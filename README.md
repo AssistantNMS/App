@@ -17,11 +17,9 @@ After 2 years of development and maintenance, the app was made open source so th
 2. Flutter
 
 ## Contributing
-Please feel free to let me know if there is an issue with the App by logging an issue here or sending an [email](mailto:support@nmsassistant.com).
+Please take a look at the [Contribution Guideline](./CONTRIBUTING.md) before creating an issue or pull request.
 
 If you would like to help add languages to the app please use this tool [AssistantApps tool](https://tools.assistantapps.com).
-
-More detail needs to be added to this section
 
 ## Builds (CI/CD)
 The Mobile Apps are built and released to the [Google Play Store](https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes, "Google Play") and [Apple App Store Store](https://apps.apple.com/us/app/assistant-for-no-mans-sky/id1480287625, "Apple App Store") using [CodeMagic](https://codemagic.io).
