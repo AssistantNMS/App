@@ -17,7 +17,7 @@ After 2 years of development and maintenance, the app was made open source so th
 2. Flutter
 
 ## Contributing
-Please take a look at the [Contribution Guideline](./CONTRIBUTING.md) before creating an issue or pull request.
+Please take a look at the [Contribution Guideline](./.github/CONTRIBUTING.md) before creating an issue or pull request.
 
 If you would like to help add languages to the app please use this tool [AssistantApps tool](https://tools.assistantapps.com).
 
