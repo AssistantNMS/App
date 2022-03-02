@@ -1,0 +1,1217 @@
+[
+  {
+    "Id": "MP_PORTALQUEST",
+    "Stages": [
+      {
+        "Level": 31,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Ariadna para conocer más detalles",
+        "AppId": "cur25",
+        "IterationAppId": "other26",
+        "Quantity": 16,
+        "PortalAddress": "010EF9F3A6C9",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Aún quedan motivos para la esperanza, Viajero afín, incluso ante la calamidad. Tengo un plan..."
+          ],
+          "Options": [
+            {
+              "Name": "Preguntarle por el plan",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Traza la ruta con las piedras del saber, síguelas hacia un portal y cura esta corrupción. ¿En cuanto a mi camino?",
+                  "No nacimos para huir y escondernos, Viajero afín. Ha llegado la hora.",
+                  "Pretendo enfrentarme a la causa de todas estas anomalías y perturbaciones, cueste lo que cueste."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Las piedras del saber te aguardan. Ellas te mostrarán el camino a través del portal."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Una transmisión surge de la estructura corrompida. Entre los gritos de los sectarios Gek, una palabra resulta clara, una y otra vez.",
+            "Exige un sacrificio. Exige materiales.",
+            "«Abismo».",
+            "El culto no fue capaz de alimentar a su maestro. En su lugar, se requieren mis servicios. Debo traer recursos..."
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La transmisión cambió con el colapso de la anomalía. En su lugar, voces Gek hablan de gratitud y amistad.",
+                  "Me dicen que este mundo podría ser mi hogar. Que debería quedarme. Que el agua se puede beber con total seguridad.",
+                  "Me dicen que están muy solos."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 32,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Géminis para conocer más detalles",
+        "AppId": "cook42",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "114805AA0B9B",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "¡Ariadna desapareció!",
+            "Intenté detenerla... ¡Intenté hacerla entrar en razón! Oh, espero que esté a salvo..."
+          ],
+          "Options": [
+            {
+              "Name": "Tranquilizarlos",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Géminis gesticula y se agita presa del pánico.",
+                  "¿Cómo puedes estar tan tranquilo? ¡Ariadna busca el origen del Abismo!",
+                  "Si hubiera sido más audaz, si hubiera sabido dónde se fue, la habría seguido para asegurarme de que estaba bien.",
+                  "No puedo pedirte que atravieses el portal, que busques las piedras del saber... Es decisión tuya, y solo tuya.",
+                  "¡Ariadna desapareció!",
+                  "Intenté detenerla... ¡Intenté hacerla entrar en razón! Oh, espero que esté a salvo..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Preguntar qué puedes hacer",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Géminis gesticula, aliviado y agradecido por tu ayuda.",
+                  "¡Ariadna busca el origen del Abismo! ¡Tienes que seguir sus pasos!",
+                  "Busca las piedras del saber, atraviesa el portal y encuentra a nuestra amiga. ¡Date prisa! ¡No hay tiempo que perder!"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "¡Ariadna está en peligro! ¡Tenemos que encontrar las piedras del saber para la siguiente anomalía! ¡Ah!"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La anomalía canta con voces, de Viajeros a lo largo del tiempo y el espacio.",
+            "Oigo sus nombres en la interferencia... Asteria, el Viajero héroe... Narciso, aliado de la Última Progenie... Son innumerables.",
+            "La anomalía exige un sacrificio. No habla con malicia. Está sufriendo.",
+            "Innumerables voces claman mi ayuda. Tengo que proporcionarles recursos. Debo sanar el mundo.",
+            "Un crecimiento musgoso cubre la estructura. Sus diminutas hojas se contonean con entusiasmo cuando acerco la mano. ¿Es una oferta? ¿Algo para ayudarme?"
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La grieta se cura sola. Hago un seguimiento de los datos de navegación de todos los que atravesaron este lugar.",
+                  "Mi mente se llena de nombres: Lázaro. Ártemis. Hildebrand.",
+                  "Transfiero los datos de navegación al Nexo. Tardarán un tiempo en decodificarse..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Recoge abono edulcorado",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "El abono cae con facilidad sobre mis manos. Huele dulce, es casi apetecible.",
+                  "Innumerables voces claman mi ayuda. Tengo que proporcionarles recursos. Debo sanar el mundo."
+                ],
+                "Options": [
+                  {
+                    "Name": "Ofrecer materiales",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "La grieta se cura sola. Hago un seguimiento de los datos de navegación de todos los que atravesaron este lugar.",
+                        "Mi mente se llena de nombres: Lázaro. Ártemis. Hildebrand.",
+                        "Transfiero los datos de navegación al Nexo. Tardarán un tiempo en decodificarse..."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Irse",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 33,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Mercurio para conocer más detalles",
+        "AppId": "cur24",
+        "IterationAppId": "other28",
+        "Quantity": 16,
+        "PortalAddress": "11CEFF9BECCC",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "A menudo suelo cuestionarme la naturaleza de nuestra existencia, adepto de los portales. Lo que significa para nosotros la reciente desaparición de Ariadna.",
+            "Hay quien cree que los Viajeros son una misma alma, dividida en incontables iteraciones y universos.",
+            "Cómo habremos sido, habremos vivido vidas diferentes..."
+          ],
+          "Options": [
+            {
+              "Name": "Preguntar por la misión",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mercurio suspira, cansado, pero al mismo tiempo asiente.",
+                  "Por supuesto. La gran obra debe ir primero.",
+                  "Hemos localizado la nave de Ariadna. O, mejor dicho, hemos localizado cientos de ellas, duplicadas y transformadas por todo el universo conocido.",
+                  "La red de portales está corrompida y es peligrosa. Tienes que tener cuidado al seguir esos pasos.",
+                  "Entra en contacto con las piedras del saber. Atraviesa la puerta. Descubre la verdad."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "¿Sigues sin comprenderlo? Sigue las piedras del saber y encuentra la nave de Ariadna al otro lado del portal.",
+                  "Hagas lo que hagas... no bebas el agua."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La nave de Ariadna se encuentra frente a mí. Mi exotraje brama, avisándome de que retroceda. Intenta salvarme de la infección.",
+            "El Abismo está ante nosotros. Exige un tributo. Exige más."
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La corrupción abandona esta nave y, con ella, miles de duplicados desaparecen en las estrellas. Leo el registro de datos.",
+                  "Antes de que la nave se escindiera de la realidad, entró en contacto con un enorme y extraño carguero en la oscuridad entre los soles.",
+                  "Su único ocupante logró escapar antes del accidente. Ariadna sigue ahí fuera, de alguna manera, en alguna parte.",
+                  "Mi amiga sigue viva."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 34,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Tetis para conocer más detalles",
+        "AppId": "raw31",
+        "IterationAppId": "other33",
+        "Quantity": 250,
+        "PortalAddress": "11F4F91DA978",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Una vez viví bajo la apariencia modificada de un Vy'keen, ¿lo sabías? Me arrepiento de muchas cosas.",
+            "Ni siquiera sé por qué estoy hablando de ello. No somos amigos. Eres un extraño."
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecerle tu amistad",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Haz esto por mí y tal vez me lo piense, ¿de acuerdo? Tengo una misión para ti. Se marcó una fábrica... una operación clandestina en la que tengo interés.",
+                  "Vaga de mundo en mundo tratando de que los Centinelas no la detecten. Necesito que localices piedras del saber y encuentres las coordenadas actuales de su portal.",
+                  "No me decepciones."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Estar de acuerdo y permanecer en silencio",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Tetis parece decepcionada. Le hubiera gustado que lucharas por su amistad.",
+                  "Tengo... una misión para ti. Se marcó una fábrica... una operación clandestina en la que tengo interés.",
+                  "Vaga de mundo en mundo tratando de que los Centinelas no la detecten. Necesito que localices piedras del saber y encuentres las coordenadas actuales de su portal.",
+                  "Solo necesito algo de ayuda."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Localiza piedras del saber para encontrar la perturbación. Tendrás que buscar una fábrica, al otro lado. Cualquier portal te mostrará el camino."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "En su día, varias especies trabajaron en este lugar, reuniendo y manipulando datos genéticos para formar modificaciones de apariencia.",
+            "Los registros de la fábrica se corrompieron por la interferencia, pero puedo acceder a los diseños finales. Los trabajadores empezaron a crear modificaciones de apariencia de luz pura, esferas en lugar de cabezas.",
+            "Ahora, están todos muertos.",
+            "La estructura exige datos nuevos. Exige sacrificio."
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Cuando la corrupción se desvanece, examino los registros de la fábrica una última vez, tratando de encontrar evidencias de sus últimos días.",
+                  "En un momento dado, los trabajadores descubrieron que las imágenes holográficas que habían creado sustituyeron sus auténticos cráneos.",
+                  "Con estas esferas de luz, llegaron las pesadillas. De alguna manera, las imágenes me resultan familiares. Como si hubiera visto antes este rostro."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 35,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Héspero para conocer más detalles",
+        "AppId": "cook27",
+        "IterationAppId": "other36",
+        "Quantity": 40,
+        "PortalAddress": "10E508A1ACC0",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Héspero parece preocupado. Cuando me acerco, esconde su tableta.None",
+            "Ariadna ha avisado... de que vuelve con nosotros, alma gemela. Está a salvo."
+          ],
+          "Options": [
+            {
+              "Name": "Preguntar qué no va bien",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Dime. ¿Oíste alguna vez la historia del Viajero héroe Asteria? Fue uno de los primeros de nosotros en superar la brecha entre mundos.",
+                  "El tiempo fluye de manera extraña para nosotros. Asteria fue preservado en el arca mental tras su muerte, ofreciendo su sabiduría desde la tumba.",
+                  "Es una peregrinación que todos hemos hecho. Es hora de que busques tu profecía, alma gemela.",
+                  "Encuentra su mundo. Sigue las piedras del saber y lleva sus glifos al portal..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Busca la tumba de Asteria, el Viajero héroe. Sigue las piedras del saber y el camino al que dirigen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La tumba de Asteria sisea una corrupción que me resulta familiar. Por todas partes detecto los signos vitales de Viajeros separados de la realidad.",
+            "Una voz cansada habla, apenas es audible por encima de la interferencia.",
+            "Asteria me cuenta que una vez lideró a los Vy'keen en la batalla contra los emisarios de cristal. Una vez acabó con una flota de Centinelas.",
+            "Me dice que me traicionarán. Me dice que yo también traicionaré.",
+            "La corrupción ha llegado a este lugar. Quiere hacer un trato. Quiere llevarse toda la materia y la vida que pueda.",
+            "Tumba de Asteria"
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "El arca mental ha quedado purificada. El alma de su interior agradece a los Viajeros su ayuda.",
+                  "Le pregunto a Asteria si puede ofrecerme alguna profecía. Le pregunto por la naturaleza de mi enemigo.",
+                  "Me responde que el Abismo no es lo que parece.",
+                  "La voz se queda en silencio. Me marcho, preocupado por lo que acabo de oír."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 36,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Ariadna para conocer más detalles",
+        "AppId": "cook25",
+        "IterationAppId": "other26",
+        "Quantity": 40,
+        "PortalAddress": "2117FBF686E8",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Estoy en casa. Por fin estoy en casa. Viajero afín, me alegro mucho de poder mirarte a la cara."
+          ],
+          "Options": [
+            {
+              "Name": "Decirle que sientes lo mismo",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Fui en busca del Abismo. Casi me enfrento a nuestro adversario, y después...",
+                  "No..., no recuerdo lo que me ocurrió en ese vacío, Viajero afín.",
+                  "Solo sé que me desperté y que estaba poseída. Poseída.",
+                  "Había una nave, enorme y terrible. La corrupción seguía ondulando...",
+                  "Encuentra las piedras del saber. Atraviesa el portal. Reuniré fuerzas para tu regreso."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Preguntarle dónde estuvo",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Fui en busca del Abismo. Casi me enfrento a nuestro adversario, y después...",
+                  "No..., no recuerdo lo que me ocurrió en ese vacío, Viajero afín.",
+                  "Solo sé que me desperté y que estaba poseída. Poseída.",
+                  "Había una nave, enorme y terrible. La corrupción seguía ondulando...",
+                  "Encuentra las piedras del saber. Atraviesa el portal. Reuniré fuerzas para tu regreso."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Sigue las piedras del saber a través del portal. Lucha contra nuestro enemigo..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "El carguero fue Vy'keen, en su día. Fue una nave inquisidora que recorría las galaxias en busca de herejes.",
+            "Solo encontré muerte. La corrupción está aquí, ahora. Está en todas partes. Anhela un tributo."
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La corrupción se marchó. Lo único que queda son los tristes registros de los seres que sufrieron y protestaron por su inocencia.",
+                  "El padre de un mechasacerdote, afirmando que no sabe dónde está su hijo, que todavía siguen el camino de Hirk.",
+                  "Los datos revelan que todos los prisioneros fueron ejecutados, antes de un motín. Los restantes miembros de la tripulación fueron abandonados en la oscuridad.",
+                  "Nada más permanece."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 37,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Géminis para conocer más detalles",
+        "AppId": "cur32",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "21DE0936B5C7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "¡Ariadna regresó! ¡Nuestra amiga está a salvo! ¡Ah, qué alegría!"
+          ],
+          "Options": [
+            {
+              "Name": "Alegrarse",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "¡Que nuestros hermanos compartan tu espíritu!",
+                  "FTH_EXOTIC2_PQ_BLD_RES_D_19"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Solicitar una misión",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Tienes razón. Nuestra tarea aquí es más importante que nunca.",
+                  "FTH_EXOTIC2_PQ_BLD_RES_D_19"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Por favor, sigue las piedras del saber hasta el lugar de la corrupción. Sigue los portales. Encuentra a Héspero. Temo por él..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Mis sensores detectan los restos de un millar de almas Korvax, diseminadas por todo el sistema.",
+            "Intentaron simular el Abismo. Pero solo consiguieron llamar su atención.",
+            "Hará falta mucho para sanar este vacío. Sin sustento, devorará sistema tras sistema..."
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La grieta se sanó, descubrí el origen del experimento.",
+                  "Héspero había estado trabajando con los Korvax... Estaba intentando solucionar su dilema.",
+                  "Su fracaso ha provocado la devastación de esta especie. No sé si mi amigo ha sobrevivido..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 38,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Mercurio para conocer más detalles",
+        "AppId": "cook29",
+        "IterationAppId": "other28",
+        "Quantity": 90,
+        "PortalAddress": "313AFB6EBFE2",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "La calamidad cayó sobre nosotros, adepto de los portales. Un millar de almas Korvax fueron erradicadas de la Convergencia.",
+            "El resultado de la ambición de un colega Viajero que ha excedido sus límites. Héspero estaba trabajando con los Korvax para intentar simular el Abismo. En su lugar, fue a por él.",
+            "Si Héspero vuelve con nosotros, ¿crees que podemos confiar en él? Tiene muchas cosas por las que responder."
+          ],
+          "Options": [
+            {
+              "Name": "Declarar tu confianza",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Espero que tengas razón, adepto de los portales."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Sacudir la cabeza",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Esto me hace sufrir, adepto de los portales. Aunque temo que estés en lo cierto.",
+                  "FTH_EXOTIC3_PQ_BLD_RES_D_20"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Las piedras del saber iluminarán tu camino, adepto de los portales. Adelante. Haz lo que yo no puedo hacer."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La corrupción me recibe, afirmando que se encontró conmigo una y otra vez.",
+            "Escucho su interferencia en mi mente. Exige obsequios. Afirma que me dio tantos..."
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La anomalía cesa. Recuerdo las dudas de Mercurio... sobre los fracasos de Héspero...",
+                  "Mis colegas Viajeros están haciendo lo que pueden. Debemos ayudarnos los unos a los otros, lo sé.",
+                  "Y junto a esa idea, otra repta por mi espalda. No es mía. Es una voz en mi interior.",
+                  "Debo ayudarla."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 39,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Tetis para conocer más detalles",
+        "AppId": "cur22",
+        "IterationAppId": "other33",
+        "Quantity": 24,
+        "PortalAddress": "0200FBA353D2",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Tetis parece intranquilo. Sus ojos descubiertos echan un vistazo al puesto vacío de Mercurio.",
+            "Dime. ¿Alguna vez te sientes solo?"
+          ],
+          "Options": [
+            {
+              "Name": "Decir que todo el mundo lo hace",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Pero yo no soy como todo el mundo, ¿cierto? Se supone que soy mejor...",
+                  "Se mueve incómodo.",
+                  "Tal vez haya más probabilidades de sobrevivir si viajamos solos. No sé cuánto tiempo más estaremos a salvo aquí.",
+                  "Las piedras del saber nos llaman a todos. Los portales te necesitan."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Decir que no",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "¿No? Um. Estás mintiendo.",
+                  "Se mueve incómodo.",
+                  "Tal vez haya más probabilidades de sobrevivir si viajamos solos. No sé cuánto tiempo más estaremos a salvo aquí.",
+                  "Las piedras del saber nos llaman a todos. Los portales te necesitan."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Sigue las piedras del saber, atraviesa el portal. Yo necesito hacer mis propios preparativos."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La corrupción hierve por la nave accidentada, pero de alguna manera, el registro del capitán no se vio afectado.",
+            "El piloto fue traicionado por alguien a quien consideraba un aliado. El Abismo solo puede tomar lo que le invitan a consumir. Incluso ahora, desea mucho más..."
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ahora que la corrupción se purgó, miro con más detenimiento los datos de la nave caída. El Viajero piloto creyó escuchar voces los días previos al accidente.",
+                  "Susurros que provenían de su propio exotraje emitidos hacia el vacío, que luchaban por sobrevivir...",
+                  "Me marcho, mientras compruebo mis propias señales de manipulación o fallo. Todo parece en su lugar."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 40,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Héspero para conocer más detalles",
+        "AppId": "cur25",
+        "IterationAppId": "other36",
+        "Quantity": 16,
+        "PortalAddress": "20FDF7C5C5A3",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah, alma gemela... No temas. Purgué toda la culpa de mi mente. Los cúmulos de nanites pueden transformar neuronas con facilidad..."
+          ],
+          "Options": [
+            {
+              "Name": "Escuchar",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ayudé a los Korvax a crear su simulación del Abismo. Lamento profundamente su fallecimiento, alma gemela. ¡Pero solo ese trabajo no determinó su destino!",
+                  "Alguien entre nosotros es un traidor... ¡Alguien guió al Abismo hasta nosotros!",
+                  "¿No lo ves? ¡Intervinieron las piedras del saber!",
+                  "Quienquiera que sea responsable de esta traición quiere que atravesemos los portales. Quiere que alimentemos las anomalías.",
+                  "Atraviesa la brecha una vez más, alma gemela. Yo intentaré liberarnos de este terrible bucle..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Busca las piedras del saber, atraviesa el portal. Yo estaré observando..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La tumba crepita con energías exóticas.",
+            "El Viajero que descansaba aquí ya no está, fue reclamado por un arca mental de otro universo.",
+            "La tumba ahora es un lugar de anhelos eternos. Su existencia exige un tributo de recursos."
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La tumba está purificada. Intento averiguar el nombre de quien murió aquí, pero solo hallo un valor nulo.",
+                  "Me marcho, preocupado. Me da la sensación de que alguien me está observando..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 41,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Ariadna para conocer más detalles",
+        "AppId": "cook27",
+        "IterationAppId": "other26",
+        "Quantity": 60,
+        "PortalAddress": "209B0170700E",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah, Viajero afín. Regresaste.",
+            "Su rostro se retuerce en algo que recuerda a una sonrisa."
+          ],
+          "Options": [
+            {
+              "Name": "Devolver la sonrisa",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Algunos creen que todos los Viajeros son un mismo ente, dividido en incontables formas y cuerpos.",
+                  "Yo soy tú y tú eres yo.",
+                  "Por eso creo en ti, Viajero afín. Si trabajamos juntos, podemos salvar todo lo que somos.",
+                  "Las piedras del saber son un regalo del Atlas. ¿Quiénes somos para rechazar la llamada de los portales?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Sigue las piedras del saber, Viajero afín, y el portal te guiará hasta nuestra siguiente tarea."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Los devotos del Atlas vinieron a este mundo a rezar.",
+            "Una anomalía distorsiona su nave accidentada. Reclama las vidas de aquellos que se hallaban en su interior hace tanto tiempo.",
+            "Ahora la anomalía ansía más. Espera nuestra invitación para marcharse, para obtener recursos que sacien su inconmensurable sed."
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La nave accidentada está purgada de todo rastro anómalo.",
+                  "Su registro habla del Atlas que creó todas las cosas... incluso la pérdida. Incluso el odio.",
+                  "Me pregunto si, en sus instantes finales, confiaron en su deidad. Si esperaban la salvación..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 42,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Géminis para conocer más detalles",
+        "AppId": "raw47",
+        "IterationAppId": "other27",
+        "Quantity": 400,
+        "PortalAddress": "11DFFB6E3036",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Géminis mira unos esquemas de exotrajes. No parece darse cuenta de que me acerqué..."
+          ],
+          "Options": [
+            {
+              "Name": "Saludar a tu amigo",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Esconde los esquemas, dudando sobre girarse para mirarme.",
+                  "Hay muchas cosas en nuestras vidas que son un misterio, amigo mío. Los rostros con los que nacemos...",
+                  "Las ropas que llevamos. ¿Quién creó los exotrajes? ¿Quién les presta su voz?",
+                  "Las piedras del saber, los portales que nos guían a través de ellos... son nuestros por derecho.",
+                  "Hay tanto ahí afuera, aún sin descubrir."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Sigue las piedras del saber, como siempre hemos hecho. Es derecho de todo Viajero atravesar los portales..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La estructura que en su día albergó una inteligencia artificial.",
+            "Ahora la corrupción se extiende por el interior de su caparazón, odiando todo lo que una vez fue.",
+            "Este lugar solo desea materia. Quiere que le traiga más."
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Veo los últimos vestigios de la IA mientras se marcha toda la corrupción, los últimos quince minutos de su vida...",
+                  "Sabía que vendría aquí. Sabía que intentaría salvarla.",
+                  "Mundos sobre mundos hierven en el vacío. El Abismo se extiende."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 43,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Mercurio para conocer más detalles",
+        "AppId": "build168",
+        "IterationAppId": "other28",
+        "Quantity": 16,
+        "PortalAddress": "4037F8AE0462",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Corren tiempos oscuros, adepto de los portales. Nuestra comunidad está sumida en la lucha."
+          ],
+          "Options": [
+            {
+              "Name": "Preguntar qué no va bien",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Héspero se volvió paranoico. Se niega a asistir a nuestras reuniones. Hasta rehúye a Nada y a Polo.",
+                  "No debes convertirte en lo que ahora es nuestro antiguo amigo. Haces un trabajo esencial...",
+                  "Las piedras del saber te guiarán en tu camino a través de los portales. Te mostrarán el camino a la salvación."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Deja que las piedras del saber sean tu guía. Los portales te guiarán hacia tu salvación."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La estructura fue infectada, sus llamadas anómalas resuenan por todo el planeta.",
+            "El Abismo demanda recursos. Sin ellos, este mundo estará perdido para siempre..."
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Cumplo con mi tarea. La corrupción se desvanece. Oigo su voz... Siento lo que siente...",
+                  "Siento malicia, odio, desesperación, todo ello dirigido hacia sí misma...",
+                  "Veo recuerdos de agua..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 44,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Tetis para conocer más detalles",
+        "AppId": "cook116",
+        "IterationAppId": "other33",
+        "Quantity": 90,
+        "PortalAddress": "519505C9AA01",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Viajero..., ¿tu exotraje estuvo funcionando a su capacidad adecuada?"
+          ],
+          "Options": [
+            {
+              "Name": "Decir que sí",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Um.",
+                  "Estuve oyendo ruidos extraños desde mi propio traje. Como si fueran susurros.",
+                  "Uno de mis socios fue al espacio Korvax para realizar un análisis de nuestras señales, pero no regresó.",
+                  "¿Puedes ir a buscarlo a través del portal? Las piedras del saber deberían mostrarte el camino."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Decir que no",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Um.",
+                  "Estuve oyendo ruidos extraños desde mi propio traje. Como si fueran susurros.",
+                  "Uno de mis socios fue al espacio Korvax para realizar un análisis de nuestras señales, pero no regresó.",
+                  "¿Puedes ir a buscarlo a través del portal? Las piedras del saber deberían mostrarte el camino."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Otro de mis socios ha desaparecido. Búscalo a través del portal... Las piedras del saber deberían guiarte hacia tu destino. Date prisa."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "¿Un Viajero hizo esto?",
+            "Hay pruebas de que se disparó una multiherramienta sobre el amigo caído de Tetis. Nunca completó sus análisis.",
+            "La corrupción se extiende alrededor de la tumba, exigiendo su tributo.",
+            "Un crecimiento musgoso cubre la estructura. Sus diminutas hojas se contonean con entusiasmo cuando acerco la mano. ¿Es una oferta? ¿Algo para ayudarme?"
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La tumba está purificada.",
+                  "Examino los rastros de la batalla, de los recuerdos del Viajero caído.",
+                  "Veo un rostro que no es un rostro, un brazo alzado para disparar su arma.",
+                  "Veo al asesino.",
+                  "Es Ariadna."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Recoge abono edulcorado",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "El abono cae con facilidad sobre mis manos. Huele dulce, es casi apetecible.",
+                  "La corrupción se extiende alrededor de la tumba, exigiendo su tributo."
+                ],
+                "Options": [
+                  {
+                    "Name": "Ofrecer materiales",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "La tumba está purificada.",
+                        "Examino los rastros de la batalla, de los recuerdos del Viajero caído.",
+                        "Veo un rostro que no es un rostro, un brazo alzado para disparar su arma.",
+                        "Veo al asesino.",
+                        "Es Ariadna."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Irse",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 45,
+        "NpcMessage": "Solo se puede acceder a la región afectada a través del portal\nHabla con Iteración: Héspero para conocer más detalles",
+        "AppId": "cur22",
+        "IterationAppId": "other36",
+        "Quantity": 24,
+        "PortalAddress": "313B052E463F",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Los otros volverán pronto, alma gemela. No tenemos mucho tiempo..."
+          ],
+          "Options": [
+            {
+              "Name": "Escuchar",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ariadna nos dice que el universo está repleto de corrupción, que solo los Viajeros podemos combatirla.",
+                  "Pero esas misiones..., esas mentiras... Mi alma gemela, nos engañaste.",
+                  "Pensé que mis escaneos estarían equivocados. Que había soñado los susurros que oía en mi mente.",
+                  "Héspero se agita, atormentado.",
+                  "Ariadna estrelló su nave hace varias semanas. Nunca regresó. El ente que ahora nos guía es un impostor.",
+                  "Busca las piedras del saber, establece tu camino a través del portal. Ve la verdad con tus propios ojos."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pedir orientación",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ariadna, la verdadera Ariadna, sigue ahí fuera. Demuestra este engaño, alma gemela. Busca las piedras del saber, atraviesa la red de portales. Halla la verdad..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La estructura canta con energías exóticas. Me ve. Conoce mi mente.",
+            "En la canción escucho nombres, distantes, apagados... Oigo el número al final de todas las cosas.",
+            "Veo a quien susurra. Veo a una forma anónima desterrar a Ariadna...",
+            "Y veo a un duplicado surgiendo del accidente, volviendo para reclamar su forma.",
+            "Si he de creer esta visión, entonces Héspero tiene razón. Ariadna es un impostor.",
+            "Este lugar desea ayudarme... si le proporciono recursos."
+          ],
+          "Options": [
+            {
+              "Name": "Ofrecer materiales",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La energía exótica se disipa, pero su canción permanece.",
+                  "¿Qué fue de Ariadna? ¿Quién es el impostor que ocupa su lugar?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Irse",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

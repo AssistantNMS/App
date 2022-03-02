@@ -1,0 +1,6188 @@
+[
+  {
+    "Id": "tech1",
+    "Icon": "technology/1.png",
+    "Name": "Gefahrenschutz",
+    "Group": "Exo-Anzug-Umweltschild",
+    "Description": "Das <CATALYST>Gefahrenschutz<>-System des Exo-Anzugs überwacht und stabilisiert die Umgebung des Benutzers kontinuierlich. \nDer allgemeine reaktive Schutz kann mit <TECHNOLOGY>Umweltschilden<> verstärkt werden, die erhöhten Schutz gegen bestimmte Bedingungen bieten.\nDas Gerät wird mit <CATALYST>natriumbasierten Substanzen<> aufgeladen. Zur Information des Anwenders: Mangelnde oder fehlerhafte Aufladung des Gefahrenschutzsystems kann dazu führen, dass die Umgebung lebensinkompatibel wird.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech2",
+    "Icon": "technology/2.png",
+    "Name": "Schildgitter",
+    "Group": "Gefahrenschutz-Upgrade",
+    "Description": "Erhöht die Grundkapazität des <COMMODITY>Gefahrenschutzsystems<> und ermöglicht es so dem Benutzer, sich länger in gefährlichen Umgebungen aufhalten zu können, ohne den Exo-Anzug aufladen zu müssen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod1",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw13",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech3",
+    "Icon": "technology/3.png",
+    "Name": "Lebenserhaltung",
+    "Group": "Überlebens-Anzugsenergiepack",
+    "Description": "Der Kern des Exo-Anzugs, das <TECHNOLOGY>Lebenserhaltungssystem<>, filtert und pumpt kontinuierlich <FUEL>Sauerstoff<> zum Atmen.\n\nNeben seiner Rolle bei der Lebenserhaltung des Exo-Anzug-Anwenders nutzt die Lebenserhaltungseinheit überschüssigen Sauerstoff zur Energiegewinnung für sekundäre Systeme wie z. B. das <TECHNOLOGY>Jetpack<>, die <TECHNOLOGY>Geschwindigkeitsverstärkung<> und die <TECHNOLOGY>Taschenlampe<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech4",
+    "Icon": "technology/4.png",
+    "Name": "Sauerstoffwiederverwerter",
+    "Group": "Lebenserhaltungs-Upgrade",
+    "Description": "Erhöht die Grundkapazität des <COMMODITY>Lebenserhaltungssystems<> und ermöglicht es so dem Benutzer, länger ohne Aufladungen zu überleben.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech5",
+    "Icon": "technology/5.png",
+    "Name": "Jetpack",
+    "Group": "Luftschub-Booster",
+    "Description": "Stattet den Exo-Anzug mit <TECHNOLOGY>erweiterten Bewegungsmöglichkeiten<> aus, einschließlich vorübergehender Flugfähigkeit.\n\nKontrolliere den Schub mit <IMG>JUMP<>. Das Jetpack nutzt Energie aus dem <FUEL>Lebenserhaltungssystem des Exo-Anzugs<>, um den Benutzer mithilfe von Hochdruck-Gasstößen in die Luft zu befördern. Durch das Sammeln von <TECHNOLOGY>deuteriumreichen Pflanzen<> kann das Jetpack vorübergehend überladen werden, wodurch der verfügbare Schub dramatisch erhöht wird.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech6",
+    "Icon": "technology/6.png",
+    "Name": "Neuralstimulator",
+    "Group": "Exo-Anzug-Bewegungs-Upgrade",
+    "Description": "Erhöht die Kapazität der <STELLAR>Jetpacktanks<> und <STELLAR>Adrenal-Pumpreserven<> des Exo-Anzugs, wodurch der Benutzer länger fliegen und sprinten kann.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 100
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech7",
+    "Icon": "technology/6.png",
+    "Name": "Raketenstiefel",
+    "Group": "Exo-Anzug-Upgrade",
+    "Description": "Rüstet das Jetpack des Exo-Anzugs mit <STELLAR>verbesserten Sprungeigenschaften<> aus, wodurch der Benutzer weiter springen kann.\n\nAktiviere die Sprungsysteme, indem du schnell <IMG>JUMP<> drückst.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 200,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech8",
+    "Icon": "technology/8.png",
+    "Name": "Kühlmittelnetzwerk",
+    "Group": "Gefahrenschutz-Einheit",
+    "Description": "Der Nutzer ist auf sengend heißen Welten gegen Schäden durch extreme Hitze geschützt.\n\nLindert intensive atmosphärische und solare Hitze mithilfe eines gefädelten Hautverteilungsnetzwerks aus flüssigem Frenium.\n\nDas Gerät wird durch <EARTH>Mineralien-Extraktion<> aus heißen Umgebungen aufgeladen. Funktioniert automatisch nach dem Bau im Exo-Anzug-Inventar des Nutzers.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 160,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw19",
+        "Quantity": 75
+      },
+      {
+        "Id": "raw29",
+        "Quantity": 150
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech9",
+    "Icon": "technology/9.png",
+    "Name": "Wärmeschicht",
+    "Group": "Gefahrenschutz-Einheit",
+    "Description": "Der Nutzer ist auf gefrorenen Welten gegen Schäden durch extreme Kälte geschützt.\n\nDurch den Exo-Anzug des Nutzers gefädelte Wärmekapillaren verteilen flüssiges Calidium gleichmäßig, um eine angenehme Körpertemperatur zu gewährleisten.\n\nDas Gerät wird durch <EARTH>Mineralien-Extraktion<> aus eisigen Umgebungen aufgeladen. Funktioniert automatisch nach dem Bau im Exo-Anzug-Inventar des Nutzers.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 160,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw19",
+        "Quantity": 75
+      },
+      {
+        "Id": "raw28",
+        "Quantity": 150
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech10",
+    "Icon": "technology/10.png",
+    "Name": "Toxindämpfer",
+    "Group": "Gefahrenschutz-Einheit",
+    "Description": "Der Nutzer ist gegen Giftschaden geschützt.\n\nReaktive Verbindungen im Dämpfer beseitigen giftige Flüssigkeiten, die auf den Nutzer fallen, und reduzieren somit die Gefahr und das Erstickungsrisiko.\n\nDas Gerät wird durch <EARTH>Mineralien-Extraktion<> aus giftigen Umgebungen aufgeladen. Funktioniert automatisch nach dem Bau im Exo-Anzug-Inventar des Nutzers.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 160,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw19",
+        "Quantity": 75
+      },
+      {
+        "Id": "raw26",
+        "Quantity": 150
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech11",
+    "Icon": "technology/11.png",
+    "Name": "Strahlungsdeflektor",
+    "Group": "Gefahrenschutz-Einheit",
+    "Description": "Der Nutzer ist gegen Strahlungsschaden geschützt.\n\nSenkt das Risiko für den Nutzer bei der Erkundung von Welten mit erhöhter Strahlung erheblich. Mikrovibrationen steigern die Reflexion elektromagnetischer Wellen und verringern somit die Absorption.\n\nDas Gerät wird durch <EARTH>Mineralien-Extraktion<> aus radioaktiven Umgebungen aufgeladen. Funktioniert automatisch nach dem Bau im Exo-Anzug-Inventar des Nutzers.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 160,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw19",
+        "Quantity": 75
+      },
+      {
+        "Id": "raw27",
+        "Quantity": 150
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech12",
+    "Icon": "technology/12.png",
+    "Name": "Belüftungsmembran",
+    "Group": "Wasseratmungshilfe",
+    "Description": "Der Nutzer kann über längere Zeiträume unter Wasser schwimmen.\n\nAbsorbiert im Wasser gelöste Gase durch eine Membranschaltvorrichtung, die – sofern der Nutzer einer herkömmlich gegliederten Spezies angehört – über dem Mund oder Atemloch im Gesicht platziert wird.\n\nFunktioniert automatisch nach dem Bau im Exo-Anzug-Inventar des Nutzers.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 150
+      },
+      {
+        "Id": "raw19",
+        "Quantity": 75
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech13",
+    "Icon": "technology/13.png",
+    "Name": "Gefahrgut-Schutzhandschuh",
+    "Group": "Exo-Anzug-Verstärkung",
+    "Description": "Verbessert den metallischen Schild der <TECHNOLOGY>Handschuhe des Exo-Anzugs<>.\n\nEine verbesserte Mischung von verstärktem Metall und Katalyseschilden erlaubt dem Benutzer den sicheren Umgang mit <CATALYST>gefährlichen Substanzen<>, ebenso wie die Ausführung der bei der Ernte bestimmter <TRADEABLE>anbaufähiger Pflanzen<> notwendigen Kraftproben.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 80,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw13",
+        "Quantity": 20
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech14",
+    "Icon": "curiosities/26.png",
+    "Name": "Erinnerung",
+    "Group": "Ein Relikt eines anderen Ortes",
+    "Description": "Alles, das du jemals wusstest, ist hier drin.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur13",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw34",
+        "Quantity": 16
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech15",
+    "Icon": "rawMaterials/4.png",
+    "Name": "Sternsamen",
+    "Group": "Unbezahlbares Fragment",
+    "Description": "Ein winziger Funke, aufbewahrt in einem Eindämmungsfeld unbekannter Herkunft.\n\nDer Samen pulsiert vor Leben, versessen darauf, zu entkommen und sein Potenzial auszuschöpfen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 16
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 16
+      },
+      {
+        "Id": "raw34",
+        "Quantity": 16
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech16",
+    "Icon": "products/81.png",
+    "Name": "Überholte Technologie",
+    "Group": "Alte, unbrauchbare Technologie",
+    "Description": "Eine <TECHNOLOGY>Technologie<>, die von einer von Atlas ausgehenden Störung beschädigt wurde.\n\nKann für brauchbare Komponenten recycelt werden.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw56",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 4
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech17",
+    "Icon": "technology/17.png",
+    "Name": "Effiziente Wasserdüsen",
+    "Group": "Jetpack-Upgrade-Einheit",
+    "Description": "Verbessern die <STELLAR>Treibstoffeffizienz<> der Wasserdüsen des Jetpacks, indem der Verbrauch der Lebenserhaltungssysteme des Exo-Anzugs reduziert wird.\n\nWasserkompressoren werden in die Turbinen des Jetpacks eingebaut, um die großen Energieanforderungen der Unterwasserzündung zu umgehen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 350,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 100
+      },
+      {
+        "Id": "cur17",
+        "Quantity": 6
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech18",
+    "Icon": "technology/4.png",
+    "Name": "Sauerstoffumleiter",
+    "Group": "Notfall-Lebenserhaltungssystem",
+    "Description": "Verbessert die <TECHNOLOGY>Belüftungsmembran<> des Exo-Anzugs, um im Falle eines Atmungsnotfalls Sauerstoff aus dem Lebenserhaltungssystem zu entnehmen, wodurch der Benutzer an die Oberfläche zurückkehren und herkömmliche Treibstoffvorräte aufsuchen kann.\n\nHinweis: Langfristige Umwandlung von Lebenserhaltungsenergie zu Gas, das eingeatmet werden kann, wird nicht empfohlen und könnte dazu führen, dass die Lebenserhaltung ihre Funktion verliert.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 240,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 6
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech19",
+    "Icon": "curiosities/65.png",
+    "Name": "Einfacher Übersetzer",
+    "Group": "Automatischer Sprachenanalysator",
+    "Description": "Eine automatische Übersetzungsvorrichtung. Sie zeichnet Gespräche in der Nähe auf und analysiert sie, ehe sie die Daten durch ein kontextuelles Lernsystem schickt, um die beabsichtigte Bedeutung zu bestimmen.\n\nDieses Einstiegsmodell verfügt über eine geringe Speicherkapazität, was die Übersetzungseffektivität limitiert.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech20",
+    "Icon": "curiosities/65.png",
+    "Name": "Verbesserter Übersetzer",
+    "Group": "Automatischer Sprachenanalysator",
+    "Description": "Eine automatische Übersetzungsvorrichtung. Sie zeichnet Gespräche in der Nähe auf und analysiert sie, ehe sie die Daten durch ein kontextuelles Lernsystem schickt, um die beabsichtigte Bedeutung zu bestimmen.\n\nParallele Sprachprozessoren ermöglichen es, einen größeren Umfang an aufgezeichneten Sprachteilen zu übersetzen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 310,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 50
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech21",
+    "Icon": "curiosities/65.png",
+    "Name": "Perfektionierter Übersetzer",
+    "Group": "Automatischer Sprachenanalysator",
+    "Description": "Eine automatische Übersetzungsvorrichtung. Sie zeichnet Gespräche in der Nähe auf und analysiert sie, ehe sie die Daten durch ein kontextuelles Lernsystem schickt, um die beabsichtigte Bedeutung zu bestimmen.\n\nEin großes Speicherspektrum und übertaktete Sprachprozessoren ermöglichen Übersetzungen von großen Sprachteilen in Echtzeit.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 580,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur40",
+        "Quantity": 2
+      },
+      {
+        "Id": "raw34",
+        "Quantity": 50
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech22",
+    "Icon": "technology/22.png",
+    "Name": "Artemis‘ Übersetzer",
+    "Group": "Automatischer Sprachenanalysator",
+    "Description": "Eine automatische Übersetzungsvorrichtung. Dieses Gerät muss kalibriert werden, indem es vorab mit existierenden Übersetzungsdaten gespeist wird. Für den Betrieb muss eine <STELLAR>Netzwerkverbindung zu Artemis<> hergestellt sein.\n\nOhne Zugriff auf den Host-Übersetzungsdienst ermöglicht der Schaltkreis an Bord eine limitierte Übersetzung kleiner Wortmengen in Echtzeit.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 90,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw19",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech23",
+    "Icon": "technology/23.png",
+    "Name": "Impulsantrieb",
+    "Group": "Raumschiffsflug-Booster",
+    "Description": "Raumflug-Antrieb, Booster und bei Bedarf auch Impulssprünge durch lokale Systeme.\n \nDer Nutzer wird daran erinnert, dass zum Laden des Impulsantriebs <EXOTIC>Tritium<> erforderlich ist. Tritium ist in großer Menge in <COMMODITY>planetennahen Asteroidenfeldern<> vorhanden.\n\nZum Aktivieren des Impulssprungs <IMG>PULSEJUMP<> gedrückt halten.\nMit <IMG>BOOST<> den Geschwindigkeitsschub während des Flugs aktivieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod5",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod6",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech24",
+    "Icon": "technology/23.png",
+    "Name": "Photonix-Kern",
+    "Group": "Impulsantrieb-Begleiteinheit",
+    "Description": "Bietet verbesserte Manövrierfähigkeit und längere Boosts bei Raumflügen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 5,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 100
+      },
+      {
+        "Id": "raw9",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech25",
+    "Icon": "technology/25.png",
+    "Name": "Startschubdüse",
+    "Group": "Vertikales Startsystem",
+    "Description": "Wichtige Ausrüstung zum Starten und Landen.\n \nDer Nutzer wird daran erinnert, dass zum Aufladen der Schubdüse spezieller Treibstoff aus Diwasserstoff erforderlich ist. Für die Startprozeduren sind vor der Aktivierung ausreichende Treibstoff-Levels erforderlich.\n \nZum Abheben vom Planeten <IMG>THRUST<> gedrückt halten.\nMit <IMG>BOOST<> den Geschwindigkeitsschub während des Flugs aktivieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod11",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech26",
+    "Icon": "technology/26.png",
+    "Name": "Effiziente Düsen",
+    "Group": "Raumschiff-Startsystem-Upgrade",
+    "Description": "Verbessert das Startsystem des Raumschiffs und verringert die <STELLAR>Treibstoffkosten<> beim Start.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod11",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech27",
+    "Icon": "technology/26.png",
+    "Name": "Startsystemladegerät",
+    "Group": "Raumschiff-Startsystem-Upgrade",
+    "Description": "Photovoltaikmodule, die an den <TECHNOLOGY>Startschubdüsen<> von Raumschiffen angebracht werden. Dadurch werden die Schubdüsen aufgeladen, wenn das Schiff nicht in Betrieb ist.\n\nGesammeltes Licht wird verwendet, um Diwasserstoff aus der Atmosphäre zu gewinnen. Damit können die <STELLAR>Startschubdüsen automatisch wiederaufgeladen werden<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 460,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod1",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech28",
+    "Icon": "technology/28.png",
+    "Name": "Teleportempfänger",
+    "Group": "Bordteleportationsgerät",
+    "Description": "Ein Gerät, das Standard-Kommunikationssignale eines Raumschiffes umwandelt, um den <TECHNOLOGY>Transport von Materie und Daten zu ermöglichen<>.\n\nRaumschiffe, die mit einem solchen Gerät ausgestattet sind, können in Verbindung mit einem Exo-Anzug Produkte und Substanzen über <VAL_ON>weite Distanzen<> schicken und erhalten.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 150,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech29",
+    "Icon": "technology/29.png",
+    "Name": "Hyperantrieb",
+    "Group": "Lichtgeschwindigkeit-Warp-Antrieb",
+    "Description": "Hyperlichtantrieb, der einem Raumschiff Warp-Geschwindigkeit und Sprünge zwischen benachbarten Systemen ermöglicht.\n\nEs wird empfohlen, dass der Nutzer über die Galaktische Karte auf die Hyperantrieb-Systeme zugreift.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 5
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 125
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech30",
+    "Icon": "technology/30.png",
+    "Name": "Cadmium-Antrieb",
+    "Group": "Hyperantrieb-Upgrade: Rote Systeme",
+    "Description": "Verbessert die Kernbindemagneten des Hyperantriebs, was eine schnelle Zerlegung beim Versuch, seltene <FUEL>rote Sternenkörper<> zu erreichen, verhindert.\n\nEs wird empfohlen, dass der Nutzer über die <VAL_ON>galaktische Karte<> auf die Hyperantrieb-Systeme zugreift.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 80,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 250
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech31",
+    "Icon": "technology/31.png",
+    "Name": "Emeril-Antrieb",
+    "Group": "Hyperantrieb-Upgrade: Grüne Systeme",
+    "Description": "Verbessert die Schildintegrität des Hyperantriebs, was Realitätsstörungen beim Versuch, seltene <TRADEABLE>grüne Sternenkörper<> zu erreichen, verhindert.\n\nEs wird empfohlen, dass der Nutzer über die <VAL_ON>galaktische Karte<> auf die Hyperantrieb-Systeme zugreift.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw20",
+        "Quantity": 250
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 4
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech32",
+    "Icon": "technology/32.png",
+    "Name": "Indium-Antrieb",
+    "Group": "Hyperantrieb-Upgrade: Blaue Systeme",
+    "Description": "Verbessert die Berechnungsmatrix des Hyperantriebs, was temporale Anomalien beim Versuch, seltene <TECHNOLOGY>blaue Sternenkörper<> zu erreichen, verhindert.\n\nEs wird empfohlen, dass der Nutzer über die <VAL_ON>galaktische Karte<> auf die Hyperantrieb-Systeme zugreift.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 200,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw21",
+        "Quantity": 250
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech33",
+    "Icon": "technology/33.png",
+    "Name": "Deflektorschild",
+    "Group": "Schutz für Raumschiffsrumpf",
+    "Description": "Dieser Energieschild schützt das Schiff vor Laserfeuer, heranfliegenden Projektilen und Zusammenstößen mit Weltraumschrott.\n\nDer Nutzer wird daran erinnert, dass zum Aufladen des Gerätes <CATALYST>katalytische Elemente<> erforderlich sind.\n\nFunktioniert automatisch nach dem Bau im Raumschiff-Inventar des Nutzers.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw13",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech34",
+    "Icon": "technology/34.png",
+    "Name": "Ablative Panzerung",
+    "Group": "Raumschiffschild-Upgrade",
+    "Description": "Erweitert das Verteidigungsspektrum des Raumschiffs um Hitzeschilde, die feindliches Feuer verdampfen lassen.\n\nErhöht die <STELLAR>Leistung des Raumschiffschilds<> signifikant.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 85,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw13",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech35",
+    "Icon": "technology/35.png",
+    "Name": "Raketenwerfer",
+    "Group": "Raumschiff-Projektilwaffe",
+    "Description": "Hochgradig zerstörerische Waffe, die Raumschiffe schnell zerstören kann.\n\nMit <IMG>SHIPFIRE<> aktivieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 100,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 100
+      },
+      {
+        "Id": "raw19",
+        "Quantity": 200
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech36",
+    "Icon": "technology/36.png",
+    "Name": "Große Raketenrohre",
+    "Group": "Raumschiffraketen-Upgrade",
+    "Description": "Vergrößert die Ladekammer des <TECHNOLOGY>Raketenwerfers<> des Raumschiffs und verbessert dadurch die Abgasleistung, wodurch die <STELLAR>Wärmerückgewinnung<> signifikant beschleunigt wird.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 50,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod19",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech37",
+    "Icon": "technology/37.png",
+    "Name": "Photonenkanone",
+    "Group": "Raumschiff-Projektilwaffe",
+    "Description": "Waffe mit großer Zerstörungskraft, die die schnelle Zerstörung anderer Schiffe ermöglicht.\n\nMit <IMG>SHIPFIRE<> aktivieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 100
+      },
+      {
+        "Id": "raw13",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech39",
+    "Icon": "technology/39.png",
+    "Name": "Wirtschaftsscanner",
+    "Group": "Fernsensor-Technologie",
+    "Description": "Ein Upgrade für die riesigen Sensoren des Raumschiffs. Mit diesem Gerät kann der Benutzer auf wirtschaftliche Daten eines Systems zugreifen, ohne es besuchen zu müssen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 150,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech40",
+    "Icon": "technology/40.png",
+    "Name": "Konfliktscanner",
+    "Group": "Fernsensor-Technologie",
+    "Description": "Ein Upgrade für die riesigen Sensoren des Raumschiffs. Mit diesem Gerät kann der Benutzer auf Konfliktdaten der Galaxiekarte zugreifen, ohne sich selbst in Gefahr begeben zu müssen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 150,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur2",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech41",
+    "Icon": "technology/41.png",
+    "Name": "Phasenstrahler",
+    "Group": "Raumschiff-Lasergerät",
+    "Description": "Raumfahrer-Strahlenwaffe und Asteroiden-Bergbaugerät.\n\nDer Nutzer wird daran erinnert, dass zum Aufladen des Gerätes <FUEL>organische Elemente<> erforderlich sind.\n\nMit <IMG>SHIPFIRE<> aktivieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 150,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech42",
+    "Icon": "technology/42.png",
+    "Name": "Fourier-Begrenzer",
+    "Group": "Phasenstrahler-Upgrade",
+    "Description": "Rüstet den <TECHNOLOGY>Phasenstrahler<> mit einem neuen, auf Nanit basierendem Schaltkreis aus, durch den sich die Grenzen der Leistungsfähigkeit eines Lasers umgehen lassen.\n\nErhöht die <STELLAR>Hitzeableitung<> signifikant.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech43",
+    "Icon": "technology/43.png",
+    "Name": "Positronenwerfer",
+    "Group": "Hochenergie-Raumschiffwaffe",
+    "Description": "Die Schüsse erhalten einen breiten Zerstörungskegel.\n\nWegen der reduzierten Reichweite und Feuerrate wird dem Nutzer empfohlen, Ziele in unmittelbarer Nähe anzugreifen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 150,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw27",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech44",
+    "Icon": "technology/44.png",
+    "Name": "Fragment-Superauflader",
+    "Group": "Raumschiff-Positronenwerfer-Upgrade",
+    "Description": "Überholt den Schussmechanismus des <TECHNOLOGY>Positronenwerfers<>, wodurch die Partikel schneller und genauer abgeschossen werden können.\n\nVerbessert die <STELLAR>Reichweite<> und die <STELLAR>Genauigkeit<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech45",
+    "Icon": "technology/45.png",
+    "Name": "Inframesser-Beschleuniger",
+    "Group": "Schnellfeuer-Raumschiffwaffe",
+    "Description": "Feuert in anhaltenden, schnellen Sequenzen.\n\nDem Nutzer wird geraten, die Salven einzuschränken, da die Kanone sehr schnell überhitzen kann.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 150,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw29",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech46",
+    "Icon": "technology/46.png",
+    "Name": "Nichtlineare Optik",
+    "Group": "Photonenkanonen-Upgrade",
+    "Description": "Ersetzt die gewöhnliche Optik der <TECHNOLOGY>Photonenkanone<> durch eine experimentelle Glasanordnung und verbessert dadurch die Leistung im Kampf.\n\nErhöht die <STELLAR>Wärmeableiterkapazität<> signifikant.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 75,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod5",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech47",
+    "Icon": "technology/47.png",
+    "Name": "Zyklotron-Balliste",
+    "Group": "Raumschiffwaffe ohne Zielsuchfunktion",
+    "Description": "Feuert eine große, konzentrierte Kugel aufgeladener Partikel auf ein frontales Ziel und verursacht schweren Schaden. Die Salve besitzt keine Zielsuchfunktion und folgt ihrer Flugbahn, bis sie auf ein Hindernis trifft.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 150,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw28",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech48",
+    "Icon": "technology/48.png",
+    "Name": "Dysonpumpe",
+    "Group": "Raumschiff-Zyklotron-Upgrade",
+    "Description": "Ersetzt den Wärmeableiter der <TECHNOLOGY>Zyklotron-Balliste<>, indem die gesamte Einheit mit einer hitzeabsorbierenden Megastruktur umgeben wird. Die abgegebene Wärme wird wiederverwendet, um die Kampfeffizienz zu erhöhen.\n\nErhöht die <STELLAR>Hitzeableitung<> signifikant.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod117",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech49",
+    "Icon": "technology/49.png",
+    "Name": "Frachter-Hyperantrieb",
+    "Group": "Lichtgeschwindigkeit-Warp-Antrieb",
+    "Description": "Hyperlichtantrieb, der einem Raumschiff Warp-Geschwindigkeit und Sprünge zwischen benachbarten Systemen ermöglicht.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod1",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod2",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 500
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech56",
+    "Icon": "tradeItems/7.png",
+    "Name": "Rumpfbruch",
+    "Group": "Beschädigte Raumschiffkomponente",
+    "Description": "Raumschiff-Teilsystem <FUEL>schwer beschädigt<>. Platz kann nicht zur <STELLAR>Lagerung<> oder für <TECHNOLOGY>Technologie<> genutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDie Kernfunktionalität des Raumschiffs ist nicht betroffen. Durch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 200
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech57",
+    "Icon": "rawMaterials/53.png",
+    "Name": "Verrostete Schaltkreise",
+    "Group": "Beschädigte Raumschiffkomponente",
+    "Description": "Raumschiff-Teilsystem <FUEL>schwer beschädigt<>. Platz kann nicht zur <STELLAR>Lagerung<> oder für <TECHNOLOGY>Technologie<> genutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDie Kernfunktionalität des Raumschiffs ist nicht betroffen. Durch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 200
+      },
+      {
+        "Id": "raw17",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech58",
+    "Icon": "tradeItems/4.png",
+    "Name": "Geborstenes Bollwerk",
+    "Group": "Beschädigte Raumschiffkomponente",
+    "Description": "Raumschiff-Teilsystem <FUEL>schwer beschädigt<>. Platz kann nicht zur <STELLAR>Lagerung<> oder für <TECHNOLOGY>Technologie<> genutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDie Kernfunktionalität des Raumschiffs ist nicht betroffen. Durch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw34",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech59",
+    "Icon": "products/49.png",
+    "Name": "Strahlungsleck",
+    "Group": "Beschädigte Raumschiffkomponente",
+    "Description": "Raumschiff-Teilsystem <FUEL>schwer beschädigt<>. Platz kann nicht zur <STELLAR>Lagerung<> oder für <TECHNOLOGY>Technologie<> genutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDie Kernfunktionalität des Raumschiffs ist nicht betroffen. Durch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw24",
+        "Quantity": 300
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech60",
+    "Icon": "rawMaterials/52.png",
+    "Name": "Versagen des Sicherheitssystems",
+    "Group": "Beschädigte Raumschiffkomponente",
+    "Description": "Raumschiff-Teilsystem <FUEL>schwer beschädigt<>. Platz kann nicht zur <STELLAR>Lagerung<> oder für <TECHNOLOGY>Technologie<> genutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDie Kernfunktionalität des Raumschiffs ist nicht betroffen. Durch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 100
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 120
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 90
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech61",
+    "Icon": "tradeItems/34.png",
+    "Name": "Beschädigte Getriebe",
+    "Group": "Beschädigte Raumschiffkomponente",
+    "Description": "Raumschiff-Teilsystem <FUEL>schwer beschädigt<>. Platz kann nicht zur <STELLAR>Lagerung<> oder für <TECHNOLOGY>Technologie<> genutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDie Kernfunktionalität des Raumschiffs ist nicht betroffen. Durch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 300
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 6
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech62",
+    "Icon": "technology/62.png",
+    "Name": "Analysevisier",
+    "Group": "Binokularer Marker",
+    "Description": "Spezielle <TECHNOLOGY>Entdeckungs-<> und <TECHNOLOGY>Untersuchungs-<>Einheit.\n\nErhöht die Leistung des Standard-<TECHNOLOGY>Scanners<> durch Projektion von detaillierten Umgebungsdaten direkt auf das Sichtfeld des Benutzers. Ermöglicht die Identifikation von <STELLAR>interessanten Orten aus der Distanz<>.\n\nDas Helmvisier generiert beim Studium von <TRADEABLE>Pflanzen<>, <FUEL>Tieren<> und <TECHNOLOGY>Mineralien<> <COMMODITY>wertvolle Daten<>.\n\nZur Bedienung <IMG>AIM<> gedrückt halten. Zum Zoomen <IMG>ZOOM<> drücken.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech63",
+    "Icon": "technology/63.png",
+    "Name": "Scanner",
+    "Group": "Topografisches Gutachten",
+    "Description": "Eine Verstärkung des <TECHNOLOGY>eigenen Oberflächenradars<> für das Multiwerkzeug. \n\nDer Scanner setzt einen hochenergetischen Puls frei, der <COMMODITY>lebenswichtige Ressourcen<> in der direkten Umgebung anzeigt. Die Daten werden über den Exo-Anzug direkt in das visuelle Nervensystem des Benutzers übertragen.\n \nLokalen Scan mit <IMG>SCAN<> aktivieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 150
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech64",
+    "Icon": "technology/64.png",
+    "Name": "Wellenformwiederverwerter",
+    "Group": "Multiwerkzeug-Upgrade",
+    "Description": "Ein leistungsstarker Prozessor, der in das <TECHNOLOGY>Scan-System<> des Multiwerkzeugs eingebaut wird, damit sich das Gerät signifikant schneller auflädt.\n\nErweitert die <STELLAR>potenzielle Scan-Frequenz<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech65",
+    "Icon": "technology/65.png",
+    "Name": "Untersuchungsgerät",
+    "Group": "Analysevisier-Upgrade",
+    "Description": "Ein unabhängiges Schaltkreis-Upgrade für das <TECHNOLOGY>Analysevisier<>, das die Scan-Vorrichtung um eine Echtzeitanalyse des Terrains erweitert.\n\nWechsle mit <IMG>SURVEYFILTERL<>/<IMG>SURVEYFILTERR<> zwischen den Visiermodi. Verwende den <STELLAR>Untersuchungsmodus<>, um nach versteckten Ressourcen im Terrain zu suchen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 320,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech66",
+    "Icon": "technology/66.png",
+    "Name": "Terrainmanipulator",
+    "Group": "Werkzeug zur Landschaftsverformung",
+    "Description": "Fortgeschrittenes Terraforming-Gerät. Dieses Modul überlädt vorhandene Multiwerkzeug-Systeme und ermöglicht es dem Benutzer, die Regionen nach seinen Vorstellungen umzugestalten.\n\nGeladen mit <EARTH>metallischen Elementen<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 50,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod11",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech67",
+    "Icon": "technology/67.png",
+    "Name": "Eigenes Kraftfeld",
+    "Group": "Defensive Schildtechnologie",
+    "Description": "Bei Aktivierung bezieht dieses Modul Energie von <VAL_ON>Exo-Anzug-Lebenserhaltungs-<>Systemen. Dabei wird das Multiwerkzeug überladen, das elektromagnetische Feld um den Benutzer gestört und ein <COMMODITY>starker eigener Schild<> aufgebaut.\n\nObwohl dieser Schild wirksam vor Laserfeuer schützt, sollte der Benutzer daran denken, dass das Multiwerkzeug für keine anderen Funktionen zur Verfügung steht, solange es den Schild mit Energie speist.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 80,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech68",
+    "Icon": "technology/65.png",
+    "Name": "Kampfvisier",
+    "Group": "Waffen-Präzisionsverbesserung",
+    "Description": "Ein stabilisierendes Waffenvisier für präzise Kampfhandlungen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 80,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech69",
+    "Icon": "technology/69.png",
+    "Name": "Minenlaser",
+    "Group": "Mineralien-Extraktionslaser",
+    "Description": "Multiwerkzeug-<TECHNOLOGY>Minenlaser<>, angetrieben von <FUEL>kohlenstoffbasierten Elementen<>. Feuere den Laser mit <IMG>ATTACK<> ab. Eine Fokussierungsoptik im Multiwerkzeug, ermöglicht einen <STELLAR>hochenergetischen Strahl<>. Der Laser stimuliert Moleküle in gewöhnlichen <STELLAR>organischen oder geologischen Objekten<> und kann so als Bergbaugerät eingesetzt werden.\n<FUEL>WARNUNG<>: Zerstörung der Pflanzen, Tiere oder Mineralien kann die Aufmerksamkeit der Wächter erregen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech70",
+    "Icon": "technology/70.png",
+    "Name": "Fortgeschrittener Minenlaser",
+    "Group": "Minenlaser-Begleiteinheit",
+    "Description": "Ersetzt die Optik des Standard-<TECHNOLOGY>Minenlasers<> durch hochwertiges lebendes Glas, wodurch der Strahl besonders effektiv gegen <STELLAR>große und/oder seltene Ressourcenansammlungen<> wird.\n\nDie Linse passt sich automatisch an minimale Fluktuationen in der Wellenform des Strahls an, minimiert die Streuung und <STELLAR>steigert das Abbaupotenzial des Gerätes<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 75,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod5",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech71",
+    "Icon": "technology/70.png",
+    "Name": "Optischer Bohrer",
+    "Group": "Materialertragsverstärker",
+    "Description": "Hauchdünne Linsen werden in einer genau kalibrierten Matrix angeordnet, um den <TECHNOLOGY>Minenlaser<> auf atomarer Ebene zu bündeln.\n\nDie zusätzliche Präzision ermöglicht hocheffizienten Abbau. Die Elemente werden effizienter extrahiert, wodurch sich der <STELLAR>Ertrag<> von Gegenständen <STELLAR>erhöht<>, die mit dem Multiwerkzeug gesammelt werden.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 460,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod81",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech72",
+    "Icon": "technology/72.png",
+    "Name": "Blitzwerfer",
+    "Group": "Energie-Projektilwaffe",
+    "Description": "Allzweck-Waffenaufsatz für das <TECHNOLOGY>Multiwerkzeug<>. Mit <IMG>CYCLEWEAPON<> zum Feuermodus wechseln und mit <IMG>ATTACK<> Waffe abfeuern.\n\nDer <TECHNOLOGY>Blitzwerfer<> konfiguriert das Multiwerkzeug so, dass <EARTH>metallische Elemente<> stark aufgeladen und als <STELLAR>Hochgeschwindigkeitsprojektile<> abgefeuert werden, die extremen Schaden bewirken.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech73",
+    "Icon": "technology/73.png",
+    "Name": "Laufionisator",
+    "Group": "Blitzwerfer-Upgrade",
+    "Description": "Erweitert den <TECHNOLOGY>Blitzwerfer<> um ein leistungsstarkes Feldionisierungsgerät, durch das die Stabilität der Projektile in der Luft erhöht wird.\n\nVerbessert die <STELLAR>Genauigkeit des Geräts<> und ermöglicht es dem Benutzer, länger feuern zu können, ohne dabei Einbußen bei der Leistung hinnehmen zu müssen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod54",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech74",
+    "Icon": "technology/73.png",
+    "Name": "Blitzwerfer SM",
+    "Group": "Blitzwerfer-Begleiteinheit",
+    "Description": "Schüsse des Blitzwerfers verursachen beim Einschlag zusätzlichen physischen Schaden.\n\nVerleiht den ionisierten Plasmaschüssen des Nutzers zusätzliche kinetische Energie.\n\nFunktioniert automatisch nach dem Bau im Multiwerkzeug-Inventar des Nutzers.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 160,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech75",
+    "Icon": "technology/75.png",
+    "Name": "Strahl-Kühlmittelsystem Sigma",
+    "Group": "Bergbaustrahl-Upgrade",
+    "Description": "Ein <TECHNOLOGY>signifikantes<> Upgrade für den <TECHNOLOGY>Minenlaser<>.\n\nFügt der Hauptkristallkammer des Minenlasers zusätzliche Reflexionselemente hinzu, wodurch die <STELLAR>Laserenergie<> verstärkt und ungewollter <STELLAR>Wärmeverlust<> verhindert wird.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 160,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech76",
+    "Icon": "technology/76.png",
+    "Name": "Plasmawerfer",
+    "Group": "Explosive Granaten",
+    "Description": "Wirkungsvolle Projektilwaffe. Abgefeuerte Plasmageschosse prallen von Oberflächen ab, bis ihr interner Timer eine große Explosion auslöst.\n \nBenutzt <FUEL>Instabiles Plasma<>. Achtloser Gebrauch kann Schaden beim Nutzer nach sich ziehen.\n \nMit <IMG>ALTATTACK<> aktivieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 150,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod5",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod117",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech77",
+    "Icon": "technology/77.png",
+    "Name": "Geologiekanone",
+    "Group": "Terrainzerstörungsgerät",
+    "Description": "Großkolben-Projektilwerfer. Feuert Plasmageschosse für die <STELLAR>schnelle Bodenausgrabung<> ab.\n \nGeladen mit <FUEL>instabilem Plasma<>. Warnung: Die Locherzeugung durch Sprengstoff kann auch organische Materie in der Nähe beschädigen.\n \nMit <IMG>ALTATTACK<> aktivieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 150,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech78",
+    "Icon": "technology/78.png",
+    "Name": "Glutspeer",
+    "Group": "Energiestrahlwaffe",
+    "Description": "Aggressiver Waffenaufsatz für das <TECHNOLOGY>Multiwerkzeug<>. Mit <IMG>CYCLEWEAPON<> zum Feuermodus wechseln und mit <IMG>ATTACK<> Waffe abfeuern.\n\nDer <TECHNOLOGY>Glutspeer<> fügt Zielen sofortigen Schaden zu.\n\nDer Plasma-Ladevorgang erzeugt einen Bogen aus ionisiertem Gas, der Projektile mit großer Geschwindigkeit antreibt. Der Nutzer kann simultan mit dem Betätigen des Auslösers das Ergebnis der Zerstörung beobachten.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 250,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 150
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech79",
+    "Icon": "technology/79.png",
+    "Name": "Massebeschleuniger",
+    "Group": "Glutspeer-Upgrade",
+    "Description": "Vergrößert die Patronenkammer des <TECHNOLOGY>Glutspeers<>, wodurch die internen Partikelbeschleuniger eine größere Masse und eine höhere Geschwindigkeit erreichen können.\n\nErhöht den <STELLAR>Waffenschaden<> signifikant.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 180,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech80",
+    "Icon": "technology/80.png",
+    "Name": "Streublaster",
+    "Group": "Streuschuss-Projektilwaffe",
+    "Description": "Spezieller <STELLAR>Nahkampf<>-Waffenaufsatz für das <TECHNOLOGY>Multiwerkzeug<>. Mit <IMG>CYCLEWEAPON<> zum Feuermodus wechseln und mit <IMG>ATTACK<> Waffe abfeuern.\n\nDer <TECHNOLOGY>Streublaster<> konfiguriert das Multiwerkzeug so, dass <EARTH>metallische Elemente<> erhitzt, zerschmettert und in einem <STELLAR>breiten Zerstörungskegel<> abgefeuert werden. Die Reichweite ist begrenzt, doch auf kurze Distanz ist das Schrapnell hocheffektiv.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 250,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw31",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech81",
+    "Icon": "technology/81.png",
+    "Name": "Geschossschmierer",
+    "Group": "Streublaster-Upgrade",
+    "Description": "Fortgeschrittene selbstschmierende Komponenten verringern die Reibung innerhalb des <TECHNOLOGY>Streublasters<>, wodurch die <STELLAR>Nachladezeit<> signifikant verkürzt wird.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 180,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech82",
+    "Icon": "technology/82.png",
+    "Name": "Impulswerfer",
+    "Group": "Schnellfeuer-Projektilwaffe",
+    "Description": "Spezieller <STELLAR>Schnellfeuer<>-Waffenaufsatz für das <TECHNOLOGY>Multiwerkzeug<>. Mit <IMG>CYCLEWEAPON<> zum Feuermodus wechseln und mit <IMG>ATTACK<> Waffe abfeuern.\n\nDer <TECHNOLOGY>Impulswerfer<> leitet die Optik des Multiwerkzeugs so um, dass eingefügte <EARTH>metallische Elemente<> ionisiert werden. Diese Projektile werden im Schnellfeuer abgefeuert und bombardieren potenzielle Ziele mit einer <STELLAR>Welle aus hochenergetischem Plasma<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 250,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw6",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech83",
+    "Icon": "technology/83.png",
+    "Name": "Verstärkte Kartuschen",
+    "Group": "Impulswerfer-Upgrade",
+    "Description": "Spezielle Oberwellen-Resonatoren ermöglichen es dem <TECHNOLOGY>Impulswerfer<>, die eingeführte Munition zu teilen, wodurch mit weniger Materialien mehr Schüsse abgefeuert werden können.\n\nErhöht die <STELLAR>Größe des Waffenmagazins<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 180,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech84",
+    "Icon": "technology/84.png",
+    "Name": "Kurzer Schaltkreis",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 200
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech85",
+    "Icon": "products/51.png",
+    "Name": "Durchgebrannter Transistor",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech86",
+    "Icon": "tradeItems/21.png",
+    "Name": "Beschädigte Verkabelung",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod5",
+        "Quantity": 8
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 6
+      },
+      {
+        "Id": "raw12",
+        "Quantity": 126
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech87",
+    "Icon": "technology/87.png",
+    "Name": "Verrosteter Energiekern",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw15",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech88",
+    "Icon": "technology/88.png",
+    "Name": "Beschädigtes Modul",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw26",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw27",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw29",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech89",
+    "Icon": "technology/89.png",
+    "Name": "Kabelstrangschaden",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw24",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw25",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw28",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech90",
+    "Icon": "technology/90.png",
+    "Name": "Fusionsantrieb",
+    "Group": "Exo-Fahrzeug-Energiesystem",
+    "Description": "Ein kompakter, für alle Exo-Fahrzeuge üblicher Fusionskern.\n\nBenötigt Treibstoff.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 25
+      },
+      {
+        "Id": "prod23",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech91",
+    "Icon": "technology/91.png",
+    "Name": "Drift-Aufhängung",
+    "Group": "Exo-Fahrzeug-Handhabungsmodifikation",
+    "Description": "Überholt die Handhabung des Exo-Fahrzeugs durch eine Kombination aus Software-Optimierungen, Druckanpassungen und dem Einbau von Mikrogravitationsbetten in Hauptbestandteile der Aufhängung.\n\nSpeziell darauf abgestimmt, die <STELLAR>Drift<>-Fähigkeit des Exo-Fahrzeugs zu verbessern.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 10,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw24",
+        "Quantity": 50
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech92",
+    "Icon": "technology/91.png",
+    "Name": "Haftungsverstärkungsaufhängung",
+    "Group": "Exo-Fahrzeug-Handhabungsmodifikation",
+    "Description": "Überholt die Handhabung des Exo-Fahrzeugs durch eine Kombination aus Software-Optimierungen, Druckanpassungen und dem Einbau von Mikrogravitationsbetten in Hauptbestandteile der Aufhängung.\n\nSpeziell darauf abgestimmt, die <STELLAR>Kurven<>-Fähigkeit des Exo-Fahrzeugs zu verbessern.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 10,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 50
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech93",
+    "Icon": "technology/91.png",
+    "Name": "Rutsch-Aufhängung",
+    "Group": "Exo-Fahrzeug-Handhabungsmodifikation",
+    "Description": "Überholt die Handhabung des Exo-Fahrzeugs durch eine Kombination aus Software-Optimierungen, Druckanpassungen und dem Einbau von Mikrogravitationsbetten in Hauptbestandteile der Aufhängung.\n\nSpeziell darauf abgestimmt, die <STELLAR>Rutsch<>-Fähigkeit des Exo-Fahrzeugs zu verbessern.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 10,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw28",
+        "Quantity": 50
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech94",
+    "Icon": "technology/94.png",
+    "Name": "Exo-Fahrzeug-Signalbooster",
+    "Group": "Exo-Fahrzeug-Scanausrüstung",
+    "Description": "Ein großer und komplexer Subraum-Radar für den Feldeinsatz.\n\nAufgrund ihres hohen Energiekonsums und der zugehörigen subatomaren Instabilität sind sie nur in Exo-Fahrzeugen zu finden.\n\nDrücke <IMG>QUICK_MENU<> um den Signalbooster zu aktivieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech96",
+    "Icon": "technology/96.png",
+    "Name": "Exo-Fahrzeug-Signalbooster-Upgrade Tau",
+    "Group": "Exo-Fahrzeug-Signalbooster-Upgrade",
+    "Description": "Ermöglicht zusätzliche Gebäudetypen, die vom Exo-Fahrzeug-Signalbooster erfasst werden können.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 320,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 150
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 50
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech97",
+    "Icon": "technology/97.png",
+    "Name": "Exo-Fahrzeug-Beschleunigungsmodul",
+    "Group": "Exo-Fahrzeug-Antriebs-Upgrade",
+    "Description": "Ein effizienter Plasmainjektor, der an den Antrieb gekoppelt ist und kurze Geschwindigkeitsschübe ermöglicht.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 180,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 2
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 15
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech98",
+    "Icon": "technology/98.png",
+    "Name": "Exo-Fahrzeug-Minenlaser",
+    "Group": "Exo-Fahrzeug-Bergbauaufsatz",
+    "Description": "Ein Minenlaser, der für den Handbetrieb zu unhandlich ist und deshalb nur an Exo-Fahrzeugen angebracht zu finden ist.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 180,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod23",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech99",
+    "Icon": "technology/99.png",
+    "Name": "Exo-Fahrzeug-Minenlaser-Upgrade Sigma",
+    "Group": "Exo-Fahrzeug-Bergbau-Upgrade",
+    "Description": "Erhöht die Energie des Exo-Fahrzeug-Minenlasers.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 210,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech100",
+    "Icon": "technology/100.png",
+    "Name": "Exo-Fahrzeug-Bordkanone",
+    "Group": "Exo-Fahrzeug-Waffenaufsatz",
+    "Description": "Durch den hohen Energiebedarf dieser mächtigen Waffe muss sie zum Abfeuern an einem Exo-Fahrzeug montiert sein.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 210,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw19",
+        "Quantity": 100
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech101",
+    "Icon": "technology/101.png",
+    "Name": "Humboldt-Antrieb",
+    "Group": "Exo-Fahrzeug-Energiesystem",
+    "Description": "Ein wärmeeffizienter, umkehrungssicherer Reaktormotor, der die Nautilon selbst in extremen Tiefen antreiben kann.\n\nAngetrieben durch <FUEL>Hydrothermale Treibstoffzellen<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 25
+      },
+      {
+        "Id": "prod23",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech102",
+    "Icon": "technology/102.png",
+    "Name": "Nautilon-Kanone",
+    "Group": "U-Boot-Waffe",
+    "Description": "Eine Bordkanone, die speziell für das <STELLAR>Nautilon-U-Boot<> entwickelt wurde.\n\nDas Waffensystem verwendet leistungsstarke Energie, um kleine Wassermengen zu überhitzen und in Richtung des vorgesehenen Ziels zu feuern.\n\nSie wurde insbesondere für den Kampf gegen biologische Entitäten entwickelt und erweist sich beim Einsatz als Bergbaugerät als nicht effektiv.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 250,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur17",
+        "Quantity": 2
+      },
+      {
+        "Id": "cur32",
+        "Quantity": 6
+      },
+      {
+        "Id": "raw17",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech103",
+    "Icon": "technology/98.png",
+    "Name": "Tethys-Strahl",
+    "Group": "U-Boot-Minenlaser",
+    "Description": "Ein Bord-Lasersystem, das speziell für das <STELLAR>Nautilon-U-Boot<> entwickelt wurde.\n\nFeuert einen konzentrierten Plasmastrahl auf das vorgesehene Ziel, welches dadurch in Brand gesteckt wird. Dieser Auslösermechanismus ermöglicht den Einsatz von hochenergetischen, optischen Abbausystemen in einem flüssigen Medium.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 450,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur17",
+        "Quantity": 10
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw17",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech104",
+    "Icon": "technology/104.png",
+    "Name": "Hochleistungssonar",
+    "Group": "U-Boot-Analysegerät",
+    "Description": "Ein detailgenaues Sonargerät, mit dem die Scanner-Technologie an Bord eines U-Boots der Nautilon-Klasse auf Analysevisier-Niveau verbessert werden kann.\nDrücke <IMG>SCAN<>, um das Hochleistungssonar zu aktivieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 10,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 50
+      },
+      {
+        "Id": "cur32",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech105",
+    "Icon": "technology/105.png",
+    "Name": "Osmotischer Generator",
+    "Group": "Humboldt-Antrieb-Upgrade",
+    "Description": "Wird im Antriebssystem an Bord des <STELLAR>Nautilon-U-Boots<> installiert.\n\nGewinnt Energie, indem er den steigenden Salzgehalt in der Tiefsee nutzt, wodurch sich der <TECHNOLOGY>Humboldt-Antrieb<> im Falle eines Treibstoffnotfalls langsam wieder auffüllen kann.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 350,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur17",
+        "Quantity": 6
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 150
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech106",
+    "Icon": "technology/106.png",
+    "Name": "Schließmechanismus",
+    "Group": "Beschädigte Komponente",
+    "Description": "Eine einfache Sperrvorrichtung, die unbefugte Diebe fernhält. Aufgrund des Schadens ist sie dauerhaft verschlossen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech107",
+    "Icon": "technology/88.png",
+    "Name": "Magnetschloss",
+    "Group": "Beschädigte Komponente",
+    "Description": "Eine fortgeschrittene Sperrvorrichtung. Aufgrund eines Polungsproblems ist sie permanent verschlossen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw14",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech108",
+    "Icon": "technology/108.png",
+    "Name": "Supraleitendes Schloss",
+    "Group": "Beschädigte Komponente",
+    "Description": "Eine äußerst fortschrittliche Sperrvorrichtung. Aufgrund der beschädigten Schaltkreise des Magneten lässt sie sich nicht mehr öffnen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw12",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech109",
+    "Icon": "technology/109.png",
+    "Name": "Eingabeterminal",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein Terminal für die manuelle Steuerung der Vorrichtung. Es kann keine Eingabe verarbeiten, da es beschädigt ist.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw12",
+        "Quantity": 10
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech110",
+    "Icon": "technology/110.png",
+    "Name": "Bio-Eingabesensor",
+    "Group": "Beschädigte Komponente",
+    "Description": "Eine fortgeschrittene Kontrolleinheit für die Interaktion von Gerät/Fleisch. Sie ist leider kaputt. Es wäre unklug, sie in diesem Zustand zu bedienen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech111",
+    "Icon": "tradeItems/14.png",
+    "Name": "Boilereinheit",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein kleiner Boiler, der Hitze erzeugt, damit das Gerät in problematischen Klimata funktioniert. Aufgrund eines Fehlers ist der Boiler beschädigt.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech112",
+    "Icon": "technology/112.png",
+    "Name": "Winziger Motor",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein sehr kleiner Motor, der sehr kleine Teile antreibt. Er ist verätzt und voll mit winzigen Rostflecken.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw34",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech113",
+    "Icon": "tradeItems/25.png",
+    "Name": "Kühlungssystem",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein Kühlsystem mit einer Pumpe für die Kühlung des Gerätes. Leider ist das System selbst überhitzt und funktioniert nicht mehr.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 5
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech114",
+    "Icon": "building/244.png",
+    "Name": "Ausgabebildschirm",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein Anzeigeterminal, um dem Benutzer den Gerätestatus mitzuteilen. Da das Terminal kaputt ist, kann es dem Benutzer nicht mitteilen, dass es kaputt ist.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 7
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech115",
+    "Icon": "technology/13.png",
+    "Name": "Manipulationspräventionsgerät",
+    "Group": "Beschädigte Komponente",
+    "Description": "Eine Einheit, die wichtige Systeme zerstört, sollte eine unbefugte Partei das Gerät sabotieren wollen. Leider hat die Einheit selbst eine Fehlfunktion, weshalb sie andere Systeme beschädigen wird, bis sie repariert ist.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw31",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech116",
+    "Icon": "technology/116.png",
+    "Name": "Sicherheitsalarm",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein kleiner Lichthupenhybrid, der vor unbefugtem Gerätezugriff warnen soll. Der Alarm ist beschädigt und sorgt dafür, dass andere Stromkreise überladen werden.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw12",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech117",
+    "Icon": "products/63.png",
+    "Name": "Federgehäuse",
+    "Group": "Beschädigte Komponente",
+    "Description": "Das Gehäuse einer stark komprimierten Feder. Es hatte einen Riss, weshalb die Feder förmlich herausgeschossen ist und den Rest des Gerätes beschädigt hat.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw11",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech118",
+    "Icon": "technology/118.png",
+    "Name": "Thermoregler",
+    "Group": "Beschädigte Komponente",
+    "Description": "Eine Kontrolleinheit für die Temperaturregelung des Gerätes. Der Sensor ist beschädigt, weshalb die Einheit zu falschen Zeiten kühlt und heizt.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw33",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech119",
+    "Icon": "technology/84.png",
+    "Name": "Treibstoffpumpe",
+    "Group": "Beschädigte Komponente",
+    "Description": "Eine Großraumpumpe, die das Gerät mit Treibstoff unter allen Gravitationsbedingungen versorgen kann. Der Filter wird von einer seltsamen Substanz verstopft, weshalb sie an Energie verliert.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 10
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech120",
+    "Icon": "tradeItems/34.png",
+    "Name": "Servoarm",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein kleines mechanisches Gelenk für die Reparatur kleiner mechanischer Fehler im Gerät. Aufgrund eines Fehlers platziert das Gelenk funktionierende Bauteile falsch, weshalb noch mehr Schaden entsteht.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech121",
+    "Icon": "technology/121.png",
+    "Name": "Magnetspule",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein Relaisschalter, der beim Einschalten des Gerätes hilft. Die Verbindungen sind verätzt und die Magnetspule funktioniert nicht mehr.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech122",
+    "Icon": "technology/122.png",
+    "Name": "Druckkammer",
+    "Group": "Beschädigte Komponente",
+    "Description": "Eine kleine Druckkammer für die Herstellung von komprimiertem Gas, das das Funktionieren des Gerätes garantiert. Die Kammer hat Risse, weshalb Gas austritt.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw32",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech123",
+    "Icon": "products/70.png",
+    "Name": "Hauptschaltkreis",
+    "Group": "Beschädigte Komponente",
+    "Description": "Der Kontrollschaltkreis für alle anderen Bauteile des Gerätes. Schaden an diesem Schaltkreis hat fatale Folgen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw34",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech124",
+    "Icon": "tradeItems/21.png",
+    "Name": "Stromverteiler",
+    "Group": "Beschädigte Komponente",
+    "Description": "Die zentrale Energieeinheit dieses Gerätes. Aufgrund des Schadens leitet diese Einheit alle Energie auf einen bestimmten Schaltkreis um, was für einen gefährlichen Kurzschluss sorgt.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw32",
+        "Quantity": 20
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech125",
+    "Icon": "tradeItems/10.png",
+    "Name": "Ladungsausgleicher",
+    "Group": "Beschädigte Komponente",
+    "Description": "Eine kleine Einheit für die Regulierung des Energieflusses im Gerät. Ein Fehler führte zu einem Kurzschluss, der andere Bauteile beschädigt.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw19",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech126",
+    "Icon": "technology/126.png",
+    "Name": "Netzwerkinterface",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein universelles Netzwerkinterface, über das sich das Gerät mit einem entfernten Kontrollzentrum verbinden kann. Das Interface wurde beschädigt und interpretiert die Strahlung im Hintergrund als Netzwerksignale, weshalb die Daten in anderen Schaltkreisen fehlerhaft sind.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech127",
+    "Icon": "tradeItems/15.png",
+    "Name": "Sicherheitssteuerung",
+    "Group": "Beschädigte Komponente",
+    "Description": "Die Sicherheitssteuerung schottet im Fall einer Fehlfunktion gefährliche Bauteile ab. Ein überempfindlicher Auslöser hat die Abschottung aktiviert, weshalb das Gerät nicht betriebsbereit ist.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw19",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech128",
+    "Icon": "tradeItems/7.png",
+    "Name": "Wechselstromgenerator",
+    "Group": "Beschädigte Komponente",
+    "Description": "Der Wechselstromgenerator reguliert und generiert die Energie des Gerätes. Aufgrund einer seltsamen Korrosion funktioniert das Gerät nicht richtig.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 15
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech129",
+    "Icon": "products/54.png",
+    "Name": "Photovoltaikmodul",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein kleines, aber effizientes Paneel, das Licht in Energie umwandelt. Es ist leider beschädigt und leistet keine zuverlässigen Dienste mehr.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw13",
+        "Quantity": 10
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech130",
+    "Icon": "tradeItems/34.png",
+    "Name": "Getriebegehäuse",
+    "Group": "Beschädigte Komponente",
+    "Description": "Der Getriebemechanismus des Gerätes. Das Schmiermittel, das für die Funktionstüchtigkeit des Gerätes sorgt, scheint mit einem grünen Schleim aus einer anderen Welt ausgetauscht worden zu sein. Das Getriebe steckt fest.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech131",
+    "Icon": "curiosities/25.png",
+    "Name": "Uraltes Schloss",
+    "Group": "Schwerer Schließmechanismus",
+    "Description": "Ein geheimnisvolles Schloss mit mehreren Schlüssellöchern. Dieses Relikt hütet mit Sicherheit einen wertvollen Schatz.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "other3",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech132",
+    "Icon": "curiosities/17.png",
+    "Name": "Perlendarbringung",
+    "Group": "Darbringung an das Meer",
+    "Description": "Die Truhe erfordert eine <SPECIAL>lebende Perle<>, die man von riesigen Muttermollusken ernten kann, die auf dem Meeresboden wachsen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur17",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech133",
+    "Icon": "products/3.png",
+    "Name": "Beschädigte Elektrode",
+    "Group": "Beschädigte Komponente",
+    "Description": "Dieses <TECHNOLOGY>Exo-Anzug-Upgrade-Modul<> ist kritisch beschädigt. Repariere die Systeme, um die Upgrade-Funktionalität wiederherzustellen.\n\nNach der Reparatur muss der Benutzer für jegliche Exo-Anzug-Upgrades <STELLAR>nichts bezahlen<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw13",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech134",
+    "Icon": "tradeItems/4.png",
+    "Name": "Geborstener Energiekern",
+    "Group": "Beschädigte Komponente",
+    "Description": "Dieses <TECHNOLOGY>Exo-Anzug-Upgrade-Modul<> ist kritisch beschädigt. Repariere die Systeme, um die Upgrade-Funktionalität wiederherzustellen.\n\nNach der Reparatur muss der Benutzer für jegliche Exo-Anzug-Upgrades <STELLAR>nichts bezahlen<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod2",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech135",
+    "Icon": "technology/135.png",
+    "Name": "Defektes Hologramm",
+    "Group": "Beschädigte Komponente",
+    "Description": "Dieses <TECHNOLOGY>Exo-Anzug-Upgrade-Modul<> ist kritisch beschädigt. Repariere die Systeme, um die Upgrade-Funktionalität wiederherzustellen.\n\nNach der Reparatur muss der Benutzer für jegliche Exo-Anzug-Upgrades <STELLAR>nichts bezahlen<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech136",
+    "Icon": "technology/136.png",
+    "Name": "Warpkernresonator",
+    "Group": "Hyperantrieb-Begleiteinheit",
+    "Description": "Eine Verstärkung für den riesigen Hyperantrieb eines <STELLAR>interstellaren Frachters<>.\n\nDie Quanten-Resonanz verbessert die Robustheit des Antriebs während des Reisens mit Hyperlichtgeschwindigkeit und bietet dem Nutzer die Möglichkeit, zu Sternen zu springen, die bislang außerhalb seiner Reichweite lagen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod2",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw20",
+        "Quantity": 250
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech137",
+    "Icon": "technology/137.png",
+    "Name": "Plasma-Warpinjektor",
+    "Group": "Hyperantrieb-Begleiteinheit",
+    "Description": "Eine Verstärkung für den riesigen Hyperantrieb eines <STELLAR>interstellaren Frachters<>.\n\nDer Hyperantrieb profitiert von hochentwickelter Fusionstechnologie, die dem Raumschiff höhere Warp-Geschwindigkeiten und -Intensitäten ermöglicht. Das Schiff des Nutzers kann tiefer in den Weltraum springen und weiter entfernte Planetensysteme anfliegen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 8,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod2",
+        "Quantity": 5
+      },
+      {
+        "Id": "raw21",
+        "Quantity": 250
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech138",
+    "Icon": "technology/138.png",
+    "Name": "Realitätsentwirrer",
+    "Group": "Hyperantrieb-Begleiteinheit",
+    "Description": "Eine Verstärkung für den riesigen Hyperantrieb eines <STELLAR>interstellaren Frachters<>.\n\nUngedrosselte, aber stabilisierte Fusionssysteme werden in den Hyperantrieb des Nutzers integriert. Ermöglicht dem Raumschiff noch weitere Sprungdistanzen in die Tiefen des Weltraums.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 12,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod2",
+        "Quantity": 6
+      },
+      {
+        "Id": "raw22",
+        "Quantity": 250
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech139",
+    "Icon": "technology/136.png",
+    "Name": "Verstärkter Warp-Schild",
+    "Group": "Hyperantrieb-Upgrade: Rote Systeme",
+    "Description": "Verbessert die Kernbindemagneten des Hyperantriebs, was eine schnelle Zerlegung beim Versuch, seltene <FUEL>rote Sternenkörper<> zu erreichen, verhindert.\n\nEs wird empfohlen, dass der Nutzer über die <VAL_ON>galaktische Karte<> auf die Hyperantrieb-Systeme zugreift.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw20",
+        "Quantity": 250
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech140",
+    "Icon": "technology/137.png",
+    "Name": "Chromatischer Warp-Schild",
+    "Group": "Hyperantrieb-Upgrade: Grüne Systeme",
+    "Description": "Verbessert die Schildintegrität des Hyperantriebs, was Realitätsstörungen beim Versuch, seltene <TRADEABLE>grüne Sternenkörper<> zu erreichen, verhindert.\n\nEs wird empfohlen, dass der Nutzer über die <VAL_ON>galaktische Karte<> auf die Hyperantrieb-Systeme zugreift.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 8,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw21",
+        "Quantity": 250
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech141",
+    "Icon": "technology/138.png",
+    "Name": "Temporaler Warp-Computer",
+    "Group": "Hyperantrieb-Upgrade: Blaue Systeme",
+    "Description": "Verbessert die Berechnungsmatrix des Hyperantriebs, was temporale Anomalien beim Versuch, seltene <TECHNOLOGY>blaue Sternenkörper<> zu erreichen, verhindert.\n\nEs wird empfohlen, dass der Nutzer über die <VAL_ON>galaktische Karte<> auf die Hyperantrieb-Systeme zugreift.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 12,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw22",
+        "Quantity": 250
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech142",
+    "Icon": "technology/6.png",
+    "Name": "Luftschubantrieb",
+    "Group": "Jetpack-Erweiterung",
+    "Description": "Ein starkes Upgrade für das <TECHNOLOGY>Jetpack des Exo-Anzugs<>, das ein begrenztes <STELLAR>Wiederaufladen des Jetpacks<> in der Luft ermöglicht.\n\nÄußerst effiziente Kompressoren, die rund um den Jetpackauspuff angebracht sind, nutzen die durch den <STELLAR>andauernden Fall<> generierte Windströmung und recyceln einen Teil dieser Energie zu Jetpack-Treibstoff.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 460,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 150
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 150
+      },
+      {
+        "Id": "raw29",
+        "Quantity": 150
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech143",
+    "Icon": "technology/143.png",
+    "Name": "Persönliche Raffinerie",
+    "Group": "Selbst getragene Raffinerieeinheit",
+    "Description": "Eine kompakte Erweiterung für den Exo-Anzug, die eine kleine <TECHNOLOGY>tragbare Raffinerie<> installiert, auf die der Benutzer direkt über die Schnittstelle des Exo-Anzugs zugreifen kann.\n\nDie Einheit benötigt <FUEL>Treibstoff<> und kann immer nur eine Substanz raffinieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 360,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 150
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech144",
+    "Icon": "technology/144.png",
+    "Name": "Instabilitätsantrieb",
+    "Group": "Impulsantriebserweiterung",
+    "Description": "Ein sehr fortschrittliches Upgrade für den <TECHNOLOGY>Impulsantrieb<>, das die <STELLAR>Treibstoffeffizienz<> stark erhöht.\n\nDie Tritiumvorräte werden in einen Zyklus aus Schwarzen Minilöchern umgeleitet. Daraus resultierende Fluktuationen in der Mikrogravitation werden nutzbar gemacht, um die Antriebskraft des Raumschiffs weit über konventionelle Verbrennungssysteme hinaus zu verstärken.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 460,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur30",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod17",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech145",
+    "Icon": "technology/144.png",
+    "Name": "Unterlichtverstärker",
+    "Group": "Impulsantriebserweiterung",
+    "Description": "Ein sehr fortschrittliches Upgrade für den <TECHNOLOGY>Impulsantrieb<>, das die <STELLAR>interplanetare Geschwindigkeit<> stark erhöht.\n\nNatürlich auftretende Rasterverschiebungseffekte innerhalb des Impulsantriebs werden durch tritiumbasierte Resonatoren verstärkt, was seine maximale Unterlichtgeschwindigkeit erhöht.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 460,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 200
+      },
+      {
+        "Id": "raw34",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech146",
+    "Icon": "technology/146.png",
+    "Name": "Notfall-Warp-Einheit",
+    "Group": "Hyperantriebserweiterung",
+    "Description": "Ein signifikantes Upgrade für den <TECHNOLOGY>Hyperantrieb<>, das ein <STELLAR>schnelles Warpen<> ermöglicht, auch wenn konventionelle Systeme aufgrund von <WARNING>Raumschiff-Kämpfen<> blockiert sind. Der Zugriff auf das Notfall-Warp-System erfolgt über das <STELLAR>Schnellmenü<>.\n\n<FUEL>WARNUNG:<> Bei Systemen zur schnellen Mobilisierung kann der Benutzer kein Ziel vorgeben. Unerwartete Lichtgeschwindigkeitsereignisse werden der Einheit Schaden zufügen und <STELLAR>regelmäßige Reparaturen<> erforderlich machen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 240,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 220
+      },
+      {
+        "Id": "prod17",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech147",
+    "Icon": "technology/147.png",
+    "Name": "Q-Resonator",
+    "Group": "Raumschiff-Inframesser-Upgrade",
+    "Description": "Verbessert den <TECHNOLOGY>Inframesser-Beschleuniger<> und verdichtet die internen Wellenformen, damit die gewöhnliche Schussabfolge um einen Schuss erweitert werden kann.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech148",
+    "Icon": "tradeItems/14.png",
+    "Name": "Hydraulikschaden",
+    "Group": "Beschädigte Raumschiffkomponente",
+    "Description": "Raumschiff-Teilsystem <FUEL>schwer beschädigt<>. Platz kann nicht zur <STELLAR>Lagerung<> oder für <TECHNOLOGY>Technologie<> genutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDie Kernfunktionalität des Raumschiffs ist nicht betroffen. Durch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 100
+      },
+      {
+        "Id": "raw28",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech149",
+    "Icon": "technology/89.png",
+    "Name": "Explodierte Verkleidung",
+    "Group": "Beschädigte Raumschiffkomponente",
+    "Description": "Raumschiff-Teilsystem <FUEL>schwer beschädigt<>. Platz kann nicht zur <STELLAR>Lagerung<> oder für <TECHNOLOGY>Technologie<> genutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDie Kernfunktionalität des Raumschiffs ist nicht betroffen. Durch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 250
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 150
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech150",
+    "Icon": "technology/150.png",
+    "Name": "Verrostete Tanks",
+    "Group": "Beschädigte Raumschiffkomponente",
+    "Description": "Raumschiff-Teilsystem <FUEL>schwer beschädigt<>. Platz kann nicht zur <STELLAR>Lagerung<> oder für <TECHNOLOGY>Technologie<> genutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDie Kernfunktionalität des Raumschiffs ist nicht betroffen. Durch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw38",
+        "Quantity": 150
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech151",
+    "Icon": "technology/112.png",
+    "Name": "Durchgebrannter Kompressor",
+    "Group": "Beschädigte Raumschiffkomponente",
+    "Description": "Raumschiff-Teilsystem <FUEL>schwer beschädigt<>. Platz kann nicht zur <STELLAR>Lagerung<> oder für <TECHNOLOGY>Technologie<> genutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDie Kernfunktionalität des Raumschiffs ist nicht betroffen. Durch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod1",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 4
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech152",
+    "Icon": "products/52.png",
+    "Name": "Verbrannte Platten",
+    "Group": "Beschädigte Raumschiffkomponente",
+    "Description": "Raumschiff-Teilsystem <FUEL>schwer beschädigt<>. Platz kann nicht zur <STELLAR>Lagerung<> oder für <TECHNOLOGY>Technologie<> genutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDie Kernfunktionalität des Raumschiffs ist nicht betroffen. Durch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 150
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw34",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech153",
+    "Icon": "products/63.png",
+    "Name": "Geschmolzene Treibstoffzelle",
+    "Group": "Beschädigte Raumschiffkomponente",
+    "Description": "Raumschiff-Teilsystem <FUEL>schwer beschädigt<>. Platz kann nicht zur <STELLAR>Lagerung<> oder für <TECHNOLOGY>Technologie<> genutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDie Kernfunktionalität des Raumschiffs ist nicht betroffen. Durch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 5
+      },
+      {
+        "Id": "raw25",
+        "Quantity": 120
+      },
+      {
+        "Id": "raw29",
+        "Quantity": 150
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech154",
+    "Icon": "technology/112.png",
+    "Name": "Verrostete Servos",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech155",
+    "Icon": "products/53.png",
+    "Name": "Durchgebranntes Terminal",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod5",
+        "Quantity": 5
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 50
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech156",
+    "Icon": "tradeItems/32.png",
+    "Name": "Geschmolzene Servos",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 120
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech157",
+    "Icon": "technology/110.png",
+    "Name": "Zerschmetterte Linse",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw16",
+        "Quantity": 50
+      },
+      {
+        "Id": "prod54",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech158",
+    "Icon": "products/52.png",
+    "Name": "Undichte Membran",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw26",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw27",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech159",
+    "Icon": "tradeItems/25.png",
+    "Name": "Kaputter Widerstand",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw15",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw25",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw28",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech160",
+    "Icon": "technology/160.png",
+    "Name": "PULS-HERZ",
+    "Group": "Verbundene Organtechnologie",
+    "Description": "Ein faseriger, metallischer Oberbau verbindet dieses warme, lebendige Organ mit dem Schiffskern. Ohne ihn wäre das Schiff nichts als eine leblose Hülle.\n\nHalte <IMG>PULSEJUMP<> gedrückt, um das Herz einen Impulssprung ausführen zu lassen.\nHalte <IMG>BOOST<> gedrückt, um einen Geschwindigkeitsschub anzufordern.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech161",
+    "Icon": "technology/161.png",
+    "Name": "Neuralanordnung",
+    "Group": "Verbundene Organtechnologie",
+    "Description": "Eine Reihe verteilter Neuronen, die zu einer Platte mit Metallsträngen zusammenlaufen. Komplexe Muster elektrischer Impulse winden sich über die Oberfläche und vernetzen jedes Schiffssystem miteinander.\n \nHalte <IMG>THRUST<> gedrückt, um herauszufinden, ob das Schiff startbereit ist.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur2",
+        "Quantity": 2
+      },
+      {
+        "Id": "raw54",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech162",
+    "Icon": "technology/162.png",
+    "Name": "Singularitätskortex",
+    "Group": "Verbundene Organtechnologie",
+    "Description": "Ein komplexer biometallischer Stamm, der direkt in ein Antimaterie-Herz gesteckt wurde. Registriert hohe Aktivitäten während interstellaren Sprüngen. Die komplexen Berechnungen zum Reisen mit Hyperlichtgeschwindigkeit scheinen ihm Freude zu bereiten.\n\nGreife über die galaktische Karte auf Langstrecken-Navigationssysteme zu. Halte das Schiff bei Laune, indem du regelmäßig zwischen den Systemen hin und her springst.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur15",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw55",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech163",
+    "Icon": "technology/163.png",
+    "Name": "Schreidämpfer",
+    "Group": "Verbundene Organtechnologie",
+    "Description": "Diese kleine Erweiterung für das automatische Verteidigungsnetzwerk des Schiffs scheint ein eigener, autonomer Organismus zu sein. Ein kleiner Mund in der Mitte des Fleisches verzehrt sich nach <SPECIAL>Pugneum<>.\n\nIm Kampf scheint er in den neurologischen Bereich einzudringen und zu verhindern, dass der restliche Rumpf des Schiffs von Angst und Schmerzen überwältigt wird.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur19",
+        "Quantity": 2
+      },
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech164",
+    "Icon": "technology/164.png",
+    "Name": "Spucklüftung",
+    "Group": "Verbundene Organtechnologie",
+    "Description": "Diese Lüftung, eine chaotische Kombination aus Beuteln und Schließmuskeln, stößt selbst generierte Plasmakügelchen aus. Wenn diese Lüftung mit den Waffensystemen des Schiffs verbunden wird, werden die Kugeln stark erhitzt und mit hohem Druck ausgestoßen.\n\nDrücke <IMG>SHIPFIRE<>, um zu erbitten, dass das Schiff seine Lüftung auf das aktuelle Ziel richtet.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur24",
+        "Quantity": 5
+      },
+      {
+        "Id": "raw54",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech165",
+    "Icon": "technology/165.png",
+    "Name": "Augentransplantate",
+    "Group": "Verbundene Organtechnologie",
+    "Description": "Eine komplexe Anordnung aus Membranen und einer Linse auf einem leistungsstarken Laseraufbau. Wer dieses Starren erwidert, verbrennt.\nDrücke <IMG>SHIPFIRE<>, damit die Augen den Blick auf ein Ziel in der Nähe richten.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur18",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw55",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech166",
+    "Icon": "technology/28.png",
+    "Name": "Materiestrahl",
+    "Group": "Frachterteleportationsgerät",
+    "Description": "Ein Gerät, das Standard-Kommunikationssignale eines Frachters umwandelt, um den <TECHNOLOGY>interplanetaren Transport von Materie<> und Daten zu ermöglichen.\n\nFrachter, die mit einem solchen Gerät ausgestattet sind, können in Verbindung mit einem <STELLAR>Exo-Anzug<> Produkte und Substanzen über <STELLAR>weite Distanzen<> schicken und erhalten.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 5,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod1",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech167",
+    "Icon": "technology/167.png",
+    "Name": "Solarstrahl",
+    "Group": "Alchemie-Laser",
+    "Description": "Eine hoch spezialisierte Erweiterung der Abbauleistung des Multiwerkzeugs, die <STELLAR>Terrainansammlungen<> in <STELLAR>Flüssigsonne<> umwandelt.\n\nEin starker Laseraufbau verstärkt die lokale Sonnenstrahlung und lässt eine schnelle Neukonfiguration von Mineralerzen in der Nähe zu.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 160,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw14",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech168",
+    "Icon": "technology/168.png",
+    "Name": "Gemütsstrahl",
+    "Group": "Seelenextraktor",
+    "Description": "Eine einzigartige Überladung des Standard-Minenlasers, der zum Multiwerkzeug gehört. Die Strahlenfrequenz wird in einer Feedback-Schleife genau reguliert und die Deltawellen werden vom Ziel des Strahls generiert.\n\nAufzeichnungen über die Erfahrungen des Ziels werden so in winzige Metallfragmente geätzt und als <STELLAR>fragmentierte Qualia<> ausgegeben. Die Lesbarkeit gesammelter Fragmente ist nicht garantiert.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 160,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 100
+      },
+      {
+        "Id": "raw13",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech169",
+    "Icon": "technology/8.png",
+    "Name": "Thermalpuffer",
+    "Group": "Exo-Fahrzeug-Gefahrenschutz-Einheit",
+    "Description": "In allen strukturellen Platten werden Sublimationskühlungen und thermische Speichermassepuffer verbaut, damit der Pilot des Exo-Fahrzeugs selbst im schwersten Feuersturm keinen tödlichen Temperaturen ausgesetzt ist.\n\nVerhindert in <FUEL>sengend heißen Umgebungen<> sämtlichen Schaden oder Energieverlust in einem Exo-Fahrzeug.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod5",
+        "Quantity": 2
+      },
+      {
+        "Id": "raw28",
+        "Quantity": 80
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech170",
+    "Icon": "technology/9.png",
+    "Name": "Megawatt-Heizung",
+    "Group": "Exo-Fahrzeug-Gefahrenschutz-Einheit",
+    "Description": "Baut eine leistungsstarke Heizung im Exo-Fahrzeug ein, die selbst unter kältesten Bedingungen für erträgliche Temperaturen in der Kabine sorgt.\n\nVerhindert in <TEMPERATURE>eiskalten Umgebungen<> sämtlichen Schaden oder Energieverlust in einem Exo-Fahrzeug.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw27",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw29",
+        "Quantity": 80
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech171",
+    "Icon": "technology/10.png",
+    "Name": "Luftfiltereinheit",
+    "Group": "Exo-Fahrzeug-Gefahrenschutz-Einheit",
+    "Description": "Doppelvakuum-Luftfiltersysteme lassen nichts von der planetaren Atmosphäre ohne gründliche Reinigung in die Kabine des Exo-Fahrzeugs.\n\nVerhindert in <TRADEABLE>giftigen Umgebungen<> sämtlichen Schaden oder Energieverlust in einem Exo-Fahrzeug.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 5
+      },
+      {
+        "Id": "raw19",
+        "Quantity": 160
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech172",
+    "Icon": "technology/11.png",
+    "Name": "Neutronenabschirmung",
+    "Group": "Exo-Fahrzeug-Gefahrenschutz-Einheit",
+    "Description": "Im Rahmen des Exo-Fahrzeugs werden höchst effiziente Kontrollmaterialien verbaut, um gefährliche Energiewellen zu neutralisieren.\n\nVerhindert in <COMMODITY>radioaktiven Umgebungen<> sämtlichen Schaden oder Energieverlust in einem Exo-Fahrzeug.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw6",
+        "Quantity": 95
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 50
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech173",
+    "Icon": "technology/173.png",
+    "Name": "Ikarus-Treibstoffsystem",
+    "Group": "Solar-Ladeeinheit",
+    "Description": "Das Ikarus-System nutzt bestehende Metallplatten und macht aus ihnen photovoltaische Oberflächen. Diese reaktive Beschichtung erzeugt bei Tageslicht Strom, was den Treibstoffverbrauch ausgleicht.\n\nErmöglicht <STELLAR>automatische Antriebsaufladung<> am <STELLAR>Tag<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur21",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech174",
+    "Icon": "technology/96.png",
+    "Name": "Fortgeschrittener Signalbooster",
+    "Group": "Exo-Fahrzeug-Signalbooster-Upgrade",
+    "Description": "Ermöglicht zusätzliche Gebäudetypen, die vom Exo-Fahrzeug-Signalbooster erfasst werden können.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 210,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech175",
+    "Icon": "technology/90.png",
+    "Name": "Daidalos-Antrieb",
+    "Group": "Minotaurus-Energieeinheit",
+    "Description": "Diese kompakte Reaktoreinheit bildet als Antrieb das Herzstück des Minotaurus. Sie ist auf einem Gyroskop montiert, damit es bei schnellen Bewegungen keine Treibstoffunfälle gibt.\n\nMit herkömmlichem <FUEL>Treibstoff auf Kohlenstoffbasis<> angetrieben.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech176",
+    "Icon": "technology/90.png",
+    "Name": "Selbstschmierende Servos",
+    "Group": "Motoreffizienz-Upgrade",
+    "Description": "Ein automatisch regulierter Schmiermittelspender, der an den Beingelenken des Minotaurus befestigt wird, um die Reibung zu reduzieren und eine kraftstoffeffiziente Bewegung zu unterstützen.\n\n<STELLAR>Senkt den Treibstoffverbrauch<> für den Daidalos-Antrieb des Minotaurus signifikant.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 40
+      },
+      {
+        "Id": "prod49",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech177",
+    "Icon": "technology/94.png",
+    "Name": "Minotaurus-Radaranlage",
+    "Group": "Minotaurus-Scan-Aufsatz",
+    "Description": "Ein präzises Radargerät, das die Scannertechnologie an Bord des Minotaurus auf das Niveau eines Analysevisiers aufwerten kann.\n\nDrücke <IMG>SCAN<>, um einen Radar-Scan einzuleiten, der <STELLAR>zusätzliche interessante Punkte<> enthüllt, die nicht über ein Multiwerkzeug-Scanner geortet werden können.\n\nDu kannst das Radar im Schnellmenü auf <TECHNOLOGY>bestimmte Gebäude<> einstellen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 75
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 50
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech178",
+    "Icon": "technology/97.png",
+    "Name": "Ariadnes Flamme",
+    "Group": "Minotaurus-Schubdüsensystem",
+    "Description": "Eine Reihe agiler und starker Schubdüsen, die hinten am Minotaurus befestigt werden. Bei präziser Nutzung kann der Minotaurus jede Art von Gelände schnell und souverän durchqueren.\n\nZum Aktivieren <IMG>JUMP<> drücken und halten. Steuerung im Flug in begrenztem Maße möglich.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 180,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod6",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod117",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech179",
+    "Icon": "technology/98.png",
+    "Name": "Minotaurus-Laser",
+    "Group": "Minotaurus-Bergbauwerkzeug",
+    "Description": "Ein Bord-Lasersystem, das speziell für den <STELLAR>Schweren Minotaurus-Exo-Anzug-Hybrid<> entwickelt wurde.\n\nErmöglicht konventionelle Bergbauoperationen. Ineffektiv in Kampfszenarien.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 180,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 65
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 80
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech180",
+    "Icon": "technology/99.png",
+    "Name": "Minotaurus-Präzisionslaser",
+    "Group": "Fortgeschrittener Minotaurus-Minenlaser",
+    "Description": "Ein Upgrade für das Lasersystem des <STELLAR>Schweren Minotaurus-Exo-Anzug-Hybrids<>.\n\nVerstärkt die Energie des Minenlasers, was die Bergbaugeschwindigkeit erhöht und die Verarbeitung von schwer abbaubaren Rohmaterialien ermöglicht.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 210,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur23",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech181",
+    "Icon": "technology/100.png",
+    "Name": "Minotaurus-Kanone",
+    "Group": "Schwere Bordwaffe",
+    "Description": "Ein Bordkanone, die speziell für den <STELLAR>Schweren Minotaurus-Exo-Anzug-Hybrid<> entwickelt wurde.\n\nSie wurde insbesondere für den Kampf gegen biologische Entitäten entwickelt und erweist sich beim Einsatz als Bergbaugerät als nicht effektiv.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 210,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw31",
+        "Quantity": 50
+      },
+      {
+        "Id": "prod30",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech182",
+    "Icon": "technology/100.png",
+    "Name": "Minotaurus-Bohrer",
+    "Group": "Minotaurus-Grabungslaser",
+    "Description": "Erweitert das Lasersystem des <STELLAR>Schweren Minotaurus-Exo-Anzug-Hybrids<> um eine <STELLAR>Terrainmanipulations-<>Funktion.\n\nEin spezieller Aufsatz ermöglicht den schnellen Einsatz eines leistungsstarken Terrain-Baggergerätes, ohne dass die empfindlichen Gelenke und Servos des Minotaurus durch Dreck blockiert werden können.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 210,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw11",
+        "Quantity": 100
+      },
+      {
+        "Id": "raw14",
+        "Quantity": 40
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech183",
+    "Icon": "technology/1.png",
+    "Name": "Umweltkontrolleinheit",
+    "Group": "Exo-Fahrzeug-Gefahrenschutz-Einheit",
+    "Description": "Ein leistungsstarkes Umwelt-Neutralisierungssystem verbindet sich direkt mit dem Piloten des Minotaurus, wenn dieser die Kontrolle über das Fahrzeug übernimmt. Das System wird von der Hauptantriebseinheit des Minotaurus versorgt und erfordert keine weiteren Eingaben durch den Benutzer. Um die Verbindungsstelle herum kann es zu leichten Schmerzen kommen.\n\nSchützt den Piloten des Minotaurus effektiv vor <STELLAR>allen Umweltgefahren<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 120,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur21",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech184",
+    "Icon": "technology/73.png",
+    "Name": "Blitzwerfer-Querschlägermodul",
+    "Group": "Blitzwerfer-Upgrade",
+    "Description": "Erschafft ein Antimateriefeld um die Schüsse des <TECHNOLOGY>Blitzwerfers<> herum, durch das sie von unbeschädigten Oberflächen zurückgeworfen werden.\n\nErmöglicht <STELLAR>Querschläger<>, wodurch Projektile abprallen, wenn sie auf ein Ziel treffen, dem sie keinen Schaden zufügen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod54",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech185",
+    "Icon": "technology/83.png",
+    "Name": "Impulswerfer-Querschlägermodul",
+    "Group": "Impulswerfer-Upgrade",
+    "Description": "Erschafft ein Antimateriefeld um die Schüsse des <TECHNOLOGY>Impulswerfers<> herum, durch das sie von unbeschädigten Oberflächen zurückgeworfen werden.\n\nErmöglicht <STELLAR>Querschläger<>, wodurch Projektile abprallen, wenn sie auf ein Ziel treffen, dem sie keinen Schaden zufügen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 180,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech186",
+    "Icon": "technology/186.png",
+    "Name": "Verbrenner",
+    "Group": "Kurzstrecken-Brandwaffeneinheit",
+    "Description": "Spezieller <FUEL>Hochtemperatur<>-Waffenaufsatz für das <TECHNOLOGY>Multiwerkzeug<>. Mit <IMG>CYCLEWEAPON<> zum Feuermodus wechseln und mit <IMG>ATTACK<> Waffe abfeuern.\n\nDer <TECHNOLOGY>Verbrenner<> bündelt interne Laser auf die natürlich auftretenden Abgase des Multiwerkzeugs. Durch die Verbrennung wird ein äußerst zerstörerisches Inferno mit geringer Reichweite entfacht.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 250,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw6",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech187",
+    "Icon": "technology/90.png",
+    "Name": "Fortgeschrittenes Startsystem",
+    "Group": "Individuelle Landeausrüstung",
+    "Description": "Ein speziell angefertigtes <TECHNOLOGY>Startsteuerungs<>system für Hochleistungsraumschiffe. Empfindliche Gyroskope und spezialisierte Steuerkreise zeichnen maßgeschneiderte Startroutinen für erhöhte Start<STELLAR>geschwindigkeit<> und <STELLAR>-effizienz<> auf.\n \nSpezieller <TECHNOLOGY>Treibstoff aus Diwasserstoff<> wird zum Aufladen der Schubdüsen benötigt. Für die Startprozeduren sind vor der Aktivierung ausreichende Treibstoff-Levels erforderlich.\n \nZum Abheben vom Planeten <IMG>THRUST<> gedrückt halten. Mit <IMG>BOOST<> den Geschwindigkeitsschub während des Flugs aktivieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur21",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech188",
+    "Icon": "products/79.png",
+    "Name": "Wellenform-Antrieb",
+    "Group": "Hochgradig angepasster Raumschiffsantrieb",
+    "Description": "Eine hochgradig abgestimmte Version des konventionellen Raumschiff-<TECHNOLOGY>Impulsantriebs<>. Die Wellenfrontnutzung wurde bis zum Äußersten ausgenutzt und so ein Pulserlebnis erschaffen, das sowohl <STELLAR>effizient<> als auch <STELLAR>äußerst reaktionsschnell<> ist.\n\nZum Laden des Impulsantriebs ist <EXOTIC>Tritium<> erforderlich. Tritium ist in großer Menge in <COMMODITY>planetennahen Asteroidenfeldern<> vorhanden.\n\nZum Aktivieren des Impulssprungs <IMG>PULSEJUMP<> gedrückt halten. Mit <IMG>BOOST<> den Geschwindigkeitsschub während des Flugs aktivieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 6
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech189",
+    "Icon": "other/148.png",
+    "Name": "Rasterverschiebungskatapult",
+    "Group": "Illegal modifizierter Warpantrieb",
+    "Description": "Dieser experimentelle Antrieb erweitert die konventionelle <TECHNOLOGY>Hyperantrieb<>-Technologie, indem die lokale Geometrie zum Zeitpunkt der Warp-Initialisierung verzerrt wird und so die <STELLAR>Reichweite<> und <STELLAR>Effizienz<> weit über Standardantriebe hinaus steigert.\n\nEs wird empfohlen, über die <STELLAR>Galaktische Karte<> auf die Hyperantriebssysteme zuzugreifen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur15",
+        "Quantity": 5
+      },
+      {
+        "Id": "cur23",
+        "Quantity": 5
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 125
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech190",
+    "Icon": "tradeItems/25.png",
+    "Name": "Druckkapsel",
+    "Group": "Raumschiff-Lebenserhaltungseinheit",
+    "Description": "Eine kritische Sicherheitsvorrichtung für Raumschiffe, die für extra-orbitale Flüge unerlässlich ist.\n\nDie Druckkapsel ist eine dedizierte Einheit, die eine <STELLAR>atembare Atmosphäre<> generiert sowie die katastrophale Explosion unkonventioneller Cockpit-Konstruktionen verhindert.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 125
+      },
+      {
+        "Id": "prod74",
+        "Quantity": 4
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech191",
+    "Icon": "technology/191.png",
+    "Name": "Eingeweide-Synthesizer",
+    "Group": "Ätherischer Brutkasten",
+    "Description": "Ein Stück außerweltlicher Technologie. Seine einladenden Membranen sind weich, gelartig und pulsieren mit einem sanften purpurnen Glanz.\n\nSeine warme Umarmung ermöglicht es dem Benutzer, jegliche <STELLAR>Abscheuliche Brut<> aus den Embryosäcken der <SPECIAL>Hungernden Ranken<> herauszuziehen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 90,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur15",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw69",
+        "Quantity": 120
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech192",
+    "Icon": "technology/192.png",
+    "Name": "Archivüberschreibungs-Implantat",
+    "Group": "Subkutaner Zugangsschaltkreis",
+    "Description": "Eine <TECHNOLOGY>biotechnische Firewall<>, entwickelt als Schutzvorrichtung vor textlichen Erkenntnisgefahren. Es ist mit etwas Glitschigem überzogen und hat angefangen, an der Oberfläche zu brodeln.\n\nUnter die Haut eingelassen gewährleistet es administrativen Zugang zu uralten verbotenen Texten, die in ein <SPECIAL>planetares Archiv<> eingebunden sind.\n<FUEL>Warnung<>: Löse die verbotenen Texte nicht ab. Der Umgang mit verbotenen Texten birgt extreme Risiken!",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 90,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur19",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw18",
+        "Quantity": 90
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech193",
+    "Icon": "technology/121.png",
+    "Name": "Magnetspule",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein Relaisschalter, der beim Einschalten des Gerätes hilft. Die Verbindungen sind verätzt und die Magnetspule funktioniert nicht mehr.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech194",
+    "Icon": "technology/112.png",
+    "Name": "Winziger Motor",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein sehr kleiner Motor, der sehr kleine Teile antreibt. Er ist verätzt und voll mit winzigen Rostflecken.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 10
+      },
+      {
+        "Id": "raw12",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech195",
+    "Icon": "tradeItems/25.png",
+    "Name": "Kühlungssystem",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein Kühlsystem mit einer Pumpe für die Kühlung des Gerätes. Leider ist das System selbst überhitzt und funktioniert nicht mehr.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech196",
+    "Icon": "technology/118.png",
+    "Name": "Thermoregler",
+    "Group": "Beschädigte Komponente",
+    "Description": "Eine Kontrolleinheit für die Temperaturregelung des Gerätes. Der Sensor ist beschädigt, weshalb die Einheit zu falschen Zeiten kühlt und heizt.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw14",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech197",
+    "Icon": "tradeItems/34.png",
+    "Name": "Servoarm",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein kleines mechanisches Gelenk für die Reparatur kleiner mechanischer Fehler im Gerät. Aufgrund eines Fehlers platziert das Gelenk funktionierende Bauteile falsch, weshalb noch mehr Schaden entsteht.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 30
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech198",
+    "Icon": "technology/122.png",
+    "Name": "Druckkammer",
+    "Group": "Beschädigte Komponente",
+    "Description": "Eine kleine Druckkammer für die Herstellung von komprimiertem Gas, das das Funktionieren des Gerätes garantiert. Die Kammer hat Risse, weshalb Gas austritt.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 20
+      },
+      {
+        "Id": "raw9",
+        "Quantity": 50
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech199",
+    "Icon": "products/70.png",
+    "Name": "Hauptschaltkreis",
+    "Group": "Beschädigte Komponente",
+    "Description": "Der Kontrollschaltkreis für alle anderen Bauteile des Gerätes. Schaden an diesem Schaltkreis hat fatale Folgen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech200",
+    "Icon": "tradeItems/21.png",
+    "Name": "Stromverteiler",
+    "Group": "Beschädigte Komponente",
+    "Description": "Die zentrale Energieeinheit dieses Gerätes. Aufgrund des Schadens leitet diese Einheit alle Energie auf einen bestimmten Schaltkreis um, was für einen gefährlichen Kurzschluss sorgt.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 15
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech201",
+    "Icon": "tradeItems/34.png",
+    "Name": "Getriebegehäuse",
+    "Group": "Beschädigte Komponente",
+    "Description": "Der Getriebemechanismus des Gerätes. Das Schmiermittel, das für die Funktionstüchtigkeit des Gerätes sorgt, scheint mit einem grünen Schleim aus einer anderen Welt ausgetauscht worden zu sein. Das Getriebe steckt fest.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw30",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw50",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech202",
+    "Icon": "products/54.png",
+    "Name": "Photovoltaikmodul",
+    "Group": "Beschädigte Komponente",
+    "Description": "Ein kleines, aber effizientes Paneel, das Licht in Energie umwandelt. Es ist leider beschädigt und leistet keine zuverlässigen Dienste mehr.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 15
+      },
+      {
+        "Id": "raw14",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech203",
+    "Icon": "other/4.png",
+    "Name": "Dreizackschlüssel",
+    "Group": "Darbringung an das Meer",
+    "Description": "Die Truhe erfordert einen <TECHNOLOGY>Dreizackschlüssel<>, den jene erhalten, die die mysteriösen Orte in den Tiefen des Ozeans studieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "other4",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech204",
+    "Icon": "technology/204.png",
+    "Name": "Tarngerät",
+    "Group": "Aktive Tarnungseinheit",
+    "Description": "Bei Aktivierung zieht dieses Modul Energie aus den <VAL_ON>Exo-Anzug-Lebenserhaltungssystemen<>, um das Gravitationsfeld um den Benutzer herum zu manipulieren, das Licht zu brechen und einen <STELLAR>aktiven Tarnungseffekt<> zu erzeugen.\n\nDieser <STELLAR>vorübergehende<> Effekt kann genutzt werden, um unerwünschter feindlicher Aufmerksamkeit zu entgehen. WARNUNG: Die aktive Tarnung kann bei dramatischen Exo-Anzug-Manövern wie der Aktivierung des Jetpacks oder der Aktivierung der Multiwerkzeug-Waffensysteme ausfallen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 80,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod20",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech205",
+    "Icon": "technology/205.png",
+    "Name": "Paralysemörser",
+    "Group": "Betäubungsgranaten",
+    "Description": "Gewaltfreie Projektilwaffe. Abgeschossene Projektile setzen Ziele in der Nähe mit einem elektrischen Energiestoß außer Gefecht. Wirksam gegen biologische und elektronische Wesen.\n \nMit <FUEL>Instabilem Plasma<> geladen.\n \nDurch Drücken von <IMG>ALTATTACK<> aktivieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 150,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod5",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod11",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech206",
+    "Icon": "technology/79.png",
+    "Name": "Wellenform-Oszillator",
+    "Group": "Glutspeer-Upgrade",
+    "Description": "Überlastet den Energiestrahl des <TECHNOLOGY>Glutspeers<>, wodurch er an seinem Aufprallpunkt eine elektrische Energieladung abgibt.\n\n<STELLAR>Betäubt<> kurzzeitig alle organischen und anorganischen Wesen, die den Strahl des Glutspeers kreuzen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 180,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw15",
+        "Quantity": 75
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 125
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech207",
+    "Icon": "technology/83.png",
+    "Name": "Aufprallzünder",
+    "Group": "Impulswerfer-Upgrade",
+    "Description": "Ein leistungsstarkes Kampf-Upgrade für den <TECHNOLOGY>Impulswerfer<>. Dieses Modul installiert eine Reihe fein kalibrierter Treibstoff-Einspritzdüsen in der Brennkammer, die einen kontrollierten Verbrennungsvorgang in den Plasmageschossen auslösen.\n\nVerursacht bei Zielen, die vom Impulswerfer getroffen werden, für kurze Zeit eine <STELLAR>Verbrennung<>, die zusätzlichen Schaden verursacht.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 180,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod5",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw29",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech208",
+    "Icon": "technology/208.png",
+    "Name": "Neutronenkanone",
+    "Group": "Explosiv-Energiewaffe",
+    "Description": "Ein <STELLAR>leistungsstarkes Energiewaffen<>-Ansatzstück für das <TECHNOLOGY>Multiwerkzeug<>. Die Neutronenkanone energetisiert atmosphärische Partikel, bevor sie auf feindliche Ziele geschleudert werden, und verursacht <STELLAR>erheblichen Flächenschaden<>.\n\nDrücke <IMG>CYCLEWEAPON<>, um den alternativen Feuermodus zu aktivieren. Lade die Waffe durch Drücken von <IMG>ATTACK<> auf und lasse dann los, um eine <STELLAR>Salve ionisierter Partikel<> zu entfesseln.\n\nWährend die Kanone sofortige Einzelschüsse abgeben kann, <TECHNOLOGY>führt ein längeres Aufladen<> zu einer deutlichen <TECHNOLOGY>Erhöhung des Tempos und Volumens freigesetzter Partikel<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasChargedBy": true,
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 250,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 95
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech209",
+    "Icon": "technology/209.png",
+    "Name": "P-Feld-Kompressor",
+    "Group": "Neutronenkanonen-Upgrade",
+    "Description": "Ein leistungsstarkes Upgrade für die <TECHNOLOGY>Neutronenkanone<>. Zusätzliche Resonanzkompressoren ermöglichen es, deutlich mehr Energie durch den zentralen Kern der Kanone zu leiten, was die Betriebsleistung drastisch erhöht.\n\nDurch die Installation kann eine voll aufgeladene Neutronenkanone <STELLAR>zusätzliche Projektile<> mit <STELLAR>höheren Geschwindigkeiten<> abfeuern.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 180,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech210",
+    "Icon": "technology/210.png",
+    "Name": "Galvanischer Verstärker",
+    "Group": "Schadenüberladungs-Modul",
+    "Description": "Ein allgemeines Upgrade für alle Multiwerkzeug-<TECHNOLOGY>Waffensysteme<>, das bewirkt, dass seine Geschosse beim Aufprall auf ein geeignetes elektromagnetisches Feld dramatisch mitschwingen.\n\nErhöht signifikant den <STELLAR>Schaden<> an organischen und anorganischen Wesen, die aktuell <STELLAR>betäubt sind<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 180,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw61",
+        "Quantity": 70
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech211",
+    "Icon": "technology/211.png",
+    "Name": "Minotaurus-KI-Pilot",
+    "Group": "Autonome Kontrolleinheit",
+    "Description": "Ein halbautonomes, <TECHNOLOGY>künstliches Piloten-Plugin<> für den Minotaurus-Exo-Fahrzeug-Hybrid. Die Installation ermöglicht es dem Minotaurus, <STELLAR>selbständig Planeten zu bereisen<> und sich an <STELLAR>Kampfhandlungen<> oder <STELLAR>Bergbauaktivitäten<> zu beteiligen, um seinen primären Anwender zu unterstützen.\n\nDer KI-Pilot gibt die Kontrolle immer an den primären Anwender ab, wenn dieser das Cockpit betritt.\n\nDie Pilotenroutinen sind stark lokalisiert. Er ist nicht in der Lage, emotionale Bindungen zu entwickeln oder eine unabhängige Kontrolle über den Minotaurus auszuüben.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 480,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech212",
+    "Icon": "technology/212.png",
+    "Name": "Linker Wächter-Hartgestellarm",
+    "Group": "Minotaurus-Gliedmaßenersatz",
+    "Description": "Eine Sammlung geborgener Komponenten eines Wächter-Hartgestells, die für den <TECHNOLOGY>Minotaurus<>-Exo-Fahrzeug-Hybrid umgebaut wurden.\n\nWerden sie zusammen mit einem <TECHNOLOGY>Minotaurus-Laser<> verbaut, erhöht dies die <STELLAR>Leistung<> und <STELLAR>Effektivität<> der <TECHNOLOGY>Minenlaser<>-Systeme des Minotaurus.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 40
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech213",
+    "Icon": "technology/213.png",
+    "Name": "Rechter Wächter-Hartgestellarm",
+    "Group": "Minotaurus-Gliedmaßenersatz",
+    "Description": "Eine Sammlung geborgener Komponenten eines Wächter-Hartgestells, die für den <TECHNOLOGY>Minotaurus<>-Exo-Fahrzeug-Hybrid umgebaut wurden.\n\nGewährt den <TECHNOLOGY>Waffensystemen<> des Minotaurus ein bedeutendes <STELLAR>Feuerkraft-Upgrade<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw15",
+        "Quantity": 30
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 40
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech214",
+    "Icon": "technology/214.png",
+    "Name": "Wächter-Hartgestellbeine",
+    "Group": "Minotaurus-Gliedmaßenersatz",
+    "Description": "Eine Sammlung geborgener Komponenten eines Wächter-Hartgestells, die für den <TECHNOLOGY>Minotaurus<>-Exo-Fahrzeug-Hybrid umgebaut wurden.\n\nDie Installation wird den <TECHNOLOGY>Antrieb und die Mobilitäts<>systeme des Minotaurus erheblich verbessern.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw31",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod149",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech215",
+    "Icon": "technology/215.png",
+    "Name": "Wächter-Hartgestellkörper",
+    "Group": "Minotaurus-Kernersatz",
+    "Description": "Eine Sammlung geborgener Komponenten eines Wächter-Hartgestells, die für den <TECHNOLOGY>Minotaurus<>-Exo-Fahrzeug-Hybrid umgebaut wurden.\n\nFunktioniert als halbautonomes, <TECHNOLOGY>künstliches Piloten-Plugin<>. Die Installation ermöglicht es dem Minotaurus, <STELLAR>selbständig Planeten zu bereisen<> und sich an <STELLAR>Kampfhandlungen<> oder <STELLAR>Bergbauaktivitäten<> zu beteiligen, um seinen primären Anwender zu unterstützen.\n\nDer KI-Pilot gibt die Kontrolle immer an den primären Anwender ab, wenn dieser das Cockpit betritt.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": {
+      "HasDevProperties": true
+    },
+    "BlueprintCost": 480,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod23",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod159",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  }
+]

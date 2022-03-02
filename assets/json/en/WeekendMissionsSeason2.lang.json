@@ -1,0 +1,1234 @@
+[
+  {
+    "Id": "MP_PORTALQUEST",
+    "Titles": [
+      "Swallowed by a Star",
+      "Toward the Void",
+      "Misaligned Realities",
+      "A Dark Maw",
+      "Vanishing Point"
+    ],
+    "Subtitles": [
+      "Investigate Anomalous Region"
+    ],
+    "Descriptions": [
+      "Nada's spacetime loom has detected a disturbance in a distant region of the universe. The probable breach in reality is too dangerous for the Space Anomaly to warp to directly. Travellers must access the region by Portal.\n\nWEEKEND EVENT: This mission may only be completed once each week. Grouping up with other explorers is recommended, but it may also be played solo.",
+      "An abnormal signal has reached the Anomaly's communicators, its frequency indicating a disturbance in reality. The signal is corrupted, and its exact origin cannot be triangulated. The only way to reach it is by Portal.\n\nWEEKEND EVENT: This mission may only be completed once each week. Grouping up with other explorers is recommended, but it may also be played solo.",
+      "Unusual, potentially dangerous readings have appeared on Nada's spacetime loom. The Iterations inhabiting the Space Anomaly believe these point to a disturbance in reality that may only be accessed by Portal.\n\nWEEKEND EVENT: This mission may only be completed once each week. Grouping up with other explorers is recommended, but it may also be played solo.",
+      "A desperate and broken transmission has reached the Space Anomaly, but the signal is untraceable, its origin disturbed. Nada and Polo urge Travellers to search for a route via the ancient Portal network and investigate.\n\nWEEKEND EVENT: This mission may only be completed once each week. Grouping up with other explorers is recommended, but it may also be played solo.",
+      "The Anomaly inhabitants are deeply troubled by recent readings from Nada's spacetime loom. The data indicates a region of unsettled reality. Rewards are offered to any Travellers who travel by Portal and assist.\n\nWEEKEND EVENT: This mission may only be completed once each week. Grouping up with other explorers is recommended, but it may also be played solo."
+    ],
+    "Stages": [
+      {
+        "Level": 31,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Ariadne to learn more",
+        "AppId": "cur25",
+        "IterationAppId": "other26",
+        "Quantity": 16,
+        "PortalAddress": "010EF9F3A6C9",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "There is still cause for hope, Like-Traveller, even in the face of calamity. I have a plan..."
+          ],
+          "Options": [
+            {
+              "Name": "Ask them about their plan",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Trace the route ahead with knowledge stones, follow them towards a portal and heal this blight. As for my path?",
+                  "We were not born to run and hide, Like-Traveller. The time has come.",
+                  "I intend to face the cause of all these anomalies and disturbances myself, whatever the cost."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Knowledge stones await you. They will show you the way through the portal..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "A transmission emanates from the corrupted structure. Between the screams of Gek cultists, one word is clear, again and again.",
+            "It demands sacrifice. It demands materials.",
+            "'Abyss'.",
+            "The cult was unable to feed its master. My service is demanded instead. I must bring resources here..."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The transmission has changed with the collapse of the anomaly. Instead, Gek voices speak of gratitude and friendship.",
+                  "They tell me that this world could be a home for me. That I should stay. That the water is perfectly safe to drink.",
+                  "They tell me they have been so lonely."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 32,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Gemini to learn more",
+        "AppId": "cook42",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "114805AA0B9B",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ariadne has disappeared!",
+            "I tried to stop them -- I tried to make them see reason! Oh, I hope they are safe..."
+          ],
+          "Options": [
+            {
+              "Name": "Reassure them",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Gemini gesticulates, shaking in panic.",
+                  "How can you be so calm? Ariadne seeks the source of the Abyss itself!",
+                  "If I were more reckless, if I knew where they had gone, I would follow them and make sure they are alright.",
+                  "I cannot ask you to go through the portal, to seek knowledge stones... it would be your choice, and your choice alone.",
+                  "Ariadne has disappeared!",
+                  "I tried to stop them -- I tried to make them see reason! Oh, I hope they are safe..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask what you can do",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Gemini gesticulates, relieved and grateful for your aid.",
+                  "Ariadne seeks the source of the Abyss itself! You must follow in their steps!",
+                  "Seek knowledge stones, step through the portal and find our friend! Hurry! There is no time to lose!"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ariadne is in danger! We must find the knowledge stones for the next anomaly! Ah!"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The anomaly sings with voices, of Travellers across time and space.",
+            "I hear their names in the static... Asteria, the Hero-Traveller... Narcissus, ally of the Last Spawn... They are countless.",
+            "The anomaly demands a sacrifice. It does not speak with malice. It is in pain.",
+            "Counless voices cry out for my help. I must provide resources. I must heal the world.",
+            "A mossy growth coats the structure. Its tiny leaves wriggle excitedly when I move my hand closer. Is this an offering? Something to aid me?"
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The rift heals itself. I track the navigational data of all those who passed through this place.",
+                  "Names fill my mind. Lazarus. Artemis. Hildebrand.",
+                  "I transfer the navigational data to the Nexus. This data will take some time to decode..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Collect Sweetened Compost",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The compost falls easily into my hands. It smells sweet, almost appetising.",
+                  "Counless voices cry out for my help. I must provide resources. I must heal the world."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offer materials",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "The rift heals itself. I track the navigational data of all those who passed through this place.",
+                        "Names fill my mind. Lazarus. Artemis. Hildebrand.",
+                        "I transfer the navigational data to the Nexus. This data will take some time to decode..."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Leave",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 33,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Mercury to learn more",
+        "AppId": "cur24",
+        "IterationAppId": "other28",
+        "Quantity": 16,
+        "PortalAddress": "11CEFF9BECCC",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "I often wonder about the nature of our existence, Portal-Adept. What Ariadne's recent disappearance means for us.",
+            "There are some who believe the Travellers to be the same soul, split across countless iterations and universes.",
+            "How we might have been, had we lived different lives..."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about the mission",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mercury sighs, tired, but nods all the same.",
+                  "Of course. The great work must come first.",
+                  "We have located Ariadne's ship. Or, rather, we have located hundreds of them, duplicated and morphed across the known universe.",
+                  "The portal network is a blighted, dangerous thing. You must be careful, following in such steps.",
+                  "Commune with stones of knowledge. Step through the gate. Discover the truth."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "You still do not understand? Trace knowledge stones and find Ariadne's ship on the other side of the portal.",
+                  "Whatever you do... don't drink the water."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Ariadne's ship lies before me. My Exosuit screams, telling me to step back. Trying to save me from infection.",
+            "The Abyss is before us both. It demands tribute. It demands more."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Corruption leaves this vessel, and with it a thousand duplicates disappear across the stars. I read the data-log.",
+                  "Before this ship's reality-splinter, it came into contact with a strange, vast freighter in the darkness between suns.",
+                  "Its sole occupant managed to escape before the crash. Ariadne is still out there, somehow, somewhere.",
+                  "My friend still lives."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 34,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Tethys to learn more",
+        "AppId": "raw31",
+        "IterationAppId": "other33",
+        "Quantity": 250,
+        "PortalAddress": "11F4F91DA978",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "I once lived with a Vy'keen appearance mod for an entire year, you know? Did a lot of things I regret.",
+            "I don't even know why I'm talking about it. We're not friends. You're a stranger."
+          ],
+          "Options": [
+            {
+              "Name": "Offer to be friends",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Do this for me, maybe I'll think about it, alright? I got a mission for you. A factory has been targeted... a clandestine operation I have some interest in.",
+                  "It shifts from world to world to avoid sentinel detection. I need you to track down knowledge stones, find its current portal coordinates.",
+                  "Don't let me down."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Agree and stay silent",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Tethys seems disappointed. They had hoped you would fight for their friendship.",
+                  "I... I got a mission for you. A factory has been targeted... a clandestine operation I have some interest in.",
+                  "It shifts from world to world to avoid sentinel detection. I need you to track down knowledge stones, find its current portal coordinates.",
+                  "I just need some help."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Find the disturbance by tracing knowledge stones. It's a factory you'll be looking for, on the other side. Any portal should show you the way."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Various species once worked in this place, gathering and manipulating genetic data to form appearance modifications.",
+            "The factory's records are corrupted by the static, but I can access the final designs. The workers began creating appearance modifications of pure light, spheres in the place of heads.",
+            "All of them are now dead.",
+            "The structure demands new data. It demands sacrifice."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "As the corruption fades, I search the factory's records one last time, trying to find evidence of its last days.",
+                  "At some point, the workers discovered the holographic displays they'd created had replaced their real skulls.",
+                  "With these spheres of light had come nightmares. The images seem familiar, somehow. Like I've seen this face before."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 35,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Hesperus to learn more",
+        "AppId": "cook27",
+        "IterationAppId": "other36",
+        "Quantity": 40,
+        "PortalAddress": "10E508A1ACC0",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Hesperus seems troubled. When I approach, they hide their data pad.None",
+            "Ariadne has sent word... they are returning to us, kindred. They are safe."
+          ],
+          "Options": [
+            {
+              "Name": "Ask what is wrong",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Tell me. Did you ever hear the story of the Hero-Traveller Asteria? One of the first of us to breach the gap between worlds.",
+                  "Time flows strangely for our people. Asteria was preserved in a Mind-Arc after their death, dispensing wisdom from the grave.",
+                  "It is a pilgrimage we have all made. It is time you seek your prophecy, kindred.",
+                  "Find their world. Follow the knowledge stones and take their glyphs through the portal..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Seek the grave of Asteria the Hero-Traveller. Follow the knowledge stones and the path to which they lead."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The grave of Asteria hisses with a familiar corruption. All around, I detect the life signs of Travellers cut from reality.",
+            "A weary voice speaks, barely audible above the static.",
+            "Asteria tells me they once led the Vy'keen into battle against emissaries of glass. They once doomed a Sentinel fleet.",
+            "They tell me I will be betrayed. They tell me I will become a betrayer, too.",
+            "Corruption has come to this place. It wishes to bargain. It wishes to take all the matter and life that it can.",
+            "Grave of Asteria"
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The Mind-Arc is cleansed. The soul within it thanks the Travellers for their assistance.",
+                  "I ask Asteria for any prophecy they can give. I ask about the nature of my enemy.",
+                  "They tell me the Abyss is not what it seems.",
+                  "The voice goes silent. I leave, troubled by what I have heard."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 36,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Ariadne to learn more",
+        "AppId": "cook25",
+        "IterationAppId": "other26",
+        "Quantity": 40,
+        "PortalAddress": "2117FBF686E8",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "I'm home. I am finally home. Like-Traveller, I am so glad to look upon your face."
+          ],
+          "Options": [
+            {
+              "Name": "Tell them you feel the same",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I went in search of the Abyss. I almost faced our adversary, and then...",
+                  "I - I have no recollection of what happened to me in that void, Like-Traveller.",
+                  "I only know that I awoke, and I was hunted. Haunted.",
+                  "There was a ship, vast and terrible. Still the corruption undulates...",
+                  "Find the knowledge stones. Go through the portal. I will gather my strength for your return."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask where they have been",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I went in search of the Abyss. I almost faced our adversary, and then...",
+                  "I - I have no recollection of what happened to me in that void, Like-Traveller.",
+                  "I only know that I awoke, and I was hunted. Haunted.",
+                  "There was a ship, vast and terrible. Still the corruption undulates...",
+                  "Find the knowledge stones. Go through the portal. I will gather my strength for your return."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Follow their knowledge stones through the portal. Fight our enemy..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The freighter was Vy'keen, once. It was an inquisitor's vessel, scouring the galaxies for heretics.",
+            "All it found was death. The corruption is here, now. It is everywhere. It yearns for tribute..."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The corruption has departed. All that is left are the sad logs of suffering beings, protesting their innocence.",
+                  "The parent of a Mech-Priest, claiming they do not know where their child is, claiming that they still follow the way of Hirk.",
+                  "The data reveals all prisoners were executed, prior to a mutiny. The remaining crew members left into the dark.",
+                  "Nothing beside remains."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 37,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Gemini to learn more",
+        "AppId": "cur32",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "21DE0936B5C7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ariadne has returned! Our friend is safe! Ah, rejoice!"
+          ],
+          "Options": [
+            {
+              "Name": "Rejoice",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Would that our brethren shared your spirit!",
+                  "FTH_EXOTIC2_PQ_BLD_RES_D_19"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for a mission",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "You are right. Our task here is more important than ever.",
+                  "FTH_EXOTIC2_PQ_BLD_RES_D_19"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Please, trace the knowledge stones to the corruption site. Follow the portals. Find Hesperus. I fear for them..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "My sensors detect the remnants of a thousand Korvax souls, spread all across this system.",
+            "They tried to simulate the Abyss. They succeeded only in gaining its attention.",
+            "It will take much to heal this void. Without sustenance, it will devour system upon system..."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The rift healed, I discover the origin of the experiment.",
+                  "Hesperus had been working with the Korvax... had been trying to solve our predicament.",
+                  "Their failure here has caused devastation to this species. I do not know if my friend survived..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 38,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Mercury to learn more",
+        "AppId": "cook29",
+        "IterationAppId": "other28",
+        "Quantity": 90,
+        "PortalAddress": "313AFB6EBFE2",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Calamity has befallen us, Portal-Adept. A thousand Korvax souls have been severed from the Convergence.",
+            "The result of a fellow Traveller's ambition exceeding their grasp. Hesperus was working with the Korvax to try to simulate the Abyss itself. It came for them instead.",
+            "If Hesperus returns to us, do you believe we can still trust them? They have much to answer for."
+          ],
+          "Options": [
+            {
+              "Name": "Declare your trust",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I hope you are right, Portal-Adept."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Shake your head",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "This pains me, Portal-Adept. Though I fear you may be correct.",
+                  "FTH_EXOTIC3_PQ_BLD_RES_D_20"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The knowledge stones will light your path, Portal-Adept. Go. Do what I cannot."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The corruption welcomes me, claiming that it has met me, time and time again.",
+            "I hear its static in my mind, now. It demands gifts. It claims to have given me so many..."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The anomaly ceases. I think back to Mercury's doubts... to the failures of Hesperus...",
+                  "My fellow Travellers are doing their best. We must help each other, I know.",
+                  "And with the thought, another slithers down my spine. It is not my own. It is a voice within me.",
+                  "I must help it."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 39,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Tethys to learn more",
+        "AppId": "cur22",
+        "IterationAppId": "other33",
+        "Quantity": 24,
+        "PortalAddress": "0200FBA353D2",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Tethys seems uneasy. Their lidless eyes flick towards Mercury's empty post.",
+            "Tell me. Do you ever feel lonely?"
+          ],
+          "Options": [
+            {
+              "Name": "Say everyone does",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I'm not everyone, though, am I? I'm supposed to be better...",
+                  "They shift uncomfortably.",
+                  "Perhaps there’s more chance of survival if we travel alone. I don’t know how much longer we will be safe here.",
+                  "The knowledge stones call to all of us, now. The portals need you."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Say no",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "No? Hm. You're bluffing.",
+                  "They shift uncomfortably.",
+                  "Perhaps there’s more chance of survival if we travel alone. I don’t know how much longer we will be safe here.",
+                  "The knowledge stones call to all of us, now. The portals need you."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Follow the knowledge stones, go through the portal. I need to make my own preparations."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Corruption boils through the crashed vessel, but somehow the captain’s log is unaffected.",
+            "The pilot was betrayed by one they considered an ally. The Abyss can only take what it is invited to consume. It desires so much more, even now..."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The corruption purged, I look more closely at the fallen vessel’s data. The Traveller pilot believed they heard voices, those days prior to the crash.",
+                  "Whispers from their own Exosuit issued out into the void, bargaining for survival...",
+                  "I leave, checking my own for signs of tampering or malfunction. All seems as it should be."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 40,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Hesperus to learn more",
+        "AppId": "cur25",
+        "IterationAppId": "other36",
+        "Quantity": 16,
+        "PortalAddress": "20FDF7C5C5A3",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah, kindred... do not fear. All my guilt has been purged from my mind. Nanite Clusters can transform neurons with ease..."
+          ],
+          "Options": [
+            {
+              "Name": "Listen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I helped the Korvax create their simulation of the Abyss. I truly grieve their passing, kindred. But that work alone did not determine their fate!",
+                  "Someone among us is a traitor... someone led the Abyss to us!",
+                  "Do you not see? The knowledge stones are being hijacked!",
+                  "Whoever is behind this betrayal wants us to go through the portals. They want us to feed the anomalies.",
+                  "Step through the breach once more, kindred. I will try to free us from this terrible loop..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Find the knowledge stones, step through the portal. I will watch and observe..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The grave crackles with exotic energies.",
+            "The Traveller who once rested here is long gone, harvested by a Mind Arc from another universe.",
+            "The grave is a place of unending yearning, now. Its existence demands a tribute of resources."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The grave is purified. I attempt to find the name of the one who died here, but all I find is a null value.",
+                  "I depart, troubled. It feels as if someone is watching me..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 41,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Ariadne to learn more",
+        "AppId": "cook27",
+        "IterationAppId": "other26",
+        "Quantity": 60,
+        "PortalAddress": "209B0170700E",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah, Like-Traveller. You have returned.",
+            "Their face twists into something half-resembling a smile."
+          ],
+          "Options": [
+            {
+              "Name": "Return the smile",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Some believe all Travellers are one entity, split over untold forms and bodies.",
+                  "I am you, and you are me.",
+                  "This is why I believe in you, Like-Traveller. If we work together, we can save all that we are.",
+                  "Knowledge stones are an Atlas-Gift. Who are we to refuse the portals’ call?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Follow the knowledge stones, Like-Traveller, and the portal will lead you to our next task."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Devotees of the Atlas came to this world to pray, once.",
+            "An anomaly distorts their crashed vessel. It claimed the lives of those within long ago.",
+            "Now the anomaly desires more. It waits for our invitation to depart, for resources to quench its unfathomable thirst."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The crashed vessel is purged of all anomalous traces.",
+                  "Its log speaks of the Atlas who made all things... even loss. Even hate.",
+                  "I wonder if, in their final moments, they trusted in their deity. If they hoped for salvation..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 42,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Gemini to learn more",
+        "AppId": "raw47",
+        "IterationAppId": "other27",
+        "Quantity": 400,
+        "PortalAddress": "11DFFB6E3036",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Gemini looks at schematics for Exosuits. They don’t seem to notice my approach..."
+          ],
+          "Options": [
+            {
+              "Name": "Greet your friend",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "They hide the schematics, hesitating as they turn to face me.",
+                  "So much of our lives are mysteries, my friend. The faces we are born with...",
+                  "The clothes we wear. Who made the Exosuits? Who speaks with their voice?",
+                  "The knowledge stones, the portals they lead us through... they are our birthright.",
+                  "There is so much out there, still to be found."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Follow the knowledge stones, as we always have. It is the right of any Traveller to go through the portals..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The structure once housed an artificial intelligence.",
+            "Corruption now festers within its shell, hating all that it once was.",
+            "This place desires only matter. It wants me to bring it more."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I see the final vestiges of the AI as all corruption departs, the final fifteen minutes of its life...",
+                  "It knew I would come here. It knew I would try to save it.",
+                  "Worlds upon worlds seethe in the void. The Abyss spreads."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 43,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Mercury to learn more",
+        "AppId": "build168",
+        "IterationAppId": "other28",
+        "Quantity": 16,
+        "PortalAddress": "4037F8AE0462",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "These are grim times, Portal-Adept. Our community has fallen to strife."
+          ],
+          "Options": [
+            {
+              "Name": "Ask what is wrong",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperus has grown paranoid. They refuse to attend our meetings. They shun even Nada and Polo.",
+                  "You must not become like our former friend. You do such vital work...",
+                  "The knowledge stones will guide you on your path through the portals. They will show you the path to salvation."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Allow the knowledge stones to be your guide. The portals will lead you to salvation."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The structure has been infected, its anomalous calls echoing through the planet itself.",
+            "The Abyss requires resources. Without them, this world will be lost forever..."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I do my duty. The corruption fades. I hear its voice... I feel its feelings...",
+                  "I feel malice, hatred, despair – all of it directed only against its own self...",
+                  "I see memories of water..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 44,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Tethys to learn more",
+        "AppId": "cook116",
+        "IterationAppId": "other33",
+        "Quantity": 90,
+        "PortalAddress": "519505C9AA01",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Traveller... has your Exosuit been operating at proper capacity?"
+          ],
+          "Options": [
+            {
+              "Name": "Say it has",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hm.",
+                  "I’ve been hearing strange noises from my own suit. Almost like it is whispering.",
+                  "An associate of mine went to Korvax space to complete an analysis of our signals, but they’ve not returned.",
+                  "Will you go and find them through the portal? The knowledge stones should show their path."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Say it has not",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hm.",
+                  "I’ve been hearing strange noises from my own suit. Almost like it is whispering.",
+                  "An associate of mine went to Korvax space to complete an analysis of our signals, but they’ve not returned.",
+                  "Will you go and find them through the portal? The knowledge stones should show their path."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Another associate of mine is missing. Find them through the portal... knowledge stones should lay out your destination. Be quick."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Did a Traveller do this?",
+            "There is evidence that a Multi-Tool was fired upon the fallen friend of Tethys, their analysis never completed.",
+            "Around the grave corruption spreads, demanding its tribute.",
+            "A mossy growth coats this gravesite. Its tiny leaves wriggle excitedly when I move my hand closer. Is this an offering? Something to aid me?"
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The grave is purified.",
+                  "I examine traces of the battle, of the fallen Traveller’s memories.",
+                  "I see a face that is not a face, an arm raised to fire their weapon.",
+                  "I see the murderer.",
+                  "It is Ariadne."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Collect Sweetened Compost",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The compost falls easily into my hands. It smells sweet, almost appetising.",
+                  "Around the grave corruption spreads, demanding its tribute."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offer materials",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "The grave is purified.",
+                        "I examine traces of the battle, of the fallen Traveller’s memories.",
+                        "I see a face that is not a face, an arm raised to fire their weapon.",
+                        "I see the murderer.",
+                        "It is Ariadne."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Leave",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 45,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Hesperus to learn more",
+        "AppId": "cur22",
+        "IterationAppId": "other36",
+        "Quantity": 24,
+        "PortalAddress": "313B052E463F",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "The others will be back soon, kindred. We do not have much time..."
+          ],
+          "Options": [
+            {
+              "Name": "Listen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ariadne tells us the universe is burning with corruption, that only we Travellers can fight it.",
+                  "But these missions... these lies... my kindred, we have been deceived.",
+                  "I thought my scans must be wrong. I thought I'd dreamt the whispers I heard in my mind.",
+                  "Hesperus shakes, tormented.",
+                  "Ariadne crashed their ship some weeks ago. They never returned. The entity who now leads us is an imposter.",
+                  "Find the knowledge stones, set your path through the portal. See the truth for yourself."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ariadne - the real Ariadne - is still out there. Prove this deception, kindred. Find the knowledge stones, go through the portal network. Find the truth..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The structure sings with exotic energies. It sees me. It knows my mind.",
+            "In the song I hear names, distant, faded... I hear the number at the end of all things.",
+            "I see its whisperer. I see a nameless form banish Ariadne...",
+            "And I see a duplicate arising from the crash, returning to claim its shape.",
+            "If this vision is to be believed, then Hesperus is right. Ariadne is an imposter.",
+            "This place wishes to help me... if I can just provide it with resources."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The exotic energy dissipates, but its song lingers.",
+                  "What has become of Ariadne? Who is the imposter standing in their place?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

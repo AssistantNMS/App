@@ -1,0 +1,1216 @@
+[
+  {
+    "Id": "MP_PORTALQUEST",
+    "Stages": [
+      {
+        "Level": 31,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Ariane pour en savoir plus.",
+        "AppId": "cur25",
+        "IterationAppId": "other26",
+        "Quantity": 16,
+        "PortalAddress": "010EF9F3A6C9",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Il y a encore de l'espoir, Pair-Voyageur, même face au désastre. J'ai un plan..."
+          ],
+          "Options": [
+            {
+              "Name": "En savoir plus sur son plan",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Trace l'itinéraire à suivre avec les pierres de savoir, suis-les vers un portail et soigne ce fléau. Quant à moi ?",
+                  "Nous ne sommes pas venus au monde pour fuir et nous cacher, Pair-Voyageur. Le temps est venu.",
+                  "Je compte bien affronter les causes de toutes ces anomalies et perturbations moi-même, quoi qu'il en coûte."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Les pierres de savoir t'attendent. Elles te montreront la voie à travers le portail..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Une transmission émane de la structure corrompue. Parmi les cris des adeptes Gek, un mot se détache, encore et encore.",
+            "Elle demande un sacrifice. Elle demande des matériaux.",
+            "'Abysses'.",
+            "La secte n'a pas été capable de nourrir son maître. On me sollicite à la place. Je dois apporter des ressources là-bas..."
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La transmission a changé avec l'effondrement de l'anomalie. À la place, des voix de Geks parlent de gratitude et d'amitié.",
+                  "Elles disent que ce monde pourrait devenir un foyer pour moi. Que je devrais rester. Que l'eau est parfaitement potable.",
+                  "Les Geks me disent qu'ils ont été si seuls."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 32,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Gémeaux pour en savoir plus.",
+        "AppId": "cook42",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "114805AA0B9B",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ariane a disparu !",
+            "J'ai essayé de l'arrêter... j'ai essayé de lui faire entendre raison ! Oh, j'espère qu'elle va bien..."
+          ],
+          "Options": [
+            {
+              "Name": "Le rassurer",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Gémeaux, gesticule, tremblant de panique.",
+                  "Comment peux-tu être si calme ? Ariane cherche la source même des Abysses !",
+                  "Si j'étais plus téméraire, si je savais où elle est partie, je la suivrais pour m'assurer qu'elle va bien.",
+                  "Je ne peux pas te demander de traverser le portail et de partir à la recherche des pierres de savoir... cela doit être ton choix, et seulement ton choix.",
+                  "Ariane a disparu !",
+                  "J'ai essayé de l'arrêter... j'ai essayé de lui faire entendre raison ! Oh, j'espère qu'elle va bien..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander ce que vous pouvez faire",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Gémeaux gesticule, soulagé et reconnaissant de votre aide.",
+                  "Ariane cherche la source même des Abysses ! Tu dois suivre sa trace !",
+                  "Cherche les pierres de savoir, traverse le portail et trouve notre amie ! Vite ! Il n'y a pas de temps à perdre !"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ariane est en danger ! Nous devons trouver les pierres de savoir pour la prochaine anomalie ! Ah !"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "L'anomalie chante avec les voix de Voyageurs à travers le temps et l'espace.",
+            "J'entends leurs noms dans les grésillements... Astéria, l'Héroïne-Voyageuse... Narcisse, allié des Derniers-Nés... Ils sont innombrables.",
+            "L'anomalie exige un sacrifice. Elle n'a pas de mauvaises intentions. Elle souffre.",
+            "D'innombrables voix m'appellent à l'aide. Je dois fournir des ressources. Je dois soigner le monde.",
+            "Une sorte de mousse recouvre la structure. Ses petites feuilles s'agitent fébrilement lorsque j'approche ma main. Est-ce une proposition ? Quelque chose pour m'aider ?"
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La fissure se répare d'elle-même. Je suis les données navigationnelles de tous ceux qui sont passés par cet endroit.",
+                  "Mon esprit se remplit de noms. Lazare. Artémis. Hildebrand.",
+                  "Je transfère les données navigationnelles au Nexus. Ces données auront besoin d'un peu de temps pour être décodées..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Récolter le compost sucré",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Le compost tombe facilement dans mes mains. Il a une odeur douce, presque appétissante.",
+                  "D'innombrables voix m'appellent à l'aide. Je dois fournir des ressources. Je dois soigner le monde."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offrir des matériaux",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "La fissure se répare d'elle-même. Je suis les données navigationnelles de tous ceux qui sont passés par cet endroit.",
+                        "Mon esprit se remplit de noms. Lazare. Artémis. Hildebrand.",
+                        "Je transfère les données navigationnelles au Nexus. Ces données auront besoin d'un peu de temps pour être décodées..."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Partir",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 33,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Mercure pour en savoir plus.",
+        "AppId": "cur24",
+        "IterationAppId": "other28",
+        "Quantity": 16,
+        "PortalAddress": "11CEFF9BECCC",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Je me questionne souvent sur la nature de notre existence, Adepte des portails. Ce que la disparition récente d'Ariane signifie pour nous.",
+            "Certains pensent que les Voyageurs partagent la même âme, divisée en d'innombrables itérations et univers.",
+            "Comment nous aurions pu être, si nous avions vécu différemment..."
+          ],
+          "Options": [
+            {
+              "Name": "En savoir plus sur la mission",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mercure soupire, fatigué, mais acquiesce tout de même.",
+                  "Bien sûr. La grande œuvre doit passer en premier.",
+                  "Nous avons localisé le vaisseau d'Ariane. Enfin, nous en avons localisé des centaines, dupliqués et répartis à travers l'univers connu.",
+                  "Le réseau de portails est une chose dangereuse, brisée. Tu dois être prudent en suivant ces étapes.",
+                  "Communie avec les pierres de savoir. Traverse le portail. Découvre la vérité."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Tu ne comprends toujours pas ? Suis le chemin des pierres de savoir et trouve le vaisseau d'Ariane de l'autre côté du portail.",
+                  "Quoi que tu fasses... Ne bois pas l'eau."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Le vaisseau d'Ariane se trouve devant moi. Mon exocombinaison me hurle de reculer. Elle essaie de me sauver de l'infection.",
+            "Les Abysses sont devant nous. Ils demandent une offrande. Ils demandent davantage."
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La corruption quitte ce vaisseau, et avec elle un millier de répliques disparaissent parmi les étoiles. Je lis le journal de données.",
+                  "Avant le fractionnement de sa réalité, ce vaisseau était entré en contact avec un étrange grand cargo dans les ténèbres entre les soleils.",
+                  "Son seul occupant a réussi à s'échapper avant l'accident. Ariane est toujours ici, d'une manière ou d'une autre, quelque part.",
+                  "Mon amie est toujours en vie."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 34,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Téthys pour en savoir plus.",
+        "AppId": "raw31",
+        "IterationAppId": "other33",
+        "Quantity": 250,
+        "PortalAddress": "11F4F91DA978",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "J'ai vécu avec le modificateur d'apparence d'un Vy'keen pendant une année entière, tu sais ? J'ai fait beaucoup de choses que je regrette.",
+            "Je ne sais même pas pourquoi je parle de ça. Nous ne sommes pas amis. Tu es un étranger."
+          ],
+          "Options": [
+            {
+              "Name": "Proposer de devenir amis",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Fais ça pour moi et peut-être que j'y réfléchirai, d'accord ? J'ai une mission pour toi. Une usine a été visée... une opération clandestine qui représente un certain intérêt pour moi...",
+                  "Elle passe de monde en monde pour éviter d'être détectée par les Sentinelles. J'ai besoin que tu localises les pierres de savoir, trouve ses coordonnées de portail actuelles.",
+                  "Ne me laisse pas tomber."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Acquiescer et rester silencieux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Téthys semble déçue. Elle avait espéré que vous vous battriez pour son amitié.",
+                  "J'ai... J'ai une mission pour toi. Une usine a été visée... une opération clandestine qui représente un certain intérêt pour moi...",
+                  "Elle passe de monde en monde pour éviter d'être détectée par les Sentinelles. J'ai besoin que tu localises les pierres de savoir, trouve ses coordonnées de portail actuelles.",
+                  "J'ai juste besoin d'aide."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Trouve la perturbation en localisant les pierres de savoir. C'est une usine que tu chercheras, de l'autre côté. N'importe quel portail devrait te montrer la voie."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Différentes espèces ont vécu un jour à cet endroit, récoltant et manipulant des données génétiques pour former des modifications d'apparence.",
+            "Les archives de l'usine sont corrompues par les parasites, mais je peux accéder aux plans finaux. Les travailleurs avaient commencé la création de modifications d'apparence de sphères de lumière pure à la place des têtes.",
+            "Ils sont tous morts désormais.",
+            "La structure demande de nouvelles données. Elle demande un sacrifice."
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Alors que la corruption disparaît, je parcours les archives de l'usine une dernière fois, dans l'espoir de trouver des traces de ses derniers jours.",
+                  "Un jour, les travailleurs ont découvert que les affichages holographiques qu'ils avaient créés avaient remplacé leur véritable crâne.",
+                  "Les cauchemars sont arrivés en même temps que ces sphères de lumière. D'une certaine manière, les images me semblent familières. Comme si j'avais déjà vu ce visage auparavant."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 35,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Hespéros pour en savoir plus.",
+        "AppId": "cook27",
+        "IterationAppId": "other36",
+        "Quantity": 40,
+        "PortalAddress": "10E508A1ACC0",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Hespéros semble troublé. Il cache sa tablette de données alors que je m'approche.None",
+            "Ariane a envoyé un mot... Elle revient vers nous, l'ami. Elle est saine et sauve."
+          ],
+          "Options": [
+            {
+              "Name": "Demander ce qui ne va pas",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Dis-moi. As-tu déjà entendu l'histoire de l'Héroïne-Voyageuse Astéria ? L'une des premières d'entre nous à avoir comblé l'écart entre les mondes.",
+                  "Le temps s'écoule étrangement pour notre peuple. Astéria a été conservée dans un arc d'esprit après sa mort, dispensant sa sagesse depuis sa tombe.",
+                  "C'est un pèlerinage que nous avons tous fait. Il est temps de partir à la recherche de ta prophétie, l'ami.",
+                  "Trouve leur monde. Suis les pierres de savoir et emporte leurs glyphes à travers le portail..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Cherche la tombe d'Astéria l'Héroïne-Voyageuse. Suis les pierres de savoir et le chemin auquel elles mènent."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "De la tombe d'Astéria provient le sifflement d'une altération familière. Tout autour, je détecte les signes de vie de Voyageurs coupés de la réalité.",
+            "Une voix fatiguée s'élève, à peine audible par-dessus les parasites.",
+            "Astéria me raconte qu'elle a mené les Vy'keen dans une bataille contre les émissaires de verre. Elle a conduit une flotte Sentinelle à sa perte.",
+            "Elle me dit que je serai trahi. Elle me dit que je deviendrai un traître, moi aussi.",
+            "L'altération a envahi cet endroit. Elle veut négocier. Elle veut prendre toute la matière et la vie qu'elle peut.",
+            "Tombe d'Astéria"
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "L'arc d'esprit est nettoyé. L'âme qui l'habite remercie les Voyageurs pour leur aide.",
+                  "Je demande à Astéria de me faire une prophétie. Je la questionne sur la nature de mes ennemis.",
+                  "Elle me dit que les Abysses ne sont pas ce qu'ils semblent être.",
+                  "La voix se tait. Je pars, troublé par ce que j'ai entendu."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 36,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Ariane pour en savoir plus.",
+        "AppId": "cook25",
+        "IterationAppId": "other26",
+        "Quantity": 40,
+        "PortalAddress": "2117FBF686E8",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Je suis chez moi. Je suis enfin chez moi. Pair-Voyageur, je suis tellement heureuse de contempler ton visage."
+          ],
+          "Options": [
+            {
+              "Name": "Lui dire que vous ressentez la même chose",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "J'étais à la recherche des Abysses. J'ai presque affronté notre adversaire, et puis...",
+                  "Je... Je n'ai aucun souvenir de ce qui m'est arrivé dans le vide, Pair-Voyageur.",
+                  "Je sais seulement que je me suis réveillée, et j'étais chassée. Hantée.",
+                  "Il y avait un vaisseau, grand et effrayant. L'altération ondule encore...",
+                  "Trouve les pierres de savoir. Traverse le portail. Je vais rassembler mes forces pour ton retour."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander où elle était",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "J'étais à la recherche des Abysses. J'ai presque affronté notre adversaire, et puis...",
+                  "Je... Je n'ai aucun souvenir de ce qui m'est arrivé dans le vide, Pair-Voyageur.",
+                  "Je sais seulement que je me suis réveillée, et j'étais chassée. Hantée.",
+                  "Il y avait un vaisseau, grand et effrayant. L'altération ondule encore...",
+                  "Trouve les pierres de savoir. Traverse le portail. Je vais rassembler mes forces pour ton retour."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Suis les pierres de savoir à travers le portail. Combats notre ennemi..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Le vaisseau était Vy'keen, avant. C'était un vaisseau inquisiteur, qui parcourait les galaxies à la recherche d'hérétiques.",
+            "Tout ce qu'il a trouvé, c'était la mort. L'altération est ici, maintenant. Elle est partout. Elle veut une offrande..."
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "L'altération est partie. Tout ce qu'elle a laissé derrière elle, ce sont de tristes journaux d'êtres en souffrance, clamant leur innocence.",
+                  "Le parent d'un meca-prêtre, affirmant qu'il ne sait pas où se trouve son enfant, affirmant qu'il suit toujours la voie de Hirk.",
+                  "Les données révèlent que tous les prisonniers ont été exécutés, avant qu'une mutinerie ne se déclenche. Les membres de l'équipage restants sont partis dans l'obscurité.",
+                  "Il ne reste que des vestiges."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 37,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Gémeaux pour en savoir plus.",
+        "AppId": "cur32",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "21DE0936B5C7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ariane est revenue ! Notre amie est saine et sauve ! Ah, réjouissez-vous !"
+          ],
+          "Options": [
+            {
+              "Name": "Se réjouir",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Si nos frères partageaient votre esprit !",
+                  "FTH_EXOTIC2_PQ_BLD_RES_D_19"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander une mission",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Tu as raison. Notre tâche ici est plus importante que jamais.",
+                  "FTH_EXOTIC2_PQ_BLD_RES_D_19"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Je t'en prie, suis les pierres de savoir jusqu'à l'emplacement de l'altération. Suis les portails. Trouve Hespéros. J'ai peur pour lui..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Mes capteurs détectent les restes d'un millier d'âmes Korvax, éparpillées à travers ce système.",
+            "Elles ont essayé de simuler les Abysses. Elles ont juste réussi à attirer leur attention.",
+            "Il faudra beaucoup de temps pour guérir ce vide. Sans nourriture, il dévorera système après système..."
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Une fois la fissure réparée, je découvre l'origine de l'expérience.",
+                  "Hespéros travaillait avec les Korvax... il essayait de résoudre notre problème.",
+                  "Son échec a provoqué la destruction de cette espèce. Je ne sais pas si mon ami a survécu..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 38,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Mercure pour en savoir plus.",
+        "AppId": "cook29",
+        "IterationAppId": "other28",
+        "Quantity": 90,
+        "PortalAddress": "313AFB6EBFE2",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "La catastrophe nous est tombée dessus, Adepte des portails. Un millier d'âmes Korvax a été déconnecté de la Convergence.",
+            "Le résultat de l'ambition d'un camarade Voyageur qui a dépassé ses capacités. Hespéros travaillait avec les Korvax pour essayer de simuler les Abysses eux-mêmes. Au lieu de cela, ils sont venus à eux.",
+            "Si Hespéros nous revient, penses-tu que nous pourrons toujours lui faire confiance ? Il a tant de réponses à nous donner."
+          ],
+          "Options": [
+            {
+              "Name": "Affirmer sa confiance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "J'espère que tu as raison, Adepte des portails."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Secouer la tête",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Cela me blesse, Adepte des portails. Même si j'ai bien peur que tu aies raison.",
+                  "FTH_EXOTIC3_PQ_BLD_RES_D_20"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Les pierres de savoir éclaireront ton chemin, Adepte des portails. Va. Fais ce dont je suis incapable."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "L'altération m'accueille, affirmant qu'elle m'a déjà rencontré, maintes et maintes fois.",
+            "J'entends ses parasites dans mon esprit, maintenant. Elle demande une offrande. Elle dit qu'elle m'en a fait tellement..."
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "L'anomalie cesse. Je repense aux doutes de Mercure... aux échecs d'Hespéros...",
+                  "Mes compagnons Voyageurs font de leur mieux. Nous devons nous entraider, je le sais.",
+                  "Une pensée se mêle aux autres en se frayant un chemin dans ma colonne vertébrale. Elle ne m'appartient pas. C'est une voix qui s'immisce en moi.",
+                  "Je dois l'aider."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 39,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Téthys pour en savoir plus.",
+        "AppId": "cur22",
+        "IterationAppId": "other33",
+        "Quantity": 24,
+        "PortalAddress": "0200FBA353D2",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Téthys semble mal à l'aise. Ses yeux dépourvus de paupières papillonnent en direction du poste vide de Mercure.",
+            "Dis-moi. Tu t'es déjà senti seul ?"
+          ],
+          "Options": [
+            {
+              "Name": "Dire que ça arrive à tout le monde",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Je ne suis pas tout le monde, pourtant, si ? Je suis censée être meilleure...",
+                  "Elle se déplace difficilement.",
+                  "Les chances de survie sont peut-être plus élevées si l'on voyage seul. Je ne sais pas pendant combien de temps encore nous serons en sécurité ici.",
+                  "Les pierres de savoir appellent chacun de nous, maintenant. Le portail a besoin de toi."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Dire que non",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Non ? Hum. Tu mens.",
+                  "Elle se déplace difficilement.",
+                  "Les chances de survie sont peut-être plus élevées si l'on voyage seul. Je ne sais pas pendant combien de temps encore nous serons en sécurité ici.",
+                  "Les pierres de savoir appellent chacun de nous, maintenant. Le portail a besoin de toi."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Suis les pierres de savoir, traverse le portail. J'ai besoin de faire mes propres préparatifs."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "L'altération bouillonne à travers le vaisseau accidenté, mais curieusement, le poste du capitaine reste épargné.",
+            "Le pilote a été trahi par quelqu'un qu'il pensait être un allié. Les Abysses peuvent prendre uniquement ce qu'ils sont invités à consommer. Ils désirent tellement plus, même maintenant..."
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Une fois l'altération éliminée, je regarde les données du vaisseau accidenté de plus près. Le pilote Voyageur a cru entendre des voix, les jours avant l'accident.",
+                  "Des chuchotements provenant de sa propre exocombinaison émis dans le vide, négociant pour leur survie...",
+                  "Je pars, vérifiant que ma propre exocombinaison ne présente pas d'altération ou de dysfonctionnement. Tout semble en ordre."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 40,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Hespéros pour en savoir plus.",
+        "AppId": "cur25",
+        "IterationAppId": "other36",
+        "Quantity": 16,
+        "PortalAddress": "20FDF7C5C5A3",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah, l'ami... n'aie pas peur. Toute ma culpabilité a été purgée de mon esprit. Des amas de nanites peuvent facilement changer des neurones..."
+          ],
+          "Options": [
+            {
+              "Name": "Écouter",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "J'ai aidé les Korvax à créer leur simulation des Abysses. Je pleure réellement leur disparition, l'ami. Mais ce travail n'est pas la seule chose à avoir précipité leur destin !",
+                  "Il y a un traître parmi nous... Quelqu'un a mené les Abysses jusqu'à nous ! Tu ne vois donc pas ! Les pierres de savoir ont été détournées !",
+                  "Celui qui est derrière cette traîtrise veut que nous traversions les portails. Il veut que nous alimentions les anomalies.",
+                  "Saute dans la brèche une fois encore, l'ami. Je vais tenter de nous délivrer de cette terrible boucle..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Trouve les pierres de savoir, traverse le portail. Je vais surveiller et observer..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Des énergies exotiques font crépiter la tombe.",
+            "Le Voyageur qui a un jour reposé ici est parti depuis longtemps, récupéré par un arc d'esprit venant d'un autre univers.",
+            "La tombe est le berceau d'un désir sans fin, désormais. Son existence exige une offrande de ressources."
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La tombe est purifiée. Je tente de trouver le nom de celui qui est mort ici, mais tout ce que je trouve, c'est une valeur nulle.",
+                  "Je pars, troublé. J'ai la sensation d'être observé..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 41,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Ariane pour en savoir plus.",
+        "AppId": "cook27",
+        "IterationAppId": "other26",
+        "Quantity": 60,
+        "PortalAddress": "209B0170700E",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah, Pair-Voyageur. Tu es revenu.",
+            "Son visage se déforme en ce qui ressemble à moitié à un sourire."
+          ],
+          "Options": [
+            {
+              "Name": "Sourire en retour",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Certains pensent que tous les Voyageurs ne sont qu'une même entité, divisée en d'innombrables formes et corps.",
+                  "Je suis toi, tu es moi.",
+                  "C'est pourquoi je crois en toi, Pair-Voyageur. Si nous travaillons ensemble, nous pouvons sauver tout ce que nous sommes.",
+                  "Les pierres de savoir sont un cadeau de l'Atlas. Qui sommes-nous pour refuser l'appel des portails ?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Suis les pierres de savoir, Pair-Voyageur, et le portail te mènera à notre prochaine tâche."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Les adeptes de l'Atlas sont venus dans ce monde pour prier.",
+            "Une anomalie distord leur vaisseau accidenté. Elle leur a coûté la vie il y a longtemps.",
+            "Désormais, l'anomalie en demande plus. Elle attend notre invitation à partir, des ressources pour étancher sa soif insondable."
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Le vaisseau accidenté est nettoyé de toute trace d'anomalie.",
+                  "Son journal parle de l'Atlas qui a créé toute chose... y compris la perte. Y compris la haine.",
+                  "Je me demande si, dans leurs derniers instants, ils ont fait confiance à leur divinité. S'ils ont espéré un sauvetage..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 42,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Gémeaux pour en savoir plus.",
+        "AppId": "raw47",
+        "IterationAppId": "other27",
+        "Quantity": 400,
+        "PortalAddress": "11DFFB6E3036",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Gémeaux regarde les plans d'exocombinaisons. Il ne semble pas remarquer ma présence..."
+          ],
+          "Options": [
+            {
+              "Name": "Saluer votre ami",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Il cache les plans, hésitant alors qu'il se tourne vers moi.",
+                  "Une grande partie de nos vies est un mystère, mon ami. Les visages avec lesquels nous sommes nés...",
+                  "Les vêtements que nous portons. Qui a fabriqué les exocombinaisons ? Qui parle au travers de leur voix ?",
+                  "Les pierres de savoir, les portails par lesquels elles nous mènent... ils sont nos droits de naissance.",
+                  "Il y a tant de choses qui restent à découvrir."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Suis les pierres de savoir, comme nous l'avons toujours fait. Tout Voyageur a le droit de traverser les portails..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La structure a autrefois abrité une intelligence artificielle.",
+            "Désormais, l'altération infeste l'intérieur de sa coquille, haïssant tout qu'elle a jadis été.",
+            "Cet endroit ne désire que matière. Il veut que je lui en apporte plus."
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Alors que l'altération s'en va, je vois les derniers vestiges de l'IA, ses quinze dernières minutes de vie...",
+                  "Je savais que je viendrais ici. Je savais que j'essaierais de la sauver.",
+                  "Les mondes bouillonnent dans le vide l'un après l'autre. Les Abysses s'étendent."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 43,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Mercure pour en savoir plus.",
+        "AppId": "build168",
+        "IterationAppId": "other28",
+        "Quantity": 16,
+        "PortalAddress": "4037F8AE0462",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Nous vivons une époque sombre, Adepte des portails. Notre communauté est tombée en disgrâce."
+          ],
+          "Options": [
+            {
+              "Name": "Demander ce qui ne va pas",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hespéros est devenu paranoïaque. Il refuse d'assister à nos réunions. Il évite même Nada et Polo.",
+                  "Tu ne dois pas devenir comme notre ancien ami. Tu accomplis un travail tellement essentiel...",
+                  "Les pierres de savoir te guideront à travers les portails. Elles te montreront la voie vers le salut."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Laisse les pierres de savoir te guider. Les portails te mèneront au salut."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La structure est infectée, son appel anormal résonne à travers la planète elle-même.",
+            "Les Abysses exigent des ressources. Sans eux, ce monde sera perdu pour toujours..."
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Je fais mon devoir. L'altération s'estompe. J'entends sa voix... je ressens ses émotions...",
+                  "Je ressens la malveillance, la haine, le désespoir, tout ceci dirigé uniquement contre elle-même...",
+                  "Je vois des souvenirs d'eau..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 44,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Téthys pour en savoir plus.",
+        "AppId": "cook116",
+        "IterationAppId": "other33",
+        "Quantity": 90,
+        "PortalAddress": "519505C9AA01",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Voyageur... Ton exocombinaison fonctionne-t-elle à pleine capacité ?"
+          ],
+          "Options": [
+            {
+              "Name": "Dire que oui",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hum.",
+                  "J'entends des bruits étranges de ma propre combinaison. Presque comme si elle était en train de chuchoter.",
+                  "Un de mes associés s'est rendu dans l'espace Korvax pour analyser nos signaux, mais il n'est jamais revenu.",
+                  "Vas-tu essayer de le trouver en traversant le portail ? Les pierres de savoir te montreront leur chemin."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Dire que non",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hum.",
+                  "J'entends des bruits étranges de ma propre combinaison. Presque comme si elle était en train de chuchoter.",
+                  "Un de mes associés s'est rendu dans l'espace Korvax pour analyser nos signaux, mais il n'est jamais revenu.",
+                  "Vas-tu essayer de le trouver en traversant le portail ? Les pierres de savoir te montreront leur chemin."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Un autre de mes associés manque à l'appel. Trouve-le dans le portail... Les pierres de savoir te montreront la destination. Fais vite."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Est-ce qu'un Voyageur a fait ça ?",
+            "Il y a des preuves qu'un multi-outil a tiré sur l'ami défunt de Téthys, mais l'analyse n'a jamais été terminée.",
+            "L'altération se répand autour de la tombe, exigeant son offrande.",
+            "Une croissance moussue recouvre la structure. Ses petites feuilles frétillent d'excitation lorsque j'approche ma main. Est-ce une proposition ? Quelque chose pour m'aider ?"
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La tombe est purifiée.",
+                  "J'examine les traces de la bataille, des souvenirs du Voyageur défunt.",
+                  "Je vois un visage qui n'en est pas un, un bras levé pour faire feu.",
+                  "Je vois le meurtrier.",
+                  "C'est Ariane."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Récolter le compost sucré",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Le compost tombe facilement dans mes mains. Il a une odeur douce, presque appétissante.",
+                  "L'altération se répand autour de la tombe, exigeant son offrande."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offrir des matériaux",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "La tombe est purifiée.",
+                        "J'examine les traces de la bataille, des souvenirs du Voyageur défunt.",
+                        "Je vois un visage qui n'en est pas un, un bras levé pour faire feu.",
+                        "Je vois le meurtrier.",
+                        "C'est Ariane."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Partir",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 45,
+        "NpcMessage": "La région perturbée doit être rejointe via un portail\nParlez à l'itération : Hespéros pour en savoir plus.",
+        "AppId": "cur22",
+        "IterationAppId": "other36",
+        "Quantity": 24,
+        "PortalAddress": "313B052E463F",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Les autres seront bientôt de retour, l'ami. Nous n'avons pas beaucoup de temps..."
+          ],
+          "Options": [
+            {
+              "Name": "Écouter",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ariane nous dit que l'univers se consume sous l'altération, que seuls les Voyageurs peuvent la combattre.",
+                  "Mais ces missions... ces mensonges... mon ami, nous avons été déçus.",
+                  "Je pensais que mes données étaient fausses. Je pensais avoir rêvé ces chuchotements que j'ai entendus dans mon esprit.",
+                  "Hespéros gigote, tourmenté.",
+                  "Le vaisseau d'Ariane s'est écrasé quelques semaines auparavant. Elle n'est jamais revenue. L'entité qui nous dirige désormais est un imposteur.",
+                  "Trouve les pierres de savoir, trace ton chemin jusqu'au portail. Vois la vérité par toi-même."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Demander conseil",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ariane, la vraie Ariane, est toujours dehors. Prouve cette supercherie, l'ami. Trouve les pierres de savoir, traverse le réseau de portails. Trouve la vérité..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Des énergies exotiques font chanter la structure. Elle me voit. Elle connaît mon esprit.",
+            "Dans la chanson, j'entends des noms, distants, faiblement... J'entends le chiffre à la fin de toutes choses.",
+            "Je vois le chuchoteur. Je vois une forme sans nom bannir Ariane...",
+            "Et je vois une réplique résultant de l'accident, venir prendre sa forme.",
+            "Si j'en crois cette vision, alors Hespéros a raison. Ariane est une impostrice.",
+            "Cet endroit désire m'aider... seulement si je lui fournis des ressources."
+          ],
+          "Options": [
+            {
+              "Name": "Offrir des matériaux",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "L'énergie exotique se dissipe, mais sa chanson persiste.",
+                  "Qu'est devenue Ariane ? Qui est l'imposteur qui a pris sa place ?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Partir",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

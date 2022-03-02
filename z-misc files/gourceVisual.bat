@@ -1,0 +1,1 @@
+"C:\Program Files\Gource\gource.exe" -1280x720 --seconds-per-day 0.2 --hide filenames --max-file-lag 0.1 --background-image "../deepSpace.jpg" --logo "../NMS Logo 128.png"

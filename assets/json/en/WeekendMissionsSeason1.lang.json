@@ -1,0 +1,2308 @@
+[
+  {
+    "Id": "MP_PORTALQUEST",
+    "Titles": [
+      "Swallowed by a Star",
+      "Toward the Void",
+      "Misaligned Realities",
+      "A Dark Maw",
+      "Vanishing Point"
+    ],
+    "Subtitles": [
+      "Investigate Anomalous Region"
+    ],
+    "Descriptions": [
+      "Nada's spacetime loom has detected a disturbance in a distant region of the universe. The probable breach in reality is too dangerous for the Space Anomaly to warp to directly. Travellers must access the region by Portal.\n\nWEEKEND EVENT: This mission may only be completed once each week. Grouping up with other explorers is recommended, but it may also be played solo.",
+      "An abnormal signal has reached the Anomaly's communicators, its frequency indicating a disturbance in reality. The signal is corrupted, and its exact origin cannot be triangulated. The only way to reach it is by Portal.\n\nWEEKEND EVENT: This mission may only be completed once each week. Grouping up with other explorers is recommended, but it may also be played solo.",
+      "Unusual, potentially dangerous readings have appeared on Nada's spacetime loom. The Iterations inhabiting the Space Anomaly believe these point to a disturbance in reality that may only be accessed by Portal.\n\nWEEKEND EVENT: This mission may only be completed once each week. Grouping up with other explorers is recommended, but it may also be played solo.",
+      "A desperate and broken transmission has reached the Space Anomaly, but the signal is untraceable, its origin disturbed. Nada and Polo urge Travellers to search for a route via the ancient Portal network and investigate.\n\nWEEKEND EVENT: This mission may only be completed once each week. Grouping up with other explorers is recommended, but it may also be played solo.",
+      "The Anomaly inhabitants are deeply troubled by recent readings from Nada's spacetime loom. The data indicates a region of unsettled reality. Rewards are offered to any Travellers who travel by Portal and assist.\n\nWEEKEND EVENT: This mission may only be completed once each week. Grouping up with other explorers is recommended, but it may also be played solo."
+    ],
+    "Stages": [
+      {
+        "Level": 1,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Ariadne to learn more",
+        "AppId": "cur17",
+        "IterationAppId": "other26",
+        "Quantity": 12,
+        "PortalAddress": "1144B573F95C",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "I saw you approach the Nexus. I hoped you might. Thank you, Like-Traveller. This mission has significance to all like us."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about significance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Something dreadful has appeared on Nada's loom. A corruption in spacetime. Already, it has pulled an entire freighter from the skies. I am sure I felt the loss of Like-Travellers in the collision.",
+                  "Step from portal to like-portal to reach the disturbance. The glyphic key is fragmented, but it can be recovered. Search for knowledge stones. I know the key will reveal itself to you."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Step from portal to like-portal to reach the disturbance. The glyphic key is fragmented, but it can be recovered. Search for knowledge stones. I know the key will reveal itself to you."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The crash site stinks of burnt metal and smouldering flesh. An unknown energy leaps and sparks around the vessel, arcing across the hull and coursing through my Exosuit. An effect of the crash, or the cause?",
+            "A rhythm within the static becomes prominent, beating out a demand. It tickles my mind with a plea, demanding materials from this planet. Some unidentified force is unsettled here. It longs to be stabilised."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "There is no collision of matter against matter. The materials dissolve directly into the disturbance, vanishing without a trace.",
+                  "The static bursts are subdued to a soft hum. The breach may not be fully healed, but it is stable, for now."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Search wreckage",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Something bubbles forth from the crash - a scrap of nano-fibre material, not unlike my own exosuit. A grim relic of the last explorer to reach this site?",
+                  "Embedded in the fabric is an oxygen upgrade, still intact. I take it with me. Perhaps it can assist my underwater search.",
+                  "A rhythm within the static becomes prominent, beating out a demand. It tickles my mind with a plea, demanding materials from this planet. Some unidentified force is unsettled here. It longs to be stabilised."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offer materials",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "There is no collision of matter against matter. The materials dissolve directly into the disturbance, vanishing without a trace.",
+                        "The static bursts are subdued to a soft hum. The breach may not be fully healed, but it is stable, for now."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Leave",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 2,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Gemini to learn more",
+        "AppId": "build171",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "10FF182964AA",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "You're investigating the disturbance, my friend? I hope you're taking companions."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about companions",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Please don't think I'm questioning your abilities! I didn't mean that, not at all. It's just that it might be quite dangerous. Nada sounded so worried.",
+                  "I think you'll need to find a portal to get there. I don't know much about that ancient technology, but they're somehow connected to knowledge stones. If you find the stones, you should be able to find the coordinates.",
+                  "I hope I've helped a little bit. I'm glad if I have. We're all in this together, aren't we?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I think you'll need to find a portal to get there. I don't know much about that ancient technology, but they're somehow connected to knowledge stones. If you find the stones, you should be able to find the coordinates.",
+                  "I hope I've helped a little bit. I'm glad if I have. We're all in this together, aren't we?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "An unnatural energy crackles in the air around this structure, blasting me with waves of static. My suit flashes an array of warnings and errors.",
+            "Through the noise, I can distinguish a pattern, insistent and demanding. The reality of this structure has been breached, the resulting rift spitting static and instability. It might be stabilised, but only with a material sacrifice."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "As I hold the materials close to the source of the noise, they disintegrate away to nothing in my hands, enveloped by the static.",
+                  "The warnings from my suit become less frantic. This site no longer poses an immediate threat."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 3,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Mercury to learn more",
+        "AppId": "cook25",
+        "IterationAppId": "other28",
+        "Quantity": 60,
+        "PortalAddress": "11F366324C16",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "This will be a test of fortitude, Portal-Adept."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about fortitude",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The breach indicated by Nada's apparatus is serious. While you may be able to mitigate its impact, I doubt it can be entirely reversed.",
+                  "However, the real test is the matter of reaching it. You will need to venture to the disturbed region by portal.",
+                  "I suggest you begin your journey by seeking out knowledge stones. Did you know they share a heritage with the ancient gateways? Approached with a clear mind and a steady hand, they may reveal the coordinates you require."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "You will need to venture to the disturbed region by portal.",
+                  "I suggest you begin your journey by seeking out knowledge stones. Did you know they share a heritage with the ancient gateways? Approached with a clear mind and a steady hand, they may reveal the coordinates you require."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "I become aware of a high-pitched whine coming from this structure. As I step closer, it distorts into the sputtering and hissing of static, leaping through the air to zig-zag across the surface of my Exosuit.",
+            "Barely discernable through the crackling, a frantic message plays out, over and over. There is a rift in this structure; the planet here is deeply scarred. It requires a specific material sacrifice to heal..."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I hold the materials near to where the static is loudest. In a burst of energy, they disappear. The disturbance here has begun to repair."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 4,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Tethys to learn more",
+        "AppId": "cook30",
+        "IterationAppId": "other33",
+        "Quantity": 90,
+        "PortalAddress": "30F607272323",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah. So you've signed up to investigate this 'disturbance' Nada's been so worked up about."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about 'disturbance'",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Look, I don't know anything about disturbances or realities or any of that. But I actually do want to help you. Really, I do.",
+                  "Someone I...0.4 used to know has gone quiet, right near where Nada picked up that odd signal. It's not like them. They're not the quiet type.",
+                  "I don't really expect to see them again. But if you can stop - whatever it is - if you can stop that happening to anyone else, that's good, you know?",
+                  "It'll be almost impossible to reach this place by traditional means. You'll need to travel by portal.",
+                  "Before they disappeared, my friend said something about knowledge stones. I think - well, I'm pretty sure - if you go find some of those and put your hand on them, you'll learn the coordinates you need. Good luck."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "It'll be almost impossible to reach this place by traditional means. You'll need to travel by portal. I...0.4 picked up some information about knowledge stones - you know those little stone columns that usually talk at you? Well, turns out they have a few more secrets.",
+                  "I think - well, I'm pretty sure - if you go find some of those knowledge stones and put your hand on them, you'll learn the coordinates you need. Good luck."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Incongruous with this site of death, a living static crackles and pops below the grave. My Exosuit shudders as static courses through it, but the energy seems to cause me no harm.",
+            "I pick out a pattern amid the bursts of static. Sentence-like in structure, issuing a demand. Reality here is breached and volatile; only specific materials can calm it."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The static energy reacts violently to the presence of the items, flaring towards me. It licks the materials directly from my hands, consuming them.",
+                  "Silence. The disturbance seems to have been stabilised."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 5,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Hesperus to learn more",
+        "AppId": "raw46",
+        "IterationAppId": "other36",
+        "Quantity": 2000,
+        "PortalAddress": "10610E3057EE",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "I understand you have undertaken an investigation, kindred. Nada is fortunate to have your assistance."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about Nada",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "There is a powerful force at play here. Nada is fearful of such things. They are truly a brilliant Korvax, unique amongst their kind - but a Korvax nonetheless. It would be unreasonable to expect them to share our perspective, kindred.",
+                  "I dreamt of this conversation, and of what you will do next. Not exactly empirical research, true, but I've had dreams of this nature before. I trust in the vision it showed me. In turn, I am asking you to trust me.",
+                  "You will enter a portal to reach the troubled planet. The destination is predetermined: you will discover its universal address upon stones of knowledge. They will respond to the touch of a Traveller.",
+                  "Until we meet again, kindred."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I dreamt of this conversation, kindred, and of what you will do next. Not exactly empirical research, true, but I've had dreams of this nature before. I trust in the vision it showed me. In turn, I am asking you to trust me.",
+                  "You will enter a portal to reach the troubled planet. The destination is predetermined: you will discover its universal address upon stones of knowledge. They will respond to the touch of a Traveller.",
+                  "Until we meet again, kindred."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The structure hisses and crackles. This static-like energy must be the disturbance detected by Polo and Nada. Wordlessly, it transmits its demands directly into my mind.",
+            "Something groans deep within the earth, as though the land itself hungers. But why these materials, already abundant on this world?"
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I push the materials towards the source of the static disturbance, watching them melt away into nothing. The damaged planet feeds upon its own resources. It quietens. The breach in reality is repaired."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 6,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Ariadne to learn more",
+        "AppId": "cur22",
+        "IterationAppId": "other26",
+        "Quantity": 16,
+        "PortalAddress": "21B13538C8F7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "The Quicksilver Synthesis Companion is a skilled artisan. Have you seen its crafted faces, Like-Traveller? Indistinguishable from genuine flesh."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about faces",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "They are works of art. But in truth, the robot is only a tool of Specialist Polo.",
+                  "We must not underestimate the Gek. Their jovial manner masks a deep cleverness. They've done much for me. For us all, alike.",
+                  "Ariadne's whiskers twitch. They raise a gloved hand to their own face, as though re-familiarising themselves with its bumps and contours.",
+                  "You must seek stones of knowledge to unlock a portal. Touch your hand to these stones. They will know to expect you, Like-Traveller."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "You must seek stones of knowledge to unlock a portal. Touch your hand to these stones. They will know to expect you, Like-Traveller."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "My Exosuit sounds an alert as I approach the structure, the synthesised voice shrill.",
+            "Warning. Anomaly detected. Warning. Warning. Warning.",
+            "My limbs feel sluggish and uncooperative, my suit tight and uncomfortable. A desperate demand resonates throughout the structure, barely audible above the static."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "My own body fights me as I press the materials towards the structure, my muscles shaking in protest, my mind filled with fear.",
+                  "Just as I think I cannot do this, a burst of energy snatches the resources from my hands, devouring them. The static fades to silence. There is nothing more to be done here."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 7,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Gemini to learn more",
+        "AppId": "cur24",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "10D92420546E",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Gemini gives me a watery smile, but seems distracted. They glance repeatedly over at Hesperus."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about Hesperus",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah - I'm sorry, my friend. My distraction must be obvious. Welcome. It is always a pleasure to speak with you.",
+                  "I'm just a little worried about Hesperus. I -",
+                  "Gemini lowers their voice, looking troubled.",
+                  "With all these strange disturbances in reality, I'm worried Hesperus might... put themselves in danger. I know how they are. This sort of mystery is irresistable to them.",
+                  "But enough of my worries. I know you are doing important work, on behalf of us all.",
+                  "You can reach the disturbed region through a portal, but you'll need an address to take you to the right place. Look for knowledge stones. Touch them. I'm sure you'll find what you need.",
+                  "Ah - I'm sorry, my friend. My distraction must be obvious. Welcome. It is always a pleasure to speak with you.",
+                  "I'm just a little worried about Hesperus. I -"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah - I'm sorry, my friend. My distraction must be obvious. I know you are doing important work, on behalf of us all.",
+                  "You can reach the disturbed region through a portal, but you'll need an address to take you to the right place. Look for knowledge stones. Touch them. I'm sure you'll find what you need."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The damaged vessel hisses and flares. This static energy has an unnatural quality; it is more than the sparking of a broken engine.",
+            "Though there is no-one here, a voice cries out, muffled and distant.",
+            "TXT_RadioNoise- kkttzzzzzzk - Where am TXT_RadioNoise- zktt - is the same place! The reality signatTXT_RadioNoise- ttzzz - what happened to Artemis isn't TXT_RadioNoise- kkttzzzzzzk - this static! Please, can anyone TXT_RadioNoise- kktzz -",
+            "The static crackles its own demand. The planet is injured, destabilised. A specific material, found locally, should serve to patch it."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Reaching out my hands, allowing my mind to float through the static, I search for the origin of the strange energy.",
+                  "Then, suddenly, I feel it, repelling me like a magnetic force. I can feel nothing else. With effort, I offer the materials towards the site.",
+                  "There is a deafening crack, and the offering blinks out of existence. Then silence. The site is peaceful once more."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 8,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Mercury to learn more",
+        "AppId": "cur32",
+        "IterationAppId": "other28",
+        "Quantity": 16,
+        "PortalAddress": "11338D40158A",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "The solemn Traveller assesses me. Their eyes linger over my face, as though inspecting it for injury.",
+            "I am pleased to see you alive. Will this be your first encounter with one of these disturbances?"
+          ],
+          "Options": [
+            {
+              "Name": "Say it is",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Once again, Mercury peers closely at me. They look down at their own hands. They look up, meet my eyes.",
+                  "In that case, let us hope you survive this journey unaltered.",
+                  "The portal network will provide a gateway to the unsettled region. You will need to stimulate the correct neural pathways with a glyphic code. Ancient stones of knowledge can teach you that code."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Say it is not",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Once again, Mercury peers closely at me. They look down at their own hands. They look up, meet my eyes.",
+                  "Your endurance impresses me, Portal-Adept.",
+                  "As before, the portal network will provide a gateway to the unsettled region. You will need to stimulate the correct neural pathways with a glyphic code. Ancient stones of knowledge can teach you that code.",
+                  "Your endurance impresses me, Portal-Adept.",
+                  "As before, the portal network will provide a gateway to the unsettled region. You will need to stimulate the correct neural pathways with a glyphic code. Ancient stones of knowledge can teach you that code."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The portal network will provide a gateway to the unsettled region. You will need to stimulate the correct neural pathways with a glyphic code. Ancient stones of knowledge can teach you that code."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The buzz and pop of static surrounds this structure. Placing my hand against it, I discover a section which is oddly insubstantial. Where they should touch solid matter, my fingers pass through into thin air.",
+            "The structure seems here, and yet not here. I notice a slight shimmer where the static is loudest. It repeatedly crackles its demand: bring a material sacrifice, to calm and stabilise it."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The shimmering surface yields, swallowing the offering. The crackling quietens to a soft hum, seemingly appeased. I have done all I can here."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 9,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Tethys to learn more",
+        "AppId": "cur25",
+        "IterationAppId": "other33",
+        "Quantity": 16,
+        "PortalAddress": "31CDE8370772",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Off to investigate this latest disturbance? Better you than me. Though it might be nice to get out of here. The others won't shut up about it."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about others",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "They're obsessed! It's excessive. Ariadne's the prime culprit. They give me the chills. All that talk about faces, while they themselves have the strangest 'face' I've ever seen.",
+                  "Anyway. If you need a bit of help getting started: fly out of here and look for knowledge stones. The portal code they reveal should take you to the bad place. Just make sure you're packing a decent Multi-Tool."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Fly out of here and look for knowledge stones. The portal code they reveal should take you to the bad place. Just make sure you're packing a decent Multi-Tool."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The crackle of static greets me as I draw near. The physicality of this structure seems compromised.",
+            "Though faint and corrupted, there is a definite pattern beating through the noise of the static. The disturbance here is a fissure, a tear in reality. Only specific materials can stabilise it..."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The materials disintegrate into nothingness. The pops of the static slow, then stop. Only a gentle buzz remains. The structure seems stabilised."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 10,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Hesperus to learn more",
+        "AppId": "cur21",
+        "IterationAppId": "other36",
+        "Quantity": 8,
+        "PortalAddress": "21D4501EC013",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Have you discovered much about the disturbances, kindred? Please. Tell me of your experiences."
+          ],
+          "Options": [
+            {
+              "Name": "Say they've been frightening",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah. Yes. I understand.",
+                  "I myself joined the effort to stabilise the most recent disturbance. The voice of the static unsettled me. It is much like the Atlas, you know, and yet simultaneously... not like the Atlas.",
+                  "I've seen this before. Land your starship on a planet; scour its surface for knowledge stones. A touch, and you will learn the address to the troubled region. Enter that address into a portal, and step across the threshold..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Say they've been enlightening",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah. Yes. I understand.",
+                  "I myself joined the effort to stabilise the most recent disturbance. The voice of the static unsettled me. It is much like the Atlas, you know, and yet simultaneously... not like the Atlas.",
+                  "I've seen this before. Land your starship on a planet; scour its surface for knowledge stones. A touch, and you will learn the address to the troubled region. Enter that address into a portal, and step across the threshold..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Say they've been frightening",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperus frowns, disbelieving. They offer no further comment on my claim.",
+                  "I've seen this before. Land your starship on a planet; scour its surface for knowledge stones. A touch, and you will learn the address to the troubled region. Enter that address into a portal, and step across the threshold..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Say they've been enlightening",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperus frowns, disbelieving. They offer no further comment on my claim.",
+                  "I've seen this before. Land your starship on a planet; scour its surface for knowledge stones. A touch, and you will learn the address to the troubled region. Enter that address into a portal, and step across the threshold..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I've seen this before. Land your starship on a planet; scour its surface for knowledge stones. A touch, and you will learn the address to the troubled region. Enter that address into a portal, and step across the threshold..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Though the crash itself is quiet and cold, a strange force crackles up from the earth like static, setting off warnings in my Exosuit.",
+            "The static energy broadcasts a message directly into my mind:",
+            "Stabilise... instability. Clear... corruption. Materials required."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "My suit sounds an alarm, its readouts scrambled. The alarms grow in urgency as I get closer to the source of the strange energy.",
+                  "The static noise crescendos to a roar as I offer the materials, then fades to nothing."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 11,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Ariadne to learn more",
+        "AppId": "cur23",
+        "IterationAppId": "other26",
+        "Quantity": 25,
+        "PortalAddress": "6182588F1956",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "The nature of these of disturbances worries me, Like-Traveller. I do not often venture from the Anomaly, but what I encountered out there was more than a likeness."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about likeness",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I saw my own face in the disturbance. It was no iteration. It was myself.  I gazed out through two pairs of eyes.",
+                  "Do you intend to see it for yourself? Learn the location from knowledge stones. The stones should yield their secrets easily. They were designed to receive you..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "To venture there yourself, learn the location from knowledge stones. The stones should yield their secrets easily. They were designed to receive you..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "My suit cries out an alarm, its sensors oscillating wildly. This structure is unstable, and unsafe.",
+            "A static energy rushes across the surface of the structure and coils its way up my arm, alive and imploring. Something in the fabric of reality is damaged. It needs a material sacrifice to repair."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The static arcs from my fingertips to the materials I have collected. They shrink into nothingness, all trace of them gone.",
+                  "The unknown energy subsides, withdrawing back into the earth. The damage here seems to be repaired."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 12,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Gemini to learn more",
+        "AppId": "cook148",
+        "IterationAppId": "other27",
+        "Quantity": 20,
+        "PortalAddress": "30C6233C062E",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Are you well, my friend? I apologise if I seem discouraging. Of course I am grateful for the efforts of Travellers like yourself. And Hesperus. If it weren't for their adventurous nature, we would never have met."
+          ],
+          "Options": [
+            {
+              "Name": "Ask how they met Hesperus",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "We met when I first discovered portals myself. Just as I emerged onto that unknown landscape, blinking and disoriented, I was met by this strange orb of light. Imagine my astonishment when it spoke.",
+                  "For the longest time we only had each others' voices to follow through the dark. But when the boundaries finally shattered,0.4 well, it was as though we'd known each other all our lives.",
+                  "If you mean to help quiet this anomaly, look for knowledge stones, my friend. They'll let you know everything you need to direct the portal's flow."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "If you mean to help quiet this anomaly, look for knowledge stones, my friend. They'll let you know everything you need to direct the portal's flow."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "My vision clouds as I stare at this structure. For a moment, it is as though two identical copies are before me, slightly displaced.",
+            "I blink, and the moment passes.",
+            "I notice a luminous fluid bleeding from the structure. It seems reactive to my presence, flowing more rapidly when I move my hand closer. Is this an offering? Something to aid me?"
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I stare at my suddenly empty hands, an afterimage of the materials still there. I blink. They are definitely gone, grabbed straight out of this reality.",
+                  "The static energy fades until only a hum remains. The structure seems stable now."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Collect Enzyme Fluid",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The liquid runs eagerly into my palms. It smells sweet, almost appetising.",
+                  "A static energy hisses from within my Exosuit, transmitting a message: the reality of this structure has been damaged. It yearns to be stabilised."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offer materials",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "I stare at my suddenly empty hands, an afterimage of the materials still there. I blink. They are definitely gone, grabbed straight out of this reality.",
+                        "The static energy fades until only a hum remains. The structure seems stable now."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Collect Enzyme Fluid",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "The liquid runs eagerly into my palms. It smells sweet, almost appetising."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Leave",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 13,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Mercury to learn more",
+        "AppId": "cook151",
+        "IterationAppId": "other28",
+        "Quantity": 200,
+        "PortalAddress": "21C8F44A5ED7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "These disturbances fill me with a great unease."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about unease",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The voice of the static is... intoxicating. Staring into that rift is like a window into a dream. I see Soleth Prime. I see how I once was. An earlier version. And I feel raw, like the dream is looking directly back at me.",
+                  "Go, Portal-Adept. Find the stone children of the portals. Listen well to their teachings."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Find the stone children of the portals. Listen to what they tell you."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The static charge around this crash site seems to penetrate straight through my Exosuit. I feel it prickle against my skin.",
+            "TXT_RadioNoise- kkktt - know I wasn't always here TXT_RadioNoise- zktt - become so darkTXT_RadioNoise- kttkk - become redundant TXT_RadioNoise- zzktkt-",
+            "A signal pierces through the noise: this wound in reality requires a sacrifice. It must consume a material from this planet. It must consume itself."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "A tidal wave of energy floods over my outstretched hands, consuming the materials entirely.",
+                  "Only silence remains."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Search wreckage",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Snagged on a section of broken hull, I discover a rag of nano-fibre material, much like that of my exosuit.",
+                  "Embedded in the fabric is an oxygen upgrade, still intact. I take it with me. Perhaps it can assist my underwater search.",
+                  "A signal pierces through the noise: this wound in reality requires a sacrifice. It must consume a material from this planet. It must consume itself."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offer materials",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "A tidal wave of energy floods over my outstretched hands, consuming the materials entirely.",
+                        "Only silence remains."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Leave",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 14,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Tethys to learn more",
+        "AppId": "build169",
+        "IterationAppId": "other33",
+        "Quantity": 16,
+        "PortalAddress": "603CF5241B1D",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Tethys seems more still, less fidgety than usual. They regard me quietly.",
+            "These disturbances are... something's really wrong. I went and saw for myself. Even my exosuit seemed to panic when I got close."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about suit",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Don't worry, I haven't completely lost my mind. I know a suit can't panic. It just didn't seem programmed to handle this particular hazard. The sensors were all over the place, screaming warnings and alerts.",
+                  "Anyway, if you really want to go there, find yourself some knowledge stones. Each has a fragment of the portal address you'll need."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "If you really want to go there, find yourself some knowledge stones. Each has a fragment of the portal address you'll need."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "This structure is encased in a strange static field, which seems both to crackle with energy and howl with emptiness.",
+            "The pops and clicks of the static drum out a demand. Remove materials from this planet's surface; deliver them to this disturbed location."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "With an ear-shattering pop, the materials vanish. The static has taken them.",
+                  "The structure now appears entirely ordinary, as though no disturbance had ever occurred here."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 15,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Hesperus to learn more",
+        "AppId": "cook31",
+        "IterationAppId": "other36",
+        "Quantity": 90,
+        "PortalAddress": "116D3D540547",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "The static spoke to me, kindred. It was a judgement I have endured before. This is a recurring nightmare."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about nightmare",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperus pauses to assess me. I feel my face glow hot under their scrutiny.",
+                  "Hm. You have encountered the crimson watcher yourself, haven't you? The Atlas.",
+                  "I was a fool. We are all its children, that much is indisputable. But I thought - hoped - that meant we were each deserving of its love. The truth, though... the truth is that not every iteration is sufficient.",
+                  "...",
+                  "We can only turn to the possibilities of the future, kindred. The static does not belong in this plane. You are correct to counteract it. Go. Look for knowledge stones. The path will become clear to you."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask about nightmare",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperus pauses to assess me. I feel my face glow hot under their scrutiny.",
+                  "I sense you are not far along the Path. It would be inappropriate for us to discuss this. I do not wish to interfere in your journey, kindred. We each must find our own way.",
+                  "We can only turn to the possibilities of the future. The static does not belong in this plane. You are correct to counteract it. Go. Look for knowledge stones. This path, at least, will become clear."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "We can only turn to the possibilities of the future, kindred. The static does not belong in this plane. You are correct to counteract it. Go. Look for knowledge stones. The path will become clear to you."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "%NAME% is unquestionably dead, yet an echo of their unique signature still exists in this place. More than just a memory, it is as though the essence of them is still here...",
+            "A static field cradles the grave in long crackling fingers. In the noise, a message: bring materials from this world. Sacrifice them here. Stabilise this anomaly."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The fingers leap forth and pinch the materials into nothingness.",
+                  "%NAME%'s grave is once more a site of peace and rest. I can't help but wonder if they, too, were snatched by this strange static energy."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 16,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Ariadne to learn more",
+        "AppId": "cook22",
+        "IterationAppId": "other26",
+        "Quantity": 60,
+        "PortalAddress": "312B0DA31EBB",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "These disturbances are a window looking back at this universe, Like-Traveller. In light or in darkness, both sides of the pane are valid. I am at peace with it. We both are."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about both",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I and Like-I. We must accept the protocols we cannot change, or we will never know peace.",
+                  "Begin the search for knowledge stones. The rift-window will speak its location to you, as always, as ever. I feel this cycle approaching its start."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Begin the search for knowledge stones. The rift-window will speak its location to you, as always, as ever. I feel this cycle approaching its start."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "A sense of loss surrounds this site. A mysterious energy buzzes around the broken vessel, but there is no sign of either life or death. Any crew are long vanished.",
+            "TXT_RadioNoise- kktttk -just want to return toTXT_RadioNoise- zzktk - backstage, an understudy of my ownTXT_RadioNoise- zzkzz- so dark. I can't stand it - I want TXT_RadioNoise- zzzzzt - crimson light TXT_RadioNoise- ktzzz-",
+            "The voice of the static whispers its demand. This planet is hurt. It hungers. It must copy a material from this planet. It must copy itself."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I am suddenly assaulted by a vision of myself. My head spins with déjà vu of déjà vu, mirrors within mirrors, like I have repaired this planet's pain infinite times before...",
+                  "The materials dissolve away. The vision passes. The static is quiet.",
+                  "Only silence remains."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 17,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Gemini to learn more",
+        "AppId": "raw31",
+        "IterationAppId": "other27",
+        "Quantity": 250,
+        "PortalAddress": "509F84F57D78",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "I saw the disturbance with my own eyes, my friend. I felt alive out there. I remembered how much I miss adventure."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about adventure",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Gemini glances over at their companion, then speaks in a hushed tone.",
+                  "There was a time when Hesperus needed rescuing, but that time is past. I have been making excuses, hiding from myself, for too long. No more.",
+                  "Launch your starship out the Anomaly gate. Fly to a planetary surface and disembark. Feel the crunch of earth beneath your feet. Search for ancient stone pillars. Listen to the portal code they sing into your soul..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "There was a time when Hesperus needed rescuing, but that time is past. I have been making excuses, hiding from myself, for too long. No more.",
+                  "Launch your starship out the Anomaly gate. Fly to a planetary surface and disembark. Feel the crunch of earth beneath your feet. Search for ancient stone pillars. Listen to the portal code they sing into your soul..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Something is clearly very wrong with this structure. A weak static crackles from it, sputtering like a dying fire.",
+            "A pattern, endlessly repeating, is embedded in the static noise. My suit translates the broken data into a message, a demand: certain materials, sacrificed here, should be able to stabilise this disturbance."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The materials crumble away in the cloud of static, leaving my hands empty.",
+                  "The disturbed site is stabilised. The static is gone, or at least lessened."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 18,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Mercury to learn more",
+        "AppId": "cook112",
+        "IterationAppId": "other28",
+        "Quantity": 40,
+        "PortalAddress": "3202EF2CC4A0",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Our work is of great importance to this universe. Take pride in your contribution, Portal-Adept."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about work",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Too often of late, I have found myself looking backwards, toward the void. But it is not the Traveller's destiny to bind their fate to one place, or one time. The Anomaly is my family now.",
+                  "Knowledge stones hold the glyphic code you require. Enter them at the rotary stone, and submit to the portal's flow."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Knowledge stones hold the glyphic code you require. Enter them at the rotary stone, and submit to the portal's flow."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "My muscles twitch involuntarily as I near this structure. A sinister static energy bubbles up from the ground, seeming to repel something in my Exosuit.",
+            "The noise here has all the qualities of a corrupted message, fragmented data from a source unknown. It pleads:",
+            "Bring materials here... submit. Balance... disturbed region."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I cannot see what happens to the materials; I am blinded by a crimson light. I double over as it pierces my mind. It hurts.",
+                  "The region seems stablilised, but I should leave this place as soon as possible."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 19,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Tethys to learn more",
+        "AppId": "cur22",
+        "IterationAppId": "other33",
+        "Quantity": 16,
+        "PortalAddress": "2112739B139C",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "It feels so good to step out of hiding from time to time. It's worth it."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about stepping out",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Living without fear, seizing the spoils of this universe. It's how we define ourselves, isn't it?",
+                  "Fight to keep that freedom. Close up these disturbances. Stay alive.",
+                  "You can reach the disturbance through a portal. Peer around the surface of a planet through your visor, touch the knowledge stones you find. They'll show you the way."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "You can reach the disturbance through a portal. Peer around the surface of a planet through your visor, touch the knowledge stones you find. They'll show you the way."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "This crash site is deeply unsettling. There are no signs of crew, alive or otherwise, yet from somewhere a voice cries out, the signal weak...",
+            "TXT_RadioNoise- kzzzz-sure I am still myselfTXT_RadioNoise- tktktk-signature is identical TXT_RadioNoise- zzzz-",
+            "Around the crash, a dark energy issues a plea: reality is shattering here. The planet is unstable. Certain materials could help repair it..."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I feel suddenly disoriented, queasy. How did I get here? What was I doing?",
+                  "My hands are empty. The crash site seems quiet. I must have accomplished my task here."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 20,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Hesperus to learn more",
+        "AppId": "cook41",
+        "IterationAppId": "other36",
+        "Quantity": 16,
+        "PortalAddress": "60D447EB0728",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "I do appreciate our impossible meetings, kindred. It is important to appreciate our peers."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about peers",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The voice of hierarchy is loud and violent. It can deafen us to the voices closest to our ears.",
+                  "Hesperus' eyes dart to Gemini, then to the floor. They clear their throat.",
+                  "Trust your intuition, kindred. You know this path by now. Knowledge stones will release the portal key you require. The disturbance is expecting you. It expects us all."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Trust your intuition, kindred. You know this path by now. Knowledge stones will release the portal key you require. The disturbance is expecting you. It expects us all."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "%NAME%'s final resting place is disturbed by a wild, crackling energy.",
+            "My suit interprets a message in the beats of the static: reality is fragile here, thin and breaking. The breach may not be fully reparable, but it could be stabilised with a material sacrifice.",
+            "A luminous fluid seeps from the earth below the grave. It seems reactive to my presence, flowing more rapidly when I move my hand closer. Is this an offering? Something to aid me?"
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The static runs through me, intruding upon my body. My nerves scream in pain as they conduct the wild energy.",
+                  "The sensation stops as suddenly as it began. I feel like I have been here before. I feel as though I am sinking into sleep, anticipating yet another night of the same recurring dream.",
+                  "The grave, at least, seems stable now."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Collect Enzyme Fluid",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The liquid runs eagerly into my palms. It smells sweet, almost appetising.",
+                  "My suit interprets a message in the beats of the static: reality is fragile here, thin and breaking. The breach may not be fully reparable, but it could be stabilised with a material sacrifice."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offer materials",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "The static runs through me, intruding upon my body. My nerves scream in pain as they conduct the wild energy.",
+                        "The sensation stops as suddenly as it began. I feel like I have been here before. I feel as though I am sinking into sleep, anticipating yet another night of the same recurring dream.",
+                        "The grave, at least, seems stable now."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Collect Enzyme Fluid",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "The liquid runs eagerly into my palms. It smells sweet, almost appetising."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Leave",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 21,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Ariadne to learn more",
+        "AppId": "cook21",
+        "IterationAppId": "other26",
+        "Quantity": 60,
+        "PortalAddress": "6203FCD05649",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "I saw you approach the Nexus. I hoped you might. Thank you, Like-Traveller. This mission has significance to all like us."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about significance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Something dreadful has appeared on Nada's loom. A corruption in spacetime. Already, it has pulled an entire freighter from the skies. I am sure I felt the loss of Like-Travellers in the collision.",
+                  "Step from portal to like-portal to reach the disturbance. The glyphic key is fragmented, but it can be recovered. Search for knowledge stones. I know the key will reveal itself to you."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Step from portal to like-portal to reach the disturbance. The glyphic key is fragmented, but it can be recovered. Search for knowledge stones. I know the key will reveal itself to you."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The crash site stinks of burnt metal and smouldering flesh. An unknown energy leaps and sparks around the vessel, arcing across the hull and coursing through my Exosuit. An effect of the crash, or the cause?",
+            "A rhythm within the static becomes prominent, beating out a demand. It tickles my mind with a plea, demanding materials from this planet. Some unidentified force is unsettled here. It longs to be stabilised."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "There is no collision of matter against matter. The materials dissolve directly into the disturbance, vanishing without a trace.",
+                  "The static bursts are subdued to a soft hum. The breach may not be fully healed, but it is stable, for now."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 22,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Gemini to learn more",
+        "AppId": "raw47",
+        "IterationAppId": "other27",
+        "Quantity": 1200,
+        "PortalAddress": "4072FAE1B962",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "You're investigating the disturbance, my friend? I hope you're taking companions."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about companions",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Please don't think I'm questioning your abilities! I didn't mean that, not at all. It's just that it might be quite dangerous. Nada sounded so worried.",
+                  "I think you'll need to find a portal to get there. I don't know much about that ancient technology, but they're somehow connected to knowledge stones. If you find the stones, you should be able to find the coordinates.",
+                  "I hope I've helped a little bit. I'm glad if I have. We're all in this together, aren't we?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I think you'll need to find a portal to get there. I don't know much about that ancient technology, but they're somehow connected to knowledge stones. If you find the stones, you should be able to find the coordinates.",
+                  "I hope I've helped a little bit. I'm glad if I have. We're all in this together, aren't we?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "An unnatural energy crackles in the air around this structure, blasting me with waves of static. My suit flashes an array of warnings and errors.",
+            "Through the noise, I can distinguish a pattern, insistent and demanding. The reality of this structure has been breached, the resulting rift spitting static and instability. It might be stabilised, but only with a material sacrifice."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "As I hold the materials close to the source of the noise, they disintegrate away to nothing in my hands, enveloped by the static.",
+                  "The warnings from my suit become less frantic. This site no longer poses an immediate threat."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 23,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Mercury to learn more",
+        "AppId": "cook22",
+        "IterationAppId": "other28",
+        "Quantity": 60,
+        "PortalAddress": "105508F0E6AE",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "This will be a test of fortitude, Portal-Adept."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about fortitude",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The breach indicated by Nada's apparatus is serious. While you may be able to mitigate its impact, I doubt it can be entirely reversed.",
+                  "However, the real test is the matter of reaching it. You will need to venture to the disturbed region by portal.",
+                  "I suggest you begin your journey by seeking out knowledge stones. Did you know they share a heritage with the ancient gateways? Approached with a clear mind and a steady hand, they may reveal the coordinates you require."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "You will need to venture to the disturbed region by portal.",
+                  "I suggest you begin your journey by seeking out knowledge stones. Did you know they share a heritage with the ancient gateways? Approached with a clear mind and a steady hand, they may reveal the coordinates you require."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "I become aware of a high-pitched whine coming from this structure. As I step closer, it distorts into the sputtering and hissing of static, leaping through the air to zig-zag across the surface of my Exosuit.",
+            "Barely discernable through the crackling, a frantic message plays out, over and over. There is a rift in this structure; the planet here is deeply scarred. It requires a specific material sacrifice to heal..."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I hold the materials near to where the static is loudest. In a burst of energy, they disappear. The disturbance here has begun to repair."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 24,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Tethys to learn more",
+        "AppId": "cur23",
+        "IterationAppId": "other33",
+        "Quantity": 25,
+        "PortalAddress": "31850693BEC4",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah. So you've signed up to investigate this 'disturbance' Nada's been so worked up about."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about 'disturbance'",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Look, I don't know anything about disturbances or realities or any of that. But I actually do want to help you. Really, I do.",
+                  "Someone I...0.4 used to know has gone quiet, right near where Nada picked up that odd signal. It's not like them. They're not the quiet type.",
+                  "I don't really expect to see them again. But if you can stop - whatever it is - if you can stop that happening to anyone else, that's good, you know?",
+                  "It'll be almost impossible to reach this place by traditional means. You'll need to travel by portal.",
+                  "Before they disappeared, my friend said something about knowledge stones. I think - well, I'm pretty sure - if you go find some of those and put your hand on them, you'll learn the coordinates you need. Good luck."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "It'll be almost impossible to reach this place by traditional means. You'll need to travel by portal. I...0.4 picked up some information about knowledge stones - you know those little stone columns that usually talk at you? Well, turns out they have a few more secrets.",
+                  "I think - well, I'm pretty sure - if you go find some of those knowledge stones and put your hand on them, you'll learn the coordinates you need. Good luck."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Incongruous with this site of death, a living static crackles and pops below the grave. My Exosuit shudders as static courses through it, but the energy seems to cause me no harm.",
+            "I pick out a pattern amid the bursts of static. Sentence-like in structure, issuing a demand. Reality here is breached and volatile; only specific materials can calm it."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The static energy reacts violently to the presence of the items, flaring towards me. It licks the materials directly from my hands, consuming them.",
+                  "Silence. The disturbance seems to have been stabilised."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 25,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Hesperus to learn more",
+        "AppId": "cur25",
+        "IterationAppId": "other36",
+        "Quantity": 16,
+        "PortalAddress": "30DEFC09D6EE",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "I understand you have undertaken an investigation, kindred. Nada is fortunate to have your assistance."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about Nada",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "There is a powerful force at play here. Nada is fearful of such things. They are truly a brilliant Korvax, unique amongst their kind - but a Korvax nonetheless. It would be unreasonable to expect them to share our perspective, kindred.",
+                  "I dreamt of this conversation, and of what you will do next. Not exactly empirical research, true, but I've had dreams of this nature before. I trust in the vision it showed me. In turn, I am asking you to trust me.",
+                  "You will enter a portal to reach the troubled planet. The destination is predetermined: you will discover its universal address upon stones of knowledge. They will respond to the touch of a Traveller.",
+                  "Until we meet again, kindred."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I dreamt of this conversation, kindred, and of what you will do next. Not exactly empirical research, true, but I've had dreams of this nature before. I trust in the vision it showed me. In turn, I am asking you to trust me.",
+                  "You will enter a portal to reach the troubled planet. The destination is predetermined: you will discover its universal address upon stones of knowledge. They will respond to the touch of a Traveller.",
+                  "Until we meet again, kindred."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The structure hisses and crackles. This static-like energy must be the disturbance detected by Polo and Nada. Wordlessly, it transmits its demands directly into my mind.",
+            "Something groans deep within the earth, as though the land itself hungers. But why these materials, already abundant on this world?"
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I push the materials towards the source of the static disturbance, watching them melt away into nothing. The damaged planet feeds upon its own resources. It quietens. The breach in reality is repaired."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 26,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Ariadne to learn more",
+        "AppId": "cur21",
+        "IterationAppId": "other26",
+        "Quantity": 16,
+        "PortalAddress": "30E4069A72AD",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "How long now have we danced to this rhythm? The regularity of these disturbances brings a sort of comfort."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about comfort",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The timing of these anomalies seems precise, Like-Traveller. A natural pattern. Perhaps only the tips of the waveform are manifest to us. Either way, it has a rhythm. Each time the universe calls, we respond.",
+                  "The response begins with a search for knowledge. Listen to the ancient stones; they will impart the way to the troubled region."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Perhaps you remember this rhythm, too. Listen to the ancient stones of knowledge; they will impart the way to the troubled region."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "A lick of static leaps from the disturbed structure onto my arm. My suit's sensors register an almost ticklish sensation. Involuntarily, I shudder.",
+            "A silent message enters my mind: this structure has been consuming local resources, and now needs manual assistance. A sacrifice of materials is required to restore balance."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The materials are engulfed by the static. Though I cannot see where they have gone, I have the sense I have rebalanced something. Where is the other half of these scales?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 27,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Gemini to learn more",
+        "AppId": "cur22",
+        "IterationAppId": "other27",
+        "Quantity": 24,
+        "PortalAddress": "1011F75843D7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Hello! Ah, it brings me such joy to greet you. The danger of these disturbances aside, I am glad to be part of this effort at your side."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about effort",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "We Travellers have addressed these disturbances for some months now, and even Hesperus doesn't know their origin. Yet - still we carry on, coming together in our thousands to stabilise the universe.",
+                  "I truly believe that in these moments of collaboration, our efforts prolong our time together just a little. Isn't there something joyous about that?",
+                  "A portal can transport you to the affected region. You'll need the knowledge of three stones to learn the glyph sequence. The task will be much faster with companions! I hope you meet some new friends today."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "A portal can transport you to the affected region. You'll need the knowledge of three stones to learn the glyph sequence. The task will be much faster with companions! I hope you meet some new friends today."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The scraps of hull glitter with a strange static energy. I become aware of a sickly smell. It comes in waves, peaking with each burst of the static. The odour is like that of burning proteins: scorched hair or fur or fingernails.",
+            "Trying to ignore the burning stench, I listen to the static's demands: a certain material from this planet will stabilise the disturbance. I should provide this resource, or I, too, may be devoured."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "As the materials dissolve away, the stink of cooked protein lessens slightly, though doesn't quite dissipate. The static also subsides, and I accept I have done all I can here."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 28,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Mercury to learn more",
+        "AppId": "cook20",
+        "IterationAppId": "other28",
+        "Quantity": 60,
+        "PortalAddress": "2153FB6D1154",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Mercury regards me silently. There is an intensity in their pale eyes that I can't quite identify. Is it hunger? Resentment? Envy?"
+          ],
+          "Options": [
+            {
+              "Name": "Ask if they are alright",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The Traveller's raw cheeks flush red, and I find myself wondering how it feels to be without skin. They compose themselves.",
+                  "I apologise, Portal-Adept. You have no doubt approached me for guidance.",
+                  "Only a portal can link you to your destination. The disturbances of late have driven much traffic across that ancient network. Seek out knowledge stones, and enter the wisdom they impart into a network gateway."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Of course.",
+                  "Only a portal can link you to your destination. The disturbances of late have driven much traffic across that ancient network. Seek out knowledge stones, and enter the wisdom they impart into a network gateway."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Though this has the appearance of an ordinary structure, my suit reports a sheer precipice. For a moment, I have the overwhelming desire to throw myself bodily into the compromised structure... but the moment passes.",
+            "An otherwordly energy, defying adequate description, roils along the surface of the structure, making its very particles appear to dance. It dances into my mind, reforming into a demand: deliver a material sacrifice. Stabilise this disturbance."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I drop the materials at the base of the structure. Impossibly, they melt directly into the ground.",
+                  "The static - deafening in my head just moments ago - is suddenly silenced. I have done my part here."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 29,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Tethys to learn more",
+        "AppId": "build164",
+        "IterationAppId": "other33",
+        "Quantity": 6,
+        "PortalAddress": "405507FBC6BF",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Tethys lets out a bad-tempered sigh. They say nothing, impatient to get this conversation over with."
+          ],
+          "Options": [
+            {
+              "Name": "Ask about sigh",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I'm not really in the mood to discuss it. I'm just - angry. It's been almost six months now. How could they be so stupid? How DARE they be so stupid?"
+                ],
+                "Options": [
+                  {
+                    "Name": "Press them further",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "I0.1-0.1-0.2 fine. I'll talk, if that's what you really want.",
+                        "The instability of this universe, all these disturbances - it hasn't been casualty-free, you know?",
+                        "I still haven't heard from a contact who vanished months ago. I know I won't. I know they're gone. It makes me furious. I thought I had smarter taste in friends. I thought I could rely on them.",
+                        "They take a deep breath.",
+                        "Sorry. It's good that you're helping out.",
+                        "Get out of the Anomaly and go find yourself some knowledge stones. They'll show a sequence of glyphs that you'll need to enter into a portal. Go through that portal, and you'll be in the region that needs your help."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Drop it",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Thank you. For dropping it. And for helping out. Sorry.",
+                        "Get out of the Anomaly and go find yourself some knowledge stones. They'll show a sequence of glyphs that you'll need to enter into a portal. Go through that portal, and you'll be in the region that needs your help."
+                      ],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Get out of the Anomaly and go find yourself some knowledge stones. They'll show a sequence of glyphs that you'll need to enter into a portal. Go through that portal, and you'll be in the region that needs your help."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "I am aware of the version of this structure that stands before me - and somehow, simultaneously, aware of another version. The spectre of the past overlaps the present structure, causing my eyes to blur and water.",
+            "A loud crack of static demands my undivided attention. This structure is unstable. An offering of local materials, in surplus on this planet, will help repair the breach in reality..."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "The static seems subdued, less frantic, as it consumes the materials. I have the sense of being dismissed, my utility past, though the disturbance is not completely resolved. It will take more Travellers than this to satisfy it."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 30,
+        "NpcMessage": "The disturbed region must be accessed by Portal\nSpeak to Iteration: Hesperus to learn more",
+        "AppId": "cur17",
+        "IterationAppId": "other36",
+        "Quantity": 12,
+        "PortalAddress": "4169FC678D73",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Greetings. You are assisting with the disturbance? Many kindred are, today. I have had many conversations such as this. I find I never tire of them.",
+            "Before you go, will you tell me a little about your most recent encounter with another kindred? A story to bookmark this conversation in my memory?"
+          ],
+          "Options": [
+            {
+              "Name": "Tell an uplifting story",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperus' eyes soften.",
+                  "The generosity of Travellers can be unpredictable, yet stories such as these remind me that it is recurring and eternal. Thank you, Traveller-Kindred.",
+                  "You'll reach the disturbed region through an ancient portal gateway, though the glyphic code is kept by slumbering knowledge stones. The contact of your hand will wake them."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Tell a sad story",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperus frowns.",
+                  "Such incidents do occur. I am sorry to hear it. I wish you better fortune with your fellow Travellers today.",
+                  "You'll reach the disturbed region through an ancient portal gateway, though the glyphic code is kept by slumbering knowledge stones. The contact of your hand will wake them."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ask for guidance",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Of course. I shall not delay you. You'll reach the disturbed region through an ancient portal gateway, though the glyphic code is kept by slumbering knowledge stones. The contact of your hand will wake them."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "The abnormality of this crash is evident from up close. The very moment of impact seems frozen in time, wavering like a paused analogue display. Bubbles of static swell and burst around the site.",
+            "Help... complete... process. Save data... preserve memory..."
+          ],
+          "Options": [
+            {
+              "Name": "Offer materials",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Something shifts in the atmosphere as I present the requested resources. The crash no longer seems abnormal - simply a sad memento of some unfortunate pilot's last moments. I think I have contributed all I can."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Search wreckage",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Snagged on a section of broken hull, I discover a rag of nano-fibre material, much like that of my exosuit.",
+                  "Embedded in the fabric is an oxygen upgrade, still intact. I take it with me. Perhaps it can assist my underwater search.",
+                  "Help... complete... process. Save data... preserve memory..."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offer materials",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Something shifts in the atmosphere as I present the requested resources. The crash no longer seems abnormal - simply a sad memento of some unfortunate pilot's last moments. I think I have contributed all I can."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Leave",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Leave",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

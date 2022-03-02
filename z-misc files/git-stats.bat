@@ -1,0 +1,1 @@
+"c:\cygwin64\bin\bash" git-quick-stats

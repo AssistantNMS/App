@@ -1,0 +1,2291 @@
+[
+  {
+    "Id": "MP_PORTALQUEST",
+    "Stages": [
+      {
+        "Level": 1,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Ariadne om meer te weten te komen",
+        "AppId": "cur17",
+        "IterationAppId": "other26",
+        "Quantity": 12,
+        "PortalAddress": "1144B573F95C",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ik zag dat je de Nexus naderde. Daar hoopte ik al op. Bedankt, mede-Reiziger. We hebben allemaal belang bij deze missie."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar het belang",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Er is iets vreselijks verschenen op Nada's apparaat. Een verstoring in de ruimtetijd. Er is al een compleet vrachtschip neergestort. Ik voel dat daarbij mede-Reizigers zijn omgekomen.",
+                  "Ga van het ene portaal naar het andere om de verstoring te bereiken. De symboolcode is gefragmenteerd, maar je kunt de delen nog terugvinden. Zoek naar kennisstenen. Dan vind je de code vanzelf."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ga van het ene portaal naar het andere om de verstoring te bereiken. De symboolcode is gefragmenteerd, maar je kunt de delen nog terugvinden. Zoek naar kennisstenen. Dan vind je de code vanzelf."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "De crashlocatie stinkt naar verbrand metaal en smeulend vlees. Een onbekende energie omringt het schip en schiet via de romp dwars door mijn exopak. Is dit een gevolg van de crash of de oorzaak ervan?",
+            "De ruis wordt langzaam maar zeker overstemd door een ritme, dat uiteindelijk een verzoek vormt. In mijn geest klinkt een smeekbede om materialen van deze planeet. Een onbekende kracht is rusteloos en wil worden gestabiliseerd."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Het is niet zo dat de ene materie tegen de andere botst. De materialen lossen direct op in de verstoring en verdwijnen spoorloos.",
+                  "De ruis verandert in een zacht gebrom. De breuk is misschien niet volledig gedicht, maar voorlopig is hij stabiel."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Doorzoek het wrak",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Er ligt iets bij de crashlocatie - een stuk stof van nanovezels, hetzelfde materiaal als mijn exopak. Was het van de laatste verkenner die deze plek wist te bereiken?",
+                  "Er zit een zuurstof-upgrade in die nog steeds werkt. Ik neem 'm mee. Misschien komt het nog van pas tijdens mijn onderzoek onder water.",
+                  "De ruis wordt langzaam maar zeker overstemd door een ritme, dat uiteindelijk een verzoek vormt. In mijn geest klinkt een smeekbede om materialen van deze planeet. Een onbekende kracht is rusteloos en wil worden gestabiliseerd."
+                ],
+                "Options": [
+                  {
+                    "Name": "Doneer materialen",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Het is niet zo dat de ene materie tegen de andere botst. De materialen lossen direct op in de verstoring en verdwijnen spoorloos.",
+                        "De ruis verandert in een zacht gebrom. De breuk is misschien niet volledig gedicht, maar voorlopig is hij stabiel."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Vertrek",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 2,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Gemini om meer te weten te komen",
+        "AppId": "build171",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "10FF182964AA",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Onderzoek je de verstoring, vriend? Dan kun je maar beter niet alleen gaan."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag wie je moet meenemen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Denk alsjeblieft niet dat ik je vaardigheden in twijfel trek. Dat was zeker niet mijn bedoeling. Het kan er alleen erg gevaarlijk zijn. Nada klonk heel bezorgd.",
+                  "Je hebt een portaal nodig om er te komen. Ik weet niet veel over die oude technologie, maar op de een of andere manier heeft het te maken met kennisstenen. Als je de stenen vindt, moet je ook de coördinaten kunnen vinden.",
+                  "Hopelijk heb je hier iets aan. Ik ben blij dat ik je kon helpen. Samen zijn we sterk, toch?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Je hebt een portaal nodig om er te komen. Ik weet niet veel over die oude technologie, maar op de een of andere manier heeft het te maken met kennisstenen. Als je de stenen vindt, moet je ook de coördinaten kunnen vinden.",
+                  "Hopelijk heb je hier iets aan. Ik ben blij dat ik je kon helpen. Samen zijn we sterk, toch?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Een onnatuurlijke energie knettert rond deze constructie en schiet overdonderende golven op me af. Op mijn pak knipperen waarschuwingen en foutmeldingen.",
+            "Ondanks het kabaal hoor ik een aanhoudend patroon. De realiteit van deze constructie is doorbroken en er komt ruis uit de instabiele breuk. De constructie kan worden gestabiliseerd, maar dat kost wel materialen."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik hou ze bij de bron van het geluid. Mijn handen worden omgeven door de ruis en de materialen lossen direct op.",
+                  "De waarschuwingen op mijn pak nemen in hevigheid af. Deze plek vormt niet langer een direct gevaar."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 3,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Mercury om meer te weten te komen",
+        "AppId": "cook25",
+        "IterationAppId": "other28",
+        "Quantity": 60,
+        "PortalAddress": "11F366324C16",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Nu wordt je doorzettingsvermogen op de proef gesteld, portaal-adept."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar doorzettingsvermogen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De breuk die werd gesignaleerd door Nada's apparaat is ernstig. Misschien kun je het effect verminderen, maar ik denk niet dat je het helemaal kunt terugdraaien.",
+                  "Het moeilijkste is echter het bereiken van de breuk. Je moet via het portaal naar de verstoorde regio.",
+                  "Je kunt het beste eerst op zoek gaan naar kennisstenen. Wist je dat ze uit dezelfde tijd komen als de oude doorgangen? Benader ze met een heldere geest en een vaste hand. Zo vind je wellicht de coördinaten die je nodig hebt."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Je moet via het portaal naar de verstoorde regio.",
+                  "Je kunt het beste eerst op zoek gaan naar kennisstenen. Wist je dat ze uit dezelfde tijd komen als de oude doorgangen? Benader ze met een heldere geest en een vaste hand. Zo vind je wellicht de coördinaten die je nodig hebt."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Ik hoor een jankend geluid uit de constructie komen. Als ik dichterbij kom, hoor ik ineens het gesputter en gesis van ruis die zigzaggend door de lucht naar mijn exopak schiet.",
+            "Het is door het geknetter nauwelijks te horen, maar er wordt steeds opnieuw dezelfde panische boodschap afgespeeld. Er is een breuk in deze constructie. Deze planeet is zwaar gehavend. Dit kan worden verholpen met een specifiek materiaal."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik hou de materialen dicht bij de plek waar het geknetter het hardste klinkt. Ze verdwijnen in een explosie van energie. De verstoring wordt verholpen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 4,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Tethys om meer te weten te komen",
+        "AppId": "cook30",
+        "IterationAppId": "other33",
+        "Quantity": 90,
+        "PortalAddress": "30F607272323",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah. Dus je hebt je aangemeld om de 'verstoring' te onderzoeken waar Nada zich zo druk over maakt."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar de 'verstoring'",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik weet niets over verstoringen of realiteiten en zo. Maar ik wil je wel helpen. Echt waar.",
+                  "Iemand die ik...0.4 kende is verdwenen, precies waar Nada dat vreemde signaal oppikte. Dat is niets voor hem. Hij laat vaak van zich horen.",
+                  "Ik zal 'm waarschijnlijk nooit meer zien. Maar als je het probleem kunt verhelpen, voorkom je dat anderen hetzelfde overkomt.",
+                  "Het is vrijwel onmogelijk om deze plek op traditionele manier te bereiken. Je moet via portalen reizen.",
+                  "Voordat hij verdween, zei mijn vriend iets over kennisstenen. Ik weet eigenlijk wel zeker dat ze de coördinaten bevatten die je nodig hebt. Succes."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Het is vrijwel onmogelijk om deze plek op traditionele manier te bereiken. Je moet via portalen reizen. Ik...0.4 heb iets gehoord over kennisstenen. Weet je wel, die kleine stenen pilaren die vaak tegen je praten. Het blijkt dat ze nog veel meer doen.",
+                  "Ik weet eigenlijk wel zeker dat die kennisstenen de coördinaten bevatten die je nodig hebt. Succes."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Het past niet bij zo'n doodse plek, maar er knettert een levendige ruis onder het graf. Mijn exopak trilt als de energie erdoorheen schiet, maar ik hou er gelukkig niets aan over.",
+            "Ik hoor een patroon in de ruisende uitbarstingen. Het lijken zinsconstructies die een vraag vormen. De realiteit is hier gebarsten en onstabiel, en kan alleen worden hersteld met specifieke materialen."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De statische energie reageert heftig op de aanwezigheid van de spullen. De stralen schieten op mijn handen af en consumeren de materialen.",
+                  "Stilte. De verstoring lijkt te zijn gestabiliseerd."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 5,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Hesperus om meer te weten te komen",
+        "AppId": "raw46",
+        "IterationAppId": "other36",
+        "Quantity": 2000,
+        "PortalAddress": "10610E3057EE",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ik begrijp dat je onderzoek hebt gedaan, geestverwant. Nada mag blij zijn met jouw hulp."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar Nada",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Er is hier een sterke kracht aan het werk. Nada is bang voor dat soort dingen. Hij is zeker een briljante Korvax en uniek in zijn soort, maar hij blijft een Korvax. We kunnen niet van hem verwachten dat hij ons standpunt begrijpt, geestverwant.",
+                  "Ik heb gedroomd van dit gesprek en van wat je nu gaat doen. Dat is inderdaad niet bepaald een empirisch onderzoek, maar ik heb eerder dit soort dromen gehad. Ik geloof in die visioenen. Zoals ik je vraag om in mij te geloven.",
+                  "Je gaat via een portaal naar de geplaagde planeet. De bestemming ligt vast: je vindt het universele adres op kennisstenen. Ze reageren op de aanraking van een Reiziger.",
+                  "Tot ziens, geestverwant."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik heb gedroomd van dit gesprek en van wat je nu gaat doen, geestverwant. Dat is inderdaad niet bepaald een empirisch onderzoek, maar ik heb eerder dit soort dromen gehad. Ik geloof in die visioenen. Zoals ik je vraag om in mij te geloven.",
+                  "Je gaat via een portaal naar de geplaagde planeet. De bestemming ligt vast: je vindt het universele adres op kennisstenen. Ze reageren op de aanraking van een Reiziger.",
+                  "Tot ziens, geestverwant."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "De constructie sist en kraakt. Deze statische energie is vast de verstoring die Polo en Nada ontdekten. Het verzoek wordt direct in mijn geest geplant, zonder woorden.",
+            "Er gromt iets diep onder de grond, alsof het land zelf honger heeft. Maar waarom deze materialen, die al in overvloed voorhanden zijn op deze wereld?"
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik duw de materialen naar de bron van de storing en zie ze volledig wegsmelten. De aangetaste planeet voedt zich met zijn eigen grondstoffen. Dan wordt het stil. De breuk in de realiteit is gerepareerd."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 6,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Ariadne om meer te weten te komen",
+        "AppId": "cur22",
+        "IterationAppId": "other26",
+        "Quantity": 16,
+        "PortalAddress": "21B13538C8F7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "De kwikzilversynthese-robot is erg handig. Heb zijn namaak-gezichten al eens gezien, mede-Reiziger? Niet te onderscheiden van echte huid."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar de gezichten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Het zijn kunstwerkjes. Maar eigenlijk is de robot slechts een hulpmiddel van specialist Polo.",
+                  "We moeten de Gek niet onderschatten. Ze doen erg joviaal, maar ze zijn ook heel slim. Ze hebben al veel voor me gedaan. Voor ons allemaal.",
+                  "De snorharen van Ariadne trillen. Ze strijkt over haar gezicht, alsof ze was vergeten hoe het aanvoelde.",
+                  "Je moet kennisstenen vinden om een portaal te ontgrendelen. Raak deze stenen aan met je hand. Ze verwachten je al, mede-Reiziger."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Je moet kennisstenen vinden om een portaal te ontgrendelen. Raak deze stenen aan met je hand. Ze verwachten je al, mede-Reiziger."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Mijn exopak laat een waarschuwing horen als ik de constructie nader. De kunstmatige stem klinkt schel.",
+            "Waarschuwing. Anomalie gedetecteerd. Waarschuwing. Waarschuwing. Waarschuwing.",
+            "Mijn ledematen voelen futloos aan en werken niet mee. Mijn pak zit strak en ongemakkelijk. Een wanhopig verzoek is hoorbaar in de hele constructie, al komt het geluid nauwelijks boven het geknetter uit."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mijn lichaam protesteert als ik de materialen naar de constructie duw. Mijn spieren trillen en mijn geest is vervuld van angst.",
+                  "Net als ik denk dat het me niet gaat lukken, worden de grondstoffen in mijn hand verzwolgen door een stoot energie. De ruis valt stil. Ik ben hier wel klaar."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 7,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Gemini om meer te weten te komen",
+        "AppId": "cur24",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "10D92420546E",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Gemini laat een flauwe glimlach zien, maar lijkt te zijn afgeleid. Hij kijkt herhaaldelijk naar Hesperus."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar Hesperus",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah... Het spijt me, vriend. Ik zat ergens anders met mijn gedachten. Welkom. Het is altijd fijn om je te spreken.",
+                  "Ik maak me alleen zorgen over Hesperus. Ik...",
+                  "Gemini praat nu met een zachte stem en ziet er bezorgd uit.",
+                  "Door al die vreemde verstoringen in de realiteit ben ik bang dat Hesperus zichzelf in gevaar brengt. Ik ken hem. Dit soort mysteries zijn onweerstaanbaar voor hem.",
+                  "Maar genoeg over mij. Ik weet dat je belangrijk werk doet, voor ons allemaal.",
+                  "Je kunt de verstoorde regio bereiken via een portaal, maar je hebt een adres nodig om naar de juiste plek te gaan. Zoek kennisstenen. Raak ze aan. Dan vind je wat je zoekt.",
+                  "Ah... Het spijt me, vriend. Ik zat ergens anders met mijn gedachten. Welkom. Het is altijd fijn om je te spreken.",
+                  "Ik maak me alleen zorgen over Hesperus. Ik..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah... Het spijt me, vriend. Ik zat ergens anders met mijn gedachten. Ik weet dat je belangrijk werk doet, voor ons allemaal.",
+                  "Je kunt de verstoorde regio bereiken via een portaal, maar je hebt een adres nodig om naar de juiste plek te gaan. Zoek kennisstenen. Raak ze aan. Dan vind je wat je zoekt."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "De beschadigde constructie sist en flikkert. Deze statische energie heeft iets onnatuurlijks. Het lijken wel vonken van een kapotte motor.",
+            "Hoewel er hier niemand is, hoor ik in de verte een gedempte stem roepen.",
+            "TXT_RadioNoise- kkttzzzzzzk - Waar ben TXT_RadioNoise- zktt - is dezelfde plek. De signalen van de realitTXT_RadioNoise- ttzzz - wat er is gebeurd met Artemis is niet TXT_RadioNoise- kkttzzzzzzk - deze ruis. Kan iemand alsjeblieft TXT_RadioNoise- kktzz -",
+            "De ruis knettert een verzoek. De planeet is aangetast en gedestabiliseerd. Een lokaal te vinden materiaal zou 'm moeten kunnen herstellen."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik steek mijn handen uit en laat mijn geest door de ruis zweven. Ik zoek naar de oorsprong van de vreemde energie.",
+                  "Plotseling voel ik het en stoot het me af als een magnetische kracht. Verder voel ik niets. Met veel moeite weet ik de materialen op hun plek te krijgen.",
+                  "Met een oorverdovend geknetter verdwijnen ze in het niets. Dan is het stil. Het is hier weer even vredig als voorheen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 8,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Mercury om meer te weten te komen",
+        "AppId": "cur32",
+        "IterationAppId": "other28",
+        "Quantity": 16,
+        "PortalAddress": "11338D40158A",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "De statige Reiziger neemt me in zich op. Hij bekijkt mijn hele gezicht, alsof hij het controleert op wonden.",
+            "Ik ben blij dat je nog leeft. Wordt dit je eerste kennismaking met deze verstoringen?"
+          ],
+          "Options": [
+            {
+              "Name": "Zeg dat het zo is",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mercury neemt me nog eens goed in zich op. Dan kijkt hij omlaag, naar zijn eigen handen. Vervolgens kijkt hij me aan.",
+                  "Dan hoop ik dat je deze reis ongeschonden doorkomt.",
+                  "Het portaalnetwerk biedt toegang tot de verstoorde regio. Je moet de juiste neurale paden stimuleren met een symboolcode. Deze code kun je leren van eeuwenoude kennisstenen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Zeg dat het niet zo is",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mercury neemt me nog eens goed in zich op. Dan kijkt hij omlaag, naar zijn eigen handen. Vervolgens kijkt hij me aan.",
+                  "Ik ben onder de indruk van je uithoudingsvermogen, portaal-adept.",
+                  "Ook nu weer biedt het portaalnetwerk toegang tot de verstoorde regio. Je moet de juiste neurale paden stimuleren met een symboolcode. Deze code kun je leren van eeuwenoude kennisstenen.",
+                  "Ik ben onder de indruk van je uithoudingsvermogen, portaal-adept.",
+                  "Ook nu weer biedt het portaalnetwerk toegang tot de verstoorde regio. Je moet de juiste neurale paden stimuleren met een symboolcode. Deze code kun je leren van eeuwenoude kennisstenen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Het portaalnetwerk biedt toegang tot de verstoorde regio. Je moet de juiste neurale paden stimuleren met een symboolcode. Deze code kun je leren van eeuwenoude kennisstenen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Deze constructie wordt omgeven door het gezoem en geruis. Ik plaats mijn hand erop en ontdek een onstabiele plek. Mijn vingers voelen geen vast oppervlak, maar gaan er dwars doorheen.",
+            "De constructie lijkt hier te zijn en toch ook weer niet. Ik zie een lichte flikkering waar de ruis het hevigst is. Tussen het geknetter door hoor ik steeds hetzelfde verzoek: breng me een materiaal om het tot rust te brengen en te stabiliseren."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Het glinsterende oppervlak opent zich en slikt de materialen in. Het geknetter gaat over in een zacht gezoem. Hij lijkt tevreden te zijn. Ik kan hier niets meer doen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 9,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Tethys om meer te weten te komen",
+        "AppId": "cur25",
+        "IterationAppId": "other33",
+        "Quantity": 16,
+        "PortalAddress": "31CDE8370772",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ga je de nieuwste verstoring onderzoeken? Jij liever dan ik. Hoewel ik hier best eens weg zou willen. De anderen houden er niet over op."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar de anderen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ze zijn geobsedeerd! Zo overdreven. Ariadne is nog de ergste. Ik vind haar maar eng. Ze heeft het voortdurend over gezichten, terwijl ze zelf het vreemdste 'gezicht' heeft dat ik ooit heb gezien.",
+                  "Maar goed, ik zal je een beetje op weg helpen. Vlieg weg van hier en zoek de kennisstenen. Met de portaalcode kun je naar de verstoorde plek. Zorg er wel voor dat je een goede multitool meeneemt."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Vlieg weg van hier en zoek de kennisstenen. Met de portaalcode kun je naar de verstoorde plek. Zorg er wel voor dat je een goede multitool meeneemt."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Het geruis groet me knetterend als ik nader. Deze constructie lijkt fysiek te zijn aangetast.",
+            "Het is heel vaag en verwrongen, maar ik hoor een duidelijk patroon in de ruis. Deze verstoring is een breuk, een scheur in de werkelijkheid. Alleen specifieke materialen kunnen het stabiliseren."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De materialen lossen in het niets op. Het geknetter van de ruis neemt af en stopt dan. Er is alleen nog een zacht gezoem te horen. De constructie lijkt te zijn gestabiliseerd."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 10,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Hesperus om meer te weten te komen",
+        "AppId": "cur21",
+        "IterationAppId": "other36",
+        "Quantity": 8,
+        "PortalAddress": "21D4501EC013",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Weet je al iets meer over de verstoringen, geestverwant? Alsjeblieft, vertel me wat je hebt meegemaakt."
+          ],
+          "Options": [
+            {
+              "Name": "Zeg dat het heel eng was",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah, ja. Dat begrijp ik.",
+                  "Ik heb zelf nog geprobeerd om de vorige verstoring te verhelpen. De ruis in die stem was echt griezelig. Het lijkt heel erg op de Atlas, maar tegelijkertijd ook weer niet.",
+                  "Ik weet hoe het werkt. Land op een planeet en zoek daar naar kennisstenen. Raak ze aan en je krijgt het adres van de verstoorde regio. Voer die locatie in bij een portaal en stap over de drempel."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Zeg dat het heel verhelderend was",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah, ja. Dat begrijp ik.",
+                  "Ik heb zelf nog geprobeerd om de vorige verstoring te verhelpen. De ruis in die stem was echt griezelig. Het lijkt heel erg op de Atlas, maar tegelijkertijd ook weer niet.",
+                  "Ik weet hoe het werkt. Land op een planeet en zoek daar naar kennisstenen. Raak ze aan en je krijgt het adres van de verstoorde regio. Voer die locatie in bij een portaal en stap over de drempel."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Zeg dat het heel eng was",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperus fronst vol ongeloof. Hij gaat verder niet in op mijn opmerking.",
+                  "Ik weet hoe het werkt. Land op een planeet en zoek daar naar kennisstenen. Raak ze aan en je krijgt het adres van de verstoorde regio. Voer die locatie in bij een portaal en stap over de drempel."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Zeg dat het heel verhelderend was",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperus fronst vol ongeloof. Hij gaat verder niet in op mijn opmerking.",
+                  "Ik weet hoe het werkt. Land op een planeet en zoek daar naar kennisstenen. Raak ze aan en je krijgt het adres van de verstoorde regio. Voer die locatie in bij een portaal en stap over de drempel."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik weet hoe het werkt. Land op een planeet en zoek daar naar kennisstenen. Raak ze aan en je krijgt het adres van de verstoorde regio. Voer die locatie in bij een portaal en stap over de drempel."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Ondanks de zachte landing borrelt er een vreemde statische kracht op uit de bodem. Mijn exopak geeft waarschuwingen af.",
+            "De statische energie plant een bericht in mijn hoofd:",
+            "Stabiliseer... instabiliteit. Herstel... verstoring. Materialen nodig."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mijn pak geeft waarschuwingen af, maar ze zijn onleesbaar. Het alarm klinkt steeds urgenter naarmate ik dichter bij de vreemde energie kom.",
+                  "Het ruisende geluid gaat over in gebrul tijdens het doneren van de materialen, die vervolgens in het niets verdwijnen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 11,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Ariadne om meer te weten te komen",
+        "AppId": "cur23",
+        "IterationAppId": "other26",
+        "Quantity": 25,
+        "PortalAddress": "6182588F1956",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "De aard van deze verstoringen baart me zorgen, mede-Reiziger. Ik ben niet vaak weg van de anomalie, maar wat ik daar zag was meer dan een gelijkenis."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar de gelijkenis",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik zag mijn eigen gezicht in de verstoring. Het was geen iteratie. Ik was het zelf. Ik keek door twee paar ogen.",
+                  "Wil je het zelf zien? Vind dan de locatie bij de kennisstenen. De stenen geven hun geheimen graag prijs. Ze zijn ontworpen om je te ontvangen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Om er zelf heen te gaan, moet je de kennisstenen met de locatie vinden. De stenen geven hun geheimen graag prijs. Ze zijn ontworpen om je te ontvangen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Mijn pak laat een luid alarm horen, terwijl de sensoren hevig trillen. Deze constructie is onstabiel en onveilig.",
+            "Een statische energie stroomt over het oppervlak van de constructie en kruipt langs mijn arm omhoog. Het lijkt te leven en me iets te vragen. Er is iets beschadigd in de realiteit. Er is materiaal nodig voor de reparatie."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De ruis kruipt van mijn vingertoppen naar de materialen die ik heb verzameld. Ze verdwijnen in het niets, zonder een spoor achter te laten.",
+                  "De onbekende energie verzwakt en trekt zich terug in de bodem. De schade lijkt te zijn gerepareerd."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 12,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Gemini om meer te weten te komen",
+        "AppId": "cook148",
+        "IterationAppId": "other27",
+        "Quantity": 20,
+        "PortalAddress": "30C6233C062E",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Alles goed, vriend? Het spijt me als ik moedeloos overkom. Natuurlijk ben ik dankbaar voor de inspanningen van Reizigers zoals jij. En Hesperus. Zonder hun avontuurlijke aard hadden we elkaar nooit ontmoet."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag hoe hij Hesperus ontmoette",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "We hebben elkaar ontmoet toen ik voor het eerst zelf portalen ontdekte. Toen ik met de ogen knipperend en gedesoriënteerd in die onbekende omgeving aankwam, werd ik begroet door een vreemde lichtbol. Je begrijpt hoe verbaasd ik was toen hij begon te praten.",
+                  "Lange tijd waren onze stemmen de enige oriëntatiepunten in het donker. Maar toen de grenzen eindelijk wegvielen,0.4 was het alsof we elkaar al ons hele leven kenden.",
+                  "Als je deze verstoring wilt bedwingen, moet je kennisstenen vinden. Ze geven je alles wat je nodig hebt om door het portaal te kunnen gaan."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Als je deze verstoring wilt bedwingen, moet je kennisstenen vinden. Ze geven je alles wat je nodig hebt om door het portaal te kunnen gaan."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Mijn zicht vertroebelt als ik naar de constructie staar. Even lijkt het alsof er twee identieke constructies voor me staan, enigszins verschoven.",
+            "Ik knipper met de ogen en de illusie is alweer weg.",
+            "Er stroomt een lichtgevende vloeistof uit de constructie. Hij lijkt te reageren op mijn aanwezigheid en stroomt sneller als ik mijn hand dichterbij breng. Is dit een geschenk? Iets wat me kan helpen?"
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik staar naar mijn lege handen, waar zojuist nog de materialen in lagen. Ik knipper met de ogen. Ze zijn echt verdwenen, gewoon weggerukt uit deze realiteit.",
+                  "De statische energie neemt in kracht af, tot er alleen een gezoem overblijft. De constructie lijkt nu stabiel te zijn."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Verzamel enzymvloeistof",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De vloeistof stroomt direct in mijn handpalmen. Het spul ruikt zoet en appetijtelijk.",
+                  "Een statische energie sist vanuit mijn exopak en zendt een bericht uit: de realiteit van deze constructie is beschadigd. Hij wil worden gestabiliseerd."
+                ],
+                "Options": [
+                  {
+                    "Name": "Doneer materialen",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Ik staar naar mijn lege handen, waar zojuist nog de materialen in lagen. Ik knipper met de ogen. Ze zijn echt verdwenen, gewoon weggerukt uit deze realiteit.",
+                        "De statische energie neemt in kracht af, tot er alleen een gezoem overblijft. De constructie lijkt nu stabiel te zijn."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Verzamel enzymvloeistof",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "De vloeistof stroomt direct in mijn handpalmen. Het spul ruikt zoet en appetijtelijk."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Vertrek",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 13,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Mercury om meer te weten te komen",
+        "AppId": "cook151",
+        "IterationAppId": "other28",
+        "Quantity": 200,
+        "PortalAddress": "21C8F44A5ED7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Deze verstoringen maken me erg onrustig."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar onrust",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De ruis klinkt onweerstaanbaar. Ik staar in de breuk en het lijkt wel alsof ik naar een droom kijk. Ik zie Soleth Prime. Ik zie hoe ik ooit was. Een vroegere versie. Ik voel me kwetsbaar, alsof de droom ook naar mij kijkt.",
+                  "Vooruit, portaal-adept. Vind de stenen kinderen van de portalen. Luister goed wat ze je te vertellen hebben."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Vind de stenen kinderen van de portalen. Luister naar wat ze zeggen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "De statische lading rond deze crashlocatie lijkt mijn exopak binnen te dringen. Ik voel 'm prikkelen op mijn huid.",
+            "TXT_RadioNoise- kkktt - weet dat ik niet altijd hier was TXT_RadioNoise- zktt - zo donker gewordenTXT_RadioNoise- kttkk - overbodig geworden TXT_RadioNoise- zzktkt-",
+            "Er stijgt een signaal boven het geluid uit: deze geschonden realiteit heeft een donatie nodig. Hij moet een materiaal van deze planeet consumeren. Hij moet zichzelf consumeren."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Een vloedgolf van energie stroomt over mijn uitgestrekte handen en verzwelgt de materialen volledig.",
+                  "Daarna is het helemaal stil."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Doorzoek het wrak",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Op een stuk van de kapotte romp vind ik een lap van nanovezels, hetzelfde materiaal als mijn exopak.",
+                  "Er zit een zuurstof-upgrade in die nog steeds werkt. Ik neem 'm mee. Misschien komt hij nog van pas tijdens mijn onderzoek onder water.",
+                  "Er stijgt een signaal boven het geluid uit: deze geschonden realiteit heeft een donatie nodig. Hij moet een materiaal van deze planeet consumeren. Hij moet zichzelf consumeren."
+                ],
+                "Options": [
+                  {
+                    "Name": "Doneer materialen",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Een vloedgolf van energie stroomt over mijn uitgestrekte handen en verzwelgt de materialen volledig.",
+                        "Daarna is het helemaal stil."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Vertrek",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 14,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Tethys om meer te weten te komen",
+        "AppId": "build169",
+        "IterationAppId": "other33",
+        "Quantity": 16,
+        "PortalAddress": "603CF5241B1D",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Tethys lijkt rustiger en minder zenuwachtig dan normaal. Hij kijkt me rustig aan.",
+            "Die verstoringen zijn... Er is iets heel erg mis. Ik ben zelf even gaan kijken. Zelfs mijn exopak raakte in paniek toen ik te dichtbij kwam."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar pak",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Maak je geen zorgen, ik ben nog niet helemaal doorgedraaid. Ik weet dat een pak niet in paniek kan raken. Het leek gewoon niet geprogrammeerd voor dergelijke gevaren. De sensoren sloegen op hol. De ene waarschuwing na de andere.",
+                  "Maar goed... Als je daar echt naartoe wilt, moet je een paar kennisstenen zien te vinden. Ze hebben allemaal een deel van het portaaladres dat je nodig hebt."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Als je daar echt naartoe wilt, moet je een paar kennisstenen zien te vinden. Ze hebben allemaal een deel van het portaaladres dat je nodig hebt."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Deze constructie is omhuld door een vreemd statisch veld. Het vonkt van de energie, maar straalt ook een grote leegte uit.",
+            "Het overweldigende geruis laat knetterend een verzoek horen. Zoek materialen op deze planeet en breng ze naar deze verstoorde locatie."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Na een oorverdovende knal zijn de materialen verdwenen. De ruis heeft ze verzwolgen.",
+                  "De constructie ziet er weer volkomen normaal uit, alsof er nooit een verstoring is geweest."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 15,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Hesperus om meer te weten te komen",
+        "AppId": "cook31",
+        "IterationAppId": "other36",
+        "Quantity": 90,
+        "PortalAddress": "116D3D540547",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "De ruis sprak me toe, geestverwant. Het was een oordeel dat ik al eerder had doorstaan. Het is een terugkerende nachtmerrie."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar nachtmerrie",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperus kijkt me even onderzoekend aan. Ik voel mijn gezicht opgloeien.",
+                  "Hm. Je bent de rode wachter zelf ook tegengekomen, hè? De Atlas.",
+                  "Ik was een dwaas. We zijn allemaal kinderen van hem. Dat is wel duidelijk. Maar ik dacht en hoopte dat we daardoor ook allemaal zijn liefde verdienden. De waarheid is dat niet elke iteratie goed genoeg is.",
+                  "...",
+                  "We kunnen alleen kijken naar de mogelijkheden van de toekomst, geestverwant. De ruis hoort hier niet. Het is terecht dat je er tegenin gaat. Zoek de kennisstenen. De weg ernaartoe zal je dan duidelijk worden."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag naar nachtmerrie",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperus kijkt me even onderzoekend aan. Ik voel mijn gezicht opgloeien.",
+                  "Ik voel dat je nog niet ver onderweg bent. Dan is het niet gepast om dit te bespreken. Ik wil me niet bemoeien met je reis, geestverwant. We moeten allemaal onze eigen weg vinden.",
+                  "We kunnen alleen kijken naar de mogelijkheden van de toekomst. De ruis hoort hier niet. Het is terecht dat je er tegenin gaat. Zoek de kennisstenen. De weg ernaartoe zal je dan eindelijk duidelijk worden."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "We kunnen alleen kijken naar de mogelijkheden van de toekomst, geestverwant. De ruis hoort hier niet. Het is terecht dat je er tegenin gaat. Zoek de kennisstenen. De weg ernaartoe zal je dan duidelijk worden."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "%NAME% is overduidelijk dood, maar er hangt hier nog een zweem van zijn unieke aanwezigheid. Het is meer dan een herinnering. Het lijkt wel alsof zijn wezen er nog is.",
+            "Het graf is omgeven door een statisch veld met lange, knetterende vonken. Ergens in die herrie hoor ik een bericht: breng me materialen van deze wereld. Doneer ze hier. Stabiliseer deze anomalie."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De vonken schieten op me af en laten de materialen in het niets verdwijnen.",
+                  "Het graf van %NAME% is weer een vredige en rustige plek. Zou hij ook zijn meegenomen door deze vreemde statische energie?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 16,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Ariadne om meer te weten te komen",
+        "AppId": "cook22",
+        "IterationAppId": "other26",
+        "Quantity": 60,
+        "PortalAddress": "312B0DA31EBB",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Deze verstoringen zijn vensters die naar dit universum kijken, mede-Reiziger. Zowel het licht als het donker hebben hun nut. Ik heb daar vrede mee. Dat hebben we allebei."
+          ],
+          "Options": [
+            {
+              "Name": "Allebei?",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik en mede-ik. We moeten accepteren dat er protocollen zijn die we niet kunnen veranderen, anders zullen we nooit rust vinden.",
+                  "Ga op zoek naar de kennisstenen. Het breukvenster zal je de locatie geven. Zo was het altijd en zo zal het altijd zijn. Ik voel dat deze cyclus begint."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ga op zoek naar de kennisstenen. Het breukvenster zal je de locatie geven. Zo was het altijd en zo zal het altijd zijn. Ik voel dat deze cyclus begint."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Een hangt een gevoel van verlies op deze locatie. Een mysterieuze energie zoemt rond de kapotte constructie, maar er is geen teken van leven of dood. Het personeel is hier al lang niet meer.",
+            "TXT_RadioNoise- kktttk -wil gewoon terug naarTXT_RadioNoise- zzktk - acther de schermen, een invaller van mijn eigenTXT_RadioNoise- zzkzz- zo donker. Ik kan er niet tegen - Ik wil TXT_RadioNoise- zzzzzt - rode licht TXT_RadioNoise- ktzzz-",
+            "De stem van de ruis fluistert een verzoek. Deze planeet is aangetast. Hij heeft honger. Hij moet een materiaal van deze planeet kopiëren. Hij moet zichzelf kopiëren."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik word plotseling aangevallen door een visioen van mezelf. Mijn hoofd tolt van een déjà vu van een déjà vu, spiegels in spiegels. Alsof ik deze planeet al ontelbare keren heb hersteld.",
+                  "De materialen lossen op. Het visioen gaat voorbij. Het geruis verdwijnt.",
+                  "Daarna is het helemaal stil."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 17,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Gemini om meer te weten te komen",
+        "AppId": "raw31",
+        "IterationAppId": "other27",
+        "Quantity": 250,
+        "PortalAddress": "509F84F57D78",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ik zag de verstoring met mijn eigen ogen, vriend. Ik kwam daar helemaal tot leven. Het herinnerde me eraan hoezeer ik het avontuur mis."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar avontuur",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Gemini kijkt even naar zijn metgezel en spreekt op gedempte toon.",
+                  "Er was een tijd dat Hesperus moest worden gered, maar dat was vroeger. Te lang heb ik naar excuses gezocht en mezelf verloochend. Maar dat doe ik niet meer.",
+                  "Verlaat de anomalie met je ruimteschip. Vlieg naar een planeet en land daar. Voel het knarsen van de aarde onder je voeten. Ga op zoek naar oude stenen zuilen. Luister naar de portaalcode die ze al zingend overbrengen naar je ziel."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Er was een tijd dat Hesperus moest worden gered, maar dat was vroeger. Te lang heb ik naar excuses gezocht en mezelf verloochend. Maar dat doe ik niet meer.",
+                  "Verlaat de anomalie met je ruimteschip. Vlieg naar een planeet en land daar. Voel het knarsen van de aarde onder je voeten. Ga op zoek naar oude stenen zuilen. Luister naar de portaalcode die ze al zingend overbrengen naar je ziel."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Er is duidelijk iets mis met deze constructie. Ik hoor een zwak geknetter, sputterend als een dovend vuurtje.",
+            "Behalve een eindeloos herhalend patroon ontwaar ik een ruisend geluid. Mijn pak zet de gefragmenteerde gegevens om in een bericht: bepaalde materialen moeten hier worden gedoneerd om deze verstoring te stabiliseren."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De materialen worden verpulverd in een wolk van energie. Mijn handen zijn leeg.",
+                  "De verstoorde locatie is gestabiliseerd. De ruis is verdwenen of in elk geval afgenomen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 18,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Mercury om meer te weten te komen",
+        "AppId": "cook112",
+        "IterationAppId": "other28",
+        "Quantity": 40,
+        "PortalAddress": "3202EF2CC4A0",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ons werk is van groot belang voor dit universum. Wees trots op jouw rol daarin, portaal-adept."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar werk",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De laatste tijd kijk ik teveel terug, in de leegte. Maar een Reiziger mag zijn lot niet verbinden aan één plek of één moment. De anomalie is nu mijn familie.",
+                  "Je vindt de symboolcode die je nodig hebt in kennisstenen. Voer 'm in bij de draaisteen en laat je door de stroom meevoeren door het portaal."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Je vindt de symboolcode die je nodig hebt in kennisstenen. Voer 'm in bij de draaisteen en laat je door de stroom meevoeren door het portaal."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Mijn spieren trillen onwillekeurig als ik de constructie nader. Een geheimzinnige statische energie borrelt op uit de grond en lijkt iets af te schrikken in mijn exopak.",
+            "Het geluid is duidelijk een verwrongen bericht dat bestaat uit gefragmenteerde gegevens uit een onbekende bron. Het verzoek luidt:",
+            "Breng materialen hier... doneren. Balans... verstoorde regio."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik kan niet zien wat er gebeurt met de materialen, want ik ben verblind door een rood licht. Het schiet door mijn hoofd en ik krimp ineen. Het doet pijn.",
+                  "De regio lijkt gestabiliseerd, maar ik moet deze plek zo snel mogelijk verlaten."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 19,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Tethys om meer te weten te komen",
+        "AppId": "cur22",
+        "IterationAppId": "other33",
+        "Quantity": 16,
+        "PortalAddress": "2112739B139C",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Het voelt goed om zo af en toe los te komen van je vertrouwde omgeving. Het is het waard."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar loskomen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Leven zonder angst en genieten van alles wat dit universum te bieden heeft. Dat is toch hoe we onszelf definiëren?",
+                  "Dat we vechten voor die vrijheid. Dat we die verstoringen verhelpen. Blijf wel in leven.",
+                  "Je kunt via een portaal naar de verstoring. Gebruik je vizier om het planeetoppervlak te verkennen en raak de kennisstenen aan die je vindt. Zij wijzen je de weg."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Je kunt via een portaal naar de verstoring. Gebruik je vizier om het planeetoppervlak te verkennen en raak de kennisstenen aan die je vindt. Zij wijzen je de weg."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Deze crashlocatie geeft me een verontrustend gevoel. Er zijn geen bemanningsleden te vinden, zelfs geen dode. Toch hoor ik ergens een zwakke stem roepen.",
+            "TXT_RadioNoise- kzzzz-zeker dat ik nog mezelf benTXT_RadioNoise- tktktk-signaal is identiek TXT_RadioNoise- zzzz-",
+            "Rond de crashlocatie laat een duistere energie een verzoek horen: realiteit is hier gebarsten. De planeet is onstabiel. Bepaalde materialen kunnen het repareren."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik voel me plotseling gedesoriënteerd en misselijk. Hoe ben ik hier terecht gekomen? Wat heb ik gedaan?",
+                  "Mijn handen zijn leeg. De rust is weergekeerd op de crashlocatie. Blijkbaar zit mijn werk erop hier."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 20,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Hesperus om meer te weten te komen",
+        "AppId": "cook41",
+        "IterationAppId": "other36",
+        "Quantity": 16,
+        "PortalAddress": "60D447EB0728",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ik waardeer onze onmogelijke ontmoetingen, geestverwant. Het is belangrijk dat we elkaar waarderen."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar 'elkaar'",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De stem van de hiërarchie is luid en overweldigend. Daardoor horen we vaak de stemmen niet van hen die het dichtst bij ons zijn.",
+                  "Hesperus kijkt even naar Gemini en dan naar de grond. Hij schraapt zijn keel.",
+                  "Vertrouw op je intuïtie, geestverwant. Je kent dit pad nu wel. Kennisstenen geven je de portaalsleutel die je nodig hebt. De verstoring verwacht je al. Hij verwacht ons allemaal."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Vertrouw op je intuïtie, geestverwant. Je kent dit pad nu wel. Kennisstenen geven je de portaalsleutel die je nodig hebt. De verstoring verwacht je al. Hij verwacht ons allemaal."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "De laatste rustplaats van %NAME% wordt verstoord door een wilde, knetterende energie.",
+            "Mijn pak vertaalt een bericht op het ritme van de ruis: realiteit is hier fragiel, dun en kwetsbaar. De breuk is misschien niet volledig te herstellen, maar kan wel worden gestabiliseerd met materiaal.",
+            "Een lichtgevende vloeistof borrelt op uit het graf. Het spul lijkt te reageren op mijn aanwezigheid en stroomt sneller als ik mijn hand dichterbij breng. Is dit een geschenk? Iets wat me kan helpen?"
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De ruis dringt mijn lichaam binnen. Mijn zenuwen gieren van pijn terwijl ze de wilde energie geleiden.",
+                  "Het gevoel verdwijnt weer net zo snel als het kwam. Volgens mij ben ik hier eerder geweest. Ik heb het gevoel dat ik in slaap val en bereid me voor op de steeds weer terugkerende droom.",
+                  "In elk geval lijkt het graf voorlopig stabiel te zijn."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Verzamel enzymvloeistof",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De vloeistof stroomt direct in mijn handpalmen. Het spul ruikt zoet en appetijtelijk.",
+                  "Mijn pak vertaalt een bericht op het ritme van de ruis: realiteit is hier fragiel, dun en kwetsbaar. De breuk is misschien niet volledig te herstellen, maar kan wel worden gestabiliseerd met materiaal."
+                ],
+                "Options": [
+                  {
+                    "Name": "Doneer materialen",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "De ruis dringt mijn lichaam binnen. Mijn zenuwen gieren van pijn terwijl ze de wilde energie geleiden.",
+                        "Het gevoel verdwijnt weer net zo snel als het kwam. Volgens mij ben ik hier eerder geweest. Ik heb het gevoel dat ik in slaap val en bereid me voor op de steeds weer terugkerende droom.",
+                        "In elk geval lijkt het graf voorlopig stabiel te zijn."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Verzamel enzymvloeistof",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "De vloeistof stroomt direct in mijn handpalmen. Het spul ruikt zoet en appetijtelijk."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Vertrek",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 21,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Ariadne om meer te weten te komen",
+        "AppId": "cook21",
+        "IterationAppId": "other26",
+        "Quantity": 60,
+        "PortalAddress": "6203FCD05649",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ik zag dat je de Nexus naderde. Daar hoopte ik al op. Bedankt, mede-Reiziger. We hebben allemaal belang bij deze missie."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar het belang",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Er is iets vreselijks verschenen op Nada's apparaat. Een verstoring in de ruimtetijd. Er is al een compleet vrachtschip neergestort. Ik voel dat daarbij mede-Reizigers zijn omgekomen.",
+                  "Ga van het ene portaal naar het andere om de verstoring te bereiken. De symboolcode is gefragmenteerd, maar je kunt de delen nog terugvinden. Zoek naar kennisstenen. Dan vind je de code vanzelf."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ga van het ene portaal naar het andere om de verstoring te bereiken. De symboolcode is gefragmenteerd, maar je kunt de delen nog terugvinden. Zoek naar kennisstenen. Dan vind je de code vanzelf."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "De crashlocatie stinkt naar verbrand metaal en smeulend vlees. Een onbekende energie omringt het schip en schiet via de romp dwars door mijn exopak. Is dit een gevolg van de crash of de oorzaak ervan?",
+            "De ruis wordt langzaam maar zeker overstemd door een ritme, dat uiteindelijk een verzoek vormt. In mijn geest klinkt een smeekbede om materialen van deze planeet. Een onbekende kracht is rusteloos en wil worden gestabiliseerd."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Het is niet zo dat de ene materie tegen de andere botst. De materialen lossen direct op in de verstoring en verdwijnen spoorloos.",
+                  "De ruis verandert in een zacht gebrom. De breuk is misschien niet volledig gedicht, maar voorlopig is hij stabiel."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 22,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Gemini om meer te weten te komen",
+        "AppId": "raw47",
+        "IterationAppId": "other27",
+        "Quantity": 1200,
+        "PortalAddress": "4072FAE1B962",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Onderzoek je de verstoring, vriend? Dan kun je maar beter niet alleen gaan."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag wie je moet meenemen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Denk alsjeblieft niet dat ik je vaardigheden in twijfel trek. Dat was zeker niet mijn bedoeling. Het kan er alleen erg gevaarlijk zijn. Nada klonk heel bezorgd.",
+                  "Je hebt een portaal nodig om er te komen. Ik weet niet veel over die oude technologie, maar op de een of andere manier heeft het te maken met kennisstenen. Als je de stenen vindt, moet je ook de coördinaten kunnen vinden.",
+                  "Hopelijk heb je hier iets aan. Ik ben blij dat ik je kon helpen. Samen zijn we sterk, toch?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Je hebt een portaal nodig om er te komen. Ik weet niet veel over die oude technologie, maar op de een of andere manier heeft het te maken met kennisstenen. Als je de stenen vindt, moet je ook de coördinaten kunnen vinden.",
+                  "Hopelijk heb je hier iets aan. Ik ben blij dat ik je kon helpen. Samen zijn we sterk, toch?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Een onnatuurlijke energie knettert rond deze constructie en schiet overdonderende golven op me af. Op mijn pak knipperen waarschuwingen en foutmeldingen.",
+            "Ondanks het kabaal hoor ik een aanhoudend patroon. De realiteit van deze constructie is doorbroken en er komt ruis uit de instabiele breuk. De constructie kan worden gestabiliseerd, maar dat kost wel materialen."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik hou ze bij de bron van het geluid. Mijn handen worden omgeven door de ruis en de materialen lossen direct op.",
+                  "De waarschuwingen op mijn pak nemen in hevigheid af. Deze plek vormt niet langer een direct gevaar."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 23,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Mercury om meer te weten te komen",
+        "AppId": "cook22",
+        "IterationAppId": "other28",
+        "Quantity": 60,
+        "PortalAddress": "105508F0E6AE",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Nu wordt je doorzettingsvermogen op de proef gesteld, portaal-adept."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar doorzettingsvermogen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De breuk die werd gesignaleerd door Nada's apparaat is ernstig. Misschien kun je het effect verminderen, maar ik denk niet dat je het helemaal kunt terugdraaien.",
+                  "Het moeilijkste is echter het bereiken van de breuk. Je moet via het portaal naar de verstoorde regio.",
+                  "Je kunt het beste eerst op zoek gaan naar kennisstenen. Wist je dat ze uit dezelfde tijd komen als de oude doorgangen? Benader ze met een heldere geest en een vaste hand. Zo vind je wellicht de coördinaten die je nodig hebt."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Je moet via het portaal naar de verstoorde regio.",
+                  "Je kunt het beste eerst op zoek gaan naar kennisstenen. Wist je dat ze uit dezelfde tijd komen als de oude doorgangen? Benader ze met een heldere geest en een vaste hand. Zo vind je wellicht de coördinaten die je nodig hebt."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Ik hoor een jankend geluid uit de constructie komen. Als ik dichterbij kom, hoor ik ineens het gesputter en gesis van ruis die zigzaggend door de lucht naar mijn exopak schiet.",
+            "Het is door het geknetter nauwelijks te horen, maar er wordt steeds opnieuw dezelfde panische boodschap afgespeeld. Er is een breuk in deze constructie. Deze planeet is zwaar gehavend. Dit kan worden verholpen met een specifiek materiaal."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik hou de materialen dicht bij de plek waar het geknetter het hardste klinkt. Ze verdwijnen in een explosie van energie. De verstoring wordt verholpen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 24,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Tethys om meer te weten te komen",
+        "AppId": "cur23",
+        "IterationAppId": "other33",
+        "Quantity": 25,
+        "PortalAddress": "31850693BEC4",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah. Dus je hebt je aangemeld om de 'verstoring' te onderzoeken waar Nada zich zo druk over maakt."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar de 'verstoring'",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik weet niets over verstoringen of realiteiten en zo. Maar ik wil je wel helpen. Echt waar.",
+                  "Iemand die ik...0.4 kende is verdwenen, precies waar Nada dat vreemde signaal oppikte. Dat is niets voor hem. Hij laat vaak van zich horen.",
+                  "Ik zal 'm waarschijnlijk nooit meer zien. Maar als je het probleem kunt verhelpen, voorkom je dat anderen hetzelfde overkomt.",
+                  "Het is vrijwel onmogelijk om deze plek op traditionele manier te bereiken. Je moet via portalen reizen.",
+                  "Voordat hij verdween, zei mijn vriend iets over kennisstenen. Ik weet eigenlijk wel zeker dat ze de coördinaten bevatten die je nodig hebt. Succes."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Het is vrijwel onmogelijk om deze plek op traditionele manier te bereiken. Je moet via portalen reizen. Ik...0.4 heb iets gehoord over kennisstenen. Weet je wel, die kleine stenen pilaren die vaak tegen je praten. Het blijkt dat ze nog veel meer doen.",
+                  "Ik weet eigenlijk wel zeker dat die kennisstenen de coördinaten bevatten die je nodig hebt. Succes."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Het past niet bij zo'n doodse plek, maar er knettert een levendige ruis onder het graf. Mijn exopak trilt als de energie erdoorheen schiet, maar ik hou er gelukkig niets aan over.",
+            "Ik hoor een patroon in de ruisende uitbarstingen. Het lijken zinsconstructies die een vraag vormen. De realiteit is hier gebarsten en onstabiel, en kan alleen worden hersteld met specifieke materialen."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De statische energie reageert heftig op de aanwezigheid van de spullen. De stralen schieten op mijn handen af en consumeren de materialen.",
+                  "Stilte. De verstoring lijkt te zijn gestabiliseerd."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 25,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Hesperus om meer te weten te komen",
+        "AppId": "cur25",
+        "IterationAppId": "other36",
+        "Quantity": 16,
+        "PortalAddress": "30DEFC09D6EE",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ik begrijp dat je onderzoek hebt gedaan, geestverwant. Nada mag blij zijn met jouw hulp."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar Nada",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Er is hier een sterke kracht aan het werk. Nada is bang voor dat soort dingen. Hij is zeker een briljante Korvax en uniek in zijn soort, maar hij blijft een Korvax. We kunnen niet van hem verwachten dat hij ons standpunt begrijpt, geestverwant.",
+                  "Ik heb gedroomd van dit gesprek en van wat je nu gaat doen. Dat is inderdaad niet bepaald een empirisch onderzoek, maar ik heb eerder dit soort dromen gehad. Ik geloof in die visioenen. Zoals ik je vraag om in mij te geloven.",
+                  "Je gaat via een portaal naar de geplaagde planeet. De bestemming ligt vast: je vindt het universele adres op kennisstenen. Ze reageren op de aanraking van een Reiziger.",
+                  "Tot ziens, geestverwant."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik heb gedroomd van dit gesprek en van wat je nu gaat doen, geestverwant. Dat is inderdaad niet bepaald een empirisch onderzoek, maar ik heb eerder dit soort dromen gehad. Ik geloof in die visioenen. Zoals ik je vraag om in mij te geloven.",
+                  "Je gaat via een portaal naar de geplaagde planeet. De bestemming ligt vast: je vindt het universele adres op kennisstenen. Ze reageren op de aanraking van een Reiziger.",
+                  "Tot ziens, geestverwant."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "De constructie sist en kraakt. Deze statische energie is vast de verstoring die Polo en Nada ontdekten. Het verzoek wordt direct in mijn geest geplant, zonder woorden.",
+            "Er gromt iets diep onder de grond, alsof het land zelf honger heeft. Maar waarom deze materialen, die al in overvloed voorhanden zijn op deze wereld?"
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik duw de materialen naar de bron van de storing en zie ze volledig wegsmelten. De aangetaste planeet voedt zich met zijn eigen grondstoffen. Dan wordt het stil. De breuk in de realiteit is gerepareerd."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 26,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Ariadne om meer te weten te komen",
+        "AppId": "cur21",
+        "IterationAppId": "other26",
+        "Quantity": 16,
+        "PortalAddress": "30E4069A72AD",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Hoelang dansen we al op dit ritme? De regelmatigheid van deze verstoringen heeft een troostende werking."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar troost",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De timing van deze anomalieën lijkt exact, mede-Reiziger. Een natuurlijk patroon. Misschien zijn alleen de topjes van de golfvorm voelbaar voor ons. Hoe het ook zij, het heeft een ritme. Telkens als het universum ons roept, antwoorden we.",
+                  "Het antwoord begint met een zoektocht naar kennis. Luister naar de oude stenen, want zij bieden de toegang tot de onrustige regio."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Misschien herinner jij je dit ritme ook. Luister naar de oude kennisstenen, want zij bieden de toegang tot de onrustige regio."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Een vonk statische elektriciteit springt van het vreemde bouwsel naar mijn arm. De sensoren van mijn pak registreren een gevoel dat nog het meest wegheeft van kietelen. Ik huiver ervan.",
+            "Opeens wordt mijn hoofd gevuld met een stille boodschap: dit bouwwerk teerde tot nu toe op lokale bronnen, maar heeft nu hulp nodig. Om de balans te herstellen, is een offer van materialen vereist."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De materialen gaan op in de ruis. Ik kan niet zien wat ermee is gebeurd, maar ik heb het gevoel dat ik iets in balans heb gebracht. Waar is de andere helft van deze weegschaal?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 27,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Gemini om meer te weten te komen",
+        "AppId": "cur22",
+        "IterationAppId": "other27",
+        "Quantity": 24,
+        "PortalAddress": "1011F75843D7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Hallo! Ach, wat fijn om je te mogen begroeten. Hoe gevaarlijk deze verstoringen ook zijn, ik ben blij dat ik je kan helpen met je inspanningen."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar inspanningen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Wij Reizigers houden ons al enkele maanden bezig met deze verstoringen en zelfs Hesperus weet niet waardoor ze veroorzaakt worden. Maar we gaan gewoon door. Met duizenden komen we samen om stabiliteit te brengen naar het universum.",
+                  "Ik geloof werkelijk dat we door die momenten van samenwerking net een beetje langer samen kunnen zijn. Dat is toch iets geweldigs?",
+                  "Met een portaal kun je naar de getroffen regio reizen. Je hebt de kennis van drie stenen nodig om de symbolenreeks te leren. Dat lukt je veel sneller met vrienden! Hopelijk maak je vandaag nieuwe vrienden."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Met een portaal kun je naar de getroffen regio reizen. Je hebt de kennis van drie stenen nodig om de symbolenreeks te leren. Dat lukt je veel sneller met vrienden! Hopelijk maak je vandaag nieuwe vrienden."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "De stukjes romp glitteren door de vreemde statische elektriciteit. Opeens ruik ik iets ranzigs. Het komt in golven en is het ergst wanneer de ruis vrijkomt. De geur doet me denken aan brandende proteïnen: verbrande haren, vacht of nagels.",
+            "Ik probeer de brandlucht te negeren en luister naar de eisen van de ruis: een bepaald materiaal van deze planeet zal de verstoring stabiliseren. Ik zal deze grondstof moeten leveren, anders word ik zelf ook verslonden."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Terwijl de materialen oplossen, neemt de stank van verbrande proteïnen een beetje af. Helemaal verdwijnen doet hij echter niet. Ook de statische ruis ebt weg en ik accepteer dat ik hier niet meer kan doen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 28,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Mercury om meer te weten te komen",
+        "AppId": "cook20",
+        "IterationAppId": "other28",
+        "Quantity": 60,
+        "PortalAddress": "2153FB6D1154",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Mercury bekijkt me zwijgend. Zijn bleke ogen stralen een intensiteit uit die ik niet thuis kan brengen. Is het honger? Wrok? Jaloezie?"
+          ],
+          "Options": [
+            {
+              "Name": "Vraag of alles goed is",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Het gezicht van de Reiziger kleurt felrood, waardoor ik me opeens afvraag hoe het moet zijn om geen huid te hebben. Dan vindt hij zijn zelfbeheersing terug.",
+                  "Neem me niet kwalijk, portaal-adept. Je hebt me vast opgezocht om advies te krijgen.",
+                  "Alleen een portaal kan je de weg wijzen naar je bestemming. De recente verstoringen hebben dat oude netwerk flink overbelast. Zoek de kennisstenen en voer de informatie die zij verstrekken in op de poort van een netwerk."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Natuurlijk.",
+                  "Alleen een portaal kan je de weg wijzen naar je bestemming. De recente verstoringen hebben dat oude netwerk flink overbelast. Zoek de kennisstenen en voer de informatie die zij verstrekken in op de poort van een netwerk."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Het ziet eruit als een gewoon bouwwerk, maar mijn pak registreert een gigantische afgrond. Heel even voel ik de onbedwingbare drang om mezelf van het aangetaste gebouw te storten... Maar het gevoel verdwijnt.",
+            "Een buitenaardse energie die zich niet goed laat beschrijven stroomt langs het oppervlak van het gebouw, waardoor de deeltjes lijken te dansen. De dans komt mijn gedachten binnen en formuleert een eis: breng een offer van materiaal. Stabiliseer deze verstoring."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik laat de materialen achter bij de voet van het bouwwerk. Hoe het kan, weet ik niet, maar ze smelten meteen in de grond.",
+                  "De statische ruis die daarnet nog oorverdovend was, zwijgt opeens. Ik heb mijn steentje bijgedragen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 29,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Tethys om meer te weten te komen",
+        "AppId": "build164",
+        "IterationAppId": "other33",
+        "Quantity": 6,
+        "PortalAddress": "405507FBC6BF",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Tethys zucht geïrriteerd. Hij zegt niets, in de hoop het gesprek zo snel mogelijk te beëindigen."
+          ],
+          "Options": [
+            {
+              "Name": "Vraag naar de zucht",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ik ben niet in de stemming om erover te praten. Ik ben gewoon boos. Het is nu al bijna zes maanden geleden. Hoe kon hij zo dom zijn? Hoe DURFDE hij zo dom te zijn?"
+                ],
+                "Options": [
+                  {
+                    "Name": "Vraag door",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Ik0.1-0.1-0.2 goed. Ik zal het vertellen, als je dat zo graag wilt.",
+                        "De instabiliteit van dit universum, met al die verstoringen... daar zijn slachtoffers bij gevallen, wist je dat?",
+                        "Ik heb nog steeds niets gehoord van een kennis die maanden geleden is verdwenen. Ik weet dat ik niets meer zal horen. Dat hij dood is. Maar ik word er zo boos van. Ik dacht dat ik mijn vrienden slimmer uitkoos. Ik dacht dat ik op ze kon vertrouwen.",
+                        "Hij slaakt een diepe zucht.",
+                        "Sorry. Het is fijn dat je helpt.",
+                        "Kom de anomalie uit en ga op zoek naar kennisstenen. Zij zullen je een reeks symbolen laten zien die je moet invoeren in een portaal. Ga door het portaal om naar een regio te gaan die je hulp nodig heeft."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Dring niet verder aan",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Bedankt. Dat je erover ophield. En voor je hulp. Sorry.",
+                        "Kom de anomalie uit en ga op zoek naar kennisstenen. Zij zullen je een reeks symbolen laten zien die je moet invoeren in een portaal. Ga door het portaal om naar een regio te gaan die je hulp nodig heeft."
+                      ],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Kom de anomalie uit en ga op zoek naar kennisstenen. Zij zullen je een reeks symbolen laten zien die je moet invoeren in een portaal. Ga door het portaal om naar een regio te gaan die je hulp nodig heeft."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Ik ben me bewust van de versie van dit bouwwerk dat voor me staat. Maar tegelijkertijd ben ik me op de een of andere manier ook bewust van een andere versie. De geest van het verleden overlapt met het gebouw dat er nu staat, waardoor alles wazig lijkt en mijn ogen tranen.",
+            "Een donderende ontlading van statische ruis eist mijn onverdeelde aandacht op. Dit bouwwerk is instabiel. Als ik plaatselijke materialen aanlever, die op deze planeet in overvloed aanwezig zijn, kan ik de breuk in de werkelijkheid repareren..."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "De felheid van de ruis zwakt af terwijl de materialen worden opgenomen. Ik krijg het gevoel dat ik word weggestuurd. Ik ben niet meer nodig. Toch is de verstoring nog niet geheel opgelost. Er zijn heel wat Reizigers voor nodig om hem te laten verdwijnen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 30,
+        "NpcMessage": "Ga via het portaal naar de verstoorde regio\nPraat met iteratie Hesperus om meer te weten te komen",
+        "AppId": "cur17",
+        "IterationAppId": "other36",
+        "Quantity": 12,
+        "PortalAddress": "4169FC678D73",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Hallo. Je helpt me vandaag met de verstoring? Je bent niet de enige geestverwant. Ik heb dit gesprek al talloze malen gevoerd. Toch word ik het nooit zat.",
+            "Kun je me, voor je gaat, iets vertellen over je recentste ontmoeting met een geestverwant? Een verhaaltje waarmee ik dit gesprek in mijn geheugen kan terugvinden?"
+          ],
+          "Options": [
+            {
+              "Name": "Vertel een vrolijk verhaal",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperus kijkt me aan met een blik van vertedering.",
+                  "Op de gulheid van Reizigers kun je niet bouwen, maar door dit soort verhalen weet ik weer dat het bestaat. Bedankt, Reiziger-Geestverwant.",
+                  "Je kunt de getroffen regio vinden via een oud portaal. De symbolencode vind je op de slapende kennisstenen. Je wekt ze door ze met je hand aan te raken."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertel een verdrietig verhaal",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperus fronst.",
+                  "Zulke dingen gebeuren. Vreselijk om te horen. Ik hoop dat je vandaag meer geluk hebt met je mede-Reizigers.",
+                  "Je kunt de getroffen regio vinden via een oud portaal. De symbolencode vind je op de slapende kennisstenen. Je wekt ze door ze met je hand aan te raken."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vraag om hulp",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Natuurlijk. Ik hou je niet langer op. Je kunt de getroffen regio vinden via een oud portaal. De symbolencode vind je op de slapende kennisstenen. Je wekt ze door ze met je hand aan te raken."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Dat deze crash abnormaal is, is duidelijk zichtbaar van dichtbij. Het lijkt wel alsof het exacte moment van de impact bevroren is, als een gepauzeerde film. Rondom de locatie bubbelt de ruis.",
+            "Help... proces... voltooien. Red gegevens... behoud geheugen..."
+          ],
+          "Options": [
+            {
+              "Name": "Doneer materialen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Wanneer ik de gevraagde materialen presenteer, verandert er iets in de atmosfeer. De crash ziet er niet meer abnormaal uit, maar is nu niet meer dan een treurige herinnering aan de laatste momenten van een onfortuinlijke piloot. Meer kan ik hier niet bijdragen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Doorzoek het wrak",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Op een stuk van de kapotte romp vind ik een lap van nanovezels, hetzelfde materiaal als mijn exopak.",
+                  "Er zit een zuurstof-upgrade in die nog steeds werkt. Ik neem 'm mee. Misschien komt hij nog van pas tijdens mijn onderzoek onder water.",
+                  "Help... proces... voltooien. Red gegevens... behoud geheugen..."
+                ],
+                "Options": [
+                  {
+                    "Name": "Doneer materialen",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Wanneer ik de gevraagde materialen presenteer, verandert er iets in de atmosfeer. De crash ziet er niet meer abnormaal uit, maar is nu niet meer dan een treurige herinnering aan de laatste momenten van een onfortuinlijke piloot. Meer kan ik hier niet bijdragen."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Vertrek",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Vertrek",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

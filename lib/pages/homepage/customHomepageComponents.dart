@@ -1,0 +1,130 @@
+import 'dart:math';
+
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:flutter/material.dart';
+import '../../constants/AppAnimation.dart';
+
+import '../../contracts/misc/customMenu.dart';
+
+class EditingHomepageItem extends StatefulWidget {
+  final CustomMenu menuItem;
+  final double tileSize;
+  EditingHomepageItem(this.menuItem, this.tileSize);
+
+  @override
+  _EditingHomepageWidget createState() => _EditingHomepageWidget(
+        this.menuItem,
+        this.tileSize,
+      );
+}
+
+class _EditingHomepageWidget extends State<EditingHomepageItem>
+    with SingleTickerProviderStateMixin {
+  AnimationController animationController;
+  final CustomMenu menuItem;
+  final double tileSize;
+  _EditingHomepageWidget(this.menuItem, this.tileSize);
+
+  @override
+  void initState() {
+    super.initState();
+    animationController = AnimationController(
+      vsync: this,
+      duration: AppAnimation.homescreenWiggle,
+      reverseDuration: AppAnimation.homescreenWiggle,
+    )..addListener(() => setState(() {}));
+
+    animationController.repeat(reverse: true);
+  }
+
+  double _shake() {
+    double progress = animationController.value;
+    return cos(progress * pi * 10.0);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return editCustomMenuItemGridPresenter(context, menuItem, tileSize,
+        position: _shake());
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+}
+
+Widget editCustomMenuItemGridPresenter(
+    BuildContext context, CustomMenu menuItem, double tileSize,
+    {double position = 0, bool isBeingDragged = false}) {
+  var childWidget = Card(
+    shadowColor: Colors.transparent,
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        menuItem.icon,
+        Padding(
+          padding: EdgeInsets.all(4),
+          child: Text(
+            getTranslations().fromKey(menuItem.title),
+            maxLines: 2,
+            textAlign: TextAlign.center,
+            overflow: TextOverflow.ellipsis,
+            softWrap: false,
+          ),
+        ),
+      ],
+    ),
+  );
+  return SizedBox(
+    child: isBeingDragged
+        ? childWidget
+        : RotationTransition(
+            turns: AlwaysStoppedAnimation((1 * position) / 360),
+            child: childWidget,
+          ),
+    height: tileSize.floorToDouble(),
+    width: tileSize.floorToDouble(),
+  );
+}
+
+Widget customMenuItemGridPresenter(BuildContext context, CustomMenu menuItem) {
+  return GestureDetector(
+    child: Card(
+        child: Stack(
+      alignment: Alignment.center,
+      children: [
+        if (menuItem.isLocked) ...[
+          Positioned(
+            top: 5,
+            right: 5,
+            child: Icon(
+              Icons.lock_clock,
+              color: getTheme().getDarkModeSecondaryColour(),
+            ),
+          ),
+        ],
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            menuItem.icon,
+            Padding(
+              padding: EdgeInsets.all(4),
+              child: Text(
+                getTranslations().fromKey(menuItem.title),
+                maxLines: 2,
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                softWrap: false,
+              ),
+            ),
+          ],
+        ),
+      ],
+    )),
+    onTap: () => customMenuClickHandler(context, menuItem),
+    onLongPress: () =>
+        (menuItem.onLongPress != null) ? menuItem.onLongPress(context) : null,
+  );
+}

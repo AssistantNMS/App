@@ -1,0 +1,2291 @@
+[
+  {
+    "Id": "MP_PORTALQUEST",
+    "Stages": [
+      {
+        "Level": 1,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Arianna per scoprire di più",
+        "AppId": "cur17",
+        "IterationAppId": "other26",
+        "Quantity": 12,
+        "PortalAddress": "1144B573F95C",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ti ho visto avvicinarti al Nexus. Speravo che lo facessi. Grazie, altro Viaggiatore. Questa missione è importante per tutti noi."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo dell'importanza",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "È apparso qualcosa di terribile sul telaio di Nada. Un'alterazione dello spaziotempo, che ha già spazzato via un mercantile. Sono sicuro che hai avvertito la perdita di altri Viaggiatori nella collisione.",
+                  "Viaggia tra i portali per raggiungere la perturbazione. La chiave glittica è frammentata, ma recuperabile. Cerca le pietre della Conoscenza. So che la chiave si rivelerà a te."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Viaggia tra i portali per raggiungere la perturbazione. La chiave glittica è frammentata, ma recuperabile. Cerca le pietre della Conoscenza. So che la chiave si rivelerà a te."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Il luogo dello schianto puzza di metallo bruciato e carne carbonizzata. La nave è circondata da lampi di energia conosciuta, che guizzano lungo lo scafo e attraversano la mia exotuta. È un effetto dello schianto, o la sua causa?",
+            "L'interferenza è animata da un ritmo distinguibile, che esprime una pretesa. Mi solletica la mente con la richiesta di materiali di questo pianeta. Qui risiede una forza irrequieta che desidera essere stabilizzata."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Non c'è alcuna collisione tra materia. I materiali si dissolvono direttamente nella perturbazione e svaniscono senza lasciare traccia.",
+                  "I guizzi dell'interferenza si riducono a un lieve ronzio. La breccia non è ancora stata riparata, ma per il momento è stabile."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ispeziono i rottami",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Qualcosa emerge dallo schianto. È un frammento di materiale in nanofibra, simile a quello della mia exotuta.",
+                  "Nel tessuto c'è un potenziamento ancora intatto per i sistemi di respirazione. Decido di prenderlo, forse faciliterà la mia ricerca subacquea.",
+                  "L'interferenza è animata da un ritmo distinguibile, che esprime una pretesa. Mi solletica la mente con la richiesta di materiali di questo pianeta. Qui risiede una forza irrequieta che desidera essere stabilizzata."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offro materiali",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Non c'è alcuna collisione tra materia. I materiali si dissolvono direttamente nella perturbazione e svaniscono senza lasciare traccia.",
+                        "I guizzi dell'interferenza si riducono a un lieve ronzio. La breccia non è ancora stata riparata, ma per il momento è stabile."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Me ne vado",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 2,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Gemini per scoprire di più",
+        "AppId": "build171",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "10FF182964AA",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Stai indagando sulla perturbazione? Spero che non ti dispiaccia portare dei compagni."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo dei compagni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Non sto mettendo in dubbio le tue capacità! Affatto. È solo che potrebbe essere molto pericoloso. Nada sembrava molto preoccupata.",
+                  "Credo che dovrai trovare un portale per arrivare fin lì. Non so molto di quell'antica tecnologia, ma in qualche modo quelle strutture sono collegate alle pietre della Conoscenza. Trova le pietre e dovresti poter risalire alle coordinate.",
+                  "Spero che questo ti sia d'aiuto. Il problema ci riguarda tutti, no?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Credo che dovrai trovare un portale per arrivare fin lì. Non so molto di quell'antica tecnologia, ma in qualche modo quelle strutture sono collegate alle pietre della Conoscenza. Trova le pietre e dovresti poter risalire alle coordinate.",
+                  "Spero che questo ti sia d'aiuto. Il problema ci riguarda tutti, no?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Un'energia innaturale crepita intorno alla struttura, investendomi con ondate di energia statica. Sulla mia tuta si attivano una lunga serie di allarmi.",
+            "Attraverso il rumore riesco a distinguere uno schema insistente. La realtà di questa struttura è stata compromessa e la breccia risultante vomita interferenze e instabilità. Posso stabilizzarla, ma solo con un sacrificio materiale."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Avvicino i materiali alla fonte del rumore e li vedo disintegrarsi in mano mia, avviluppati dall'interferenza.",
+                  "Gli allarmi della tuta iniziano a scemare. Questo luogo non è più una minaccia immediata."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 3,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Mercurio per scoprire di più",
+        "AppId": "cook25",
+        "IterationAppId": "other28",
+        "Quantity": 60,
+        "PortalAddress": "11F366324C16",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Sarà una prova di fermezza, adepto del portale."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo della fermezza",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La breccia indicata dal telaio di Nada è pericolosa. Potresti mitigarne l'impatto, ma dubito che sia possibile ripararla del tutto.",
+                  "Tuttavia, il difficile sarà raggiungerla. Dovrai dirigerti verso la regione perturbata tramite i portali.",
+                  "Ti suggerisco di iniziare il viaggio cercando le pietre della Conoscenza. Sapevi che condividono la propria origine con gli antichi portali? Avvicinale con mente salda e mano ferma, e potrebbero rivelarti le coordinate di cui necessiti."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Dovrai dirigerti verso la regione perturbata tramite i portali.",
+                  "Ti suggerisco di iniziare il viaggio cercando le pietre della Conoscenza. Sapevi che condividono la propria origine con gli antichi portali? Avvicinale con mente salda e mano ferma, e potrebbero rivelarti le coordinate di cui necessiti."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Avverto un lamento acuto provenire dalla struttura. Quando mi avvicino, il suono si trasforma nei sibili e crepitii di un'interferenza che sfrecciano disordinatamente sulla superficie della mia exotuta.",
+            "Un messaggio concitato, appena distinguibile attraverso i crepitii, si ripete all'infinito. In questa struttura c'è una breccia. Il pianeta è profondamente lacerato e per curarlo è necessario un sacrificio materiale ben preciso..."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Metto i materiali dove l'interferenza è più forte e li vedo scomparire in un lampo di energia. La perturbazione locale ha iniziato a ripararsi."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 4,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Teti per scoprire di più",
+        "AppId": "cook30",
+        "IterationAppId": "other33",
+        "Quantity": 90,
+        "PortalAddress": "30F607272323",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah. Allora hai intenzione di indagare su questa 'perturbazione' che tanto preoccupa Nada."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo della 'perturbazione'",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ascolta, non so molto di perturbazioni, realtà e cose simili, ma voglio aiutarti. Davvero.",
+                  "Una mia...0.4 vecchia conoscenza non ha più dato sue notizie dopo aver raggiunto una zona vicina all'origine dello strano segnale rilevato da Nada. Non è da lei. Non è mai sparita così.",
+                  "Non penso che la rivedrò più, ma se puoi impedire che lo stesso destino tocchi ad altri... Beh, è un bene.",
+                  "Sarà quasi impossibile raggiungere quel posto con i consueti mezzi. Dovrai farlo con un portale.",
+                  "Prima di sparire, il mio contatto ha detto qualcosa a proposito delle pietre della Conoscenza. Forse... Anzi, sicuramente, trovandone qualcuna e toccandola, apprenderai le coordinate che ti servono. Buona fortuna."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Sarà quasi impossibile raggiungere quel posto con i consueti mezzi. Dovrai farlo con un portale. Io...0.4 ho ottenuto qualche informazione sulle pietre della Conoscenza. Quelle piccole colonne di pietra che parlano, hai presente? Beh, a quanto pare nascondono altri segreti.",
+                  "Forse... Anzi, sicuramente, trovandone qualcuna e toccandola, apprenderai le coordinate che ti servono. Buona fortuna."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "In questo luogo di morte, un'interferenza vivente crepita e spunta sotto la tomba. La mia exotuta si scuote quando viene attraversata da energia elettrostatica, che però non sembra nuocermi.",
+            "Attraverso l'interferenza colgo uno schema. È una richiesta, dalla struttura simile a una frase. Qui la realtà è lacerata e instabile. Solo dei materiali ben precisi possono calmarla."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "L'energia elettrostatica reagisce violentemente agli oggetti, scattando verso di me. Consuma i materiali direttamente dalle mie mani.",
+                  "Silenzio. La perturbazione sembra essersi stabilizzata."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 5,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Espero per scoprire di più",
+        "AppId": "raw46",
+        "IterationAppId": "other36",
+        "Quantity": 2000,
+        "PortalAddress": "10610E3057EE",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ho saputo che hai deciso di indagare su qualcosa, affine. Nada è fortunata a poter contare su di te."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo di Nada",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "C'è una forza potente all'opera. Nada teme questo genere di cose. È molto brillante e unica tra i suoi simili, ma resta pur sempre una Korvax. Sarebbe irragionevole aspettarsi che possa condividere la nostra prospettiva, affine.",
+                  "Ho sognato questa conversazione e le tue prossime azioni. Non è una ricerca empirica, ma ho già fatto sogni simili e credo nella visione che mi è stata mostrata. In cambio, ti chiedo di fidarti di me.",
+                  "Entrerai in un portale per raggiungere il pianeta afflitto. La destinazione è già determinata: scoprirai la sua ubicazione universale dalle pietre della Conoscenza. Esse risponderanno al tocco di un Viaggiatore.",
+                  "Al nostro prossimo incontro, affine."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ho sognato questa conversazione e le tue prossime azioni. Non è una ricerca empirica, ma ho già fatto sogni simili e credo nella visione che mi è stata mostrata. In cambio, ti chiedo di fidarti di me.",
+                  "Entrerai in un portale per raggiungere il pianeta afflitto. La destinazione è già determinata: scoprirai la sua ubicazione universale dalle pietre della Conoscenza. Esse risponderanno al tocco di un Viaggiatore.",
+                  "Al nostro prossimo incontro, affine."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La struttura sibila e crepita. Quest'energia dev'essere la perturbazione rilevata da Polo e Nada. Senza proferire parola, trasmette la sua richiesta direttamente nella mia mente.",
+            "Qualcosa geme nelle profondità della terra, come se il suolo stesso avesse fame. Ma perché proprio questi materiali, che su questo mondo abbondano?"
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Spingo i materiali verso la fonte della perturbazione e li vedo dissolversi nel nulla. Il pianeta ferito si nutre delle sue stesse risorse, poi si calma. La breccia nella realtà è stata riparata."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 6,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Arianna per scoprire di più",
+        "AppId": "cur22",
+        "IterationAppId": "other26",
+        "Quantity": 16,
+        "PortalAddress": "21B13538C8F7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "L'assistente sintetico Quicksilver è un abile artigiano. Hai visto i volti che crea, altro Viaggiatore? Sono indistinguibili da quelli reali."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo dei volti",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Sono opere d'arte, ma in verità il robot è solo uno strumento dello specialista Polo.",
+                  "Non dobbiamo sottovalutare il Gek. I suoi modi gioviali celano una profonda sagacia. Ha fatto molto per me. Per tutti noi.",
+                  "I baffi di Arianna scattano. Solleva una mano guantata verso il proprio volto, come a saggiarne i lineamenti.",
+                  "Devi cercare le pietre della Conoscenza per sbloccare un portale. Toccale. Le troverai che ti attendono, altro Viaggiatore."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Devi cercare le pietre della Conoscenza per sbloccare un portale. Toccale. Le troverai che ti attendono, altro Viaggiatore."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Quando mi avvicino alla struttura, sulla mia exotuta suona un allarme stridulo.",
+            "Attenzione. Anomalia rilevata. Attenzione. Attenzione. Attenzione.",
+            "Sento gli arti intorpidirsi, la tuta improvvisamente mi sembra stretta e scomoda. Una richiesta disperata echeggia nella struttura, udibile a malapena tra le interferenze."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Il mio corpo si ribella mentre spingo i materiali verso la struttura. I muscoli si contraggono in protesta e la paura mi attanaglia.",
+                  "Appena penso di aver raggiunto il limite, una scarica di energia mi strappa le risorse dalla mano e le divora. L'interferenza lascia il posto al silenzio. Non ho altro da fare qui."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 7,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Gemini per scoprire di più",
+        "AppId": "cur24",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "10D92420546E",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Gemini accenna un sorriso. Sembra pensare ad altro. Guarda più volte Espero."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo di Espero",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah. Scusami. Dev'essere ovvio che sto pensando a qualcosa. Ti do il benvenuto. È sempre un piacere parlare con te.",
+                  "Sono solo un po' in pensiero per Espero. Io...",
+                  "Gemini abbassa la voce. Sembra in ansia.",
+                  "Con tutte queste strane perturbazioni della realtà, temo che Espero possa... finire in pericolo. So bene com'è. Non resiste a questo genere di misteri.",
+                  "Ma basta parlare delle mie preoccupazioni. So che stai svolgendo lavori importanti per conto di tutti noi.",
+                  "Puoi raggiungere la regione perturbata tramite un portale, ma per arrivare nel luogo giusto ti serviranno coordinate precise. Cerca le pietre della Conoscenza. Toccale. Confido che in esse troverai ciò che ti serve.",
+                  "Ah. Scusami. Dev'essere ovvio che sto pensando a qualcosa. Ti do il benvenuto. È sempre un piacere parlare con te.",
+                  "Sono solo un po' in pensiero per Espero. Io..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah. Scusami. Dev'essere ovvio che sto pensando a qualcosa. So che stai svolgendo lavori importanti per conto di tutti noi.",
+                  "Puoi raggiungere la regione perturbata tramite un portale, ma per arrivare nel luogo giusto ti serviranno coordinate precise. Cerca le pietre della Conoscenza. Toccale. Confido che in esse troverai ciò che ti serve."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La nave danneggiata sibila e si illumina. L'energia statica ha proprietà innaturali, è più della scintilla di un motore guasto.",
+            "Anche se il posto è deserto, sento un urlo distante e attutito.",
+            "TXT_RadioNoise- kkttzzzzzzk - Dove sono TXT_RadioNoise- zktt - è lo stesso posto! La traccia della realTXT_RadioNoise- ttzzz - quello che è successo ad Artemis non è TXT_RadioNoise- kkttzzzzzzk - quest'interferenza! Per favore, qualcuno potrebbe TXT_RadioNoise- kktzz -",
+            "L'interferenza crepita la sua richiesta. Il pianeta è ferito, destabilizzato. Un materiale specifico, disponibile nelle vicinanze, dovrebbe bastare a guarirlo."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Protendo le mani e lascio che la mia mente fluttui nell'interferenza, alla ricerca dell'origine della strana energia.",
+                  "Improvvisamente la sento, che mi respinge come un campo magnetico, e non avverto altro. Mi sforzo di protendere i materiali.",
+                  "Sento un crepitio assordante, poi l'offerta svanisce. Il silenzio cala sul posto, di nuovo placido."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 8,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Mercurio per scoprire di più",
+        "AppId": "cur32",
+        "IterationAppId": "other28",
+        "Quantity": 16,
+        "PortalAddress": "11338D40158A",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Il solenne Viaggiatore mi valuta. Scruta il mio volto, come se cercasse ferite.",
+            "Mi fa piacere vederti in vita. È la prima volta che hai a che fare con queste perturbazioni?"
+          ],
+          "Options": [
+            {
+              "Name": "Dico di sì",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mercurio mi scruta di nuovo a fondo. Si guarda le mani, poi alza gli occhi e i nostri sguardi si incrociano.",
+                  "In tal caso, speriamo che tu sopravviva a questo viaggio senza subire alterazioni.",
+                  "La rete dei portali ti fornirà un passaggio verso la regione turbata. Devi stimolare i percorsi neurali corretti con un codice glittico. Le antiche pietre della Conoscenza possono insegnartelo."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Dico di no",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mercurio mi scruta di nuovo a fondo. Si guarda le mani, poi alza gli occhi e i nostri sguardi si incrociano.",
+                  "La tua resistenza mi colpisce, adepto del portale.",
+                  "Come prima, la rete dei portali ti fornirà un passaggio verso la regione turbata. Devi stimolare i percorsi neurali corretti con un codice glittico. Le antiche pietre della Conoscenza possono insegnartelo.",
+                  "La tua resistenza mi colpisce, adepto del portale.",
+                  "Come prima, la rete dei portali ti fornirà un passaggio verso la regione turbata. Devi stimolare i percorsi neurali corretti con un codice glittico. Le antiche pietre della Conoscenza possono insegnartelo."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La rete dei portali ti fornirà un passaggio verso la regione turbata. Devi stimolare i percorsi neurali corretti con un codice glittico. Le antiche pietre della Conoscenza possono insegnartelo."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Il ronzio e i crepitii dell'interferenza circondano la struttura. La tocco e scopro una sezione stranamente inconsistente, che la mia mano attraversa come se fosse aria.",
+            "La struttura sembra qui, eppure assente. Noto un lieve bagliore nel punto in cui l'interferenza è più forte. Crepita ripetutamente la sua richiesta: vuole che le porti un sacrificio materiale per placarla e stabilizzarla."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La superficie scintillante cede, inghiottendo l'offerta. Il crepitio si riduce a un lieve ronzio, apparentemente soddisfatto. Qui ho fatto il possibile."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 9,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Teti per scoprire di più",
+        "AppId": "cur25",
+        "IterationAppId": "other33",
+        "Quantity": 16,
+        "PortalAddress": "31CDE8370772",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Vai a indagare sulla perturbazione? Meglio tu di me, anche se non mi dispiacerebbe cambiare un po' aria. Gli altri non fanno che parlarne."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo degli altri",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Sono ossessionati! Soprattutto Arianna. Mi fa venire i brividi. Non fa che parlare di volti, quando lei per prima ha il 'volto' più strano che abbia mai visto.",
+                  "Comunque, se vuoi un consiglio, vai in cerca delle pietre della Conoscenza. Il codice per i portali che ti riveleranno dovrebbe portarti in quel brutto posto. Assicurati di avere con te un buon multi-tool."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Vai in cerca delle pietre della Conoscenza. Il codice per i portali che ti riveleranno dovrebbe portarti in quel brutto posto. Assicurati di avere con te un buon multi-tool."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Il crepitio dell'interferenza mi accoglie quando mi avvicino. Le caratteristiche fisiche di questa struttura sembrano compromesse.",
+            "Nonostante sia debole e distorto, c'è uno schema preciso che pulsa attraverso l'interferenza. Qui la perturbazione è una breccia, uno squarcio nella realtà. Solo dei materiali ben precisi possono stabilizzarla..."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I materiali si disintegrano. I crepiti dell'interferenza si fanno più radi, poi scompaiono del tutto e lasciano posto a un tenue ronzio. La struttura sembra essersi stabilizzata."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 10,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Espero per scoprire di più",
+        "AppId": "cur21",
+        "IterationAppId": "other36",
+        "Quantity": 8,
+        "PortalAddress": "21D4501EC013",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Hai scoperto qualcosa sulle perturbazioni, affine? Raccontami le tue esperienze, ti prego."
+          ],
+          "Options": [
+            {
+              "Name": "Dico che sono state spaventose",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah. Sì, capisco.",
+                  "Anch'io ho cercato di stabilizzare la recente perturbazione. La voce dell'interferenza mi inquieta. È come Atlante, ma al tempo stesso... qualcosa di diverso.",
+                  "So già tutto. Atterra su un pianeta e cerca le pietre della Conoscenza sulla sua superficie. Toccandole apprenderai le coordinate della regione turbata. Inseriscile in un portale e varcane la soglia..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Dico che sono state illuminanti",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah. Sì, capisco.",
+                  "Anch'io ho cercato di stabilizzare la recente perturbazione. La voce dell'interferenza mi inquieta. È come Atlante, ma al tempo stesso... qualcosa di diverso.",
+                  "So già tutto. Atterra su un pianeta e cerca le pietre della Conoscenza sulla sua superficie. Toccandole apprenderai le coordinate della regione turbata. Inseriscile in un portale e varcane la soglia..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Dico che sono state spaventose",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Espero si acciglia, incredulo. Non commenta la mia affermazione.",
+                  "So già tutto. Atterra su un pianeta e cerca le pietre della Conoscenza sulla sua superficie. Toccandole apprenderai le coordinate della regione turbata. Inseriscile in un portale e varcane la soglia..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Dico che sono state illuminanti",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Espero si acciglia, incredulo. Non commenta la mia affermazione.",
+                  "So già tutto. Atterra su un pianeta e cerca le pietre della Conoscenza sulla sua superficie. Toccandole apprenderai le coordinate della regione turbata. Inseriscile in un portale e varcane la soglia..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "So già tutto. Atterra su un pianeta e cerca le pietre della Conoscenza sulla sua superficie. Toccandole apprenderai le coordinate della regione turbata. Inseriscile in un portale e varcane la soglia..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Anche se il luogo dello schianto è tranquillo e freddo, dal terreno emerge crepitando una strana forza simile a un'interferenza, a cui l'exotuta reagisce con diversi allarmi.",
+            "L'energia elettrostatica trasmette un segnale direttamente nei miei pensieri:",
+            "Stabilizzare... instabilità. Cancellare... corruzione. Materiali necessari."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La tuta emette un allarme, mostrando grafici distorti. Gli allarmi aumentano d'intensità man mano che mi avvicino alla sorgente della strana energia.",
+                  "Quando offro i materiali, l'interferenza si amplifica fino a diventare un ruggito, poi svanisce gradualmente nel nulla."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 11,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Arianna per scoprire di più",
+        "AppId": "cur23",
+        "IterationAppId": "other26",
+        "Quantity": 25,
+        "PortalAddress": "6182588F1956",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "La natura di queste perturbazioni mi preoccupa, altro Viaggiatore. Non mi allontano spesso dall'anomalia, ma quello che ho visto è stato più di una semplice somiglianza."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo della somiglianza",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Nella perturbazione ho visto il mio volto. Non era un'iterazione. Ero io. Ho osservato attraverso due paia di occhi.",
+                  "Vuoi vederla anche tu? Scopri dove si trova dalle pietre della Conoscenza. Le pietre dovrebbero cederti facilmente i loro segreti. Sono state create per accoglierti..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Se vuoi andarci di persona, scopri dove si trova dalle pietre della Conoscenza. Le pietre dovrebbero cederti facilmente i loro segreti. Sono state create per accoglierti..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La tuta emette un allarme mentre i sensori oscillano selvaggiamente. La struttura è instabile... e pericolosa.",
+            "Una scarica di energia elettrostatica corre sulla superficie della struttura e si proietta lungo il mio braccio, viva e implorante. Il tessuto stesso della realtà è danneggiato e per ripararlo serve un sacrificio materiale."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "L'energia corre dalle mie dita ai materiali che ho raccolto. Li vedo rimpicciolirsi fino a sparire senza lasciare traccia.",
+                  "L'energia sconosciuta si affievolisce, ritirandosi nel terreno. Qui il danno sembra riparato."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 12,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Gemini per scoprire di più",
+        "AppId": "cook148",
+        "IterationAppId": "other27",
+        "Quantity": 20,
+        "PortalAddress": "30C6233C062E",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Stai bene? Scusa se sembro deprimente. Ovviamente sono riconoscente ai Viaggiatori che si adoperano come te ed Espero. Se non fosse per la vostra natura avventurosa, non ci saremmo mai incontrati."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo come ha conosciuto Espero",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ci siamo conosciuti quando ho scoperto i portali. La prima cosa che il mio sguardo incerto ha visto in quello scenario sconosciuto è stato uno strano globo luminoso. Immagina la mia sorpresa quando ha parlato.",
+                  "Per molto tempo abbiamo seguito reciprocamente le nostre voci nel buio, ma quando i confini si sono infranti... 0.4 Beh, è stato come se ci conoscessimo da sempre.",
+                  "Se vuoi placare quest'anomalia, cerca le pietre della Conoscenza. Ti diranno tutto ciò che devi sapere per indirizzare il flusso del portale."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Se vuoi placare quest'anomalia, cerca le pietre della Conoscenza. Ti diranno tutto ciò che devi sapere per indirizzare il flusso del portale."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La vista mi si offusca mentre osservo la struttura. Per un attimo è come se ce ne fossero due copie identiche, leggermente sfalsate.",
+            "Quando sbatto le palpebre, tutto torna come prima.",
+            "Noto un fluido luminoso fuoriuscire dalla struttura. Sembra reagire alla mia presenza, scorrendo più rapidamente quando avvicino la mano. È un'offerta? Qualcosa per aiutarmi?"
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Fisso le mie mani improvvisamente vuote, con l'eccezione dell'immagine residua dei materiali. Sbatto le palpebre. Sono spariti, strappati a questa realtà.",
+                  "L'energia si attenua fino a sfumare in un ronzio. Ora la struttura sembra stabile."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Prendo il fluido enzimatico",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Il liquido scorre impaziente sulle mie mani. Ha un odore dolce, quasi invitante.",
+                  "Una scarica elettrostatica sibila all'interno dell'exotuta, trasmettendo un messaggio: la realtà di questa struttura è stata danneggiata e vuol essere stabilizzata."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offro materiali",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Fisso le mie mani improvvisamente vuote, con l'eccezione dell'immagine residua dei materiali. Sbatto le palpebre. Sono spariti, strappati a questa realtà.",
+                        "L'energia si attenua fino a sfumare in un ronzio. Ora la struttura sembra stabile."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Prendo il fluido enzimatico",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Il liquido scorre impaziente sulle mie mani. Ha un odore dolce, quasi invitante."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Me ne vado",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 13,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Mercurio per scoprire di più",
+        "AppId": "cook151",
+        "IterationAppId": "other28",
+        "Quantity": 200,
+        "PortalAddress": "21C8F44A5ED7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Queste perturbazioni mi preoccupano molto."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo della preoccupazione",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La voce dell'interferenza è... inebriante. Scrutare in quella breccia è come aprire una finestra su di un sogno. Vedo Soleth Prime. Vedo com'ero un tempo. Una mia versione precedente. E mi sento come se il sogno ricambiasse il mio sguardo.",
+                  "Vai, adepto del portale. Trova i figli di pietra dei portali e ascolta attentamente i loro insegnamenti."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Trova i figli di pietra dei portali e ascolta il loro messaggio."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La carica elettrostatica che circonda il luogo dello schianto sembra penetrare nella mia exotuta. Ne sento il formicolio sulla pelle.",
+            "TXT_RadioNoise- kkktt - so che prima non ero qui TXT_RadioNoise- zktt - diventato così buioTXT_RadioNoise- kttkk - diventato ridondante TXT_RadioNoise- zzktkt-",
+            "Un segnale perfora l'interferenza: questa ferita della realtà esige un sacrificio. Deve consumare un materiale di questo pianeta. Consumare se stessa."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Un'ondata di energia investe le mie mani protese, consumando completamente i materiali.",
+                  "Poi, solo silenzio."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ispeziono i rottami",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Impigliato su una parte dello scafo scopro uno straccio di materiale in nanofibra, simile a quello della mia exotuta.",
+                  "Nel tessuto c'è un potenziamento ancora intatto per i sistemi di respirazione. Decido di prenderlo, forse faciliterà la mia ricerca subacquea.",
+                  "Un segnale perfora l'interferenza: questa ferita della realtà esige un sacrificio. Deve consumare un materiale di questo pianeta. Consumare se stessa."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offro materiali",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Un'ondata di energia investe le mie mani protese, consumando completamente i materiali.",
+                        "Poi, solo silenzio."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Me ne vado",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 14,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Teti per scoprire di più",
+        "AppId": "build169",
+        "IterationAppId": "other33",
+        "Quantity": 16,
+        "PortalAddress": "603CF5241B1D",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Teti sembra meno vivace del solito. Mi guarda in silenzio.",
+            "Queste perturbazioni... C'è qualcosa di molto sbagliato. L'ho visto con i miei occhi. Anche la mia exotuta sembrava andare in panico quando ho avvicinato quella cosa."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo della tuta",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Non preoccuparti, non ho perso il senno. So che le tute non possono provare paura. È solo che non sembrava programmata per gestire quel particolare pericolo. I sensori sono impazziti e gli allarmi si sono attivati tutti insieme.",
+                  "Comunque, se vuoi davvero andarci, trova le pietre della Conoscenza. Ciascuna possiede un frammento dell'indirizzo del portale che ti serve."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Se vuoi davvero andarci, trova le pietre della Conoscenza. Ciascuna possiede un frammento dell'indirizzo del portale che ti serve."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Questa struttura è avvolta da uno strano campo elettrostatico, che sembra crepitare di energia e ululare al tempo stesso di vacuità.",
+            "I crepitii dell'interferenza trasmettono una richiesta. Devo rimuovere dei materiali dalla superficie di questo pianeta e portarli nel luogo perturbato."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I materiali svaniscono con uno schiocco assordante. L'interferenza li ha presi.",
+                  "Ora la struttura sembra normalissima, come se non fosse mai accaduto nulla."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 15,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Espero per scoprire di più",
+        "AppId": "cook31",
+        "IterationAppId": "other36",
+        "Quantity": 90,
+        "PortalAddress": "116D3D540547",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "L'interferenza mi ha parlato, affine. È stato un giudizio che ho già affrontato. Questo è un incubo ricorrente."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo dell'incubo",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Espero indugia e mi squadra. Sento di arrossire sotto il suo sguardo.",
+                  "Mmh. Hai incontrato il guardiano scarlatto, vero? L'Atlante.",
+                  "Che sciocchezza che ho commesso. Siamo tutti suoi figli, è innegabile, ma pensavo... speravo... che meritassimo il suo amore. La verità, invece, è che non tutte le iterazioni sono sufficienti.",
+                  "...",
+                  "Possiamo solo sperare nelle possibilità offerte dal futuro, affine. L'interferenza non appartiene a questo piano. Fai bene a contrastarla. Va'. Cerca le pietre della Conoscenza. Il sentiero ti si rivelerà."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo dell'incubo",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Espero indugia e mi squadra. Sento di arrossire sotto il suo sguardo.",
+                  "Vedo che non hai fatto molta strada sul sentiero. Non è appropriato discutere di certi argomenti. Non voglio interferire nel tuo viaggio, affine. Ciascuno di noi deve trovare la sua strada.",
+                  "Possiamo solo sperare nelle possibilità offerte dal futuro, affine. L'interferenza non appartiene a questo piano. Fai bene a contrastarla. Va'. Cerca le pietre della Conoscenza. Questo sentiero, almeno, si rivelerà chiaramente."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Possiamo solo sperare nelle possibilità offerte dal futuro, affine. L'interferenza non appartiene a questo piano. Fai bene a contrastarla. Va'. Cerca le pietre della Conoscenza. Il sentiero si rivelerà a te."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "%NAME% non è più di questo mondo, ma in questo luogo persiste un eco dei suoi caratteristici segni vitali. Non è un semplice ricordo: è come se qui albergasse ancora la sua stessa essenza...",
+            "Un campo elettrostatico avvolge la tomba con lunghe dita crepitanti. Tra l'interferenza, è distinguibile un messaggio: portare materiali di questo mondo. Sacrificarli qui. Stabilizzare quest'anomalia."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Le dita scattano in avanti e ghermiscono i materiali, che scompaiono.",
+                  "La tomba di %NAME% torna a essere un placido luogo di riposo. Non posso fare a meno di chiedere se quella strana energia elettrostatica abbia preso anche chi è stato sepolto qui."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 16,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Arianna per scoprire di più",
+        "AppId": "cook22",
+        "IterationAppId": "other26",
+        "Quantity": 60,
+        "PortalAddress": "312B0DA31EBB",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Queste perturbazioni sono una finestra aperta su quest'universo, altro Viaggiatore. Nella luce o nell'oscurità, entrambi i lati sono validi. L'ho accettato. L'abbiamo accettato entrambi."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo di 'entrambi'",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Io e l'altro io. Dobbiamo accettare i protocolli che non possiamo cambiare, o non troveremo mai la pace.",
+                  "Mettiti alla ricerca delle pietre della Conoscenza. La breccia-finestra te ne rivelerà il luogo, come sempre. Sento che questo ciclo si sta avvicinando al suo inizio."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mettiti alla ricerca delle pietre della Conoscenza. La breccia-finestra te ne rivelerà il luogo, come sempre. Sento che questo ciclo si sta avvicinando al suo inizio."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Questo posto è ammantato di un senso di perdita. Una misteriosa energia ronza intorno alla nave danneggiata, ma non c'è segno né di vita, né di morte. L'equipaggio è svanito da tempo.",
+            "TXT_RadioNoise- kktttk -voglio solo tornare aTXT_RadioNoise- zzktk - dietro, una mia immagineTXT_RadioNoise- zzkzz- così buio. Non lo sopporto, voglio TXT_RadioNoise- zzzzzt - luce scarlatta TXT_RadioNoise- ktzzz-",
+            "La voce dell'interferenza mormora la sua richiesta. Questo pianeta è ferito. Ha fame. Deve copiare un materiale di questo stesso pianeta. Copiare se stesso."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Una visione con le mie fattezze mi assale improvvisamente. La testa mi gira in preda a déjà vu di déjà vu, specchi all'interno di altri specchi, come se avessi già placato infinite volte il dolore di questo pianeta...",
+                  "I materiali si dissolvono. La visione svanisce. L'interferenza si placa.",
+                  "Resta solo silenzio."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 17,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Gemini per scoprire di più",
+        "AppId": "raw31",
+        "IterationAppId": "other27",
+        "Quantity": 250,
+        "PortalAddress": "509F84F57D78",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ho visto la perturbazione con i miei occhi. Mi sentivo in vita. Ho ricordato quanto mi manca l'avventura."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo dell'avventura",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Gemini guarda il suo partner, poi parla in tono sommesso.",
+                  "Un tempo Espero ha avuto bisogno di soccorso, ma quel momento è passato. Ho cercato scuse e mi sono nascosto al mio vero io troppo a lungo. Ma ora basta.",
+                  "Fai decollare l'astronave e allontanati dall'anomalia. Atterra sulla superficie di un pianeta e sbarca. Senti la terra che scricchiola sotto i tuoi piedi e cerca gli antichi pilastri di pietra. Ascolta il codice che canteranno nella tua anima..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Un tempo Espero ha avuto bisogno di soccorso, ma quel momento è passato. Ho cercato scuse e mi sono nascosto al mio vero io troppo a lungo. Ma ora basta.",
+                  "Fai decollare l'astronave e allontanati dall'anomalia. Atterra sulla superficie di un pianeta e sbarca. Senti la terra che scricchiola sotto i tuoi piedi e cerca gli antichi pilastri di pietra. Ascolta il codice che canteranno nella tua anima..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "C'è qualcosa di molto sbagliato in questa struttura. Emana una debole energia elettrostatica, che crepita come un fuoco morente.",
+            "L'interferenza contiene uno schema ripetuto all'infinito. L'exotuta traduce i dati frammentati in una richiesta: se sacrificati qui, determinati materiali potrebbero stabilizzare la perturbazione."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I materiali si frantumano nella nube di energia elettrostatica, lasciando vuote le mie mani.",
+                  "Il luogo perturbato si stabilizza. L'interferenza è sparita, o almeno si è attenuata."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 18,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Mercurio per scoprire di più",
+        "AppId": "cook112",
+        "IterationAppId": "other28",
+        "Quantity": 40,
+        "PortalAddress": "3202EF2CC4A0",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Il nostro lavoro è di grande importanza per quest'universo. Devi andare fiero del tuo contributo, adepto del portale."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo del lavoro",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ultimamente guardo indietro, verso il vuoto, troppo spesso. I Viaggiatori non sono destinati a legarsi a un luogo o a un tempo. Ora l'anomalia è la mia famiglia.",
+                  "Le pietre della Conoscenza possiedono il codice glittico che ti serve. Inseriscilo nella pietra rotante e abbandonati al flusso del portale."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Le pietre della Conoscenza possiedono il codice glittico che ti serve. Inseriscilo nella pietra rotante e abbandonati al flusso del portale."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "I muscoli mi si contraggono involontariamente quando mi avvicino alla struttura. Una lugubre interferenza emerge dal terreno e sembra respingere qualcosa nell'exotuta.",
+            "Qui il rumore sembra chiaramente un messaggio corrotto, dati frammentati provenienti da una fonte sconosciuta. È una supplica:",
+            "Porta materiali... offri. Equilibrio... regione perturbata."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Una luce scarlatta mi acceca e non vedo cosa accade ai materiali. La luce mi perfora la mente e mi piego in due. Fa male.",
+                  "La regione sembra stabilizzata, ma è meglio allontanarmi da questo posto il prima possibile."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 19,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Teti per scoprire di più",
+        "AppId": "cur22",
+        "IterationAppId": "other33",
+        "Quantity": 16,
+        "PortalAddress": "2112739B139C",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Di tanto in tanto è bello uscire allo scoperto. Ne vale la pena."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo dell'uscire allo scoperto",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Vivere senza paura, cogliere le ricchezze dell'universo. È così che definiamo noi stessi, no?",
+                  "Combatti per difendere quella libertà. Chiudi quelle perturbazioni. Sopravvivi.",
+                  "Puoi raggiungere la perturbazione tramite un portale. Esamina la superficie di un pianeta con il visore e tocca le pietre della Conoscenza che troverai. Esse ti mostreranno la strada."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Puoi raggiungere la perturbazione tramite un portale. Esamina la superficie di un pianeta con il visore e tocca le pietre della Conoscenza che troverai. Esse ti mostreranno la strada."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Il luogo dell'impatto è terribilmente inquietante. Non ci sono tracce di membri dell'equipaggio, né vivi né morti, eppure una voce urla da qualche parte. Il segnale è debole...",
+            "TXT_RadioNoise- kzzzz-più la certezza di essereTXT_RadioNoise- tktktk-segnale è identico TXT_RadioNoise- zzzz-",
+            "Attorno al relitto, un'energia oscura mi supplica: qui la realtà si sta frantumando. Il pianeta è instabile. Determinati materiali potrebbero contribuire a ripararla..."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Avverto improvvisamente nausea e perdo l'orientamento. Come ho fatto ad arrivare qui? Cosa stavo facendo?",
+                  "Le mie mani sono vuote. Il luogo dell'impatto sembra tranquillo. Probabilmente qui ho fatto ciò che dovevo."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 20,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Espero per scoprire di più",
+        "AppId": "cook41",
+        "IterationAppId": "other36",
+        "Quantity": 16,
+        "PortalAddress": "60D447EB0728",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Sono grato per i nostri incontri impossibili, affine. È importante apprezzare i propri simili."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo dei simili",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La voce della gerarchia è alta e violenta. Può renderci sordi alle voci più vicine a noi.",
+                  "Gli occhi di Espero saettano verso Gemini, poi si abbassano. Si schiarisce la gola.",
+                  "Fidati del tuo intuito, affine. Ormai conosci questo sentiero. Le pietre della Conoscenza ti daranno la chiave del portale che ti serve. La perturbazione ti sta aspettando. Aspetta tutti noi."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Fidati del tuo intuito, affine. Ormai conosci questo sentiero. Le pietre della Conoscenza ti daranno la chiave del portale che ti serve. La perturbazione ti sta aspettando. Aspetta tutti noi."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Il luogo di eterno riposo di %NAME% è disturbato da una feroce energia crepitante.",
+            "L'exotuta interpreta un messaggio nel ritmo dell'interferenza: qui la realtà è fragile e sfilacciata. La breccia potrebbe non essere completamente riparabile, ma forse può essere stabilizzata con un sacrificio materiale.",
+            "Un fluido luminoso filtra da sotto la tomba. Sembra reagire alla mia presenza, facendosi più rapido quando avvicino la mano. È un'offerta? Qualcosa per aiutarmi?"
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "L'energia invade e percorre il mio corpo. I miei nervi si contorcono in preda al dolore al passaggio dell'energia.",
+                  "La sensazione svanisce improvvisamente com'è iniziata. Ho l'impressione di aver già visto questo posto. Mi sento come se stessi sprofondando nel sonno, in vista di una notte dello stesso sogno ricorrente.",
+                  "Ora, almeno, la tomba sembra stabile."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Prendo il fluido enzimatico",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Il liquido scorre impaziente sulle mie mani. Ha un odore dolce, quasi invitante.",
+                  "L'exotuta interpreta un messaggio nel ritmo dell'interferenza: qui la realtà è fragile e sfilacciata. La breccia potrebbe non essere completamente riparabile, ma forse può essere stabilizzata con un sacrificio materiale."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offro materiali",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "L'energia invade e percorre il mio corpo. I miei nervi si contorcono in preda al dolore al passaggio dell'energia.",
+                        "La sensazione svanisce improvvisamente com'è iniziata. Ho l'impressione di aver già visto questo posto. Mi sento come se stessi sprofondando nel sonno, in vista di una notte dello stesso sogno ricorrente.",
+                        "Ora, almeno, la tomba sembra stabile."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Prendo il fluido enzimatico",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Il liquido scorre impaziente sulle mie mani. Ha un odore dolce, quasi invitante."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Me ne vado",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 21,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Arianna per scoprire di più",
+        "AppId": "cook21",
+        "IterationAppId": "other26",
+        "Quantity": 60,
+        "PortalAddress": "6203FCD05649",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ti ho visto avvicinarti al Nexus. Speravo che lo facessi. Grazie, altro Viaggiatore. Questa missione è importante per tutti noi."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo dell'importanza",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "È apparso qualcosa di terribile sul telaio di Nada. Un'alterazione dello spaziotempo, che ha già spazzato via un mercantile. Sono sicuro che hai avvertito la perdita di altri Viaggiatori nella collisione.",
+                  "Viaggia tra i portali per raggiungere la perturbazione. La chiave glittica è frammentata, ma recuperabile. Cerca le pietre della Conoscenza. So che la chiave si rivelerà a te."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Viaggia tra i portali per raggiungere la perturbazione. La chiave glittica è frammentata, ma recuperabile. Cerca le pietre della Conoscenza. So che la chiave si rivelerà a te."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Il luogo dello schianto puzza di metallo bruciato e carne carbonizzata. La nave è circondata da lampi di energia conosciuta, che guizzano lungo lo scafo e attraversano la mia exotuta. È un effetto dello schianto, o la sua causa?",
+            "L'interferenza è animata da un ritmo distinguibile, che esprime una pretesa. Mi solletica la mente con la richiesta di materiali di questo pianeta. Qui risiede una forza irrequieta che desidera essere stabilizzata."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Non c'è alcuna collisione tra materia. I materiali si dissolvono direttamente nella perturbazione e svaniscono senza lasciare traccia.",
+                  "I guizzi dell'interferenza si riducono a un lieve ronzio. La breccia non è ancora stata riparata, ma per il momento è stabile."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 22,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Gemini per scoprire di più",
+        "AppId": "raw47",
+        "IterationAppId": "other27",
+        "Quantity": 1200,
+        "PortalAddress": "4072FAE1B962",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Stai indagando sulla perturbazione? Spero che non ti dispiaccia portare dei compagni."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo dei compagni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Non sto mettendo in dubbio le tue capacità! Affatto. È solo che potrebbe essere molto pericoloso. Nada sembrava molto preoccupata.",
+                  "Credo che dovrai trovare un portale per arrivare fin lì. Non so molto di quell'antica tecnologia, ma in qualche modo quelle strutture sono collegate alle pietre della Conoscenza. Trova le pietre e dovresti poter risalire alle coordinate.",
+                  "Spero che questo ti sia d'aiuto. Il problema ci riguarda tutti, no?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Credo che dovrai trovare un portale per arrivare fin lì. Non so molto di quell'antica tecnologia, ma in qualche modo quelle strutture sono collegate alle pietre della Conoscenza. Trova le pietre e dovresti poter risalire alle coordinate.",
+                  "Spero che questo ti sia d'aiuto. Il problema ci riguarda tutti, no?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Un'energia innaturale crepita intorno alla struttura, investendomi con ondate di energia statica. Sulla mia tuta si attivano una lunga serie di allarmi.",
+            "Attraverso il rumore riesco a distinguere uno schema insistente. La realtà di questa struttura è stata compromessa e la breccia risultante vomita interferenze e instabilità. Posso stabilizzarla, ma solo con un sacrificio materiale."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Avvicino i materiali alla fonte del rumore e li vedo disintegrarsi in mano mia, avviluppati dall'interferenza.",
+                  "Gli allarmi della tuta iniziano a scemare. Questo luogo non è più una minaccia immediata."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 23,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Mercurio per scoprire di più",
+        "AppId": "cook22",
+        "IterationAppId": "other28",
+        "Quantity": 60,
+        "PortalAddress": "105508F0E6AE",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Sarà una prova di fermezza, adepto del portale."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo della fermezza",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "La breccia indicata dal telaio di Nada è pericolosa. Potresti mitigarne l'impatto, ma dubito che sia possibile ripararla del tutto.",
+                  "Tuttavia, il difficile sarà raggiungerla. Dovrai dirigerti verso la regione perturbata tramite i portali.",
+                  "Ti suggerisco di iniziare il viaggio cercando le pietre della Conoscenza. Sapevi che condividono la propria origine con gli antichi portali? Avvicinale con mente salda e mano ferma, e potrebbero rivelarti le coordinate di cui necessiti."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Dovrai dirigerti verso la regione perturbata tramite i portali.",
+                  "Ti suggerisco di iniziare il viaggio cercando le pietre della Conoscenza. Sapevi che condividono la propria origine con gli antichi portali? Avvicinale con mente salda e mano ferma, e potrebbero rivelarti le coordinate di cui necessiti."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Avverto un lamento acuto provenire dalla struttura. Quando mi avvicino, il suono si trasforma nei sibili e crepitii di un'interferenza che sfrecciano disordinatamente sulla superficie della mia exotuta.",
+            "Un messaggio concitato, appena distinguibile attraverso i crepitii, si ripete all'infinito. In questa struttura c'è una breccia. Il pianeta è profondamente lacerato e per curarlo è necessario un sacrificio materiale ben preciso..."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Metto i materiali dove l'interferenza è più forte e li vedo scomparire in un lampo di energia. La perturbazione locale ha iniziato a ripararsi."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 24,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Teti per scoprire di più",
+        "AppId": "cur23",
+        "IterationAppId": "other33",
+        "Quantity": 25,
+        "PortalAddress": "31850693BEC4",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah. Allora hai intenzione di indagare su questa 'perturbazione' che tanto preoccupa Nada."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo della 'perturbazione'",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ascolta, non so molto di perturbazioni, realtà e cose simili, ma voglio aiutarti. Davvero.",
+                  "Una mia...0.4 vecchia conoscenza non ha più dato sue notizie dopo aver raggiunto una zona vicina all'origine dello strano segnale rilevato da Nada. Non è da lei. Non è mai sparita così.",
+                  "Non penso che la rivedrò più, ma se puoi impedire che lo stesso destino tocchi ad altri... Beh, è un bene.",
+                  "Sarà quasi impossibile raggiungere quel posto con i consueti mezzi. Dovrai farlo con un portale.",
+                  "Prima di sparire, il mio contatto ha detto qualcosa a proposito delle pietre della Conoscenza. Forse... Anzi, sicuramente, trovandone qualcuna e toccandola, apprenderai le coordinate che ti servono. Buona fortuna."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Sarà quasi impossibile raggiungere quel posto con i consueti mezzi. Dovrai farlo con un portale. Io...0.4 ho ottenuto qualche informazione sulle pietre della Conoscenza. Quelle piccole colonne di pietra che parlano, hai presente? Beh, a quanto pare nascondono altri segreti.",
+                  "Forse... Anzi, sicuramente, trovandone qualcuna e toccandola, apprenderai le coordinate che ti servono. Buona fortuna."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "In questo luogo di morte, un'interferenza vivente crepita e spunta sotto la tomba. La mia exotuta si scuote quando viene attraversata da energia elettrostatica, che però non sembra nuocermi.",
+            "Attraverso l'interferenza colgo uno schema. È una richiesta, dalla struttura simile a una frase. Qui la realtà è lacerata e instabile. Solo dei materiali ben precisi possono calmarla."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "L'energia elettrostatica reagisce violentemente agli oggetti, scattando verso di me. Consuma i materiali direttamente dalle mie mani.",
+                  "Silenzio. La perturbazione sembra essersi stabilizzata."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 25,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Espero per scoprire di più",
+        "AppId": "cur25",
+        "IterationAppId": "other36",
+        "Quantity": 16,
+        "PortalAddress": "30DEFC09D6EE",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ho saputo che hai deciso di indagare su qualcosa, affine. Nada è fortunata a poter contare su di te."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo di Nada",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "C'è una forza potente all'opera. Nada teme questo genere di cose. È molto brillante e unica tra i suoi simili, ma resta pur sempre una Korvax. Sarebbe irragionevole aspettarsi che possa condividere la nostra prospettiva, affine.",
+                  "Ho sognato questa conversazione e le tue prossime azioni. Non è una ricerca empirica, ma ho già fatto sogni simili e credo nella visione che mi è stata mostrata. In cambio, ti chiedo di fidarti di me.",
+                  "Entrerai in un portale per raggiungere il pianeta afflitto. La destinazione è già determinata: scoprirai la sua ubicazione universale dalle pietre della Conoscenza. Esse risponderanno al tocco di un Viaggiatore.",
+                  "Al nostro prossimo incontro, affine."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ho sognato questa conversazione e le tue prossime azioni. Non è una ricerca empirica, ma ho già fatto sogni simili e credo nella visione che mi è stata mostrata. In cambio, ti chiedo di fidarti di me.",
+                  "Entrerai in un portale per raggiungere il pianeta afflitto. La destinazione è già determinata: scoprirai la sua ubicazione universale dalle pietre della Conoscenza. Esse risponderanno al tocco di un Viaggiatore.",
+                  "Al nostro prossimo incontro, affine."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La struttura sibila e crepita. Quest'energia dev'essere la perturbazione rilevata da Polo e Nada. Senza proferire parola, trasmette la sua richiesta direttamente nella mia mente.",
+            "Qualcosa geme nelle profondità della terra, come se il suolo stesso avesse fame. Ma perché proprio questi materiali, che su questo mondo abbondano?"
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Spingo i materiali verso la fonte della perturbazione e li vedo dissolversi nel nulla. Il pianeta ferito si nutre delle sue stesse risorse, poi si calma. La breccia nella realtà è stata riparata."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 26,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Arianna per scoprire di più",
+        "AppId": "cur21",
+        "IterationAppId": "other26",
+        "Quantity": 16,
+        "PortalAddress": "30E4069A72AD",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Quanto a lungo abbiamo ballato seguendo questo ritmo? In un certo senso, la regolarità di queste perturbazioni dà una certa sicurezza."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo della sicurezza",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I tempi di queste anomalie sembrano precisi, altro Viaggiatore. Forse a noi si manifestano solo i picchi della forma d'onda. Tuttavia, c'è un ritmo. Ogni volta che l'universo chiama, noi rispondiamo.",
+                  "La risposta inizia con la ricerca della conoscenza. Ascolta le antiche pietre: esse ti mostreranno la strada verso la regione turbata."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Forse anche tu ricordi questo ritmo. Ascolta le antiche pietre della Conoscenza: esse ti mostreranno la strada verso la regione turbata."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "La struttura trasmette sul mio braccio un guizzo di energia elettrostatica. I sensori della tuta registrano una sensazione quasi solleticante. Ho un fremito involontario.",
+            "Un messaggio silenzioso si fa strada nella mia mente: questa struttura ha consumato risorse locali e ora necessita di assistenza manuale. Per ripristinare l'equilibrio è necessario sacrificare dei materiali."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "I materiali vengono avvolti dall'energia elettrostatica. Non riesco a vedere dove siano finiti, ma sento di aver riequilibrato qualcosa. Quanti altri tasselli mancheranno ancora?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 27,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Gemini per scoprire di più",
+        "AppId": "cur22",
+        "IterationAppId": "other27",
+        "Quantity": 24,
+        "PortalAddress": "1011F75843D7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Salve! Ah, qual gioia nel vederti. Pericoli di queste perturbazioni a parte, sono felice di affrontare quest'impresa al tuo fianco."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo dell'impresa",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Noi Viaggiatori ci occupiamo di queste perturbazioni da mesi e neanche Espero sa nulla della loro origine. Eppure proseguiamo, accorrendo a migliaia per stabilizzare l'universo.",
+                  "Credo fermamente che i nostri sforzi, in questi momenti di collaborazione, prolunghino leggermente il nostro tempo insieme. Non è motivo di gioia?",
+                  "Puoi arrivare alla regione colpita con un portale. Per apprendere la sequenza di glifi avrai bisogno della conoscenza di tre pietre. Svolgerai l'incarico molto più velocemente con dei compagni! Spero che oggi incontrerai nuovi amici."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Puoi arrivare alla regione colpita con un portale. Per apprendere la sequenza di glifi avrai bisogno della conoscenza di tre pietre. Svolgerai l'incarico molto più velocemente con dei compagni! Spero che oggi incontrerai nuovi amici."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "I rimasugli dello scafo crepitano di una strana energia elettrostatica. Insieme a ogni scarica mi giunge un'ondata di odore nauseabondo, simile a quello di proteine bruciate: capelli, pelliccia o unghie arsi.",
+            "Cercando di ignorare il puzzo di bruciato, ascolto le richieste dell'interferenza: un certo materiale di questo pianeta stabilizzerà la perturbazione. Devo fornire questa risorsa, o forse divorerà anche me."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mentre i materiali si dissolvono, il puzzo di proteine bruciate si attenua pur non dissipandosi del tutto. L'interferenza si riduce: qui ho fatto tutto il possibile."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 28,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Mercurio per scoprire di più",
+        "AppId": "cook20",
+        "IterationAppId": "other28",
+        "Quantity": 60,
+        "PortalAddress": "2153FB6D1154",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Mercurio mi guarda in silenzio, gli occhi pallidi accesi da un'emozione tanto intensa quanto inintelligibile. Fame? Risentimento? Invidia?"
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo se sta bene",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Le guance del Viaggiatore si arrossano. Mentre mi chiedo come ci si possa sentire a non avere la pelle, si ricompone.",
+                  "Scusami, adepto del portale. Sicuramente mi hai cercato per chiedere consiglio.",
+                  "Solo un portale può condurti a destinazione. Ultimamente le perturbazioni hanno portato a un aumento del traffico attraverso quell'antica rete. Cerca le pietre della Conoscenza e inserisci ciò che ti insegneranno in uno di quei passaggi."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ma certo.",
+                  "Solo un portale può condurti a destinazione. Ultimamente le perturbazioni hanno portato a un aumento del traffico attraverso quell'antica rete. Cerca le pietre della Conoscenza e inserisci ciò che ti insegneranno in uno di quei passaggi."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Anche se questa sembra una normalissima struttura, la mia tuta segnala un baratro. Per un momento, provo il fortissimo impulso di lanciarmi nella struttura compromessa... ma un istante dopo la sensazione svanisce.",
+            "Un'energia sovrannaturale indescrivibile scorre sulla superficie della struttura, dando l'impressione che le singole particelle danzino. L'energia stessa danza nella mia mente, componendo una richiesta: la consegna di un sacrificio materiale per stabilizzare la perturbazione."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Depongo i materiali alla base della struttura e li vedo sciogliersi direttamente al suolo.",
+                  "L'interferenza, che fino a qualche istante prima era assordante, lascia posto al silenzio. Qui ho fatto ciò che dovevo."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 29,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Teti per scoprire di più",
+        "AppId": "build164",
+        "IterationAppId": "other33",
+        "Quantity": 6,
+        "PortalAddress": "405507FBC6BF",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Teti sbuffa bruscamente e resta in silenzio, impaziente di mettere fine a questa conversazione."
+          ],
+          "Options": [
+            {
+              "Name": "Chiedo dello sbuffo",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Non voglio parlarne. Sono semplicemente... arrabbiata. Sono passati quasi sei mesi, come fa a essere così stupido? Come OSA essere così stupido?"
+                ],
+                "Options": [
+                  {
+                    "Name": "Insisto",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Io0.1-0.1...0.2 E va bene. Se proprio insisti, parlerò.",
+                        "L'instabilità dell'universo e tutte queste perturbazioni hanno esatto un prezzo, sai?",
+                        "Non ho più avuto notizie da un mio contatto svanito mesi addietro. So che non ne avrò più notizia e ciò mi rende furiosa. Pensavo di avere amici più furbi. Più affidabili.",
+                        "Vedo che inspira profondamente.",
+                        "Mi dispiace. Il tuo aiuto è ben accetto.",
+                        "Esci dall'anomalia e cerca le pietre della Conoscenza. Ti mostreranno una sequenza di glifi da inserire in un portale. Attraversa quel portale e giungerai nella regione che necessita del tuo aiuto."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Lascio perdere",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Grazie per non aver insistito. E per il tuo aiuto. Mi dispiace.",
+                        "Esci dall'anomalia e cerca le pietre della Conoscenza. Ti mostreranno una sequenza di glifi da inserire in un portale. Attraversa quel portale e giungerai nella regione che necessita del tuo aiuto."
+                      ],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Esci dall'anomalia e cerca le pietre della Conoscenza. Ti mostreranno una sequenza di glifi da inserire in un portale. Attraversa quel portale e giungerai nella regione che necessita del tuo aiuto."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Sono consapevole della versione di questa struttura che si staglia dinanzi a me e, in qualche modo, anche di un'altra sua versione. Lo spettro del passato si sovrappone alla struttura del presente, facendomi lacrimare gli occhi.",
+            "Un crepitio di energia elettrostatica attira la mia attenzione. Questa struttura è instabile. Un'offerta di materiali locali, sovrabbondanti su questo pianeta, contribuirà a riparare lo squarcio nella realtà..."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mentre consuma i materiali, l'interferenza sembra attenuarsi e calmarsi. Mi sento come se mi stesse congedando, ora che non sono più di alcuna utilità. L'interferenza, però, non si è del tutto stabilizzata. Serviranno altri Viaggiatori per soddisfarla."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 30,
+        "NpcMessage": "La regione perturbata dev'essere raggiunta tramite portale\nParla con l'iterazione Espero per scoprire di più",
+        "AppId": "cur17",
+        "IterationAppId": "other36",
+        "Quantity": 12,
+        "PortalAddress": "4169FC678D73",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Salve. Vuoi aiutare con l'interferenza? Si stanno offrendo in molti. Ho avuto molte conversazioni simili a questa e non me ne sono ancora stancato.",
+            "Prima che tu vada, mi racconteresti del tuo incontro più recente con un altro affine? Una storia per imprimere questa conversazione nei miei ricordi?"
+          ],
+          "Options": [
+            {
+              "Name": "Racconto una storia incoraggiante",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Lo sguardo di Espero si addolcisce.",
+                  "La generosità dei Viaggiatori può essere imprevedibile, ma storie come questa mi ricordano che è ricorrente ed eterna. Grazie, affine.",
+                  "Raggiungerai la regione perturbata tramite un antico portale il cui codice glittico è conservato dalle pietre della Conoscenza dormienti. Il contatto della tua mano le sveglierà."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Racconto una storia triste",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Espero si acciglia.",
+                  "Può capitare. Mi dispiace, ti auguro miglior fortuna con i tuoi compagni Viaggiatori.",
+                  "Raggiungerai la regione perturbata tramite un antico portale il cui codice glittico è conservato dalle pietre della Conoscenza dormienti. Il contatto della tua mano le sveglierà."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Chiedo indicazioni",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Certo. Non ti tratterrò. Raggiungerai la regione perturbata tramite un antico portale il cui codice glittico è conservato dalle pietre della Conoscenza dormienti. Il contatto della tua mano le sveglierà."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Da vicino, l'atipicità di questo schianto è evidente. Il momento dell'impatto sembra sospeso nel tempo e tremola come uno schermo analogico in pausa. Sacche di energia elettrostatica si gonfiano e scoppiano nei dintorni.",
+            "Aiuta... completare... procedura. Dati salvati... conservare memoria..."
+          ],
+          "Options": [
+            {
+              "Name": "Offro materiali",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Quando offro le risorse richieste, qualcosa cambia nell'atmosfera. Lo schianto non sembra più anormale, ma solo il triste ricordo degli ultimi istanti di uno sventurato pilota. Credo di aver fatto tutto il possibile."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Ispeziono i rottami",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Impigliato su una parte dello scafo scopro uno straccio di materiale in nanofibra, simile a quello della mia exotuta.",
+                  "Nel tessuto c'è un potenziamento ancora intatto per i sistemi di respirazione. Decido di prenderlo, forse faciliterà la mia ricerca subacquea.",
+                  "Aiuta... completare... procedura. Dati salvati... conservare memoria..."
+                ],
+                "Options": [
+                  {
+                    "Name": "Offro materiali",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Quando offro le risorse richieste, qualcosa cambia nell'atmosfera. Lo schianto non sembra più anormale, ma solo il triste ricordo degli ultimi istanti di uno sventurato pilota. Credo di aver fatto tutto il possibile."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Me ne vado",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Me ne vado",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

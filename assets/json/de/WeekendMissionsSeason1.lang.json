@@ -1,0 +1,2294 @@
+[
+  {
+    "Id": "MP_PORTALQUEST",
+    "Stages": [
+      {
+        "Level": 1,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Ariadne, um mehr zu erfahren.",
+        "AppId": "cur17",
+        "IterationAppId": "other26",
+        "Quantity": 12,
+        "PortalAddress": "1144B573F95C",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ich habe gesehen, wie du dich dem Nexus genähert hast. Darauf hatte ich gehofft. Danke, gleichartiger Reisender. Diese Mission ist für alle unserer Art von Bedeutung."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Bedeutung fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Auf Nadas Kabelapparatur ist etwas Bedrohliches erschienen. Ein Fehler in der Raumzeit. Er hat bereits einen kompletten Frachter abstürzen lassen. Ich bin mir sicher, dass ich den Verlust von gleichartigen Reisenden in der Kollision gespürt habe.",
+                  "Begib dich vom Portal zum gleichartigen Portal, um die Störung zu erreichen. Der Glyphenschlüssel ist zersplittert, kann aber gerettet werden. Suche Wissenssteine. Ich weiß, dass sich dir der Schlüssel zu erkennen geben wird."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Begib dich vom Portal zum gleichartigen Portal, um die Störung zu erreichen. Der Glyphenschlüssel ist zersplittert, kann aber gerettet werden. Suche Wissenssteine. Ich weiß, dass sich dir der Schlüssel zu erkennen geben wird."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "An der Absturzstelle stinkt es nach verbranntem Metall und schwelendem Fleisch. Eine unbekannte Energie schießt hervor, schlägt rund um das Schiff Funken, erzeugt einen Lichtbogen am Rumpf und jagt durch meinen Exo-Anzug. Eine Folge des Absturzes oder der Auslöser?",
+            "Ein Rhythmus in der Störung wird deutlich und hämmert eine Forderung heraus. Er kitzelt meinen Verstand mit einer Bitte, verlangt Materialien von diesem Planeten. Irgendeine unidentifizierte Macht wird hier erschüttert. Sie sehnt sich danach, stabilisiert zu werden."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Es kommt zu keiner Kollision von Materie mit Materie. Die Materialien lösen sich direkt in der Störung auf und verschwinden spurlos.",
+                  "Die Stöße der Störung werden zu einem sanften Summen gebändigt. Der Bruch ist vielleicht nicht vollständig geheilt, aber er ist vorerst stabil."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Wrack durchsuchen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Etwas sprudelt aus der Absturzstelle hervor – ein Fetzen Nanofasermaterial, das dem von meinem Exo-Anzug nicht unähnlich ist. Ein düsteres Relikt vom letzten Entdecker, der an diesen Ort kam?",
+                  "Im Gewebe steckt ein Sauerstoff-Upgrade, das noch intakt ist. Ich nehme es mit. Vielleicht wird es mir bei meiner Unterwassersuche von Nutzen sein.",
+                  "Ein Rhythmus in der Störung wird deutlich und hämmert eine Forderung heraus. Er kitzelt meinen Verstand mit einer Bitte, verlangt Materialien von diesem Planeten. Irgendeine unidentifizierte Macht wird hier erschüttert. Sie sehnt sich danach, stabilisiert zu werden."
+                ],
+                "Options": [
+                  {
+                    "Name": "Materialien anbieten",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Es kommt zu keiner Kollision von Materie mit Materie. Die Materialien lösen sich direkt in der Störung auf und verschwinden spurlos.",
+                        "Die Stöße der Störung werden zu einem sanften Summen gebändigt. Der Bruch ist vielleicht nicht vollständig geheilt, aber er ist vorerst stabil."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Weggehen",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 2,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Gemini, um mehr zu erfahren.",
+        "AppId": "build171",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "10FF182964AA",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Du untersuchst die Störung, mein Freund? Ich hoffe, du nimmst Gefährten mit."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Gefährten fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Denk bitte nicht, dass ich deine Fähigkeiten anzweifle! Das meine ich nicht, absolut nicht. Es ist nur so, dass das ziemlich gefährlich werden kann. Nada klang so besorgt.",
+                  "Ich glaube, du musst ein Portal finden, um dorthin zu gelangen. Ich weiß nicht viel über diese uralte Technologie, aber sie ist irgendwie mit den Wissenssteinen verbunden. Wenn du die Steine findest, solltest du die Koordinaten finden können.",
+                  "Ich hoffe, ich konnte ein wenig helfen. Das würde mich freuen. Wir sitzen doch alle im selben Boot, oder?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich glaube, du musst ein Portal finden, um dorthin zu gelangen. Ich weiß nicht viel über diese uralte Technologie, aber sie ist irgendwie mit den Wissenssteinen verbunden. Wenn du die Steine findest, solltest du die Koordinaten finden können.",
+                  "Ich hoffe, ich konnte ein wenig helfen. Das würde mich freuen. Wir sitzen doch alle im selben Boot, oder?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Eine unnatürliche Energie knistert in der Luft um diese Struktur herum und beschießt mich mit Wellen von Störrauschen. An meinem Anzug blinken eine Reihe von Warnungen und Fehlermeldungen.",
+            "In diesem Lärm kann ich ein Muster heraushören, eindringlich und fordernd. Die Realität dieser Struktur wurde durchbrochen und der daraus resultierende Riss spuckt Störungen und Instabilität aus. Er kann vielleicht stabilisiert werden, aber nur mit einem Materialopfer."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Als ich die Materialien nah an die Quelle des Lärms halte, lösen sie sich in meinen Händen in nichts auf und werden von einer Störung umhüllt.",
+                  "Die Warnungen von meinem Anzug beruhigen sich etwas. Dieser Ort stellt keine direkte Gefahr mehr dar."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 3,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Merkur, um mehr zu erfahren.",
+        "AppId": "cook25",
+        "IterationAppId": "other28",
+        "Quantity": 60,
+        "PortalAddress": "11F366324C16",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Das wird ein Test deiner Stärke, Portal-Kenner."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Stärke fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Der Bruch, den Nadas Apparat angezeigt hat, ist ernst. Du kannst vielleicht seine Wirkung mildern, aber ich glaube kaum, dass er vollständig rückgängig gemacht werden kann.",
+                  "Wie dem auch sei, die wahre Prüfung liegt darin, ihn zu erreichen. Du musst über ein Portal in die gestörte Region reisen.",
+                  "Ich schlage vor, dass du deine Reise mit der Suche nach Wissenssteinen beginnst. Wusstest du, dass sie ein gemeinsames Erbe mit den uralten Pforten teilen? Wenn du dich ihnen mit klarem Verstand und ruhiger Hand näherst, offenbaren sie dir vielleicht die Koordinaten, die du benötigst."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Du musst über ein Portal in die gestörte Region reisen.",
+                  "Ich schlage vor, dass du deine Reise mit der Suche nach Wissenssteinen beginnst. Wusstest du, dass sie ein gemeinsames Erbe mit den uralten Pforten teilen? Wenn du dich ihnen mit klarem Verstand und ruhiger Hand näherst, offenbaren sie dir vielleicht die Koordinaten, die du benötigst."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Ich erkenne ein hohes Weinen aus dem Inneren dieser Struktur. Als ich näherkomme, wird es zu einer sprudelnden und zischenden Störung verzerrt, die durch die Luft und in Zickzacklinien über die Oberfläche meines Exo-Anzugs schießt.",
+            "Wegen des Knisterns kaum wahrnehmbar, wird eine wilde Nachricht abgespielt, immer und immer wieder. In dieser Struktur ist ein Riss – der Planet hier trägt tiefe Narben. Er benötigt ein bestimmtes Material, um zu heilen ..."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich halte die Materialien dorthin, wo die Störung am lautesten ist. In einem Schwall von Energie verschwinden sie. Die Störung hier beginnt sich zu reparieren."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 4,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Tethys, um mehr zu erfahren.",
+        "AppId": "cook30",
+        "IterationAppId": "other33",
+        "Quantity": 90,
+        "PortalAddress": "30F607272323",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah. Du hast dich also freiwillig gemeldet, um diese „Störung“ zu untersuchen, in die sich Nada so reinsteigert."
+          ],
+          "Options": [
+            {
+              "Name": "Nach der „Störung“ fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hör mal, ich weiß überhaupt nichts über Störungen oder Realitäten und all das. Doch ich will dir wirklich helfen. Im Ernst.",
+                  "Jemand, den ich 0.4 mal kannte, meldet sich nicht mehr – genau in dem Bereich, in dem Nada dieses seltsame Signal empfangen hat. Das passt so gar nicht zu der Person. Sie ist nicht der Typ dafür.",
+                  "Ich erwarte nicht wirklich, sie je wiederzusehen. Doch wenn du das – was immer es ist – aufhalten kannst, wenn du verhindern kannst, dass das jemand anderem passiert, ist das gut, weißt du?",
+                  "Mit traditionellen Mitteln ist es fast unmöglich, diesen Ort zu erreichen. Du wirst über ein Portal reisen müssen.",
+                  "Vor dem Verschwinden erzählte mir die Person etwas über Wissenssteine. Ich glaube – na ja, ich bin mir ziemlich sicher – dass du, wenn du ein paar von denen findest und mitnimmst, die Koordinaten erhalten wirst, die du brauchst. Viel Glück."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mit traditionellen Mitteln ist es fast unmöglich, diesen Ort zu erreichen. Du wirst über ein Portal reisen müssen. Ich ...0.4 habe Informationen über Wissenssteine erhalten – du weißt schon, diese kleinen Steinsäulen, die immer auf einen einreden?",
+                  "Tja, wie es aussieht, verbergen die noch ein paar Geheimnisse mehr.",
+                  "Ich glaube – na ja, ich bin mir ziemlich sicher – dass du, wenn du ein paar von diesen Wissenssteinen findest und mitnimmst, die Koordinaten erhalten wirst, die du brauchst. Viel Glück."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Nicht zu diesem Ort des Todes passend, knistert und knallt eine lebhafte Störung unterhalb des Grabs. Mein Exo-Anzug erzittert, als die Störung durch ihn schießt, aber die Energie scheint mir keinen Schaden zuzufügen.",
+            "Ich nehme mitten in den Stößen der Störung ein Muster wahr. Satzähnlich strukturiert, stellen sie eine Forderung. Die Realität hier wurde durchbrochen und ist sprunghaft – nur bestimmte Materialien können sie besänftigen."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die Störung reagiert heftig auf die Gegenwart der Objekte und flackert auf mich zu. Sie schleckt die Materialien direkt aus meinen Händen und verschlingt sie.",
+                  "Stille. Die Störung scheint stabilisiert zu sein."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 5,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Hesperos, um mehr zu erfahren.",
+        "AppId": "raw46",
+        "IterationAppId": "other36",
+        "Quantity": 2000,
+        "PortalAddress": "10610E3057EE",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Wie ich höre, nehmt ihr euch einer Untersuchung an, Gleichgesinnter. Nada darf sich glücklich schätzen, dass du ihm hilfst."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Nada fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hier ist eine starke Macht im Spiel. Nada fürchtet sich vor solchen Dingen. Er ist ein wirklich brillanter Korvax, einzigartig in seiner Art – doch er ist trotzdem noch ein Korvax. Es wäre unangemessen, von ihm zu erwarten, dass er unsere Perspektive teilt, Gleichgesinnter.",
+                  "Ich habe von diesem Gespräch geträumt – und davon, was du als Nächstes tun wirst. Nicht gerade empirische Forschung, das ist wahr, aber ich hatte solche Träume schon einmal. Ich vertraue der Vision, die sie mir zeigen. Im Gegenzug bitte ich dich, mir zu vertrauen.",
+                  "Du wirst ein Portal betreten, um zu dem gebeutelten Planeten zu gelangen. Das Ziel ist vorgegeben: Du wirst seine Adresse im Universum von Wissenssteinen erhalten. Sie werden auf die Berührung von einem Reisenden reagieren.",
+                  "Bis wir uns wiedersehen, Gleichgesinnter."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich habe von diesem Gespräch geträumt, Gleichgesinnter – und davon, was du als Nächstes tun wirst. Nicht gerade empirische Forschung, das ist wahr, aber ich hatte solche Träume schon einmal. Ich vertraue der Vision, die sie mir zeigen. Im Gegenzug bitte ich dich, mir zu vertrauen.",
+                  "Du wirst ein Portal betreten, um zu dem gebeutelten Planeten zu gelangen. Das Ziel ist vorgegeben: Du wirst seine Adresse im Universum von Wissenssteinen erhalten. Sie werden auf die Berührung von einem Reisenden reagieren.",
+                  "Bis wir uns wiedersehen, Gleichgesinnter."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Die Struktur zischt und knistert. Die Art statische Energie muss die Störung sein, die Polo und Nada entdeckt haben. Wortlos überträgt sie ihre Forderungen direkt in meinen Verstand.",
+            "Tief in der Erde stöhnt etwas, als ob das Land selbst hungere. Aber warum gerade diese Materialien, die es in dieser Welt bereits zuhauf gibt?"
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich drücke die Materialien zur Quelle der statischen Störung und sehe zu, wie sie zu nichts zerschmelzen. Der beschädigte Planet ernährt sich von seinen eigenen Ressourcen. Er beruhigt sich. Der Bruch in der Realität ist repariert."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 6,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Ariadne, um mehr zu erfahren.",
+        "AppId": "cur22",
+        "IterationAppId": "other26",
+        "Quantity": 16,
+        "PortalAddress": "21B13538C8F7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Der Quecksilber-Synthese-Roboter ist ein geschickter Kunsthandwerker. Hast du die von ihm geformten Gesichter gesehen, gleichartiger Reisender? Nicht von echtem Fleisch zu unterscheiden."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Gesichtern fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Es handelt sich um echte Kunstwerke. Doch in Wahrheit ist der Roboter nur ein Werkzeug von Spezialist Polo.",
+                  "Wir dürfen die Gek nicht unterschätzen. Hinter ihrer jovialen Art verbirgt sich eine ausgeprägte Cleverness. Sie haben viel für mich getan. Für uns alle.",
+                  "Ariadnes Schnurrhaare zucken. Sie hebt einen Handschuh zu ihrem eigenen Gesicht, als ob sie sich erneut mit seinen Buckeln und Konturen vertraut machen würde.",
+                  "Du musst Wissenssteine suchen, um ein Portal freizuschalten. Berühre diese Steine mit deiner Hand. Sie werden dich erwarten, gleichartiger Reisender."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Du musst Wissenssteine suchen, um ein Portal freizuschalten. Berühre diese Steine mit deiner Hand. Sie werden dich erwarten, gleichartiger Reisender."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Mein Exo-Anzug lässt einen Alarm erklingen, als ich mich der Struktur nähere – die künstliche Stimme klingt schrill.",
+            "Warnung. Anomalie entdeckt. Warnung. Warnung. Warnung.",
+            "Meine Gliedmaßen fühlen sich träge und sperrig an, mein Anzug eng und unbequem. Eine verzweifelte Forderung hallt in der Struktur wider, aufgrund der Störung kaum hörbar."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mein eigener Körper kämpft gegen mich an – als ich die Materialien in Richtung der Struktur schiebe, zittert meine Muskulatur in Protest und Ängste erfüllen meinen Verstand.",
+                  "Gerade als ich denke, dass ich es nicht schaffe, schnappt sich ein Energiestoß die Ressourcen aus meinen Händen und verschlingt sie. Die Störung verstummt langsam. Es gibt hier nichts mehr zu tun."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 7,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Gemini, um mehr zu erfahren.",
+        "AppId": "cur24",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "10D92420546E",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Gemini lächelt mich mit feuchten Augen an, wirkt aber abgelenkt. Die Lebensform blickt wiederholt zu Hesperos hinüber."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Hesperos fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Äh, tut mir leid, mein Freund. Wie du siehst, bin ich abgelenkt. Willkommen. Es ist immer schön, mit dir zu sprechen.",
+                  "Ich bin nur etwas besorgt wegen Hesperos. Ich ...",
+                  "Gemini spricht leiser und sieht besorgt aus.",
+                  "Bei all diesen seltsamen Störungen der Realität mache ich mir Sorgen, dass sich Hesperos ... in Gefahr begibt. Ich weiß doch, wie er ist. Diese Art von Geheimnis zieht ihn unwiderstehlich an.",
+                  "Aber genug von meinen Sorgen. Ich weiß, dass du eine wichtige Aufgabe für uns alle erfüllst.",
+                  "Du erreichst die gestörte Region durch ein Portal, aber du wirst eine Adresse benötigen, um an den richtigen Ort zu gelangen. Suche Wissenssteine. Berühre sie. Du wirst bestimmt finden, was du brauchst.",
+                  "Äh, tut mir leid, mein Freund. Wie du siehst, bin ich abgelenkt. Willkommen. Es ist immer schön, mit dir zu sprechen.",
+                  "Ich bin nur etwas besorgt wegen Hesperos. Ich ..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Äh, tut mir leid, mein Freund. Wie du siehst, bin ich abgelenkt. Ich weiß, dass du eine wichtige Aufgabe für uns alle erfüllst.",
+                  "Du erreichst die gestörte Region durch ein Portal, aber du wirst eine Adresse benötigen, um an den richtigen Ort zu gelangen. Suche Wissenssteine. Berühre sie. Du wirst bestimmt finden, was du brauchst."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Das beschädigte Schiff zischt und flackert. Diese statische Energie hat eine unnatürliche Qualität – das ist mehr als nur die Funken eines kaputten Triebwerks.",
+            "Obwohl hier niemand ist, schreit eine Stimme auf, dumpf und fern.",
+            "TXT_RadioNoise... kkttzzzzzzk ... Wo bin TXT_RadioNoise... zktt ... ist derselbe Ort! Die Signatur der Realit...TXT_RadioNoise... ttzzz ... was Artemis widerfahren ist, ist kein TXT_RadioNoise... kkttzzzzzzk ... diese Störung! Bitte, kann jemand TXT_RadioNoise... kktzz ...",
+            "Die Störung knistert ihre eigene Forderung hervor. Der Planet ist lädiert, destabilisiert. Mit einem speziellen Material, das vor Ort zu finden ist, sollte man ihn reparieren können."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich strecke meine Hand aus, damit mein Verstand durch die Störung schweben kann, und suche die Quelle der seltsamen Energie.",
+                  "Dann spüre ich es plötzlich, wie es mich wie eine magnetische Kraft abstößt. Sonst kann ich nichts fühlen. Unter Anstrengung biete ich die Materialien zum Ort hin an.",
+                  "Ein ohrenbetäubendes Knacken ist zu hören und die Opfergabe entschwindet flimmernd. Was folgt, ist Stille. Der Ort ist wieder friedvoll."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 8,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Merkur, um mehr zu erfahren.",
+        "AppId": "cur32",
+        "IterationAppId": "other28",
+        "Quantity": 16,
+        "PortalAddress": "11338D40158A",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Der ehrwürdige Reisende mustert mich. Seine Augen verweilen auf meinem Gesicht, als ob er es nach Verletzungen absuchen würde.",
+            "Ich freue mich, dass du am Leben bist. Wird das dein erster Kontakt mit einer dieser Störungen sein?"
+          ],
+          "Options": [
+            {
+              "Name": "Bejahen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Merkur mustert mich noch einmal genau. Er blickt auf seine Hände herab. Er blickt auf und unsere Blicke treffen sich.",
+                  "Dann wollen wir mal hoffen, dass du diese Reise unverändert überstehst.",
+                  "Das Portalnetzwerk bietet eine Pforte in die gestörte Region. Du musst die richtigen Nervenbahnen mit einem Glyphencode stimulieren. Uralte Wissenssteine können dir den Code beibringen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Verneinen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Merkur mustert mich noch einmal genau. Er blickt auf seine Hände herab. Er blickt auf und unsere Blicke treffen sich.",
+                  "Deine Ausdauer beeindruckt mich, Portal-Kenner.",
+                  "Wie schon zuvor bietet das Portalnetzwerk eine Pforte in die gestörte Region. Du musst die richtigen Nervenbahnen mit einem Glyphencode stimulieren. Uralte Wissenssteine können dir den Code beibringen.",
+                  "Deine Ausdauer beeindruckt mich, Portal-Kenner.",
+                  "Wie schon zuvor bietet das Portalnetzwerk eine Pforte in die gestörte Region. Du musst die richtigen Nervenbahnen mit einem Glyphencode stimulieren. Uralte Wissenssteine können dir den Code beibringen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Das Portalnetzwerk bietet eine Pforte in die gestörte Region. Du musst die richtigen Nervenbahnen mit einem Glyphencode stimulieren. Uralte Wissenssteine können dir den Code beibringen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Das Summen und Knallen der Störung umgibt diese Struktur. Mit meiner Hand an ihr entdecke ich einen Bereich, der auf seltsame Weise substanzlos ist. Wo sie auf harte Materie treffen sollten, gleiten meine Finger ins Nichts.",
+            "Die Struktur scheint hier und zugleich doch nicht hier zu sein. Ich bemerke ein leichtes Schimmern dort, wo die Störung am lautesten ist. Sie bringt wiederholt knisternd ihre Forderung hervor: Beschaffe ein Materialopfer, um sie zu beruhigen und zu stabilisieren."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die schimmernde Oberfläche gibt nach und verschluckt die Opfergabe. Das Knistern verstummt zu einem sanften Summen – augenscheinlich besänftigt. Ich habe hier alles getan, was ich kann."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 9,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Tethys, um mehr zu erfahren.",
+        "AppId": "cur25",
+        "IterationAppId": "other33",
+        "Quantity": 16,
+        "PortalAddress": "31CDE8370772",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Unterwegs, um die jüngste Störung zu untersuchen? Hauptsache ohne mich. Obwohl es vielleicht schön wäre, mal von hier wegzukommen. Die anderen reden immerzu davon."
+          ],
+          "Options": [
+            {
+              "Name": "Nach anderen fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Sie sind besessen! Es geht zu weit. Ariadne ist die Hauptschuldige. Sie macht mir Angst. Das ganze Gerede von Gesichtern, während sie selbst das seltsamste „Gesicht“ hat, das ich je gesehen habe.",
+                  "Aber egal. Wenn du etwas Starthilfe brauchst: Flieg weg von hier und suche nach Wissenssteinen. Der Portalcode, den sie dir geben, sollte dich an den bösen Ort bringen. Achte nur darauf, dass du ein ordentliches Multiwerkzeug dabei hast."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Flieg weg von hier und suche nach Wissenssteinen. Der Portalcode, den sie dir geben, sollte dich an den bösen Ort bringen. Achte nur darauf, dass du ein ordentliches Multiwerkzeug dabei hast."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Das Knistern der Störung begrüßt mich, als ich näherkomme. Die Körperlichkeit dieser Struktur scheint beeinträchtigt zu sein.",
+            "Obwohl sie matt und beschädigt ist, hämmert sich da ein klares Muster durch den Lärm der Störung. Die Störung hier ist ein Bruch, ein Riss in der Realität. Nur bestimmte Materialien können sie stabilisieren ..."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die Materialien zerfallen zu nichts. Das Knallen der Störung wird langsamer und hört dann auf. Nur ein sanftes Brummen bleibt zurück. Die Struktur scheint stabil zu sein."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 10,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Hesperos, um mehr zu erfahren.",
+        "AppId": "cur21",
+        "IterationAppId": "other36",
+        "Quantity": 8,
+        "PortalAddress": "21D4501EC013",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Hast du viel über die Störungen herausgefunden, Gleichgesinnter? Bitte. Erzähl mir von deinen Erlebnissen."
+          ],
+          "Options": [
+            {
+              "Name": "Sagen, dass sie beängstigend waren",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah. Ja. Verstehe.",
+                  "Ich habe mich selbst an den Anstrengungen beteiligt, die zur Stabilisierung der jüngsten Störung unternommen wurden. Die Stimme der Störung hat mich beunruhigt. Sie klingt wie der Atlas, weißt du, und zugleich auch ... gar nicht wie der Atlas.",
+                  "Das kenne ich schon. Lande dein Raumschiff auf einem Planeten und suche seine Oberfläche nach Wissenssteinen ab. Eine Berührung und du wirst die Adresse der gestörten Region erfahren. Gib diese Adresse in einem Portal ein und tritt über die Schwelle ..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Sagen, dass sie aufschlussreich waren",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ah. Ja. Verstehe.",
+                  "Ich habe mich selbst an den Anstrengungen beteiligt, die zur Stabilisierung der jüngsten Störung unternommen wurden. Die Stimme der Störung hat mich beunruhigt. Sie klingt wie der Atlas, weißt du, und zugleich auch ... gar nicht wie der Atlas.",
+                  "Das kenne ich schon. Lande dein Raumschiff auf einem Planeten und suche seine Oberfläche nach Wissenssteinen ab. Eine Berührung und du wirst die Adresse der gestörten Region erfahren. Gib diese Adresse in einem Portal ein und tritt über die Schwelle ..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Sagen, dass sie beängstigend waren",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperos runzelt ungläubig die Stirn. Er kommentiert meine Behauptung nicht weiter.",
+                  "Das kenne ich schon. Lande dein Raumschiff auf einem Planeten und suche seine Oberfläche nach Wissenssteinen ab. Eine Berührung und du wirst die Adresse der gestörten Region erfahren. Gib diese Adresse in einem Portal ein und tritt über die Schwelle ..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Sagen, dass sie aufschlussreich waren",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperos runzelt ungläubig die Stirn. Er kommentiert meine Behauptung nicht weiter.",
+                  "Das kenne ich schon. Lande dein Raumschiff auf einem Planeten und suche seine Oberfläche nach Wissenssteinen ab. Eine Berührung und du wirst die Adresse der gestörten Region erfahren. Gib diese Adresse in einem Portal ein und tritt über die Schwelle ..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Das kenne ich schon. Lande dein Raumschiff auf einem Planeten und suche seine Oberfläche nach Wissenssteinen ab. Eine Berührung und du wirst die Adresse der gestörten Region erfahren. Gib diese Adresse in einem Portal ein und tritt über die Schwelle ..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Obwohl der Knall leise und kalt ist, prasselt eine seltsame Kraft wie statische Energie aus der Erde und löst in meinem Exo-Anzug Warnsignale aus.",
+            "Die statische Energie überträgt eine Botschaft direkt in mein Gehirn:",
+            "Stabilisiere ... die Instabilität. Repariere ... die Beschädigung. Materialien benötigt."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mein Anzug lässt einen Alarm erklingen, seine Anzeigen sind unleserlich. Die Alarmsignale werden dringlicher, als ich mich der Quelle der seltsamen Energie nähere.",
+                  "Das Geräusch der Störung schwillt zu einem Röhren an, als ich die Materialien darbiete, und verstummt dann langsam."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 11,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Ariadne, um mehr zu erfahren.",
+        "AppId": "cur23",
+        "IterationAppId": "other26",
+        "Quantity": 25,
+        "PortalAddress": "6182588F1956",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Die Natur dieser Störungen besorgt mich, gleichartiger Reisender. Ich verlasse die Anomalie nicht oft, aber das, worauf ich da draußen gestoßen bin, war mehr als ein Abbild."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Abbild fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich sah mein eigenes Gesicht in der Störung. Es war keine Iteration. Das war ich selbst. Ich blickte durch zwei Paar Augen.",
+                  "Möchtest du das selbst sehen? Erfahre den genauen Ort von Wissenssteinen. Die Steine sollten ihre Geheimnisse schnell preisgeben. Sie wurde erschaffen, um dich zu empfangen ..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Um selbst dorthin zu reisen, erfahre den genauen Ort von Wissenssteinen. Die Steine sollten ihre Geheimnisse schnell preisgeben. Sie wurde erschaffen, um dich zu empfangen ..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Mein Anzug lässt einen Alarm aufheulen, seine Sensoren bewegen sich wild hin und her. Diese Struktur ist instabil und unsicher.",
+            "Eine statische Energie rast über die Oberfläche der Struktur und windet sich meinen Arm hinauf – lebendig und flehentlich. Irgendetwas im Realitätsgefüge ist beschädigt. Es ist ein Materialopfer nötig, um das zu reparieren."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die statische Ladung erzeugt einen Bogen von meinen Fingerspitzen zu den Materialien, die ich gesammelt habe. Sie schrumpfen zu nichts, hinterlassen keinerlei Spur.",
+                  "Die unbekannte Energie flaut ab und zieht sich in die Erde zurück. Der Schaden hier scheint behoben zu sein."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 12,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Gemini, um mehr zu erfahren.",
+        "AppId": "cook148",
+        "IterationAppId": "other27",
+        "Quantity": 20,
+        "PortalAddress": "30C6233C062E",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Geht‘s dir gut, mein Freund? Tut mir leid, wenn ich entmutigend auf dich wirke. Ich bin natürlich sehr dankbar für die Arbeit von Reisenden wie dir. Und Hesperos. Wäre er nicht so abenteuerlustig, dann hätten wir uns nie getroffen."
+          ],
+          "Options": [
+            {
+              "Name": "Nach erstem Treffen mit Hesperos fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Wir lernten uns kennen, als ich zum ersten Mal ein Portal entdeckte. Gerade als ich in diese unbekannte Landschaft kam, blinzelnd und orientierungslos, stieß ich auf diese seltsame Lichtkugel. Stell dir vor, wie erstaunt ich war, als sie zu sprechen begann.",
+                  "Für eine lange Zeit hatten wir nur unsere Stimmen, denen wir in der Dunkelheit folgen konnten. Doch als die Grenzen endlich zerbarsten,0.4 tja, da war es so, als würden wir uns schon immer kennen.",
+                  "Wenn du helfen willst, diese Anomalie zum Schweigen zu bringen, dann suche Wissenssteine, mein Freund. Sie werden dir alles geben, was du brauchst, um den Fluss des Portals zu lenken."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Wenn du helfen willst, diese Anomalie zum Schweigen zu bringen, dann suche Wissenssteine, mein Freund. Sie werden dir alles geben, was du brauchst, um den Fluss des Portals zu lenken."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Meine Sicht wird getrübt, als ich diese Struktur anstarre. Für einen Moment ist es so, als stünden zwei identische Kopien vor mir, leicht versetzt.",
+            "Ich blinzele und der Moment vergeht.",
+            "Ich bemerke eine leuchtende Flüssigkeit, die aus der Struktur fließt. Sie scheint auf meine Präsenz zu reagieren und schneller zu fließen, wenn ich mich mit meiner Hand nähere. Ist das ein Angebot? Eine Hilfe für mich?"
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich starre in meine plötzlich leeren Hände und sehe noch ein Nachbild der Materialien. Ich blinzele. Sie sind definitiv fort, direkt aus dieser Realität weggeschnappt.",
+                  "Die statische Energie verblasst, bis nur noch ein Summen verbleibt. Die Struktur scheint jetzt stabil zu sein."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Enzymflüssigkeit sammeln",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die Flüssigkeit läuft begierig in meine Handflächen. Sie riecht süß, geradezu lecker.",
+                  "Eine statische Energie zischt aus meinem Exo-Anzug heraus und überträgt eine Botschaft: Die Realität dieser Struktur wurde beschädigt. Sie sehnt sich danach, stabilisiert zu werden."
+                ],
+                "Options": [
+                  {
+                    "Name": "Materialien anbieten",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Ich starre in meine plötzlich leeren Hände und sehe noch ein Nachbild der Materialien. Ich blinzele. Sie sind definitiv fort, direkt aus dieser Realität weggeschnappt.",
+                        "Die statische Energie verblasst, bis nur noch ein Summen verbleibt. Die Struktur scheint jetzt stabil zu sein."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Enzymflüssigkeit sammeln",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Die Flüssigkeit läuft begierig in meine Handflächen. Sie riecht süß, geradezu lecker."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Weggehen",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 13,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Merkur, um mehr zu erfahren.",
+        "AppId": "cook151",
+        "IterationAppId": "other28",
+        "Quantity": 200,
+        "PortalAddress": "21C8F44A5ED7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Diese Störungen erfüllen mich mit großem Unbehagen."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Unbehagen fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die Stimme der Störung ist ... berauschend. In diesen Riss zu starren, ist wie ein Fenster zu einem Traum. Ich sehe Soleth Prime. Ich sehe, wie ich einst war. Eine frühere Version. Und ich fühle mich schutzlos, so als würde der Traum meinen Blick direkt erwidern.",
+                  "Geh, Portal-Kenner. Finde die Steinkinder der Portale. Höre ihren Lehren gut zu."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Finde die Steinkinder der Portale. Höre, was sie dir zu sagen haben."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Die statische Aufladung rund um diese Absturzstelle scheint direkt in meinen Exo-Anzug einzudringen. Ich fühle, wie sie an meiner Haut kribbelt.",
+            "TXT_RadioNoise... kkktt ... weiß, dass ich nicht immer hier war TXT_RadioNoise... zktt ... wurde so dunkelTXT_RadioNoise... kttkk ... wurde überflüssigTXT_RadioNoise... zzktkt...",
+            "Ein Signal schneidet durch den Lärm: Diese Wunde in der Realität fordert ein Opfer. Sie muss ein Material von diesem Planeten konsumieren. Sie muss sich selbst konsumieren."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Eine Riesenwelle der Energie überflutet meine ausgestreckten Hände und verschlingt die Materialien komplett.",
+                  "Alles ist still."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Wrack durchsuchen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Um ein Stück kaputten Schiffsrumpf gewickelt, finde ich einen Fetzen Nanofasermaterial, das dem an meinem Exo-Anzug ähnelt.",
+                  "Im Gewebe steckt ein Sauerstoff-Upgrade, das noch intakt ist. Ich nehme es mit. Vielleicht wird es mir bei meiner Unterwassersuche von Nutzen sein.",
+                  "Ein Signal schneidet durch den Lärm: Diese Wunde in der Realität fordert ein Opfer. Sie muss ein Material von diesem Planeten konsumieren. Sie muss sich selbst konsumieren."
+                ],
+                "Options": [
+                  {
+                    "Name": "Materialien anbieten",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Eine Riesenwelle der Energie überflutet meine ausgestreckten Hände und verschlingt die Materialien komplett.",
+                        "Alles ist still."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Weggehen",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 14,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Tethys, um mehr zu erfahren.",
+        "AppId": "build169",
+        "IterationAppId": "other33",
+        "Quantity": 16,
+        "PortalAddress": "603CF5241B1D",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Tethys wirkt ruhiger als sonst, nicht so zappelig. Die Lebensform sieht mich schweigend an.",
+            "Diese Störungen sind ... da läuft etwas richtig falsch. Ich habe mir selbst vor Ort ein Bild davon gemacht. Sogar mein Exo-Anzug schien in Panik zu geraten, als ich mich ihnen näherte."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Anzug fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Keine Sorge, ich bin nicht komplett verrückt. Ich weiß, dass ein Anzug nicht in Panik geraten kann. Er schien einfach nicht dafür programmiert zu sein, diese spezielle Bedrohung zu bewältigen. Die Sensoren spielten verrückt, gaben gellende Warnungen und Alarme aus.",
+                  "Wie dem auch sei, wenn du wirklich dorthin möchtest, dann suche ein paar Wissenssteine. Jeder hat ein Fragment der Portaladresse, die du benötigen wirst."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Wenn du wirklich dorthin möchtest, dann suche ein paar Wissenssteine. Jeder hat ein Fragment der Portaladresse, die du benötigen wirst."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Diese Struktur ist in einem seltsamen statischen Feld eingeschlossen, das sowohl vor Energie zu knistern als auch vor Leere zu heulen scheint.",
+            "Das Knallen und Klicken der Störung hämmert eine Forderung heraus. Entferne Materialien von der Oberfläche dieses Planeten, liefere sie an diesen gestörten Ort."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mit einem ohrenbetäubenden Knall verschwinden die Materialien. Die Störung hat sie sich genommen.",
+                  "Die Struktur wirkt jetzt völlig gewöhnlich, als ob es hier nie eine Störung gegeben hätte."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 15,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Hesperos, um mehr zu erfahren.",
+        "AppId": "cook31",
+        "IterationAppId": "other36",
+        "Quantity": 90,
+        "PortalAddress": "116D3D540547",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Die Störung hat zu mir gesprochen, Gleichgesinnter. Es war ein Urteil, das ich schon einmal aushalten musste. Das ist ein wiederkehrender Albtraum."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Albtraum fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperos hält inne, um mich zu mustern. Ich fühle, wie mein Gesicht unter dem forschenden Blick heiß wird.",
+                  "Hm. Du hast den blutroten Wächter selbst erlebt, oder? Den Atlas.",
+                  "Ich war töricht. Wir sind alle seine Kinder, so viel ist unbestritten. Doch dachte – hoffte – ich, dass wir deshalb alle seine Liebe verdient hätten. Die Wahrheit, aber ... die Wahrheit ist, dass nicht jede Iteration dem genügt.",
+                  "...",
+                  "Wir können uns nur den Möglichkeiten der Zukunft zuwenden, Gleichgesinnter. Die Störung gehört nicht in diese Ebene. Du hast recht, sie zu bekämpfen. Geh. Suche Wissenssteine. Der Weg wird sich dir offenbaren."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Nach Albtraum fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperos hält inne, um mich zu mustern. Ich fühle, wie mein Gesicht unter dem forschenden Blick heiß wird.",
+                  "Ich fühle, dass du nicht weit bist auf deinem Weg. Es wäre unangemessen, darüber zu diskutieren. Ich möchte dir auf deiner Reise nicht im Weg stehen, Gleichgesinnter. Wir alle müssen unseren eigenen Weg finden.",
+                  "Wir können uns nur den Möglichkeiten der Zukunft zuwenden. Die Störung gehört nicht in diese Ebene. Du hast recht, sie zu bekämpfen. Geh. Suche Wissenssteine. Dieser Weg wird sich dir wenigstens offenbaren."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Wir können uns nur den Möglichkeiten der Zukunft zuwenden, Gleichgesinnter. Die Störung gehört nicht in diese Ebene. Du hast recht, sie zu bekämpfen. Geh. Suche Wissenssteine. Der Weg wird sich dir offenbaren."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "%NAME% ist unzweifelhaft tot, doch ein Echo der einzigartigen Signatur der Lebensform existiert an diesem Ort noch. Es ist mehr als nur eine Erinnerung, es ist, als ob die Essenz von ihr noch hier wäre ...",
+            "Ein statisches Feld wiegt das Grab in seinen langen, knisternden Fingern. Mitten in dem Lärm eine Botschaft: Bring Materialien aus dieser Welt. Opfere sie hier. Stabilisiere diese Anomalie."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die Finger schnellen nach vorn und krallen sich die Materialien.",
+                  "%NAME%s Grab ist wieder ein Ort des Friedens und der Ruhe. Ich frage mich aber trotzdem, ob die Lebensform nicht auch von dieser seltsamen statischen Energie ergriffen wurde."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 16,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Ariadne, um mehr zu erfahren.",
+        "AppId": "cook22",
+        "IterationAppId": "other26",
+        "Quantity": 60,
+        "PortalAddress": "312B0DA31EBB",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Diese Störungen sind ein Fenster, durch das man auf dieses Universum zurückblickt, gleichartiger Reisender. Ob Licht oder Dunkel, beide Seiten der Scheibe sind zulässig. Ich habe meinen Frieden gefunden. Das haben wir beide."
+          ],
+          "Options": [
+            {
+              "Name": "Nach „beiden“ fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich und das gleichartige Ich. Wir müssen die Protokolle akzeptieren, die wir nicht ändern können, oder wir werden niemals Frieden finden.",
+                  "Beginne mit der Suche nach Wissenssteinen. Das Riss-Fenster wird dir den Ort sagen, wie zuvor, wie immer. Ich fühle, wie dieser Zyklus seinen Anfang nimmt."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Beginne mit der Suche nach Wissenssteinen. Das Riss-Fenster wird dir den Ort sagen, wie zuvor, wie immer. Ich fühle, wie dieser Zyklus seinen Anfang nimmt."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Ein Gefühl des Verlusts umgibt diesen Ort. Eine mysteriöse Energie surrt um dieses kaputte Schiff herum, aber es gibt keinerlei Anzeichen von Leben oder Tod. Die Crew ist längst nicht mehr.",
+            "TXT_RadioNoise... kktttk ...will nur zurück nachTXT_RadioNoise... zzktk ... Backstage, eine Zweitbesetzung für michTXT_RadioNoise... zzkzz... so dunkel. Ich mag es nicht – ich will TXT_RadioNoise... zzzzzt ... purpurnes Licht TXT_RadioNoise... ktzzz...",
+            "Die Stimme der Störung trägt flüsternd ihre Forderung vor. Dieser Planet ist verletzt. Er hungert. Er muss ein Material von diesem Planeten imitieren. Er muss sich selbst kopieren."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich werde plötzlich von einer Vision von mir selbst angegriffen. Mein Kopf dreht sich vor lauter Dé­jà-vus, Spiegeln in Spiegeln, als hätte ich die Probleme dieses Planeten bereits unendliche Male behoben ...",
+                  "Die Materialien lösen sich auf. Die Vision vergeht. Die Störung verstummt.",
+                  "Alles ist still."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 17,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Gemini, um mehr zu erfahren.",
+        "AppId": "raw31",
+        "IterationAppId": "other27",
+        "Quantity": 250,
+        "PortalAddress": "509F84F57D78",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ich habe die Störung mit meinen eigenen Augen gesehen, mein Freund. Ich habe mich da draußen lebendig gefühlt. Mir wurde klar, wie sehr ich das Abenteuer vermisst hatte."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Abenteuer fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Gemini blickt zu seinem Begleiter und spricht dann leise.",
+                  "Einst musste Hesperos gerettet werden, aber diese Zeit ist vorbei. Ich habe mich herausgeredet, mich vor mir selbst versteckt, und das viel zu lange. Damit ist Schluss.",
+                  "Starte dein Raumschiff durch das Anomalie-Tor. Fliege zu einer planetaren Oberfläche und gehe von Bord. Fühle das Knirschen der Erde unter deinen Füßen. Suche nach alten Steinsäulen. Hör dir den Portalcode an, den sie in deine Seele singen ..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Einst musste Hesperos gerettet werden, aber diese Zeit ist vorbei. Ich habe mich herausgeredet, mich vor mir selbst versteckt, und das viel zu lange. Damit ist Schluss.",
+                  "Starte dein Raumschiff durch das Anomalie-Tor. Fliege zu einer planetaren Oberfläche und gehe von Bord. Fühle das Knirschen der Erde unter deinen Füßen. Suche nach alten Steinsäulen. Hör dir den Portalcode an, den sie in deine Seele singen ..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Irgendetwas ist bei dieser Struktur eindeutig aus dem Lot. Eine schwache Störung knistert hervor, lodert wie ein ausgehendes Feuer.",
+            "Ein Muster, das sich endlos wiederholt, ist in das statische Geräusch eingebettet. Mein Anzug übersetzt die kaputten Daten zu einer Botschaft, einer Forderung: Bestimmte Materialien, die hier geopfert werden, sollten diese Störung stabilisieren können."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die Materialien zerbröckeln in der statischen Wolke und lassen meine leeren Hände zurück.",
+                  "Dieser gestörte Ort ist wieder stabil. Die Störung ist beendet oder wenigstens abgeschwächt."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 18,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Merkur, um mehr zu erfahren.",
+        "AppId": "cook112",
+        "IterationAppId": "other28",
+        "Quantity": 40,
+        "PortalAddress": "3202EF2CC4A0",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Unsere Arbeit ist für das Universum von großer Bedeutung. Sei stolz auf deinen Beitrag, Portal-Kenner."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Arbeit fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "In letzter Zeit habe ich zu oft zurückgeblickt, zurück zur Leere. Aber es ist dem Reisenden nicht vorherbestimmt, sein Schicksal an einen Ort oder an eine Zeit zu binden. Die Anomalie ist jetzt meine Familie.",
+                  "Wissenssteine enthalten den Glyphencode, den du benötigst. Gib sie am Drehstein ein und übergib dich dem Fluss des Portals."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Wissenssteine enthalten den Glyphencode, den du benötigst. Gib sie am Drehstein ein und übergib dich dem Fluss des Portals."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Meine Muskeln zucken unfreiwillig, als ich mich der Struktur nähere. Eine dunkle statische Energie blubbert aus dem Boden und scheint etwas in meinen Exo-Anzug abzustoßen.",
+            "Das Geräusch hier hat alle Eigenschaften einer beschädigten Nachricht, fragmentierte Daten aus unbekannter Quelle. Sie bittet:",
+            "Bring Materialien her ... übergib sie. Gleichgewicht ... gestörte Region."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich sehe nicht, was mit den Materialien passiert – ich werde von einem purpurnen Licht geblendet. Ich krümme mich, als es durch meinen Verstand schneidet. Es tut weh.",
+                  "Die Region scheint stabilisiert zu sein, doch ich sollte diesen Ort schnellstmöglich verlassen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 19,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Tethys, um mehr zu erfahren.",
+        "AppId": "cur22",
+        "IterationAppId": "other33",
+        "Quantity": 16,
+        "PortalAddress": "2112739B139C",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Es fühlt sich so gut an, sein Versteck hin und wieder zu verlassen. Das ist es wert."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Verlassen des Verstecks fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Angstfrei zu leben, die Gaben dieses Universums zu ergreifen. Darüber definieren wir uns doch, oder?",
+                  "Kämpfe darum, diese Freiheit zu erhalten. Setze diesen Störungen ein Ende. Bleib am Leben.",
+                  "Du kannst die Störung über ein Portal erreichen. Sieh dich mit deinem Visier an der Oberfläche eines Planeten um und berühre die Wissenssteine, die du findest. Sie werden dir den Weg weisen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Du kannst die Störung über ein Portal erreichen. Sieh dich mit deinem Visier an der Oberfläche eines Planeten um und berühre die Wissenssteine, die du findest. Sie werden dir den Weg weisen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Diese Absturzstelle ist sehr beunruhigend. Es gibt keinerlei Anzeichen von einer Crew, ob lebendig oder nicht, doch von irgendwoher heult eine Stimme auf, das Signal ist schwach ...",
+            "TXT_RadioNoise... kzzzz ...natürlich bin ich noch ich selbstTXT_RadioNoise... tktktk ...Signatur ist identisch TXT_RadioNoise... zzzz ...",
+            "In der Nähe des Absturzes trägt eine dunkle Energie eine Bitte vor: Die Realität zerschellt hier. Der Planet ist instabil. Mit bestimmten Materialien könnte er repariert werden ..."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich fühle mich plötzlich orientierungslos, mir wird mulmig. Wie bin ich hierhergekommen? Was habe ich gemacht?",
+                  "Meine Hände sind leer. Die Absturzstelle wirkt ruhig. Ich muss meine Aufgabe hier erfüllt haben."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 20,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Hesperos, um mehr zu erfahren.",
+        "AppId": "cook41",
+        "IterationAppId": "other36",
+        "Quantity": 16,
+        "PortalAddress": "60D447EB0728",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ich weiß unsere unmöglichen Treffen zu schätzen, Gleichgesinnter. Es ist wichtig, unsere Gleichartigen zu schätzen."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Gleichartigen fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die Stimme der Hierarchie ist laut und grell. Sie kann dafür sorgen, dass wir ganz nahe Stimmen nicht mehr hören.",
+                  "Hesperos‘ Blick schnellt zu Gemini und dann zu Boden. Die Lebensform räuspert sich.",
+                  "Vertraue auf deine Intuition, Gleichgesinnter. Du kennst diesen Weg inzwischen. Wissenssteine werden den Portalschlüssel preisgeben, den du brauchst. Die Störung erwartet dich. Sie erwartet uns alle."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Vertraue auf deine Intuition, Gleichgesinnter. Du kennst diesen Weg inzwischen. Wissenssteine werden den Portalschlüssel preisgeben, den du brauchst. Die Störung erwartet dich. Sie erwartet uns alle."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "%NAME%s letzte Ruhestätte wird von einer wilden, knisternden Energie gestört.",
+            "Mein Anzug erkennt im Hämmern der Störung eine Botschaft: Die Realität hier ist zerbrechlich, dünn und kaputt. Der Bruch ist vielleicht nicht vollständig reparabel, könnte aber mit einem Materialopfer stabilisiert werden.",
+            "Eine leuchtende Flüssigkeit sickert aus der Erde unter dem Grab. Sie scheint auf meine Präsenz zu reagieren und schneller zu fließen, wenn ich mich mit meiner Hand nähere. Ist das ein Angebot? Eine Hilfe für mich?"
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die Störung schießt durch mich durch, dringt in meinen Körper ein. Meine Nerven schreien vor Schmerz auf, als sie die wilde Energie weiterleiten.",
+                  "Das Gefühl endet so plötzlich, wie es begonnen hat. Ich fühle mich, als wäre ich schon einmal hier gewesen. Ich fühle mich, als würde ich in einen Schlaf fallen und mich eine weitere Nacht mit demselben Traum erwarten.",
+                  "Das Grab scheint jetzt wenigstens stabil zu sein."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Enzymflüssigkeit sammeln",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die Flüssigkeit läuft begierig in meine Handflächen. Sie riecht süß, geradezu lecker.",
+                  "Mein Anzug erkennt im Hämmern der Störung eine Botschaft: Die Realität hier ist zerbrechlich, dünn und kaputt. Der Bruch ist vielleicht nicht vollständig reparabel, könnte aber mit einem Materialopfer stabilisiert werden."
+                ],
+                "Options": [
+                  {
+                    "Name": "Materialien anbieten",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Die Störung schießt durch mich durch, dringt in meinen Körper ein. Meine Nerven schreien vor Schmerz auf, als sie die wilde Energie weiterleiten.",
+                        "Das Gefühl endet so plötzlich, wie es begonnen hat. Ich fühle mich, als wäre ich schon einmal hier gewesen. Ich fühle mich, als würde ich in einen Schlaf fallen und mich eine weitere Nacht mit demselben Traum erwarten.",
+                        "Das Grab scheint jetzt wenigstens stabil zu sein."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Enzymflüssigkeit sammeln",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Die Flüssigkeit läuft begierig in meine Handflächen. Sie riecht süß, geradezu lecker."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Weggehen",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 21,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Ariadne, um mehr zu erfahren.",
+        "AppId": "cook21",
+        "IterationAppId": "other26",
+        "Quantity": 60,
+        "PortalAddress": "6203FCD05649",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ich habe gesehen, wie du dich dem Nexus genähert hast. Darauf hatte ich gehofft. Danke, gleichartiger Reisender. Diese Mission ist für alle unserer Art von Bedeutung."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Bedeutung fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Auf Nadas Kabelapparatur ist etwas Bedrohliches erschienen. Ein Fehler in der Raumzeit. Er hat bereits einen kompletten Frachter abstürzen lassen. Ich bin mir sicher, dass ich den Verlust von gleichartigen Reisenden in der Kollision gespürt habe.",
+                  "Begib dich vom Portal zum gleichartigen Portal, um die Störung zu erreichen. Der Glyphenschlüssel ist zersplittert, kann aber gerettet werden. Suche Wissenssteine. Ich weiß, dass sich dir der Schlüssel zu erkennen geben wird."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Begib dich vom Portal zum gleichartigen Portal, um die Störung zu erreichen. Der Glyphenschlüssel ist zersplittert, kann aber gerettet werden. Suche Wissenssteine. Ich weiß, dass sich dir der Schlüssel zu erkennen geben wird."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "An der Absturzstelle stinkt es nach verbranntem Metall und schwelendem Fleisch. Eine unbekannte Energie schießt hervor, schlägt rund um das Schiff Funken, erzeugt einen Lichtbogen am Rumpf und jagt durch meinen Exo-Anzug. Eine Folge des Absturzes oder der Auslöser?",
+            "Ein Rhythmus in der Störung wird deutlich und hämmert eine Forderung heraus. Er kitzelt meinen Verstand mit einer Bitte, verlangt Materialien von diesem Planeten. Irgendeine unidentifizierte Macht wird hier erschüttert. Sie sehnt sich danach, stabilisiert zu werden."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Es kommt zu keiner Kollision von Materie mit Materie. Die Materialien lösen sich direkt in der Störung auf und verschwinden spurlos.",
+                  "Die Stöße der Störung werden zu einem sanften Summen gebändigt. Der Bruch ist vielleicht nicht vollständig geheilt, aber er ist vorerst stabil."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 22,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Gemini, um mehr zu erfahren.",
+        "AppId": "raw47",
+        "IterationAppId": "other27",
+        "Quantity": 1200,
+        "PortalAddress": "4072FAE1B962",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Du untersuchst die Störung, mein Freund? Ich hoffe, du nimmst Gefährten mit."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Gefährten fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Denk bitte nicht, dass ich deine Fähigkeiten anzweifle! Das meine ich nicht, absolut nicht. Es ist nur so, dass das ziemlich gefährlich werden kann. Nada klang so besorgt.",
+                  "Ich glaube, du musst ein Portal finden, um dorthin zu gelangen. Ich weiß nicht viel über diese uralte Technologie, aber sie ist irgendwie mit den Wissenssteinen verbunden. Wenn du die Steine findest, solltest du die Koordinaten finden können.",
+                  "Ich hoffe, ich konnte ein wenig helfen. Das würde mich freuen. Wir sitzen doch alle im selben Boot, oder?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich glaube, du musst ein Portal finden, um dorthin zu gelangen. Ich weiß nicht viel über diese uralte Technologie, aber sie ist irgendwie mit den Wissenssteinen verbunden. Wenn du die Steine findest, solltest du die Koordinaten finden können.",
+                  "Ich hoffe, ich konnte ein wenig helfen. Das würde mich freuen. Wir sitzen doch alle im selben Boot, oder?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Eine unnatürliche Energie knistert in der Luft um diese Struktur herum und beschießt mich mit Wellen von Störrauschen. An meinem Anzug blinken eine Reihe von Warnungen und Fehlermeldungen.",
+            "In diesem Lärm kann ich ein Muster heraushören, eindringlich und fordernd. Die Realität dieser Struktur wurde durchbrochen und der daraus resultierende Riss spuckt Störungen und Instabilität aus. Er kann vielleicht stabilisiert werden, aber nur mit einem Materialopfer."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Als ich die Materialien nah an die Quelle des Lärms halte, lösen sie sich in meinen Händen in nichts auf und werden von einer Störung umhüllt.",
+                  "Die Warnungen von meinem Anzug beruhigen sich etwas. Dieser Ort stellt keine direkte Gefahr mehr dar."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 23,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Merkur, um mehr zu erfahren.",
+        "AppId": "cook22",
+        "IterationAppId": "other28",
+        "Quantity": 60,
+        "PortalAddress": "105508F0E6AE",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Das wird ein Test deiner Stärke, Portal-Kenner."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Stärke fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Der Bruch, den Nadas Apparat angezeigt hat, ist ernst. Du kannst vielleicht seine Wirkung mildern, aber ich glaube kaum, dass er vollständig rückgängig gemacht werden kann.",
+                  "Wie dem auch sei, die wahre Prüfung liegt darin, ihn zu erreichen. Du musst über ein Portal in die gestörte Region reisen.",
+                  "Ich schlage vor, dass du deine Reise mit der Suche nach Wissenssteinen beginnst. Wusstest du, dass sie ein gemeinsames Erbe mit den uralten Pforten teilen? Wenn du dich ihnen mit klarem Verstand und ruhiger Hand näherst, offenbaren sie dir vielleicht die Koordinaten, die du benötigst."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Du musst über ein Portal in die gestörte Region reisen.",
+                  "Ich schlage vor, dass du deine Reise mit der Suche nach Wissenssteinen beginnst. Wusstest du, dass sie ein gemeinsames Erbe mit den uralten Pforten teilen? Wenn du dich ihnen mit klarem Verstand und ruhiger Hand näherst, offenbaren sie dir vielleicht die Koordinaten, die du benötigst."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Ich erkenne ein hohes Weinen aus dem Inneren dieser Struktur. Als ich näherkomme, wird es zu einer sprudelnden und zischenden Störung verzerrt, die durch die Luft und in Zickzacklinien über die Oberfläche meines Exo-Anzugs schießt.",
+            "Wegen des Knisterns kaum wahrnehmbar, wird eine wilde Nachricht abgespielt, immer und immer wieder. In dieser Struktur ist ein Riss – der Planet hier trägt tiefe Narben. Er benötigt ein bestimmtes Material, um zu heilen ..."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich halte die Materialien dorthin, wo die Störung am lautesten ist. In einem Schwall von Energie verschwinden sie. Die Störung hier beginnt sich zu reparieren."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 24,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Tethys, um mehr zu erfahren.",
+        "AppId": "cur23",
+        "IterationAppId": "other33",
+        "Quantity": 25,
+        "PortalAddress": "31850693BEC4",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah. Du hast dich also freiwillig gemeldet, um diese „Störung“ zu untersuchen, in die sich Nada so reinsteigert."
+          ],
+          "Options": [
+            {
+              "Name": "Nach der „Störung“ fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hör mal, ich weiß überhaupt nichts über Störungen oder Realitäten und all das. Doch ich will dir wirklich helfen. Im Ernst.",
+                  "Jemand, den ich 0.4 mal kannte, meldet sich nicht mehr – genau in dem Bereich, in dem Nada dieses seltsame Signal empfangen hat. Das passt so gar nicht zu der Person. Sie ist nicht der Typ dafür.",
+                  "Ich erwarte nicht wirklich, sie je wiederzusehen. Doch wenn du das – was immer es ist – aufhalten kannst, wenn du verhindern kannst, dass das jemand anderem passiert, ist das gut, weißt du?",
+                  "Mit traditionellen Mitteln ist es fast unmöglich, diesen Ort zu erreichen. Du wirst über ein Portal reisen müssen.",
+                  "Vor dem Verschwinden erzählte mir die Person etwas über Wissenssteine. Ich glaube – na ja, ich bin mir ziemlich sicher – dass du, wenn du ein paar von denen findest und mitnimmst, die Koordinaten erhalten wirst, die du brauchst. Viel Glück."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mit traditionellen Mitteln ist es fast unmöglich, diesen Ort zu erreichen. Du wirst über ein Portal reisen müssen. Ich ...0.4 habe Informationen über Wissenssteine erhalten – du weißt schon, diese kleinen Steinsäulen, die immer auf einen einreden?",
+                  "Tja, wie es aussieht, verbergen die noch ein paar Geheimnisse mehr.",
+                  "Ich glaube – na ja, ich bin mir ziemlich sicher – dass du, wenn du ein paar von diesen Wissenssteinen findest und mitnimmst, die Koordinaten erhalten wirst, die du brauchst. Viel Glück."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Nicht zu diesem Ort des Todes passend, knistert und knallt eine lebhafte Störung unterhalb des Grabs. Mein Exo-Anzug erzittert, als die Störung durch ihn schießt, aber die Energie scheint mir keinen Schaden zuzufügen.",
+            "Ich nehme mitten in den Stößen der Störung ein Muster wahr. Satzähnlich strukturiert, stellen sie eine Forderung. Die Realität hier wurde durchbrochen und ist sprunghaft – nur bestimmte Materialien können sie besänftigen."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die Störung reagiert heftig auf die Gegenwart der Objekte und flackert auf mich zu. Sie schleckt die Materialien direkt aus meinen Händen und verschlingt sie.",
+                  "Stille. Die Störung scheint stabilisiert zu sein."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 25,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Hesperos, um mehr zu erfahren.",
+        "AppId": "cur25",
+        "IterationAppId": "other36",
+        "Quantity": 16,
+        "PortalAddress": "30DEFC09D6EE",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Wie ich höre, nehmt ihr euch einer Untersuchung an, Gleichgesinnter. Nada darf sich glücklich schätzen, dass du ihm hilfst."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Nada fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hier ist eine starke Macht im Spiel. Nada fürchtet sich vor solchen Dingen. Er ist ein wirklich brillanter Korvax, einzigartig in seiner Art – doch er ist trotzdem noch ein Korvax. Es wäre unangemessen, von ihm zu erwarten, dass er unsere Perspektive teilt, Gleichgesinnter.",
+                  "Ich habe von diesem Gespräch geträumt – und davon, was du als Nächstes tun wirst. Nicht gerade empirische Forschung, das ist wahr, aber ich hatte solche Träume schon einmal. Ich vertraue der Vision, die sie mir zeigen. Im Gegenzug bitte ich dich, mir zu vertrauen.",
+                  "Du wirst ein Portal betreten, um zu dem gebeutelten Planeten zu gelangen. Das Ziel ist vorgegeben: Du wirst seine Adresse im Universum von Wissenssteinen erhalten. Sie werden auf die Berührung von einem Reisenden reagieren.",
+                  "Bis wir uns wiedersehen, Gleichgesinnter."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich habe von diesem Gespräch geträumt, Gleichgesinnter – und davon, was du als Nächstes tun wirst. Nicht gerade empirische Forschung, das ist wahr, aber ich hatte solche Träume schon einmal. Ich vertraue der Vision, die sie mir zeigen. Im Gegenzug bitte ich dich, mir zu vertrauen.",
+                  "Du wirst ein Portal betreten, um zu dem gebeutelten Planeten zu gelangen. Das Ziel ist vorgegeben: Du wirst seine Adresse im Universum von Wissenssteinen erhalten. Sie werden auf die Berührung von einem Reisenden reagieren.",
+                  "Bis wir uns wiedersehen, Gleichgesinnter."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Die Struktur zischt und knistert. Die Art statische Energie muss die Störung sein, die Polo und Nada entdeckt haben. Wortlos überträgt sie ihre Forderungen direkt in meinen Verstand.",
+            "Tief in der Erde stöhnt etwas, als ob das Land selbst hungere. Aber warum gerade diese Materialien, die es in dieser Welt bereits zuhauf gibt?"
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich drücke die Materialien zur Quelle der statischen Störung und sehe zu, wie sie zu nichts zerschmelzen. Der beschädigte Planet ernährt sich von seinen eigenen Ressourcen. Er beruhigt sich. Der Bruch in der Realität ist repariert."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 26,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Ariadne, um mehr zu erfahren.",
+        "AppId": "cur21",
+        "IterationAppId": "other26",
+        "Quantity": 16,
+        "PortalAddress": "30E4069A72AD",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Wie lange tanzen wir schon zu diesem Rhythmus? Die Regelmäßigkeit dieser Störungen hat etwas Beruhigendes."
+          ],
+          "Options": [
+            {
+              "Name": "Nach der Beruhigung fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Das Timing dieser Anomalien scheint präzise, gleichartiger Reisender. Ein natürliches Muster. Vielleicht sind für uns nur die Spitzen der Wellenform greifbar. Wie dem auch sei, ein Rhythmus ist vorhanden. Jedes Mal, wenn das Universum ruft, antworten wir.",
+                  "Die Antwort beginnt mit der Suche nach Wissen. Hör auf die uralten Steine, sie weisen den Weg zur gestörten Region."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Vielleicht erinnerst du dich auch an diesen Rhythmus? Hör auf die uralten Wissenssteine, sie weisen den Weg zur gestörten Region."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Eine Spur der Störung springt aus der gestörten Struktur auf meinen Arm. Die Sensoren meines Anzugs registrieren ein fast kribbelndes Gefühl. Unwillkürlich schaudere ich.",
+            "Eine stille Nachricht kommt mir in den Sinn: Diese Struktur hat lokale Ressourcen konsumiert und benötigt jetzt manuelle Unterstützung. Ein Opfer in der Form von Materialien ist erforderlich, um das Gleichgewicht wiederherzustellen."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die Materialien werden von der Störung eingehüllt. Obwohl ich nicht sehen kann, was passiert ist, habe ich das Gefühl, etwas wieder ins Gleichgewicht gebracht zu haben. Wo ist die andere Hälfte dieser Waage?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 27,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Gemini, um mehr zu erfahren.",
+        "AppId": "cur22",
+        "IterationAppId": "other27",
+        "Quantity": 24,
+        "PortalAddress": "1011F75843D7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Hallo! Ah, es bereitet mir eine solche Freude, dich zu begrüßen. Abgesehen von der Gefahr dieser Störungen, bin ich froh, an deiner Seite Teil dieser Anstrengungen zu sein."
+          ],
+          "Options": [
+            {
+              "Name": "Nach den Anstrengungen fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Wir Reisenden befassen uns schon seit einigen Monaten mit diesen Störungen und nicht einmal Hesperos kennt ihren Ursprung. Und trotzdem machen wir weiter. Wir kommen zu Tausenden zusammen, um das Universum zu stabilisieren.",
+                  "Ich glaube wirklich daran, dass diese Momente der Zusammenarbeit, unsere Bemühungen, unsere gemeinsame Zeit ein wenig verlängern. Ist das nicht etwas Freudiges?",
+                  "Ein Portal kann dich in die betroffene Region bringen. Du wirst das Wissen von drei Steinen brauchen, um die Glyphensequenz zu erlernen. Die Aufgabe lässt sich mit Gefährten viel schneller lösen! Ich hoffe, dass du heute ein paar neue Freunde findest."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ein Portal kann dich in die betroffene Region bringen. Du wirst das Wissen von drei Steinen brauchen, um die Glyphensequenz zu erlernen. Die Aufgabe lässt sich mit Gefährten viel schneller lösen! Ich hoffe, dass du heute ein paar neue Freunde findest."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Die Reste der Hülle schimmern mit einer seltsamen statischen Energie. Ich nehme einen widerlichen Geruch wahr. Er kommt in Wellen und erreicht seinen Höhepunkt mit jedem Ausbruch der Störung. Der Geruch ähnelt dem von brennenden Proteinen: versengte Haare oder Felle oder Fingernägel.",
+            "Den brennenden Gestank ignorierend, höre ich den Forderungen der Störung zu: Ein bestimmtes Material auf diesem Planeten kann die Störung stabilisieren. Ich sollte diese Ressource beschaffen, sonst werde auch ich verschlungen."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Als die Materialien sich auflösen, nimmt auch langsam der Gestank von gekochten Proteinen ab, obwohl er nicht völlig verschwindet. Auch die Störung klingt ab und ich sehe ein, dass ich hier alles getan habe, was ich konnte."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 28,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Merkur, um mehr zu erfahren.",
+        "AppId": "cook20",
+        "IterationAppId": "other28",
+        "Quantity": 60,
+        "PortalAddress": "2153FB6D1154",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Merkur sieht mich ruhig an. Es liegt eine Intensität in diesen blassen Augen, die ich nicht wirklich benennen kann. Ist es Hunger? Groll? Neid?"
+          ],
+          "Options": [
+            {
+              "Name": "Fragen, ob alles in Ordnung ist",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die rohen Wangen des Reisenden werden rot und ich frage mich, wie es sich anfühlt, keine Haut zu haben. Die Lebensform kommt wieder zu Sinnen.",
+                  "Ich entschuldige mich, Portal-Kenner. Du bist zweifellos zu mir gekommen, um einen Rat zu erhalten.",
+                  "Nur ein Portal kann dich mit deinem Ziel verbinden. Die Störungen in letzter Zeit haben viel Verkehr durch dieses uralte Netzwerk getrieben. Suche die Wissenssteine und füge das Wissen, das sie preisgeben, in eine Netzwerk-Schnittstelle ein."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Natürlich.",
+                  "Nur ein Portal kann dich mit deinem Ziel verbinden. Die Störungen in letzter Zeit haben viel Verkehr durch dieses uralte Netzwerk getrieben. Suche die Wissenssteine und füge das Wissen, das sie preisgeben, in eine Netzwerk-Schnittstelle ein."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Obwohl dies das Aussehen einer gewöhnlichen Struktur hat, meldet mein Anzug einen steilen Abhang. Für einen Augenblick habe ich das unglaubliche Verlangen mich mit meinem Körper in die beschädigte Struktur zu werfen ... doch der Augenblick vergeht.",
+            "Eine außerweltliche Energie, die man nicht angemessen beschreiben kann, bewegt sich entlang der Oberfläche der Struktur, und es wirkt, als würden ihre Partikel tanzen. Sie tanzen in meinem Kopf und formen sich zu einer Forderung: Bring ein Materialopfer dar. Stabilisiere diese Störung."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich lasse die Materialien am Fuß der Struktur fallen. Erstaunlicherweise schmelzen sie direkt in den Boden ein.",
+                  "Die Störung, die bis vor Kurzem noch lautstark in meinem Kopf war, ist plötzlich still. Ich habe meinen Teil erledigt."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 29,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Tethys, um mehr zu erfahren.",
+        "AppId": "build164",
+        "IterationAppId": "other33",
+        "Quantity": 6,
+        "PortalAddress": "405507FBC6BF",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Tethys seufzt schlecht gelaunt. Die Lebensform sagt nichts, um dieses Gespräch schnell zu beenden."
+          ],
+          "Options": [
+            {
+              "Name": "Nach Seufzer fragen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ich bin nicht wirklich in Stimmung, darüber zu reden. Ich bin nur ... wütend. Es ist jetzt schon fast sechs Monate her. Wie kann man nur so dumm sein? Wie kann man es WAGEN, so dumm zu sein?"
+                ],
+                "Options": [
+                  {
+                    "Name": "Weiter nachhaken",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Ich0.1 ...0.1 ...0.2 Gut. Ich werde reden, wenn du das wirklich willst.",
+                        "Die Instabilität dieses Universums, all diese Störungen – das lief nicht ohne Opfer ab, weißt du?",
+                        "Ich habe immer noch nichts von einem Kontakt gehört, der vor einigen Monaten verschwunden ist. Ich weiß, dass ich nichts hören werde. Ich weiß, dass es ihn nicht mehr gibt. Es macht mich wütend.",
+                        "Ich dachte, ich hätte mir meine Freunde besser ausgesucht. Ich glaubte, ich könne mich auf sie verlassen.",
+                        "Die Lebensform holt tief Luft.",
+                        "Tut mir leid. Es ist gut, dass du hilfst.",
+                        "Verlasse die Anomalie und besorg dir ein paar Wissenssteine. Sie werden dir eine Glyphensequenz zeigen, die du in ein Portal eingeben musst. Gehe durch dieses Portal und du wirst dich in der Region wiederfinden, die deine Hilfe braucht."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Thema beenden",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Vielen Dank. Dass du nicht weiter nachfragst. Und dass du hilfst. Tut mir leid.",
+                        "Verlasse die Anomalie und besorg dir ein paar Wissenssteine. Sie werden dir eine Glyphensequenz zeigen, die du in ein Portal eingeben musst. Gehe durch dieses Portal und du wirst dich in der Region wiederfinden, die deine Hilfe braucht."
+                      ],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Verlasse die Anomalie und besorg dir ein paar Wissenssteine. Sie werden dir eine Glyphensequenz zeigen, die du in ein Portal eingeben musst. Gehe durch dieses Portal und du wirst dich in der Region wiederfinden, die deine Hilfe braucht."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Mir ist die Version dieser Struktur, die sich vor mir befindet, bekannt – und gleichzeitig muss ich irgendwie an eine andere Version denken. Der Geist der Vergangenheit überlappt die Struktur der Gegenwart, sodass meine Sicht unscharf wird und verschwimmt.",
+            "Ein lautes Knacken der Störung verlangt meine ungeteilte Aufmerksamkeit. Diese Struktur ist instabil. Ein Opfer aus lokalen Materialien, die auf diesem Planeten im Überschuss vorhanden sind, wird helfen, den Bruch in der Realität zu reparieren."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Die Störung scheint gebändigt, weniger rasend, während sie die Materialien konsumiert. Ich habe das Gefühl, entlassen zu werden, inzwischen als nutzlos erachtet, obwohl die Störung nicht vollkommen aufgelöst wurde. Es wird mehr Reisende brauchen, um sie zu befriedigen."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 30,
+        "NpcMessage": "Die gestörte Region muss per Portal erreicht werden.\nSprich mit Iteration: Hesperos, um mehr zu erfahren.",
+        "AppId": "cur17",
+        "IterationAppId": "other36",
+        "Quantity": 12,
+        "PortalAddress": "4169FC678D73",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Sei gegrüßt! Du hilfst mit der Störung? Viele Gleichgesinnte tun das heute. Ich hatte schon viele solcher Gespräche. Ich merke, dass ich ihrer niemals überdrüssig werde.",
+            "Bevor du gehst, erzählst du mir ein klein wenig über deine letzte Begegnung mit einem anderen Gleichgesinnten? Eine Geschichte, damit mir dieses Gespräch in Erinnerung bleibt?"
+          ],
+          "Options": [
+            {
+              "Name": "Erbauliche Geschichte erzählen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperos‘ Blick wird sanft.",
+                  "Die Großzügigkeit von Reisenden kann unvorhersehbar sein, doch Geschichten wie diese erinnern mich daran, dass sie wiederkehrend und ewig ist. Vielen Dank, Reisender-Gleichgesinnter.",
+                  "Du wirst die gestörte Region über eine uralte Portal-Pforte erreichen, allerdings befindet sich der Glyphencode bei den schlafenden Wissenssteinen. Eine Berührung mit deiner Hand wird sie aufwecken."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Traurige Geschichte erzählen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hesperos runzelt die Stirn.",
+                  "Solche Vorfälle gibt es. Es tut mir leid, das zu hören. Ich wünsche dir und den anderen Reisenden heute mehr Glück.",
+                  "Du wirst die gestörte Region über eine uralte Portal-Pforte erreichen, allerdings befindet sich der Glyphencode bei den schlafenden Wissenssteinen. Eine Berührung mit deiner Hand wird sie aufwecken."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Um Hilfe bitten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Natürlich. Ich sollte dich nicht aufhalten. Du wirst die gestörte Region über eine uralte Portal-Pforte erreichen, allerdings befindet sich der Glyphencode bei den schlafenden Wissenssteinen. Eine Berührung mit deiner Hand wird sie aufwecken."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Die Abnormalität dieses Absturzes ist aus der Nähe ersichtlich. Der Augenblick des Aufpralls scheint in der Zeit eingefroren zu sein und zittert wie eine angehaltene Analoganzeige. Störungsblasen schwellen an und zerbersten um den Ort herum.",
+            "Hilfe ... Vorgang ... abschließen. Daten speichern ... Speicher instand halten ..."
+          ],
+          "Options": [
+            {
+              "Name": "Materialien anbieten",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Etwas ändert sich in der Atmosphäre, als ich die angeforderten Ressourcen darbiete. Der Absturz wirkt nicht länger abnormal – nur eine traurige Erinnerung an die letzten Momente eines bedauerlichen Piloten. Ich glaube, ich habe alles beigetragen, was ich kann."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Wrack durchsuchen",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Um ein Stück kaputten Schiffsrumpf gewickelt, finde ich einen Fetzen Nanofasermaterial, das dem an meinem Exo-Anzug ähnelt.",
+                  "Im Gewebe steckt ein Sauerstoff-Upgrade, das noch intakt ist. Ich nehme es mit. Vielleicht wird es mir bei meiner Unterwassersuche von Nutzen sein.",
+                  "Hilfe ... Vorgang ... abschließen. Daten speichern ... Speicher instand halten ..."
+                ],
+                "Options": [
+                  {
+                    "Name": "Materialien anbieten",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "Etwas ändert sich in der Atmosphäre, als ich die angeforderten Ressourcen darbiete. Der Absturz wirkt nicht länger abnormal – nur eine traurige Erinnerung an die letzten Momente eines bedauerlichen Piloten. Ich glaube, ich habe alles beigetragen, was ich kann."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Weggehen",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Weggehen",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

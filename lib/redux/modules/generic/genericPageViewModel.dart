@@ -1,0 +1,59 @@
+import 'package:redux/redux.dart';
+
+import '../../../contracts/cart/cartItem.dart';
+import '../../../contracts/favourite/favouriteItem.dart';
+import '../../../contracts/inventory/inventory.dart';
+import '../../../contracts/genericPageItem.dart';
+import '../../../contracts/redux/appState.dart';
+import '../cart/actions.dart';
+import '../cart/selector.dart';
+import '../favourite/actions.dart';
+import '../favourite/selector.dart';
+import '../inventory/selector.dart';
+import '../setting/selector.dart';
+
+class GenericPageViewModel {
+  final bool genericTileIsCompact;
+  final bool displayGenericItemColour;
+  final List<CartItem> cartItems;
+  final List<Inventory> containers;
+  final List<FavouriteItem> favourites;
+  final bool isPatron;
+  final int platformIndex;
+
+  Function(String itemId) removeFavourite;
+  Function(FavouriteItem newItem) addFavourite;
+  Function(GenericPageItem item, int quantity) addToCart;
+
+  GenericPageViewModel({
+    this.genericTileIsCompact,
+    this.displayGenericItemColour,
+    this.cartItems,
+    this.containers,
+    this.favourites,
+    this.isPatron,
+    this.platformIndex,
+    //
+    this.addToCart,
+    this.addFavourite,
+    this.removeFavourite,
+  });
+
+  static GenericPageViewModel fromStore(Store<AppState> store) {
+    return GenericPageViewModel(
+      genericTileIsCompact: getGenericTileIsCompact(store.state),
+      displayGenericItemColour: getDisplayGenericItemColour(store.state),
+      cartItems: getCartItems(store.state),
+      containers: getContainers(store.state),
+      favourites: getFavourites(store.state),
+      isPatron: getIsPatron(store.state),
+      platformIndex: getLastPlatformIndex(store.state),
+      addFavourite: (FavouriteItem newItem) =>
+          store.dispatch(AddFavouriteAction(newItem)),
+      addToCart: (GenericPageItem item, int quantity) =>
+          store.dispatch(AddCraftingToCartAction(item, quantity)),
+      removeFavourite: (String itemId) =>
+          store.dispatch(RemoveFavouriteAction(itemId)),
+    );
+  }
+}

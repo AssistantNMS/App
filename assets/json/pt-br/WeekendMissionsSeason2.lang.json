@@ -1,0 +1,1216 @@
+[
+  {
+    "Id": "MP_PORTALQUEST",
+    "Stages": [
+      {
+        "Level": 31,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Ariadne para saber mais",
+        "AppId": "cur25",
+        "IterationAppId": "other26",
+        "Quantity": 16,
+        "PortalAddress": "010EF9F3A6C9",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ainda dá para ter esperança, semelhante viajante, mesmo diante de uma calamidade. Eu tenho um plano..."
+          ],
+          "Options": [
+            {
+              "Name": "Pergunte sobre o plano dela",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Trace a rota adiante com pedras do conhecimento, siga-as em direção a um portal e elimine a praga. E o meu caminho?",
+                  "Não nascemos para fugir e nos esconder, semelhante viajante. Chegou a hora.",
+                  "Pretendo enfrentar a causa de todas essas anomalias e perturbações por conta própria, custe o que custar."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "As pedras do conhecimento aguardam você. Elas mostrarão o caminho através do portal..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "A estrutura corrompida emite uma transmissão. Entre os gritos dos cultistas geks, uma palavra fica repetidamente clara.",
+            "Ela exige um sacrifício. Exige materiais.",
+            "'Abismo'.",
+            "O culto foi incapaz de alimentar seu mestre. Meus serviços são necessários. Devo trazer recursos até aqui..."
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "A transmissão se alterou com o colapso da anomalia. As vozes geks passaram a falar sobre gratidão e amizade.",
+                  "Elas me dizem que este mundo poderia ser um lar para mim. Que eu deveria ficar. Que a água é perfeitamente potável.",
+                  "Elas me dizem que estão tão sozinhas."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 32,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Gêmeos para saber mais",
+        "AppId": "cook42",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "114805AA0B9B",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ariadne desapareceu!",
+            "Eu tentei pará-la... Tentei fazê-la pensar racionalmente! Ah, espero que esteja segura..."
+          ],
+          "Options": [
+            {
+              "Name": "Tranquilize-o",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Gêmeos gesticula, tremendo de pânico.",
+                  "Como você pode ter tanta calma? Ariadne está buscando a origem do abismo!",
+                  "Se eu fosse mais inconsequente, se eu soubesse aonde ela foi, iria atrás dela e me certificaria de que está bem.",
+                  "Não posso pedir que você atravesse o portal, que busque pedras do conhecimento... Teria que ser uma escolha sua, só sua.",
+                  "Ariadne desapareceu!",
+                  "Eu tentei pará-la... Tentei fazê-la pensar racionalmente! Ah, espero que esteja segura..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pergunte o que você pode fazer",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Gêmeos gesticula. Está aliviado e grato por sua ajuda.",
+                  "Ariadne está buscando a origem do abismo! Você deve seguir os passos dela!",
+                  "Busque pedras do conhecimento, atravesse o portal e encontre nossa amiga! Depressa! Não há tempo a perder!"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ariadne corre perigo! Precisamos achar as pedras do conhecimento para a próxima anomalia! Ah!"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "A anomalia canta com as vozes dos viajantes que já existiram no tempo e espaço.",
+            "Ouço os nomes deles em meio à estática... Astéria, o herói viajante... Narciso, aliado dos Últimos Filhos... São inúmeros.",
+            "A anomalia exige um sacrifício. Ela não fala com malícia. Está sentindo dor.",
+            "Inúmeras vozes suplicam minha ajuda. Devo fornecer recursos. Devo curar o mundo.",
+            "Musgo cobre a estrutura. As folhas minúsculas se agitam animadas quando aproximo minha mão. É uma oferta? Algo para me ajudar?"
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "A fenda fecha a si mesma. Eu rastreio os dados de navegação de todos os que passaram por este lugar.",
+                  "Nomes preenchem minha mente. Lázaro. Ártemis. Hildebrando.",
+                  "Eu transfiro os dados de navegação para o Nexus. Decodificá-los vai levar um tempo..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Colete composto adocicado",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "O composto cai facilmente em minhas mãos. Ele tem um cheiro doce, quase apetitoso.",
+                  "Inúmeras vozes suplicam minha ajuda. Devo fornecer recursos. Devo curar o mundo."
+                ],
+                "Options": [
+                  {
+                    "Name": "Ofereça materiais",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "A fenda fecha a si mesma. Eu rastreio os dados de navegação de todos os que passaram por este lugar.",
+                        "Nomes preenchem minha mente. Lázaro. Ártemis. Hildebrando.",
+                        "Eu transfiro os dados de navegação para o Nexus. Decodificá-los vai levar um tempo..."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Parta",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 33,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Mercúrio para saber mais",
+        "AppId": "cur24",
+        "IterationAppId": "other28",
+        "Quantity": 16,
+        "PortalAddress": "11CEFF9BECCC",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Sempre me pergunto sobre a natureza da nossa existência, experiente em portais. Sobre o que o desaparecimento recente de Ariadne significa para nós.",
+            "Há quem acredite que os viajantes possuem a mesma alma, dividida em inúmeras iterações e universos.",
+            "Como seríamos se tivéssemos levado vidas diferentes...?"
+          ],
+          "Options": [
+            {
+              "Name": "Pergunte sobre a missão",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mercúrio suspira, cansado, mas acena com a cabeça mesmo assim.",
+                  "É claro. O grande trabalho deve vir primeiro.",
+                  "Nós localizamos a nave de Ariadne. Na verdade, localizamos centenas delas, duplicadas, metamorfoseadas e espalhadas pelo universo conhecido.",
+                  "A rede de portais é uma coisa nociva e perigosa. Você deve ter cuidado ao seguir esses passos.",
+                  "Entre em comunhão com as pedras do conhecimento. Atravesse o portão. Descubra a verdade."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Você ainda não entendeu? Rastreie pedras do conhecimento e encontre a nave de Ariadne do outro lado do portal.",
+                  "Mas faça o que fizer... não beba a água."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "A nave de Ariadne está diante de mim. Meu exotraje grita. Está mandando eu me afastar, tentando me salvar de uma infecção.",
+            "O abismo está diante de nós dois. Ele exige um tributo. Ele exige mais."
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "A corrupção deixa esta nave, e junto com ela mil duplicatas desaparecem entre as estrelas. Eu leio o log de dados.",
+                  "Antes de sua divisão de realidade, esta nave entrou em contato com uma nave cargueira grande e estranha na escuridão entre sóis.",
+                  "Seu único ocupante conseguiu escapar antes do acidente. De algum modo, Ariadne ainda está por aí em algum lugar.",
+                  "Minha amiga ainda vive."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 34,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Tétis para saber mais",
+        "AppId": "raw31",
+        "IterationAppId": "other33",
+        "Quantity": 250,
+        "PortalAddress": "11F4F91DA978",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Eu já vivi com uma modificação de aparência vy'keen por um ano inteiro, sabia? Fiz muitas coisas das quais me arrependo.",
+            "Nem sei por que estou falando sobre isso. Não temos amizade. Não conheço você."
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça sua amizade",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Faça algo por mim e talvez eu pense sobre isso, tudo bem? Tenho uma missão para você. Uma fábrica foi atacada... uma operação clandestina pela qual me interesso um pouco.",
+                  "Ela viaja de mundo em mundo para não ser detectada pelos sentinelas. Preciso que você encontre pedras do conhecimento e descubra as coordenadas do portal atual dela.",
+                  "Não me decepcione."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Concorde e fique em silêncio",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Tétis parece desapontado. Ele esperava que você lutasse pela amizade dele.",
+                  "Eu... Eu tenho uma missão para você. Uma fábrica foi atacada... uma operação clandestina pela qual me interesso um pouco.",
+                  "Ela viaja de mundo em mundo para não ser detectada pelos sentinelas. Preciso que você encontre pedras do conhecimento e descubra as coordenadas do portal atual dela.",
+                  "Só preciso de uma ajuda."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Rastreie pedras do conhecimento para encontrar a perturbação. Você precisa procurar uma fábrica, do outro lado. Qualquer portal deve lhe mostrar o caminho."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Várias espécies já trabalharam neste lugar, acumulando e manipulando dados genéticos para formar modificações de aparência.",
+            "Os registros da fábrica foram corrompidos pela estática, mas posso acessar os designs finais. Os trabalhadores tinham começado a criar modificações feitas de luz pura, com uma esfera no lugar da cabeça.",
+            "Todos estão mortos agora.",
+            "A estrutura exige dados novos. Ela exige um sacrifício."
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "À medida que a corrupção desaparece, vasculho os registros da fábrica uma última vez, tentando encontrar evidências de seus dias finais.",
+                  "Em algum momento, os trabalhadores descobriram que as imagens holográficas que criaram haviam substituído os crânios reais deles.",
+                  "Com essas esferas de luz, vieram pesadelos. As imagens parecem familiares de algum modo. Como se eu tivesse visto esse rosto antes."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 35,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Héspero para saber mais",
+        "AppId": "cook27",
+        "IterationAppId": "other36",
+        "Quantity": 40,
+        "PortalAddress": "10E508A1ACC0",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Héspero parece preocupado. Quando me aproximo, ele esconde um datapad.None",
+            "Ariadne mandou notícias... Ela está voltando para nós, semelhante. Ela está segura."
+          ],
+          "Options": [
+            {
+              "Name": "Pergunte o que há de errado",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Diga. Você já ouviu a história do herói viajante Astéria? Um dos primeiros entre nós a viajar entre os mundos.",
+                  "O tempo flui de um modo estranho para o nosso povo. Astéria foi preservado em um arco mental após sua morte, transmitindo sabedoria de seu túmulo.",
+                  "É uma peregrinação que todos nós fizemos. Está na hora de buscar sua profecia, semelhante.",
+                  "Encontre o mundo dele. Siga as pedras do conhecimento e leve os seus glifos através do portal..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Procure o túmulo de Astéria, o herói viajante. Siga as pedras do conhecimento e o caminho para o qual elas levam."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "O túmulo de Astéria sibila com uma corrupção familiar. Por todos os lados, detecto sinais vitais de viajantes que foram tirados da realidade.",
+            "Uma voz cansada fala. Mal é possível ouvi-la em meio à estática.",
+            "Astéria me diz que certa vez liderou os vy'keens em uma batalha contra emissários de vidro. Que uma vez condenou uma frota de sentinelas.",
+            "Ele me diz que alguém vai me trair. Ele me diz que também vou trair alguém.",
+            "A corrupção chegou a este lugar. Ela quer barganhar. Ela quer obter toda matéria e vida que puder.",
+            "Túmulo de Astéria"
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "O arco mental está purificado. A alma dentro dele agradece aos viajantes pela ajuda.",
+                  "Eu peço uma profecia a Astéria. Pergunto sobre a natureza de meu inimigo.",
+                  "Ele me diz que o abismo não é o que parece.",
+                  "A voz fica em silêncio. Eu parto. O que ouvi me preocupa."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 36,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Ariadne para saber mais",
+        "AppId": "cook25",
+        "IterationAppId": "other26",
+        "Quantity": 40,
+        "PortalAddress": "2117FBF686E8",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Estou em casa. Finalmente estou em casa. Semelhante viajante, estou tão feliz de ver seu rosto."
+          ],
+          "Options": [
+            {
+              "Name": "Diga que você sente o mesmo",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Fui procurar o abismo. Quase enfrentei nosso adversário e aí...",
+                  "Eu... Eu não lembro o que aconteceu comigo naquele vácuo, semelhante viajante.",
+                  "Só sei que despertei e fui caçada. Atormentada.",
+                  "Havia uma nave grande e terrível. A corrupção ainda flutua...",
+                  "Encontre as pedras do conhecimento. Atravesse o portal. Vou recuperar minhas forças para o seu retorno."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Pergunte onde ela estava",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Fui procurar o abismo. Quase enfrentei nosso adversário e aí...",
+                  "Eu... Eu não lembro o que aconteceu comigo naquele vácuo, semelhante viajante.",
+                  "Só sei que despertei e fui caçada. Atormentada.",
+                  "Havia uma nave grande e terrível. A corrupção ainda flutua...",
+                  "Encontre as pedras do conhecimento. Atravesse o portal. Vou recuperar minhas forças para o seu retorno."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Siga as pedras do conhecimento através do portal. Lute contra nosso inimigo..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "A nave cargueira já foi vy'keen. Era a nave de um inquisidor que procurava hereges pelas galáxias.",
+            "Ele só encontrou morte. A corrupção está aqui agora. Está em toda parte. Ela anseia por um tributo..."
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "A corrupção se foi. Restaram apenas os logs tristes de seres que estavam sofrendo e declarando sua inocência.",
+                  "O pai de um sacerdote mecânico dizia que ele não sabia onde seu filho estava, que ainda seguia o caminho de Hirk.",
+                  "Os dados revelam que todos os prisioneiros foram executados antes de um motim. Os tripulantes restantes partiram para a escuridão.",
+                  "Não resta mais nada."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 37,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Gêmeos para saber mais",
+        "AppId": "cur32",
+        "IterationAppId": "other27",
+        "Quantity": 16,
+        "PortalAddress": "21DE0936B5C7",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ariadne voltou! Nossa amiga está a salvo! Ah, alegrem-se!"
+          ],
+          "Options": [
+            {
+              "Name": "Alegre-se",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Queria que nossos irmãos tivessem o seu espírito!",
+                  "FTH_EXOTIC2_PQ_BLD_RES_D_19"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça uma missão",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Tem razão. Nossa tarefa aqui é mais importante do que nunca.",
+                  "FTH_EXOTIC2_PQ_BLD_RES_D_19"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Por favor, rastreie as pedras do conhecimento até o local da corrupção. Siga os portais. Encontre Héspero. Temo por ele..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Meus sensores detectam os vestígios de mil almas korvax espalhadas por todo este sistema.",
+            "Elas tentaram simular o abismo. Conseguiram apenas chamar a atenção dele.",
+            "Muito será necessário para eliminar esse vazio. Sem sustento, ele vai devorar um sistema atrás do outro..."
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "A fenda se fechou, e eu descobri a origem do experimento.",
+                  "Héspero estava colaborando com os korvax... tentando resolver nosso problema.",
+                  "O fracasso deles aqui devastou essa espécie. Não sei se meu amigo sobreviveu..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 38,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Mercúrio para saber mais",
+        "AppId": "cook29",
+        "IterationAppId": "other28",
+        "Quantity": 90,
+        "PortalAddress": "313AFB6EBFE2",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Uma calamidade aconteceu, experiente em portais. Mil almas korvax foram removidas da Convergência.",
+            "É o resultado da ambição de outro viajante indo além de sua capacidade. Héspero estava colaborando com os korvax para tentar simular o abismo. Mas isso só o atraiu.",
+            "Se Héspero voltar, você acha que ainda poderemos confiar nele? Ele tem muito a responder."
+          ],
+          "Options": [
+            {
+              "Name": "Declare sua confiança",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Espero que tenha razão, experiente em portais."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Balance a cabeça",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Isso me dói, experiente em portais. Embora eu tema que tenha razão.",
+                  "FTH_EXOTIC3_PQ_BLD_RES_D_20"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "As pedras do conhecimento vão iluminar seu caminho, experiente em portais. Vá. Faça o que eu não posso."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "A corrupção me dá boas-vindas. Ela alega que já nos encontramos várias vezes.",
+            "Ouço a estática dela em minha mente. Ela exige presentes. Alega já ter me dado muitos..."
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "A anomalia se interrompe. Penso nas dúvidas de Mercúrio... nos fracassos de Héspero...",
+                  "Meus amigos viajantes estão fazendo o possível. Temos que nos ajudar, eu sei.",
+                  "E com esse pensamento, outro desce pela minha espinha. Não é meu. É uma voz dentro de mim.",
+                  "Preciso ajudá-la."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 39,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Tétis para saber mais",
+        "AppId": "cur22",
+        "IterationAppId": "other33",
+        "Quantity": 24,
+        "PortalAddress": "0200FBA353D2",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Tétis parece inquieto. Seus olhos sem pálpebras se dirigem rápido ao posto vazio de Mercúrio.",
+            "Diga. Você sente solidão?"
+          ],
+          "Options": [
+            {
+              "Name": "Diga que todo mundo sente",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Mas não sou todo mundo, não é? Supostamente, sou melhor...",
+                  "Ele se mexe desconfortável.",
+                  "Talvez haja uma chance maior de sobrevivência se viajarmos sozinhos. Não sei por quanto tempo mais estaremos seguros aqui.",
+                  "As pedras do conhecimento chamam todos nós agora. Os portais precisam de você."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Diga que não",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Não. Hum. Você está mentindo.",
+                  "Ele se mexe desconfortável.",
+                  "Talvez haja uma chance maior de sobrevivência se viajarmos sozinhos. Não sei por quanto tempo mais estaremos seguros aqui.",
+                  "As pedras do conhecimento chamam todos nós agora. Os portais precisam de você."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Siga as pedras do conhecimento e atravesse o portal. Preciso me preparar também."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "A corrupção borbulha através da nave acidentada, mas de algum modo o log do capitão não foi afetado.",
+            "O piloto foi traído por alguém que considerava um aliado. O abismo só se apossa do que foi convidado a devorar. Ele deseja muito mais, até mesmo agora..."
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Com a corrupção eliminada, observo mais de perto os dados da nave caída. O piloto viajante acreditava que estava ouvindo vozes nos dias antes do acidente.",
+                  "Sussurros do exotraje dele voaram pelo vazio, tentando negociar a sobrevivência...",
+                  "Eu parto. Verifico o meu próprio exotraje em busca de sinais de adulteração ou mau funcionamento. Tudo parece normal."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 40,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Héspero para saber mais",
+        "AppId": "cur25",
+        "IterationAppId": "other36",
+        "Quantity": 16,
+        "PortalAddress": "20FDF7C5C5A3",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah, semelhante... não tema. Toda culpa foi removida de minha mente. Aglomerados de nanitos transformam neurônios com facilidade..."
+          ],
+          "Options": [
+            {
+              "Name": "Ouça",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Eu ajudei os korvax a criarem uma simulação do abismo. Sinto de verdade pela morte deles, semelhante. Mas não foi só isso que determinou o destino deles!",
+                  "Há um traidor entre nós... que atraiu o Abismo até nós!",
+                  "Você não vê? As pedras do conhecimento estão sendo adulteradas!",
+                  "Quem quer que esteja por trás dessa traição quer que passemos pelos portais. Quer que alimentemos as anomalias.",
+                  "Atravesse a falha mais uma vez, semelhante. Vou tentar nos libertar desse loop terrível..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Encontre as pedras do conhecimento e atravesse o portal. Vou observar..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "O túmulo estala com energias exóticas.",
+            "O viajante que antes descansava aqui desapareceu há muito tempo, coletado pelo arco mental de outro universo.",
+            "O túmulo agora é um lugar de anseio infinito. Sua existência exige um tributo de recursos."
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "O túmulo está purificado. Tento achar o nome daquele que morreu aqui, mas só encontro um valor nulo.",
+                  "Eu vou embora preocupado. Sinto que alguém está me observando..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 41,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Ariadne para saber mais",
+        "AppId": "cook27",
+        "IterationAppId": "other26",
+        "Quantity": 60,
+        "PortalAddress": "209B0170700E",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Ah, semelhante viajante. Você voltou.",
+            "A boca dele se transforma em algo que quase parece um sorriso."
+          ],
+          "Options": [
+            {
+              "Name": "Devolva o sorriso",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Alguns acreditam que os viajantes são uma entidade só, dividida em formas e corpos não revelados.",
+                  "Eu sou você e você é eu.",
+                  "É por isso que acredito em você, semelhante viajante. Se agirmos juntos, poderemos salvar tudo o que somos.",
+                  "As pedras do conhecimento são um presente do Atlas. Quem somos nós para recusar o chamado dos portais?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Siga as pedras do conhecimento, semelhante viajante, e o portal levará você até sua próxima tarefa."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Devotos do Atlas vieram a este mundo para rezar uma vez.",
+            "Uma anomalia distorce a nave acidentada deles. Ela tomou a vida dos tripulantes há muito tempo.",
+            "Agora a anomalia quer mais. Ela aguarda nosso convite para partir e quer recursos para matar sua sede imensa."
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Todos os traços anômalos foram removidos da nave acidentada.",
+                  "Seu log fala do Atlas que fez todas as coisas... até mesmo a perda. Até mesmo o ódio.",
+                  "Me pergunto se, nos momentos finais, eles confiaram na divindade deles. Se esperavam a salvação..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 42,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Gêmeos para saber mais",
+        "AppId": "raw47",
+        "IterationAppId": "other27",
+        "Quantity": 400,
+        "PortalAddress": "11DFFB6E3036",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Gêmeos está olhando para diagramas de exotrajes. Parece não notar minha aproximação..."
+          ],
+          "Options": [
+            {
+              "Name": "Cumprimente seu amigo",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ele esconde os diagramas e hesita antes de se virar para me encarar.",
+                  "Boa parte da nossa vida é um mistério, camarada. O rosto com o qual nascemos...",
+                  "As roupas que usamos. Quem fez os exotrajes? Quem fala com a voz deles?",
+                  "As pedras do conhecimento, os portais através dos quais elas nos guiam... são nosso direito de nascença.",
+                  "Ainda há tanta coisa para ser encontrada por aí."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Siga as pedras do conhecimento, como sempre fizemos. É direito de qualquer viajante atravessar os portais..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "A estrutura certa vez abrigou uma inteligência artificial.",
+            "A corrupção agora inflama-se dentro de sua casca, odiando tudo o que já existiu.",
+            "Este lugar deseja apenas matéria. Ele quer que eu traga mais."
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Eu vejo os traços finais da IA quando toda a corrupção parte, seus últimos quinze minutos de vida...",
+                  "Ela sabia que viria aqui, que tentaria salvá-la.",
+                  "Mundos e mais mundos afundam no vazio. O abismo se espalha."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 43,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Mercúrio para saber mais",
+        "AppId": "build168",
+        "IterationAppId": "other28",
+        "Quantity": 16,
+        "PortalAddress": "4037F8AE0462",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Estes são tempos sinistros, experiente em portais. Nossa comunidade está em conflito."
+          ],
+          "Options": [
+            {
+              "Name": "Pergunte o que há de errado",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Héspero se tornou paranoico. Ele se recusa a ir às nossas reuniões. Ele evita até mesmo Nada e Polo.",
+                  "Você não deve se tornar como nosso ex-amigo. Você faz um trabalho tão vital...",
+                  "As pedras do conhecimento vão guiar você em seu caminho através dos portais. Elas vão lhe mostrar o caminho para a salvação."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Permita que as pedras do conhecimento sejam suas guias. Os portais levarão você à salvação."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "A estrutura foi infectada. Seus chamados anômalos ecoam pelo planeta.",
+            "O abismo precisa de recursos. Sem eles, este mundo se perderá para sempre..."
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Cumpro meu dever. A corrupção desaparece. Ouço a voz dela... Sinto os sentimentos dela...",
+                  "Sinto maldade, ódio, desespero... Tudo dirigido somente a ela mesma...",
+                  "Vejo lembranças da água..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 44,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Tétis para saber mais",
+        "AppId": "cook116",
+        "IterationAppId": "other33",
+        "Quantity": 90,
+        "PortalAddress": "519505C9AA01",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Viajante... seu exotraje tem funcionado na capacidade apropriada?"
+          ],
+          "Options": [
+            {
+              "Name": "Diga que sim",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hum.",
+                  "Tenho ouvido barulhos estranhos vindo do meu traje. Quase como se ele estivesse sussurrando.",
+                  "Um colega meu foi para o espaço korvax para concluir uma análise dos nossos sinais, mas não voltou.",
+                  "Você pode procurá-lo depois do portal? As pedras do conhecimento devem mostrar o caminho que ele fez."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Diga que não",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Hum.",
+                  "Tenho ouvido barulhos estranhos vindo do meu traje. Quase como se ele estivesse sussurrando.",
+                  "Um colega meu foi para o espaço korvax para concluir uma análise dos nossos sinais, mas não voltou.",
+                  "Você pode procurá-lo depois do portal? As pedras do conhecimento devem mostrar o caminho que ele fez."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Outro colega meu está desaparecido. Procure-o depois do portal... As pedras do conhecimento devem indicar seu destino. Não demore."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "Um viajante fez isso?",
+            "Há evidências de que uma multiferramenta foi disparada contra o amigo caído de Tétis. A análise dele nunca foi concluída.",
+            "A corrupção se espalha ao redor do túmulo, exigindo um tributo.",
+            "Musgo cobre a estrutura. As folhas minúsculas se agitam animadas quando aproximo minha mão. É uma oferta? Algo para me ajudar?"
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "O túmulo está purificado.",
+                  "Eu examino os vestígios da batalha, das lembranças do viajante derrotado.",
+                  "Vejo um rosto que não é um rosto, um braço levantado para disparar uma arma.",
+                  "Vejo o assassino.",
+                  "É Ariadne."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Colete composto adocicado",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "O composto cai facilmente em minhas mãos. Ele tem um cheiro doce, quase apetitoso.",
+                  "A corrupção se espalha ao redor do túmulo, exigindo um tributo."
+                ],
+                "Options": [
+                  {
+                    "Name": "Ofereça materiais",
+                    "IfSelected": {
+                      "IncomingMessages": [
+                        "O túmulo está purificado.",
+                        "Eu examino os vestígios da batalha, das lembranças do viajante derrotado.",
+                        "Vejo um rosto que não é um rosto, um braço levantado para disparar uma arma.",
+                        "Vejo o assassino.",
+                        "É Ariadne."
+                      ],
+                      "Options": []
+                    }
+                  },
+                  {
+                    "Name": "Parta",
+                    "IfSelected": {
+                      "IncomingMessages": [],
+                      "Options": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Level": 45,
+        "NpcMessage": "A região com a perturbação deve ser acessada por meio de um portal\nFale com a iteração: Héspero para saber mais",
+        "AppId": "cur22",
+        "IterationAppId": "other36",
+        "Quantity": 24,
+        "PortalAddress": "313B052E463F",
+        "NpcMessageFlows": {
+          "IncomingMessages": [
+            "Os outros vão voltar logo, semelhante. Não temos muito tempo..."
+          ],
+          "Options": [
+            {
+              "Name": "Ouça",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ariadne nos disse que o universo queima com uma corrupção que somente nós, os viajantes, podemos combater.",
+                  "Mas essas missões... essas mentiras... Semelhante, fomos enganados.",
+                  "Eu achava que minhas verificações deviam estar erradas. Eu achava que tinha sonhado com os sussurros que ouvi em minha mente.",
+                  "Héspero treme. Está atormentado.",
+                  "A nave de Ariadne caiu há algumas semanas. Ele não voltou mais. A entidade que agora nos lidera é uma impostora.",
+                  "Encontre as pedras do conhecimento, defina seu caminho através do portal. Veja a verdade com seus próprios olhos."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Peça orientação",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "Ariadne... a verdadeira Ariadne... está em algum lugar. Comprove essa enganação, semelhante. Encontre as pedras do conhecimento e atravesse a rede de portais. Descubra a verdade..."
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        },
+        "PortalMessageFlows": {
+          "IncomingMessages": [
+            "A estrutura canta com energias exóticas. Ela me vê. Conhece a minha mente. Na canção, ouço nomes distantes, fracos... Ouço o número no final de todas as coisas.",
+            "Vejo o sussurro dela. Vejo uma forma sem nome banir Ariadne...",
+            "E vejo uma duplicata surgir do acidente, voltando para reivindicar sua forma.",
+            "Se essa visão for verdadeira, Héspero está certo. Ariadne é um impostor.",
+            "Este lugar quer me ajudar... Basta eu lhe fornecer recursos."
+          ],
+          "Options": [
+            {
+              "Name": "Ofereça materiais",
+              "IfSelected": {
+                "IncomingMessages": [
+                  "A energia exótica se dissipa, mas sua canção continua.",
+                  "O que aconteceu com Ariadne? Quem é o impostor no lugar dele?"
+                ],
+                "Options": []
+              }
+            },
+            {
+              "Name": "Parta",
+              "IfSelected": {
+                "IncomingMessages": [],
+                "Options": []
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
