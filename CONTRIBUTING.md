@@ -4,9 +4,10 @@
 
 These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
-#### Table Of Contents
+### TLDR
+> **Note:** Please don't file an issue to ask a question. You'll get faster results by asking your question in our [Discord server](https://assistantapps.com/discord) or by using the resources below.
 
-[TLDR](#TLDR)
+## Table Of Contents
 
 [What should I know before I get started?](#what-should-i-know-before-i-get-started)
   * [Project History](#project-history)
@@ -18,10 +19,6 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
   * [Your First Code Contribution](#your-first-code-contribution)
   * [Pull Requests](#pull-requests)
 
-
-## TLDR
-
-> **Note:** Please don't file an issue to ask a question. You'll get faster results by asking your question in our [Discord server](https://assistantapps.com/discord) or by using the resources below.
 
 
 ## What should I know before I get started?
@@ -36,13 +33,13 @@ The project has gone through multiple major refactorings and still needs to go t
 This project was started long before Dart 2 and null safety was added. There are a lot of files that are not compliant with best practices due to this. They will slowly be fixed, over time 😅
 
 #### File naming
-Unfortunately almost all of the files in the project are pascal case (`appShell.dart`) instead of what Dart recommends (`app_shell.dart`). There are just too many files to change along with their corresponding imports, so we will just continue naming the files in pascal case until someone can come up with an easy solution that doesn't break everything 😅
+Unfortunately almost all of the files in the project are pascal case `appShell.dart` instead of what Dart recommends `app_shell.dart`. There are just too many files to change along with their corresponding imports, so we will just continue naming the files in pascal case until someone can come up with an easy solution that doesn't break everything 😅
 
 
 
 ```
 ------------------------------------------------------------------
-# Continue from here
+# Continue from here Kurt
 ------------------------------------------------------------------
 ```
 
