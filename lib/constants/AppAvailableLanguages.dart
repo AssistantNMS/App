@@ -22,7 +22,7 @@ List<LocalizationMap> supportedLanguageMaps = [
   LocalizationMap(LocaleKey.traditionalChinese, 'zh-hant', 'cn',
       percentageComplete: 35),
   LocalizationMap(LocaleKey.arabic, 'ar', 'ar', percentageComplete: 12),
-  LocalizationMap(LocaleKey.vietnamese, 'vi-vn', 'vn', percentageComplete: 2),
+  LocalizationMap(LocaleKey.vietnamese, 'vi-vn', 'vn', percentageComplete: 100),
   LocalizationMap(LocaleKey.urdu, 'ur', 'pk', percentageComplete: 7),
   LocalizationMap(LocaleKey.filipino, 'ph', 'ph', percentageComplete: 0),
   LocalizationMap(LocaleKey.indonesian, 'id', 'id', percentageComplete: 98),
