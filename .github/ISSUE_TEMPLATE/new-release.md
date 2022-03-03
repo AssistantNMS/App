@@ -1,7 +1,7 @@
 ---
 name: New Release
 about: Steps to release a new version
-title: ''
+title: 'Release '
 labels: pre-release
 assignees: Khaoz-Topsy
 
