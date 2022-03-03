@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:after_layout/after_layout.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide UIConstants;
@@ -16,7 +18,7 @@ import '../../integration/dependencyInjection.dart';
 import '../../redux/modules/titles/titleViewModel.dart';
 
 class TitlePage extends StatefulWidget {
-  TitlePage() {
+  TitlePage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.titlePage);
   }
 
@@ -35,12 +37,12 @@ class _TitlePageState extends State<TitlePage> {
         builder: (_, viewModel) {
           return TitlePageView(
             viewModel,
-            this.selection,
-            (itemList) => this.setState(() {
-              this.selection = itemList;
+            selection,
+            (itemList) => setState(() {
+              selection = itemList;
             }),
             key: Key(
-                'Title-View-${viewModel.playerTitle}-${(this.selection ?? []).length}'),
+                'Title-View-${viewModel.playerTitle}-${(selection ?? []).length}'),
           );
         });
   }
@@ -50,7 +52,7 @@ Future<void> setPlayerName(
     BuildContext context, TitleViewModel viewModel) async {
   var playerNameResult = await asyncInputDialog(
       context, getTranslations().fromKey(LocaleKey.playerName));
-  if ((playerNameResult != null && playerNameResult.length > 0)) {
+  if ((playerNameResult != null && playerNameResult.isNotEmpty)) {
     Future.delayed(const Duration(milliseconds: 250), () {
       // TODO Really bad - I sorry
       viewModel.setPlayerName(playerNameResult);
@@ -63,14 +65,15 @@ class TitlePageView extends StatefulWidget {
   final TitleViewModel viewModel;
   final List<String> selection;
   final void Function(List<String>) setSelection;
-  TitlePageView(this.viewModel, this.selection, this.setSelection, {Key key})
+  const TitlePageView(this.viewModel, this.selection, this.setSelection,
+      {Key key})
       : super(key: key);
 
   @override
   _TitlePageViewState createState() => _TitlePageViewState(
-        this.viewModel,
-        this.selection,
-        this.setSelection,
+        viewModel,
+        selection,
+        setSelection,
       );
 }
 
@@ -91,16 +94,15 @@ class _TitlePageViewState extends State<TitlePageView>
 
   @override
   void afterFirstLayout(BuildContext context) {
-    if (this.viewModel == null) return;
+    if (viewModel == null) return;
 
-    this.getFiltered(
+    getFiltered(
       context,
       (selection ?? List.empty()),
       (viewModel.owned ?? List.empty()),
     );
 
-    if (this.viewModel.playerTitle == null ||
-        this.viewModel.playerTitle.length < 1) {
+    if (viewModel.playerTitle == null || viewModel.playerTitle.isEmpty) {
       setPlayerName(context, viewModel);
     }
   }
@@ -112,8 +114,8 @@ class _TitlePageViewState extends State<TitlePageView>
 
     List<TitleDataWithOwned> allItemsWithOwned = List.empty(growable: true);
     if (allItems.hasFailed) {
-      this.setState(() {
-        this.isLoading = false;
+      setState(() {
+        isLoading = false;
       });
       return;
     }
@@ -127,10 +129,10 @@ class _TitlePageViewState extends State<TitlePageView>
         )
         .toList();
 
-    if (selection == null || selection.length < 1) {
-      this.setState(() {
-        this.isLoading = false;
-        this.titleDataWithOwned = allItemsWithOwned;
+    if (selection == null || selection.isEmpty) {
+      setState(() {
+        isLoading = false;
+        titleDataWithOwned = allItemsWithOwned;
       });
       return;
     }
@@ -144,14 +146,16 @@ class _TitlePageViewState extends State<TitlePageView>
     for (TitleDataWithOwned item in allItemsWithOwned) {
       bool isOwned = viewModel.owned.any((o) => o == item.id);
 
-      if (isOwned && showOwned)
+      if (isOwned && showOwned) {
         newValue.add(item);
-      else if (!isOwned && showNotOwned) newValue.add(item);
+      } else if (!isOwned && showNotOwned) {
+        newValue.add(item);
+      }
     }
 
-    this.setState(() {
-      this.isLoading = false;
-      this.titleDataWithOwned = newValue;
+    setState(() {
+      isLoading = false;
+      titleDataWithOwned = newValue;
     });
   }
 
@@ -160,8 +164,8 @@ class _TitlePageViewState extends State<TitlePageView>
     String title = getTranslations().fromKey(LocaleKey.titles);
     int ownedItems = (viewModel?.owned?.length ?? 0);
     String owned = ownedItems > 0 ? ownedItems.toString() : '...';
-    String numTiles = this.titleDataWithOwned.length > 0
-        ? this.titleDataWithOwned.length.toString()
+    String numTiles = titleDataWithOwned.isNotEmpty
+        ? titleDataWithOwned.length.toString()
         : '...';
     return basicGenericPageScaffold(
       context,
@@ -173,14 +177,15 @@ class _TitlePageViewState extends State<TitlePageView>
           text: getTranslations().fromKey(LocaleKey.playerName),
         )
       ],
-      body: this.isLoading
+      body: isLoading
           ? getLoading().fullPageLoading(context)
           : SearchableList<TitleDataWithOwned>(
-              () async => ResultWithValue(true, this.titleDataWithOwned, ''),
+              () async => ResultWithValue(true, titleDataWithOwned, ''),
               listItemDisplayer: titleDataTilePresenter(viewModel),
               listItemSearch: searchTitle,
-              key: Key('title-Search-List-${this.titleDataWithOwned.length}'),
+              key: Key('title-Search-List-${titleDataWithOwned.length}'),
               minListForSearch: 5,
+              addFabPadding: true,
             ),
     );
   }

@@ -13,6 +13,7 @@ class AppImage {
   static const String shield = 'special/shield.png';
   static const String nmsfmLogoDrawer = 'special/nmsfmDrawer.png';
   static const String nmsfmLogo = base + 'special/nmsfm.png';
+  static const String cronus = base + 'special/cronus.png';
 
   static const String drawer = 'drawer/';
   static const String about = drawer + 'about.png';

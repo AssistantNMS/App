@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
@@ -15,12 +17,14 @@ import 'genericPageAllRequiredRawMaterialsTreeComponents.dart';
 class GenericPageAllRequiredRawMaterials extends StatefulWidget {
   final GenericPageAllRequired item;
   final bool showBackgroundColours;
-  GenericPageAllRequiredRawMaterials(this.item, this.showBackgroundColours);
+  const GenericPageAllRequiredRawMaterials(
+      this.item, this.showBackgroundColours,
+      {Key key})
+      : super(key: key);
 
   @override
   _GenericPageAllRequiredRawMaterialsWidget createState() =>
-      _GenericPageAllRequiredRawMaterialsWidget(
-          this.item, this.showBackgroundColours);
+      _GenericPageAllRequiredRawMaterialsWidget(item, showBackgroundColours);
 }
 
 class _GenericPageAllRequiredRawMaterialsWidget

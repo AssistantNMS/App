@@ -12,7 +12,7 @@ import '../../constants/Routes.dart';
 import '../../contracts/menuItem.dart';
 
 class HelloGamesPage extends StatelessWidget {
-  HelloGamesPage() {
+  HelloGamesPage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.helloGamesPage);
   }
 
@@ -38,19 +38,24 @@ class HelloGamesPage extends StatelessWidget {
       navigateToNamed: Routes.helloGamesReleaseNotes,
     ));
     menuItems.add(MenuItem(
+      image: getListTileImage('galacticAtlas.png'),
+      title: LocaleKey.galacticAtlas,
+      navigateToExternl: NmsExternalUrls.nmsGalacticAtlas,
+    ));
+    menuItems.add(MenuItem(
       image: getListTileImage(AppImage.communityMission),
       title: LocaleKey.communityMission,
       navigateToNamed: Routes.helloGamesCommunityMission,
     ));
     menuItems.add(MenuItem(
+      image: getCorrectlySizedImageFromIcon(context, Icons.map_sharp),
+      title: LocaleKey.seasonalExpeditionSeasons,
+      navigateToNamed: Routes.seasonalExpeditionPage,
+    ));
+    menuItems.add(MenuItem(
       image: getListTileImage(AppImage.weekendMission),
       title: LocaleKey.weekendMission,
       navigateToNamed: Routes.helloGamesWeekendMission,
-    ));
-    menuItems.add(MenuItem(
-      image: getListTileImage('galacticAtlas.png'),
-      title: LocaleKey.galacticAtlas,
-      navigateToExternl: NmsExternalUrls.nmsGalacticAtlas,
     ));
     menuItems.add(MenuItem(
       image: getCorrectlySizedImageFromIcon(context, Icons.home,

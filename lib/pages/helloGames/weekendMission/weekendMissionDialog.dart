@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import '../../../constants/AppAnimation.dart';
@@ -8,10 +10,11 @@ import '../../../contracts/weekendMission.dart';
 
 class WeekendMissionDialogPage extends StatefulWidget {
   final MessageFlow messageFlow;
-  WeekendMissionDialogPage(this.messageFlow);
+  const WeekendMissionDialogPage(this.messageFlow, {Key key}) : super(key: key);
+
   @override
   _WeekendMissionDialogWidget createState() =>
-      _WeekendMissionDialogWidget(this.messageFlow);
+      _WeekendMissionDialogWidget(messageFlow);
 }
 
 class _WeekendMissionDialogWidget extends State<WeekendMissionDialogPage> {
@@ -30,26 +33,26 @@ class _WeekendMissionDialogWidget extends State<WeekendMissionDialogPage> {
     localChatBubbles.addAll(chatBubbles);
 
     var localOptions = messageFlow?.options ?? List.empty(growable: true);
-    if (localOptions.length == 0) {
+    if (localOptions.isEmpty) {
       localChatBubbles.add(() => Padding(
-            padding: EdgeInsets.only(top: 12, left: 6),
+            padding: const EdgeInsets.only(top: 12, left: 6),
             child: userLeftBubble(context,
                 getTranslations().fromKey(LocaleKey.conversationEnded)),
           ));
       localChatBubbles.add(() => emptySpace8x());
     }
 
-    if (localOptions.length > 0) {
+    if (localOptions.isNotEmpty) {
       localChatBubbles.add(
         () => Padding(
-          padding: EdgeInsets.only(top: 12),
+          padding: const EdgeInsets.only(top: 12),
           child: Wrap(
             alignment: WrapAlignment.center,
             children: localOptions
                 .map((opt) => GestureDetector(
                       child: currentUserBubbleOption(context, opt.name),
                       onTap: () {
-                        this.setState(() {
+                        setState(() {
                           chatBubbles
                               .add(() => currentUserBubble(context, opt.name));
                           for (var npcMsg in opt.ifSelected.incomingMessages) {
@@ -72,15 +75,15 @@ class _WeekendMissionDialogWidget extends State<WeekendMissionDialogPage> {
         child: Stack(
           children: [
             ListView.builder(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               itemCount: localChatBubbles.length,
               itemBuilder: (_, int index) => localChatBubbles[index](),
               shrinkWrap: true,
             ),
-            if (localOptions.length == 0) ...[
+            if (localOptions.isEmpty) ...[
               positionCenterBottom(
                 FloatingActionButton(
-                  child: Icon(Icons.close),
+                  child: const Icon(Icons.close),
                   foregroundColor:
                       getTheme().fabForegroundColourSelector(context),
                   backgroundColor: getTheme().fabColourSelector(context),
