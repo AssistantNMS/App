@@ -20,7 +20,8 @@ assignees: Khaoz-Topsy
 Much later:
 - [ ] Go through manual iOS steps
   - [ ] Copy content of `release_notes.txt` into Apple webpage
-  - [ ] Submit for review
+  - [ ] Submit for Apple review
 - [ ] Create Github release
+  - [ ] Tag main branch
   - [ ] Attach `.apk`
   - [ ] Use appropriate tag
