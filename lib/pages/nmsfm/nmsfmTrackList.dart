@@ -7,6 +7,8 @@ import '../../components/tilePresenters/nmsfmTrackDataTilePresenter.dart';
 import '../../integration/dependencyInjection.dart';
 
 class NMSFMTrackListPage extends StatefulWidget {
+  const NMSFMTrackListPage({Key key}) : super(key: key);
+
   @override
   _NMSFMTrackListPageWidget createState() => _NMSFMTrackListPageWidget();
 }

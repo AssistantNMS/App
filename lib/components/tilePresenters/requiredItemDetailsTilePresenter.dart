@@ -86,7 +86,7 @@ Widget requiredItemDetailsWithCraftingRecipeTilePresenter(
       }
 
       String listTileTitle = '';
-      if (snapshot.data != null && snapshot.data.length > 0) {
+      if (snapshot.data != null && snapshot.data.isNotEmpty) {
         var rows = snapshot.data.toList();
         rows.sort((RequiredItemDetails a, RequiredItemDetails b) =>
             (b.id == pageItemId) ? 1 : -1);
@@ -131,7 +131,7 @@ Widget requiredItemTreeDetailsRowPresenter(BuildContext context,
         ),
       ],
       Padding(
-        padding: EdgeInsets.only(left: 8),
+        padding: const EdgeInsets.only(left: 8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -142,7 +142,7 @@ Widget requiredItemTreeDetailsRowPresenter(BuildContext context,
                 "${getTranslations().fromKey(LocaleKey.quantity)}: ${itemDetails.quantity.toString()}",
                 style: _subtitleTextStyle(getTheme().getTheme(context)),
                 // style: getTheme(context).textTheme.bodyText2,
-                // style: TextStyle(color: getTheme(context).textTheme.caption.color),
+                // style: const TextStyle(color: getTheme(context).textTheme.caption.color),
               ),
             ],
           ],
@@ -151,7 +151,8 @@ Widget requiredItemTreeDetailsRowPresenter(BuildContext context,
     ],
   );
   if (itemDetails.id == null) return rowWidget;
-  var onTapFunc = () async => await getNavigation().navigateAsync(
+  Future Function() onTapFunc;
+  onTapFunc = () async => await getNavigation().navigateAsync(
         context,
         navigateTo: (context) => GenericPage(itemDetails.id),
       );

@@ -9,9 +9,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../constants/AppConfig.dart';
 import '../constants/GoogleDrive.dart';
 
-const _SCOPES = const [DriveApi.driveFileScope];
-const _JsonMimeType = 'application/json';
-const _GoogleFolderMimeType = 'application/vnd.google-apps.folder';
+const List<String> scopes = [DriveApi.driveFileScope];
+const String jsonMimeType = 'application/json';
+const String googleFolderMimeType = 'application/vnd.google-apps.folder';
 
 Future<ResultWithValue<AccessCredentials>> _getGoogleCredentials() async {
   SharedPreferences preferences = await SharedPreferences.getInstance();
@@ -30,7 +30,7 @@ Future<ResultWithValue<AccessCredentials>> _getGoogleCredentials() async {
   var client = http.Client();
   try {
     AccessCredentials credentials = await obtainAccessCredentialsViaUserConsent(
-        id, _SCOPES, client, launchExternalURL);
+        id, scopes, client, launchExternalURL);
     await preferences.setString(
       AppConfig.sharedPrefCredKey,
       json.encode(_accessCredentialsToJson(credentials)),
@@ -68,7 +68,7 @@ Future<Result> writeJsonFileToGoogleDriveOLD(
     var _createFolder = await driveApi.files.create(
       File()
         ..name = GoogleDrive.folderNameOLD
-        ..mimeType = _GoogleFolderMimeType,
+        ..mimeType = googleFolderMimeType,
     );
     folderId = _createFolder.id;
   }
@@ -86,7 +86,7 @@ Future<Result> writeJsonFileToGoogleDriveOLD(
   Media uploadMedia = Media(
     Stream.value(contentByteArray),
     contentByteArray.length,
-    contentType: _JsonMimeType,
+    contentType: jsonMimeType,
   );
 
   if (fileToWriteExists) {

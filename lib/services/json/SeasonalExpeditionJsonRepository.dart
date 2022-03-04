@@ -11,7 +11,7 @@ class SeasonalExpeditionJsonRepository extends BaseJsonService
   Future<ResultWithValue<List<SeasonalExpeditionSeason>>> getAll(
       BuildContext context) async {
     try {
-      List responseDetailsJson = await this.getListfromJson(
+      List responseDetailsJson = await getListfromJson(
           context, getTranslations().fromKey(LocaleKey.seasonalExpeditionJson));
       List<SeasonalExpeditionSeason> seasonalExp = responseDetailsJson
           .map((m) => SeasonalExpeditionSeason.fromJson(m))
@@ -30,7 +30,7 @@ class SeasonalExpeditionJsonRepository extends BaseJsonService
   Future<ResultWithValue<SeasonalExpeditionSeason>> getById(
       BuildContext context, String id) async {
     ResultWithValue<List<SeasonalExpeditionSeason>> expeditionsResult =
-        await this.getAll(context);
+        await getAll(context);
     if (expeditionsResult.hasFailed) {
       return ResultWithValue(
           false, SeasonalExpeditionSeason(), expeditionsResult.errorMessage);

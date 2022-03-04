@@ -13,7 +13,7 @@ class FavouriteItem {
       );
 
   Map<String, dynamic> toJson() => {
-        'id': this.id,
-        'icon': this.icon,
+        'id': id,
+        'icon': icon,
       };
 }

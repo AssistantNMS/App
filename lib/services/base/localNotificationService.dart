@@ -8,9 +8,9 @@ class LocalNotificationService {
     flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 // initialise the plugin. app_icon needs to be a added as a drawable resource to the Android head project
     var initializationSettingsAndroid =
-        AndroidInitializationSettings('notification');
+        const AndroidInitializationSettings('notification');
 
-    var initializationSettingsIOS = IOSInitializationSettings(
+    var initializationSettingsIOS = const IOSInitializationSettings(
       requestSoundPermission: false,
       requestBadgePermission: false,
       requestAlertPermission: false,
@@ -81,7 +81,7 @@ class LocalNotificationService {
       groupKey: 'com.assistantnms.app.timers',
     );
 
-    var iOSPlatformChannelSpecifics = IOSNotificationDetails();
+    var iOSPlatformChannelSpecifics = const IOSNotificationDetails();
 
     NotificationDetails platformChannelSpecifics = NotificationDetails(
       android: androidPlatformChannelSpecifics,

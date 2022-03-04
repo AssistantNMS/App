@@ -22,6 +22,8 @@ class NewsShellPage extends StatelessWidget {
     AppImage.steamNewsIcon,
   ];
 
+  NewsShellPage({Key key}) : super(key: key);
+
   getAppBarTitle(int selectionIndex) {
     switch (selectionIndex) {
       case 0:
@@ -43,7 +45,7 @@ class NewsShellPage extends StatelessWidget {
       converter: (store) => NewsPageViewModel.fromStore(store),
       builder: (_, viewModel) => basicGenericPageScaffold(
         context,
-        title: this.getAppBarTitle(viewModel.selectedNewsPage),
+        title: getAppBarTitle(viewModel.selectedNewsPage),
         actions: [
           ActionItem(
             icon: Icons.help_outline,
@@ -83,7 +85,7 @@ class NewsShellPage extends StatelessWidget {
         );
         break;
       case 2:
-        columnWidget = SteamBranchesPage();
+        columnWidget = const SteamBranchesPage();
         break;
       case 3:
         columnWidget = SearchableList<SteamNewsItemViewModel>(
@@ -98,7 +100,7 @@ class NewsShellPage extends StatelessWidget {
     }
     return Column(
       children: [
-        Container(
+        SizedBox(
           width: double.infinity,
           child: adaptiveSegmentedControl(
             context,
@@ -109,7 +111,7 @@ class NewsShellPage extends StatelessWidget {
                     ))
                 .toList(),
             borderRadius: 0,
-            padding: EdgeInsets.only(bottom: 4),
+            padding: const EdgeInsets.only(bottom: 4),
             currentSelection: viewModel.selectedNewsPage,
             onSegmentChosen: viewModel.setSelectedNewsPage,
           ),

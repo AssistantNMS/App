@@ -5,6 +5,8 @@ import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
 import 'weekendMissionComponents.dart';
 
 class WeekendMissionMenuPage extends StatelessWidget {
+  const WeekendMissionMenuPage({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     var listItems = [

@@ -74,7 +74,7 @@ Widget getNutrientProcessorTile(
 Widget processorRecipeWithInputsTilePresentor(BuildContext context,
     Processor processor, Widget Function(Processor p) navigateTo,
     {bool showBackgroundColours = false}) {
-  var items = [processor.output]..addAll(processor.inputs);
+  var items = [processor.output, ...processor.inputs];
   return FutureBuilder<ResultWithValue<List<RequiredItemDetails>>>(
     key: Key(processor.id),
     future: requiredItemDetailsFromInputs(context, items),

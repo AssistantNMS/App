@@ -54,22 +54,22 @@ class AlienPuzzleRewardOdds {
 
 class AlienPuzzleRewardWithAdditional extends AlienPuzzleReward {
   AlienPuzzleRewardWithAdditional(AlienPuzzleReward orig) {
-    this.rewardId = orig.rewardId;
-    this.type = orig.type;
-    this.rewards = orig.rewards;
-    this.details = List.empty(growable: true);
+    rewardId = orig.rewardId;
+    type = orig.type;
+    rewards = orig.rewards;
+    details = List.empty(growable: true);
   }
   List<AlienPuzzleRewardOddsWithAdditional> details;
 }
 
 class AlienPuzzleRewardOddsWithAdditional extends AlienPuzzleRewardOdds {
   AlienPuzzleRewardOddsWithAdditional(AlienPuzzleRewardOdds orig) {
-    this.id = orig.id;
-    this.type = orig.type;
-    this.percentageChance = orig.percentageChance;
-    this.amountMin = orig.amountMin;
-    this.amountMax = orig.amountMax;
-    this.details = RequiredItemDetails();
+    id = orig.id;
+    type = orig.type;
+    percentageChance = orig.percentageChance;
+    amountMin = orig.amountMin;
+    amountMax = orig.amountMax;
+    details = RequiredItemDetails();
   }
 
   RequiredItemDetails details;

@@ -26,10 +26,10 @@ class EnvironmentSettings {
 
   AssistantAppsEnvironmentSettings toAssistantApps() =>
       AssistantAppsEnvironmentSettings(
-        assistantAppsApiUrl: this.assistantAppsApiUrl,
-        assistantAppsAppGuid: this.assistantAppsAppGuid,
-        currentWhatIsNewGuid: this.currentWhatIsNewGuid,
-        isProduction: this.isProduction,
-        patreonOAuthClientId: this.patreonOAuthClientId,
+        assistantAppsApiUrl: assistantAppsApiUrl,
+        assistantAppsAppGuid: assistantAppsAppGuid,
+        currentWhatIsNewGuid: currentWhatIsNewGuid,
+        isProduction: isProduction,
+        patreonOAuthClientId: patreonOAuthClientId,
       );
 }

@@ -44,7 +44,7 @@ Widget journeyMilestoneTilePresenter(BuildContext context,
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
     ),
-    subtitle: (milestone.title.length < 1)
+    subtitle: (milestone.title.isEmpty)
         ? null
         : Text(
             subHeading,

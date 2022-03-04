@@ -8,7 +8,7 @@ import '../../integration/dependencyInjection.dart';
 import 'unlockableTechTreeComponents.dart';
 
 class UnlockableTechTreePage extends StatelessWidget {
-  UnlockableTechTreePage() {
+  UnlockableTechTreePage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.unlockableTechTreePage);
   }
 

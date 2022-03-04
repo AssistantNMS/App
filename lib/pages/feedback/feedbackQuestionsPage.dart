@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide UIConstants;
 import 'package:flutter/material.dart';
@@ -44,7 +46,8 @@ class _FeedbackQuestionsWidget extends State<FeedbackQuestionsPage> {
         questionIndex < feedbackForm.questions.length;
         questionIndex++) {
       var questionObj = feedbackForm.questions[questionIndex];
-      var onSuccess = (String answer) => setState(() {
+      void Function(String answer) onSuccess;
+      onSuccess = (String answer) => setState(() {
             answerForm.answers[questionIndex].answer = answer;
           });
       if (questionObj.type == FeedbackQuestionType.PlainText) {
@@ -93,7 +96,8 @@ class _FeedbackQuestionsWidget extends State<FeedbackQuestionsPage> {
   }
 
   Widget renderButtonWidgets(BuildContext context) {
-    var submitFeedback = () async {
+    Future Function() submitFeedback;
+    submitFeedback = () async {
       setState(() {
         isLoading = true;
       });
@@ -134,7 +138,7 @@ class _FeedbackQuestionsWidget extends State<FeedbackQuestionsPage> {
           )
         : disabledButton(title: buttonText);
 
-    return Container(child: button, margin: EdgeInsets.all(12));
+    return Container(child: button, margin: const EdgeInsets.all(12));
   }
 
   bool submitButtonEnabled(
@@ -148,7 +152,7 @@ class _FeedbackQuestionsWidget extends State<FeedbackQuestionsPage> {
     }
 
     int numberValid = 0;
-    if (answerForm.answers == null || answerForm.answers.length == 0) {
+    if (answerForm.answers == null || answerForm.answers.isEmpty) {
       return false;
     }
     for (var answer in answerForm.answers) {

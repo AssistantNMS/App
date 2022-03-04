@@ -40,14 +40,16 @@ class IntroViewModel {
   });
 
   static IntroViewModel fromStore(Store<AppState> store) {
-    Function hideRelease118Intro = () => store.dispatch(HideRelease118Intro());
-    Function hideValentines2020Intro =
-        () => store.dispatch(HideValentines2020Intro());
-    Function hideValentines2021Intro =
-        () => store.dispatch(HideValentines2021Intro());
-    Function toggleIntroComplete = () => store.dispatch(ToggleIntroComplete());
-    Function hideOnlineMeetup2020 =
-        () => store.dispatch(HideOnlineMeetup2020());
+    Function hideRelease118Intro;
+    hideRelease118Intro = () => store.dispatch(HideRelease118Intro());
+    Function hideValentines2020Intro;
+    hideValentines2020Intro = () => store.dispatch(HideValentines2020Intro());
+    Function hideValentines2021Intro;
+    hideValentines2021Intro = () => store.dispatch(HideValentines2021Intro());
+    Function toggleIntroComplete;
+    toggleIntroComplete = () => store.dispatch(ToggleIntroComplete());
+    Function hideOnlineMeetup2020;
+    hideOnlineMeetup2020 = () => store.dispatch(HideOnlineMeetup2020());
     try {
       return IntroViewModel(
         isRelease118IntroHidden: getIsRelease118IntroHidden(store.state),

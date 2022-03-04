@@ -8,6 +8,7 @@ import '../../components/starRating.dart';
 
 class DialogService implements IDialogService {
   //
+  @override
   void showSimpleDialog(context, String title, Widget content,
       {List<Widget> buttons}) {
     Alert(
@@ -23,6 +24,7 @@ class DialogService implements IDialogService {
     ).show();
   }
 
+  @override
   void showSimpleHelpDialog(context, String title, String helpContent,
       {List<Widget> buttons}) {
     nmsShowSimpleHelpDialog(
@@ -33,6 +35,7 @@ class DialogService implements IDialogService {
     );
   }
 
+  @override
   Widget simpleDialogCloseButton(context, {Function onTap}) => DialogButton(
         child: Text(
           getTranslations().fromKey(LocaleKey.close),
@@ -46,6 +49,7 @@ class DialogService implements IDialogService {
         },
       );
 
+  @override
   Widget simpleDialogPositiveButton(context,
           {LocaleKey title, Function onTap}) =>
       DialogButton(
@@ -61,6 +65,7 @@ class DialogService implements IDialogService {
         },
       );
 
+  @override
   void showOptionsDialog(context, String title, List<DropdownOption> options,
       {String selectedValue = '', Function(String value) onSuccess}) {
     List<DialogButton> buttons = List.empty(growable: true);
@@ -74,7 +79,8 @@ class DialogService implements IDialogService {
       onPressed: () => Navigator.of(context).pop(),
     ));
 
-    var tempOnChange = (String value) {
+    void Function(String value) tempOnChange;
+    tempOnChange = (String value) {
       if (onSuccess != null) onSuccess(value);
       Navigator.of(context).pop();
     };
@@ -98,13 +104,14 @@ class DialogService implements IDialogService {
     );
   }
 
+  @override
   void showQuantityDialog(context, TextEditingController controller,
       {String title, Function(String) onSuccess}) {
     void onControllerTextChange(
         TextEditingController textEditController, String content) {
       textEditController
         ..text = content
-        ..selection = TextSelection.collapsed(offset: 0);
+        ..selection = const TextSelection.collapsed(offset: 0);
     }
 
     List<DialogButton> buttons = List.empty(growable: true);
@@ -160,7 +167,7 @@ class DialogService implements IDialogService {
         children: <Widget>[
           TextField(
             controller: controller,
-            style: TextStyle(),
+            style: const TextStyle(),
             autofocus: true,
             cursorColor: getTheme().getSecondaryColour(context),
             keyboardType: TextInputType.number,
@@ -177,6 +184,7 @@ class DialogService implements IDialogService {
     );
   }
 
+  @override
   void showStarDialog(context, String title,
       {int currentRating = 0, Function(int) onSuccess}) {
     List<DialogButton> buttons = List.empty(growable: true);
@@ -207,6 +215,7 @@ class DialogService implements IDialogService {
     );
   }
 
+  @override
   Future<String> asyncInputDialog(BuildContext context, String title,
       {String defaultText,
       List<Widget> actions,
@@ -229,7 +238,7 @@ class DialogService implements IDialogService {
           Expanded(
               child: TextField(
             autofocus: true,
-            controller: new TextEditingController(text: defaultText),
+            controller: TextEditingController(text: defaultText),
             keyboardType: inputType == null ? TextInputType.text : null,
             inputFormatters: inputFormatters,
             onChanged: (value) {

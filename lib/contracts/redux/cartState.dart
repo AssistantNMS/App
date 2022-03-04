@@ -7,7 +7,7 @@ import '../cart/cartItem.dart';
 class CartState {
   final List<CartItem> craftingItems;
 
-  CartState({this.craftingItems});
+  const CartState({this.craftingItems});
 
   factory CartState.initial() {
     return CartState(craftingItems: List.empty(growable: true));

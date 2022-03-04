@@ -6,7 +6,7 @@ import 'customHomepageComponents.dart';
 
 class ViewCustomHomepage extends StatelessWidget {
   final List<CustomMenu> _menuItems;
-  ViewCustomHomepage(this._menuItems);
+  const ViewCustomHomepage(this._menuItems, {Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return responsiveGrid(

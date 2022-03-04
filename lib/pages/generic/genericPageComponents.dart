@@ -260,7 +260,7 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
 }
 
 Widget getCookingScore(BuildContext ctx, double cookingValue) {
-  var secondaryColour = getTheme().getSecondaryColour(ctx);
+  Color secondaryColour = getTheme().getSecondaryColour(ctx);
   String cookingPerc =
       ((cookingValue + 1) * cookingValue * 47).toStringAsFixed(0);
   return flatCard(

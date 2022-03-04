@@ -14,6 +14,8 @@ import 'addPortalPage.dart';
 import 'viewPortalPage.dart';
 
 class PortalsPage extends StatefulWidget {
+  const PortalsPage({Key key}) : super(key: key);
+
   @override
   _PortalsPageState createState() => _PortalsPageState();
 }
@@ -53,14 +55,14 @@ class _PortalsPageState extends State<PortalsPage> {
                     tags: List.empty(growable: true)),
               ),
             );
-            if (temp == null || !(temp is PortalRecord)) return;
+            if (temp == null || temp is! PortalRecord) return;
             portalViewModel.addPortal(temp.name, temp.codes, temp.tags);
-            this.setState(() {
+            setState(() {
               _counter++;
             });
           },
           heroTag: 'PortalsPage',
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
           foregroundColor: getTheme().fabForegroundColourSelector(context),
           backgroundColor: getTheme().fabColourSelector(context),
         ),
@@ -83,9 +85,7 @@ class _PortalsPageState extends State<PortalsPage> {
       listItemSearch: searchPortal,
       deleteAll: () => deleteAll(portalViewModel),
       key: Key(
-        'numItems: ${portalViewModel.portals.length.toString()} ' +
-            'counter: $_counter ' +
-            'useAltGlyphs: ${portalViewModel.useAltGlyphs}',
+        'numItems: ${portalViewModel.portals.length.toString()} counter: $_counter useAltGlyphs: ${portalViewModel.useAltGlyphs}',
       ),
       minListForSearch: 5,
     );
@@ -96,7 +96,7 @@ class _PortalsPageState extends State<PortalsPage> {
       context,
       navigateTo: (context) => ViewPortalPage(portal),
     );
-    this.setState(() {
+    setState(() {
       _counter++;
     });
   }
@@ -106,14 +106,14 @@ class _PortalsPageState extends State<PortalsPage> {
       context,
       navigateTo: (context) => AddPortalPage(portal, isEdit: true),
     );
-    if (temp == null || !(temp is PortalRecord)) return;
+    if (temp == null || temp is! PortalRecord) return;
     portalViewModel.editPortal(
       temp.name,
       temp.codes,
       temp.tags,
       temp.uuid,
     );
-    this.setState(() {
+    setState(() {
       _counter++;
     });
   }

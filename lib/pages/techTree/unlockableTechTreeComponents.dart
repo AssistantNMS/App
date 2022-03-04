@@ -78,8 +78,8 @@ TreeNode mapChildren(
   for (TechTreeNode child in node.children) {
     var childList = child.children;
     // childList.sort((a, b) => a.children.length.compareTo(b.children.length));
-    childList.sort((ttna, ttnb) => boolToInt(ttna.children.length > 0)
-        .compareTo(boolToInt(ttnb.children.length > 0)));
+    childList.sort((ttna, ttnb) => boolToInt(ttna.children.isNotEmpty)
+        .compareTo(boolToInt(ttnb.children.isNotEmpty)));
     children.add(TreeNode(
       content: techTreeNodeTilePresenter(context, child, costType),
       children:

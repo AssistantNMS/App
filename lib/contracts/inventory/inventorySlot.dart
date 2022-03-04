@@ -6,11 +6,10 @@ class InventorySlot {
   String icon;
   int quantity;
 
-  InventorySlot({InventorySlotDetails pageItem, int quantity}) {
-    this.quantity = quantity;
-    this.typeName = pageItem.typeName;
-    this.id = pageItem.id;
-    this.icon = pageItem.icon;
+  InventorySlot({InventorySlotDetails pageItem, this.quantity}) {
+    typeName = pageItem.typeName;
+    id = pageItem.id;
+    icon = pageItem.icon;
   }
 
   factory InventorySlot.fromJson(Map<String, dynamic> json) => InventorySlot(
@@ -19,10 +18,10 @@ class InventorySlot {
 
   Map<String, dynamic> toJson() => {
         'pageItem': InventorySlotDetails(
-          typeName: this.typeName,
-          id: this.id,
-          icon: this.icon,
+          typeName: typeName,
+          id: id,
+          icon: icon,
         ).toJson(),
-        'quantity': this.quantity
+        'quantity': quantity
       };
 }

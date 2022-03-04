@@ -10,12 +10,12 @@ class CartItem {
   int quantity;
 
   CartItem({GenericPageItem pageItem, int quantity}) {
-    this.quantity = quantity;
-    this.typeName = pageItem.typeName;
-    this.id = pageItem.id;
-    this.icon = pageItem.icon;
-    this.colour = pageItem.colour;
-    this.requiredItems = pageItem.requiredItems;
+    quantity = quantity;
+    typeName = pageItem.typeName;
+    id = pageItem.id;
+    icon = pageItem.icon;
+    colour = pageItem.colour;
+    requiredItems = pageItem.requiredItems;
   }
 
   factory CartItem.fromJson(Map<String, dynamic> json) => CartItem(
@@ -24,12 +24,12 @@ class CartItem {
 
   Map<String, dynamic> toJson() => {
         'pageItem': GenericPageItem(
-          typeName: this.typeName,
-          id: this.id,
-          icon: this.icon,
-          colour: this.colour,
-          requiredItems: this.requiredItems,
+          typeName: typeName,
+          id: id,
+          icon: icon,
+          colour: colour,
+          requiredItems: requiredItems,
         ).toJson(),
-        'quantity': this.quantity
+        'quantity': quantity
       };
 }

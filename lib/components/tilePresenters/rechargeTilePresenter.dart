@@ -38,7 +38,8 @@ Widget chargeByItemDetailsTilePresenter(BuildContext context,
     RequiredItemDetails itemDetails, ChargeBy recharge, int totalRequired,
     {Function onTap, bool showBackgroundColours = false}) {
   String icon = itemDetails.icon;
-  Function navigate = (context) => GenericPage(itemDetails.id);
+  Function navigate;
+  navigate = (context) => GenericPage(itemDetails.id);
 
   return genericListTileWithSubtitle(
     context,
@@ -86,7 +87,8 @@ Widget usedToRechargeItemDetailsTilePresenter(
     {Function onTap,
     bool showBackgroundColours = false}) {
   String icon = itemDetails.icon;
-  Function navigate = (context) => GenericPage(itemDetails.id);
+  Function navigate;
+  navigate = (context) => GenericPage(itemDetails.id);
 
   var chargeByForCurrentItemValue = recharge.chargeBy
       .firstWhere((c) => c.id == genericPageItem.id, orElse: () => ChargeBy())

@@ -12,7 +12,7 @@ Widget menuItemTilePresenter(BuildContext context, MenuItem menuItem) =>
           children: <Widget>[
             menuItem.image,
             Padding(
-              padding: EdgeInsets.only(top: 8, left: 8, right: 8),
+              padding: const EdgeInsets.only(top: 8, left: 8, right: 8),
               child: Text(
                 getTranslations().fromKey(menuItem.title),
                 overflow: TextOverflow.ellipsis,

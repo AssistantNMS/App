@@ -8,7 +8,7 @@ import '../../contracts/generated/onlineMeetup2020SubmissionViewModel.dart';
 import '../../integration/dependencyInjection.dart';
 
 class OnlineMeetup2020SubmissionsPage extends StatelessWidget {
-  OnlineMeetup2020SubmissionsPage() {
+  OnlineMeetup2020SubmissionsPage({Key key}) : super(key: key) {
     getAnalytics()
         .trackEvent(AnalyticsEvent.onlineMeetup2020SubmissionsListPage);
   }

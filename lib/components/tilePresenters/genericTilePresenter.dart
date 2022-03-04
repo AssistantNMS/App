@@ -9,7 +9,7 @@ import '../common/image.dart';
 Widget genericTileWithBackgroundColourPresenter(
     BuildContext context, GenericPageItem genericItem, bool isHero,
     {void Function() onTap}) {
-  String itemIcon = (genericItem.icon == null || genericItem.icon.length < 1)
+  String itemIcon = (genericItem.icon == null || genericItem.icon.isEmpty)
       ? getPath().unknownImagePath
       : genericItem.icon;
   return genericListTile(
@@ -18,9 +18,8 @@ Widget genericTileWithBackgroundColourPresenter(
     leadingImageHero: isHero ? gameItemIconHero(genericItem) : null,
     imageBackgroundColour: genericItem.colour,
     name: genericItem.name,
-    onTap: onTap != null
-        ? onTap
-        : () async => await getNavigation().navigateAwayFromHomeAsync(
+    onTap: onTap ??
+        () async => await getNavigation().navigateAwayFromHomeAsync(
               context,
               navigateTo: (context) => GenericPage(
                 genericItem.id,
@@ -33,7 +32,7 @@ Widget genericTileWithBackgroundColourPresenter(
 Widget genericTilePresenter(
     BuildContext context, GenericPageItem genericItem, bool isHero,
     {void Function() onTap}) {
-  String itemIcon = (genericItem.icon == null || genericItem.icon.length < 1)
+  String itemIcon = (genericItem.icon == null || genericItem.icon.isEmpty)
       ? getPath().unknownImagePath
       : genericItem.icon;
   return genericListTile(
@@ -41,9 +40,8 @@ Widget genericTilePresenter(
     leadingImage: itemIcon,
     leadingImageHero: isHero ? gameItemIconHero(genericItem) : null,
     name: genericItem.name,
-    onTap: onTap != null
-        ? onTap
-        : () async => await getNavigation().navigateAwayFromHomeAsync(
+    onTap: onTap ??
+        () async => await getNavigation().navigateAwayFromHomeAsync(
               context,
               navigateTo: (context) => GenericPage(
                 genericItem.id,

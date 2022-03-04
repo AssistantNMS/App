@@ -13,9 +13,9 @@ import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 
 class SelectGenericItemPage extends StatelessWidget {
-  final title;
+  final String title;
 
-  SelectGenericItemPage(this.title);
+  const SelectGenericItemPage(this.title, {Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +23,12 @@ class SelectGenericItemPage extends StatelessWidget {
     return basicGenericPageScaffold(
       context,
       title: title ?? 'Unknown',
-      drawer: AppDrawer(),
+      drawer: const AppDrawer(),
       body: StoreConnector<AppState, GenericPageViewModel>(
           converter: (store) => GenericPageViewModel.fromStore(store),
           builder: (_, viewModel) {
-            var onTap = (GenericPageItem genericPageItem) {
+            Null Function(GenericPageItem genericPageItem) onTap;
+            onTap = (GenericPageItem genericPageItem) {
               Navigator.pop(context, genericPageItem);
             };
             var presenter = getListItemDisplayer(

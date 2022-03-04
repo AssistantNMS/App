@@ -7,7 +7,7 @@ import '../timer/timerItem.dart';
 class TimerState {
   final List<TimerItem> timers;
 
-  TimerState({
+  const TimerState({
     this.timers,
   });
 

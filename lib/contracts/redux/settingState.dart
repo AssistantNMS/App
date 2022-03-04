@@ -31,7 +31,7 @@ class SettingState {
   final bool showFestiveBackground;
   final int lastNewsPageIndex;
 
-  SettingState({
+  const SettingState({
     this.persistCart,
     this.selectedLanguage,
     this.guidesIsCompact,

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../contracts/nmsfm/nmsfmTrackData.dart';
 
 Widget nmsfmTrackTilePresenter(BuildContext context, NmsfmTrackData track) {
-  bool hasArtist = track.artist != null && track.artist.length > 0;
+  bool hasArtist = track.artist != null && track.artist.isNotEmpty;
   bool hasTime = track.runtimeInSeconds != null && track.runtimeInSeconds > 0;
 
   return ListTile(
@@ -36,15 +36,17 @@ String getTrackTime(int seconds) {
   var sec = seconds % 60;
 
   if (min == 0 && sec == 0) return '';
-  if (min == 0)
+  if (min == 0) {
     return getTranslations()
         .fromKey(LocaleKey.secondsAbbrev)
         .replaceAll('{0}', sec.toString());
+  }
 
-  if (sec == 0)
+  if (sec == 0) {
     return getTranslations()
         .fromKey(LocaleKey.minutesAbbrev)
         .replaceAll('{0}', min.toString());
+  }
   return getTranslations()
       .fromKey(LocaleKey.minutesSecondsAbbrev)
       .replaceAll('{0}', min.toString())

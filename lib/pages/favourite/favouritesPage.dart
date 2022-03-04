@@ -18,7 +18,7 @@ import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/favourite/favouriteViewModel.dart';
 
 class FavouritesPage extends StatelessWidget {
-  FavouritesPage() {
+  FavouritesPage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.favouritesPage);
   }
 
@@ -55,7 +55,7 @@ class FavouritesPage extends StatelessWidget {
           context,
           RequiredItem(id: details.value.output.id, quantity: 0),
         );
-        if (itemFromProc.isSuccess)
+        if (itemFromProc.isSuccess) {
           reqItems.add(ProcessorRequiredItemDetails(
             id: itemFromProc.value.id,
             icon: itemFromProc.value.icon,
@@ -64,6 +64,7 @@ class FavouritesPage extends StatelessWidget {
             quantity: itemFromProc.value.quantity,
             processor: details.value,
           ));
+        }
       } else {
         var details = await requiredItemDetails(
             context, RequiredItem(id: favItem.id, quantity: 0));
@@ -78,7 +79,7 @@ class FavouritesPage extends StatelessWidget {
     Widget errorWidget = asyncSnapshotHandler(context, snapshot);
     if (errorWidget != null) return errorWidget;
 
-    if (snapshot.data.length == 0) {
+    if (snapshot.data.isEmpty) {
       return listWithScrollbar(
         itemCount: 1,
         itemBuilder: (context, index) => Container(
@@ -86,9 +87,9 @@ class FavouritesPage extends StatelessWidget {
             getTranslations().fromKey(LocaleKey.noItems),
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
-          margin: EdgeInsets.only(top: 30),
+          margin: const EdgeInsets.only(top: 30),
         ),
       );
     }

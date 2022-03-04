@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_function_declarations_over_variables
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -30,7 +32,7 @@ Widget friendCodeTilePresenter(BuildContext context,
       overflow: TextOverflow.ellipsis,
     ),
     trailing: IconButton(
-      icon: Icon(Icons.copy),
+      icon: const Icon(Icons.copy),
       onPressed: onTap,
     ),
     onTap: onTap,

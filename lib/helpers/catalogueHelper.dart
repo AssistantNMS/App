@@ -9,7 +9,7 @@ List<MenuItem> getCatalogueItemData(context) {
   menuItems.add(MenuItem(
     image: getListTileImage('drawer/rawmaterials.png'),
     title: LocaleKey.rawMaterials,
-    navigateTo: (context) => CatalogueItemPage(
+    navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.rawMaterials,
       [LocaleKey.rawMaterialsJson],
     ),
@@ -17,7 +17,7 @@ List<MenuItem> getCatalogueItemData(context) {
   menuItems.add(MenuItem(
     image: getListTileImage('drawer/crafted.png'),
     title: LocaleKey.products,
-    navigateTo: (context) => CatalogueItemPage(
+    navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.products,
       [LocaleKey.productsJson],
     ),
@@ -25,7 +25,7 @@ List<MenuItem> getCatalogueItemData(context) {
   menuItems.add(MenuItem(
     image: getListTileImage('drawer/equipment.png'),
     title: LocaleKey.technologies,
-    navigateTo: (context) => CatalogueItemPage(
+    navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.technologies,
       [LocaleKey.technologiesJson],
     ),
@@ -33,7 +33,7 @@ List<MenuItem> getCatalogueItemData(context) {
   menuItems.add(MenuItem(
     image: getListTileImage('drawer/constructedTechnology.png'),
     title: LocaleKey.constructedTechnologies,
-    navigateTo: (context) => CatalogueItemPage(
+    navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.constructedTechnologies,
       [LocaleKey.constructedTechnologyJson],
     ),
@@ -41,7 +41,7 @@ List<MenuItem> getCatalogueItemData(context) {
   menuItems.add(MenuItem(
     image: getListTileImage('drawer/building.png'),
     title: LocaleKey.buildings,
-    navigateTo: (context) => CatalogueItemPage(
+    navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.buildings,
       [LocaleKey.buildingsJson],
     ),
@@ -49,7 +49,7 @@ List<MenuItem> getCatalogueItemData(context) {
   menuItems.add(MenuItem(
     image: getListTileImage('drawer/tradeItems.png'),
     title: LocaleKey.tradeItems,
-    navigateTo: (context) => CatalogueItemPage(
+    navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.tradeItems,
       [LocaleKey.tradeItemsJson],
     ),
@@ -57,7 +57,7 @@ List<MenuItem> getCatalogueItemData(context) {
   menuItems.add(MenuItem(
     image: getListTileImage('drawer/curiosities.png'),
     title: LocaleKey.curiosities,
-    navigateTo: (context) => CatalogueItemPage(
+    navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.curiosities,
       [LocaleKey.curiosityJson],
     ),
@@ -65,7 +65,7 @@ List<MenuItem> getCatalogueItemData(context) {
   menuItems.add(MenuItem(
     image: getListTileImage('drawer/cooking.png'),
     title: LocaleKey.cooking,
-    navigateTo: (context) => CatalogueItemPage(
+    navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.cooking,
       [LocaleKey.cookingJson],
     ),
@@ -73,7 +73,7 @@ List<MenuItem> getCatalogueItemData(context) {
   menuItems.add(MenuItem(
     image: getListTileImage('drawer/upgradeModules.png'),
     title: LocaleKey.upgradeModules,
-    navigateTo: (context) => CatalogueItemPage(
+    navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.upgradeModules,
       // [LocaleKey.upgradeModulesJson],
       [LocaleKey.technologyModulesJson],
@@ -83,7 +83,7 @@ List<MenuItem> getCatalogueItemData(context) {
     image: getCorrectlySizedImageFromIcon(context, Icons.dashboard,
         colour: getTheme().getDarkModeSecondaryColour()),
     title: LocaleKey.others,
-    navigateTo: (context) => CatalogueItemPage(
+    navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.others,
       [LocaleKey.otherItemsJson],
     ),

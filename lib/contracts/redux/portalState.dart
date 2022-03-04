@@ -10,7 +10,7 @@ class PortalState {
   final List<PortalRecord> portals;
   final List<String> availableTags;
 
-  PortalState({this.portals, this.availableTags});
+  const PortalState({this.portals, this.availableTags});
 
   factory PortalState.initial() {
     return PortalState(
@@ -48,5 +48,5 @@ class PortalState {
   Map<String, dynamic> toJson() =>
       {'portals': portals, 'availableTags': availableTags};
 
-  String toGoogleJson() => jsonEncode(this.toJson());
+  String toGoogleJson() => jsonEncode(toJson());
 }

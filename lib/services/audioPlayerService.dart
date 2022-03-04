@@ -5,17 +5,15 @@ class AudioPlayerService {
   // AudioPlayerService() {}
 
   AssetsAudioPlayer getPlayer() {
-    if (this._player == null) {
-      this._player = AssetsAudioPlayer.newPlayer();
-    }
-    return this._player;
+    _player ??= AssetsAudioPlayer.newPlayer();
+    return _player;
   }
 
-  Stream<bool> isPlaying() => this.getPlayer().isPlaying;
+  Stream<bool> isPlaying() => getPlayer().isPlaying;
 
-  Future<void> stop() => this.getPlayer().stop();
+  Future<void> stop() => getPlayer().stop();
 
-  Future<void> open(Audio audio) => this.getPlayer().open(
+  Future<void> open(Audio audio) => getPlayer().open(
         audio,
         autoStart: true,
         showNotification: true,

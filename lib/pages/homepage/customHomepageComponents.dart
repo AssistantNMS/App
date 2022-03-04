@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'dart:math';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
@@ -9,12 +11,13 @@ import '../../contracts/misc/customMenu.dart';
 class EditingHomepageItem extends StatefulWidget {
   final CustomMenu menuItem;
   final double tileSize;
-  EditingHomepageItem(this.menuItem, this.tileSize);
+  const EditingHomepageItem(this.menuItem, this.tileSize, {Key key})
+      : super(key: key);
 
   @override
   _EditingHomepageWidget createState() => _EditingHomepageWidget(
-        this.menuItem,
-        this.tileSize,
+        menuItem,
+        tileSize,
       );
 }
 
@@ -65,7 +68,7 @@ Widget editCustomMenuItemGridPresenter(
       children: [
         menuItem.icon,
         Padding(
-          padding: EdgeInsets.all(4),
+          padding: const EdgeInsets.all(4),
           child: Text(
             getTranslations().fromKey(menuItem.title),
             maxLines: 2,
@@ -110,7 +113,7 @@ Widget customMenuItemGridPresenter(BuildContext context, CustomMenu menuItem) {
           children: [
             menuItem.icon,
             Padding(
-              padding: EdgeInsets.all(4),
+              padding: const EdgeInsets.all(4),
               child: Text(
                 getTranslations().fromKey(menuItem.title),
                 maxLines: 2,

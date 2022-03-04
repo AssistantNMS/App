@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +13,8 @@ import '../../helpers/actionHelper.dart';
 class AddEditInventoryPage extends StatefulWidget {
   final bool isEdit;
   final Inventory inventory;
-  AddEditInventoryPage(this.inventory, this.isEdit);
+  const AddEditInventoryPage(this.inventory, this.isEdit, {Key key})
+      : super(key: key);
 
   @override
   _AddEditInventoryState createState() =>
@@ -26,8 +29,8 @@ class _AddEditInventoryState extends State<AddEditInventoryPage> {
 
   _AddEditInventoryState(this.inventory, this.isEdit) {
     var selectedIndex = UserSelectionIcons.inventory.indexOf(inventory.icon);
-    this.selectedImageIndex = selectedIndex >= 0 ? selectedIndex : 0;
-    this.inventory.icon = UserSelectionIcons.inventory[this.selectedImageIndex];
+    selectedImageIndex = selectedIndex >= 0 ? selectedIndex : 0;
+    inventory.icon = UserSelectionIcons.inventory[selectedImageIndex];
   }
 
   @override
@@ -40,10 +43,10 @@ class _AddEditInventoryState extends State<AddEditInventoryPage> {
           context,
           LocaleKey.name,
           nameIfEmpty: LocaleKey.newItem,
-          currentName: this.inventory.name ??
-              getTranslations().fromKey(LocaleKey.newItem),
+          currentName:
+              inventory.name ?? getTranslations().fromKey(LocaleKey.newItem),
           onEdit: (String newName) => setState(() {
-            this.inventory.name = newName;
+            inventory.name = newName;
           }),
         )
       ],
@@ -53,15 +56,15 @@ class _AddEditInventoryState extends State<AddEditInventoryPage> {
           Navigator.pop(
             context,
             Inventory(
-                name: this.inventory.name ??
+                name: inventory.name ??
                     getTranslations().fromKey(LocaleKey.newItem),
-                uuid: this.inventory.uuid,
-                icon: this.inventory.icon,
-                slots: this.inventory.slots ?? List.empty(growable: true)),
+                uuid: inventory.uuid,
+                icon: inventory.icon,
+                slots: inventory.slots ?? List.empty(growable: true)),
           );
         },
         heroTag: 'AddEditInventoryPage',
-        child: Icon(Icons.check),
+        child: const Icon(Icons.check),
         foregroundColor: getTheme().fabForegroundColourSelector(context),
         backgroundColor: getTheme().fabColourSelector(context),
       ),
@@ -78,7 +81,7 @@ class _AddEditInventoryState extends State<AddEditInventoryPage> {
       (BuildContext innerContext, String icon) =>
           inventoryIconTilePresenter(innerContext, icon, (String icon) {
         var selectedIndex = UserSelectionIcons.inventory.indexOf(icon);
-        this.setState(() {
+        setState(() {
           inventory.icon = icon;
           selectedImageIndex = selectedIndex;
         });

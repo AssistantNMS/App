@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
@@ -9,18 +11,17 @@ class CommunityMissionRewardDetailsPage extends StatefulWidget {
   final int missionId;
   final int missionMin;
   final int missionMax;
-  CommunityMissionRewardDetailsPage(
-    this.missionId,
-    this.missionMin,
-    this.missionMax,
-  );
+  const CommunityMissionRewardDetailsPage(
+      this.missionId, this.missionMin, this.missionMax,
+      {Key key})
+      : super(key: key);
 
   @override
   _CommunityMissionRewardDetailsWidget createState() =>
       _CommunityMissionRewardDetailsWidget(
         missionId,
-        this.missionMin,
-        this.missionMax,
+        missionMin,
+        missionMax,
       );
 }
 
@@ -50,26 +51,26 @@ class _CommunityMissionRewardDetailsWidget extends State<StatefulWidget> {
         children: [
           Padding(
             child: Text(
-              this.missionId.toString(),
-              style: TextStyle(fontSize: 20),
+              missionId.toString(),
+              style: const TextStyle(fontSize: 20),
               textAlign: TextAlign.center,
             ),
-            padding: EdgeInsets.only(top: 12),
+            padding: const EdgeInsets.only(top: 12),
           ),
           customDivider(),
-          CommunityMissionRewards(this.missionId),
+          CommunityMissionRewards(missionId),
           emptySpace(16),
         ],
       ),
-      currentPosition: (this.missionId - this.missionMin),
-      maxPositionIndex: (this.missionMax - this.missionMin) + 1,
+      currentPosition: (missionId - missionMin),
+      maxPositionIndex: (missionMax - missionMin) + 1,
       nextLocaleKey: LocaleKey.nextCommunityMission,
       prevLocaleKey: LocaleKey.prevCommunityMission,
-      onPreviousTap: () => this.setState(() {
-        this.missionId = this.missionId - 1;
+      onPreviousTap: () => setState(() {
+        missionId = missionId - 1;
       }),
-      onNextTap: () => this.setState(() {
-        this.missionId = this.missionId + 1;
+      onNextTap: () => setState(() {
+        missionId = missionId + 1;
       }),
     );
   }

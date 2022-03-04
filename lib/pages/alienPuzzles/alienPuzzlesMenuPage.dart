@@ -98,7 +98,7 @@ class AlienPuzzlesMenuPage extends StatelessWidget {
 
     return gridWithScrollbar(
       shrinkWrap: true,
-      padding: EdgeInsets.all(0),
+      padding: const EdgeInsets.all(0),
       itemCount: listItems.length,
       itemBuilder: (BuildContext context, int index) => listItems[index],
       gridViewColumnCalculator: (dynamic br) => 2,
@@ -115,7 +115,7 @@ Widget menuTile(
     List<AlienPuzzleType> puzzleTypes) {
   return InkWell(
     child: Stack(children: [
-      Container(
+      SizedBox(
         height: backgroundHeight,
         width: double.infinity,
         child: Image.asset(
@@ -123,13 +123,13 @@ Widget menuTile(
           fit: BoxFit.cover,
         ),
       ),
-      if (userCredit.length > 0) ...[
+      if (userCredit.isNotEmpty) ...[
         Positioned(
           right: 0,
           top: 0,
           child: Container(
             child: genericItemDescription(userCredit),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(10),
               ),
@@ -143,7 +143,7 @@ Widget menuTile(
         right: 0,
         bottom: 0,
         child: Container(
-          color: Color.fromRGBO(0, 0, 0, 0.75),
+          color: const Color.fromRGBO(0, 0, 0, 0.75),
           child: genericItemName(getTranslations().fromKey(title)),
         ),
       ),

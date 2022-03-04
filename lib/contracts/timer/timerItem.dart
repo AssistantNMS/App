@@ -45,20 +45,20 @@ class TimerItem {
   }
 
   factory TimerItem.fromJson(Map<String, dynamic> json) => TimerItem(
-        notificationId: (json["notificationId"] as int) ?? 0,
-        uuid: json["uuid"],
-        name: json["name"],
-        icon: json["icon"],
-        startDate: DateTime.tryParse(json["startDate"]),
-        completionDate: DateTime.tryParse(json["completionDate"]),
+        notificationId: readIntSafe(json, 'notificationId'),
+        uuid: readStringSafe(json, 'uuid'),
+        name: readStringSafe(json, 'name'),
+        icon: readStringSafe(json, 'icon'),
+        startDate: readDateSafe(json, 'startDate'),
+        completionDate: readDateSafe(json, 'completionDate'),
       );
 
   Map<String, dynamic> toJson() => {
-        'notificationId': this.notificationId,
-        'uuid': this.uuid,
-        'name': this.name,
-        'icon': this.icon,
-        'startDate': this.startDate.toString(),
-        'completionDate': this.completionDate.toString(),
+        'notificationId': notificationId,
+        'uuid': uuid,
+        'name': name,
+        'icon': icon,
+        'startDate': startDate.toString(),
+        'completionDate': completionDate.toString(),
       };
 }

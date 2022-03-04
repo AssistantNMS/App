@@ -9,7 +9,7 @@ import '../../../contracts/redux/appState.dart';
 import '../../../redux/modules/setting/introViewModel.dart';
 
 class Valentines2020 extends StatelessWidget {
-  Valentines2020();
+  const Valentines2020({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,8 @@ class Valentines2020 extends StatelessWidget {
     String selectedImage = availableImages[index];
 
     String url = 'https://www.reddit.com/r/NMS_GalacticCorporate/';
-    var gotToFunc = () => launchExternalURL(url);
+    Future Function() gotToFunc;
+    gotToFunc = () => launchExternalURL(url);
 
     return basicGenericPageScaffold(
       context,
@@ -46,16 +47,16 @@ class Valentines2020 extends StatelessWidget {
               child: Center(
                 child: Text(
                   "#${index + 1}",
-                  style: TextStyle(fontStyle: FontStyle.italic),
+                  style: const TextStyle(fontStyle: FontStyle.italic),
                 ),
               ),
               margin: const EdgeInsets.all(4.0),
             ),
             GestureDetector(
               child: Chip(
-                label: Text('NMS_GalacticCorporate'),
+                label: const Text('NMS_GalacticCorporate'),
                 backgroundColor: Colors.transparent,
-                deleteIcon: Icon(Icons.open_in_new),
+                deleteIcon: const Icon(Icons.open_in_new),
                 onDeleted: gotToFunc,
               ),
               onTap: gotToFunc,
@@ -66,14 +67,14 @@ class Valentines2020 extends StatelessWidget {
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 10,
-                style: TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 20),
               ),
               margin: const EdgeInsets.all(4.0),
             ),
           ];
           return listWithScrollbar(
             shrinkWrap: true,
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             itemCount: widgets.length,
             itemBuilder: (BuildContext context, int index) => widgets[index],
           );

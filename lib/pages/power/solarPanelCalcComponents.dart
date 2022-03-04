@@ -25,7 +25,7 @@ Widget getPowerTable(BuildContext context, double totalPowerCons,
     double night = 0,
     double total = 0}) {
   return Padding(
-    padding: EdgeInsets.all(8),
+    padding: const EdgeInsets.all(8),
     child: Table(
       children: [
         TableRow(children: [
@@ -56,7 +56,7 @@ Widget getPowerTable(BuildContext context, double totalPowerCons,
         ]),
         TableRow(children: [customDivider(), customDivider(), customDivider()]),
       ],
-      columnWidths: {
+      columnWidths: const {
         0: FractionColumnWidth(.05),
         1: FractionColumnWidth(.65),
         2: FractionColumnWidth(.3)
@@ -68,7 +68,7 @@ Widget getPowerTable(BuildContext context, double totalPowerCons,
 Widget getSummaryTable(BuildContext context, double powerStoredForNight,
     double powerRequiredForNight, double powerUnused, double powerLost) {
   return Padding(
-    padding: EdgeInsets.all(8),
+    padding: const EdgeInsets.all(8),
     child: Table(
       children: [
         TableRow(children: [
@@ -97,7 +97,7 @@ Widget getSummaryTable(BuildContext context, double powerStoredForNight,
         ]),
         TableRow(children: [customDivider(), customDivider(), customDivider()]),
       ],
-      columnWidths: {
+      columnWidths: const {
         0: FractionColumnWidth(.05),
         1: FractionColumnWidth(.65),
         2: FractionColumnWidth(.3)
@@ -119,7 +119,7 @@ Widget headingText(BuildContext context, LocaleKey locale,
     Padding(
       child: Text(
         getTranslations().fromKey(locale),
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 16,
           // fontWeight: FontWeight.bold,
         ),
@@ -127,17 +127,17 @@ Widget headingText(BuildContext context, LocaleKey locale,
         overflow: TextOverflow.ellipsis,
         textAlign: textAlign,
       ),
-      padding: EdgeInsets.only(top: 2, bottom: 4, left: 8),
+      padding: const EdgeInsets.only(top: 2, bottom: 4, left: 8),
     );
 
 Widget rowText(BuildContext context, String text, {TextAlign textAlign}) =>
     Padding(
       child: Text(
         text,
-        style: TextStyle(fontSize: 16),
+        style: const TextStyle(fontSize: 16),
         textAlign: TextAlign.end,
       ),
-      padding: EdgeInsets.only(top: 2, bottom: 4, right: 8),
+      padding: const EdgeInsets.only(top: 2, bottom: 4, right: 8),
     );
 
 Widget inGameInfoTable(BuildContext context) {
@@ -173,13 +173,13 @@ Widget inGameInfoTable(BuildContext context) {
               rowText(context, "10h 40m"),
             ]),
           ],
-          columnWidths: {
+          columnWidths: const {
             0: FractionColumnWidth(.05),
           },
         ),
       ],
     ),
-    padding: EdgeInsets.all(8),
+    padding: const EdgeInsets.all(8),
   );
 }
 
@@ -216,12 +216,12 @@ Widget realTimeInfoTable(BuildContext context) {
               rowText(context, "800s"),
             ]),
           ],
-          columnWidths: {
+          columnWidths: const {
             0: FractionColumnWidth(.05),
           },
         ),
       ],
     ),
-    padding: EdgeInsets.all(8),
+    padding: const EdgeInsets.all(8),
   );
 }

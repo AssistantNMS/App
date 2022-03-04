@@ -15,7 +15,7 @@ import 'communityMissionRewardDetails.dart';
 import 'communityMissionRewards.dart';
 
 class CommunityMissionPage extends StatelessWidget {
-  CommunityMissionPage() {
+  CommunityMissionPage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.communityMissionPage);
   }
 
@@ -106,7 +106,7 @@ class CommunityMissionPage extends StatelessWidget {
 
     widgets.add(
       Padding(
-        padding: EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(15.0),
         child: horizontalProgressBar(context, percentage.toDouble()),
       ),
     );
@@ -130,7 +130,7 @@ class CommunityMissionPage extends StatelessWidget {
         LocaleKey buttonLocale, int missionIdToView) {
       return Expanded(
         child: Padding(
-          padding: EdgeInsets.only(left: 8, right: 4, bottom: 4),
+          padding: const EdgeInsets.only(left: 8, right: 4, bottom: 4),
           child: positiveButton(
             title: getTranslations().fromKey(buttonLocale),
             colour: getTheme().getSecondaryColour(context),

@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
@@ -20,7 +22,7 @@ class GuidesDetailsPage extends StatefulWidget {
   const GuidesDetailsPage(this.details, {Key key}) : super(key: key);
 
   @override
-  _GuidesDetailsWidget createState() => _GuidesDetailsWidget(this.details);
+  _GuidesDetailsWidget createState() => _GuidesDetailsWidget(details);
 }
 
 class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
@@ -36,28 +38,27 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
   @override
   void initState() {
     super.initState();
-    this.appApi = getGuideApiService();
-    this.isMetaLoading = false;
+    appApi = getGuideApiService();
+    isMetaLoading = false;
   }
 
   void handleGetGuideMetaData() {
-    if (this.meta != null && this.meta.guid != null) return;
-    if (this.details == null || this.details.guid == null) return;
+    if (meta != null && meta.guid != null) return;
+    if (details == null || details.guid == null) return;
 
-    appApi.getGuideMetaData(this.details.guid).then((metaDataResult) {
+    appApi.getGuideMetaData(details.guid).then((metaDataResult) {
       if (metaDataResult.hasFailed) {
-        print(metaDataResult.errorMessage);
         return;
       }
       setState(() {
-        this.meta = metaDataResult.value;
+        meta = metaDataResult.value;
       });
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    this.handleGetGuideMetaData();
+    handleGetGuideMetaData();
     return simpleGenericPageScaffold(
       context,
       title: details.shortTitle,
@@ -72,7 +73,7 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
 
     List<Widget> firstSectionWidgets = List.empty(growable: true);
     firstSectionWidgets.add(genericItemDescription(details.author));
-    if (details.translatedBy != null && details.translatedBy.length > 0) {
+    if (details.translatedBy != null && details.translatedBy.isNotEmpty) {
       firstSectionWidgets.add(genericItemDescription(details.translatedBy));
     }
     firstSectionWidgets.add(genericItemDescription(dateString));
@@ -109,18 +110,19 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
 
     Widget metaWidget = Padding(
       child: getLoading().loadingIndicator(),
-      padding: EdgeInsets.only(top: 12),
+      padding: const EdgeInsets.only(top: 12),
     );
-    if (this.meta != null &&
-        this.meta.guid != null &&
-        this.meta.guid.length > 0 &&
-        !this.isMetaLoading) {
-      Future<void> Function() likeFunc = () async {
-        if (this.isMetaLoading) return;
+    if (meta != null &&
+        meta.guid != null &&
+        meta.guid.isNotEmpty &&
+        !isMetaLoading) {
+      Future<void> Function() likeFunc;
+      likeFunc = () async {
+        if (isMetaLoading) return;
         setState(() {
-          this.isMetaLoading = true;
+          isMetaLoading = true;
         });
-        Result apiResult = await this.appApi.likeGuide(this.meta.guid);
+        Result apiResult = await appApi.likeGuide(meta.guid);
         if (apiResult.hasFailed) {
           simpleDialog(
             context,
@@ -129,28 +131,28 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
             buttons: [simpleDialogCloseButton(context)],
           );
           setState(() {
-            this.isMetaLoading = false;
+            isMetaLoading = false;
           });
           return;
         }
         setState(() {
-          this.isMetaLoading = false;
-          this.meta.likes += 1;
+          isMetaLoading = false;
+          meta.likes += 1;
         });
       };
       metaWidget = Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             genericIconWithText(
               Icons.thumb_up,
-              this.meta.likes.toString(),
+              meta.likes.toString(),
               onTap: likeFunc,
             ),
             genericIconWithText(
               Icons.remove_red_eye,
-              this.meta.views.toString(),
+              meta.views.toString(),
             ),
           ],
         ),
@@ -163,7 +165,7 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
     ];
 
     widgets.add(SliverStickyHeader(
-      header: Container(height: 0, width: 0),
+      header: const SizedBox(height: 0, width: 0),
       sliver: SliverList(
         delegate: SliverChildBuilderDelegate(
           (_c, i) => metaList[i],

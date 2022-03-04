@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:after_layout/after_layout.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
@@ -18,13 +20,12 @@ import '../techTree/unlockableTechTreeComponents.dart';
 
 class AlienPuzzlesRewardPage extends StatefulWidget {
   final List<AlienPuzzleReward> rewards;
-  AlienPuzzlesRewardPage(this.rewards) {
+  AlienPuzzlesRewardPage(this.rewards, {Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.alienPuzzlesRewardDetailPage);
   }
 
   @override
-  _AlienPuzzlesRewardWidget createState() =>
-      _AlienPuzzlesRewardWidget(this.rewards);
+  _AlienPuzzlesRewardWidget createState() => _AlienPuzzlesRewardWidget(rewards);
 }
 
 class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
@@ -42,7 +43,7 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
     getList(context);
   }
 
-  Future<Null> getList(BuildContext context) async {
+  Future getList(BuildContext context) async {
     List<AlienPuzzleRewardWithAdditional> newRewards =
         List.empty(growable: true);
     List<TechTree> techTreesToDisplay = List.empty(growable: true);
@@ -117,7 +118,9 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
         newItem.details = detailRewards;
         newRewards.add(newItem);
       }
-    } catch (exception) {}
+    } catch (exception) {
+      //
+    }
 
     setState(() {
       hasLoaded = true;
@@ -137,15 +140,15 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
   }
 
   Widget getBody(BuildContext context, unused) {
-    if (this.hasFailed == true) return getLoading().customErrorWidget(context);
-    if (this.hasLoaded == false) return getLoading().fullPageLoading(context);
+    if (hasFailed == true) return getLoading().customErrorWidget(context);
+    if (hasLoaded == false) return getLoading().fullPageLoading(context);
 
     List<Widget> widgets = List.empty(growable: true);
     for (AlienPuzzleRewardWithAdditional reward in _rewards) {
       // widgets.add(Center(
       //     child: Padding(
       //   child: Text('reward'),
-      //   padding: EdgeInsets.only(top: 8),
+      //   padding: const EdgeInsets.only(top: 8),
       // )));
       var orderedRewardDetails = reward.details.toList();
       orderedRewardDetails.sort(
@@ -165,7 +168,7 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
         // widgets.add(customDivider());
       }
     }
-    if (widgets.length > 0) {
+    if (widgets.isNotEmpty) {
       widgets.add(customDivider());
     }
     for (var techTree in _techTree) {
@@ -177,16 +180,16 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
         ),
       ));
     }
-    if (widgets.length < 1) {
+    if (widgets.isEmpty) {
       widgets.add(
         Container(
           child: Text(
             getTranslations().fromKey(LocaleKey.noItems),
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
-          margin: EdgeInsets.only(top: 30),
+          margin: const EdgeInsets.only(top: 30),
         ),
       );
     }

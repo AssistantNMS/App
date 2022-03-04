@@ -136,7 +136,7 @@ Widget genericHomeTileWithRequiredItemsBody(
   );
   if (errorWidget != null) return errorWidget;
 
-  if (snapshot.data.length == 0) {
+  if (snapshot.data.isEmpty) {
     return displayBackgroundColour
         ? genericTileWithBackgroundColourPresenter(context, genericItem, isHero,
             onTap: onTap)

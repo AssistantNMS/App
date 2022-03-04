@@ -155,7 +155,7 @@ class SeasonalExpeditionSeasonListPage extends StatelessWidget {
         () {
           getNavigation().navigateAsync(
             context,
-            navigateTo: (_) => UnusedPatchImagesPage(),
+            navigateTo: (_) => const UnusedPatchImagesPage(),
           );
         },
       ),

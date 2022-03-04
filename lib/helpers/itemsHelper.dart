@@ -35,8 +35,7 @@ Future<List<RequiredItemDetails>> getAllRequiredItemsForMultiple(
     }
   }
 
-  Map<String, RequiredItemDetails> rawMaterialMap =
-      Map<String, RequiredItemDetails>();
+  Map<String, RequiredItemDetails> rawMaterialMap = {};
   for (int rawMaterialIndex = 0;
       rawMaterialIndex < rawMaterials.length;
       rawMaterialIndex++) {
@@ -94,7 +93,7 @@ Future<List<RequiredItemDetails>> getRequiredItems(
   List<RequiredItemDetails> rawMaterialsResult = List.empty(growable: true);
 
   if (tempRawMaterials != null &&
-      tempRawMaterials.length == 0 &&
+      tempRawMaterials.isEmpty &&
       requiredItemDetails != null) {
     rawMaterialsResult.add(requiredItemDetails);
     return rawMaterialsResult;
@@ -150,9 +149,10 @@ Future<ResultWithValue<RequiredItemDetails>> requiredItemDetails(
   //
   ResultWithValue<IGenericRepository> genRepo =
       getRepoFromId(context, requiredItem.id);
-  if (genRepo.hasFailed)
+  if (genRepo.hasFailed) {
     return ResultWithValue<RequiredItemDetails>(
         false, RequiredItemDetails(), genRepo.errorMessage);
+  }
   ResultWithValue<GenericPageItem> genericResult =
       await genRepo.value.getById(context, requiredItem.id);
   if (genericResult.isSuccess) {
@@ -357,14 +357,13 @@ Future<ResultWithValue<List<InventorySlotWithGenericPageItem>>>
 
   results.sort((a, b) => a.name.compareTo(b.name));
 
-  return ResultWithValue(results.length > 0, results, '');
+  return ResultWithValue(results.isNotEmpty, results, '');
 }
 
 Future<ResultWithValue<List<InventorySlotWithContainersAndGenericPageItem>>>
     getDetailedInventorySlotsWithContainer(
         BuildContext context, List<Inventory> inventories) async {
-  Map<String, InventorySlotWithContainersAndGenericPageItem> invSlotMap =
-      Map<String, InventorySlotWithContainersAndGenericPageItem>();
+  Map<String, InventorySlotWithContainersAndGenericPageItem> invSlotMap = {};
   for (Inventory inventory in inventories) {
     for (InventorySlot slot in inventory.slots) {
       InventoryNameAndId nameId =
@@ -400,5 +399,5 @@ Future<ResultWithValue<List<InventorySlotWithContainersAndGenericPageItem>>>
   List<InventorySlotWithContainersAndGenericPageItem> results =
       invSlotMap.values.toList();
   results.sort((a, b) => a.name.compareTo(b.name));
-  return ResultWithValue(results.length > 0, results, '');
+  return ResultWithValue(results.isNotEmpty, results, '');
 }

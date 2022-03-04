@@ -21,8 +21,7 @@ class DataJsonRepository extends BaseJsonService
   Future<ResultWithValue<List<SocialItem>>> getSocial(
       BuildContext context) async {
     try {
-      dynamic responseJson =
-          await this.getJsonFromAssets(context, "data/social");
+      dynamic responseJson = await getJsonFromAssets(context, "data/social");
       List list = json.decode(responseJson);
       List<SocialItem> socials =
           list.map((m) => SocialItem.fromJson(m)).toList();
@@ -39,8 +38,7 @@ class DataJsonRepository extends BaseJsonService
   Future<ResultWithValue<List<UpdateItemDetail>>> getUpdateItems(
       BuildContext context) async {
     try {
-      dynamic responseJson =
-          await this.getJsonFromAssets(context, "data/newItems");
+      dynamic responseJson = await getJsonFromAssets(context, "data/newItems");
       List list = json.decode(responseJson);
       List<UpdateItemDetail> updateItems =
           list.map((m) => UpdateItemDetail.fromJson(m)).toList();
@@ -57,7 +55,7 @@ class DataJsonRepository extends BaseJsonService
   Future<ResultWithValue<UpdateItemDetail>> getUpdateItem(
       BuildContext context, String itemId) async {
     ResultWithValue<List<UpdateItemDetail>> allGenericItemsResult =
-        await this.getUpdateItems(context);
+        await getUpdateItems(context);
     if (allGenericItemsResult.hasFailed) {
       return ResultWithValue(
           false, UpdateItemDetail(), allGenericItemsResult.errorMessage);
@@ -79,7 +77,7 @@ class DataJsonRepository extends BaseJsonService
       BuildContext context) async {
     try {
       dynamic responseJson =
-          await this.getJsonFromAssets(context, "data/quicksilverStore");
+          await getJsonFromAssets(context, "data/quicksilverStore");
       List list = json.decode(responseJson);
       List<QuicksilverStore> quicksilverStoreItems =
           list.map((m) => QuicksilverStore.fromJson(m)).toList();
@@ -118,7 +116,7 @@ class DataJsonRepository extends BaseJsonService
       BuildContext context, String itemId) async {
     try {
       dynamic responseJson =
-          await this.getJsonFromAssets(context, "data/eggNeuralTraits");
+          await getJsonFromAssets(context, "data/eggNeuralTraits");
       List list = json.decode(responseJson);
       List<EggTrait> eggTraitItems = list //
           .map((e) => EggTrait.fromJson(e))
@@ -138,7 +136,7 @@ class DataJsonRepository extends BaseJsonService
       BuildContext context) async {
     try {
       dynamic responseJson =
-          await this.getJsonFromAssets(context, "data/unusedMilestonePatches");
+          await getJsonFromAssets(context, "data/unusedMilestonePatches");
       List list = json.decode(responseJson);
       List<String> unusedItems = list.map((e) => e as String).toList();
       return ResultWithValue<List<String>>(true, unusedItems, '');
@@ -154,7 +152,7 @@ class DataJsonRepository extends BaseJsonService
       BuildContext context) async {
     try {
       dynamic responseJson =
-          await this.getJsonFromAssets(context, "data/developerDetails");
+          await getJsonFromAssets(context, "data/developerDetails");
       List list = json.decode(responseJson);
       List<DevDetail> devItems = list //
           .map((e) => DevDetail.fromJson(e))
@@ -173,9 +171,10 @@ class DataJsonRepository extends BaseJsonService
       BuildContext context, String itemId) async {
     ResultWithValue<List<DevDetail>> devItemsResult =
         await _getDevDetails(context);
-    if (devItemsResult.hasFailed)
+    if (devItemsResult.hasFailed) {
       return ResultWithValue<DevDetail>(
           false, null, devItemsResult.errorMessage);
+    }
 
     try {
       var devItem = devItemsResult.value
@@ -183,7 +182,7 @@ class DataJsonRepository extends BaseJsonService
 
       if (devItem == null ||
           devItem.properties == null ||
-          devItem.properties.length < 1) {
+          devItem.properties.isEmpty) {
         return ResultWithValue<DevDetail>(false, null, 'No dev details');
       }
 
@@ -199,7 +198,7 @@ class DataJsonRepository extends BaseJsonService
   Future<ResultWithValue<GeneratedMeta>> getGeneratedMeta(
       BuildContext context) async {
     try {
-      dynamic responseJson = await this.getJsonFromAssets(context, "data/meta");
+      dynamic responseJson = await getJsonFromAssets(context, "data/meta");
       GeneratedMeta meta = GeneratedMeta.fromRawJson(responseJson);
       return ResultWithValue<GeneratedMeta>(true, meta, '');
     } catch (exception) {
@@ -214,7 +213,7 @@ class DataJsonRepository extends BaseJsonService
       BuildContext context, int platformIndex) async {
     try {
       dynamic responseJson =
-          await this.getJsonFromAssets(context, "data/controllerLookup");
+          await getJsonFromAssets(context, "data/controllerLookup");
       ControlMappingList fullMapping =
           ControlMappingList.fromRawJson(responseJson);
       List<PlatformControlMapping> result =
@@ -233,7 +232,7 @@ class DataJsonRepository extends BaseJsonService
       BuildContext context) async {
     try {
       dynamic responseJson =
-          await this.getJsonFromAssets(context, "data/alphabetTranslations");
+          await getJsonFromAssets(context, "data/alphabetTranslations");
       List list = json.decode(responseJson);
       List<AlphabetTranslation> trans = list //
           .map((e) => AlphabetTranslation.fromJson(e))
@@ -252,9 +251,10 @@ class DataJsonRepository extends BaseJsonService
       BuildContext context, String itemId) async {
     ResultWithValue<List<AlphabetTranslation>> devItemsResult =
         await getTranslations(context);
-    if (devItemsResult.hasFailed)
+    if (devItemsResult.hasFailed) {
       return ResultWithValue<AlphabetTranslation>(
           false, null, devItemsResult.errorMessage);
+    }
 
     try {
       AlphabetTranslation devItem = devItemsResult.value

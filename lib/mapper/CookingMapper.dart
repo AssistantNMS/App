@@ -4,7 +4,7 @@ import '../contracts/requiredItem.dart';
 
 List<RequiredItem> mapCookingToRequiredItemsWithDescrip(
         List<Processor> nutrientProcs) =>
-    (nutrientProcs == null || nutrientProcs.length < 1)
+    (nutrientProcs == null || nutrientProcs.isEmpty)
         ? List.empty(growable: true)
         : nutrientProcs
             .map(

@@ -15,15 +15,15 @@ Widget portalTilePresenter(BuildContext context, PortalRecord portalItem,
       Card(
         child: Column(children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(top: 12, right: 4, left: 4),
+            padding: const EdgeInsets.only(top: 12, right: 4, left: 4),
             child: Text(
               portalItem.name,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 8),
+            padding: const EdgeInsets.only(top: 8),
             child: twoLinePortalGlyphList(portalItem.codes,
                 useAltGlyphs: useAltGlyphs),
           ),

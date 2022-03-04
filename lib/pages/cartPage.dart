@@ -21,7 +21,7 @@ import '../redux/modules/cart/cartViewModel.dart';
 import 'generic/genericPageAllRequiredRawMaterials.dart';
 
 class CartPage extends StatelessWidget {
-  CartPage() {
+  CartPage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.cartPage);
   }
 
@@ -60,11 +60,12 @@ class CartPage extends StatelessWidget {
       if (genRepo.hasFailed) continue;
 
       var itemResult = await genRepo.value.getById(context, cartItem.id);
-      if (itemResult.isSuccess)
+      if (itemResult.isSuccess) {
         reqItems.add(CartPageItem(
           quantity: cartItem.quantity,
           details: itemResult.value,
         ));
+      }
     }
     return reqItems;
   }
@@ -125,7 +126,7 @@ class CartPage extends StatelessWidget {
       ],
     ));
 
-    if (requiredItems.length > 0) {
+    if (requiredItems.isNotEmpty) {
       widgets.add(Container(
         child: positiveButton(
           title: getTranslations().fromKey(
@@ -168,9 +169,9 @@ class CartPage extends StatelessWidget {
             getTranslations().fromKey(LocaleKey.noCartItems),
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
-          margin: EdgeInsets.only(top: 30),
+          margin: const EdgeInsets.only(top: 30),
         ),
       );
     }
@@ -196,7 +197,7 @@ class CartPage extends StatelessWidget {
         for (var currency in snapshot.data) {
           total += currency;
         }
-        if (total == 0) return Container(width: 0, height: 0);
+        if (total == 0) return const SizedBox(width: 0, height: 0);
         return genericChipWidget(
             context, presenter(context, total.toStringAsFixed(0)));
       },

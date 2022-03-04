@@ -5,7 +5,7 @@ import 'package:meta/meta.dart';
 class ExpeditionState {
   final List<String> claimedRewards;
 
-  ExpeditionState({this.claimedRewards});
+  const ExpeditionState({this.claimedRewards});
 
   factory ExpeditionState.initial() {
     return ExpeditionState(claimedRewards: List.empty(growable: true));

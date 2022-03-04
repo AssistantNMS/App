@@ -32,14 +32,14 @@ Widget techTreeTilePresenter(BuildContext context, String name) {
 // Widget techTreeNodeTilePresenter(
 //     BuildContext context, TechTreeNode item, int level) {
 //   List<Widget> rowWidgets = List.empty(growable: true);
-//   if (item.children.length > 0) {
+//   if (item.children.isNotEmpty) {
 //     rowWidgets.add(Padding(
 //       child: itemIcon,
 //       padding: const EdgeInsets.only(right: 8.0),
 //     ));
 //   } else {
 //     rowWidgets.add(Padding(
-//       child: Icon(Icons.add_circle, size: 20, color: Colors.transparent),
+//       child: const Icon(Icons.add_circle, size: 20, color: Colors.transparent),
 //       padding: const EdgeInsets.only(right: 8.0),
 //     ));
 //   }
@@ -53,12 +53,12 @@ Widget techTreeTilePresenter(BuildContext context, String name) {
 //       // leading: genericTileImage(item.icon, null),
 //       title: Row(children: rowWidgets),
 //       trailing: IconButton(
-//         icon: Icon(Icons.exit_to_app),
+//         icon: const Icon(Icons.exit_to_app),
 //         onPressed: () async => await getNavigation().navigateAsync(context,
 //             navigateTo: (context) => GenericPage(item.id)),
 //       ),
 //     ),
-//     padding: EdgeInsets.only(left: level * itemPadding),
+//     padding: const EdgeInsets.only(left: level * itemPadding),
 //   );
 // }
 
@@ -77,7 +77,7 @@ Widget techTreeTilePresenter(BuildContext context, String name) {
 //     child: ListTile(
 //       title: Row(children: rowWidgets),
 //     ),
-//     padding: EdgeInsets.only(left: level * itemPadding),
+//     padding: const EdgeInsets.only(left: level * itemPadding),
 //   );
 //   if (level == 0) {
 //     return Card(child: child);

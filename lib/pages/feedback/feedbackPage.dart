@@ -13,7 +13,7 @@ import '../../integration/dependencyInjection.dart';
 import 'FeedbackQuestionsPage.dart';
 
 class FeedbackPage extends StatelessWidget {
-  FeedbackPage() {
+  FeedbackPage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.feedbackPage);
   }
 
@@ -39,7 +39,7 @@ class FeedbackPage extends StatelessWidget {
             snapshot.data.value.guid == null ||
             snapshot.data.value.name == null ||
             snapshot.data.value.questions == null ||
-            snapshot.data.value.questions.length < 1) {
+            snapshot.data.value.questions.isEmpty) {
           return false;
         }
         return true;
@@ -52,9 +52,9 @@ class FeedbackPage extends StatelessWidget {
               getTranslations().fromKey(LocaleKey.somethingWentWrong),
               textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
             ),
-            margin: EdgeInsets.only(top: 30),
+            margin: const EdgeInsets.only(top: 30),
           );
         },
       ),

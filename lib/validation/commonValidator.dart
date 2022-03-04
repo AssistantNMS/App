@@ -19,7 +19,8 @@ bool emailValidator(String email) {
 bool friendCodeValidator(String friendCode) {
   String regexPattern = r"^[A-z0-9]{4}\-[A-z0-9]{4}\-[A-z0-9]{5}";
   var friendCodeValid = RegExp(regexPattern).hasMatch(friendCode);
-  if (friendCodeValid == false)
+  if (friendCodeValid == false) {
     getLog().v('friendCodeValidator: $friendCode failed');
+  }
   return friendCodeValid;
 }

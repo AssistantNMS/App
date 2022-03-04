@@ -10,10 +10,13 @@ class LanguageService implements ILanguageService {
   @override
   List<LocalizationMap> getLocalizationMaps() => supportedLanguageMaps;
 
+  @override
   List<Locale> supportedLocales() =>
       getLocalizationMaps().map((l) => Locale(l.code, "")).toList();
+  @override
   List<LocaleKey> supportedLanguages() =>
       getLocalizationMaps().map((l) => l.name).toList();
+  @override
   List<String> supportedLanguagesCodes() =>
       getLocalizationMaps().map((l) => l.code).toList();
 }

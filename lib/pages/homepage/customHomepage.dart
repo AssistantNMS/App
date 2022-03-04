@@ -15,7 +15,7 @@ import 'editCustomHomepage.dart';
 import 'viewCustomHomepage.dart';
 
 class CustomHomepage extends StatefulWidget {
-  CustomHomepage() {
+  CustomHomepage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.customHomepage);
   }
   @override
@@ -32,14 +32,14 @@ class _CustomHomeWidget extends State<CustomHomepage>
   Widget build(BuildContext context) {
     return basicGenericPageScaffold(
       context,
-      drawer: AppDrawer(),
+      drawer: const AppDrawer(),
       appBar: homePageAppBar(
         getTranslations().fromKey(LocaleKey.homepage),
         customActions: [
           ActionItem(
             icon: isEdit ? Icons.check : Icons.edit,
             onPressed: () {
-              this.setState(() {
+              setState(() {
                 isEdit = !isEdit;
               });
             },

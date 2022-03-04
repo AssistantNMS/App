@@ -23,7 +23,9 @@ class HomepageItem {
         }
       }
       return HomepageItem.defaultHomepageItem();
-    } catch (ex) {}
+    } catch (ex) {
+      //
+    }
     return HomepageItem.defaultHomepageItem();
   }
 }

@@ -7,7 +7,7 @@ import 'interface/IWeekendMissionSeasonJsonRepository.dart';
 
 class WeekendMissionSeasonJsonRepository extends BaseJsonService
     implements IWeekendMissionSeasonJsonRepository {
-  LocaleKey _jsonLocale;
+  final LocaleKey _jsonLocale;
 
   WeekendMissionSeasonJsonRepository(this._jsonLocale);
 
@@ -16,7 +16,7 @@ class WeekendMissionSeasonJsonRepository extends BaseJsonService
       BuildContext context) async {
     String jsonFile = getTranslations().fromKey(_jsonLocale);
     try {
-      List list = await this.getListfromJson(context, jsonFile);
+      List list = await getListfromJson(context, jsonFile);
       List<WeekendMission> weekendMission =
           list.map((m) => WeekendMission.fromJson(m)).toList();
       return ResultWithValue<List<WeekendMission>>(true, weekendMission, '');
@@ -32,7 +32,7 @@ class WeekendMissionSeasonJsonRepository extends BaseJsonService
   Future<ResultWithValue<WeekendMission>> getMissionById(
       context, String seasonId) async {
     ResultWithValue<List<WeekendMission>> allGenericItemsResult =
-        await this.getAll(context);
+        await getAll(context);
     if (allGenericItemsResult.hasFailed) {
       return ResultWithValue(
           false, WeekendMission(), allGenericItemsResult.errorMessage);
@@ -53,7 +53,7 @@ class WeekendMissionSeasonJsonRepository extends BaseJsonService
   Future<ResultWithValue<WeekendStage>> getStageById(
       context, String seasonId, int level) async {
     ResultWithValue<WeekendMission> missionResult =
-        await this.getMissionById(context, seasonId);
+        await getMissionById(context, seasonId);
     if (missionResult.hasFailed) {
       return ResultWithValue(false, WeekendStage(), missionResult.errorMessage);
     }

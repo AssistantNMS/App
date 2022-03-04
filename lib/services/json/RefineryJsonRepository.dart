@@ -16,8 +16,7 @@ class RefineryJsonRepository extends BaseJsonService
 
     String detailJson = getTranslations().fromKey(detailsJsonLocale);
     try {
-      List responseDetailsJson =
-          await this.getListfromJson(context, detailJson);
+      List responseDetailsJson = await getListfromJson(context, detailJson);
       List<Processor> refinerDetails = responseDetailsJson
           .map((m) => Processor.fromJson(m, isRefiner))
           .toList();
@@ -34,7 +33,7 @@ class RefineryJsonRepository extends BaseJsonService
   @override
   Future<ResultWithValue<Processor>> getById(context, String procId) async {
     ResultWithValue<List<Processor>> allGenericItemsResult =
-        await this.getAll(context);
+        await getAll(context);
     if (allGenericItemsResult.hasFailed) {
       return ResultWithValue(
           false, Processor(), allGenericItemsResult.errorMessage);
@@ -54,8 +53,7 @@ class RefineryJsonRepository extends BaseJsonService
   @override
   Future<ResultWithValue<List<Processor>>> getByOutput(
       context, String id) async {
-    ResultWithValue<List<Processor>> refineryResult =
-        await this.getAll(context);
+    ResultWithValue<List<Processor>> refineryResult = await getAll(context);
     if (refineryResult.hasFailed) {
       return ResultWithValue(
           false, List.empty(growable: true), refineryResult.errorMessage);
@@ -75,8 +73,7 @@ class RefineryJsonRepository extends BaseJsonService
   @override
   Future<ResultWithValue<List<Processor>>> getByInput(
       context, String id) async {
-    ResultWithValue<List<Processor>> refineryResult =
-        await this.getAll(context);
+    ResultWithValue<List<Processor>> refineryResult = await getAll(context);
     if (refineryResult.hasFailed) {
       return ResultWithValue(
           false, List.empty(growable: true), refineryResult.errorMessage);

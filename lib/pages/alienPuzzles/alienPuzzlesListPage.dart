@@ -34,7 +34,7 @@ class AlienPuzzlesListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return simpleGenericPageScaffold(
       context,
-      title: getTranslations().fromKey(this.title),
+      title: getTranslations().fromKey(title),
       body: SearchableList<AlienPuzzle>(
         () => getFilteredPuzzles(context),
         listItemDisplayer: alienPuzzleTilePresenter,

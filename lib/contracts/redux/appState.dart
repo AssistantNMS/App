@@ -22,7 +22,7 @@ class AppState {
   final ExpeditionState expeditionState;
   final JourneyMilestoneState journeyMilestoneState;
 
-  AppState({
+  const AppState({
     this.cartState,
     this.portalState,
     this.settingState,
@@ -93,15 +93,15 @@ class AppState {
     JourneyMilestoneState journeyMState,
   }) {
     return AppState(
-      cartState: cartState ?? this.cartState,
-      portalState: portalState ?? this.portalState,
-      settingState: settingState ?? this.settingState,
-      inventoryState: inventoryState ?? this.inventoryState,
-      favouriteState: favouriteState ?? this.favouriteState,
-      timerState: timerState ?? this.timerState,
-      titleState: titleState ?? this.titleState,
-      expeditionState: expeditionState ?? this.expeditionState,
-      journeyMilestoneState: journeyMState ?? this.journeyMilestoneState,
+      cartState: cartState ?? cartState,
+      portalState: portalState ?? portalState,
+      settingState: settingState ?? settingState,
+      inventoryState: inventoryState ?? inventoryState,
+      favouriteState: favouriteState ?? favouriteState,
+      timerState: timerState ?? timerState,
+      titleState: titleState ?? titleState,
+      expeditionState: expeditionState ?? expeditionState,
+      journeyMilestoneState: journeyMState ?? journeyMilestoneState,
     );
   }
 

@@ -10,6 +10,8 @@ import '../../redux/modules/setting/whatIsNewSettingsViewModel.dart';
 import '../newItemsInUpdate/newItemDetailsPage.dart';
 
 class EnhancedWhatIsNewPage extends StatelessWidget {
+  const EnhancedWhatIsNewPage({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return StoreConnector<AppState, WhatIsNewSettingsViewModel>(
@@ -32,7 +34,7 @@ class EnhancedWhatIsNewPage extends StatelessWidget {
             (result.isSuccess &&
                 result.value != null &&
                 result.value.length != null &&
-                result.value.length > 0));
+                result.value.isNotEmpty));
     if (errorWidget != null) return errorWidget;
 
     return WhatIsNewPage(

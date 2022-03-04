@@ -5,6 +5,8 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class RequiredItem {
   String id;
   int quantity;
@@ -24,9 +26,9 @@ class RequiredItem {
 
   String toRawJson() => json.encode(toJson());
 
-  factory RequiredItem.fromJson(Map<String, dynamic> json) => new RequiredItem(
-        id: json["Id"] as String,
-        quantity: json["Quantity"] as int,
+  factory RequiredItem.fromJson(Map<String, dynamic> json) => RequiredItem(
+        id: readStringSafe(json, 'Id'),
+        quantity: readIntSafe(json, 'Quantity'),
       );
 
   Map<String, dynamic> toJson() => {

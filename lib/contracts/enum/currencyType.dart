@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 enum CurrencyType {

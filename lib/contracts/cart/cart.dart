@@ -4,6 +4,6 @@ class Cart {
   List<CartItem> cartItems;
 
   Cart() {
-    this.cartItems = List.empty(growable: true);
+    cartItems = List.empty(growable: true);
   }
 }

@@ -15,7 +15,7 @@ class HelloGamesApiService extends BaseApiService {
 
   Future<ResultWithValue<List<ReleaseNote>>> getReleases() async {
     try {
-      final response = await this.apiGet(ApiUrls.hellogamesReleases);
+      final response = await apiGet(ApiUrls.hellogamesReleases);
       if (response.hasFailed) {
         return ResultWithValue<List<ReleaseNote>>(
             false, List.empty(growable: true), response.errorMessage);
@@ -32,7 +32,7 @@ class HelloGamesApiService extends BaseApiService {
 
   Future<ResultWithValue<List<NewsItem>>> getNews() async {
     try {
-      final response = await this.apiGet(ApiUrls.hellogamesNews);
+      final response = await apiGet(ApiUrls.hellogamesNews);
       if (response.hasFailed) {
         return ResultWithValue<List<NewsItem>>(
             false, List.empty(growable: true), response.errorMessage);
@@ -49,7 +49,7 @@ class HelloGamesApiService extends BaseApiService {
 
   Future<ResultWithValue<CommunityMission>> getCommunityMission() async {
     try {
-      final response = await this.apiGet(ApiUrls.communityMission);
+      final response = await apiGet(ApiUrls.communityMission);
       if (response.hasFailed) {
         return ResultWithValue<CommunityMission>(
             false, CommunityMission(), response.errorMessage);
@@ -65,7 +65,7 @@ class HelloGamesApiService extends BaseApiService {
 
   Future<ResultWithValue<WeekendMissionViewModel>> getWeekendMission() async {
     try {
-      final response = await this.apiGet(ApiUrls.weekendMission);
+      final response = await apiGet(ApiUrls.weekendMission);
       if (response.hasFailed) {
         return ResultWithValue<WeekendMissionViewModel>(
             false, WeekendMissionViewModel(), response.errorMessage);
@@ -83,7 +83,7 @@ class HelloGamesApiService extends BaseApiService {
       getWeekendMissionFromSeasonAndLevel(String season, int level) async {
     try {
       String url = '${ApiUrls.weekendMission}/$season/$level';
-      final response = await this.apiGet(url);
+      final response = await apiGet(url);
       if (response.hasFailed) {
         return ResultWithValue<WeekendMissionViewModel>(
             false, WeekendMissionViewModel(), response.errorMessage);
@@ -100,7 +100,7 @@ class HelloGamesApiService extends BaseApiService {
   Future<ResultWithValue<ExpeditionViewModel>> getExpeditionStatus() async {
     try {
       String url = ApiUrls.expedition;
-      final response = await this.apiGet(url);
+      final response = await apiGet(url);
       if (response.hasFailed) {
         return ResultWithValue<ExpeditionViewModel>(
             false, ExpeditionViewModel(), response.errorMessage);

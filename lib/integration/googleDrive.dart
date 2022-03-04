@@ -8,8 +8,8 @@ import '../constants/GoogleDrive.dart';
 
 import 'googleHttpClient.dart';
 
-const _JsonMimeType = 'application/json';
-const _GoogleFolderMimeType = 'application/vnd.google-apps.folder';
+const jsonMimeType = 'application/json';
+const googleFolderMimeType = 'application/vnd.google-apps.folder';
 
 Future<ResultWithValue<String>> _readJsonFileFromGoogleDrive(
     GoogleSignInAccount account, String filename) async {
@@ -83,7 +83,7 @@ Future<Result> writeJsonFileToGoogleDrive(
     var _createFolder = await driveApi.files.create(
       File()
         ..name = GoogleDrive.folderName
-        ..mimeType = _GoogleFolderMimeType,
+        ..mimeType = googleFolderMimeType,
     );
     folderId = _createFolder.id;
   }
@@ -101,7 +101,7 @@ Future<Result> writeJsonFileToGoogleDrive(
   Media uploadMedia = Media(
     Stream.value(contentByteArray),
     contentByteArray.length,
-    contentType: _JsonMimeType,
+    contentType: jsonMimeType,
   );
 
   if (fileToWriteExists) {

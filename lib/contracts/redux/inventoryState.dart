@@ -10,7 +10,7 @@ class InventoryState {
   final List<Inventory> containers;
   final InventoryOrderByType orderByType;
 
-  InventoryState({this.containers, this.orderByType});
+  const InventoryState({this.containers, this.orderByType});
 
   factory InventoryState.initial() {
     return InventoryState(
@@ -51,5 +51,5 @@ class InventoryState {
         'orderByType': inventoryOrderByTypeToInt(orderByType),
       };
 
-  String toGoogleJson() => jsonEncode(this.toJson());
+  String toGoogleJson() => jsonEncode(toJson());
 }

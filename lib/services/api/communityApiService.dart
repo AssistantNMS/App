@@ -14,7 +14,7 @@ class CommunityApiService extends BaseApiService {
   Future<ResultWithValue<List<CommunityLinkViewModel>>>
       getAllCommunityLinks() async {
     try {
-      final response = await this.apiGet(ApiUrls.communityLinks);
+      final response = await apiGet(ApiUrls.communityLinks);
       if (response.hasFailed) {
         return ResultWithValue<List<CommunityLinkViewModel>>(
             false, List.empty(growable: true), response.errorMessage);
@@ -33,7 +33,7 @@ class CommunityApiService extends BaseApiService {
   Future<ResultWithValue<List<OnlineMeetup2020SubmissionViewModel>>>
       getAllOnlineMeetup2020() async {
     try {
-      final response = await this.apiGet(ApiUrls.onlineMeetup2020Submission);
+      final response = await apiGet(ApiUrls.onlineMeetup2020Submission);
       if (response.hasFailed) {
         return ResultWithValue<List<OnlineMeetup2020SubmissionViewModel>>(
             false, List.empty(growable: true), response.errorMessage);
@@ -55,7 +55,7 @@ class CommunityApiService extends BaseApiService {
   Future<ResultWithValue<List<CommuntySpotlightViewModel>>>
       getAllCommunitySpotlights() async {
     try {
-      final response = await this.apiGet(ApiUrls.communitySpotlight);
+      final response = await apiGet(ApiUrls.communitySpotlight);
       if (response.hasFailed) {
         return ResultWithValue<List<CommuntySpotlightViewModel>>(
             false, List.empty(growable: true), response.errorMessage);

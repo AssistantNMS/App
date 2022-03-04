@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class TitleState {
   final List<String> owned;
 
-  TitleState({
+  const TitleState({
     this.owned,
   });
 

@@ -6,8 +6,11 @@ String gameItemIconHero(GenericPageItem genericItem) {
 }
 
 String gameItemNameHero(GenericPageItem genericItem) {
-  if (genericItem == null || genericItem.id == null || genericItem.name == null)
+  if (genericItem == null ||
+      genericItem.id == null ||
+      genericItem.name == null) {
     return null;
+  }
   return '${genericItem.id}-item-name-${genericItem.name}';
 }
 

@@ -15,22 +15,23 @@ class WeekendMissionSeasonPage extends StatelessWidget {
   final int maxLevel;
   final int minLevel;
   final void Function() navigateToWeekendMissionMenu;
-  WeekendMissionSeasonPage({
+  const WeekendMissionSeasonPage({
+    Key key,
     this.weekendMissionJson,
     this.season,
     this.level,
     this.minLevel,
     this.maxLevel,
     this.navigateToWeekendMissionMenu,
-  });
+  }) : super(key: key);
 
   Future<ResultWithValue<WeekendStagePageItem>> getCurrentWeekendMissionData(
       BuildContext context) async {
     var weekendMissionResult = await getWeekendMissionSeasonData(
       context,
-      this.weekendMissionJson,
-      this.season,
-      this.level,
+      weekendMissionJson,
+      season,
+      level,
     );
 
     if (!weekendMissionResult.isSuccess) {
@@ -38,7 +39,7 @@ class WeekendMissionSeasonPage extends StatelessWidget {
           false, null, 'Something went wrong');
     }
 
-    var weekendMissionValue = weekendMissionResult.value;
+    WeekendStagePageItem weekendMissionValue = weekendMissionResult.value;
     weekendMissionValue.titles = weekendMissionResult.value.titles;
     weekendMissionValue.subtitles = weekendMissionResult.value.subtitles;
     weekendMissionValue.descriptions = weekendMissionResult.value.descriptions;
@@ -56,9 +57,9 @@ class WeekendMissionSeasonPage extends StatelessWidget {
           icon: Icons.more,
           image: getListTileImage(
             AppImage.weekendMissionWhite,
-            padding: EdgeInsets.symmetric(vertical: 16),
+            padding: const EdgeInsets.symmetric(vertical: 16),
           ),
-          onPressed: this.navigateToWeekendMissionMenu,
+          onPressed: navigateToWeekendMissionMenu,
         ),
       ],
       body: CachedFutureBuilder<ResultWithValue<WeekendStagePageItem>>(
@@ -72,9 +73,9 @@ class WeekendMissionSeasonPage extends StatelessWidget {
           result.value,
           (BuildContext ctx, String season, int level) =>
               getWeekendMissionSeasonData(
-                  ctx, this.weekendMissionJson, season, level),
-          this.minLevel,
-          this.maxLevel,
+                  ctx, weekendMissionJson, season, level),
+          minLevel,
+          maxLevel,
         ),
       ),
     );

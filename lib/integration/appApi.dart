@@ -23,7 +23,7 @@ class AppApi extends BaseApiService {
     vm.currency = AppConfig.stripeCurrencyCode;
     vm.isGooglePay = isAndroid;
     try {
-      final response = await this.apiPost(ApiUrls.stripeCharge, vm.toJson());
+      final response = await apiPost(ApiUrls.stripeCharge, vm.toJson());
       return response;
     } catch (exception) {
       getLog().e("stripeCharge Exception: ${exception.toString()}");
@@ -33,7 +33,7 @@ class AppApi extends BaseApiService {
 
   Future<ResultWithValue<FeedbackViewModel>> getLatestFeedbackForm() async {
     try {
-      final response = await this.apiGet(ApiUrls.feedback);
+      final response = await apiGet(ApiUrls.feedback);
       if (response.hasFailed) {
         return ResultWithValue<FeedbackViewModel>(
             false, FeedbackViewModel(), response.errorMessage);
@@ -51,7 +51,7 @@ class AppApi extends BaseApiService {
 
   Future<Result> sendFeedbackForm(FeedbackAnsweredViewModel vm) async {
     try {
-      final response = await this.apiPost(ApiUrls.feedback, vm.toRawJson());
+      final response = await apiPost(ApiUrls.feedback, vm.toRawJson());
       if (response.hasFailed) {
         return Result(false, response.errorMessage);
       }
@@ -66,7 +66,7 @@ class AppApi extends BaseApiService {
       bool showPc, bool showPs4, bool showXb1) async {
     String queryParams = 'showPc=$showPc&showPs4=$showPs4&showXb1=$showXb1';
     try {
-      final response = await this.apiGet('${ApiUrls.friendCode}?$queryParams');
+      final response = await apiGet('${ApiUrls.friendCode}?$queryParams');
       if (response.hasFailed) {
         return ResultWithValue<List<FriendCodeViewModel>>(
             false, List.empty(growable: true), response.errorMessage);
@@ -84,7 +84,7 @@ class AppApi extends BaseApiService {
 
   Future<Result> submitFriendCode(AddFriendCodeViewModel vm) async {
     try {
-      final response = await this.apiPost(ApiUrls.friendCode, vm.toRawJson());
+      final response = await apiPost(ApiUrls.friendCode, vm.toRawJson());
       if (response.hasFailed) {
         return Result(false, response.errorMessage);
       }
@@ -97,7 +97,7 @@ class AppApi extends BaseApiService {
 
   Future<ResultWithValue<List<NmsfmTrackData>>> getNmsfmTrackList() async {
     try {
-      final response = await this.apiGet(ApiUrls.nmsfm);
+      final response = await apiGet(ApiUrls.nmsfm);
       if (response.hasFailed) {
         return ResultWithValue<List<NmsfmTrackData>>(
             false, List.empty(growable: true), response.errorMessage);

@@ -10,7 +10,7 @@ void uselessButtonFunc(
     'Why did you click this?',
     Text(
       getMessage(numberOfTaps),
-      style: TextStyle(fontSize: 17),
+      style: const TextStyle(fontSize: 17),
       textAlign: TextAlign.center,
     ),
     buttons: [

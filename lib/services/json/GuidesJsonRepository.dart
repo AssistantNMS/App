@@ -11,14 +11,14 @@ class GuidesJsonRepository extends BaseJsonService
   @override
   Future<ResultWithValue<List<Guide>>> getAll(context) async {
     try {
-      List availableGuidesJson = await this.getListfromJson(
+      List availableGuidesJson = await getListfromJson(
           context, getTranslations().fromKey(LocaleKey.guidesJson));
 
       List<Guide> guides = List.empty(growable: true);
       for (var guideItemDynamic in availableGuidesJson) {
         GuideListItem guideListItem = GuideListItem.fromJson(guideItemDynamic);
-        var guideDynamic = await this
-            .getJsonGuide(context, guideListItem.folder, guideListItem.file);
+        var guideDynamic = await getJsonGuide(
+            context, guideListItem.folder, guideListItem.file);
         Guide guideContent = Guide.fromJson(guideDynamic, guideListItem.folder);
         if (guideContent != null) {
           guides.add(guideContent);
