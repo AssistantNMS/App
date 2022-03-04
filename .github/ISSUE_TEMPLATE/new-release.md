@@ -21,7 +21,7 @@ Much later:
 - [ ] Go through manual iOS steps
   - [ ] Copy content of `release_notes.txt` into Apple webpage
   - [ ] Submit for Apple review
-- [ ] Create Github release
+- [ ] Create Github release ([New Release](https://github.com/AssistantNMS/App/releases/new))
   - [ ] Tag main branch
   - [ ] Attach `.apk`
   - [ ] Use appropriate tag
