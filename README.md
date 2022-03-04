@@ -7,7 +7,11 @@ The **Assistant for No Man's Sky** is an app that gives users information about 
 
 After 2 years of development and maintenance, the app was made open source so that the community to have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
 
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)
+
 [![discord invite link](./.github/img/joinDiscord.svg)][discord]
+[![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
 
 ## Running the project
 **Prerequisites:**
@@ -34,7 +38,7 @@ The Mobile Apps are built and released to the [Google Play Store][googlePlayStor
 __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed even though it actually successfully built and pushed the `.ipa` file to the Apple App Store. This is because they poll the App Store checking if the `.ipa` file is there and after a few attempts throw an error. So ignore build failures for anything that has to do with iOS 🙄.__
 
 ## Links
-- [Website][assistantnms]
+- [Website][assistantnmsWebsite]
 - [Google Play Store][googlePlayStore]
 - [Apple App Store Store][appleAppStore]
 
@@ -50,7 +54,7 @@ __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed e
 [kurtGithub]: https://github.com/Khaoz-Topsy
 [assistantAppsTools]: https://tools.assistantapps.com
 [assistantAppsDiscord]: https://assistantapps.com/discord?ref=nmsAssistantGithub
-[assistantnms]: https://nmsassistant.com
+[assistantnmsWebsite]: https://nmsassistant.com
 [assistantnmsTwitter]: https://twitter.com/AssistantNMS?ref=nmsAssistantGithub
 [assistantnmsFacebook]: https://facebook.com/AssistantNMS?ref=nmsAssistantGithub
 [assistantnmsSteamComm]: https://steamcommunity.com/groups/AssistantNMS?ref=nmsAssistantGithub
