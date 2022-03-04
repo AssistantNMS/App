@@ -174,12 +174,12 @@ List<CustomMenu> getMenuOptionsSection3(
       title: LocaleKey.communityMission,
       navigateToNamed: Routes.helloGamesCommunityMission,
     ),
-    CustomMenu(
-      icon: getListTileImage(AppImage.weekendMission, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.weekendMission),
-      title: LocaleKey.weekendMission,
-      navigateToNamed: Routes.helloGamesWeekendMission,
-    ),
+    // CustomMenu(
+    //   icon: getListTileImage(AppImage.weekendMission, size: imageSize),
+    //   drawerIcon: getListTileImage(AppImage.weekendMission),
+    //   title: LocaleKey.weekendMission,
+    //   navigateToNamed: Routes.helloGamesWeekendMission,
+    // ),
     CustomMenu(
       icon: localGetFromIcon(Icons.map_sharp),
       drawerIcon: localGetDrawerFromIcon(Icons.map_sharp),

@@ -26,6 +26,7 @@ Widget genericItemCredits(BuildContext context, String credits,
         credits,
         textAlign: TextAlign.center,
         overflow: TextOverflow.ellipsis,
+        addDecimal: false,
         style: getTheme()
             .getTheme(context)
             .primaryTextTheme

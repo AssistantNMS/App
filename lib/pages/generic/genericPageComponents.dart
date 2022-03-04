@@ -1,19 +1,20 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:ff_stars/ff_stars.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/common/image.dart';
-import '../../contracts/enum/blueprintSource.dart';
-import '../../helpers/heroHelper.dart';
 import '../../components/expeditionAlphabetTranslation.dart';
 import '../../components/tilePresenters/eggTraitTilePresenter.dart';
 import '../../components/tilePresenters/inventoryTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemTilePresenter.dart';
 import '../../components/tilePresenters/statBonusPresenter.dart';
+import '../../constants/AppImage.dart';
 import '../../constants/IdPrefix.dart';
 import '../../constants/Routes.dart';
 import '../../contracts/cart/cartItem.dart';
 import '../../contracts/chargeBy.dart';
 import '../../contracts/data/eggTrait.dart';
+import '../../contracts/enum/blueprintSource.dart';
 import '../../contracts/enum/currencyType.dart';
 import '../../contracts/genericPageAllRequired.dart';
 import '../../contracts/genericPageItem.dart';
@@ -25,6 +26,7 @@ import '../../contracts/requiredItem.dart';
 import '../../contracts/requiredItemDetails.dart';
 import '../../contracts/statBonus.dart';
 import '../../helpers/genericHelper.dart';
+import '../../helpers/heroHelper.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 import 'allPossibleOutputsPage.dart';
 import 'genericPageAllRequiredRawMaterials.dart';
@@ -160,6 +162,14 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
     widgets.add(ExpeditionAlphabetTranslation(genericItem.translation));
   }
 
+  double cookValue = genericItem.cookingValue;
+  if (cookValue != null && cookValue > 0.0) {
+    widgets.add(emptySpace1x());
+    widgets.add(animateSlideInFromLeft(
+      child: getCookingScore(bodyDetailsCtx, cookValue),
+    ));
+  }
+
   return widgets;
 }
 
@@ -230,13 +240,13 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
       break;
   }
 
-  if (genericItem.cookingValue != null && genericItem.cookingValue > 0.0) {
-    String cookingVText = getTranslations().fromKey(LocaleKey.cookingValue);
-    String cookingV = (genericItem.cookingValue * 100.0).toStringAsFixed(0);
-    chipList.add(genericItemTextWithIcon(
-        context, "$cookingVText: $cookingV%", Icons.fastfood,
-        colour: chipColour));
-  }
+  // if (genericItem.cookingValue != null && genericItem.cookingValue > 0.0) {
+  //   String cookingVText = getTranslations().fromKey(LocaleKey.cookingValue);
+  //   String cookingV = (genericItem.cookingValue * 100.0).toStringAsFixed(0);
+  //   chipList.add(genericItemTextWithIcon(
+  //       context, "$cookingVText: $cookingV%", Icons.fastfood,
+  //       colour: chipColour));
+  // }
 
   if (genericItem.power != null && genericItem.power != 0) {
     chipList.add(
@@ -247,6 +257,28 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
   }
 
   return chipList;
+}
+
+Widget getCookingScore(BuildContext ctx, double cookingValue) {
+  var secondaryColour = getTheme().getSecondaryColour(ctx);
+  String cookingPerc =
+      ((cookingValue + 1) * cookingValue * 47).toStringAsFixed(0);
+  return flatCard(
+    child: genericListTileWithSubtitle(
+      ctx,
+      leadingImage: AppImage.cronus,
+      name: getTranslations().fromKey(LocaleKey.cookingValue),
+      subtitle: FFStars(
+        normalStar: Icon(Icons.star_border, color: secondaryColour),
+        selectedStar: Icon(Icons.star, color: secondaryColour),
+        step: 0.1,
+        defaultStars: (cookingValue * 5),
+        justShow: true,
+      ),
+      trailing:
+          genericItemNanites(ctx, "± $cookingPerc", colour: secondaryColour),
+    ),
+  );
 }
 
 List<Widget> getCraftedUsing(

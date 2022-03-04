@@ -9,7 +9,7 @@ import '../../constants/Routes.dart';
 import '../../contracts/menuItem.dart';
 
 class RetiredDrawerMenuPage extends StatelessWidget {
-  RetiredDrawerMenuPage() {
+  RetiredDrawerMenuPage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.retiredDrawerMenuPage);
   }
 

@@ -1,4 +1,4 @@
-import '../../../redux/modules/setting/actions.dart';
+import '../setting/actions.dart';
 import 'package:redux/redux.dart';
 
 import '../../../contracts/redux/appState.dart';

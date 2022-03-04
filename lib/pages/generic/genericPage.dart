@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/common/cachedFutureBuilder.dart';
-import '../../components/common/loading.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/nutrientProcessorRecipeTilePresenter.dart';
 import '../../components/tilePresenters/rechargeTilePresenter.dart';
@@ -34,7 +33,7 @@ class GenericPage extends StatelessWidget {
   final GenericPageItem itemDetails;
 
   GenericPage(this.itemId, {Key key, this.itemDetails}) : super(key: key) {
-    getAnalytics().trackEvent('${AnalyticsEvent.genericPage}: ${itemId}');
+    getAnalytics().trackEvent('${AnalyticsEvent.genericPage}: $itemId');
   }
 
   @override

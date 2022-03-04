@@ -1,10 +1,10 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
+
 import '../../../contracts/data/alphabetTranslation.dart';
+import '../../../contracts/data/eggTrait.dart';
 import '../../../contracts/data/generatedMeta.dart';
 import '../../../contracts/data/platformControlMapping.dart';
-
-import '../../../contracts/data/eggTrait.dart';
 import '../../../contracts/data/quicksilverStore.dart';
 import '../../../contracts/data/socialItem.dart';
 import '../../../contracts/data/updateItemDetail.dart';

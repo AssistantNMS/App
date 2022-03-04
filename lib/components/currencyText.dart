@@ -7,6 +7,7 @@ class CurrencyText extends StatelessWidget {
   final String numberString;
   final TextAlign textAlign;
   final TextOverflow overflow;
+  final bool addDecimal;
 
   const CurrencyText(
     this.numberString, {
@@ -14,12 +15,13 @@ class CurrencyText extends StatelessWidget {
     this.style,
     this.textAlign,
     this.overflow,
+    this.addDecimal,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      currencyFormat(numberString),
+      currencyFormat(numberString, addDecimal: addDecimal),
       textAlign: textAlign,
       style: style,
       overflow: overflow,
