@@ -7,6 +7,8 @@ The **Assistant for No Man's Sky** is an app that gives users information about 
 
 After 2 years of development and maintenance, the app was made open source so that the community to have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
 
+[![Discord](./.github/img/joinDiscord.svg)][Discord]
+
 ## Running the project
 **Prerequisites:**
 - [Flutter](https://docs.flutter.dev/get-started/install)
