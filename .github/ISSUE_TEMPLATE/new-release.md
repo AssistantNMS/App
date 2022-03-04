@@ -23,5 +23,7 @@ Much later:
   - [ ] Submit for Apple review
 - [ ] Create Github release ([New Release](https://github.com/AssistantNMS/App/releases/new))
   - [ ] Tag main branch
+  - [ ] Attach `.aab`
   - [ ] Attach `.apk`
+  - [ ] Attach `.ipa`
   - [ ] Use appropriate tag
