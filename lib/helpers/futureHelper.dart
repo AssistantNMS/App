@@ -332,12 +332,11 @@ Future<ResultWithValue<List<GenericPageItem>>> getAllFromLocaleKeys(
     if (result.hasFailed) return;
     results.addAll(result.value);
   };
-  List<Future<ResultWithValue<List<GenericPageItem>>>> tasks =
-      List.empty(growable: true);
+  List<Future<void>> tasks = List.empty(growable: true);
   for (LocaleKey repJson in repoJsonStrings) {
     IGenericRepository repo = getGenericRepo(repJson);
     if (repo == null) continue;
-    var getAllTask = repo.getAll(context).then(onFinishTask);
+    Future<void> getAllTask = repo.getAll(context).then(onFinishTask);
     tasks.add(getAllTask);
   }
   await Future.wait(tasks);

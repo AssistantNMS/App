@@ -123,7 +123,7 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
   Container Function(String text, {double fontSize}) textWrapper;
   textWrapper = (String text, {double fontSize}) => Container(
         child: Text(
-          seasonalExpeditionMilestone.title,
+          text,
           textAlign: TextAlign.start,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
