@@ -25,7 +25,7 @@ bool searchGenericPageItem(GenericPageItem genericItem, String searchText) =>
 
 bool searchPortal(PortalRecord option, String search) {
   if (option.name.toLowerCase().contains(search)) return true;
-  if (option.tags == null || option.tags.length < 1) return false;
+  if (option.tags == null || option.tags.isEmpty) return false;
 
   if (option.tags.any((tag) => tag.toLowerCase().contains(search))) {
     return true;

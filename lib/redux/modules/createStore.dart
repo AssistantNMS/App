@@ -12,7 +12,7 @@ import 'appReducer.dart';
 Future<Store<AppState>> createStore() async {
   List<void Function(Store<AppState>, dynamic, void Function(dynamic))>
       middlewares = List.empty(growable: true);
-  Map<String, dynamic> stateMap = Map<String, dynamic>();
+  Map<String, dynamic> stateMap = <String, dynamic>{};
   if (isAndroid || isiOS) {
     try {
       SharedPreferences preferences = await SharedPreferences.getInstance();

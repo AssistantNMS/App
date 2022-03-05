@@ -10,7 +10,7 @@ class GuideApiService extends BaseApiService {
   Future<ResultWithValue<GuideMetaViewModel>> getGuideMetaData(
       String guid) async {
     try {
-      final response = await this.apiGet('${ApiUrls.guideMeta}/$guid');
+      final response = await apiGet('${ApiUrls.guideMeta}/$guid');
       if (response.hasFailed) {
         return ResultWithValue<GuideMetaViewModel>(
             false, GuideMetaViewModel(), response.errorMessage);
@@ -27,8 +27,7 @@ class GuideApiService extends BaseApiService {
   Future<ResultWithValue<GuideMetaViewModel>> getGuideDetails(
       String guid, String language) async {
     try {
-      final response =
-          await this.apiGet('${ApiUrls.guideMeta}/$guid/$language');
+      final response = await apiGet('${ApiUrls.guideMeta}/$guid/$language');
       if (response.hasFailed) {
         return ResultWithValue<GuideMetaViewModel>(
             false, GuideMetaViewModel(), response.errorMessage);
@@ -44,7 +43,7 @@ class GuideApiService extends BaseApiService {
 
   Future<Result> likeGuide(String guid) async {
     try {
-      final response = await this.apiPost('${ApiUrls.guideMeta}/$guid', '{}');
+      final response = await apiPost('${ApiUrls.guideMeta}/$guid', '{}');
       if (response.hasFailed) {
         return Result(false, response.errorMessage);
       }

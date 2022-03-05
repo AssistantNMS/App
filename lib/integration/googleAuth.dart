@@ -4,12 +4,13 @@ import 'package:googleapis/oauth2/v2.dart';
 
 import '../constants/AppConfig.dart';
 
-const _SCOPES = const [
+const scopes = [
   Oauth2Api.userinfoEmailScope,
-  Oauth2Api.userinfoProfileScope
+  Oauth2Api.userinfoProfileScope,
 ];
+
 final GoogleSignIn googleSignIn =
-    GoogleSignIn(clientId: AppConfig.newGoogleClientId, scopes: _SCOPES);
+    GoogleSignIn(clientId: AppConfig.newGoogleClientId, scopes: scopes);
 
 Future<GoogleSignInAccount> signInWithGoogle() async {
   var task = googleSignIn.signIn().then((value) => value);

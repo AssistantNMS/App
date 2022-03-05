@@ -14,14 +14,13 @@ class RemoteConfigs extends BaseApiService {
   final String _headerKey = 'apikey';
 
   RemoteConfigs({this.apiKey}) : super(getEnv().baseApi) {
-    this._configurationsUrl =
-        "${this.remoteConfigsUrl}${this._configurationsEndpoint}";
+    _configurationsUrl = "$remoteConfigsUrl$_configurationsEndpoint";
   }
 
   Future<ResultWithValue<List<Configuration>>> getAllConfigurations(
       BuildContext context) async {
-    var response = await this.webGet(this._configurationsUrl,
-        headers: {this._headerKey: this.apiKey});
+    var response =
+        await webGet(_configurationsUrl, headers: {_headerKey: apiKey});
 
     if (response.hasFailed) {
       return ResultWithValue<List<Configuration>>(
@@ -41,9 +40,8 @@ class RemoteConfigs extends BaseApiService {
 
   Future<ResultWithValue<Configuration>> getConfiguration(
       BuildContext context, String configId) async {
-    var url = "${this._configurationsUrl}/$configId";
-    var response =
-        await this.webGet(url, headers: {this._headerKey: this.apiKey});
+    var url = "$_configurationsUrl/$configId";
+    var response = await webGet(url, headers: {_headerKey: apiKey});
 
     if (response.hasFailed) {
       return ResultWithValue<Configuration>(
@@ -64,9 +62,8 @@ class RemoteConfigs extends BaseApiService {
       BuildContext context,
       String configId,
       T Function(String) settingsFromJson) async {
-    var url = "${this._configurationsUrl}/$configId/Object";
-    var response =
-        await this.webGet(url, headers: {this._headerKey: this.apiKey});
+    var url = "$_configurationsUrl/$configId/Object";
+    var response = await webGet(url, headers: {_headerKey: apiKey});
 
     if (response.hasFailed) {
       return ResultWithValue<ConfigurationObject<T>>(

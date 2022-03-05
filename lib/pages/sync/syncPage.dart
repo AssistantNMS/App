@@ -30,7 +30,7 @@ class _SyncWidget extends State<SyncPage> {
     getAnalytics().trackEvent(AnalyticsEvent.syncPage);
     signInSilentlyWithGoogle().then((newAccount) {
       getLog().d('signInSilentlyWithGoogle');
-      this.setState(() {
+      setState(() {
         isLoading = false;
         account = newAccount;
         rebuildCounter++;
@@ -86,18 +86,17 @@ class _SyncWidget extends State<SyncPage> {
                   onPress: () async {
                     await signOutGoogle();
                     var newAccount = await signInWithGoogle();
-                    this.setState(() {
+                    setState(() {
                       account = newAccount;
                       rebuildCounter++;
                     });
                   }),
               negativeButton(
                 title: getTranslations().fromKey(LocaleKey.logout),
-                onPress: () =>
-                    signOutGoogle().then((dynamic _) => this.setState(() {
-                          account = null;
-                          rebuildCounter++;
-                        })),
+                onPress: () => signOutGoogle().then((dynamic _) => setState(() {
+                      account = null;
+                      rebuildCounter++;
+                    })),
               ),
             ),
           ],
@@ -116,7 +115,7 @@ class _SyncWidget extends State<SyncPage> {
         futureFunc: () => asyncSettingTileGenericFunc(
           context,
           () => writePortalJsonFileToGoogleDrive(
-            this.account,
+            account,
             viewModel.portalState.toGoogleJson(),
           ),
           LocaleKey.portalsNotUploaded,
@@ -129,7 +128,7 @@ class _SyncWidget extends State<SyncPage> {
         icon: Icons.cloud_download,
         futureFunc: () => asyncSettingTileWithSuccessFunc(
           context,
-          () => readPortalJsonFileFromGoogleDrive(this.account),
+          () => readPortalJsonFileFromGoogleDrive(account),
           LocaleKey.portalsNotRestored,
           viewModel.restorePortals,
           LocaleKey.portalsRestored,
@@ -148,7 +147,7 @@ class _SyncWidget extends State<SyncPage> {
             futureFunc: () => asyncSettingTileGenericFunc(
                   context,
                   () => writeInventoryJsonFileToGoogleDrive(
-                    this.account,
+                    account,
                     viewModel.inventoryState.toGoogleJson(),
                   ),
                   LocaleKey.inventoryNotUploaded,
@@ -161,7 +160,7 @@ class _SyncWidget extends State<SyncPage> {
         icon: Icons.cloud_download,
         futureFunc: () => asyncSettingTileWithSuccessFunc(
           context,
-          () => readInventoryJsonFileFromGoogleDrive(this.account),
+          () => readInventoryJsonFileFromGoogleDrive(account),
           LocaleKey.inventoryNotRestored,
           viewModel.restoreInventory,
           LocaleKey.inventoryRestored,
@@ -178,7 +177,7 @@ class _SyncWidget extends State<SyncPage> {
           onPressed: () async {
             try {
               var newAccount = await signInWithGoogle();
-              this.setState(() {
+              setState(() {
                 account = newAccount;
                 rebuildCounter++;
               });

@@ -28,7 +28,8 @@ Widget feedbackPlainTextQuestionTilePresenter(BuildContext context,
 Widget feedbackFiveOptionScaleQuestionTilePresenter(BuildContext context,
     String question, String answer, Function(String) setAnswer) {
   var intAnswer = int.tryParse(answer) ?? 0;
-  var setAnswerFromInt = (int value) => setAnswer(value.toString());
+  Function(int value) setAnswerFromInt;
+  setAnswerFromInt = (int value) => setAnswer(value.toString());
   return genericListTileWithSubtitle(
     context,
     leadingImage: null,

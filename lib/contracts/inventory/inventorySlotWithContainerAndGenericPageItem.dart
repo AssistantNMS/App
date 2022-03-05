@@ -11,7 +11,7 @@ class InventorySlotWithContainersAndGenericPageItem
       InventoryNameAndId container,
       int quantity})
       : super(pageItem: pageItem, quantity: quantity) {
-    this.containers = List.empty(growable: true);
-    this.containers.add(container);
+    containers = List.empty(growable: true);
+    containers.add(container);
   }
 }

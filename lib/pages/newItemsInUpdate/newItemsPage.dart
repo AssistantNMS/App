@@ -11,14 +11,14 @@ import '../../helpers/futureHelper.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 
 class NewItemsPage extends StatelessWidget {
-  NewItemsPage();
+  const NewItemsPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return basicGenericPageScaffold(
       context,
       title: getTranslations().fromKey(LocaleKey.newItemsAdded),
-      drawer: AppDrawer(),
+      drawer: const AppDrawer(),
       body: StoreConnector<AppState, GenericPageViewModel>(
         converter: (store) => GenericPageViewModel.fromStore(store),
         builder: (_, viewModel) => SearchableList<UpdateItemDetail>(

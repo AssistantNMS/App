@@ -16,7 +16,7 @@ import '../../redux/modules/generic/genericPageViewModel.dart';
 
 class NewItemsDetailPage extends StatelessWidget {
   final UpdateItemDetail details;
-  NewItemsDetailPage(this.details) {
+  NewItemsDetailPage(this.details, {Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.updateNewItemPage);
   }
 
@@ -25,7 +25,7 @@ class NewItemsDetailPage extends StatelessWidget {
     return basicGenericPageScaffold(
       context,
       title: details.name,
-      drawer: AppDrawer(),
+      drawer: const AppDrawer(),
       body: StoreConnector<AppState, GenericPageViewModel>(
         converter: (store) => GenericPageViewModel.fromStore(store),
         builder: (_, viewModel) => SearchableList<GenericPageItem>(

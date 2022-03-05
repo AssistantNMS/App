@@ -17,25 +17,26 @@ class CommunityMissionRewards extends StatelessWidget {
   final QuicksilverStore qsStore;
   final List<RequiredItemDetails> reqItemDetails;
 
-  CommunityMissionRewards(
+  const CommunityMissionRewards(
     this.missionId, {
+    Key key,
     this.totalTiers = 0,
     this.currentTier =
         100, // So that all items displayed in Community mission pages have colour unless it is the current mission
     this.currentTierPercentage = 100,
     this.qsStore,
     this.reqItemDetails,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    if (this.qsStore == null || this.reqItemDetails == null) {
+    if (qsStore == null || reqItemDetails == null) {
       return FutureBuilder(
         future: quickSilverItemDetailsFuture(context, missionId),
         builder: getBody,
       );
     }
-    return getBodyInternal(context, this.qsStore, this.reqItemDetails);
+    return getBodyInternal(context, qsStore, reqItemDetails);
   }
 
   Widget getBody(
@@ -67,7 +68,7 @@ class CommunityMissionRewards extends StatelessWidget {
       List<RequiredItemDetails> reqItemDetails) {
     List<Widget> widgets = List.empty(growable: true);
 
-    if (this.totalTiers <= 0 || this.totalTiers == qsStore.items.length) {
+    if (totalTiers <= 0 || totalTiers == qsStore.items.length) {
       if (reqItemDetails.isEmpty) {
         for (var qs = 0; qs < qsStore.items.length; qs++) {
           widgets.add(genericListTile(
@@ -86,8 +87,8 @@ class CommunityMissionRewards extends StatelessWidget {
           internalContext,
           reqDetails,
           itemFound,
-          this.currentTier,
-          this.currentTierPercentage,
+          currentTier,
+          currentTierPercentage,
         ));
       }
     } else {

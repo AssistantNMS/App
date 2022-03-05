@@ -5,7 +5,8 @@ import '../../contracts/generated/onlineMeetup2020SubmissionViewModel.dart';
 
 Widget onlineMeetup2020SubmissionTilePresenter(
     BuildContext context, OnlineMeetup2020SubmissionViewModel submission) {
-  Function() onTap = () => launchExternalURL(submission.externalUrl);
+  Function() onTap;
+  onTap = () => launchExternalURL(submission.externalUrl);
   Row userInfoNameAndImageRow = Row(
     mainAxisSize: MainAxisSize.max,
     children: (submission.userName != null && submission.userName.length > 1)
@@ -14,13 +15,13 @@ Widget onlineMeetup2020SubmissionTilePresenter(
               child: networkImage(submission.userImage, height: 50, width: 50),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 8),
+              padding: const EdgeInsets.only(left: 8),
               child: Text(
                 submission.userName,
                 maxLines: 1,
                 textAlign: TextAlign.left,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 20),
               ),
             ),
           ]
@@ -34,7 +35,7 @@ Widget onlineMeetup2020SubmissionTilePresenter(
                 userInfoNameAndImageRow,
                 Positioned(
                   child: IconButton(
-                    icon: Icon(Icons.open_in_new, size: 36),
+                    icon: const Icon(Icons.open_in_new, size: 36),
                     onPressed: onTap,
                   ),
                   top: 0,
@@ -49,7 +50,7 @@ Widget onlineMeetup2020SubmissionTilePresenter(
   if (submission.text != null && submission.text.length > 1) {
     columnWidgets.add(customDivider());
     columnWidgets.add(Padding(
-      padding: EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.only(top: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
@@ -85,7 +86,7 @@ Widget onlineMeetup2020SubmissionTilePresenter(
         borderRadius: BorderRadius.circular(10.0),
       ),
       elevation: 5,
-      margin: EdgeInsets.only(top: 10, left: 10, right: 10),
+      margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
     ),
     onTap: onTap,
   );

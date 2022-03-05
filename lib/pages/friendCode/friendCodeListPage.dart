@@ -68,7 +68,7 @@ class _FriendCodeListWidget extends State<FriendCodeListPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () => getNavigation().navigateAsync(
           context,
-          navigateTo: (context) => AddFriendCodePage(),
+          navigateTo: (context) => const AddFriendCodePage(),
         ),
         heroTag: 'AddFriendCodePage',
         child: const Icon(Icons.add),

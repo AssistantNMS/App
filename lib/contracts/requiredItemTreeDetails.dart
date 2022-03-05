@@ -8,14 +8,17 @@ class RequiredItemTreeDetails extends RequiredItem {
   int cost;
   List<RequiredItemTreeDetails> children;
 
-  RequiredItemTreeDetails({id, icon, name, colour, quantity, cost, children}) {
+  RequiredItemTreeDetails({
+    id,
+    this.icon,
+    this.name,
+    this.colour,
+    quantity,
+    this.cost,
+    this.children,
+  }) {
     this.id = id;
-    this.name = name;
-    this.icon = icon;
-    this.colour = colour;
     this.quantity = quantity;
-    this.cost = cost;
-    this.children = children;
   }
 
   factory RequiredItemTreeDetails.fromRequiredItemDetails(

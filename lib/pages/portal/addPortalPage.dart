@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -16,7 +18,8 @@ import '../../redux/modules/portal/portalViewModel.dart';
 class AddPortalPage extends StatefulWidget {
   final bool isEdit;
   final PortalRecord item;
-  AddPortalPage(this.item, {this.isEdit = false});
+  const AddPortalPage(this.item, {Key key, this.isEdit = false})
+      : super(key: key);
 
   @override
   _PortalPageState createState() => _PortalPageState(item, isEdit: isEdit);
@@ -40,61 +43,61 @@ class _PortalPageState extends State<AddPortalPage> {
 
   _PortalPageState(this.item, {this.isEdit = false}) {
     getAnalytics().trackEvent(AnalyticsEvent.addPortalPage);
-    this.disableEditBtns = !isEdit;
-    this.useAltGlyphs = true;
+    disableEditBtns = !isEdit;
+    useAltGlyphs = true;
   }
 
   _addCode(int code) {
-    if (this.item.codes.length >= 12) return;
+    if (item.codes.length >= 12) return;
     setState(() {
-      this.item.codes.add(code);
-      var tempHexStr = allUpperCase(intArrayToHex(this.item.codes));
+      item.codes.add(code);
+      var tempHexStr = allUpperCase(intArrayToHex(item.codes));
       _setHexCoordText(tempHexStr);
-      if (this.item.codes.length > 0) this.disableEditBtns = false;
+      if (item.codes.isNotEmpty) disableEditBtns = false;
     });
   }
 
   _setCode(List<int> codes) {
     if (codes.length > 12) codes = codes.take(12);
     setState(() {
-      this.item = this.item.copyWith(codes: codes);
-      if (this.item.codes.length > 0) this.disableEditBtns = false;
+      item = item.copyWith(codes: codes);
+      if (item.codes.isNotEmpty) disableEditBtns = false;
     });
   }
 
   _addTag(BuildContext context, String tag) {
     setState(() {
-      this.item.tags.add(tag);
+      item.tags.add(tag);
     });
   }
 
   _removeTag(BuildContext context, String tag) {
     setState(() {
-      this.item.tags.remove(tag);
+      item.tags.remove(tag);
     });
   }
 
   _backspaceCode() {
-    if (this.item.codes.length <= 0) return;
+    if (item.codes.isEmpty) return;
     setState(() {
-      this.item = this.item.copyWith(
-            codes: this.item.codes.sublist(0, this.item.codes.length - 1),
-          );
-      var tempHexStr = allUpperCase(intArrayToHex(this.item.codes));
+      item = item.copyWith(
+        codes: item.codes.sublist(0, item.codes.length - 1),
+      );
+      var tempHexStr = allUpperCase(intArrayToHex(item.codes));
       _setHexCoordText(tempHexStr);
-      if (this.item.codes.length <= 0) this.disableEditBtns = true;
+      if (item.codes.isEmpty) disableEditBtns = true;
     });
   }
 
   _clearCode() {
-    if (this.item.codes.length <= 0) return;
+    if (item.codes.isEmpty) return;
     setState(() {
-      this.item = this.item.copyWith(
+      item = item.copyWith(
         codes: [],
       );
-      var tempHexStr = allUpperCase(intArrayToHex(this.item.codes));
+      var tempHexStr = allUpperCase(intArrayToHex(item.codes));
       _setHexCoordText(tempHexStr);
-      this.disableEditBtns = true;
+      disableEditBtns = true;
     });
   }
 
@@ -110,44 +113,43 @@ class _PortalPageState extends State<AddPortalPage> {
       converter: (store) => PortalViewModel.fromStore(store),
       builder: (_, viewModel) => basicGenericPageScaffold(
         context,
-        title: this.item.name ??
-            getTranslations().fromKey(LocaleKey.newPortalEntry),
+        title: item.name ?? getTranslations().fromKey(LocaleKey.newPortalEntry),
         actions: [
           editNameInAppBarAction(
             context,
             LocaleKey.name,
             nameIfEmpty: LocaleKey.newPortalEntry,
-            currentName: this.item.name ??
+            currentName: item.name ??
                 getTranslations().fromKey(LocaleKey.newPortalEntry),
             onEdit: (String newName) => setState(() {
-              this.item.name = newName;
+              item.name = newName;
             }),
           ),
         ],
         body: getBody(context, viewModel),
-        fab: (this.item.codes.length == 12)
+        fab: (item.codes.length == 12)
             ? FloatingActionButton(
                 onPressed: () async {
-                  if (this.validationMessage != null) return;
-                  var tempCodes = List.from(this.item.codes)
+                  if (validationMessage != null) return;
+                  var tempCodes = List.from(item.codes)
                       .map((cc) => cc as int)
                       .toList(); //So that it isn't passed by reference
-                  var tempTags = List.from(this.item.tags)
+                  var tempTags = List.from(item.tags)
                       .map((cc) => cc as String)
                       .toList(); //So that it isn't passed by reference
                   Navigator.pop(
                     context,
                     PortalRecord(
-                      name: this.item.name ??
+                      name: item.name ??
                           getTranslations().fromKey(LocaleKey.newPortalEntry),
-                      uuid: this.item.uuid,
+                      uuid: item.uuid,
                       codes: tempCodes,
                       tags: tempTags,
                     ),
                   );
                 },
                 heroTag: 'AddPortalPage',
-                child: Icon(Icons.check),
+                child: const Icon(Icons.check),
                 foregroundColor:
                     getTheme().fabForegroundColourSelector(context),
                 backgroundColor: getTheme().fabColourSelector(context),
@@ -159,9 +161,9 @@ class _PortalPageState extends State<AddPortalPage> {
 
   Widget getBody(BuildContext context, PortalViewModel portalViewModel) {
     List<Widget> widgets = List.empty(growable: true);
-    final double runSpacing = 1;
-    final double spacing = 1;
-    final columns = 4;
+    const double runSpacing = 1;
+    const double spacing = 1;
+    const columns = 4;
     final w = (MediaQuery.of(context).size.width - runSpacing * (columns - 1)) /
         columns;
     String color = getTheme().getIsDark(context) ? 'white' : 'black';
@@ -169,17 +171,17 @@ class _PortalPageState extends State<AddPortalPage> {
 
     widgets.add(Container(
       margin: const EdgeInsets.all(2.0),
-      child: twoLinePortalGlyphList(this.item.codes,
+      child: twoLinePortalGlyphList(item.codes,
           useAltGlyphs: portalViewModel.useAltGlyphs),
     ));
 
     widgets.add(Padding(
-        padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
+        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
         child: Center(
           child: TextField(
             controller: _hexCoordController,
             decoration: InputDecoration(
-              border: OutlineInputBorder(),
+              border: const OutlineInputBorder(),
               labelText: getTranslations().fromKey(LocaleKey.hexCoordLabel),
             ),
             textCapitalization: TextCapitalization.characters,
@@ -214,16 +216,14 @@ class _PortalPageState extends State<AddPortalPage> {
                         backgroundColor:
                             MaterialStateProperty.all<Color>(Colors.red[400]),
                       ),
-                      onPressed: this.disableEditBtns
+                      onPressed: disableEditBtns
                           ? null
                           : () {
                               _backspaceCode();
                             },
                       child: Icon(
                         Icons.backspace,
-                        color: this.disableEditBtns
-                            ? Colors.white60
-                            : Colors.white,
+                        color: disableEditBtns ? Colors.white60 : Colors.white,
                       ),
                     ),
                     ElevatedButton(
@@ -231,16 +231,14 @@ class _PortalPageState extends State<AddPortalPage> {
                         backgroundColor:
                             MaterialStateProperty.all<Color>(Colors.red[800]),
                       ),
-                      onPressed: this.disableEditBtns
+                      onPressed: disableEditBtns
                           ? null
                           : () {
                               _clearCode();
                             },
                       child: Icon(
                         Icons.clear,
-                        color: this.disableEditBtns
-                            ? Colors.white60
-                            : Colors.white,
+                        color: disableEditBtns ? Colors.white60 : Colors.white,
                       ),
                     ),
                     Flexible(
@@ -301,7 +299,7 @@ class _PortalPageState extends State<AddPortalPage> {
         '+' + getTranslations().fromKey(LocaleKey.addTag),
         onTap: () async {
           var availableTags = portalViewModel.availableTags
-              .where((at) => !this.item.tags.contains(at))
+              .where((at) => !item.tags.contains(at))
               .toList();
           String temp = await getNavigation().navigateAsync(
             context,
@@ -316,7 +314,7 @@ class _PortalPageState extends State<AddPortalPage> {
               },
             ),
           );
-          if (temp == null || temp.length <= 0) return;
+          if (temp == null || temp.isEmpty) return;
           _addTag(context, temp);
         },
       ),

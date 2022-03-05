@@ -15,7 +15,7 @@ Widget statBonusTilePresenter(BuildContext context, StatBonus statBonus) {
   return genericListTileWithSubtitleAndImageCount(
     context,
     leadingImage: Padding(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       child: genericTileImage('${AppImage.statImages}/${statBonus.image}.png'),
     ),
     title: statBonus.name,
@@ -46,7 +46,7 @@ Widget proceduralStatBonusTilePresenter(
   return genericListTileWithSubtitleAndImageCount(
     context,
     leadingImage: Padding(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       child: genericTileImage('${AppImage.statImages}/${statBonus.image}.png'),
     ),
     title: statBonus.name,

@@ -12,7 +12,7 @@ import 'addEditTimerPage.dart';
 import 'timerPageView.dart';
 
 class TimersPage extends StatelessWidget {
-  TimersPage() {
+  TimersPage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.timerPage);
     if (isApple) {
       getLocalNotification().requestIosPermission();
@@ -41,7 +41,7 @@ class TimersPage extends StatelessWidget {
                 false,
               ),
             );
-            if (temp == null || !(temp is TimerItem)) return;
+            if (temp == null || temp is! TimerItem) return;
             viewModel.addTimer(temp);
             await getLocalNotification().scheduleTimerNotification(
               temp.completionDate,
@@ -51,7 +51,7 @@ class TimersPage extends StatelessWidget {
             );
           },
           heroTag: 'addTimer',
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
           foregroundColor: getTheme().fabForegroundColourSelector(context),
           backgroundColor: getTheme().fabColourSelector(context),
         ),

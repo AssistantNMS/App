@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:reorderables/reorderables.dart';
@@ -8,15 +10,16 @@ import 'customHomepageComponents.dart';
 class EditCustomHomepage extends StatefulWidget {
   final List<CustomMenu> _menuOptions;
   final Function(List<LocaleKey>) _setCustomOrder;
-  EditCustomHomepage(this._menuOptions, this._setCustomOrder);
+  const EditCustomHomepage(this._menuOptions, this._setCustomOrder, {Key key})
+      : super(key: key);
 
   @override
   _EditCustomHomeWidget createState() =>
-      _EditCustomHomeWidget(this._menuOptions, this._setCustomOrder);
+      _EditCustomHomeWidget(_menuOptions, _setCustomOrder);
 }
 
 class _EditCustomHomeWidget extends State<EditCustomHomepage> {
-  List<CustomMenu> _menuOptions;
+  final List<CustomMenu> _menuOptions;
   final Function(List<LocaleKey>) _setCustomOrder;
   _EditCustomHomeWidget(this._menuOptions, this._setCustomOrder);
 

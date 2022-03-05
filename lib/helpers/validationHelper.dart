@@ -17,7 +17,7 @@ OutlineInputBorder getTextFieldValidationBorderColour(
 InputDecoration getTextFieldDecoration(BuildContext context, LocaleKey locale,
     bool Function() validator, bool showValidation) {
   return InputDecoration(
-    border: OutlineInputBorder(),
+    border: const OutlineInputBorder(),
     enabledBorder: getTextFieldValidationBorderColour(
       context,
       validator,

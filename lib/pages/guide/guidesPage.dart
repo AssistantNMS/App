@@ -12,7 +12,7 @@ import '../../redux/modules/setting/settingViewModel.dart';
 import '../../services/json/GuidesJsonRepository.dart';
 
 class GuidesPage extends StatelessWidget {
-  GuidesPage() {
+  GuidesPage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.guidePage);
   }
 

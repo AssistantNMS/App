@@ -284,7 +284,8 @@ Future<ResultWithValue<List<GenericPageItem>>> getMegaList(context) async {
   var techModItemsTask = techModRepo.getAll(context);
   var procProdItemsTask = procProdRepo.getAll(context);
 
-  var onFinishTask = (ResultWithValue<List<GenericPageItem>> result) {
+  void Function(ResultWithValue<List<GenericPageItem>> result) onFinishTask;
+  onFinishTask = (ResultWithValue<List<GenericPageItem>> result) {
     if (result.hasFailed) return;
     results.addAll(result.value);
   };
@@ -320,30 +321,30 @@ Future<ResultWithValue<List<GenericPageItem>>> getMegaList(context) async {
   getLog().i('Number of items: ${results.length}');
   results.sort((a, b) => a.name.compareTo(b.name));
 
-  return ResultWithValue(results.length > 0, results, '');
+  return ResultWithValue(results.isNotEmpty, results, '');
 }
 
 Future<ResultWithValue<List<GenericPageItem>>> getAllFromLocaleKeys(
     dynamic context, List<LocaleKey> repoJsonStrings) async {
   List<GenericPageItem> results = List.empty(growable: true);
-  var onFinishTask = (ResultWithValue<List<GenericPageItem>> result) {
+  void Function(ResultWithValue<List<GenericPageItem>> result) onFinishTask;
+  onFinishTask = (ResultWithValue<List<GenericPageItem>> result) {
     if (result.hasFailed) return;
     results.addAll(result.value);
   };
-  List<Future<ResultWithValue<List<GenericPageItem>>>> tasks =
-      List.empty(growable: true);
+  List<Future<void>> tasks = List.empty(growable: true);
   for (LocaleKey repJson in repoJsonStrings) {
     IGenericRepository repo = getGenericRepo(repJson);
     if (repo == null) continue;
-    var getAllTask = repo.getAll(context).then(onFinishTask);
+    Future<void> getAllTask = repo.getAll(context).then(onFinishTask);
     tasks.add(getAllTask);
   }
   await Future.wait(tasks);
 
   getLog().i('Number of items: ${results.length}');
   results.sort((a, b) {
-    if (a.name.length > 0 && a.name[0] == '\'') {
-      if (b.name.length > 0 && b.name[0] == '\'') {
+    if (a.name.isNotEmpty && a.name[0] == '\'') {
+      if (b.name.isNotEmpty && b.name[0] == '\'') {
         return b.name.compareTo(a.name);
       }
       return 1;
@@ -351,7 +352,7 @@ Future<ResultWithValue<List<GenericPageItem>>> getAllFromLocaleKeys(
     return a.name.compareTo(b.name);
   });
 
-  return ResultWithValue(results.length > 0, results, '');
+  return ResultWithValue(results.isNotEmpty, results, '');
 }
 
 Future<ResultWithValue<List<UpdateItemDetail>>> getUpdateNewItemsList(
@@ -401,10 +402,12 @@ Future<double> getNanitesFromId(
   var detailsResult = await repo.getById(context, itemId);
   if (detailsResult.hasFailed) return 0;
 
-  if (detailsResult.value.currencyType == CurrencyType.NANITES)
+  if (detailsResult.value.currencyType == CurrencyType.NANITES) {
     return detailsResult.value.baseValueUnits * multiplier;
-  if (detailsResult.value.blueprintCostType == CurrencyType.NANITES)
+  }
+  if (detailsResult.value.blueprintCostType == CurrencyType.NANITES) {
     return detailsResult.value.blueprintCost.toDouble() * multiplier;
+  }
 
   return 0;
 }
@@ -462,9 +465,10 @@ Future<ResultWithDoubleValue<QuicksilverStore, List<RequiredItemDetails>>>
     quickSilverItemDetailsFuture(context, int missionId) async {
   ResultWithValue<QuicksilverStore> qsItemsResult =
       await getDataRepo().getQuickSilverItem(context, missionId);
-  if (qsItemsResult.hasFailed)
+  if (qsItemsResult.hasFailed) {
     return ResultWithDoubleValue<QuicksilverStore, List<RequiredItemDetails>>(
         false, null, List.empty(), qsItemsResult.errorMessage);
+  }
 
   ResultWithValue<List<RequiredItemDetails>> reqItemsResult =
       await requiredItemDetailsFromInputs(

@@ -7,6 +7,6 @@ class ProcessorRequiredItem extends RequiredItem {
   ProcessorRequiredItem({id, quantity, description, processor}) {
     this.id = id;
     this.quantity = quantity;
-    this.processor = processor;
+    processor = processor;
   }
 }

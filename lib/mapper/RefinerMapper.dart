@@ -4,7 +4,7 @@ import '../contracts/requiredItem.dart';
 
 List<RequiredItem> mapRefinersToRequiredItemsWithDescrip(
     List<Processor> usedInRefiners) {
-  if (usedInRefiners == null || usedInRefiners.length < 1) {
+  if (usedInRefiners == null || usedInRefiners.isEmpty) {
     return List.empty(growable: true);
   }
   List<RequiredItem> requiredItems = List.empty(growable: true);

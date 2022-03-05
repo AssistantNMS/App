@@ -57,15 +57,15 @@ class GenericPageItemUsage {
   }
 
   Map<String, dynamic> toJson() => {
-        'HasUsedToCraft': this.hasUsedToCraft,
-        'HasChargedBy': this.hasChargedBy,
-        'HasUsedToRecharge': this.hasUsedToRecharge,
-        'HasRefinedUsing': this.hasRefinedUsing,
-        'HasRefinedToCreate': this.hasRefinedToCreate,
-        'HasCookUsing': this.hasCookUsing,
-        'HasCookToCreate': this.hasCookToCreate,
-        'HasDevProperties': this.hasDevProperties,
-        'IsConsumable': this.isConsumable,
-        'IsEggIngredient': this.isEggIngredient,
+        'HasUsedToCraft': hasUsedToCraft,
+        'HasChargedBy': hasChargedBy,
+        'HasUsedToRecharge': hasUsedToRecharge,
+        'HasRefinedUsing': hasRefinedUsing,
+        'HasRefinedToCreate': hasRefinedToCreate,
+        'HasCookUsing': hasCookUsing,
+        'HasCookToCreate': hasCookToCreate,
+        'HasDevProperties': hasDevProperties,
+        'IsConsumable': isConsumable,
+        'IsEggIngredient': isEggIngredient,
       };
 }

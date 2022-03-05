@@ -228,7 +228,7 @@ Widget getFloatingActionButton(
       addToCart,
     ));
   }
-  if (fabs.length == 0) return null;
+  if (fabs.isEmpty) return null;
   if (fabs.length == 1) {
     return inventoryFloatingActionButton(
         context, genericItem.id, controller, genericItem);
@@ -237,12 +237,12 @@ Widget getFloatingActionButton(
   var colourStart = getTheme().fabColourSelector(context);
   return SpeedDial(
     animatedIcon: AnimatedIcons.menu_close,
-    animatedIconTheme: IconThemeData(size: 22.0),
+    animatedIconTheme: const IconThemeData(size: 22.0),
     closeManually: false,
     curve: Curves.bounceIn,
     overlayColor: Colors.black,
     overlayOpacity: 0.5,
-    childMargin: EdgeInsets.only(right: 12, bottom: 12),
+    childMargin: const EdgeInsets.only(right: 12, bottom: 12),
     tooltip: 'Speed Dial',
     heroTag: 'speed-dial-hero-tag',
     backgroundColor: colourStart,

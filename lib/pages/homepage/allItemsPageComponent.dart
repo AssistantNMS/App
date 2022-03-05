@@ -11,6 +11,8 @@ import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 
 class AllItemsPageComponent extends StatelessWidget {
+  const AllItemsPageComponent({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     var hintText = getTranslations().fromKey(LocaleKey.searchItems);

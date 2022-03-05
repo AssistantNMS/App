@@ -9,6 +9,8 @@ import '../../contracts/redux/appState.dart';
 import '../../redux/modules/setting/introViewModel.dart';
 
 class OnlineMeetup2020Page extends StatefulWidget {
+  const OnlineMeetup2020Page({Key key}) : super(key: key);
+
   @override
   _OnlineMeetup2020Widget createState() => _OnlineMeetup2020Widget();
 }
@@ -24,7 +26,7 @@ class _OnlineMeetup2020Widget extends State<OnlineMeetup2020Page> {
   //   ),
   // );
 
-  Widget _youtubeWidget = Container();
+  final Widget _youtubeWidget = Container();
   _OnlineMeetup2020Widget() {
     // _youtubeWidget = YoutubePlayerIFrame(
     //   controller: _controller,
@@ -84,7 +86,8 @@ class _OnlineMeetup2020Widget extends State<OnlineMeetup2020Page> {
                       alignment: Alignment.center,
                       child: Text(
                         countdown,
-                        style: TextStyle(color: Colors.black, fontSize: 32),
+                        style:
+                            const TextStyle(color: Colors.black, fontSize: 32),
                       ),
                     ),
                   ),
@@ -95,8 +98,8 @@ class _OnlineMeetup2020Widget extends State<OnlineMeetup2020Page> {
                   context,
                   leadingImage: 'contributors/proceduralTraveller.jpg',
                   name: 'Procedural Traveller',
-                  subtitle: Text('Join the Discord Server!'),
-                  trailing: Icon(Icons.open_in_new),
+                  subtitle: const Text('Join the Discord Server!'),
+                  trailing: const Icon(Icons.open_in_new),
                   onTap: () => launchExternalURL(
                       NmsExternalUrls.proceduralTravellerDiscord),
                 ),
@@ -105,7 +108,7 @@ class _OnlineMeetup2020Widget extends State<OnlineMeetup2020Page> {
                 context,
                 'More Information',
                 displayVideo,
-                () => this.setState(() {
+                () => setState(() {
                   displayVideo = !displayVideo;
                 }),
               ),
@@ -150,10 +153,10 @@ class _OnlineMeetup2020Widget extends State<OnlineMeetup2020Page> {
                 child: Center(
                   child: Text(title),
                 ),
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
               ),
               color: getTheme().getPrimaryColour(context),
-              margin: EdgeInsets.all(0),
+              margin: const EdgeInsets.all(0),
             ),
             Positioned(
               child: Icon(
@@ -166,7 +169,7 @@ class _OnlineMeetup2020Widget extends State<OnlineMeetup2020Page> {
             ),
           ],
         ),
-        padding: EdgeInsets.only(top: 8),
+        padding: const EdgeInsets.only(top: 8),
       ),
       onTap: onTap,
     );

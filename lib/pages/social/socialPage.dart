@@ -8,7 +8,7 @@ import '../../contracts/data/socialItem.dart';
 import '../../integration/dependencyInjection.dart';
 
 class SocialPage extends StatelessWidget {
-  SocialPage() {
+  SocialPage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.socialPage);
   }
 
@@ -26,7 +26,7 @@ class SocialPage extends StatelessWidget {
       fab: FloatingActionButton(
         onPressed: () => shareText(LocaleKey.shareContent),
         heroTag: 'SocialPage',
-        child: Icon(Icons.share),
+        child: const Icon(Icons.share),
         foregroundColor: getTheme().fabForegroundColourSelector(context),
         backgroundColor: getTheme().fabColourSelector(context),
       ),

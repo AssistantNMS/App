@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
@@ -21,7 +23,7 @@ import 'AddEditInventoryPage.dart';
 
 class ViewInventoryListPage extends StatefulWidget {
   final String inventoryUuid;
-  ViewInventoryListPage(this.inventoryUuid);
+  const ViewInventoryListPage(this.inventoryUuid, {Key key}) : super(key: key);
 
   @override
   _ViewInventoryListState createState() =>
@@ -57,7 +59,7 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
             getTranslations().fromKey(LocaleKey.noItems),
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
         );
       },
@@ -132,7 +134,7 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
             });
           },
           heroTag: 'ViewInventoryListPage',
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
           foregroundColor: getTheme().fabForegroundColourSelector(context),
           backgroundColor: getTheme().fabColourSelector(context),
         ),

@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide ExternalUrls;
 import 'package:flutter/material.dart';
@@ -14,8 +16,8 @@ import '../../helpers/itemsHelper.dart';
 import 'solarPanelCalcComponents.dart';
 import 'solarPanelCalcHelper.dart';
 
-final String _solarPanelId = 'conTech50';
-final String _batteryId = 'conTech57';
+const String _solarPanelId = 'conTech50';
+const String _batteryId = 'conTech57';
 
 class SolarPanelCalcPage extends StatefulWidget {
   const SolarPanelCalcPage({Key key}) : super(key: key);
@@ -69,7 +71,7 @@ class _SolarPanelCalcWidget extends State<SolarPanelCalcPage> {
     List<RequiredItemDetails> array,
     String id,
   ) {
-    if (array == null || array.length == 0) return null;
+    if (array == null || array.isEmpty) return null;
     if (array.length == 1) return array[0];
 
     return array.firstWhere((item) => item.id == id, orElse: () => null);
@@ -99,31 +101,31 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
   final RequiredItemDetails batteryDetails;
   bool showDetails = false;
   bool showInfo = false;
-  TextEditingController _editing = TextEditingController();
+  final TextEditingController _editing = TextEditingController();
 
   _SolarPanelInnerWidget(this.solarPanelDetails, this.batteryDetails);
 
   _setPowerKps(int powerKps) {
-    this.setState(() {
+    setState(() {
       _powerKps = powerKps;
     });
   }
 
   _setPowerKpsFromString(String powerKpsString) {
     var intValue = int.tryParse(powerKpsString);
-    if (intValue == null) intValue = 0;
+    intValue ??= 0;
 
     _setPowerKps(intValue);
   }
 
   _toggleShowDetails() {
-    this.setState(() {
+    setState(() {
       showDetails = !showDetails;
     });
   }
 
   _toggleShowInfo() {
-    this.setState(() {
+    setState(() {
       showInfo = !showInfo;
     });
   }
@@ -142,7 +144,7 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
       Padding(
         child: TextField(
           controller: _editing,
-          style: TextStyle(fontSize: 24),
+          style: const TextStyle(fontSize: 24),
           autofocus: true,
           textAlign: TextAlign.center,
           cursorColor: getTheme().getSecondaryColour(context),
@@ -152,7 +154,7 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
             FilteringTextInputFormatter.digitsOnly
           ],
         ),
-        padding: EdgeInsets.only(left: 16, right: 16),
+        padding: const EdgeInsets.only(left: 16, right: 16),
       ),
     );
 
@@ -236,7 +238,7 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
       context,
       getTranslations().fromKey(LocaleKey.details),
       showDetails,
-      this._toggleShowDetails,
+      _toggleShowDetails,
     ));
     if (showDetails) {
       widgets.add(emptySpace(1));
@@ -295,7 +297,7 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
       context,
       getTranslations().fromKey(LocaleKey.info),
       showInfo,
-      this._toggleShowInfo,
+      _toggleShowInfo,
     ));
     if (showInfo) {
       widgets.add(emptySpace1x());
@@ -328,10 +330,10 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
                 child: Center(
                   child: Text(title),
                 ),
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
               ),
               color: getTheme().getSecondaryColour(context),
-              margin: EdgeInsets.all(0),
+              margin: const EdgeInsets.all(0),
             ),
             Positioned(
               child: Icon(
@@ -344,7 +346,7 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
             ),
           ],
         ),
-        padding: EdgeInsets.only(top: 8),
+        padding: const EdgeInsets.only(top: 8),
       ),
       onTap: onTap,
     );

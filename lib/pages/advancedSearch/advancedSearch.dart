@@ -14,14 +14,18 @@ import '../../mapper/RarityMapper.dart';
 import 'advancedSearchResults.dart';
 
 class AdvancedSearch extends StatefulWidget {
+  const AdvancedSearch({Key key}) : super(key: key);
+
   @override
+  // ignore: no_logic_in_create_state
   _AdvancedSearchWidget createState() => _AdvancedSearchWidget(
         (context) => getMegaList(context),
       );
 }
 
 class _AdvancedSearchWidget extends State<AdvancedSearch> {
-  final getAllItemsList;
+  final Future<ResultWithValue<List<GenericPageItem>>> Function(BuildContext)
+      getAllItemsList;
   List<String> groups = List.empty(growable: true);
   bool showResults = false;
 
@@ -101,7 +105,7 @@ class _AdvancedSearchWidget extends State<AdvancedSearch> {
     ResultWithValue<List<GenericPageItem>> allItems =
         ResultWithValue<List<GenericPageItem>>(false, null, '');
     if (type == SearchOptionType.group || type == SearchOptionType.rarity) {
-      allItems = await this.getAllItemsList(context);
+      allItems = await getAllItemsList(context);
     }
 
     String result = '';
@@ -113,7 +117,7 @@ class _AdvancedSearchWidget extends State<AdvancedSearch> {
           navigateTo: (context) => OptionsListPageDialog(
               getTranslations().fromKey(LocaleKey.type), getTypes(context)),
         );
-        result = (temp == null || temp.length <= 0) ? '' : temp;
+        result = (temp == null || temp.isEmpty) ? '' : temp;
         break;
       case SearchOptionType.group:
         if (allItems.hasFailed) return;
@@ -128,7 +132,7 @@ class _AdvancedSearchWidget extends State<AdvancedSearch> {
           navigateTo: (context) => OptionsListPageDialog(
               getTranslations().fromKey(LocaleKey.group), uniqueGroupItems),
         );
-        result = (temp == null || temp.length <= 0) ? '' : temp;
+        result = (temp == null || temp.isEmpty) ? '' : temp;
         break;
       case SearchOptionType.isConsumable:
         List<DropdownOption> options = List.empty(growable: true);
@@ -139,7 +143,7 @@ class _AdvancedSearchWidget extends State<AdvancedSearch> {
           navigateTo: (context) => OptionsListPageDialog(
               getTranslations().fromKey(LocaleKey.isConsumable), options),
         );
-        result = (temp == null || temp.length <= 0) ? '' : temp;
+        result = (temp == null || temp.isEmpty) ? '' : temp;
         break;
       case SearchOptionType.rarity:
         if (allItems.hasFailed) return;
@@ -156,16 +160,16 @@ class _AdvancedSearchWidget extends State<AdvancedSearch> {
           navigateTo: (context) => OptionsListPageDialog(
               getTranslations().fromKey(LocaleKey.rarity), uniqueRarity),
         );
-        var rarityTemp = (temp == null || temp.length <= 0) ? '' : temp;
+        var rarityTemp = (temp == null || temp.isEmpty) ? '' : temp;
         result = mapStringToRarityText(context, rarityTemp);
         actualValue = rarityTemp;
-        if (result == null) result = '';
+        result ??= '';
         break;
       case SearchOptionType.title:
         LocaleKey key = LocaleKey.itemName;
         var temp =
             await asyncInputDialog(context, getTranslations().fromKey(key));
-        result = (temp == null || temp.length <= 0) ? '' : temp;
+        result = (temp == null || temp.isEmpty) ? '' : temp;
         break;
       case SearchOptionType.minValue:
       case SearchOptionType.maxValue:
@@ -175,11 +179,11 @@ class _AdvancedSearchWidget extends State<AdvancedSearch> {
         var temp = await asyncInputDialog(
             context, getTranslations().fromKey(key),
             inputType: TextInputType.number);
-        result = (temp == null || temp.length <= 0) ? '' : temp;
+        result = (temp == null || temp.isEmpty) ? '' : temp;
         break;
       default:
         var temp = await asyncInputDialog(context, '');
-        result = (temp == null || temp.length <= 0) ? '' : temp;
+        result = (temp == null || temp.isEmpty) ? '' : temp;
         break;
     }
     setValue(type, result, actualValue);
@@ -211,7 +215,7 @@ class _AdvancedSearchWidget extends State<AdvancedSearch> {
       navigateTo: (context) => OptionsListPageDialog(
           getTranslations().fromKey(LocaleKey.group), options),
     );
-    var result = (temp == null || temp.length <= 0) ? '' : temp;
+    var result = (temp == null || temp.isEmpty) ? '' : temp;
     setState(() {
       orderByType = EnumToString.fromString(OrderByOptionType.values, result);
     });
@@ -224,17 +228,17 @@ class _AdvancedSearchWidget extends State<AdvancedSearch> {
         color: getTheme().getSecondaryColour(context),
         onPressed: () async {
           ResultWithValue<List<GenericPageItem>> allItems =
-              await this.getAllItemsList(context);
+              await getAllItemsList(context);
           if (allItems.hasFailed) return;
           await getNavigation().navigateAsync(context,
               navigateTo: (context) => AdvancedSearchResults(
                     allItems.value,
-                    this.searchOptions,
-                    this.orderByType,
+                    searchOptions,
+                    orderByType,
                   ));
         },
       ),
-      margin: EdgeInsets.all(4),
+      margin: const EdgeInsets.all(4),
     );
   }
 
@@ -249,7 +253,7 @@ class _AdvancedSearchWidget extends State<AdvancedSearch> {
           }
         },
       ),
-      margin: EdgeInsets.all(4),
+      margin: const EdgeInsets.all(4),
     );
   }
 

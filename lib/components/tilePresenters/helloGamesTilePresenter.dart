@@ -43,21 +43,21 @@ Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release) {
       child: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(top: 4, right: 4, left: 4),
+            padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
             child: Text(
               release.name,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 4, right: 4, left: 4),
+            padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
             child: Text(
               release.description,
               maxLines: NMSUIConstants.ReleaseNotesDescripNumLines,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
           ),
           Wrap(children: platformChips),
@@ -80,27 +80,27 @@ Widget newsItemTilePresenter(BuildContext context, NewsItem newsItem) {
         children: <Widget>[
           image,
           Padding(
-            padding: EdgeInsets.only(top: 4, right: 4, left: 4),
+            padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
             child: Text(
               newsItem.name,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 4, right: 4, left: 4),
+            padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
             child: Text(
               newsItem.date,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 14),
+              style: const TextStyle(fontSize: 14),
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             child: Text(
               newsItem.description,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
           ),
         ],

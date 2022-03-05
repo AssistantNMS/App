@@ -36,9 +36,9 @@ class Inventory {
       );
 
   Map<String, dynamic> toJson() => {
-        'uuid': this.uuid,
-        'name': this.name,
-        'icon': this.icon,
-        'slots': this.slots,
+        'uuid': uuid,
+        'name': name,
+        'icon': icon,
+        'slots': slots,
       };
 }

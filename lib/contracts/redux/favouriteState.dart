@@ -7,7 +7,7 @@ import '../favourite/favouriteItem.dart';
 class FavouriteState {
   final List<FavouriteItem> favouriteItems;
 
-  FavouriteState({
+  const FavouriteState({
     this.favouriteItems,
   });
 

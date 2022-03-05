@@ -20,7 +20,9 @@ class SelectedPlatform {
         }
       }
       return SelectedPlatform.defaultFont();
-    } catch (ex) {}
+    } catch (ex) {
+      //
+    }
     return SelectedPlatform.defaultFont();
   }
 }

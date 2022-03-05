@@ -10,6 +10,8 @@ import '../../../contracts/redux/appState.dart';
 import '../../../redux/modules/setting/introViewModel.dart';
 
 class Valentines2021 extends StatelessWidget {
+  const Valentines2021({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     List<String> availableImages = List.empty(growable: true);
@@ -37,7 +39,7 @@ class Valentines2021 extends StatelessWidget {
               child: Center(
                 child: Text(
                   "#${index + 1}",
-                  style: TextStyle(fontStyle: FontStyle.italic),
+                  style: const TextStyle(fontStyle: FontStyle.italic),
                 ),
               ),
               margin: const EdgeInsets.all(4.0),
@@ -48,14 +50,14 @@ class Valentines2021 extends StatelessWidget {
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 10,
-                style: TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 20),
               ),
               margin: const EdgeInsets.all(4.0),
             ),
             positiveButton(
               title: getTranslations().fromKey(LocaleKey.noticeAccept),
               colour: getTheme().getSecondaryColour(context),
-              padding: EdgeInsets.symmetric(vertical: 8),
+              padding: const EdgeInsets.symmetric(vertical: 8),
               onPress: () async => await getNavigation().navigateAsync(
                 context,
                 navigateToNamed: HomepageItem.getByType(
@@ -65,7 +67,7 @@ class Valentines2021 extends StatelessWidget {
             ),
             negativeButton(
               title: getTranslations().fromKey(LocaleKey.noticeReject),
-              padding: EdgeInsets.symmetric(vertical: 8),
+              padding: const EdgeInsets.symmetric(vertical: 8),
               onPress: () async {
                 introViewModel.hideValentines2021Intro();
                 await getNavigation().navigateHomeAsync(
@@ -80,7 +82,7 @@ class Valentines2021 extends StatelessWidget {
           ];
           return listWithScrollbar(
             shrinkWrap: true,
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             itemCount: widgets.length,
             itemBuilder: (BuildContext context, int index) => widgets[index],
           );

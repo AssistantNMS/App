@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:after_layout/after_layout.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
@@ -26,16 +28,14 @@ class WeekendMissionDetail extends StatefulWidget {
   final Future<ResultWithValue<WeekendStagePageItem>> Function(
           BuildContext context, String seasonId, int level)
       getWeekendMissionSeasonData;
-  WeekendMissionDetail(
-    this.pageItem,
-    this.getWeekendMissionSeasonData,
-    this.weekendMissionLevelMin,
-    this.weekendMissionLevelMax,
-  );
+  const WeekendMissionDetail(this.pageItem, this.getWeekendMissionSeasonData,
+      this.weekendMissionLevelMin, this.weekendMissionLevelMax,
+      {Key key})
+      : super(key: key);
 
   @override
-  _WeekendMissionDetailWidget createState() => _WeekendMissionDetailWidget(
-      this.pageItem, this.getWeekendMissionSeasonData);
+  _WeekendMissionDetailWidget createState() =>
+      _WeekendMissionDetailWidget(pageItem, getWeekendMissionSeasonData);
 }
 
 class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
@@ -48,15 +48,15 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
       getWeekendMissionSeasonData;
 
   _WeekendMissionDetailWidget(this.pageItem, this.getWeekendMissionSeasonData) {
-    isLoadingAdditionalDetails.add(this.pageItem.stage.level);
+    isLoadingAdditionalDetails.add(pageItem.stage.level);
   }
 
   @override
   void afterFirstLayout(BuildContext context) {
-    if (this.pageItem == null) return;
-    if (this.pageItem.stage == null) return;
-    if (this.pageItem.stage.level == null) return;
-    getMissionExtraDetails(context, this.pageItem.stage.level);
+    if (pageItem == null) return;
+    if (pageItem.stage == null) return;
+    if (pageItem.stage.level == null) return;
+    getMissionExtraDetails(context, pageItem.stage.level);
   }
 
   Future<void> getMission(BuildContext context, int newLevel) async {
@@ -64,16 +64,16 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
     if (newLevel < widget.weekendMissionLevelMin) return;
     if (!mounted) return;
 
-    this.setState(() {
-      this.isLoadingAdditionalDetails.add(newLevel);
+    setState(() {
+      isLoadingAdditionalDetails.add(newLevel);
     });
 
-    var localWeekendMissionDataResult = await this
-        .getWeekendMissionSeasonData(context, this.pageItem.season, newLevel);
+    var localWeekendMissionDataResult =
+        await getWeekendMissionSeasonData(context, pageItem.season, newLevel);
     if (localWeekendMissionDataResult.hasFailed) return;
 
-    this.setState(() {
-      this.pageItem = localWeekendMissionDataResult.value;
+    setState(() {
+      pageItem = localWeekendMissionDataResult.value;
     });
     await getMissionExtraDetails(context, newLevel);
   }
@@ -82,24 +82,24 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
       BuildContext context, int newLevel) async {
     ResultWithValue<WeekendMissionViewModel> apiResult =
         await getHelloGamesApiService().getWeekendMissionFromSeasonAndLevel(
-      this.pageItem.season,
+      pageItem.season,
       newLevel,
     );
     if (!mounted) return;
 
     if (!apiResult.isSuccess) {
-      this.setState(() {
-        this.isLoadingAdditionalDetails.remove(newLevel);
-        this.additionalDetails = List.empty(growable: true);
+      setState(() {
+        isLoadingAdditionalDetails.remove(newLevel);
+        additionalDetails = List.empty(growable: true);
       });
       return;
     }
 
-    this.setState(() {
-      this.isLoadingAdditionalDetails.remove(newLevel);
+    setState(() {
+      isLoadingAdditionalDetails.remove(newLevel);
       if (apiResult.isSuccess &&
-          apiResult.value.level == this.pageItem.stage.level) {
-        this.additionalDetails =
+          apiResult.value.level == pageItem.stage.level) {
+        additionalDetails =
             getAdditionalWidgetsFromVM(context, apiResult.value);
       }
     });
@@ -182,13 +182,13 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
       );
     }
 
-    if (this.isLoadingAdditionalDetails.contains(this.pageItem.stage.level)) {
+    if (isLoadingAdditionalDetails.contains(pageItem.stage.level)) {
       widgets.add(emptySpace1x());
       widgets.add(customDivider());
       widgets.add(emptySpace1x());
       widgets.add(Center(child: getLoading().smallLoadingIndicator()));
     } else {
-      widgets.addAll(this.additionalDetails);
+      widgets.addAll(additionalDetails);
     }
 
     widgets.add(emptySpace1x());
@@ -201,7 +201,7 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
 
     if (pageItem.stage.portalAddress != null) {
       widgets.add(Padding(
-        padding: EdgeInsets.symmetric(horizontal: 4),
+        padding: const EdgeInsets.symmetric(horizontal: 4),
         child: StoreConnector<AppState, PortalGlyphViewModel>(
           converter: (store) => PortalGlyphViewModel.fromStore(store),
           builder: (_, viewModel) => portalGlyphList(
@@ -223,11 +223,11 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
       children: [
         Padding(
           child: Text(
-            this.pageItem.stage.level.toString(),
-            style: TextStyle(fontSize: 20),
+            pageItem.stage.level.toString(),
+            style: const TextStyle(fontSize: 20),
             textAlign: TextAlign.center,
           ),
-          padding: EdgeInsets.only(top: 12),
+          padding: const EdgeInsets.only(top: 12),
         ),
         ...widgets,
       ],
@@ -237,13 +237,12 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
       child: dotPagination(
         context,
         content: pageContent,
-        currentPosition:
-            this.pageItem.stage.level - widget.weekendMissionLevelMin,
+        currentPosition: pageItem.stage.level - widget.weekendMissionLevelMin,
         numberOfDots:
             (widget.weekendMissionLevelMax - widget.weekendMissionLevelMin) + 1,
         nextLocaleKey: LocaleKey.nextWeekendMission,
         prevLocaleKey: LocaleKey.previousWeekendMission,
-        onDotTap: (int dotIndex) => this.getMission(
+        onDotTap: (int dotIndex) => getMission(
           context,
           (dotIndex + widget.weekendMissionLevelMin).toInt(),
         ),
@@ -251,14 +250,14 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
       offsetDx: 0.5,
       iconSize: 42,
       iconOnRightSwipe: Icons.chevron_left,
-      onRightSwipe: () => this.getMission(
+      onRightSwipe: () => getMission(
         context,
-        this.pageItem.stage.level - 1,
+        pageItem.stage.level - 1,
       ),
       iconOnLeftSwipe: Icons.chevron_right,
-      onLeftSwipe: () => this.getMission(
+      onLeftSwipe: () => getMission(
         context,
-        this.pageItem.stage.level + 1,
+        pageItem.stage.level + 1,
       ),
     );
   }
@@ -274,7 +273,7 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(right: 8),
               child: Icon(Icons.chat),
             ),

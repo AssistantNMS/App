@@ -13,7 +13,7 @@ Widget timerTilePresenter(BuildContext context, TimerItem timer,
     leadingImage: timer.icon,
     name: timer.name,
     subtitle: Padding(
-      padding: EdgeInsets.only(top: 4.0, bottom: 4.0),
+      padding: const EdgeInsets.only(top: 4.0, bottom: 4.0),
       child: getProgressbarFromDates(
         context,
         timer.startDate,
@@ -41,12 +41,13 @@ Widget timerDateTimeTilePresenter(
   Widget trailing,
 }) {
   var now = DateTime.now();
-  var onTap = () async {
+  Future Function() onTap;
+  onTap = () async {
     DateTime dayOfTheYear = await showDatePicker(
       context: context,
       initialDate: currentDateTime,
-      firstDate: minDate ?? now.subtract(Duration(days: 365)),
-      lastDate: maxDate ?? now.add(Duration(days: 365)),
+      firstDate: minDate ?? now.subtract(const Duration(days: 365)),
+      lastDate: maxDate ?? now.add(const Duration(days: 365)),
     );
     if (dayOfTheYear == null) return;
 
@@ -73,7 +74,7 @@ Widget timerDateTimeTilePresenter(
       DateFormat(UIConstants.DateTimeFormat).format(currentDateTime) ?? '...',
     ),
     trailing: showEditIcon
-        ? IconButton(icon: Icon(Icons.edit), onPressed: onTap)
+        ? IconButton(icon: const Icon(Icons.edit), onPressed: onTap)
         : trailing,
     onTap: onTap,
   );

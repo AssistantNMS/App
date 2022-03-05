@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -17,7 +19,7 @@ import '../../redux/modules/inventory/inventoryListViewModel.dart';
 
 class AddInventorySlotPage extends StatefulWidget {
   final GenericPageItem genericItem;
-  AddInventorySlotPage(this.genericItem);
+  const AddInventorySlotPage(this.genericItem, {Key key}) : super(key: key);
 
   @override
   _ViewInventoryListState createState() => _ViewInventoryListState(genericItem);
@@ -27,7 +29,7 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
   final GenericPageItem genericItem;
   Inventory inventory;
   int _counter = 0;
-  TextEditingController quantityController = new TextEditingController();
+  TextEditingController quantityController = TextEditingController();
 
   _ViewInventoryListState(this.genericItem) {
     getAnalytics().trackEvent(AnalyticsEvent.addInventorySlotPage);
@@ -52,7 +54,7 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
             Navigator.of(context).pop();
           },
           heroTag: 'AddInventorySlotPage',
-          child: Icon(Icons.check),
+          child: const Icon(Icons.check),
           foregroundColor: getTheme().fabForegroundColourSelector(context),
           backgroundColor: getTheme().fabColourSelector(context),
         ),
@@ -65,19 +67,19 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
     widgets.add(vm.displayGenericItemColour
         ? genericItemImageWithBackground(context, genericItem)
         : genericItemImage(context, genericItem.icon));
-    var itemName = (genericItem.symbol != null && genericItem.symbol.length > 0)
+    var itemName = (genericItem.symbol != null && genericItem.symbol.isNotEmpty)
         ? "${genericItem.name} (${genericItem.symbol})"
         : genericItem.name;
     widgets.add(genericItemName(itemName));
 
     widgets.add(emptySpace3x());
 
-    if (vm.containers.length > 0) {
+    if (vm.containers.isNotEmpty) {
       widgets.add(genericItemDescription("Select Container"));
       widgets.add(
         Padding(
           child: DropdownButton<Inventory>(
-            hint: Text("Select item"),
+            hint: const Text("Select item"),
             value: inventory ?? vm.containers[0],
             onChanged: (Inventory value) {
               setState(() {
@@ -94,14 +96,14 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
                       height: 25,
                       width: 25,
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Text(inv.name),
                   ],
                 ),
               );
             }).toList(),
           ),
-          padding: EdgeInsets.only(left: 32.0, right: 32.0),
+          padding: const EdgeInsets.only(left: 32.0, right: 32.0),
         ),
       );
 
@@ -119,7 +121,7 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
               FilteringTextInputFormatter.digitsOnly
             ],
           ),
-          padding: EdgeInsets.only(left: 32.0, right: 32.0),
+          padding: const EdgeInsets.only(left: 32.0, right: 32.0),
         ),
       );
 
@@ -147,7 +149,7 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
             },
           ),
         ),
-        margin: EdgeInsets.all(12),
+        margin: const EdgeInsets.all(12),
       ));
     }
 

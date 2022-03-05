@@ -11,7 +11,7 @@ class ContributorApiService extends BaseApiService {
 
   Future<ResultWithValue<List<ContributorViewModel>>> getContributors() async {
     try {
-      final response = await this.apiGet(ApiUrls.contributor);
+      final response = await apiGet(ApiUrls.contributor);
       if (response.hasFailed) {
         return ResultWithValue<List<ContributorViewModel>>(
             false, List.empty(growable: true), response.errorMessage);

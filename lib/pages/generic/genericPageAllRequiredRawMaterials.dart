@@ -60,17 +60,17 @@ class _GenericPageAllRequiredRawMaterialsWidget
           currentSelection = index;
         });
       }),
-      margin: EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
     );
 
     return genericPageScaffold<List<RequiredItemDetails>>(
       context,
-      this.item.typeName ?? getTranslations().fromKey(LocaleKey.loading),
+      item.typeName ?? getTranslations().fromKey(LocaleKey.loading),
       null,
       body: (BuildContext innerContext, unused) =>
           getBody(innerContext, currentSelection, segmentedWidget),
       floatingActionButton:
-          getFloatingActionButton(context, controller, this.item.genericItem),
+          getFloatingActionButton(context, controller, item.genericItem),
     );
   }
 
@@ -86,7 +86,7 @@ class _GenericPageAllRequiredRawMaterialsWidget
     Widget Function(BuildContext context, RequiredItemDetails itemDetails)
         requiredItemDetailsPresenter =
         requiredItemDetailsBackgroundTilePresenter(showBackgroundColours);
-    if (snapshot.data.length > 0) {
+    if (snapshot.data.isNotEmpty) {
       for (RequiredItemDetails item in snapshot.data) {
         widgets.add(requiredItemDetailsPresenter(context, item));
       }
@@ -97,9 +97,9 @@ class _GenericPageAllRequiredRawMaterialsWidget
             getTranslations().fromKey(LocaleKey.noItems),
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
-          margin: EdgeInsets.only(top: 30),
+          margin: const EdgeInsets.only(top: 30),
         ),
       );
     }
@@ -118,7 +118,7 @@ class _GenericPageAllRequiredRawMaterialsWidget
 
     List<Widget> widgets = List.empty(growable: true);
 
-    if (snapshot.data.length > 0) {
+    if (snapshot.data.isNotEmpty) {
       widgets.add(Expanded(
         child: ListView(
           shrinkWrap: true,
@@ -134,9 +134,9 @@ class _GenericPageAllRequiredRawMaterialsWidget
             getTranslations().fromKey(LocaleKey.noItems),
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
-          margin: EdgeInsets.only(top: 30),
+          margin: const EdgeInsets.only(top: 30),
         ),
       );
     }
@@ -150,9 +150,9 @@ class _GenericPageAllRequiredRawMaterialsWidget
     Widget segmentedWidget,
   ) {
     List<Widget> widgets = List.empty(growable: true);
-    if (this.item.name.length > 0) {
+    if (item.name.isNotEmpty) {
       widgets.add(emptySpace1x());
-      widgets.add(genericItemName(this.item.name));
+      widgets.add(genericItemName(item.name));
       widgets.add(genericItemText(
         getTranslations().fromKey(LocaleKey.allRawMaterialsRequired),
       ));

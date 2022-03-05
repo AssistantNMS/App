@@ -1,3 +1,5 @@
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 import '../genericPageItem.dart';
 
 class InventorySlotDetails {
@@ -10,10 +12,10 @@ class InventorySlotDetails {
 
   factory InventorySlotDetails.fromJson(Map<String, dynamic> json) =>
       InventorySlotDetails(
-        typeName: json["typeName"] as String,
-        id: json["id"] as String,
-        icon: json["icon"] as String,
-        name: json["name"] as String,
+        typeName: readStringSafe(json, 'typeName'),
+        id: readStringSafe(json, 'id'),
+        icon: readStringSafe(json, 'icon'),
+        name: readStringSafe(json, 'name'),
       );
 
   factory InventorySlotDetails.fromGenericPageItem(GenericPageItem generic) =>
@@ -25,9 +27,9 @@ class InventorySlotDetails {
       );
 
   Map<String, dynamic> toJson() => {
-        'typeName': this.typeName,
-        'id': this.id,
-        'icon': this.icon,
-        'name': this.name,
+        'typeName': typeName,
+        'id': id,
+        'icon': icon,
+        'name': name,
       };
 }

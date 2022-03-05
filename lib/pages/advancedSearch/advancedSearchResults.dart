@@ -4,7 +4,6 @@ import '../../helpers/genericHelper.dart';
 
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/genericTilePresenter.dart';
-import '../../constants/IdPrefix.dart';
 import '../../contracts/enum/currencyType.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/search/orderByOptionType.dart';
@@ -16,7 +15,9 @@ class AdvancedSearchResults extends StatelessWidget {
   final List<GenericPageItem> items;
   final List<SearchOption> searchOptions;
   final OrderByOptionType orderByType;
-  AdvancedSearchResults(this.items, this.searchOptions, this.orderByType);
+  const AdvancedSearchResults(this.items, this.searchOptions, this.orderByType,
+      {Key key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -6,6 +6,8 @@ import '../../components/responsiveGridView.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 
 class UnusedPatchImagesPage extends StatelessWidget {
+  const UnusedPatchImagesPage({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return simpleGenericPageScaffold(
@@ -27,7 +29,10 @@ class UnusedPatchImagesPage extends StatelessWidget {
                 onTap: () => getNavigation().navigateAsync(
                   context,
                   navigateTo: (context) => ImageViewerPage(
-                      path.replaceAll('milestonePatches/', ''), path),
+                    path.replaceAll('milestonePatches/', ''),
+                    path,
+                    analyticsKey: '',
+                  ),
                 ),
               ),
             );

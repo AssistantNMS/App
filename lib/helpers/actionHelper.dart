@@ -13,7 +13,7 @@ ActionItem editNameInAppBarAction(BuildContext context, LocaleKey dialogTitle,
         var name = await asyncInputDialog(
             context, getTranslations().fromKey(dialogTitle),
             defaultText: currentName);
-        var newName = (name == null || name.length == 0)
+        var newName = (name == null || name.isEmpty)
             ? getTranslations().fromKey(nameIfEmpty)
             : name;
         onEdit(newName);

@@ -3,6 +3,8 @@
 //     final resource = resourceFromJson(jsonString);
 // https://app.quicktype.io/
 
+// ignore_for_file: constant_identifier_names
+
 import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
@@ -32,14 +34,14 @@ class RawMaterialDetail {
   String toRawJson() => json.encode(toJson());
 
   factory RawMaterialDetail.fromJson(Map<String, dynamic> json) =>
-      new RawMaterialDetail(
-        id: json["Id"] as String,
-        name: json["Name"] as String,
-        abbrev: json["Abbrev"] as String,
-        group: json["Group"] as String,
-        description: json["Description"] as String,
+      RawMaterialDetail(
+        id: readStringSafe(json, 'Id'),
+        name: readStringSafe(json, 'Name'),
+        abbrev: readStringSafe(json, 'Abbrev'),
+        group: readStringSafe(json, 'Group'),
+        description: readStringSafe(json, 'Description'),
         rarity: rarityValues.map[json["Rarity"]],
-        additional: json["Additional"] as String,
+        additional: readStringSafe(json, 'Additional'),
       );
 
   Map<String, dynamic> toJson() => {

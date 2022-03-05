@@ -22,7 +22,9 @@ class SelectedFont {
         }
       }
       return SelectedFont.defaultFont();
-    } catch (ex) {}
+    } catch (ex) {
+      //
+    }
     return SelectedFont.defaultFont();
   }
 }

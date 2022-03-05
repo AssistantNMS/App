@@ -11,12 +11,12 @@ class AlienPuzzleJsonRepository extends BaseJsonService
   Future<ResultWithValue<List<AlienPuzzle>>> getAll(
       context, List<AlienPuzzleType> puzzleTypes) async {
     try {
-      List responseDetailsJson = await this.getListfromJson(
+      List responseDetailsJson = await getListfromJson(
           context, getTranslations().fromKey(LocaleKey.alienPuzzleJson));
       List<AlienPuzzle> alienPuzzles =
           responseDetailsJson.map((m) => AlienPuzzle.fromJson(m)).toList();
       List<AlienPuzzle> filtered = alienPuzzles.toList();
-      if (puzzleTypes.length > 0) {
+      if (puzzleTypes.isNotEmpty) {
         filtered = alienPuzzles
             .where((a) => puzzleTypes.any((pt) => pt == a.type))
             .toList();
@@ -33,7 +33,7 @@ class AlienPuzzleJsonRepository extends BaseJsonService
   @override
   Future<ResultWithValue<AlienPuzzle>> getById(context, String id) async {
     ResultWithValue<List<AlienPuzzle>> alienPuzzlesResult =
-        await this.getAll(context, List.empty());
+        await getAll(context, List.empty());
     if (alienPuzzlesResult.hasFailed) {
       return ResultWithValue(
           false, AlienPuzzle(), alienPuzzlesResult.errorMessage);

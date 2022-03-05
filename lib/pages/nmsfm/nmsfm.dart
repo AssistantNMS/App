@@ -15,6 +15,8 @@ import 'nmsfmTrackList.dart';
 //https://stream.zenolive.com/9kz76c8mdg8uv.aac
 
 class NMSFMPage extends StatefulWidget {
+  const NMSFMPage({Key key}) : super(key: key);
+
   @override
   _NMSFMPageWidget createState() => _NMSFMPageWidget();
 }
@@ -30,7 +32,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
     _connectivitySubscription = Connectivity()
         .onConnectivityChanged
         .listen((ConnectivityResult result) {
-      this.setState(() {
+      setState(() {
         _connectivityStatus = result;
       });
     });
@@ -49,7 +51,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
     List<Widget> widgets = List.empty(growable: true);
     widgets.add(localImage(
       AppImage.nmsfmLogo,
-      padding: EdgeInsets.symmetric(horizontal: 64),
+      padding: const EdgeInsets.symmetric(horizontal: 64),
     ));
     widgets.add(emptySpace1x());
     widgets.add(genericItemName(getTranslations().fromKey(LocaleKey.nmsfm)));
@@ -62,18 +64,18 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
         child: veritasVelezTile(context,
             subtitle: getTranslations().fromKey(LocaleKey.nmsfmCreator))));
 
-    bool isOnline = this._connectivityStatus != ConnectivityResult.none ||
+    bool isOnline = _connectivityStatus != ConnectivityResult.none ||
         isiOS; // Connectivity plugin subscription to connectivity does not work on ios 🙄
     if (isOnline) {
-      widgets.add(AudioStreamPresenter());
+      widgets.add(const AudioStreamPresenter());
       widgets.add(Container(
-        padding: EdgeInsets.symmetric(horizontal: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 12),
         child: positiveButton(
           title: getTranslations().fromKey(LocaleKey.viewTrackList),
           colour: getTheme().getSecondaryColour(context),
           onPress: () => getNavigation().navigateAsync(
             context,
-            navigateTo: (context) => NMSFMTrackListPage(),
+            navigateTo: (context) => const NMSFMTrackListPage(),
           ),
         ),
       ));
@@ -87,21 +89,21 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
     if (!isOnline) {
       widgets.add(customDivider());
       widgets.add(
-        LocalAudioPresenter(
+        const LocalAudioPresenter(
           'Cactus Jelly Sunrise',
           'Tron Lennon',
           AppAudio.cactusJellySunrise,
         ),
       );
       widgets.add(
-        LocalAudioPresenter(
+        const LocalAudioPresenter(
           'Flux16',
           'The ByteBeat Guy',
           AppAudio.flux16,
         ),
       );
       widgets.add(
-        LocalAudioPresenter(
+        const LocalAudioPresenter(
           'Oranges',
           'VeritasVelez',
           AppAudio.oranges,
@@ -113,7 +115,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
       shrinkWrap: true,
       itemCount: widgets.length,
       itemBuilder: (BuildContext innerContext, int index) => widgets[index],
-      padding: EdgeInsets.only(bottom: 32),
+      padding: const EdgeInsets.only(bottom: 32),
     );
   }
 
@@ -125,6 +127,8 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
 }
 
 class AudioStreamPresenter extends StatefulWidget {
+  const AudioStreamPresenter({Key key}) : super(key: key);
+
   @override
   _AudioStreamPresenterWidget createState() => _AudioStreamPresenterWidget();
 }
@@ -139,8 +143,8 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
       stream: getAudioPlayer().getPlayer().current,
       builder: (context, AsyncSnapshot<Playing> asyncSnapshot) {
         final Audio current = asyncSnapshot?.data?.audio?.audio;
-        bool isLoading = this.isPlaying == true && current == null;
-        bool localIsPlaying = this.isPlaying;
+        bool isLoading = isPlaying == true && current == null;
+        bool localIsPlaying = isPlaying;
         if (current == null) {
           localIsPlaying = false;
         }
@@ -187,9 +191,10 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
           trailing:
               isLoading ? getLoading().smallLoadingIndicator() : playStopWidget,
           onTap: () {
-            var stopFunction = (AssetsAudioPlayer localPlayer) {
+            void Function(AssetsAudioPlayer localPlayer) stopFunction;
+            stopFunction = (AssetsAudioPlayer localPlayer) {
               localPlayer.stop();
-              this.setState(() {
+              setState(() {
                 isPlaying = false;
               });
             };
@@ -200,7 +205,7 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
             var defaultMeta = Metas(
               title: getTranslations().fromKey(LocaleKey.nmsfm),
               artist: 'Now Streaming', // TODO Translate
-              image: MetasImage.network(
+              image: const MetasImage.network(
                 'https://app.nmsassistant.com/assets/images/special/nmsfm.png',
               ),
             );
@@ -217,7 +222,7 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
                     customStopAction: stopFunction,
                   ),
                 );
-            this.setState(() {
+            setState(() {
               isPlaying = true;
               savedMetas = defaultMeta;
             });
@@ -232,7 +237,8 @@ class LocalAudioPresenter extends StatelessWidget {
   final String name;
   final String artist;
   final String localPath;
-  LocalAudioPresenter(this.name, this.artist, this.localPath);
+  const LocalAudioPresenter(this.name, this.artist, this.localPath, {Key key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

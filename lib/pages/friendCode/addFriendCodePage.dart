@@ -19,7 +19,7 @@ const String ps4 = 'PS';
 const String xb1 = 'XB';
 
 class AddFriendCodePage extends StatefulWidget {
-  AddFriendCodePage();
+  const AddFriendCodePage({Key key}) : super(key: key);
 
   @override
   _AddFriendCodeState createState() => _AddFriendCodeState();
@@ -68,7 +68,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
   }
 
   updateApiObj() {
-    this.setState(() {
+    setState(() {
       friendCodeVm = AddFriendCodeViewModel(
         name: _nameController.text,
         code: _codeController.text,
@@ -87,8 +87,8 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
         body: getBody(context, friendCodeSettingVm),
         fab: FloatingActionButton(
           onPressed: () async {
-            if (!this._allValidationsPassed()) {
-              this.setState(() {
+            if (!_allValidationsPassed()) {
+              setState(() {
                 _showValidation = true;
               });
               return;
@@ -106,11 +106,11 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
               platformType: friendCodeSettingVm.lastPlatformIndex + 1,
               languageCode: currentLocal.code,
             );
-            this.setState(() {
+            setState(() {
               _isLoading = true;
             });
             var submissionResult = await getApiRepo().submitFriendCode(apiObj);
-            this.setState(() {
+            setState(() {
               _isLoading = false;
             });
             if (submissionResult.isSuccess) {
@@ -137,7 +137,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
             }
           },
           heroTag: 'addFriendCode',
-          child: Icon(Icons.check),
+          child: const Icon(Icons.check),
           foregroundColor: getTheme().fabForegroundColourSelector(context),
           backgroundColor: getTheme().fabColourSelector(context),
         ),
@@ -151,7 +151,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
     List<Widget> widgets = List.empty(growable: true);
 
     var textEditingPadding =
-        EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0);
+        const EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0);
 
     widgets.add(Padding(
       padding: textEditingPadding,
@@ -170,10 +170,10 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
         decoration: getTextFieldDecoration(
           context,
           LocaleKey.name,
-          this._validationMap['name'],
+          _validationMap['name'],
           _showValidation,
         ),
-        onChanged: (_) => this.updateApiObj(),
+        onChanged: (_) => updateApiObj(),
       ),
     ));
 
@@ -186,10 +186,10 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
             decoration: getTextFieldDecoration(
               context,
               LocaleKey.emailAddress,
-              this._validationMap['email'],
+              _validationMap['email'],
               _showValidation,
             ),
-            onChanged: (_) => this.updateApiObj(),
+            onChanged: (_) => updateApiObj(),
           ),
         ),
         Positioned(
@@ -197,7 +197,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
           right: 22,
           bottom: 4,
           child: GestureDetector(
-            child: Icon(Icons.help_outline),
+            child: const Icon(Icons.help_outline),
             onTap: () {
               getDialog().showSimpleHelpDialog(
                 context,
@@ -217,10 +217,10 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
         decoration: getTextFieldDecoration(
           context,
           LocaleKey.friendCode,
-          this._validationMap['code'],
+          _validationMap['code'],
           _showValidation,
         ),
-        onChanged: (_) => this.updateApiObj(),
+        onChanged: (_) => updateApiObj(),
         textCapitalization: TextCapitalization.characters,
         inputFormatters: [
           FilteringTextInputFormatter(RegExp('[A-z0-9]'), allow: true),
@@ -238,8 +238,8 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
   }
 
   bool _allValidationsPassed() {
-    for (var validationKey in this._validationMap.keys) {
-      var validate = this._validationMap[validationKey];
+    for (var validationKey in _validationMap.keys) {
+      var validate = _validationMap[validationKey];
       var vResult = validate();
       if (vResult == false) return false;
     }

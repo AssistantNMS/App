@@ -11,7 +11,7 @@ import '../../redux/modules/setting/introViewModel.dart';
 class IntroPage extends StatelessWidget {
   final Function onTap;
   final void Function(Locale locale) onLocaleChange;
-  IntroPage(this.onLocaleChange, {this.onTap});
+  const IntroPage(this.onLocaleChange, {Key key, this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +34,9 @@ class IntroPage extends StatelessWidget {
             descrip: '',
           ),
         ],
-        renderSkipBtn: Icon(Icons.skip_next, color: iconFgColour),
-        renderNextBtn: Icon(Icons.navigate_next, color: iconFgColour),
-        renderDoneBtn: Icon(Icons.done, color: iconFgColour),
+        renderSkipBtn: const Icon(Icons.skip_next, color: iconFgColour),
+        renderNextBtn: const Icon(Icons.navigate_next, color: iconFgColour),
+        renderDoneBtn: const Icon(Icons.done, color: iconFgColour),
         onDonePress: () async {
           if (onTap != null) {
             onTap();

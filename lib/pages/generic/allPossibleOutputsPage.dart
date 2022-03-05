@@ -9,23 +9,24 @@ class AllPossibleOutputsPage<T> extends StatelessWidget {
   final String title;
   final Widget Function(BuildContext context, T p) presenter;
 
-  AllPossibleOutputsPage(this.requiredItems, this.title, this.presenter) {
+  AllPossibleOutputsPage(this.requiredItems, this.title, this.presenter,
+      {Key key})
+      : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.allPossibleOutputsPage);
   }
 
   @override
   Widget build(BuildContext context) {
     return genericPageScaffold(
-      context, this.title, null, //unused
+      context, title, null, //unused
       body: getBody,
     );
   }
 
   Widget getBody(BuildContext context, unused) {
     List<Widget> widgets = List.empty(growable: true);
-    if (this.requiredItems.length > 0) {
-      widgets.addAll(
-          this.requiredItems.map((p) => presenter(context, p)).toList());
+    if (requiredItems.isNotEmpty) {
+      widgets.addAll(requiredItems.map((p) => presenter(context, p)).toList());
     } else {
       widgets.add(
         Container(
@@ -33,9 +34,9 @@ class AllPossibleOutputsPage<T> extends StatelessWidget {
             getTranslations().fromKey(LocaleKey.noItems),
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
-          margin: EdgeInsets.only(top: 30),
+          margin: const EdgeInsets.only(top: 30),
         ),
       );
     }

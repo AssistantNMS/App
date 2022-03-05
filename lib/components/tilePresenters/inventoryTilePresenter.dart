@@ -122,7 +122,7 @@ Widget inventorySlotTileWithContainersPresenter(BuildContext context,
       ),
       trailing: (invSlot == null ||
               invSlot.containers == null ||
-              invSlot.containers.length < 1)
+              invSlot.containers.isEmpty)
           ? null
           : popupMenu(context,
               additionalItems: invSlot.containers

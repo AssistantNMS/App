@@ -9,7 +9,7 @@ import '../../helpers/searchHelpers.dart';
 import '../../integration/dependencyInjection.dart';
 
 class NewsPage extends StatelessWidget {
-  NewsPage() {
+  NewsPage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.newsPage);
   }
   @override

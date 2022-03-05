@@ -119,7 +119,7 @@ Widget communitySpotlightTilePresenter(
   //     imageUrl: communitySpotlight.userImage,
   //     name: communitySpotlight.userName,
   //     subtitle: (communitySpotlight.subtitle != null &&
-  //             communitySpotlight.subtitle.length > 0)
+  //             communitySpotlight.subtitle.isNotEmpty)
   //         ? Text(
   //             communitySpotlight.subtitle,
   //             maxLines: 1,

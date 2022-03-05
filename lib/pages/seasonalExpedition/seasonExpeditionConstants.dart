@@ -37,7 +37,7 @@ Widget expeditionSeasonTile(
     backgroundImage,
     fit: BoxFit.cover,
   );
-  Widget backgroundContainer = Container(
+  Widget backgroundContainer = SizedBox(
     height: backgroundHeight,
     width: double.infinity,
     child: isOld ? imageInGreyScale(backgroundImgSource) : backgroundImgSource,
@@ -47,11 +47,11 @@ Widget expeditionSeasonTile(
       if (backgroundImage != null) ...[
         backgroundContainer,
       ],
-      Container(
+      SizedBox(
         height: backgroundHeight,
         width: double.infinity,
         child: Padding(
-          padding: EdgeInsets.only(top: 4, bottom: 20),
+          padding: const EdgeInsets.only(top: 4, bottom: 20),
           child: isOld
               ? imageInGreyScale(localImage(imageUrl))
               : localImage(imageUrl),
@@ -63,9 +63,9 @@ Widget expeditionSeasonTile(
         child: Container(
           child: Padding(
             child: genericItemName(name),
-            padding: EdgeInsets.only(left: 4),
+            padding: const EdgeInsets.only(left: 4),
           ),
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(10),
             ),
@@ -78,12 +78,12 @@ Widget expeditionSeasonTile(
         right: 0,
         bottom: -1,
         child: Container(
-          color: Color.fromRGBO(0, 0, 0, 0.65),
+          color: const Color.fromRGBO(0, 0, 0, 0.65),
           child: genericItemName(seasonTitle),
         ),
       ),
       if (isLocked) ...[
-        Positioned(
+        const Positioned(
           top: 8,
           left: 8,
           child: Icon(

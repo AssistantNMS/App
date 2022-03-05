@@ -13,7 +13,7 @@ import '../../../integration/dependencyInjection.dart';
 import 'weekendMissionDetail.dart';
 
 class WeekendMissionSeason3Page extends StatelessWidget {
-  WeekendMissionSeason3Page() {
+  WeekendMissionSeason3Page({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.weekendMissionSeason3Page);
   }
   Future<ResultWithValue<WeekendStagePageItem>> getCurrentWeekendMissionData(
@@ -63,7 +63,7 @@ class WeekendMissionSeason3Page extends StatelessWidget {
           icon: Icons.more,
           image: getListTileImage(
             AppImage.weekendMissionWhite,
-            padding: EdgeInsets.symmetric(vertical: 16),
+            padding: const EdgeInsets.symmetric(vertical: 16),
           ),
           onPressed: () => getNavigation().navigateAsync(
             context,

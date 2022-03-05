@@ -7,7 +7,7 @@ import '../journey/storedJourneyMilestone.dart';
 class JourneyMilestoneState {
   final List<StoredJourneyMilestone> storedMilestones;
 
-  JourneyMilestoneState({
+  const JourneyMilestoneState({
     this.storedMilestones,
   });
 

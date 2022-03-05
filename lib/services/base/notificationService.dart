@@ -14,6 +14,7 @@ class NotificationService implements INotificationService {
       });
     });
   }
+  @override
   subscribeToTopics(context, String selectedLanguage) {
     bool isProduction = getEnv().isProduction;
     for (String code in getLanguage().supportedLanguagesCodes()) {

@@ -5,17 +5,17 @@ import '../../contracts/guide/guide.dart';
 import '../../helpers/genericHelper.dart';
 import '../../pages/guide/guidesDetailsPage.dart';
 
-final int numberOfDaysAGuideIsConsideredNew = 31;
+const int numberOfDaysAGuideIsConsideredNew = 31;
 
 bool isGuideNew(Guide guideDetails) => guideDetails.date
-    .add(Duration(days: numberOfDaysAGuideIsConsideredNew))
+    .add(const Duration(days: numberOfDaysAGuideIsConsideredNew))
     .isAfter(DateTime.now());
 
 Widget guideTilePresenter(BuildContext context, Guide guideDetails) {
   List<Row> firstRow = [
     Row(
       children: [
-        Icon(Icons.person),
+        const Icon(Icons.person),
         Text(guideDetails.author ?? '???'),
       ],
     )
@@ -23,7 +23,7 @@ Widget guideTilePresenter(BuildContext context, Guide guideDetails) {
   if (guideDetails.minutes > 0) {
     firstRow.add(Row(
       children: [
-        Icon(Icons.timer),
+        const Icon(Icons.timer),
         Text(getTranslations()
             .fromKey(LocaleKey.minutes)
             .replaceAll('{0}', guideDetails.minutes.toString())),
@@ -31,10 +31,10 @@ Widget guideTilePresenter(BuildContext context, Guide guideDetails) {
     ));
   }
   if (guideDetails.translatedBy != null &&
-      guideDetails.translatedBy.length > 0) {
+      guideDetails.translatedBy.isNotEmpty) {
     firstRow.add(Row(
       children: [
-        Icon(Icons.translate),
+        const Icon(Icons.translate),
         Text(guideDetails.translatedBy),
       ],
     ));
@@ -48,18 +48,18 @@ Widget guideTilePresenter(BuildContext context, Guide guideDetails) {
             : 'assets/guide/${guideDetails.folder}/${guideDetails.image}',
       )),
       Padding(
-        padding: EdgeInsets.only(top: 8),
+        padding: const EdgeInsets.only(top: 8),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: firstRow,
         ),
       ),
       Padding(
-        padding: EdgeInsets.only(top: 4, right: 4, left: 4),
+        padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
         child: Text(
           guideDetails.title,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 16),
+          style: const TextStyle(fontSize: 16),
         ),
       ),
       Wrap(
@@ -87,7 +87,7 @@ Widget guideTilePresenter(BuildContext context, Guide guideDetails) {
 Widget compactGuideTilePresenter(BuildContext context, Guide guideDetails) {
   String subTitle = (guideDetails.author ?? '???');
   if (guideDetails.translatedBy != null &&
-      guideDetails.translatedBy.length > 0) {
+      guideDetails.translatedBy.isNotEmpty) {
     subTitle += ' - ' + guideDetails.translatedBy;
   }
   if (guideDetails.minutes > 0) {
@@ -96,7 +96,7 @@ Widget compactGuideTilePresenter(BuildContext context, Guide guideDetails) {
             .fromKey(LocaleKey.minutes)
             .replaceAll('{0}', guideDetails.minutes.toString());
   }
-  if (guideDetails.tags.length > 0) {
+  if (guideDetails.tags.isNotEmpty) {
     subTitle += ' - ' + guideDetails.tags[0];
     for (int tagIndex = 1; tagIndex < guideDetails.tags.length; tagIndex++) {
       subTitle += ', ' + guideDetails.tags[tagIndex];

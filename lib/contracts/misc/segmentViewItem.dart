@@ -12,6 +12,6 @@ class SegmentViewItem {
   });
 
   Widget toSegmentOption() => getSegmentedControlOption(
-        getTranslations().fromKey(this.title),
+        getTranslations().fromKey(title),
       );
 }

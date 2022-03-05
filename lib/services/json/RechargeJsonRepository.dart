@@ -10,8 +10,7 @@ class RechargeJsonRepository extends BaseJsonService
   //
   Future<ResultWithValue<List<Recharge>>> getAllRechargeItems(context) async {
     try {
-      dynamic responseJson =
-          await this.getJsonFromAssets(context, "data/Recharge");
+      dynamic responseJson = await getJsonFromAssets(context, "data/Recharge");
       List list = json.decode(responseJson);
       List<Recharge> rechargeItems =
           list.map((m) => Recharge.fromJson(m)).toList();
@@ -33,8 +32,9 @@ class RechargeJsonRepository extends BaseJsonService
     try {
       var rechargeItem = allItemsResult.value
           .firstWhere((rech) => rech.id == id, orElse: () => null);
-      if (rechargeItem != null)
+      if (rechargeItem != null) {
         return ResultWithValue<Recharge>(true, rechargeItem, '');
+      }
     } catch (exception) {
       getLog().e('RechargeJsonRepository getRechargeById $id Exception');
       return ResultWithValue<Recharge>(false, Recharge(), exception.toString());
@@ -52,7 +52,7 @@ class RechargeJsonRepository extends BaseJsonService
     var rechargeItems = allItemsResult.value
         .where((rech) => rech.chargeBy.any((cb) => cb.id == id))
         .toList();
-    if (rechargeItems == null || rechargeItems.length < 1) {
+    if (rechargeItems == null || rechargeItems.isEmpty) {
       return ResultWithValue<List<Recharge>>(
           false, List.empty(growable: true), 'item not found');
     }

@@ -15,7 +15,7 @@ ThemeData darkTheme(String fontFamily) {
     colorScheme: base.colorScheme.copyWith(
       primary: primary,
       secondary: secondary,
-      secondaryVariant: secondary,
+      secondaryContainer: secondary,
     ),
     textTheme: _buildAppTextTheme(base.textTheme, fontFamily),
     primaryTextTheme: _buildAppTextTheme(base.primaryTextTheme, fontFamily),
@@ -26,7 +26,7 @@ ThemeData darkTheme(String fontFamily) {
       textTheme: ButtonTextTheme.primary,
     ),
     brightness: Brightness.dark,
-    pageTransitionsTheme: PageTransitionsTheme(builders: {
+    pageTransitionsTheme: const PageTransitionsTheme(builders: {
       TargetPlatform.android: CupertinoPageTransitionsBuilder(),
       TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
     }),
@@ -64,11 +64,11 @@ CupertinoTextThemeData toAppleTextTheme(ThemeData theme) {
   return CupertinoTextThemeData(
     // brightness: theme.brightness,
     primaryColor: theme.primaryColor,
-    // actionTextStyle: TextStyle(
+    // actionTextStyle: const TextStyle(
     //   color: theme.accentColor,
     //   backgroundColor: theme.backgroundColor,
     // ),
-    // textStyle: TextStyle(
+    // textStyle: const TextStyle(
     //   color: theme.accentColor,
     //   backgroundColor: theme.backgroundColor,
     // )

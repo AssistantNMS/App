@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_this
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
@@ -14,13 +16,15 @@ class CatalogueItemPage extends StatelessWidget {
   final LocaleKey titleLocaleKey;
   final List<LocaleKey> repoJsonLocaleKeys;
 
-  CatalogueItemPage(this.titleLocaleKey, this.repoJsonLocaleKeys);
+  const CatalogueItemPage(this.titleLocaleKey, this.repoJsonLocaleKeys,
+      {Key key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return simpleGenericPageScaffold(
       context,
-      title: getTranslations().fromKey(this.titleLocaleKey),
+      title: getTranslations().fromKey(titleLocaleKey),
       body: StoreConnector<AppState, GenericPageViewModel>(
         converter: (store) => GenericPageViewModel.fromStore(store),
         builder: (_, viewModel) => SearchableList<GenericPageItem>(

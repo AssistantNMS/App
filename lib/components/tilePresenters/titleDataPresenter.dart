@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
@@ -18,12 +20,13 @@ Widget Function(BuildContext, TitleDataWithOwned) titleDataTilePresenter(
 class TitleDataTile extends StatefulWidget {
   final TitleViewModel viewModel;
   final TitleDataWithOwned titleData;
-  TitleDataTile(this.viewModel, this.titleData, {Key key}) : super(key: key);
+  const TitleDataTile(this.viewModel, this.titleData, {Key key})
+      : super(key: key);
 
   @override
   _TitleDataTileState createState() => _TitleDataTileState(
-        this.viewModel,
-        this.titleData,
+        viewModel,
+        titleData,
       );
 }
 
@@ -34,7 +37,7 @@ class _TitleDataTileState extends State<TitleDataTile> {
   _TitleDataTileState(this.viewModel, this.titleData);
 
   void setOwned(bool newIsOwned, void Function() callback) {
-    this.setState(() {
+    setState(() {
       titleData.isOwned = newIsOwned;
     });
     callback();
@@ -45,7 +48,9 @@ class _TitleDataTileState extends State<TitleDataTile> {
     Function() viewModelFunc = titleData.isOwned
         ? () => viewModel.removeFromOwned(titleData.id)
         : () => viewModel.addToOwned(titleData.id);
-    Function() toggleOwned = () => setOwned(!titleData.isOwned, viewModelFunc);
+    Function() toggleOwned;
+    toggleOwned = () => setOwned(!titleData.isOwned, viewModelFunc);
+
     return ListTile(
       leading: (titleData.appIcon == null || titleData.appIcon.length < 5)
           ? null

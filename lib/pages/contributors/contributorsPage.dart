@@ -46,7 +46,7 @@ class _ContributorsWidget extends State<ContributorsPage> {
               false,
           minListForSearch: 1000,
           lastListItemWidget: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: positiveButton(
               title: getTranslations().fromKey(LocaleKey.useTranslationTool),
               colour: getTheme().getSecondaryColour(context),

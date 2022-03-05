@@ -11,7 +11,7 @@ import '../../redux/modules/journeyMilestone/journeyMilestoneViewModel.dart';
 import '../../services/json/JourneyJsonRepository.dart';
 
 class JourneyMilestonePage extends StatelessWidget {
-  JourneyMilestonePage() {
+  JourneyMilestonePage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.journeyMilestonesPage);
   }
 
@@ -28,7 +28,7 @@ class JourneyMilestonePage extends StatelessWidget {
               journeyMilestoneCurriedTilePresenter(viewModel);
           //
           return SearchableList<JourneyMilestone>(
-            () => (new JourneyJsonRepository()).getAllMilestones(context),
+            () => (JourneyJsonRepository()).getAllMilestones(context),
             listItemDisplayer: localJourneyMilestoneTilePresenter,
             listItemSearch: (JourneyMilestone _, String __) => false,
             minListForSearch: 100,
@@ -41,7 +41,7 @@ class JourneyMilestonePage extends StatelessWidget {
                           (m.journeyId ?? '') +
                           (m.journeyStatIndex?.toString() ?? ''))
                       .toList(),
-                  'handle empty array', // TODO Don't know why I need dis here, plz fix
+                  'handle empty array', // Don't know why I need dis here
                 ],
                 ',',
               ),

@@ -15,7 +15,7 @@ class PortalRecord {
   bool compareCodes(List<int> current) {
     bool isEqual = true;
     for (var codeIndex = 0; codeIndex < codes.length; codeIndex++) {
-      if (this.codes[codeIndex] != current[codeIndex]) {
+      if (codes[codeIndex] != current[codeIndex]) {
         isEqual = false;
         break;
       }
@@ -39,22 +39,18 @@ class PortalRecord {
   }
 
   factory PortalRecord.fromJson(Map<String, dynamic> json) => PortalRecord(
-        uuid: json["uuid"],
-        name: json["name"],
-        date: json["date"],
-        tags: json["tags"] != null
-            ? (json["tags"] as List).map((c) => c as String).toList()
-            : List.empty(growable: true),
-        codes: json["codes"] != null
-            ? (json["codes"] as List).map((c) => c as int).toList()
-            : List.empty(growable: true),
+        uuid: readStringSafe(json, 'uuid'),
+        name: readStringSafe(json, 'name'),
+        date: readStringSafe(json, 'date'),
+        tags: readListSafe(json, 'tags', ((c) => c as String)),
+        codes: readListSafe(json, 'codes', ((c) => c as int)),
       );
 
   Map<String, dynamic> toJson() => {
-        'uuid': this.uuid,
-        'name': this.name,
-        'date': this.date,
-        'tags': this.tags,
-        'codes': this.codes,
+        'uuid': uuid,
+        'name': name,
+        'date': date,
+        'tags': tags,
+        'codes': codes,
       };
 }

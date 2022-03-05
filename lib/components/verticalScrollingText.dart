@@ -5,12 +5,13 @@ class VerticalScrollingText extends StatefulWidget {
   final TextStyle textItemStyle;
   final List<String> textItems;
   final Widget Function(String) textDisplayer;
-  VerticalScrollingText(
+  const VerticalScrollingText(
     this.textItems, {
+    Key key,
     this.duration = const Duration(seconds: 2),
     this.textDisplayer,
     this.textItemStyle,
-  });
+  }) : super(key: key);
   @override
   _VerticalScrollingTextWidget createState() => _VerticalScrollingTextWidget();
 }
@@ -18,7 +19,7 @@ class VerticalScrollingText extends StatefulWidget {
 class _VerticalScrollingTextWidget extends State<VerticalScrollingText>
     with TickerProviderStateMixin {
   AnimationController _animationController;
-  final Curve _animationCurve = Interval(
+  final Curve _animationCurve = const Interval(
     0.3,
     0.7,
     curve: Curves.easeInOut,
@@ -33,7 +34,7 @@ class _VerticalScrollingTextWidget extends State<VerticalScrollingText>
       reverseDuration: widget.duration,
     );
     _animationController.addListener(() {
-      this.setState(() {});
+      setState(() {});
     });
     // _animationController.addStatusListener((status) {
     //   if (status == AnimationStatus.completed) {
@@ -53,7 +54,7 @@ class _VerticalScrollingTextWidget extends State<VerticalScrollingText>
                 style: widget.textItemStyle,
               ),
             );
-    var container = Container(
+    var container = SizedBox(
       width: double.infinity,
       height: 30,
       child: Stack(
@@ -88,7 +89,7 @@ class _VerticalScrollingTextWidget extends State<VerticalScrollingText>
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              stops: [
+              stops: const [
                 0.05,
                 0.3,
                 0.7,

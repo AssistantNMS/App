@@ -45,8 +45,9 @@ class ThemeService implements IThemeService {
   @override
   Color getH1Colour(BuildContext context) {
     var textColour = AdaptiveTheme.of(context).theme.textTheme.headline1.color;
-    if (textColour == null)
+    if (textColour == null) {
       return getIsDark(context) ? Colors.white : Colors.black;
+    }
     return textColour;
   }
 

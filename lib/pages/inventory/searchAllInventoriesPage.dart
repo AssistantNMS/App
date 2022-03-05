@@ -12,7 +12,7 @@ import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/inventory/inventoryListViewModel.dart';
 
 class SearchAllInventoriesPage extends StatelessWidget {
-  SearchAllInventoriesPage() {
+  SearchAllInventoriesPage({Key key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.searchInventorySlotPage);
   }
 

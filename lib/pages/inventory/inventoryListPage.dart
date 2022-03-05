@@ -16,6 +16,8 @@ import 'searchAllInventoriesPage.dart';
 import 'viewInventoryPage.dart';
 
 class InventoryListPage extends StatefulWidget {
+  const InventoryListPage({Key key}) : super(key: key);
+
   @override
   _InventoryListState createState() => _InventoryListState();
 }
@@ -34,8 +36,8 @@ class _InventoryListState extends State<InventoryListPage> {
 
   @override
   Widget build(BuildContext context) {
-    var appBar = (InventoryListViewModel vm) =>
-        getBaseWidget().appBarForSubPage(
+    PreferredSizeWidget Function(InventoryListViewModel vm) appBar;
+    appBar = (InventoryListViewModel vm) => getBaseWidget().appBarForSubPage(
           context,
           showHomeAction: true,
           title: Text(getTranslations().fromKey(LocaleKey.inventoryManagement)),
@@ -62,7 +64,7 @@ class _InventoryListState extends State<InventoryListPage> {
                   navigateTo: (context) => OptionsListPageDialog(
                       getTranslations().fromKey(LocaleKey.orderBy), options),
                 );
-                var result = (temp == null || temp.length <= 0) ? '' : temp;
+                var result = (temp == null || temp.isEmpty) ? '' : temp;
                 InventoryOrderByType orderByType = EnumToString.fromString(
                     InventoryOrderByType.values, result);
                 vm.setOrderByType(orderByType);
@@ -87,7 +89,7 @@ class _InventoryListState extends State<InventoryListPage> {
             forceUpdate();
           },
           heroTag: 'InventoryListPage',
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
           foregroundColor: getTheme().fabForegroundColourSelector(context),
           backgroundColor: getTheme().fabColourSelector(context),
         ),
@@ -98,16 +100,16 @@ class _InventoryListState extends State<InventoryListPage> {
   Widget getBody(BuildContext context, InventoryListViewModel viewModel) {
     List<Widget> widgets = List.empty(growable: true);
 
-    if (viewModel.containers.length == 0) {
+    if (viewModel.containers.isEmpty) {
       widgets.add(
         Container(
           child: Text(
             getTranslations().fromKey(LocaleKey.noItems),
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
-          margin: EdgeInsets.only(top: 30),
+          margin: const EdgeInsets.only(top: 30),
         ),
       );
     } else {
@@ -121,10 +123,10 @@ class _InventoryListState extends State<InventoryListPage> {
                   color: getTheme().getSecondaryColour(context),
                 ),
               ),
-              padding: EdgeInsets.all(12),
+              padding: const EdgeInsets.all(12),
             ),
           ),
-          padding: EdgeInsets.only(top: 4, bottom: 0),
+          padding: const EdgeInsets.only(top: 4, bottom: 0),
         ),
         onTap: () async => await getNavigation().navigateAsync<Inventory>(
           context,

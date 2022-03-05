@@ -1,9 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:get_it/get_it.dart';
-import '../../services/base/languageService.dart';
 
+import '../../services/base/languageService.dart';
 import '../env/environmentSettings.dart';
-import '../helpers/repositoryHelper.dart';
 import '../services/api/communityApiService.dart';
 import '../services/api/contributorApiService.dart';
 import '../services/api/guideApiService.dart';
@@ -22,7 +21,9 @@ import '../services/json/AlienPuzzleRepository.dart';
 import '../services/json/AlienPuzzleRewardsJsonRepository.dart';
 import '../services/json/DataJsonRepository.dart';
 import '../services/json/ExploitJsonRepository.dart';
+import '../services/json/GenericJsonRepository.dart';
 import '../services/json/RechargeJsonRepository.dart';
+import '../services/json/RefineryJsonRepository.dart';
 import '../services/json/SeasonalExpeditionJsonRepository.dart';
 import '../services/json/TechTreeJsonRepository.dart';
 import '../services/json/TitleJsonRepository.dart';
@@ -58,10 +59,10 @@ void initDependencyInjection(EnvironmentSettings _env) {
   );
 
   getIt.registerFactoryParam<IGenericRepository, LocaleKey, String>(
-    (LocaleKey key, String unused) => initRepo(key),
+    (LocaleKey key, String unused) => GenericJsonRepository(key),
   );
   getIt.registerFactoryParam<IRefineryRepository, LocaleKey, bool>(
-    (LocaleKey key, bool isRefiner) => initRefineryRepo(key, isRefiner),
+    (LocaleKey key, bool isRefiner) => RefineryJsonRepository(key, isRefiner),
   );
   getIt.registerSingleton<IExploitRepository>(ExploitJsonRepository());
   getIt.registerSingleton<IDataJsonRepository>(DataJsonRepository());

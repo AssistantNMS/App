@@ -7,6 +7,6 @@ class InventorySlotWithGenericPageItem extends InventorySlot {
   InventorySlotWithGenericPageItem(
       {InventorySlotDetails pageItem, int quantity})
       : super(pageItem: pageItem, quantity: quantity) {
-    this.name = pageItem.name;
+    name = pageItem.name;
   }
 }

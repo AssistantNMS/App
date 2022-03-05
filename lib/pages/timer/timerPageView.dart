@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'dart:async';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
@@ -13,12 +15,12 @@ class TimersPageView extends StatefulWidget {
   final List<TimerItem> timers;
   final void Function(TimerItem) editTimer;
   final void Function(String) deleteTimer;
-  TimersPageView(this.timers, this.editTimer, this.deleteTimer, {Key key})
+  const TimersPageView(this.timers, this.editTimer, this.deleteTimer, {Key key})
       : super(key: key);
 
   @override
   _TimersPageViewState createState() =>
-      _TimersPageViewState(this.timers, this.editTimer, this.deleteTimer);
+      _TimersPageViewState(timers, editTimer, deleteTimer);
 }
 
 class _TimersPageViewState extends State<TimersPageView> {
@@ -47,7 +49,7 @@ class _TimersPageViewState extends State<TimersPageView> {
 
   @override
   Widget build(BuildContext context) {
-    if (timers == null || timers.length == 0) {
+    if (timers == null || timers.isEmpty) {
       return listWithScrollbar(
         itemCount: 1,
         itemBuilder: (context, index) => Container(
@@ -55,19 +57,20 @@ class _TimersPageViewState extends State<TimersPageView> {
             getTranslations().fromKey(LocaleKey.noItems),
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
-          margin: EdgeInsets.only(top: 30),
+          margin: const EdgeInsets.only(top: 30),
         ),
       );
     }
 
-    Function(TimerItem) onEdit = (TimerItem currentItem) async {
+    Function(TimerItem) onEdit;
+    onEdit = (TimerItem currentItem) async {
       TimerItem temp = await getNavigation().navigateAsync<TimerItem>(
         context,
         navigateTo: (context) => AddEditTimerPage(currentItem, false),
       );
-      if (temp == null || !(temp is TimerItem)) return;
+      if (temp == null || temp is! TimerItem) return;
       editTimer(temp);
       await getLocalNotification()
           .removeScheduledTimerNotification(temp.notificationId);
@@ -80,7 +83,8 @@ class _TimersPageViewState extends State<TimersPageView> {
       initTimer(newTimer: temp);
     };
 
-    var presenter = (BuildContext presenterContext, TimerItem timer) =>
+    Widget Function(BuildContext presenterContext, TimerItem timer) presenter;
+    presenter = (BuildContext presenterContext, TimerItem timer) =>
         timerTilePresenter(
             presenterContext, timer, onEdit, (String id) => deleteTimer(id));
 

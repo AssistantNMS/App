@@ -1,3 +1,5 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide ExternalUrls;
 import 'package:flutter/material.dart';
@@ -18,7 +20,7 @@ import 'addPortalPage.dart';
 
 class ViewPortalPage extends StatefulWidget {
   final PortalRecord item;
-  ViewPortalPage(this.item);
+  const ViewPortalPage(this.item, {Key key}) : super(key: key);
 
   @override
   _ViewPortalPageState createState() => _ViewPortalPageState(item);
@@ -44,17 +46,17 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
             PortalRecord temp =
                 await getNavigation().navigateAsync<PortalRecord>(
               context,
-              navigateTo: (context) => AddPortalPage(this.item, isEdit: true),
+              navigateTo: (context) => AddPortalPage(item, isEdit: true),
             );
-            if (temp == null || !(temp is PortalRecord)) return;
+            if (temp == null || temp is! PortalRecord) return;
             portalViewModel.editPortal(
                 temp.name, temp.codes, temp.tags, temp.uuid);
-            this.setState(() {
+            setState(() {
               item = temp;
             });
           },
           heroTag: 'ViewPortalPage',
-          child: Icon(Icons.edit),
+          child: const Icon(Icons.edit),
           foregroundColor: getTheme().fabForegroundColourSelector(context),
           backgroundColor: getTheme().fabColourSelector(context),
         ),
@@ -73,9 +75,9 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(hexString, style: TextStyle(fontSize: 20)),
+          Text(hexString, style: const TextStyle(fontSize: 20)),
           IconButton(
-            icon: Icon(Icons.content_copy),
+            icon: const Icon(Icons.content_copy),
             onPressed: () {
               Clipboard.setData(ClipboardData(text: hexString));
               getSnackbar().showSnackbar(
@@ -89,7 +91,7 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
       ),
     ));
 
-    if (item.tags != null && item.tags.length > 0) {
+    if (item.tags != null && item.tags.isNotEmpty) {
       widgets.add(Wrap(
         alignment: WrapAlignment.center,
         children: item.tags.map((tag) => genericChip(context, tag)).toList(),
@@ -100,13 +102,14 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
     //     ? item.date.substring(0, 10)
     //     : item.date ?? '';
     // widgets.add(Padding(
-    //   padding: EdgeInsets.only(top: 8, bottom: 12),
+    //   padding: const EdgeInsets.only(top: 8, bottom: 12),
     //   child: genericItemGroup(dateString),
     // ));
 
     widgets.add(emptySpace3x());
 
-    var onCopy = (String gAddress) {
+    void Function(String gAddress) onCopy;
+    onCopy = (String gAddress) {
       Clipboard.setData(ClipboardData(text: gAddress));
       getSnackbar().showSnackbar(
         scaffoldContext,
@@ -117,11 +120,12 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
     widgets.add(galacticAddress(context, item.codes, onCopy));
 
     String url = NmsExternalUrls.nmsPortals + hexString;
-    var onTap = () => launchExternalURL(url);
+    Future Function() onTap;
+    onTap = () => launchExternalURL(url);
     widgets.add(GestureDetector(
       child: Chip(
-        label: Text('nmsportals.github.io'),
-        deleteIcon: Icon(Icons.open_in_new),
+        label: const Text('nmsportals.github.io'),
+        deleteIcon: const Icon(Icons.open_in_new),
         onDeleted: onTap,
       ),
       onTap: onTap,

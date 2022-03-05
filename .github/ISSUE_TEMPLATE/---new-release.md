@@ -1,5 +1,5 @@
 ---
-name: New Release
+name: "\U0001F4E6 New Release"
 about: Steps to release a new version
 title: 'Release '
 labels: pre-release

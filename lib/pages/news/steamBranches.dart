@@ -5,6 +5,8 @@ import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../components/common/loading.dart';
 
 class SteamBranchesPage extends StatefulWidget {
+  const SteamBranchesPage({Key key}) : super(key: key);
+
   @override
   _SteamBranchesPageWidget createState() => _SteamBranchesPageWidget();
 }
@@ -17,14 +19,14 @@ class _SteamBranchesPageWidget extends State<SteamBranchesPage> {
   @override
   initState() {
     super.initState();
-    this.getSteamBranches();
+    getSteamBranches();
   }
 
   getSteamBranches() async {
     var branchResult =
         await getAssistantAppsSteam().getSteamBranches(AssistantAppType.NMS);
 
-    this.setState(() {
+    setState(() {
       hasFailed = branchResult.hasFailed;
       isLoading = false;
       branches = branchResult.value;
@@ -36,7 +38,7 @@ class _SteamBranchesPageWidget extends State<SteamBranchesPage> {
     return CustomRefreshIndicator(
       offsetToArmed: 150.0,
       trailingGlowVisible: false,
-      onRefresh: () => this.getSteamBranches(),
+      onRefresh: () => getSteamBranches(),
       child: getBody(context),
       builder: (context, child, controller) => Stack(
         children: <Widget>[
@@ -59,7 +61,7 @@ class _SteamBranchesPageWidget extends State<SteamBranchesPage> {
                   child: Container(
                     color: getTheme().getScaffoldBackgroundColour(context),
                     child: Padding(
-                      padding: EdgeInsets.all(6),
+                      padding: const EdgeInsets.all(6),
                       child: oldLoadingSpinner(),
                     ),
                   ),
@@ -73,15 +75,14 @@ class _SteamBranchesPageWidget extends State<SteamBranchesPage> {
   }
 
   Widget getBody(BuildContext context) {
-    if (this.hasFailed) return getLoading().customErrorWidget(context);
-    if (this.isLoading) return getLoading().fullPageLoading(context);
+    if (hasFailed) return getLoading().customErrorWidget(context);
+    if (isLoading) return getLoading().fullPageLoading(context);
     return SingleChildScrollView(
       physics: const AlwaysScrollableScrollPhysics(),
       child: Column(
         children: [
           steamDatabaseTile(context),
-          ...this
-              .branches
+          ...branches
               .map((item) => steamBranchItemTilePresenter(context, item))
               .toList(),
         ],

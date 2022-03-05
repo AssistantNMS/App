@@ -31,7 +31,7 @@ class CustomMenuSettingsViewModel {
       );
 
   DrawerSettingsViewModel toDrawerViewModel() => DrawerSettingsViewModel(
-        isPatron: this.isPatron,
-        dontShowSpoilerAlert: this.dontShowSpoilerAlert,
+        isPatron: isPatron,
+        dontShowSpoilerAlert: dontShowSpoilerAlert,
       );
 }

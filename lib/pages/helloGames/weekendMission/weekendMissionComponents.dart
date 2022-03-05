@@ -10,8 +10,8 @@ import 'weekendMissionSeasonPage.dart';
 Widget weekendMissionComingSoon(BuildContext context, String message) {
   return weekendMissionSeasonTile(
     Padding(
-      key: Key('weekendMissionComingSoon'),
-      padding: EdgeInsets.only(top: 4, bottom: 28),
+      key: const Key('weekendMissionComingSoon'),
+      padding: const EdgeInsets.only(top: 4, bottom: 28),
       child: WebsafeSvg.asset(
         AppSvgImage.underConstruction,
         fit: BoxFit.contain,
@@ -97,7 +97,7 @@ Widget weekendMissionSeasonTile(
     Widget imageWidget, String message, String author, Function ontap) {
   return InkWell(
     child: Stack(children: [
-      Container(
+      SizedBox(
         height: 200,
         width: double.infinity,
         child: imageWidget,
@@ -112,7 +112,7 @@ Widget weekendMissionSeasonTile(
         right: 0,
         bottom: 0,
         child: Container(
-          color: Color.fromRGBO(0, 0, 0, 0.65),
+          color: const Color.fromRGBO(0, 0, 0, 0.65),
           child: genericItemName(message),
         ),
       ),
