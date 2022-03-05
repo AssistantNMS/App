@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../contracts/generated/expeditionViewModel.dart' as ExpeditionApi;
+import '../../contracts/generated/expeditionViewModel.dart' as expedition_api;
 import '../../redux/modules/expedition/expeditionViewModel.dart';
 
 import '../../contracts/seasonalExpedition/seasonalExpeditionMilestone.dart';
@@ -21,7 +21,7 @@ Widget seasonalExpeditionDetailTilePresenter(
         season.title,
         season.icon,
         bodyDisplayFunc: () => Padding(
-          padding: EdgeInsets.only(right: 8),
+          padding: const EdgeInsets.only(right: 8),
           child: Stack(
             children: [
               twoLinePortalGlyphList(
@@ -35,13 +35,17 @@ Widget seasonalExpeditionDetailTilePresenter(
         imageFlex: 4,
         onTap: () => getNavigation().navigateAsync(
           context,
-          navigateTo: (context) => ImageViewerPage(season.title, season.icon),
+          navigateTo: (context) => ImageViewerPage(
+            season.title,
+            season.icon,
+            analyticsKey: '',
+          ),
         ),
         backgroundColour: getTheme().getScaffoldBackgroundColour(context),
       ),
       if (season.startDate != null && season.endDate != null) ...[
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -119,7 +123,7 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
   Container Function(String text, {double fontSize}) textWrapper;
   textWrapper = (String text, {double fontSize}) => Container(
         child: Text(
-          seasonalExpeditionMilestone.title,
+          text,
           textAlign: TextAlign.start,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
@@ -205,7 +209,11 @@ Widget seasonalExpeditionBase(
           child: localImage(imagePath),
           onTap: () => getNavigation().navigateAsync(
             context,
-            navigateTo: (context) => ImageViewerPage(title, imagePath),
+            navigateTo: (context) => ImageViewerPage(
+              title,
+              imagePath,
+              analyticsKey: '',
+            ),
           ),
         ),
       ),
@@ -237,9 +245,9 @@ Widget seasonalExpeditionBase(
 }
 
 Widget expeditionInProgressPresenter(
-    BuildContext context, ExpeditionApi.ExpeditionViewModel expedition) {
+    BuildContext context, expedition_api.ExpeditionViewModel expedition) {
   Widget bodyChild = Container(
-    padding: EdgeInsets.symmetric(horizontal: 8),
+    padding: const EdgeInsets.symmetric(horizontal: 8),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -259,7 +267,7 @@ Widget expeditionInProgressPresenter(
   );
 
   Widget contentChild = Container(
-    padding: EdgeInsets.symmetric(horizontal: 8),
+    padding: const EdgeInsets.symmetric(horizontal: 8),
     child: Row(children: [
       Expanded(flex: 3, child: networkImage(expedition.imageUrl)),
       Expanded(flex: 7, child: bodyChild),
