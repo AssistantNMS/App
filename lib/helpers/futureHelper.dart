@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/constants/UsageKey.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/IdPrefix.dart';
@@ -8,7 +9,6 @@ import '../contracts/data/quicksilverStore.dart';
 import '../contracts/data/updateItemDetail.dart';
 import '../contracts/enum/currencyType.dart';
 import '../contracts/genericPageItem.dart';
-import '../contracts/genericPageItemUsage.dart';
 import '../contracts/processor.dart';
 import '../contracts/processorRecipePageData.dart';
 import '../contracts/recharge.dart';
@@ -44,7 +44,7 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
         false, GenericPageItem(), itemResult.errorMessage);
   }
   GenericPageItem item = itemResult.value;
-  GenericPageItemUsage usage = itemResult.value.usage;
+  List<String> usage = itemResult.value.usage;
 
   item.typeName = getTypeName(context, item.id);
   item.usedInRecipes = List.empty();
@@ -55,27 +55,27 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   item.chargedBy = Recharge.initial();
   item.usedToRecharge = List.empty();
 
-  if (usage?.hasUsedToCraft == true) {
+  if ((usage ?? []).contains(UsageKey.hasUsedToCraft)) {
     item.usedInRecipes = await getAllPossibleOutputsFromInput(context, itemId);
   }
-  if (usage?.hasRefinedToCreate == true) {
+  if ((usage ?? []).contains(UsageKey.hasRefinedToCreate)) {
     item.usedInRefiners = await refinerRecipesByInputFuture(context, itemId);
   }
-  if (usage?.hasRefinedUsing == true) {
+  if ((usage ?? []).contains(UsageKey.hasRefinedUsing)) {
     item.refiners = await refinerRecipesByOutputFuture(context, itemId);
   }
-  if (usage?.hasCookUsing == true) {
+  if ((usage ?? []).contains(UsageKey.hasCookUsing)) {
     item.cooking =
         await nutrientProcessorRecipesByOutputFuture(context, itemId);
   }
-  if (usage?.hasCookToCreate == true) {
+  if ((usage ?? []).contains(UsageKey.hasCookToCreate)) {
     item.usedInCooking =
         await nutrientProcessorRecipesByInputFuture(context, itemId);
   }
-  if (usage?.hasChargedBy == true) {
+  if ((usage ?? []).contains(UsageKey.hasChargedBy)) {
     item.chargedBy = await rechargedByFuture(context, itemId);
   }
-  if (usage?.hasUsedToRecharge == true) {
+  if ((usage ?? []).contains(UsageKey.hasUsedToRecharge)) {
     item.usedToRecharge = await usedToRechargeFuture(context, itemId);
   }
 

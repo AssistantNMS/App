@@ -7,10 +7,13 @@ import '../../components/expeditionAlphabetTranslation.dart';
 import '../../components/tilePresenters/eggTraitTilePresenter.dart';
 import '../../components/tilePresenters/inventoryTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemTilePresenter.dart';
+import '../../components/tilePresenters/seasonalExpeditionTilePresenter.dart';
 import '../../components/tilePresenters/statBonusPresenter.dart';
+import '../../components/tilePresenters/twitchTilePresenter.dart';
 import '../../constants/AppImage.dart';
 import '../../constants/IdPrefix.dart';
 import '../../constants/Routes.dart';
+import '../../constants/UsageKey.dart';
 import '../../contracts/cart/cartItem.dart';
 import '../../contracts/chargeBy.dart';
 import '../../contracts/data/eggTrait.dart';
@@ -66,7 +69,7 @@ List<Widget> getBodyTopContent(BuildContext context, GenericPageViewModel vm,
         vm.addFavourite,
         vm.removeFavourite,
       ),
-      if (genericItem?.usage?.hasDevProperties == true) ...[
+      if ((genericItem?.usage ?? []).contains(UsageKey.hasDevProperties)) ...[
         getDevSheet(
           context,
           genericItem.id,
@@ -570,4 +573,47 @@ List<Widget> getEggTraits(
     ));
   }
   return eggTraitWidgets;
+}
+
+List<Widget> getRewardFrom(
+  BuildContext context,
+  List<String> usages,
+) {
+  List<Widget> rewardsFromWidgets = List.empty(growable: true);
+
+  List<String> expSeasonKeySplit = UsageKey.isExpeditionSeason.split("{0}");
+  if (usages.any((u) => u.contains(expSeasonKeySplit[0]))) {
+    String expSeasUsageKey =
+        usages.firstWhere((u) => u.contains(expSeasonKeySplit[0]));
+    String expSeasonNum = expSeasUsageKey
+        .replaceAll(expSeasonKeySplit[0], '')
+        .replaceAll(expSeasonKeySplit[1], '');
+    rewardsFromWidgets.add(rewardFromSeasonalExpeditionTilePresenter(
+      context,
+      'seas-$expSeasonNum',
+    ));
+  }
+
+  List<String> twitchCampaignKeySplit = UsageKey.isTwitchCapaign.split("{0}");
+  if (usages.any((u) => u.contains(twitchCampaignKeySplit[0]))) {
+    String expSeasUsageKey =
+        usages.firstWhere((u) => u.contains(twitchCampaignKeySplit[0]));
+    String expSeasonNum = expSeasUsageKey
+        .replaceAll(twitchCampaignKeySplit[0], '')
+        .replaceAll(twitchCampaignKeySplit[1], '');
+    rewardsFromWidgets.add(rewardFromTwitchTilePresenter(
+      context,
+      expSeasonNum,
+    ));
+  }
+
+  if (rewardsFromWidgets.isEmpty) {
+    return List.empty(growable: true);
+  }
+
+  return [
+    emptySpace3x(),
+    genericItemText('Reward from'), // TODO translate
+    ...rewardsFromWidgets,
+  ];
 }

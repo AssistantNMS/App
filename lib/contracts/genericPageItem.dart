@@ -1,7 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import 'data/platformControlMapping.dart';
-import 'genericPageItemUsage.dart';
 import 'statBonus.dart';
 import 'proceduralStatBonus.dart';
 import 'enum/blueprintSource.dart';
@@ -47,7 +46,7 @@ class GenericPageItem {
   List<EggTrait> eggTraits;
   List<PlatformControlMapping> controlMappings;
   String translation;
-  GenericPageItemUsage usage;
+  List<String> usage;
 
   GenericPageItem({
     this.typeName,
@@ -161,7 +160,7 @@ class GenericPageItem {
           (dynamic json) => PlatformControlMapping.fromJson(json),
         ),
         translation: readStringSafe(json, 'translation'),
-        usage: GenericPageItemUsage.fromJson(json['usages']),
+        usage: readListSafe(json, 'usages', (dynamic json) => json.toString()),
       );
 
   Map<String, dynamic> toJson() => {

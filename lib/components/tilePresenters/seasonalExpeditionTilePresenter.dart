@@ -1,6 +1,9 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/components/common/cachedFutureBuilder.dart';
 import 'package:flutter/material.dart';
 import '../../contracts/generated/expeditionViewModel.dart' as expedition_api;
+import '../../integration/dependencyInjection.dart';
+import '../../pages/seasonalExpedition/seasonalExpeditionPhaseListPage.dart';
 import '../../redux/modules/expedition/expeditionViewModel.dart';
 
 import '../../contracts/seasonalExpedition/seasonalExpeditionMilestone.dart';
@@ -284,5 +287,28 @@ Widget expeditionInProgressPresenter(
             child: contentChild,
             onTap: () => launchExternalURL(expedition.link),
           ),
+  );
+}
+
+Widget rewardFromSeasonalExpeditionTilePresenter(
+    BuildContext context, String seasId) {
+  return flatCard(
+    shadowColor: Colors.transparent,
+    child: CachedFutureBuilder(
+      future: getSeasonalExpeditionRepo().getById(context, seasId),
+      whileLoading: getLoading().smallLoadingTile(context),
+      whenDoneLoading: (ResultWithValue<SeasonalExpeditionSeason> snapshot) {
+        SeasonalExpeditionSeason item = snapshot.value;
+        return genericListTile(
+          context,
+          leadingImage: item.icon,
+          name: item.title,
+          onTap: () async => await getNavigation().navigateAsync(
+            context,
+            navigateTo: (_) => SeasonalExpeditionPhaseListPage(seasId),
+          ),
+        );
+      },
+    ),
   );
 }

@@ -11,7 +11,6 @@ import '../contracts/proceduralStatBonus.dart';
 import '../contracts/statBonus.dart';
 import 'enum/blueprintSource.dart';
 import 'enum/currencyType.dart';
-import 'genericPageItemUsage.dart';
 import 'requiredItem.dart';
 
 class ItemBaseDetail {
@@ -38,7 +37,7 @@ class ItemBaseDetail {
   List<ProceduralStatBonus> proceduralStatBonuses;
   int numStatsMax;
   int numStatsMin;
-  GenericPageItemUsage usage;
+  List<String> usage;
 
   ItemBaseDetail({
     this.id,
@@ -103,7 +102,7 @@ class ItemBaseDetail {
           (dynamic json) => ProceduralStatBonus.fromJson(json)),
       numStatsMax: readIntSafe(json, 'NumStatsMax'),
       numStatsMin: readIntSafe(json, 'NumStatsMin'),
-      usage: GenericPageItemUsage.fromJson(json['Usages']),
+      usage: readListSafe(json, 'Usages', (dynamic json) => json.toString()),
     );
   }
 }

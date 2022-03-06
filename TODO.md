@@ -9,6 +9,10 @@ https://pub.dev/packages/molten_navigationbar_flutter
 [all] Better button handling
 [all] Show if items is a Legacy item
 [app] Fix AssistantApps team page
+[all] Quicksilver merchant page
+[all] Display if ExpitionReward or not
+[all] Display if Twitch or not
+
 
 
 🐛 Bugs

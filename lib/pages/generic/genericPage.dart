@@ -9,7 +9,10 @@ import '../../components/tilePresenters/rechargeTilePresenter.dart';
 import '../../components/tilePresenters/refinerRecipeTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemTilePresenter.dart';
+import '../../components/tilePresenters/seasonalExpeditionTilePresenter.dart';
+import '../../components/tilePresenters/twitchTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
+import '../../constants/UsageKey.dart';
 import '../../contracts/cart/cartItem.dart';
 import '../../contracts/chargeBy.dart';
 import '../../contracts/data/eggTrait.dart';
@@ -236,10 +239,7 @@ class GenericPage extends StatelessWidget {
       nutrientProcessorRecipeWithInputsTilePresentor,
     ));
 
-    List<CartItem> cartItems =
-        vm.cartItems.where((CartItem ci) => ci.id == genericItem.id).toList();
-    widgets.addAll(getCartItems(context, vm, genericItem, cartItems));
-
+    // ----------------------------- Stat bonuses ------------------------------
     List<StatBonus> statBonuses =
         genericItem?.statBonuses ?? List.empty(growable: true);
     List<ProceduralStatBonus> proceduralStatBonuses =
@@ -249,10 +249,12 @@ class GenericPage extends StatelessWidget {
     widgets.addAll(getProceduralStatBonuses(context, proceduralStatBonuses,
         genericItem?.numStatsMin, genericItem?.numStatsMax));
 
-    List<EggTrait> eggTraits =
-        genericItem?.eggTraits ?? List.empty(growable: true);
-    widgets.addAll(getEggTraits(context, eggTraits));
+    // ------------------------------ Is in Cart -------------------------------
+    List<CartItem> cartItems =
+        vm.cartItems.where((CartItem ci) => ci.id == genericItem.id).toList();
+    widgets.addAll(getCartItems(context, vm, genericItem, cartItems));
 
+    // --------------------------- Is in Inventories ---------------------------
     widgets.addAll(getInventories(
         context,
         genericItem,
@@ -260,6 +262,17 @@ class GenericPage extends StatelessWidget {
             .where((Inventory i) =>
                 i.slots.any((InventorySlot invS) => invS.id == genericItem.id))
             .toList()));
+
+    // ----------------------------- Rewards from ------------------------------
+    widgets.addAll(getRewardFrom(
+      context,
+      (genericItem?.usage ?? []),
+    ));
+
+    // ------------------------------ Egg Traits -------------------------------
+    List<EggTrait> eggTraits =
+        genericItem?.eggTraits ?? List.empty(growable: true);
+    widgets.addAll(getEggTraits(context, eggTraits));
 
     widgets.add(emptySpace(10));
 
