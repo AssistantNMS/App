@@ -2,7 +2,7 @@
 name: "\U0001F525 Hot fix Release"
 about: Steps to release a hotfix version
 title: ''
-labels: ''
+labels: hotfix
 assignees: Khaoz-Topsy
 
 ---
