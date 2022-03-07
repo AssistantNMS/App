@@ -1,5 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
+import '../../constants/NmsUIConstants.dart';
 import '../../helpers/heroHelper.dart';
 
 import '../../constants/AppImage.dart';
@@ -88,6 +89,7 @@ Widget requiredItemBody(
     name: details.name,
     description: tileDescrip,
     quantity: details.quantity,
+    borderRadius: NMSUIConstants.gameItemBorderRadius,
     onTap: onTap ??
         () async =>
             await getNavigation().navigateAsync(context, navigateTo: navigate),

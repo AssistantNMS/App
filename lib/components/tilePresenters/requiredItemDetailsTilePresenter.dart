@@ -2,6 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';
+import '../../constants/NmsUIConstants.dart';
 import '../../contracts/enum/currencyType.dart';
 import '../../contracts/processorRequiredItemDetails.dart';
 import '../../contracts/requiredItemDetails.dart';
@@ -47,6 +48,7 @@ Widget requiredItemDetailsTilePresenter(
     name: itemDetails.name,
     quantity: itemDetails.quantity != 0 ? itemDetails.quantity : null,
     imageBackgroundColour: showBackgroundColours ? itemDetails.colour : null,
+    borderRadius: NMSUIConstants.gameItemBorderRadius,
     onTap: onTap ??
         () async =>
             await getNavigation().navigateAsync(context, navigateTo: navigate),
@@ -110,6 +112,7 @@ Widget requiredItemDetailsWithCraftingRecipeTilePresenter(
         subtitle: subtitle,
         imageBackgroundColour:
             showBackgroundColours ? itemDetails.colour : null,
+        borderRadius: NMSUIConstants.gameItemBorderRadius,
         onTap: onTap ??
             () async => await getNavigation()
                 .navigateAsync(context, navigateTo: navigate),

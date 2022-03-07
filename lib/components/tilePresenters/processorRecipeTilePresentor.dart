@@ -1,6 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/NmsUIConstants.dart';
 import '../../contracts/processor.dart';
 import '../../contracts/requiredItemDetails.dart';
 
@@ -122,6 +123,7 @@ Widget getProcessorWithRecipeTile(
       leadingImage: genericTileImageWithBackgroundColour(
         output.icon,
         output.colour,
+        borderRadius: NMSUIConstants.gameItemBorderRadius,
       ),
       leadingImageCount: output.quantity,
       subtitle: subtitle,

@@ -1,6 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/components/common/cachedFutureBuilder.dart';
 import 'package:flutter/material.dart';
+import '../../constants/NmsUIConstants.dart';
 import '../../contracts/generated/expeditionViewModel.dart' as expedition_api;
 import '../../integration/dependencyInjection.dart';
 import '../../pages/seasonalExpedition/seasonalExpeditionPhaseListPage.dart';
@@ -303,6 +304,7 @@ Widget rewardFromSeasonalExpeditionTilePresenter(
           context,
           leadingImage: item.icon,
           name: item.title,
+          borderRadius: NMSUIConstants.gameItemBorderRadius,
           onTap: () async => await getNavigation().navigateAsync(
             context,
             navigateTo: (_) => SeasonalExpeditionPhaseListPage(seasId),

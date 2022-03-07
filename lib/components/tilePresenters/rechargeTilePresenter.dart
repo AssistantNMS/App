@@ -1,6 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/NmsUIConstants.dart';
 import '../../contracts/chargeBy.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/recharge.dart';
@@ -48,6 +49,7 @@ Widget chargeByItemDetailsTilePresenter(BuildContext context,
         'x ' +
         itemDetails.name,
     imageBackgroundColour: showBackgroundColours ? itemDetails.colour : null,
+    borderRadius: NMSUIConstants.gameItemBorderRadius,
     onTap: onTap ??
         () async =>
             await getNavigation().navigateAsync(context, navigateTo: navigate),
@@ -103,6 +105,7 @@ Widget usedToRechargeItemDetailsTilePresenter(
         'x ' +
         genericPageItem.name),
     imageBackgroundColour: showBackgroundColours ? itemDetails.colour : null,
+    borderRadius: NMSUIConstants.gameItemBorderRadius,
     onTap: onTap ??
         () async =>
             await getNavigation().navigateAsync(context, navigateTo: navigate),

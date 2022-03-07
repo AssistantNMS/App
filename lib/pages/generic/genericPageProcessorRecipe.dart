@@ -9,6 +9,7 @@ import '../../components/tilePresenters/nutrientProcessorRecipeTilePresenter.dar
 import '../../components/tilePresenters/refinerRecipeTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/IdPrefix.dart';
+import '../../constants/NmsUIConstants.dart';
 import '../../contracts/processor.dart';
 import '../../contracts/processorRecipePageData.dart';
 import '../../contracts/redux/appState.dart';
@@ -131,6 +132,7 @@ class GenericPageProcessorRecipe extends StatelessWidget {
             leadingImage: input.icon,
             name: input.name,
             quantity: input.quantity,
+            borderRadius: NMSUIConstants.gameItemBorderRadius,
             onTap: () async => await getNavigation().navigateAsync(context,
                 navigateTo: (context) => GenericPage(input.id)),
           ),

@@ -12,4 +12,5 @@ class NMSUIConstants {
   static const int DonationsPageSize = 20;
   static const String PatreonHex = 'FF424D';
   static const String ObsoleteAppId = 'tech16';
+  static BorderRadius gameItemBorderRadius = BorderRadius.circular(4.0);
 }

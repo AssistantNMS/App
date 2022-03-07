@@ -32,25 +32,28 @@ class _AsyncSettingTilePresenterWidget
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: genericListTile(context, leadingImage: null, name: title,
-          onTap: () async {
-        if (futureFunc != null) {
-          setState(() {
-            isLoading = true;
-          });
-          try {
-            await futureFunc();
-          } catch (exception) {
-            // unused
-          } finally {
+      child: genericListTile(
+        context,
+        leadingImage: null,
+        name: title,
+        onTap: () async {
+          if (futureFunc != null) {
             setState(() {
-              isLoading = false;
+              isLoading = true;
             });
+            try {
+              await futureFunc();
+            } catch (exception) {
+              // unused
+            } finally {
+              setState(() {
+                isLoading = false;
+              });
+            }
           }
-        }
-      },
-          trailing:
-              isLoading ? getLoading().smallLoadingIndicator() : Icon(icon)),
+        },
+        trailing: isLoading ? getLoading().smallLoadingIndicator() : Icon(icon),
+      ),
       margin: const EdgeInsets.all(0.0),
     );
   }

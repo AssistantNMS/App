@@ -56,6 +56,7 @@ Widget genericTileImageWithBackgroundColour(
   String imageBackgroundColour, {
   String imageHero,
   bool imageGreyScale = false,
+  BorderRadius borderRadius,
 }) {
   if (leadingImage == null) return null;
 
@@ -74,8 +75,16 @@ Widget genericTileImageWithBackgroundColour(
     return image;
   }
 
-  return Container(
+  Widget container = Container(
     child: image,
     color: HexColor(imageBackgroundColour),
   );
+  if (borderRadius != null) {
+    return ClipRRect(
+      borderRadius: borderRadius,
+      child: container,
+    );
+  }
+
+  return container;
 }
