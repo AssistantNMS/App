@@ -13,11 +13,6 @@ https://pub.dev/packages/molten_navigationbar_flutter
 [app] Fix AssistantApps team page
 [app] Add option to make images rounded on tilepresenters
 
-[web] Display if ExpitionReward or not
-[web] Display if Twitch or not
-[web] Show if items is a Legacy item
-
-
 
 🐛 Bugs
 [web] translate start and end dates
