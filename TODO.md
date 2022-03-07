@@ -10,13 +10,14 @@ https://pub.dev/packages/molten_navigationbar_flutter
 [all] Show if items is a Legacy item
 [app] Fix AssistantApps team page
 [all] Quicksilver merchant page
-[all] Display if ExpitionReward or not
-[all] Display if Twitch or not
+[all] Guild missions page
+[web] Display if ExpitionReward or not
+[web] Display if Twitch or not
+[app] Add option to make images rounded on tilepresenters
 
 
 
 🐛 Bugs
 [web] translate start and end dates
-[web] Can't scroll on guides
-    do a gameID search, click on the item you searched, then open a guide and try to scroll. magic man fix
+[web] Better error handling like (other152)
 

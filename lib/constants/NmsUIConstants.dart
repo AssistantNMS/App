@@ -11,4 +11,5 @@ class NMSUIConstants {
       RoundedRectangleBorder(borderRadius: BorderRadius.circular(0));
   static const int DonationsPageSize = 20;
   static const String PatreonHex = 'FF424D';
+  static const String ObsoleteAppId = 'tech16';
 }

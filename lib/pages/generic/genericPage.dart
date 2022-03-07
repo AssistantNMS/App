@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/constants/UsageKey.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -9,10 +10,8 @@ import '../../components/tilePresenters/rechargeTilePresenter.dart';
 import '../../components/tilePresenters/refinerRecipeTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemTilePresenter.dart';
-import '../../components/tilePresenters/seasonalExpeditionTilePresenter.dart';
-import '../../components/tilePresenters/twitchTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
-import '../../constants/UsageKey.dart';
+import '../../constants/NmsUIConstants.dart';
 import '../../contracts/cart/cartItem.dart';
 import '../../contracts/chargeBy.dart';
 import '../../contracts/data/eggTrait.dart';
@@ -148,6 +147,15 @@ class GenericPage extends StatelessWidget {
     widgets.addAll(
       getBodyItemDetailsContent(context, vm, genericItem),
     );
+
+    // ----------------------------- Obsolete tech ------------------------------
+    if ((genericItem.usage ?? []).contains(UsageKey.isNoLongerObtainable)) {
+      widgets.add(emptySpace1x());
+      widgets.add(flatCard(
+        child: requiredItemTilePresenter(
+            context, RequiredItem(id: NMSUIConstants.ObsoleteAppId)),
+      ));
+    }
 
     // ----------------------------- Crafted using -----------------------------
     Widget Function(BuildContext context, RequiredItem requiredItem,

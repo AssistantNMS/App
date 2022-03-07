@@ -171,7 +171,7 @@ RequiredItemDetails toRequiredItemDetails(
       icon: genericItem.icon,
       name: genericItem.name,
       colour: genericItem.colour,
-      quantity: requiredItem.quantity,
+      quantity: requiredItem.quantity ?? 0,
     );
 
 Future<ResultWithValue<List<RequiredItemDetails>>>
