@@ -8,7 +8,9 @@ Widget rewardFromTwitchTilePresenter(BuildContext context, String campaignId) {
     child: genericListTile(
       context,
       leadingImage: AppImage.twitch,
-      name: 'Twitch Campaign $campaignId', // TODO translate
+      name: getTranslations()
+          .fromKey(LocaleKey.twitchCampaignNum)
+          .replaceAll('{0}', campaignId),
     ),
   );
 }

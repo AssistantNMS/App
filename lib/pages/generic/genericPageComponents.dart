@@ -613,7 +613,7 @@ List<Widget> getRewardFrom(
 
   return [
     emptySpace3x(),
-    genericItemText('Reward from'), // TODO translate
+    genericItemText(getTranslations().fromKey(LocaleKey.rewardFrom)),
     ...rewardsFromWidgets,
   ];
 }

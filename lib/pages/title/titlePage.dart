@@ -54,9 +54,8 @@ Future<void> setPlayerName(
       context, getTranslations().fromKey(LocaleKey.playerName));
   if ((playerNameResult != null && playerNameResult.isNotEmpty)) {
     Future.delayed(const Duration(milliseconds: 250), () {
-      // TODO Really bad - I sorry
+      // Really bad - I sorry
       viewModel.setPlayerName(playerNameResult);
-      // viewModel.setPlayerName('');
     });
   }
 }

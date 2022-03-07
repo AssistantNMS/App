@@ -166,7 +166,7 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.communitySpotlight: (context) => CommunitySpotlightPage(),
     Routes.customHome: (context) => CustomHomepage(),
     Routes.allItemsPage: (context) => const AllItemsPage(),
-    Routes.catalogueHome: (context) => CatalogueHomepage(),
+    Routes.catalogueHome: (context) => const CatalogueHomepage(),
     Routes.titlePage: (context) => TitlePage(),
     Routes.alienPuzzlesListPage: (context) => AlienPuzzlesListPage(),
     Routes.nmsfmPage: (context) => const NMSFMPage(),
