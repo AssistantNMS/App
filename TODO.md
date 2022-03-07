@@ -5,15 +5,17 @@ https://pub.dev/packages/molten_navigationbar_flutter
 
 
 👷 Features
-[app] search for game IDs
-[all] Better button handling
-[all] Show if items is a Legacy item
-[app] Fix AssistantApps team page
+[all] Better button handling ??
 [all] Quicksilver merchant page
 [all] Guild missions page
+
+[app] search for game IDs
+[app] Fix AssistantApps team page
+[app] Add option to make images rounded on tilepresenters
+
 [web] Display if ExpitionReward or not
 [web] Display if Twitch or not
-[app] Add option to make images rounded on tilepresenters
+[web] Show if items is a Legacy item
 
 
 
