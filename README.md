@@ -50,7 +50,7 @@ __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed e
 [![WebApp](https://img.shields.io/badge/Web%20App-app.nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantnmsWebapp]
 
 [![GooglePlay](https://img.shields.io/badge/Download-Google%20Play%20Store-blue?color=34A853&style=for-the-badge)][googlePlayStore]
-[![AppleAppStore](https://img.shields.io/badge/Download-Apple%20App%20Store-black?color=444444&style=for-the-badge)][appleAppStore]
+[![AppleAppStore](https://img.shields.io/badge/Download-Apple%20App%20Store-black?color=333333&style=for-the-badge)][appleAppStore]
 
 [![Twitter](https://img.shields.io/badge/Twitter-@AssistantNMS-blue?color=1DA1F2&style=for-the-badge)][assistantnmsTwitter]
 [![Discord](https://img.shields.io/badge/Discord-AssistantApps-blue?color=5865F2&style=for-the-badge)][discord]
