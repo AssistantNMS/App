@@ -53,7 +53,7 @@ __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed e
 [![AppleAppStore](https://img.shields.io/badge/Download-Apple%20App%20Store-black?color=444444&style=for-the-badge)][appleAppStore]
 
 [![Twitter](https://img.shields.io/badge/Twitter-@AssistantNMS-blue?color=1DA1F2&style=for-the-badge)][assistantnmsTwitter]
-[![Discord](https://img.shields.io/badge/Discord-AssistantApps-blue?color=5865F2&style=for-the-badge)][assistantAppsDiscord]
+[![Discord](https://img.shields.io/badge/Discord-AssistantApps-blue?color=5865F2&style=for-the-badge)][discord]
 [![Facebook](https://img.shields.io/badge/Facebook-AssistantNMS-blue?color=1877f2&style=for-the-badge)][assistantnmsFacebook]
 [![Steam Community Page](https://img.shields.io/badge/Steam%20Community%20Page-AssistantNMS-black?style=for-the-badge)][assistantnmsSteamComm]
 
@@ -63,7 +63,6 @@ __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed e
 
 [kurtGithub]: https://github.com/Khaoz-Topsy?ref=AssistantNMSGithub
 [assistantAppsTools]: https://tools.assistantapps.com?ref=AssistantNMSGithub
-[assistantAppsDiscord]: https://assistantapps.com/discord?ref=AssistantNMSGithub
 [assistantnmsWebsite]: https://nmsassistant.com?ref=AssistantNMSGithub
 [assistantnmsWebapp]: https://app.nmsassistant.com?ref=AssistantNMSGithub
 [assistantnmsTwitter]: https://twitter.com/AssistantNMS?ref=AssistantNMSGithub
