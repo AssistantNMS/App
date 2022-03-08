@@ -15,6 +15,12 @@ After 2 years of development and maintenance, the app was made open source so th
 
 [![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)](https://github.com/NMSCD)
 
+<!--- 
+![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)
+![Android review](https://api.assistantapps.com/badge/1/1.svg)
+![iOS review](https://api.assistantapps.com/badge/1/2.svg)
+--->
+
 ## Running the project
 **Prerequisites:**
 - [Flutter][flutter]
