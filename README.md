@@ -13,12 +13,12 @@ After 2 years of development and maintenance, the app was made open source so th
 [![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
 [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
 
-[![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)](https://github.com/NMSCD)
+[![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd]
 
 <!--- 
 ![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)
-![Android review](https://api.assistantapps.com/badge/1/1.svg)
-![iOS review](https://api.assistantapps.com/badge/1/2.svg)
+[![Android review](https://api.assistantapps.com/badge/1/1.svg)][googlePlay]
+[![iOS review](https://api.assistantapps.com/badge/1/2.svg)][appleAppStore]
 --->
 
 ## Running the project
@@ -59,20 +59,21 @@ __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed e
 
 <!-- Links used in the page -->
 
-[kurtGithub]: https://github.com/Khaoz-Topsy
-[assistantAppsTools]: https://tools.assistantapps.com
-[assistantAppsDiscord]: https://assistantapps.com/discord?ref=nmsAssistantGithub
-[assistantnmsWebsite]: https://nmsassistant.com
-[assistantnmsTwitter]: https://twitter.com/AssistantNMS?ref=nmsAssistantGithub
-[assistantnmsFacebook]: https://facebook.com/AssistantNMS?ref=nmsAssistantGithub
-[assistantnmsSteamComm]: https://steamcommunity.com/groups/AssistantNMS?ref=nmsAssistantGithub
-[discord]: https://assistantapps.com/discord?ref=AssistantAppsDocs
+[kurtGithub]: https://github.com/Khaoz-Topsy?ref=AssistantNMSGithub
+[assistantAppsTools]: https://tools.assistantapps.com?ref=AssistantNMSGithub
+[assistantAppsDiscord]: https://assistantapps.com/discord?ref=AssistantNMSGithub
+[assistantnmsWebsite]: https://nmsassistant.com?ref=AssistantNMSGithub
+[assistantnmsTwitter]: https://twitter.com/AssistantNMS?ref=AssistantNMSGithub
+[assistantnmsFacebook]: https://facebook.com/AssistantNMS?ref=AssistantNMSGithub
+[assistantnmsSteamComm]: https://steamcommunity.com/groups/AssistantNMS?ref=AssistantNMSGithub
+[googlePlay]: https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes&ref=AssistantNMSGithub
+[appleAppStore]: https://apps.apple.com/us/app/assistant-for-no-mans-sky/id1480287625?ref=AssistantNMSGithub
+[discord]: https://assistantapps.com/discord?ref=AssistantNMSGithub
+[nmscd]: https://github.com/NMSCD?ref=AssistantNMSGithub
 
 <!-- Other -->
 [mbincompiler]: https://github.com/monkeyman192/MBINCompiler
 [flutter]: https://docs.flutter.dev/get-started/install
 [androidStudio]: https://developer.android.com/studio
-[googlePlayStore]: https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes
-[appleAppStore]: https://apps.apple.com/us/app/assistant-for-no-mans-sky/id1480287625
 [codeMagic]: https://codemagic.io
 
