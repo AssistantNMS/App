@@ -7,8 +7,8 @@ The **Assistant for No Man's Sky** is an app that gives users information about 
 
 After 2 years of development and maintenance, the app was made open source so that the community to have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)
+![madeWithLove](https://img.shields.io/badge/Made%20with-love-red?style=for-the-badge&logo=undertale)
+[![licence](https://img.shields.io/badge/Licence-GPL%203.0-important?style=for-the-badge)](https://github.com/AssistantNMS/App/blob/master/LICENCE.md)
 
 [![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
 [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
