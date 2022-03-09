@@ -11,7 +11,6 @@ https://pub.dev/packages/molten_navigationbar_flutter
 
 [app] search for game IDs
 [app] Fix AssistantApps team page
-[app] Add option to make images rounded on tilepresenters
 
 
 🐛 Bugs
