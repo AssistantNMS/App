@@ -15,7 +15,7 @@ After 2 years of development and maintenance, the app was made open source so th
 [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
 
 [![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](#) <br />
-[![Android review](https://api.assistantapps.com/badge/review/1/1.svg)][googlePlayStore]
+[![Android review](https://api.assistantapps.com/badge/review/1/1.svg)][googlePlayStore] <br />
 [![iOS review](https://api.assistantapps.com/badge/review/1/2.svg)][appleAppStore]
 
 
