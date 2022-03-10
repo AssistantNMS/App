@@ -2,10 +2,57 @@
 //
 //     final faction = factionFromMap(jsonString);
 
+import 'dart:convert';
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-class Faction {
-  Faction({
+class FactionData {
+  FactionData({
+    this.milestone,
+    this.category,
+    this.categories,
+    this.lifeform,
+    this.lifeforms,
+    this.guild,
+    this.guilds,
+  });
+
+  final String milestone;
+  final String category;
+  final List<FactionDetail> categories;
+  final String lifeform;
+  final List<FactionDetail> lifeforms;
+  final String guild;
+  final List<FactionDetail> guilds;
+
+  factory FactionData.fromRawJson(String str) =>
+      FactionData.fromJson(json.decode(str));
+
+  factory FactionData.fromJson(Map<String, dynamic> json) => FactionData(
+        milestone: readStringSafe(json, 'Milestone'),
+        category: readStringSafe(json, 'Category'),
+        categories: readListSafe<FactionDetail>(
+          json,
+          'Categories',
+          (x) => FactionDetail.fromJson(x),
+        ),
+        lifeform: readStringSafe(json, 'Lifeform'),
+        lifeforms: readListSafe<FactionDetail>(
+          json,
+          'Lifeforms',
+          (x) => FactionDetail.fromJson(x),
+        ),
+        guild: readStringSafe(json, 'Guild'),
+        guilds: readListSafe<FactionDetail>(
+          json,
+          'Guilds',
+          (x) => FactionDetail.fromJson(x),
+        ),
+      );
+}
+
+class FactionDetail {
+  FactionDetail({
     this.id,
     this.icon,
     this.name,
@@ -19,7 +66,7 @@ class Faction {
   final String description;
   final List<FactionMission> missions;
 
-  factory Faction.fromJson(Map<String, dynamic> json) => Faction(
+  factory FactionDetail.fromJson(Map<String, dynamic> json) => FactionDetail(
         id: readStringSafe(json, 'Id'),
         icon: readStringSafe(json, 'Icon'),
         name: readStringSafe(json, 'Name'),

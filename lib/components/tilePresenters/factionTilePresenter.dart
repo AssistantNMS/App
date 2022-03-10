@@ -13,7 +13,7 @@ import '../modalBottomSheet/factionMilestoneModalBottomSheet.dart';
 //       journeyMilestoneTilePresenter(context, milestone, vm);
 // }
 
-Widget factionTilePresenter(BuildContext context, Faction faction) {
+Widget factionTilePresenter(BuildContext context, FactionDetail faction) {
   return genericListTileWithSubtitle(
     context,
     leadingImage: faction.icon,

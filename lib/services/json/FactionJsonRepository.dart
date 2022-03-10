@@ -8,34 +8,40 @@ class FactionJsonRepository extends BaseJsonService
     implements IFactionJsonRepository {
   //
   @override
-  Future<ResultWithValue<List<Faction>>> getAll(BuildContext context) async {
+  Future<ResultWithValue<FactionData>> getAll(BuildContext context) async {
+    String jsonFileName = getTranslations().fromKey(LocaleKey.factionJson);
     try {
-      List responseDetailsJson = await getListfromJson(
-          context, getTranslations().fromKey(LocaleKey.factionJson));
-      List<Faction> items =
-          responseDetailsJson.map((m) => Faction.fromJson(m)).toList();
-      return ResultWithValue<List<Faction>>(true, items, '');
+      dynamic responseDetailsJson =
+          await getJsonFromAssets(context, 'json/$jsonFileName');
+
+      FactionData item = FactionData.fromRawJson(responseDetailsJson);
+      return ResultWithValue<FactionData>(true, item, '');
     } catch (exception) {
       getLog().e("FactionJsonRepository Exception: ${exception.toString()}");
-      return ResultWithValue<List<Faction>>(
-          false, List.empty(growable: true), exception.toString());
+      return ResultWithValue<FactionData>(
+          false, FactionData(), exception.toString());
     }
   }
 
   @override
-  Future<ResultWithValue<Faction>> getById(
+  Future<ResultWithValue<FactionDetail>> getById(
       BuildContext context, String id) async {
-    ResultWithValue<List<Faction>> itemsResult = await getAll(context);
+    ResultWithValue<FactionData> itemsResult = await getAll(context);
     if (itemsResult.hasFailed) {
-      return ResultWithValue(false, Faction(), itemsResult.errorMessage);
+      return ResultWithValue(false, FactionDetail(), itemsResult.errorMessage);
     }
+    List<FactionDetail> details = List.empty(growable: true);
+    details.addAll(itemsResult.value.categories);
+    details.addAll(itemsResult.value.lifeforms);
+    details.addAll(itemsResult.value.guilds);
     try {
-      Faction selectedItem = itemsResult.value.firstWhere((r) => r.id == id);
-      return ResultWithValue<Faction>(true, selectedItem, '');
+      FactionDetail selectedItem = details.firstWhere((r) => r.id == id);
+      return ResultWithValue<FactionDetail>(true, selectedItem, '');
     } catch (exception) {
       getLog().e(
           "FactionJsonRepository getById ($id) Exception: ${exception.toString()}");
-      return ResultWithValue<Faction>(false, Faction(), exception.toString());
+      return ResultWithValue<FactionDetail>(
+          false, FactionDetail(), exception.toString());
     }
   }
 }

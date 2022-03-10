@@ -20,7 +20,7 @@ class FactionDetailPage extends StatelessWidget {
     return CachedFutureBuilder(
       future: getFactionRepo().getById(context, factionId),
       whileLoading: getLoading().fullPageLoading(context),
-      whenDoneLoading: (ResultWithValue<Faction> snapshot) =>
+      whenDoneLoading: (ResultWithValue<FactionDetail> snapshot) =>
           StoreConnector<AppState, FactionsViewModel>(
         converter: (store) => FactionsViewModel.fromStore(store),
         rebuildOnChange: false,
@@ -30,8 +30,8 @@ class FactionDetailPage extends StatelessWidget {
     );
   }
 
-  Widget getBody(BuildContext storeContext, ResultWithValue<Faction> snapshot,
-      FactionsViewModel viewModel) {
+  Widget getBody(BuildContext storeContext,
+      ResultWithValue<FactionDetail> snapshot, FactionsViewModel viewModel) {
     if (snapshot == null || snapshot.isSuccess == false) {
       return simpleGenericPageScaffold(
         storeContext,
@@ -39,7 +39,7 @@ class FactionDetailPage extends StatelessWidget {
         body: getLoading().customErrorWidget(storeContext),
       );
     }
-    Faction faction = snapshot.value;
+    FactionDetail faction = snapshot.value;
 
     List<Widget> widgets = List.empty(growable: true);
     widgets.add(localImage(

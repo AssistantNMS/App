@@ -4,13 +4,12 @@ import 'package:flutter/material.dart';
 
 class IFactionJsonRepository {
   //
-  Future<ResultWithValue<List<Faction>>> getAll(BuildContext context) async {
-    return ResultWithValue<List<Faction>>(
-        false, List.empty(growable: true), '');
+  Future<ResultWithValue<FactionData>> getAll(BuildContext context) async {
+    return ResultWithValue<FactionData>(false, FactionData(), '');
   }
 
-  Future<ResultWithValue<Faction>> getById(
+  Future<ResultWithValue<FactionDetail>> getById(
       BuildContext context, String id) async {
-    return ResultWithValue<Faction>(false, Faction(), '');
+    return ResultWithValue<FactionDetail>(false, FactionDetail(), '');
   }
 }
