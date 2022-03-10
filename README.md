@@ -7,19 +7,17 @@ The **Assistant for No Man's Sky** is an app that gives users information about 
 
 After 2 years of development and maintenance, the app was made open source so that the community to have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
 
-![madeWithLove](https://img.shields.io/badge/Made%20with-love-red?style=for-the-badge&logo=undertale)
-[![licence](https://img.shields.io/badge/Licence-GPL%203.0-important?style=for-the-badge)](https://github.com/AssistantNMS/App/blob/master/LICENCE.md)
+![madeWithLove](./.github/img/made-with-love.svg)
+[![licence](./.github/img/licence-badge.svg)](https://github.com/AssistantNMS/App/blob/master/LICENCE.md) <br />
+[![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd] 
 
 [![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
 [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
 
-[![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd]
+[![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](#) <br />
+[![Android review](https://api.assistantapps.com/badge/review/1/1.svg)][googlePlayStore] <br />
+[![iOS review](https://api.assistantapps.com/badge/review/1/2.svg)][appleAppStore]
 
-<!--- 
-![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)
-[![Android review](https://api.assistantapps.com/badge/1/1.svg)][googlePlayStore]
-[![iOS review](https://api.assistantapps.com/badge/1/2.svg)][appleAppStore]
---->
 
 ## Running the project
 **Prerequisites:**
@@ -46,15 +44,15 @@ The Mobile Apps are built and released to the [Google Play Store][googlePlayStor
 __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed even though it actually successfully built and pushed the `.ipa` file to the Apple App Store. This is because they poll the App Store checking if the `.ipa` file is there and after a few attempts throw an error. So ignore build failures for anything that has to do with iOS 🙄.__
 
 ## Links
-[![Website](https://img.shields.io/badge/Website-nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantnmsWebsite]
+[![Website](https://img.shields.io/badge/Website-nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantnmsWebsite] <br />
 [![WebApp](https://img.shields.io/badge/Web%20App-app.nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantnmsWebapp]
 
-[![GooglePlay](https://img.shields.io/badge/Download-Google%20Play%20Store-blue?color=34A853&style=for-the-badge)][googlePlayStore]
+[![GooglePlay](https://img.shields.io/badge/Download-Google%20Play%20Store-blue?color=34A853&style=for-the-badge)][googlePlayStore] <br />
 [![AppleAppStore](https://img.shields.io/badge/Download-Apple%20App%20Store-black?color=333333&style=for-the-badge)][appleAppStore]
 
-[![Twitter](https://img.shields.io/badge/Twitter-@AssistantNMS-blue?color=1DA1F2&style=for-the-badge)][assistantnmsTwitter]
-[![Discord](https://img.shields.io/badge/Discord-AssistantApps-blue?color=5865F2&style=for-the-badge)][discord]
-[![Facebook](https://img.shields.io/badge/Facebook-AssistantNMS-blue?color=1877f2&style=for-the-badge)][assistantnmsFacebook]
+[![Twitter](https://img.shields.io/badge/Twitter-@AssistantNMS-blue?color=1DA1F2&style=for-the-badge)][assistantnmsTwitter] <br />
+[![Discord](https://img.shields.io/badge/Discord-AssistantApps-blue?color=5865F2&style=for-the-badge)][discord] <br />
+[![Facebook](https://img.shields.io/badge/Facebook-AssistantNMS-blue?color=1877f2&style=for-the-badge)][assistantnmsFacebook] <br />
 [![Steam Community Page](https://img.shields.io/badge/Steam%20Community%20Page-AssistantNMS-black?style=for-the-badge)][assistantnmsSteamComm]
 
 
