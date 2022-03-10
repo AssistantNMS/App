@@ -7,19 +7,17 @@ The **Assistant for No Man's Sky** is an app that gives users information about 
 
 After 2 years of development and maintenance, the app was made open source so that the community to have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
 
-![madeWithLove](https://img.shields.io/badge/Made%20with-love-red?style=for-the-badge&logo=undertale)
-[![licence](https://img.shields.io/badge/Licence-GPL%203.0-important?style=for-the-badge)](https://github.com/AssistantNMS/App/blob/master/LICENCE.md)
+![madeWithLove](./.github/img/made-with-love.svg)
+[![licence](./.github/img/licence-badge.svg)](https://github.com/AssistantNMS/App/blob/master/LICENCE.md) <br />
+[![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd] 
 
 [![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
 [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
 
-[![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd]
+[![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](#) <br />
+[![Android review](https://api.assistantapps.com/badge/review/1/1.svg)][googlePlayStore]
+[![iOS review](https://api.assistantapps.com/badge/review/1/2.svg)][appleAppStore]
 
-<!--- 
-![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)
-[![Android review](https://api.assistantapps.com/badge/1/1.svg)][googlePlayStore]
-[![iOS review](https://api.assistantapps.com/badge/1/2.svg)][appleAppStore]
---->
 
 ## Running the project
 **Prerequisites:**
