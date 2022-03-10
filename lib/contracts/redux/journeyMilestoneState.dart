@@ -1,27 +1,33 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
+import '../faction/storedFactionMission.dart';
 import '../journey/storedJourneyMilestone.dart';
 
 @immutable
 class JourneyMilestoneState {
   final List<StoredJourneyMilestone> storedMilestones;
+  final List<StoredFactionMission> storedFactions;
 
   const JourneyMilestoneState({
     this.storedMilestones,
+    this.storedFactions,
   });
 
   factory JourneyMilestoneState.initial() {
     return JourneyMilestoneState(
-      storedMilestones: List.empty(growable: true),
+      storedMilestones: List.empty(),
+      storedFactions: List.empty(),
     );
   }
 
   JourneyMilestoneState copyWith({
     List<StoredJourneyMilestone> storedMilestones,
+    List<StoredFactionMission> storedFactions,
   }) {
     return JourneyMilestoneState(
-      storedMilestones: storedMilestones ?? List.empty(growable: true),
+      storedMilestones: storedMilestones ?? List.empty(),
+      storedFactions: storedFactions ?? List.empty(),
     );
   }
 
@@ -33,6 +39,10 @@ class JourneyMilestoneState {
             json,
             'storedMilestones',
             (dynamic innerJson) => StoredJourneyMilestone.fromJson(innerJson)),
+        storedFactions: readListSafe<StoredFactionMission>(
+            json,
+            'storedFactions',
+            (dynamic innerJson) => StoredFactionMission.fromJson(innerJson)),
       );
     } catch (exception) {
       return JourneyMilestoneState.initial();
@@ -41,5 +51,6 @@ class JourneyMilestoneState {
 
   Map<String, dynamic> toJson() => {
         'storedMilestones': storedMilestones,
+        'storedFactions': storedFactions,
       };
 }

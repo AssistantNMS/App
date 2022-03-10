@@ -1,3 +1,5 @@
+import 'package:assistantnms_app/contracts/faction/storedFactionMission.dart';
+
 import '../../../contracts/journey/storedJourneyMilestone.dart';
 import 'package:redux/redux.dart';
 
@@ -6,6 +8,7 @@ import 'actions.dart';
 
 final journeyMilestoneReducer = combineReducers<JourneyMilestoneState>([
   TypedReducer<JourneyMilestoneState, SetMilestonAction>(_setMilestonAction),
+  TypedReducer<JourneyMilestoneState, SetFaction>(_setFactionAction),
 ]);
 
 JourneyMilestoneState _setMilestonAction(
@@ -29,4 +32,27 @@ JourneyMilestoneState _setMilestonAction(
   }
 
   return state.copyWith(storedMilestones: newItems);
+}
+
+JourneyMilestoneState _setFactionAction(
+    JourneyMilestoneState state, SetFaction action) {
+  bool itemExists = false;
+  StoredFactionMission itemToAdd = StoredFactionMission(
+    missionId: action.missionId,
+    missionTierIndex: action.missionTierIndex,
+  );
+  List<StoredFactionMission> newItems =
+      state.storedFactions.map((StoredFactionMission storedF) {
+    if (storedF.missionId == action.missionId) {
+      itemExists = true;
+      return itemToAdd;
+    }
+    return storedF;
+  }).toList();
+
+  if (itemExists == false) {
+    newItems.add(itemToAdd);
+  }
+
+  return state.copyWith(storedFactions: newItems);
 }

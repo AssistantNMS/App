@@ -222,6 +222,12 @@ List<CustomMenu> getMenuOptionsSection3(
       navigateToNamed: Routes.alienPuzzlesMenuPage,
     ),
     CustomMenu(
+      icon: localGetFromIcon(Icons.reduce_capacity_sharp),
+      drawerIcon: localGetDrawerFromIcon(Icons.reduce_capacity_sharp),
+      title: LocaleKey.factionPage,
+      navigateToNamed: Routes.factionPage,
+    ),
+    CustomMenu(
       icon: localGetFromIcon(Icons.offline_bolt),
       drawerIcon: localGetDrawerFromIcon(Icons.offline_bolt),
       title: LocaleKey.solarPanelBatteryCalculator,
