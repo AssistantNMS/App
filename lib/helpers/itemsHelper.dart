@@ -103,7 +103,7 @@ Future<List<RequiredItemDetails>> getRequiredItems(
       requiredIndex < tempRawMaterials.length;
       requiredIndex++) {
     RequiredItem rawMaterial = tempRawMaterials[requiredIndex];
-    rawMaterial.quantity *= requiredItem.quantity;
+    rawMaterial.quantity *= (requiredItem.quantity ?? 1);
 
     if (rawMaterial.id == requiredItem.id) {
       // Handle infinite loop

@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/services/json/interface/IGenericRepository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -56,10 +57,12 @@ class CartPage extends StatelessWidget {
       context, CartViewModel viewModel) async {
     List<CartPageItem> reqItems = List.empty(growable: true);
     for (CartItem cartItem in viewModel.craftingItems) {
-      var genRepo = getRepoFromId(context, cartItem.id);
+      ResultWithValue<IGenericRepository> genRepo =
+          getRepoFromId(context, cartItem.id);
       if (genRepo.hasFailed) continue;
 
-      var itemResult = await genRepo.value.getById(context, cartItem.id);
+      ResultWithValue<GenericPageItem> itemResult =
+          await genRepo.value.getById(context, cartItem.id);
       if (itemResult.isSuccess) {
         reqItems.add(CartPageItem(
           quantity: cartItem.quantity,
@@ -103,15 +106,15 @@ class CartPage extends StatelessWidget {
             viewModel.removeFromCart(cartDetail.details.id);
           }));
       creditTasks.add(getCreditsFromId(
-          context, cartDetail.details.id, cartDetail.quantity));
+          context, cartDetail.details.id, cartDetail.quantity ?? 1));
       quicksilverTasks.add(getQuickSilverFromId(
-          context, cartDetail.details.id, cartDetail.quantity));
+          context, cartDetail.details.id, cartDetail.quantity ?? 1));
       nanitesTasks.add(getNanitesFromId(
-          context, cartDetail.details.id, cartDetail.quantity));
+          context, cartDetail.details.id, cartDetail.quantity ?? 1));
       salvagedTechTasks.add(getSalvagedTechFromId(
-          context, cartDetail.details.id, cartDetail.quantity));
+          context, cartDetail.details.id, cartDetail.quantity ?? 1));
       factoryOvrTasks.add(getFactoryOverridesFromId(
-          context, cartDetail.details.id, cartDetail.quantity));
+          context, cartDetail.details.id, cartDetail.quantity ?? 1));
       requiredItems.add(req);
     }
 
