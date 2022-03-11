@@ -14,16 +14,26 @@ assignees: Khaoz-Topsy
 - [ ] Regenerate AssistantApps server data from the AssistantNMS.Data tool
 - [ ] Make sure content of `release_notes.txt` is ready for production
 - [ ] Create new item in Admin tool
-  - [ ] Copy content of `release_notes.txt` 
+  - [ ] Copy content of `release_notes.txt` to Markdown
   - [ ] Future date release date
   - [ ] Copy guid, paste into `prod.dart`
 - [ ] Queue CodeMagic build
 
-Much later:
+---
+
+### Github:
+- [ ] Create release branch
+- [ ] Create [Pull Request](https://github.com/AssistantNMS/App/compare) for release branch into `main`
+- [ ] Copy content of `release_notes.txt` to Pull Request comment
+
+---
+
+### Much later:
 - [ ] Go through manual iOS steps
   - [ ] Copy content of `release_notes.txt` into Apple webpage
   - [ ] Submit for Apple review
 - [ ] Create Github release ([New Release](https://github.com/AssistantNMS/App/releases/new))
+  - [ ] Merge Pull Request
   - [ ] Tag main branch
   - [ ] Attach `.aab`
   - [ ] Attach `.apk`
