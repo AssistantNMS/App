@@ -79,13 +79,23 @@ dependencies:
   logger: 1.1.0
   after_layout: 1.1.0
 
-# dev_dependencies:
-#   flutter_test:
-#     sdk: flutter
+dev_dependencies:
+  flutter_launcher_icons: ^0.9.2
 
 dependency_overrides:
   google_fonts: 2.2.0
 #   flutter_svg: ^0.23.0+1
+
+# Command to run:
+# flutter pub run flutter_launcher_icons:main
+flutter_icons:
+  ios: true
+  android: true
+  color: '#333333'
+  remove_alpha_ios: true
+  image_path: 'assets/images/fullSizeIcon.png'
+  adaptive_icon_background: 'assets/images/fullSizeIconAdaptiveBg.png'
+  adaptive_icon_foreground: 'assets/images/fullSizeIconAdaptiveFg.png'
 
 flutter:
   uses-material-design: true
