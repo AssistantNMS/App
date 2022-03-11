@@ -57,6 +57,7 @@ class FactionDetail {
     this.icon,
     this.name,
     this.description,
+    this.additional,
     this.missions,
   });
 
@@ -64,6 +65,7 @@ class FactionDetail {
   final String icon;
   final String name;
   final String description;
+  final List<String> additional;
   final List<FactionMission> missions;
 
   factory FactionDetail.fromJson(Map<String, dynamic> json) => FactionDetail(
@@ -71,6 +73,11 @@ class FactionDetail {
         icon: readStringSafe(json, 'Icon'),
         name: readStringSafe(json, 'Name'),
         description: readStringSafe(json, 'Description'),
+        additional: readListSafe<String>(
+          json,
+          'Additional',
+          (x) => x.toString(),
+        ),
         missions: readListSafe<FactionMission>(
           json,
           'Missions',

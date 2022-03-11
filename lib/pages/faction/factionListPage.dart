@@ -17,7 +17,11 @@ class FactionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CachedFutureBuilder(
       future: getFactionRepo().getAll(context),
-      whileLoading: getLoading().fullPageLoading(context),
+      whileLoading: simpleGenericPageScaffold(
+        context,
+        title: getTranslations().fromKey(LocaleKey.loading),
+        body: getLoading().fullPageLoading(context),
+      ),
       whenDoneLoading: (ResultWithValue<FactionData> snapshot) =>
           getBody(context, snapshot),
     );
@@ -28,22 +32,22 @@ class FactionPage extends StatelessWidget {
     if (snapshot == null || snapshot.isSuccess == false) {
       return simpleGenericPageScaffold(
         bodyCtx,
-        title: getTranslations().fromKey(LocaleKey.loading),
+        title: getTranslations().fromKey(LocaleKey.error),
         body: getLoading().customErrorWidget(bodyCtx),
       );
     }
     FactionData faction = snapshot.value;
 
     List<Widget> widgets = List.empty(growable: true);
-    // widgets.add(flatCard(child: genericItemName(faction.category)));
-    for (FactionDetail detail in faction.categories) {
-      widgets.add(factionTilePresenter(bodyCtx, detail));
-    }
-    widgets.add(flatCard(child: genericItemName(faction.lifeform)));
+    // widgets.add(categoryHeading(faction.category));
+    // for (FactionDetail detail in faction.categories) {
+    //   widgets.add(factionTilePresenter(bodyCtx, detail));
+    // }
+    widgets.add(categoryHeading(faction.lifeform));
     for (FactionDetail detail in faction.lifeforms) {
       widgets.add(factionTilePresenter(bodyCtx, detail));
     }
-    widgets.add(flatCard(child: genericItemName(faction.guild)));
+    widgets.add(categoryHeading(faction.guild));
     for (FactionDetail detail in faction.guilds) {
       widgets.add(factionTilePresenter(bodyCtx, detail));
     }
@@ -56,6 +60,15 @@ class FactionPage extends StatelessWidget {
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (context, index) => widgets[index],
+      ),
+    );
+  }
+
+  Widget categoryHeading(String title) {
+    return flatCard(
+      child: Padding(
+        padding: const EdgeInsets.all(4),
+        child: genericItemName(title),
       ),
     );
   }

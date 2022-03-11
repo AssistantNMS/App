@@ -90,6 +90,7 @@ class AnalyticsEvent {
   //user_events
   static const String addToCartFromHome = 'Added_item_to_cart_from_Home_Page';
   static const String exploitItemClick = 'Exploit_item_Click';
+  static const String patreonOAuthLogin = 'Patreon_OAuth_Login';
   //json
   static const String loadRawMaterialJson = 'Loaded_RawMaterials.json';
   static const String loadProductJson = 'Loaded_Products.json';

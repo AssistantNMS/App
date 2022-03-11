@@ -1,27 +1,36 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/Routes.dart';
 import '../../contracts/faction/faction.dart';
 import '../../contracts/faction/storedFactionMission.dart';
 import '../../pages/faction/factionDetailPage.dart';
 import '../../redux/modules/journeyMilestone/factionsViewModel.dart';
 import '../modalBottomSheet/factionMilestoneModalBottomSheet.dart';
 
-// Widget Function(BuildContext context, JourneyMilestone milestone)
-//     journeyMilestoneCurriedTilePresenter(JourneyMilestoneViewModel vm) {
-//   return (BuildContext context, JourneyMilestone milestone) =>
-//       journeyMilestoneTilePresenter(context, milestone, vm);
-// }
-
 Widget factionTilePresenter(BuildContext context, FactionDetail faction) {
   return genericListTileWithSubtitle(
     context,
     leadingImage: faction.icon,
     name: faction.name,
-    subtitle: Text(faction.description, maxLines: 1),
+    subtitle: faction.description.isNotEmpty
+        ? Text(faction.description, maxLines: 1)
+        : null,
     maxLines: 1,
-    onTap: () => getNavigation().navigateAsync(context,
-        navigateTo: (context) => FactionDetailPage(faction.id)),
+    onTap: () {
+      List<String> additionalList = (faction.additional ?? List.empty());
+      if (additionalList.contains('NavigateToJourneyPage')) {
+        getNavigation().navigateAsync(
+          context,
+          navigateToNamed: Routes.journeyMilestonePage,
+        );
+        return;
+      }
+      getNavigation().navigateAsync(
+        context,
+        navigateTo: (context) => FactionDetailPage(faction.id),
+      );
+    },
   );
 }
 
@@ -30,16 +39,6 @@ Widget factionMissionTilePresenter(BuildContext context, FactionMission faction,
   FactionMissionTier currentTier = (storedFac != null)
       ? faction.tiers[storedFac.missionTierIndex]
       : faction.tiers.first;
-
-  // return genericListTileWithSubtitle(
-  //   context,
-  //   leadingImage: faction.icon,
-  //   name: faction.name,
-  //   subtitle: Text('test', maxLines: 1),
-  //   maxLines: 1,
-  //   // onTap: () async => await getNavigation().navigateAsync(context,
-  //   //     navigateTo: (context) => ExploitDetailsPage(details)),
-  // );
 
   return ListTile(
     leading: SizedBox(

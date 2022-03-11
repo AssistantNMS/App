@@ -93,7 +93,7 @@ Widget editCustomMenuItemGridPresenter(
 }
 
 Widget customMenuItemGridPresenter(BuildContext context, CustomMenu menuItem) {
-  return GestureDetector(
+  Widget card = GestureDetector(
     child: Card(
         child: Stack(
       alignment: Alignment.center,
@@ -101,9 +101,10 @@ Widget customMenuItemGridPresenter(BuildContext context, CustomMenu menuItem) {
         if (menuItem.isLocked) ...[
           Positioned(
             top: 5,
-            right: 5,
+            left: 7,
             child: Icon(
               Icons.lock_clock,
+              size: 32,
               color: getTheme().getDarkModeSecondaryColour(),
             ),
           ),
@@ -130,4 +131,6 @@ Widget customMenuItemGridPresenter(BuildContext context, CustomMenu menuItem) {
     onLongPress: () =>
         (menuItem.onLongPress != null) ? menuItem.onLongPress(context) : null,
   );
+  if (menuItem.isNew) return wrapInNewBanner(context, LocaleKey.newItem, card);
+  return card;
 }

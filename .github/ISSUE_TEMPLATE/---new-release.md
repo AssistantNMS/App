@@ -8,6 +8,8 @@ assignees: Khaoz-Topsy
 ---
 
 - [ ] Make sure that `pubspec.yaml` uses github link for the `assistantapps_flutter_common` library
+  - [ ] Replace `CURRENT_PROJECT_VERSION` with latest version code in `project.pbxproj`
+  - [ ] Replace `MARKETING_VERSION` with latest version name in `project.pbxproj`
 - [ ] Verify that AssistantNMS.Data audits have all passed
 - [ ] Regenerate AssistantApps server data from the AssistantNMS.Data tool
 - [ ] Make sure content of `release_notes.txt` is ready for production
