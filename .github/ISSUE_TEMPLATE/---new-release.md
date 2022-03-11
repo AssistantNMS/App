@@ -17,7 +17,7 @@ assignees: Khaoz-Topsy
   - [ ] Copy content of `release_notes.txt` to Markdown
   - [ ] Future date release date
   - [ ] Copy guid, paste into `prod.dart`
-- [ ] Queue CodeMagic build
+- [ ] [Queue](https://codemagic.io/app/5d9da9057a0a9500105180bf/workflow/5ef3374ec0adbfe0fdee431d/settings) CodeMagic build 
 
 ---
 
