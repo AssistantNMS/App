@@ -1,7 +1,7 @@
 ---
 name: "\U0001F4E6 New Release"
 about: Steps to release a new version
-title: 'Release '
+title: 'Release 2.xx'
 labels: pre-release
 assignees: Khaoz-Topsy
 
