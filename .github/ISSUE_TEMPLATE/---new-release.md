@@ -1,12 +1,17 @@
 ---
 name: "\U0001F4E6 New Release"
 about: Steps to release a new version
-title: 'Release '
+title: Release 2.xx
 labels: pre-release
 assignees: Khaoz-Topsy
 
 ---
 
+### Changes:
+
+---
+
+### Prepare:
 - [ ] Make sure that `pubspec.yaml` uses github link for the `assistantapps_flutter_common` library
   - [ ] Replace `CURRENT_PROJECT_VERSION` with latest version code in `project.pbxproj`
   - [ ] Replace `MARKETING_VERSION` with latest version name in `project.pbxproj`
@@ -18,13 +23,6 @@ assignees: Khaoz-Topsy
   - [ ] Future date release date
   - [ ] Copy guid, paste into `prod.dart`
 - [ ] [Queue](https://codemagic.io/app/5d9da9057a0a9500105180bf/workflow/5ef3374ec0adbfe0fdee431d/settings) CodeMagic build 
-
----
-
-### Github:
-- [ ] Create release branch
-- [ ] Create [Pull Request](https://github.com/AssistantNMS/App/compare) for release branch into `main`
-- [ ] Copy content of `release_notes.txt` to Pull Request comment
 
 ---
 
