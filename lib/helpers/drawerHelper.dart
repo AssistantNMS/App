@@ -79,16 +79,23 @@ Widget _drawerItem(BuildContext context,
     String navigateToNamed,
     String navigateToExternal,
     bool isLocked = false,
+    bool isNew = false,
     Function(BuildContext) onTap,
     Function(BuildContext) onLongPress}) {
-  return ListTile(
+  Widget isLockedWidget;
+  if (isLocked) {
+    isLockedWidget = Icon(
+      Icons.lock_clock,
+      color: getTheme().getDarkModeSecondaryColour(),
+    );
+  }
+
+  ListTile tile = ListTile(
     key: Key('$image-${key.toString()}'),
     leading: image,
     title: Text(getTranslations().fromKey(key)),
     dense: true,
-    trailing: isLocked
-        ? Icon(Icons.lock_clock, color: getTheme().getDarkModeSecondaryColour())
-        : null,
+    trailing: isLockedWidget,
     onLongPress: () {
       if (onLongPress != null) onLongPress(context);
     },
@@ -106,6 +113,15 @@ Widget _drawerItem(BuildContext context,
       }
     },
   );
+  if (isNew) {
+    return wrapInNewBanner(
+      context,
+      LocaleKey.newItem,
+      tile,
+      location: isLocked ? BannerLocation.topStart : BannerLocation.topEnd,
+    );
+  }
+  return tile;
 }
 
 List<Widget> _mapToDrawerItem(BuildContext context, List<CustomMenu> menus) {
@@ -119,6 +135,7 @@ List<Widget> _mapToDrawerItem(BuildContext context, List<CustomMenu> menus) {
       navigateToNamed: menu.navigateToNamed,
       navigateToExternal: menu.navigateToExternal,
       isLocked: menu.isLocked,
+      isNew: menu.isNew,
       onTap: menu.onTap,
       onLongPress: menu.onLongPress,
     ));

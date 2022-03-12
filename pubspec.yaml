@@ -2,7 +2,7 @@ name: assistantnms_app
 description: Assistant for No Man's Sky
 homepage: https://nmsassistant.com
 # author: Kurt Lourens
-version: 1.100.1+264
+version: 1.101.2+267
 publish_to: 'none'
 
 environment:
@@ -18,14 +18,13 @@ dependencies:
 
   # AssistantApps
   assistantapps_flutter_common:
-    # git: https://github.com/AssistantApps/Flutter.Common.git
-    path: 'C:\Development\Projects\AssistantApps\assistantapps_flutter_common'
+    git: https://github.com/AssistantApps/Flutter.Common.git
+    # path: 'C:\Development\Projects\AssistantApps\assistantapps_flutter_common'
 
   # Firebase
   firebase_core: 1.13.1
   firebase_analytics: 9.1.2
   # firebase_analytics_web: 0.1.1
-  native_admob_flutter: 1.5.0
   firebase_messaging: 11.2.8
   firebase_auth: 3.3.9
   # firebase_auth_web: ^0.3.2+6
@@ -42,11 +41,15 @@ dependencies:
   # Push
   flutter_local_notifications: 9.4.0
 
+  # native_admob_flutter: 1.5.0 # iOS issue
+  native_admob_flutter:
+    git: https://github.com/bdlukaa/native_admob_flutter.git
+
   # UI
   adaptive_theme: 2.3.0
   adaptive_dialog: 1.4.0
   avatar_glow: 2.0.2
-  assets_audio_player: 3.0.3+9
+  assets_audio_player: 3.0.4+1
   bubble: 1.2.1
   bottom_bars: 1.1.0
   country_icons: 2.0.2 # Move to AA?

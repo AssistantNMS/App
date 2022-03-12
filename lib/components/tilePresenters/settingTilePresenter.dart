@@ -124,14 +124,18 @@ Widget patreonCodeSettingTilePresenter(
   patreonModalSheet = () async {
     baseOnChange();
 
+    if (value == true) return;
+
     adaptiveBottomModalSheet(
       context,
       hasRoundedCorners: true,
       builder: (BuildContext innerC) => PatreonLoginModalBottomSheet(
-        AnalyticsEvent.aboutPage,
+        AnalyticsEvent.patreonOAuthLogin,
         (Result loginResult) {
           if (loginResult.isSuccess) {
             onChange(true);
+          } else {
+            getLog().d('patreonOAuthLogin message ' + loginResult.errorMessage);
           }
         },
       ),

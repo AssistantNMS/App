@@ -1,7 +1,9 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
+import '../../components/dialogs/patreonDialog.dart';
 import '../../constants/AppImage.dart';
+import '../../constants/Patreon.dart';
 import '../../constants/Routes.dart';
 import '../../redux/modules/setting/drawerSettingsViewModel.dart';
 
@@ -12,6 +14,7 @@ class CustomMenu {
   String navigateToNamed;
   String navigateToExternal;
   bool isLocked;
+  bool isNew;
   bool hideInCustom;
   bool hideInDrawer;
   void Function(BuildContext) onTap;
@@ -23,6 +26,7 @@ class CustomMenu {
     this.navigateToNamed,
     this.navigateToExternal,
     this.isLocked = false,
+    this.isNew = false,
     this.hideInCustom = false,
     this.hideInDrawer = false,
     this.onTap,
@@ -196,6 +200,23 @@ List<CustomMenu> getMenuOptionsSection3(
       drawerIcon: localGetDrawerFromIcon(Icons.show_chart),
       title: LocaleKey.journeyMilestone,
       navigateToNamed: Routes.journeyMilestonePage,
+    ),
+    CustomMenu(
+      icon: localGetFromIcon(Icons.show_chart),
+      drawerIcon: localGetDrawerFromIcon(Icons.show_chart),
+      title: LocaleKey.milestones,
+      isLocked: isPatreonFeatureLocked(
+        PatreonEarlyAccessFeature.newMilestonesPage,
+        vm.isPatron,
+      ),
+      isNew: true,
+      navigateToNamed: Routes.factionPage,
+      onTap: (BuildContext navContext) => handlePatreonDialogForRoute(
+        navContext,
+        vm.isPatron,
+        route: Routes.factionPage,
+        unlockDate: PatreonEarlyAccessFeature.newMilestonesPage,
+      ),
     ),
     CustomMenu(
       icon: getListTileImage(AppImage.timer, size: imageSize),
