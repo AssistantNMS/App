@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import '../../constants/Platforms.dart';
 
+import '../components/modalBottomSheet/logsModalBottomSheet.dart';
 import '../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../components/tilePresenters/settingTilePresenter.dart';
 import '../constants/AnalyticsEvent.dart';
@@ -189,6 +190,17 @@ class Settings extends StatelessWidget {
     widgets.add(
       headingSettingTilePresenter(getTranslations().fromKey(LocaleKey.other)),
     );
+
+    widgets.add(linkSettingTilePresenter(
+      context,
+      'Logs',
+      icon: Icons.code,
+      onTap: () => adaptiveBottomModalSheet(
+        context,
+        hasRoundedCorners: true,
+        builder: (BuildContext innerContext) => const LogsModalBottomSheet(),
+      ),
+    ));
 
     widgets.add(linkSettingTilePresenter(
       context,
