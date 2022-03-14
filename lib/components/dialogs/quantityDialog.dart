@@ -56,7 +56,7 @@ void showQuantityDialog(context, TextEditingController controller,
     Column(
       mainAxisAlignment: MainAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
+      children: [
         TextField(
           controller: controller,
           style: const TextStyle(),
