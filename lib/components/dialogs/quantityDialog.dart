@@ -32,7 +32,7 @@ void showQuantityDialog(context, TextEditingController controller,
 
   List<int> amounts = [1, 2, 3, 5, 10, 25];
   List<InputChip> inputs = List.empty(growable: true);
-  for (var amount in amounts) {
+  for (int amount in amounts) {
     inputs.add(
       InputChip(
         label: Text(
@@ -67,7 +67,7 @@ void showQuantityDialog(context, TextEditingController controller,
             FilteringTextInputFormatter.digitsOnly
           ],
         ),
-        Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: inputs)
+        Wrap(crossAxisAlignment: WrapCrossAlignment.center, children: inputs),
       ],
     ),
     buttons: buttons,
