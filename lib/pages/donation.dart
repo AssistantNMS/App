@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:native_admob_flutter/native_admob_flutter.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../constants/AnalyticsEvent.dart';
@@ -23,69 +23,95 @@ class _DonationWidget extends State<Donation> {
 
   final _interstitialAdId = adMobInterstitialDonationPageAdUnitId();
   InterstitialAd _interstitialAd;
+  final int maxFailedLoadAttempts = 3;
+  int _numInterstitialLoadAttempts = 0;
   StreamSubscription _interstitialAdSubscription;
+
+  static const AdRequest request = AdRequest(
+    keywords: ['gaming', 'space'],
+    nonPersonalizedAds: true,
+  );
 
   _DonationWidget() {
     getAnalytics().trackEvent(AnalyticsEvent.donationPage);
   }
+
   @override
   void initState() {
     super.initState();
-    initializeAd();
+    _createInterstitialAd();
     if (!kReleaseMode) {
       adHasFailedToLoad = true;
     }
   }
 
-  Future<void> initializeAd() async {
-    if (_interstitialAd != null && !_interstitialAd.isDisposed) {
+  void _createInterstitialAd() {
+    if (_interstitialAd != null) {
       _interstitialAd.dispose();
     }
     if (_interstitialAdSubscription != null) {
       _interstitialAdSubscription.cancel();
     }
 
-    _interstitialAd = InterstitialAd(unitId: _interstitialAdId);
-
-    _interstitialAdSubscription =
-        _interstitialAd.onEvent.listen(handleAdEvents);
-
-    await _interstitialAd.load(unitId: _interstitialAdId);
+    InterstitialAd.load(
+      adUnitId: _interstitialAdId,
+      request: request,
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (InterstitialAd ad) {
+          getLog().d('$ad loaded');
+          _interstitialAd = ad;
+          _numInterstitialLoadAttempts = 0;
+          _interstitialAd?.setImmersiveMode(true);
+        },
+        onAdFailedToLoad: (LoadAdError error) {
+          getLog().d('InterstitialAd failed to load: $error.');
+          _numInterstitialLoadAttempts += 1;
+          _interstitialAd = null;
+          if (_numInterstitialLoadAttempts < maxFailedLoadAttempts) {
+            _createInterstitialAd();
+          }
+        },
+      ),
+    );
   }
 
-  void handleAdEvents(e) {
-    final event = e.keys.first;
-    switch (event) {
-      case FullScreenAdEvent.closed:
-        getAnalytics().trackEvent(AnalyticsEvent.addMobDonationPageClose);
-        handleAdDismiss();
-        break;
-      case FullScreenAdEvent.showFailed:
-      case FullScreenAdEvent.loadFailed:
-        getAnalytics()
-            .trackEvent(AnalyticsEvent.addMobDonationPageFailedToLoad);
-        setState(() {
-          adHasFailedToLoad = true;
-        });
-        break;
-      case FullScreenAdEvent.loaded:
-        setState(() {
-          adIsLoading = false;
-        });
-        break;
-      case FullScreenAdEvent.showed:
-        getAnalytics().trackEvent(AnalyticsEvent.addMobDonationPageClick);
-        break;
-      default:
-        break;
+  void _showInterstitialAd() {
+    if (_interstitialAd == null) {
+      getLog().d('Warning: attempt to show interstitial before loaded.');
+      return;
     }
+    _interstitialAd.fullScreenContentCallback =
+        FullScreenContentCallback(onAdShowedFullScreenContent: (ad) {
+      getLog().d('onAdShowedFullScreenContent.');
+      setState(() {
+        adIsLoading = false;
+      });
+    }, onAdDismissedFullScreenContent: (ad) {
+      getLog().d('onAdDismissedFullScreenContent.');
+      ad.dispose();
+      getAnalytics().trackEvent(AnalyticsEvent.addMobDonationPageClose);
+      handleAdDismiss();
+    }, onAdFailedToShowFullScreenContent: (ad, error) {
+      getAnalytics().trackEvent(AnalyticsEvent.addMobDonationPageFailedToLoad);
+      getLog().d('onAdFailedToShowFullScreenContent: $error');
+      setState(() {
+        adHasFailedToLoad = true;
+      });
+      ad.dispose();
+      _createInterstitialAd();
+    }, onAdClicked: (ad) {
+      getLog().d('Ad clicked!');
+      getAnalytics().trackEvent(AnalyticsEvent.addMobDonationPageClick);
+    });
+    _interstitialAd.show();
+    _interstitialAd = null;
   }
 
   void handleAdDismiss() {
     setState(() {
       adIsLoading = true;
       _interstitialAd.dispose();
-      initializeAd();
+      _createInterstitialAd();
     });
   }
 
@@ -167,15 +193,8 @@ class _DonationWidget extends State<Donation> {
             key: const Key('advert'),
             leading: getListTileImage('ad.png'),
             title: const Text("Advertisement", style: TextStyle(fontSize: 20)),
-            onTap: () async {
-              // Load only if not loaded
-              if (!_interstitialAd.isAvailable) {
-                await _interstitialAd.load(unitId: _interstitialAdId);
-              } else {
-                await _interstitialAd.show();
-                _interstitialAd.load(unitId: _interstitialAdId);
-                getAnalytics().trackEvent(AnalyticsEvent.addMobDonationPage);
-              }
+            onTap: () {
+              _showInterstitialAd();
             },
           ));
         }
@@ -209,7 +228,7 @@ class _DonationWidget extends State<Donation> {
     if (_interstitialAdSubscription != null) {
       _interstitialAdSubscription.cancel();
     }
-    if (_interstitialAd != null && !_interstitialAd.isDisposed) {
+    if (_interstitialAd != null) {
       _interstitialAd.dispose();
     }
     super.dispose();
