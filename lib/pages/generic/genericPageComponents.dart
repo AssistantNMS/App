@@ -308,8 +308,8 @@ List<Widget> getCraftedUsing(
 
     craftedUsing.add(Container(
       child: positiveButton(
+        context,
         title: getTranslations().fromKey(LocaleKey.viewAllRawMaterialsRequired),
-        colour: getTheme().getSecondaryColour(context),
         onPress: () async => await getNavigation().navigateAsync(
           context,
           navigateTo: (context) => GenericPageAllRequiredRawMaterials(

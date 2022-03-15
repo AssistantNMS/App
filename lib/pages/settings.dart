@@ -220,8 +220,8 @@ class Settings extends StatelessWidget {
 
     if (viewModel.selectedLanguage == 'en') {
       widgets.add(positiveButton(
+        context,
         title: 'Useless button',
-        colour: getTheme().getSecondaryColour(context),
         onPress: () => uselessButtonFunc(context, viewModel.uselessButtonTaps,
             viewModel.increaseUselessButtonTaps),
       ));

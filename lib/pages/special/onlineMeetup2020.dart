@@ -117,8 +117,8 @@ class _OnlineMeetup2020Widget extends State<OnlineMeetup2020Page> {
               ],
               emptySpace1x(),
               positiveButton(
+                context,
                 title: 'Continue',
-                colour: getTheme().getSecondaryColour(context),
                 onPress: () async =>
                     await getNavigation().navigateHomeAsync(context),
               ),

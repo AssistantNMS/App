@@ -71,8 +71,8 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
       widgets.add(Container(
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: positiveButton(
+          context,
           title: getTranslations().fromKey(LocaleKey.viewTrackList),
-          colour: getTheme().getSecondaryColour(context),
           onPress: () => getNavigation().navigateAsync(
             context,
             navigateTo: (context) => const NMSFMTrackListPage(),

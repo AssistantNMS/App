@@ -132,8 +132,8 @@ class CommunityMissionPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(left: 8, right: 4, bottom: 4),
           child: positiveButton(
+            context,
             title: getTranslations().fromKey(buttonLocale),
-            colour: getTheme().getSecondaryColour(context),
             onPress: () async =>
                 await getNavigation().navigateAwayFromHomeAsync(
               context,

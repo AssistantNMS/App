@@ -92,8 +92,8 @@ class _ExpeditionRewardsListModalBottomSheetWidget
                 } else {
                   widgetFuncs.add(
                     () => positiveButton(
+                      context,
                       title: getTranslations().fromKey(LocaleKey.markAsClaimed),
-                      colour: getTheme().getSecondaryColour(context),
                       onPress: () =>
                           viewModel.addToClaimedRewards(widget.milestoneId),
                     ),

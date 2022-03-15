@@ -132,9 +132,9 @@ class _FeedbackQuestionsWidget extends State<FeedbackQuestionsPage> {
     var buttonText = getTranslations().fromKey(LocaleKey.submit);
     var button = isButtonEnabled
         ? positiveButton(
+            context,
             title: buttonText,
             onPress: submitFeedback,
-            colour: getTheme().getSecondaryColour(context),
           )
         : disabledButton(title: buttonText);
 

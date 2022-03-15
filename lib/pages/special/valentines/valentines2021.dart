@@ -55,8 +55,8 @@ class Valentines2021 extends StatelessWidget {
               margin: const EdgeInsets.all(4.0),
             ),
             positiveButton(
+              context,
               title: getTranslations().fromKey(LocaleKey.noticeAccept),
-              colour: getTheme().getSecondaryColour(context),
               padding: const EdgeInsets.symmetric(vertical: 8),
               onPress: () async => await getNavigation().navigateAsync(
                 context,

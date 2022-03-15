@@ -18,15 +18,15 @@ class Language extends StatelessWidget {
       body: LanguagePageContent(
         additionalButtons: [
           positiveButton(
+            context,
             title: getTranslations().fromKey(LocaleKey.useTranslationTool),
-            colour: getTheme().getSecondaryColour(context),
             onPress: () => launchExternalURL(
               ExternalUrls.assistantAppsToolSite,
             ),
           ),
           positiveButton(
+            context,
             title: getTranslations().fromKey(LocaleKey.github),
-            colour: getTheme().getSecondaryColour(context),
             eventString: AnalyticsEvent.externalLinkGitHubGeneral,
             onPress: () => launchExternalURL(NmsExternalUrls.githubGeneralRepo),
           ),

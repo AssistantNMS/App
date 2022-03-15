@@ -149,7 +149,7 @@ class _AlienPuzzleModalBottomSheetWidget
                               padding: const EdgeInsets.only(
                                   top: 8, left: 8, right: 8),
                               child: positiveButton(
-                                colour: getTheme().getSecondaryColour(context),
+                                context,
                                 title: getTranslations()
                                     .fromKey(LocaleKey.viewPossibleRewards)
                                     .replaceAll(

@@ -133,8 +133,8 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
         child: StoreConnector<AppState, InventoryListViewModel>(
           converter: (store) => InventoryListViewModel.fromStore(store),
           builder: (_, viewModel) => positiveButton(
+            context,
             title: getTranslations().fromKey(LocaleKey.add),
-            colour: getTheme().getSecondaryColour(context),
             onPress: () async {
               Inventory temp = await getNavigation().navigateAsync<Inventory>(
                 context,

@@ -16,27 +16,29 @@ Widget prevAndNextPagination(
 }) {
   Widget buttonWidget = Container();
 
-  var prevButton = positiveButton(
-      title: getTranslations().fromKey(prevLocaleKey),
-      colour: getTheme().getSecondaryColour(context),
-      padding: const EdgeInsets.symmetric(vertical: 8),
-      onPress: () {
-        if (onPreviousTap != null) {
-          onPreviousTap();
-          return;
-        }
-      });
+  Widget prevButton = positiveButton(
+    context,
+    title: getTranslations().fromKey(prevLocaleKey),
+    padding: const EdgeInsets.symmetric(vertical: 8),
+    onPress: () {
+      if (onPreviousTap != null) {
+        onPreviousTap();
+        return;
+      }
+    },
+  );
 
-  var nextButton = positiveButton(
-      title: getTranslations().fromKey(nextLocaleKey),
-      colour: getTheme().getSecondaryColour(context),
-      padding: const EdgeInsets.symmetric(vertical: 8),
-      onPress: () {
-        if (onNextTap != null) {
-          onNextTap();
-          return;
-        }
-      });
+  Widget nextButton = positiveButton(
+    context,
+    title: getTranslations().fromKey(nextLocaleKey),
+    padding: const EdgeInsets.symmetric(vertical: 8),
+    onPress: () {
+      if (onNextTap != null) {
+        onNextTap();
+        return;
+      }
+    },
+  );
 
   bool showBothButtons = true;
   if (currentPosition >= maxPositionIndex - 1) {

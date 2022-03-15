@@ -132,10 +132,10 @@ class CartPage extends StatelessWidget {
     if (requiredItems.isNotEmpty) {
       widgets.add(Container(
         child: positiveButton(
+          context,
           title: getTranslations().fromKey(
             LocaleKey.viewAllRawMaterialsRequired,
           ),
-          colour: getTheme().getSecondaryColour(context),
           onPress: () async => await getNavigation().navigateAsync(context,
               navigateTo: (context) => GenericPageAllRequiredRawMaterials(
                     GenericPageAllRequired(

@@ -81,16 +81,17 @@ class _SyncWidget extends State<SyncPage> {
             ),
             rowWith2Columns(
               positiveButton(
-                  title: getTranslations().fromKey(LocaleKey.switchUser),
-                  colour: getTheme().getSecondaryColour(context),
-                  onPress: () async {
-                    await signOutGoogle();
-                    var newAccount = await signInWithGoogle();
-                    setState(() {
-                      account = newAccount;
-                      rebuildCounter++;
-                    });
-                  }),
+                context,
+                title: getTranslations().fromKey(LocaleKey.switchUser),
+                onPress: () async {
+                  await signOutGoogle();
+                  var newAccount = await signInWithGoogle();
+                  setState(() {
+                    account = newAccount;
+                    rebuildCounter++;
+                  });
+                },
+              ),
               negativeButton(
                 title: getTranslations().fromKey(LocaleKey.logout),
                 onPress: () => signOutGoogle().then((dynamic _) => setState(() {
