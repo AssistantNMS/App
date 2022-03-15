@@ -103,7 +103,11 @@ class _ExpeditionRewardsListModalBottomSheetWidget
 
               return ListView.builder(
                 padding: const EdgeInsets.only(
-                    top: 20, left: 0, right: 0, bottom: 32),
+                  top: 14,
+                  left: 0,
+                  right: 0,
+                  bottom: 32,
+                ),
                 itemCount: widgetFuncs.length,
                 itemBuilder: (_, int index) => widgetFuncs[index](),
                 shrinkWrap: true,
