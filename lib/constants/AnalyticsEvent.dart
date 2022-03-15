@@ -87,6 +87,7 @@ class AnalyticsEvent {
       "Seasonal_Expedition_List_Page_View";
   static const String journeyMilestonesPage = "Journey_Milestones_Page_View";
   static const String factionPage = "Faction_Page_View";
+  static const String guildMissionsPage = "Guild_Missions_Page_View";
   //user_events
   static const String addToCartFromHome = 'Added_item_to_cart_from_Home_Page';
   static const String exploitItemClick = 'Exploit_item_Click';

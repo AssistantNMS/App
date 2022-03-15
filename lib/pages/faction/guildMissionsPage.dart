@@ -5,29 +5,30 @@ import '../../components/common/cachedFutureBuilder.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/factionTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
-import '../../contracts/faction/faction.dart';
+import '../../contracts/faction/guildMission.dart';
 import '../../integration/dependencyInjection.dart';
 
-class FactionPage extends StatelessWidget {
-  FactionPage({Key key}) : super(key: key) {
-    getAnalytics().trackEvent(AnalyticsEvent.factionPage);
+class GuildMissionsPage extends StatelessWidget {
+  GuildMissionsPage({Key key}) : super(key: key) {
+    getAnalytics().trackEvent(AnalyticsEvent.guildMissionsPage);
   }
 
   @override
   Widget build(BuildContext context) {
     return CachedFutureBuilder(
-      future: getFactionRepo().getAll(context),
+      future: getFactionRepo().getAllMissions(context),
       whileLoading: simpleGenericPageScaffold(
         context,
         title: getTranslations().fromKey(LocaleKey.loading),
         body: getLoading().fullPageLoading(context),
       ),
-      whenDoneLoading: (ResultWithValue<FactionData> snapshot) =>
+      whenDoneLoading: (ResultWithValue<List<GuildMission>> snapshot) =>
           getBody(context, snapshot),
     );
   }
 
-  Widget getBody(BuildContext bodyCtx, ResultWithValue<FactionData> snapshot) {
+  Widget getBody(
+      BuildContext bodyCtx, ResultWithValue<List<GuildMission>> snapshot) {
     if (snapshot == null || snapshot.isSuccess == false) {
       return simpleGenericPageScaffold(
         bodyCtx,
@@ -35,30 +36,21 @@ class FactionPage extends StatelessWidget {
         body: getLoading().customErrorWidget(bodyCtx),
       );
     }
-    FactionData faction = snapshot.value;
-
-    List<Widget> widgets = List.empty(growable: true);
-    widgets.add(categoryHeading(faction.category));
-    for (FactionDetail detail in faction.categories) {
-      widgets.add(factionTilePresenter(bodyCtx, detail));
-    }
-    widgets.add(categoryHeading(faction.lifeform));
-    for (FactionDetail detail in faction.lifeforms) {
-      widgets.add(factionTilePresenter(bodyCtx, detail));
-    }
-    widgets.add(categoryHeading(faction.guild));
-    for (FactionDetail detail in faction.guilds) {
-      widgets.add(factionTilePresenter(bodyCtx, detail));
+    List<Widget Function(BuildContext t)> widgets = List.empty(growable: true);
+    List<GuildMission> missions = snapshot.value;
+    for (GuildMission mission in missions) {
+      widgets.add((innerCtx) => guildMissionTilePresenter(bodyCtx, mission));
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add((_) => emptySpace8x());
 
     return simpleGenericPageScaffold(
       bodyCtx,
-      title: faction.milestone,
+      title:
+          getTranslations().fromKey(LocaleKey.milestones), // TODO add page name
       body: listWithScrollbar(
         itemCount: widgets.length,
-        itemBuilder: (context, index) => widgets[index],
+        itemBuilder: (listCtx, index) => widgets[index](listCtx),
       ),
     );
   }

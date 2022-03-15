@@ -10,6 +10,7 @@ import '../../contracts/faction/storedFactionMission.dart';
 import '../../contracts/redux/appState.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../redux/modules/journeyMilestone/factionsViewModel.dart';
+import 'guildMissionsPage.dart';
 
 class FactionDetailPage extends StatelessWidget {
   final String factionId;
@@ -59,6 +60,18 @@ class FactionDetailPage extends StatelessWidget {
       widgets.add(factionMissionTilePresenter(
           storeContext, mission, viewModel, reduxMdl));
     }
+
+    widgets.add(positiveButton(
+      storeContext,
+      title: 'View Guild missions', // TODO translate
+      onPress: () {
+        getNavigation().navigateAwayFromHomeAsync(
+          storeContext,
+          navigateTo: (_) => GuildMissionsPage(),
+        );
+      },
+    ));
+    //GuildMissionsPage
 
     widgets.add(emptySpace8x());
 
