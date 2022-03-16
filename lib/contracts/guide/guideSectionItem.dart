@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 import 'guideType.dart';
 
 class GuideSectionItem {
@@ -29,10 +31,10 @@ class GuideSectionItem {
   factory GuideSectionItem.fromJson(Map<String, dynamic> json) =>
       GuideSectionItem(
         type: guideTypeValues.map[json["type"]],
-        content: json["content"],
-        imageUrl: json["imageUrl"],
-        image: json["image"],
-        name: json["name"],
+        content: readStringSafe(json, 'content'),
+        imageUrl: readStringSafe(json, 'imageUrl'),
+        image: readStringSafe(json, 'image'),
+        name: readStringSafe(json, 'name'),
         columns: json["columns"] != null
             ? (json["columns"] as List).map((c) => c as String).toList()
             : List.empty(growable: true),

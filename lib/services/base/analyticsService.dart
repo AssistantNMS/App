@@ -13,6 +13,7 @@ class AnalyticsService implements IAnalyticsService {
 
   @override
   void trackEvent(String key, {dynamic data}) {
+    if (key.isEmpty) return;
     if (kReleaseMode) {
       try {
         analytics.logEvent(name: key);

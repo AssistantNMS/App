@@ -20,7 +20,7 @@ Widget guideTilePresenter(BuildContext context, Guide guideDetails) {
       ],
     )
   ];
-  if (guideDetails.minutes > 0) {
+  if ((guideDetails.minutes ?? 0) > 0) {
     firstRow.add(Row(
       children: [
         const Icon(Icons.timer),
@@ -90,7 +90,7 @@ Widget compactGuideTilePresenter(BuildContext context, Guide guideDetails) {
       guideDetails.translatedBy.isNotEmpty) {
     subTitle += ' - ' + guideDetails.translatedBy;
   }
-  if (guideDetails.minutes > 0) {
+  if ((guideDetails.minutes ?? 0) > 0) {
     subTitle += ' - ' +
         getTranslations()
             .fromKey(LocaleKey.minutes)
