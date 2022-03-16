@@ -46,20 +46,11 @@ class GuildMissionsPage extends StatelessWidget {
 
     return simpleGenericPageScaffold(
       bodyCtx,
-      title:
-          getTranslations().fromKey(LocaleKey.milestones), // TODO add page name
+      // TODO add page name
+      title: getTranslations().fromKey(LocaleKey.milestones),
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (listCtx, index) => widgets[index](listCtx),
-      ),
-    );
-  }
-
-  Widget categoryHeading(String title) {
-    return flatCard(
-      child: Padding(
-        padding: const EdgeInsets.all(4),
-        child: genericItemName(title),
       ),
     );
   }

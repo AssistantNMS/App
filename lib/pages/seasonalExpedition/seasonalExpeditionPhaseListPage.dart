@@ -67,6 +67,7 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
         title: getTranslations().fromKey(LocaleKey.rewards),
         onPress: () => adaptiveBottomModalSheet(
           storeContext,
+          hasRoundedCorners: true,
           builder: (_) => ExpeditionRewardsListModalBottomSheet(
             '',
             season.rewards,

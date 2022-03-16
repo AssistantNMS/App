@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/constants/AppImage.dart';
 import 'package:flutter/material.dart';
 import 'package:marquee_vertical/marquee_vertical.dart';
 
@@ -7,6 +8,7 @@ import '../../contracts/faction/faction.dart';
 import '../../contracts/faction/guildMission.dart';
 import '../../contracts/faction/storedFactionMission.dart';
 import '../../pages/faction/factionDetailPage.dart';
+import '../../pages/faction/guildMissionDetailPage.dart';
 import '../../redux/modules/journeyMilestone/factionsViewModel.dart';
 import '../modalBottomSheet/factionMilestoneModalBottomSheet.dart';
 
@@ -14,6 +16,7 @@ Widget factionTilePresenter(BuildContext context, FactionDetail faction) {
   return genericListTileWithSubtitle(
     context,
     leadingImage: faction.icon,
+    leadingImageHero: faction.icon + faction.id,
     name: faction.name,
     subtitle: faction.description.isNotEmpty
         ? Text(faction.description, maxLines: 1)
@@ -30,7 +33,7 @@ Widget factionTilePresenter(BuildContext context, FactionDetail faction) {
       }
       getNavigation().navigateAsync(
         context,
-        navigateTo: (context) => FactionDetailPage(faction.id),
+        navigateTo: (context) => FactionDetailPage(faction),
       );
     },
   );
@@ -88,6 +91,23 @@ Widget guildMissionTilePresenter(BuildContext context, GuildMission mission) {
     titles = mission.subtitles;
   }
 
+  List<String> factionImgs = List.empty(growable: true);
+  if (mission.factions.contains('ExplorerGuild')) {
+    factionImgs.add(AppImage.expFaction);
+  }
+  if (mission.factions.contains('TradeGuild')) {
+    factionImgs.add(AppImage.traFaction);
+  }
+  if (mission.factions.contains('WarriorGuild')) {
+    factionImgs.add(AppImage.warFaction);
+  }
+
+  Future Function() onTap;
+  onTap = () => getNavigation().navigateAwayFromHomeAsync(
+        context,
+        navigateTo: (__) => GuildMissionDetailPage(mission),
+      );
+
   bool marqueeMode = titles.length > 1;
   Widget titleWidget = marqueeMode //
       ? MarqueeVertical(
@@ -107,16 +127,30 @@ Widget guildMissionTilePresenter(BuildContext context, GuildMission mission) {
           },
           scrollDuration: const Duration(milliseconds: 300),
           stopDuration: const Duration(seconds: 2),
+          onPress: (_) => onTap(),
         )
       : Text(titles[0], maxLines: 1);
 
   ListTile listTile = ListTile(
-    leading: genericTileImage(mission.icon), // TODO add Hero
+    leading: genericTileImage(
+      mission.icon,
+      imageHero: mission.icon + mission.id,
+    ),
     title: titleWidget,
     subtitle: Text(mission.objective, maxLines: 1),
-    onTap: () {
-      getLog().v('Hi');
-    },
+    trailing: Wrap(
+      children: factionImgs
+          .map(
+            (img) => localImage(
+              img,
+              imageHero: img + mission.id,
+              height: 35,
+              width: 35,
+            ),
+          )
+          .toList(),
+    ),
+    onTap: onTap,
   );
 
   if (marqueeMode) {

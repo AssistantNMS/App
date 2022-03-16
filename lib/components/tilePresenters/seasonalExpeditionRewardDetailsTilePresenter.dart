@@ -2,6 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';
+import '../../constants/NmsUIConstants.dart';
 import '../../contracts/alienPuzzle/alienPuzzleRaceType.dart';
 import '../../contracts/requiredItemDetails.dart';
 import '../../contracts/seasonalExpedition/expeditionRewardType.dart';
@@ -15,7 +16,7 @@ Widget seasonalExpeditionRewardDetailTilePresenter(
   BuildContext context,
   SeasonalExpeditionReward expReward,
   List<RequiredItemDetails> rewardLookups, {
-  bool showBackgroundColours = false,
+  bool showBackgroundColours = true,
 }) {
   RequiredItemDetails reward =
       rewardLookups.firstWhere((r) => r.id == expReward.id, orElse: () => null);
@@ -69,11 +70,13 @@ Widget seasonalExpeditionRewardDetailTilePresenter(
     subtitleText = 'BOOST';
   }
 
-  return genericListTileWithSubtitle(
+  bool addPadding = subtitleText == null;
+  ListTile tile = genericListTileWithSubtitle(
     context,
     leadingImage: reward.icon,
     name: reward.name,
-    subtitle: subtitleText != null ? Text(subtitleText ?? '') : null,
+    borderRadius: NMSUIConstants.gameItemBorderRadius,
+    subtitle: addPadding ? null : Text(subtitleText ?? ''),
     imageBackgroundColour: showBackgroundColours ? reward.colour : null,
     onTap: () async {
       if (expReward.id == fakeAppId) return;
@@ -83,4 +86,13 @@ Widget seasonalExpeditionRewardDetailTilePresenter(
       );
     },
   );
+
+  if (addPadding) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: tile,
+    );
+  }
+
+  return tile;
 }

@@ -55,7 +55,7 @@ class FactionPage extends StatelessWidget {
 
     return simpleGenericPageScaffold(
       bodyCtx,
-      title: faction.milestone,
+      title: getTranslations().fromKey(LocaleKey.milestones),
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (context, index) => widgets[index],

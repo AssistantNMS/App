@@ -181,6 +181,7 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
       ),
       onTap: () => adaptiveBottomModalSheet(
         context,
+        hasRoundedCorners: true,
         builder: (_) => ExpeditionRewardsListModalBottomSheet(
           seasonalExpeditionMilestone.id,
           seasonalExpeditionMilestone.rewards,
@@ -253,7 +254,7 @@ Widget expeditionInProgressPresenter(
   Widget bodyChild = Container(
     padding: const EdgeInsets.symmetric(horizontal: 8),
     child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         genericItemName(expedition.name, maxLines: 2),
