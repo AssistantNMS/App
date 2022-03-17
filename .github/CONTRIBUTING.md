@@ -13,6 +13,8 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
   * [Project History](#project-history)
   * [Design Decisions](#design-decisions)
 
+[I found a 🐛Bug🐛 and I want to report it](#i-found-a-bug-and-want-to-report-it)
+
 [How Can I Contribute?](#how-can-i-contribute)
   * [Reporting Bugs](#reporting-bugs)
   * [Suggesting Enhancements](#suggesting-enhancements)
@@ -35,7 +37,11 @@ This project was started long before Dart 2 and null safety was added. There are
 #### File naming
 Unfortunately almost all of the files in the project are pascal case `appShell.dart` instead of what Dart recommends `app_shell.dart`. There are just too many files to change along with their corresponding imports, so we will just continue naming the files in pascal case until someone can come up with an easy solution that doesn't break everything 😅
 
+## I found a bug and want to report it
 
+First of all thank you for taking the time to check our guidelines before creating a Github issue 💪
+
+To help keep the issues manageable, please double check that the issue you have, has not been reported already in the issues list. Secondly please ensure that you fill in as much information as possible on the issue. The issue template should help you through the process, sometimes small details help us find the bug quickly.
 
 ```
 ------------------------------------------------------------------
