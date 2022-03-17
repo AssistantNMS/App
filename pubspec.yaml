@@ -81,13 +81,19 @@ dependencies:
   talker_flutter: 0.8.0
   after_layout: 1.1.0
 
-# dev_dependencies:
-#   flutter_test:
-#     sdk: flutter
+dev_dependencies:
+  flutter_launcher_icons: 0.9.2
 
 dependency_overrides:
   google_fonts: 2.2.0
 #   flutter_svg: ^0.23.0+1
+
+flutter_icons: ## flutter pub run flutter_launcher_icons:main
+  ios: true
+  android: true
+  image_path: 'assets/img/fullSizeIcon.png'
+  adaptive_icon_background: 'assets/img/fullSizeIconAdaptiveBg.png'
+  adaptive_icon_foreground: 'assets/img/fullSizeIconAdaptiveFg.png'
 
 flutter:
   uses-material-design: true
