@@ -64,7 +64,7 @@ class FactionDetailPage extends StatelessWidget {
         padding: NMSUIConstants.buttonPadding,
         child: positiveButton(
           storeContext,
-          title: 'View Guild missions', // TODO translate
+          title: getTranslations().fromKey(LocaleKey.viewGuildMissions),
           onPress: () {
             getNavigation().navigateAwayFromHomeAsync(
               storeContext,

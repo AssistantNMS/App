@@ -46,8 +46,7 @@ class GuildMissionsPage extends StatelessWidget {
 
     return simpleGenericPageScaffold(
       bodyCtx,
-      // TODO add page name
-      title: getTranslations().fromKey(LocaleKey.milestones),
+      title: getTranslations().fromKey(LocaleKey.viewGuildMissions),
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (listCtx, index) => widgets[index](listCtx),

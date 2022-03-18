@@ -50,7 +50,7 @@ class FactionJsonRepository extends BaseJsonService
   @override
   Future<ResultWithValue<List<GuildMission>>> getAllMissions(
       BuildContext context) async {
-    String jsonFileName = 'en/GuildMissions.lang';
+    String jsonFileName = getTranslations().fromKey(LocaleKey.guildMissionJson);
     try {
       List responseDetailsJson = await getListfromJson(context, jsonFileName);
       List<GuildMission> missions =
