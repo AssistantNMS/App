@@ -91,9 +91,10 @@ dependency_overrides:
 flutter_icons: ## flutter pub run flutter_launcher_icons:main
   ios: true
   android: true
-  image_path: 'assets/img/fullSizeIcon.png'
-  adaptive_icon_background: 'assets/img/fullSizeIconAdaptiveBg.png'
-  adaptive_icon_foreground: 'assets/img/fullSizeIconAdaptiveFg.png'
+  remove_alpha_ios: true
+  image_path: 'assets/images/fullSizeIcon.png'
+  adaptive_icon_background: 'assets/images/fullSizeIconAdaptiveBg.png'
+  adaptive_icon_foreground: 'assets/images/fullSizeIconAdaptiveFg.png'
 
 flutter:
   uses-material-design: true
