@@ -14,7 +14,7 @@ Future main() async {
     remoteConfigsConfigId: '4fa400a4',
     donationsEnabled: false,
     isProduction: true,
-    currentWhatIsNewGuid: '682ce415-30eb-4265-b0ad-fcfc363705bb',
+    currentWhatIsNewGuid: '6e038211-e797-43d0-aa18-285dd2d2c1d0',
 
     // from env.dart
     remoteConfigsApiKey: remoteConfigsApiKey,
