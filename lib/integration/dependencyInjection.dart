@@ -21,6 +21,7 @@ import '../services/json/AlienPuzzleRepository.dart';
 import '../services/json/AlienPuzzleRewardsJsonRepository.dart';
 import '../services/json/DataJsonRepository.dart';
 import '../services/json/ExploitJsonRepository.dart';
+import '../services/json/FactionJsonRepository.dart';
 import '../services/json/GenericJsonRepository.dart';
 import '../services/json/RechargeJsonRepository.dart';
 import '../services/json/RefineryJsonRepository.dart';
@@ -31,6 +32,7 @@ import '../services/json/interface/IAlienPuzzleJsonRepository.dart';
 import '../services/json/interface/IAlienPuzzleRewardsJsonRepository.dart';
 import '../services/json/interface/IDataJsonRepository.dart';
 import '../services/json/interface/IExploitRepository.dart';
+import '../services/json/interface/IFactionJsonRepository.dart';
 import '../services/json/interface/IGenericRepository.dart';
 import '../services/json/interface/IRechargeJsonRepository.dart';
 import '../services/json/interface/IRefineryRepository.dart';
@@ -75,6 +77,7 @@ void initDependencyInjection(EnvironmentSettings _env) {
       AlienPuzzleRewardsJsonRepository());
   getIt.registerSingleton<ISeasonalExpeditionJsonRepository>(
       SeasonalExpeditionJsonRepository());
+  getIt.registerSingleton<IFactionJsonRepository>(FactionJsonRepository());
 
   getIt.registerSingleton<AudioPlayerService>(AudioPlayerService());
   getIt.registerSingleton<LocalNotificationService>(LocalNotificationService());
@@ -109,6 +112,7 @@ IAlienPuzzleRewardsJsonRepository getAlienPuzzleRewardsRepo() =>
     getIt<IAlienPuzzleRewardsJsonRepository>();
 ISeasonalExpeditionJsonRepository getSeasonalExpeditionRepo() =>
     getIt<ISeasonalExpeditionJsonRepository>();
+IFactionJsonRepository getFactionRepo() => getIt<IFactionJsonRepository>();
 
 AudioPlayerService getAudioPlayer() => getIt<AudioPlayerService>();
 LocalNotificationService getLocalNotification() =>

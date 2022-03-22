@@ -48,8 +48,8 @@ class _ContributorsWidget extends State<ContributorsPage> {
           lastListItemWidget: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: positiveButton(
+              context,
               title: getTranslations().fromKey(LocaleKey.useTranslationTool),
-              colour: getTheme().getSecondaryColour(context),
               onPress: () => launchExternalURL(
                 ExternalUrls.assistantAppsToolSite,
               ),

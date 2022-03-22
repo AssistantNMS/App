@@ -112,9 +112,9 @@ Widget patreonCodeSettingTilePresenter(
   patreonCodeModal = () async {
     baseOnChange();
 
-    var code = await asyncInputDialog(context, name);
-    var newName = (code == null || code.isEmpty) ? '' : code;
-    var codeIsCorrect = Patreon.codes.any(
+    String code = await asyncInputDialog(context, name);
+    String newName = (code == null || code.isEmpty) ? '' : code;
+    bool codeIsCorrect = Patreon.codes.any(
       (code) => code == newName.toUpperCase(),
     );
     if (codeIsCorrect && onChange != null && value == false) onChange(true);
@@ -124,14 +124,18 @@ Widget patreonCodeSettingTilePresenter(
   patreonModalSheet = () async {
     baseOnChange();
 
+    if (value == true) return;
+
     adaptiveBottomModalSheet(
       context,
       hasRoundedCorners: true,
       builder: (BuildContext innerC) => PatreonLoginModalBottomSheet(
-        AnalyticsEvent.aboutPage,
+        AnalyticsEvent.patreonOAuthLogin,
         (Result loginResult) {
           if (loginResult.isSuccess) {
             onChange(true);
+          } else {
+            getLog().d('patreonOAuthLogin message ' + loginResult.errorMessage);
           }
         },
       ),

@@ -162,8 +162,8 @@ Widget viewMoreButton(context, int numLeftOver, viewMoreOnPress) {
   String viewMore = getTranslations().fromKey(LocaleKey.viewXMore);
   return Container(
     child: positiveButton(
+      context,
       title: viewMore.replaceAll("{0}", numLeftOver.toString()),
-      colour: getTheme().getSecondaryColour(context),
       onPress: () {
         if (viewMoreOnPress == null) return;
         viewMoreOnPress();

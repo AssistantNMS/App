@@ -13,6 +13,7 @@ import '../pages/community/onlineMeetup2020SubmissionsPage.dart';
 import '../pages/contributors/contributorsPage.dart';
 import '../pages/donation.dart';
 import '../pages/exploits/exploitsPage.dart';
+import '../pages/faction/factionListPage.dart';
 import '../pages/favourite/favouritesPage.dart';
 import '../pages/feedback/feedbackPage.dart';
 import '../pages/friendCode/friendCodeListPage.dart';
@@ -99,6 +100,7 @@ class Routes {
   static const String seasonalExpeditionPage = '/seasonalExpPage';
   static const String alienPuzzlesMenuPage = '/alienPuzzlesMenuPage';
   static const String journeyMilestonePage = '/journeyMilestonePage';
+  static const String factionPage = '/factionPage';
 }
 
 Map<String, Widget Function(BuildContext)> initNamedRoutes(
@@ -175,6 +177,7 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
         SeasonalExpeditionSeasonListPage(),
     Routes.alienPuzzlesMenuPage: (context) => AlienPuzzlesMenuPage(),
     Routes.journeyMilestonePage: (context) => JourneyMilestonePage(),
+    Routes.factionPage: (context) => FactionPage(),
   });
   return routes;
 }

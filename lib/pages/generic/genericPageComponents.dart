@@ -177,7 +177,7 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
 }
 
 List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
-  Color chipColour = Colors.white;
+  Color chipColour = getTheme().buttonForegroundColour(context);
   List<Widget> chipList = List.empty(growable: true);
 
   if (genericItem.maxStackSize != null &&
@@ -225,18 +225,26 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
       String bpCostText = getTranslations().fromKey(LocaleKey.blueprintCost);
       int bpCost = genericItem.blueprintCost;
       chipList.add(
-        genericItemNanites(context, "$bpCostText: $bpCost", colour: chipColour),
+        genericItemNanites(
+          context,
+          "$bpCostText: $bpCost",
+          colour: chipColour,
+        ),
       );
       break;
     case CurrencyType.SALVAGEDDATA:
       chipList.add(genericItemSalvagedData(
-          context, genericItem.blueprintCost.toStringAsFixed(0),
-          colour: chipColour));
+        context,
+        genericItem.blueprintCost.toStringAsFixed(0),
+        colour: chipColour,
+      ));
       break;
     case CurrencyType.FACTORYOVERRIDE:
       chipList.add(genericItemFactoryOverride(
-          context, genericItem.blueprintCost.toStringAsFixed(0),
-          colour: chipColour));
+        context,
+        genericItem.blueprintCost.toStringAsFixed(0),
+        colour: chipColour,
+      ));
       break;
     case CurrencyType.NONE:
     default:
@@ -308,8 +316,8 @@ List<Widget> getCraftedUsing(
 
     craftedUsing.add(Container(
       child: positiveButton(
+        context,
         title: getTranslations().fromKey(LocaleKey.viewAllRawMaterialsRequired),
-        colour: getTheme().getSecondaryColour(context),
         onPress: () async => await getNavigation().navigateAsync(
           context,
           navigateTo: (context) => GenericPageAllRequiredRawMaterials(

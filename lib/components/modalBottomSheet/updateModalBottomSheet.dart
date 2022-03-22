@@ -47,8 +47,8 @@ class _UpdateBottomSheetWidget extends State<UpdateBottomSheet> {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
               child: positiveButton(
+                context,
                 title: getTranslations().fromKey(LocaleKey.viewItemsAdded),
-                colour: getTheme().getSecondaryColour(context),
                 onPress: () => getNavigation().navigateAsync(
                   context,
                   navigateTo: (context) =>

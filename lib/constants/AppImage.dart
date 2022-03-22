@@ -43,6 +43,9 @@ class AppImage {
   static const String korvaxFaction = factionDir + 'korvax.png';
   static const String atlasFaction = factionDir + 'atlas.png';
   static const String allFaction = factionDir + 'all.png';
+  static const String expFaction = factionDir + 'FACTIONS.EXPLORERGUILD.ON.png';
+  static const String traFaction = factionDir + 'FACTIONS.TRADEGUILD.ON.png';
+  static const String warFaction = factionDir + 'FACTIONS.WARRIORGUILD.ON.png';
 
   static const String weekendMissionDir = base + 'weekendMission/';
   static const String weekendMissionSeason1 = weekendMissionDir + 'Season1.jpg';

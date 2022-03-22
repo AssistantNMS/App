@@ -45,7 +45,7 @@ Widget textListItem(GuideSectionItem item) => Card(
 Widget linkListItem(GuideSectionItem item) {
   // ignore: prefer_function_declarations_over_variables
   Function() onTap = () => launchExternalURL(item.content);
-  return Card(
+  return flatCard(
     child: GestureDetector(
       child: Chip(
         label: Text(item.name),
@@ -55,7 +55,6 @@ Widget linkListItem(GuideSectionItem item) {
       ),
       onTap: onTap,
     ),
-    margin: const EdgeInsets.all(0.0),
   );
 }
 
@@ -74,7 +73,7 @@ Widget imageListItem(context, GuideSectionItem item, String folder) {
   }
 
   return GestureDetector(
-    child: Card(
+    child: flatCard(
       child: (item.image == null || item.image.isEmpty)
           ? networkImage(imagePath)
           : guideImage(imagePath),
@@ -93,12 +92,11 @@ Widget imageListItem(context, GuideSectionItem item, String folder) {
 }
 
 Widget markdownListItem(GuideSectionItem item) {
-  return Card(
+  return flatCard(
     child: Padding(
       child: MarkdownBody(data: item.content),
       padding: const EdgeInsets.all(16.0),
     ),
-    margin: const EdgeInsets.all(0.0),
   );
 }
 
@@ -126,7 +124,7 @@ Widget tableListItem(context, GuideSectionItem item) {
     rows.add(TableRow(children: rowChildren));
   }
 
-  return Card(
+  return flatCard(
     child: Padding(
       child: Table(
         children: rows,
@@ -135,6 +133,5 @@ Widget tableListItem(context, GuideSectionItem item) {
       ),
       padding: const EdgeInsets.all(16.0),
     ),
-    margin: const EdgeInsets.all(0.0),
   );
 }

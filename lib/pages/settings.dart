@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import '../../constants/Platforms.dart';
 
+import '../components/modalBottomSheet/logsModalBottomSheet.dart';
 import '../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../components/tilePresenters/settingTilePresenter.dart';
 import '../constants/AnalyticsEvent.dart';
@@ -192,6 +193,17 @@ class Settings extends StatelessWidget {
 
     widgets.add(linkSettingTilePresenter(
       context,
+      'Logs',
+      icon: Icons.code,
+      onTap: () => adaptiveBottomModalSheet(
+        context,
+        hasRoundedCorners: true,
+        builder: (BuildContext innerContext) => const LogsModalBottomSheet(),
+      ),
+    ));
+
+    widgets.add(linkSettingTilePresenter(
+      context,
       getTranslations().fromKey(LocaleKey.privacyPolicy),
       icon: Icons.description,
       onTap: () => launchExternalURL(ExternalUrls.privacyPolicy),
@@ -208,8 +220,8 @@ class Settings extends StatelessWidget {
 
     if (viewModel.selectedLanguage == 'en') {
       widgets.add(positiveButton(
+        context,
         title: 'Useless button',
-        colour: getTheme().getSecondaryColour(context),
         onPress: () => uselessButtonFunc(context, viewModel.uselessButtonTaps,
             viewModel.increaseUselessButtonTaps),
       ));

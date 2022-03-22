@@ -19,8 +19,11 @@ class GuideSection {
   String toRawJson() => json.encode(toJson());
 
   factory GuideSection.fromJson(Map<String, dynamic> json) => GuideSection(
-        items: List<GuideSectionItem>.from(
-            json["items"].map((x) => GuideSectionItem.fromJson(x))),
+        items: readListSafe<GuideSectionItem>(
+          json,
+          'items',
+          (dynamic json) => GuideSectionItem.fromJson(json),
+        ),
         heading: readStringSafe(json, 'heading'),
       );
 

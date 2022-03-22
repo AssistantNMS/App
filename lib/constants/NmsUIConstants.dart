@@ -13,4 +13,5 @@ class NMSUIConstants {
   static const String PatreonHex = 'FF424D';
   static const String ObsoleteAppId = 'tech16';
   static BorderRadius gameItemBorderRadius = BorderRadius.circular(4.0);
+  static EdgeInsets buttonPadding = const EdgeInsets.symmetric(horizontal: 12);
 }

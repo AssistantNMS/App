@@ -3,6 +3,7 @@
 //     final baseGuide = baseGuideFromJson(jsonString);
 
 import 'dart:convert';
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import 'guideSection.dart';
 
@@ -37,17 +38,24 @@ class Guide {
       Guide.fromJson(json.decode(str), folder);
 
   factory Guide.fromJson(Map<String, dynamic> json, String folder) => Guide(
-        guid: json["guid"],
-        title: json["title"],
-        shortTitle: json["shortTitle"],
-        image: json["image"],
-        author: json["author"],
+        guid: readStringSafe(json, 'guid'),
+        title: readStringSafe(json, 'title'),
+        shortTitle: readStringSafe(json, 'shortTitle'),
+        image: readStringSafe(json, 'image'),
+        author: readStringSafe(json, 'author'),
         folder: folder,
-        minutes: json["minutes"] as int,
-        date: DateTime.parse(json["date"]),
-        translatedBy: json["translatedBy"],
-        sections: List<GuideSection>.from(
-            json["sections"].map((x) => GuideSection.fromJson(x))),
-        tags: List<String>.from(json["tags"].map((x) => x as String)),
+        minutes: readIntSafe(json, 'minutes'),
+        date: readDateSafe(json, 'date'),
+        translatedBy: readStringSafe(json, 'translatedBy'),
+        sections: readListSafe<GuideSection>(
+          json,
+          'sections',
+          (dynamic json) => GuideSection.fromJson(json),
+        ),
+        tags: readListSafe<String>(
+          json,
+          'tags',
+          (dynamic json) => json.toString(),
+        ),
       );
 }

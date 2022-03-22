@@ -33,12 +33,18 @@ Future<String> asyncInputDialog(BuildContext context, String title,
     ),
     buttons: [
       DialogButton(
-        child: Text(getTranslations().fromKey(LocaleKey.close)),
-        onPressed: () => Navigator.of(context).pop(false),
+        child: Text(
+          getTranslations().fromKey(LocaleKey.close),
+          style: TextStyle(color: getTheme().buttonForegroundColour(context)),
+        ),
+        onPressed: () => getNavigation().pop(context, false),
       ),
       DialogButton(
-        child: Text(getTranslations().fromKey(LocaleKey.apply)),
-        onPressed: () => Navigator.of(context).pop(true),
+        child: Text(
+          getTranslations().fromKey(LocaleKey.apply),
+          style: TextStyle(color: getTheme().buttonForegroundColour(context)),
+        ),
+        onPressed: () => getNavigation().pop(context, true),
       ),
     ],
   ).show(); // This is ugly, I know. Don't touch though, here be Dragons
