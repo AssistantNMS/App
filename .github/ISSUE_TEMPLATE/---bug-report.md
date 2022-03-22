@@ -7,7 +7,10 @@ assignees: ''
 
 ---
 
-Please make sure that you have looked at and read the [I found a Bug and I want to report it](https://github.com/AssistantNMS/App/blob/main/.github/CONTRIBUTING.md#i-found-a-bug-and-want-to-report-it) section of the [Contributing to AssistantNMS](https://github.com/AssistantNMS/App/blob/main/.github/CONTRIBUTING.md) document.
+<!--
+Thank you for reporting issues!
+Please make sure that you have looked at and read the "I found a Bug and I want to report it" section of the Contributing to AssistantNMS document: https://github.com/AssistantNMS/App/blob/main/.github/CONTRIBUTING.md
+-->
 
 **Describe the bug**
 A clear and concise description of what the bug is. If you for example disagree with what the name of an game item is please point out what you believe it should say.
