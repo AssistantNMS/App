@@ -7,10 +7,12 @@ https://pub.dev/packages/molten_navigationbar_flutter
 👷 Features
 [all] Better button handling ??
 [all] Quicksilver merchant page
-[all] Guild missions page
+[web] Guild missions page
 
 [app] search for game IDs
 [app] Fix AssistantApps team page
+
+[web] Tree diagrams https://github.com/brimdata/react-arborist
 
 
 🐛 Bugs

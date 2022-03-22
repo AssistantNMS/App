@@ -36,13 +36,13 @@ Unfortunately almost all of the files in the project are pascal case `appShell.d
 
 ## How Can I Contribute?
 
-## I found a bug and want to report it
+### I found a bug and want to report it
 
 First of all thank you for taking the time to check our guidelines before creating a Github issue 💪
 
 To help keep the issues manageable, please double check that the issue you have, has not been reported already in the issues list. Secondly please ensure that you fill in as much information as possible on the issue. The issue template should help you through the process, sometimes small details help us find the bug quickly.
 
-## Suggesting a Feature
+### Suggesting a Feature
 
 _**Please note:** Just because a feature ticket exists, does not mean that we will or can build the feature._ 
 
