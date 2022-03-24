@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import '../../constants/AppAnimation.dart';
+import '../../constants/AppDuration.dart';
 import '../../constants/Modal.dart';
 
 import '../../contracts/redux/appState.dart';
@@ -35,7 +35,7 @@ class _ExpeditionRewardsListModalBottomSheetWidget
         .toList();
 
     return AnimatedSize(
-      duration: AppAnimation.modal,
+      duration: AppDuration.modal,
       child: Container(
         constraints: modalDefaultSize(context),
         child: FutureBuilder(

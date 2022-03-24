@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/AlienPuzzle.dart';
-import '../../constants/AppAnimation.dart';
+import '../../constants/AppDuration.dart';
 import '../../constants/Modal.dart';
 import '../../contracts/alienPuzzle/alienPuzzle.dart';
 import '../../contracts/alienPuzzle/alienPuzzleReward.dart';
@@ -232,7 +232,7 @@ class _AlienPuzzleModalBottomSheetWidget
     }
 
     return AnimatedSize(
-      duration: AppAnimation.modal,
+      duration: AppDuration.modal,
       child: Container(
         constraints: modalDefaultSize(context),
         child: ListView.builder(

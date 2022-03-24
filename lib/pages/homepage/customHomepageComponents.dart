@@ -4,7 +4,7 @@ import 'dart:math';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../constants/AppAnimation.dart';
+import '../../constants/AppDuration.dart';
 
 import '../../contracts/misc/customMenu.dart';
 
@@ -33,8 +33,8 @@ class _EditingHomepageWidget extends State<EditingHomepageItem>
     super.initState();
     animationController = AnimationController(
       vsync: this,
-      duration: AppAnimation.homescreenWiggle,
-      reverseDuration: AppAnimation.homescreenWiggle,
+      duration: AppDuration.homescreenWiggle,
+      reverseDuration: AppDuration.homescreenWiggle,
     )..addListener(() => setState(() {}));
 
     animationController.repeat(reverse: true);
