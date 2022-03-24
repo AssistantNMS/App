@@ -13,7 +13,10 @@ class LogsModalBottomSheet extends StatelessWidget {
       duration: AppAnimation.modal,
       child: Container(
         constraints: modalFullHeightSize(context),
-        child: TalkerScreen(talker: Talker.instance),
+        child: TalkerScreen(
+          talker: Talker.instance,
+          options: const TalkerScreenOptions(appBarTitle: 'Logs'),
+        ),
       ),
     );
   }
