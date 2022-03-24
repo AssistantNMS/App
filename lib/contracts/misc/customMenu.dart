@@ -195,12 +195,18 @@ List<CustomMenu> getMenuOptionsSection3(
       title: LocaleKey.nmsNews,
       navigateToNamed: Routes.newsPage,
     ),
-    CustomMenu(
-      icon: localGetFromIcon(Icons.show_chart),
-      drawerIcon: localGetDrawerFromIcon(Icons.show_chart),
-      title: LocaleKey.journeyMilestone,
-      navigateToNamed: Routes.journeyMilestonePage,
-    ),
+    if (DateTime.now().isBefore(//
+        PatreonEarlyAccessFeature.newMilestonesPage //
+        ))
+      // TODO remove this check
+      ...[
+      CustomMenu(
+        icon: localGetFromIcon(Icons.show_chart),
+        drawerIcon: localGetDrawerFromIcon(Icons.show_chart),
+        title: LocaleKey.journeyMilestone,
+        navigateToNamed: Routes.journeyMilestonePage,
+      ),
+    ],
     CustomMenu(
       icon: localGetFromIcon(Icons.show_chart),
       drawerIcon: localGetDrawerFromIcon(Icons.show_chart),
