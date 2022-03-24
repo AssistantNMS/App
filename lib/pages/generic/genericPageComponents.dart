@@ -37,50 +37,58 @@ import 'genericPageDescripHighlightText.dart';
 
 List<Widget> getBodyTopContent(BuildContext context, GenericPageViewModel vm,
     GenericPageItem genericItem) {
-  List<Widget> widgets = List.empty(growable: true);
-  bool hdAvailable =
-      genericItem.cdnUrl != null && genericItem.cdnUrl.isNotEmpty;
-  Widget background = vm.displayGenericItemColour
-      ? genericItemImageWithBackground(
-          context,
-          genericItem,
-          hdAvailable: hdAvailable,
-        )
-      : genericItemImage(
-          context,
-          genericItem.icon,
-          imageHero: gameItemIconHero(genericItem),
-          name: genericItem.name,
-          hdAvailable: hdAvailable,
-        );
+  List<Widget> stackWidgets = List.empty(growable: true);
+  bool hdAvailable = genericItem.cdnUrl != null && //
+      genericItem.cdnUrl.isNotEmpty;
   Color iconColour = getOverlayColour(HexColor(genericItem.colour));
-  widgets.add(Stack(
-    key: Key('${genericItem.id}-bg-stack'),
-    children: [
-      background,
-      if (hdAvailable) ...[
-        getHdImage(context, genericItem.icon, genericItem.name, iconColour),
-      ],
-      getFavouriteStar(
-        genericItem.icon,
-        genericItem.id,
-        vm.favourites,
-        iconColour,
-        vm.addFavourite,
-        vm.removeFavourite,
-      ),
-      if ((genericItem?.usage ?? []).contains(UsageKey.hasDevProperties)) ...[
-        getDevSheet(
-          context,
-          genericItem.id,
-          iconColour,
-          hdAvailable,
-        ),
-      ],
-    ],
-  ));
 
-  return widgets;
+  if (vm.displayGenericItemColour) {
+    stackWidgets.add(genericItemImageWithBackground(
+      context,
+      genericItem,
+      hdAvailable: hdAvailable,
+    ));
+  } else {
+    stackWidgets.add(genericItemImage(
+      context,
+      genericItem.icon,
+      imageHero: gameItemIconHero(genericItem),
+      name: genericItem.name,
+      hdAvailable: hdAvailable,
+    ));
+  }
+
+  if (hdAvailable) {
+    stackWidgets.add(
+      getHdImage(context, genericItem.icon, genericItem.name, iconColour),
+    );
+  }
+
+  stackWidgets.add(
+    getFavouriteStar(
+      genericItem.icon,
+      genericItem.id,
+      vm.favourites,
+      iconColour,
+      vm.addFavourite,
+      vm.removeFavourite,
+    ),
+  );
+
+  if ((genericItem?.usage ?? []).contains(UsageKey.hasDevProperties)) {
+    stackWidgets.add(
+      getDevSheet(
+        context,
+        genericItem.id,
+        iconColour,
+        hdAvailable,
+      ),
+    );
+  }
+
+  return [
+    Stack(key: Key('${genericItem.id}-bg-stack'), children: stackWidgets),
+  ];
 }
 
 List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,

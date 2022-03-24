@@ -10,6 +10,7 @@ import '../components/floatingActionButton/cartFloatingActionButton.dart';
 import '../components/floatingActionButton/inventoryFloatingActionButton.dart';
 import '../components/tilePresenters/genericTilePresenter.dart';
 import '../components/tilePresenters/requiredItemTilePresenter.dart';
+import '../constants/AppDuration.dart';
 import '../constants/AppImage.dart';
 import '../constants/IdPrefix.dart';
 import '../contracts/data/platformControlMapping.dart';
@@ -333,7 +334,14 @@ Widget getFavouriteStar(
               FavouriteItem(icon: itemIcon, id: itemId),
             ),
   );
-  return Positioned(top: 0, right: 0, child: favouriteStar);
+  return Positioned(
+    top: 0,
+    right: 0,
+    child: animateWidgetIn(
+      duration: AppDuration.genericIconFadeIn,
+      child: favouriteStar,
+    ),
+  );
 }
 
 Widget getHdImage(
@@ -341,14 +349,17 @@ Widget getHdImage(
   return Positioned(
     top: 0,
     left: 0,
-    child: IconButton(
-      icon: Icon(Icons.hd, color: iconColour),
-      onPressed: genericItemImageOnTap(
-        context,
-        itemIcon,
-        false,
-        itemName,
-        true,
+    child: animateWidgetIn(
+      duration: AppDuration.genericIconFadeIn,
+      child: IconButton(
+        icon: Icon(Icons.hd, color: iconColour),
+        onPressed: genericItemImageOnTap(
+          context,
+          itemIcon,
+          false,
+          itemName,
+          true,
+        ),
       ),
     ),
   );
@@ -373,15 +384,18 @@ String removeAllNameVariables(String input) {
 
 Widget getDevSheet(
     BuildContext context, String itemId, Color iconColour, bool hdAvailable) {
-  Widget iconBtn = IconButton(
-    icon: Icon(Icons.code, color: iconColour),
-    onPressed: () {
-      adaptiveBottomModalSheet(
-        context,
-        hasRoundedCorners: true,
-        builder: (BuildContext innerContext) => DevDetailBottomSheet(itemId),
-      );
-    },
+  Widget iconBtn = animateWidgetIn(
+    duration: AppDuration.genericIconFadeIn,
+    child: IconButton(
+      icon: Icon(Icons.code, color: iconColour),
+      onPressed: () {
+        adaptiveBottomModalSheet(
+          context,
+          hasRoundedCorners: true,
+          builder: (BuildContext innerContext) => DevDetailBottomSheet(itemId),
+        );
+      },
+    ),
   );
 
   return hdAvailable
