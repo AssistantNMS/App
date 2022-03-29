@@ -2,7 +2,7 @@ name: assistantnms_app
 description: Assistant for No Man's Sky
 homepage: https://nmsassistant.com
 # author: Kurt Lourens
-version: 1.102.0+268
+version: 1.103.0+267
 publish_to: 'none'
 
 environment:
@@ -77,15 +77,13 @@ dependencies:
   enum_to_string: 2.0.1
   shared_preferences: 2.0.13
   shared_preferences_windows: 2.1.0
-  talker: 0.8.0
-  talker_flutter: 0.8.0
   after_layout: 1.1.0
 
 dev_dependencies:
   flutter_launcher_icons: 0.9.2
 
 dependency_overrides:
-  google_fonts: 2.2.0
+  # google_fonts: 2.2.0
 #   flutter_svg: ^0.23.0+1
 
 flutter_icons: ## flutter pub run flutter_launcher_icons:main
@@ -106,17 +104,12 @@ flutter:
     - assets/json/en/ # English
     - assets/json/es/ # Spanish
     - assets/json/fr/ # French
-    # - assets/json/hu/ # Hungarian
-    # - assets/json/id/ # Indonesian
     - assets/json/it/ # Italian
     - assets/json/nl/ # Dutch
     - assets/json/pl/ # Polish
     - assets/json/pt-br/ # Portuguese
     - assets/json/pt/ # Portuguese
-    # - assets/json/language.ro.json # Romanian
     - assets/json/ru/ # Russian
-    # - assets/json/language.tr.json # Turkish
-    # - assets/json/language.cs.json # Czech
     - assets/json/zh-hans/ # Simplified Chinese
     - assets/json/zh-hant/ # Traditional Chinese
 
@@ -140,6 +133,7 @@ flutter:
     - assets/guide/TradeQuickReference/
     - assets/guide/AdvancedExoticShipHunting/
     - assets/guide/HowToGetSFreighter/
+    - assets/guide/HowToGetLivingShip/
 
     # Audio
     - assets/audio/
