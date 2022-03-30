@@ -594,6 +594,7 @@ List<Widget> getEggTraits(
 List<Widget> getRewardFrom(
   BuildContext context,
   List<String> usages,
+  bool displayGenericItemColour,
 ) {
   List<Widget> rewardsFromWidgets = List.empty(growable: true);
 
@@ -620,6 +621,7 @@ List<Widget> getRewardFrom(
     rewardsFromWidgets.add(rewardFromTwitchTilePresenter(
       context,
       expSeasonNum,
+      displayGenericItemColour,
     ));
   }
 

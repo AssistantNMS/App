@@ -275,6 +275,7 @@ class GenericPage extends StatelessWidget {
     widgets.addAll(getRewardFrom(
       context,
       (genericItem?.usage ?? []),
+      vm.displayGenericItemColour,
     ));
 
     // ------------------------------ Egg Traits -------------------------------

@@ -15,6 +15,7 @@ class AppImage {
   static const String nmsfmLogo = base + 'special/nmsfm.png';
   static const String cronus = base + 'special/cronus.png';
   static const String twitch = base + 'special/twitch.png';
+  static const String twitchAlt = base + 'special/twitchAlt.png';
 
   static const String drawer = 'drawer/';
   static const String about = drawer + 'about.png';
