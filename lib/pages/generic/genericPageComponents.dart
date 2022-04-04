@@ -613,7 +613,7 @@ List<Widget> getRewardFrom(
     ));
   }
 
-  if (usages.any((u) => u.contains('IsQuicksilver'))) {
+  if (usages.any((u) => u.contains(UsageKey.isQuicksilver))) {
     if (genericItem.baseValueUnits > 0 &&
         genericItem.currencyType == CurrencyType.QUICKSILVER) {
       rewardsFromWidgets.add(rewardFromQuicksilverMerchantTilePresenter(
