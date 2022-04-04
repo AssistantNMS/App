@@ -16,6 +16,8 @@ class AppImage {
   static const String cronus = base + 'special/cronus.png';
   static const String twitch = base + 'special/twitch.png';
   static const String twitchAlt = base + 'special/twitchAlt.png';
+  static const String quicksilver = base + 'special/quicksilver.png';
+  static const String quicksilverAlt = base + 'special/quicksilverAlt.png';
 
   static const String drawer = 'drawer/';
   static const String about = drawer + 'about.png';

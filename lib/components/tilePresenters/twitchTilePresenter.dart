@@ -8,7 +8,7 @@ Widget rewardFromTwitchTilePresenter(
     BuildContext context, String campaignId, bool displayBackgroundColour) {
   return flatCard(
     shadowColor: Colors.transparent,
-    child: genericListTile(
+    child: genericListTileWithSubtitle(
       context,
       leadingImage:
           displayBackgroundColour ? AppImage.twitchAlt : AppImage.twitch,
@@ -16,6 +16,7 @@ Widget rewardFromTwitchTilePresenter(
       name: getTranslations()
           .fromKey(LocaleKey.twitchCampaignNum)
           .replaceAll('{0}', campaignId),
+      subtitle: Text('Twitch Drop'), // TODO translate
     ),
   );
 }

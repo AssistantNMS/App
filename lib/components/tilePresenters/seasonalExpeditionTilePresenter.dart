@@ -301,10 +301,12 @@ Widget rewardFromSeasonalExpeditionTilePresenter(
       whileLoading: getLoading().smallLoadingTile(context),
       whenDoneLoading: (ResultWithValue<SeasonalExpeditionSeason> snapshot) {
         SeasonalExpeditionSeason item = snapshot.value;
-        return genericListTile(
+        return genericListTileWithSubtitle(
           context,
           leadingImage: item.icon,
           name: item.title,
+          subtitle: Text(
+              getTranslations().fromKey(LocaleKey.seasonalExpeditionSeasons)),
           borderRadius: NMSUIConstants.gameItemBorderRadius,
           onTap: () async => await getNavigation().navigateAsync(
             context,

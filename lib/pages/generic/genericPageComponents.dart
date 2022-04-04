@@ -7,6 +7,7 @@ import '../../components/expeditionAlphabetTranslation.dart';
 import '../../components/tilePresenters/eggTraitTilePresenter.dart';
 import '../../components/tilePresenters/inventoryTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemTilePresenter.dart';
+import '../../components/tilePresenters/rewardFromTilePresenter.dart';
 import '../../components/tilePresenters/seasonalExpeditionTilePresenter.dart';
 import '../../components/tilePresenters/statBonusPresenter.dart';
 import '../../components/tilePresenters/twitchTilePresenter.dart';
@@ -593,10 +594,11 @@ List<Widget> getEggTraits(
 
 List<Widget> getRewardFrom(
   BuildContext context,
-  List<String> usages,
+  GenericPageItem genericItem,
   bool displayGenericItemColour,
 ) {
   List<Widget> rewardsFromWidgets = List.empty(growable: true);
+  List<String> usages = genericItem?.usage ?? [];
 
   List<String> expSeasonKeySplit = UsageKey.isExpeditionSeason.split("{0}");
   if (usages.any((u) => u.contains(expSeasonKeySplit[0]))) {
@@ -609,6 +611,17 @@ List<Widget> getRewardFrom(
       context,
       'seas-$expSeasonNum',
     ));
+  }
+
+  if (usages.any((u) => u.contains('IsQuicksilver'))) {
+    if (genericItem.baseValueUnits > 0 &&
+        genericItem.currencyType == CurrencyType.QUICKSILVER) {
+      rewardsFromWidgets.add(rewardFromQuicksilverMerchantTilePresenter(
+        context,
+        genericItem.baseValueUnits.toString(),
+        displayGenericItemColour,
+      ));
+    }
   }
 
   List<String> twitchCampaignKeySplit = UsageKey.isTwitchCapaign.split("{0}");
