@@ -42,24 +42,18 @@ class RetiredDrawerMenuPage extends StatelessWidget {
       title: LocaleKey.exploits,
       navigateToNamed: Routes.exploits,
     ));
-    // menuItems.add(MenuItem(
-    //   image: getCorrectlySizedImageFromIcon(context, Icons.search,
-    //       colour: menuIconColour),
-    //   title: LocaleKey.advancedSearch,
-    //   navigateToNamed: Routes.advancedSearch,
-    // ));
+    menuItems.add(MenuItem(
+      image: getCorrectlySizedImageFromIcon(context, Icons.search,
+          colour: menuIconColour),
+      title: LocaleKey.advancedSearch,
+      navigateToNamed: Routes.advancedSearch,
+    ));
     menuItems.add(MenuItem(
       image: getCorrectlySizedImageFromIcon(context, Icons.favorite,
           colour: menuIconColour),
       title: LocaleKey.valentines,
       navigateToNamed: Routes.valentinesPage,
     ));
-    // menuItems.add(MenuItem(
-    //   image: getCorrectlySizedImageFromIcon(context, Icons.public,
-    //       colour: menuIconColour),
-    //   title: LocaleKey.onlineMeetup2020,
-    //   navigateToNamed: Routes.onlineMeetup2020Page,
-    // ));
     menuItems.add(MenuItem(
       image: getCorrectlySizedImageFromIcon(context, Icons.public,
           colour: menuIconColour),
