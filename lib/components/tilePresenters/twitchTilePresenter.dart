@@ -16,7 +16,7 @@ Widget rewardFromTwitchTilePresenter(
       name: getTranslations()
           .fromKey(LocaleKey.twitchCampaignNum)
           .replaceAll('{0}', campaignId),
-      subtitle: Text('Twitch Drop'), // TODO translate
+      subtitle: Text(getTranslations().fromKey(LocaleKey.twitchDrop)),
     ),
   );
 }

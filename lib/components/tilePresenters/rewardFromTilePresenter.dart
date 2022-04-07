@@ -14,8 +14,7 @@ Widget rewardFromQuicksilverMerchantTilePresenter(
       leadingImage: AppImage.quicksilver,
       imageBackgroundColour: '#2092CC',
       borderRadius: NMSUIConstants.gameItemBorderRadius,
-      // TODO translate
-      name: getTranslations().fromKey(LocaleKey.quicksilverPrice),
+      name: getTranslations().fromKey(LocaleKey.quicksilverCompanion),
       subtitle: Row(children: [
         genericItemQuicksilver(
           context,

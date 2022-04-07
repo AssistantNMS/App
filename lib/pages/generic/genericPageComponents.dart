@@ -618,7 +618,7 @@ List<Widget> getRewardFrom(
         genericItem.currencyType == CurrencyType.QUICKSILVER) {
       rewardsFromWidgets.add(rewardFromQuicksilverMerchantTilePresenter(
         context,
-        genericItem.baseValueUnits.toString(),
+        genericItem.baseValueUnits.toStringAsFixed(0),
         displayGenericItemColour,
       ));
     }
