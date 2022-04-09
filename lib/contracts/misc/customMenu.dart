@@ -197,7 +197,6 @@ List<CustomMenu> getMenuOptionsSection3(
       icon: localGetFromIcon(Icons.show_chart),
       drawerIcon: localGetDrawerFromIcon(Icons.show_chart),
       title: LocaleKey.milestones,
-      isNew: true,
       navigateToNamed: Routes.factionPage,
     ),
     CustomMenu(
