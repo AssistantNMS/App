@@ -1,5 +1,25 @@
-# Assistant for No Man's Sky (Android + iOS apps)
-**Project Owner**: [Khaoz-Topsy][kurtGithub]
+<div align="center">
+  
+  # Assistant for No Man's Sky
+  ### Android & iOS app built in Flutter  
+  ![header](./.github/img/header.png)
+  
+  <br />
+  
+  ![madeWithLove](./.github/img/made-with-love.svg)
+  [![licence](./.github/img/licence-badge.svg)](https://github.com/AssistantNMS/App/blob/master/LICENCE.md) 
+  [![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd] 
+
+  [![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
+  [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
+
+  [![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](#)
+  [![Android review](https://api.assistantapps.com/badge/review/1/1.svg)][googlePlayStore]
+  [![iOS review](https://api.assistantapps.com/badge/review/1/2.svg)][appleAppStore]
+
+  <br />
+</div>
+  
 
 The **Assistant for No Man's Sky** is an app that gives users information about the game, such as crafting recipes, refiner recipes, item costs, blueprint costs, a portal library and guides. Almost all of the data is extracted from the **No Man's Sky** game files. This project would not be possible without the hard work of the NMS Modding community and the [MBinCompiler][mbincompiler].
 
@@ -7,17 +27,21 @@ The **Assistant for No Man's Sky** is an app that gives users information about 
 
 After 2 years of development and maintenance, the app was made open source so that the community to have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
 
-![madeWithLove](./.github/img/made-with-love.svg)
-[![licence](./.github/img/licence-badge.svg)](https://github.com/AssistantNMS/App/blob/master/LICENCE.md) <br />
-[![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd] 
+<div align="center">
+  <h3>
+    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#running-the-project">Getting Started</a>
+    <span> · </span>
+    <a href="https://github.com/AssistantNMS/App/blob/main/.github/CONTRIBUTING.md">Contributing Guidelines</a>
+    <span> · </span>
+    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#builds-cicd">Build statuses</a>
+    <span> · </span>
+    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#links">More Links</a>
+    <span> · </span>
+    <a href="https://github.com/AssistantNMS/App/blob/main/.github/SUPPORT.md">Support</a>
+  </h3>
+</div>
 
-[![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
-[![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
-
-[![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](#) <br />
-[![Android review](https://api.assistantapps.com/badge/review/1/1.svg)][googlePlayStore] <br />
-[![iOS review](https://api.assistantapps.com/badge/review/1/2.svg)][appleAppStore]
-
+<br />
 
 ## Running the project
 **Prerequisites:**
@@ -28,10 +52,15 @@ After 2 years of development and maintenance, the app was made open source so th
 1. Rename the `env.dart.template` file to `env.dart`
 2. Flutter
 
+<br />
+
 ## Contributing
+**Project Owner**: [Khaoz-Topsy][kurtGithub]
 Please take a look at the [Contribution Guideline](./.github/CONTRIBUTING.md) before creating an issue or pull request.
 
 If you would like to help add languages to the app please use this tool [AssistantApps tool][assistantAppsTools].
+
+<br />
 
 ## Builds (CI/CD)
 The Mobile Apps are built and released to the [Google Play Store][googlePlayStore] and [Apple App Store Store][appleAppStore] using [CodeMagic][codeMagic].
@@ -42,6 +71,8 @@ The Mobile Apps are built and released to the [Google Play Store][googlePlayStor
 - ![Codemagic build status](https://api.codemagic.io/apps/5d9da9057a0a9500105180bf/5d9dc56b7a0a95000a475d84/status_badge.svg) - iOS Build
 
 __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed even though it actually successfully built and pushed the `.ipa` file to the Apple App Store. This is because they poll the App Store checking if the `.ipa` file is there and after a few attempts throw an error. So ignore build failures for anything that has to do with iOS 🙄.__
+
+<br />
 
 ## Links
 [![Website](https://img.shields.io/badge/Website-nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantnmsWebsite] <br />
