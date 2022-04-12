@@ -13,9 +13,9 @@
   [![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
   [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
 
-  [![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](#)<br />
   [![Android review](https://api.assistantapps.com/badge/review/1/1.svg)][googlePlayStore]
-  [![iOS review](https://api.assistantapps.com/badge/review/1/2.svg)][appleAppStore]
+  [![iOS review](https://api.assistantapps.com/badge/review/1/2.svg)][appleAppStore]<br />
+  [![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](#)
 
   <br />
 </div>
