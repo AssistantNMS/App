@@ -5,21 +5,20 @@
   ![header](./.github/img/header.png)
   
   <br />
-  
-  ![madeWithLove](./.github/img/made-with-love.svg)
-  [![licence](./.github/img/licence-badge.svg)](https://github.com/AssistantNMS/App/blob/master/LICENCE.md) 
-  [![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd] 
-
-  [![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
-  [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
-
-  [![Android review](https://api.assistantapps.com/badge/review/1/1.svg)][googlePlayStore]
-  [![iOS review](https://api.assistantapps.com/badge/review/1/2.svg)][appleAppStore]<br />
-  [![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](#)
-
-  <br />
 </div>
   
+![madeWithLove](./.github/img/made-with-love.svg)
+[![licence](./.github/img/licence-badge.svg)](https://github.com/AssistantNMS/App/blob/master/LICENCE.md)<br />
+[![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd] 
+
+[![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
+[![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
+
+[![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](#)<br />
+[![Android review](https://api.assistantapps.com/badge/review/1/1.svg)][googlePlayStore]<br />
+[![iOS review](https://api.assistantapps.com/badge/review/1/2.svg)][appleAppStore]
+
+<br />  
 
 The **Assistant for No Man's Sky** is an app that gives users information about the game, such as crafting recipes, refiner recipes, item costs, blueprint costs, a portal library and guides. Almost all of the data is extracted from the **No Man's Sky** game files. This project would not be possible without the hard work of the NMS Modding community and the [MBinCompiler][mbincompiler].
 
