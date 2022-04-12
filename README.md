@@ -56,7 +56,7 @@ After 2 years of development and maintenance, the app was made open source so th
 <br />
 
 ## Contributing
-**Project Owner**: [Khaoz-Topsy][kurtGithub]
+**Project Owner**: [Khaoz-Topsy][kurtGithub]<br /><br />
 Please take a look at the [Contribution Guideline](./.github/CONTRIBUTING.md) before creating an issue or pull request.
 
 If you would like to help add languages to the app please use this tool [AssistantApps tool][assistantAppsTools].
