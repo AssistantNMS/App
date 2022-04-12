@@ -229,35 +229,37 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
     }
   }
 
-  switch (genericItem.blueprintCostType) {
-    case CurrencyType.NANITES:
-      String bpCostText = getTranslations().fromKey(LocaleKey.blueprintCost);
-      int bpCost = genericItem.blueprintCost;
-      chipList.add(
-        genericItemNanites(
+  int bpCost = genericItem.blueprintCost;
+  if (bpCost > 0) {
+    switch (genericItem.blueprintCostType) {
+      case CurrencyType.NANITES:
+        String bpCostText = getTranslations().fromKey(LocaleKey.blueprintCost);
+        chipList.add(
+          genericItemNanites(
+            context,
+            "$bpCostText: $bpCost",
+            colour: chipColour,
+          ),
+        );
+        break;
+      case CurrencyType.SALVAGEDDATA:
+        chipList.add(genericItemSalvagedData(
           context,
-          "$bpCostText: $bpCost",
+          genericItem.blueprintCost.toStringAsFixed(0),
           colour: chipColour,
-        ),
-      );
-      break;
-    case CurrencyType.SALVAGEDDATA:
-      chipList.add(genericItemSalvagedData(
-        context,
-        genericItem.blueprintCost.toStringAsFixed(0),
-        colour: chipColour,
-      ));
-      break;
-    case CurrencyType.FACTORYOVERRIDE:
-      chipList.add(genericItemFactoryOverride(
-        context,
-        genericItem.blueprintCost.toStringAsFixed(0),
-        colour: chipColour,
-      ));
-      break;
-    case CurrencyType.NONE:
-    default:
-      break;
+        ));
+        break;
+      case CurrencyType.FACTORYOVERRIDE:
+        chipList.add(genericItemFactoryOverride(
+          context,
+          genericItem.blueprintCost.toStringAsFixed(0),
+          colour: chipColour,
+        ));
+        break;
+      case CurrencyType.NONE:
+      default:
+        break;
+    }
   }
 
   // if (genericItem.cookingValue != null && genericItem.cookingValue > 0.0) {
