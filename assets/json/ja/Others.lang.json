@@ -53,7 +53,7 @@
     "Icon": "other/3.png",
     "Name": "古代の鍵",
     "Group": "時を超越する遺物",
-    "Description": "鍛鉄でできた重みのある鍵。\n近くに錠があるはずだが...",
+    "Description": "鍛鉄でできた重みのある鍵。近くに錠があるはずだが...",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -101,7 +101,7 @@
     "Icon": "other/5.png",
     "Name": "ナビゲーションデータ",
     "Group": "暗号化されたナビゲーションデータ",
-    "Description": "暗号化されたナビゲーションデータ。\n\nこの移植性の高いデータユニットには、とある惑星の地図情報がすべて保存されている。\n\n宇宙ステーションにいる<TRADEABLE>地図製作者<>に、\n<STELLAR>利用可能な星図<>と交換してもらえるかもしれない。",
+    "Description": "暗号化されたナビゲーションデータ。この移植性の高いデータユニットには、とある惑星の地図情報がすべて保存されている。\n\n宇宙ステーションにいる<TRADEABLE>地図製作者<>に、<STELLAR>利用可能な星図<>と交換してもらえるかもしれない。",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -2118,7 +2118,7 @@
     "Icon": "other/93.png",
     "Name": "コンパニオンの卵",
     "Group": "%NAME%の遺伝物質",
-    "Description": "生きている受精卵。%READY%\n\n%MODIFIED%\n\nスキャンにより、%SIZE%と%TRAIT%である遺伝的ポテンシャルを持つ存在が中にいると表示されている。",
+    "Description": "生きている受精卵。%READY%%EXTRA%\n\n%MODIFIED%\n\nスキャンにより、%SIZE%と%TRAIT%である遺伝的ポテンシャルを持つ存在が中にいると表示されている。",
     "BaseValueUnits": 0.0,
     "CurrencyType": "Credits",
     "Colour": "311A49",
@@ -4766,6 +4766,1260 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other216",
+    "Icon": "other/216.png",
+    "Name": "偽造パスポート",
+    "Group": "上書きされたデジタルレコード",
+    "Description": "偽造 <TECHNOLOGY>宇宙船登録書類<>。このデジタル署名は、これまでに重犯罪および軽犯罪歴がないことを保証する。\n\n<TECHNOLOGY>宇宙ステーションコア<> で使用することで、任意のネガティブな <STELLAR>派閥の評価<> 記録をリセットできる。",
+    "BaseValueUnits": 256000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other217",
+    "Icon": "other/217.png",
+    "Name": "海賊のマップの一部（1/3）",
+    "Group": "暗号化された地理データ",
+    "Description": "困った<STELLAR>貨物船の船長<>から手に入れた座標データの一部。この航路図には海賊のモットーが記されている：\n\n「我らはこの新たな銀河に破滅をもたらす。これまでの銀河、そしてこれから向かう銀河と同じように！」\n\nこのデータは海賊団「<SPECIAL>ザ・ブライト<>」にとって極めて重要なものであり、奴らはどんな手を使っても取り返そうとするだろう。",
+    "BaseValueUnits": 88.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 88
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other218",
+    "Icon": "other/218.png",
+    "Name": "海賊のマップの一部（2/3）",
+    "Group": "暗号化された地理データ",
+    "Description": "海賊団「<SPECIAL>ザ・ブライト<>」により破壊された<STELLAR>貨物船<>から得られた座標データの一部。この航路図には海賊のモットーが記されている：\n\n「銀河トンネルは我らザ・ブライトのものだ！」\n\n航路情報は破損しているが、<STELLAR>貨物船の船長<>から手に入れたデータと関連性がありそうだ。",
+    "BaseValueUnits": 88.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 88
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other219",
+    "Icon": "other/219.png",
+    "Name": "海賊のマップの一部（3/3）",
+    "Group": "暗号化された地理データ",
+    "Description": "墜落し海底に沈んだ<STELLAR>宇宙船<>から得られた座標データの一部。この航路図には海賊のモットーが記されている：\n\n「トラベラーを根絶やしにせよ！ 銀河全土がザ・ブライトの前に屈するのだ！」\n\n現在の状態では航行情報は読み出せない。<STELLAR>貨物船の船長<>から手に入れたデータと関連性がありそうだ。",
+    "BaseValueUnits": 88.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 88
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other220",
+    "Icon": "other/220.png",
+    "Name": "海賊のマップ",
+    "Group": "不正な地理データ",
+    "Description": "海賊団「<SPECIAL>ザ・ブライト<>」に襲われた者から取得した<COMMODITY>宝の在処の座標<>を再構築したもの。",
+    "BaseValueUnits": 888.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "other217",
+        "Quantity": 1
+      },
+      {
+        "Id": "other218",
+        "Quantity": 1
+      },
+      {
+        "Id": "other219",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "データをエクソスーツ誘導マーカーに変換"
+    ],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other221",
+    "Icon": "other/221.png",
+    "Name": "ランデブービーコン",
+    "Group": "ナビゲーションデータレコーダー",
+    "Description": "故障した船の残骸から入手したマークのない <TECHNOLOGY>ナビゲーションビーコン<>。\n\nビーコンを起動（<IMG>FE_ALT1<>）を使用して配備すると、故障した船の最後の軌跡を遡ることができる。",
+    "BaseValueUnits": 888.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "ビーコンを起動して座標をマークする"
+    ],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other222",
+    "Icon": "other/222.png",
+    "Name": "自由への切符",
+    "Group": "セキュアシステムパス",
+    "Description": "「栄光の生存者！ <STELLAR>約束の星<> は君のものだ！」\n\n「<STELLAR>自由の声」<TECHNOLOGY><> から取得したセキュアシステムパス<>。\nパスを選択し、招待の承諾（<IMG>FE_ALT1<>） を使用すると、ナビゲーションシステムに位置を固定する。",
+    "BaseValueUnits": 888.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "自由の声の呼びかけを承諾する"
+    ],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other223",
+    "Icon": "other/223.png",
+    "Name": "血塩",
+    "Group": "密輸品",
+    "Description": "悪臭を放つどす黒い結晶の入った袋。中身は粘性蒸発トラップ内で生産された有機塩であり、違法フェロモンの製造に使用される。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
+    "BaseValueUnits": 2000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other224",
+    "Icon": "other/224.png",
+    "Name": "盗まれたDNAサンプル",
+    "Group": "密輸品",
+    "Description": "遺伝子の違法な改変を防ぐための標準的なバイオセキュリティ機構が施されていない、未登録のDNAサンプルが入った密閉バイアル。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
+    "BaseValueUnits": 9000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties",
+      "IsEggIngredient"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other225",
+    "Icon": "other/225.png",
+    "Name": "ムーンエーテル",
+    "Group": "密輸品",
+    "Description": "バットに入った非常に揮発性の高い液体。その気体は極めて引火性が高く、また強力な鎮静薬としての効能を持つ。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
+    "BaseValueUnits": 18000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other226",
+    "Icon": "other/226.png",
+    "Name": "プリズムフェザー",
+    "Group": "密輸品",
+    "Description": "真空密閉されたまばゆいばかりの美しい羽根の束。万華鏡のように見る者を魅了するこの非現実的な羽を残した動物は絶滅して久しい。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
+    "BaseValueUnits": 32000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other227",
+    "Icon": "other/227.png",
+    "Name": "ウガァウガァ",
+    "Group": "密輸品",
+    "Description": "現在では使用が禁止されているヴァイキーンのバトルガスキャニスター。伝統的に戦闘の直前に吸入して使用されていた。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
+    "BaseValueUnits": 58000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other228",
+    "Icon": "other/228.png",
+    "Name": "模造回路",
+    "Group": "密輸品",
+    "Description": "捕獲した宇宙ステーションコアをリバースエンジニアリングして作られた回路。この非正規の回路は、ブラックマーケットやグレーマーケットのテクノロジーに広く使用される。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
+    "BaseValueUnits": 68000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other229",
+    "Icon": "other/229.png",
+    "Name": "禁止された武器",
+    "Group": "密輸品",
+    "Description": "回収されたセンチネル軍の残骸品を組み合わせて作られた強力な武器。銀河中のならず者たちが好んで使用する。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
+    "BaseValueUnits": 83000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other230",
+    "Icon": "other/230.png",
+    "Name": "はじまりの民のレリック",
+    "Group": "密輸品",
+    "Description": "没落したゲックの帝国の遺物。全銀河の主要な文明によってその使用を非難、禁止された。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
+    "BaseValueUnits": 98000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other231",
+    "Icon": "other/231.png",
+    "Name": "無法者フード",
+    "Group": "Unlockable Hood",
+    "Description": "特製<STELLAR>エクソスーツデザインオーバーライド<>。\n\n<TECHNOLOGY>外見変更モジュール<>でエクソスーツのデザインを変更することができる。",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "FFFFFF",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other232",
+    "Icon": "other/232.png",
+    "Name": "閃光のシップトレイル",
+    "Group": "宇宙船外装オーバーライド",
+    "Description": "<STELLAR>スターシップ排気専用モディファイア<>。 \n\n緊急時に無法者が手作業で組み立てた、今にも壊れそうな船の排気ノズル。時折爆発することがあるが、機体の操縦性には悪影響はない。\n\nこの<TECHNOLOGY>テクノロジー<>を宇宙船のアイテムケースに装着すると、エンジンの排気の見た目が変わる。",
+    "BaseValueUnits": 2100.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other233",
+    "Icon": "other/233.png",
+    "Name": "恐怖の船長ファングのポスター",
+    "Group": "デコレーション",
+    "Description": "粘着性があり、しわになりにくいウォールアート。\n船長ファングと恐るべき悪行の数々を知らないヴァイキーンはほとんどいない。この船長が実在の人物であるかどうかは定かではない。もしかすると、生意気な若造を震え上がらせるための作り話かもしれない。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other234",
+    "Icon": "other/234.png",
+    "Name": "無法者のポスター",
+    "Group": "デコレーション",
+    "Description": "粘着性があり、しわになりにくいウォールアート。\n海賊や前科者、センチネルの法に従わない反乱者を称えている。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other235",
+    "Icon": "other/235.png",
+    "Name": "レスブールXIIIのポスター",
+    "Group": "デコレーション",
+    "Description": "粘着性があり、しわになりにくいウォールアート。\n海賊が支配する悪名高き星を描いた反政府ポスター。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other236",
+    "Icon": "other/236.png",
+    "Name": "海賊フラッグ",
+    "Group": "海賊フラッグ",
+    "Description": "ビロードのような旗に刻まれたこの真っ赤な頭蓋骨は、敵対陣営に対する警告として機能する。\n\n建設可能な特製の基地装飾品。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other237",
+    "Icon": "other/237.png",
+    "Name": "団結のフラッグ",
+    "Group": "海賊フラッグ",
+    "Description": "複数の銀河間ギルドの協力で生まれた記章。\n\n建設可能な特製の基地装飾品。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other238",
+    "Icon": "other/238.png",
+    "Name": "紋章のフラッグ",
+    "Group": "海賊フラッグ",
+    "Description": "この旗に施された繊細な金色の刺繍は、居住可能なあらゆる基地を洗練された優雅さで彩る。\n\n建設可能な特製の基地装飾品。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other239",
+    "Icon": "other/239.png",
+    "Name": "オービタルフラッグ",
+    "Group": "海賊フラッグ",
+    "Description": "真紅色と灰色の布地を使って凝視する瞳が縫い付けられた、惑星軌道の抽象的な表現。\n\n建設可能な特製の基地装飾品。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other240",
+    "Icon": "other/240.png",
+    "Name": "青緑のフラッグ",
+    "Group": "海賊フラッグ",
+    "Description": "対照的な緑と紫でデザインされたこの旗は、緑豊かな銀河を探す者にインスパイアされたもの。\n\n建設可能な特製の基地装飾品。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other241",
+    "Icon": "other/241.png",
+    "Name": "ウェイワードキューブ",
+    "Group": "漂う原始の者",
+    "Description": "建設可能な特製の基地装飾品。\n\n別の次元から軌道ステーションに流れ着いたところを旅の商人に囚われた立方体の生命体。居住可能な基地で飼うことで、おとなしいペットになる。",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other242",
+    "Icon": "other/52.png",
+    "Name": "称号：「荒廃のハンター」",
+    "Group": "オーダーメイド個人識別",
+    "Description": "探検「<STELLAR>荒廃<>」の成功、不正に奪われた金の華麗な奪取、そして海賊の秘密の発見を記念した特別な<STELLAR>探検者の称号<>。\n\n<TECHNOLOGY>外見変更モジュール<>でプロフィールに付けることができる。",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other243",
+    "Icon": "other/243.png",
+    "Name": "荒廃の探検ステッカー",
+    "Group": "デコレーション",
+    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\n\nこのステッカーは探検「<STELLAR>荒廃<>」の成功、不正に奪われた金の華麗な奪取、そして海賊の秘密の発見を記念したもの。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other244",
+    "Icon": "other/244.png",
+    "Name": "荒廃の探検バナー",
+    "Group": "オーダーメイド個人識別バナー（旗）",
+    "Description": "「荒廃」の<STELLAR>探検<>の成功、不正に奪われた金の華麗な奪取、そして海賊の秘密の発見を記念した特製の<STELLAR>自己表現用アイテム<>。\n\n<TECHNOLOGY>外見変更モジュール<>でプロフィールに付けることができる。",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other245",
+    "Icon": "other/245.png",
+    "Name": "無法者ケープ",
+    "Group": "Unlockable Cape",
+    "Description": "特製<STELLAR>エクソスーツデザインオーバーライド<>。\n\n悪名高い海賊団<SPECIAL>ザ・ブライト<>から盗んだ戦闘用ケープ。化学物質に浸したナノファイバ－で織られた布地は、ジェットパックの排気の熱にも耐える。\n\n<TECHNOLOGY>外見変更モジュール<>でエクソスーツのデザインを変更することができる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other246",
+    "Icon": "other/246.png",
+    "Name": "ネイヤムの輝く征服者",
+    "Group": "特製宇宙船",
+    "Description": "特別製の<STELLAR>宇宙船<>。効率的な敵船破壊用として違法に改造された<TECHNOLOGY>ポジトロン・イジェクター<>があらかじめ取り付けられている。\n\nこの宇宙船は<STELLAR>取得<>して手持ちに加えるか、現在の宇宙船と<STELLAR>交換<>できる。惑星上ではクイックメニュー（<IMG>QUICK_MENU<>）から宇宙船を招集できる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other247",
+    "Icon": "other/247.png",
+    "Name": "ファイナル・イウラノーノII",
+    "Group": "特製宇宙船",
+    "Description": "特別製の<STELLAR>宇宙船<>。効率的な銀河探査用として違法に改造された<TECHNOLOGY>ハイパードライブ<>と<TECHNOLOGY>パルスドライブ<>が取り付けられている。\n\nこの宇宙船は<STELLAR>取得<>して手持ちに加えるか、現在の宇宙船と<STELLAR>交換<>できる。惑星上ではクイックメニュー（<IMG>QUICK_MENU<>）から宇宙船を招集できる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other248",
+    "Icon": "other/248.png",
+    "Name": "プライム・ボイスTU7",
+    "Group": "特製宇宙船",
+    "Description": "特別製の<STELLAR>宇宙船<>。効率的な敵船破壊用として違法に改造された<TECHNOLOGY>フォトンキャノン<>があらかじめ取り付けられている。\n\nこの宇宙船は<STELLAR>取得<>して手持ちに加えるか、現在の宇宙船と<STELLAR>交換<>できる。惑星上ではクイックメニュー（<IMG>QUICK_MENU<>）から宇宙船を招集できる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other249",
+    "Icon": "other/249.png",
+    "Name": "UB7ダテバヤ",
+    "Group": "特製宇宙船",
+    "Description": "特別製の<STELLAR>宇宙船<>。貨物を素早く輸送するための<TECHNOLOGY>テレポート受信機<>があらかじめ取り付けられている。\n\nこの宇宙船は<STELLAR>取得<>して手持ちに加えるか、現在の宇宙船と<STELLAR>交換<>できる。惑星上ではクイックメニュー（<IMG>QUICK_MENU<>）から宇宙船を招集できる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other250",
+    "Icon": "other/250.png",
+    "Name": "ボリベッツの航海YZ7",
+    "Group": "特製宇宙船",
+    "Description": "特別製の<STELLAR>宇宙船<>。広々とした貨物室があり、違法に改造された<TECHNOLOGY>偏向シールド<>があらかじめ取り付けられている。\n\nこの宇宙船は<STELLAR>取得<>して手持ちに加えるか、現在の宇宙船と<STELLAR>交換<>できる。惑星上ではクイックメニュー（<IMG>QUICK_MENU<>）から宇宙船を招集できる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other251",
+    "Icon": "other/251.png",
+    "Name": "O. ティジェラエウミスの卵",
+    "Group": "限定コンパニオンの卵",
+    "Description": "生きている受精卵で、<TRADEABLE>孵化の準備万端！<>\n\n中の小さな生き物が外へ出ようと、弧を描いた角が卵の内側をこすっている。\n\nスキャンにより、主人の脅威に対して非常に攻撃的となる<FUEL>凶暴<>な性質の遺伝的ポテンシャルを持つ存在が中にいると表示されている。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other252",
+    "Icon": "other/252.png",
+    "Name": "W. フレガエイオサスの卵",
+    "Group": "限定コンパニオンの卵",
+    "Description": "生きている受精卵で、<TRADEABLE>孵化の準備万端！<>\n\n内側からはこもった鳴き声が聞こえてくる。\n\nスキャンにより、<TRADEABLE>いたずら好き<>な性質の遺伝的ポテンシャルを持つ存在が中にいると表示されている。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other253",
+    "Icon": "other/253.png",
+    "Name": "J. ゼノアリイの卵",
+    "Group": "限定コンパニオンの卵",
+    "Description": "生きている受精卵で、<TRADEABLE>孵化の準備万端！<>\n\n内部の合成生命体は、エネルギーを浪費しないよう完全に静止している。\n\nスキャンにより、<TECHNOLOGY>自立心旺盛<>な特徴の遺伝的ポテンシャルを持つ存在が中にいると表示されている。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other254",
+    "Icon": "other/254.png",
+    "Name": "Z. ペタルポエメウムの卵",
+    "Group": "限定コンパニオンの卵",
+    "Description": "生きている受精卵で、<TRADEABLE>孵化の準備万端！<>\n\n中の生き物は卵に触れるたび、孵化できるかもしれないとワクワクして体を動かす。\n\nスキャンにより、優しく触られると落ち着く<TRADEABLE>気の優しい<>性質の遺伝的ポテンシャルを持つ存在が中にいると表示されている。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other255",
+    "Icon": "other/255.png",
+    "Name": "D. ジェンタリウムの卵",
+    "Group": "限定コンパニオンの卵",
+    "Description": "生きている受精卵で、<TRADEABLE>孵化の準備万端！<>\n\n軟骨のはさみが卵の内側を優しく挟んでいる。\n\nスキャンにより、役に立つ任務を与えられたときが最も嬉しく思う<STELLAR>従順<>な特徴の遺伝的ポテンシャルを持つ存在が中にいると表示されている。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other256",
+    "Icon": "other/256.png",
+    "Name": "デラックス花火パック",
+    "Group": "パイロテクニクスマルチパック",
+    "Description": "見事な演出の高級花火3点セット。<TECHNOLOGY>三段炸裂<>タイプ、<FUEL>二重クロム<>タイプ、<COMMODITY>ハークの輪<>タイプが入っている。着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>（<IMG>BUILD_MENU<>）から打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて使わないこと。室内での使用は推奨しない。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other257",
+    "Icon": "other/256.png",
+    "Name": "デラックス花火パック",
+    "Group": "パイロテクニクスマルチパック",
+    "Description": "見事な演出の高級花火3点セット。<TECHNOLOGY>三段炸裂<>タイプ、<FUEL>二重クロム<>タイプ、<COMMODITY>ハークの輪<>タイプが入っている。着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>（<IMG>BUILD_MENU<>）から打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて使わないこと。室内での使用は推奨しない。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other258",
+    "Icon": "other/256.png",
+    "Name": "デラックス花火パック",
+    "Group": "パイロテクニクスマルチパック",
+    "Description": "見事な演出の高級花火3点セット。<TECHNOLOGY>三段炸裂<>タイプ、<FUEL>二重クロム<>タイプ、<COMMODITY>ハークの輪<>タイプが入っている。着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>（<IMG>BUILD_MENU<>）から打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて使わないこと。室内での使用は推奨しない。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other259",
+    "Icon": "other/256.png",
+    "Name": "デラックス花火パック",
+    "Group": "パイロテクニクスマルチパック",
+    "Description": "見事な演出の高級花火3点セット。<TECHNOLOGY>三段炸裂<>タイプ、<FUEL>二重クロム<>タイプ、<COMMODITY>ハークの輪<>タイプが入っている。着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>（<IMG>BUILD_MENU<>）から打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて使わないこと。室内での使用は推奨しない。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other260",
+    "Icon": "other/256.png",
+    "Name": "デラックス花火パック",
+    "Group": "パイロテクニクスマルチパック",
+    "Description": "見事な演出の高級花火3点セット。<TECHNOLOGY>三段炸裂<>タイプ、<FUEL>二重クロム<>タイプ、<COMMODITY>ハークの輪<>タイプが入っている。着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>（<IMG>BUILD_MENU<>）から打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて使わないこと。室内での使用は推奨しない。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other261",
+    "Icon": "other/261.png",
+    "Name": "ワーム狩りIステッカー",
+    "Group": "デコレーション",
+    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこの<SPECIAL>呪われた<>ステッカーは<STELLAR>タイタンワーム<>を模している。\n\n「ワームロードは砂塵舞う大地にそびえ立ち、その身体は空となる。」",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other262",
+    "Icon": "other/262.png",
+    "Name": "ワーム狩りIIステッカー",
+    "Group": "デコレーション",
+    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこの<SPECIAL>呪われた<>ステッカーは<STELLAR>タイタンワーム<>を模している。\n\n「アトラスの血管が顕になっていた。」",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other263",
+    "Icon": "other/263.png",
+    "Name": "ワーム狩りIIIステッカー",
+    "Group": "デコレーション",
+    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこの<SPECIAL>呪われた<>ステッカーは<STELLAR>タイタンワーム<>を模している。\n\n「疲弊した末の歓喜は言葉にならない。」",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other264",
+    "Icon": "other/264.png",
+    "Name": "ワーム狩りIVステッカー",
+    "Group": "デコレーション",
+    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこの<SPECIAL>呪われた<>ステッカーは<STELLAR>タイタンワーム<>を模している。\n\n「それが飲み込むたびに我々は転がったが、滑りやすい壁を力の限り掴んだ。」",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other265",
+    "Icon": "other/265.png",
+    "Name": "ワーム狩りVステッカー",
+    "Group": "デコレーション",
+    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこの<SPECIAL>呪われた<>ステッカーは<STELLAR>タイタンワーム<>を模している。\n\n「我が同志たちは生まれ変わった、新たな蔓となって聖なる塵から立ち上がった。」",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other266",
+    "Icon": "other/266.png",
+    "Name": "宇宙飛行ポスター",
+    "Group": "デコレーション",
+    "Description": "粘着性があり、しわになりにくいウォールアート。\n宇宙船に乗って飛び立つ喜びを祝うポスター。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other267",
+    "Icon": "other/267.png",
+    "Name": "オービタルポスター",
+    "Group": "デコレーション",
+    "Description": "粘着性があり、しわになりにくいウォールアート。\n物思いにふける探検家の頭上に浮かぶ宇宙ステーションが描かれている。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other268",
+    "Icon": "other/268.png",
+    "Name": "艦船のカタログポスター",
+    "Group": "デコレーション",
+    "Description": "粘着性があり、しわになりにくいウォールアート。\n様々な宇宙船のシルエットが並んでいる。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
