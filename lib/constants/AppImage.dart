@@ -102,6 +102,7 @@ class AppImage {
   static const String updatePrisms = update + 'prisms.png';
   static const String updateFrontiers = update + 'frontiers.png';
   static const String updateSentinal = update + 'sentinal.png';
+  static const String updateOutlaws = update + 'outlaws.png';
 
   static const String milestonePatches = 'milestonePatches/';
   static const String expeditionsUnusedPatches =
