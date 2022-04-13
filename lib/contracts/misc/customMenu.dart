@@ -1,9 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/dialogs/patreonDialog.dart';
 import '../../constants/AppImage.dart';
-import '../../constants/Patreon.dart';
 import '../../constants/Routes.dart';
 import '../../redux/modules/setting/drawerSettingsViewModel.dart';
 
@@ -195,34 +193,11 @@ List<CustomMenu> getMenuOptionsSection3(
       title: LocaleKey.nmsNews,
       navigateToNamed: Routes.newsPage,
     ),
-    if (DateTime.now().isBefore(//
-        PatreonEarlyAccessFeature.newMilestonesPage //
-        ))
-      // TODO remove this check
-      ...[
-      CustomMenu(
-        icon: localGetFromIcon(Icons.show_chart),
-        drawerIcon: localGetDrawerFromIcon(Icons.show_chart),
-        title: LocaleKey.journeyMilestone,
-        navigateToNamed: Routes.journeyMilestonePage,
-      ),
-    ],
     CustomMenu(
       icon: localGetFromIcon(Icons.show_chart),
       drawerIcon: localGetDrawerFromIcon(Icons.show_chart),
       title: LocaleKey.milestones,
-      isLocked: isPatreonFeatureLocked(
-        PatreonEarlyAccessFeature.newMilestonesPage,
-        vm.isPatron,
-      ),
-      isNew: true,
       navigateToNamed: Routes.factionPage,
-      onTap: (BuildContext navContext) => handlePatreonDialogForRoute(
-        navContext,
-        vm.isPatron,
-        route: Routes.factionPage,
-        unlockDate: PatreonEarlyAccessFeature.newMilestonesPage,
-      ),
     ),
     CustomMenu(
       icon: getListTileImage(AppImage.timer, size: imageSize),

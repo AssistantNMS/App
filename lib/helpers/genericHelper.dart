@@ -49,13 +49,11 @@ Widget genericItemNanites(BuildContext context, String nanites,
     );
 Widget genericItemQuicksilver(BuildContext context, String quicksilver,
         {Color colour}) =>
-    Container(
-      child: genericItemIntCurrency(
-        context,
-        quicksilver,
-        '${getPath().imageAssetPathPrefix}/rawMaterials/57.png',
-        colour: colour,
-      ),
+    genericItemIntCurrency(
+      context,
+      quicksilver,
+      '${getPath().imageAssetPathPrefix}/rawMaterials/57.png',
+      colour: colour,
     );
 Widget genericItemSalvagedData(BuildContext context, String salvagedData,
         {Color colour}) =>

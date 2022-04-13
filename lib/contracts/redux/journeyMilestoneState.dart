@@ -26,8 +26,8 @@ class JourneyMilestoneState {
     List<StoredFactionMission> storedFactions,
   }) {
     return JourneyMilestoneState(
-      storedMilestones: storedMilestones ?? List.empty(),
-      storedFactions: storedFactions ?? List.empty(),
+      storedMilestones: storedMilestones ?? this.storedMilestones,
+      storedFactions: storedFactions ?? this.storedFactions,
     );
   }
 

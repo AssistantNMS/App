@@ -909,15 +909,21 @@
         "Value": "100"
       },
       {
-        "Name": "Boost",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "9,900"
-      },
-      {
         "Name": "Pulse Drive Power",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Maneuverability",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "100"
+      },
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -951,22 +957,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Pulse Drive Fuel Efficiency",
+        "Name": "Pulse Drive Power",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
+        "Image": "recharge2",
+        "Value": "85"
       },
       {
-        "Name": "Boost",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
+        "Name": "Internal Life Support Enabled",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.1"
       },
       {
         "Name": "Maneuverability",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "10"
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -1003,6 +1009,12 @@
         "Name": "Launch Cost",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Automatic Recharging",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -1040,10 +1052,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Launch Cost",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "-20"
+        "Name": "Automatic Recharging",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "0.8"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -1078,14 +1090,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Automatic Recharging",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -1149,13 +1154,19 @@
         "Name": "Hyperdrive Range",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "100"
+        "Value": "1"
       },
       {
         "Name": "Warp Cell Efficiency",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
+        "Value": "10,000"
+      },
+      {
+        "Name": "Instant Hyperdrive Scramble",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -1186,7 +1197,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Hyperdrive Range",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -1215,7 +1233,14 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Hyperdrive Range",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -1244,7 +1269,14 @@
         "Quantity": 5
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Hyperdrive Range",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -1279,7 +1311,7 @@
         "Name": "Shield Strength",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "0.65"
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -1314,14 +1346,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Shield Strength",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "0.05"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -1329,8 +1354,8 @@
     "Id": "tech35",
     "Icon": "technology/35.png",
     "Name": "Rocket Launcher",
-    "Group": "Spacecraft Projectile Weapon",
-    "Description": "Highly destructive weapon that facilitates rapid ship-to-ship destruction.\n\nPress <IMG>SHIPFIRE<> to activate.",
+    "Group": "Long Range Starship Weapon",
+    "Description": "A <TECHNOLOGY>long range<> starship weapon, capable of delivering a highly explosive torpedo across massive distances.\n\nNote: explosive damage is <STELLAR>highly effective<> against <STELLAR>unshielded<> targets, but <TITLE>ineffective<> against <TITLE>shielded<> targets.\n\nUse <IMG>CYCLEWEAPON<> to change weapon mode. Press <IMG>SHIPFIRE<> to fire.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1437,8 +1462,8 @@
     "Id": "tech37",
     "Icon": "technology/37.png",
     "Name": "Photon Cannon",
-    "Group": "Spacecraft Projectile Weapon",
-    "Description": "Highly destructive weapon that facilitates rapid ship-to-ship destruction.\n\nPress <IMG>SHIPFIRE<> to activate.",
+    "Group": "Starship Projectile Weapon",
+    "Description": "A destructive <TECHNOLOGY>starship projectile launcher<>, the weapons system for choice for the interstellar trader and pirate alike.\n\nUse <IMG>CYCLEWEAPON<> to change weapon mode. Press <IMG>SHIPFIRE<> to fire.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1567,8 +1592,8 @@
     "Id": "tech41",
     "Icon": "technology/41.png",
     "Name": "Phase Beam",
-    "Group": "Spacecraft Laser Device",
-    "Description": "Spacefaring beam weapon and asteroid mining tool.\n\nUser is advised that <FUEL>organic elements<> are required to recharge device.\n\nPress <IMG>SHIPFIRE<> to activate.",
+    "Group": "Starship Energy Weapon",
+    "Description": "A <TECHNOLOGY>high-energy beam weapon<> for ship-to-ship combat. \n\nThough vulnerable to <FUEL>overheating<>, these highly accurate laser weapons can <STELLAR>recharge the users's shields<> by leeching energy from target shield systems.\n\nUse <IMG>CYCLEWEAPON<> to change weapon mode. Press <IMG>SHIPFIRE<> to fire.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1593,7 +1618,7 @@
         "Name": "Heat Dispersion",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "50"
+        "Value": "150"
       },
       {
         "Name": "Damage",
@@ -1645,8 +1670,8 @@
     "Id": "tech43",
     "Icon": "technology/43.png",
     "Name": "Positron Ejector",
-    "Group": "High Energy Starship Weapon",
-    "Description": "Shots are granted a wide cone of destruction.\n\nWith reduced range and rate of fire, users are encouraged to engage their targets in close proximity.",
+    "Group": "Close Range Starship Weapon",
+    "Description": "A powerful starship weapon, capable of delivering <STELLAR>extreme destruction<> at <TECHNOLOGY>close range<>. \n\nNote: these particles show <TITLE>decreased effectiveness<> against shielded targets.\n\nUse <IMG>CYCLEWEAPON<> to change weapon mode. Press <IMG>SHIPFIRE<> to fire.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1671,7 +1696,7 @@
         "Name": "Fire Rate",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "3"
+        "Value": "2"
       },
       {
         "Name": "Accuracy",
@@ -1689,7 +1714,7 @@
         "Name": "Heat Dispersion",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "75"
+        "Value": "50"
       },
       {
         "Name": "Damage",
@@ -1760,7 +1785,7 @@
     "Icon": "technology/45.png",
     "Name": "Infra-Knife Accelerator",
     "Group": "Rapid Fire Starship Weapon",
-    "Description": "Releases sustained rapid sequences of fire.\n\nUser is advised to limit bursts as overheating can occur very rapidly.",
+    "Description": "A <TECHNOLOGY>rapid fire<> starship weapon that launches superheated globes of liquid metal at hostile targets. These projectiles are <STELLAR>extremely effective<> against <STELLAR>unshielded<> starship hulls.\n\nNote: the Accelerator's internal components are vulnerable to rapid <FUEL>overheating<>. Sustained burst fire is not recommended.\n\nUse <IMG>CYCLEWEAPON<> to change weapon mode. Press <IMG>SHIPFIRE<> to fire.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1785,37 +1810,37 @@
         "Name": "Fire Rate",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "15"
+        "Value": "9"
       },
       {
         "Name": "Accuracy",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "100"
+        "Value": "50"
       },
       {
         "Name": "Total Cannon Count",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "2"
+        "Value": "1"
       },
       {
         "Name": "Heat Dispersion",
-        "LocaleKeyTemplate": "defaultTemplate",
+        "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "4"
+        "Value": "200"
       },
       {
         "Name": "Damage",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "160"
+        "Value": "205"
       },
       {
         "Name": "Range",
         "LocaleKeyTemplate": "meter",
         "Image": "range",
-        "Value": "2,000"
+        "Value": "2,200"
       },
       {
         "Name": "Heat Recovery",
@@ -1871,8 +1896,8 @@
     "Id": "tech47",
     "Icon": "technology/47.png",
     "Name": "Cyclotron Ballista",
-    "Group": "Non-guided Starship Weapon",
-    "Description": "Fires a large, concentrated ball of charged particles at forward targets, causing heavy damage. The charge is non-guided and will continue on its trajectory until it impacts with an obstacle.",
+    "Group": "Anti-Electronics Starship Weapon",
+    "Description": "A powerful ship-to-ship weapon, flinging plasmatic balls of ionising radiation towards the selected target. These projectiles can <TECHNOLOGY>disable starship engines<>, leaving the target vulnerable to attack from other weapons.\n\nThese charged particles are <STELLAR>extremely effective<> against starship <STELLAR>shields<>, and considerably weaker against the metal armour of a ship's hull.\n\nUse <IMG>CYCLEWEAPON<> to change weapon mode. Press <IMG>SHIPFIRE<> to fire.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1897,13 +1922,13 @@
         "Name": "Fire Rate",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "4"
+        "Value": "3"
       },
       {
         "Name": "Accuracy",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "200"
+        "Value": "100"
       },
       {
         "Name": "Total Cannon Count",
@@ -1927,7 +1952,7 @@
         "Name": "Range",
         "LocaleKeyTemplate": "meter",
         "Image": "range",
-        "Value": "1,500"
+        "Value": "1,250"
       },
       {
         "Name": "Heat Recovery",
@@ -2007,12 +2032,6 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Hyperdrive Range",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "100"
-      },
-      {
         "Name": "Warp Cell Efficiency",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
@@ -2023,6 +2042,12 @@
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
         "Value": "1"
+      },
+      {
+        "Name": "Expedition Efficiency",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -3481,21 +3506,21 @@
         "Value": "100"
       },
       {
-        "Name": "Top Speed",
+        "Name": "Boost Power",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Boost Tank Size",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "100"
+      },
+      {
+        "Name": "Acceleration",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
-        "Value": "100"
-      },
-      {
-        "Name": "Forwards Grip",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
-      },
-      {
-        "Name": "Angular Grip",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -3533,16 +3558,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Forwards Grip",
+        "Name": "Acceleration",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "recharge",
         "Value": "300"
-      },
-      {
-        "Name": "Angular Grip",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -3579,16 +3598,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Forwards Grip",
+        "Name": "Acceleration",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "recharge",
         "Value": "50"
-      },
-      {
-        "Name": "Angular Grip",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "210"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -3625,16 +3638,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Forwards Grip",
+        "Name": "Acceleration",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "recharge",
         "Value": "50"
-      },
-      {
-        "Name": "Angular Grip",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -3667,9 +3674,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Scan",
+        "Name": "Top Speed",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -3707,9 +3714,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Scan",
+        "Name": "Top Speed",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -3747,21 +3754,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Boost",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "Scan",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
       },
       {
-        "Name": "Boost Power",
+        "Name": "Forwards Grip",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "Boost Tank Size",
+        "Name": "Angular Grip",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -3799,16 +3806,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Mining Laser Power",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
+        "Name": "Advanced Exocraft Mining Laser",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
         "Value": "80"
-      },
-      {
-        "Name": "Mining Laser Efficiency",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -3841,15 +3842,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Mining Laser Power",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
         "Name": "Advanced Exocraft Mining Laser",
         "LocaleKeyTemplate": "enabled",
         "Image": "enabled",
+        "Value": "50"
+      },
+      {
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "1"
       }
     ],
@@ -3883,22 +3884,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Damage",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "320"
-      },
-      {
-        "Name": "Weapon Power Efficiency",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "Rate of Fire",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "0.5"
+        "Value": "320"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -3938,16 +3927,22 @@
         "Value": "100"
       },
       {
-        "Name": "Top Speed",
+        "Name": "Boost Power",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "Acceleration",
+        "Name": "Boost Tank Size",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
         "Value": "100"
+      },
+      {
+        "Name": "Mining Laser Power",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -3984,22 +3979,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Damage",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "220"
-      },
-      {
-        "Name": "Weapon Power Efficiency",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "Rate of Fire",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "0.5"
+        "Value": "220"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -4036,21 +4019,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Mining Laser Power",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "240"
-      },
-      {
-        "Name": "Mining Laser Efficiency",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
         "Name": "Advanced Exocraft Mining Laser",
         "LocaleKeyTemplate": "enabled",
         "Image": "enabled",
+        "Value": "240"
+      },
+      {
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "1"
       }
     ],
@@ -4088,9 +4065,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Scan",
+        "Name": "Top Speed",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -4128,10 +4105,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Fuel Usage",
+        "Name": "Boost Power",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-20"
+        "Image": "recharge2",
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -4948,14 +4925,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Hyperdrive Range",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "200"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -4988,14 +4958,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Hyperdrive Range",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "300"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -5028,14 +4991,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Hyperdrive Range",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "800"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -5068,14 +5024,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Hyperdrive Range",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -5108,14 +5057,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Hyperdrive Range",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -5148,14 +5090,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Hyperdrive Range",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -5259,10 +5194,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Pulse Drive Fuel Efficiency",
+        "Name": "Pulse Drive Power",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "34"
+        "Image": "recharge2",
+        "Value": "66"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -5299,10 +5234,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Pulse Drive Power",
+        "Name": "Boost",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "130"
+        "Image": "recovery",
+        "Value": "30"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -5337,14 +5272,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Instant Hyperdrive Scramble",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -5786,15 +5714,21 @@
         "Value": "100"
       },
       {
-        "Name": "Boost",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "9,900"
-      },
-      {
         "Name": "Pulse Drive Power",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Maneuverability",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "100"
+      },
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -5832,6 +5766,12 @@
         "Name": "Launch Cost",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Automatic Recharging",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -5869,13 +5809,19 @@
         "Name": "Hyperdrive Range",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "100"
+        "Value": "1"
       },
       {
         "Name": "Warp Cell Efficiency",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
+        "Value": "10,000"
+      },
+      {
+        "Name": "Instant Hyperdrive Scramble",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -5912,7 +5858,7 @@
         "Name": "Shield Strength",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "0.65"
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -6061,7 +6007,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Expedition Speed",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "9,900"
+      }
+    ],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -6357,14 +6310,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Exocraft Solar Panels",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "400"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -6399,9 +6345,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Scan",
+        "Name": "Top Speed",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -6442,24 +6388,24 @@
         "Name": "Fuel Usage",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "-50"
+        "Value": "100"
       },
       {
-        "Name": "Top Speed",
+        "Name": "Boost Power",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "50"
+      },
+      {
+        "Name": "Boost Tank Size",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "100"
+      },
+      {
+        "Name": "Acceleration",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
-        "Value": "100"
-      },
-      {
-        "Name": "Forwards Grip",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
-      },
-      {
-        "Name": "Angular Grip",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -6497,10 +6443,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Fuel Usage",
+        "Name": "Boost Power",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-20"
+        "Image": "recharge2",
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -6537,9 +6483,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Scan",
+        "Name": "Top Speed",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -6577,21 +6523,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Boost",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "Scan",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
       },
       {
-        "Name": "Boost Power",
+        "Name": "Forwards Grip",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "Boost Tank Size",
+        "Name": "Angular Grip",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -6629,15 +6575,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Mining Laser Power",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "100"
-      },
-      {
-        "Name": "Mining Laser Efficiency",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
+        "Name": "Advanced Exocraft Mining Laser",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
         "Value": "100"
       }
     ],
@@ -6671,15 +6611,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Mining Laser Power",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
         "Name": "Advanced Exocraft Mining Laser",
         "LocaleKeyTemplate": "enabled",
         "Image": "enabled",
+        "Value": "50"
+      },
+      {
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "1"
       }
     ],
@@ -6717,22 +6657,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Damage",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "420"
-      },
-      {
-        "Name": "Weapon Power Efficiency",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "Rate of Fire",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "0.35"
+        "Value": "420"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -6767,7 +6695,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Minotaur AI Pilot",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -7020,6 +6955,12 @@
         "Name": "Launch Cost",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Automatic Recharging",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "25"
       }
     ],
@@ -7060,12 +7001,6 @@
         "Value": "100"
       },
       {
-        "Name": "Boost",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "11,900"
-      },
-      {
         "Name": "Pulse Drive Power",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
@@ -7075,7 +7010,25 @@
         "Name": "Maneuverability",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "25"
+        "Value": "10"
+      },
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "Internal Life Support Enabled",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.25"
+      },
+      {
+        "Name": "Maneuverability",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -7116,13 +7069,19 @@
         "Name": "Hyperdrive Range",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "600"
+        "Value": "1"
       },
       {
         "Name": "Warp Cell Efficiency",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "200"
+        "Value": "60,000"
+      },
+      {
+        "Name": "Instant Hyperdrive Scramble",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "2"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -7154,14 +7113,7 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Internal Life Support Enabled",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -7947,14 +7899,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Minotaur AI Pilot",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -7995,9 +7940,9 @@
         "Value": "5"
       },
       {
-        "Name": "Mining Laser Power",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
+        "Name": "Advanced Exocraft Mining Laser",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
         "Value": "50"
       },
       {
@@ -8053,22 +7998,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Damage",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "20"
-      },
-      {
-        "Name": "Weapon Power Efficiency",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "Rate of Fire",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "0.5"
+        "Value": "20"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -8101,15 +8034,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Fuel Usage",
+        "Name": "Boost Power",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-10"
+        "Image": "recharge2",
+        "Value": "90"
       },
       {
-        "Name": "Boost Tank Size",
+        "Name": "Angular Grip",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge2",
         "Value": "25"
       }
     ],
@@ -8145,14 +8078,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Minotaur AI Pilot",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   }

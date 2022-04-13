@@ -12,10 +12,7 @@ https://pub.dev/packages/molten_navigationbar_flutter
 [app] search for game IDs
 [app] Fix AssistantApps team page
 
-[web] Tree diagrams https://github.com/brimdata/react-arborist
-
 
 🐛 Bugs
 [web] translate start and end dates
-[web] Better error handling like (other152)
 

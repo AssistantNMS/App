@@ -15,6 +15,9 @@ class AppImage {
   static const String nmsfmLogo = base + 'special/nmsfm.png';
   static const String cronus = base + 'special/cronus.png';
   static const String twitch = base + 'special/twitch.png';
+  static const String twitchAlt = base + 'special/twitchAlt.png';
+  static const String quicksilver = base + 'special/quicksilver.png';
+  static const String quicksilverAlt = base + 'special/quicksilverAlt.png';
 
   static const String drawer = 'drawer/';
   static const String about = drawer + 'about.png';
@@ -99,6 +102,7 @@ class AppImage {
   static const String updatePrisms = update + 'prisms.png';
   static const String updateFrontiers = update + 'frontiers.png';
   static const String updateSentinal = update + 'sentinal.png';
+  static const String updateOutlaws = update + 'outlaws.png';
 
   static const String milestonePatches = 'milestonePatches/';
   static const String expeditionsUnusedPatches =

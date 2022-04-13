@@ -7,6 +7,7 @@ import '../../components/expeditionAlphabetTranslation.dart';
 import '../../components/tilePresenters/eggTraitTilePresenter.dart';
 import '../../components/tilePresenters/inventoryTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemTilePresenter.dart';
+import '../../components/tilePresenters/rewardFromTilePresenter.dart';
 import '../../components/tilePresenters/seasonalExpeditionTilePresenter.dart';
 import '../../components/tilePresenters/statBonusPresenter.dart';
 import '../../components/tilePresenters/twitchTilePresenter.dart';
@@ -228,35 +229,37 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
     }
   }
 
-  switch (genericItem.blueprintCostType) {
-    case CurrencyType.NANITES:
-      String bpCostText = getTranslations().fromKey(LocaleKey.blueprintCost);
-      int bpCost = genericItem.blueprintCost;
-      chipList.add(
-        genericItemNanites(
+  int bpCost = genericItem.blueprintCost;
+  if (bpCost > 0) {
+    switch (genericItem.blueprintCostType) {
+      case CurrencyType.NANITES:
+        String bpCostText = getTranslations().fromKey(LocaleKey.blueprintCost);
+        chipList.add(
+          genericItemNanites(
+            context,
+            "$bpCostText: $bpCost",
+            colour: chipColour,
+          ),
+        );
+        break;
+      case CurrencyType.SALVAGEDDATA:
+        chipList.add(genericItemSalvagedData(
           context,
-          "$bpCostText: $bpCost",
+          genericItem.blueprintCost.toStringAsFixed(0),
           colour: chipColour,
-        ),
-      );
-      break;
-    case CurrencyType.SALVAGEDDATA:
-      chipList.add(genericItemSalvagedData(
-        context,
-        genericItem.blueprintCost.toStringAsFixed(0),
-        colour: chipColour,
-      ));
-      break;
-    case CurrencyType.FACTORYOVERRIDE:
-      chipList.add(genericItemFactoryOverride(
-        context,
-        genericItem.blueprintCost.toStringAsFixed(0),
-        colour: chipColour,
-      ));
-      break;
-    case CurrencyType.NONE:
-    default:
-      break;
+        ));
+        break;
+      case CurrencyType.FACTORYOVERRIDE:
+        chipList.add(genericItemFactoryOverride(
+          context,
+          genericItem.blueprintCost.toStringAsFixed(0),
+          colour: chipColour,
+        ));
+        break;
+      case CurrencyType.NONE:
+      default:
+        break;
+    }
   }
 
   // if (genericItem.cookingValue != null && genericItem.cookingValue > 0.0) {
@@ -593,9 +596,11 @@ List<Widget> getEggTraits(
 
 List<Widget> getRewardFrom(
   BuildContext context,
-  List<String> usages,
+  GenericPageItem genericItem,
+  bool displayGenericItemColour,
 ) {
   List<Widget> rewardsFromWidgets = List.empty(growable: true);
+  List<String> usages = genericItem?.usage ?? [];
 
   List<String> expSeasonKeySplit = UsageKey.isExpeditionSeason.split("{0}");
   if (usages.any((u) => u.contains(expSeasonKeySplit[0]))) {
@@ -610,6 +615,17 @@ List<Widget> getRewardFrom(
     ));
   }
 
+  if (usages.any((u) => u.contains(UsageKey.isQuicksilver))) {
+    if (genericItem.baseValueUnits > 0 &&
+        genericItem.currencyType == CurrencyType.QUICKSILVER) {
+      rewardsFromWidgets.add(rewardFromQuicksilverMerchantTilePresenter(
+        context,
+        genericItem.baseValueUnits.toStringAsFixed(0),
+        displayGenericItemColour,
+      ));
+    }
+  }
+
   List<String> twitchCampaignKeySplit = UsageKey.isTwitchCapaign.split("{0}");
   if (usages.any((u) => u.contains(twitchCampaignKeySplit[0]))) {
     String expSeasUsageKey =
@@ -620,6 +636,7 @@ List<Widget> getRewardFrom(
     rewardsFromWidgets.add(rewardFromTwitchTilePresenter(
       context,
       expSeasonNum,
+      displayGenericItemColour,
     ));
   }
 
