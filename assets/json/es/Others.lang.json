@@ -2118,7 +2118,7 @@
     "Icon": "other/93.png",
     "Name": "Huevo de compañero",
     "Group": "Material genético de %NAME%",
-    "Description": "Un huevo vivo y fértil, %READY%\n\n%MODIFIED%\n\nLos escaneos indican que el ser en su interior tiene el potencial genético de ser %SIZE% y %TRAIT%.",
+    "Description": "Un huevo vivo y fértil, %READY%%EXTRA%\n\n%MODIFIED%\n\nLos escaneos indican que el ser en su interior tiene el potencial genético de ser %SIZE% y %TRAIT%.",
     "BaseValueUnits": 0.0,
     "CurrencyType": "Credits",
     "Colour": "311A49",
@@ -4766,6 +4766,1260 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other216",
+    "Icon": "other/216.png",
+    "Name": "Pasaporte falsificado",
+    "Group": "Registro digital sobrescrito",
+    "Description": "Un <TECHNOLOGY>documento de registro de nave<> falsificado. Se garantiza que esta firma digital está libre de delitos o faltas anteriores.\n\nSe puede utilizar para restablecer cualquier registro de <STELLAR>estatus en una facción<> negativo desde el <TECHNOLOGY>núcleo de una estación espacial<>.",
+    "BaseValueUnits": 256000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other217",
+    "Icon": "other/217.png",
+    "Name": "Fragmento 1 de 3 del mapa pirata",
+    "Group": "Datos geográficos corruptos",
+    "Description": "Datos de coordenadas parciales proporcionados por un <STELLAR>capitán de carguero<> preocupado. El mapa está firmado con un fragmento del manifiesto pirata:\n\n“¡Arruinaremos la nueva galaxia tal y como hicimos con la anterior y haremos con la siguiente!”\n\nSe trata de datos valiosos para la facción pirata conocida como <SPECIAL>La Ruina<>, que han intentado recuperarlos de forma violenta.",
+    "BaseValueUnits": 88.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 88
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other218",
+    "Icon": "other/218.png",
+    "Name": "Fragmento 2 de 3 del mapa pirata",
+    "Group": "Datos geográficos corruptos",
+    "Description": "Datos de coordenadas parciales obtenidos de un<STELLAR>carguero<> derribado por la facción pirata <SPECIAL>La Ruina<>. El mapa está firmado con un fragmento del manifiesto pirata:\n\n“¡Los túneles galácticos pertenecen a la Ruina!”\n\nLa información de navegación está dañada, pero parece estar vinculada a los datos proporcionados por el <STELLAR>capitán de carguero<>.",
+    "BaseValueUnits": 88.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 88
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other219",
+    "Icon": "other/219.png",
+    "Name": "Fragmento 3 de 3 del mapa pirata",
+    "Group": "Datos geográficos corruptos",
+    "Description": "Datos de coordenadas parciales obtenidos de una <STELLAR>nave estelar<> estrellada en un lecho marino. El mapa está firmado con un fragmento del manifiesto pirata:\n\n“¡Aniquilad hasta al último viajero! ¡Todas las galaxias caerán ante la Ruina!”.\n\nLa información de navegación es ilegible en su estado actual, sin embargo, parece estar vinculada a los datos proporcionados por el <STELLAR>capitán de carguero<>.",
+    "BaseValueUnits": 88.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 88
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other220",
+    "Icon": "other/220.png",
+    "Name": "Mapa pirata",
+    "Group": "Datos geográficos ilícitos",
+    "Description": "Se han restaurado los <COMMODITY>datos de las coordenadas del tesoro<> recuperados de las víctimas de la facción pirata <SPECIAL>la Ruina<>.",
+    "BaseValueUnits": 888.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "other217",
+        "Quantity": 1
+      },
+      {
+        "Id": "other218",
+        "Quantity": 1
+      },
+      {
+        "Id": "other219",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Convertir datos en indicador de navegación de exotraje"
+    ],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other221",
+    "Icon": "other/221.png",
+    "Name": "Baliza del punto de encuentro",
+    "Group": "Grabador de datos de navegación",
+    "Description": "Una <TECHNOLOGY>baliza de navegación<> sin marca obtenida de los restos de una nave estelar abatida.\n\nUsa Activar baliza (<IMG> FE_ALT1<>) para desplegarla y volver sobre los últimos pasos de la nave caída.",
+    "BaseValueUnits": 888.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Activar baliza y marcar coordenadas de navegación"
+    ],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other222",
+    "Icon": "other/222.png",
+    "Name": "Billete a la libertad",
+    "Group": "Pase de sistema seguro",
+    "Description": "“¡Glorioso superviviente! ¡La <STELLAR>estrella prometida<> será tuya!”\n\nUn <TECHNOLOGY>pase de sistema seguro<> recibido de la “<STELLAR>Voz de la libertad”<>. \nSelecciona el pase y usa Aceptar la invitación (<IMG>FE_ALT1<>) para fijar la ubicación en tus sistemas de navegación.",
+    "BaseValueUnits": 888.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Acepta la llamada de la Voz de la libertad"
+    ],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other223",
+    "Icon": "other/223.png",
+    "Name": "Sal de sangre",
+    "Group": "Artículos de contrabando",
+    "Description": "Una bolsa de cristales turbios y malolientes. Producidos en las trampas de evaporación viscosa, estas sales orgánicas se utilizan en la fabricación de feromonas ilegales.\n\nSu compra es <SPECIAL>ilegal<> en casi todas las terminales comerciales galácticas. El suministro regular de estos solo está disponible dentro de <FUEL>sistemas proscritos<>.\n\nLa venta de productos vetados en espacios comercialmente regulados puede ser <TRADEABLE>muy rentable<>.",
+    "BaseValueUnits": 2000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other224",
+    "Icon": "other/224.png",
+    "Name": "Muestras de ADN robadas",
+    "Group": "Artículos de contrabando",
+    "Description": "Viales sellados de muestras de ADN no registradas, libres de los mecanismos de bioseguridad estándar que evitan la manipulación genética ilegal.\n\nSu compra es <SPECIAL>ilegal<> en casi todas las terminales comerciales galácticas. El suministro regular de estos solo está disponible dentro de <FUEL>sistemas proscritos<>.\n\nLa venta de productos vetados en espacios comercialmente regulados puede ser <TRADEABLE>muy rentable<>.",
+    "BaseValueUnits": 9000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties",
+      "IsEggIngredient"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other225",
+    "Icon": "other/225.png",
+    "Name": "Éter lunar",
+    "Group": "Artículos de contrabando",
+    "Description": "Contenedor de líquido sumamente volátil. Sus vapores son extremadamente inflamables y funcionan como un poderoso sedante.\n\nSu compra es <SPECIAL>ilegal<> en casi todas las terminales comerciales galácticas. El suministro regular de estos solo está disponible dentro de <FUEL>sistemas proscritos<>.\n\nLa venta de productos vetados en espacios comercialmente regulados puede ser <TRADEABLE>muy rentable<>.",
+    "BaseValueUnits": 18000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other226",
+    "Icon": "other/226.png",
+    "Name": "Plumas prismáticas",
+    "Group": "Artículos de contrabando",
+    "Description": "Un paquete sellado al vacío con plumas de una belleza deslumbrante. El animal al que se le dio caza a cambio de este encanto imposible y caleidoscópico lleva mucho tiempo extinto.\n\nSu compra es <SPECIAL>ilegal<> en casi todas las terminales comerciales galácticas. El suministro regular de estos solo está disponible dentro de <FUEL>sistemas proscritos<>.\n\nLa venta de productos vetados en espacios comercialmente regulados puede ser <TRADEABLE>muy rentable<>.",
+    "BaseValueUnits": 32000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other227",
+    "Icon": "other/227.png",
+    "Name": "GrahGrah",
+    "Group": "Artículos de contrabando",
+    "Description": "Un bote del ahora vetado gas de batalla Vy’keen. Tradicionalmente, se inhalaba en la víspera de la batalla.\n\nSu compra es <SPECIAL>ilegal<> en casi todas las terminales comerciales galácticas. El suministro regular de estos solo está disponible dentro de <FUEL>sistemas proscritos<>.\n\nLa venta de productos vetados en espacios comercialmente regulados puede ser <TRADEABLE>muy rentable<>.",
+    "BaseValueUnits": 58000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other228",
+    "Icon": "other/228.png",
+    "Name": "Circuitos falsificados",
+    "Group": "Artículos de contrabando",
+    "Description": "Diseñados mediante ingeniería inversa a partir del núcleo capturado de una estación espacial, estos circuitos no autorizados se utilizan en una amplia gama de tecnologías de los mercados negro y gris.\n\nSu compra es <SPECIAL>ilegal<> en casi todas las terminales comerciales galácticas. El suministro regular de estos solo está disponible dentro de <FUEL>sistemas proscritos<>.\n\nLa venta de productos vetados en espacios comercialmente regulados puede ser <TRADEABLE>muy rentable<>.",
+    "BaseValueUnits": 68000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other229",
+    "Icon": "other/229.png",
+    "Name": "Armas vetadas",
+    "Group": "Artículos de contrabando",
+    "Description": "Estas potentes armas, creadas a partir de los restos recuperados de fuerzas de centinelas, son las favoritas de los proscritos de toda la galaxia.\n\nSu compra es <SPECIAL>ilegal<> en casi todas las terminales comerciales galácticas. El suministro regular de estos solo está disponible dentro de <FUEL>sistemas proscritos<>.\n\nLa venta de productos vetados en espacios comercialmente regulados puede ser <TRADEABLE>muy rentable<>.",
+    "BaseValueUnits": 83000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other230",
+    "Icon": "other/230.png",
+    "Name": "Reliquias de la Primera Progenie",
+    "Group": "Artículos de contrabando",
+    "Description": "Reliquias del caído imperio Gek, condenadas y vetadas por todas las principales civilizaciones de la galaxia.\n\nSu compra es <SPECIAL>ilegal<> en casi todas las terminales comerciales galácticas. El suministro regular de estos solo está disponible dentro de <FUEL>sistemas proscritos<>.\n\nLa venta de productos vetados en espacios comercialmente regulados puede ser <TRADEABLE>muy rentable<>.",
+    "BaseValueUnits": 98000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other231",
+    "Icon": "other/231.png",
+    "Name": "Capucha de proscrito",
+    "Group": "Unlockable Hood",
+    "Description": "Una exclusiva <STELLAR>manipulación de apariencia de exotraje<>.\n\nTransforma la apariencia de tu exotraje en un <TECHNOLOGY>modificador de apariencia<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "FFFFFF",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other232",
+    "Icon": "other/232.png",
+    "Name": "Estela de nave petardeante",
+    "Group": "Anulación de escape de nave",
+    "Description": "Un exclusivo <STELLAR>modificador de escape de nave<>.\n\nUn destartalado tubo de escape de nave, montado a mano por un proscrito durante una emergencia. Tiene tendencia a explotar ocasionalmente, pero sin efectos adversos para el vuelo.\n\nInstala esta <TECHNOLOGY>tecnología<> en el inventario de tu nave para cambiar la apariencia de las estelas del escape del motor.",
+    "BaseValueUnits": 2100.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other233",
+    "Icon": "other/233.png",
+    "Name": "Póster temible capitán Fahng",
+    "Group": "Decoración",
+    "Description": "Una pieza exclusiva de arte mural autoadhesiva a prueba de arrugas.\nPocos Vy'keen desconocen la existencia de temible capitán Fahng y sus espeluznantes hazañas, aunque no se sabe con certeza si se trata una figura histórica real o simplemente una historia inventada para asustar a los cachorros desobedientes.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other234",
+    "Icon": "other/234.png",
+    "Name": "Póster proscrito",
+    "Group": "Decoración",
+    "Description": "Una pieza exclusiva de arte mural autoadhesiva a prueba de arrugas.\nUn rebelde tributo a los piratas, fugitivos y a la resistencia frente a la ley centinela.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other235",
+    "Icon": "other/235.png",
+    "Name": "Póster Resbur XIII",
+    "Group": "Decoración",
+    "Description": "Una exclusiva pieza de arte mural autoadhesiva y a prueba de arrugas.\nEste anárquico póster plasma un famoso planeta ocupado por piratas.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other236",
+    "Icon": "other/236.png",
+    "Name": "Bandera pirata",
+    "Group": "Bandera pirata",
+    "Description": "La calavera roja brillante que luce esta bandera aterciopelada sirve como advertencia para grupos hostiles.\n\nUn adorno exclusivo para las bases.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other237",
+    "Icon": "other/237.png",
+    "Name": "Bandera de unidad",
+    "Group": "Bandera pirata",
+    "Description": "Un estándar diseñado de forma colaborativa entre varios gremios intergalácticos. \n\nUn adorno exclusivo para las bases.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other238",
+    "Icon": "other/238.png",
+    "Name": "Bandera heráldica",
+    "Group": "Bandera pirata",
+    "Description": "El delicado bordado dorado de esta bandera proporciona elegancia y refinamiento de forma instantánea a cualquier base habitable.\n\nUn adorno exclusivo para las bases.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other239",
+    "Icon": "other/239.png",
+    "Name": "Bandera orbital",
+    "Group": "Bandera pirata",
+    "Description": "Una representación abstracta de las órbitas planetarias bajo un ojo vigilante, cosida con llamativos tejidos grises y carmesí.\n\nUn adorno exclusivo para las bases.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other240",
+    "Icon": "other/240.png",
+    "Name": "Bandera verde esmeralda",
+    "Group": "Bandera pirata",
+    "Description": "Los buscadores de galaxias frondosas inspiran el diseño de esta bandera, con un diseño de contrastes verdes y púrpuras.\n\nUn adorno exclusivo para las bases.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other241",
+    "Icon": "other/241.png",
+    "Name": "Cubo díscolo",
+    "Group": "Primitivo flotante",
+    "Description": "Un adorno exclusivo para las bases.\n\nEsta forma de vida cúbica llegó desde otra realidad a una estación orbital en la que la capturó un mercader ambulante. Proporciona agradable compañía cuando se reubica a una base habitable.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other242",
+    "Icon": "other/52.png",
+    "Name": "Título: “Cazador de la Ruina”",
+    "Group": "Identificación personal a medida",
+    "Description": "Un <STELLAR>título de explorador<> exclusivo que conmemora la finalización de la expedición de la <STELLAR>Ruina<>, la gloriosa recuperación de ganancias ilícitas y el descubrimiento de un secreto pirata.\n\nAplica este título a tu estandarte en un <TECHNOLOGY>modificador de apariencia<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other243",
+    "Icon": "other/243.png",
+    "Name": "Calcomanía de expedición de la Ruina",
+    "Group": "Decoración",
+    "Description": "Una exclusiva calcomanía decorativa, para adornar y dar estilo a las bases.\n\nEsta calcomanía conmemora la finalización de la expedición de la <STELLAR>Ruina<>, la gloriosa recuperación de ganancias ilícitas y el descubrimiento de un secreto pirata.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other244",
+    "Icon": "other/244.png",
+    "Name": "Estandarte de expedición de la Ruina",
+    "Group": "Identificación personal a medida",
+    "Description": "Equipa este exclusivo <STELLAR>estilo personal<> en conmemoración de la finalización de la primera <STELLAR>expedición<> de la “Ruina”, la gloriosa recuperación de ganancias ilícitas y el descubrimiento de un secreto pirata.\n\nAplica este estandarte a tu perfil en un <TECHNOLOGY>modificador de apariencia<>.",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other245",
+    "Icon": "other/245.png",
+    "Name": "Capa de proscrito",
+    "Group": "Unlockable Cape",
+    "Description": "Una exclusiva <STELLAR>manipulación de apariencia de exotraje<>.\n\nUna capa gastada, testigo de muchas batallas, robada a la facción pirata de <SPECIAL>La Ruina<>. Tejida a partir de nanofibras empapadas en químicos, no se ve afectada en absoluto por el calor de la salida del jetpack.\n\nTransforma la apariencia de tu exotraje en un <TECHNOLOGY>modificador de apariencia<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other246",
+    "Icon": "other/246.png",
+    "Name": "Conquistadora reluciente de Neyam",
+    "Group": "Astronave exclusiva",
+    "Description": "Una <STELLAR>nave<> exclusiva integrada con un <TECHNOLOGY>eyector de positrones<> modificado ilegalmente para una destrucción eficiente de naves hostiles.\n\n<STELLAR>Consigue<> esta nave para añadirla a tu colección o <STELLAR>intercámbiala<> por tu nave actual. Cuando estés en un planeta, llama a tus naves desde el menú rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other247",
+    "Icon": "other/247.png",
+    "Name": "Final Iuranono II",
+    "Group": "Astronave exclusiva",
+    "Description": "Una <STELLAR>nave<> exclusiva con un <TECHNOLOGY>hiperturbo<> modificado ilegalmente y <TECHNOLOGY>motor de pulso<> para una exploración eficiente de la galaxia.\n\n<STELLAR>Consigue<> esta nave para añadirla a tu colección o <STELLAR>intercámbiala<> por tu nave actual. Cuando estés en un planeta, llama a tus naves desde el menú rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other248",
+    "Icon": "other/248.png",
+    "Name": "Voz original TU7",
+    "Group": "Astronave exclusiva",
+    "Description": "Una <STELLAR>nave<> exclusiva integrada con un <TECHNOLOGY>cañón de fotones<> modificado ilegalmente para una destrucción eficiente de naves hostiles.\n\n<STELLAR>Consigue<> esta nave para añadirla a tu colección o <STELLAR>intercámbiala<> por tu nave actual. Cuando estés en un planeta, llama a tus naves desde el menú rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other249",
+    "Icon": "other/249.png",
+    "Name": "UB7 Datebaya",
+    "Group": "Astronave exclusiva",
+    "Description": "Una <STELLAR>nave<> exclusiva integrada con un <TECHNOLOGY>receptor de teletransporte<> para el transporte rápido del cargamento.\n\n<STELLAR>Consigue<> esta nave para añadirla a tu colección o <STELLAR>intercámbiala<> por tu nave actual. Cuando estés en un planeta, llama a tus naves desde el menú rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other250",
+    "Icon": "other/250.png",
+    "Name": "El viaje de Boribet YZ7",
+    "Group": "Astronave exclusiva",
+    "Description": "Una <STELLAR>nave<> exclusiva con una bodega espaciosa e integrada con <TECHNOLOGY>escudos deflectores<> modificados ilegalmente.\n\n<STELLAR>Consigue<> esta nave para añadirla a tu colección o <STELLAR>intercámbiala<> por tu nave actual. Cuando estés en un planeta, llama a tus naves desde el menú rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other251",
+    "Icon": "other/251.png",
+    "Name": "Huevo de O. Tigeraeumis",
+    "Group": "Huevo de compañero exclusivo",
+    "Description": "Un huevo vivo y fértil, <TRADEABLE>¡listo para eclosionar!<>\n\nLa criatura rasca el interior del huevo con sus cuernos curvos en su lucha por salir.\n\nLos escaneos indican que el ser en su interior tiene el potencial genético de poseer una naturaleza <FUEL>fiera<> por lo que puede enfrentarse de forma agresiva contra las amenazas a su amo.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other252",
+    "Icon": "other/252.png",
+    "Name": "Huevo de W. Fregaeiosus",
+    "Group": "Huevo de compañero exclusivo",
+    "Description": "Un huevo vivo y fértil, <TRADEABLE>¡listo para eclosionar!<>\n\nSe escucha un graznido amortiguado en su interior.\n\nLos escaneos indican que el ser en su interior tiene el potencial genético de tener una personalidad <TRADEABLE>traviesa<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other253",
+    "Icon": "other/253.png",
+    "Name": "Huevo de J. Xenoaryii",
+    "Group": "Huevo de compañero exclusivo",
+    "Description": "Un huevo vivo y fértil, <TRADEABLE>¡listo para eclosionar!<>\n\nLa forma de vida sintética yace en su interior completamente quieta para conservar su energía.\n\nLos escaneos indican que el ser en su interior tiene el potencial genético de tener rasgos <TECHNOLOGY>autónomos<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other254",
+    "Icon": "other/254.png",
+    "Name": "Huevo de Z. Petalpoemeum",
+    "Group": "Huevo de compañero exclusivo",
+    "Description": "Un huevo vivo y fértil, <TRADEABLE>¡listo para eclosionar!<>\n\nLa criatura en su interior serpentea cuándo se toca el huevo, emocionada con la idea de eclosionar.\n\nLos escaneos indican que el ser en su interior tiene el potencial genético de ser un compañero de naturaleza <TRADEABLE>cordial<> que se amansa con interacciones delicadas.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other255",
+    "Icon": "other/255.png",
+    "Name": "Huevo de D. Gentalium",
+    "Group": "Huevo de compañero exclusivo",
+    "Description": "Un huevo vivo y fértil, <TRADEABLE>¡listo para eclosionar!<>\n\nUnas pinzas de cartílago pellizcan suavemente el interior del huevo.\n\nLos escaneos indican que el ser en su interior tiene el potencial genético de poseer una naturaleza <STELLAR>diligente<> que será feliz al recibir tareas útiles.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other256",
+    "Icon": "other/256.png",
+    "Name": "Paquete de fuegos artificiales deluxe",
+    "Group": "Multipaquete pirotécnico",
+    "Description": "Un paquete con tres variedades de fuegos artificiales de lujo, que contiene <TECHNOLOGY>triple estallido<>, <FUEL>cromo dual<> y variaciones de la<COMMODITY>rueda de Hirk<>. Se prenden para crear espectáculos brillantes en el cielo.\n\nColoca el tubo de lanzamiento a través del <VAL_ON>menú de construcción<> (<IMG>BUILD_MENU<>). <FUEL>Advertencia<>: no apuntar a criaturas vivas. No se recomienda su uso en interiores.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other257",
+    "Icon": "other/256.png",
+    "Name": "Paquete de fuegos artificiales deluxe",
+    "Group": "Multipaquete pirotécnico",
+    "Description": "Un paquete con tres variedades de fuegos artificiales de lujo, que contiene <TECHNOLOGY>triple estallido<>, <FUEL>cromo dual<> y variaciones de la<COMMODITY>rueda de Hirk<>. Se prenden para crear espectáculos brillantes en el cielo.\n\nColoca el tubo de lanzamiento a través del <VAL_ON>menú de construcción<> (<IMG>BUILD_MENU<>). <FUEL>Advertencia<>: no apuntar a criaturas vivas. No se recomienda su uso en interiores.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other258",
+    "Icon": "other/256.png",
+    "Name": "Paquete de fuegos artificiales deluxe",
+    "Group": "Multipaquete pirotécnico",
+    "Description": "Un paquete con tres variedades de fuegos artificiales de lujo, que contiene <TECHNOLOGY>triple estallido<>, <FUEL>cromo dual<> y variaciones de la<COMMODITY>rueda de Hirk<>. Se prenden para crear espectáculos brillantes en el cielo.\n\nColoca el tubo de lanzamiento a través del <VAL_ON>menú de construcción<> (<IMG>BUILD_MENU<>). <FUEL>Advertencia<>: no apuntar a criaturas vivas. No se recomienda su uso en interiores.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other259",
+    "Icon": "other/256.png",
+    "Name": "Paquete de fuegos artificiales deluxe",
+    "Group": "Multipaquete pirotécnico",
+    "Description": "Un paquete con tres variedades de fuegos artificiales de lujo, que contiene <TECHNOLOGY>triple estallido<>, <FUEL>cromo dual<> y variaciones de la<COMMODITY>rueda de Hirk<>. Se prenden para crear espectáculos brillantes en el cielo.\n\nColoca el tubo de lanzamiento a través del <VAL_ON>menú de construcción<> (<IMG>BUILD_MENU<>). <FUEL>Advertencia<>: no apuntar a criaturas vivas. No se recomienda su uso en interiores.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other260",
+    "Icon": "other/256.png",
+    "Name": "Paquete de fuegos artificiales deluxe",
+    "Group": "Multipaquete pirotécnico",
+    "Description": "Un paquete con tres variedades de fuegos artificiales de lujo, que contiene <TECHNOLOGY>triple estallido<>, <FUEL>cromo dual<> y variaciones de la<COMMODITY>rueda de Hirk<>. Se prenden para crear espectáculos brillantes en el cielo.\n\nColoca el tubo de lanzamiento a través del <VAL_ON>menú de construcción<> (<IMG>BUILD_MENU<>). <FUEL>Advertencia<>: no apuntar a criaturas vivas. No se recomienda su uso en interiores.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other261",
+    "Icon": "other/261.png",
+    "Name": "Calcomanía de caza de gusanos I",
+    "Group": "Decoración",
+    "Description": "Una exclusiva calcomanía decorativa, para adornar y dar estilo a las bases.\nEsta calcomanía <SPECIAL>maldita<> representa al poderoso <STELLAR>gusano titánico<>.\n\n“El señor de los gusanos se yergue sobre la tierra polvorienta, su carne es el cielo”.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other262",
+    "Icon": "other/262.png",
+    "Name": "Calcomanía de caza de gusanos II",
+    "Group": "Decoración",
+    "Description": "Una exclusiva calcomanía decorativa, para adornar y dar estilo a las bases.\nEsta calcomanía <SPECIAL>maldita<> representa al poderoso <STELLAR>gusano titánico<>.\n\n“Las venas de Atlas han aflorado”.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other263",
+    "Icon": "other/263.png",
+    "Name": "Calcomanía de caza de gusanos III",
+    "Group": "Decoración",
+    "Description": "Una exclusiva calcomanía decorativa, para adornar y dar estilo a las bases.\nEsta calcomanía <SPECIAL>maldita<> representa al poderoso <STELLAR>gusano titánico<>.\n\n“No hay palabras para describir el rapto de nuestro consumo”.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other264",
+    "Icon": "other/264.png",
+    "Name": "Calcomanía de caza de gusanos IV",
+    "Group": "Decoración",
+    "Description": "Una exclusiva calcomanía decorativa, para adornar y dar estilo a las bases.\nEsta calcomanía <SPECIAL>maldita<> representa al poderoso <STELLAR>gusano titánico<>.\n\n“Caemos mientras traga, pero nos agarramos a las resbaladizas paredes lo mejor que podemos”.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other265",
+    "Icon": "other/265.png",
+    "Name": "Calcomanía de caza de gusanos V",
+    "Group": "Decoración",
+    "Description": "Una exclusiva calcomanía decorativa, para adornar y dar estilo a las bases.\nEsta calcomanía <SPECIAL>maldita<> representa al poderoso <STELLAR>gusano titánico<>.\n\n“Mis hermanos renacieron, alzándose del bendito polvo como tentáculos neonatos”.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other266",
+    "Icon": "other/266.png",
+    "Name": "Póster de vuelo cósmico",
+    "Group": "Decoración",
+    "Description": "Una pieza exclusiva de arte mural autoadhesiva a prueba de arrugas.\nUn póster que celebra la alegría de despegar en una nave.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other267",
+    "Icon": "other/267.png",
+    "Name": "Póster orbital",
+    "Group": "Decoración",
+    "Description": "Una exclusiva pieza de arte mural autoadhesiva y a prueba de arrugas.\nEste póster muestra una estación espacial que se cierne ante un explorador pensativo.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other268",
+    "Icon": "other/268.png",
+    "Name": "Póster de catálogo de naves",
+    "Group": "Decoración",
+    "Description": "Una exclusiva pieza de arte mural autoadhesiva y a prueba de arrugas.\nEste póster muestra una variedad de siluetas de naves espaciales.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true

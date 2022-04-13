@@ -2118,7 +2118,7 @@
     "Icon": "other/93.png",
     "Name": "Œuf de compagnon",
     "Group": "Matériel génétique de %NAME%",
-    "Description": "Un œuf vivant, fertile, %READY%\n\n%MODIFIED%\n\nLes scanographies indiquent que l'embryon a le potentiel génétique pour devenir %SIZE% et %TRAIT%.",
+    "Description": "Un œuf vivant, fertile, %READY%%EXTRA%\n\n%MODIFIED%\n\nLes scanographies indiquent que l'embryon a le potentiel génétique pour devenir %SIZE% et %TRAIT%.",
     "BaseValueUnits": 0.0,
     "CurrencyType": "Credits",
     "Colour": "311A49",
@@ -4704,7 +4704,7 @@
     "Icon": "other/213.png",
     "Name": "Adhésif d'expédition Exobiologie",
     "Group": "Décoration",
-    "Description": "Un adhésif exclusif à placer où vous voulez, pour décorer et ajouter du cachet à votre base.\n\nCet adhésif commémore l'accomplissement de l'expédition <STELLAR>Exobiologie<> et célèbre la coexistence paisible entre les voyageurs et l'infinité d'espèces sauvages qui peuplent l'univers.",
+    "Description": "Un adhésif exclusif à placer où vous voulez, pour décorer et ajouter du cachet à votre base.\n\nCet adhésif commémore l'accomplissement de l'expédition <STELLAR>Exobiologie<> et célèbre la coexistence paisible entre les Voyageurs et l'infinité d'espèces sauvages qui peuplent l'univers.",
     "BaseValueUnits": 400.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4731,7 +4731,7 @@
     "Icon": "other/214.png",
     "Name": "Bannière d'expédition Exobiologie",
     "Group": "Identification personnelle sur mesure",
-    "Description": "Équipez cette <STELLAR>touche personnelle<> exclusive en commémoration de l'accomplissement de l'expédition <STELLAR>Exobiologie<> ainsi que vos explorations de la faune variée de l'univers.\n\nAppliquez cette bannière à votre profil dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "Description": "Adoptez cette <STELLAR>touche personnelle<> exclusive en commémoration de l'accomplissement de l'expédition <STELLAR>Exobiologie<> ainsi que vos explorations de la faune variée de l'univers.\n\nAppliquez cette bannière à votre profil dans un <TECHNOLOGY>modificateur d'apparence<>.",
     "BaseValueUnits": 220.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
@@ -4766,6 +4766,1260 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other216",
+    "Icon": "other/216.png",
+    "Name": "Passeport falsifié",
+    "Group": "Dossier numérique écrasé",
+    "Description": "Un faux <TECHNOLOGY>document d'immatriculation de vaisseau spatial<>. Cette signature numérique est garantie sans crimes ou délits antérieurs.\n\nPermet de réinitialiser toute trace d'<STELLAR>estime de faction<> négative auprès d'un <TECHNOLOGY>noyau de station spatiale<>.",
+    "BaseValueUnits": 256000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other217",
+    "Icon": "other/217.png",
+    "Name": "Fragment de carte pirate 1 sur 3",
+    "Group": "Données géographiques brouillées",
+    "Description": "Données de coordonnées partielles, obtenues d'un <STELLAR>capitaine de cargo<> perturbé. Ce graphique est signé avec un extrait de manifeste de pirate :\n\n'Nous brisons cette nouvelle galaxie, comme nous l'avons fait avec la dernière et comme nous le ferons avec la prochaine !'\n\nLes données sont précieuses pour la faction pirate <SPECIAL>Le Fléau<>, qui a tenté de le récupérer par des moyens violents.",
+    "BaseValueUnits": 88.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 88
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other218",
+    "Icon": "other/218.png",
+    "Name": "Fragment de carte pirate 2 sur 3",
+    "Group": "Données géographiques brouillées",
+    "Description": "Données de coordonnées partielles, obtenues à partir d'un <STELLAR>cargo<> abattu par la faction pirate <SPECIAL>Le Fléau<>. Ce graphique est signé avec un extrait de manifeste de pirate :\n\n'Les tunnels galactiques appartiennent au Fléau !'\n\nLes informations sont corrompues, mais elles semblent liées aux données récupérées sur le <STELLAR>capitaine de cargo<>.",
+    "BaseValueUnits": 88.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 88
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other219",
+    "Icon": "other/219.png",
+    "Name": "Fragment de carte pirate 3 sur 3",
+    "Group": "Données géographiques brouillées",
+    "Description": "Données de coordonnées partielles, obtenues sur un <STELLAR>vaisseau spatial<> s'étant écrasé sur un fond océanique. Ce graphique est signé avec un extrait de manifeste de pirate :\n\n'Anéantissez tous les Voyageurs ! Toutes les galaxies tomberont face au Fléau !\n\nLes informations de navigation sont illisibles dans leur état actuel, mais elles semblent liées aux données récupérées sur le <STELLAR>capitaine de cargo<>.",
+    "BaseValueUnits": 88.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 88
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other220",
+    "Icon": "other/220.png",
+    "Name": "Carte pirate",
+    "Group": "Données géographiques illicites",
+    "Description": "<COMMODITY>Données de coordonnées de trésor<> réassemblées, récupérées auprès des victimes de la faction pirate <SPECIAL>Le Fléau<>.",
+    "BaseValueUnits": 888.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "other217",
+        "Quantity": 1
+      },
+      {
+        "Id": "other218",
+        "Quantity": 1
+      },
+      {
+        "Id": "other219",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Convertir les données en marqueur de navigation pour l'exocombinaison"
+    ],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other221",
+    "Icon": "other/221.png",
+    "Name": "Balise de rendez-vous",
+    "Group": "Enregistreur de données de navigation",
+    "Description": "Une <TECHNOLOGY>balise de navigation<> vierge, obtenue sur l'épave d'un vaisseau spatial abattu.\n\nUtilisez Activer la balise (<IMG>FE_ALT1<>) pour déployer la balise et remonter les dernières étapes du vaisseau écrasé.",
+    "BaseValueUnits": 888.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Activer la balise et entrer les coordonnées de navigation"
+    ],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other222",
+    "Icon": "other/222.png",
+    "Name": "Un billet vers la liberté",
+    "Group": "Passe sécurisé du système",
+    "Description": "'Glorieux survivant ! L'<STELLAR>étoile promise<> sera à toi !'\n\nUn <TECHNOLOGY>passe sécurisé du système<> acquis auprès de la '<STELLAR>Voix de la Liberté<>'. \nSélectionnez le passe et utilisez l'option Accepter l'invitation (<IMG>FE_ALT1<>) pour entrer l'emplacement dans vos systèmes de navigation.",
+    "BaseValueUnits": 888.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Accepter l'appel de la Voix de la Liberté"
+    ],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other223",
+    "Icon": "other/223.png",
+    "Name": "Sel de sang",
+    "Group": "Marchandises de contrebande",
+    "Description": "Un sac de cristaux troubles et nauséabonds. Produits dans des pièges à évaporation visqueuse, ces sels organiques sont utilisés dans la fabrication de phéromones illégales.\n\nLeur achat est <SPECIAL>illégal<> dans presque tous les terminaux de commerce galactiques. On n'en trouve régulièrement que dans les <FUEL>systèmes hors-la-loi<>.\n\nVendre des marchandises interdites dans un espace commercial réglementé peut être <TRADEABLE>très rentable<>.",
+    "BaseValueUnits": 2000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other224",
+    "Icon": "other/224.png",
+    "Name": "Échantillons d'ADN volés",
+    "Group": "Marchandises de contrebande",
+    "Description": "Des flacons scellés d'échantillons d'ADN non enregistrés, exempts des mécanismes de biosécurité standard qui empêchent la falsification génétique illégale.\n\nLeur achat est <SPECIAL>illégal<> dans presque tous les terminaux de commerce galactiques. On n'en trouve régulièrement que dans les <FUEL>systèmes hors-la-loi<>.\n\nVendre des marchandises interdites dans un espace commercial réglementé peut être <TRADEABLE>très rentable<>.",
+    "BaseValueUnits": 9000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties",
+      "IsEggIngredient"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other225",
+    "Icon": "other/225.png",
+    "Name": "Éther lunaire",
+    "Group": "Marchandises de contrebande",
+    "Description": "Une cuve de liquide très volatil. Ses vapeurs sont extrêmement inflammables et peuvent servir de sédatif puissant.\n\nLeur achat est <SPECIAL>illégal<> dans presque tous les terminaux de commerce galactiques. On n'en trouve régulièrement que dans les <FUEL>systèmes hors-la-loi<>.\n\nVendre des marchandises interdites dans un espace commercial réglementé peut être <TRADEABLE>très rentable<>.",
+    "BaseValueUnits": 18000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other226",
+    "Icon": "other/226.png",
+    "Name": "Plumes prismatiques",
+    "Group": "Marchandises de contrebande",
+    "Description": "Un paquet scellé sous vide de plumes d'une beauté éblouissante. L'animal qui a donné sa vie pour créer ce charme impossible et kaléidoscopique a depuis longtemps disparu.\n\nLeur achat est <SPECIAL>illégal<> dans presque tous les terminaux de commerce galactiques. On n'en trouve régulièrement que dans les <FUEL>systèmes hors-la-loi<>.\n\nVendre des marchandises interdites dans un espace commercial réglementé peut être <TRADEABLE>très rentable<>.",
+    "BaseValueUnits": 32000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other227",
+    "Icon": "other/227.png",
+    "Name": "Grahgrah",
+    "Group": "Marchandises de contrebande",
+    "Description": "Une cartouche du gaz de combat vy'keen désormais interdit, inhalée selon la tradition à la veille de la bataille.\n\nLeur achat est <SPECIAL>illégal<> dans presque tous les terminaux de commerce galactiques. On n'en trouve régulièrement que dans les <FUEL>systèmes hors-la-loi<>.\n\nVendre des marchandises interdites dans un espace commercial réglementé peut être <TRADEABLE>très rentable<>.",
+    "BaseValueUnits": 58000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other228",
+    "Icon": "other/228.png",
+    "Name": "Circuits de contrefaçon",
+    "Group": "Marchandises de contrebande",
+    "Description": "Rétroconçus à partir d'un cœur de station spatiale capturé, ces circuits sans licence sont utilisés dans un large éventail de technologies du marché noir et gris.\n\nLeur achat est <SPECIAL>illégal<> dans presque tous les terminaux de commerce galactiques. On n'en trouve régulièrement que dans les <FUEL>systèmes hors-la-loi<>.\n\nVendre des marchandises interdites dans un espace commercial réglementé peut être <TRADEABLE>très rentable<>.",
+    "BaseValueUnits": 68000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other229",
+    "Icon": "other/229.png",
+    "Name": "Armes interdites",
+    "Group": "Marchandises de contrebande",
+    "Description": "Montées à partir des restes récupérés sur des forces sentinelles, ces armes puissantes sont les préférées des hors-la-loi dans toute la galaxie.\n\nLeur achat est <SPECIAL>illégal<> dans presque tous les terminaux de commerce galactiques. On n'en trouve régulièrement que dans les <FUEL>systèmes hors-la-loi<>.\n\nVendre des marchandises interdites dans un espace commercial réglementé peut être <TRADEABLE>très rentable<>.",
+    "BaseValueUnits": 83000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other230",
+    "Icon": "other/230.png",
+    "Name": "Reliques des Premiers-Nés",
+    "Group": "Marchandises de contrebande",
+    "Description": "Des reliques de l'empire gek déchu, condamnées et interdites par toutes les grandes civilisations de la galaxie.\n\nLeur achat est <SPECIAL>illégal<> dans presque tous les terminaux de commerce galactiques. On n'en trouve régulièrement que dans les <FUEL>systèmes hors-la-loi<>.\n\nVendre des marchandises interdites dans un espace commercial réglementé peut être <TRADEABLE>très rentable<>.",
+    "BaseValueUnits": 98000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other231",
+    "Icon": "other/231.png",
+    "Name": "Capuchon de hors-la-loi",
+    "Group": "Unlockable Hood",
+    "Description": "Un <STELLAR>changement d'apparence de l'exocombinaison<> exclusif.\n\nTransformez l'apparence de votre exocombinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "FFFFFF",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other232",
+    "Icon": "other/232.png",
+    "Name": "Traînée de vaisseau crépitante",
+    "Group": "Changement de l'échappement du vaisseau",
+    "Description": "Un <STELLAR>changement de l'échappement du vaisseau<> exclusif.\n\nUne buse d'échappement de vaisseau abattu, assemblée à la main et dans l'urgence par un hors-la-loi. Elle peut occasionnellement exploser, mais sans effet néfaste sur le contrôle du vol.\n\nInstallez cette <TECHNOLOGY>technologie<> dans votre inventaire de vaisseau pour modifier l'apparence des traînées d'échappement du pulsoréacteur.",
+    "BaseValueUnits": 2100.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other233",
+    "Icon": "other/233.png",
+    "Name": "Affiche du capitaine effrayant Fahng",
+    "Group": "Décoration",
+    "Description": "Une œuvre d'art mural exclusive, adhésive et infroissable.\nLa plupart des Vy'keen connaissent le capitaine effrayant Fahng et ses exploits effroyables... bien qu'on ne sache pas s'il s'agit d'un personnage historique ou simplement d'une histoire inventée pour effrayer les enfants désobéissants.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other234",
+    "Icon": "other/234.png",
+    "Name": "Affiche de hors-la-loi",
+    "Group": "Décoration",
+    "Description": "Une œuvre d'art mural exclusive, adhésive et infroissable.\nUn hommage rebelle aux pirates, aux fugitifs et à la résistance face à la loi des Sentinelles.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other235",
+    "Icon": "other/235.png",
+    "Name": "Affiche Resbur XIII",
+    "Group": "Décoration",
+    "Description": "Une œuvre d'art mural exclusive, adhésive et infroissable.\nCette affiche anarchiste représente une planète notoire occupée par des pirates.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other236",
+    "Icon": "other/236.png",
+    "Name": "Drapeau de piraterie",
+    "Group": "Drapeau pirate",
+    "Description": "Le crâne rouge vif décorant ce drapeau en velours sert d'avertissement aux adversaires.\n\nUne décoration exclusive à construire sur votre base.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other237",
+    "Icon": "other/237.png",
+    "Name": "Drapeau d'unité",
+    "Group": "Drapeau pirate",
+    "Description": "Un étendard conçu en collaboration par une coopération de plusieurs guildes intergalactiques.\n\nUne décoration exclusive à construire sur votre base.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other238",
+    "Icon": "other/238.png",
+    "Name": "Drapeau de blason",
+    "Group": "Drapeau pirate",
+    "Description": "La délicate broderie dorée de ce drapeau ajoute instantanément élégance et raffinement à toute base habitable.\n\nUne décoration exclusive à construire sur votre base.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other239",
+    "Icon": "other/239.png",
+    "Name": "Drapeau orbital",
+    "Group": "Drapeau pirate",
+    "Description": "Une représentation abstraite des orbites planétaires sous un œil attentif, cousue à partir de sublimes tissus pourpres et gris.\n\nUne décoration exclusive à construire sur votre base.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other240",
+    "Icon": "other/240.png",
+    "Name": "Drapeau vert émeraude",
+    "Group": "Drapeau pirate",
+    "Description": "Ce drapeau au motif contrasté, vert et violet, a été inspiré par ceux qui recherchent des galaxies verdoyantes.\n\nUne décoration exclusive à construire sur votre base.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other241",
+    "Icon": "other/241.png",
+    "Name": "Cube imprévisible",
+    "Group": "Primitif flottant",
+    "Description": "Une décoration exclusive à construire sur votre base.\n\nCette forme de vie cubique a dérivé vers une station orbitale depuis une autre réalité et a été capturée par un marchand ambulant. Elle peut servir de compagnon placide lorsqu'elle est relogée dans une base habitable.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other242",
+    "Icon": "other/52.png",
+    "Name": "Titre : 'Chasseur du Fléau'",
+    "Group": "Identification personnelle sur mesure",
+    "Description": "Un <STELLAR>titre d'explorateur<> exclusif, commémorant l'accomplissement de l'expédition <STELLAR>Brisé<>, la glorieuse récupération d'un lucre mal acquis et la découverte d'un secret pirate.\n\nAppliquez ce titre à votre bannière dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other243",
+    "Icon": "other/243.png",
+    "Name": "Adhésif d'expédition Brisé",
+    "Group": "Décoration",
+    "Description": "Un adhésif exclusif à placer où vous voulez, pour décorer et ajouter du cachet à votre base.\n\nCet adhésif commémore l'accomplissement de l'expédition <STELLAR>Brisé<>, la glorieuse récupération d'un lucre mal acquis et la découverte d'un secret pirate.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other244",
+    "Icon": "other/244.png",
+    "Name": "Bannière d'expédition Brisé",
+    "Group": "Identification personnelle sur mesure",
+    "Description": "Adoptez cette <STELLAR>touche personnelle<> exclusive en commémoration de l'accomplissement de l'expédition <STELLAR>'Brisé'<>, la glorieuse récupération d'un lucre mal acquis et la découverte d'un secret pirate.\n\nAppliquez cette bannière à votre profil dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other245",
+    "Icon": "other/245.png",
+    "Name": "Cape de hors-la-loi",
+    "Group": "Unlockable Cape",
+    "Description": "Un <STELLAR>changement d'apparence de l'exocombinaison<> exclusif.\n\nUne cape usée au combat, volée à la célèbre faction pirate du <SPECIAL>Fléau<>. Tissée à partir de nanofibres chimiques, le tissu est complètement imperméable à la chaleur produite par l'échappement du jetpack.\n\nTransformez l'apparence de votre exocombinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other246",
+    "Icon": "other/246.png",
+    "Name": "Le conquérant luisant de Neyam",
+    "Group": "Vaisseau exclusif",
+    "Description": "Un <STELLAR>vaisseau<> exclusif, équipé d'office d'un <TECHNOLOGY>éjecteur à positrons<> modifié illégalement pour une destruction optimale des vaisseaux hostiles.\n\n<STELLAR>Récupérez<> ce vaisseau pour l'ajouter à votre collection, ou <STELLAR>échangez<>-le contre votre vaisseau actuel. Lorsque vous êtes sur une planète, appelez les vaisseaux depuis le menu /nrapide (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other247",
+    "Icon": "other/247.png",
+    "Name": "Dernier Iuranono II",
+    "Group": "Vaisseau exclusif",
+    "Description": "Un <STELLAR>vaisseau<> exclusif, doté d'une <TECHNOLOGY>hyperpropulsion<> et d'un <TECHNOLOGY>pulsoréacteur<STELLAR> modifiés illégalement pour une exploration galactique optimale.\n\n<STELLAR>Récupérez<> ce vaisseau pour l'ajouter à votre collection ou <STELLAR>échangez<>-le contre votre vaisseau actuel. Lorsque vous êtes sur une planète, appelez les vaisseaux depuis le menu /nrapide (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other248",
+    "Icon": "other/248.png",
+    "Name": "Voix primordiale᠂ TU7",
+    "Group": "Vaisseau exclusif",
+    "Description": "Un <STELLAR>vaisseau<> exclusif, équipé d'office d'un <TECHNOLOGY>canon à photons<> modifié illégalement pour une destruction optimale des vaisseaux hostiles.\n\n<STELLAR>Récupérez<> ce vaisseau pour l'ajouter à votre collection ou <STELLAR>échangez<>-le contre votre vaisseau actuel. Lorsque vous êtes sur une planète, appelez les vaisseaux depuis le menu /nrapide (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other249",
+    "Icon": "other/249.png",
+    "Name": "Datebaya UB7",
+    "Group": "Vaisseau exclusif",
+    "Description": "Un <STELLAR>vaisseau<> exclusif, équipé d'office d'un <TECHNOLOGY>récepteur de téléportation<> pour un transport rapide de cargaison.\n\n<STELLAR>Réclamez<> ce vaisseau pour l'ajouter à votre collection ou <STELLAR>échangez<>-le contre votre vaisseau actuel. Lorsque vous êtes sur une planète, appelez les vaisseaux depuis le menu /nrapide (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other250",
+    "Icon": "other/250.png",
+    "Name": "Le voyage YZ7 des Boribets",
+    "Group": "Vaisseau exclusif",
+    "Description": "Un <STELLAR>vaisseau<> exclusif doté d'une soute spacieuse et équipé d'office de <TECHNOLOGY>boucliers déflecteurs<> modifiés illégalement.\n\n<STELLAR>Récupérez<> ce vaisseau pour l'ajouter à votre collection ou <STELLAR>échangez<>-le contre votre vaisseau actuel. Lorsque vous êtes sur une planète, appelez les vaisseaux depuis le menu /nrapide (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other251",
+    "Icon": "other/251.png",
+    "Name": "Œuf d'O. Tigeraeumis",
+    "Group": "Œuf de compagnon exclusif",
+    "Description": "Un œuf vivant et fertile, <TRADEABLE>prêt à éclore !<>\n\nUn ensemble de cornes incurvées gratte l'intérieur de l'œuf. La petite créature qui s'y cache lutte pour sortir.\n\nLes scanographies indiquent que cet être a le potentiel génétique pour devenir <FUEL>féroce<>, prêt à engager le combat contre toute menace envers son maître.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other252",
+    "Icon": "other/252.png",
+    "Name": "Œuf de W. Fregaeiosus",
+    "Group": "Œuf de compagnon exclusif",
+    "Description": "Un œuf vivant et fertile, <TRADEABLE>prêt à éclore !<>\n\nUn cri étouffé se fait entendre de l'intérieur.\n\nLes scanographies indiquent que l'être dans cet œuf a le potentiel génétique pour devenir <TRADEABLE>espiègle<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other253",
+    "Icon": "other/253.png",
+    "Name": "Œuf de J. Xenoaryii",
+    "Group": "Œuf de compagnon exclusif",
+    "Description": "Un œuf vivant et fertile, <TRADEABLE>prêt à éclore !<>\n\nLa forme de vie synthétique à l'intérieur est parfaitement immobile et économise son énergie.\n\nLes scanographies indiquent que l'être dans cet œuf a le potentiel génétique pour devenir <TECHNOLOGY>autonome<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other254",
+    "Icon": "other/254.png",
+    "Name": "Œuf de Z. Petalpoemeum",
+    "Group": "Œuf de compagnon exclusif",
+    "Description": "Un œuf vivant et fertile, <TRADEABLE>prêt à éclore !<>\n\nLa créature à l'intérieur se tortille chaque fois que l'œuf est touché, excitée par la perspective de l'éclosion.\n\nLes scanographies indiquent que l'être à l'intérieur a le potentiel génétique pour devenir un être au <TRADEABLE>tempérament doux<> et au toucher agréable.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other255",
+    "Icon": "other/255.png",
+    "Name": "Œuf de D. Gentalium",
+    "Group": "Œuf de compagnon exclusif",
+    "Description": "Un œuf vivant et fertile, <TRADEABLE>prêt à éclore !<>\n\nUn ensemble de pinces à cartilage pince doucement l'intérieur de l'œuf.\n\nLes scanographies indiquent que l'être à l'intérieur a le potentiel génétique pour devenir <STELLAR>dévoué<>, plus heureux lorsqu'il est assigné à des tâches utiles.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other256",
+    "Icon": "other/256.png",
+    "Name": "Pack de feux d'artifice de luxe",
+    "Group": "Multi-pack de pyrotechnie",
+    "Description": "Un pack de trois sortes de feux d'artifice de luxe, dont une <TECHNOLOGY>triple rafale<>, un <FUEL>double chrome<> et une <COMMODITY>roue de Hirk<>. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis le <VAL_ON>menu de construction<> \\n(<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other257",
+    "Icon": "other/256.png",
+    "Name": "Pack de feux d'artifice de luxe",
+    "Group": "Multi-pack de pyrotechnie",
+    "Description": "Un pack de trois sortes de feux d'artifice de luxe, dont une <TECHNOLOGY>triple rafale<>, un <FUEL>double chrome<> et une <COMMODITY>roue de Hirk<>. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis le <VAL_ON>menu de construction<> \\n(<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other258",
+    "Icon": "other/256.png",
+    "Name": "Pack de feux d'artifice de luxe",
+    "Group": "Multi-pack de pyrotechnie",
+    "Description": "Un pack de trois sortes de feux d'artifice de luxe, dont une <TECHNOLOGY>triple rafale<>, un <FUEL>double chrome<> et une <COMMODITY>roue de Hirk<>. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis le <VAL_ON>menu de construction<> \\n(<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other259",
+    "Icon": "other/256.png",
+    "Name": "Pack de feux d'artifice de luxe",
+    "Group": "Multi-pack de pyrotechnie",
+    "Description": "Un pack de trois sortes de feux d'artifice de luxe, dont une <TECHNOLOGY>triple rafale<>, un <FUEL>double chrome<> et une <COMMODITY>roue de Hirk<>. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis le <VAL_ON>menu de construction<> \\n(<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other260",
+    "Icon": "other/256.png",
+    "Name": "Pack de feux d'artifice de luxe",
+    "Group": "Multi-pack de pyrotechnie",
+    "Description": "Un pack de trois sortes de feux d'artifice de luxe, dont une <TECHNOLOGY>triple rafale<>, un <FUEL>double chrome<> et une <COMMODITY>roue de Hirk<>. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis le <VAL_ON>menu de construction<> \\n(<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other261",
+    "Icon": "other/261.png",
+    "Name": "Adhésif Chasse aux vers I",
+    "Group": "Décoration",
+    "Description": "Un adhésif décoratif exclusif à placer où vous voulez ; il ajoutera de l'élégance à n'importe quelle base.\nCet adhésif <SPECIAL>maudit<> représente le puissant <STELLAR>ver titan<>.\n\n'Le seigneur ver s'élève au-dessus de la terre poussiéreuse, sa chair devient ciel.'",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other262",
+    "Icon": "other/262.png",
+    "Name": "Adhésif Chasse aux vers II",
+    "Group": "Décoration",
+    "Description": "Un adhésif décoratif exclusif à placer où vous voulez ; il ajoutera de l'élégance à n'importe quelle base.\nCet adhésif <SPECIAL>maudit<> représente le puissant <STELLAR>ver titan<>.\n\n'Les veines de l'Atlas sont apparues.'",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other263",
+    "Icon": "other/263.png",
+    "Name": "Adhésif Chasse aux vers III",
+    "Group": "Décoration",
+    "Description": "Un adhésif décoratif exclusif à placer où vous voulez ; il ajoutera de l'élégance à n'importe quelle base.\nCet adhésif <SPECIAL>maudit<> représente le puissant <STELLAR>ver titan<>.\n\n'L'extase de notre perte est indescriptible.'",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other264",
+    "Icon": "other/264.png",
+    "Name": "Adhésif Chasse aux vers IV",
+    "Group": "Décoration",
+    "Description": "Un adhésif décoratif exclusif à placer où vous voulez ; il ajoutera de l'élégance à n'importe quelle base.\nCet adhésif <SPECIAL>maudit<> représente le puissant <STELLAR>ver titan<>.\n\n'Nous tombons lorsqu'il nous engloutit, tentant de nous accrocher aux parois glissantes.'",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other265",
+    "Icon": "other/265.png",
+    "Name": "Adhésif Chasse aux vers V",
+    "Group": "Décoration",
+    "Description": "Un adhésif décoratif exclusif à placer où vous voulez ; il ajoutera de l'élégance à n'importe quelle base.\nCet adhésif <SPECIAL>maudit<> représente le puissant <STELLAR>ver titan<>.\n\n'Mes frères se sont réincarnés, s'élevant depuis la poussière bénie sous forme de vrilles.'",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other266",
+    "Icon": "other/266.png",
+    "Name": "Affiche de vol cosmique",
+    "Group": "Décoration",
+    "Description": "Une œuvre d'art mural exclusive, adhésive et infroissable.\nCette affiche célèbre la joie ressentie lors du décollage dans un vaisseau spatial.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other267",
+    "Icon": "other/267.png",
+    "Name": "Affiche orbitale",
+    "Group": "Décoration",
+    "Description": "Une œuvre d'art mural exclusive, adhésive et infroissable.\nCette affiche représente une station spatiale au-dessus d'un explorateur pensif.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other268",
+    "Icon": "other/268.png",
+    "Name": "Affiche catalogue de vaisseau",
+    "Group": "Décoration",
+    "Description": "Une œuvre d'art mural exclusive, adhésive et infroissable.\nCette affiche répertorie une gamme de silhouettes de vaisseaux spatiaux.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true

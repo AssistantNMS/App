@@ -2118,7 +2118,7 @@
     "Icon": "other/93.png",
     "Name": "반려동물의 알",
     "Group": "%NAME%의 유전 물질",
-    "Description": "살아있는 수정란, %READY%\n\n%MODIFIED%\n\n스캔 결과 내부 생명체는 유전적으로 다음 크기와 특성을 보일 것으로 추정: %SIZE%, %TRAIT%.",
+    "Description": "살아있는 수정란, %READY%%EXTRA%\n\n%MODIFIED%\n\n스캔 결과 내부 생명체는 유전적으로 다음 크기와 특성을 보일 것으로 추정: %SIZE%, %TRAIT%.",
     "BaseValueUnits": 0.0,
     "CurrencyType": "Credits",
     "Colour": "311A49",
@@ -4660,7 +4660,7 @@
     "Icon": "other/211.png",
     "Name": "이국적인 윙팩",
     "Group": "엑소슈트 비주얼 개선",
-    "Description": "독점 <STELLAR>엑소슈트 외관 오버라이드<>입니다.\n\n이국적인 함선의 디자인 철학에서 영감을 받은 우아한 날개 보조용 제트팩입니다. '우주생물학' <STELLAR>원정<>의 완료를 기념하는 특별한 엑소슈트 증강물입니다.\n\n엑소슈트의 외관을 <TECHNOLOGY>외모 수정기<>에 따라 변형합니다.",
+    "Description": "독점 <STELLAR>엑소슈트 외관 오버라이드<>입니다.\n\n이국적인 함선의 디자인 철학에서 영감을 받은 우아한 날개 보조용 제트팩입니다. '우주생물학' <STELLAR>원정<>의 완료를 기념하는 특별한 엑소슈트 증강물입니다.\n\n엑소슈트의 외관을 <TECHNOLOGY>외모 수정기<>로 변형합니다.",
     "BaseValueUnits": 3500.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
@@ -4766,6 +4766,1260 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other216",
+    "Icon": "other/216.png",
+    "Name": "위조 여권",
+    "Group": "재작성된 디지털 기록",
+    "Description": "위조 <TECHNOLOGY>함선 등록 서류<>입니다. 이전 범죄나 사소한 위법 행위까지 모든 기록이 없는 디지털 신분입니다.\n\n<TECHNOLOGY>우주정거장 코어<>에서 사용하면 부정적인 <STELLAR>세력 우호도<>를 초기화할 수 있습니다.",
+    "BaseValueUnits": 256000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other217",
+    "Icon": "other/217.png",
+    "Name": "해적 지도 조각 1/3",
+    "Group": "변환된 지형 데이터",
+    "Description": "좌표 정보의 일부로 위기에 빠진 <STELLAR>화물선 선장<>에게서 얻었습니다. 해적의 선언문의 일부가 포함되어 있습니다:\n\n'우리 파괴단은 예전처럼 새로운 은하를 공격할 것이고 다음 은하도 공격할 것이다!'\n\n해적 세력인 <SPECIAL>파괴단<>에게 중요한 정보입니다. 폭력을 동원해 되찾으려 할 것입니다.",
+    "BaseValueUnits": 88.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 88
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other218",
+    "Icon": "other/218.png",
+    "Name": "해적 지도 조각 2/3",
+    "Group": "변환된 지형 데이터",
+    "Description": "좌표 정보의 일부로 해적 세력 <SPECIAL>파괴단<>에게 침몰된 <STELLAR>화물선<>에서 찾았습니다. 해적의 선언문의 일부가 포함되어 있습니다:\n\n'은하계 터널은 파괴단의 것이다!'\n\n항법 정보는 손상되었지만 <STELLAR>화물선 선장<>에게서 얻은 정보와 연관이 있는 것 같습니다.",
+    "BaseValueUnits": 88.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 88
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other219",
+    "Icon": "other/219.png",
+    "Name": "해적 지도 조각 3/3",
+    "Group": "변환된 지형 데이터",
+    "Description": "좌표 정보의 일부로 해저에 가라앉은 <STELLAR>함선<>에서 찾았습니다. 해적의 선언문의 일부가 포함되어 있습니다:\n\n'모든 여행자를 죽여라! 파괴단이 은하계를 정복할 것이다!'\n\n항법 정보를 제대로 확인할 수 없지만 <STELLAR>화물선 선장<>에게서 얻은 정보와 연관이 있는 것 같습니다.",
+    "BaseValueUnits": 88.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 88
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other220",
+    "Icon": "other/220.png",
+    "Name": "해적 지도",
+    "Group": "불법 지형 데이터",
+    "Description": "해적 세력 <SPECIAL>파괴단<>의 희생자들에게서 얻은 <COMMODITY>보물 좌표 데이터<>를 조합했습니다.",
+    "BaseValueUnits": 888.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "other217",
+        "Quantity": 1
+      },
+      {
+        "Id": "other218",
+        "Quantity": 1
+      },
+      {
+        "Id": "other219",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "데이터를 엑소슈트 항법 마커로 변환"
+    ],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other221",
+    "Icon": "other/221.png",
+    "Name": "합류지 신호기",
+    "Group": "항법 데이터 기록계",
+    "Description": "아무런 표식이 없는 <TECHNOLOGY>항법 신호기<>로 침몰한 함선의 잔해에서 찾았습니다.\n\n신호기 활성화(<IMG>FE_ALT1<>)를 사용해 신호기를 배치하고 침몰한 함선의 항로를 추적하십시오.",
+    "BaseValueUnits": 888.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "신호기를 활성화하고 항법 좌표 지정하기"
+    ],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other222",
+    "Icon": "other/222.png",
+    "Name": "자유를 얻는 티켓",
+    "Group": "보안 항성계 통행권",
+    "Description": "'영광스러운 생존자여! <STELLAR>약속의 별<>은 당신의 것이 되리라!'\n\n'<STELLAR>자유의 목소리'<>에게서 얻은 <TECHNOLOGY>보안 항성계 통행권<>입니다.\n통행권을 선택해 초대(<IMG>FE_ALT1<>)를 수락하여 항법 시스템에 위치를 지정하십시오.",
+    "BaseValueUnits": 888.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "자유의 목소리의 요청 수락하기"
+    ],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other223",
+    "Icon": "other/223.png",
+    "Name": "피의 소금",
+    "Group": "밀수품",
+    "Description": "탁하고 역겨운 냄새가 나는 결정체가 가득한 가방입니다. 점액 증류기로 만든 유기 소금으로 주로 불법 페로몬을 제작할 때 쓰입니다.\n\n거의 대부분의 은하 무역 단말기에서 거래 자체가 <SPECIAL>불법<>입니다. <FUEL>무법 항성계<>에서 공급하는 방법밖에 없습니다.\n\n무역 규제를 받는 우주에서 금지품을 판매하면 <TRADEABLE>수익이 높을<> 수 있습니다.",
+    "BaseValueUnits": 2000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other224",
+    "Icon": "other/224.png",
+    "Name": "도난당한 DNA 표본",
+    "Group": "밀수품",
+    "Description": "등록되지 않은 DNA 표본이 담긴 병으로 불법 유전자 조작을 금지한 표준 생체보안 작동 방식의 영향을 받지 않습니다.\n\n거의 대부분의 은하 무역 단말기에서 거래 자체가 <SPECIAL>불법<>입니다. <FUEL>무법 항성계<>에서 공급하는 방법밖에 없습니다.\n\n무역 규제를 받는 우주에서 금지품을 판매하면 <TRADEABLE>수익이 높을<> 수 있습니다.",
+    "BaseValueUnits": 9000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties",
+      "IsEggIngredient"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other225",
+    "Icon": "other/225.png",
+    "Name": "달 에테르",
+    "Group": "밀수품",
+    "Description": "매우 불안정한 액체가 담긴 통입니다. 이 물질의 증기는 아주 쉽게 불이 붙으며 강력한 진정제로 쓰이기도 합니다.\n\n거의 대부분의 은하 무역 단말기에서 거래 자체가 <SPECIAL>불법<>입니다. <FUEL>무법 항성계<>에서 공급하는 방법밖에 없습니다.\n\n무역 규제를 받는 우주에서 금지품을 판매하면 <TRADEABLE>수익이 높을<> 수 있습니다.",
+    "BaseValueUnits": 18000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other226",
+    "Icon": "other/226.png",
+    "Name": "프리즘 깃털",
+    "Group": "밀수품",
+    "Description": "눈부시도록 아름다운 깃털 여러 개를 진공으로 밀봉했습니다. 마치 만화경처럼 빛나는 부적은 이미 멸종된 동물이 남긴 유해입니다.\n\n거의 대부분의 은하 무역 단말기에서 거래 자체가 <SPECIAL>불법<>입니다. <FUEL>무법 항성계<>에서 공급하는 방법밖에 없습니다.\n\n무역 규제를 받는 우주에서 금지품을 판매하면 <TRADEABLE>수익이 높을<> 수 있습니다.",
+    "BaseValueUnits": 32000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other227",
+    "Icon": "other/227.png",
+    "Name": "그라아그라아",
+    "Group": "밀수품",
+    "Description": "지금은 금지된 바이-킨이 전투에 사용하는 가스로 전투 전날 흡입하곤 했습니다.\n\n거의 대부분의 은하 무역 단말기에서 거래 자체가 <SPECIAL>불법<>입니다. <FUEL>무법 항성계<>에서 공급하는 방법밖에 없습니다.\n\n무역 규제를 받는 우주에서 금지품을 판매하면 <TRADEABLE>수익이 높을<> 수 있습니다.",
+    "BaseValueUnits": 58000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other228",
+    "Icon": "other/228.png",
+    "Name": "위조 회로",
+    "Group": "밀수품",
+    "Description": "나포된 우주정거장 코어를 재구성한 미허가 회로로 암시장에서 거래되는 많은 기술에 쓰입니다.\n\n거의 대부분의 은하 무역 단말기에서 거래 자체가 <SPECIAL>불법<>입니다. <FUEL>무법 항성계<>에서 공급하는 방법밖에 없습니다.\n\n무역 규제를 받는 우주에서 금지품을 판매하면 <TRADEABLE>수익이 높을<> 수 있습니다.",
+    "BaseValueUnits": 68000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other229",
+    "Icon": "other/229.png",
+    "Name": "금지 무기",
+    "Group": "밀수품",
+    "Description": "센티널 군의 잔해에서 구한 무기를 해킹한 것으로 은하계의 무법자들이 선호하는 강력한 무기입니다.\n\n거의 대부분의 은하 무역 단말기에서 거래 자체가 <SPECIAL>불법<>입니다. <FUEL>무법 항성계<>에서 공급하는 방법밖에 없습니다.\n\n무역 규제를 받는 우주에서 금지품을 판매하면 <TRADEABLE>수익이 높을<> 수 있습니다.",
+    "BaseValueUnits": 83000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other230",
+    "Icon": "other/230.png",
+    "Name": "퍼스트스폰 유물",
+    "Group": "밀수품",
+    "Description": "멸망한 겍 제국의 유물로 은하계 대부분의 문명에서 금지된 물건입니다.\n\n거의 대부분의 은하 무역 단말기에서 거래 자체가 <SPECIAL>불법<>입니다. <FUEL>무법 항성계<>에서 공급하는 방법밖에 없습니다.\n\n무역 규제를 받는 우주에서 금지품을 판매하면 <TRADEABLE>수익이 높을<> 수 있습니다.",
+    "BaseValueUnits": 98000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 25.0,
+    "Colour": "383838",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other231",
+    "Icon": "other/231.png",
+    "Name": "무법자 후드",
+    "Group": "Unlockable Hood",
+    "Description": "독점 <STELLAR>엑소슈트 외관 오버라이드<>입니다.\n\n엑소슈트의 외관을 <TECHNOLOGY>외모 수정기<>로 변형합니다.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "FFFFFF",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other232",
+    "Icon": "other/232.png",
+    "Name": "털털거리는 함선 궤적",
+    "Group": "함선 배기 오버라이드",
+    "Description": "독점 <STELLAR>함선 배기 수정기<>입니다.\n\n무법자가 급하게 손으로 대충 고친 고철덩어리 함선의 배기 노즐입니다. 종종 폭발하는 일도 있지만 비행에는 별다른 지장이 없습니다.\n\n이 <TECHNOLOGY>기술<>을 함선 인벤토리에 설치해 엔진 배기 궤적의 모습을 변경합니다.",
+    "BaseValueUnits": 2100.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other233",
+    "Icon": "other/233.png",
+    "Name": "무시무시한 선장 팡 포스터",
+    "Group": "장식",
+    "Description": "접착식 구겨짐 방지 독점 벽화입니다.\n무시무시한 선장 팡과 뼛속까지 소름이 돋을 악명을 모르는 바이-킨은 찾기 어렵습니다. 물론 그들의 전설이 역사적으로 실존했던 인물들의 이야기인지 말을 안 듣는 아이들을 겁주려 지어낸 이야기인지 확실하게 알 수는 없습니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other234",
+    "Icon": "other/234.png",
+    "Name": "무법자 포스터",
+    "Group": "장식",
+    "Description": "접착식 구겨짐 방지 독점 벽화입니다.\n센티널의 법에 반기를 든 해적, 도망자, 반란군들입니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other235",
+    "Icon": "other/235.png",
+    "Name": "레스버 XIII 포스터",
+    "Group": "장식",
+    "Description": "접착식 구겨짐 방지 독점 벽화입니다.\n무정부주의자의 느낌이 나는 포스터로 해적이 점령한 행성을 표현했습니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other236",
+    "Icon": "other/236.png",
+    "Name": "해적 영역 깃발",
+    "Group": "해적 깃발",
+    "Description": "벨벳 같은 옷감에 새빨간 해골이 그려진 깃발로 포악한 해적의 상징입니다.\n\n독점 기지 장식물입니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other237",
+    "Icon": "other/237.png",
+    "Name": "연합 영역 깃발",
+    "Group": "해적 깃발",
+    "Description": "여러 성간 길드의 연합의 상징으로 공동으로 디자인한 표준 장식입니다.\n\n독점 기지 장식물입니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other238",
+    "Icon": "other/238.png",
+    "Name": "문장 깃발",
+    "Group": "해적 깃발",
+    "Description": "황금으로 수를 놓은 깃발로 어느 기지에 걸어도 우아한 멋을 더할 수 있습니다.\n\n독점 기지 장식물입니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other239",
+    "Icon": "other/239.png",
+    "Name": "궤도 깃발",
+    "Group": "해적 깃발",
+    "Description": "눈에 확 띄는 선홍색과 회색 천에 행성 궤도를 감시하는 형상을 표현했습니다.\n\n독점 기지 장식물입니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other240",
+    "Icon": "other/240.png",
+    "Name": "버리디안 깃발",
+    "Group": "해적 깃발",
+    "Description": "녹색과 보라색이 대비되도록 디자인한 깃발로 풍요로운 항성계를 찾으려는 노력을 표현했습니다.\n\n독점 기지 장식물입니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other241",
+    "Icon": "other/241.png",
+    "Name": "어려운 큐브",
+    "Group": "떠다니는 원시 생명체",
+    "Description": "독점 기지 장식물입니다.\n\n이 정육면체처럼 생긴 생명체는 다른 차원에서 우주정거장 주변을 지나던 상인이 발견했습니다. 거주할 수 있는 기지에 거처를 마련해주면 얌전하게 지냅니다.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other242",
+    "Icon": "other/52.png",
+    "Name": "칭호: '파괴단 사냥꾼'",
+    "Group": "맞춤형 개인 식별자",
+    "Description": "<STELLAR>파괴단<> 원정의 완료와 영광스러운 약탈품, 해적 비밀의 발견을 기념하는 독점 <STELLAR>탐험가 칭호<>입니다.\n\n<TECHNOLOGY>외모 수정기<>에서 이 칭호를 배너에 적용시킬 수 있습니다.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other243",
+    "Icon": "other/243.png",
+    "Name": "파괴 원정 데칼",
+    "Group": "장식",
+    "Description": "독점 데칼로, 기지에 멋진 장식을 더할 수 있습니다.\n\n이 데칼은 <STELLAR>파괴단<> 원정과 영광스러운 악탈품, 그리고 해적 비밀의 발견을 기념합니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other244",
+    "Icon": "other/244.png",
+    "Name": "파괴 원정 배너",
+    "Group": "맞춤형 개인 식별자",
+    "Description": "이 특별한 <STELLAR>개인 장식<>을 장비하고 '파괴단' <STELLAR>원정<>과 영광스러운 약탈품, 그리고 해적 비밀의 발견을 기념하십시오.\n\n<TECHNOLOGY>외모 수정기<>에서 이 배너를 프로필에 적용할 수 있습니다.",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other245",
+    "Icon": "other/245.png",
+    "Name": "무법자 망토",
+    "Group": "Unlockable Cape",
+    "Description": "독점 <STELLAR>엑소슈트 외관 오버라이드<>입니다.\n\n전투로 해진 망토로, 악명 높은 해적 세력 <SPECIAL>파괴단<>에서 훔쳐온 것입니다. 화학 처리한 나노 섬유로 제작되어 제트팩의 열기에도 아무런 영향을 받지 않습니다.\n\n엑소슈트의 외관을 <TECHNOLOGY>외모 수정기<>로 변형합니다.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other246",
+    "Icon": "other/246.png",
+    "Name": "네얌의 빛나는 정복자",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>으로, 적 함선을 효율적으로 파괴하기 위해 불법 개조된 <TECHNOLOGY>양전자 배출기<>가 장착되어 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other247",
+    "Icon": "other/247.png",
+    "Name": "파이널 이우라노노 II",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>으로, 효율적인 은하계 탐험을 위해 불법 개조된 <TECHNOLOGY>하이퍼드라이브<>와 <TECHNOLOGY>펄스 엔진<>이 장착되어 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other248",
+    "Icon": "other/248.png",
+    "Name": "프라임 보이스 TU7",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>으로, 적 함선을 효율적으로 파괴하기 위해 업그레이드된 <TECHNOLOGY>광자포<>가 장착되어 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other249",
+    "Icon": "other/249.png",
+    "Name": "UB7 다테바야",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>으로, 빠른 화물 운송을 위해 <TECHNOLOGY>순간이동 수신기<>가 장착되어 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other250",
+    "Icon": "other/250.png",
+    "Name": "보리베츠의 항해 YZ7",
+    "Group": "독점 함선",
+    "Description": "넓은 화물칸이 있는 독점 <STELLAR>함선<>으로, 불법 개조된 <TECHNOLOGY>편향 방어막<>이 장착되어 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other251",
+    "Icon": "other/251.png",
+    "Name": "O. 티게레우미스 알",
+    "Group": "독점 반려동물의 알",
+    "Description": "살아있는 수정란으로 <TRADEABLE>곧 부화합니다!<>\n\n구부러진 뿔 한 쌍이 알 안쪽을 긁어댑니다. 안에 있는 작은 생명체는 출구를 찾아 몸부림치고 있습니다.\n\n스캔 결과 내부 생명체는 유전적으로 <FUEL>사납고<>, 주인에게 해를 끼치는 모든 위협에 공격적으로 반응하는 특성을 보일 것으로 추정됩니다.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other252",
+    "Icon": "other/252.png",
+    "Name": "W. 프레게이오수스 알",
+    "Group": "독점 반려동물의 알",
+    "Description": "살아있는 수정란으로 <TRADEABLE>곧 부화합니다!<>\n\n안쪽에서 약하게 꽥꽥거리는 소리가 들립니다.\n\n스캔 결과 내부 생명체는 유전적으로 <TRADEABLE>장난스러운<> 성격을 가질 것으로 추정됩니다.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other253",
+    "Icon": "other/253.png",
+    "Name": "J. 제노아리이 알",
+    "Group": "독점 반려동물의 알",
+    "Description": "살아있는 수정란으로 <TRADEABLE>곧 부화합니다!<>\n\n안에 있는 인조 생명체는 완벽하게 고요한 상태로 기운을 아끼고 있습니다.\n\n스캔 결과 내부 생명체는 유전적으로 <TECHNOLOGY>자주적인<> 특성을 가질 것으로 추정됩니다.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other254",
+    "Icon": "other/254.png",
+    "Name": "Z. 페탈포에메움 알",
+    "Group": "독점 반려동물의 알",
+    "Description": "살아있는 수정란으로 <TRADEABLE>곧 부화합니다!<>\n\n안에 있는 생명체는 알을 만질 때마다 부화할 것이라는 기대감에 들떠서 꿈틀거립니다.\n\n스캔 결과 내부 생명체는 유전적으로 부드러운 손길에 위안을 받는 <TRADEABLE>온화한<> 성격을 가질 것으로 추정됩니다.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other255",
+    "Icon": "other/255.png",
+    "Name": "D. 젠탈륨 알",
+    "Group": "독점 반려동물의 알",
+    "Description": "살아있는 수정란으로 <TRADEABLE>곧 부화합니다!<>\n\n물렁한 집게발 한 쌍이 알 안쪽을 부드럽게 긁고 있습니다.\n\n스캔 결과 내부 생명체는 유전적으로 도움이 되는 작업을 할당받았을 때 가장 행복한 <STELLAR>순종적인<> 성격을 가질 것으로 추정됩니다.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsTwitchCapaign2Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other256",
+    "Icon": "other/256.png",
+    "Name": "디럭스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "세 가지 종류의 호화로운 폭죽이 들어있는 팩입니다. <TECHNOLOGY>삼중 폭발 폭죽<>, <FUEL>이중 크롬 폭죽<>, <COMMODITY>허크의 바퀴 폭죽<>이 들어 있습니다. 점화시키면 하늘에 광채를 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other257",
+    "Icon": "other/256.png",
+    "Name": "디럭스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "세 가지 종류의 호화로운 폭죽이 들어있는 팩입니다. <TECHNOLOGY>삼중 폭발 폭죽<>, <FUEL>이중 크롬 폭죽<>, <COMMODITY>허크의 바퀴 폭죽<>이 들어 있습니다. 점화시키면 하늘에 광채를 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other258",
+    "Icon": "other/256.png",
+    "Name": "디럭스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "세 가지 종류의 호화로운 폭죽이 들어있는 팩입니다. <TECHNOLOGY>삼중 폭발 폭죽<>, <FUEL>이중 크롬 폭죽<>, <COMMODITY>허크의 바퀴 폭죽<>이 들어 있습니다. 점화시키면 하늘에 광채를 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other259",
+    "Icon": "other/256.png",
+    "Name": "디럭스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "세 가지 종류의 호화로운 폭죽이 들어있는 팩입니다. <TECHNOLOGY>삼중 폭발 폭죽<>, <FUEL>이중 크롬 폭죽<>, <COMMODITY>허크의 바퀴 폭죽<>이 들어 있습니다. 점화시키면 하늘에 광채를 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other260",
+    "Icon": "other/256.png",
+    "Name": "디럭스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "세 가지 종류의 호화로운 폭죽이 들어있는 팩입니다. <TECHNOLOGY>삼중 폭발 폭죽<>, <FUEL>이중 크롬 폭죽<>, <COMMODITY>허크의 바퀴 폭죽<>이 들어 있습니다. 점화시키면 하늘에 광채를 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other261",
+    "Icon": "other/261.png",
+    "Name": "벌레 사냥 I 데칼",
+    "Group": "장식",
+    "Description": "독점 데칼로, 기지에 멋과 장식을 더할 수 있습니다.\n이 <SPECIAL>저주받은<> 데칼은 강력한 <STELLAR>타이탄 웜<>을 묘사했습니다.\n\n'벌레의 제왕이 먼지가 자욱한 땅 위로 머리를 내민다. 하늘을 가릴 듯 거대한 체구다.'",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other262",
+    "Icon": "other/262.png",
+    "Name": "벌레 사냥 II 데칼",
+    "Group": "장식",
+    "Description": "독점 데칼로, 기지에 멋과 장식을 더할 수 있습니다.\n이 <SPECIAL>저주받은<> 데칼은 강력한 <STELLAR>타이탄 웜<>을 묘사했습니다.\n\n'아틀라스의 모든 지역이 뒤덮였다.'",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other263",
+    "Icon": "other/263.png",
+    "Name": "벌레 사냥 III 데칼",
+    "Group": "장식",
+    "Description": "독점 데칼로, 기지에 멋과 장식을 더할 수 있습니다.\n이 <SPECIAL>저주받은<> 데칼은 강력한 <STELLAR>타이탄 웜<>을 묘사했습니다.\n\n'말로 표현할 수 없을 정도로 기쁘게 먹어치운다.'",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other264",
+    "Icon": "other/264.png",
+    "Name": "벌레 사냥 IV 데칼",
+    "Group": "장식",
+    "Description": "독점 데칼로, 기지에 멋과 장식을 더할 수 있습니다.\n이 <SPECIAL>저주받은<> 데칼은 강력한 <STELLAR>타이탄 웜<>을 묘사했습니다.\n\n'그들이 집어삼키자 천지가 흔들렸다. 우린 그저 벽에 매달릴 수밖에 없다.'",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other265",
+    "Icon": "other/265.png",
+    "Name": "벌레 사냥 V 데칼",
+    "Group": "장식",
+    "Description": "독점 데칼로, 기지에 멋과 장식을 더할 수 있습니다.\n이 <SPECIAL>저주받은<> 데칼은 강력한 <STELLAR>타이탄 웜<>을 묘사했습니다.\n\n'새로 돋은 촉수의 축복을 받은 먼지 사이로 나의 신도들이 다시 태어나 봉기할 것이다.'",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other266",
+    "Icon": "other/266.png",
+    "Name": "우주 비행 포스터",
+    "Group": "장식",
+    "Description": "접착식 구겨짐 방지 독점 벽화입니다.\n함선이 이륙하는 기쁜 순간을 표현했습니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other267",
+    "Icon": "other/267.png",
+    "Name": "궤도 포스터",
+    "Group": "장식",
+    "Description": "접착식 구겨짐 방지 독점 벽화입니다.\n포스터에는 근심이 많은 것 같은 탐험가 위에 희미하게 떠 있는 우주정거장이 그려져 있습니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "other268",
+    "Icon": "other/268.png",
+    "Name": "함선 목록 포스터",
+    "Group": "장식",
+    "Description": "접착식 구겨짐 방지 독점 벽화입니다.\n포스터에는 다양한 형태의 함선이 나열되어 있습니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
