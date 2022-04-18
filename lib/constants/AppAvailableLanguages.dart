@@ -3,7 +3,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 List<LocalizationMap> supportedLanguageMaps = [
   LocalizationMap(LocaleKey.english, 'en', 'gb', percentageComplete: 100),
   LocalizationMap(LocaleKey.dutch, 'nl', 'nl', percentageComplete: 59),
-  LocalizationMap(LocaleKey.german, 'de', 'de', percentageComplete: 99),
+  LocalizationMap(LocaleKey.german, 'de', 'de', percentageComplete: 100),
   LocalizationMap(LocaleKey.french, 'fr', 'fr', percentageComplete: 99),
   LocalizationMap(LocaleKey.italian, 'it', 'it', percentageComplete: 99),
   LocalizationMap(LocaleKey.russian, 'ru', 'ru', percentageComplete: 98),
