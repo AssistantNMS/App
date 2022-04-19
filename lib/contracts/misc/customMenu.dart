@@ -273,15 +273,15 @@ List<CustomMenu> getMenuOptionsSection4(
       title: LocaleKey.feedback,
       navigateToNamed: Routes.feedback,
     ),
-    if (!isApple) ...[
-      CustomMenu(
-        icon: localGetFromIcon(Icons.share),
-        drawerIcon: localGetDrawerFromIcon(Icons.share),
-        title: LocaleKey.share,
-        hideInCustom: true,
-        onTap: (BuildContext navContext) => shareText(LocaleKey.shareContent),
-      )
-    ],
+    // if (!isApple) ...[
+    //   CustomMenu(
+    //     icon: localGetFromIcon(Icons.share),
+    //     drawerIcon: localGetDrawerFromIcon(Icons.share),
+    //     title: LocaleKey.share,
+    //     hideInCustom: true,
+    //     onTap: (BuildContext navContext) => shareText(LocaleKey.shareContent),
+    //   )
+    // ],
     CustomMenu(
       icon: localGetFromIcon(Icons.help),
       drawerIcon: localGetDrawerFromIcon(Icons.help),
