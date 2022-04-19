@@ -9,6 +9,7 @@ import '../../../contracts/data/quicksilverStore.dart';
 import '../../../contracts/data/socialItem.dart';
 import '../../../contracts/data/updateItemDetail.dart';
 import '../../../contracts/devDetail.dart';
+import '../../../contracts/twitch/twitchCampaignData.dart';
 
 class IDataJsonRepository {
   //
@@ -73,5 +74,15 @@ class IDataJsonRepository {
   Future<ResultWithValue<AlphabetTranslation>> getTranslation(
       BuildContext context, String itemId) async {
     return ResultWithValue<AlphabetTranslation>(false, null, '');
+  }
+
+  Future<ResultWithValue<List<TwitchCampaignData>>> getTwitchDrops(
+      BuildContext context) async {
+    return ResultWithValue<List<TwitchCampaignData>>(false, null, '');
+  }
+
+  Future<ResultWithValue<TwitchCampaignData>> getTwitchDropById(
+      BuildContext context, int id) async {
+    return ResultWithValue<TwitchCampaignData>(false, null, '');
   }
 }
