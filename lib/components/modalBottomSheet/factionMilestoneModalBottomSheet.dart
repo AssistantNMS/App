@@ -26,6 +26,8 @@ class FactionTierBottomSheet extends StatelessWidget {
 
       void Function() onTap;
       onTap = () {
+        getLog()
+            .i('FactionTierBottomSheet - set "${mission.id}", "$statIndex"');
         getNavigation().pop(context);
         viewModel.setFaction(mission.id, statIndex);
       };

@@ -21,11 +21,11 @@ class AlienPuzzlesListPage extends StatelessWidget {
   }
 
   Future<ResultWithValue<List<AlienPuzzle>>> getFilteredPuzzles(context) async {
-    var alienPuzzlesResult =
+    ResultWithValue<List<AlienPuzzle>> alienPuzzlesResult =
         await getAlienPuzzleRepo().getAll(context, puzzleTypes);
     if (alienPuzzlesResult.hasFailed) return alienPuzzlesResult;
 
-    var filtered =
+    List<AlienPuzzle> filtered =
         alienPuzzlesResult.value.where((al) => !al.id.contains('?')).toList();
     return ResultWithValue<List<AlienPuzzle>>(true, filtered, '');
   }
