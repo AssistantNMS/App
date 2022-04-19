@@ -8081,5 +8081,112 @@
     "StatBonuses": [],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
+  },
+  {
+    "Id": "tech216",
+    "Icon": "technology/216.png",
+    "Name": "Cargo Scan Deflector",
+    "Group": "Anti-Probe Countermeasures",
+    "Description": "A specially tuned resonance jammer, designed to interfere with the remote <STELLAR>cargo scans<> deployed by system authorities in the search for <SPECIAL>smuggled goods<>.\n\nDeploy from the <TECHNOLOGY>Quick Menu<> (<IMG>QUICK_MENU<>) while a scan is in progress to deflect the probe. Note: jamming is not 100% effective.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw34",
+        "Quantity": 220
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 2
+      },
+      {
+        "Id": "other228",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Hyperdrive Range",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech217",
+    "Icon": "other/232.png",
+    "Name": "Sputtering Starship Trail",
+    "Group": "Starship Exhaust Override",
+    "Description": "An exclusive <STELLAR>Starship Exhaust Modifier<>.\n\nA ramshackle ship exhaust nozzle, hand-assembled in an emergency by an outlaw. Has an occasional propensity to explode, but with no adverse effect on flight handling.\n\nInstall this <TECHNOLOGY>technology<> in your starship inventory to change the appearance of the engine exhaust trails.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech218",
+    "Icon": "technology/218.png",
+    "Name": "Vesper Sail",
+    "Group": "Advanced Engine Technology",
+    "Description": "A high-performance <STELLAR>solar sail<>, deployed automatically during flight. This advanced <TECHNOLOGY>propulsion device<> generates an electric field within the sails themselves, allowing the starship to build momentum from the solar wind.\n\nOffers substantial gains in <STELLAR>fuel efficiency<> and <STELLAR>boost<> performance over conventional engine systems, as well as enabling photovoltaic <STELLAR>recharge<> of the starship's <TECHNOLOGY>launch systems<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw6",
+        "Quantity": 125
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Pulse Drive Power",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "20"
+      },
+      {
+        "Name": "Internal Life Support Enabled",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.1"
+      }
+    ],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
   }
 ]
