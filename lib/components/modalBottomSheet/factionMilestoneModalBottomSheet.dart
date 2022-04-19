@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/AppAnimation.dart';
+import '../../constants/AppDuration.dart';
 import '../../contracts/faction/faction.dart';
 import '../../contracts/faction/storedFactionMission.dart';
 import '../../redux/modules/journeyMilestone/factionsViewModel.dart';
@@ -48,7 +48,7 @@ class FactionTierBottomSheet extends StatelessWidget {
     widgets.add(() => emptySpace8x());
 
     return AnimatedSize(
-      duration: AppAnimation.modal,
+      duration: AppDuration.modal,
       child: Container(
         constraints: BoxConstraints(
           minHeight: (MediaQuery.of(context).size.height) / 2,

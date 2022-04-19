@@ -21,7 +21,7 @@ class AnalyticsService implements IAnalyticsService {
         getLog().e("[Analytics]: $key----");
       }
     } else {
-      getLog().v("[Analytics]: $key----");
+      getLog().i("[Analytics]: $key----");
     }
   }
 }

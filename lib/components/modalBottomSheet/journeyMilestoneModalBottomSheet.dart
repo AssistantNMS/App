@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import '../../contracts/journey/storedJourneyMilestone.dart';
 
-import '../../constants/AppAnimation.dart';
+import '../../constants/AppDuration.dart';
 import '../../contracts/journey/journeyMilestone.dart';
 import '../../contracts/journey/journeyMilestoneStat.dart';
 import '../../redux/modules/journeyMilestone/journeyMilestoneViewModel.dart';
@@ -56,7 +56,7 @@ class JourneyMilestoneBottomSheet extends StatelessWidget {
     widgets.add(() => emptySpace8x());
 
     return AnimatedSize(
-      duration: AppAnimation.modal,
+      duration: AppDuration.modal,
       child: Container(
         constraints: BoxConstraints(
           minHeight: (MediaQuery.of(context).size.height) / 2,

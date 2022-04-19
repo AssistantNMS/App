@@ -30,7 +30,7 @@ Widget sectionListItem(
       ),
     );
 
-Widget textListItem(GuideSectionItem item) => Card(
+Widget textListItem(GuideSectionItem item) => flatCard(
       child: ListTile(
         title: Text(
           item.content,
@@ -39,7 +39,6 @@ Widget textListItem(GuideSectionItem item) => Card(
           style: const TextStyle(fontSize: 16),
         ),
       ),
-      margin: const EdgeInsets.all(0.0),
     );
 
 Widget linkListItem(GuideSectionItem item) {

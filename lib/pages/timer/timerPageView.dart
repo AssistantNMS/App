@@ -6,7 +6,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/tilePresenters/timerTilePresenter.dart';
-import '../../constants/AppAnimation.dart';
+import '../../constants/AppDuration.dart';
 import '../../contracts/timer/timerItem.dart';
 import '../../integration/dependencyInjection.dart';
 import 'addEditTimerPage.dart';
@@ -34,7 +34,7 @@ class _TimersPageViewState extends State<TimersPageView> {
 
   initTimer({TimerItem newTimer}) {
     if (_timer != null && _timer.isActive) _timer.cancel();
-    _timer = Timer.periodic(AppAnimation.oneSec, (Timer t) {
+    _timer = Timer.periodic(AppDuration.timerPageRefreshInterval, (Timer t) {
       var hasValidTimers = timers.any(
         (t) => t.completionDate.isAfter(DateTime.now()),
       );

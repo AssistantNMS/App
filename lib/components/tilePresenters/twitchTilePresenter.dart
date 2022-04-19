@@ -4,16 +4,19 @@ import 'package:flutter/material.dart';
 
 import '../../constants/NmsUIConstants.dart';
 
-Widget rewardFromTwitchTilePresenter(BuildContext context, String campaignId) {
+Widget rewardFromTwitchTilePresenter(
+    BuildContext context, String campaignId, bool displayBackgroundColour) {
   return flatCard(
     shadowColor: Colors.transparent,
-    child: genericListTile(
+    child: genericListTileWithSubtitle(
       context,
-      leadingImage: AppImage.twitch,
+      leadingImage:
+          displayBackgroundColour ? AppImage.twitchAlt : AppImage.twitch,
       borderRadius: NMSUIConstants.gameItemBorderRadius,
       name: getTranslations()
           .fromKey(LocaleKey.twitchCampaignNum)
           .replaceAll('{0}', campaignId),
+      subtitle: Text(getTranslations().fromKey(LocaleKey.twitchDrop)),
     ),
   );
 }
