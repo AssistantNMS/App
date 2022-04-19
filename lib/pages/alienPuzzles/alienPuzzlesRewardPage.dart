@@ -56,7 +56,7 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
         if (baseReward.rewardId == 'RECIPE_LIST' ||
             baseReward.rewardId == 'USEFUL_PROD' ||
             baseReward.rewardId == 'FACT_PROD') {
-          var rewardWithInfo =
+          AlienPuzzleRewardOddsWithAdditional rewardWithInfo =
               AlienPuzzleRewardOddsWithAdditional(AlienPuzzleRewardOdds(
             type: AlienPuzzleRewardItemType.Product,
             amountMin: 1,
@@ -86,7 +86,7 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
           }
 
           if (subTreeId != '') {
-            var subTechTree =
+            ResultWithValue<TechTree> subTechTree =
                 await getTechTreeRepo().getSubTree(context, subTreeId);
             if (subTechTree.isSuccess) {
               techTreesToDisplay.add(subTechTree.value);
@@ -119,7 +119,7 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
         newRewards.add(newItem);
       }
     } catch (exception) {
-      //
+      getLog().e('getList ${exception.toString()}');
     }
 
     setState(() {
@@ -150,7 +150,8 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
       //   child: Text('reward'),
       //   padding: const EdgeInsets.only(top: 8),
       // )));
-      var orderedRewardDetails = reward.details.toList();
+      List<AlienPuzzleRewardOddsWithAdditional> orderedRewardDetails =
+          reward.details.toList();
       orderedRewardDetails.sort(
         (a, b) => ((a.type.toString()).compareTo(b.type.toString())),
       );
