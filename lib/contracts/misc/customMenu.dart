@@ -69,8 +69,9 @@ List<CustomMenu> getMenuOptionsSection1(
       title: LocaleKey.patrons,
       navigateToNamed: Routes.patronListPage,
     ),
-    isApple
-        ? CustomMenu(
+    // isApple
+    //     ? 
+        CustomMenu(
             icon: localGetFromIcon(Icons.share),
             drawerIcon: localGetDrawerFromIcon(Icons.share),
             title: LocaleKey.share,
@@ -78,13 +79,13 @@ List<CustomMenu> getMenuOptionsSection1(
             onTap: (BuildContext navContext) =>
                 shareText(LocaleKey.shareContent),
           )
-        : CustomMenu(
-            icon: getListTileImage(AppImage.donation, size: imageSize),
-            drawerIcon: getListTileImage(AppImage.donation),
-            title: LocaleKey.donation,
-            hideInCustom: true,
-            navigateToNamed: Routes.donation,
-          )
+        // : CustomMenu(
+        //     icon: getListTileImage(AppImage.donation, size: imageSize),
+        //     drawerIcon: getListTileImage(AppImage.donation),
+        //     title: LocaleKey.donation,
+        //     hideInCustom: true,
+        //     navigateToNamed: Routes.donation,
+        //   )
   ];
 }
 
