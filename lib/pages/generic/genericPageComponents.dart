@@ -634,7 +634,7 @@ List<Widget> getRewardFrom(
     }
   }
 
-  List<String> twitchCampaignKeySplit = UsageKey.isTwitchCapaign.split("{0}");
+  List<String> twitchCampaignKeySplit = UsageKey.isTwitchCampaign.split("{0}");
   if (usages.any((u) => u.contains(twitchCampaignKeySplit[0]))) {
     String expSeasUsageKey =
         usages.firstWhere((u) => u.contains(twitchCampaignKeySplit[0]));
