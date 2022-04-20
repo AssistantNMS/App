@@ -35,6 +35,13 @@ Widget weekendMissionBubble(String message) {
   );
 }
 
+Widget alienPuzzleBubble(Widget text) {
+  return Bubble(
+    style: weekendMissionBubbleStyle(defaultElevation),
+    child: Padding(padding: const EdgeInsets.all(4), child: text),
+  );
+}
+
 Widget currentUserBubbleOption(BuildContext context, String message) {
   return Padding(
     padding: const EdgeInsets.all(4),
@@ -55,12 +62,19 @@ Widget currentUserBubbleOption(BuildContext context, String message) {
 }
 
 Widget currentUserBubble(BuildContext context, String message) {
+  return currentUserFromWidgetBubble(
+    context,
+    Text(message, style: const TextStyle(color: Colors.white)),
+  );
+}
+
+Widget currentUserFromWidgetBubble(BuildContext context, Widget text) {
   return Bubble(
     style: currentUserBubbleStyle(
       defaultElevation,
       getTheme().getPrimaryColour(context),
     ),
-    child: Text(message, style: const TextStyle(color: Colors.white)),
+    child: text,
   );
 }
 

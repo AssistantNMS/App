@@ -1117,7 +1117,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5"
+      }
+    ],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -1147,10 +1154,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Warp Cell Efficiency",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "5,000"
+        "Name": "Hyperdrive Range",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -1182,10 +1189,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Automatic Recharging",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "0.9"
+        "Name": "Launch Cost",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -1215,7 +1222,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Shield Strength",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "0.05"
+      }
+    ],
     "ConsumableRewardTexts": [],
     "HasDevProperties": true
   },
@@ -1245,10 +1259,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Internal Life Support Enabled",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1.05"
+        "Name": "Maneuverability",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "5"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -3388,23 +3402,6 @@
     "HasDevProperties": true
   },
   {
-    "Id": "other152",
-    "Icon": "other/152.png",
-    "Name": "Hadach's Discovery KH3 starship",
-    "Group": "Exclusive Starship",
-    "Description": "",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 0.0,
-    "Colour": "2C7C9F",
-    "BlueprintCost": 0,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "HasDevProperties": false
-  },
-  {
     "Id": "other153",
     "Icon": "other/52.png",
     "Name": "Title: 'Globemaster'",
@@ -4483,21 +4480,6 @@
     "HasDevProperties": true
   },
   {
-    "Id": "other199",
-    "Icon": "other/199.png",
-    "Name": "Burrowing Monstrosity",
-    "Group": "",
-    "Description": "",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "Credits",
-    "Colour": "2C7C9F",
-    "BlueprintCost": 0,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "HasDevProperties": false
-  },
-  {
     "Id": "other200",
     "Icon": "other/187.png",
     "Name": "Wormskin Folio: 1",
@@ -5239,7 +5221,8 @@
     "MaxStackSize": 5.0,
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5260,7 +5243,8 @@
     "MaxStackSize": 5.0,
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5286,7 +5270,8 @@
     "MaxStackSize": 5.0,
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5312,7 +5297,8 @@
     "MaxStackSize": 5.0,
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5338,7 +5324,8 @@
     "MaxStackSize": 5.0,
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5364,7 +5351,8 @@
     "MaxStackSize": 5.0,
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5390,7 +5378,8 @@
     "MaxStackSize": 5.0,
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5416,7 +5405,8 @@
     "MaxStackSize": 5.0,
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5442,7 +5432,8 @@
     "MaxStackSize": 5.0,
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5468,7 +5459,8 @@
     "MaxStackSize": 5.0,
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5494,7 +5486,8 @@
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5515,7 +5508,8 @@
     "MaxStackSize": 5.0,
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5541,7 +5535,8 @@
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5562,7 +5557,8 @@
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsExpeditionSeason6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

@@ -83,6 +83,8 @@ class AppImage {
       base + 'special/expeditionsCover3.jpg';
   static const String expeditionSeasonBackground6 =
       base + 'special/expeditionsCover4.jpg';
+  static const String expeditionSeasonBackground7 =
+      base + 'special/expeditionsCover6.jpg';
   static const String observatory = base + 'special/observatory.png';
   static const String monolith = base + 'special/monolith.png';
   static const String plaque = base + 'special/plaque.png';

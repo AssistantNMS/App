@@ -55,31 +55,28 @@ String getColourValueFromTag(String tag) {
 InlineSpan renderNode(BuildContext context, String colour, String wordChain) {
   TextStyle textStyle = (colour != null && colour.length == 6)
       ? TextStyle(color: HexColor(colour))
-      : Theme.of(context).textTheme.subtitle1;
+      : null;
 
   return TextSpan(text: wordChain, style: textStyle);
 }
 
-List<Widget> genericPageDescripHighlightText(BuildContext context, String text,
-    List<PlatformControlMapping> controlLookup) {
+Widget textWithHighlightTags(
+  BuildContext context,
+  String text,
+  List<PlatformControlMapping> controlLookup, {
+  TextAlign textAlign = TextAlign.center,
+  TextStyle textStyle,
+  int maxLines,
+}) {
   RegExp doubleTagRegex = RegExp(r'<\w+>(<\w+>(\w+\s*)*<>)<>');
   RegExp tagStartRegex = RegExp(r'(.*)<(\w+)>(.*)');
   RegExp tagEndRegex = RegExp(r'(.*)<>(.*)');
 
   String currentColourValue = '';
-  List<RichText> paragraphNodes = List.empty(growable: true);
-  if (!text.contains('<>')) return [genericItemDescription(text)];
-
-  List<String> paragraphs = text.split(RegExp(r'\r?\n'));
-  for (var paragraphIndex = 0;
-      paragraphIndex < paragraphs.length;
-      paragraphIndex++) {
-    String paragraph = paragraphs[paragraphIndex];
-    if (paragraph.length < 2) continue;
-
+  List<InlineSpan> nodes = List.empty(growable: true);
+  if (text.contains('<>')) {
     String wordChain = '';
-    List<InlineSpan> nodes = List.empty(growable: true);
-    List<String> words = paragraph.split(' ');
+    List<String> words = text.replaceAll('<><', '<> <').split(' ');
     for (int wordIndex = 0; wordIndex < words.length; wordIndex++) {
       String word = words[wordIndex];
       String displayWord = word;
@@ -116,6 +113,11 @@ List<Widget> genericPageDescripHighlightText(BuildContext context, String text,
           endMatches.length == 1 &&
           endMatches[0].groupCount >= 2) {
         leftOverDisplayWord = endMatches[0].group(2) + ' ';
+      }
+
+      if (localTag == '<AUDIO>') {
+        // Don't show
+        continue;
       }
 
       if (currentColourValue.length > 1) {
@@ -169,15 +171,35 @@ List<Widget> genericPageDescripHighlightText(BuildContext context, String text,
     if (wordChain.length > 1) {
       nodes.add(renderNode(context, '', wordChain));
     }
+    // ----------------------------
+  } else {
+    nodes.add(renderNode(context, '', text));
+  }
+
+  return RichText(
+    text: TextSpan(
+      style: textStyle ?? Theme.of(context).textTheme.subtitle1,
+      children: nodes,
+    ),
+    textAlign: textAlign,
+    maxLines: maxLines,
+  );
+}
+
+List<Widget> genericPageDescripHighlightText(BuildContext context, String text,
+    List<PlatformControlMapping> controlLookup) {
+  List<RichText> paragraphNodes = List.empty(growable: true);
+  if (!text.contains('<>')) return [genericItemDescription(text)];
+
+  List<String> paragraphs = text.split(RegExp(r'\r?\n'));
+  for (var paragraphIndex = 0;
+      paragraphIndex < paragraphs.length;
+      paragraphIndex++) {
+    String paragraph = paragraphs[paragraphIndex];
+    if (paragraph.length < 2) continue;
 
     paragraphNodes.add(
-      RichText(
-        text: TextSpan(
-          style: Theme.of(context).textTheme.subtitle1,
-          children: nodes,
-        ),
-        textAlign: TextAlign.center,
-      ),
+      textWithHighlightTags(context, paragraph, controlLookup),
     );
   }
 
