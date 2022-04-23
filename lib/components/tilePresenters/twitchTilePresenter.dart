@@ -50,7 +50,7 @@ Widget Function(BuildContext, TwitchCampaignData)
         subtitle: Text(simpleDate(campaign.startDate) +
             ' -> ' +
             simpleDate(campaign.endDate)),
-        onTap: () async => await getNavigation().navigateAsync(
+        onTap: () => getNavigation().navigateAsync(
           context,
           navigateTo: (context) => TwitchCampaignDetailPage(
             id: campaign.id,

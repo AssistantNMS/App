@@ -241,12 +241,12 @@ List<CustomMenu> getMenuOptionsSection3(
       title: LocaleKey.techTree,
       navigateToNamed: Routes.techTree,
     ),
-    CustomMenu(
-      icon: getListTileImage(AppImage.techTree, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.techTree),
-      title: LocaleKey.twitchDrop,
-      navigateToNamed: Routes.twitchCampaignPage,
-    ),
+    // CustomMenu(
+    //   icon: getListTileImage(AppImage.techTree, size: imageSize),
+    //   drawerIcon: getListTileImage(AppImage.techTree),
+    //   title: LocaleKey.twitchDrop,
+    //   navigateToNamed: Routes.twitchCampaignPage,
+    // ),
     CustomMenu(
       icon: localGetFromIcon(Icons.more_horiz),
       drawerIcon: localGetDrawerFromIcon(Icons.more_horiz),

@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import '../../components/guide/stickRowPresenters.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/twitchTilePresenter.dart';
+import '../../constants/AppImage.dart';
+import '../../constants/Routes.dart';
 import '../../contracts/twitch/twitchCampaignData.dart';
 import '../../contracts/twitch/twitchCampaignDay.dart';
 import '../../integration/dependencyInjection.dart';
@@ -18,11 +20,27 @@ class TwitchCampaignDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return simpleGenericPageScaffold(
+    return basicGenericPageScaffold(
       context,
       title: getTranslations()
           .fromKey(LocaleKey.twitchCampaignNum)
           .replaceAll('{0}', id.toString()),
+      actions: [
+        ActionItem(
+          icon: Icons.more,
+          image: Padding(
+            padding: const EdgeInsets.only(left: 12, right: 12),
+            child: getListTileImage(
+              AppImage.twitch,
+              padding: const EdgeInsets.symmetric(vertical: 16),
+            ),
+          ),
+          onPressed: () => getNavigation().navigateAsync(
+            context,
+            navigateToNamed: Routes.twitchCampaignPage,
+          ),
+        ),
+      ],
       body: FutureBuilder<ResultWithValue<TwitchCampaignData>>(
         future: getDataRepo().getTwitchDropById(context, id),
         builder: (BuildContext futureContext,
