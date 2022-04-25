@@ -42,6 +42,7 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
       widgets.add(
         (_) => genericItemDescription(
           (titleIndex + 1).toString() + " / " + titles.length.toString(),
+          maxLines: 20,
         ),
       );
       widgets.add(

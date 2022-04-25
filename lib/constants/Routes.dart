@@ -46,6 +46,7 @@ import '../pages/sync/syncPage.dart';
 import '../pages/techTree/unlockableTechTreePage.dart';
 import '../pages/timer/timerPage.dart';
 import '../pages/title/titlePage.dart';
+import '../pages/twitch/twitchCampaignPage.dart';
 import '../pages/whatIsNew/enhancedWhatIsNewPage.dart';
 import 'AnalyticsEvent.dart';
 
@@ -101,6 +102,7 @@ class Routes {
   static const String alienPuzzlesMenuPage = '/alienPuzzlesMenuPage';
   static const String journeyMilestonePage = '/journeyMilestonePage';
   static const String factionPage = '/factionPage';
+  static const String twitchCampaignPage = '/twitchCampaignPage';
 }
 
 Map<String, Widget Function(BuildContext)> initNamedRoutes(
@@ -178,6 +180,7 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.alienPuzzlesMenuPage: (context) => AlienPuzzlesMenuPage(),
     Routes.journeyMilestonePage: (context) => JourneyMilestonePage(),
     Routes.factionPage: (context) => FactionPage(),
+    Routes.twitchCampaignPage: (context) => TwitchCampaignPage(),
   });
   return routes;
 }

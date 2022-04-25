@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 
 class AnalyticsService implements IAnalyticsService {
+  final analyticsKey = '[Analytics]:';
   FirebaseAnalytics analytics;
   AnalyticsService() {
     Firebase.initializeApp().then((_) {
@@ -17,11 +18,12 @@ class AnalyticsService implements IAnalyticsService {
     if (kReleaseMode) {
       try {
         analytics.logEvent(name: key);
+        getLog().i("$analyticsKey $key");
       } catch (ex) {
-        getLog().e("[Analytics]: $key----");
+        getLog().e("$analyticsKey $key");
       }
     } else {
-      getLog().i("[Analytics]: $key----");
+      getLog().i("$analyticsKey $key");
     }
   }
 }

@@ -325,19 +325,27 @@ List<Widget> getCraftedUsing(
       requiredItemsPresenter,
     ));
 
-    craftedUsing.add(Container(
-      child: positiveButton(
-        context,
-        title: getTranslations().fromKey(LocaleKey.viewAllRawMaterialsRequired),
-        onPress: () async => await getNavigation().navigateAsync(
+    List<RequiredItem> itemsThatArentRawMaterials = resArray
+        .where((element) => !element.id.contains(IdPrefix.rawMaterial))
+        .toList();
+
+    if (itemsThatArentRawMaterials.isNotEmpty) {
+      craftedUsing.add(
+        positiveButton(
           context,
-          navigateTo: (context) => GenericPageAllRequiredRawMaterials(
-            GenericPageAllRequired.fromGenericItem(genericItem),
-            vm.displayGenericItemColour,
+          title: getTranslations().fromKey(
+            LocaleKey.viewAllRawMaterialsRequired,
+          ),
+          onPress: () async => await getNavigation().navigateAsync(
+            context,
+            navigateTo: (context) => GenericPageAllRequiredRawMaterials(
+              GenericPageAllRequired.fromGenericItem(genericItem),
+              vm.displayGenericItemColour,
+            ),
           ),
         ),
-      ),
-    ));
+      );
+    }
   }
   return craftedUsing;
 }
@@ -626,7 +634,7 @@ List<Widget> getRewardFrom(
     }
   }
 
-  List<String> twitchCampaignKeySplit = UsageKey.isTwitchCapaign.split("{0}");
+  List<String> twitchCampaignKeySplit = UsageKey.isTwitchCampaign.split("{0}");
   if (usages.any((u) => u.contains(twitchCampaignKeySplit[0]))) {
     String expSeasUsageKey =
         usages.firstWhere((u) => u.contains(twitchCampaignKeySplit[0]));

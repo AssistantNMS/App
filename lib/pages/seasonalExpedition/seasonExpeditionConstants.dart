@@ -12,6 +12,7 @@ String getBackgroundForExpedition(String seasId) {
   if (seasId.contains('seas-3')) return AppImage.expeditionSeasonBackground4;
   if (seasId.contains('seas-4')) return AppImage.expeditionSeasonBackground5;
   if (seasId.contains('seas-5')) return AppImage.expeditionSeasonBackground6;
+  if (seasId.contains('seas-6')) return AppImage.expeditionSeasonBackground7;
   return AppImage.expeditionSeasonBackground1;
 }
 

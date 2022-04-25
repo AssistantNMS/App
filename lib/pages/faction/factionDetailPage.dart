@@ -42,7 +42,10 @@ class FactionDetailPage extends StatelessWidget {
     ));
     widgets.add(Padding(
       padding: NMSUIConstants.buttonPadding,
-      child: genericItemDescription(factionDetail.description),
+      child: genericItemDescription(
+        factionDetail.description,
+        maxLines: 20,
+      ),
     ));
     widgets.add(customDivider());
 

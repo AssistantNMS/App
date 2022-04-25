@@ -13,5 +13,5 @@ class UsageKey {
   static const String isQuicksilver = 'IsQuicksilver';
 
   static const String isExpeditionSeason = 'IsExpeditionSeason{0}Reward';
-  static const String isTwitchCapaign = 'IsTwitchCapaign{0}Reward';
+  static const String isTwitchCampaign = 'IsTwitchCampaign{0}Reward';
 }

@@ -1,5 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/constants/AppImage.dart';
+import 'package:assistantnms_app/pages/helloGames/communityMission/communityMissionPage.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/NmsUIConstants.dart';
@@ -22,6 +23,10 @@ Widget rewardFromQuicksilverMerchantTilePresenter(
           colour: Colors.grey[400],
         )
       ]),
+      onTap: () async => await getNavigation().navigateAsync(
+        context,
+        navigateTo: (context) => CommunityMissionPage(),
+      ),
     ),
   );
 }

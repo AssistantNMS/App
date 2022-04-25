@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../contracts/alienPuzzle/alienPuzzle.dart';
 import '../../contracts/alienPuzzle/alienPuzzleRaceType.dart';
 import '../../contracts/alienPuzzle/alienPuzzleType.dart';
+import '../../pages/generic/genericPageDescripHighlightText.dart';
 import '../modalBottomSheet/alienPuzzleModalBottomSheet.dart';
 
 void Function() openModalForAlienPuzzle(
@@ -33,54 +34,67 @@ Widget manufacturingFacilityTilePresenter(
   String template = getTranslations().fromKey(alienPuzzle.isFactory
       ? LocaleKey.manufacturingFacilityFactory
       : LocaleKey.manufacturingFacilityHarvestor);
-  return genericListTileWithSubtitle(
-    context,
-    leadingImage: getFactionImageFromRaceType(alienPuzzle.race),
-    name: template
-        .replaceAll(
-            '{0}', getFactionNameFromRaceType(context, alienPuzzle.race))
-        .replaceAll('{1}', alienPuzzle.number.toString()),
-    subtitle: Text(
-      alienPuzzle.incomingMessages.isNotEmpty
-          ? alienPuzzle.incomingMessages[0]
-          : '...',
-      maxLines: 1,
-      overflow: TextOverflow.ellipsis,
-    ),
+  var title = template
+      .replaceAll('{0}', getFactionNameFromRaceType(context, alienPuzzle.race))
+      .replaceAll('{1}', alienPuzzle.number.toString());
+  var subtitle = alienPuzzle.incomingMessages.isNotEmpty
+      ? alienPuzzle.incomingMessages[0]
+      : '...';
+
+  return ListTile(
+    leading: genericTileImage(getFactionImageFromRaceType(alienPuzzle.race)),
+    title: titleWithHighlightTags(context, title),
+    subtitle: subtitleWithHighlightTags(context, subtitle),
     onTap: openModalForAlienPuzzle(context, alienPuzzle),
   );
 }
 
 Widget radioTowerTilePresenter(BuildContext context, AlienPuzzle alienPuzzle) {
-  return genericListTileWithSubtitle(
-    context,
-    leadingImage: getFactionImageFromRaceType(alienPuzzle.race),
-    name: alienPuzzle.incomingMessages.isNotEmpty
-        ? alienPuzzle.incomingMessages[0]
-        : '...',
-    subtitle: Text(
-      alienPuzzle.incomingMessages.length > 1
-          ? alienPuzzle.incomingMessages[1]
-          : '...',
-      maxLines: 1,
-      overflow: TextOverflow.ellipsis,
-    ),
+  var title = alienPuzzle.incomingMessages.isNotEmpty
+      ? alienPuzzle.incomingMessages[0]
+      : '...';
+  var subtitle = alienPuzzle.incomingMessages.length > 1
+      ? alienPuzzle.incomingMessages[1]
+      : '...';
+
+  return ListTile(
+    leading: genericTileImage(getFactionImageFromRaceType(alienPuzzle.race)),
+    title: titleWithHighlightTags(context, title),
+    subtitle: subtitleWithHighlightTags(context, subtitle),
     onTap: openModalForAlienPuzzle(context, alienPuzzle),
   );
 }
 
 Widget stationCoreTilePresenter(BuildContext context, AlienPuzzle alienPuzzle) {
-  return genericListTileWithSubtitle(
-    context,
-    leadingImage: getFactionImageFromRaceType(alienPuzzle.race),
-    name: alienPuzzle.incomingMessages.isNotEmpty
-        ? alienPuzzle.incomingMessages[0]
-        : '...',
-    subtitle: Text(
-      alienPuzzle.options.isNotEmpty ? alienPuzzle.options[0].name : '...',
-      maxLines: 1,
-      overflow: TextOverflow.ellipsis,
-    ),
+  var title = alienPuzzle.incomingMessages.isNotEmpty
+      ? alienPuzzle.incomingMessages[0]
+      : '...';
+  var subtitle =
+      alienPuzzle.options.isNotEmpty ? alienPuzzle.options[0].name : '...';
+
+  return ListTile(
+    leading: genericTileImage(getFactionImageFromRaceType(alienPuzzle.race)),
+    title: titleWithHighlightTags(context, title),
+    subtitle: subtitleWithHighlightTags(context, subtitle),
     onTap: openModalForAlienPuzzle(context, alienPuzzle),
   );
 }
+
+Widget titleWithHighlightTags(BuildContext context, String titleText) =>
+    textWithHighlightTags(
+      context,
+      titleText,
+      List.empty(),
+      textAlign: TextAlign.left,
+      maxLines: 1,
+    );
+
+Widget subtitleWithHighlightTags(BuildContext context, String subtitleText) =>
+    textWithHighlightTags(
+      context,
+      subtitleText,
+      List.empty(),
+      textAlign: TextAlign.left,
+      maxLines: 1,
+      textStyle: TextStyle(color: Colors.grey[400]),
+    );

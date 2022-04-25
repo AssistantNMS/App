@@ -8,6 +8,7 @@ import '../../contracts/alienPuzzle/alienPuzzle.dart';
 import '../../contracts/alienPuzzle/alienPuzzleReward.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../pages/alienPuzzles/alienPuzzlesRewardPage.dart';
+import '../../pages/generic/genericPageDescripHighlightText.dart';
 import '../common/chatBubble.dart';
 import '../tilePresenters/alienPuzzleRewardOddsTilePresenter.dart';
 
@@ -33,7 +34,16 @@ class _AlienPuzzleModalBottomSheetWidget
 
   _AlienPuzzleModalBottomSheetWidget(this.alienPuzzle) {
     for (var npcMsg in alienPuzzle.incomingMessages) {
-      chatBubbles.add(() => weekendMissionBubble(npcMsg));
+      chatBubbles.add(
+        () => alienPuzzleBubble(
+          textWithHighlightTags(
+            context,
+            npcMsg,
+            List.empty(),
+            textAlign: TextAlign.left,
+          ),
+        ),
+      );
     }
     localOptions = alienPuzzle.options;
   }
@@ -74,11 +84,26 @@ class _AlienPuzzleModalBottomSheetWidget
                           showOptions = false;
                           isLoadingRewards = true;
                           chatBubbles.add(
-                            () => currentUserBubble(context, opt.name),
+                            () => currentUserFromWidgetBubble(
+                              context,
+                              textWithHighlightTags(
+                                context,
+                                opt.name,
+                                List.empty(),
+                                textAlign: TextAlign.right,
+                              ),
+                            ),
                           );
                           if (opt.text != null && opt.text.isNotEmpty) {
                             chatBubbles.add(
-                              () => weekendMissionBubble(opt.text),
+                              () => alienPuzzleBubble(
+                                textWithHighlightTags(
+                                  context,
+                                  opt.text,
+                                  List.empty(),
+                                  textAlign: TextAlign.left,
+                                ),
+                              ),
                             );
                           }
                         });
@@ -198,7 +223,13 @@ class _AlienPuzzleModalBottomSheetWidget
                           for (var npcMsg
                               in nextAlienPuzzleResult.value.incomingMessages) {
                             newChatBubbles.add(
-                              () => weekendMissionBubble(npcMsg),
+                              () => alienPuzzleBubble(
+                                textWithHighlightTags(
+                                  context,
+                                  npcMsg,
+                                  List.empty(),
+                                ),
+                              ),
                             );
                           }
                           setState(() {

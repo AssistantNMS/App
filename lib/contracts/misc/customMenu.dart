@@ -70,22 +70,21 @@ List<CustomMenu> getMenuOptionsSection1(
       navigateToNamed: Routes.patronListPage,
     ),
     // isApple
-    //     ? 
-        CustomMenu(
-            icon: localGetFromIcon(Icons.share),
-            drawerIcon: localGetDrawerFromIcon(Icons.share),
-            title: LocaleKey.share,
-            hideInCustom: true,
-            onTap: (BuildContext navContext) =>
-                shareText(LocaleKey.shareContent),
-          )
-        // : CustomMenu(
-        //     icon: getListTileImage(AppImage.donation, size: imageSize),
-        //     drawerIcon: getListTileImage(AppImage.donation),
-        //     title: LocaleKey.donation,
-        //     hideInCustom: true,
-        //     navigateToNamed: Routes.donation,
-        //   )
+    //     ?
+    CustomMenu(
+      icon: localGetFromIcon(Icons.share),
+      drawerIcon: localGetDrawerFromIcon(Icons.share),
+      title: LocaleKey.share,
+      hideInCustom: true,
+      onTap: (BuildContext navContext) => shareText(LocaleKey.shareContent),
+    )
+    // : CustomMenu(
+    //     icon: getListTileImage(AppImage.donation, size: imageSize),
+    //     drawerIcon: getListTileImage(AppImage.donation),
+    //     title: LocaleKey.donation,
+    //     hideInCustom: true,
+    //     navigateToNamed: Routes.donation,
+    //   )
   ];
 }
 
@@ -242,6 +241,12 @@ List<CustomMenu> getMenuOptionsSection3(
       title: LocaleKey.techTree,
       navigateToNamed: Routes.techTree,
     ),
+    // CustomMenu(
+    //   icon: getListTileImage(AppImage.techTree, size: imageSize),
+    //   drawerIcon: getListTileImage(AppImage.techTree),
+    //   title: LocaleKey.twitchDrop,
+    //   navigateToNamed: Routes.twitchCampaignPage,
+    // ),
     CustomMenu(
       icon: localGetFromIcon(Icons.more_horiz),
       drawerIcon: localGetDrawerFromIcon(Icons.more_horiz),
@@ -274,15 +279,15 @@ List<CustomMenu> getMenuOptionsSection4(
       title: LocaleKey.feedback,
       navigateToNamed: Routes.feedback,
     ),
-    if (!isApple) ...[
-      CustomMenu(
-        icon: localGetFromIcon(Icons.share),
-        drawerIcon: localGetDrawerFromIcon(Icons.share),
-        title: LocaleKey.share,
-        hideInCustom: true,
-        onTap: (BuildContext navContext) => shareText(LocaleKey.shareContent),
-      )
-    ],
+    // if (!isApple) ...[
+    //   CustomMenu(
+    //     icon: localGetFromIcon(Icons.share),
+    //     drawerIcon: localGetDrawerFromIcon(Icons.share),
+    //     title: LocaleKey.share,
+    //     hideInCustom: true,
+    //     onTap: (BuildContext navContext) => shareText(LocaleKey.shareContent),
+    //   )
+    // ],
     CustomMenu(
       icon: localGetFromIcon(Icons.help),
       drawerIcon: localGetDrawerFromIcon(Icons.help),
