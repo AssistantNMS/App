@@ -84,15 +84,11 @@ Widget Function(BuildContext context, InventorySlotWithGenericPageItem invSlot)
     inventorySlotInContainerTilePresenter(
             {Function onEdit, Function onDelete}) =>
         (BuildContext context, InventorySlotWithGenericPageItem invSlot) =>
-            genericListTileWithSubtitle(
+            genericListTile(
               context,
               leadingImage: invSlot.icon,
               name: invSlot.name,
-              subtitle: Text(
-                invSlot.quantity.toString(),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
+              quantity: invSlot.quantity,
               trailing: popupMenu(
                 context,
                 onEdit: () => onEdit(invSlot),
@@ -130,7 +126,11 @@ Widget inventorySlotTileWithContainersPresenter(BuildContext context,
                     (i) => PopupMenuActionItem(
                       text: i.name,
                       icon: Icons.open_in_new,
-                      image: getListTileImage('drawer/inventory.png'),
+                      image: getListTileImage(
+                        i.icon != null
+                            ? 'inventory/${i.icon}'
+                            : 'drawer/inventory.png',
+                      ),
                       onPressed: () async =>
                           await getNavigation().navigateAwayFromHomeAsync(
                         context,

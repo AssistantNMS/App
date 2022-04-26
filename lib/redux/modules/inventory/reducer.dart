@@ -13,9 +13,11 @@ final inventoryReducer = combineReducers<InventoryState>([
   TypedReducer<InventoryState, RemoveInventoryAction>(_removeInventoryAction),
   TypedReducer<InventoryState, AddInventorySlotToInventoryAction>(
       _addInventorySlotToInventoryAction),
+  TypedReducer<InventoryState, AddInventorySlotToInventoryWithMergeAction>(
+      _addInventorySlotToInventoryWithMergeAction),
   TypedReducer<InventoryState, EditInventorySlotInInventoryAction>(
       _editInventorySlotInInventoryAction),
-  TypedReducer<InventoryState, RemoveInventorySlotToInventoryAction>(
+  TypedReducer<InventoryState, RemoveInventorySlotFromInventoryAction>(
       _removeInventorySlotToInventoryAction),
   TypedReducer<InventoryState, RestoreInventoryAction>(_restoreInventoryAction),
 ]);
@@ -47,7 +49,9 @@ InventoryState _editInventoryAction(
 }
 
 InventoryState _setInventoryOrderAction(
-    InventoryState state, SetInventoryOrderAction action) {
+  InventoryState state,
+  SetInventoryOrderAction action,
+) {
   return state.copyWith(orderByType: action.orderByType);
 }
 
@@ -65,7 +69,9 @@ InventoryState _removeInventoryAction(
 }
 
 InventoryState _addInventorySlotToInventoryAction(
-    InventoryState state, AddInventorySlotToInventoryAction action) {
+  InventoryState state,
+  AddInventorySlotToInventoryAction action,
+) {
   List<Inventory> newContainers = List.empty(growable: true);
   for (int inventoryIndex = 0;
       inventoryIndex < state.containers.length;
@@ -89,8 +95,44 @@ InventoryState _addInventorySlotToInventoryAction(
   return state.copyWith(containers: newContainers);
 }
 
+InventoryState _addInventorySlotToInventoryWithMergeAction(
+  InventoryState state,
+  AddInventorySlotToInventoryWithMergeAction action,
+) {
+  List<Inventory> newContainers = List.empty(growable: true);
+  for (int inventoryIndex = 0;
+      inventoryIndex < state.containers.length;
+      inventoryIndex++) {
+    Inventory tempInventory = state.containers[inventoryIndex];
+    if (tempInventory.uuid != action.inventoryUuid) {
+      newContainers.add(tempInventory);
+      continue;
+    }
+    bool hasBeenAdded = false;
+    List<InventorySlot> newSlots = List.empty(growable: true);
+    for (int slotIndex = 0;
+        slotIndex < tempInventory.slots.length;
+        slotIndex++) {
+      InventorySlot tempSlot = tempInventory.slots[slotIndex];
+      if (tempSlot.id == action.slot.id) {
+        tempSlot.quantity = tempSlot.quantity + action.slot.quantity;
+        hasBeenAdded = true;
+      }
+      newSlots.add(tempSlot);
+    }
+    if (!hasBeenAdded) {
+      newSlots.add(action.slot);
+    }
+    tempInventory.slots = newSlots;
+    newContainers.add(tempInventory);
+  }
+  return state.copyWith(containers: newContainers);
+}
+
 InventoryState _editInventorySlotInInventoryAction(
-    InventoryState state, EditInventorySlotInInventoryAction action) {
+  InventoryState state,
+  EditInventorySlotInInventoryAction action,
+) {
   List<Inventory> newItems = List.empty(growable: true);
   for (int inventoryIndex = 0;
       inventoryIndex < state.containers.length;
@@ -119,13 +161,35 @@ InventoryState _editInventorySlotInInventoryAction(
 }
 
 InventoryState _removeInventorySlotToInventoryAction(
-    InventoryState state, RemoveInventorySlotToInventoryAction action) {
+  InventoryState state,
+  RemoveInventorySlotFromInventoryAction action,
+) {
+  if (action.slot.uuid == null) {
+    return _removeInventorySlotFromInventoryByAppIdAction(
+      state,
+      action.inventoryUuid,
+      action.slot.id,
+      action.slot.quantity,
+    );
+  }
+  return _removeInventorySlotFromInventoryByUuidAction(
+    state,
+    action.inventoryUuid,
+    action.slot.uuid,
+  );
+}
+
+InventoryState _removeInventorySlotFromInventoryByUuidAction(
+  InventoryState state,
+  String inventoryUuid,
+  String slotUuid,
+) {
   List<Inventory> newItems = List.empty(growable: true);
   for (int inventoryIndex = 0;
       inventoryIndex < state.containers.length;
       inventoryIndex++) {
     Inventory tempInventory = state.containers[inventoryIndex];
-    if (tempInventory.uuid != action.inventoryUuid) {
+    if (tempInventory.uuid != inventoryUuid) {
       newItems.add(tempInventory);
       continue;
     }
@@ -135,7 +199,37 @@ InventoryState _removeInventorySlotToInventoryAction(
         slotIndex < tempInventory.slots.length;
         slotIndex++) {
       InventorySlot tempSlot = tempInventory.slots[slotIndex];
-      if (tempSlot.id == action.inventorySlotId) continue;
+      if (tempSlot.uuid == slotUuid) continue;
+      newSlots.add(tempSlot);
+    }
+    tempInventory.slots = newSlots;
+    newItems.add(tempInventory);
+  }
+  return state.copyWith(containers: newItems);
+}
+
+InventoryState _removeInventorySlotFromInventoryByAppIdAction(
+  InventoryState state,
+  String inventoryUuid,
+  String slotId,
+  int quantity,
+) {
+  List<Inventory> newItems = List.empty(growable: true);
+  for (int inventoryIndex = 0;
+      inventoryIndex < state.containers.length;
+      inventoryIndex++) {
+    Inventory tempInventory = state.containers[inventoryIndex];
+    if (tempInventory.uuid != inventoryUuid) {
+      newItems.add(tempInventory);
+      continue;
+    }
+
+    List<InventorySlot> newSlots = List.empty(growable: true);
+    for (int slotIndex = 0;
+        slotIndex < tempInventory.slots.length;
+        slotIndex++) {
+      InventorySlot tempSlot = tempInventory.slots[slotIndex];
+      if (tempSlot.id == slotId && tempSlot.quantity == quantity) continue;
       newSlots.add(tempSlot);
     }
     tempInventory.slots = newSlots;

@@ -70,3 +70,7 @@ bool getShowFestiveBackground(AppState state) {
 int getSelectedNewsPage(AppState state) {
   return state?.settingState?.lastNewsPageIndex;
 }
+
+bool getMergeInventoryQuantities(AppState state) {
+  return state?.settingState?.mergeInventoryQuantities ?? true;
+}

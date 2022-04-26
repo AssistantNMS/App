@@ -157,6 +157,13 @@ class Settings extends StatelessWidget {
       onChange: viewModel.setShowSpoilerAlert,
     ));
 
+    widgets.add(boolSettingTilePresenter(
+      context,
+      'Merge inventory quantities', // TODO translation
+      viewModel.mergeInventoryQuantities,
+      onChange: viewModel.toggleMergeInventoryQuantities,
+    ));
+
     if (isValentinesPeriod()) {
       widgets.add(boolSettingTilePresenter(
         context,

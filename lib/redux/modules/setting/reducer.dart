@@ -27,6 +27,8 @@ final settingReducer = combineReducers<SettingState>([
   TypedReducer<SettingState, SetIsPatron>(_setIsPatron),
   TypedReducer<SettingState, SetNewsPage>(_setNewsPage),
   TypedReducer<SettingState, ShowFestiveBackground>(_showFestiveBackground),
+  TypedReducer<SettingState, ToggleMergeInventoryQuantities>(
+      _toggleMergeInventoryQuantities),
 ]);
 
 SettingState _editLanguage(SettingState state, ChangeLanguageAction action) {
@@ -83,3 +85,6 @@ SettingState _setNewsPage(SettingState state, SetNewsPage action) =>
 SettingState _showFestiveBackground(
         SettingState state, ShowFestiveBackground action) =>
     state.copyWith(showFestiveBackground: action.show);
+SettingState _toggleMergeInventoryQuantities(
+        SettingState state, ToggleMergeInventoryQuantities action) =>
+    state.copyWith(mergeInventoryQuantities: !state.mergeInventoryQuantities);

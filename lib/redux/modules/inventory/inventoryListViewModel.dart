@@ -3,12 +3,14 @@ import 'package:redux/redux.dart';
 import '../../../contracts/inventory/inventory.dart';
 import '../../../contracts/inventory/inventoryOrderByType.dart';
 import '../../../contracts/redux/appState.dart';
+import '../setting/selector.dart';
 import 'actions.dart';
 import 'selector.dart';
 
 class InventoryListViewModel {
   List<Inventory> containers;
   InventoryOrderByType orderByType;
+  bool mergeInventoryQuantities;
 
   Function(Inventory inventory) addInventory;
   Function(Inventory inventory) editInventory;
@@ -22,12 +24,14 @@ class InventoryListViewModel {
     this.editInventory,
     this.removeInventory,
     this.setOrderByType,
+    this.mergeInventoryQuantities,
   });
 
   static InventoryListViewModel fromStore(Store<AppState> store) {
     return InventoryListViewModel(
       containers: getContainers(store.state),
       orderByType: getOrderByType(store.state),
+      mergeInventoryQuantities: getMergeInventoryQuantities(store.state),
       addInventory: (Inventory inventory) =>
           store.dispatch(AddInventoryAction(inventory)),
       editInventory: (Inventory inventory) =>

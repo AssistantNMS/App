@@ -75,3 +75,7 @@ class SetNewsPage extends PersistToStorage {
   final int newsSelection;
   SetNewsPage(this.newsSelection);
 }
+
+class ToggleMergeInventoryQuantities extends PersistToStorage {
+  ToggleMergeInventoryQuantities();
+}

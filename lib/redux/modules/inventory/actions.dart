@@ -30,6 +30,12 @@ class AddInventorySlotToInventoryAction extends PersistToStorage {
   AddInventorySlotToInventoryAction(this.inventoryUuid, this.slot);
 }
 
+class AddInventorySlotToInventoryWithMergeAction extends PersistToStorage {
+  final String inventoryUuid;
+  final InventorySlot slot;
+  AddInventorySlotToInventoryWithMergeAction(this.inventoryUuid, this.slot);
+}
+
 class EditInventorySlotInInventoryAction extends PersistToStorage {
   final String inventoryUuid;
   final InventorySlot slot;
@@ -39,12 +45,12 @@ class EditInventorySlotInInventoryAction extends PersistToStorage {
   );
 }
 
-class RemoveInventorySlotToInventoryAction extends PersistToStorage {
+class RemoveInventorySlotFromInventoryAction extends PersistToStorage {
   final String inventoryUuid;
-  final String inventorySlotId;
-  RemoveInventorySlotToInventoryAction(
+  final InventorySlot slot;
+  RemoveInventorySlotFromInventoryAction(
     this.inventoryUuid,
-    this.inventorySlotId,
+    this.slot,
   );
 }
 

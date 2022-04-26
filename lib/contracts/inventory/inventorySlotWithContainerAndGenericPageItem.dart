@@ -1,14 +1,14 @@
 import './inventorySlotDetails.dart';
-import 'inventoryNameAndId.dart';
+import 'inventoryBasicInfo.dart';
 import 'inventorySlotWithGenericPageItem.dart';
 
 class InventorySlotWithContainersAndGenericPageItem
     extends InventorySlotWithGenericPageItem {
-  List<InventoryNameAndId> containers;
+  List<InventoryBasicInfo> containers;
 
   InventorySlotWithContainersAndGenericPageItem(
       {InventorySlotDetails pageItem,
-      InventoryNameAndId container,
+      InventoryBasicInfo container,
       int quantity})
       : super(pageItem: pageItem, quantity: quantity) {
     containers = List.empty(growable: true);
