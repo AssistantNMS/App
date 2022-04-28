@@ -13,17 +13,15 @@ Future<Store<AppState>> createStore() async {
   List<void Function(Store<AppState>, dynamic, void Function(dynamic))>
       middlewares = List.empty(growable: true);
   Map<String, dynamic> stateMap = <String, dynamic>{};
-  if (isAndroid || isiOS) {
-    try {
-      SharedPreferences preferences = await SharedPreferences.getInstance();
-      var stateString = preferences.getString(AppConfig.sharedPrefKey);
-      if (stateString != null) {
-        stateMap = json.decode(stateString) as Map<String, dynamic>;
-      }
-      middlewares.add(LocalStorageMiddleware());
-    } catch (exception) {
-      getLog().e('createStore');
+  try {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    var stateString = preferences.getString(AppConfig.sharedPrefKey);
+    if (stateString != null) {
+      stateMap = json.decode(stateString) as Map<String, dynamic>;
     }
+    middlewares.add(LocalStorageMiddleware());
+  } catch (exception) {
+    getLog().e('createStore');
   }
   // middlewares.add(ValidationMiddleware());
 
