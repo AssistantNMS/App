@@ -6,7 +6,7 @@ import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 import '../../contracts/guide/guideSectionItem.dart';
 import '../common/image.dart';
 
-Widget sectionListItem(
+Widget nmsSectionListItem(
         BuildContext context, String text, List<Widget> widgets) =>
     SliverStickyHeader(
       header: Container(
@@ -30,7 +30,7 @@ Widget sectionListItem(
       ),
     );
 
-Widget textListItem(GuideSectionItem item) => flatCard(
+Widget nmsTextListItem(NmsGuideSectionItem item) => flatCard(
       child: ListTile(
         title: Text(
           item.content,
@@ -41,7 +41,7 @@ Widget textListItem(GuideSectionItem item) => flatCard(
       ),
     );
 
-Widget linkListItem(GuideSectionItem item) {
+Widget nmsLinkListItem(NmsGuideSectionItem item) {
   // ignore: prefer_function_declarations_over_variables
   Function() onTap = () => launchExternalURL(item.content);
   return flatCard(
@@ -57,7 +57,7 @@ Widget linkListItem(GuideSectionItem item) {
   );
 }
 
-Widget imageListItem(context, GuideSectionItem item, String folder) {
+Widget nmsImageListItem(context, NmsGuideSectionItem item, String folder) {
   bool isNetworkImage = (item.image == null || item.image.isEmpty);
 
   String imagePath = 'guide.png';
@@ -90,7 +90,7 @@ Widget imageListItem(context, GuideSectionItem item, String folder) {
   );
 }
 
-Widget markdownListItem(GuideSectionItem item) {
+Widget nmsMarkdownListItem(NmsGuideSectionItem item) {
   return flatCard(
     child: Padding(
       child: MarkdownBody(data: item.content),
@@ -99,7 +99,7 @@ Widget markdownListItem(GuideSectionItem item) {
   );
 }
 
-Widget tableListItem(context, GuideSectionItem item) {
+Widget nmsTableListItem(context, NmsGuideSectionItem item) {
   List<Widget> headingRowChildren = item.columns
       .map((c) => Padding(
           child: Text(

@@ -2,7 +2,7 @@
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-enum GuideType {
+enum NmsGuideType {
   Text,
   Image,
   Link,
@@ -11,9 +11,9 @@ enum GuideType {
 }
 
 final guideTypeValues = EnumValues({
-  "text": GuideType.Text,
-  "image": GuideType.Image,
-  "link": GuideType.Link,
-  "markdown": GuideType.Markdown,
-  "table": GuideType.Table,
+  "text": NmsGuideType.Text,
+  "image": NmsGuideType.Image,
+  "link": NmsGuideType.Link,
+  "markdown": NmsGuideType.Markdown,
+  "table": NmsGuideType.Table,
 });

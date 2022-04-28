@@ -1,4 +1,5 @@
-import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
+    hide GuideApiService;
 import 'package:get_it/get_it.dart';
 
 import '../../services/base/languageService.dart';

@@ -7,11 +7,11 @@ import '../../pages/guide/guidesDetailsPage.dart';
 
 const int numberOfDaysAGuideIsConsideredNew = 31;
 
-bool isGuideNew(Guide guideDetails) => guideDetails.date
+bool isGuideNew(NmsGuide guideDetails) => guideDetails.date
     .add(const Duration(days: numberOfDaysAGuideIsConsideredNew))
     .isAfter(DateTime.now());
 
-Widget guideTilePresenter(BuildContext context, Guide guideDetails) {
+Widget guideTilePresenter(BuildContext context, NmsGuide guideDetails) {
   List<Row> firstRow = [
     Row(
       children: [
@@ -84,7 +84,7 @@ Widget guideTilePresenter(BuildContext context, Guide guideDetails) {
   );
 }
 
-Widget compactGuideTilePresenter(BuildContext context, Guide guideDetails) {
+Widget compactGuideTilePresenter(BuildContext context, NmsGuide guideDetails) {
   String subTitle = (guideDetails.author ?? '???');
   if (guideDetails.translatedBy != null &&
       guideDetails.translatedBy.isNotEmpty) {

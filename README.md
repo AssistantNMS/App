@@ -30,7 +30,7 @@ After 2 years of development and maintenance, the app was made open source so th
 
 <div align="center">
   <h3>
-    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#running-the-project">Getting Started</a>
+    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#-requirements">Getting Started</a>
     <span> · </span>
     <a href="https://github.com/AssistantNMS/App/blob/main/.github/CONTRIBUTING.md">Contributing Guidelines</a>
     <span> · </span>
@@ -45,13 +45,19 @@ After 2 years of development and maintenance, the app was made open source so th
 <br />
 
 ## Running the project
-**Prerequisites:**
-- [Flutter][flutter]
-- Android SDK, (easiest way to install is to go through the [Android Studio install][androidStudio]
+  
+### ✨ Requirements
+- Almost any desktop computer (eg.. MacOS X, Linux, Windows)
+- An IDE with (e.g. IntelliJ, Android Studio, VSCode etc)
+- [Flutter][flutter] installed and in your
 
-**Steps:**
-1. Rename the `env.dart.template` file to `env.dart`
-2. Flutter
+### Steps:
+1. Clone this rpository
+2. Rename the `env.dart.template` file to `env.dart`
+3. In the directory where the `pubspec.yaml` file is, run `flutter pub get`
+4. Run the app
+   - If you want to run the app as an Android app, have the Android emulator running, ensure that the device is showing in the results of this command: `flutter devices` and use the command `flutter run`
+   - If you want to run the app as a Windows application, use the command `flutter run -d windows`
 
 <br />
 

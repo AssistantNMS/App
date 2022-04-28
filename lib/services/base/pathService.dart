@@ -15,4 +15,7 @@ class PathService implements IPathService {
   String get defaultProfilePic => '';
   @override
   String get unknownImagePath => AppImage.unknown;
+
+  @override
+  String get defaultGuideImage => AppImage.guide;
 }

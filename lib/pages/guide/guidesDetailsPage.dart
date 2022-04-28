@@ -1,6 +1,7 @@
 // ignore_for_file: no_logic_in_create_state
 
-import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
+    hide GuideApiService;
 import 'package:flutter/material.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 import '../../contracts/guide/guideSection.dart';
@@ -18,7 +19,7 @@ import '../../integration/dependencyInjection.dart';
 import '../../services/api/guideApiService.dart';
 
 class GuidesDetailsPage extends StatefulWidget {
-  final Guide details;
+  final NmsGuide details;
   const GuidesDetailsPage(this.details, {Key key}) : super(key: key);
 
   @override
@@ -26,7 +27,7 @@ class GuidesDetailsPage extends StatefulWidget {
 }
 
 class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
-  final Guide details;
+  final NmsGuide details;
   GuideMetaViewModel meta;
   GuideApiService appApi;
   bool isMetaLoading;
@@ -66,7 +67,7 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
     );
   }
 
-  Widget getBody(BuildContext context, Guide details) {
+  Widget getBody(BuildContext context, NmsGuide details) {
     List<Widget> widgets = List.empty(growable: true);
 
     String dateString = simpleDate(details.date.toLocal());
@@ -77,34 +78,35 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
       firstSectionWidgets.add(genericItemDescription(details.translatedBy));
     }
     firstSectionWidgets.add(genericItemDescription(dateString));
-    widgets.add(sectionListItem(context, details.title, firstSectionWidgets));
+    widgets
+        .add(nmsSectionListItem(context, details.title, firstSectionWidgets));
 
-    for (GuideSection section in details.sections) {
+    for (NmsGuideSection section in details.sections) {
       List<Widget> sectionItemWidgets = List.empty(growable: true);
-      for (GuideSectionItem sectionItem in section.items) {
+      for (NmsGuideSectionItem sectionItem in section.items) {
         switch (sectionItem.type) {
-          case GuideType.Text:
-            sectionItemWidgets.add(textListItem(sectionItem));
+          case NmsGuideType.Text:
+            sectionItemWidgets.add(nmsTextListItem(sectionItem));
             break;
-          case GuideType.Link:
-            sectionItemWidgets.add(linkListItem(sectionItem));
+          case NmsGuideType.Link:
+            sectionItemWidgets.add(nmsLinkListItem(sectionItem));
             break;
-          case GuideType.Image:
+          case NmsGuideType.Image:
             sectionItemWidgets
-                .add(imageListItem(context, sectionItem, details.folder));
+                .add(nmsImageListItem(context, sectionItem, details.folder));
             break;
-          case GuideType.Markdown:
-            sectionItemWidgets.add(markdownListItem(sectionItem));
+          case NmsGuideType.Markdown:
+            sectionItemWidgets.add(nmsMarkdownListItem(sectionItem));
             break;
-          case GuideType.Table:
-            sectionItemWidgets.add(tableListItem(context, sectionItem));
+          case NmsGuideType.Table:
+            sectionItemWidgets.add(nmsTableListItem(context, sectionItem));
             break;
           default:
             break;
         }
       }
       widgets.add(
-        sectionListItem(context, section.heading, sectionItemWidgets),
+        nmsSectionListItem(context, section.heading, sectionItemWidgets),
       );
     }
 

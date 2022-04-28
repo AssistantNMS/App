@@ -13,6 +13,7 @@ import 'package:firebase_core_web/firebase_core_web.dart';
 import 'package:firebase_messaging_web/firebase_messaging_web.dart';
 import 'package:flutter_native_timezone/flutter_native_timezone_web.dart';
 import 'package:google_sign_in_web/google_sign_in_web.dart';
+import 'package:image_picker_for_web/image_picker_for_web.dart';
 import 'package:package_info_plus_web/package_info_plus_web.dart';
 import 'package:platform_device_id_web/platform_device_id_web.dart';
 import 'package:share_plus_web/share_plus_web.dart';
@@ -31,6 +32,7 @@ void registerPlugins(Registrar registrar) {
   FirebaseMessagingWeb.registerWith(registrar);
   FlutterNativeTimezonePlugin.registerWith(registrar);
   GoogleSignInPlugin.registerWith(registrar);
+  ImagePickerPlugin.registerWith(registrar);
   PackageInfoPlugin.registerWith(registrar);
   PlatformDeviceIdWebPlugin.registerWith(registrar);
   SharePlusPlugin.registerWith(registrar);

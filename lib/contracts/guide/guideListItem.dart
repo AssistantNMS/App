@@ -4,21 +4,22 @@
 
 import 'dart:convert';
 
-class GuideListItem {
+class NmsGuideListItem {
   String folder;
   String file;
 
-  GuideListItem({
+  NmsGuideListItem({
     this.folder,
     this.file,
   });
 
-  factory GuideListItem.fromRawJson(String str) =>
-      GuideListItem.fromJson(json.decode(str));
+  factory NmsGuideListItem.fromRawJson(String str) =>
+      NmsGuideListItem.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory GuideListItem.fromJson(Map<String, dynamic> json) => GuideListItem(
+  factory NmsGuideListItem.fromJson(Map<String, dynamic> json) =>
+      NmsGuideListItem(
         folder: json["folder"],
         file: json["file"],
       );
