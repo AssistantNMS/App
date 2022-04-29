@@ -30,13 +30,13 @@ After 2 years of development and maintenance, the app was made open source so th
 
 <div align="center">
   <h3>
-    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#-requirements">Getting Started</a>
+    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#requirements">Getting Started</a>
     <span> · </span>
     <a href="https://github.com/AssistantNMS/App/blob/main/.github/CONTRIBUTING.md">Contributing Guidelines</a>
     <span> · </span>
-    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#builds-cicd">Build statuses</a>
+    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#-builds-cicd">Build statuses</a>
     <span> · </span>
-    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#links">More Links</a>
+    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#-links">More Links</a>
     <span> · </span>
     <a href="https://github.com/AssistantNMS/App/blob/main/.github/SUPPORT.md">Support</a>
   </h3>
@@ -44,15 +44,20 @@ After 2 years of development and maintenance, the app was made open source so th
 
 <br />
 
-## Running the project
+![PlayStore](./.github/img/PlayStore.png)
+![AppStore](./.github/img/AppStore.png)
+![PWA](./.github/img/pwa.png)
+![Windows](./.github/img/WindowsStore.png)
+
+## 🏃‍♂️ Running the project
   
-### ✨ Requirements
+### Requirements
 - Almost any desktop computer (eg.. MacOS X, Linux, Windows)
 - An IDE with (e.g. IntelliJ, Android Studio, VSCode etc)
 - [Flutter][flutter] installed and in your
 
 ### Steps:
-1. Clone this rpository
+1. Clone this repository
 2. Rename the `env.dart.template` file to `env.dart`
 3. In the directory where the `pubspec.yaml` file is, run `flutter pub get`
 4. Run the app
@@ -61,7 +66,7 @@ After 2 years of development and maintenance, the app was made open source so th
 
 <br />
 
-## Contributing
+## 👪 Contributing
 **Project Owner**: [Khaoz-Topsy][kurtGithub]<br /><br />
 Please take a look at the [Contribution Guideline](./.github/CONTRIBUTING.md) before creating an issue or pull request.
 
@@ -69,7 +74,7 @@ If you would like to help add languages to the app please use this tool [Assista
 
 <br />
 
-## Builds (CI/CD)
+## 📦 Builds (CI/CD)
 The Mobile Apps are built and released to the [Google Play Store][googlePlayStore] and [Apple App Store Store][appleAppStore] using [CodeMagic][codeMagic].
 
 - ![Codemagic build status](https://api.codemagic.io/apps/5d9da9057a0a9500105180bf/5ef3374ec0adbfe0fdee431d/status_badge.svg) - Android & iOS (Production)
@@ -81,7 +86,7 @@ __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed e
 
 <br />
 
-## Links
+## 🔗 Links
 [![Website](https://img.shields.io/badge/Website-nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantnmsWebsite] <br />
 [![WebApp](https://img.shields.io/badge/Web%20App-app.nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantnmsWebapp]
 
