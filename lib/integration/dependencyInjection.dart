@@ -47,7 +47,7 @@ void initDependencyInjection(EnvironmentSettings _env) {
   getIt.registerSingleton<EnvironmentSettings>(_env);
 
   // AssistantApps
-  initBaseDependencyInjection(
+  initAssistantAppsDependencyInjection(
     _env.toAssistantApps(),
     analytics: AnalyticsService(),
     theme: ThemeService(),
