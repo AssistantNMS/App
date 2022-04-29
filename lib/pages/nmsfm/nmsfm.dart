@@ -66,7 +66,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
 
     bool isOnline = _connectivityStatus != ConnectivityResult.none ||
         isiOS; // Connectivity plugin subscription to connectivity does not work on ios 🙄
-    if (isOnline) {
+    if (isOnline && !isDesktop) {
       widgets.add(const AudioStreamPresenter());
       widgets.add(Container(
         padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -86,7 +86,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
       externalLinkPresenter(context, 'Zeno Radio', 'https://zeno.fm/nms-fm/'),
     );
 
-    if (!isOnline) {
+    if (!isOnline && !isDesktop) {
       widgets.add(customDivider());
       widgets.add(
         const LocalAudioPresenter(
