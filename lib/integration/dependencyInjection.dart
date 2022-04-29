@@ -8,10 +8,11 @@ import '../services/api/communityApiService.dart';
 import '../services/api/contributorApiService.dart';
 import '../services/api/guideApiService.dart';
 import '../services/api/helloGamesApiService.dart';
-import '../services/audioPlayerService.dart';
 import '../services/base/analyticsService.dart';
+import '../services/base/audioPlayerService.dart';
 import '../services/base/baseWidgetService.dart';
 import '../services/base/dialogService.dart';
+import '../services/base/interface/IAudioPlayerService.dart';
 import '../services/base/loadingWidgetService.dart';
 import '../services/base/localNotificationService.dart';
 import '../services/base/notificationService.dart';
@@ -78,7 +79,7 @@ void initDependencyInjection(EnvironmentSettings _env) {
       SeasonalExpeditionJsonRepository());
   getIt.registerSingleton<IFactionJsonRepository>(FactionJsonRepository());
 
-  getIt.registerSingleton<AudioPlayerService>(AudioPlayerService());
+  getIt.registerSingleton<IAudioPlayerService>(AudioPlayerService());
   getIt.registerSingleton<LocalNotificationService>(LocalNotificationService());
 
   getIt.registerSingleton<AppApi>(AppApi());
@@ -113,7 +114,7 @@ ISeasonalExpeditionJsonRepository getSeasonalExpeditionRepo() =>
     getIt<ISeasonalExpeditionJsonRepository>();
 IFactionJsonRepository getFactionRepo() => getIt<IFactionJsonRepository>();
 
-AudioPlayerService getAudioPlayer() => getIt<AudioPlayerService>();
+IAudioPlayerService getAudioPlayer() => getIt<IAudioPlayerService>();
 LocalNotificationService getLocalNotification() =>
     getIt<LocalNotificationService>();
 
