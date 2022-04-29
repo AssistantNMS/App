@@ -9,14 +9,15 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
 
 ## Table Of Contents
 
-[What should I know before I get started?](#what-should-i-know-before-i-get-started)
+* [What should I know before I get started?](#what-should-i-know-before-i-get-started)
   * [Project History](#project-history)
   * [Design Decisions](#design-decisions)
 
-[How Can I Contribute?](#how-can-i-contribute)
+* [How Can I Contribute?](#how-can-i-contribute)
   * [I found a 🐛Bug🐛 and I want to report it](#i-found-a-bug-and-want-to-report-it)
   * [Suggesting a Feature](#suggesting-a-feature)
 
+<br />
 
 ## What should I know before I get started?
 
@@ -32,7 +33,7 @@ This project was started long before Dart 2 and null safety was added. There are
 #### File naming
 Unfortunately almost all of the files in the project are pascal case `appShell.dart` instead of what Dart recommends `app_shell.dart`. There are just too many files to change along with their corresponding imports, so we will just continue naming the files in pascal case until someone can come up with an easy solution that doesn't break everything 😅
 
----
+<br />
 
 ## How Can I Contribute?
 
