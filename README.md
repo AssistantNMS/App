@@ -44,10 +44,12 @@ After 2 years of development and maintenance, the app was made open source so th
 
 <br />
 
-![PlayStore](./.github/img/PlayStore.png)
-![AppStore](./.github/img/AppStore.png)
-![PWA](./.github/img/pwa.png)
-![Windows](./.github/img/WindowsStore.png)
+<div align="center">
+  <img src="./.github/img/PlayStore.png" alt="PlayStore">
+  <img src="./.github/img/AppStore.png" alt="AppStore">
+  <img src="./.github/img/pwa.png" alt="PWA">
+  <!-- <img src="./.github/img/WindowsStore.png" alt="Windows"> -->
+</div>
 
 ## 🏃‍♂️ Running the project
   
