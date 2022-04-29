@@ -113,22 +113,24 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.home: (context) => const DefaultHomePage(),
     Routes.intro: (context) => IntroPage(onLocaleChange),
     Routes.about: (context) => AboutPage(
-        appType: AssistantAppType.NMS,
-        aboutPageWidgetsFunc: (BuildContext ctx) {
-          return [
-            emptySpace(0.5),
-            Padding(
-              child: Text(
-                getTranslations().fromKey(LocaleKey.aboutContent),
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                maxLines: 50,
-                style: const TextStyle(fontSize: 16),
+          key: const Key('AboutPage'),
+          appType: AssistantAppType.NMS,
+          aboutPageWidgetsFunc: (BuildContext ctx) {
+            return [
+              emptySpace(0.5),
+              Padding(
+                child: Text(
+                  getTranslations().fromKey(LocaleKey.aboutContent),
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 50,
+                  style: const TextStyle(fontSize: 16),
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 8),
               ),
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-            ),
-          ];
-        }),
+            ];
+          },
+        ),
     Routes.language: (context) => Language(),
     Routes.donation: (context) => const Donation(),
     Routes.cart: (context) => CartPage(),

@@ -3,8 +3,7 @@ import 'dart:convert';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:googleapis/drive/v3.dart';
 import 'package:googleapis_auth/auth_io.dart';
-import "package:http/http.dart" as http;
-import 'package:shared_preferences/shared_preferences.dart';
+import "package:http/http.dart";
 
 import '../constants/AppConfig.dart';
 import '../constants/GoogleDrive.dart';
@@ -14,10 +13,13 @@ const String jsonMimeType = 'application/json';
 const String googleFolderMimeType = 'application/vnd.google-apps.folder';
 
 Future<ResultWithValue<AccessCredentials>> _getGoogleCredentials() async {
-  SharedPreferences preferences = await SharedPreferences.getInstance();
   try {
-    var credentialsString = preferences.getString(AppConfig.sharedPrefCredKey);
-    var accessToken = _accessCredentialsFromJson(
+    ResultWithValue<String> storageResult = await getStorageRepo()
+        .loadStringFromStorage(AppConfig.sharedPrefCredKey);
+    if (storageResult.hasFailed) throw storageResult.value;
+
+    String credentialsString = storageResult.value;
+    AccessCredentials accessToken = _accessCredentialsFromJson(
         json.decode(credentialsString) as Map<String, dynamic>);
     if (accessToken.accessToken.expiry.isAfter(DateTime.now().toUtc())) {
       return ResultWithValue<AccessCredentials>(true, accessToken, '');
@@ -26,12 +28,12 @@ Future<ResultWithValue<AccessCredentials>> _getGoogleCredentials() async {
     getLog().e('load from pref: ${exception.toString()}');
   }
 
-  var id = ClientId(AppConfig.googleClientId, AppConfig.googleSecret);
-  var client = http.Client();
+  ClientId id = ClientId(AppConfig.googleClientId, AppConfig.googleSecret);
+  Client client = Client();
   try {
     AccessCredentials credentials = await obtainAccessCredentialsViaUserConsent(
         id, scopes, client, launchExternalURL);
-    await preferences.setString(
+    await getStorageRepo().saveToStorage(
       AppConfig.sharedPrefCredKey,
       json.encode(_accessCredentialsToJson(credentials)),
     );
@@ -47,17 +49,18 @@ Future<ResultWithValue<AccessCredentials>> _getGoogleCredentials() async {
 
 Future<Result> writeJsonFileToGoogleDriveOLD(
     String filename, String data) async {
-  var googleCredResult = await _getGoogleCredentials();
+  ResultWithValue<AccessCredentials> googleCredResult =
+      await _getGoogleCredentials();
   if (googleCredResult.hasFailed) return googleCredResult;
 
-  var client = authenticatedClient(http.Client(), googleCredResult.value);
-  var driveApi = DriveApi(client);
+  AuthClient client = authenticatedClient(Client(), googleCredResult.value);
+  DriveApi driveApi = DriveApi(client);
 
   String folderId;
   bool folderExists = false;
 
-  var files = await driveApi.files.list();
-  for (var file in files.files) {
+  FileList files = await driveApi.files.list();
+  for (File file in files.files) {
     if (file.name != GoogleDrive.folderNameOLD) continue;
     folderId = file.id;
     folderExists = true;
@@ -65,7 +68,7 @@ Future<Result> writeJsonFileToGoogleDriveOLD(
   }
 
   if (!folderExists) {
-    var _createFolder = await driveApi.files.create(
+    File _createFolder = await driveApi.files.create(
       File()
         ..name = GoogleDrive.folderNameOLD
         ..mimeType = googleFolderMimeType,
@@ -75,7 +78,7 @@ Future<Result> writeJsonFileToGoogleDriveOLD(
 
   String fileToWriteId;
   bool fileToWriteExists = false;
-  for (var file in files.files) {
+  for (File file in files.files) {
     if (file.name != filename) continue;
     fileToWriteId = file.id;
     fileToWriteExists = true;
@@ -108,17 +111,18 @@ Future<Result> writeJsonFileToGoogleDriveOLD(
 
 Future<ResultWithValue<String>> _readJsonFileFromGoogleDriveOLD(
     String filename) async {
-  var googleCredResult = await _getGoogleCredentials();
+  ResultWithValue<AccessCredentials> googleCredResult =
+      await _getGoogleCredentials();
   if (googleCredResult.hasFailed) return ResultWithValue<String>(false, '', '');
 
-  var client = authenticatedClient(http.Client(), googleCredResult.value);
-  var driveApi = DriveApi(client);
+  AuthClient client = authenticatedClient(Client(), googleCredResult.value);
+  DriveApi driveApi = DriveApi(client);
 
   String fileToReadId;
   bool fileToReadExists = false;
 
-  var files = await driveApi.files.list();
-  for (var file in files.files) {
+  FileList files = await driveApi.files.list();
+  for (File file in files.files) {
     if (file.name != filename) continue;
     fileToReadId = file.id;
     fileToReadExists = true;
@@ -130,8 +134,8 @@ Future<ResultWithValue<String>> _readJsonFileFromGoogleDriveOLD(
       Media driveFileResult = await driveApi.files
           .get(fileToReadId, downloadOptions: DownloadOptions.fullMedia);
 
-      var byteArrayContent = await driveFileResult.stream.first;
-      var content = utf8.decode(byteArrayContent);
+      List<int> byteArrayContent = await driveFileResult.stream.first;
+      String content = utf8.decode(byteArrayContent);
 
       return ResultWithValue<String>(true, content, '');
     } catch (exception) {
@@ -144,11 +148,12 @@ Future<ResultWithValue<String>> _readJsonFileFromGoogleDriveOLD(
 
 Future<ResultWithValue<T>> readGenericJsonFileFromGoogleDriveOLD<T>(
     String filename, Function(Map<String, dynamic> json) fromJson) async {
-  var readFileResult = await _readJsonFileFromGoogleDriveOLD(filename);
+  ResultWithValue<String> readFileResult =
+      await _readJsonFileFromGoogleDriveOLD(filename);
   if (readFileResult.hasFailed) return ResultWithValue<T>(false, null, '');
 
   try {
-    var driveFile = fromJson(json.decode(readFileResult.value));
+    T driveFile = fromJson(json.decode(readFileResult.value));
     return ResultWithValue<T>(true, driveFile, '');
   } catch (exception) {
     if (exception is String) getLog().e(exception);

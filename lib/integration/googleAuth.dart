@@ -13,13 +13,13 @@ final GoogleSignIn googleSignIn =
     GoogleSignIn(clientId: AppConfig.newGoogleClientId, scopes: scopes);
 
 Future<GoogleSignInAccount> signInWithGoogle() async {
-  var task = googleSignIn.signIn().then((value) => value);
-  return await task;
+  GoogleSignInAccount account = await googleSignIn.signIn();
+  return account;
 }
 
 Future<GoogleSignInAccount> signInSilentlyWithGoogle() async {
-  var task = googleSignIn.signInSilently().then((value) => value);
-  return await task;
+  GoogleSignInAccount account = await googleSignIn.signInSilently();
+  return account;
 }
 
 Future signOutGoogle() async {

@@ -67,7 +67,6 @@ dependencies:
   timezone: 0.8.0
   flutter_native_timezone: 2.0.0
   enum_to_string: 2.0.1
-  shared_preferences: 2.0.13
   after_layout: 1.1.0
 
 dev_dependencies:
@@ -89,10 +88,12 @@ flutter_icons: ## flutter pub run flutter_launcher_icons:main
 msix_config: # flutter pub run msix:create  ---  https://pub.dev/documentation/msix/latest/
   display_name: Assistant for No Man's Sky
   publisher_display_name: AssistantApps
-  identity_name: com.kurtlourens.assistantnms
-  msix_version: 1.0.0.0
+  identity_name:
+  publisher: CN=
   logo_path: 'assets/images/fullSizeIcon.png'
+  languages: en
   capabilities: internetClient
+  store: true
 
 flutter:
   uses-material-design: true
