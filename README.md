@@ -26,7 +26,7 @@ The **Assistant for No Man's Sky** is an app that gives users information about 
 
 > This app was originally released in early August 2019! The app was originally named No Man's Sky Recipes, when submitting the app to the Apple Store it was rejected due to the name and so the app was renamed. 
 
-After 2 years of development and maintenance, the app was made open source so that the community to have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
+After 2 years of development and maintenance, the app was made open source so that the community could have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
 
 <div align="center">
   <h3>
@@ -45,11 +45,15 @@ After 2 years of development and maintenance, the app was made open source so th
 <br />
 
 <div align="center">
-  <img src="./.github/img/PlayStore.png" alt="PlayStore">
-  <img src="./.github/img/AppStore.png" alt="AppStore">
-  <img src="./.github/img/pwa.png" alt="PWA">
-  <!-- <img src="./.github/img/WindowsStore.png" alt="Windows"> -->
+
+  [![PlayStore](./.github/img/PlayStore.png)][googlePlayStore]
+  [![AppStore](./.github/img/AppStore.png)][appleAppStore]
+  [![PWA](./.github/img/pwa.png)][assistantnmsWebapp]
+  <!-- [![WindowsStore](./.github/img/WindowsStore.png)][windowsStore] -->
+  
 </div>
+
+<br />
 
 ## 🏃‍♂️ Running the project
   
@@ -113,6 +117,7 @@ __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed e
 [assistantnmsSteamComm]: https://steamcommunity.com/groups/AssistantNMS?ref=AssistantNMSGithub
 [googlePlayStore]: https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes&ref=AssistantNMSGithub
 [appleAppStore]: https://apps.apple.com/us/app/assistant-for-no-mans-sky/id1480287625?ref=AssistantNMSGithub
+[windowsStore]: https://microsoft.com?ref=AssistantNMSGithub
 [discord]: https://assistantapps.com/discord?ref=AssistantNMSGithub
 [nmscd]: https://github.com/NMSCD?ref=AssistantNMSGithub
 
