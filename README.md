@@ -51,6 +51,8 @@ After 2 years of development and maintenance, the app was made open source so th
   <!-- <img src="./.github/img/WindowsStore.png" alt="Windows"> -->
 </div>
 
+<br />
+
 ## 🏃‍♂️ Running the project
   
 ### Requirements
