@@ -59,11 +59,15 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
 
     widgets.add(emptySpace1x());
     widgets.add(flatCard(
-        child: veritasVelezTile(context,
-            subtitle: getTranslations().fromKey(LocaleKey.nmsfmCreator))));
+      child: veritasVelezTile(
+        context,
+        subtitle: getTranslations().fromKey(LocaleKey.nmsfmCreator),
+      ),
+    ));
 
     bool isOnline = _connectivityStatus != ConnectivityResult.none ||
         isiOS; // Connectivity plugin subscription to connectivity does not work on ios 🙄
+
     if (isOnline && !isDesktop) {
       widgets.add(const AudioStreamPresenter());
       widgets.add(Container(
@@ -84,7 +88,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
       externalLinkPresenter(context, 'Zeno Radio', 'https://zeno.fm/nms-fm/'),
     );
 
-    if (!isOnline || isDesktop) {
+    if (!isOnline) {
       widgets.add(customDivider());
       widgets.add(
         const LocalAudioPresenter(
@@ -120,6 +124,8 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
   @override
   void dispose() {
     _connectivitySubscription.cancel();
+    getAudioPlayer().stop();
+    getAudioPlayer().dispose();
     super.dispose();
   }
 }
@@ -138,74 +144,57 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
   @override
   Widget build(BuildContext context) {
     return getAudioPlayer().audioStreamBuilder(
-        builder: (BuildContext context, AudioStreamBuilderEvent event) {
-      bool isLoading = event.isLoading;
+      uniqueKey: const Key('Streaming'),
+      builder: (BuildContext context, AudioStreamBuilderEvent event) {
+        bool isLoading = event.isLoading;
 
-      String title = event.title;
-      String artist = event.artist;
+        String title = getTranslations().fromKey(LocaleKey.nmsfm);
+        if (event?.title?.isNotEmpty ?? false) title = event?.title;
+        if (savedMetas?.title?.isNotEmpty ?? false) title = savedMetas?.title;
 
-      bool metasDontMatch = savedMetas != null &&
-          title != null &&
-          artist != null &&
-          (title != savedMetas.title || artist != savedMetas.artist);
-      if (metasDontMatch) {
-        AudioStreamBuilderEvent newMeta = AudioStreamBuilderEvent(
-          title: title,
-          artist: artist,
-          album: getTranslations().fromKey(LocaleKey.nmsfm),
-          image: savedMetas.image,
-        );
-        setState(() {
-          savedMetas = newMeta;
-        });
-      }
+        String artist = 'Now Streaming'; // TODO translate
+        if (event?.artist?.isNotEmpty ?? false) artist = event?.artist;
+        if (savedMetas?.artist?.isNotEmpty ?? false) {
+          artist = savedMetas?.artist;
+        }
 
-      Widget playStopWidget = isPlaying
-          ? getCorrectlySizedImageFromIcon(context, Icons.stop)
-          : getCorrectlySizedImageFromIcon(context, Icons.play_arrow);
+        Widget playStopWidget = (isPlaying)
+            ? getCorrectlySizedImageFromIcon(context, Icons.stop)
+            : getCorrectlySizedImageFromIcon(context, Icons.play_arrow);
 
-      return ListTile(
-        title: Text(
-          title ?? getTranslations().fromKey(LocaleKey.nmsfm),
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-        ),
-        subtitle: Text(
-          artist ?? 'Start listening now!', //TODO Translate
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-        ),
-        trailing:
-            isLoading ? getLoading().smallLoadingIndicator() : playStopWidget,
-        onTap: () {
-          void Function() stopFunction;
-          stopFunction = () {
-            getAudioPlayer().stop();
+        return ListTile(
+          title: Text(title, maxLines: 1, overflow: TextOverflow.ellipsis),
+          subtitle: Text(artist, maxLines: 1, overflow: TextOverflow.ellipsis),
+          trailing: isLoading
+              ? getLoading().smallLoadingIndicator() //
+              : playStopWidget,
+          onTap: () {
+            void Function() stopFunction;
+            stopFunction = () {
+              getAudioPlayer().stop();
+              setState(() {
+                isPlaying = false;
+              });
+            };
+            if (isPlaying) {
+              stopFunction();
+              return;
+            }
+            getAudioPlayer().openUrl(
+              'https://stream.zenolive.com/9kz76c8mdg8uv.aac',
+              AudioStreamOpenUrlModel(
+                title: title,
+                artist: artist,
+                image: AppImage.nmsfm,
+              ),
+            );
             setState(() {
-              isPlaying = false;
+              isPlaying = true;
             });
-          };
-          if (isPlaying) {
-            stopFunction();
-            return;
-          }
-          AudioStreamBuilderEvent defaultMeta = AudioStreamBuilderEvent(
-            title: getTranslations().fromKey(LocaleKey.nmsfm),
-            artist: 'Now Streaming', // TODO Translate
-            image:
-                'https://app.nmsassistant.com/assets/images/special/nmsfm.png',
-          );
-          getAudioPlayer().openUrl(
-            'https://stream.zenolive.com/9kz76c8mdg8uv.aac',
-            AudioStreamOpenUrlModel(title: title, artist: artist),
-          );
-          setState(() {
-            isPlaying = true;
-            savedMetas = defaultMeta;
-          });
-        },
-      );
-    });
+          },
+        );
+      },
+    );
   }
 }
 
@@ -218,7 +207,9 @@ class LocalAudioPresenter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return getAudioPlayer().audioStreamBuilder(
+    Key uniqueKey = Key(localPath);
+    return getAudioPlayer().audioLocalBuilder(
+      uniqueKey: uniqueKey,
       builder: (BuildContext context, AudioStreamBuilderEvent event) {
         bool isPlaying = event.isPlaying;
 
@@ -247,6 +238,7 @@ class LocalAudioPresenter extends StatelessWidget {
             }
             getAudioPlayer().openLocal(
               'assets/audio/$localPath',
+              uniqueKey,
               AudioStreamOpenUrlModel(title: name, artist: artist),
             );
           },

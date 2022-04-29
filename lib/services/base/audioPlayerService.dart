@@ -7,6 +7,7 @@ import 'interface/IAudioPlayerService.dart';
 
 class AudioPlayerService extends IAudioPlayerService {
   AssetsAudioPlayer _player;
+  Key uniqueKey;
 
   AssetsAudioPlayer getPlayer() {
     _player ??= AssetsAudioPlayer.newPlayer();
@@ -52,7 +53,9 @@ class AudioPlayerService extends IAudioPlayerService {
   }
 
   @override
-  Future<void> openLocal(String localPath, AudioStreamOpenUrlModel model) {
+  Future<void> openLocal(
+      String localPath, Key uniqueKey, AudioStreamOpenUrlModel model) {
+    this.uniqueKey = uniqueKey;
     return getPlayer().open(
       Audio(
         localPath,
@@ -65,8 +68,11 @@ class AudioPlayerService extends IAudioPlayerService {
 
   @override
   Widget audioStreamBuilder({
+    Key uniqueKey,
     Widget Function(
-            BuildContext audioContext, AudioStreamBuilderEvent audioStream)
+      BuildContext audioContext,
+      AudioStreamBuilderEvent audioStream,
+    )
         builder,
   }) {
     return StreamBuilder(
@@ -104,52 +110,36 @@ class AudioPlayerService extends IAudioPlayerService {
     );
   }
 
-  // @override
-  // Widget audioLocalBuilder({
-  //   Widget Function(
-  //           BuildContext audioContext, AudioStreamBuilderEvent audioStream)
-  //       builder,
-  // }) {
-  //   return StreamBuilder(
-  //     stream: getPlayer().isPlaying,
-  //     builder: (BuildContext context, AsyncSnapshot<bool> asyncSnapshot) {
-  //       bool isLoading = asyncSnapshot.connectionState == ConnectionState.done;
-  //       bool isPlaying =
-  //           asyncSnapshot.data.processingState == ProcessingState.ready;
-  //       final Audio current = asyncSnapshot?.data?.audio?.audio;
+  @override
+  Widget audioLocalBuilder({
+    Key uniqueKey,
+    Widget Function(
+      BuildContext audioContext,
+      AudioStreamBuilderEvent audioStream,
+    )
+        builder,
+  }) {
+    return StreamBuilder(
+      stream: getPlayer().isPlaying,
+      builder: (BuildContext audioCtx, AsyncSnapshot<bool> asyncSnapshot) {
+        bool isLoading = asyncSnapshot.connectionState == ConnectionState.done;
+        bool isPlaying = asyncSnapshot.data ?? false;
 
-  //       bool isLoading = isPlaying == true && current == null;
-  //       bool localIsPlaying = isPlaying;
-  //       if (current == null) {
-  //         localIsPlaying = false;
-  //       }
-  //       Metas metas = (current?.metas != null) ? current?.metas : null;
-  //       String title = metas?.title;
-  //       String artist = metas?.artist;
+        if (this.uniqueKey != uniqueKey) {
+          isPlaying = false;
+        }
 
-  //       AudioStreamBuilderEvent current = AudioStreamBuilderEvent(
-  //         title: '',
-  //         artist: '',
-  //         album: '',
-  //         image: '',
-  //         isLoading: isLoading,
-  //         isPlaying: isPlaying,
-  //       );
+        AudioStreamBuilderEvent current = AudioStreamBuilderEvent(
+          title: '',
+          artist: '',
+          album: '',
+          image: '',
+          isLoading: isLoading,
+          isPlaying: isPlaying,
+        );
 
-  //       if (!isLoading) {
-  //         PlaybackEvent data = asyncSnapshot?.data;
-  //         current = current.copyWith(
-  //           title: data.icyMetadata?.info?.title ?? '',
-  //           artist: data.icyMetadata?.headers?.name ?? '',
-  //           album: '',
-  //           image: data.icyMetadata?.info?.url ?? '',
-  //           isLoading: isLoading,
-  //           isPlaying: isPlaying,
-  //         );
-  //       }
-
-  //       return builder(audioContext, current);
-  //     },
-  //   );
-  // }
+        return builder(audioCtx, current);
+      },
+    );
+  }
 }
