@@ -1,6 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
+import 'appVersionNum.dart';
+
 class EnvironmentSettings {
   String baseApi;
   String assistantAppsApiUrl;
@@ -31,5 +33,8 @@ class EnvironmentSettings {
         currentWhatIsNewGuid: currentWhatIsNewGuid,
         isProduction: isProduction,
         patreonOAuthClientId: patreonOAuthClientId,
+
+        // Required for Android (because of how I set it up) and Windows
+        appVersionBuildNumberOverride: appsBuildNum,
       );
 }

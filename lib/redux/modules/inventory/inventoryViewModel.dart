@@ -12,21 +12,12 @@ class InventoryViewModel {
   Function(Inventory inventory) addInventory;
   Function(Inventory inventory) editInventory;
   Function(String inventoryUuid) removeInventory;
-  // Function(String inventoryUuid, InventorySlot slot)
-  //     addInventorySlotToInventory;
-  // Function(String inventoryUuid, InventorySlot slot)
-  //     editInventorySlotInInventory;
-  // Function(String inventoryUuid, InventorySlot slot)
-  //     removeInventorySlotFromInventory;
 
   InventoryViewModel({
     this.containers,
     this.addInventory,
     this.editInventory,
     this.removeInventory,
-    // this.addInventorySlotToInventory,
-    // this.editInventorySlotInInventory,
-    // this.removeInventorySlotFromInventory,
   });
 
   static InventoryViewModel fromStore(Store<AppState> store) {
@@ -38,27 +29,6 @@ class InventoryViewModel {
           store.dispatch(EditInventoryAction(inventory)),
       removeInventory: (String inventoryUuid) =>
           store.dispatch(RemoveInventoryAction(inventoryUuid)),
-      // addInventorySlotToInventory: (String inventoryUuid, InventorySlot slot) =>
-      //     store.dispatch(
-      //   AddInventorySlotToInventoryAction(
-      //     inventoryUuid,
-      //     slot,
-      //   ),
-      // ),
-      // editInventorySlotInInventory:
-      //     (String inventoryUuid, InventorySlot slot) => store.dispatch(
-      //   EditInventorySlotInInventoryAction(
-      //     inventoryUuid,
-      //     slot,
-      //   ),
-      // ),
-      // removeInventorySlotFromInventory:
-      //     (String inventoryUuid, InventorySlot slot) => store.dispatch(
-      //   RemoveInventorySlotFromInventoryAction(
-      //     inventoryUuid,
-      //     slot,
-      //   ),
-      // ),
     );
   }
 }

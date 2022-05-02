@@ -1,22 +1,26 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
+import 'package:timezone/data/latest.dart' as tzi;
 
 class LocalNotificationService {
   FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
 
   LocalNotificationService() {
+    tzi.initializeTimeZones();
+
     flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 // initialise the plugin. app_icon needs to be a added as a drawable resource to the Android head project
-    var initializationSettingsAndroid =
+    AndroidInitializationSettings initializationSettingsAndroid =
         const AndroidInitializationSettings('notification');
 
-    var initializationSettingsIOS = const IOSInitializationSettings(
+    IOSInitializationSettings initializationSettingsIOS =
+        const IOSInitializationSettings(
       requestSoundPermission: false,
       requestBadgePermission: false,
       requestAlertPermission: false,
     );
 
-    var initializationSettings = InitializationSettings(
+    InitializationSettings initializationSettings = InitializationSettings(
       android: initializationSettingsAndroid,
       iOS: initializationSettingsIOS,
     );
@@ -71,7 +75,8 @@ class LocalNotificationService {
     tz.TZDateTime newTzDate =
         tz.TZDateTime.now(tz.local).add(secondsTillNotification);
 
-    var androidPlatformChannelSpecifics = AndroidNotificationDetails(
+    AndroidNotificationDetails androidPlatformChannelSpecifics =
+        AndroidNotificationDetails(
       'timerChannelId',
       'Timer Notifications',
       channelDescription: 'Notifications from reminders set on the Timers page',
@@ -81,7 +86,8 @@ class LocalNotificationService {
       groupKey: 'com.assistantnms.app.timers',
     );
 
-    var iOSPlatformChannelSpecifics = const IOSNotificationDetails();
+    IOSNotificationDetails iOSPlatformChannelSpecifics =
+        const IOSNotificationDetails();
 
     NotificationDetails platformChannelSpecifics = NotificationDetails(
       android: androidPlatformChannelSpecifics,

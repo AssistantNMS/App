@@ -49,7 +49,7 @@ After 2 years of development and maintenance, the app was made open source so th
   [![PlayStore](./.github/img/PlayStore.png)][googlePlayStore]
   [![AppStore](./.github/img/AppStore.png)][appleAppStore]
   [![PWA](./.github/img/pwa.png)][assistantnmsWebapp]
-  <!-- [![WindowsStore](./.github/img/WindowsStore.png)][windowsStore] -->
+  [![WindowsStore](./.github/img/WindowsStore.png)][windowsStore]
   
 </div>
 
@@ -117,7 +117,7 @@ __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed e
 [assistantnmsSteamComm]: https://steamcommunity.com/groups/AssistantNMS?ref=AssistantNMSGithub
 [googlePlayStore]: https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes&ref=AssistantNMSGithub
 [appleAppStore]: https://apps.apple.com/us/app/assistant-for-no-mans-sky/id1480287625?ref=AssistantNMSGithub
-[windowsStore]: https://microsoft.com?ref=AssistantNMSGithub
+[windowsStore]: https://apps.microsoft.com/store/detail/assistant-for-no-mans-sky/9NQLF7XD0LF3?ref=AssistantNMSGithub
 [discord]: https://assistantapps.com/discord?ref=AssistantNMSGithub
 [nmscd]: https://github.com/NMSCD?ref=AssistantNMSGithub
 

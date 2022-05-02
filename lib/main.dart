@@ -7,7 +7,7 @@ import 'assistantAppsSettings.dart';
 import 'env/environmentSettings.dart';
 
 Future main() async {
-  var env = EnvironmentSettings(
+  EnvironmentSettings env = EnvironmentSettings(
     baseApi: 'https://api.nmsassistant.com',
     remoteConfigsConfigId: '9e83ecdf',
     donationsEnabled: true,
@@ -24,5 +24,6 @@ Future main() async {
   );
 
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp(env));
 }

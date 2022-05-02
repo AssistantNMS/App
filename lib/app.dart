@@ -3,13 +3,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
-import 'package:timezone/data/latest.dart' as tz;
 
 import 'components/adaptive/appShell.dart';
 import 'contracts/redux/appState.dart';
 import 'env/environmentSettings.dart';
 import 'integration/dependencyInjection.dart';
-import 'integration/firebase.dart';
 import 'redux/modules/createStore.dart';
 import 'redux/modules/setting/actions.dart';
 import 'redux/modules/setting/selector.dart';
@@ -33,7 +31,6 @@ class _MyAppState extends State<MyApp> {
   @override
   initState() {
     super.initState();
-    tz.initializeTimeZones();
     initDependencyInjection(_env);
     initReduxState();
 

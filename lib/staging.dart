@@ -21,5 +21,6 @@ Future main() async {
     remoteConfigsApiKey: remoteConfigsApiKey,
     patreonOAuthClientId: patreonOAuthClientId,
   );
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp(env));
 }
