@@ -33,10 +33,10 @@ assignees: Khaoz-Topsy
   - [ ] Copy content of `release_notes.txt` into store webpage
   - [ ] Submit for Microsoft review
 - [ ] Create Github release ([New Release](https://github.com/AssistantNMS/App/releases/new))
-  - [ ] Merge Pull Request
-  - [ ] Tag main branch
+  - [ ] Tag develop branch
+  - [ ] Use appropriate tag
   - [ ] Attach `.aab`
   - [ ] Attach `.apk`
   - [ ] Attach `.ipa`
   - [ ] Attach `.msix`
-  - [ ] Use appropriate tag
+- [ ] Merge Pull Request when update is out for everyone 🎉
