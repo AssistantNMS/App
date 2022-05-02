@@ -12,6 +12,7 @@ import '../services/base/analyticsService.dart';
 import '../services/base/audioPlayerService.dart';
 import '../services/base/baseWidgetService.dart';
 import '../services/base/dialogService.dart';
+import '../services/base/firebaseService.dart';
 import '../services/base/interface/IAudioPlayerService.dart';
 import '../services/base/loadingWidgetService.dart';
 import '../services/base/localNotificationService.dart';
@@ -81,6 +82,7 @@ void initDependencyInjection(EnvironmentSettings _env) {
 
   getIt.registerSingleton<IAudioPlayerService>(AudioPlayerService());
   getIt.registerSingleton<LocalNotificationService>(LocalNotificationService());
+  getIt.registerSingleton<FirebaseService>(FirebaseService());
 
   getIt.registerSingleton<AppApi>(AppApi());
   getIt.registerSingleton<GuideApiService>(GuideApiService());
@@ -117,6 +119,7 @@ IFactionJsonRepository getFactionRepo() => getIt<IFactionJsonRepository>();
 IAudioPlayerService getAudioPlayer() => getIt<IAudioPlayerService>();
 LocalNotificationService getLocalNotification() =>
     getIt<LocalNotificationService>();
+FirebaseService getFirebase() => getIt<FirebaseService>();
 
 AppApi getApiRepo() => getIt<AppApi>();
 GuideApiService getGuideApiService() => getIt<GuideApiService>();

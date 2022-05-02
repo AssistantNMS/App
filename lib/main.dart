@@ -5,7 +5,6 @@ import 'app.dart';
 import 'env.dart';
 import 'assistantAppsSettings.dart';
 import 'env/environmentSettings.dart';
-import 'integration/firebase.dart';
 
 Future main() async {
   var env = EnvironmentSettings(
@@ -25,9 +24,5 @@ Future main() async {
   );
 
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
-
-  if (kReleaseMode) {
-    initFirebaseAdMob();
-  }
   runApp(MyApp(env));
 }

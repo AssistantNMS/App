@@ -17,6 +17,7 @@ import '../pages/faction/factionListPage.dart';
 import '../pages/favourite/favouritesPage.dart';
 import '../pages/feedback/feedbackPage.dart';
 import '../pages/friendCode/friendCodeListPage.dart';
+import '../pages/guide/assistantAppsGuidesPage.dart';
 import '../pages/guide/guidesPage.dart';
 import '../pages/helloGames/communityMission/communityMissionPage.dart';
 import '../pages/helloGames/helloGamesPage.dart';
@@ -103,6 +104,7 @@ class Routes {
   static const String journeyMilestonePage = '/journeyMilestonePage';
   static const String factionPage = '/factionPage';
   static const String twitchCampaignPage = '/twitchCampaignPage';
+  static const String guideV2 = '/guideV2';
 }
 
 Map<String, Widget Function(BuildContext)> initNamedRoutes(
@@ -183,6 +185,7 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.journeyMilestonePage: (context) => JourneyMilestonePage(),
     Routes.factionPage: (context) => FactionPage(),
     Routes.twitchCampaignPage: (context) => TwitchCampaignPage(),
+    Routes.guideV2: (context) => const AssistantAppsGuidesPage(),
   });
   return routes;
 }
