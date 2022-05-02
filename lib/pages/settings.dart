@@ -159,7 +159,7 @@ class Settings extends StatelessWidget {
 
     widgets.add(boolSettingTilePresenter(
       context,
-      'Merge inventory quantities', // TODO translation
+      getTranslations().fromKey(LocaleKey.mergeInventoryQuantities),
       viewModel.mergeInventoryQuantities,
       onChange: viewModel.toggleMergeInventoryQuantities,
     ));
