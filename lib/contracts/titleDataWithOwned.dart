@@ -2,7 +2,6 @@
 //
 //     final titleData = titleDataFromJson(jsonString);
 
-import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import '../../contracts/titleData.dart';
 
 class TitleDataWithOwned {
@@ -13,7 +12,6 @@ class TitleDataWithOwned {
     this.appId,
     this.appIcon,
     this.appName,
-    this.unlockedByStatLocaleKey,
     this.unlockedByStatValue,
     this.isOwned,
   });
@@ -24,7 +22,6 @@ class TitleDataWithOwned {
   String appId;
   String appIcon;
   String appName;
-  LocaleKey unlockedByStatLocaleKey;
   int unlockedByStatValue;
   bool isOwned;
 
@@ -36,7 +33,6 @@ class TitleDataWithOwned {
         appId: orig.appId,
         appIcon: orig.appIcon,
         appName: orig.appName,
-        unlockedByStatLocaleKey: orig.unlockedByStatLocaleKey,
         unlockedByStatValue: orig.unlockedByStatValue,
         isOwned: isOwned,
       );
