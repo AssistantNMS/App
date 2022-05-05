@@ -6,7 +6,7 @@ import 'assistantAppsSettings.dart';
 import 'env/environmentSettings.dart';
 
 Future main() async {
-  var env = EnvironmentSettings(
+  EnvironmentSettings env = EnvironmentSettings(
     baseApi: 'https://api.nmsassistant.com',
     remoteConfigsConfigId: '4fa400a4',
     donationsEnabled: false,
@@ -22,5 +22,5 @@ Future main() async {
     patreonOAuthClientId: patreonOAuthClientId,
   );
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp(env));
+  runApp(AssistantNMS(env));
 }

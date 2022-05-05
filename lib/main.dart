@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:bitsdojo_window/bitsdojo_window.dart';
 
 import 'app.dart';
 import 'env.dart';
@@ -25,5 +26,10 @@ Future main() async {
 
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp(env));
+  runApp(AssistantNMS(env));
+
+  doWhenWindowReady(() {
+    appWindow.alignment = Alignment.center;
+    appWindow.show();
+  });
 }

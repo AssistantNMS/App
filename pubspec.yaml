@@ -44,6 +44,7 @@ dependencies:
   adaptive_dialog: 1.4.0
   avatar_glow: 2.0.2
   assets_audio_player: 3.0.4+1
+  bitsdojo_window: 0.1.1+1
   bubble: 1.2.1
   country_icons: 2.0.2 # Move to AA?
   custom_refresh_indicator: 1.1.1
@@ -84,12 +85,14 @@ flutter_icons: ## flutter pub run flutter_launcher_icons:main
   adaptive_icon_background: 'assets/images/fullSizeIconAdaptiveBg.png'
   adaptive_icon_foreground: 'assets/images/fullSizeIconAdaptiveFg.png'
 
-msix_config: # flutter pub run msix:create  ---  https://pub.dev/documentation/msix/latest/
+# flutter pub run -t ./lib/prodDesktop.dart msix:create
+msix_config: # https://pub.dev/documentation/msix/latest/
   display_name: Assistant for No Man's Sky
   publisher_display_name: AssistantApps
-  identity_name:
-  publisher: CN=
-  logo_path: 'assets/images/fullSizeIcon.png'
+  msix_version: 1.107.0.0
+  identity_name: 32412AssistantApps.AssistantforNoMansSky
+  publisher: CN=3CD7EDA8-DFB6-44F8-A6AC-DC70B9A5D88A
+  logo_path: './assets/images/fullSizeIcon.png'
   languages: en
   capabilities: internetClient
   store: true
