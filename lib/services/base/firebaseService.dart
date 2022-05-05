@@ -13,6 +13,8 @@ class FirebaseService {
   GoogleSignIn _googleSignIn;
 
   FirebaseService() {
+    if (isWindows) return;
+
     Firebase.initializeApp().then((_) {
       _auth = FirebaseAuth.instance;
       _googleSignIn = GoogleSignIn(scopes: scopes);
@@ -20,6 +22,14 @@ class FirebaseService {
   }
 
   Future<ResultWithValue<OAuthUserViewModel>> signInwithGoogle() async {
+    if (isWindows) {
+      return ResultWithValue(
+        false,
+        OAuthUserViewModel(),
+        'Not available on Windows',
+      );
+    }
+
     try {
       final GoogleSignInAccount googleSignInAccount =
           await _googleSignIn.signIn();
@@ -50,11 +60,15 @@ class FirebaseService {
   }
 
   User getCurrentUser() {
+    if (isWindows) return null;
+
     User currentUser = FirebaseAuth.instance.currentUser;
     return currentUser;
   }
 
   Future<void> signOutFromGoogle() async {
+    if (isWindows) return;
+
     try {
       await _googleSignIn.disconnect();
       await _googleSignIn.signOut();

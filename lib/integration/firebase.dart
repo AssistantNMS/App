@@ -8,6 +8,7 @@ import '../constants/AppConfig.dart';
 FirebaseMessaging firebaseMessaging;
 
 initFirebaseAdMob() async {
+  if (isWindows) return;
   MobileAds.instance.initialize();
 }
 
