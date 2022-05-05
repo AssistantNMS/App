@@ -91,7 +91,7 @@ Widget communitySpotlightTilePresenter(
           if (communitySpotlight.previewImageUrl != null &&
               communitySpotlight.previewImageUrl.length > 5) ...[
             Container(
-              constraints: const BoxConstraints(maxHeight: 225),
+              // constraints: const BoxConstraints(maxHeight: 225),
               child: networkImage(
                 communitySpotlight.previewImageUrl,
                 boxfit: BoxFit.fitWidth,
