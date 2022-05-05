@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -80,37 +80,27 @@ class AppShell extends StatelessWidget {
     List<LocalizationsDelegate<dynamic>> localizationsDelegates,
     List<Locale> supportedLocales,
   ) {
+    ScrollBehavior scrollBehavior;
+    if (isWindows) {
+      scrollBehavior = const MaterialScrollBehavior().copyWith(
+        dragDevices: {
+          PointerDeviceKind.mouse,
+          PointerDeviceKind.touch,
+          PointerDeviceKind.stylus,
+          PointerDeviceKind.unknown
+        },
+      );
+    }
     return MaterialApp(
       key: key,
-      shortcuts: <ShortcutActivator, Intent>{
-        ...WidgetsApp.defaultShortcuts,
-        const SingleActivator(LogicalKeyboardKey.space): const ActivateIntent(),
-      },
       title: 'Assistant for No Man\'s Sky',
       theme: theme,
       darkTheme: darkTheme,
       initialRoute: initialRoute,
       routes: routes,
+      scrollBehavior: scrollBehavior,
       localizationsDelegates: localizationsDelegates,
       supportedLocales: supportedLocales,
     );
   }
-
-  // Widget _appleApp(
-  //   BuildContext context,
-  //   ThemeData theme,
-  //   String initialRoute,
-  //   Map<String, Widget Function(BuildContext)> routes,
-  //   List<LocalizationsDelegate<dynamic>> localizationsDelegates,
-  //   List<Locale> supportedLocales,
-  // ) =>
-  //     CupertinoApp(
-  //       title: 'No Man\'s Sky Assistant',
-  //       theme: toAppleTheme(theme),
-  //       initialRoute: initialRoute,
-  //       routes: routes,
-  //       builder: (_, widget) => widget,
-  //       localizationsDelegates: localizationsDelegates,
-  //       supportedLocales: supportedLocales,
-  //     );
 }

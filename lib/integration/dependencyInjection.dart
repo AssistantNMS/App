@@ -9,6 +9,7 @@ import '../services/api/contributorApiService.dart';
 import '../services/api/guideApiService.dart';
 import '../services/api/helloGamesApiService.dart';
 import '../services/base/analyticsService.dart';
+import '../services/base/audioPlayerService.Windows.dart';
 import '../services/base/audioPlayerService.dart';
 import '../services/base/baseWidgetService.dart';
 import '../services/base/dialogService.dart';
@@ -80,7 +81,9 @@ void initDependencyInjection(EnvironmentSettings _env) {
       SeasonalExpeditionJsonRepository());
   getIt.registerSingleton<IFactionJsonRepository>(FactionJsonRepository());
 
-  getIt.registerSingleton<IAudioPlayerService>(AudioPlayerService());
+  getIt.registerSingleton<IAudioPlayerService>(
+    isWindows ? WindowsAudioPlayerService() : AudioPlayerService(),
+  );
   getIt.registerSingleton<LocalNotificationService>(LocalNotificationService());
   getIt.registerSingleton<FirebaseService>(FirebaseService());
 
