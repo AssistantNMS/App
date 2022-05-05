@@ -6,7 +6,7 @@ import '../contracts/exploit.dart';
 import '../contracts/exploitDetailTileItem.dart';
 import '../contracts/genericPageItem.dart';
 import '../contracts/inventory/inventory.dart';
-import '../contracts/inventory/inventoryNameAndId.dart';
+import '../contracts/inventory/inventoryBasicInfo.dart';
 import '../contracts/inventory/inventorySlot.dart';
 import '../contracts/inventory/inventorySlotDetails.dart';
 import '../contracts/inventory/inventorySlotWithContainerAndGenericPageItem.dart';
@@ -103,7 +103,7 @@ Future<List<RequiredItemDetails>> getRequiredItems(
       requiredIndex < tempRawMaterials.length;
       requiredIndex++) {
     RequiredItem rawMaterial = tempRawMaterials[requiredIndex];
-    rawMaterial.quantity *= requiredItem.quantity;
+    rawMaterial.quantity *= (requiredItem.quantity ?? 1);
 
     if (rawMaterial.id == requiredItem.id) {
       // Handle infinite loop
@@ -366,8 +366,8 @@ Future<ResultWithValue<List<InventorySlotWithContainersAndGenericPageItem>>>
   Map<String, InventorySlotWithContainersAndGenericPageItem> invSlotMap = {};
   for (Inventory inventory in inventories) {
     for (InventorySlot slot in inventory.slots) {
-      InventoryNameAndId nameId =
-          InventoryNameAndId(inventory.uuid, inventory.name);
+      InventoryBasicInfo nameId =
+          InventoryBasicInfo(inventory.uuid, inventory.name, inventory.icon);
       if (invSlotMap.containsKey(slot.id)) {
         invSlotMap.update(slot.id,
             (InventorySlotWithContainersAndGenericPageItem orig) {

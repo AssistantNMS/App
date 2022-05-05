@@ -7,7 +7,7 @@ https://pub.dev/packages/molten_navigationbar_flutter
 👷 Features
 [all] Better button handling ??
 [all] Quicksilver merchant page
-[all] Guild missions page
+[web] Guild missions page
 
 [app] search for game IDs
 [app] Fix AssistantApps team page
@@ -15,5 +15,4 @@ https://pub.dev/packages/molten_navigationbar_flutter
 
 🐛 Bugs
 [web] translate start and end dates
-[web] Better error handling like (other152)
 

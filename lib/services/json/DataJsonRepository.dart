@@ -12,6 +12,7 @@ import '../../contracts/data/quicksilverStore.dart';
 import '../../contracts/data/socialItem.dart';
 import '../../contracts/data/updateItemDetail.dart';
 import '../../contracts/devDetail.dart';
+import '../../contracts/twitch/twitchCampaignData.dart';
 import 'interface/IDataJsonRepository.dart';
 
 class DataJsonRepository extends BaseJsonService
@@ -270,6 +271,53 @@ class DataJsonRepository extends BaseJsonService
       getLog().e(
           "DataJsonRepository getTranslation Exception: ${exception.toString()}");
       return ResultWithValue<AlphabetTranslation>(
+          false, null, exception.toString());
+    }
+  }
+
+  @override
+  Future<ResultWithValue<List<TwitchCampaignData>>> getTwitchDrops(
+      BuildContext context) async {
+    try {
+      dynamic responseJson =
+          await getJsonFromAssets(context, "data/twitchDrops");
+      List list = json.decode(responseJson);
+      List<TwitchCampaignData> trans = list //
+          .map((e) => TwitchCampaignData.fromJson(e))
+          .toList();
+      return ResultWithValue<List<TwitchCampaignData>>(true, trans, '');
+    } catch (exception) {
+      getLog().e(
+          "DataJsonRepository getTwitchDrops Exception: ${exception.toString()}");
+      return ResultWithValue<List<TwitchCampaignData>>(
+          false, List.empty(), exception.toString());
+    }
+  }
+
+  @override
+  Future<ResultWithValue<TwitchCampaignData>> getTwitchDropById(
+      BuildContext context, int id) async {
+    ResultWithValue<List<TwitchCampaignData>> devItemsResult =
+        await getTwitchDrops(context);
+    if (devItemsResult.hasFailed) {
+      return ResultWithValue<TwitchCampaignData>(
+          false, null, devItemsResult.errorMessage);
+    }
+
+    try {
+      TwitchCampaignData devItem = devItemsResult.value
+          .firstWhere((dev) => dev.id == id, orElse: () => null);
+
+      if (devItem == null) {
+        return ResultWithValue<TwitchCampaignData>(
+            false, null, 'No Twitch campaign');
+      }
+
+      return ResultWithValue<TwitchCampaignData>(true, devItem, '');
+    } catch (exception) {
+      getLog().e(
+          "DataJsonRepository getTwitchDropById Exception: ${exception.toString()}");
+      return ResultWithValue<TwitchCampaignData>(
           false, null, exception.toString());
     }
   }

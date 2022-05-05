@@ -1,9 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/dialogs/patreonDialog.dart';
 import '../../constants/AppImage.dart';
-import '../../constants/Patreon.dart';
 import '../../constants/Routes.dart';
 import '../../redux/modules/setting/drawerSettingsViewModel.dart';
 
@@ -71,22 +69,22 @@ List<CustomMenu> getMenuOptionsSection1(
       title: LocaleKey.patrons,
       navigateToNamed: Routes.patronListPage,
     ),
-    isApple
-        ? CustomMenu(
-            icon: localGetFromIcon(Icons.share),
-            drawerIcon: localGetDrawerFromIcon(Icons.share),
-            title: LocaleKey.share,
-            hideInCustom: true,
-            onTap: (BuildContext navContext) =>
-                shareText(LocaleKey.shareContent),
-          )
-        : CustomMenu(
-            icon: getListTileImage(AppImage.donation, size: imageSize),
-            drawerIcon: getListTileImage(AppImage.donation),
-            title: LocaleKey.donation,
-            hideInCustom: true,
-            navigateToNamed: Routes.donation,
-          )
+    // isApple
+    //     ?
+    CustomMenu(
+      icon: localGetFromIcon(Icons.share),
+      drawerIcon: localGetDrawerFromIcon(Icons.share),
+      title: LocaleKey.share,
+      hideInCustom: true,
+      onTap: (BuildContext navContext) => shareText(LocaleKey.shareContent),
+    )
+    // : CustomMenu(
+    //     icon: getListTileImage(AppImage.donation, size: imageSize),
+    //     drawerIcon: getListTileImage(AppImage.donation),
+    //     title: LocaleKey.donation,
+    //     hideInCustom: true,
+    //     navigateToNamed: Routes.donation,
+    //   )
   ];
 }
 
@@ -158,6 +156,12 @@ List<CustomMenu> getMenuOptionsSection3(
       drawerIcon: getListTileImage(AppImage.guide),
       title: LocaleKey.guides,
       navigateToNamed: Routes.guides,
+      onLongPress: (ctx) {
+        getNavigation().navigateAwayFromHomeAsync(
+          ctx,
+          navigateToNamed: Routes.guideV2,
+        );
+      },
     ),
     CustomMenu(
       icon: getListTileImage(AppImage.portal, size: imageSize),
@@ -198,25 +202,8 @@ List<CustomMenu> getMenuOptionsSection3(
     CustomMenu(
       icon: localGetFromIcon(Icons.show_chart),
       drawerIcon: localGetDrawerFromIcon(Icons.show_chart),
-      title: LocaleKey.journeyMilestone,
-      navigateToNamed: Routes.journeyMilestonePage,
-    ),
-    CustomMenu(
-      icon: localGetFromIcon(Icons.show_chart),
-      drawerIcon: localGetDrawerFromIcon(Icons.show_chart),
       title: LocaleKey.milestones,
-      isLocked: isPatreonFeatureLocked(
-        PatreonEarlyAccessFeature.newMilestonesPage,
-        vm.isPatron,
-      ),
-      isNew: true,
       navigateToNamed: Routes.factionPage,
-      onTap: (BuildContext navContext) => handlePatreonDialogForRoute(
-        navContext,
-        vm.isPatron,
-        route: Routes.factionPage,
-        unlockDate: PatreonEarlyAccessFeature.newMilestonesPage,
-      ),
     ),
     CustomMenu(
       icon: getListTileImage(AppImage.timer, size: imageSize),
@@ -260,6 +247,12 @@ List<CustomMenu> getMenuOptionsSection3(
       title: LocaleKey.techTree,
       navigateToNamed: Routes.techTree,
     ),
+    // CustomMenu(
+    //   icon: getListTileImage(AppImage.techTree, size: imageSize),
+    //   drawerIcon: getListTileImage(AppImage.techTree),
+    //   title: LocaleKey.twitchDrop,
+    //   navigateToNamed: Routes.twitchCampaignPage,
+    // ),
     CustomMenu(
       icon: localGetFromIcon(Icons.more_horiz),
       drawerIcon: localGetDrawerFromIcon(Icons.more_horiz),
@@ -292,15 +285,15 @@ List<CustomMenu> getMenuOptionsSection4(
       title: LocaleKey.feedback,
       navigateToNamed: Routes.feedback,
     ),
-    if (!isApple) ...[
-      CustomMenu(
-        icon: localGetFromIcon(Icons.share),
-        drawerIcon: localGetDrawerFromIcon(Icons.share),
-        title: LocaleKey.share,
-        hideInCustom: true,
-        onTap: (BuildContext navContext) => shareText(LocaleKey.shareContent),
-      )
-    ],
+    // if (!isApple) ...[
+    //   CustomMenu(
+    //     icon: localGetFromIcon(Icons.share),
+    //     drawerIcon: localGetDrawerFromIcon(Icons.share),
+    //     title: LocaleKey.share,
+    //     hideInCustom: true,
+    //     onTap: (BuildContext navContext) => shareText(LocaleKey.shareContent),
+    //   )
+    // ],
     CustomMenu(
       icon: localGetFromIcon(Icons.help),
       drawerIcon: localGetDrawerFromIcon(Icons.help),
@@ -329,11 +322,6 @@ List<CustomMenu> getMenuOptions(
 }
 
 void customMenuClickHandler(BuildContext context, CustomMenu menuItem) async {
-  if (menuItem.onLongPress != null) {
-    menuItem.onLongPress(context);
-    return;
-  }
-
   if (menuItem.onTap != null) {
     menuItem.onTap(context);
     return;

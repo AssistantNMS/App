@@ -1,9 +1,11 @@
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 import 'guideType.dart';
 
-class GuideSectionItem {
-  GuideType type;
+class NmsGuideSectionItem {
+  NmsGuideType type;
   String name;
   String content;
   String image;
@@ -11,7 +13,7 @@ class GuideSectionItem {
   List<String> columns;
   List<List<String>> rows;
 
-  GuideSectionItem({
+  NmsGuideSectionItem({
     this.type,
     this.name,
     this.content,
@@ -21,18 +23,18 @@ class GuideSectionItem {
     this.rows,
   });
 
-  factory GuideSectionItem.fromRawJson(String str) =>
-      GuideSectionItem.fromJson(json.decode(str));
+  factory NmsGuideSectionItem.fromRawJson(String str) =>
+      NmsGuideSectionItem.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory GuideSectionItem.fromJson(Map<String, dynamic> json) =>
-      GuideSectionItem(
+  factory NmsGuideSectionItem.fromJson(Map<String, dynamic> json) =>
+      NmsGuideSectionItem(
         type: guideTypeValues.map[json["type"]],
-        content: json["content"],
-        imageUrl: json["imageUrl"],
-        image: json["image"],
-        name: json["name"],
+        content: readStringSafe(json, 'content'),
+        imageUrl: readStringSafe(json, 'imageUrl'),
+        image: readStringSafe(json, 'image'),
+        name: readStringSafe(json, 'name'),
         columns: json["columns"] != null
             ? (json["columns"] as List).map((c) => c as String).toList()
             : List.empty(growable: true),

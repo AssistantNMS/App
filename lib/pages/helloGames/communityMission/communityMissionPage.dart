@@ -104,12 +104,17 @@ class CommunityMissionPage extends StatelessWidget {
       widgets.add(genericItemDescription("$currentTier / $totalTiers"));
     }
 
-    widgets.add(
-      Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: horizontalProgressBar(context, percentage.toDouble()),
+    widgets.add(Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: horizontalProgressBar(
+        context,
+        percentage.toDouble(),
+        text: Text(
+          '${percentage.toStringAsFixed(0)}%',
+          style: const TextStyle(color: Colors.black),
+        ),
       ),
-    );
+    ));
 
     widgets.add(
       genericItemDescription(
@@ -132,8 +137,8 @@ class CommunityMissionPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(left: 8, right: 4, bottom: 4),
           child: positiveButton(
+            context,
             title: getTranslations().fromKey(buttonLocale),
-            colour: getTheme().getSecondaryColour(context),
             onPress: () async =>
                 await getNavigation().navigateAwayFromHomeAsync(
               context,

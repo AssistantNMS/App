@@ -14,10 +14,9 @@ class CartState {
   }
 
   CartState copyWith({
-    List<CartItem> craftingItems,
-    List<CartItem> refinerItems,
+    List<CartItem> crftingItems,
   }) {
-    return CartState(craftingItems: craftingItems ?? this.craftingItems);
+    return CartState(craftingItems: crftingItems ?? craftingItems);
   }
 
   factory CartState.fromJson(Map<String, dynamic> json) {
@@ -27,7 +26,7 @@ class CartState {
         craftingItems: readListSafe<CartItem>(
           json,
           'craftingItems',
-          (i) => CartItem.fromJson(i as Map<String, dynamic>),
+          (i) => CartItem.fromJson(i),
         ).toList(),
       );
     } catch (exception) {

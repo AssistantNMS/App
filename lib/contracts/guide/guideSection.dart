@@ -4,23 +4,27 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import 'guideSectionItem.dart';
 
-class GuideSection {
-  List<GuideSectionItem> items;
+class NmsGuideSection {
+  List<NmsGuideSectionItem> items;
   String heading;
 
-  GuideSection({
+  NmsGuideSection({
     this.items,
     this.heading,
   });
 
-  factory GuideSection.fromRawJson(String str) =>
-      GuideSection.fromJson(json.decode(str));
+  factory NmsGuideSection.fromRawJson(String str) =>
+      NmsGuideSection.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory GuideSection.fromJson(Map<String, dynamic> json) => GuideSection(
-        items: List<GuideSectionItem>.from(
-            json["items"].map((x) => GuideSectionItem.fromJson(x))),
+  factory NmsGuideSection.fromJson(Map<String, dynamic> json) =>
+      NmsGuideSection(
+        items: readListSafe<NmsGuideSectionItem>(
+          json,
+          'items',
+          (dynamic json) => NmsGuideSectionItem.fromJson(json),
+        ),
         heading: readStringSafe(json, 'heading'),
       );
 

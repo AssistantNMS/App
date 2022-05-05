@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
@@ -9,10 +8,9 @@ import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AppAudio.dart';
 import '../../constants/AppImage.dart';
+import '../../contracts/misc/audioStreamBuilderEvent.dart';
 import '../../integration/dependencyInjection.dart';
 import 'nmsfmTrackList.dart';
-
-//https://stream.zenolive.com/9kz76c8mdg8uv.aac
 
 class NMSFMPage extends StatefulWidget {
   const NMSFMPage({Key key}) : super(key: key);
@@ -61,18 +59,22 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
 
     widgets.add(emptySpace1x());
     widgets.add(flatCard(
-        child: veritasVelezTile(context,
-            subtitle: getTranslations().fromKey(LocaleKey.nmsfmCreator))));
+      child: veritasVelezTile(
+        context,
+        subtitle: getTranslations().fromKey(LocaleKey.nmsfmCreator),
+      ),
+    ));
 
     bool isOnline = _connectivityStatus != ConnectivityResult.none ||
         isiOS; // Connectivity plugin subscription to connectivity does not work on ios 🙄
-    if (isOnline) {
+
+    if (isOnline && !isDesktop) {
       widgets.add(const AudioStreamPresenter());
       widgets.add(Container(
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: positiveButton(
+          context,
           title: getTranslations().fromKey(LocaleKey.viewTrackList),
-          colour: getTheme().getSecondaryColour(context),
           onPress: () => getNavigation().navigateAsync(
             context,
             navigateTo: (context) => const NMSFMTrackListPage(),
@@ -122,6 +124,8 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
   @override
   void dispose() {
     _connectivitySubscription.cancel();
+    getAudioPlayer().stop();
+    getAudioPlayer().dispose();
     super.dispose();
   }
 }
@@ -135,96 +139,57 @@ class AudioStreamPresenter extends StatefulWidget {
 
 class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
   bool isPlaying = false;
-  Metas savedMetas;
+  AudioStreamBuilderEvent savedMetas;
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder(
-      stream: getAudioPlayer().getPlayer().current,
-      builder: (context, AsyncSnapshot<Playing> asyncSnapshot) {
-        final Audio current = asyncSnapshot?.data?.audio?.audio;
-        bool isLoading = isPlaying == true && current == null;
-        bool localIsPlaying = isPlaying;
-        if (current == null) {
-          localIsPlaying = false;
-        }
-        Metas metas = (current?.metas != null) ? current?.metas : null;
-        String title = metas?.title;
-        String artist = metas?.artist;
+    return getAudioPlayer().audioStreamBuilder(
+      uniqueKey: const Key('Streaming'),
+      builder: (BuildContext context, AudioStreamBuilderEvent event) {
+        bool isLoading = event.isLoading;
 
-        bool metasDontMatch = metas != null &&
-            savedMetas != null &&
-            title != null &&
-            artist != null &&
-            (title != savedMetas.title || artist != savedMetas.artist);
-        if (metasDontMatch) {
-          var newMeta = Metas(
-            title: title,
-            artist: artist,
-            album: getTranslations().fromKey(LocaleKey.nmsfm),
-            image: savedMetas.image,
-          );
-          current.updateMetas(
-            title: title,
-            artist: artist,
-          );
-          setState(() {
-            savedMetas = newMeta;
-          });
+        String title = getTranslations().fromKey(LocaleKey.nmsfm);
+        if (event?.title?.isNotEmpty ?? false) title = event?.title;
+        if (savedMetas?.title?.isNotEmpty ?? false) title = savedMetas?.title;
+
+        String artist = 'Now Streaming'; // TODO translate
+        if (event?.artist?.isNotEmpty ?? false) artist = event?.artist;
+        if (savedMetas?.artist?.isNotEmpty ?? false) {
+          artist = savedMetas?.artist;
         }
 
-        Widget playStopWidget = localIsPlaying
+        Widget playStopWidget = (isPlaying)
             ? getCorrectlySizedImageFromIcon(context, Icons.stop)
             : getCorrectlySizedImageFromIcon(context, Icons.play_arrow);
 
         return ListTile(
-          title: Text(
-            title ?? getTranslations().fromKey(LocaleKey.nmsfm),
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-          ),
-          subtitle: Text(
-            artist ?? 'Start listening now!', //TODO Translate
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-          ),
-          trailing:
-              isLoading ? getLoading().smallLoadingIndicator() : playStopWidget,
+          title: Text(title, maxLines: 1, overflow: TextOverflow.ellipsis),
+          subtitle: Text(artist, maxLines: 1, overflow: TextOverflow.ellipsis),
+          trailing: isLoading
+              ? getLoading().smallLoadingIndicator() //
+              : playStopWidget,
           onTap: () {
-            void Function(AssetsAudioPlayer localPlayer) stopFunction;
-            stopFunction = (AssetsAudioPlayer localPlayer) {
-              localPlayer.stop();
+            void Function() stopFunction;
+            stopFunction = () {
+              getAudioPlayer().stop();
               setState(() {
                 isPlaying = false;
               });
             };
-            if (localIsPlaying) {
-              stopFunction(getAudioPlayer().getPlayer());
+            if (isPlaying) {
+              stopFunction();
               return;
             }
-            var defaultMeta = Metas(
-              title: getTranslations().fromKey(LocaleKey.nmsfm),
-              artist: 'Now Streaming', // TODO Translate
-              image: const MetasImage.network(
-                'https://app.nmsassistant.com/assets/images/special/nmsfm.png',
+            getAudioPlayer().openUrl(
+              'https://stream.zenolive.com/9kz76c8mdg8uv.aac',
+              AudioStreamOpenUrlModel(
+                title: title,
+                artist: artist,
+                image: AppImage.nmsfm,
               ),
             );
-            getAudioPlayer().getPlayer().open(
-                  Audio.liveStream(
-                    'https://stream.zenolive.com/9kz76c8mdg8uv.aac',
-                    metas: defaultMeta,
-                  ),
-                  autoStart: true,
-                  showNotification: true,
-                  notificationSettings: NotificationSettings(
-                    nextEnabled: false,
-                    prevEnabled: false,
-                    customStopAction: stopFunction,
-                  ),
-                );
             setState(() {
               isPlaying = true;
-              savedMetas = defaultMeta;
             });
           },
         );
@@ -242,14 +207,16 @@ class LocalAudioPresenter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder(
-      stream: getAudioPlayer().getPlayer().isPlaying,
-      builder: (context, AsyncSnapshot<bool> asyncSnapshot) {
-        if (asyncSnapshot.data == null) {
+    Key uniqueKey = Key(localPath);
+    return getAudioPlayer().audioLocalBuilder(
+      uniqueKey: uniqueKey,
+      builder: (BuildContext context, AudioStreamBuilderEvent event) {
+        bool isPlaying = event.isPlaying;
+
+        if (event.isLoading) {
           return getLoading().smallLoadingTile(context);
         }
 
-        final bool isPlaying = asyncSnapshot.data;
         return ListTile(
           title: Text(
             name + ' (Sample)',
@@ -266,17 +233,14 @@ class LocalAudioPresenter extends StatelessWidget {
               : getCorrectlySizedImageFromIcon(context, Icons.play_arrow),
           onTap: () {
             if (isPlaying) {
-              getAudioPlayer().getPlayer().stop();
+              getAudioPlayer().stop();
               return;
             }
-            getAudioPlayer().getPlayer().open(
-                  Audio(
-                    "assets/audio/$localPath",
-                    metas: Metas(title: name, artist: artist),
-                  ),
-                  autoStart: true,
-                  showNotification: true,
-                );
+            getAudioPlayer().openLocal(
+              'assets/audio/$localPath',
+              uniqueKey,
+              AudioStreamOpenUrlModel(title: name, artist: artist),
+            );
           },
         );
       },

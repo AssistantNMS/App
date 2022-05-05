@@ -1,8 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
-import 'package:timezone/data/latest.dart' as tz;
 
 import 'components/adaptive/appShell.dart';
 import 'contracts/redux/appState.dart';
@@ -31,9 +31,12 @@ class _MyAppState extends State<MyApp> {
   @override
   initState() {
     super.initState();
-    tz.initializeTimeZones();
     initDependencyInjection(_env);
     initReduxState();
+
+    if (kReleaseMode) {
+      // initFirebaseAdMob();
+    }
 
     _newLocaleDelegate ??= const TranslationsDelegate(newLocale: null);
   }

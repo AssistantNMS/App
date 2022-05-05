@@ -1,11 +1,20 @@
-- Added reward from section, that displays whether an item is:
-    - No longer obtainable
-    - A reward from Expeditions
-    - A reward from Twitch Campaigns
-- Added Factions page (Patreon exclusive)
-    - Displays information about the ranks for each faction and guild
-    - Ability to set your current progress
+- Fix inventory adding and removing functions not working as expected
+  - There is now a setting that allows for the customisation of how an item is added to an inventory
+  - "Merge inventory quantities" when enabled, will squash the item's quantities into one slot in the inventory. If you add 50 Carbon to an inventory twice, the inventory will show a single stack of 100.
+  - "Merge inventory quantities" when disabled, will add another stack of the added item to the inventory. If you add 50 Carbon to an inventory twice, the inventory will show two stacks of 50 Carbon.
+  - Previously when deleting an item from an inventory, all items that share the same ID would be removed. Now only the stack specified will be deleted.
+- Fixed NMSFM not streaming audio in some situations + updates and improvements
+- Fixed Share button not working in all cases
+- Fixed update checking system 
+  - Fixed incorrect local version number being reported
+  - Improved version number system
+- Better logging for reports made by users
+- Added missing images for Titles
+- Fixes for Flora item images
+- Fix spaces not working in some situations
+- Handle issues with tap and drag scrolling not working in some situations
 
+_Submitted to App Stores 2022-05-05_
 
 For more details on this update please visit the "What is New" page in the Apps or on the website
 

@@ -1,4 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/constants/AppImage.dart';
+import 'package:assistantnms_app/contracts/requiredItem.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/NmsUIConstants.dart';
@@ -27,10 +29,18 @@ Widget processorRecipeTilePresentor(BuildContext context, Processor processor,
     {bool showBackgroundColours = false}) {
   return FutureBuilder<ResultWithValue<List<RequiredItemDetails>>>(
     future: requiredItemDetailsFromInputs(context, processor.inputs),
-    builder: (BuildContext context,
-        AsyncSnapshot<ResultWithValue<List<RequiredItemDetails>>> snapshot) {
-      return getNutrientProcessorTile(context, processor, multiItemImage,
-          navigateTo, showBackgroundColours, snapshot);
+    builder: (
+      BuildContext context,
+      AsyncSnapshot<ResultWithValue<List<RequiredItemDetails>>> snapshot,
+    ) {
+      return getNutrientProcessorTile(
+        context,
+        processor,
+        multiItemImage,
+        navigateTo,
+        showBackgroundColours,
+        snapshot,
+      );
     },
   );
 }
@@ -49,7 +59,7 @@ Widget getNutrientProcessorTile(
   );
   if (errorWidget != null) return errorWidget;
 
-  var rows = snapshot.data.value;
+  List<RequiredItemDetails> rows = snapshot.data.value;
   int startIndex = 0;
   String listTileTitle = '';
   for (var rowIndex = startIndex; rowIndex < rows.length; rowIndex++) {
@@ -58,7 +68,7 @@ Widget getNutrientProcessorTile(
   }
 
   // listTileTitle += " - ${processor.operation}";
-  var colour = rows.length == 1 ? rows[0].colour : null;
+  String colour = rows.length == 1 ? rows[0].colour : null;
   return Card(
     child: genericListTileWithSubtitle(
       context,
@@ -75,14 +85,21 @@ Widget getNutrientProcessorTile(
 Widget processorRecipeWithInputsTilePresentor(BuildContext context,
     Processor processor, Widget Function(Processor p) navigateTo,
     {bool showBackgroundColours = false}) {
-  var items = [processor.output, ...processor.inputs];
+  List<RequiredItem> items = [processor.output, ...processor.inputs];
   return FutureBuilder<ResultWithValue<List<RequiredItemDetails>>>(
     key: Key(processor.id),
     future: requiredItemDetailsFromInputs(context, items),
-    builder: (BuildContext context,
-        AsyncSnapshot<ResultWithValue<List<RequiredItemDetails>>> snapshot) {
+    builder: (
+      BuildContext context,
+      AsyncSnapshot<ResultWithValue<List<RequiredItemDetails>>> snapshot,
+    ) {
       return getProcessorWithRecipeTile(
-          context, processor, navigateTo, showBackgroundColours, snapshot);
+        context,
+        processor,
+        navigateTo,
+        showBackgroundColours,
+        snapshot,
+      );
     },
   );
 }
@@ -100,23 +117,37 @@ Widget getProcessorWithRecipeTile(
   );
   if (errorWidget != null) return errorWidget;
 
-  var output = snapshot.data.value[0];
-  var rows =
+  RequiredItemDetails output = snapshot.data.value[0];
+  List<RequiredItemDetails> rows =
       snapshot.data.value.skip(1).take(snapshot.data.value.length).toList();
   int startIndex = 0;
   String listTileTitle = '';
   for (var rowIndex = 0; rowIndex < rows.length; rowIndex++) {
-    listTileTitle +=
-        processorInputsToString(rowIndex, startIndex, rows[rowIndex]);
+    listTileTitle += processorInputsToString(
+      rowIndex,
+      startIndex,
+      rows[rowIndex],
+    );
   }
 
-  var subtitle = Text(
+  Widget subtitle = Text(
     listTileTitle,
     maxLines: 1,
     overflow: TextOverflow.ellipsis,
   );
 
-  return Card(
+  String refinerImg = AppImage.nutrientProcessor;
+  if (processor.isRefiner) {
+    refinerImg = AppImage.refiner;
+    if (rows.length == 2) {
+      refinerImg = AppImage.refinerMedium;
+    }
+    if (rows.length == 3) {
+      refinerImg = AppImage.refinerLarge;
+    }
+  }
+
+  return flatCard(
     child: genericListTileWithSubtitleAndImageCount(
       context,
       title: output.name,
@@ -127,10 +158,12 @@ Widget getProcessorWithRecipeTile(
       ),
       leadingImageCount: output.quantity,
       subtitle: subtitle,
-      onTap: () async => await getNavigation().navigateAsync(context,
-          navigateTo: (context) => navigateTo(processor)),
+      trailing: localImage(refinerImg),
+      onTap: () async => await getNavigation().navigateAsync(
+        context,
+        navigateTo: (context) => navigateTo(processor),
+      ),
     ),
-    margin: const EdgeInsets.all(0.0),
   );
 }
 

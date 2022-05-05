@@ -3,8 +3,8 @@ import '../../../contracts/guide/guide.dart';
 
 class IGuidesRepository {
   //
-  Future<ResultWithValue<List<Guide>>> getAll(context) async {
-    return ResultWithValue<List<Guide>>(false, List.empty(), '');
+  Future<ResultWithValue<List<NmsGuide>>> getAll(context) async {
+    return ResultWithValue<List<NmsGuide>>(false, List.empty(), '');
   }
 
   // Future<ResultWithValue<Guide>> getById(context, String id) async {

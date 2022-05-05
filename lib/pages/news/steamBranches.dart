@@ -37,7 +37,7 @@ class _SteamBranchesPageWidget extends State<SteamBranchesPage> {
   Widget build(BuildContext context) {
     return CustomRefreshIndicator(
       offsetToArmed: 150.0,
-      trailingGlowVisible: false,
+      trailingScrollIndicatorVisible: false,
       onRefresh: () => getSteamBranches(),
       child: getBody(context),
       builder: (context, child, controller) => Stack(

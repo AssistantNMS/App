@@ -7,6 +7,8 @@ assignees: ''
 
 ---
 
+_**Please note:** Just because a feature ticket exists, does not mean that we will or can build the feature. A feature may also require research before work on it can even start._
+
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 

@@ -1,28 +1,26 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'app.dart';
 import 'env.dart';
+import 'assistantAppsSettings.dart';
 import 'env/environmentSettings.dart';
-import 'integration/firebase.dart';
 
 Future main() async {
   var env = EnvironmentSettings(
     baseApi: 'https://api.nmsassistant.com',
-    assistantAppsApiUrl: 'https://api.assistantapps.com',
-    assistantAppsAppGuid: '589405b4-e40f-4cd9-b793-6bf37944ee09',
     remoteConfigsConfigId: '4fa400a4',
     donationsEnabled: false,
     isProduction: true,
-    currentWhatIsNewGuid: '682ce415-30eb-4265-b0ad-fcfc363705bb',
+
+    // AssistantApps
+    assistantAppsApiUrl: assistantAppsApiUrl,
+    assistantAppsAppGuid: assistantAppsAppGuid,
+    currentWhatIsNewGuid: currentWhatIsNewGuid,
 
     // from env.dart
     remoteConfigsApiKey: remoteConfigsApiKey,
     patreonOAuthClientId: patreonOAuthClientId,
   );
-
-  if (kReleaseMode) {
-    initFirebaseAdMob();
-  }
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp(env));
 }

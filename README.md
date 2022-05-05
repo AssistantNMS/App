@@ -1,39 +1,86 @@
-# Assistant for No Man's Sky (Android + iOS apps)
-**Project Owner**: [Khaoz-Topsy][kurtGithub]
+<div align="center">
+  
+  # Assistant for No Man's Sky
+  ### Android & iOS app built in Flutter  
+  ![header](./.github/img/header.png)
+  
+  <br />
+  
+  ![madeWithLove](./.github/img/made-with-love.svg)
+  [![licence](./.github/img/licence-badge.svg)](https://github.com/AssistantNMS/App/blob/master/LICENCE.md)<br />
+  [![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd] 
+
+  [![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
+  [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
+
+  [![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](#)<br />
+  [![Android review](https://api.assistantapps.com/badge/review/1/1.svg)][googlePlayStore]<br />
+  [![iOS review](https://api.assistantapps.com/badge/review/1/2.svg)][appleAppStore]
+  
+  <br /> 
+</div>
+  
+ 
 
 The **Assistant for No Man's Sky** is an app that gives users information about the game, such as crafting recipes, refiner recipes, item costs, blueprint costs, a portal library and guides. Almost all of the data is extracted from the **No Man's Sky** game files. This project would not be possible without the hard work of the NMS Modding community and the [MBinCompiler][mbincompiler].
 
 > This app was originally released in early August 2019! The app was originally named No Man's Sky Recipes, when submitting the app to the Apple Store it was rejected due to the name and so the app was renamed. 
 
-After 2 years of development and maintenance, the app was made open source so that the community to have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
+After 2 years of development and maintenance, the app was made open source so that the community could have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
 
-![madeWithLove](./.github/img/made-with-love.svg)
-[![licence](./.github/img/licence-badge.svg)](https://github.com/AssistantNMS/App/blob/master/LICENCE.md) <br />
-[![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd] 
+<div align="center">
+  <h3>
+    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#requirements">Getting Started</a>
+    <span> · </span>
+    <a href="https://github.com/AssistantNMS/App/blob/main/.github/CONTRIBUTING.md">Contributing Guidelines</a>
+    <span> · </span>
+    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#-builds-cicd">Build statuses</a>
+    <span> · </span>
+    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#-links">More Links</a>
+    <span> · </span>
+    <a href="https://github.com/AssistantNMS/App/blob/main/.github/SUPPORT.md">Support</a>
+  </h3>
+</div>
 
-[![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
-[![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
+<br />
 
-[![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](#) <br />
-[![Android review](https://api.assistantapps.com/badge/review/1/1.svg)][googlePlayStore] <br />
-[![iOS review](https://api.assistantapps.com/badge/review/1/2.svg)][appleAppStore]
+<div align="center">
 
+  [![PlayStore](./.github/img/PlayStore.png)][googlePlayStore]
+  [![AppStore](./.github/img/AppStore.png)][appleAppStore]
+  [![PWA](./.github/img/pwa.png)][assistantnmsWebapp]
+  [![WindowsStore](./.github/img/WindowsStore.png)][windowsStore]
+  
+</div>
 
-## Running the project
-**Prerequisites:**
-- [Flutter][flutter]
-- Android SDK, (easiest way to install is to go through the [Android Studio install][androidStudio]
+<br />
 
-**Steps:**
-1. Rename the `env.dart.template` file to `env.dart`
-2. Flutter
+## 🏃‍♂️ Running the project
+  
+### Requirements
+- Almost any desktop computer (eg.. MacOS X, Linux, Windows)
+- An IDE with (e.g. IntelliJ, Android Studio, VSCode etc)
+- [Flutter][flutter] installed and in your
 
-## Contributing
+### Steps:
+1. Clone this repository
+2. Rename the `env.dart.template` file to `env.dart`
+3. In the directory where the `pubspec.yaml` file is, run `flutter pub get`
+4. Run the app
+   - If you want to run the app as an Android app, have the Android emulator running, ensure that the device is showing in the results of this command: `flutter devices` and use the command `flutter run`
+   - If you want to run the app as a Windows application, use the command `flutter run -d windows`
+
+<br />
+
+## 👪 Contributing
+**Project Owner**: [Khaoz-Topsy][kurtGithub]<br /><br />
 Please take a look at the [Contribution Guideline](./.github/CONTRIBUTING.md) before creating an issue or pull request.
 
 If you would like to help add languages to the app please use this tool [AssistantApps tool][assistantAppsTools].
 
-## Builds (CI/CD)
+<br />
+
+## 📦 Builds (CI/CD)
 The Mobile Apps are built and released to the [Google Play Store][googlePlayStore] and [Apple App Store Store][appleAppStore] using [CodeMagic][codeMagic].
 
 - ![Codemagic build status](https://api.codemagic.io/apps/5d9da9057a0a9500105180bf/5ef3374ec0adbfe0fdee431d/status_badge.svg) - Android & iOS (Production)
@@ -43,7 +90,9 @@ The Mobile Apps are built and released to the [Google Play Store][googlePlayStor
 
 __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed even though it actually successfully built and pushed the `.ipa` file to the Apple App Store. This is because they poll the App Store checking if the `.ipa` file is there and after a few attempts throw an error. So ignore build failures for anything that has to do with iOS 🙄.__
 
-## Links
+<br />
+
+## 🔗 Links
 [![Website](https://img.shields.io/badge/Website-nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantnmsWebsite] <br />
 [![WebApp](https://img.shields.io/badge/Web%20App-app.nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantnmsWebapp]
 
@@ -68,6 +117,7 @@ __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed e
 [assistantnmsSteamComm]: https://steamcommunity.com/groups/AssistantNMS?ref=AssistantNMSGithub
 [googlePlayStore]: https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes&ref=AssistantNMSGithub
 [appleAppStore]: https://apps.apple.com/us/app/assistant-for-no-mans-sky/id1480287625?ref=AssistantNMSGithub
+[windowsStore]: https://apps.microsoft.com/store/detail/assistant-for-no-mans-sky/9NQLF7XD0LF3?ref=AssistantNMSGithub
 [discord]: https://assistantapps.com/discord?ref=AssistantNMSGithub
 [nmscd]: https://github.com/NMSCD?ref=AssistantNMSGithub
 

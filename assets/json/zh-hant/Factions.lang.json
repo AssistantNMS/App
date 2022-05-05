@@ -4,6 +4,7 @@
   "Categories": [
     {
       "Id": "journey",
+      "Icon": "faction/JOURNEY.ON.png",
       "Name": "旅程里程碑",
       "Description": "無窮無盡的旅程：在無邊無境的宇宙探索求生",
       "Missions": [],
@@ -16,6 +17,7 @@
   "Lifeforms": [
     {
       "Id": "gek",
+      "Icon": "faction/FACTIONS.GEK.ON.png",
       "Name": "吉客族",
       "Description": "這體型嬌小的喙嘴爬蟲類生命體是銀河界最傑出的商人。他們能精心釋出費洛蒙，藉此溝通，透過氣味傳達複雜的概念和情緒。\n\n他們來自巴拉隆星球。其他智慧生命體都對他們抱持懷疑態度，因為吉客族第一世代是靠著血腥的手段，才建立起現在的偉大帝國。",
       "Missions": [
@@ -267,6 +269,7 @@
     },
     {
       "Id": "vykeen",
+      "Icon": "faction/FACTIONS.VYKEEN.ON.png",
       "Name": "維金族",
       "Description": "維金族是來自德林達厄星系的好戰生物，熱衷襲擊巡警。他們在維金族總司令的指揮下，於銀河各地對抗巡警的威脅。\n\n雖然維金族外表兇猛，卻受嚴格的行為準則約束。對他們來說，忠誠、犧牲、死得其所遠比物質和知識來得珍貴。他們也誓言盡全力幫助旅行者。",
       "Missions": [
@@ -518,6 +521,7 @@
     },
     {
       "Id": "explorer",
+      "Icon": "faction/FACTIONS.KORVAX.ON.png",
       "Name": "科瓦族",
       "Description": "科瓦族存在體是無機生命體，棲於代代相傳的金屬外殼內。他們相信藉由數學研究能觸及寰宇的高度，想達成理想就得研究巡警。\n\n每位科瓦族都是純粹的精神體，科瓦族的偉大議會就是由這些心靈聚集而成。他們與這集體意識的連結遠比他們棲息的軀殼重要。\n\n科瓦族曾是吉客族第一世代的奴隸，許多科瓦族至今仍不相信吉客族。",
       "Missions": [
@@ -772,8 +776,9 @@
   "Guilds": [
     {
       "Id": "traGuild",
+      "Icon": "faction/FACTIONS.TRADEGUILD.ON.png",
       "Name": "商人工會",
-      "Description": "代表銀河系的貿易公司和獨立商人之集體組織，代成員控管並分派任務給受雇駕駛員。\n\n商人工會很自然是由吉客族主導，但工會並不排外。只要生命體的資本準備金達到要求，就歡迎加入工會......",
+      "Description": "代表銀河系各貿易公司與獨立商人的集體組織，協助成員管理並分派任務給受雇駕駛員。\n\n商人工會自然是由吉客族主導，但工會並不排外。只要生命體的資本準備金達到要求，就歡迎加入工會......",
       "Missions": [
         {
           "Name": "聲望",
@@ -1019,10 +1024,14 @@
             }
           ]
         }
+      ],
+      "Additional": [
+        "ShowGuildMissions"
       ]
     },
     {
       "Id": "warGuild",
+      "Icon": "faction/FACTIONS.WARRIORGUILD.ON.png",
       "Name": "傭兵工會",
       "Description": "銀河系的傭兵組成的鬆散集團，工會內有許多派系鬥爭，許多派系想藉機幹掉彼此。\n\n工會成員包含海盜、義警、臥底執法人員、異教徒、惡棍和勇士。傭兵工會能確保將適當的工作分發給適當的機會主義武裝團體，維護銀河的和平。",
       "Missions": [
@@ -1270,10 +1279,14 @@
             }
           ]
         }
+      ],
+      "Additional": [
+        "ShowGuildMissions"
       ]
     },
     {
-      "Id": "traGuild",
+      "Id": "expGuild",
+      "Icon": "faction/FACTIONS.EXPLORERGUILD.ON.png",
       "Name": "探險家工會",
       "Description": "探險家工會是研究員和探險家的共同組織，方便有資料需求的成員找到合適的資料收集員。\n\n會員五花八門，有科學機構、地理協會和科技公司，時不時也有獨立探險家加入。工會提供共用資源、共享實驗室、系列講座和每年一度的獎章。",
       "Missions": [
@@ -1521,6 +1534,9 @@
             }
           ]
         }
+      ],
+      "Additional": [
+        "ShowGuildMissions"
       ]
     }
   ]

@@ -57,18 +57,11 @@ class SeasonalExpeditionSeasonListPage extends StatelessWidget {
           builder: (BuildContext futureContext,
               AsyncSnapshot<ResultWithValue<CurrentAndPastExpeditions>>
                   snapshot) {
-            List<Widget> listItems =
-                getBodyFromFuture(futureContext, viewModel, snapshot);
             return simpleGenericPageScaffold(
               futureContext,
               title: getTranslations()
                   .fromKey(LocaleKey.seasonalExpeditionSeasons),
-              body: listWithScrollbar(
-                shrinkWrap: true,
-                itemCount: listItems.length,
-                itemBuilder: (BuildContext context, int index) =>
-                    listItems[index],
-              ),
+              body: getBodyFromFuture(futureContext, viewModel, snapshot),
             );
           },
         );
@@ -76,7 +69,7 @@ class SeasonalExpeditionSeasonListPage extends StatelessWidget {
     );
   }
 
-  List<Widget> getBodyFromFuture(BuildContext context, IsPatreonViewModel vm,
+  Widget getBodyFromFuture(BuildContext context, IsPatreonViewModel vm,
       AsyncSnapshot<ResultWithValue<CurrentAndPastExpeditions>> snapshot) {
     List<Widget> listItems = List.empty(growable: true);
 
@@ -90,10 +83,7 @@ class SeasonalExpeditionSeasonListPage extends StatelessWidget {
         return true;
       },
     );
-    if (errorWidget != null) {
-      listItems.add(errorWidget);
-      return listItems;
-    }
+    if (errorWidget != null) return errorWidget;
 
     Widget innerChild = getLoading().customErrorWidget(context);
     if (snapshot.data.value.current != null) {
@@ -164,6 +154,10 @@ class SeasonalExpeditionSeasonListPage extends StatelessWidget {
     listItems
         .add(Padding(child: Container(), padding: const EdgeInsets.all(16)));
 
-    return listItems;
+    return listWithScrollbar(
+      shrinkWrap: true,
+      itemCount: listItems.length,
+      itemBuilder: (BuildContext context, int index) => listItems[index],
+    );
   }
 }

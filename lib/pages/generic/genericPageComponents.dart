@@ -7,6 +7,7 @@ import '../../components/expeditionAlphabetTranslation.dart';
 import '../../components/tilePresenters/eggTraitTilePresenter.dart';
 import '../../components/tilePresenters/inventoryTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemTilePresenter.dart';
+import '../../components/tilePresenters/rewardFromTilePresenter.dart';
 import '../../components/tilePresenters/seasonalExpeditionTilePresenter.dart';
 import '../../components/tilePresenters/statBonusPresenter.dart';
 import '../../components/tilePresenters/twitchTilePresenter.dart';
@@ -37,50 +38,58 @@ import 'genericPageDescripHighlightText.dart';
 
 List<Widget> getBodyTopContent(BuildContext context, GenericPageViewModel vm,
     GenericPageItem genericItem) {
-  List<Widget> widgets = List.empty(growable: true);
-  bool hdAvailable =
-      genericItem.cdnUrl != null && genericItem.cdnUrl.isNotEmpty;
-  Widget background = vm.displayGenericItemColour
-      ? genericItemImageWithBackground(
-          context,
-          genericItem,
-          hdAvailable: hdAvailable,
-        )
-      : genericItemImage(
-          context,
-          genericItem.icon,
-          imageHero: gameItemIconHero(genericItem),
-          name: genericItem.name,
-          hdAvailable: hdAvailable,
-        );
+  List<Widget> stackWidgets = List.empty(growable: true);
+  bool hdAvailable = genericItem.cdnUrl != null && //
+      genericItem.cdnUrl.isNotEmpty;
   Color iconColour = getOverlayColour(HexColor(genericItem.colour));
-  widgets.add(Stack(
-    key: Key('${genericItem.id}-bg-stack'),
-    children: [
-      background,
-      if (hdAvailable) ...[
-        getHdImage(context, genericItem.icon, genericItem.name, iconColour),
-      ],
-      getFavouriteStar(
-        genericItem.icon,
-        genericItem.id,
-        vm.favourites,
-        iconColour,
-        vm.addFavourite,
-        vm.removeFavourite,
-      ),
-      if ((genericItem?.usage ?? []).contains(UsageKey.hasDevProperties)) ...[
-        getDevSheet(
-          context,
-          genericItem.id,
-          iconColour,
-          hdAvailable,
-        ),
-      ],
-    ],
-  ));
 
-  return widgets;
+  if (vm.displayGenericItemColour) {
+    stackWidgets.add(genericItemImageWithBackground(
+      context,
+      genericItem,
+      hdAvailable: hdAvailable,
+    ));
+  } else {
+    stackWidgets.add(genericItemImage(
+      context,
+      genericItem.icon,
+      imageHero: gameItemIconHero(genericItem),
+      name: genericItem.name,
+      hdAvailable: hdAvailable,
+    ));
+  }
+
+  if (hdAvailable) {
+    stackWidgets.add(
+      getHdImage(context, genericItem.icon, genericItem.name, iconColour),
+    );
+  }
+
+  stackWidgets.add(
+    getFavouriteStar(
+      genericItem.icon,
+      genericItem.id,
+      vm.favourites,
+      iconColour,
+      vm.addFavourite,
+      vm.removeFavourite,
+    ),
+  );
+
+  if ((genericItem?.usage ?? []).contains(UsageKey.hasDevProperties)) {
+    stackWidgets.add(
+      getDevSheet(
+        context,
+        genericItem.id,
+        iconColour,
+        hdAvailable,
+      ),
+    );
+  }
+
+  return [
+    Stack(key: Key('${genericItem.id}-bg-stack'), children: stackWidgets),
+  ];
 }
 
 List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
@@ -177,7 +186,7 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
 }
 
 List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
-  Color chipColour = Colors.white;
+  Color chipColour = getTheme().buttonForegroundColour(context);
   List<Widget> chipList = List.empty(growable: true);
 
   if (genericItem.maxStackSize != null &&
@@ -220,27 +229,37 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
     }
   }
 
-  switch (genericItem.blueprintCostType) {
-    case CurrencyType.NANITES:
-      String bpCostText = getTranslations().fromKey(LocaleKey.blueprintCost);
-      int bpCost = genericItem.blueprintCost;
-      chipList.add(
-        genericItemNanites(context, "$bpCostText: $bpCost", colour: chipColour),
-      );
-      break;
-    case CurrencyType.SALVAGEDDATA:
-      chipList.add(genericItemSalvagedData(
-          context, genericItem.blueprintCost.toStringAsFixed(0),
-          colour: chipColour));
-      break;
-    case CurrencyType.FACTORYOVERRIDE:
-      chipList.add(genericItemFactoryOverride(
-          context, genericItem.blueprintCost.toStringAsFixed(0),
-          colour: chipColour));
-      break;
-    case CurrencyType.NONE:
-    default:
-      break;
+  int bpCost = genericItem.blueprintCost;
+  if (bpCost > 0) {
+    switch (genericItem.blueprintCostType) {
+      case CurrencyType.NANITES:
+        String bpCostText = getTranslations().fromKey(LocaleKey.blueprintCost);
+        chipList.add(
+          genericItemNanites(
+            context,
+            "$bpCostText: $bpCost",
+            colour: chipColour,
+          ),
+        );
+        break;
+      case CurrencyType.SALVAGEDDATA:
+        chipList.add(genericItemSalvagedData(
+          context,
+          genericItem.blueprintCost.toStringAsFixed(0),
+          colour: chipColour,
+        ));
+        break;
+      case CurrencyType.FACTORYOVERRIDE:
+        chipList.add(genericItemFactoryOverride(
+          context,
+          genericItem.blueprintCost.toStringAsFixed(0),
+          colour: chipColour,
+        ));
+        break;
+      case CurrencyType.NONE:
+      default:
+        break;
+    }
   }
 
   // if (genericItem.cookingValue != null && genericItem.cookingValue > 0.0) {
@@ -306,19 +325,27 @@ List<Widget> getCraftedUsing(
       requiredItemsPresenter,
     ));
 
-    craftedUsing.add(Container(
-      child: positiveButton(
-        title: getTranslations().fromKey(LocaleKey.viewAllRawMaterialsRequired),
-        colour: getTheme().getSecondaryColour(context),
-        onPress: () async => await getNavigation().navigateAsync(
+    List<RequiredItem> itemsThatArentRawMaterials = resArray
+        .where((element) => !element.id.contains(IdPrefix.rawMaterial))
+        .toList();
+
+    if (itemsThatArentRawMaterials.isNotEmpty) {
+      craftedUsing.add(
+        positiveButton(
           context,
-          navigateTo: (context) => GenericPageAllRequiredRawMaterials(
-            GenericPageAllRequired.fromGenericItem(genericItem),
-            vm.displayGenericItemColour,
+          title: getTranslations().fromKey(
+            LocaleKey.viewAllRawMaterialsRequired,
+          ),
+          onPress: () async => await getNavigation().navigateAsync(
+            context,
+            navigateTo: (context) => GenericPageAllRequiredRawMaterials(
+              GenericPageAllRequired.fromGenericItem(genericItem),
+              vm.displayGenericItemColour,
+            ),
           ),
         ),
-      ),
-    ));
+      );
+    }
   }
   return craftedUsing;
 }
@@ -577,9 +604,11 @@ List<Widget> getEggTraits(
 
 List<Widget> getRewardFrom(
   BuildContext context,
-  List<String> usages,
+  GenericPageItem genericItem,
+  bool displayGenericItemColour,
 ) {
   List<Widget> rewardsFromWidgets = List.empty(growable: true);
+  List<String> usages = genericItem?.usage ?? [];
 
   List<String> expSeasonKeySplit = UsageKey.isExpeditionSeason.split("{0}");
   if (usages.any((u) => u.contains(expSeasonKeySplit[0]))) {
@@ -594,7 +623,18 @@ List<Widget> getRewardFrom(
     ));
   }
 
-  List<String> twitchCampaignKeySplit = UsageKey.isTwitchCapaign.split("{0}");
+  if (usages.any((u) => u.contains(UsageKey.isQuicksilver))) {
+    if (genericItem.baseValueUnits > 0 &&
+        genericItem.currencyType == CurrencyType.QUICKSILVER) {
+      rewardsFromWidgets.add(rewardFromQuicksilverMerchantTilePresenter(
+        context,
+        genericItem.baseValueUnits.toStringAsFixed(0),
+        displayGenericItemColour,
+      ));
+    }
+  }
+
+  List<String> twitchCampaignKeySplit = UsageKey.isTwitchCampaign.split("{0}");
   if (usages.any((u) => u.contains(twitchCampaignKeySplit[0]))) {
     String expSeasUsageKey =
         usages.firstWhere((u) => u.contains(twitchCampaignKeySplit[0]));
@@ -604,6 +644,7 @@ List<Widget> getRewardFrom(
     rewardsFromWidgets.add(rewardFromTwitchTilePresenter(
       context,
       expSeasonNum,
+      displayGenericItemColour,
     ));
   }
 

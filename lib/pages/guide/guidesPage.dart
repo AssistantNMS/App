@@ -27,9 +27,9 @@ class GuidesPage extends StatelessWidget {
   Widget getBody(BuildContext context, SettingViewModel viewModel) {
     GuidesJsonRepository _guidesRepo = GuidesJsonRepository();
     var presenter = viewModel.guidesIsCompact
-        ? (BuildContext context, Guide guideDetails) =>
+        ? (BuildContext context, NmsGuide guideDetails) =>
             compactGuideTilePresenter(context, guideDetails)
-        : (BuildContext context, Guide guideDetails) =>
+        : (BuildContext context, NmsGuide guideDetails) =>
             guideTilePresenter(context, guideDetails);
     return basicGenericPageScaffold(
       context,
@@ -42,7 +42,7 @@ class GuidesPage extends StatelessWidget {
           onPressed: () => viewModel.toggleGuideIsCompact(),
         )
       ],
-      body: SearchableList<Guide>(
+      body: SearchableList<NmsGuide>(
         () => _guidesRepo.getAll(context),
         listItemDisplayer: presenter,
         listItemSearch: searchGuide,

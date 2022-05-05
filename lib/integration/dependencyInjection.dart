@@ -1,4 +1,5 @@
-import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
+    hide GuideApiService;
 import 'package:get_it/get_it.dart';
 
 import '../../services/base/languageService.dart';
@@ -7,13 +8,15 @@ import '../services/api/communityApiService.dart';
 import '../services/api/contributorApiService.dart';
 import '../services/api/guideApiService.dart';
 import '../services/api/helloGamesApiService.dart';
-import '../services/audioPlayerService.dart';
 import '../services/base/analyticsService.dart';
+import '../services/base/audioPlayerService.Windows.dart';
+import '../services/base/audioPlayerService.dart';
 import '../services/base/baseWidgetService.dart';
 import '../services/base/dialogService.dart';
+import '../services/base/firebaseService.dart';
+import '../services/base/interface/IAudioPlayerService.dart';
 import '../services/base/loadingWidgetService.dart';
 import '../services/base/localNotificationService.dart';
-import '../services/base/loggingService.dart';
 import '../services/base/notificationService.dart';
 import '../services/base/pathService.dart';
 import '../services/base/themeService.dart';
@@ -47,9 +50,8 @@ void initDependencyInjection(EnvironmentSettings _env) {
   getIt.registerSingleton<EnvironmentSettings>(_env);
 
   // AssistantApps
-  initBaseDependencyInjection(
+  initAssistantAppsDependencyInjection(
     _env.toAssistantApps(),
-    logger: LoggerService(),
     analytics: AnalyticsService(),
     theme: ThemeService(),
     notification: NotificationService(),
@@ -79,8 +81,11 @@ void initDependencyInjection(EnvironmentSettings _env) {
       SeasonalExpeditionJsonRepository());
   getIt.registerSingleton<IFactionJsonRepository>(FactionJsonRepository());
 
-  getIt.registerSingleton<AudioPlayerService>(AudioPlayerService());
+  getIt.registerSingleton<IAudioPlayerService>(
+    isWindows ? WindowsAudioPlayerService() : AudioPlayerService(),
+  );
   getIt.registerSingleton<LocalNotificationService>(LocalNotificationService());
+  getIt.registerSingleton<FirebaseService>(FirebaseService());
 
   getIt.registerSingleton<AppApi>(AppApi());
   getIt.registerSingleton<GuideApiService>(GuideApiService());
@@ -114,9 +119,10 @@ ISeasonalExpeditionJsonRepository getSeasonalExpeditionRepo() =>
     getIt<ISeasonalExpeditionJsonRepository>();
 IFactionJsonRepository getFactionRepo() => getIt<IFactionJsonRepository>();
 
-AudioPlayerService getAudioPlayer() => getIt<AudioPlayerService>();
+IAudioPlayerService getAudioPlayer() => getIt<IAudioPlayerService>();
 LocalNotificationService getLocalNotification() =>
     getIt<LocalNotificationService>();
+FirebaseService getFirebase() => getIt<FirebaseService>();
 
 AppApi getApiRepo() => getIt<AppApi>();
 GuideApiService getGuideApiService() => getIt<GuideApiService>();

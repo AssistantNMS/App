@@ -1329,8 +1329,8 @@
     "Id": "tech35",
     "Icon": "technology/35.png",
     "Name": "Rocket Launcher",
-    "Group": "Spacecraft Projectile Weapon",
-    "Description": "Highly destructive weapon that facilitates rapid ship-to-ship destruction.\n\nPress <IMG>SHIPFIRE<> to activate.",
+    "Group": "Long Range Starship Weapon",
+    "Description": "A <TECHNOLOGY>long range<> starship weapon, capable of delivering a highly explosive torpedo across massive distances.\n\nNote: explosive damage is <STELLAR>highly effective<> against <STELLAR>unshielded<> targets, but <TITLE>ineffective<> against <TITLE>shielded<> targets.\n\nUse <IMG>CYCLEWEAPON<> to change weapon mode. Press <IMG>SHIPFIRE<> to fire.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1437,8 +1437,8 @@
     "Id": "tech37",
     "Icon": "technology/37.png",
     "Name": "Photon Cannon",
-    "Group": "Spacecraft Projectile Weapon",
-    "Description": "Highly destructive weapon that facilitates rapid ship-to-ship destruction.\n\nPress <IMG>SHIPFIRE<> to activate.",
+    "Group": "Starship Projectile Weapon",
+    "Description": "A destructive <TECHNOLOGY>starship projectile launcher<>, the weapons system for choice for the interstellar trader and pirate alike.\n\nUse <IMG>CYCLEWEAPON<> to change weapon mode. Press <IMG>SHIPFIRE<> to fire.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1567,8 +1567,8 @@
     "Id": "tech41",
     "Icon": "technology/41.png",
     "Name": "Phase Beam",
-    "Group": "Spacecraft Laser Device",
-    "Description": "Spacefaring beam weapon and asteroid mining tool.\n\nUser is advised that <FUEL>organic elements<> are required to recharge device.\n\nPress <IMG>SHIPFIRE<> to activate.",
+    "Group": "Starship Energy Weapon",
+    "Description": "A <TECHNOLOGY>high-energy beam weapon<> for ship-to-ship combat. \n\nThough vulnerable to <FUEL>overheating<>, these highly accurate laser weapons can <STELLAR>recharge the users's shields<> by leeching energy from target shield systems.\n\nUse <IMG>CYCLEWEAPON<> to change weapon mode. Press <IMG>SHIPFIRE<> to fire.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1593,13 +1593,19 @@
         "Name": "Heat Dispersion",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "50"
+        "Value": "150"
       },
       {
         "Name": "Damage",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "Value": "250"
+      },
+      {
+        "Name": "Shield recharge on impact",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "shieldStrength",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -1636,6 +1642,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
         "Value": "10"
+      },
+      {
+        "Name": "Shield recharge on impact",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "shieldStrength",
+        "Value": "0.1"
       }
     ],
     "ConsumableRewardTexts": [],
@@ -1645,8 +1657,8 @@
     "Id": "tech43",
     "Icon": "technology/43.png",
     "Name": "Positron Ejector",
-    "Group": "High Energy Starship Weapon",
-    "Description": "Shots are granted a wide cone of destruction.\n\nWith reduced range and rate of fire, users are encouraged to engage their targets in close proximity.",
+    "Group": "Close Range Starship Weapon",
+    "Description": "A powerful starship weapon, capable of delivering <STELLAR>extreme destruction<> at <TECHNOLOGY>close range<>. \n\nNote: these particles show <TITLE>decreased effectiveness<> against shielded targets.\n\nUse <IMG>CYCLEWEAPON<> to change weapon mode. Press <IMG>SHIPFIRE<> to fire.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1671,7 +1683,7 @@
         "Name": "Fire Rate",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "3"
+        "Value": "2"
       },
       {
         "Name": "Accuracy",
@@ -1683,13 +1695,13 @@
         "Name": "Total Cannon Count",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "20"
+        "Value": "14"
       },
       {
         "Name": "Heat Dispersion",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "75"
+        "Value": "50"
       },
       {
         "Name": "Damage",
@@ -1760,7 +1772,7 @@
     "Icon": "technology/45.png",
     "Name": "Infra-Knife Accelerator",
     "Group": "Rapid Fire Starship Weapon",
-    "Description": "Releases sustained rapid sequences of fire.\n\nUser is advised to limit bursts as overheating can occur very rapidly.",
+    "Description": "A <TECHNOLOGY>rapid fire<> starship weapon that launches superheated globes of liquid metal at hostile targets. These projectiles are <STELLAR>extremely effective<> against <STELLAR>unshielded<> starship hulls.\n\nNote: the Accelerator's internal components are vulnerable to rapid <FUEL>overheating<>. Sustained burst fire is not recommended.\n\nUse <IMG>CYCLEWEAPON<> to change weapon mode. Press <IMG>SHIPFIRE<> to fire.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1785,37 +1797,37 @@
         "Name": "Fire Rate",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "15"
+        "Value": "9"
       },
       {
         "Name": "Accuracy",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "100"
+        "Value": "50"
       },
       {
         "Name": "Total Cannon Count",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "2"
+        "Value": "1"
       },
       {
         "Name": "Heat Dispersion",
-        "LocaleKeyTemplate": "defaultTemplate",
+        "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "4"
+        "Value": "200"
       },
       {
         "Name": "Damage",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "160"
+        "Value": "205"
       },
       {
         "Name": "Range",
         "LocaleKeyTemplate": "meter",
         "Image": "range",
-        "Value": "2,000"
+        "Value": "2,200"
       },
       {
         "Name": "Heat Recovery",
@@ -1871,8 +1883,8 @@
     "Id": "tech47",
     "Icon": "technology/47.png",
     "Name": "Cyclotron Ballista",
-    "Group": "Non-guided Starship Weapon",
-    "Description": "Fires a large, concentrated ball of charged particles at forward targets, causing heavy damage. The charge is non-guided and will continue on its trajectory until it impacts with an obstacle.",
+    "Group": "Anti-Electronics Starship Weapon",
+    "Description": "A powerful ship-to-ship weapon, flinging plasmatic balls of ionising radiation towards the selected target. These projectiles can <TECHNOLOGY>disable starship engines<>, leaving the target vulnerable to attack from other weapons.\n\nThese charged particles are <STELLAR>extremely effective<> against starship <STELLAR>shields<>, and considerably weaker against the metal armour of a ship's hull.\n\nUse <IMG>CYCLEWEAPON<> to change weapon mode. Press <IMG>SHIPFIRE<> to fire.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1897,13 +1909,13 @@
         "Name": "Fire Rate",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "4"
+        "Value": "3"
       },
       {
         "Name": "Accuracy",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "200"
+        "Value": "100"
       },
       {
         "Name": "Total Cannon Count",
@@ -1927,7 +1939,7 @@
         "Name": "Range",
         "LocaleKeyTemplate": "meter",
         "Image": "range",
-        "Value": "1,500"
+        "Value": "1,250"
       },
       {
         "Name": "Heat Recovery",
@@ -4862,7 +4874,7 @@
     "RequiredItems": [
       {
         "Id": "raw13",
-        "Quantity": 20
+        "Quantity": 10
       }
     ],
     "StatBonuses": [],
@@ -4887,7 +4899,7 @@
     "RequiredItems": [
       {
         "Id": "prod2",
-        "Quantity": 1
+        "Quantity": 0
       }
     ],
     "StatBonuses": [],
@@ -4912,7 +4924,7 @@
     "RequiredItems": [
       {
         "Id": "prod3",
-        "Quantity": 2
+        "Quantity": 1
       }
     ],
     "StatBonuses": [],
@@ -8151,6 +8163,125 @@
         "LocaleKeyTemplate": "enabled",
         "Image": "enabled",
         "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech216",
+    "Icon": "technology/216.png",
+    "Name": "Cargo Scan Deflector",
+    "Group": "Anti-Probe Countermeasures",
+    "Description": "A specially tuned resonance jammer, designed to interfere with the remote <STELLAR>cargo scans<> deployed by system authorities in the search for <SPECIAL>smuggled goods<>.\n\nDeploy from the <TECHNOLOGY>Quick Menu<> (<IMG>QUICK_MENU<>) while a scan is in progress to deflect the probe. Note: jamming is not 100% effective.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw34",
+        "Quantity": 220
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 2
+      },
+      {
+        "Id": "other228",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech217",
+    "Icon": "other/232.png",
+    "Name": "Sputtering Starship Trail",
+    "Group": "Starship Exhaust Override",
+    "Description": "An exclusive <STELLAR>Starship Exhaust Modifier<>.\n\nA ramshackle ship exhaust nozzle, hand-assembled in an emergency by an outlaw. Has an occasional propensity to explode, but with no adverse effect on flight handling.\n\nInstall this <TECHNOLOGY>technology<> in your starship inventory to change the appearance of the engine exhaust trails.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": [],
+    "HasDevProperties": true
+  },
+  {
+    "Id": "tech218",
+    "Icon": "technology/218.png",
+    "Name": "Vesper Sail",
+    "Group": "Advanced Engine Technology",
+    "Description": "A high-performance <STELLAR>solar sail<>, deployed automatically during flight. This advanced <TECHNOLOGY>propulsion device<> generates an electric field within the sails themselves, allowing the starship to build momentum from the solar wind.\n\nOffers substantial gains in <STELLAR>fuel efficiency<> and <STELLAR>boost<> performance over conventional engine systems, as well as enabling photovoltaic <STELLAR>recharge<> of the starship's <TECHNOLOGY>launch systems<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw6",
+        "Quantity": 125
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Pulse Drive Fuel Efficiency",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "80"
+      },
+      {
+        "Name": "Automatic Recharging",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "1"
+      },
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "15"
+      },
+      {
+        "Name": "Maneuverability",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "10"
       }
     ],
     "ConsumableRewardTexts": [],

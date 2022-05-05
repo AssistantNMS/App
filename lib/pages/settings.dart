@@ -157,6 +157,13 @@ class Settings extends StatelessWidget {
       onChange: viewModel.setShowSpoilerAlert,
     ));
 
+    widgets.add(boolSettingTilePresenter(
+      context,
+      getTranslations().fromKey(LocaleKey.mergeInventoryQuantities),
+      viewModel.mergeInventoryQuantities,
+      onChange: viewModel.toggleMergeInventoryQuantities,
+    ));
+
     if (isValentinesPeriod()) {
       widgets.add(boolSettingTilePresenter(
         context,
@@ -190,6 +197,8 @@ class Settings extends StatelessWidget {
       headingSettingTilePresenter(getTranslations().fromKey(LocaleKey.other)),
     );
 
+    widgets.add(logTilePresenter(context));
+
     widgets.add(linkSettingTilePresenter(
       context,
       getTranslations().fromKey(LocaleKey.privacyPolicy),
@@ -208,8 +217,8 @@ class Settings extends StatelessWidget {
 
     if (viewModel.selectedLanguage == 'en') {
       widgets.add(positiveButton(
+        context,
         title: 'Useless button',
-        colour: getTheme().getSecondaryColour(context),
         onPress: () => uselessButtonFunc(context, viewModel.uselessButtonTaps,
             viewModel.increaseUselessButtonTaps),
       ));

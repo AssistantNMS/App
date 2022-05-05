@@ -15,6 +15,9 @@ class AppImage {
   static const String nmsfmLogo = base + 'special/nmsfm.png';
   static const String cronus = base + 'special/cronus.png';
   static const String twitch = base + 'special/twitch.png';
+  static const String twitchAlt = base + 'special/twitchAlt.png';
+  static const String quicksilver = base + 'special/quicksilver.png';
+  static const String quicksilverAlt = base + 'special/quicksilverAlt.png';
 
   static const String drawer = 'drawer/';
   static const String about = drawer + 'about.png';
@@ -43,6 +46,9 @@ class AppImage {
   static const String korvaxFaction = factionDir + 'korvax.png';
   static const String atlasFaction = factionDir + 'atlas.png';
   static const String allFaction = factionDir + 'all.png';
+  static const String expFaction = factionDir + 'FACTIONS.EXPLORERGUILD.ON.png';
+  static const String traFaction = factionDir + 'FACTIONS.TRADEGUILD.ON.png';
+  static const String warFaction = factionDir + 'FACTIONS.WARRIORGUILD.ON.png';
 
   static const String weekendMissionDir = base + 'weekendMission/';
   static const String weekendMissionSeason1 = weekendMissionDir + 'Season1.jpg';
@@ -77,6 +83,8 @@ class AppImage {
       base + 'special/expeditionsCover3.jpg';
   static const String expeditionSeasonBackground6 =
       base + 'special/expeditionsCover4.jpg';
+  static const String expeditionSeasonBackground7 =
+      base + 'special/expeditionsCover6.jpg';
   static const String observatory = base + 'special/observatory.png';
   static const String monolith = base + 'special/monolith.png';
   static const String plaque = base + 'special/plaque.png';
@@ -96,6 +104,7 @@ class AppImage {
   static const String updatePrisms = update + 'prisms.png';
   static const String updateFrontiers = update + 'frontiers.png';
   static const String updateSentinal = update + 'sentinal.png';
+  static const String updateOutlaws = update + 'outlaws.png';
 
   static const String milestonePatches = 'milestonePatches/';
   static const String expeditionsUnusedPatches =
@@ -125,6 +134,9 @@ class AppImage {
 
   static const String onlinePatreonIcon =
       'https://scrapassistant.com/assets/assets/img/drawer/patreon.png';
+
+  static const String nmsfm =
+      'https://app.nmsassistant.com/assets/images/special/nmsfm.png';
 
   static String getRefinerImage(int numberOfInputs) {
     if (numberOfInputs < 2) return AppImage.refiner;

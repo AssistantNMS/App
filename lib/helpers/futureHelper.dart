@@ -395,18 +395,20 @@ Future<double> getQuickSilverFromId(
 
 Future<double> getNanitesFromId(
     BuildContext context, String itemId, int multiplier) async {
-  var repoResult = getRepoFromId(context, itemId);
+  ResultWithValue<IGenericRepository> repoResult =
+      getRepoFromId(context, itemId);
   if (repoResult.hasFailed) return 0;
 
-  var repo = repoResult.value;
-  var detailsResult = await repo.getById(context, itemId);
+  IGenericRepository repo = repoResult.value;
+  ResultWithValue<GenericPageItem> detailsResult =
+      await repo.getById(context, itemId);
   if (detailsResult.hasFailed) return 0;
 
   if (detailsResult.value.currencyType == CurrencyType.NANITES) {
     return detailsResult.value.baseValueUnits * multiplier;
   }
   if (detailsResult.value.blueprintCostType == CurrencyType.NANITES) {
-    return detailsResult.value.blueprintCost.toDouble() * multiplier;
+    return (detailsResult.value.blueprintCost ?? 0).toDouble() * multiplier;
   }
 
   return 0;
@@ -432,28 +434,32 @@ Future<double> getFactoryOverridesFromId(
 
 Future<double> getBaseValueCostFromId(BuildContext context,
     CurrencyType currencyType, String itemId, int multiplier) async {
-  var repoResult = getRepoFromId(context, itemId);
+  ResultWithValue<IGenericRepository> repoResult =
+      getRepoFromId(context, itemId);
   if (repoResult.hasFailed) return 0;
 
-  var repo = repoResult.value;
-  var detailsResult = await repo.getById(context, itemId);
+  IGenericRepository repo = repoResult.value;
+  ResultWithValue<GenericPageItem> detailsResult =
+      await repo.getById(context, itemId);
   if (detailsResult.hasFailed) return 0;
 
   if (detailsResult.value.currencyType != currencyType) return 0;
-  return detailsResult.value.baseValueUnits * multiplier;
+  return (detailsResult.value?.baseValueUnits ?? 0.0) * multiplier;
 }
 
 Future<double> getBlueprintCostFromId(BuildContext context,
     CurrencyType currencyType, String itemId, int multiplier) async {
-  var repoResult = getRepoFromId(context, itemId);
+  ResultWithValue<IGenericRepository> repoResult =
+      getRepoFromId(context, itemId);
   if (repoResult.hasFailed) return 0;
 
-  var repo = repoResult.value;
-  var detailsResult = await repo.getById(context, itemId);
+  IGenericRepository repo = repoResult.value;
+  ResultWithValue<GenericPageItem> detailsResult =
+      await repo.getById(context, itemId);
   if (detailsResult.hasFailed) return 0;
 
   if (detailsResult.value.blueprintCostType != currencyType) return 0;
-  return detailsResult.value.blueprintCost.toDouble() * multiplier;
+  return (detailsResult.value.blueprintCost ?? 0).toDouble() * multiplier;
 }
 
 Future<ResultWithValue<Processor>> processorOutputDetailsFuture(

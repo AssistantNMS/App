@@ -25,7 +25,6 @@ class FactionPage extends StatelessWidget {
       whenDoneLoading: (ResultWithValue<FactionData> snapshot) =>
           getBody(context, snapshot),
     );
-    //factionTilePresenter
   }
 
   Widget getBody(BuildContext bodyCtx, ResultWithValue<FactionData> snapshot) {
@@ -39,10 +38,10 @@ class FactionPage extends StatelessWidget {
     FactionData faction = snapshot.value;
 
     List<Widget> widgets = List.empty(growable: true);
-    // widgets.add(categoryHeading(faction.category));
-    // for (FactionDetail detail in faction.categories) {
-    //   widgets.add(factionTilePresenter(bodyCtx, detail));
-    // }
+    widgets.add(categoryHeading(faction.category));
+    for (FactionDetail detail in faction.categories) {
+      widgets.add(factionTilePresenter(bodyCtx, detail));
+    }
     widgets.add(categoryHeading(faction.lifeform));
     for (FactionDetail detail in faction.lifeforms) {
       widgets.add(factionTilePresenter(bodyCtx, detail));
@@ -56,7 +55,7 @@ class FactionPage extends StatelessWidget {
 
     return simpleGenericPageScaffold(
       bodyCtx,
-      title: faction.milestone,
+      title: getTranslations().fromKey(LocaleKey.milestones),
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (context, index) => widgets[index],

@@ -104,7 +104,7 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
               });
             },
             onDelete: (InventorySlot slot) =>
-                vm.removeInventorySlotToInventory(inventory.uuid, slot.id),
+                vm.removeInventorySlotFromInventory(inventory.uuid, slot),
           ),
           listItemSearch: searchInventory,
           addFabPadding: true,
@@ -124,8 +124,8 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
                 onSuccess: (String quantity) {
               if (quantity == '') return;
 
-              var quantityInt = int.tryParse(quantity);
-              var inv = InventorySlot(
+              int quantityInt = int.tryParse(quantity);
+              InventorySlot inv = InventorySlot(
                   pageItem: InventorySlotDetails.fromGenericPageItem(temp),
                   quantity: quantityInt);
 

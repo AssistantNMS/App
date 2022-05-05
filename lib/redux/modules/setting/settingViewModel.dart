@@ -20,6 +20,7 @@ class SettingViewModel {
   final bool isPatron;
   final bool showFestiveBackground;
   final int platformIndex;
+  final bool mergeInventoryQuantities;
 
   final Function() toggleGuideIsCompact;
   final Function() toggleGenericTileIsCompact;
@@ -33,6 +34,7 @@ class SettingViewModel {
   final Function(bool) setIsPatron;
   final Function(bool) setShowFestiveBackground;
   final Function(int) setPlatformIndex;
+  final Function() toggleMergeInventoryQuantities;
 
   SettingViewModel({
     this.persistCart,
@@ -49,6 +51,7 @@ class SettingViewModel {
     this.isPatron,
     this.showFestiveBackground,
     this.platformIndex,
+    this.mergeInventoryQuantities,
     //
     this.toggleGuideIsCompact,
     this.toggleGenericTileIsCompact,
@@ -62,6 +65,7 @@ class SettingViewModel {
     this.setIsPatron,
     this.setShowFestiveBackground,
     this.setPlatformIndex,
+    this.toggleMergeInventoryQuantities,
   });
 
   static SettingViewModel fromStore(Store<AppState> store) => SettingViewModel(
@@ -79,6 +83,7 @@ class SettingViewModel {
         isPatron: getIsPatron(store.state),
         showFestiveBackground: getShowFestiveBackground(store.state),
         platformIndex: getLastPlatformIndex(store.state),
+        mergeInventoryQuantities: getMergeInventoryQuantities(store.state),
         //
         toggleGuideIsCompact: () => store.dispatch(ToggleIsGuidesCompact()),
         toggleGenericTileIsCompact: () =>
@@ -100,5 +105,7 @@ class SettingViewModel {
             store.dispatch(ShowFestiveBackground(show)),
         setPlatformIndex: (int platformIndex) =>
             store.dispatch(SetLastPlatformIndex(platformIndex)),
+        toggleMergeInventoryQuantities: () =>
+            store.dispatch(ToggleMergeInventoryQuantities()),
       );
 }

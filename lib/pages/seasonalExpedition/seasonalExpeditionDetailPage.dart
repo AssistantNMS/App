@@ -45,10 +45,11 @@ class SeasonalExpeditionDetailPage extends StatelessWidget {
     widgets.add(Padding(
       padding: const EdgeInsets.symmetric(horizontal: 4),
       child: positiveButton(
+        scaffoldContext,
         title: getTranslations().fromKey(LocaleKey.rewards),
-        colour: getTheme().getSecondaryColour(scaffoldContext),
         onPress: () => adaptiveBottomModalSheet(
           scaffoldContext,
+          hasRoundedCorners: true,
           builder: (_) => ExpeditionRewardsListModalBottomSheet(
             '',
             seasonalExpeditionPhase.rewards,
@@ -62,8 +63,9 @@ class SeasonalExpeditionDetailPage extends StatelessWidget {
       children: [
         Expanded(
           child: listWithScrollbar(
-              itemCount: widgets.length,
-              itemBuilder: (context, index) => widgets[index]),
+            itemCount: widgets.length,
+            itemBuilder: (context, index) => widgets[index],
+          ),
         ),
       ],
     );

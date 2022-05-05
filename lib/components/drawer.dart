@@ -14,7 +14,6 @@ class AppDrawer extends StatelessWidget {
     String path = '${getPath().imageAssetPathPrefix}/DrawerHeader.png';
     return Drawer(
       child: ListView(
-        //padding: const EdgeInsets.zero,    Header now is not blocked by notification banner
         children: [
           SizedBox(
             height: 100.0,

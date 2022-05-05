@@ -221,7 +221,7 @@ Widget alienPuzzleRewardExpandableOddsTilePresenter(
     items.add(alienPuzzleRewardOddsTilePresenter(context, reward));
   }
 
-  String tileImage = 'technology/114.png';
+  String tileImage = 'building/244.png';
   String displayText = getTranslations().fromKey(LocaleKey.oneBlueprint);
   if (reward.rewardId.contains('SUBST_TECH') ||
       reward.rewardId.contains('SUBST_FUEL') ||

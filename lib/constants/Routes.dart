@@ -17,6 +17,7 @@ import '../pages/faction/factionListPage.dart';
 import '../pages/favourite/favouritesPage.dart';
 import '../pages/feedback/feedbackPage.dart';
 import '../pages/friendCode/friendCodeListPage.dart';
+import '../pages/guide/assistantAppsGuidesPage.dart';
 import '../pages/guide/guidesPage.dart';
 import '../pages/helloGames/communityMission/communityMissionPage.dart';
 import '../pages/helloGames/helloGamesPage.dart';
@@ -46,6 +47,7 @@ import '../pages/sync/syncPage.dart';
 import '../pages/techTree/unlockableTechTreePage.dart';
 import '../pages/timer/timerPage.dart';
 import '../pages/title/titlePage.dart';
+import '../pages/twitch/twitchCampaignPage.dart';
 import '../pages/whatIsNew/enhancedWhatIsNewPage.dart';
 import 'AnalyticsEvent.dart';
 
@@ -101,6 +103,8 @@ class Routes {
   static const String alienPuzzlesMenuPage = '/alienPuzzlesMenuPage';
   static const String journeyMilestonePage = '/journeyMilestonePage';
   static const String factionPage = '/factionPage';
+  static const String twitchCampaignPage = '/twitchCampaignPage';
+  static const String guideV2 = '/guideV2';
 }
 
 Map<String, Widget Function(BuildContext)> initNamedRoutes(
@@ -111,22 +115,24 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.home: (context) => const DefaultHomePage(),
     Routes.intro: (context) => IntroPage(onLocaleChange),
     Routes.about: (context) => AboutPage(
-        appType: AssistantAppType.NMS,
-        aboutPageWidgetsFunc: (BuildContext ctx) {
-          return [
-            emptySpace(0.5),
-            Padding(
-              child: Text(
-                getTranslations().fromKey(LocaleKey.aboutContent),
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                maxLines: 50,
-                style: const TextStyle(fontSize: 16),
+          key: const Key('AboutPage'),
+          appType: AssistantAppType.NMS,
+          aboutPageWidgetsFunc: (BuildContext ctx) {
+            return [
+              emptySpace(0.5),
+              Padding(
+                child: Text(
+                  getTranslations().fromKey(LocaleKey.aboutContent),
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 50,
+                  style: const TextStyle(fontSize: 16),
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 8),
               ),
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-            ),
-          ];
-        }),
+            ];
+          },
+        ),
     Routes.language: (context) => Language(),
     Routes.donation: (context) => const Donation(),
     Routes.cart: (context) => CartPage(),
@@ -178,6 +184,8 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.alienPuzzlesMenuPage: (context) => AlienPuzzlesMenuPage(),
     Routes.journeyMilestonePage: (context) => JourneyMilestonePage(),
     Routes.factionPage: (context) => FactionPage(),
+    Routes.twitchCampaignPage: (context) => TwitchCampaignPage(),
+    Routes.guideV2: (context) => const AssistantAppsGuidesPage(),
   });
   return routes;
 }
