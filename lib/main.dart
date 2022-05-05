@@ -25,5 +25,5 @@ Future main() async {
 
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp(env));
+  runApp(AssistantNMS(env));
 }
