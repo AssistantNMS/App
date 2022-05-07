@@ -1,31 +1,9 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import 'package:websafe_svg/websafe_svg.dart';
 
 import '../../../constants/AppImage.dart';
-import '../../../constants/AppSvgImage.dart';
 import '../../../constants/NmsExternalUrls.dart';
 import 'weekendMissionSeasonPage.dart';
-
-Widget weekendMissionComingSoon(BuildContext context, String message) {
-  return weekendMissionSeasonTile(
-    Padding(
-      key: const Key('weekendMissionComingSoon'),
-      padding: const EdgeInsets.only(top: 4, bottom: 28),
-      child: WebsafeSvg.asset(
-        AppSvgImage.underConstruction,
-        fit: BoxFit.contain,
-      ),
-    ),
-    message,
-    '',
-    () {},
-    // () async => await getNavigation().navigateAsync(
-    //   context,
-    //   navigateTo: (context) => WeekendMissionSeason3Page(),
-    // ),
-  );
-}
 
 Widget weekendMissionSeason1(BuildContext context) {
   return weekendMissionSeasonTile(

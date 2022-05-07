@@ -7,7 +7,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import 'guideSection.dart';
 
-class Guide {
+class NmsGuide {
   String guid;
   String title;
   String shortTitle;
@@ -18,9 +18,9 @@ class Guide {
   int minutes;
   String translatedBy;
   List<String> tags;
-  List<GuideSection> sections;
+  List<NmsGuideSection> sections;
 
-  Guide({
+  NmsGuide({
     this.guid,
     this.title,
     this.shortTitle,
@@ -34,10 +34,11 @@ class Guide {
     this.minutes,
   });
 
-  factory Guide.fromRawJson(String str, String folder) =>
-      Guide.fromJson(json.decode(str), folder);
+  factory NmsGuide.fromRawJson(String str, String folder) =>
+      NmsGuide.fromJson(json.decode(str), folder);
 
-  factory Guide.fromJson(Map<String, dynamic> json, String folder) => Guide(
+  factory NmsGuide.fromJson(Map<String, dynamic> json, String folder) =>
+      NmsGuide(
         guid: readStringSafe(json, 'guid'),
         title: readStringSafe(json, 'title'),
         shortTitle: readStringSafe(json, 'shortTitle'),
@@ -47,10 +48,10 @@ class Guide {
         minutes: readIntSafe(json, 'minutes'),
         date: readDateSafe(json, 'date'),
         translatedBy: readStringSafe(json, 'translatedBy'),
-        sections: readListSafe<GuideSection>(
+        sections: readListSafe<NmsGuideSection>(
           json,
           'sections',
-          (dynamic json) => GuideSection.fromJson(json),
+          (dynamic json) => NmsGuideSection.fromJson(json),
         ),
         tags: readListSafe<String>(
           json,

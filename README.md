@@ -26,17 +26,17 @@ The **Assistant for No Man's Sky** is an app that gives users information about 
 
 > This app was originally released in early August 2019! The app was originally named No Man's Sky Recipes, when submitting the app to the Apple Store it was rejected due to the name and so the app was renamed. 
 
-After 2 years of development and maintenance, the app was made open source so that the community to have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
+After 2 years of development and maintenance, the app was made open source so that the community could have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
 
 <div align="center">
   <h3>
-    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#running-the-project">Getting Started</a>
+    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#requirements">Getting Started</a>
     <span> · </span>
     <a href="https://github.com/AssistantNMS/App/blob/main/.github/CONTRIBUTING.md">Contributing Guidelines</a>
     <span> · </span>
-    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#builds-cicd">Build statuses</a>
+    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#-builds-cicd">Build statuses</a>
     <span> · </span>
-    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#links">More Links</a>
+    <a href="https://github.com/AssistantNMS/App/blob/main/README.md#-links">More Links</a>
     <span> · </span>
     <a href="https://github.com/AssistantNMS/App/blob/main/.github/SUPPORT.md">Support</a>
   </h3>
@@ -44,18 +44,35 @@ After 2 years of development and maintenance, the app was made open source so th
 
 <br />
 
-## Running the project
-**Prerequisites:**
-- [Flutter][flutter]
-- Android SDK, (easiest way to install is to go through the [Android Studio install][androidStudio]
+<div align="center">
 
-**Steps:**
-1. Rename the `env.dart.template` file to `env.dart`
-2. Flutter
+  [![PlayStore](./.github/img/PlayStore.png)][googlePlayStore]
+  [![AppStore](./.github/img/AppStore.png)][appleAppStore]
+  [![PWA](./.github/img/pwa.png)][assistantnmsWebapp]
+  [![WindowsStore](./.github/img/WindowsStore.png)][windowsStore]
+  
+</div>
 
 <br />
 
-## Contributing
+## 🏃‍♂️ Running the project
+  
+### Requirements
+- Almost any desktop computer (eg.. MacOS X, Linux, Windows)
+- An IDE with (e.g. IntelliJ, Android Studio, VSCode etc)
+- [Flutter][flutter] installed and in your
+
+### Steps:
+1. Clone this repository
+2. Rename the `env.dart.template` file to `env.dart`
+3. In the directory where the `pubspec.yaml` file is, run `flutter pub get`
+4. Run the app
+   - If you want to run the app as an Android app, have the Android emulator running, ensure that the device is showing in the results of this command: `flutter devices` and use the command `flutter run`
+   - If you want to run the app as a Windows application, use the command `flutter run -d windows`
+
+<br />
+
+## 👪 Contributing
 **Project Owner**: [Khaoz-Topsy][kurtGithub]<br /><br />
 Please take a look at the [Contribution Guideline](./.github/CONTRIBUTING.md) before creating an issue or pull request.
 
@@ -63,7 +80,7 @@ If you would like to help add languages to the app please use this tool [Assista
 
 <br />
 
-## Builds (CI/CD)
+## 📦 Builds (CI/CD)
 The Mobile Apps are built and released to the [Google Play Store][googlePlayStore] and [Apple App Store Store][appleAppStore] using [CodeMagic][codeMagic].
 
 - ![Codemagic build status](https://api.codemagic.io/apps/5d9da9057a0a9500105180bf/5ef3374ec0adbfe0fdee431d/status_badge.svg) - Android & iOS (Production)
@@ -75,7 +92,7 @@ __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed e
 
 <br />
 
-## Links
+## 🔗 Links
 [![Website](https://img.shields.io/badge/Website-nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantnmsWebsite] <br />
 [![WebApp](https://img.shields.io/badge/Web%20App-app.nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantnmsWebapp]
 
@@ -100,6 +117,7 @@ __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed e
 [assistantnmsSteamComm]: https://steamcommunity.com/groups/AssistantNMS?ref=AssistantNMSGithub
 [googlePlayStore]: https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes&ref=AssistantNMSGithub
 [appleAppStore]: https://apps.apple.com/us/app/assistant-for-no-mans-sky/id1480287625?ref=AssistantNMSGithub
+[windowsStore]: https://apps.microsoft.com/store/detail/assistant-for-no-mans-sky/9NQLF7XD0LF3?ref=AssistantNMSGithub
 [discord]: https://assistantapps.com/discord?ref=AssistantNMSGithub
 [nmscd]: https://github.com/NMSCD?ref=AssistantNMSGithub
 

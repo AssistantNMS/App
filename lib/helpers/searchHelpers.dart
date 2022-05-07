@@ -33,7 +33,7 @@ bool searchPortal(PortalRecord option, String search) {
   return false;
 }
 
-bool searchGuide(Guide guide, String text) {
+bool searchGuide(NmsGuide guide, String text) {
   // if (guide.author.contains(text)) return true;
   if (guide.title.contains(text)) return true;
   // if (guide.sections.any((sec) => sec.heading.contains(text))) return true;

@@ -10,6 +10,8 @@ class NmsExternalUrls {
       'https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes';
   static const String appStoreListing =
       'https://apps.apple.com/us/app/id1480287625';
+  static const String microsoftStoreListing =
+      'https://apps.microsoft.com/store/detail/assistant-for-no-mans-sky/9NQLF7XD0LF3';
   static const String noMansSkyWebsite = 'https://nomanssky.com';
   static const String discord = 'https://discord.gg/q3aFBQM';
   static const String twitter = 'https://twitter.com/AssistantNMS';

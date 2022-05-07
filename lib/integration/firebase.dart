@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart' show kReleaseMode;
@@ -9,7 +8,7 @@ import '../constants/AppConfig.dart';
 FirebaseMessaging firebaseMessaging;
 
 initFirebaseAdMob() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  if (isWindows) return;
   MobileAds.instance.initialize();
 }
 

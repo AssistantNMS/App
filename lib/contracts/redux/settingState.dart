@@ -30,6 +30,7 @@ class SettingState {
   final bool isPatron;
   final bool showFestiveBackground;
   final int lastNewsPageIndex;
+  final bool mergeInventoryQuantities;
 
   const SettingState({
     this.persistCart,
@@ -55,6 +56,7 @@ class SettingState {
     this.isPatron,
     this.showFestiveBackground,
     this.lastNewsPageIndex,
+    this.mergeInventoryQuantities,
   });
 
   factory SettingState.initial() {
@@ -82,6 +84,7 @@ class SettingState {
       isPatron: false,
       showFestiveBackground: true,
       lastNewsPageIndex: 0,
+      mergeInventoryQuantities: true,
     );
   }
 
@@ -109,6 +112,7 @@ class SettingState {
     bool isPatron,
     bool showFestiveBackground,
     int lastNewsPageIndex,
+    bool mergeInventoryQuantities,
   }) {
     return SettingState(
       persistCart: persistCart ?? this.persistCart,
@@ -139,6 +143,8 @@ class SettingState {
       showFestiveBackground:
           showFestiveBackground ?? this.showFestiveBackground,
       lastNewsPageIndex: lastNewsPageIndex ?? this.lastNewsPageIndex,
+      mergeInventoryQuantities:
+          mergeInventoryQuantities ?? this.mergeInventoryQuantities,
     );
   }
 
@@ -173,6 +179,8 @@ class SettingState {
         isPatron: readBoolSafe(json, 'isPatron'),
         showFestiveBackground: readBoolSafe(json, 'showFestiveBackground'),
         lastNewsPageIndex: readIntSafe(json, 'lastNewsPageIndex'),
+        mergeInventoryQuantities:
+            readBoolSafe(json, 'mergeInventoryQuantities'),
       );
     } catch (exception) {
       return SettingState.initial();
@@ -204,5 +212,6 @@ class SettingState {
         'isPatron': isPatron,
         'showFestiveBackground': showFestiveBackground,
         'lastNewsPageIndex': lastNewsPageIndex,
+        'mergeInventoryQuantities': mergeInventoryQuantities,
       };
 }

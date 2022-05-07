@@ -1,14 +1,12 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'app.dart';
 import 'env.dart';
 import 'assistantAppsSettings.dart';
 import 'env/environmentSettings.dart';
-import 'integration/firebase.dart';
 
 Future main() async {
-  var env = EnvironmentSettings(
+  EnvironmentSettings env = EnvironmentSettings(
     baseApi: 'https://api.nmsassistant.com',
     remoteConfigsConfigId: '4fa400a4',
     donationsEnabled: false,
@@ -23,9 +21,6 @@ Future main() async {
     remoteConfigsApiKey: remoteConfigsApiKey,
     patreonOAuthClientId: patreonOAuthClientId,
   );
-
-  if (kReleaseMode) {
-    initFirebaseAdMob();
-  }
-  runApp(MyApp(env));
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(AssistantNMS(env));
 }

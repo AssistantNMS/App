@@ -7,10 +7,6 @@ assignees: Khaoz-Topsy
 
 ---
 
-### Changes:
-
----
-
 ### Prepare:
 - [ ] Make sure that `pubspec.yaml` uses github link for the `assistantapps_flutter_common` library
 - [ ] Regenerate AssistantApps server data from the AssistantNMS.Data tool

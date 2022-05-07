@@ -5,10 +5,9 @@ import 'app.dart';
 import 'env.dart';
 import 'assistantAppsSettings.dart';
 import 'env/environmentSettings.dart';
-import 'integration/firebase.dart';
 
 Future main() async {
-  var env = EnvironmentSettings(
+  EnvironmentSettings env = EnvironmentSettings(
     baseApi: 'https://api.nmsassistant.com',
     remoteConfigsConfigId: '9e83ecdf',
     donationsEnabled: true,
@@ -25,9 +24,6 @@ Future main() async {
   );
 
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
-
-  if (kReleaseMode) {
-    initFirebaseAdMob();
-  }
-  runApp(MyApp(env));
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(AssistantNMS(env));
 }

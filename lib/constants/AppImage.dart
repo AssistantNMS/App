@@ -135,6 +135,9 @@ class AppImage {
   static const String onlinePatreonIcon =
       'https://scrapassistant.com/assets/assets/img/drawer/patreon.png';
 
+  static const String nmsfm =
+      'https://app.nmsassistant.com/assets/images/special/nmsfm.png';
+
   static String getRefinerImage(int numberOfInputs) {
     if (numberOfInputs < 2) return AppImage.refiner;
     if (numberOfInputs == 2) return AppImage.refinerMedium;

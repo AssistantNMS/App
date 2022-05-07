@@ -156,6 +156,12 @@ List<CustomMenu> getMenuOptionsSection3(
       drawerIcon: getListTileImage(AppImage.guide),
       title: LocaleKey.guides,
       navigateToNamed: Routes.guides,
+      onLongPress: (ctx) {
+        getNavigation().navigateAwayFromHomeAsync(
+          ctx,
+          navigateToNamed: Routes.guideV2,
+        );
+      },
     ),
     CustomMenu(
       icon: getListTileImage(AppImage.portal, size: imageSize),
@@ -316,11 +322,6 @@ List<CustomMenu> getMenuOptions(
 }
 
 void customMenuClickHandler(BuildContext context, CustomMenu menuItem) async {
-  if (menuItem.onLongPress != null) {
-    menuItem.onLongPress(context);
-    return;
-  }
-
   if (menuItem.onTap != null) {
     menuItem.onTap(context);
     return;

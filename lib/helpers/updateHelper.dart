@@ -4,9 +4,14 @@ import 'package:flutter/material.dart';
 import '../constants/NmsExternalUrls.dart';
 
 Future<void> checkForUpdate(BuildContext context) async {
-  String externalUrl = isApple
-      ? NmsExternalUrls.appStoreListing
-      : NmsExternalUrls.googlePlayListing;
+  String externalUrl = NmsExternalUrls.googlePlayListing;
+
+  if (isApple) {
+    externalUrl = NmsExternalUrls.appStoreListing;
+  }
+  if (isWindows) {
+    externalUrl = NmsExternalUrls.microsoftStoreListing;
+  }
 
   return getUpdate().checkForUpdate(context, externalUrl);
 }

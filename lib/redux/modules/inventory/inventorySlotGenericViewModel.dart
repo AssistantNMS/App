@@ -21,12 +21,15 @@ class InventorySlotGenericViewModel {
   });
 
   static InventorySlotGenericViewModel fromStore(Store<AppState> store) {
+    bool mergeInventoryQuantities = getMergeInventoryQuantities(store.state);
     return InventorySlotGenericViewModel(
       containers: getContainers(store.state),
       displayGenericItemColour: getDisplayGenericItemColour(store.state),
       addInventorySlotToInventory: (String inventoryUuid, InventorySlot slot) =>
           store.dispatch(
-        AddInventorySlotToInventoryAction(inventoryUuid, slot),
+        mergeInventoryQuantities
+            ? AddInventorySlotToInventoryWithMergeAction(inventoryUuid, slot)
+            : AddInventorySlotToInventoryAction(inventoryUuid, slot),
       ),
     );
   }

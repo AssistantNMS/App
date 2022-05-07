@@ -1,8 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
-import 'package:timezone/data/latest.dart' as tz;
 
 import 'components/adaptive/appShell.dart';
 import 'contracts/redux/appState.dart';
@@ -12,28 +12,31 @@ import 'redux/modules/createStore.dart';
 import 'redux/modules/setting/actions.dart';
 import 'redux/modules/setting/selector.dart';
 
-class MyApp extends StatefulWidget {
+class AssistantNMS extends StatefulWidget {
   final EnvironmentSettings _env;
-  const MyApp(this._env, {Key key}) : super(key: key);
+  const AssistantNMS(this._env, {Key key}) : super(key: key);
 
   @override
   // ignore: no_logic_in_create_state
-  _MyAppState createState() => _MyAppState(_env);
+  _AssistantNMSState createState() => _AssistantNMSState(_env);
 }
 
-class _MyAppState extends State<MyApp> {
+class _AssistantNMSState extends State<AssistantNMS> {
   final EnvironmentSettings _env;
   Store<AppState> store;
   TranslationsDelegate _newLocaleDelegate;
 
-  _MyAppState(this._env);
+  _AssistantNMSState(this._env);
 
   @override
   initState() {
     super.initState();
-    tz.initializeTimeZones();
     initDependencyInjection(_env);
     initReduxState();
+
+    if (kReleaseMode) {
+      // initFirebaseAdMob();
+    }
 
     _newLocaleDelegate ??= const TranslationsDelegate(newLocale: null);
   }
