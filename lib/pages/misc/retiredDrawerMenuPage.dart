@@ -5,6 +5,7 @@ import '../../components/responsiveGridView.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/menuItemTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
+import '../../constants/AppImage.dart';
 import '../../constants/Routes.dart';
 import '../../contracts/menuItem.dart';
 
@@ -38,9 +39,9 @@ class RetiredDrawerMenuPage extends StatelessWidget {
       navigateToNamed: Routes.helloGames,
     ));
     menuItems.add(MenuItem(
-      image: getListTileImage('drawer/exploits.png'),
-      title: LocaleKey.exploits,
-      navigateToNamed: Routes.exploits,
+      image: getListTileImage(AppImage.twitch),
+      title: LocaleKey.twitchDrop,
+      navigateToNamed: Routes.twitchCampaignPage,
     ));
     menuItems.add(MenuItem(
       image: getCorrectlySizedImageFromIcon(context, Icons.search,
@@ -53,6 +54,11 @@ class RetiredDrawerMenuPage extends StatelessWidget {
           colour: menuIconColour),
       title: LocaleKey.valentines,
       navigateToNamed: Routes.valentinesPage,
+    ));
+    menuItems.add(MenuItem(
+      image: getListTileImage('drawer/exploits.png'),
+      title: LocaleKey.exploits,
+      navigateToNamed: Routes.exploits,
     ));
     menuItems.add(MenuItem(
       image: getCorrectlySizedImageFromIcon(context, Icons.public,
