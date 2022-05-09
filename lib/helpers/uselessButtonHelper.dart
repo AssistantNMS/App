@@ -27,7 +27,7 @@ String getMessage(int numberOfTaps) {
   int index = Random.secure().nextInt(responses.length);
   return responses[index].replaceAll(
     '{0}',
-    numberOfTaps.toString(),
+    (numberOfTaps + 1).toString(),
   );
 }
 
