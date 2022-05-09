@@ -29,7 +29,7 @@ class WindowsTitleBar extends StatelessWidget
         children: [
           Padding(
             padding: const EdgeInsets.all(4),
-            child: localImage(AppImage.assistantNMSIcon),
+            child: localImage(AppImage.assistantNMSWindowIcon),
           ),
           Expanded(
             child: MoveWindow(

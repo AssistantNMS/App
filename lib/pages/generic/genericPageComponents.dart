@@ -325,9 +325,10 @@ List<Widget> getCraftedUsing(
       requiredItemsPresenter,
     ));
 
-    List<RequiredItem> itemsThatArentRawMaterials = resArray
-        .where((element) => !element.id.contains(IdPrefix.rawMaterial))
-        .toList();
+    List<RequiredItem> itemsThatArentRawMaterials = resArray.where((element) {
+      if (element.id.contains('prod81')) return false;
+      return !element.id.contains(IdPrefix.rawMaterial);
+    }).toList();
 
     if (itemsThatArentRawMaterials.isNotEmpty) {
       craftedUsing.add(
