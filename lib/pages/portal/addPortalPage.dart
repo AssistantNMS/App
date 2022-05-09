@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
+import '../../components/common/text.dart';
+import '../../components/common/textFormatter.dart';
 import '../../components/portal/portalGlyphList.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../constants/AnalyticsEvent.dart';
@@ -127,35 +129,40 @@ class _PortalPageState extends State<AddPortalPage> {
           ),
         ],
         body: getBody(context, viewModel),
-        fab: (item.codes.length == 12)
-            ? FloatingActionButton(
-                onPressed: () async {
-                  if (validationMessage != null) return;
-                  var tempCodes = List.from(item.codes)
-                      .map((cc) => cc as int)
-                      .toList(); //So that it isn't passed by reference
-                  var tempTags = List.from(item.tags)
-                      .map((cc) => cc as String)
-                      .toList(); //So that it isn't passed by reference
-                  Navigator.pop(
-                    context,
-                    PortalRecord(
-                      name: item.name ??
-                          getTranslations().fromKey(LocaleKey.newPortalEntry),
-                      uuid: item.uuid,
-                      codes: tempCodes,
-                      tags: tempTags,
-                    ),
-                  );
-                },
-                heroTag: 'AddPortalPage',
-                child: const Icon(Icons.check),
-                foregroundColor:
-                    getTheme().fabForegroundColourSelector(context),
-                backgroundColor: getTheme().fabColourSelector(context),
-              )
-            : null,
+        fab: getFab(),
       ),
+    );
+  }
+
+  Widget getFab() {
+    if (item.codes.length != 12) return null;
+    String name = (item.name == null)
+        ? getTranslations().fromKey(LocaleKey.newPortalEntry)
+        : item.name;
+
+    return FloatingActionButton(
+      onPressed: () async {
+        if (validationMessage != null) return;
+        List<int> tempCodes = List.from(item.codes)
+            .map((cc) => cc as int)
+            .toList(); //So that it isn't passed by reference
+        List<String> tempTags = List.from(item.tags)
+            .map((cc) => cc as String)
+            .toList(); //So that it isn't passed by reference
+        Navigator.pop(
+          context,
+          PortalRecord(
+            name: name,
+            uuid: item.uuid,
+            codes: tempCodes,
+            tags: tempTags,
+          ),
+        );
+      },
+      heroTag: 'AddPortalPage',
+      child: const Icon(Icons.check),
+      foregroundColor: getTheme().fabForegroundColourSelector(context),
+      backgroundColor: getTheme().fabColourSelector(context),
     );
   }
 
@@ -176,26 +183,28 @@ class _PortalPageState extends State<AddPortalPage> {
     ));
 
     widgets.add(Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
-        child: Center(
-          child: TextField(
-            controller: _hexCoordController,
-            decoration: InputDecoration(
-              border: const OutlineInputBorder(),
-              labelText: getTranslations().fromKey(LocaleKey.hexCoordLabel),
-            ),
-            textCapitalization: TextCapitalization.characters,
-            inputFormatters: [
-              FilteringTextInputFormatter(RegExp('[A-F0-9]'), allow: true),
-              LengthLimitingTextInputFormatter(12),
-            ],
-            onChanged: (newHexString) {
-              List<int> newCodes = hexToIntArray(newHexString);
-              _setCode(newCodes);
-              // _setHexCoordText(newHexString);
-            },
+      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
+      child: Center(
+        child: TextField(
+          controller: _hexCoordController,
+          decoration: InputDecoration(
+            border: const OutlineInputBorder(),
+            labelText: getTranslations().fromKey(LocaleKey.hexCoordLabel),
           ),
-        )));
+          textCapitalization: TextCapitalization.characters,
+          inputFormatters: [
+            FilteringTextInputFormatter(RegExp('[a-fA-F0-9]'), allow: true),
+            LengthLimitingTextInputFormatter(12),
+            UpperCaseTextFormatter(),
+          ],
+          onChanged: (newHexString) {
+            List<int> newCodes = hexToIntArray(newHexString);
+            _setCode(newCodes);
+            // _setHexCoordText(newHexString);
+          },
+        ),
+      ),
+    ));
 
     widgets.add(Flex(
       direction: Axis.horizontal,

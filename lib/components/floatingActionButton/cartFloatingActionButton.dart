@@ -15,7 +15,7 @@ SpeedDialChild cartFloatingActionButton(
         child: getListTileImage('fab/cart.png'),
         padding: const EdgeInsets.all(8),
       ),
-      // label: getTranslations().fromKey(LocaleKey.cart),
+      label: isDesktop ? getTranslations().fromKey(LocaleKey.cart) : null,
       foregroundColor: getTheme().fabForegroundColourSelector(context),
       backgroundColor: getTheme().fabColourSelector(context),
       onTap: () => showQuantityDialog(

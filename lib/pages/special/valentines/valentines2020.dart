@@ -4,6 +4,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
+import '../../../components/common/actionItem.dart';
 import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../../contracts/redux/appState.dart';
 import '../../../redux/modules/setting/introViewModel.dart';
@@ -28,13 +29,7 @@ class Valentines2020 extends StatelessWidget {
     return basicGenericPageScaffold(
       context,
       title: getTranslations().fromKey(LocaleKey.valentines),
-      actions: [
-        ActionItem(
-          icon: Icons.home,
-          onPressed: () async =>
-              await getNavigation().navigateHomeAsync(context),
-        )
-      ],
+      actions: [goHomeAction(context)],
       body: StoreConnector<AppState, IntroViewModel>(
         converter: (store) => IntroViewModel.fromStore(store),
         builder: (_, introViewModel) {
