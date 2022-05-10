@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 
 import '../constants/Routes.dart';
 
-List<ActionItem> getShortcutActions(BuildContext context,
-    {bool hideCart = false, bool hideInventory = false}) {
+List<ActionItem> getShortcutActions(
+  BuildContext context, {
+  bool hideCart = false,
+  bool hideInventory = false,
+  List<ActionItem> additionalShortcutLinks,
+}) {
   List<ActionItem> items = List.empty(growable: true);
   items.add(ActionItem(
     icon: Icons.star,
@@ -31,6 +35,10 @@ List<ActionItem> getShortcutActions(BuildContext context,
       onPressed: () => getNavigation()
           .navigateHomeAsync(context, navigateToNamed: Routes.inventoryList),
     ));
+  }
+
+  if (additionalShortcutLinks != null) {
+    items.addAll(additionalShortcutLinks);
   }
 
   return items;

@@ -12,7 +12,7 @@ void simpleDialog(context, String title, String contentString,
   );
 }
 
-void simpleWidgetDialog(context, String title, Widget content,
+void simpleWidgetDialog(BuildContext context, String title, Widget content,
     {List<DialogButton> buttons, Function() closeFunction}) {
   Alert(
     context: context,

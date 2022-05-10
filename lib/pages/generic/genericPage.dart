@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/common/cachedFutureBuilder.dart';
+import '../../components/modalBottomSheet/shareModalBottomSheet.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/nutrientProcessorRecipeTilePresenter.dart';
 import '../../components/tilePresenters/rechargeTilePresenter.dart';
@@ -66,7 +67,30 @@ class GenericPage extends StatelessWidget {
               null, // unused
               body: (BuildContext context, unused) =>
                   getBody(context, viewModel, snapshot),
-              showShortcutLinks: true,
+              additionalShortcutLinks: [
+                if (snapshot?.value?.id != null) ...[
+                  ActionItem(
+                    icon: Icons.share, // Fallback
+                    image: getCorrectlySizedImageFromIcon(
+                      context,
+                      Icons.share,
+                      colour: getTheme().getDarkModeSecondaryColour(),
+                    ),
+                    text: getTranslations().fromKey(LocaleKey.share),
+                    onPressed: () {
+                      adaptiveBottomModalSheet(
+                        context,
+                        hasRoundedCorners: true,
+                        builder: (BuildContext innerContext) =>
+                            ShareBottomSheet(
+                          itemId: snapshot.value.id,
+                          itemName: snapshot.value.name,
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ],
               floatingActionButton: getFloatingActionButton(
                 context,
                 controller,
