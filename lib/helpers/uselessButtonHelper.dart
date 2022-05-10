@@ -5,6 +5,7 @@ import '../../components/dialogs/baseDialog.dart';
 
 void uselessButtonFunc(
     BuildContext ctx, int numberOfTaps, Function() increaseUselessButtontaps) {
+  increaseUselessButtontaps();
   simpleWidgetDialog(
     ctx,
     'Why did you click this?',
@@ -14,9 +15,8 @@ void uselessButtonFunc(
       textAlign: TextAlign.center,
     ),
     buttons: [
-      simpleDialogCloseButton(ctx, onTap: increaseUselessButtontaps),
+      simpleDialogCloseButton(ctx),
     ],
-    closeFunction: increaseUselessButtontaps,
   );
 }
 

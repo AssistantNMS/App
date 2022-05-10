@@ -219,8 +219,11 @@ class Settings extends StatelessWidget {
       widgets.add(positiveButton(
         context,
         title: 'Useless button',
-        onPress: () => uselessButtonFunc(context, viewModel.uselessButtonTaps,
-            viewModel.increaseUselessButtonTaps),
+        onPress: () => uselessButtonFunc(
+          context,
+          viewModel.uselessButtonTaps,
+          viewModel.increaseUselessButtonTaps,
+        ),
       ));
     }
 
