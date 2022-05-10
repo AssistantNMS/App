@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/common/text.dart';
 import '../../components/common/textFormatter.dart';
 import '../../components/portal/portalGlyphList.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
