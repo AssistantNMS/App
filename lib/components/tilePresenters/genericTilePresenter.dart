@@ -29,6 +29,21 @@ Widget genericTileWithBackgroundColourPresenter(
   );
 }
 
+Widget genericTileWithBackgroundColourResponsivePresenter(
+    BuildContext context, GenericPageItem genericItem, bool isHero,
+    {void Function() onTap}) {
+  String itemIcon = (genericItem.icon == null || genericItem.icon.isEmpty)
+      ? getPath().unknownImagePath
+      : genericItem.icon;
+  return genericListTile(
+    context,
+    leadingImage: itemIcon,
+    leadingImageHero: isHero ? gameItemIconHero(genericItem) : null,
+    imageBackgroundColour: genericItem.colour,
+    name: genericItem.name,
+  );
+}
+
 Widget genericTilePresenter(
     BuildContext context, GenericPageItem genericItem, bool isHero,
     {void Function() onTap}) {
@@ -48,6 +63,20 @@ Widget genericTilePresenter(
                 itemDetails: genericItem,
               ),
             ),
+  );
+}
+
+Widget genericTileResponsivePresenter(
+    BuildContext context, GenericPageItem genericItem, bool isHero,
+    {void Function() onTap}) {
+  String itemIcon = (genericItem.icon == null || genericItem.icon.isEmpty)
+      ? getPath().unknownImagePath
+      : genericItem.icon;
+  return genericListTile(
+    context,
+    leadingImage: itemIcon,
+    leadingImageHero: isHero ? gameItemIconHero(genericItem) : null,
+    name: genericItem.name,
   );
 }
 

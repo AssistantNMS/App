@@ -51,12 +51,12 @@ class Settings extends StatelessWidget {
     //   onChange: () => this._changeBrightness(context),
     // ));
 
-    widgets.add(boolSettingTilePresenter(
-      context,
-      getTranslations().fromKey(LocaleKey.homeUseCompactTiles),
-      viewModel.genericTileIsCompact,
-      onChange: viewModel.toggleGenericTileIsCompact,
-    ));
+    // widgets.add(boolSettingTilePresenter(
+    //   context,
+    //   getTranslations().fromKey(LocaleKey.homeUseCompactTiles),
+    //   viewModel.genericTileIsCompact,
+    //   onChange: viewModel.toggleGenericTileIsCompact,
+    // ));
 
     widgets.add(boolSettingTilePresenter(
       context,

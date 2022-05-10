@@ -16,15 +16,20 @@ import 'genericTilePresenter.dart';
 
 Widget Function(BuildContext context, RequiredItem requiredItem,
     {Function onTap}) requiredItemBackgroundTilePresenter(
-        bool showBackgroundColours,
-        {Function onEdit,
-        Function onDelete}) =>
+  bool showBackgroundColours, {
+  Function onEdit,
+  Function onDelete,
+  Function(RequiredItem) onPress,
+}) =>
     (BuildContext context, RequiredItem requiredItem, {Function onTap}) =>
-        requiredItemTilePresenter(context, requiredItem,
-            showBackgroundColours: showBackgroundColours,
-            onEdit: onEdit,
-            onDelete: onDelete,
-            onTap: onTap);
+        requiredItemTilePresenter(
+          context,
+          requiredItem,
+          showBackgroundColours: showBackgroundColours,
+          onEdit: onEdit,
+          onDelete: onDelete,
+          onTap: (onPress != null) ? () => onPress(requiredItem) : null,
+        );
 
 Widget requiredItemTilePresenter(
     BuildContext context, RequiredItem requiredItem,
@@ -37,8 +42,15 @@ Widget requiredItemTilePresenter(
     future: requiredItemDetails(context, requiredItem),
     builder: (BuildContext context,
         AsyncSnapshot<ResultWithValue<RequiredItemDetails>> snapshot) {
-      return requiredItemBody(context, requiredItem, showBackgroundColours,
-          onEdit, onDelete, snapshot, onTap);
+      return requiredItemBody(
+        context,
+        requiredItem,
+        showBackgroundColours,
+        onEdit,
+        onDelete,
+        snapshot,
+        onTap,
+      );
     },
   );
 }

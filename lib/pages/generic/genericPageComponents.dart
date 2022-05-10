@@ -304,13 +304,14 @@ Widget getCookingScore(BuildContext ctx, double cookingValue) {
 }
 
 List<Widget> getCraftedUsing(
-    BuildContext context,
-    GenericPageViewModel vm,
-    GenericPageItem genericItem,
-    List<RequiredItem> resArray,
-    Widget Function(BuildContext context, RequiredItem requiredItem,
-            {Function onTap})
-        requiredItemsPresenter) {
+  BuildContext context,
+  GenericPageViewModel vm,
+  GenericPageItem genericItem,
+  List<RequiredItem> resArray,
+  Widget Function(BuildContext context, RequiredItem requiredItem,
+          {Function onTap})
+      requiredItemsPresenter,
+) {
   List<Widget> craftedUsing = List.empty(growable: true);
   if (resArray.isNotEmpty) {
     craftedUsing.add(emptySpace3x());

@@ -9,6 +9,7 @@ import '../../helpers/genericHelper.dart';
 import '../../helpers/repositoryHelper.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
+import '../generic/genericPage.dart';
 
 class AllItemsPageComponent extends StatelessWidget {
   const AllItemsPageComponent({Key key}) : super(key: key);
@@ -19,32 +20,46 @@ class AllItemsPageComponent extends StatelessWidget {
     return StoreConnector<AppState, GenericPageViewModel>(
       converter: (store) => GenericPageViewModel.fromStore(store),
       builder: (_, viewModel) => //
-          SearchableList<GenericPageItem>(
+          //     SearchableList<GenericPageItem>(
+          //   () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),
+          //   listItemDisplayer: getListItemDisplayer(
+          //     viewModel.genericTileIsCompact,
+          //     viewModel.displayGenericItemColour,
+          //     isHero: true,
+          //   ),
+          //   listItemSearch: search,
+          //   key: Key(
+          //       '${getTranslations().currentLanguage} ${viewModel.genericTileIsCompact} - ${viewModel.displayGenericItemColour}'),
+          //   hintText: hintText,
+          // ),
+          ResponsiveListDetailView<GenericPageItem>(
         () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),
-        listItemDisplayer: getListItemDisplayer(
-          viewModel.genericTileIsCompact,
+        getResponsiveListItemDisplayer(
           viewModel.displayGenericItemColour,
           isHero: true,
         ),
-        listItemSearch: search,
+        search,
+        listItemMobileOnTap: (BuildContext context, GenericPageItem gameItem) {
+          getNavigation().navigateAwayFromHomeAsync(
+            context,
+            navigateTo: (context) => GenericPage(
+              gameItem.id,
+              itemDetails: gameItem,
+            ),
+          );
+        },
+        listItemDesktopOnTap: (BuildContext context, GenericPageItem gameItem,
+            void Function(Widget) updateDetailView) {
+          return GenericPage(
+            gameItem.id,
+            itemDetails: gameItem,
+            updateDetailView: updateDetailView,
+          );
+        },
         key: Key(
             '${getTranslations().currentLanguage} ${viewModel.genericTileIsCompact} - ${viewModel.displayGenericItemColour}'),
         hintText: hintText,
       ),
-      // ResponsiveListDetailView<GenericPageItem>(
-      //   () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),
-      //   getResponsiveListItemDisplayer(
-      //     viewModel.genericTileIsCompact,
-      //     viewModel.displayGenericItemColour,
-      //     isHero: true,
-      //   ),
-      //   search,
-      //   listItemMobileOnTap:
-      //       (BuildContext context, GenericPageItem gameItem) {},
-      //   listItemDesktopOnTap: (BuildContext context, GenericPageItem recipe,
-      //       void Function(Widget) updateDetailView) {},
-      //   key: Key(getTranslations().currentLanguage),
-      // ),
     );
   }
 }

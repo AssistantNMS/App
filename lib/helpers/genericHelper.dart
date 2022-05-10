@@ -317,22 +317,18 @@ Widget Function(BuildContext, GenericPageItem, {void Function() onTap})
       presenterWithIsHero(ctx, item, isHero, onTap: onTap);
 }
 
-// Widget Function(BuildContext, GenericPageItem, int)
-//     getResponsiveListItemDisplayer(
-//         bool genericTileIsCompact, bool displayGenericItemColour,
-//         {void Function() onTap, bool isHero = false}) {
-//   var presenterWithIsHero = displayGenericItemColour
-//       ? genericHomeTileWithRequiredItemsAndBackgroundColourPresenter
-//       : genericHomeTileWithRequiredItemsPresenter;
+Widget Function(BuildContext, GenericPageItem, int)
+    getResponsiveListItemDisplayer(
+  bool displayGenericItemColour, {
+  bool isHero = false,
+}) {
+  var presenterWithIsHero = displayGenericItemColour
+      ? genericTileWithBackgroundColourResponsivePresenter
+      : genericTileResponsivePresenter;
 
-//   if (genericTileIsCompact) {
-//     presenterWithIsHero = displayGenericItemColour
-//         ? genericTileWithBackgroundColourPresenter
-//         : genericTilePresenter;
-//   }
-//   return (BuildContext ctx, GenericPageItem item, int index) =>
-//       presenterWithIsHero(ctx, item, isHero, onTap: onTap);
-// }
+  return (BuildContext ctx, GenericPageItem item, int index) =>
+      presenterWithIsHero(ctx, item, isHero);
+}
 
 Widget getFavouriteStar(
     String itemIcon,

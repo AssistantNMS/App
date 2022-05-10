@@ -30,12 +30,15 @@ import '../../helpers/genericHelper.dart';
 import '../../mapper/GenericItemMapper.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 import 'genericPageComponents.dart';
+import 'genericPageProcessorRecipe.dart';
 
 class GenericPage extends StatelessWidget {
   final String itemId;
   final GenericPageItem itemDetails;
+  final void Function(Widget) updateDetailView;
 
-  GenericPage(this.itemId, {Key key, this.itemDetails}) : super(key: key) {
+  GenericPage(this.itemId, {Key key, this.itemDetails, this.updateDetailView})
+      : super(key: key) {
     getAnalytics().trackEvent('${AnalyticsEvent.genericPage}: $itemId');
   }
 
@@ -177,16 +180,31 @@ class GenericPage extends StatelessWidget {
       widgets.add(emptySpace1x());
       widgets.add(flatCard(
         child: requiredItemTilePresenter(
-            context, RequiredItem(id: NMSUIConstants.ObsoleteAppId)),
+          context,
+          RequiredItem(id: NMSUIConstants.ObsoleteAppId),
+          onTap: updateDetailView != null
+              ? () => navigateWithinUpdateView(NMSUIConstants.ObsoleteAppId)
+              : null,
+        ),
       ));
     }
 
     // ----------------------------- Crafted using -----------------------------
     Widget Function(BuildContext context, RequiredItem requiredItem,
             {Function onTap}) requiredItemsFunction =
-        requiredItemBackgroundTilePresenter(vm.displayGenericItemColour);
-    widgets.addAll(getCraftedUsing(context, vm, genericItem,
-        genericItem.requiredItems, requiredItemsFunction));
+        requiredItemBackgroundTilePresenter(
+      vm.displayGenericItemColour,
+      onPress: updateDetailView != null
+          ? (RequiredItem req) => navigateWithinUpdateView(req.id)
+          : null,
+    );
+    widgets.addAll(getCraftedUsing(
+      context,
+      vm,
+      genericItem,
+      genericItem.requiredItems,
+      requiredItemsFunction,
+    ));
 
     // ----------------------------- Used to Craft -----------------------------
     Widget Function(
@@ -313,5 +331,12 @@ class GenericPage extends StatelessWidget {
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
     );
+  }
+
+  void navigateWithinUpdateView(String appId) {
+    updateDetailView(GenericPage(
+      appId,
+      updateDetailView: updateDetailView,
+    ));
   }
 }
