@@ -29,6 +29,7 @@ class NewItemsPage extends StatelessWidget {
               '${getTranslations().currentLanguage} ${viewModel.genericTileIsCompact} - ${viewModel.displayGenericItemColour}'),
           hintText: getTranslations().fromKey(LocaleKey.searchItems),
           addFabPadding: true,
+          minListForSearch: 1000,
         ),
       ),
     );

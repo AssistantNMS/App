@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/constants/AppImage.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/cupertino.dart' show ObstructingPreferredSizeWidget;
 import 'package:flutter/material.dart';
 
 import '../windowsButtons.dart';

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../contracts/menuItem.dart';
+import '../contracts/customMenuItem.dart';
 import '../pages/catalogue/catalogueItemPage.dart';
 
-List<MenuItem> getCatalogueItemData(context) {
-  List<MenuItem> menuItems = List.empty(growable: true);
-  menuItems.add(MenuItem(
+List<CustomMenuItem> getCatalogueItemData(context) {
+  List<CustomMenuItem> menuItems = List.empty(growable: true);
+  menuItems.add(CustomMenuItem(
     image: getListTileImage('drawer/rawmaterials.png'),
     title: LocaleKey.rawMaterials,
     navigateTo: (context) => const CatalogueItemPage(
@@ -14,7 +14,7 @@ List<MenuItem> getCatalogueItemData(context) {
       [LocaleKey.rawMaterialsJson],
     ),
   ));
-  menuItems.add(MenuItem(
+  menuItems.add(CustomMenuItem(
     image: getListTileImage('drawer/crafted.png'),
     title: LocaleKey.products,
     navigateTo: (context) => const CatalogueItemPage(
@@ -22,7 +22,7 @@ List<MenuItem> getCatalogueItemData(context) {
       [LocaleKey.productsJson],
     ),
   ));
-  menuItems.add(MenuItem(
+  menuItems.add(CustomMenuItem(
     image: getListTileImage('drawer/equipment.png'),
     title: LocaleKey.technologies,
     navigateTo: (context) => const CatalogueItemPage(
@@ -30,7 +30,7 @@ List<MenuItem> getCatalogueItemData(context) {
       [LocaleKey.technologiesJson],
     ),
   ));
-  menuItems.add(MenuItem(
+  menuItems.add(CustomMenuItem(
     image: getListTileImage('drawer/constructedTechnology.png'),
     title: LocaleKey.constructedTechnologies,
     navigateTo: (context) => const CatalogueItemPage(
@@ -38,7 +38,7 @@ List<MenuItem> getCatalogueItemData(context) {
       [LocaleKey.constructedTechnologyJson],
     ),
   ));
-  menuItems.add(MenuItem(
+  menuItems.add(CustomMenuItem(
     image: getListTileImage('drawer/building.png'),
     title: LocaleKey.buildings,
     navigateTo: (context) => const CatalogueItemPage(
@@ -46,7 +46,7 @@ List<MenuItem> getCatalogueItemData(context) {
       [LocaleKey.buildingsJson],
     ),
   ));
-  menuItems.add(MenuItem(
+  menuItems.add(CustomMenuItem(
     image: getListTileImage('drawer/tradeItems.png'),
     title: LocaleKey.tradeItems,
     navigateTo: (context) => const CatalogueItemPage(
@@ -54,7 +54,7 @@ List<MenuItem> getCatalogueItemData(context) {
       [LocaleKey.tradeItemsJson],
     ),
   ));
-  menuItems.add(MenuItem(
+  menuItems.add(CustomMenuItem(
     image: getListTileImage('drawer/curiosities.png'),
     title: LocaleKey.curiosities,
     navigateTo: (context) => const CatalogueItemPage(
@@ -62,7 +62,7 @@ List<MenuItem> getCatalogueItemData(context) {
       [LocaleKey.curiosityJson],
     ),
   ));
-  menuItems.add(MenuItem(
+  menuItems.add(CustomMenuItem(
     image: getListTileImage('drawer/cooking.png'),
     title: LocaleKey.cooking,
     navigateTo: (context) => const CatalogueItemPage(
@@ -70,7 +70,7 @@ List<MenuItem> getCatalogueItemData(context) {
       [LocaleKey.cookingJson],
     ),
   ));
-  menuItems.add(MenuItem(
+  menuItems.add(CustomMenuItem(
     image: getListTileImage('drawer/upgradeModules.png'),
     title: LocaleKey.upgradeModules,
     navigateTo: (context) => const CatalogueItemPage(
@@ -79,7 +79,7 @@ List<MenuItem> getCatalogueItemData(context) {
       [LocaleKey.technologyModulesJson],
     ),
   ));
-  menuItems.add(MenuItem(
+  menuItems.add(CustomMenuItem(
     image: getCorrectlySizedImageFromIcon(context, Icons.dashboard,
         colour: getTheme().getDarkModeSecondaryColour()),
     title: LocaleKey.others,
