@@ -40,7 +40,7 @@ dependencies:
   redux: 5.0.0
 
   # UI
-  adaptive_theme: 2.3.0
+  adaptive_theme: 2.3.1
   adaptive_dialog: 1.4.0
   avatar_glow: 2.0.2
   assets_audio_player: 3.0.4+1
@@ -67,6 +67,7 @@ dependencies:
   flutter_native_timezone: 2.0.0
   enum_to_string: 2.0.1
   after_layout: 1.1.0
+  
 
 dev_dependencies:
   flutter_launcher_icons: 0.9.2
@@ -76,6 +77,22 @@ dev_dependencies:
 dependency_overrides:
   # google_fonts: 2.2.0
 #   flutter_svg: ^0.23.0+1
+  bitsdojo_window_platform_interface:
+    git:
+      url: https://github.com/AssistantApps/bitsdojo_window.git
+      path: bitsdojo_window_platform_interface
+  bitsdojo_window_windows:
+    git:
+      url: https://github.com/AssistantApps/bitsdojo_window.git
+      path: bitsdojo_window_windows
+  bitsdojo_window_linux:
+    git:
+      url: https://github.com/AssistantApps/bitsdojo_window.git
+      path: bitsdojo_window_linux
+  bitsdojo_window_macos:
+    git:
+      url: https://github.com/AssistantApps/bitsdojo_window.git
+      path: bitsdojo_window_macos
 
 flutter_icons: ## flutter pub run flutter_launcher_icons:main
   ios: true
