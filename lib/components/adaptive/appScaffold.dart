@@ -52,20 +52,17 @@ Widget _androidScaffold(
   return WillPopScope(
     onWillPop: () => getNavigation().navigateBackOrHomeAsync(context),
     child: Scaffold(
-      appBar: WindowsTitleBar('Assistant for No Man\'s Sky'),
-      body: Scaffold(
-        appBar: appBar,
-        body: animateWidgetIn(
-          child: BackgroundWrapper(
-            key: Key(bgType.toString()),
-            backgroundType: bgType,
-            body: body,
-          ),
+      appBar: appBar,
+      body: animateWidgetIn(
+        child: BackgroundWrapper(
+          key: Key(bgType.toString()),
+          backgroundType: bgType,
+          body: body,
         ),
-        drawer: drawer,
-        floatingActionButton: floatingActionButton,
-        floatingActionButtonLocation: floatingActionButtonLocation,
       ),
+      drawer: drawer,
+      floatingActionButton: floatingActionButton,
+      floatingActionButtonLocation: floatingActionButtonLocation,
     ),
   );
 }
