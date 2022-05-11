@@ -219,8 +219,11 @@ class Settings extends StatelessWidget {
       widgets.add(positiveButton(
         context,
         title: 'Useless button',
-        onPress: () => uselessButtonFunc(context, viewModel.uselessButtonTaps,
-            viewModel.increaseUselessButtonTaps),
+        onPress: () => uselessButtonFunc(
+          context,
+          viewModel.uselessButtonTaps,
+          viewModel.increaseUselessButtonTaps,
+        ),
       ));
     }
 
@@ -231,12 +234,4 @@ class Settings extends StatelessWidget {
       itemBuilder: (context, index) => widgets[index],
     );
   }
-
-  // void _changeBrightness(BuildContext context) {
-  //   bool isDark = getTheme().getIsDark(context);
-  //   getTheme().setBrightness(context, isDark);
-  //   getAnalytics().trackEvent(
-  //     isDark ? AnalyticsEvent.lightMode : AnalyticsEvent.darkMode,
-  //   );
-  // }
 }

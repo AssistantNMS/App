@@ -230,10 +230,14 @@ Widget getFloatingActionButton(
   if (fabs.isEmpty) return null;
   if (fabs.length == 1) {
     return inventoryFloatingActionButton(
-        context, genericItem.id, controller, genericItem);
+      context,
+      genericItem.id,
+      controller,
+      genericItem,
+    );
   }
 
-  var colourStart = getTheme().fabColourSelector(context);
+  Color colourStart = getTheme().fabColourSelector(context);
   return SpeedDial(
     animatedIcon: AnimatedIcons.menu_close,
     animatedIconTheme: const IconThemeData(size: 22.0),
@@ -313,6 +317,23 @@ Widget Function(BuildContext, GenericPageItem, {void Function() onTap})
       presenterWithIsHero(ctx, item, isHero, onTap: onTap);
 }
 
+// Widget Function(BuildContext, GenericPageItem, int)
+//     getResponsiveListItemDisplayer(
+//         bool genericTileIsCompact, bool displayGenericItemColour,
+//         {void Function() onTap, bool isHero = false}) {
+//   var presenterWithIsHero = displayGenericItemColour
+//       ? genericHomeTileWithRequiredItemsAndBackgroundColourPresenter
+//       : genericHomeTileWithRequiredItemsPresenter;
+
+//   if (genericTileIsCompact) {
+//     presenterWithIsHero = displayGenericItemColour
+//         ? genericTileWithBackgroundColourPresenter
+//         : genericTilePresenter;
+//   }
+//   return (BuildContext ctx, GenericPageItem item, int index) =>
+//       presenterWithIsHero(ctx, item, isHero, onTap: onTap);
+// }
+
 Widget getFavouriteStar(
     String itemIcon,
     String itemId,
@@ -326,6 +347,7 @@ Widget getFavouriteStar(
       isFavourited ? Icons.star : Icons.star_border,
       color: iconColour,
     ),
+    tooltip: isFavourited ? 'Unfavourite' : 'Favourite',
     onPressed: isFavourited
         ? () => removeFavourite(itemId)
         : () => addFavourite(
@@ -351,6 +373,7 @@ Widget getHdImage(
       duration: AppDuration.genericIconFadeIn,
       child: IconButton(
         icon: Icon(Icons.hd, color: iconColour),
+        tooltip: 'HD image',
         onPressed: genericItemImageOnTap(
           context,
           itemIcon,
@@ -386,6 +409,7 @@ Widget getDevSheet(
     duration: AppDuration.genericIconFadeIn,
     child: IconButton(
       icon: Icon(Icons.code, color: iconColour),
+      tooltip: 'Developer details',
       onPressed: () {
         adaptiveBottomModalSheet(
           context,

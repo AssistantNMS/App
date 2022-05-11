@@ -130,6 +130,7 @@ class AppImage {
   static const String cyberpunk2350 = 'contributors/cyberpunk2350.jpg';
   static const String veritasVelez = 'contributors/veritasVelez.jpg';
   static const String assistantNMSIcon = 'icon.png';
+  static const String assistantNMSWindowIcon = 'window_icon.png';
   static const String kurtlIcon = 'KurtLourens.png';
 
   static const String onlinePatreonIcon =

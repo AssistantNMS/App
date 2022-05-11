@@ -2,6 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../common/actionItem.dart';
 import 'appBar.dart';
 import 'shortcutActionButton.dart';
 
@@ -29,21 +30,31 @@ class AppBarForSubPage extends StatelessWidget
   Widget build(BuildContext context) =>
       _appBarForAndroid(context, title, actions, shortcutActions);
 
-  Widget _appBarForAndroid(context, Widget title, List<ActionItem> actions,
-      List<ActionItem> shortcutActions) {
+  Widget _appBarForAndroid(
+    context,
+    Widget title,
+    List<ActionItem> actions,
+    List<ActionItem> shortcutActions,
+  ) {
     List<Widget> actionWidgets = List.empty(growable: true);
     if (shortcutActions != null && shortcutActions.isNotEmpty) {
-      actionWidgets.add(shortcutActionButton(context, shortcutActions));
+      actionWidgets.add(
+        shortcutActionButton(context, shortcutActions),
+      );
     }
     actionWidgets.addAll(actionItemToAndroidAction(actions));
-    return adaptiveAppBar(context, title, actionWidgets,
-        leading: showBackAction
-            ? IconButton(
-                icon: const Icon(Icons.arrow_back),
-                onPressed: () async =>
-                    await getNavigation().navigateBackOrHomeAsync(context),
-              )
-            : null);
+    return adaptiveAppBar(
+      context,
+      title,
+      actionWidgets,
+      leading: showBackAction
+          ? IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () async =>
+                  await getNavigation().navigateBackOrHomeAsync(context),
+            )
+          : null,
+    );
   }
 
   @override
@@ -61,11 +72,13 @@ Widget adaptiveAppBarForSubPageHelper(context,
   }
 
   if (showHomeAction) {
-    actions.add(ActionItem(
-        icon: Icons.home,
-        onPressed: () async =>
-            await getNavigation().navigateHomeAsync(context)));
+    actions.add(goHomeAction(context));
   }
   return AppBarForSubPage(
-      title, actions, showHomeAction, showBackAction, shortcutActions);
+    title,
+    actions,
+    showHomeAction,
+    showBackAction,
+    shortcutActions,
+  );
 }

@@ -58,8 +58,11 @@ class HelloGamesPage extends StatelessWidget {
       navigateToNamed: Routes.helloGamesWeekendMission,
     ));
     menuItems.add(MenuItem(
-      image: getCorrectlySizedImageFromIcon(context, Icons.home,
-          colour: getTheme().getDarkModeSecondaryColour()),
+      image: getCorrectlySizedImageFromIcon(
+        context,
+        Icons.home,
+        colour: getTheme().getDarkModeSecondaryColour(),
+      ),
       title: LocaleKey.nmsWebsite,
       navigateToExternl: NmsExternalUrls.noMansSkyWebsite,
     ));

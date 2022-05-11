@@ -7,6 +7,8 @@ class AnalyticsService implements IAnalyticsService {
   final analyticsKey = '[Analytics]:';
   FirebaseAnalytics analytics;
   AnalyticsService() {
+    if (isWindows) return;
+
     Firebase.initializeApp().then((_) {
       analytics = FirebaseAnalytics.instance;
     });
@@ -15,7 +17,7 @@ class AnalyticsService implements IAnalyticsService {
   @override
   void trackEvent(String key, {dynamic data}) {
     if (key.isEmpty) return;
-    if (kReleaseMode) {
+    if (kReleaseMode && !isWindows) {
       try {
         analytics.logEvent(name: key);
         getLog().i("$analyticsKey $key");

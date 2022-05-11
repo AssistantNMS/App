@@ -71,13 +71,15 @@ List<CustomMenu> getMenuOptionsSection1(
     ),
     // isApple
     //     ?
-    CustomMenu(
-      icon: localGetFromIcon(Icons.share),
-      drawerIcon: localGetDrawerFromIcon(Icons.share),
-      title: LocaleKey.share,
-      hideInCustom: true,
-      onTap: (BuildContext navContext) => shareText(LocaleKey.shareContent),
-    )
+    if (!isWindows) ...[
+      CustomMenu(
+        icon: localGetFromIcon(Icons.share),
+        drawerIcon: localGetDrawerFromIcon(Icons.share),
+        title: LocaleKey.share,
+        hideInCustom: true,
+        onTap: (BuildContext navContext) => shareText(LocaleKey.shareContent),
+      ),
+    ],
     // : CustomMenu(
     //     icon: getListTileImage(AppImage.donation, size: imageSize),
     //     drawerIcon: getListTileImage(AppImage.donation),

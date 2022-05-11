@@ -11,16 +11,16 @@ class WindowButtons extends StatelessWidget {
     Color textColour = getTheme().getTextColour(context);
     Color textHoverColour = getTheme().getForegroundTextColour(hoverColour);
 
-    final buttonColors = WindowButtonColors(
+    WindowButtonColors buttonColors = WindowButtonColors(
       mouseOver: hoverColour,
       mouseDown: hoverColour,
       iconNormal: textColour,
       iconMouseOver: textHoverColour,
     );
 
-    final closeButtonColors = WindowButtonColors(
-      mouseOver: hoverColour,
-      mouseDown: hoverColour,
+    WindowButtonColors closeButtonColors = WindowButtonColors(
+      mouseOver: HexColor('E81123'),
+      mouseDown: HexColor('E81123'),
       iconNormal: textColour,
       iconMouseOver: textHoverColour,
     );

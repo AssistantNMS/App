@@ -18,7 +18,8 @@ class AllItemsPageComponent extends StatelessWidget {
     var hintText = getTranslations().fromKey(LocaleKey.searchItems);
     return StoreConnector<AppState, GenericPageViewModel>(
       converter: (store) => GenericPageViewModel.fromStore(store),
-      builder: (_, viewModel) => SearchableList<GenericPageItem>(
+      builder: (_, viewModel) => //
+          SearchableList<GenericPageItem>(
         () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),
         listItemDisplayer: getListItemDisplayer(
           viewModel.genericTileIsCompact,
@@ -30,6 +31,20 @@ class AllItemsPageComponent extends StatelessWidget {
             '${getTranslations().currentLanguage} ${viewModel.genericTileIsCompact} - ${viewModel.displayGenericItemColour}'),
         hintText: hintText,
       ),
+      // ResponsiveListDetailView<GenericPageItem>(
+      //   () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),
+      //   getResponsiveListItemDisplayer(
+      //     viewModel.genericTileIsCompact,
+      //     viewModel.displayGenericItemColour,
+      //     isHero: true,
+      //   ),
+      //   search,
+      //   listItemMobileOnTap:
+      //       (BuildContext context, GenericPageItem gameItem) {},
+      //   listItemDesktopOnTap: (BuildContext context, GenericPageItem recipe,
+      //       void Function(Widget) updateDetailView) {},
+      //   key: Key(getTranslations().currentLanguage),
+      // ),
     );
   }
 }
