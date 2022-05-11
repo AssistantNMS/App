@@ -259,7 +259,6 @@ List<CustomMenu> getMenuOptionsSection3(
       icon: localGetFromIcon(Icons.more_horiz),
       drawerIcon: localGetDrawerFromIcon(Icons.more_horiz),
       title: LocaleKey.more,
-      hideInCustom: true,
       navigateToNamed: Routes.retiredDrawerMenuPage,
     ),
   ];

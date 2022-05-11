@@ -16,14 +16,37 @@ class MajorUpdatesPage extends StatelessWidget {
       context,
       title: getTranslations().fromKey(LocaleKey.newItemsAdded),
       drawer: const AppDrawer(),
-      body: SearchableList<MajorUpdateItem>(
-        () => getDataRepo().getMajorUpdates(context),
-        listItemDisplayer: majorUpdateTilePresenter,
-        listItemSearch: (MajorUpdateItem item, String searchText) => false,
-        key: Key(getTranslations().currentLanguage),
-        addFabPadding: true,
-        minListForSearch: 1000,
+      body: FutureBuilder(
+        future: getDataRepo().getMajorUpdates(context),
+        builder: getBodyFromFuture,
       ),
+    );
+  }
+
+  Widget getBodyFromFuture(BuildContext bodyCtx,
+      AsyncSnapshot<ResultWithValue<List<MajorUpdateItem>>> snapshot) {
+    List<Widget> listItems = List.empty(growable: true);
+
+    Widget errorWidget = asyncSnapshotHandler(
+      bodyCtx,
+      snapshot,
+      loader: () => getLoading().fullPageLoading(bodyCtx),
+      isValidFunction: (ResultWithValue<List<MajorUpdateItem>> expResult) {
+        if (expResult.hasFailed) return false;
+        if (expResult.value == null) return false;
+        return true;
+      },
+    );
+    if (errorWidget != null) return errorWidget;
+
+    for (MajorUpdateItem update in snapshot.data.value) {
+      listItems.add(majorUpdateTilePresenter(bodyCtx, update));
+    }
+
+    return listWithScrollbar(
+      shrinkWrap: true,
+      itemCount: listItems.length,
+      itemBuilder: (BuildContext context, int index) => listItems[index],
     );
   }
 }
