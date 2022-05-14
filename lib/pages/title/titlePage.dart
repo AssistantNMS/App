@@ -6,7 +6,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/dialogs/asyncInputDialog.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/titleDataPresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
@@ -50,8 +49,11 @@ class _TitlePageState extends State<TitlePage> {
 
 Future<void> setPlayerName(
     BuildContext context, TitleViewModel viewModel) async {
-  var playerNameResult = await asyncInputDialog(
-      context, getTranslations().fromKey(LocaleKey.playerName));
+  String playerNameResult = await getDialog().asyncInputDialog(
+    context,
+    getTranslations().fromKey(LocaleKey.playerName),
+    defaultText: viewModel.playerTitle ?? '',
+  );
   if ((playerNameResult != null && playerNameResult.isNotEmpty)) {
     Future.delayed(const Duration(milliseconds: 250), () {
       // Really bad - I sorry

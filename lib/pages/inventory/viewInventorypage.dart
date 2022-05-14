@@ -4,7 +4,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/dialogs/quantityDialog.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/inventoryTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
@@ -96,12 +95,16 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
               var controller = TextEditingController(
                 text: slot.quantity.toString(),
               );
-              showQuantityDialog(context, controller, onSuccess: (quantity) {
-                int intQuantity = int.tryParse(quantity);
-                if (intQuantity == null) return;
-                slot.quantity = intQuantity;
-                vm.editInventorySlotInInventory(inventory.uuid, slot);
-              });
+              getDialog().showQuantityDialog(
+                context,
+                controller,
+                onSuccess: (BuildContext ctx, String quantity) {
+                  int intQuantity = int.tryParse(quantity);
+                  if (intQuantity == null) return;
+                  slot.quantity = intQuantity;
+                  vm.editInventorySlotInInventory(inventory.uuid, slot);
+                },
+              );
             },
             onDelete: (InventorySlot slot) =>
                 vm.removeInventorySlotFromInventory(inventory.uuid, slot),
@@ -120,8 +123,8 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
             );
             if (temp == null) return;
 
-            showQuantityDialog(context, TextEditingController(), title: '',
-                onSuccess: (String quantity) {
+            getDialog().showQuantityDialog(context, TextEditingController(),
+                title: '', onSuccess: (BuildContext ctx, String quantity) {
               if (quantity == '') return;
 
               int quantityInt = int.tryParse(quantity);

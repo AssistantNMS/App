@@ -3,8 +3,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/dialogs/baseDialog.dart';
-
 class AsyncSettingTilePresenter extends StatefulWidget {
   final String title;
   final IconData icon;
@@ -67,19 +65,23 @@ Future<dynamic> asyncSettingTileWithSuccessFunc<T>(
     LocaleKey successMessage) async {
   var readResult = await asyncFunc();
   if (readResult.hasFailed) {
-    simpleDialog(
+    getDialog().showSimpleDialog(
       context,
       getTranslations().fromKey(LocaleKey.error),
-      getTranslations().fromKey(errorMessage),
-      buttons: [simpleDialogCloseButton(context)],
+      Text(getTranslations().fromKey(errorMessage)),
+      buttonBuilder: (BuildContext ctx) => [
+        getDialog().simpleDialogCloseButton(ctx),
+      ],
     );
   } else {
     successFunc(readResult.value);
-    simpleDialog(
+    getDialog().showSimpleDialog(
       context,
       getTranslations().fromKey(LocaleKey.success),
-      getTranslations().fromKey(successMessage),
-      buttons: [simpleDialogCloseButton(context)],
+      Text(getTranslations().fromKey(successMessage)),
+      buttonBuilder: (BuildContext ctx) => [
+        getDialog().simpleDialogCloseButton(ctx),
+      ],
     );
   }
 }
@@ -91,18 +93,22 @@ Future<dynamic> asyncSettingTileGenericFunc<T>(
     LocaleKey successMessage) async {
   var readResult = await asyncFunc();
   if (readResult.hasFailed) {
-    simpleDialog(
+    getDialog().showSimpleDialog(
       context,
       getTranslations().fromKey(LocaleKey.error),
-      getTranslations().fromKey(errorMessage),
-      buttons: [simpleDialogCloseButton(context)],
+      Text(getTranslations().fromKey(errorMessage)),
+      buttonBuilder: (BuildContext ctx) => [
+        getDialog().simpleDialogCloseButton(ctx),
+      ],
     );
   } else {
-    simpleDialog(
+    getDialog().showSimpleDialog(
       context,
       getTranslations().fromKey(LocaleKey.success),
-      getTranslations().fromKey(successMessage),
-      buttons: [simpleDialogCloseButton(context)],
+      Text(getTranslations().fromKey(successMessage)),
+      buttonBuilder: (BuildContext ctx) => [
+        getDialog().simpleDialogCloseButton(ctx),
+      ],
     );
   }
 }

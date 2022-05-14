@@ -31,8 +31,7 @@ class RetiredDrawerMenuPage extends StatelessWidget {
       image: getCorrectlySizedImageFromIcon(context, Icons.new_releases,
           colour: menuIconColour),
       title: LocaleKey.newItemsAdded,
-      navigateToNamed: Routes.newItems,
-      // navigateToNamed: Routes.majorUpdates,
+      navigateToNamed: Routes.majorUpdates,
     ));
     menuItems.add(CustomMenuItem(
       image: getListTileImage('drawer/helloGames.png'),

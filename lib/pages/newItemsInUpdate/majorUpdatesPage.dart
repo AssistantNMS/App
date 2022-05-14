@@ -1,11 +1,16 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/integration/dependencyInjection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/drawer.dart';
+import '../../components/modalBottomSheet/patreonModalBottomSheet.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/majorUpdateTilePresenter.dart';
+import '../../constants/Patreon.dart';
 import '../../contracts/data/majorUpdateItem.dart';
+import '../../contracts/redux/appState.dart';
+import '../../redux/modules/setting/isPatreonViewModel.dart';
+import 'majorUpdatesSpeculationPage.dart';
 
 class MajorUpdatesPage extends StatelessWidget {
   const MajorUpdatesPage({Key key}) : super(key: key);
@@ -15,16 +20,22 @@ class MajorUpdatesPage extends StatelessWidget {
     return basicGenericPageScaffold(
       context,
       title: getTranslations().fromKey(LocaleKey.newItemsAdded),
-      drawer: const AppDrawer(),
-      body: FutureBuilder(
-        future: getDataRepo().getMajorUpdates(context),
-        builder: getBodyFromFuture,
+      body: StoreConnector<AppState, IsPatreonViewModel>(
+        converter: (store) => IsPatreonViewModel.fromStore(store),
+        builder: (_, viewModel) => FutureBuilder(
+          future: getDataRepo().getMajorUpdates(context),
+          builder: (bodyCtx, asyncSnapshot) =>
+              getBodyFromFuture(bodyCtx, asyncSnapshot, viewModel),
+        ),
       ),
     );
   }
 
-  Widget getBodyFromFuture(BuildContext bodyCtx,
-      AsyncSnapshot<ResultWithValue<List<MajorUpdateItem>>> snapshot) {
+  Widget getBodyFromFuture(
+    BuildContext bodyCtx,
+    AsyncSnapshot<ResultWithValue<List<MajorUpdateItem>>> snapshot,
+    IsPatreonViewModel reduxViewModel,
+  ) {
     List<Widget> listItems = List.empty(growable: true);
 
     Widget errorWidget = asyncSnapshotHandler(
@@ -39,6 +50,33 @@ class MajorUpdatesPage extends StatelessWidget {
     );
     if (errorWidget != null) return errorWidget;
 
+    listItems.add(majorUpdateTilePresenter(
+      bodyCtx,
+      MajorUpdateItem(
+        guid: getNewGuid(),
+        gameVersion: 'Speculation', // TODO translate
+        title: 'Speculation', // TODO translate
+        icon: 'update/speculation.png',
+        itemIds: [],
+        releaseDate: DateTime.now(),
+      ),
+      isPatronLocked: isPatreonFeatureLocked(
+        PatreonEarlyAccessFeature.newMajorUpdatesPage,
+        reduxViewModel.isPatron,
+      ),
+      onTap: () {
+        handlePatreonBottomModalSheetWhenTapped(
+          bodyCtx,
+          reduxViewModel.isPatron,
+          unlockDate: PatreonEarlyAccessFeature.newMajorUpdatesPage,
+          onTap: (dialogCtx) => getNavigation().navigateAwayFromHomeAsync(
+            dialogCtx,
+            navigateTo: (_) =>
+                MajorUpdatesSpeculationPage(items: snapshot.data.value),
+          ),
+        );
+      },
+    ));
     for (MajorUpdateItem update in snapshot.data.value) {
       listItems.add(majorUpdateTilePresenter(bodyCtx, update));
     }
@@ -47,6 +85,7 @@ class MajorUpdatesPage extends StatelessWidget {
       shrinkWrap: true,
       itemCount: listItems.length,
       itemBuilder: (BuildContext context, int index) => listItems[index],
+      padding: const EdgeInsets.only(bottom: 64),
     );
   }
 }

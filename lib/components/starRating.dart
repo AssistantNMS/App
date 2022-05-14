@@ -1,10 +1,14 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-Widget starRating(context, int currentRating,
-    {double size = 32, Function(int) onTap}) {
+Widget starRating(
+  BuildContext context,
+  int currentRating, {
+  double size = 32,
+  Function(int) onTap,
+}) {
   onTap ??= (int _) => {};
-  var colour = getTheme().getSecondaryColour(context);
+  Color colour = getTheme().getSecondaryColour(context);
   return Wrap(
     // alignment: WrapAlignment.center,
     children: List.generate(
@@ -15,7 +19,8 @@ Widget starRating(context, int currentRating,
               onTap: () => onTap(index + 1))
           : GestureDetector(
               child: Icon(Icons.star_border, color: colour, size: size),
-              onTap: () => onTap(index + 1)),
+              onTap: () => onTap(index + 1),
+            ),
     ),
   );
 }

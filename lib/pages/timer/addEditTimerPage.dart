@@ -3,7 +3,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/dialogs/baseDialog.dart';
 import '../../components/responsiveGridView.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/timerTilePresenter.dart';
@@ -65,12 +64,16 @@ class _AddEditTimerState extends State<AddEditTimerPage> {
         onPressed: () {
           if (timer.startDate.millisecondsSinceEpoch >
               timer.completionDate.millisecondsSinceEpoch) {
-            simpleDialog(
+            getDialog().showSimpleDialog(
               context,
               getTranslations().fromKey(LocaleKey.error),
-              getTranslations()
-                  .fromKey(LocaleKey.errorStartDateShouldNotBeAfterEndDate),
-              buttons: [simpleDialogCloseButton(context)],
+              Text(
+                getTranslations()
+                    .fromKey(LocaleKey.errorStartDateShouldNotBeAfterEndDate),
+              ),
+              buttonBuilder: (BuildContext ctx) => [
+                getDialog().simpleDialogCloseButton(ctx),
+              ],
             );
             return;
           }

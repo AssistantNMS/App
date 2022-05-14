@@ -47,6 +47,7 @@ class GenericPage extends StatelessWidget {
       converter: (store) => GenericPageViewModel.fromStore(store),
       builder: (_, viewModel) {
         return CachedFutureBuilder<ResultWithValue<GenericPageItem>>(
+          key: Key('${viewModel.cartItems.length}'),
           future: genericItemFuture(
             context,
             itemId,

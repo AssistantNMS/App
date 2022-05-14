@@ -44,7 +44,7 @@ class _ExpeditionAlphabetTranslationAnimatedWidget
     TextStyle expeditionFont =
         currentFont.copyWith(fontFamily: nmsExpeditionFontFamily);
 
-    var content = TextSpan(
+    TextSpan content = TextSpan(
       style: currentFont,
       children: text
           .split('')

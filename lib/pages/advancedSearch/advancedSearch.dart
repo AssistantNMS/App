@@ -2,7 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:enum_to_string/enum_to_string.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/dialogs/asyncInputDialog.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/search/orderByOptionType.dart';
@@ -167,8 +166,8 @@ class _AdvancedSearchWidget extends State<AdvancedSearch> {
         break;
       case SearchOptionType.title:
         LocaleKey key = LocaleKey.itemName;
-        var temp =
-            await asyncInputDialog(context, getTranslations().fromKey(key));
+        String temp = await getDialog()
+            .asyncInputDialog(context, getTranslations().fromKey(key));
         result = (temp == null || temp.isEmpty) ? '' : temp;
         break;
       case SearchOptionType.minValue:
@@ -176,13 +175,13 @@ class _AdvancedSearchWidget extends State<AdvancedSearch> {
         LocaleKey key = (type == SearchOptionType.minValue)
             ? LocaleKey.minValue
             : LocaleKey.maxValue;
-        var temp = await asyncInputDialog(
+        var temp = await getDialog().asyncInputDialog(
             context, getTranslations().fromKey(key),
             inputType: TextInputType.number);
         result = (temp == null || temp.isEmpty) ? '' : temp;
         break;
       default:
-        var temp = await asyncInputDialog(context, '');
+        var temp = await getDialog().asyncInputDialog(context, '');
         result = (temp == null || temp.isEmpty) ? '' : temp;
         break;
     }
