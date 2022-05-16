@@ -72,7 +72,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Force language'), // TODO translate
+                Text(getTranslations().fromKey(LocaleKey.shareForceLanguage)),
                 adaptiveCheckbox(
                   value: forceLang,
                   onChanged: (bool newValue) {
@@ -86,7 +86,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Include name'), // TODO translate
+                Text(getTranslations().fromKey(LocaleKey.shareIncludeName)),
                 adaptiveCheckbox(
                   value: includeName,
                   onChanged: (bool newValue) {
@@ -102,7 +102,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
         widgets.add(customDivider());
         widgets.add(ListTile(
           leading: const Icon(Icons.share),
-          title: const Text('Copy to clipboard'), // TODO translate
+          title: Text(getTranslations().fromKey(LocaleKey.copyToClipboard)),
           onTap: () {
             Clipboard.setData(ClipboardData(text: fullLink));
             getSnackbar().showSnackbar(
@@ -118,7 +118,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
         ));
         widgets.add(ListTile(
           leading: const Icon(Icons.open_in_new),
-          title: const Text('Open link'), // TODO translate
+          title: Text(getTranslations().fromKey(LocaleKey.shareOpenLink)),
           onTap: () => launchExternalURL(fullLink),
         ));
 

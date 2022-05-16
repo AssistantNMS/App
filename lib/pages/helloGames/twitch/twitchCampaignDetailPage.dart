@@ -2,13 +2,13 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/contracts/twitch/twitchCampaignReward.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
-import '../../components/tilePresenters/twitchTilePresenter.dart';
-import '../../constants/AppImage.dart';
-import '../../constants/Routes.dart';
-import '../../contracts/twitch/twitchCampaignData.dart';
-import '../../contracts/twitch/twitchCampaignDay.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../../components/tilePresenters/twitchTilePresenter.dart';
+import '../../../constants/AppImage.dart';
+import '../../../constants/Routes.dart';
+import '../../../contracts/twitch/twitchCampaignData.dart';
+import '../../../contracts/twitch/twitchCampaignDay.dart';
+import '../../../integration/dependencyInjection.dart';
 
 class TwitchCampaignDetailPage extends StatelessWidget {
   final int id;

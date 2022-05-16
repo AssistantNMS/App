@@ -86,7 +86,7 @@ class MajorUpdatesDetailPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: positiveButton(
           bodyCtx,
-          title: 'View post online', // TODO translate
+          title: getTranslations().fromKey(LocaleKey.viewPostOnline),
           onPress: () => launchExternalURL(localMajorItem.postUrl),
         ),
       ));
@@ -100,7 +100,9 @@ class MajorUpdatesDetailPage extends StatelessWidget {
       }
     } else {
       listItems.add(Center(
-        child: genericItemGroup('No items recorded'), // TODO translate
+        child: genericItemGroup(
+          getTranslations().fromKey(LocaleKey.noItemsRecorded),
+        ),
       ));
     }
 

@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../pages/homepage/allItemsPage.dart';
 
+import '../../pages/homepage/allItemsPage.dart';
 import '../pages/advancedSearch/advancedSearch.dart';
 import '../pages/alienPuzzles/alienPuzzlesListPage.dart';
 import '../pages/alienPuzzles/alienPuzzlesMenuPage.dart';
@@ -21,8 +21,10 @@ import '../pages/guide/assistantAppsGuidesPage.dart';
 import '../pages/guide/guidesPage.dart';
 import '../pages/helloGames/communityMission/communityMissionPage.dart';
 import '../pages/helloGames/helloGamesPage.dart';
+import '../pages/helloGames/misc/starshipScrapPage.dart';
 import '../pages/helloGames/newsPage.dart.dart';
 import '../pages/helloGames/releaseNotesPage.dart';
+import '../pages/helloGames/twitch/twitchCampaignPage.dart';
 import '../pages/helloGames/weekendMission/weekendMissionMenuPage.dart';
 import '../pages/homepage/CatalogueHomepage.dart';
 import '../pages/homepage/customHomepage.dart';
@@ -48,7 +50,6 @@ import '../pages/sync/syncPage.dart';
 import '../pages/techTree/unlockableTechTreePage.dart';
 import '../pages/timer/timerPage.dart';
 import '../pages/title/titlePage.dart';
-import '../pages/twitch/twitchCampaignPage.dart';
 import '../pages/whatIsNew/enhancedWhatIsNewPage.dart';
 import 'AnalyticsEvent.dart';
 
@@ -107,6 +108,7 @@ class Routes {
   static const String twitchCampaignPage = '/twitchCampaignPage';
   static const String guideV2 = '/guideV2';
   static const String majorUpdates = '/majorUpdates';
+  static const String starshipScrap = '/starshipScrap';
 }
 
 Map<String, Widget Function(BuildContext)> initNamedRoutes(
@@ -189,6 +191,7 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.twitchCampaignPage: (context) => TwitchCampaignPage(),
     Routes.guideV2: (context) => const AssistantAppsGuidesPage(),
     Routes.majorUpdates: (context) => const MajorUpdatesPage(),
+    Routes.starshipScrap: (context) => StarshipScrapPage(),
   });
   return routes;
 }

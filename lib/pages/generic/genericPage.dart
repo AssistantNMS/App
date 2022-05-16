@@ -16,6 +16,7 @@ import '../../constants/NmsUIConstants.dart';
 import '../../contracts/cart/cartItem.dart';
 import '../../contracts/chargeBy.dart';
 import '../../contracts/data/eggTrait.dart';
+import '../../contracts/data/starshipScrap.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';
@@ -275,10 +276,9 @@ class GenericPage extends StatelessWidget {
     ));
 
     // ----------------------------- Stat bonuses ------------------------------
-    List<StatBonus> statBonuses =
-        genericItem?.statBonuses ?? List.empty(growable: true);
+    List<StatBonus> statBonuses = genericItem.statBonuses;
     List<ProceduralStatBonus> proceduralStatBonuses =
-        genericItem?.proceduralStatBonuses ?? List.empty(growable: true);
+        genericItem.proceduralStatBonuses;
 
     widgets.addAll(getStatBonuses(context, statBonuses));
     widgets.addAll(getProceduralStatBonuses(context, proceduralStatBonuses,
@@ -299,10 +299,14 @@ class GenericPage extends StatelessWidget {
             .toList()));
 
     // ----------------------------- Rewards from ------------------------------
+
+    List<StarshipScrap> starshipScrapItems = genericItem.starshipScrapItems;
+
     widgets.addAll(getRewardFrom(
       context,
       genericItem,
       vm.displayGenericItemColour,
+      starshipScrapItems: starshipScrapItems,
     ));
 
     // ------------------------------ Egg Traits -------------------------------

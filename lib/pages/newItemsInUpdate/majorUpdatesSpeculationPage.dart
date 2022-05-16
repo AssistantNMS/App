@@ -14,7 +14,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return basicGenericPageScaffold(
       context,
-      title: 'Speculation', // TODO translate
+      title: getTranslations().fromKey(LocaleKey.speculation),
       body: getBody(context, items),
     );
   }
@@ -35,11 +35,12 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
     int daysSinceLastUpdate =
         nowInDaysSinceEpoch - lastestUpdateInDaysSinceEpoch;
     listItems.add(
-      genericItemDescription('{0} days since last update'.replaceAll(
-        // TODO translate
-        '{0}',
-        daysSinceLastUpdate.toString(),
-      )),
+      genericItemDescription(
+        getTranslations().fromKey(LocaleKey.daysSinceLastUpdate).replaceAll(
+              '{0}',
+              daysSinceLastUpdate.toString(),
+            ),
+      ),
     );
     listItems.add(emptySpace1x());
 
@@ -57,11 +58,12 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
     int daysLeft = anniversaryDaysSinceEpoch -
         (DateTime.now().millisecondsSinceEpoch ~/ millisecondsToDaysConversion);
     listItems.add(
-      genericItemDescription('{0} days until anniversary'.replaceAll(
-        // TODO translate
-        '{0}',
-        (daysLeft).toString(),
-      )),
+      genericItemDescription(
+        getTranslations().fromKey(LocaleKey.daysUntilAnniversary).replaceAll(
+              '{0}',
+              (daysLeft).toString(),
+            ),
+      ),
     );
     listItems.add(emptySpace1x());
 
@@ -88,11 +90,10 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
         daysSinceLastUpdateList.length;
     listItems.add(
       genericItemDescription(
-        'Average days per update: {0}'.replaceAll(
-          // TODO translate
-          '{0}',
-          avgDaysPerUpdate.toStringAsFixed(2),
-        ),
+        getTranslations().fromKey(LocaleKey.daysPerUpdate).replaceAll(
+              '{0}',
+              avgDaysPerUpdate.toStringAsFixed(2),
+            ),
       ),
     );
     int nextUpdateBasedOnAvgDaysSinceEpoch =
@@ -100,15 +101,17 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
             millisecondsToDaysConversion;
     listItems.add(
       genericItemDescription(
-        'Next update should be on {0} based on average days since update' // TODO translate
+        getTranslations()
+            .fromKey(LocaleKey.updateCouldBeOnDateBasedOnAverageDays)
             .replaceAll(
-          '{0}',
-          simpleDate(
-            DateTime.fromMillisecondsSinceEpoch(
-              nextUpdateBasedOnAvgDaysSinceEpoch,
-            ),
-          ),
-        ),
+              '{0}',
+              simpleDate(
+                DateTime.fromMillisecondsSinceEpoch(
+                  nextUpdateBasedOnAvgDaysSinceEpoch,
+                ),
+              ),
+            )
+            .replaceAll('{1}', ''),
       ),
     );
     listItems.add(emptySpace1x());
@@ -119,27 +122,27 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
     for (int lastXUpdate in lastXUpdatesList) {
       List<int> localDaysSinceLastUpdateList =
           daysSinceLastUpdateList.take(lastXUpdate).toList();
+      String dayString = simpleDate(
+        DateTime.fromMillisecondsSinceEpoch(
+          (lastestUpdateInDaysSinceEpoch +
+                  (localDaysSinceLastUpdateList.reduce((a, b) => a + b) /
+                          localDaysSinceLastUpdateList.length)
+                      .round()) *
+              millisecondsToDaysConversion,
+        ),
+      );
+      String extraInfo = getTranslations()
+          .fromKey(LocaleKey.basedOnTheLastXUpdates)
+          .replaceAll(
+            '{0}',
+            lastXUpdate.toString(),
+          );
       listItems.add(
         genericItemDescription(
-          // TODO translate
-          'Next update should be on {0} based on average days since update (based on the last {1} updates)'
-              .replaceAll(
-                '{0}',
-                simpleDate(
-                  DateTime.fromMillisecondsSinceEpoch(
-                    (lastestUpdateInDaysSinceEpoch +
-                            (localDaysSinceLastUpdateList
-                                        .reduce((a, b) => a + b) /
-                                    localDaysSinceLastUpdateList.length)
-                                .round()) *
-                        millisecondsToDaysConversion,
-                  ),
-                ),
-              )
-              .replaceAll(
-                '{1}',
-                lastXUpdate.toString(),
-              ),
+          getTranslations()
+              .fromKey(LocaleKey.updateCouldBeOnDateBasedOnAverageDays)
+              .replaceAll('{0}', dayString)
+              .replaceAll('{1}', '\n($extraInfo)'),
         ),
       );
       listItems.add(emptySpace1x());
@@ -149,9 +152,15 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
 
     List<TableRow> rows = [
       TableRow(children: [
-        getTableHeading('Name'), // TODO translate
-        getTableHeading('Date released'), // TODO translate
-        getTableHeading('Days since previous update'), // TODO translate
+        getTableHeading(
+          getTranslations().fromKey(LocaleKey.updateName),
+        ),
+        getTableHeading(
+          getTranslations().fromKey(LocaleKey.updateDateReleased),
+        ),
+        getTableHeading(
+          getTranslations().fromKey(LocaleKey.updateDaysSincePreviousUpdate),
+        ),
       ])
     ];
     for (int updateIndex = 0; updateIndex < items.length; updateIndex++) {

@@ -54,8 +54,8 @@ class MajorUpdatesPage extends StatelessWidget {
       bodyCtx,
       MajorUpdateItem(
         guid: getNewGuid(),
-        gameVersion: 'Speculation', // TODO translate
-        title: 'Speculation', // TODO translate
+        gameVersion: getTranslations().fromKey(LocaleKey.speculation),
+        title: getTranslations().fromKey(LocaleKey.speculation),
         icon: 'update/speculation.png',
         itemIds: [],
         releaseDate: DateTime.now(),

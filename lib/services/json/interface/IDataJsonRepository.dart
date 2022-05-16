@@ -8,6 +8,7 @@ import '../../../contracts/data/majorUpdateItem.dart';
 import '../../../contracts/data/platformControlMapping.dart';
 import '../../../contracts/data/quicksilverStore.dart';
 import '../../../contracts/data/socialItem.dart';
+import '../../../contracts/data/starshipScrap.dart';
 import '../../../contracts/data/updateItemDetail.dart';
 import '../../../contracts/devDetail.dart';
 import '../../../contracts/twitch/twitchCampaignData.dart';
@@ -90,5 +91,15 @@ class IDataJsonRepository {
   Future<ResultWithValue<List<MajorUpdateItem>>> getMajorUpdates(
       BuildContext context) async {
     return ResultWithValue<List<MajorUpdateItem>>(false, null, '');
+  }
+
+  Future<ResultWithValue<List<StarshipScrap>>> getStarshipScrapData(
+      BuildContext context) async {
+    return ResultWithValue<List<StarshipScrap>>(false, null, '');
+  }
+
+  Future<ResultWithValue<List<StarshipScrap>>> getStarshipScrapDataForItem(
+      BuildContext context, String itemId) async {
+    return ResultWithValue<List<StarshipScrap>>(false, null, '');
   }
 }

@@ -18,6 +18,7 @@ class AppImage {
   static const String twitchAlt = base + 'special/twitchAlt.png';
   static const String quicksilver = base + 'special/quicksilver.png';
   static const String quicksilverAlt = base + 'special/quicksilverAlt.png';
+  static const String starshipScrap = base + 'special/starshipScrap.png';
 
   static const String drawer = 'drawer/';
   static const String about = drawer + 'about.png';
@@ -95,6 +96,11 @@ class AppImage {
       base + 'special/manufacturingFacility.png';
   static const String transmissionTower =
       base + 'special/transmissionTower.png';
+
+  static const String sclass = base + 'special/sclass.png';
+  static const String aclass = base + 'special/aclass.png';
+  static const String bclass = base + 'special/bclass.png';
+  static const String cclass = base + 'special/cclass.png';
 
   static const String statImages = base + 'stats';
 

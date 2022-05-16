@@ -11,6 +11,7 @@ import '../../contracts/data/platformControlMapping.dart';
 import '../../contracts/data/eggTrait.dart';
 import '../../contracts/data/quicksilverStore.dart';
 import '../../contracts/data/socialItem.dart';
+import '../../contracts/data/starshipScrap.dart';
 import '../../contracts/data/updateItemDetail.dart';
 import '../../contracts/devDetail.dart';
 import '../../contracts/twitch/twitchCampaignData.dart';
@@ -338,6 +339,54 @@ class DataJsonRepository extends BaseJsonService
           "DataJsonRepository getMajorUpdates Exception: ${exception.toString()}");
       return ResultWithValue<List<MajorUpdateItem>>(
           false, List.empty(), exception.toString());
+    }
+  }
+
+  @override
+  Future<ResultWithValue<List<StarshipScrap>>> getStarshipScrapData(
+      BuildContext context) async {
+    try {
+      dynamic responseJson =
+          await getJsonFromAssets(context, "data/starshipScrap");
+      List list = json.decode(responseJson);
+      List<StarshipScrap> trans = list //
+          .map((e) => StarshipScrap.fromJson(e))
+          .toList();
+      return ResultWithValue<List<StarshipScrap>>(true, trans, '');
+    } catch (exception) {
+      getLog().e(
+          "DataJsonRepository getStarshipScrapData Exception: ${exception.toString()}");
+      return ResultWithValue<List<StarshipScrap>>(
+          false, List.empty(), exception.toString());
+    }
+  }
+
+  @override
+  Future<ResultWithValue<List<StarshipScrap>>> getStarshipScrapDataForItem(
+      BuildContext context, String itemId) async {
+    ResultWithValue<List<StarshipScrap>> allItemsResult =
+        await getStarshipScrapData(context);
+    if (allItemsResult.hasFailed) {
+      return ResultWithValue<List<StarshipScrap>>(
+          false, List.empty(), allItemsResult.errorMessage);
+    }
+
+    try {
+      List<StarshipScrap> items = allItemsResult.value
+          .where((dev) => dev.itemDetails.any((itemD) => itemD.id == itemId))
+          .toList();
+
+      if (items == null || items.isEmpty) {
+        return ResultWithValue<List<StarshipScrap>>(
+            false, null, 'No Starship Scrap data found');
+      }
+
+      return ResultWithValue<List<StarshipScrap>>(true, items, '');
+    } catch (exception) {
+      getLog().e(
+          "DataJsonRepository getStarshipScrapDataForItem Exception: ${exception.toString()}");
+      return ResultWithValue<List<StarshipScrap>>(
+          false, null, exception.toString());
     }
   }
 }

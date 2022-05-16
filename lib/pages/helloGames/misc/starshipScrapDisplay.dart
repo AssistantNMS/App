@@ -1,0 +1,87 @@
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:flutter/material.dart';
+
+import '../../../components/tilePresenters/starshipRewardTilePresenter.dart';
+import '../../../contracts/data/starshipScrap.dart';
+
+class StarshipScrapDisplay extends StatefulWidget {
+  final List<StarshipScrap> starScraps;
+  final bool displayGenericItemColour;
+  const StarshipScrapDisplay({
+    this.starScraps,
+    this.displayGenericItemColour,
+    Key key,
+  }) : super(key: key);
+
+  @override
+  _StarshipScrapDisplayState createState() => _StarshipScrapDisplayState();
+}
+
+class _StarshipScrapDisplayState extends State<StarshipScrapDisplay> {
+  List<String> expandedItems = List.empty(growable: true);
+
+  @override
+  Widget build(BuildContext context) {
+    List<Widget> listItems = List.empty(growable: true);
+
+    for (StarshipScrap starScrap in widget.starScraps) {
+      String scrapKey = '${starScrap.shipClassType}-${starScrap.shipType}';
+      bool isExpanded = expandedItems.contains(scrapKey);
+      listItems.add(flatCard(
+        child: ListTile(
+          leading: Stack(
+            children: [
+              localImage(starshipScrapShipImage(starScrap), height: 100),
+              Positioned(
+                child: localImage(
+                  starshipScrapShipClassImage(starScrap),
+                  height: 30,
+                ),
+                bottom: -3,
+                left: -3,
+              ),
+            ],
+          ),
+          title: Text(
+            starshipScrapShipType(starScrap),
+            overflow: TextOverflow.ellipsis,
+          ),
+          subtitle: Text(
+            starshipScrapClassType(starScrap) + ' class',
+            overflow: TextOverflow.ellipsis,
+          ),
+          trailing: Icon(
+            isExpanded
+                ? Icons.keyboard_arrow_up_sharp
+                : Icons.keyboard_arrow_down_sharp,
+          ),
+          onTap: () {
+            setState(() {
+              if (isExpanded) {
+                expandedItems.remove(scrapKey);
+              } else {
+                expandedItems.add(scrapKey);
+              }
+            });
+          },
+        ),
+      ));
+      if (isExpanded) {
+        for (StarshipScrapItemDetail itemDetail in starScrap.itemDetails) {
+          listItems.add(starshipScrapTilePresenter(
+            context,
+            itemDetail,
+            widget.displayGenericItemColour,
+          ));
+        }
+      }
+    }
+
+    return listWithScrollbar(
+      shrinkWrap: true,
+      itemCount: listItems.length,
+      itemBuilder: (BuildContext context, int index) => listItems[index],
+      padding: const EdgeInsets.only(bottom: 64),
+    );
+  }
+}

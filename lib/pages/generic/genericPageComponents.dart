@@ -9,6 +9,7 @@ import '../../components/tilePresenters/inventoryTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemTilePresenter.dart';
 import '../../components/tilePresenters/rewardFromTilePresenter.dart';
 import '../../components/tilePresenters/seasonalExpeditionTilePresenter.dart';
+import '../../components/tilePresenters/starshipRewardTilePresenter.dart';
 import '../../components/tilePresenters/statBonusPresenter.dart';
 import '../../components/tilePresenters/twitchTilePresenter.dart';
 import '../../constants/AppImage.dart';
@@ -18,6 +19,7 @@ import '../../constants/UsageKey.dart';
 import '../../contracts/cart/cartItem.dart';
 import '../../contracts/chargeBy.dart';
 import '../../contracts/data/eggTrait.dart';
+import '../../contracts/data/starshipScrap.dart';
 import '../../contracts/enum/blueprintSource.dart';
 import '../../contracts/enum/currencyType.dart';
 import '../../contracts/genericPageAllRequired.dart';
@@ -606,8 +608,9 @@ List<Widget> getEggTraits(
 List<Widget> getRewardFrom(
   BuildContext context,
   GenericPageItem genericItem,
-  bool displayGenericItemColour,
-) {
+  bool displayGenericItemColour, {
+  List<StarshipScrap> starshipScrapItems,
+}) {
   List<Widget> rewardsFromWidgets = List.empty(growable: true);
   List<String> usages = genericItem?.usage ?? [];
 
@@ -645,6 +648,14 @@ List<Widget> getRewardFrom(
     rewardsFromWidgets.add(rewardFromTwitchTilePresenter(
       context,
       expSeasonNum,
+      displayGenericItemColour,
+    ));
+  }
+
+  if (usages.any((u) => u.contains(UsageKey.isRewardFromShipScrap))) {
+    rewardsFromWidgets.add(rewardFromStarshipScrapTilePresenter(
+      context,
+      starshipScrapItems,
       displayGenericItemColour,
     ));
   }

@@ -1,5 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/constants/UsageKey.dart';
+import 'package:assistantnms_app/contracts/data/alphabetTranslation.dart';
+import 'package:assistantnms_app/contracts/data/starshipScrap.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/IdPrefix.dart';
@@ -54,6 +56,7 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   item.usedInCooking = List.empty();
   item.chargedBy = Recharge.initial();
   item.usedToRecharge = List.empty();
+  item.starshipScrapItems = List.empty();
 
   if ((usage ?? []).contains(UsageKey.hasUsedToCraft)) {
     item.usedInRecipes = await getAllPossibleOutputsFromInput(context, itemId);
@@ -77,6 +80,9 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   }
   if ((usage ?? []).contains(UsageKey.hasUsedToRecharge)) {
     item.usedToRecharge = await usedToRechargeFuture(context, itemId);
+  }
+  if ((usage ?? []).contains(UsageKey.isRewardFromShipScrap)) {
+    item.starshipScrapItems = await rewardStarshipScrapFuture(context, itemId);
   }
 
   itemResult.value.eggTraits = await eggTraitsFuture(context, itemId);
@@ -167,7 +173,7 @@ Future<ResultWithValue<ProcessorRecipePageData>> processorPageDetails(
 }
 
 Future<List<Recharge>> usedToRechargeFuture(context, String itemId) async {
-  var rechargeItems =
+  ResultWithValue<List<Recharge>> rechargeItems =
       await getRechargeRepo().getRechargeByChargeById(context, itemId);
   if (rechargeItems.hasFailed) {
     return List.empty(growable: true);
@@ -176,7 +182,8 @@ Future<List<Recharge>> usedToRechargeFuture(context, String itemId) async {
 }
 
 Future<Recharge> rechargedByFuture(context, String itemId) async {
-  var rechargeItem = await getRechargeRepo().getRechargeById(context, itemId);
+  ResultWithValue<Recharge> rechargeItem =
+      await getRechargeRepo().getRechargeById(context, itemId);
   if (rechargeItem.hasFailed) {
     return Recharge();
   }
@@ -245,11 +252,22 @@ Future<List<PlatformControlMapping>> controlMappingsFuture(
 }
 
 Future<String> translationFuture(context, String itemId) async {
-  var translationResult = await getDataRepo().getTranslation(context, itemId);
+  ResultWithValue<AlphabetTranslation> translationResult =
+      await getDataRepo().getTranslation(context, itemId);
   if (translationResult.hasFailed) {
     return '';
   }
   return translationResult.value.text;
+}
+
+Future<List<StarshipScrap>> rewardStarshipScrapFuture(
+    context, String itemId) async {
+  ResultWithValue<List<StarshipScrap>> items =
+      await getDataRepo().getStarshipScrapDataForItem(context, itemId);
+  if (items.hasFailed) {
+    return List.empty();
+  }
+  return items.value;
 }
 
 // -----------------------------------------------------------------------------------------------------------------
