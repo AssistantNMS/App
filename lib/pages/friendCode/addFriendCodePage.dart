@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/dialogs/baseDialog.dart';
 import '../../components/dialogs/prettyDialog.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../constants/AnalyticsEvent.dart';
@@ -17,6 +16,7 @@ import '../../validation/commonValidator.dart';
 const String pc = 'PC';
 const String ps4 = 'PS';
 const String xb1 = 'XB';
+const String nsw = 'SW';
 
 class AddFriendCodePage extends StatefulWidget {
   const AddFriendCodePage({Key key}) : super(key: key);
@@ -128,11 +128,14 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
                 onlyCancelButton: true,
               );
             } else {
-              simpleDialog(
+              getDialog().showSimpleDialog(
                 context,
                 getTranslations().fromKey(LocaleKey.error),
-                getTranslations().fromKey(LocaleKey.friendCodeNotSubmitted),
-                buttons: [simpleDialogCloseButton(context)],
+                Text(getTranslations()
+                    .fromKey(LocaleKey.friendCodeNotSubmitted)),
+                buttonBuilder: (BuildContext ctx) => [
+                  getDialog().simpleDialogCloseButton(ctx),
+                ],
               );
             }
           },

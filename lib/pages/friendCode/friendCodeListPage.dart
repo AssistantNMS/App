@@ -34,16 +34,14 @@ class _FriendCodeListWidget extends State<FriendCodeListPage> {
     bool showPC = currentSelection.contains(pc);
     bool showPS4 = currentSelection.contains(ps4);
     bool showXb1 = currentSelection.contains(xb1);
-    return genericPageScaffold<dynamic>(
+    return basicGenericPageScaffold<dynamic>(
       context,
-      getTranslations().fromKey(LocaleKey.friendCodes),
-      null,
-      body: (BuildContext scaffoldContext, AsyncSnapshot<dynamic> snapshot) =>
-          SearchableList<FriendCodeViewModel>(
+      title: getTranslations().fromKey(LocaleKey.friendCodes),
+      body: SearchableList<FriendCodeViewModel>(
         () => getApiRepo().getFriendCodes(showPC, showPS4, showXb1),
         listItemDisplayer:
             (BuildContext context, FriendCodeViewModel friendCode) =>
-                friendCodeTilePresenter(context, scaffoldContext, friendCode),
+                friendCodeTilePresenter(context, context, friendCode),
         listItemSearch: (FriendCodeViewModel option, String search) =>
             option.name.toLowerCase().contains(search.toLowerCase()),
         minListForSearch: 0,
@@ -65,7 +63,7 @@ class _FriendCodeListWidget extends State<FriendCodeListPage> {
         ),
         key: Key('firendCodes-${currentSelection.length}'),
       ),
-      floatingActionButton: FloatingActionButton(
+      fab: FloatingActionButton(
         onPressed: () => getNavigation().navigateAsync(
           context,
           navigateTo: (context) => const AddFriendCodePage(),

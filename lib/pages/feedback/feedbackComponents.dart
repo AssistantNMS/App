@@ -1,10 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/dialogs/asyncInputDialog.dart';
-import '../../components/dialogs/optionsDialog.dart';
-import '../../components/dialogs/starDialog.dart';
 import '../../components/starRating.dart';
+import '../../constants/NmsUIConstants.dart';
 
 Widget feedbackPlainTextQuestionTilePresenter(BuildContext context,
         String question, String answer, Function(String) setAnswer) =>
@@ -14,15 +12,19 @@ Widget feedbackPlainTextQuestionTilePresenter(BuildContext context,
       name: question,
       maxLines: 5,
       subtitle: Text(
-        answer,
+        answer.isEmpty ? NMSUIConstants.FeedbackAnswerDefault : answer,
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
       ),
-      onTap: () => asyncInputDialog(context, question).then(
-        (String value) {
-          if (value != null) setAnswer(value);
-        },
-      ),
+      onTap: () async {
+        String value = await getDialog().asyncInputDialog(
+          context,
+          question,
+          defaultText: answer,
+        );
+
+        if (value != null && value.isNotEmpty) setAnswer(value);
+      },
     );
 
 Widget feedbackFiveOptionScaleQuestionTilePresenter(BuildContext context,
@@ -36,7 +38,11 @@ Widget feedbackFiveOptionScaleQuestionTilePresenter(BuildContext context,
     name: question,
     maxLines: 5,
     subtitle: starRating(context, intAnswer, onTap: setAnswerFromInt),
-    onTap: () => showStarDialog(context, question, onSuccess: setAnswerFromInt),
+    onTap: () => getDialog().showStarDialog(
+      context,
+      question,
+      onSuccess: (BuildContext ctx, int value) => setAnswerFromInt(value),
+    ),
   );
 }
 
@@ -56,7 +62,11 @@ Widget feedbackYesUnknownNoQuestionTilePresenter(BuildContext context,
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
     ),
-    onTap: () => showOptionsDialog(context, question, options,
-        onSuccess: (value) => setAnswer(value)),
+    onTap: () => getDialog().showOptionsDialog(
+      context,
+      question,
+      options,
+      onSuccess: (BuildContext ctx, String value) => setAnswer(value),
+    ),
   );
 }

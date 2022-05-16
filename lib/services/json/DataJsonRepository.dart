@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../../contracts/data/alphabetTranslation.dart';
 import '../../contracts/data/controlMappingList.dart';
 import '../../contracts/data/generatedMeta.dart';
+import '../../contracts/data/majorUpdateItem.dart';
 import '../../contracts/data/platformControlMapping.dart';
 
 import '../../contracts/data/eggTrait.dart';
@@ -319,6 +320,24 @@ class DataJsonRepository extends BaseJsonService
           "DataJsonRepository getTwitchDropById Exception: ${exception.toString()}");
       return ResultWithValue<TwitchCampaignData>(
           false, null, exception.toString());
+    }
+  }
+
+  @override
+  Future<ResultWithValue<List<MajorUpdateItem>>> getMajorUpdates(
+      BuildContext context) async {
+    try {
+      dynamic responseJson = await getJsonFromAssets(context, "data/updates");
+      List list = json.decode(responseJson);
+      List<MajorUpdateItem> trans = list //
+          .map((e) => MajorUpdateItem.fromJson(e))
+          .toList();
+      return ResultWithValue<List<MajorUpdateItem>>(true, trans, '');
+    } catch (exception) {
+      getLog().e(
+          "DataJsonRepository getMajorUpdates Exception: ${exception.toString()}");
+      return ResultWithValue<List<MajorUpdateItem>>(
+          false, List.empty(), exception.toString());
     }
   }
 }

@@ -361,14 +361,15 @@ Future<ResultWithValue<List<UpdateItemDetail>>> getUpdateNewItemsList(
 
 Future<ResultWithValue<List<GenericPageItem>>> getUpdateNewItemsDetailsList(
     BuildContext context,
-    UpdateItemDetail details,
+    List<String> itemIds,
     List<LocaleKey> repoJsonStrings) async {
-  var allItemsResult = await getAllFromLocaleKeys(context, repoJsonStrings);
+  ResultWithValue<List<GenericPageItem>> allItemsResult =
+      await getAllFromLocaleKeys(context, repoJsonStrings);
   if (allItemsResult.hasFailed) return allItemsResult;
 
   List<GenericPageItem> results = List.empty(growable: true);
-  for (var item in allItemsResult.value) {
-    if (!details.itemIds.any((newItem) => newItem == item.id)) continue;
+  for (GenericPageItem item in allItemsResult.value) {
+    if (!itemIds.any((newItem) => newItem == item.id)) continue;
     results.add(item);
   }
   results.sort((a, b) => a.name.compareTo(b.name));

@@ -63,14 +63,11 @@ class _GenericPageAllRequiredRawMaterialsWidget
       margin: const EdgeInsets.all(8),
     );
 
-    return genericPageScaffold<List<RequiredItemDetails>>(
+    return basicGenericPageScaffold(
       context,
-      item.typeName ?? getTranslations().fromKey(LocaleKey.loading),
-      null,
-      body: (BuildContext innerContext, unused) =>
-          getBody(innerContext, currentSelection, segmentedWidget),
-      floatingActionButton:
-          getFloatingActionButton(context, controller, item.genericItem),
+      title: item.typeName ?? getTranslations().fromKey(LocaleKey.loading),
+      body: getBody(context, currentSelection, segmentedWidget),
+      fab: getFloatingActionButton(context, controller, item.genericItem),
     );
   }
 

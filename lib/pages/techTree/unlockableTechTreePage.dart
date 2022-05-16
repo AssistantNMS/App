@@ -15,16 +15,16 @@ class UnlockableTechTreePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<ResultWithValue<List<UnlockableTechTree>>>(
-        future: getTechTreeRepo().getAll(context),
-        builder: (BuildContext context,
-            AsyncSnapshot<ResultWithValue<List<UnlockableTechTree>>> snapshot) {
-          return genericPageScaffold<ResultWithValue<List<UnlockableTechTree>>>(
-            context,
-            getTranslations().fromKey(LocaleKey.techTree),
-            snapshot,
-            body: getBody,
-          );
-        });
+      future: getTechTreeRepo().getAll(context),
+      builder: (BuildContext context,
+          AsyncSnapshot<ResultWithValue<List<UnlockableTechTree>>> snapshot) {
+        return basicGenericPageScaffold(
+          context,
+          title: getTranslations().fromKey(LocaleKey.techTree),
+          body: getBody(context, snapshot),
+        );
+      },
+    );
   }
 
   Widget getBody(BuildContext context,

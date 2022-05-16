@@ -7,7 +7,6 @@ import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 import '../../contracts/guide/guideSection.dart';
 import '../../contracts/guide/guideSectionItem.dart';
 
-import '../../components/dialogs/baseDialog.dart';
 import '../../components/guide/stickRowPresenters.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../constants/AnalyticsEvent.dart';
@@ -126,11 +125,13 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
         });
         Result apiResult = await appApi.likeGuide(meta.guid);
         if (apiResult.hasFailed) {
-          simpleDialog(
+          getDialog().showSimpleDialog(
             context,
             getTranslations().fromKey(LocaleKey.error),
-            getTranslations().fromKey(LocaleKey.likeNotSubmitted),
-            buttons: [simpleDialogCloseButton(context)],
+            Text(getTranslations().fromKey(LocaleKey.likeNotSubmitted)),
+            buttonBuilder: (BuildContext ctx) => [
+              getDialog().simpleDialogCloseButton(ctx),
+            ],
           );
           setState(() {
             isMetaLoading = false;

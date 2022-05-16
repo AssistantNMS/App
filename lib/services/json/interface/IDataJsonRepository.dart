@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../contracts/data/alphabetTranslation.dart';
 import '../../../contracts/data/eggTrait.dart';
 import '../../../contracts/data/generatedMeta.dart';
+import '../../../contracts/data/majorUpdateItem.dart';
 import '../../../contracts/data/platformControlMapping.dart';
 import '../../../contracts/data/quicksilverStore.dart';
 import '../../../contracts/data/socialItem.dart';
@@ -84,5 +85,10 @@ class IDataJsonRepository {
   Future<ResultWithValue<TwitchCampaignData>> getTwitchDropById(
       BuildContext context, int id) async {
     return ResultWithValue<TwitchCampaignData>(false, null, '');
+  }
+
+  Future<ResultWithValue<List<MajorUpdateItem>>> getMajorUpdates(
+      BuildContext context) async {
+    return ResultWithValue<List<MajorUpdateItem>>(false, null, '');
   }
 }

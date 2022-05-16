@@ -1,5 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
+import 'package:assistantnms_app/components/adaptive/windowsTitleBar.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -91,7 +92,8 @@ class AppShell extends StatelessWidget {
         },
       );
     }
-    return MaterialApp(
+
+    MaterialApp matApp = MaterialApp(
       key: key,
       title: 'Assistant for No Man\'s Sky',
       theme: theme,
@@ -101,6 +103,18 @@ class AppShell extends StatelessWidget {
       scrollBehavior: scrollBehavior,
       localizationsDelegates: localizationsDelegates,
       supportedLocales: supportedLocales,
+    );
+
+    if (!isWindows) return matApp;
+
+    return MaterialApp(
+      theme: theme,
+      darkTheme: darkTheme,
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: WindowsTitleBar('Assistant for No Man\'s Sky'),
+        body: matApp,
+      ),
     );
   }
 }

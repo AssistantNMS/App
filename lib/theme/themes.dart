@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/cupertino.dart'
+    show CupertinoThemeData, CupertinoTextThemeData;
 import 'package:flutter/material.dart';
 
 ThemeData getDynamicTheme(Brightness brightness, String fontFamily) {

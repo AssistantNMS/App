@@ -57,7 +57,7 @@ Widget patronFeatureTilePresenter(BuildContext context, String featureName,
       descrip,
       okButtonText: getTranslations().fromKey(LocaleKey.patreon),
       buttonOkColor: HexColor(NMSUIConstants.PatreonHex),
-      onSuccess: () => launchExternalURL(ExternalUrls.patreon),
+      onSuccess: (_) => launchExternalURL(ExternalUrls.patreon),
     );
   };
   return flatCard(

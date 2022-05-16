@@ -1,14 +1,14 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-class MenuItem {
+class CustomMenuItem {
   Widget image;
   LocaleKey title;
   Function navigateTo;
   String navigateToNamed;
   String navigateToExternl;
 
-  MenuItem({
+  CustomMenuItem({
     this.image,
     this.title,
     this.navigateTo,

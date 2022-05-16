@@ -52,17 +52,17 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
         String paramString =
             (params.isNotEmpty) ? ('?' + params.join('&')) : '';
         String fullLink = '$baseUrl$paramString';
+        String displayLink = fullLink.replaceAll('https://', '');
 
         List<Widget> widgets = List.empty(growable: true);
-        widgets.add(emptySpace1x());
+        widgets.add(emptySpace2x());
         widgets.add(Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              fullLink,
+              displayLink,
               textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontSize: 18),
             ),
           ],
         ));
@@ -108,7 +108,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
             getSnackbar().showSnackbar(
               storeContext,
               LocaleKey.share,
-              description: fullLink,
+              description: displayLink,
               onNegative: () async {
                 await getNavigation().pop(context);
                 await getNavigation().pop(context);
@@ -116,6 +116,19 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
             );
           },
         ));
+        widgets.add(ListTile(
+          leading: const Icon(Icons.open_in_new),
+          title: const Text('Open link'), // TODO translate
+          onTap: () => launchExternalURL(fullLink),
+        ));
+
+        if (isAndroid || isiOS) {
+          widgets.add(ListTile(
+            leading: const Icon(Icons.interests_outlined),
+            title: const Text('Open share menu'), // TODO translate
+            onTap: () => shareTextManual(fullLink),
+          ));
+        }
 
         widgets.add(emptySpace8x());
 

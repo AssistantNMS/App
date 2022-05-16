@@ -12,7 +12,7 @@ Future main() async {
     baseApi: 'https://api.nmsassistant.com',
     remoteConfigsConfigId: '9e83ecdf',
     donationsEnabled: true,
-    isProduction: false,
+    isProduction: true,
 
     // AssistantApps
     assistantAppsApiUrl: assistantAppsApiUrl,

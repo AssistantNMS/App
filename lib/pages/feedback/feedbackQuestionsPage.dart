@@ -2,10 +2,10 @@
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide UIConstants;
+import 'package:assistantnms_app/contracts/generated/feedbackQuestionViewModel.dart';
 import 'package:flutter/material.dart';
 
 import './feedbackComponents.dart';
-import '../../components/dialogs/baseDialog.dart';
 import '../../constants/NmsUIConstants.dart';
 import '../../contracts/enum/feedbackQuestionType.dart';
 import '../../contracts/generated/feedbackAnsweredViewModel.dart';
@@ -42,10 +42,11 @@ class _FeedbackQuestionsWidget extends State<FeedbackQuestionsPage> {
     ));
     widgets.add(customDivider());
 
-    for (var questionIndex = 0;
+    for (int questionIndex = 0;
         questionIndex < feedbackForm.questions.length;
         questionIndex++) {
-      var questionObj = feedbackForm.questions[questionIndex];
+      FeedbackQuestionViewModel questionObj =
+          feedbackForm.questions[questionIndex];
       void Function(String answer) onSuccess;
       onSuccess = (String answer) => setState(() {
             answerForm.answers[questionIndex].answer = answer;
@@ -101,36 +102,37 @@ class _FeedbackQuestionsWidget extends State<FeedbackQuestionsPage> {
       setState(() {
         isLoading = true;
       });
-      var result = await getApiRepo().sendFeedbackForm(answerForm);
+      Result result = await getApiRepo().sendFeedbackForm(answerForm);
       setState(() {
         isLoading = false;
       });
       if (result.hasFailed) {
-        simpleDialog(
+        getDialog().showSimpleDialog(
           context,
           getTranslations().fromKey(LocaleKey.error),
-          getTranslations().fromKey(LocaleKey.feedbackNotSubmitted),
-          buttons: [simpleDialogCloseButton(context)],
+          Text(getTranslations().fromKey(LocaleKey.feedbackNotSubmitted)),
+          buttonBuilder: (BuildContext ctx) => [
+            getDialog().simpleDialogCloseButton(ctx),
+          ],
         );
       } else {
-        simpleDialog(
+        getDialog().showSimpleDialog(
           context,
           getTranslations().fromKey(LocaleKey.success),
-          getTranslations().fromKey(LocaleKey.feedbackSubmitted),
-          buttons: [
-            simpleDialogCloseButton(
+          Text(getTranslations().fromKey(LocaleKey.feedbackSubmitted)),
+          buttonBuilder: (BuildContext ctx) => [
+            getDialog().simpleDialogCloseButton(
               context,
-              onTap: () async =>
-                  await getNavigation().navigateHomeAsync(context),
-            )
+              onTap: () async => await getNavigation().navigateHomeAsync(ctx),
+            ),
           ],
         );
       }
     };
 
-    var isButtonEnabled = submitButtonEnabled(feedbackForm, answerForm);
-    var buttonText = getTranslations().fromKey(LocaleKey.submit);
-    var button = isButtonEnabled
+    bool isButtonEnabled = submitButtonEnabled(feedbackForm, answerForm);
+    String buttonText = getTranslations().fromKey(LocaleKey.submit);
+    Widget button = isButtonEnabled
         ? positiveButton(
             context,
             title: buttonText,

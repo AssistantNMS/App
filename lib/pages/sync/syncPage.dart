@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/common/rowHelper.dart';
-import '../../components/dialogs/baseDialog.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/settingTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
@@ -166,14 +165,16 @@ class _SyncWidget extends State<SyncPage> {
               });
             } catch (exception) {
               getLog().e('signInWithGoogle exception' + exception.toString());
-              simpleDialog(
+              getDialog().showSimpleDialog(
                 context,
                 getTranslations().fromKey(LocaleKey.error),
-                getTranslations()
-                    .fromKey(LocaleKey.unableToLogInToGoogleAccount),
-                buttons: [
-                  simpleDialogCloseButton(
-                    context,
+                Text(
+                  getTranslations()
+                      .fromKey(LocaleKey.unableToLogInToGoogleAccount),
+                ),
+                buttonBuilder: (BuildContext ctx) => [
+                  getDialog().simpleDialogCloseButton(
+                    ctx,
                     onTap: () {
                       // Old signIn
                     },

@@ -32,6 +32,7 @@ import '../pages/ios/appleMenu.dart';
 import '../pages/journey/journeyMilestone.dart';
 import '../pages/language.dart';
 import '../pages/misc/retiredDrawerMenuPage.dart';
+import '../pages/newItemsInUpdate/majorUpdatesPage.dart';
 import '../pages/newItemsInUpdate/newItemsPage.dart';
 import '../pages/news/newsShellPage.dart';
 import '../pages/nmsfm/nmsfm.dart';
@@ -105,6 +106,7 @@ class Routes {
   static const String factionPage = '/factionPage';
   static const String twitchCampaignPage = '/twitchCampaignPage';
   static const String guideV2 = '/guideV2';
+  static const String majorUpdates = '/majorUpdates';
 }
 
 Map<String, Widget Function(BuildContext)> initNamedRoutes(
@@ -186,6 +188,7 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.factionPage: (context) => FactionPage(),
     Routes.twitchCampaignPage: (context) => TwitchCampaignPage(),
     Routes.guideV2: (context) => const AssistantAppsGuidesPage(),
+    Routes.majorUpdates: (context) => const MajorUpdatesPage(),
   });
   return routes;
 }

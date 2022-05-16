@@ -31,7 +31,7 @@ class NewItemsDetailPage extends StatelessWidget {
         builder: (_, viewModel) => SearchableList<GenericPageItem>(
           () => getUpdateNewItemsDetailsList(
             context,
-            details,
+            details.itemIds,
             getAllItemsLocaleKeys,
           ),
           listItemDisplayer: getListItemDisplayer(
