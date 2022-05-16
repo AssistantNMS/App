@@ -177,7 +177,9 @@ class GenericPage extends StatelessWidget {
       widgets.add(emptySpace1x());
       widgets.add(flatCard(
         child: requiredItemTilePresenter(
-            context, RequiredItem(id: NMSUIConstants.ObsoleteAppId)),
+          context,
+          RequiredItem(id: NMSUIConstants.ObsoleteAppId),
+        ),
       ));
     }
 
