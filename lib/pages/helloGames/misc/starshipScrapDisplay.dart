@@ -2,10 +2,10 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/tilePresenters/starshipRewardTilePresenter.dart';
-import '../../../contracts/data/starshipScrap.dart';
+import '../../../contracts/helloGames/starshipScrapDetailed.dart';
 
 class StarshipScrapDisplay extends StatefulWidget {
-  final List<StarshipScrap> starScraps;
+  final List<StarshipScrapDetailed> starScraps;
   final bool displayGenericItemColour;
   const StarshipScrapDisplay({
     this.starScraps,
@@ -24,17 +24,20 @@ class _StarshipScrapDisplayState extends State<StarshipScrapDisplay> {
   Widget build(BuildContext context) {
     List<Widget> listItems = List.empty(growable: true);
 
-    for (StarshipScrap starScrap in widget.starScraps) {
+    for (StarshipScrapDetailed starScrap in widget.starScraps) {
       String scrapKey = '${starScrap.shipClassType}-${starScrap.shipType}';
       bool isExpanded = expandedItems.contains(scrapKey);
       listItems.add(flatCard(
         child: ListTile(
           leading: Stack(
             children: [
-              localImage(starshipScrapShipImage(starScrap), height: 100),
+              localImage(
+                starshipScrapShipImage(starScrap.shipType),
+                height: 100,
+              ),
               Positioned(
                 child: localImage(
-                  starshipScrapShipClassImage(starScrap),
+                  starshipScrapShipClassImage(starScrap.shipClassType),
                   height: 30,
                 ),
                 bottom: -3,
@@ -43,11 +46,11 @@ class _StarshipScrapDisplayState extends State<StarshipScrapDisplay> {
             ],
           ),
           title: Text(
-            starshipScrapShipType(starScrap),
+            starshipScrapShipType(starScrap.shipType),
             overflow: TextOverflow.ellipsis,
           ),
           subtitle: Text(
-            starshipScrapClassType(starScrap) + ' class',
+            starshipScrapClassType(starScrap.shipClassType) + ' class',
             overflow: TextOverflow.ellipsis,
           ),
           trailing: Icon(
@@ -67,7 +70,7 @@ class _StarshipScrapDisplayState extends State<StarshipScrapDisplay> {
         ),
       ));
       if (isExpanded) {
-        for (StarshipScrapItemDetail itemDetail in starScrap.itemDetails) {
+        for (var itemDetail in starScrap.itemDetails) {
           listItems.add(starshipScrapTilePresenter(
             context,
             itemDetail,

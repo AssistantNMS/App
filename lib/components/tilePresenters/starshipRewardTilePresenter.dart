@@ -4,67 +4,37 @@ import 'package:flutter/material.dart';
 
 import '../../constants/NmsUIConstants.dart';
 import '../../contracts/data/starshipScrap.dart';
-import '../../contracts/requiredItem.dart';
-import '../../contracts/requiredItemDetails.dart';
-import '../../helpers/itemsHelper.dart';
+import '../../contracts/helloGames/starshipScrapDetailed.dart';
 import '../../pages/generic/genericPage.dart';
 import '../../pages/helloGames/misc/starshipScrapPage.dart';
 
 Widget starshipScrapTilePresenter(BuildContext context,
-    StarshipScrapItemDetail scrapDetail, bool displayBackgroundColour) {
-  return FutureBuilder<ResultWithValue<RequiredItemDetails>>(
-    key: Key(scrapDetail.id),
-    future: requiredItemDetails(
+    StarshipScrapDetailedItemDetail scrapDetail, bool displayBackgroundColour) {
+  String subtitle;
+  Widget trailing;
+  if (scrapDetail.amountMin != scrapDetail.amountMax &&
+      scrapDetail.amountMax != 0) {
+    subtitle = '${scrapDetail.amountMin} => ${scrapDetail.amountMax}';
+  }
+  if (scrapDetail.percentageChance > 0) {
+    if (subtitle != null && subtitle.isNotEmpty) {
+      trailing = Text('${scrapDetail.percentageChance.toStringAsFixed(0)} %');
+    } else {
+      subtitle = '${scrapDetail.percentageChance.toStringAsFixed(0)} %';
+    }
+  }
+
+  return genericListTileWithSubtitle(
+    context,
+    leadingImage: scrapDetail.icon,
+    borderRadius: NMSUIConstants.gameItemBorderRadius,
+    name: scrapDetail.name,
+    subtitle: subtitle != null ? Text(subtitle) : null,
+    trailing: trailing,
+    onTap: () async => await getNavigation().navigateAsync(
       context,
-      RequiredItem(id: scrapDetail.id, quantity: 1),
+      navigateTo: (context) => GenericPage(scrapDetail.id),
     ),
-    builder: (BuildContext context,
-        AsyncSnapshot<ResultWithValue<RequiredItemDetails>> snapshot) {
-      Widget errorWidget = asyncSnapshotHandler(
-        context,
-        snapshot,
-        loader: () => getLoading().smallLoadingTile(context),
-        isValidFunction: (ResultWithValue<RequiredItemDetails> result) {
-          if (snapshot.data.value == null ||
-              snapshot.data.value.icon == null ||
-              snapshot.data.value.name == null ||
-              snapshot.data.value.quantity == null) {
-            return false;
-          }
-          return true;
-        },
-      );
-      if (errorWidget != null) return errorWidget;
-
-      RequiredItemDetails details = snapshot.data.value;
-      String subtitle;
-      Widget trailing;
-      if (scrapDetail.amountMin != scrapDetail.amountMax &&
-          scrapDetail.amountMax != 0) {
-        subtitle = '${scrapDetail.amountMin} => ${scrapDetail.amountMax}';
-      }
-      if (scrapDetail.percentageChance > 0) {
-        if (subtitle != null && subtitle.isNotEmpty) {
-          trailing =
-              Text('${scrapDetail.percentageChance.toStringAsFixed(0)} %');
-        } else {
-          subtitle = '${scrapDetail.percentageChance.toStringAsFixed(0)} %';
-        }
-      }
-
-      return genericListTileWithSubtitle(
-        context,
-        leadingImage: details.icon,
-        borderRadius: NMSUIConstants.gameItemBorderRadius,
-        name: details.name,
-        subtitle: subtitle != null ? Text(subtitle) : null,
-        trailing: trailing,
-        onTap: () async => await getNavigation().navigateAsync(
-          context,
-          navigateTo: (context) => GenericPage(details.id),
-        ),
-      );
-    },
   );
 }
 
@@ -93,18 +63,19 @@ String starshipScrapHeading(StarshipScrap starshipScrap) {
     if (starshipScrap.shipType == 'Any') {
       subtitle = getTranslations().fromKey(LocaleKey.starshipScrapAny);
     } else {
-      subtitle =
-          '${starshipScrapShipType(starshipScrap)} - ${starshipScrapClassType(starshipScrap)}';
+      String type = starshipScrapShipType(starshipScrap.shipType);
+      String classType = starshipScrapShipType(starshipScrap.shipClassType);
+      subtitle = '$type - $classType';
     }
   }
   return subtitle;
 }
 
-String starshipScrapShipType(StarshipScrap starshipScrap) {
+String starshipScrapShipType(String shipType) {
   String subtitle = '';
-  if (starshipScrap?.shipType != null) {
-    subtitle = starshipScrap.shipType;
-    if (starshipScrap.shipType == 'Any') {
+  if (shipType != null) {
+    subtitle = shipType;
+    if (shipType == 'Any') {
       subtitle = getTranslations().fromKey(LocaleKey.starshipScrapAny);
     }
   }
@@ -112,35 +83,35 @@ String starshipScrapShipType(StarshipScrap starshipScrap) {
   return subtitle;
 }
 
-String starshipScrapClassType(StarshipScrap starshipScrap) {
+String starshipScrapClassType(String shipClassType) {
   String subtitle = '';
-  if (starshipScrap?.shipClassType != null) {
-    subtitle = starshipScrap.shipClassType;
-    if (starshipScrap.shipClassType == 'Unknown') {
+  if (shipClassType != null) {
+    subtitle = shipClassType;
+    if (shipClassType == 'Unknown') {
       subtitle = getTranslations().fromKey(LocaleKey.starshipScrapAny);
     }
   }
   return subtitle;
 }
 
-String starshipScrapShipImage(StarshipScrap starshipScrap) {
+String starshipScrapShipImage(String shipType) {
   String icon = AppImage.starshipScrap;
-  if (starshipScrap?.shipType != null) {
-    if (starshipScrap.shipType == 'Fighter') icon = 'other/162.png';
-    if (starshipScrap.shipType == 'Science') icon = 'other/129.png';
-    if (starshipScrap.shipType == 'Hauler') icon = 'other/132.png';
-    if (starshipScrap.shipType == 'Shuttle') icon = 'other/158.png';
+  if (shipType != null) {
+    if (shipType == 'Fighter') icon = 'other/162.png';
+    if (shipType == 'Science') icon = 'other/129.png';
+    if (shipType == 'Hauler') icon = 'other/132.png';
+    if (shipType == 'Shuttle') icon = 'other/158.png';
   }
   return icon;
 }
 
-String starshipScrapShipClassImage(StarshipScrap starshipScrap) {
+String starshipScrapShipClassImage(String shipClassType) {
   String icon = AppImage.unknown;
-  if (starshipScrap?.shipClassType != null) {
-    if (starshipScrap.shipClassType == 'S') icon = AppImage.sclass;
-    if (starshipScrap.shipClassType == 'A') icon = AppImage.aclass;
-    if (starshipScrap.shipClassType == 'B') icon = AppImage.bclass;
-    if (starshipScrap.shipClassType == 'C') icon = AppImage.cclass;
+  if (shipClassType != null) {
+    if (shipClassType == 'S') icon = AppImage.sclass;
+    if (shipClassType == 'A') icon = AppImage.aclass;
+    if (shipClassType == 'B') icon = AppImage.bclass;
+    if (shipClassType == 'C') icon = AppImage.cclass;
   }
   return icon;
 }
