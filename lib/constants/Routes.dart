@@ -31,7 +31,7 @@ import '../pages/homepage/customHomepage.dart';
 import '../pages/homepage/defaultHomePage.dart';
 import '../pages/inventory/inventoryListPage.dart';
 import '../pages/ios/appleMenu.dart';
-import '../pages/journey/journeyMilestone.dart';
+import '../pages/faction/journeyMilestone.dart';
 import '../pages/language.dart';
 import '../pages/misc/retiredDrawerMenuPage.dart';
 import '../pages/newItemsInUpdate/majorUpdatesPage.dart';
