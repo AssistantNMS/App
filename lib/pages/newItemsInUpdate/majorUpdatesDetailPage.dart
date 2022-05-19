@@ -62,9 +62,12 @@ class MajorUpdatesDetailPage extends StatelessWidget {
 
     listItems.add(emptySpace2x());
     listItems.add(Center(
-      child: localImage(
-        localMajorItem.icon,
-        width: 200,
+      child: ClipRRect(
+        borderRadius: const BorderRadius.only(
+          bottomRight: Radius.circular(8),
+          bottomLeft: Radius.circular(8),
+        ),
+        child: localImage(localMajorItem.icon, width: 200),
       ),
     ));
 

@@ -10,35 +10,18 @@ Widget majorUpdateTilePresenter(
   void Function() onTap,
   bool isPatronLocked = false,
 }) {
-  List<Row> firstRow = [
-    Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const Icon(Icons.date_range),
-        Text(simpleDate(updateNewItems.releaseDate)),
-      ],
-    )
-  ];
-  if (updateNewItems.itemIds.isNotEmpty) {
-    String trans = getTranslations().fromKey(LocaleKey.newItem);
-    firstRow.add(Row(
-      children: [
-        const Icon(Icons.card_giftcard_rounded),
-        Text('${updateNewItems.itemIds.length} $trans'),
-      ],
-    ));
-  }
-
-  Widget backgroundImgSource = ClipRRect(
-    borderRadius: const BorderRadius.only(
-      topLeft: Radius.circular(12),
-      topRight: Radius.circular(12),
+  Widget backgroundImgSource = Padding(
+    child: ClipRRect(
+      borderRadius: const BorderRadius.only(
+        topLeft: Radius.circular(12),
+        topRight: Radius.circular(12),
+      ),
+      child: Image.asset(
+        '${getPath().imageAssetPathPrefix}/${updateNewItems.icon}',
+        fit: BoxFit.fitWidth,
+      ),
     ),
-    child: Image.asset(
-      '${getPath().imageAssetPathPrefix}/${updateNewItems.icon}',
-      fit: BoxFit.fitWidth,
-    ),
+    padding: const EdgeInsets.symmetric(horizontal: 1),
   );
 
   Widget content = Column(
@@ -52,11 +35,9 @@ Widget majorUpdateTilePresenter(
         ),
         child: Container(
           color: const Color.fromRGBO(0, 0, 0, 0.45),
-          child: Column(
-            children: [
-              genericItemName(updateNewItems.title),
-            ],
-          ),
+          child: Column(children: [
+            genericItemName(updateNewItems.title),
+          ]),
           width: double.infinity,
         ),
       ),
@@ -86,7 +67,7 @@ Widget majorUpdateTilePresenter(
                 ),
               ),
               top: 0,
-              right: 0,
+              right: 1,
             )
           ],
         )
@@ -95,7 +76,7 @@ Widget majorUpdateTilePresenter(
   return InkWell(
     child: Padding(
       child: contentToDisplay,
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.only(top: 18, right: 12, bottom: 0, left: 12),
     ),
     onTap: onTap ??
         () => getNavigation().navigateAwayFromHomeAsync(
