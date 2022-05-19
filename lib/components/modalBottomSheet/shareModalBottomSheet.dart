@@ -59,10 +59,13 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
         widgets.add(Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              displayLink,
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
+            Expanded(
+              child: Text(
+                displayLink,
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 2,
+              ),
             ),
           ],
         ));
@@ -125,8 +128,11 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
         if (isAndroid || isiOS) {
           widgets.add(ListTile(
             leading: const Icon(Icons.interests_outlined),
-            title: const Text('Open share menu'), // TODO translate
-            onTap: () => shareTextManual(fullLink),
+            title: Text(getTranslations().fromKey(LocaleKey.shareOpenMenu)),
+            onTap: () async {
+              await getNavigation().pop(context);
+              shareTextManual(fullLink);
+            },
           ));
         }
 
@@ -135,7 +141,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
         return AnimatedSize(
           duration: AppDuration.modal,
           child: Container(
-            constraints: modalDefaultSize(context),
+            constraints: modalSmallHeightSize(context),
             child: ListView.builder(
               padding: NMSUIConstants.buttonPadding,
               itemCount: widgets.length,
