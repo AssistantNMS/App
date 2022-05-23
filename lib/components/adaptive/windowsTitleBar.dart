@@ -25,24 +25,27 @@ class WindowsTitleBar extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return WindowTitleBarBox(
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(4),
-            child: localImage(AppImage.assistantNMSWindowIcon),
-          ),
-          Expanded(
-            child: MoveWindow(
-              child: Center(
-                  child: Row(
-                children: [
-                  genericItemDescription(title),
-                ],
-              )),
+      child: Container(
+        color: getTheme().getScaffoldBackgroundColour(context),
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(4),
+              child: localImage(AppImage.assistantNMSWindowIcon),
             ),
-          ),
-          const WindowButtons(),
-        ],
+            Expanded(
+              child: MoveWindow(
+                child: Center(
+                    child: Row(
+                  children: [
+                    genericItemDescription(title),
+                  ],
+                )),
+              ),
+            ),
+            const WindowButtons(),
+          ],
+        ),
       ),
     );
   }

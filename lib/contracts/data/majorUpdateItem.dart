@@ -11,6 +11,7 @@ class MajorUpdateItem {
     this.guid,
     this.title,
     this.icon,
+    this.emoji,
     this.gameVersion,
     this.releaseDate,
     this.postUrl,
@@ -20,6 +21,7 @@ class MajorUpdateItem {
   final String guid;
   final String title;
   final String icon;
+  final String emoji;
   final String gameVersion;
   final DateTime releaseDate;
   final String postUrl;
@@ -33,6 +35,7 @@ class MajorUpdateItem {
         guid: readStringSafe(json, 'guid'),
         title: readStringSafe(json, 'title'),
         icon: readStringSafe(json, 'icon'),
+        emoji: readStringSafe(json, 'emoji'),
         gameVersion: readStringSafe(json, 'gameVersion'),
         releaseDate: readDateSafe(json, 'releaseDate'),
         postUrl: readStringSafe(json, 'postUrl'),
