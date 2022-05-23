@@ -3,12 +3,12 @@ import 'package:assistantnms_app/integration/dependencyInjection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
-import '../../components/tilePresenters/twitchTilePresenter.dart';
-import '../../constants/AnalyticsEvent.dart';
-import '../../contracts/redux/appState.dart';
-import '../../contracts/twitch/twitchCampaignData.dart';
-import '../../redux/modules/generic/genericItemViewModel.dart';
+import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../../components/tilePresenters/twitchTilePresenter.dart';
+import '../../../constants/AnalyticsEvent.dart';
+import '../../../contracts/redux/appState.dart';
+import '../../../contracts/twitch/twitchCampaignData.dart';
+import '../../../redux/modules/generic/genericItemViewModel.dart';
 
 class TwitchCampaignPage extends StatelessWidget {
   TwitchCampaignPage({Key key}) : super(key: key) {

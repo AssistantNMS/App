@@ -71,13 +71,15 @@ List<CustomMenu> getMenuOptionsSection1(
     ),
     // isApple
     //     ?
-    CustomMenu(
-      icon: localGetFromIcon(Icons.share),
-      drawerIcon: localGetDrawerFromIcon(Icons.share),
-      title: LocaleKey.share,
-      hideInCustom: true,
-      onTap: (BuildContext navContext) => shareText(LocaleKey.shareContent),
-    )
+    if (!isWindows) ...[
+      CustomMenu(
+        icon: localGetFromIcon(Icons.share),
+        drawerIcon: localGetDrawerFromIcon(Icons.share),
+        title: LocaleKey.share,
+        hideInCustom: true,
+        onTap: (BuildContext navContext) => shareText(LocaleKey.shareContent),
+      ),
+    ],
     // : CustomMenu(
     //     icon: getListTileImage(AppImage.donation, size: imageSize),
     //     drawerIcon: getListTileImage(AppImage.donation),
@@ -200,6 +202,13 @@ List<CustomMenu> getMenuOptionsSection3(
       navigateToNamed: Routes.newsPage,
     ),
     CustomMenu(
+      icon: localGetFromIcon(Icons.new_releases_sharp),
+      drawerIcon: localGetDrawerFromIcon(Icons.new_releases_sharp),
+      title: LocaleKey.newItemsAdded,
+      isNew: true,
+      navigateToNamed: Routes.majorUpdates,
+    ),
+    CustomMenu(
       icon: localGetFromIcon(Icons.show_chart),
       drawerIcon: localGetDrawerFromIcon(Icons.show_chart),
       title: LocaleKey.milestones,
@@ -257,7 +266,6 @@ List<CustomMenu> getMenuOptionsSection3(
       icon: localGetFromIcon(Icons.more_horiz),
       drawerIcon: localGetDrawerFromIcon(Icons.more_horiz),
       title: LocaleKey.more,
-      hideInCustom: true,
       navigateToNamed: Routes.retiredDrawerMenuPage,
     ),
   ];
@@ -273,12 +281,14 @@ List<CustomMenu> getMenuOptionsSection4(
       getCorrectlySizedImageFromIcon(context, icon, colour: drawerIconColour);
 
   return [
-    // CustomMenu(
-    //   icon: localGetFromIcon(Icons.sync),
-    //   drawerIcon: localGetDrawerFromIcon(Icons.sync),
-    //   title: LocaleKey.synchronize,
-    //   navigateToNamed: Routes.syncPage,
-    // ),
+    if (isAndroid || isApple) ...[
+      CustomMenu(
+        icon: localGetFromIcon(Icons.sync),
+        drawerIcon: localGetDrawerFromIcon(Icons.sync),
+        title: LocaleKey.synchronize,
+        navigateToNamed: Routes.syncPage,
+      ),
+    ],
     CustomMenu(
       icon: localGetFromIcon(Icons.feedback),
       drawerIcon: localGetDrawerFromIcon(Icons.feedback),

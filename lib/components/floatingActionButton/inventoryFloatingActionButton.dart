@@ -12,6 +12,7 @@ Widget inventoryFloatingActionButton(BuildContext context, String uniqueKey,
         context,
         navigateTo: (context) => AddInventorySlotPage(genericItem),
       ),
+      tooltip: getTranslations().fromKey(LocaleKey.inventoryManagement),
       heroTag: 'InventoryManagement-$uniqueKey',
       child: getListTileImage('fab/inventory.png'),
       foregroundColor: getTheme().fabForegroundColourSelector(context),
@@ -25,7 +26,9 @@ SpeedDialChild inventorySpeedDial(
         child: getListTileImage('fab/inventory.png'),
         padding: const EdgeInsets.all(8),
       ),
-      // label: getTranslations().fromKey(LocaleKey.inventoryManagement),
+      label: isDesktop
+          ? getTranslations().fromKey(LocaleKey.inventoryManagement)
+          : null,
       foregroundColor: getTheme().fabForegroundColourSelector(context),
       backgroundColor: getTheme().fabColourSelector(context),
       onTap: () async => await getNavigation().navigateAsync(

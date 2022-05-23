@@ -9,7 +9,7 @@ import '../../contracts/twitch/twitchCampaignData.dart';
 import '../../contracts/twitch/twitchCampaignReward.dart';
 import '../../helpers/itemsHelper.dart';
 import '../../pages/generic/genericPage.dart';
-import '../../pages/twitch/twitchCampaignDetailPage.dart';
+import '../../pages/helloGames/twitch/twitchCampaignDetailPage.dart';
 
 Widget rewardFromTwitchTilePresenter(
     BuildContext context, String campaignId, bool displayBackgroundColour) {

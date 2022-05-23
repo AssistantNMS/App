@@ -23,7 +23,7 @@ Widget rewardFromQuicksilverMerchantTilePresenter(
           colour: Colors.grey[400],
         )
       ]),
-      onTap: () async => await getNavigation().navigateAsync(
+      onTap: () => getNavigation().navigateAsync(
         context,
         navigateTo: (context) => CommunityMissionPage(),
       ),

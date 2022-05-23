@@ -9,7 +9,6 @@ import '../../constants/StorageKey.dart';
 import '../../contracts/auth/googleLoginModel.dart';
 import '../../integration/dependencyInjection.dart';
 import '../common/rowHelper.dart';
-import '../dialogs/baseDialog.dart';
 import '../tilePresenters/settingTilePresenter.dart';
 
 class GoogleLoginBottomSheet extends StatefulWidget {
@@ -168,13 +167,15 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
             // getNavigation().pop(context);
           } catch (exception) {
             getLog().e('signInWithGoogle exception' + exception.toString());
-            simpleDialog(
+
+            getDialog().showSimpleDialog(
               context,
               getTranslations().fromKey(LocaleKey.error),
-              getTranslations().fromKey(LocaleKey.unableToLogInToGoogleAccount),
-              buttons: [
-                simpleDialogCloseButton(
-                  context,
+              Text(getTranslations()
+                  .fromKey(LocaleKey.unableToLogInToGoogleAccount)),
+              buttonBuilder: (BuildContext ctx) => [
+                getDialog().simpleDialogCloseButton(
+                  ctx,
                   onTap: () {
                     // Old signIn
                   },

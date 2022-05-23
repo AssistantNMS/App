@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 
 Widget responsiveGrid<T>(BuildContext context, List<T> items,
     Widget Function(BuildContext context, T item) gridItemPresenter) {
-  var deviceWidth = MediaQuery.of(context).size.width;
-  var numberOfColumns = 6;
-  if (deviceWidth < 1000) numberOfColumns = 5;
-  if (deviceWidth < 800) numberOfColumns = 4;
-  if (deviceWidth < 600) numberOfColumns = 3;
-  if (deviceWidth < 400) numberOfColumns = 2;
+  double deviceWidth = MediaQuery.of(context).size.width;
+  int numberOfColumns = 8;
+  if (deviceWidth < 1400.0) numberOfColumns = 7;
+  if (deviceWidth < 1200.0) numberOfColumns = 6;
+  if (deviceWidth < 1000.0) numberOfColumns = 5;
+  if (deviceWidth < 800.0) numberOfColumns = 4;
+  if (deviceWidth < 600.0) numberOfColumns = 3;
+  if (deviceWidth < 400.0) numberOfColumns = 2;
 
   return GridView.builder(
     primary: false,
@@ -30,8 +32,9 @@ Widget responsiveSelectorGrid<T>(
     List<T> items,
     int selectedIndex,
     Widget Function(BuildContext context, T item) gridItemPresenter) {
-  var deviceWidth = MediaQuery.of(context).size.width;
-  var numberOfColumns = 8;
+  double deviceWidth = MediaQuery.of(context).size.width;
+  int numberOfColumns = 8;
+  if (deviceWidth < 800) numberOfColumns = 8;
   if (deviceWidth < 600) numberOfColumns = 6;
   if (deviceWidth < 400) numberOfColumns = 4;
 

@@ -48,22 +48,26 @@ Widget basicGenericPageScaffold<T>(
   );
 }
 
-Widget genericPageScaffold<T>(context, String title, snapshot,
-    {Widget Function(BuildContext context, AsyncSnapshot<T> snapshot) body,
-    bool showShortcutLinks = false,
-    floatingActionButton}) {
-  List<ActionItem> actions = List.empty(growable: true);
-  actions.add(ActionItem(
-    icon: Icons.home,
-    onPressed: () async => await getNavigation().navigateHomeAsync(context),
-  ));
+Widget genericPageScaffold<T>(
+  context,
+  String title,
+  snapshot, {
+  Widget Function(BuildContext context, AsyncSnapshot<T> snapshot) body,
+  bool showShortcutLinks = false,
+  List<ActionItem> additionalShortcutLinks,
+  floatingActionButton,
+}) {
   return getBaseWidget().appScaffold(
     context,
     appBar: getBaseWidget().appBarForSubPage(
       context,
       title: Text(title),
-      actions: actions,
-      shortcutActions: showShortcutLinks ? getShortcutActions(context) : null,
+      showHomeAction: true,
+      shortcutActions:
+          (showShortcutLinks || (additionalShortcutLinks ?? []).isNotEmpty)
+              ? getShortcutActions(context,
+                  additionalShortcutLinks: additionalShortcutLinks)
+              : null,
     ),
     body: body(context, snapshot),
     floatingActionButton: floatingActionButton,

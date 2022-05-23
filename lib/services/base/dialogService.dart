@@ -1,145 +1,150 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
 
-import '../../components/dialogs/baseDialog.dart';
 import '../../components/starRating.dart';
 
 class DialogService implements IDialogService {
   //
   @override
-  void showSimpleDialog(context, String title, Widget content,
-      {List<Widget> buttons}) {
-    Alert(
+  void showSimpleDialog(
+    context,
+    String title,
+    Widget content, {
+    List<Widget> Function(BuildContext) buttonBuilder,
+  }) {
+    showDialog(
       context: context,
-      title: title,
-      style: AlertStyle(
-        titleStyle: TextStyle(
-          color: getTheme().getIsDark(context) ? Colors.white : Colors.black,
-        ),
+      builder: (BuildContext dialogCtx) => AlertDialog(
+        title: Text(title),
+        // style: AlertStyle(
+        //   titleStyle: TextStyle(
+        //     color: getTheme().getIsDark(context) ? Colors.white : Colors.black,
+        //   ),
+        // ),
+        content: content,
+        actions: (buttonBuilder == null) ? [] : buttonBuilder(dialogCtx),
       ),
-      content: content,
-      buttons: buttons as List<DialogButton>,
-    ).show();
-  }
-
-  @override
-  void showSimpleHelpDialog(context, String title, String helpContent,
-      {List<Widget> buttons}) {
-    nmsShowSimpleHelpDialog(
-      context,
-      title,
-      helpContent,
-      buttons: [simpleDialogCloseButton(context)],
     );
   }
 
   @override
-  Widget simpleDialogCloseButton(context, {Function onTap}) => DialogButton(
-        child: Text(
-          getTranslations().fromKey(LocaleKey.close),
-          style: TextStyle(
-            color: getTheme().getIsDark(context) ? Colors.black : Colors.white,
-          ),
-        ),
-        onPressed: () {
-          getNavigation().pop(context);
-          if (onTap != null) onTap();
-        },
-      );
-
-  @override
-  Widget simpleDialogPositiveButton(context,
-          {LocaleKey title, Function onTap}) =>
-      DialogButton(
-        child: Text(
-          getTranslations().fromKey(title ?? LocaleKey.apply),
-          style: TextStyle(
-            color: getTheme().getIsDark(context) ? Colors.black : Colors.white,
-          ),
-        ),
-        onPressed: () {
-          getNavigation().pop(context);
-          if (onTap != null) onTap();
-        },
-      );
-
-  @override
-  void showOptionsDialog(context, String title, List<DropdownOption> options,
-      {String selectedValue = '', Function(String value) onSuccess}) {
-    List<DialogButton> buttons = List.empty(growable: true);
-    buttons.add(DialogButton(
-      child: Text(
-        getTranslations().fromKey(LocaleKey.close),
-        style: TextStyle(
-          color: getTheme().getIsDark(context) ? Colors.black : Colors.white,
-        ),
-      ),
-      onPressed: () => getNavigation().pop(context),
-    ));
-
-    void Function(String value) tempOnChange;
-    tempOnChange = (String value) {
-      if (onSuccess != null) onSuccess(value);
-      getNavigation().pop(context);
-    };
-
+  void showSimpleHelpDialog(
+    context,
+    String title,
+    String helpContent, {
+    List<Widget> Function(BuildContext) buttonBuilder,
+  }) {
     showSimpleDialog(
       context,
-      title ?? getTranslations().fromKey(LocaleKey.quantity),
+      title,
       Column(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
-        children: options
-            .map((opt) => genericListTile(
-                  context,
-                  leadingImage: null,
-                  name: opt.title,
-                  onTap: () => tempOnChange(opt.value),
-                ))
-            .toList(),
+        children: [
+          Text(
+            helpContent,
+            style: const TextStyle(fontSize: 14),
+            textAlign: TextAlign.center,
+          )
+        ],
       ),
-      buttons: buttons,
+      buttonBuilder: (BuildContext innerCtx) => (buttonBuilder == null)
+          ? [simpleDialogCloseButton(innerCtx)]
+          : buttonBuilder(innerCtx),
     );
   }
 
   @override
-  void showQuantityDialog(context, TextEditingController controller,
-      {String title, Function(String) onSuccess}) {
+  Widget simpleDialogCloseButton(
+    context, {
+    Function onTap,
+  }) =>
+      MaterialButton(
+        child: Padding(
+          padding: const EdgeInsets.all(4),
+          child: Text(getTranslations().fromKey(LocaleKey.close)),
+        ),
+        textColor: getTheme().getPrimaryColour(context),
+        onPressed: () {
+          getNavigation().pop(context);
+          if (onTap != null) onTap();
+        },
+      );
+
+  @override
+  Widget simpleDialogPositiveButton(
+    context, {
+    LocaleKey title,
+    Function onTap,
+  }) =>
+      MaterialButton(
+        child: Padding(
+          padding: const EdgeInsets.all(4),
+          child: Text(getTranslations().fromKey(title ?? LocaleKey.apply)),
+        ),
+        textColor: getTheme().getPrimaryColour(context),
+        onPressed: () {
+          if (onTap != null) onTap();
+        },
+      );
+
+  @override
+  void showOptionsDialog(
+    context,
+    String title,
+    List<DropdownOption> options, {
+    String selectedValue = '',
+    Function(BuildContext ctx, String value) onSuccess,
+  }) {
+    void Function(BuildContext dialogCtx, String value) tempOnChange;
+    tempOnChange = (BuildContext dialogCtx, String value) {
+      if (onSuccess != null) onSuccess(dialogCtx, value);
+      getNavigation().pop(dialogCtx);
+    };
+
+    showDialog(
+      context: context,
+      builder: (BuildContext dialogCtx) => AlertDialog(
+        title: Text(title ?? getTranslations().fromKey(LocaleKey.quantity)),
+        content: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: options
+              .map((opt) => genericListTile(
+                    dialogCtx,
+                    leadingImage: null,
+                    name: opt.title,
+                    onTap: () => tempOnChange(dialogCtx, opt.value),
+                  ))
+              .toList(),
+        ),
+        actions: [
+          simpleDialogCloseButton(dialogCtx),
+        ],
+      ),
+    );
+  }
+
+  @override
+  void showQuantityDialog(
+    context,
+    TextEditingController controller, {
+    String title,
+    Function(BuildContext ctx, String) onSuccess,
+  }) {
     void onControllerTextChange(
-        TextEditingController textEditController, String content) {
+      TextEditingController textEditController,
+      String content,
+    ) {
       textEditController
         ..text = content
         ..selection = const TextSelection.collapsed(offset: 0);
     }
 
-    List<DialogButton> buttons = List.empty(growable: true);
-    buttons.add(DialogButton(
-      child: Text(
-        getTranslations().fromKey(LocaleKey.close),
-        style: TextStyle(
-          color: getTheme().getIsDark(context) ? Colors.black : Colors.white,
-        ),
-      ),
-      onPressed: () => getNavigation().pop(context),
-    ));
-    buttons.add(DialogButton(
-      child: Text(
-        getTranslations().fromKey(LocaleKey.apply),
-        style: TextStyle(
-          color: getTheme().getIsDark(context) ? Colors.black : Colors.white,
-        ),
-      ),
-      onPressed: () {
-        onSuccess(controller.text);
-        getNavigation().pop(context);
-      },
-    ));
-
     List<int> amounts = [1, 2, 3, 5, 10, 25];
     List<InputChip> inputs = List.empty(growable: true);
-    for (var amount in amounts) {
+    for (int amount in amounts) {
       inputs.add(
         InputChip(
           label: Text(
@@ -178,84 +183,99 @@ class DialogService implements IDialogService {
           Wrap(alignment: WrapAlignment.spaceEvenly, children: inputs),
         ],
       ),
-      buttons: buttons,
-    );
-  }
-
-  @override
-  void showStarDialog(context, String title,
-      {int currentRating = 0, Function(int) onSuccess}) {
-    List<DialogButton> buttons = List.empty(growable: true);
-    buttons.add(DialogButton(
-      child: Text(
-        getTranslations().fromKey(LocaleKey.close),
-        style: TextStyle(
-          color: getTheme().getIsDark(context) ? Colors.black : Colors.white,
+      buttonBuilder: (BuildContext buttonCtx) => [
+        simpleDialogCloseButton(buttonCtx),
+        simpleDialogPositiveButton(
+          buttonCtx,
+          onTap: () {
+            getNavigation().pop(buttonCtx);
+            onSuccess(buttonCtx, controller.text);
+          },
         ),
-      ),
-      onPressed: () => getNavigation().pop(context),
-    ));
-
-    showSimpleDialog(
-      context,
-      title,
-      Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          starRating(context, currentRating, size: 64, onTap: (int value) {
-            onSuccess(value);
-            getNavigation().pop(context);
-          })
-        ],
-      ),
-      buttons: buttons,
+      ],
     );
   }
 
   @override
-  Future<String> asyncInputDialog(BuildContext context, String title,
-      {String defaultText,
-      List<Widget> actions,
-      TextInputType inputType}) async {
+  void showStarDialog(
+    context,
+    String title, {
+    int currentRating = 0,
+    Function(BuildContext ctx, int) onSuccess,
+  }) {
+    showDialog(
+      context: context,
+      builder: (BuildContext dialogCtx) => AlertDialog(
+        title: Text(title),
+        content: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            starRating(
+              context,
+              currentRating,
+              size: 64,
+              onTap: (int value) {
+                onSuccess(dialogCtx, value);
+                getNavigation().pop(dialogCtx);
+              },
+            ),
+          ],
+        ),
+        // actions: [
+        //   simpleDialogCloseButton(dialogCtx),
+        // ],
+      ),
+    );
+  }
+
+  @override
+  Future<String> asyncInputDialog(
+    BuildContext context,
+    String title, {
+    String defaultText,
+    List<Widget> Function(BuildContext) buttonBuilder,
+    TextInputType inputType,
+  }) async {
     String output = '';
     List<TextInputFormatter> inputFormatters = inputType == TextInputType.number
         ? <TextInputFormatter>[FilteringTextInputFormatter.digitsOnly]
         : null;
-    var alertResult = await Alert(
+
+    await showDialog<String>(
       context: context,
-      title: title,
-      closeFunction: () {},
-      style: AlertStyle(
-        titleStyle: TextStyle(
-          color: getTheme().getIsDark(context) ? Colors.white : Colors.black,
-        ),
-      ),
-      content: Row(
-        children: <Widget>[
-          Expanded(
+      builder: (BuildContext dialogCtx) => AlertDialog(
+        title: Text(title),
+        content: Row(
+          children: [
+            Expanded(
               child: TextField(
-            autofocus: true,
-            controller: TextEditingController(text: defaultText),
-            keyboardType: inputType == null ? TextInputType.text : null,
-            inputFormatters: inputFormatters,
-            onChanged: (value) {
-              output = value;
-            },
-          ))
-        ],
+                autofocus: true,
+                controller: TextEditingController(text: defaultText),
+                keyboardType: inputType == null ? TextInputType.text : null,
+                inputFormatters: inputFormatters,
+                onChanged: (value) {
+                  output = value;
+                },
+              ),
+            )
+          ],
+        ),
+        actions: (buttonBuilder == null)
+            ? [
+                simpleDialogCloseButton(dialogCtx),
+                simpleDialogPositiveButton(
+                  dialogCtx,
+                  onTap: () {
+                    getNavigation().pop(dialogCtx);
+                  },
+                ),
+              ]
+            : buttonBuilder(dialogCtx),
       ),
-      buttons: [
-        DialogButton(
-          child: Text(getTranslations().fromKey(LocaleKey.close)),
-          onPressed: () => getNavigation().pop(context, false),
-        ),
-        DialogButton(
-          child: Text(getTranslations().fromKey(LocaleKey.apply)),
-          onPressed: () => getNavigation().pop(context, true),
-        ),
-      ],
-    ).show(); // This is ugly, I know. Don't touch though, here be Dragons
-    return alertResult ? output : null;
+    );
+
+    if (output == null) return '';
+    return output.isNotEmpty ? output : '';
   }
 }

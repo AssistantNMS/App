@@ -17,13 +17,14 @@ class AllPossibleOutputsPage<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return genericPageScaffold(
-      context, title, null, //unused
-      body: getBody,
+    return basicGenericPageScaffold(
+      context,
+      title: title,
+      body: getBody(context),
     );
   }
 
-  Widget getBody(BuildContext context, unused) {
+  Widget getBody(BuildContext context) {
     List<Widget> widgets = List.empty(growable: true);
     if (requiredItems.isNotEmpty) {
       widgets.addAll(requiredItems.map((p) => presenter(context, p)).toList());
