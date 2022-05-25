@@ -620,7 +620,7 @@
     "Icon": "products/21.png",
     "Name": "스타실드 배터리",
     "Group": "휴대용 에너지 저장 장치",
-    "Description": "<COMMODITY>함선 방어 시스템<>에서의 사용에 최적화된 동력 비축 유닛입니다.\n\n<SPECIAL>삼중 수소<>를 연료료 사용하는 축전기가 <TECHNOLOGY>편향 방어막<>에 신속 방출이 가능한 전하를 제공하지만, 크기가 좀 더 작은 장비에 과부하를 일으킬 수도 있습니다.",
+    "Description": "<COMMODITY>함선 방어 시스템<>에서의 사용에 최적화된 동력 비축 유닛입니다.\n \n<SPECIAL>삼중 수소<>를 연료료 사용하는 축전기가 <TECHNOLOGY>편향 방어막<>에 신속 방출이 가능한 전하를 제공하지만, 크기가 좀 더 작은 장비에 과부하를 일으킬 수도 있습니다.",
     "BaseValueUnits": 500.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 50.0,
@@ -3902,6 +3902,47 @@
     "Description": "<TECHNOLOGY>엑소슈트<>를 위한 <SPECIAL>특이<> 업그레이드입니다. <VAL_ON><IMG>FE_ALT1<><>으로 업그레이드 <VAL_ON>설치 절차<>를 시작하십시오.\n\n이 이상한 잔해 파편은 <SPECIAL>센티널 기술<>에서 추출한 것입니다. 나노로봇 거품이 엑소슈트 시스템 내부에 완전히 퍼지기 전에는 이 파편이 슈트 기능에 끼치는 정확한 효과를 예측할 수 없습니다.",
     "BaseValueUnits": 480.0,
     "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "prod168",
+    "Icon": "products/168.png",
+    "Name": "임시 함선 궤적",
+    "Group": "함선 배기 오버라이드",
+    "Description": "독점 <STELLAR>함선 배기 수정기<>입니다.\n\n우주 공명실이 함선 배기구와 상호작용해 추진 에너지를 변화시켜 시간을 일렬로 동요시킵니다.\n\n이 <TECHNOLOGY>기술<>을 함선 인벤토리에 설치해 엔진 배기 궤적의 모습을 변경합니다.",
+    "BaseValueUnits": 2100.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "prod169",
+    "Icon": "products/169.png",
+    "Name": "사전 포장 %NAME% 업그레이드",
+    "Group": "설치 가능한 기술 패키지",
+    "Description": "핵심 기술을 쉽게 설치할 수 있도록 설계된 <TECHNOLOGY>사전 제작 배선 패키지<>입니다. <VAL_ON><IMG>FE_ALT1<><>로 <STELLAR>설치 과정<>을 시작합니다.\n\n%TECH_DESC%",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [
       "HasDevProperties",
