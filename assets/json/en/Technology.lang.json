@@ -8076,5 +8076,58 @@
       }
     ],
     "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech218",
+    "Icon": "technology/218.png",
+    "Name": "Vesper Sail",
+    "Group": "Advanced Engine Technology",
+    "Description": "A high-performance <STELLAR>solar sail<>, deployed automatically during flight. This advanced <TECHNOLOGY>propulsion device<> generates an electric field within the sails themselves, allowing the starship to build momentum from the solar wind.\n\nOffers substantial gains in <STELLAR>fuel efficiency<> and <STELLAR>boost<> performance over conventional engine systems, as well as enabling photovoltaic <STELLAR>recharge<> of the starship's <TECHNOLOGY>launch systems<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw6",
+        "Quantity": 125
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Pulse Drive Fuel Efficiency",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "80"
+      },
+      {
+        "Name": "Automatic Recharging",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "1"
+      },
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "15"
+      },
+      {
+        "Name": "Maneuverability",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
   }
 ]
