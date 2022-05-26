@@ -1,7 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/common/image.dart';
 import '../../constants/AppImage.dart';
 import '../../contracts/generated/expeditionViewModel.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
