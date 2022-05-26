@@ -74,7 +74,7 @@ Widget seasonalExpeditionRewardDetailTilePresenter(
   ListTile tile = genericListTileWithSubtitle(
     context,
     leadingImage: reward.icon,
-    name: reward.name,
+    name: reward.name ?? getTranslations().fromKey(LocaleKey.unknown),
     borderRadius: NMSUIConstants.gameItemBorderRadius,
     subtitle: addPadding ? null : Text(subtitleText ?? ''),
     imageBackgroundColour: showBackgroundColours ? reward.colour : null,

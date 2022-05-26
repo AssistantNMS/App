@@ -94,7 +94,8 @@ Widget seasonalExpeditionPhaseTilePresenter(BuildContext context,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           genericItemName(seasonalExpedition.title),
-          genericItemDescription(description)
+          genericItemDescription(description),
+          emptySpace1x(),
         ],
       ),
       onTap: () {
@@ -172,6 +173,7 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
         children: <Widget>[
           textWrapper(seasonalExpeditionMilestone.title, fontSize: 20),
           textWrapper(description ?? ''),
+          emptySpace1x(),
         ],
       ),
       trailingFlex: hasRewards ? 4 : 2,

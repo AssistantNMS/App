@@ -45,7 +45,7 @@ class GenericJsonRepository extends BaseJsonService
       return ResultWithValue<GenericPageItem>(true, selectedGeneric, '');
     } catch (exception) {
       getLog().e(
-          "GenericJsonRepo($detailsJsonLocale) - getById - Exception: ${exception.toString()}");
+          "GenericJsonRepo($detailsJsonLocale) - getById - $id - Exception: ${exception.toString()}");
       return ResultWithValue<GenericPageItem>(
           false, GenericPageItem(), exception.toString());
     }
@@ -67,7 +67,7 @@ class GenericJsonRepository extends BaseJsonService
       return ResultWithValue<List<GenericPageItem>>(true, craftableItems, '');
     } catch (exception) {
       getLog().e(
-          "GenericJsonRepo($detailsJsonLocale) - getByInputsId - Exception: ${exception.toString()}");
+          "GenericJsonRepo($detailsJsonLocale) - getByInputsId - $id - Exception: ${exception.toString()}");
       return ResultWithValue<List<GenericPageItem>>(
           false, List.empty(growable: true), exception.toString());
     }
