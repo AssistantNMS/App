@@ -3,6 +3,7 @@ import 'package:assistantnms_app/components/common/cachedFutureBuilder.dart';
 import 'package:flutter/material.dart';
 import '../../constants/NmsUIConstants.dart';
 import '../../contracts/generated/expeditionViewModel.dart' as expedition_api;
+import '../../contracts/seasonalExpedition/expeditionMilestoneType.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../pages/seasonalExpedition/seasonalExpeditionPhaseListPage.dart';
 import '../../redux/modules/expedition/expeditionViewModel.dart';
@@ -166,6 +167,10 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
       90,
       seasonalExpeditionMilestone.title,
       seasonalExpeditionMilestone.icon,
+      topLeftBanner: seasonalExpeditionMilestone.type ==
+              SeasonalExpeditionMilestoneType.Optional
+          ? 'Optional'
+          : null,
       bodyFlex: 8,
       bodyDisplayFunc: () => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -211,6 +216,7 @@ Widget seasonalExpeditionBase(
   String title,
   String imagePath, {
   bool useMaterial,
+  String topLeftBanner,
   Color backgroundColour,
   int imageFlex = 4,
   int bodyFlex = 9,
@@ -219,7 +225,7 @@ Widget seasonalExpeditionBase(
   Widget Function() trailingDisplayFunc,
   Function() onTap,
 }) {
-  InkWell child = InkWell(
+  InkWell innerChild = InkWell(
     borderRadius: BorderRadius.circular(6.0),
     child: Row(children: [
       Expanded(
@@ -255,6 +261,16 @@ Widget seasonalExpeditionBase(
     ]),
     onTap: onTap,
   );
+  Widget child = innerChild;
+  if (topLeftBanner != null) {
+    child = ClipRect(
+      child: Banner(
+        message: 'Optional', // TODO translate
+        location: BannerLocation.topEnd,
+        child: innerChild,
+      ),
+    );
+  }
   return Container(
     height: height,
     padding: const EdgeInsets.all(0),

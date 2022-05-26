@@ -117,6 +117,7 @@ class AppImage {
   static const String proceduralTraveller =
       'contributors/proceduralTraveller.jpg';
   static const String captainSteve = 'contributors/captainSteve.png';
+  static const String podcast1616 = 'contributors/podcast1616.jpg';
   static const String cyberpunk2350 = 'contributors/cyberpunk2350.jpg';
   static const String veritasVelez = 'contributors/veritasVelez.jpg';
   static const String assistantNMSIcon = 'icon.png';

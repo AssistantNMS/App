@@ -52,6 +52,19 @@ Widget captainSteveYoutubeVideoTile(BuildContext context, String link,
       onTap: () => launchExternalURL(link),
     );
 
+Widget podcast1616PlaylistTile(BuildContext context, {String subtitle}) =>
+    genericListTileWithSubtitleAndImageCount(
+      context,
+      leadingImage: localImage(
+        '${getPath().imageAssetPathPrefix}/${AppImage.podcast1616}',
+        padding: const EdgeInsets.all(8),
+      ),
+      title: '16 16 Podcast',
+      subtitle: const Text(NmsExternalUrls.podacst1616Youtube, maxLines: 1),
+      trailing: const Icon(Icons.open_in_new),
+      onTap: () => launchExternalURL(NmsExternalUrls.podacst1616Youtube),
+    );
+
 Widget cyberpunk2350Tile(BuildContext context, {String subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,

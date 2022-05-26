@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/components/tilePresenters/youtubersTilePresenter.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
@@ -148,6 +149,10 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
       listItems.add(emptySpace1x());
     }
     listItems.add(customDivider());
+    listItems.add(emptySpace1x());
+
+    listItems.add(Card(child: podcast1616PlaylistTile(bodyCtx)));
+
     listItems.add(emptySpace1x());
 
     List<TableRow> rows = [
