@@ -136,6 +136,29 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
         margin: const EdgeInsets.all(4.0),
       );
 
+  bool hasRewards = seasonalExpeditionMilestone.rewards.isNotEmpty;
+
+  void Function(bool) checkBoxOnTap;
+  checkBoxOnTap = (bool newValue) => newValue
+      ? viewModel.addToClaimedRewards(
+          seasonalExpeditionMilestone.id,
+        )
+      : viewModel.removeFromClaimedRewards(
+          seasonalExpeditionMilestone.id,
+        );
+
+  void Function() rewardOnTap = () => checkBoxOnTap(!isClaimed);
+  if (hasRewards) {
+    rewardOnTap = () => adaptiveBottomModalSheet(
+          context,
+          hasRoundedCorners: true,
+          builder: (_) => ExpeditionRewardsListModalBottomSheet(
+            seasonalExpeditionMilestone.id,
+            seasonalExpeditionMilestone.rewards,
+          ),
+        );
+  }
+
   return Card(
     child: seasonalExpeditionBase(
       context,
@@ -151,42 +174,31 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
           textWrapper(description ?? ''),
         ],
       ),
-      trailingFlex: 4,
+      trailingFlex: hasRewards ? 4 : 2,
       trailingDisplayFunc: () => Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Row(
             children: [
-              const Padding(
-                padding: EdgeInsets.only(right: 4),
-                child: Icon(
-                  Icons.info_sharp,
-                  size: 30,
+              if (hasRewards) ...[
+                const Padding(
+                  padding: EdgeInsets.only(right: 4),
+                  child: Icon(
+                    Icons.info_sharp,
+                    size: 30,
+                  ),
                 ),
-              ),
+              ],
               adaptiveCheckbox(
                 value: isClaimed,
-                onChanged: (bool newValue) => newValue
-                    ? viewModel.addToClaimedRewards(
-                        seasonalExpeditionMilestone.id,
-                      )
-                    : viewModel.removeFromClaimedRewards(
-                        seasonalExpeditionMilestone.id,
-                      ),
+                onChanged: checkBoxOnTap,
               ),
             ],
           ),
         ],
       ),
-      onTap: () => adaptiveBottomModalSheet(
-        context,
-        hasRoundedCorners: true,
-        builder: (_) => ExpeditionRewardsListModalBottomSheet(
-          seasonalExpeditionMilestone.id,
-          seasonalExpeditionMilestone.rewards,
-        ),
-      ),
+      onTap: rewardOnTap,
     ),
   );
 }
@@ -205,7 +217,7 @@ Widget seasonalExpeditionBase(
   Widget Function() trailingDisplayFunc,
   Function() onTap,
 }) {
-  var child = InkWell(
+  InkWell child = InkWell(
     borderRadius: BorderRadius.circular(6.0),
     child: Row(children: [
       Expanded(

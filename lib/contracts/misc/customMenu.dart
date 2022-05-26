@@ -281,14 +281,14 @@ List<CustomMenu> getMenuOptionsSection4(
       getCorrectlySizedImageFromIcon(context, icon, colour: drawerIconColour);
 
   return [
-    if (isAndroid || isApple) ...[
-      CustomMenu(
-        icon: localGetFromIcon(Icons.sync),
-        drawerIcon: localGetDrawerFromIcon(Icons.sync),
-        title: LocaleKey.synchronize,
-        navigateToNamed: Routes.syncPage,
-      ),
-    ],
+    // if (isAndroid || isApple) ...[
+    //   CustomMenu(
+    //     icon: localGetFromIcon(Icons.sync),
+    //     drawerIcon: localGetDrawerFromIcon(Icons.sync),
+    //     title: LocaleKey.synchronize,
+    //     navigateToNamed: Routes.syncPage,
+    //   ),
+    // ],
     CustomMenu(
       icon: localGetFromIcon(Icons.feedback),
       drawerIcon: localGetDrawerFromIcon(Icons.feedback),

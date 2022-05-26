@@ -113,16 +113,15 @@ class SeasonalExpeditionSeasonListPage extends StatelessWidget {
           .replaceAll('seas-', '') //
           .replaceAll('-redux', '');
       String suffix = jsonExp.isRedux ? ' (Redux)' : '';
-      bool isOld = jsonExp.endDate.millisecondsSinceEpoch < milliSinceEpoch;
       listItems.add(
         expeditionSeasonTile(
           context,
           getBackgroundForExpedition(jsonExp.id),
           tileHeight,
-          getPatchForExpedition(jsonExp.id, jsonExp.icon),
+          // getPatchForExpedition(jsonExp.id, jsonExp.icon),
+          jsonExp.icon,
           'Season $seasNum$suffix',
           jsonExp.title,
-          isOld,
           () {
             getNavigation().navigateAsync(
               context,
@@ -136,12 +135,11 @@ class SeasonalExpeditionSeasonListPage extends StatelessWidget {
     listItems.add(
       expeditionSeasonTile(
         context,
-        AppImage.expeditionSeasonBackground1,
+        AppImage.expeditionSeasonBackgroundBackup,
         smallTileHeight,
         AppImage.expeditionsUnusedPatches,
-        getTranslations().fromKey(LocaleKey.viewUnusedMilestonePatches),
         '',
-        false,
+        getTranslations().fromKey(LocaleKey.viewUnusedMilestonePatches),
         () {
           getNavigation().navigateAsync(
             context,
