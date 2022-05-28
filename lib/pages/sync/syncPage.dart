@@ -1,15 +1,21 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/constants/GoogleDrive.dart';
+import 'package:download/download.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/common/rowHelper.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/tilePresenters/asyncSettingTilePresenter.dart';
 import '../../components/tilePresenters/settingTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/inventoryState.dart';
+import '../../contracts/redux/portalState.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../redux/modules/viewModel/syncPageViewModel.dart';
+import '../../services/base/fileService.dart';
 
 class SyncPage extends StatefulWidget {
   const SyncPage({Key key}) : super(key: key);
@@ -35,7 +41,7 @@ class _SyncWidget extends State<SyncPage> {
     );
   }
 
-  List<Widget> getAuthWidgets(BuildContext authCtx) {
+  List<Widget> getGoogleDriveWidgets(BuildContext authCtx) {
     List<Widget> widgets = List.empty(growable: true);
     User user = getFirebase().getCurrentUser();
     if (user != null) {
@@ -186,13 +192,96 @@ class _SyncWidget extends State<SyncPage> {
         ),
       ));
     }
+
+    widgets.add(emptySpace3x());
     return widgets;
   }
 
   Widget getBody(BuildContext bodyCtx, SyncPageViewModel viewModel) {
     List<Widget> widgets = List.empty(growable: true);
     // widgets.addAll(getAuthWidgets(bodyCtx));
-    widgets.add(emptySpace3x());
+
+    widgets.add(
+      headingSettingTilePresenter(getTranslations().fromKey(LocaleKey.portals)),
+    );
+
+    widgets.add(
+      AsyncSettingTilePresenter(
+        title: getTranslations().fromKey(LocaleKey.backupPortals),
+        icon: Icons.file_download_sharp,
+        futureFunc: () => asyncSettingTileGenericFunc(
+          context,
+          () async {
+            FileService service = FileService();
+            String jsonContent = viewModel.portalState.toGoogleJson();
+            return service.saveFileLocally(
+              jsonContent,
+              'Please select a location to save the file',
+              GoogleDrive.portalJson,
+            );
+          },
+          LocaleKey.portalsNotUploaded,
+          LocaleKey.portalsUploaded,
+        ),
+      ),
+    );
+
+    widgets.add(
+      AsyncSettingTilePresenter(
+        title: getTranslations().fromKey(LocaleKey.restorePortals),
+        icon: Icons.file_open_rounded,
+        futureFunc: () => asyncSettingTileWithSuccessFunc(
+          context,
+          () => FileService().readFileFromLocal(
+            (jsonContent) => PortalState.fromGoogleJson(jsonContent),
+          ),
+          LocaleKey.portalsNotRestored,
+          viewModel.restorePortals,
+          LocaleKey.portalsRestored,
+        ),
+      ),
+    );
+
+    widgets.add(
+      headingSettingTilePresenter(
+          getTranslations().fromKey(LocaleKey.inventoryManagement)),
+    );
+
+    widgets.add(
+      AsyncSettingTilePresenter(
+        title: getTranslations().fromKey(LocaleKey.backupInventory),
+        icon: Icons.file_download_sharp,
+        futureFunc: () => asyncSettingTileGenericFunc(
+          context,
+          () async {
+            FileService service = FileService();
+            String jsonContent = viewModel.inventoryState.toGoogleJson();
+            return service.saveFileLocally(
+              jsonContent,
+              'Please select a location to save the file',
+              GoogleDrive.portalJson,
+            );
+          },
+          LocaleKey.inventoryNotUploaded,
+          LocaleKey.inventoryUploaded,
+        ),
+      ),
+    );
+
+    widgets.add(AsyncSettingTilePresenter(
+      title: getTranslations().fromKey(LocaleKey.restoreInventory),
+      icon: Icons.file_open_rounded,
+      futureFunc: () => asyncSettingTileWithSuccessFunc(
+        context,
+        () => FileService().readFileFromLocal(
+          (jsonContent) => InventoryState.fromGoogleJson(jsonContent),
+        ),
+        LocaleKey.inventoryNotRestored,
+        viewModel.restoreInventory,
+        LocaleKey.inventoryRestored,
+      ),
+    ));
+
     // widgets.add(genericItemDescription(
     //     'This sync feature is only intended to allow you to back up your app data to Google Drive.'));
     // widgets.add(localImage(AppImage.underConstruction, height: 150.0));
