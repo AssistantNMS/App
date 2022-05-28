@@ -25,17 +25,17 @@ class _SyncWidget extends State<SyncPage> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext buildCtx) {
     return simpleGenericPageScaffold(
-      context,
+      buildCtx,
       title: getTranslations().fromKey(LocaleKey.synchronize),
       body: StoreConnector<AppState, SyncPageViewModel>(
           converter: (store) => SyncPageViewModel.fromStore(store),
-          builder: (_, viewModel) => getBody(context, viewModel)),
+          builder: (_, viewModel) => getBody(buildCtx, viewModel)),
     );
   }
 
-  Widget getBody(BuildContext context, SyncPageViewModel viewModel) {
+  List<Widget> getAuthWidgets(BuildContext authCtx) {
     List<Widget> widgets = List.empty(growable: true);
     User user = getFirebase().getCurrentUser();
     if (user != null) {
@@ -62,7 +62,7 @@ class _SyncWidget extends State<SyncPage> {
             ),
             rowWith2Columns(
               positiveButton(
-                context,
+                authCtx,
                 title: getTranslations().fromKey(LocaleKey.switchUser),
                 onPress: () async {
                   await getFirebase().signOutFromGoogle();
@@ -166,7 +166,7 @@ class _SyncWidget extends State<SyncPage> {
             } catch (exception) {
               getLog().e('signInWithGoogle exception' + exception.toString());
               getDialog().showSimpleDialog(
-                context,
+                authCtx,
                 getTranslations().fromKey(LocaleKey.error),
                 Text(
                   getTranslations()
@@ -186,7 +186,12 @@ class _SyncWidget extends State<SyncPage> {
         ),
       ));
     }
+    return widgets;
+  }
 
+  Widget getBody(BuildContext bodyCtx, SyncPageViewModel viewModel) {
+    List<Widget> widgets = List.empty(growable: true);
+    // widgets.addAll(getAuthWidgets(bodyCtx));
     widgets.add(emptySpace3x());
     // widgets.add(genericItemDescription(
     //     'This sync feature is only intended to allow you to back up your app data to Google Drive.'));
