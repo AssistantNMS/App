@@ -7,6 +7,7 @@ import '../../../constants/AnalyticsEvent.dart';
 import '../../../contracts/data/quicksilverStore.dart';
 import '../../../contracts/helloGames/communityMission.dart';
 import '../../../contracts/helloGames/communityMissionPageData.dart';
+import '../../../contracts/helloGames/quickSilverStoreDetails.dart';
 import '../../../contracts/requiredItemDetails.dart';
 import '../../../helpers/futureHelper.dart';
 import '../../../helpers/mathHelper.dart';
@@ -31,8 +32,8 @@ class CommunityMissionPage extends StatelessWidget {
     }
 
     int missionId = apiResult.value.missionId;
-    ResultWithDoubleValue<QuicksilverStore, List<RequiredItemDetails>>
-        qsDataResult = await quickSilverItemDetailsFuture(context, missionId);
+    ResultWithValue<QuicksilverStoreDetails> qsDataResult =
+        await quickSilverItemDetailsFuture(context, missionId);
     if (qsDataResult.isSuccess == false) {
       return ResultWithValue<CommunityMissionPageData>(false, null, '');
     }
@@ -48,10 +49,11 @@ class CommunityMissionPage extends StatelessWidget {
         qsItemResult.value, (qList) => qList.missionId);
     CommunityMissionPageData data = CommunityMissionPageData(
       apiData: apiResult.value,
-      requiredItems: qsDataResult.secondValue,
-      qsStore: qsDataResult.value,
+      itemDetails: qsDataResult.value.items,
+      qsStore: qsDataResult.value.store,
       communityMissionMax: communityMissionMax,
       communityMissionMin: communityMissionMin,
+      requiredItemDetails: qsDataResult.value.itemsRequired,
     );
     return ResultWithValue<CommunityMissionPageData>(true, data, '');
   }
@@ -90,7 +92,9 @@ class CommunityMissionPage extends StatelessWidget {
     int totalTiers = snapshot.value.apiData.totalTiers;
     int currentTier = snapshot.value.apiData.currentTier;
     QuicksilverStore qsStore = snapshot.value.qsStore;
-    List<RequiredItemDetails> reqItemDetails = snapshot.value.requiredItems;
+    List<RequiredItemDetails> itemDetails = snapshot.value.itemDetails;
+    List<RequiredItemDetails> reqItemDetails =
+        snapshot.value.requiredItemDetails;
 
     int communityMissionMax = snapshot.value.communityMissionMax;
     int communityMissionMin = snapshot.value.communityMissionMin;
@@ -128,7 +132,8 @@ class CommunityMissionPage extends StatelessWidget {
       currentTierPercentage: percentage,
       totalTiers: totalTiers,
       qsStore: qsStore,
-      reqItemDetails: reqItemDetails,
+      itemDetails: itemDetails,
+      requiredItemDetails: reqItemDetails,
     ));
 
     Widget viewCommunityMissionsButton(
