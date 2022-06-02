@@ -20,4 +20,5 @@ class ApiUrls {
   static const String communitySpotlight = "communitySpotlight";
   static const String versionSearch = "version/search";
   static const String nmsfm = "nmsfm";
+  static const String communityMissionProgress = "CommunityMissionProgress";
 }
