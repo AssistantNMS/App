@@ -6,8 +6,6 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import './enum/statBonusType.dart';
-
 class StatBonus {
   StatBonus({
     this.name,
@@ -17,7 +15,7 @@ class StatBonus {
   });
 
   String name;
-  LocaleKey localeKeyTemplate;
+  String localeKeyTemplate;
   String image;
   String value;
 
@@ -27,8 +25,7 @@ class StatBonus {
   factory StatBonus.fromJson(Map<String, dynamic> json) {
     return StatBonus(
       name: readStringSafe(json, 'Name'),
-      localeKeyTemplate: supportedLocaleKeyValues
-          .map[readStringSafe(json, 'LocaleKeyTemplate')],
+      localeKeyTemplate: readStringSafe(json, 'LocaleKeyTemplate'),
       image: readStringSafe(json, 'Image'),
       value: readStringSafe(json, 'Value'),
     );

@@ -77,7 +77,7 @@ class SettingState {
       introComplete: false,
       onlineMeetup2020: false,
       dontShowSpoilerAlert: false,
-      homepageType: HomepageType.allItemsList,
+      homepageType: HomepageType.custom,
       customMenuOrder: List.empty(growable: true),
       playerName: null,
       uselessButtonTaps: 0,

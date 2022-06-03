@@ -6,8 +6,6 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import './enum/statBonusType.dart';
-
 class ProceduralStatBonus {
   ProceduralStatBonus({
     this.alwaysChoose,
@@ -20,7 +18,7 @@ class ProceduralStatBonus {
 
   bool alwaysChoose;
   String name;
-  LocaleKey localeKeyTemplate;
+  String localeKeyTemplate;
   String image;
   String minValue;
   String maxValue;
@@ -32,8 +30,7 @@ class ProceduralStatBonus {
       ProceduralStatBonus(
         alwaysChoose: readBoolSafe(json, 'AlwaysChoose'),
         name: readStringSafe(json, 'Name'),
-        localeKeyTemplate: supportedLocaleKeyValues
-            .map[readStringSafe(json, 'LocaleKeyTemplate')],
+        localeKeyTemplate: readStringSafe(json, 'LocaleKeyTemplate'),
         image: readStringSafe(json, 'Image'),
         minValue: readStringSafe(json, 'MinValue'),
         maxValue: readStringSafe(json, 'MaxValue'),

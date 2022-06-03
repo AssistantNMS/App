@@ -7,9 +7,9 @@ import '../../contracts/proceduralStatBonus.dart';
 
 Widget statBonusTilePresenter(BuildContext context, StatBonus statBonus) {
   String subTitle = statBonus.value.toString();
-  if (statBonus.localeKeyTemplate != LocaleKey.unknown) {
+  if (statBonus.localeKeyTemplate != 'unknown') {
     subTitle = getTranslations()
-        .fromKey(statBonus.localeKeyTemplate)
+        .fromString(statBonus.localeKeyTemplate)
         .replaceAll('{0}', statBonus.value);
   }
   return genericListTileWithSubtitleAndImageCount(
@@ -27,18 +27,18 @@ Widget proceduralStatBonusTilePresenter(
     BuildContext context, ProceduralStatBonus statBonus) {
   String subTitle =
       statBonus.minValue.toString() + ' => ' + statBonus.maxValue.toString();
-  if (statBonus.localeKeyTemplate != LocaleKey.unknown) {
+  if (statBonus.localeKeyTemplate != 'unknown') {
     if (statBonus.minValue.toString() == statBonus.maxValue.toString()) {
       subTitle = getTranslations()
-          .fromKey(statBonus.localeKeyTemplate)
+          .fromString(statBonus.localeKeyTemplate)
           .replaceAll('{0}', statBonus.minValue.toString());
     } else {
       subTitle = getTranslations()
-              .fromKey(statBonus.localeKeyTemplate)
+              .fromString(statBonus.localeKeyTemplate)
               .replaceAll('{0}', statBonus.minValue.toString()) +
           ' => ' +
           getTranslations()
-              .fromKey(statBonus.localeKeyTemplate)
+              .fromString(statBonus.localeKeyTemplate)
               .replaceAll('{0}', statBonus.maxValue.toString());
     }
   }

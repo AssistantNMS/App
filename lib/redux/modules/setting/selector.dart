@@ -46,7 +46,7 @@ bool getOnlineMeetup2020(AppState state) =>
     state?.settingState?.onlineMeetup2020 ?? false;
 
 HomepageType getHomepageType(AppState state) =>
-    state?.settingState?.homepageType ?? HomepageType.allItemsList;
+    state?.settingState?.homepageType ?? HomepageType.custom;
 
 List<LocaleKey> getCustomMenuOrder(AppState state) =>
     state?.settingState?.customMenuOrder ?? List.empty(growable: true);
