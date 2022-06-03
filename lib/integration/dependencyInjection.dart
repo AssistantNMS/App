@@ -60,6 +60,7 @@ void initDependencyInjection(EnvironmentSettings _env) {
     dialog: DialogService(),
     loading: LoadingWidgetService(),
     language: LanguageService(),
+    // snackbar: SnackbarService(),
   );
 
   getIt.registerFactoryParam<IGenericRepository, LocaleKey, String>(

@@ -205,7 +205,6 @@ List<CustomMenu> getMenuOptionsSection3(
       icon: localGetFromIcon(Icons.new_releases_sharp),
       drawerIcon: localGetDrawerFromIcon(Icons.new_releases_sharp),
       title: LocaleKey.newItemsAdded,
-      isNew: true,
       navigateToNamed: Routes.majorUpdates,
     ),
     CustomMenu(
@@ -281,12 +280,12 @@ List<CustomMenu> getMenuOptionsSection4(
       getCorrectlySizedImageFromIcon(context, icon, colour: drawerIconColour);
 
   return [
-      CustomMenu(
-        icon: localGetFromIcon(Icons.sync),
-        drawerIcon: localGetDrawerFromIcon(Icons.sync),
-        title: LocaleKey.synchronize,
-        navigateToNamed: Routes.syncPage,
-      ),
+    CustomMenu(
+      icon: localGetFromIcon(Icons.sync),
+      drawerIcon: localGetDrawerFromIcon(Icons.sync),
+      title: LocaleKey.synchronize,
+      navigateToNamed: Routes.syncPage,
+    ),
     CustomMenu(
       icon: localGetFromIcon(Icons.feedback),
       drawerIcon: localGetDrawerFromIcon(Icons.feedback),

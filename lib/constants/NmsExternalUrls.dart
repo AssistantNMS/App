@@ -37,4 +37,6 @@ class NmsExternalUrls {
   static const String assistantNMSYoutube =
       'https://www.youtube.com/channel/UCpKNMVk7ZWvBk-psQQZqz5w?ref=assistantNMS';
   static const String steamDatabase = 'https://steamdb.info/app/275850/depots/';
+  static const String communityMissionProgress =
+      'https://nmscd.github.io/CommunityMission-Progress-Viewer/';
 }

@@ -72,6 +72,8 @@ class AppImage {
   static const String scan = 'special/scan.png';
   static const String damagedTech = 'special/damagedTech.png';
   static const String underConstruction = 'special/underConstruction.png';
+  static const String communityMissionProgress =
+      'special/communityMissionProgress.png';
 
   static const String expeditionSeasonBackgroundPrefix =
       base + 'special/expedition-';
