@@ -1295,8 +1295,8 @@
     "Id": "tech35",
     "Icon": "technology/35.png",
     "Name": "Raketenwerfer",
-    "Group": "Raumschiff-Projektilwaffe",
-    "Description": "Hochgradig zerstörerische Waffe, die eine schnelle Zerstörung von Schiff zu Schiff ermöglicht.\n\nHinweis: Explosionsschaden ist >hochwirksam gegen Raumschiffhüllen, aber <STELLAR>unwirksam<> gegen <STELLAR>abgeschirmte<> Ziele.\n\nDrücke zum Aktivieren <IMG>SHIPFIRE<>.",
+    "Group": "Langstrecken-Raumschiffwaffe",
+    "Description": "Eine <TECHNOLOGY>Langstrecken<>-Raumschiffwaffe, die einen hochexplosiven Torpedo über gewaltige Distanzen abfeuern kann.\n\nHinweis: Explosivschaden ist <STELLAR>äußerst effektiv<> gegen <STELLAR>nicht abgeschirmte<> Ziele, aber <TITLE>ineffektiv<> gegen <TITLE>abgeschirmte<> Ziele.\n\nWechsle mit <IMG>CYCLEWEAPON<> den Waffenmodus. Drücke <IMG>SHIPFIRE<>, um zu feuern.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1402,7 +1402,7 @@
     "Icon": "technology/37.png",
     "Name": "Photonenkanone",
     "Group": "Raumschiff-Projektilwaffe",
-    "Description": "Waffe mit großer Zerstörungskraft, die die schnelle Zerstörung anderer Schiffe ermöglicht.\n\nMit <IMG>SHIPFIRE<> aktivieren.",
+    "Description": "Ein zerstörerischer <TECHNOLOGY>Raumschiff-Projektilwerfer<>, das Waffensystem der Wahl für interstellare Händler und Piraten gleichermaßen.\n\nWechsle mit <IMG>CYCLEWEAPON<> den Waffenmodus. Drücke <IMG>SHIPFIRE<>, um zu feuern.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1528,8 +1528,8 @@
     "Id": "tech41",
     "Icon": "technology/41.png",
     "Name": "Phasenstrahler",
-    "Group": "Raumschiff-Lasergerät",
-    "Description": "Raumfahrer-Strahlenwaffe und Asteroiden-Bergbaugerät.\n\nDer Nutzer wird daran erinnert, dass zum Aufladen des Gerätes <FUEL>organische Elemente<> erforderlich sind.\n\nMit <IMG>SHIPFIRE<> aktivieren.",
+    "Group": "Raumschiff-Energiewaffe",
+    "Description": "Eine <TECHNOLOGY>Hochenergiestrahlenwaffe<> für Schiff-zu-Schiff-Kämpfe.\n\nDiese hochpräzisen Laserwaffen sind zwar anfällig für <FUEL>Überhitzung<>, können aber <STELLAR>die Schilde des Nutzers aufladen<>, indem sie Energie aus den Schildsystemen des Ziels absaugen.\n\nWechsle mit <IMG>CYCLEWEAPON<> den Waffenmodus. Drücke <IMG>SHIPFIRE<>, um zu feuern.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1563,7 +1563,7 @@
         "Value": "250"
       },
       {
-        "Name": "Kampfschild-Wiederaufladung",
+        "Name": "Schildaufladung bei Aufprall",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "shieldStrength",
         "Value": "0.2"
@@ -1604,7 +1604,7 @@
         "Value": "10"
       },
       {
-        "Name": "Kampfschild-Wiederaufladung",
+        "Name": "Schildaufladung bei Aufprall",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "shieldStrength",
         "Value": "0.1"
@@ -1616,8 +1616,8 @@
     "Id": "tech43",
     "Icon": "technology/43.png",
     "Name": "Positronenwerfer",
-    "Group": "Hochenergie-Raumschiffwaffe",
-    "Description": "Die Schüsse erhalten einen breiten Zerstörungskegel.\n\nWegen der reduzierten Reichweite und Feuerrate wird dem Nutzer empfohlen, Ziele in unmittelbarer Nähe anzugreifen.",
+    "Group": "Nahkampf-Raumschiffwaffe",
+    "Description": "Eine mächtige Raumschiffwaffe, die <STELLAR>extreme Zerstörung<> aus <TECHNOLOGY>nächster Nähe<> verursacht.\n\nHinweis: Die Partikel zeigen <TITLE>geringere Wirksamkeit<> gegen abgeschirmte Ziele.\n\nWechsle mit <IMG>CYCLEWEAPON<> den Waffenmodus. Drücke <IMG>SHIPFIRE<>, um zu feuern.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1729,7 +1729,7 @@
     "Icon": "technology/45.png",
     "Name": "Inframesser-Beschleuniger",
     "Group": "Schnellfeuer-Raumschiffwaffe",
-    "Description": "Feuert in anhaltenden, schnellen Sequenzen.\n\nDem Nutzer wird geraten, die Salven einzuschränken, da die Kanone sehr schnell überhitzen kann.",
+    "Description": "Eine <TECHNOLOGY>Schnellfeuerwaffe<> für Raumschiffe, die überhitzte Kugeln aus flüssigem Metall auf feindliche Ziele abfeuert. Diese Geschosse sind <STELLAR>äußerst effektiv<> gegen <STELLAR>nicht abgeschirmte<> Raumschiffhüllen.\n\nHinweis: Die internen Komponenten des Beschleunigers sind anfällig für schnelle <FUEL>Überhitzung<>. Dauerhaftes Sperrfeuer wird nicht empfohlen.\n\nWechsle mit <IMG>CYCLEWEAPON<> den Waffenmodus. Drücke <IMG>SHIPFIRE<>, um zu feuern.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1838,8 +1838,8 @@
     "Id": "tech47",
     "Icon": "technology/47.png",
     "Name": "Zyklotron-Balliste",
-    "Group": "Raumschiffwaffe ohne Zielsuchfunktion",
-    "Description": "Feuert eine große, konzentrierte Kugel aufgeladener Partikel auf ein frontales Ziel und verursacht schweren Schaden. Die Salve besitzt keine Zielsuchfunktion und folgt ihrer Flugbahn, bis sie auf ein Hindernis trifft.",
+    "Group": "Anti-Elektronik-Raumschiffwaffe",
+    "Description": "Eine mächtige Schiff-zu-Schiff-Waffe, die Plasmakugeln mit ionisierender Strahlung auf das ausgewählte Ziel schleudert. Diese Geschosse können <TECHNOLOGY>Raumschiffantriebe ausschalten<> und machen das Ziel verwundbar für Angriffe durch andere Waffen.\n\nDiese geladenen Partikel sind <STELLAR>äußerst effektiv<> gegen die <STELLAR>Schilde<> von Raumschiffen, aber wesentlich schwächer gegen die Metallpanzerung der Schiffshülle.\n\nWechsle mit <IMG>CYCLEWEAPON<> den Waffenmodus. Drücke <IMG>SHIPFIRE<>, um zu feuern.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -8072,6 +8072,38 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech219",
+    "Icon": "products/168.png",
+    "Name": "Temporale Raumschiffspur",
+    "Group": "Raumschiff-Auspuffüberschreibung",
+    "Description": "Ein exklusiver <STELLAR>Raumschiff-Abgasmodifikator<>.\n\nEine kosmische Resonanzkammer interagiert mit den Abgasen des Raumschiffs und verändert die Antriebsenergie derart, dass sie eine Reihe von temporalen Störungen hinterlässt.\n\nInstalliere diese <TECHNOLOGY>Technologie<> in deinem Raumschiff-Inventar, um das Aussehen der Antrieb-Auspuffspuren zu verändern.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsExpeditionSeason7Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []

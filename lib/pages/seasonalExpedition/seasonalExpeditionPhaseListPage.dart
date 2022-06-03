@@ -55,26 +55,52 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
     if (endDate != null) season.endDate = endDate;
 
     List<Widget> widgets = List.empty(growable: true);
+
+    bool infoNotComplete = (season?.rewards?.length ?? 0) < 1;
+    if (infoNotComplete) {
+      const mesg =
+          'This data is incomplete and we are working on getting accurate information!';
+
+      widgets.add(Container(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 4, left: 4, right: 4, bottom: 8),
+          child: Column(
+            children: const [
+              Icon(Icons.error, color: Colors.white),
+              Text(mesg),
+            ],
+          ),
+        ),
+        color: Colors.red,
+      ));
+    }
+
     widgets.add(seasonalExpeditionDetailTilePresenter(
       storeContext,
       season,
       viewModel.useAltGlyphs,
     ));
-    widgets.add(Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4),
-      child: positiveButton(
-        storeContext,
-        title: getTranslations().fromKey(LocaleKey.rewards),
-        onPress: () => adaptiveBottomModalSheet(
+
+    if (season.rewards.isNotEmpty) {
+      widgets.add(Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 4),
+        child: positiveButton(
           storeContext,
-          hasRoundedCorners: true,
-          builder: (_) => ExpeditionRewardsListModalBottomSheet(
-            '',
-            season.rewards,
+          title: getTranslations().fromKey(LocaleKey.rewards),
+          onPress: () => adaptiveBottomModalSheet(
+            storeContext,
+            hasRoundedCorners: true,
+            builder: (_) => ExpeditionRewardsListModalBottomSheet(
+              '',
+              season.rewards,
+            ),
           ),
         ),
-      ),
-    ));
+      ));
+    } else {
+      widgets.add(emptySpace1x());
+      widgets.add(customDivider());
+    }
     if (season.captainSteveYoutubePlaylist != null &&
         season.captainSteveYoutubePlaylist.length > 5) {
       String seasNum =

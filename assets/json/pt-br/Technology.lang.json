@@ -99,7 +99,7 @@
   {
     "Id": "tech3",
     "Icon": "technology/3.png",
-    "Name": "Sobrevivência",
+    "Name": "Sistema de sobrevivência",
     "Group": "Pacote de energia de sobrevivência do traje",
     "Description": "O núcleo do exotraje, o <TECHNOLOGY>sistema de sobrevivência<> filtra e bombeia <FUEL>oxigênio<> respirável continuamente.\n\nAlém de garantir a existência do usuário do exotraje, a unidade de sobrevivência usa o oxigênio extra para gerar energia para sistemas secundários, como o <TECHNOLOGY>jetpack<>, o <TECHNOLOGY>sistema de aumento de velocidade<> e a <TECHNOLOGY>lanterna<>.",
     "BaseValueUnits": 1.0,
@@ -1295,8 +1295,8 @@
     "Id": "tech35",
     "Icon": "technology/35.png",
     "Name": "Lança-foguetes",
-    "Group": "Arma com projétil para naves",
-    "Description": "Arma potente que permite que uma nave destrua outra rapidamente.\n\nObservação: o dano explosivo é muito eficaz contra fuselagens de naves, mas <STELLAR>ineficaz<> contra alvos <STELLAR>protegidos<>.\n\nPressione <IMG>SHIPFIRE<> para ativar.",
+    "Group": "Arma de nave de longo alcance",
+    "Description": "Uma arma de nave de <TECHNOLOGY>longo alcance<>, capaz de disparar um torpedo altamente explosivo a grandes distâncias.\n\nObservação: o dano explosivo é <STELLAR>muito eficaz<> contra alvos <STELLAR>desprotegidos<>, mas <TITLE>ineficaz<> contra alvos <TITLE>protegidos<>.\n\nUse <IMG>CYCLEWEAPON<> para mudar o modo de arma. Pressione <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1402,7 +1402,7 @@
     "Icon": "technology/37.png",
     "Name": "Canhão de fótons",
     "Group": "Arma com projétil para naves",
-    "Description": "Arma potente que dá grande vantagem no combate nave contra nave.\n\nPressione <IMG>SHIPFIRE<> para ativar.",
+    "Description": "Um <TECHNOLOGY>lançador de projéteis para naves<> destrutivo, o sistema de armas preferido pelos comerciantes interestelares e piratas.\n\nUse <IMG>CYCLEWEAPON<> para mudar o modo de arma. Pressione <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1528,8 +1528,8 @@
     "Id": "tech41",
     "Icon": "technology/41.png",
     "Name": "Feixe de fases",
-    "Group": "Dispositivo a laser para naves",
-    "Description": "Arma de feixe e ferramenta de mineração de asteroides para explorações espaciais.\n\nO usuário deve saber que <FUEL>elementos orgânicos<> são necessários para recarregar o dispositivo.\n\nPressione <IMG>SHIPFIRE<> para ativar.",
+    "Group": "Arma de energia para naves",
+    "Description": "Uma <TECHNOLOGY>arma de feixe de alta energia<> para combate entre naves. \n\nEmbora sejam vulneráveis ao <FUEL>superaquecimento<>, essas armas laser altamente precisas <STELLAR>recarregam os escudos dos usuários<> sugando a energia dos sistemas de escudos do alvo.\n\nUse <IMG>CYCLEWEAPON<> para mudar o modo de arma. Pressione <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1563,7 +1563,7 @@
         "Value": "250"
       },
       {
-        "Name": "Recarga do escudo de combate",
+        "Name": "Recarga de escudo no impacto",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "shieldStrength",
         "Value": "0.2"
@@ -1604,7 +1604,7 @@
         "Value": "10"
       },
       {
-        "Name": "Recarga do escudo de combate",
+        "Name": "Recarga de escudo no impacto",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "shieldStrength",
         "Value": "0.1"
@@ -1616,8 +1616,8 @@
     "Id": "tech43",
     "Icon": "technology/43.png",
     "Name": "Ejetor de pósitrons",
-    "Group": "Arma de nave de alta energia",
-    "Description": "Os disparos criam um cone amplo de destruição.\n\nCom alcance e taxa de disparo reduzidos, os usuários são encorajados a combater os alvos em grande proximidade.",
+    "Group": "Arma de nave de curto alcance",
+    "Description": "Uma arma de nave poderosa, capaz de causar <STELLAR>destruição extrema<> a <TECHNOLOGY>curtas distâncias<>. \n\nObservação: estas partículas têm uma <TITLE>eficácia reduzida<> contra alvos com escudos.\n\nUse <IMG>CYCLEWEAPON<> para mudar o modo de arma. Pressione <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1729,7 +1729,7 @@
     "Icon": "technology/45.png",
     "Name": "Acelerador de infracorte",
     "Group": "Arma de nave de disparo rápido",
-    "Description": "Libera sequências curtas e rápidas de fogo.\n\nÉ aconselhável limitar os disparos, pois o superaquecimento ocorre muito rápido.",
+    "Description": "Uma arma de nave de <TECHNOLOGY>fogo rápido<> que lança globos de metal líquido superaquecido contra alvos hostis. Esses projéteis são <STELLAR>extremamente eficazes<> contra fuselagens de naves <STELLAR>sem escudos<>.\n\nObservação: os componentes internos do acelerador são vulneráveis ao <FUEL>superaquecimento<> rápido. Rajadas longas não são recomendadas.\n\nUse <IMG>CYCLEWEAPON<> para mudar o modo de arma. Pressione <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1838,8 +1838,8 @@
     "Id": "tech47",
     "Icon": "technology/47.png",
     "Name": "Balista ciclotrônica",
-    "Group": "Arma de nave não teleguiada",
-    "Description": "Dispara uma esfera grande e concentrada de partículas carregadas contra os alvos à frente, causando um dano alto. A carga não é teleguiada e continuará sua trajetória até colidir com um objeto.",
+    "Group": "Arma de nave antieletrônica",
+    "Description": "Uma poderosa arma para combate entre naves, que lança bolas plasmáticas de radiação ionizante contra o alvo selecionado. Esses projéteis podem <TECHNOLOGY>desativar os mecanismos das naves<>, deixando seu alvo vulnerável a outras armas.\n\nEstas partículas carregadas são <STELLAR>extremamente eficazes<> contra <STELLAR>escudos<> de naves, mas bem mais fracas contra a blindagem de metal da fuselagem das naves.\n\nUse <IMG>CYCLEWEAPON<> para mudar o modo de arma. Pressione <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -2198,7 +2198,7 @@
     "Icon": "technology/63.png",
     "Name": "Scanner",
     "Group": "Pesquisa topográfica",
-    "Description": "Um aprimoramento de <TECHNOLOGY>radar pessoal de superfície<> para a multiferramenta.\n\nO scanner emite um pulso de alta energia que revela <COMMODITY>recursos essenciais à sobrevivência<> nos arredores. Os dados são transmitidos pelo exotraje diretamente no sistema nervoso visual do usuário.\n \nPressione <IMG>SCAN<> para ativar a verificação local.",
+    "Description": "Um aprimoramento de <TECHNOLOGY>radar pessoal de superfície<> para a multiferramenta.\n\nO scanner emite um pulso de alta energia que revela <COMMODITY>recursos essenciais à sobrevivência<> nos arredores. Os dados são transmitidos pelo exotraje diretamente no sistema nervoso visual do usuário.\n\nPressione <IMG>SCAN<> para ativar a verificação local.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -2411,7 +2411,7 @@
     "Icon": "technology/69.png",
     "Name": "Feixe de mineração",
     "Group": "Laser de extração mineral",
-    "Description": "<TECHNOLOGY>Feixe de mineração<> da multiferramenta alimentado por <FUEL>elementos baseados em carbono<>. Dispare-o com <IMG>ATTACK<>.\n\nInstala ótica de foco na multiferramenta, permitindo-lhe emitir um <STELLAR>feixe de alta energia<>. O feixe é calibrado para excitar as moléculas em <STELLAR>objetos orgânicos ou geológicos<> comuns. Desse modo, ele pode operar como um dispositivo minerador altamente eficaz.\n\n<FUEL>ATENÇÃO<>: a destruição de flora, fauna ou minerais pode chamar a atenção dos sentinelas.",
+    "Description": "<TECHNOLOGY>Feixe de mineração<> da multiferramenta alimentado por <FUEL>elementos baseados em carbono<>. Dispare-o com <IMG>ATTACK<>.\n\nInstala ótica de foco na multiferramenta, permitindo-lhe emitir um <STELLAR>feixe de alta energia<>. O feixe é calibrado para excitar as moléculas em <STELLAR>objetos orgânicos ou geológicos<> comuns. Desse modo, ele pode operar como um dispositivo minerador altamente eficaz.\n<FUEL>ATENÇÃO<>: a destruição de flora, fauna ou minerais pode chamar a atenção dos sentinelas.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -8072,6 +8072,38 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech219",
+    "Icon": "products/168.png",
+    "Name": "Rastro da nave temporal",
+    "Group": "Sobreposição do Exaustor da Nave",
+    "Description": "Um <STELLAR>modificador do exaustor da nave<> exclusivo.\n\nUma câmara de ressonância cósmica interage com o exaustor da nave, modificando a energia de propulsão para deixar um rastro de perturbações temporais.\n\nInstale esta <TECHNOLOGY>tecnologia<> no inventário da sua nave para mudar a aparência dos rastros do exaustor do motor.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsExpeditionSeason7Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Incrementar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []

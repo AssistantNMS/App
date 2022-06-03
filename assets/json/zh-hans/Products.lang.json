@@ -620,7 +620,7 @@
     "Icon": "products/21.png",
     "Name": "星盾电池",
     "Group": "便携式能量存储器",
-    "Description": "一种为<COMMODITY>飞船防御系统<>使用而优化的储能装置。\n\n<SPECIAL>氚<>燃料电容能为<TECHNOLOGY>偏转护盾<>提供快速释放的电荷，但会使小型装备过载。",
+    "Description": "为<COMMODITY>飞船防御系统<>而优化的能源储存器。以\n\n<SPECIAL>氚<>为燃料的电容器为<TECHNOLOGY>偏导护盾<>提供了快速释放的电荷，但小型装备用它会超载。",
     "BaseValueUnits": 500.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 50.0,
@@ -3902,6 +3902,48 @@
     "Description": "<TECHNOLOGY>套装<>的<SPECIAL>异常<>升级组件。按<VAL_ON><IMG>FE_ALT1<><>开始升级<VAL_ON>安装流程<>。\n\n从<SPECIAL>护卫技术<>中提取的诡异碎片。只有当纳米泡沫彻底融入套装系统后才能确定这种升级组件提供的具体效果。",
     "BaseValueUnits": 480.0,
     "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "prod168",
+    "Icon": "products/168.png",
+    "Name": "时空飞船尾迹",
+    "Group": "飞船排气管覆盖品",
+    "Description": "一个专属的<STELLAR>飞船排气管修改器<>。\n\n宇宙共振室与飞船的尾气相互作用，改变推进能量以留下一丝时空扰动。\n\n在你的飞船库存中安装这项<TECHNOLOGY>技术<>可以改变你飞船的驱动器尾迹外观。",
+    "BaseValueUnits": 2100.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsExpeditionSeason7Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "prod169",
+    "Icon": "products/169.png",
+    "Name": "预装的%NAME%升级组件",
+    "Group": "可安装技术包",
+    "Description": "<TECHNOLOGY>预建线缆包<>，用于便捷安装核心科技。使用<VAL_ON><IMG>FE_ALT1<><>启动<STELLAR>安装流程<>。\n\n%TECH_DESC%",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [
       "HasDevProperties",

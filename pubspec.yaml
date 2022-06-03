@@ -2,7 +2,7 @@ name: assistantnms_app
 description: Assistant for No Man's Sky
 homepage: https://nmsassistant.com
 # author: Kurt Lourens
-version: 1.108.0+273 # dart scripts\versionNumScript.dart
+version: 1.110.0+276 # dart scripts\versionNumScript.dart
 publish_to: 'none'
 
 environment:
@@ -49,8 +49,11 @@ dependencies:
   country_icons: 2.0.2 # Move to AA?
   custom_refresh_indicator: 1.1.1
   dots_indicator: 2.1.0
+  download: 0.0.1+1
   expandable: 5.0.1
   ff_stars: 1.0.0
+  file_picker: 4.6.0
+  fl_chart: 0.51.0
   flutter_local_notifications: 9.5.3+1
   flutter_simple_treeview: 3.0.1
   flutter_speed_dial: 6.0.0
@@ -87,9 +90,9 @@ flutter_icons: ## flutter pub run flutter_launcher_icons:main
 msix_config: # https://pub.dev/documentation/msix/latest/
   display_name: Assistant for No Man's Sky
   publisher_display_name: AssistantApps
-  msix_version: 1.107.0.0
-  identity_name:
-  publisher: CN=3
+  msix_version: 1.110.0.0
+  identity_name: 
+  publisher: C
   logo_path: './assets/images/fullSizeIcon.png'
   languages: en
   capabilities: internetClient

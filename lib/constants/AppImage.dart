@@ -72,20 +72,16 @@ class AppImage {
   static const String scan = 'special/scan.png';
   static const String damagedTech = 'special/damagedTech.png';
   static const String underConstruction = 'special/underConstruction.png';
-  static const String expeditionSeasonBackground1 =
-      base + 'special/expeditionsCover5.jpg';
-  static const String expeditionSeasonBackground2 =
-      base + 'special/expeditionsCover.jpg';
-  static const String expeditionSeasonBackground3 =
-      base + 'special/expeditionsCover1.jpg';
-  static const String expeditionSeasonBackground4 =
-      base + 'special/expeditionsCover2.jpg';
-  static const String expeditionSeasonBackground5 =
-      base + 'special/expeditionsCover3.jpg';
-  static const String expeditionSeasonBackground6 =
-      base + 'special/expeditionsCover4.jpg';
-  static const String expeditionSeasonBackground7 =
-      base + 'special/expeditionsCover6.jpg';
+
+  static const String expeditionSeasonBackgroundPrefix =
+      base + 'special/expedition-';
+  static const String expeditionSeasonBackgroundBackup =
+      base + 'special/expeditionsCoverUnused.jpg';
+
+  static const String milestonePatches = 'milestonePatches/';
+  static const String expeditionsUnusedPatches =
+      base + milestonePatches + 'ENCRYPTED.PATCH.2.png';
+
   static const String observatory = base + 'special/observatory.png';
   static const String monolith = base + 'special/monolith.png';
   static const String plaque = base + 'special/plaque.png';
@@ -112,18 +108,6 @@ class AppImage {
   static const String updateSentinal = update + 'sentinal.png';
   static const String updateOutlaws = update + 'outlaws.png';
 
-  static const String milestonePatches = 'milestonePatches/';
-  static const String expeditionsUnusedPatches =
-      milestonePatches + 'ENCRYPTED.PATCH.2.png';
-  static const String expeditionSeason1Patch =
-      milestonePatches + 'PATCH.EXPEDITION.1.png';
-  static const String expeditionSeason2Patch =
-      milestonePatches + 'PATCH.EXPEDITION.2.ALT.png';
-  static const String expeditionSeason3Patch =
-      milestonePatches + 'PATCH.EXPEDITION.3.png';
-  static const String expeditionSeason4Patch =
-      milestonePatches + 'PATCH.EXPEDITION.4.png';
-
   static const String controls = base + 'buttons/';
   static const String controlUnknown = base + 'buttons/unknown.png';
   static const String platformPC = base + 'platformPc.png';
@@ -133,6 +117,7 @@ class AppImage {
   static const String proceduralTraveller =
       'contributors/proceduralTraveller.jpg';
   static const String captainSteve = 'contributors/captainSteve.png';
+  static const String podcast1616 = 'contributors/podcast1616.jpg';
   static const String cyberpunk2350 = 'contributors/cyberpunk2350.jpg';
   static const String veritasVelez = 'contributors/veritasVelez.jpg';
   static const String assistantNMSIcon = 'icon.png';

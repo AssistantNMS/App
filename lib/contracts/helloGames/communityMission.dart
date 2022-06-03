@@ -4,6 +4,8 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/helpers/jsonHelper.dart';
+
 class CommunityMission {
   int missionId;
   int currentTier;
@@ -24,10 +26,10 @@ class CommunityMission {
 
   factory CommunityMission.fromJson(Map<String, dynamic> json) =>
       CommunityMission(
-        missionId: json["missionId"],
-        currentTier: json["currentTier"],
-        percentage: json["percentage"],
-        totalTiers: json["totalTiers"],
+        missionId: readIntSafe(json, 'missionId'),
+        currentTier: readIntSafe(json, 'currentTier'),
+        percentage: readIntSafe(json, 'percentage'),
+        totalTiers: readIntSafe(json, 'totalTiers'),
       );
 
   Map<String, dynamic> toJson() => {

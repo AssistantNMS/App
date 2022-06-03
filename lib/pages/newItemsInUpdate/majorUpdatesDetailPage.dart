@@ -73,6 +73,12 @@ class MajorUpdatesDetailPage extends StatelessWidget {
 
     listItems.add(emptySpace1x());
     listItems.add(Center(
+      child: Text(
+        localMajorItem.emoji,
+        style: const TextStyle(fontSize: 30),
+      ),
+    ));
+    listItems.add(Center(
       child: genericItemName(simpleDate(localMajorItem.releaseDate)),
     ));
     if (localUpdateNewItems.isNotEmpty) {

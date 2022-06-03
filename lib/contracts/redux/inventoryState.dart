@@ -29,6 +29,9 @@ class InventoryState {
     );
   }
 
+  factory InventoryState.fromGoogleJson(String json) =>
+      InventoryState.fromJson(jsonDecode(json));
+
   factory InventoryState.fromJson(Map<String, dynamic> json) {
     if (json == null) return InventoryState.initial();
     try {

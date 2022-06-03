@@ -11,6 +11,7 @@ import '../contracts/data/quicksilverStore.dart';
 import '../contracts/data/updateItemDetail.dart';
 import '../contracts/enum/currencyType.dart';
 import '../contracts/genericPageItem.dart';
+import '../contracts/helloGames/quickSilverStoreDetails.dart';
 import '../contracts/processor.dart';
 import '../contracts/processorRecipePageData.dart';
 import '../contracts/recharge.dart';
@@ -486,16 +487,16 @@ Future<ResultWithValue<Processor>> processorOutputDetailsFuture(
     await getProcessorRepo(procId.contains(IdPrefix.refiner))
         .getById(context, procId);
 
-Future<ResultWithDoubleValue<QuicksilverStore, List<RequiredItemDetails>>>
-    quickSilverItemDetailsFuture(context, int missionId) async {
+Future<ResultWithValue<QuicksilverStoreDetails>> quickSilverItemDetailsFuture(
+    context, int missionId) async {
   ResultWithValue<QuicksilverStore> qsItemsResult =
       await getDataRepo().getQuickSilverItem(context, missionId);
   if (qsItemsResult.hasFailed) {
-    return ResultWithDoubleValue<QuicksilverStore, List<RequiredItemDetails>>(
-        false, null, List.empty(), qsItemsResult.errorMessage);
+    return ResultWithValue<QuicksilverStoreDetails>(
+        false, null, qsItemsResult.errorMessage);
   }
 
-  ResultWithValue<List<RequiredItemDetails>> reqItemsResult =
+  ResultWithValue<List<RequiredItemDetails>> itemsResult =
       await requiredItemDetailsFromInputs(
     context,
     qsItemsResult.value.items
@@ -503,9 +504,27 @@ Future<ResultWithDoubleValue<QuicksilverStore, List<RequiredItemDetails>>>
         .toList(),
   );
 
-  List<RequiredItemDetails> reqList = reqItemsResult.value;
-  if (reqItemsResult.hasFailed) reqList = List.empty();
+  List<RequiredItemDetails> itemList =
+      itemsResult.isSuccess ? itemsResult.value : List.empty();
 
-  return ResultWithDoubleValue<QuicksilverStore, List<RequiredItemDetails>>(
-      true, qsItemsResult.value, reqList, '');
+  ResultWithValue<List<RequiredItemDetails>> itemsReqResult =
+      await requiredItemDetailsFromInputs(
+    context,
+    qsItemsResult.value.itemsRequired
+        .map((qs) => RequiredItem(id: qs, quantity: 0))
+        .toList(),
+  );
+
+  List<RequiredItemDetails> itemsReqList =
+      itemsReqResult.isSuccess ? itemsReqResult.value : List.empty();
+
+  return ResultWithValue<QuicksilverStoreDetails>(
+    true,
+    QuicksilverStoreDetails(
+      store: qsItemsResult.value,
+      items: itemList,
+      itemsRequired: itemsReqList,
+    ),
+    '',
+  );
 }

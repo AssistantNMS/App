@@ -506,7 +506,7 @@
     "Icon": "technology/13.png",
     "Name": "Haz-Mat Gauntlet",
     "Group": "Exosuit Augmentation",
-    "Description": "Upgrades the metallic shielding of the <TECHNOLOGY>Exosuit's gloves<>.\n\nAn advanced blend of reinforced metal and catalytic shielding allows the user to safely handle <CATALYST>hazardous substances<>, as well perform the necessary feats of strength required to harvest certain <TRADEABLE>farmable flora<>.",
+    "Description": "Upgrades the metallic shielding of the <TECHNOLOGY>Exosuit's gloves<>.\n\nAn advanced blend of reinforced metal and catalytic shielding allows the user to safely handle <CATALYST>hazardous substances<>, as well as perform the necessary feats of strength required to harvest certain <TRADEABLE>farmable flora<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -8073,6 +8073,38 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech219",
+    "Icon": "products/168.png",
+    "Name": "Temporal Starship Trail",
+    "Group": "Starship Exhaust Override",
+    "Description": "An exclusive <STELLAR>Starship Exhaust Modifier<>.\n\nA cosmic resonance chamber interacts with starship exhaust, modifying propulsion energy to leave a streak of temporal disturbances.\n\nInstall this <TECHNOLOGY>technology<> in your starship inventory to change the appearance of the engine exhaust trails.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsExpeditionSeason7Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []

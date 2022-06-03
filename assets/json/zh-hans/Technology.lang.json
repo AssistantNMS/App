@@ -858,7 +858,7 @@
     "Icon": "technology/23.png",
     "Name": "脉冲驱动器",
     "Group": "飞船飞行推进器",
-    "Description": "飞行推进装置，可加速并按照指令在本地恒星系中进行脉冲跳跃。\n \n使用者请注意，必须用<EXOTIC>氚<>给脉冲驱动器充能。<COMMODITY>近太空小行星带<>含有丰富的氚。\n\n同时按住<IMG>PULSEJUMP<>启动脉冲跳跃。\n在飞行中按<IMG>BOOST<>启动加速。",
+    "Description": "飞行推进装置，可加速并按照指令在本地恒星系中进行脉冲跃迁。\n\n使用者请注意，必须用<EXOTIC>氚<>给脉冲驱动器充能。<COMMODITY>近太空小行星带<>含有丰富的氚。\n\n长按<IMG>PULSEJUMP<>启动脉冲跃迁。\n在飞行中长按<IMG>BOOST<>启动加速。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1295,8 +1295,8 @@
     "Id": "tech35",
     "Icon": "technology/35.png",
     "Name": "火箭发射器",
-    "Group": "飞船抛射武器",
-    "Description": "该武器破坏力很强，适合用来快速击沉敌方飞船。\n\n注意：爆炸伤害攻击飞船船体十分有效，但是<STELLAR>不适合<>用来对抗<STELLAR>拥有护盾<>的目标。\n\n按<IMG>SHIPFIRE<>激活。",
+    "Group": "远距离飞船武器",
+    "Description": "<TECHNOLOGY>远距离<>飞船武器，能够远距离投掷高爆鱼雷。\n\n注意：爆炸伤害对<STELLAR>无护盾<>目标<STELLAR>非常有效<>，但是对<TITLE>有护盾<>目标<TITLE>没有效果<>。\n\n使用<IMG>CYCLEWEAPON<>变更武器模式。按下<IMG>SHIPFIRE<>发射。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1401,8 +1401,8 @@
     "Id": "tech37",
     "Icon": "technology/37.png",
     "Name": "光子大炮",
-    "Group": "飞船抛射武器",
-    "Description": "该武器破坏力很强，适合用来快速击沉敌方飞船。\n\n按 <IMG>SHIPFIRE<> 激活。",
+    "Group": "飞船射弹武器",
+    "Description": "一种毁灭性的<TECHNOLOGY>飞船射弹发射器<>，星际商人和海盗使用的武器系统。\n\n使用<IMG>CYCLEWEAPON<>变更武器模式。按下<IMG>SHIPFIRE<>发射。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1528,8 +1528,8 @@
     "Id": "tech41",
     "Icon": "technology/41.png",
     "Name": "相位光束",
-    "Group": "飞船激光装置",
-    "Description": "航天激光武器和小行星开采工具。\n\n使用者请注意，必须用<FUEL>有机元素<>给本设备充能。\n\n按 <IMG>SHIPFIRE<> 激活。",
+    "Group": "飞船能量武器",
+    "Description": "一种舰对舰的<TECHNOLOGY>高能量光束武器<>。\n\n虽然很容易<FUEL>过热<>，但这种高精准度的激光武器可以通过吸取目标护盾系统的能量来<STELLAR>充能使用者的护盾<>。\n\n使用<IMG>CYCLEWEAPON<>变更武器模式。按下<IMG>SHIPFIRE<>发射。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1563,7 +1563,7 @@
         "Value": "250"
       },
       {
-        "Name": "战斗护盾充能",
+        "Name": "在遭受攻击时护盾会充能",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "shieldStrength",
         "Value": "0.2"
@@ -1604,7 +1604,7 @@
         "Value": "10"
       },
       {
-        "Name": "战斗护盾充能",
+        "Name": "在遭受攻击时护盾会充能",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "shieldStrength",
         "Value": "0.1"
@@ -1616,8 +1616,8 @@
     "Id": "tech43",
     "Icon": "technology/43.png",
     "Name": "正电子冲击波",
-    "Group": "高能飞船武器",
-    "Description": "射击能破坏大片锥形区域内的一切。\n \n由于射程和射速有所降低，建议使用者用于近距离目标。",
+    "Group": "近距离飞船武器",
+    "Description": "一种强大的飞船武器，能够在<TECHNOLOGY>近距离范围<>内提供<STELLAR>极限破坏力<>。\n\n注意：这些炮弹对有护盾的目标<TITLE>有效性降低<>。\n\n使用<IMG>CYCLEWEAPON<>变更武器模式。按下<IMG>SHIPFIRE<>发射。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1729,7 +1729,7 @@
     "Icon": "technology/45.png",
     "Name": "红外切割加速器",
     "Group": "急速飞船武器",
-    "Description": "可短时快速连续开火。\n\n容易过热，建议使用者开火时限制连发。",
+    "Description": "一种向敌对目标发射过热的液态金属球的<TECHNOLOGY>快速射击<>飞船武器。这些射弹对<STELLAR>无护盾<>的船体有着<STELLAR>极为有效<>的杀伤力。\n\n注意：加速器的内部构件容易受到快速<FUEL>过热<>的影响。不建议连续射击。\n\n使用<IMG>CYCLEWEAPON<>变更武器模式。按下<IMG>SHIPFIRE<>发射。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1838,8 +1838,8 @@
     "Id": "tech47",
     "Icon": "technology/47.png",
     "Name": "回旋加速弩炮",
-    "Group": "非引导性飞船武器",
-    "Description": "向前方目标发射充满粒子的巨大浓缩球，造成巨大伤害。非定向，且将继续沿弹道飞行直至撞击物体。",
+    "Group": "反电子飞船武器",
+    "Description": "一种强大的舰对舰武器，将电离辐射的等离子球体射向选定的目标。这些射弹可以<TECHNOLOGY>使飞船驱动器失效<>，从而使目标更容易受到其他武器的攻击。\n\n这些带电粒子对飞船的<STELLAR>护盾<><STELLAR>极为有效<>，但是对船体的金属装甲破坏力较弱。\n\n使用<IMG>CYCLEWEAPON<>变更武器模式。按下<IMG>SHIPFIRE<>发射。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -7997,7 +7997,7 @@
     "Icon": "other/232.png",
     "Name": "溅射飞船尾迹",
     "Group": "飞船排气管覆盖品",
-    "Description": "专属的<STELLAR>飞船排气管修改物品<>。\n\n一个破旧的飞船排气管，由一名亡命之徒在紧急情况下手工组装而成。偶尔会有爆炸的倾向，但对飞行操作没有不利影响。\n\n在你的飞船库存中安装这个<TECHNOLOGY>技术<>以改变驱动器排气管尾迹的外观。",
+    "Description": "专属的<STELLAR>飞船排气管修改器<>。\n\n一个破旧的飞船排气管，由一名亡命之徒在紧急情况下手工组装而成。偶尔会有爆炸的倾向，但对飞行操作没有不利影响。\n\n在你的飞船库存中安装这个<TECHNOLOGY>技术<>可改变驱动器排气管尾迹的外观。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -8028,7 +8028,7 @@
     "Icon": "technology/218.png",
     "Name": "维斯珀之帆",
     "Group": "高级驱动器技术",
-    "Description": "一面高性能<STELLAR>太阳能帆<>，能在飞行过程中中自动部署。这种先进的<TECHNOLOGY>推进装置<>在帆内产生电场，使飞船能够从太阳风中获得动力。\n\n该技术相较传统的驱动器系统在<STELLAR>燃料效率<>和<STELLAR>增压<>性能方面有极大提高，同时还能为飞船的<TECHNOLOGY>发射系统<>进行光伏<STELLAR>充电<>。",
+    "Description": "一面高性能<STELLAR>太阳能帆<>，能在飞行过程中自动部署。这种先进的<TECHNOLOGY>推进装置<>在帆内产生电场，使飞船能够从太阳风中获得动力。\n\n该技术相较传统的驱动器系统在<STELLAR>燃料效率<>和<STELLAR>增压<>性能方面有极大提高，同时还能为飞船的<TECHNOLOGY>发射系统<>进行光伏<STELLAR>充电<>。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -8072,6 +8072,38 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech219",
+    "Icon": "products/168.png",
+    "Name": "时空飞船尾迹",
+    "Group": "飞船排气管覆盖品",
+    "Description": "一个专属的<STELLAR>飞船排气管修改器<>。\n\n宇宙共振室与飞船的尾气相互作用，改变推进能量以留下一丝时空扰动。\n\n在你的飞船库存中安装这项<TECHNOLOGY>技术<>可以改变你飞船的驱动器尾迹外观。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsExpeditionSeason7Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "推进器",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []

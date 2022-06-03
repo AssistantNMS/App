@@ -858,7 +858,7 @@
     "Icon": "technology/23.png",
     "Name": "Motor de Pulsação",
     "Group": "Impulso de Voo Espacial",
-    "Description": "Propulsão de voo espacial que ativa Saltos Pulsantes num sistema local.\n \nO utilizador precisa de <EXOTIC>Trítio<> para carregar o Motor de Pulsação. O Trítio é abundante em <COMMODITY>campos de asteroides próximos<>.\n\nMantém <IMG>PULSEJUMP<> premido para ativar o Salto Pulsante.\nMantém <IMG>BOOST<> premido para iniciar o impulso de velocidade durante o voo.",
+    "Description": "Propulsão de voo espacial que ativa Saltos Pulsantes num sistema local.\n\nO utilizador precisa de <EXOTIC>Trítio<> para carregar o Motor de Pulsação. O Trítio é abundante em <COMMODITY>campos de asteroides próximos<>.\n\nMantém <IMG>PULSEJUMP<> premido para ativar o Salto Pulsante.\nMantém <IMG>BOOST<> premido para iniciar o impulso de velocidade durante o voo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -953,7 +953,7 @@
     "Icon": "technology/25.png",
     "Name": "Propulsor de Lançamento",
     "Group": "Sistema de Descolagem Vertical",
-    "Description": "Sistema de engrenagem de lançamento e aterragem essencial.\n\nÉ necessário um combustível especializado e derivado de Di-hidrogénio para recarregar o propulsor. Os procedimentos de lançamento precisam de combustível suficiente para serem ativados.\n\nPressiona <IMG>THRUST<> para descolar do planeta.\nPressiona <IMG>BOOST<> para iniciar o impulso de velocidade.",
+    "Description": "Sistema de engrenagem de lançamento e aterragem essencial.\n\nÉ necessário um combustível especializado e derivado de Deutério para recarregar o propulsor. Os procedimentos de lançamento precisam de combustível suficiente para serem ativados.\n\nMantém <IMG>THRUST<> premido para descolar do planeta.\nMantém <IMG>BOOST<> premido para iniciar o impulso de velocidade.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1295,8 +1295,8 @@
     "Id": "tech35",
     "Icon": "technology/35.png",
     "Name": "Lança-Mísseis",
-    "Group": "Arma Projétil da Nave Espacial",
-    "Description": "Arma altamente destrutiva e de apoio a destruição de naves.\n\nNota: os danos explosivos são >muito eficazes contra cascos de nave, mas <STELLAR>ineficazes<> contra alvos <STELLAR>blindados<>.\n\nPrime <IMG>SHIPFIRE<> para ativar.",
+    "Group": "Arma de nave espacial de longo alcance",
+    "Description": "Uma arma de nave espacial de <TECHNOLOGY>longo alcance<>, capaz de disparar um torpedo altamente explosivo a longas distâncias.\n\nNota: os danos explosivos são <STELLAR>extremamente eficazes<> contra alvos <STELLAR>sem escudos<>, ainda que <TITLE>ineficazes<> contra alvos <TITLE>com escudos<>.\n\nUtiliza <IMG>CYCLEWEAPON<> para mudar o modo de arma. Prime <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1401,8 +1401,8 @@
     "Id": "tech37",
     "Icon": "technology/37.png",
     "Name": "Canhão de Fotões",
-    "Group": "Arma da Nave Espacial",
-    "Description": "Arma altamente destrutiva e de apoio a destruição de naves.\n\nPressionar <IMG>SHIPFIRE<> para ativar.",
+    "Group": "Arma de nave espacial de projéteis",
+    "Description": "Um destrutivo <TECHNOLOGY>lançador de projéteis de nave espacial<>, sendo o sistema de armas preferido tanto de comerciantes como de piratas interestelares.\n\nUtiliza <IMG>CYCLEWEAPON<> para mudar o modo de arma. Prime <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1528,8 +1528,8 @@
     "Id": "tech41",
     "Icon": "technology/41.png",
     "Name": "Laser Polifásico",
-    "Group": "Dispositivo de Laser da Nave Espacial",
-    "Description": "Arma laser espacial e ferramenta de mineração de asteroides.\n\nAviso ao utilizador: são necessários <FUEL>elementos orgânicos<> para recarregar o dispositivo.\n\nPressionar <IMG>SHIPFIRE<> para ativar.",
+    "Group": "Arma de nave espacial de energia",
+    "Description": "Uma <TECHNOLOGY>arma de feixes de alta energia<> para combate entre naves.\n\nAinda que sejam vulneráveis ao <FUEL>sobreaquecimento<>, estas armas laser extremamente precisas podem <STELLAR>recarregar os escudos do utilizador<> ao roubar energia aos sistemas de escudos de alvos.\n\nUtiliza <IMG>CYCLEWEAPON<> para mudar o modo de arma. Prime <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1563,7 +1563,7 @@
         "Value": "250"
       },
       {
-        "Name": "Recarga do Escudo de Combate",
+        "Name": "Escudo recarrega no impacto",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "shieldStrength",
         "Value": "0.2"
@@ -1604,7 +1604,7 @@
         "Value": "10"
       },
       {
-        "Name": "Recarga do Escudo de Combate",
+        "Name": "Escudo recarrega no impacto",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "shieldStrength",
         "Value": "0.1"
@@ -1616,8 +1616,8 @@
     "Id": "tech43",
     "Icon": "technology/43.png",
     "Name": "Ejetor de Positrões",
-    "Group": "Arma de nave espacial de alta energia",
-    "Description": "Os disparos têm um cone de destruição mais amplo.\n\nCom menor alcance e cadência de fogo, os utilizadores são encorajados a atacar os seus alvos a curta distância.",
+    "Group": "Arma de nave espacial de curto alcance",
+    "Description": "Uma poderosa arma de nave espacial, capaz de infligir <STELLAR>danos extremos<> a <TECHNOLOGY>curto alcance<>. \n\nNota: estas partículas apresentam uma <TITLE>eficácia reduzida<> contra alvos com escudos.\n\nUtiliza <IMG>CYCLEWEAPON<> para mudar o modo de arma. Prime <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1729,7 +1729,7 @@
     "Icon": "technology/45.png",
     "Name": "Acelerador Infra-Faca",
     "Group": "Arma de nave espacial de disparo rápido",
-    "Description": "Liberta sequências de fogo rápidas e constantes.\n\nO utilizador é aconselhado a disparar de forma limitada para não causar sobreaquecimento.",
+    "Description": "Uma arma de nave espacial de <TECHNOLOGY>disparo rápido<> que lança esferas superaquecidas de metal líquido contra alvos hostis. Estes projéteis são <STELLAR>extremamente eficazes<> contra cascos de nave <STELLAR>não blindados<>.\n\nNota: os componentes internos do Acelerador são vulneráveis ao <FUEL>sobreaquecimento<> rápido.\n\nUtiliza <IMG>CYCLEWEAPON<> para mudar o modo de arma. Prime <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1838,8 +1838,8 @@
     "Id": "tech47",
     "Icon": "technology/47.png",
     "Name": "Catapulta Ciclotron",
-    "Group": "Arma de nave espacial de energia não-guiada",
-    "Description": "Dispara uma bola grande e concentrada de partículas carregadas a alvos avançados, causando grandes danos. A carga não é guiada e continuará em sua trajetória até que impacte com um obstáculo.",
+    "Group": "Arma de nave espacial antieletrónica",
+    "Description": "Uma poderosa arma de combate entre naves, que dispara balas plasmáticas de radiação ionizante contra o alvo selecionado. Estes projéteis podem <TECHNOLOGY>desativar os motores da nave<>, deixando o alvo vulnerável a ataques de outras armas.\n\nEstas partículas carregadas são <STELLAR>extremamente eficazes<> contra <STELLAR>escudos<> da nave e significativamente ineficazes contra a blindagem metálica do casco da nave.\n\nUtiliza <IMG>CYCLEWEAPON<> para mudar o modo de arma. Prime <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -2327,7 +2327,7 @@
     "Icon": "technology/66.png",
     "Name": "Manipulador de Terrenos",
     "Group": "Ferramenta de Formação de Paisagens",
-    "Description": "Dispositivo de terraformação avançada. Este módulo sobrecarrega sistemas de multiferramentas existentes, permitindo que o utilizador remodele as regiões conforme desejar.\n\n Carrega-se com <EARTH>elementos metálicos<>.",
+    "Description": "Dispositivo de terraformação avançada. Este módulo sobrecarrega sistemas de multiferramentas existentes, permitindo que o utilizador remodele as regiões conforme desejar.\n \nCarrega-se com <EARTH>elementos metálicos<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -8072,6 +8072,38 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech219",
+    "Icon": "products/168.png",
+    "Name": "Rasto da Nave Temporal",
+    "Group": "Alteração do escape da nave espacial",
+    "Description": "Um exclusivo <STELLAR>Modificador do Escape da Nave Espacial<>.\n\nUma câmara de ressonância cósmica interage com o escape da nave, alterando a energia de propulsão para deixar um rasto de interferências temporais.\n\nInstala esta <TECHNOLOGY>tecnologia<> no inventário da tua nave espacial para alterar a aparência do rasto de escape do motor.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsExpeditionSeason7Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Impulso",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []

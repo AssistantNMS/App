@@ -858,7 +858,7 @@
     "Icon": "technology/23.png",
     "Name": "Motor de pulso",
     "Group": "Intensificador de vuelo espacial",
-    "Description": "Propulsión de vuelo espacial, potenciación y saltos de pulso si se solicitan a través del sistema local.\n \nSe advierte al usuario de que se requiere <EXOTIC>tritio<> para cargar el Motor de Pulso. El tritio es abundante en <COMMODITY>campos de asteroides cercanos<>.\n\nMantener <IMG>PULSEJUMP<> para activar el Salto de Pulso.\nMantener <IMG>BOOST<> para iniciar el potenciador de velocidad en vuelo.",
+    "Description": "Propulsión de vuelo espacial, potenciación y saltos de pulso si se solicitan a través del sistema local.\n \nSe advierte al usuario de que se requiere <EXOTIC>tritio<> para cargar el motor de pulso. El tritio es abundante en <COMMODITY>campos de asteroides cercanos<>.\n\nMantener <IMG>PULSEJUMP<> para activar el salto de pulso.\nMantener <IMG>BOOST<> para iniciar el potenciador de velocidad en vuelo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1295,8 +1295,8 @@
     "Id": "tech35",
     "Icon": "technology/35.png",
     "Name": "Lanzacohetes",
-    "Group": "Arma de proyectiles de astronave",
-    "Description": "Arma altamente destructiva que permite una rápida aniquilación entre naves.\n\nNota: el daño explosivo es >altamente eficaz contra el casco de las naves pero resulta <STELLAR>ineficaz<> contra objetivos <STELLAR>con escudo<>\n\nPulsa <IMG>SHIPFIRE<> para activar.",
+    "Group": "Arma de largo alcance de nave espacial",
+    "Description": "Un arma de <TECHNOLOGY>largo alcance<> para nave espacial que puede lanzar un torpedo altamente explosivo a distancias enormes.\n\nNota: el daño explosivo es <STELLAR>altamente efectivo<> contra objetivos <STELLAR>sin blindaje<>, pero <TITLE>ineficaz<> contra objetivos <TITLE>con escudo<>.\n\nUsa <IMG>CYCLEWEAPON<> para cambiar el modo de arma. Pulsa <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1401,8 +1401,8 @@
     "Id": "tech37",
     "Icon": "technology/37.png",
     "Name": "Cañón de Fotones",
-    "Group": "Arma de Proyectiles de Astronave",
-    "Description": "Arma altamente destructiva que permite una rápida aniquilación nave a nave.\n\nPulsar <IMG>SHIPFIRE<> para activar.",
+    "Group": "Arma de proyectiles de nave espacial",
+    "Description": "Un destructivo <TECHNOLOGY>lanzador de proyectiles de naves<>; el sistema de armas elegido tanto por comerciantes interestelares como por piratas.\n\nUsa <IMG>CYCLEWEAPON<> para cambiar el modo de arma. Pulsa <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1528,8 +1528,8 @@
     "Id": "tech41",
     "Icon": "technology/41.png",
     "Name": "Rayo de Fase",
-    "Group": "Dispositivo Láser de Astronave",
-    "Description": "Arma láser y herramienta de extracción de asteroides espacial.\n\nSe advierte al usuario que se requieren <FUEL>elementos orgánicos<> para recargar el dispositivo.\n\nPulsar <IMG>SHIPFIRE<> para activar.",
+    "Group": "Arma de energía de nave espacial",
+    "Description": "Un <TECHNOLOGY>arma de rayos de alta energía<> para el combate entre naves. \n\nAunque tienden a <FUEL>sobrecalentarse<>, estas armas láser de alta precisión <STELLAR>recargan los escudos de los usuarios<> extrayendo energía de los sistemas de escudos de los objetivos.\n\nUsa <IMG>CYCLEWEAPON<> para cambiar el modo de arma. Presiona <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1563,7 +1563,7 @@
         "Value": "250"
       },
       {
-        "Name": "Recarga de escudo de combate",
+        "Name": "Recarga el escudo al impactar",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "shieldStrength",
         "Value": "0.2"
@@ -1604,7 +1604,7 @@
         "Value": "10"
       },
       {
-        "Name": "Recarga de escudo de combate",
+        "Name": "Recarga el escudo al impactar",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "shieldStrength",
         "Value": "0.1"
@@ -1616,8 +1616,8 @@
     "Id": "tech43",
     "Icon": "technology/43.png",
     "Name": "Eyector de positrones",
-    "Group": "Arma para nave de gran energía",
-    "Description": "Concede a los disparos un amplio abanico de destrucción.\n\nCon reducido alcance y cadencia de disparo, se aconseja a los usuarios apuntar hacia objetivos cercanos.",
+    "Group": "Arma de corto alcance para nave espacial",
+    "Description": "Una poderosa arma para nave espacial que puede desatar una <STELLAR>destrucción extrema<> a <TECHNOLOGY>corta distancia<>. \n\nNota: estas partículas tienen una <TITLE>eficacia reducida<> contra objetivos protegidos.\n\nUsa <IMG>CYCLEWEAPON<> para cambiar el modo de arma. Pulsa <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1729,7 +1729,7 @@
     "Icon": "technology/45.png",
     "Name": "Acelerador de infracuchillo",
     "Group": "Arma para nave de fuego rápido",
-    "Description": "Libera secuencias de disparos rápidas y constantes.\n\nSe aconseja al usuario controlar las ráfagas de disparos, ya que se puede sobrecalentar con facilidad.",
+    "Description": "Un arma para nave espacial de <TECHNOLOGY>fuego rápido<> que lanza bolas de metal líquido sobrecalentado a los objetivos enemigos. Estos proyectiles son <STELLAR>extremadamente eficaces<> contra cascos de naves <STELLAR>sin blindaje<>.\n\nNota: los componentes internos del acelerador son vulnerables a un rápido <FUEL>sobrecalentamiento<>. No se recomienda su uso continuado.\n\nUsa <IMG>CYCLEWEAPON<> para cambiar el modo de arma. Pulsa <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -1838,8 +1838,8 @@
     "Id": "tech47",
     "Icon": "technology/47.png",
     "Name": "Balista de ciclotrones",
-    "Group": "Arma no guiada para nave",
-    "Description": "Dispara una gran bola concentrada de partículas cargadas a objetivos que tiene delante y les causa un gran daño. La carga no es guiada y sigue su trayectoria hasta que impacta con un obstáculo.",
+    "Group": "Arma antielectrónica para nave espacial",
+    "Description": "Una poderosa arma para combate entre naves que lanza bolas de plasma con radiación ionizante hacia el objetivo seleccionado. Estos proyectiles pueden <TECHNOLOGY>desactivar los motores de las naves<>, dejando al objetivo vulnerable al ataque de otras armas.\n\nEstas partículas cargadas son <STELLAR>extremadamente eficaces<> contra los <STELLAR>escudos<> de las naves, aunque no lo son tanto contra la armadura metálica de los cascos de las naves.\n\nUsa <IMG>CYCLEWEAPON<> para cambiar el modo de arma. Pulsa <IMG>SHIPFIRE<> para disparar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -2761,7 +2761,7 @@
     "Icon": "technology/76.png",
     "Name": "Lanzador de Plasma",
     "Group": "Granadas explosivas",
-    "Description": "Arma de proyectiles de gran impacto. Lanza proyectiles de plasma que rebotan en las superficies hasta que su temporizador interno desencadena una gran explosión.\n \nCargada con <FUEL>plasma inestable<>. Un mal uso puede provocar daño al usuario.\n\nPulsar <IMG>ALTATTACK<> para activar.",
+    "Description": "Arma de proyectiles de gran impacto. Lanza proyectiles de plasma que rebotan en las superficies hasta que su temporizador interno desencadena una gran explosión.\n \nCargada con <FUEL>plasma inestable<>. Un mal uso puede provocar daño al usuario.\n \nPulsa <IMG>ALTATTACK<> para activar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -8072,6 +8072,38 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech219",
+    "Icon": "products/168.png",
+    "Name": "Estela de nave temporal",
+    "Group": "Anulación de escape de nave",
+    "Description": "Un exclusivo <STELLAR>modificador de escape de nave<>.\n\nUna cámara de resonancia cósmica interactúa con el escape de la nave, modificando la energía de propulsión para dejar una estela de perturbaciones temporales.\n\nInstala esta <TECHNOLOGY>tecnología<> en el inventario de tu nave para cambiar la apariencia de las estelas del escape del motor.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsExpeditionSeason7Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []

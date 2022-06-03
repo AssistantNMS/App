@@ -42,21 +42,24 @@ class SeasonalExpeditionDetailPage extends StatelessWidget {
         viewModel,
       ));
     }
-    widgets.add(Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4),
-      child: positiveButton(
-        scaffoldContext,
-        title: getTranslations().fromKey(LocaleKey.rewards),
-        onPress: () => adaptiveBottomModalSheet(
+
+    if (seasonalExpeditionPhase.rewards.isNotEmpty) {
+      widgets.add(Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 4),
+        child: positiveButton(
           scaffoldContext,
-          hasRoundedCorners: true,
-          builder: (_) => ExpeditionRewardsListModalBottomSheet(
-            '',
-            seasonalExpeditionPhase.rewards,
+          title: getTranslations().fromKey(LocaleKey.rewards),
+          onPress: () => adaptiveBottomModalSheet(
+            scaffoldContext,
+            hasRoundedCorners: true,
+            builder: (_) => ExpeditionRewardsListModalBottomSheet(
+              '',
+              seasonalExpeditionPhase.rewards,
+            ),
           ),
         ),
-      ),
-    ));
+      ));
+    }
     widgets.add(emptySpace8x());
 
     return Column(

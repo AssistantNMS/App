@@ -26,6 +26,8 @@ class NmsExternalUrls {
       'https://www.youtube.com/channel/UC3ecEReRHi5ddkdOgGnqmJA';
   static const String captainSteveYoutube =
       'https://www.youtube.com/channel/UCtAkYahXNSJ8RVOil0O_Rnw';
+  static const String podacst1616Youtube =
+      'https://www.youtube.com/playlist?list=PLFVRR5wqxfgwr_0erEIG6CbvT0GalmPyk';
   static const String cyberpunk2350Youtube =
       'https://www.youtube.com/c/HenryRice2';
   static const String veritasVelezTwitter = 'https://twitter.com/VeritasVelez';

@@ -11,14 +11,16 @@ class CommunityMissionPageData {
   int communityMissionMin;
   int communityMissionMax;
   QuicksilverStore qsStore;
-  List<RequiredItemDetails> requiredItems;
+  List<RequiredItemDetails> requiredItemDetails;
+  List<RequiredItemDetails> itemDetails;
   CommunityMission apiData;
 
   CommunityMissionPageData({
     this.communityMissionMin,
     this.communityMissionMax,
     this.qsStore,
-    this.requiredItems,
+    this.itemDetails,
+    this.requiredItemDetails,
     this.apiData,
   });
 }

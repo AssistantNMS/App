@@ -5,31 +5,42 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/helpers/jsonHelper.dart';
+
 import './quicksilverStoreItem.dart';
 
 class QuicksilverStore {
   int missionId;
+  String icon;
+  String name;
+  List<String> itemsRequired;
   List<QuicksilverStoreItem> items;
 
   QuicksilverStore({
     this.missionId,
     this.items,
+    this.icon,
+    this.name,
+    this.itemsRequired,
   });
 
   factory QuicksilverStore.fromRawJson(String str) =>
       QuicksilverStore.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
-
   factory QuicksilverStore.fromJson(Map<String, dynamic> json) =>
       QuicksilverStore(
-        missionId: json["MissionId"],
-        items: List<QuicksilverStoreItem>.from(
-            json["Items"].map((x) => QuicksilverStoreItem.fromJson(x))),
+        missionId: readIntSafe(json, 'MissionId'),
+        items: readListSafe(
+          json,
+          'Items',
+          (x) => QuicksilverStoreItem.fromJson(x),
+        ),
+        icon: readStringSafe(json, 'Icon'),
+        name: readStringSafe(json, 'Name'),
+        itemsRequired: readListSafe(
+          json,
+          'ItemsRequired',
+          (item) => item.toString(),
+        ),
       );
-
-  Map<String, dynamic> toJson() => {
-        "MissionId": missionId,
-        "Items": List<dynamic>.from(items.map((x) => x.toJson())),
-      };
 }
