@@ -614,19 +614,6 @@ List<Widget> getRewardFrom(
   List<Widget> rewardsFromWidgets = List.empty(growable: true);
   List<String> usages = genericItem?.usage ?? [];
 
-  List<String> expSeasonKeySplit = UsageKey.isExpeditionSeason.split("{0}");
-  if (usages.any((u) => u.contains(expSeasonKeySplit[0]))) {
-    String expSeasUsageKey =
-        usages.firstWhere((u) => u.contains(expSeasonKeySplit[0]));
-    String expSeasonNum = expSeasUsageKey
-        .replaceAll(expSeasonKeySplit[0], '')
-        .replaceAll(expSeasonKeySplit[1], '');
-    rewardsFromWidgets.add(rewardFromSeasonalExpeditionTilePresenter(
-      context,
-      'seas-$expSeasonNum',
-    ));
-  }
-
   if (usages.any((u) => u.contains(UsageKey.isQuicksilver))) {
     if (genericItem.baseValueUnits > 0 &&
         genericItem.currencyType == CurrencyType.QUICKSILVER) {
@@ -638,18 +625,30 @@ List<Widget> getRewardFrom(
     }
   }
 
-  List<String> twitchCampaignKeySplit = UsageKey.isTwitchCampaign.split("{0}");
-  if (usages.any((u) => u.contains(twitchCampaignKeySplit[0]))) {
-    String expSeasUsageKey =
-        usages.firstWhere((u) => u.contains(twitchCampaignKeySplit[0]));
-    String expSeasonNum = expSeasUsageKey
-        .replaceAll(twitchCampaignKeySplit[0], '')
-        .replaceAll(twitchCampaignKeySplit[1], '');
-    rewardsFromWidgets.add(rewardFromTwitchTilePresenter(
-      context,
-      expSeasonNum,
-      displayGenericItemColour,
-    ));
+  for (String usageKey in usages) {
+    List<String> expSeasonKeySplit = UsageKey.isExpeditionSeason.split("{0}");
+    if (usageKey.contains(expSeasonKeySplit[0])) {
+      String expSeasonNum = usageKey
+          .replaceAll(expSeasonKeySplit[0], '')
+          .replaceAll(expSeasonKeySplit[1], '');
+      rewardsFromWidgets.add(rewardFromSeasonalExpeditionTilePresenter(
+        context,
+        'seas-$expSeasonNum',
+      ));
+    }
+
+    List<String> twitchCampaignKeySplit =
+        UsageKey.isTwitchCampaign.split("{0}");
+    if (usageKey.contains(twitchCampaignKeySplit[0])) {
+      String expSeasonNum = usageKey
+          .replaceAll(twitchCampaignKeySplit[0], '')
+          .replaceAll(twitchCampaignKeySplit[1], '');
+      rewardsFromWidgets.add(rewardFromTwitchTilePresenter(
+        context,
+        expSeasonNum,
+        displayGenericItemColour,
+      ));
+    }
   }
 
   if (usages.any((u) => u.contains(UsageKey.isRewardFromShipScrap))) {
