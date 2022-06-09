@@ -39,6 +39,8 @@ class AppImage {
   static const String techTree = drawer + 'techTree.png';
 
   static const String twitter = 'twitter.png';
+  static const String discord = 'discord.png';
+  static const String discordWhite = 'discord-white.png';
   static const String assistantApps = 'assistantApps.png';
 
   static const String factionDir = 'faction/';
