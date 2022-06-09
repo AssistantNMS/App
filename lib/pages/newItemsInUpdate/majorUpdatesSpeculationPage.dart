@@ -186,12 +186,14 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
       rows.add(
         TableRow(children: [
           getUpdateNameTableRow(update.title, update.updateType),
-          getTableRow(simpleDate(update.releaseDate)),
+          getUpdateNameTableRow(
+              simpleDate(update.releaseDate), update.updateType),
           hasPrevious
-              ? getTableRow(
+              ? getUpdateNameTableRow(
                   (updateDaysSinceEpoch - previousUpdateDaysSinceEpoch)
-                      .toString())
-              : getTableRow('-'),
+                      .toString(),
+                  update.updateType)
+              : getUpdateNameTableRow('-', update.updateType),
         ]),
       );
     }
@@ -230,15 +232,15 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
 
   Widget getUpdateNameTableRow(String text, UpdateType updateType) {
     Color textColor;
-    // if (updateType == UpdateType.major) {
-    //   textColor = Colors.lightBlue;
+    if (updateType == UpdateType.major) {
+      textColor = Colors.lightBlue;
+    }
+    // if (updateType == UpdateType.minor) {
+    //   textColor = Colors.red;
     // }
-    // // if (updateType == UpdateType.minor) {
-    // //   textColor = Colors.red;
-    // // }
-    // if (updateType == UpdateType.expedition) {
-    //   textColor = Colors.yellow;
-    // }
+    if (updateType == UpdateType.expedition) {
+      textColor = HexColor('D4BC38');
+    }
 
     return getTableRow(text, textColor: textColor);
   }
