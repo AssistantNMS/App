@@ -96,6 +96,10 @@ Widget majorUpdateItemDetailTilePresenter(
       name: updateItem.title,
       subtitle: Text(simpleDate(updateItem.releaseDate)),
       trailing: Text(updateItem.emoji),
+      onTap: () => getNavigation().navigateAwayFromHomeAsync(
+        context,
+        navigateTo: (_) => MajorUpdatesDetailPage(updateNewItems: updateItem),
+      ),
     ),
   );
 }
