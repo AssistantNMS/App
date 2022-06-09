@@ -1,6 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/NmsUIConstants.dart';
 import '../../contracts/data/majorUpdateItem.dart';
 import '../../pages/newItemsInUpdate/majorUpdatesDetailPage.dart';
 
@@ -90,7 +91,26 @@ Widget majorUpdateTilePresenter(
 Widget majorUpdateItemDetailTilePresenter(
     BuildContext context, MajorUpdateItem updateItem) {
   return flatCard(
-    child: genericListTileWithSubtitle(
+    child: ListTile(
+      leading: ClipRRect(
+        borderRadius: NMSUIConstants.gameItemBorderRadius,
+        child: localImage(
+          updateItem.icon.replaceAll('.png', '-icon.png'),
+          boxfit: BoxFit.fill,
+        ),
+      ),
+      title: Text(updateItem.title),
+      subtitle: Text(simpleDate(updateItem.releaseDate)),
+      trailing: Text(updateItem.emoji, style: const TextStyle(fontSize: 25)),
+      onTap: () => getNavigation().navigateAwayFromHomeAsync(
+        context,
+        navigateTo: (_) => MajorUpdatesDetailPage(updateNewItems: updateItem),
+      ),
+    ),
+  );
+
+  /*
+  genericListTileWithSubtitle(
       context,
       leadingImage: updateItem.icon,
       name: updateItem.title,
@@ -101,5 +121,5 @@ Widget majorUpdateItemDetailTilePresenter(
         navigateTo: (_) => MajorUpdatesDetailPage(updateNewItems: updateItem),
       ),
     ),
-  );
+   */
 }

@@ -72,12 +72,15 @@ class MajorUpdatesDetailPage extends StatelessWidget {
     ));
 
     listItems.add(emptySpace1x());
-    listItems.add(Center(
-      child: Text(
-        localMajorItem.emoji,
-        style: const TextStyle(fontSize: 30),
-      ),
-    ));
+    if (localMajorItem.emoji.isNotEmpty) {
+      listItems.add(Center(
+        child: Text(
+          localMajorItem.emoji,
+          style: const TextStyle(fontSize: 30),
+        ),
+      ));
+      listItems.add(emptySpace1x());
+    }
     listItems.add(Center(
       child: genericItemName(simpleDate(localMajorItem.releaseDate)),
     ));
