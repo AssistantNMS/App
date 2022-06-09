@@ -14,6 +14,7 @@ class MajorUpdateItem {
     this.emoji,
     this.gameVersion,
     this.releaseDate,
+    this.updateType,
     this.postUrl,
     this.itemIds,
   });
@@ -24,6 +25,7 @@ class MajorUpdateItem {
   final String emoji;
   final String gameVersion;
   final DateTime releaseDate;
+  final UpdateType updateType;
   final String postUrl;
   final List<String> itemIds;
 
@@ -38,6 +40,8 @@ class MajorUpdateItem {
         emoji: readStringSafe(json, 'emoji'),
         gameVersion: readStringSafe(json, 'gameVersion'),
         releaseDate: readDateSafe(json, 'releaseDate'),
+        updateType:
+            updateTypeValues.map[readIntSafe(json, 'updateType').toString()],
         postUrl: readStringSafe(json, 'postUrl'),
         itemIds: readListSafe<String>(
           json,
@@ -46,3 +50,15 @@ class MajorUpdateItem {
         ),
       );
 }
+
+enum UpdateType {
+  major,
+  minor,
+  expedition,
+}
+
+final updateTypeValues = EnumValues({
+  "0": UpdateType.major,
+  "1": UpdateType.minor,
+  "2": UpdateType.expedition,
+});

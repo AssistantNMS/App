@@ -93,6 +93,11 @@ class IDataJsonRepository {
     return ResultWithValue<List<MajorUpdateItem>>(false, null, '');
   }
 
+  Future<ResultWithValue<MajorUpdateItem>> getMajorUpdatesForItem(
+      BuildContext context, String itemId) async {
+    return ResultWithValue<MajorUpdateItem>(false, null, '');
+  }
+
   Future<ResultWithValue<List<StarshipScrap>>> getStarshipScrapData(
       BuildContext context) async {
     return ResultWithValue<List<StarshipScrap>>(false, null, '');

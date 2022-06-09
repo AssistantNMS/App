@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/UsageKey.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -13,6 +12,7 @@ import '../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/NmsUIConstants.dart';
+import '../../constants/UsageKey.dart';
 import '../../contracts/cart/cartItem.dart';
 import '../../contracts/chargeBy.dart';
 import '../../contracts/data/eggTrait.dart';
@@ -313,6 +313,11 @@ class GenericPage extends StatelessWidget {
     List<EggTrait> eggTraits =
         genericItem?.eggTraits ?? List.empty(growable: true);
     widgets.addAll(getEggTraits(context, eggTraits));
+
+    // ----------------------------- From Update -------------------------------
+    if (genericItem?.addedInUpdate != null) {
+      widgets.addAll(getFromUpdate(context, genericItem.addedInUpdate));
+    }
 
     widgets.add(emptySpace(10));
 

@@ -86,3 +86,16 @@ Widget majorUpdateTilePresenter(
             ),
   );
 }
+
+Widget majorUpdateItemDetailTilePresenter(
+    BuildContext context, MajorUpdateItem updateItem) {
+  return flatCard(
+    child: genericListTileWithSubtitle(
+      context,
+      leadingImage: updateItem.icon,
+      name: updateItem.title,
+      subtitle: Text(simpleDate(updateItem.releaseDate)),
+      trailing: Text(updateItem.emoji),
+    ),
+  );
+}

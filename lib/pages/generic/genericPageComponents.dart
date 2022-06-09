@@ -6,6 +6,7 @@ import '../../components/common/image.dart';
 import '../../components/expeditionAlphabetTranslation.dart';
 import '../../components/tilePresenters/eggTraitTilePresenter.dart';
 import '../../components/tilePresenters/inventoryTilePresenter.dart';
+import '../../components/tilePresenters/majorUpdateTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemTilePresenter.dart';
 import '../../components/tilePresenters/rewardFromTilePresenter.dart';
 import '../../components/tilePresenters/seasonalExpeditionTilePresenter.dart';
@@ -19,6 +20,7 @@ import '../../constants/UsageKey.dart';
 import '../../contracts/cart/cartItem.dart';
 import '../../contracts/chargeBy.dart';
 import '../../contracts/data/eggTrait.dart';
+import '../../contracts/data/majorUpdateItem.dart';
 import '../../contracts/data/starshipScrap.dart';
 import '../../contracts/enum/blueprintSource.dart';
 import '../../contracts/enum/currencyType.dart';
@@ -668,4 +670,17 @@ List<Widget> getRewardFrom(
     genericItemText(getTranslations().fromKey(LocaleKey.rewardFrom)),
     ...rewardsFromWidgets,
   ];
+}
+
+List<Widget> getFromUpdate(
+  BuildContext context,
+  MajorUpdateItem addedInUpdate,
+) {
+  List<Widget> updateWidgets = List.empty(growable: true);
+  updateWidgets.add(emptySpace3x());
+  String title = getTranslations().fromKey(LocaleKey.addedInUpdate);
+  updateWidgets.add(genericItemText(title));
+  updateWidgets.add(majorUpdateItemDetailTilePresenter(context, addedInUpdate));
+
+  return updateWidgets;
 }

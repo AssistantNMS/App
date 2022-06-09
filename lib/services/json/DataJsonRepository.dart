@@ -343,6 +343,35 @@ class DataJsonRepository extends BaseJsonService
   }
 
   @override
+  Future<ResultWithValue<MajorUpdateItem>> getMajorUpdatesForItem(
+      BuildContext context, String itemId) async {
+    ResultWithValue<List<MajorUpdateItem>> allItemsResult =
+        await getMajorUpdates(context);
+    if (allItemsResult.hasFailed) {
+      return ResultWithValue<MajorUpdateItem>(
+          false, null, allItemsResult.errorMessage);
+    }
+
+    try {
+      List<MajorUpdateItem> items = allItemsResult.value
+          .where((all) => all.itemIds.contains(itemId))
+          .toList();
+
+      if (items == null || items.isEmpty) {
+        return ResultWithValue<MajorUpdateItem>(
+            false, null, 'No Starship Scrap data found');
+      }
+
+      return ResultWithValue<MajorUpdateItem>(true, items.first, '');
+    } catch (exception) {
+      getLog().e(
+          "DataJsonRepository getMajorUpdatesForItem Exception: ${exception.toString()}");
+      return ResultWithValue<MajorUpdateItem>(
+          false, null, exception.toString());
+    }
+  }
+
+  @override
   Future<ResultWithValue<List<StarshipScrap>>> getStarshipScrapData(
       BuildContext context) async {
     try {

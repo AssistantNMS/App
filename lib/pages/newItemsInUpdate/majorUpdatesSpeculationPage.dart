@@ -185,7 +185,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
 
       rows.add(
         TableRow(children: [
-          getTableRow(update.title),
+          getUpdateNameTableRow(update.title, update.updateType),
           getTableRow(simpleDate(update.releaseDate)),
           hasPrevious
               ? getTableRow(
@@ -217,10 +217,29 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
     );
   }
 
-  Widget getTableRow(String text) {
-    return Text(
-      text,
-      textAlign: TextAlign.center,
+  Widget getTableRow(String text, {Color textColor}) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 4),
+      child: Text(
+        text,
+        textAlign: TextAlign.center,
+        style: TextStyle(color: textColor),
+      ),
     );
+  }
+
+  Widget getUpdateNameTableRow(String text, UpdateType updateType) {
+    Color textColor;
+    // if (updateType == UpdateType.major) {
+    //   textColor = Colors.lightBlue;
+    // }
+    // // if (updateType == UpdateType.minor) {
+    // //   textColor = Colors.red;
+    // // }
+    // if (updateType == UpdateType.expedition) {
+    //   textColor = Colors.yellow;
+    // }
+
+    return getTableRow(text, textColor: textColor);
   }
 }
