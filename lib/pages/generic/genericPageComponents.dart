@@ -542,7 +542,7 @@ List<Widget> getStatBonuses(
   List<Widget> statBonusWidgets = List.empty(growable: true);
   if (statBonuses.isNotEmpty) {
     statBonusWidgets.add(emptySpace3x());
-    var title = getTranslations().fromKey(LocaleKey.stats);
+    String title = getTranslations().fromKey(LocaleKey.stats);
     statBonusWidgets.add(genericItemText(title));
     statBonusWidgets.addAll(genericItemWithOverflowButton(
       context,
@@ -565,7 +565,7 @@ List<Widget> getProceduralStatBonuses(
   List<Widget> statBonusWidgets = List.empty(growable: true);
   if (statBonuses.isNotEmpty) {
     statBonusWidgets.add(emptySpace3x());
-    var title = getTranslations()
+    String title = getTranslations()
         .fromKey(LocaleKey.proceduralStats)
         .replaceAll('{0}', numStatsMin.toString())
         .replaceAll('{1}', numStatsMax.toString());
