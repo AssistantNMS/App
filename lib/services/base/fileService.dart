@@ -21,6 +21,9 @@ class FileService {
           // User canceled the picker
           return Result(false, 'Operation cancelled');
         }
+      } else {
+        String selectedDirectory = await FilePicker.platform.getDirectoryPath();
+        outputFile = selectedDirectory + '/' + defaultFileName;
       }
 
       getLog().d('save file to: ' + outputFile);
@@ -28,6 +31,7 @@ class FileService {
 
       return Result(true, '');
     } catch (ex) {
+      getLog().d(ex.toString());
       return Result(false, ex.toString());
     }
   }

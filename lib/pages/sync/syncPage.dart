@@ -203,12 +203,11 @@ class _SyncWidget extends State<SyncPage> {
     widgets.add(GestureDetector(
       child: Container(
         color: Colors.red[900],
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(8),
-            child: Text(
-              getTranslations().fromKey(LocaleKey.syncDocumentationNotice),
-            ),
+        child: Padding(
+          padding: const EdgeInsets.all(8),
+          child: Text(
+            getTranslations().fromKey(LocaleKey.syncDocumentationNotice),
+            textAlign: TextAlign.center,
           ),
         ),
       ),
