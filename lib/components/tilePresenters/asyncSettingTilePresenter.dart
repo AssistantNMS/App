@@ -91,7 +91,6 @@ Future<dynamic> asyncSettingTileGenericFunc<T>(
     LocaleKey errorMessage,
     LocaleKey successMessage) async {
   Result readResult = await asyncFunc();
-  print(readResult.hasFailed);
   if (readResult.hasFailed) {
     getDialog().showSimpleDialog(
       context,

@@ -1,3 +1,4 @@
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
@@ -28,8 +29,10 @@ Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(AssistantNMS(env));
 
-  doWhenWindowReady(() {
-    appWindow.alignment = Alignment.center;
-    appWindow.show();
-  });
+  if (isWindows) {
+    doWhenWindowReady(() {
+      appWindow.alignment = Alignment.center;
+      appWindow.show();
+    });
+  }
 }

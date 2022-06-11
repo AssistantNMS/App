@@ -45,8 +45,8 @@ class AppDrawer extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 30,
-            right: 30,
+            top: isWindows ? 15 : 40,
+            right: 15,
             child: GestureDetector(
               child: ClipOval(
                 child: Container(
@@ -55,8 +55,8 @@ class AppDrawer extends StatelessWidget {
                     padding: const EdgeInsets.all(4),
                     child: localImage(
                       AppImage.discordWhite,
-                      height: 100,
-                      width: 100,
+                      height: 85,
+                      width: 85,
                     ),
                   ),
                 ),
