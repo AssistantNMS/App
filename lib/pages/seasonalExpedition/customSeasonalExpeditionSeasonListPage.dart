@@ -3,16 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
-import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/redux/appState.dart';
 import '../../redux/modules/setting/isPatreonViewModel.dart';
 import 'commonSeasonalExpeditionSeasonList.dart';
 import 'seasonExpeditionConstants.dart';
 
-class SeasonalExpeditionSeasonListPage extends StatelessWidget {
-  SeasonalExpeditionSeasonListPage({Key key}) : super(key: key) {
-    getAnalytics().trackEvent(AnalyticsEvent.seasonalExpeditionListPage);
-  }
+class CustomSeasonalExpeditionSeasonListPage extends StatelessWidget {
+  const CustomSeasonalExpeditionSeasonListPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +17,7 @@ class SeasonalExpeditionSeasonListPage extends StatelessWidget {
       converter: (store) => IsPatreonViewModel.fromStore(store),
       builder: (_, viewModel) {
         return FutureBuilder(
-          future: currentAndPastExpeditions(context),
+          future: currentAndPastExpeditions(context, isCustom: true),
           builder: (BuildContext futureContext,
               AsyncSnapshot<ResultWithValue<CurrentAndPastExpeditions>>
                   snapshot) {
@@ -33,6 +30,7 @@ class SeasonalExpeditionSeasonListPage extends StatelessWidget {
                 futureContext,
                 viewModel,
                 snapshot,
+                isCustom: true,
               ),
             );
           },

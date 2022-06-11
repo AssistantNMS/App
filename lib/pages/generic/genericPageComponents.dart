@@ -636,6 +636,7 @@ List<Widget> getRewardFrom(
       rewardsFromWidgets.add(rewardFromSeasonalExpeditionTilePresenter(
         context,
         'seas-$expSeasonNum',
+        false,
       ));
     }
 

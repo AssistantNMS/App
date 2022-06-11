@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';
 import '../../constants/Routes.dart';
+import '../../pages/seasonalExpedition/customSeasonalExpeditionSeasonListPage.dart';
 import '../../redux/modules/setting/drawerSettingsViewModel.dart';
 
 class CustomMenu {
@@ -194,6 +195,12 @@ List<CustomMenu> getMenuOptionsSection3(
       drawerIcon: localGetDrawerFromIcon(Icons.map_sharp),
       title: LocaleKey.seasonalExpeditionSeasons,
       navigateToNamed: Routes.seasonalExpeditionPage,
+      // onLongPress: (navCtx) {
+      //   getNavigation().navigateAwayFromHomeAsync(
+      //     navCtx,
+      //     navigateTo: (_) => const CustomSeasonalExpeditionSeasonListPage(),
+      //   );
+      // },
     ),
     CustomMenu(
       icon: localGetFromIcon(Icons.new_releases_sharp),

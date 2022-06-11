@@ -323,11 +323,14 @@ Widget expeditionInProgressPresenter(
 }
 
 Widget rewardFromSeasonalExpeditionTilePresenter(
-    BuildContext context, String seasId) {
+  BuildContext context,
+  String seasId,
+  bool isCustom,
+) {
   return flatCard(
     shadowColor: Colors.transparent,
     child: CachedFutureBuilder(
-      future: getSeasonalExpeditionRepo().getById(context, seasId),
+      future: getSeasonalExpeditionRepo().getById(context, seasId, isCustom),
       whileLoading: getLoading().smallLoadingTile(context),
       whenDoneLoading: (ResultWithValue<SeasonalExpeditionSeason> snapshot) {
         SeasonalExpeditionSeason item = snapshot.value;
@@ -340,7 +343,10 @@ Widget rewardFromSeasonalExpeditionTilePresenter(
           borderRadius: NMSUIConstants.gameItemBorderRadius,
           onTap: () async => await getNavigation().navigateAsync(
             context,
-            navigateTo: (_) => SeasonalExpeditionPhaseListPage(seasId),
+            navigateTo: (_) => SeasonalExpeditionPhaseListPage(
+              seasId,
+              isCustomExp: isCustom,
+            ),
           ),
         );
       },
