@@ -114,12 +114,12 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
               _isLoading = false;
             });
             if (submissionResult.isSuccess) {
-              var thankYou = getTranslations()
+              String thankYou = getTranslations()
                   .fromKey(LocaleKey.thankYouForSubmittingFriendCode);
-              var checkMail = getTranslations()
+              String checkMail = getTranslations()
                   .fromKey(LocaleKey.pleaseCheckMailForConfirmation)
                   .replaceAll('{0}', '(${apiObj.email})');
-              var dialogDescription = '$thankYou $checkMail';
+              String dialogDescription = '$thankYou $checkMail';
               prettyDialog(
                 context,
                 '${getPath().imageAssetPathPrefix}/email.png',

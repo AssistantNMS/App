@@ -77,7 +77,7 @@ class _AddEditTimerState extends State<AddEditTimerPage> {
             );
             return;
           }
-          Navigator.pop(
+          getNavigation().pop(
             context,
             TimerItem(
               name: timer.name ?? getTranslations().fromKey(LocaleKey.newTimer),
