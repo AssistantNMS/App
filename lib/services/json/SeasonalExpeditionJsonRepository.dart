@@ -42,7 +42,6 @@ class SeasonalExpeditionJsonRepository extends BaseJsonService
       return ResultWithValue(
           false, SeasonalExpeditionSeason(), expeditionsResult.errorMessage);
     }
-    print(id + ' ' + isCustom.toString());
     try {
       SeasonalExpeditionSeason selectedexpedition =
           expeditionsResult.value.firstWhere(
