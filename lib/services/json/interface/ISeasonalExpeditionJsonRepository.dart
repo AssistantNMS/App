@@ -5,13 +5,13 @@ import '../../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
 class ISeasonalExpeditionJsonRepository {
   //
   Future<ResultWithValue<List<SeasonalExpeditionSeason>>> getAll(
-      BuildContext context) async {
+      BuildContext context, bool isCustom) async {
     return ResultWithValue<List<SeasonalExpeditionSeason>>(
         false, List.empty(growable: true), '');
   }
 
   Future<ResultWithValue<SeasonalExpeditionSeason>> getById(
-      BuildContext context, String id) async {
+      BuildContext context, String id, bool isCustom) async {
     return ResultWithValue<SeasonalExpeditionSeason>(
         false, SeasonalExpeditionSeason(), '');
   }

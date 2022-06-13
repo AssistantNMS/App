@@ -75,15 +75,17 @@ List<Widget> getDrawerItems(context, DrawerSettingsViewModel viewModel) {
   return widgets;
 }
 
-Widget _drawerItem(BuildContext context,
-    {@required Widget image,
-    @required LocaleKey key,
-    String navigateToNamed,
-    String navigateToExternal,
-    bool isLocked = false,
-    bool isNew = false,
-    Function(BuildContext) onTap,
-    Function(BuildContext) onLongPress}) {
+Widget _drawerItem(
+  BuildContext context, {
+  @required Widget image,
+  @required LocaleKey key,
+  String navigateToNamed,
+  String navigateToExternal,
+  bool isLocked = false,
+  bool isNew = false,
+  Function(BuildContext) onTap,
+  Function(BuildContext) onLongPress,
+}) {
   Widget isLockedWidget;
   if (isLocked) {
     isLockedWidget = Icon(
@@ -134,7 +136,7 @@ List<Widget> _mapToDrawerItem(BuildContext context, List<CustomMenu> menus) {
       context,
       image: menu.drawerIcon ?? menu.icon,
       key: menu.title,
-      navigateToNamed: menu.navigateToNamed,
+      //navigateToNamed: menu.navigateToNamed,
       navigateToExternal: menu.navigateToExternal,
       isLocked: menu.isLocked,
       isNew: menu.isNew,

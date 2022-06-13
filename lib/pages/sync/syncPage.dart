@@ -200,6 +200,20 @@ class _SyncWidget extends State<SyncPage> {
     List<Widget> widgets = List.empty(growable: true);
     // widgets.addAll(getAuthWidgets(bodyCtx));
 
+    widgets.add(GestureDetector(
+      child: Container(
+        color: Colors.red[900],
+        child: Padding(
+          padding: const EdgeInsets.all(8),
+          child: Text(
+            getTranslations().fromKey(LocaleKey.syncDocumentationNotice),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ),
+      onTap: () => launchExternalURL(ExternalUrls.assistantAppsDocsSyncNotice),
+    ));
+
     widgets.add(
       headingSettingTilePresenter(getTranslations().fromKey(LocaleKey.portals)),
     );

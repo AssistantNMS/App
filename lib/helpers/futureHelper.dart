@@ -1,6 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/constants/UsageKey.dart';
 import 'package:assistantnms_app/contracts/data/alphabetTranslation.dart';
+import 'package:assistantnms_app/contracts/data/majorUpdateItem.dart';
 import 'package:assistantnms_app/contracts/data/starshipScrap.dart';
 import 'package:flutter/material.dart';
 
@@ -58,6 +59,7 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   item.chargedBy = Recharge.initial();
   item.usedToRecharge = List.empty();
   item.starshipScrapItems = List.empty();
+  item.addedInUpdate = null;
 
   if ((usage ?? []).contains(UsageKey.hasUsedToCraft)) {
     item.usedInRecipes = await getAllPossibleOutputsFromInput(context, itemId);
@@ -84,6 +86,9 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   }
   if ((usage ?? []).contains(UsageKey.isRewardFromShipScrap)) {
     item.starshipScrapItems = await rewardStarshipScrapFuture(context, itemId);
+  }
+  if ((usage ?? []).contains(UsageKey.isAddedInTrackedUpdate)) {
+    item.addedInUpdate = await fromTrackedUpdateFuture(context, itemId);
   }
 
   itemResult.value.eggTraits = await eggTraitsFuture(context, itemId);
@@ -269,6 +274,15 @@ Future<List<StarshipScrap>> rewardStarshipScrapFuture(
     return List.empty();
   }
   return items.value;
+}
+
+Future<MajorUpdateItem> fromTrackedUpdateFuture(context, String itemId) async {
+  ResultWithValue<MajorUpdateItem> item =
+      await getDataRepo().getMajorUpdatesForItem(context, itemId);
+  if (item.hasFailed) {
+    return null;
+  }
+  return item.value;
 }
 
 // -----------------------------------------------------------------------------------------------------------------

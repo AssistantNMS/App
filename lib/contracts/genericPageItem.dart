@@ -1,6 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/contracts/data/starshipScrap.dart';
 
+import 'data/majorUpdateItem.dart';
 import 'data/platformControlMapping.dart';
 import 'statBonus.dart';
 import 'proceduralStatBonus.dart';
@@ -43,6 +44,7 @@ class GenericPageItem {
   List<StatBonus> statBonuses;
   List<ProceduralStatBonus> proceduralStatBonuses;
   List<StarshipScrap> starshipScrapItems;
+  MajorUpdateItem addedInUpdate;
   int numStatsMax;
   int numStatsMin;
   List<EggTrait> eggTraits;
@@ -80,6 +82,7 @@ class GenericPageItem {
     this.statBonuses,
     this.proceduralStatBonuses,
     this.starshipScrapItems,
+    this.addedInUpdate,
     this.numStatsMax,
     this.numStatsMin,
     this.eggTraits,

@@ -76,7 +76,7 @@ Widget textWithHighlightTags(
   List<InlineSpan> nodes = List.empty(growable: true);
   if (text.contains('<>')) {
     String wordChain = '';
-    List<String> words = text.replaceAll('<><', '<> <').split(' ');
+    List<String> words = text.split(' ');
     for (int wordIndex = 0; wordIndex < words.length; wordIndex++) {
       String word = words[wordIndex];
       String displayWord = word;
@@ -92,7 +92,7 @@ Widget textWithHighlightTags(
         word = doubleMatches[0].group(1);
       }
 
-      var startMatches = tagStartRegex.allMatches(word).toList();
+      List<RegExpMatch> startMatches = tagStartRegex.allMatches(word).toList();
       if (startMatches != null &&
           startMatches.length == 1 &&
           startMatches[0].groupCount == 3) {
@@ -192,7 +192,7 @@ List<Widget> genericPageDescripHighlightText(BuildContext context, String text,
   if (!text.contains('<>')) return [genericItemDescription(text)];
 
   List<String> paragraphs = text.split(RegExp(r'\r?\n'));
-  for (var paragraphIndex = 0;
+  for (int paragraphIndex = 0;
       paragraphIndex < paragraphs.length;
       paragraphIndex++) {
     String paragraph = paragraphs[paragraphIndex];

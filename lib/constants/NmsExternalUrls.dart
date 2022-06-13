@@ -13,7 +13,7 @@ class NmsExternalUrls {
   static const String microsoftStoreListing =
       'https://apps.microsoft.com/store/detail/assistant-for-no-mans-sky/9NQLF7XD0LF3';
   static const String noMansSkyWebsite = 'https://nomanssky.com';
-  static const String discord = 'https://discord.gg/q3aFBQM';
+  static const String discord = 'https://assistantapps.com/discord';
   static const String twitter = 'https://twitter.com/AssistantNMS';
   static const String defaultProfilePic =
       'https://nmsassistant.com/assets/img/vykeen.png';
@@ -37,4 +37,6 @@ class NmsExternalUrls {
   static const String assistantNMSYoutube =
       'https://www.youtube.com/channel/UCpKNMVk7ZWvBk-psQQZqz5w?ref=assistantNMS';
   static const String steamDatabase = 'https://steamdb.info/app/275850/depots/';
+  static const String communityMissionProgress =
+      'https://nmscd.github.io/CommunityMission-Progress-Viewer/';
 }

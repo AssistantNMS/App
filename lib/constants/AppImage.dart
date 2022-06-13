@@ -39,6 +39,8 @@ class AppImage {
   static const String techTree = drawer + 'techTree.png';
 
   static const String twitter = 'twitter.png';
+  static const String discord = 'discord.png';
+  static const String discordWhite = 'discord-white.png';
   static const String assistantApps = 'assistantApps.png';
 
   static const String factionDir = 'faction/';
@@ -72,6 +74,8 @@ class AppImage {
   static const String scan = 'special/scan.png';
   static const String damagedTech = 'special/damagedTech.png';
   static const String underConstruction = 'special/underConstruction.png';
+  static const String communityMissionProgress =
+      'special/communityMissionProgress.png';
 
   static const String expeditionSeasonBackgroundPrefix =
       base + 'special/expedition-';
