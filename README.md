@@ -9,6 +9,7 @@
   ![madeWithLove](./.github/img/made-with-love.svg)
   [![licence](./.github/img/licence-badge.svg)](https://github.com/AssistantNMS/App/blob/master/LICENCE.md)<br />
   [![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd] 
+  ![Profile views](https://komarev.com/ghpvc/?username=AssistantNMS&color=green&style=for-the-badge)
 
   [![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
   [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
