@@ -127,7 +127,10 @@ class _PortalsPageState extends State<PortalsPage> {
         getDialog().simpleDialogPositiveButton(
           ctx,
           title: LocaleKey.yes,
-          onTap: () => portalViewModel.removePortal(portal.uuid),
+          onTap: () {
+            portalViewModel.removePortal(portal.uuid);
+            getNavigation().pop(ctx);
+          },
         ),
       ],
     );
@@ -143,7 +146,10 @@ class _PortalsPageState extends State<PortalsPage> {
         getDialog().simpleDialogPositiveButton(
           ctx,
           title: LocaleKey.yes,
-          onTap: () => portalViewModel.removeAllPortals(),
+          onTap: () {
+            portalViewModel.removeAllPortals();
+            getNavigation().pop(ctx);
+          },
         ),
       ],
     );

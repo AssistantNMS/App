@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';
 import '../../constants/Routes.dart';
-import '../../pages/seasonalExpedition/customSeasonalExpeditionSeasonListPage.dart';
 import '../../redux/modules/setting/drawerSettingsViewModel.dart';
 
 class CustomMenu {
