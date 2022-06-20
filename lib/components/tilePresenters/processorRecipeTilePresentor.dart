@@ -82,9 +82,12 @@ Widget getNutrientProcessorTile(
   );
 }
 
-Widget processorRecipeWithInputsTilePresentor(BuildContext context,
-    Processor processor, Widget Function(Processor p) navigateTo,
-    {bool showBackgroundColours = false}) {
+Widget processorRecipeWithInputsTilePresentor(
+  BuildContext context,
+  Processor processor,
+  Widget Function(Processor p) navigateTo, {
+  bool showBackgroundColours = false,
+}) {
   List<RequiredItem> items = [processor.output, ...processor.inputs];
   return FutureBuilder<ResultWithValue<List<RequiredItemDetails>>>(
     key: Key(processor.id),

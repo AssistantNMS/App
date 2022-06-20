@@ -57,12 +57,14 @@ Widget requiredItemDetailsTilePresenter(
 }
 
 Widget requiredItemDetailsWithCraftingRecipeTilePresenter(
-    BuildContext context, RequiredItemDetails itemDetails,
-    {Function onTap,
-    Function onEdit,
-    Function onDelete,
-    String pageItemId,
-    bool showBackgroundColours = false}) {
+  BuildContext context,
+  RequiredItemDetails itemDetails, {
+  void Function() onTap,
+  Function onEdit,
+  Function onDelete,
+  String pageItemId,
+  bool showBackgroundColours = false,
+}) {
   return FutureBuilder<List<RequiredItemDetails>>(
     future: getRequiredItemsSurfaceLevel(context, itemDetails.id),
     builder: (BuildContext context,

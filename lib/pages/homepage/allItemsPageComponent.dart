@@ -10,6 +10,7 @@ import '../../helpers/repositoryHelper.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 import '../generic/genericPage.dart';
+import '../generic/genericPageInnerContent.dart';
 
 class AllItemsPageComponent extends StatelessWidget {
   const AllItemsPageComponent({Key key}) : super(key: key);
@@ -50,7 +51,7 @@ class AllItemsPageComponent extends StatelessWidget {
         },
         listItemDesktopOnTap: (BuildContext context, GenericPageItem gameItem,
             void Function(Widget) updateDetailView) {
-          return GenericPage(
+          return GenericPageInnerContent(
             gameItem.id,
             itemDetails: gameItem,
             updateDetailView: updateDetailView,

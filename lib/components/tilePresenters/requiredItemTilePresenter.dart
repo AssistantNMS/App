@@ -14,12 +14,15 @@ import '../../pages/generic/genericPage.dart';
 import '../../pages/generic/genericPageProcessorRecipe.dart';
 import 'genericTilePresenter.dart';
 
-Widget Function(BuildContext context, RequiredItem requiredItem,
-    {Function onTap}) requiredItemBackgroundTilePresenter(
+Widget Function(
+  BuildContext context,
+  RequiredItem requiredItem, {
+  void Function() onTap,
+}) requiredItemBackgroundTilePresenter(
   bool showBackgroundColours, {
-  Function onEdit,
-  Function onDelete,
-  Function(RequiredItem) onPress,
+  void Function() onEdit,
+  void Function() onDelete,
+  void Function(RequiredItem) onPress,
 }) =>
     (BuildContext context, RequiredItem requiredItem, {Function onTap}) =>
         requiredItemTilePresenter(
@@ -32,11 +35,13 @@ Widget Function(BuildContext context, RequiredItem requiredItem,
         );
 
 Widget requiredItemTilePresenter(
-    BuildContext context, RequiredItem requiredItem,
-    {Function onTap,
-    Function onEdit,
-    Function onDelete,
-    bool showBackgroundColours = false}) {
+  BuildContext context,
+  RequiredItem requiredItem, {
+  void Function() onTap,
+  void Function() onEdit,
+  void Function() onDelete,
+  bool showBackgroundColours = false,
+}) {
   return FutureBuilder<ResultWithValue<RequiredItemDetails>>(
     key: Key(requiredItem.id),
     future: requiredItemDetails(context, requiredItem),
