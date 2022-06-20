@@ -7,7 +7,7 @@ import '../../components/tilePresenters/menuItemTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/AppImage.dart';
 import '../../constants/Routes.dart';
-import '../../contracts/menuItem.dart';
+import '../../contracts/customMenuItem.dart';
 
 class RetiredDrawerMenuPage extends StatelessWidget {
   RetiredDrawerMenuPage({Key key}) : super(key: key) {
@@ -25,42 +25,42 @@ class RetiredDrawerMenuPage extends StatelessWidget {
 
   Widget getBody(BuildContext context) {
     Color menuIconColour = getTheme().getDarkModeSecondaryColour();
-    List<MenuItem> menuItems = List.empty(growable: true);
+    List<CustomMenuItem> menuItems = List.empty(growable: true);
 
-    menuItems.add(MenuItem(
+    menuItems.add(CustomMenuItem(
       image: getCorrectlySizedImageFromIcon(context, Icons.new_releases,
           colour: menuIconColour),
       title: LocaleKey.newItemsAdded,
-      navigateToNamed: Routes.newItems,
+      navigateToNamed: Routes.majorUpdates,
     ));
-    menuItems.add(MenuItem(
+    menuItems.add(CustomMenuItem(
       image: getListTileImage('drawer/helloGames.png'),
       title: LocaleKey.helloGames,
       navigateToNamed: Routes.helloGames,
     ));
-    menuItems.add(MenuItem(
+    menuItems.add(CustomMenuItem(
       image: getListTileImage(AppImage.twitch),
       title: LocaleKey.twitchDrop,
       navigateToNamed: Routes.twitchCampaignPage,
     ));
-    menuItems.add(MenuItem(
+    menuItems.add(CustomMenuItem(
       image: getCorrectlySizedImageFromIcon(context, Icons.search,
           colour: menuIconColour),
       title: LocaleKey.advancedSearch,
       navigateToNamed: Routes.advancedSearch,
     ));
-    menuItems.add(MenuItem(
+    menuItems.add(CustomMenuItem(
       image: getCorrectlySizedImageFromIcon(context, Icons.favorite,
           colour: menuIconColour),
       title: LocaleKey.valentines,
       navigateToNamed: Routes.valentinesPage,
     ));
-    menuItems.add(MenuItem(
+    menuItems.add(CustomMenuItem(
       image: getListTileImage('drawer/exploits.png'),
       title: LocaleKey.exploits,
       navigateToNamed: Routes.exploits,
     ));
-    menuItems.add(MenuItem(
+    menuItems.add(CustomMenuItem(
       image: getCorrectlySizedImageFromIcon(context, Icons.public,
           colour: menuIconColour),
       title: LocaleKey.onlineMeetup2020,

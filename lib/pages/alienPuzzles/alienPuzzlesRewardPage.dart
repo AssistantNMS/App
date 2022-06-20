@@ -131,15 +131,14 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
 
   @override
   Widget build(BuildContext context) {
-    return genericPageScaffold(
+    return basicGenericPageScaffold(
       context,
-      getTranslations().fromKey(LocaleKey.puzzles),
-      null, //unused
-      body: getBody,
+      title: getTranslations().fromKey(LocaleKey.puzzles),
+      body: getBody(context),
     );
   }
 
-  Widget getBody(BuildContext context, unused) {
+  Widget getBody(BuildContext context) {
     if (hasFailed == true) return getLoading().customErrorWidget(context);
     if (hasLoaded == false) return getLoading().fullPageLoading(context);
 

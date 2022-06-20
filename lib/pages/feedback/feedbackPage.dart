@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 
 import '../../constants/AnalyticsEvent.dart';
-import '../../constants/NmsUIConstants.dart';
 import '../../contracts/enum/appType.dart';
 import '../../contracts/generated/feedbackAnsweredViewModel.dart';
 import '../../contracts/generated/feedbackQuestionAnsweredViewModel.dart';
@@ -61,20 +60,29 @@ class FeedbackPage extends StatelessWidget {
     );
     if (errorWidget != null) return errorWidget;
 
-    var feedbackForm = snapshot.data.value;
-    var answerForm = FeedbackAnsweredViewModel();
+    FeedbackViewModel feedbackForm = snapshot.data.value;
+    FeedbackAnsweredViewModel answerForm = FeedbackAnsweredViewModel();
     answerForm.feedbackGuid = feedbackForm.guid;
-    answerForm.appType = isApple ? AppType.Ios : AppType.Android;
+    answerForm.appType = getAppTypeForPlatform();
     answerForm.answers = feedbackForm.questions
         .map(
           (q) => FeedbackQuestionAnsweredViewModel(
-              feedbackQuestionGuid: q.guid,
-              answer: NMSUIConstants.FeedbackAnswerDefault),
+            feedbackQuestionGuid: q.guid,
+            answer: '',
+          ),
         )
         .toList();
     return FeedbackQuestionsPage(
       feedbackForm: feedbackForm,
       answerForm: answerForm,
     );
+  }
+
+  AppType getAppTypeForPlatform() {
+    AppType platType = AppType.Web;
+    if (isiOS) platType = AppType.Ios;
+    if (isAndroid) platType = AppType.Android;
+
+    return platType;
   }
 }

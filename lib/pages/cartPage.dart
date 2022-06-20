@@ -3,8 +3,6 @@ import 'package:assistantnms_app/services/json/interface/IGenericRepository.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../components/dialogs/baseDialog.dart';
-import '../components/dialogs/quantityDialog.dart';
 import '../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
 import '../constants/AnalyticsEvent.dart';
@@ -43,18 +41,23 @@ class CartPage extends StatelessWidget {
       ],
       body: StoreConnector<AppState, CartViewModel>(
         converter: (store) => CartViewModel.fromStore(store),
-        builder: (_, viewModel) => FutureBuilder<List<CartPageItem>>(
-          future: cartItemsFuture(context, viewModel),
-          builder: (BuildContext context,
-                  AsyncSnapshot<List<CartPageItem>> snapshot) =>
-              getBody(context, viewModel, snapshot),
-        ),
+        builder: (_, viewModel) {
+          return FutureBuilder<List<CartPageItem>>(
+            key: Key('${viewModel.craftingItems.length}'),
+            future: cartItemsFuture(context, viewModel),
+            builder: (BuildContext context,
+                    AsyncSnapshot<List<CartPageItem>> snapshot) =>
+                getBody(context, viewModel, snapshot),
+          );
+        },
       ),
     );
   }
 
   Future<List<CartPageItem>> cartItemsFuture(
-      context, CartViewModel viewModel) async {
+    context,
+    CartViewModel viewModel,
+  ) async {
     List<CartPageItem> reqItems = List.empty(growable: true);
     for (CartItem cartItem in viewModel.craftingItems) {
       ResultWithValue<IGenericRepository> genRepo =
@@ -73,8 +76,11 @@ class CartPage extends StatelessWidget {
     return reqItems;
   }
 
-  Widget getBody(BuildContext context, CartViewModel viewModel,
-      AsyncSnapshot<List<CartPageItem>> snapshot) {
+  Widget getBody(
+    BuildContext context,
+    CartViewModel viewModel,
+    AsyncSnapshot<List<CartPageItem>> snapshot,
+  ) {
     Widget errorWidget = asyncSnapshotHandler(context, snapshot);
     if (errorWidget != null) return errorWidget;
 
@@ -89,22 +95,30 @@ class CartPage extends StatelessWidget {
     for (CartPageItem cartDetail in snapshot.data) {
       RequiredItemDetails req = RequiredItemDetails.fromGenericPageItem(
           cartDetail.details, cartDetail.quantity);
-      widgets.add(requiredItemDetailsTilePresenter(context, req,
-          onTap: () async => await getNavigation().navigateAsync(context,
-              navigateTo: (context) => GenericPage(cartDetail.details.id)),
-          showBackgroundColours: viewModel.displayGenericItemColour,
-          onEdit: () {
-            var controller =
-                TextEditingController(text: cartDetail.quantity.toString());
-            showQuantityDialog(context, controller, onSuccess: (quantity) {
+      widgets.add(requiredItemDetailsTilePresenter(
+        context,
+        req,
+        onTap: () async => await getNavigation().navigateAsync(context,
+            navigateTo: (context) => GenericPage(cartDetail.details.id)),
+        showBackgroundColours: viewModel.displayGenericItemColour,
+        onEdit: () {
+          TextEditingController controller =
+              TextEditingController(text: cartDetail.quantity.toString());
+          getDialog().showQuantityDialog(
+            context,
+            controller,
+            onSuccess: (BuildContext ctx, String quantity) {
               int intQuantity = int.tryParse(quantity);
               if (intQuantity == null) return;
               viewModel.editCartItem(cartDetail.details.id, intQuantity);
-            });
-          },
-          onDelete: () {
-            viewModel.removeFromCart(cartDetail.details.id);
-          }));
+            },
+          );
+        },
+        onDelete: () {
+          viewModel.removeFromCart(cartDetail.details.id);
+        },
+      ));
+
       creditTasks.add(getCreditsFromId(
           context, cartDetail.details.id, cartDetail.quantity ?? 1));
       quicksilverTasks.add(getQuickSilverFromId(
@@ -136,33 +150,43 @@ class CartPage extends StatelessWidget {
           title: getTranslations().fromKey(
             LocaleKey.viewAllRawMaterialsRequired,
           ),
-          onPress: () async => await getNavigation().navigateAsync(context,
-              navigateTo: (context) => GenericPageAllRequiredRawMaterials(
-                    GenericPageAllRequired(
-                        genericItem: GenericPageItem(),
-                        id: "",
-                        name: "",
-                        typeName: getTranslations().fromKey(LocaleKey.cart),
-                        requiredItems: requiredItems),
-                    viewModel.displayGenericItemColour,
-                  )),
+          onPress: () async => await getNavigation().navigateAsync(
+            context,
+            navigateTo: (context) => GenericPageAllRequiredRawMaterials(
+              GenericPageAllRequired(
+                  genericItem: GenericPageItem(),
+                  id: "",
+                  name: "",
+                  typeName: getTranslations().fromKey(LocaleKey.cart),
+                  requiredItems: requiredItems),
+              viewModel.displayGenericItemColour,
+            ),
+          ),
         ),
       ));
+
       widgets.add(Container(
         child: negativeButton(
-            title: getTranslations().fromKey(LocaleKey.deleteAll),
-            onPress: () {
-              simpleDialog(
-                  context,
-                  getTranslations().fromKey(LocaleKey.deleteAll),
-                  getTranslations().fromKey(LocaleKey.areYouSure),
-                  buttons: [
-                    simpleDialogCloseButton(context),
-                    simpleDialogPositiveButton(context,
-                        title: LocaleKey.yes,
-                        onTap: () => viewModel.removeAllFromCart()),
-                  ]);
-            }),
+          title: getTranslations().fromKey(LocaleKey.deleteAll),
+          onPress: () {
+            getDialog().showSimpleDialog(
+              context,
+              getTranslations().fromKey(LocaleKey.deleteAll),
+              Text(getTranslations().fromKey(LocaleKey.areYouSure)),
+              buttonBuilder: (BuildContext ctx) => [
+                getDialog().simpleDialogCloseButton(ctx),
+                getDialog().simpleDialogPositiveButton(
+                  ctx,
+                  title: LocaleKey.yes,
+                  onTap: () {
+                    viewModel.removeAllFromCart();
+                    getNavigation().pop(ctx);
+                  },
+                ),
+              ],
+            );
+          },
+        ),
       ));
       widgets.add(customDivider());
     } else {
@@ -184,8 +208,10 @@ class CartPage extends StatelessWidget {
     );
   }
 
-  Widget currencyDisplay(List<Future<double>> listOfFutures,
-      Widget Function(BuildContext context, String total) presenter) {
+  Widget currencyDisplay(
+    List<Future<double>> listOfFutures,
+    Widget Function(BuildContext context, String total) presenter,
+  ) {
     return FutureBuilder(
       future: Future.wait(listOfFutures),
       builder: (context, AsyncSnapshot<List<double>> snapshot) {
@@ -202,7 +228,9 @@ class CartPage extends StatelessWidget {
         }
         if (total == 0) return const SizedBox(width: 0, height: 0);
         return genericChipWidget(
-            context, presenter(context, total.toStringAsFixed(0)));
+          context,
+          presenter(context, total.toStringAsFixed(0)),
+        );
       },
     );
     //genericItemCredits

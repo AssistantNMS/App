@@ -1,12 +1,12 @@
 import 'dart:math';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../components/dialogs/baseDialog.dart';
 
 void uselessButtonFunc(
     BuildContext ctx, int numberOfTaps, Function() increaseUselessButtontaps) {
   increaseUselessButtontaps();
-  simpleWidgetDialog(
+  getDialog().showSimpleDialog(
     ctx,
     'Why did you click this?',
     Text(
@@ -14,8 +14,8 @@ void uselessButtonFunc(
       style: const TextStyle(fontSize: 17),
       textAlign: TextAlign.center,
     ),
-    buttons: [
-      simpleDialogCloseButton(ctx),
+    buttonBuilder: (BuildContext ctx) => [
+      getDialog().simpleDialogCloseButton(ctx),
     ],
   );
 }

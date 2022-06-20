@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/UsageKey.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -13,9 +12,11 @@ import '../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/NmsUIConstants.dart';
+import '../../constants/UsageKey.dart';
 import '../../contracts/cart/cartItem.dart';
 import '../../contracts/chargeBy.dart';
 import '../../contracts/data/eggTrait.dart';
+import '../../contracts/data/starshipScrap.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';
@@ -50,6 +51,7 @@ class GenericPage extends StatelessWidget {
       converter: (store) => GenericPageViewModel.fromStore(store),
       builder: (_, viewModel) {
         return CachedFutureBuilder<ResultWithValue<GenericPageItem>>(
+          key: Key('${viewModel.cartItems.length}'),
           future: genericItemFuture(
             context,
             itemId,
@@ -290,10 +292,9 @@ class GenericPage extends StatelessWidget {
     ));
 
     // ----------------------------- Stat bonuses ------------------------------
-    List<StatBonus> statBonuses =
-        genericItem?.statBonuses ?? List.empty(growable: true);
+    List<StatBonus> statBonuses = genericItem.statBonuses;
     List<ProceduralStatBonus> proceduralStatBonuses =
-        genericItem?.proceduralStatBonuses ?? List.empty(growable: true);
+        genericItem.proceduralStatBonuses;
 
     widgets.addAll(getStatBonuses(context, statBonuses));
     widgets.addAll(getProceduralStatBonuses(context, proceduralStatBonuses,
@@ -314,16 +315,25 @@ class GenericPage extends StatelessWidget {
             .toList()));
 
     // ----------------------------- Rewards from ------------------------------
+
+    List<StarshipScrap> starshipScrapItems = genericItem.starshipScrapItems;
+
     widgets.addAll(getRewardFrom(
       context,
       genericItem,
       vm.displayGenericItemColour,
+      starshipScrapItems: starshipScrapItems,
     ));
 
     // ------------------------------ Egg Traits -------------------------------
     List<EggTrait> eggTraits =
         genericItem?.eggTraits ?? List.empty(growable: true);
     widgets.addAll(getEggTraits(context, eggTraits));
+
+    // ----------------------------- From Update -------------------------------
+    if (genericItem?.addedInUpdate != null) {
+      widgets.addAll(getFromUpdate(context, genericItem.addedInUpdate));
+    }
 
     widgets.add(emptySpace(10));
 

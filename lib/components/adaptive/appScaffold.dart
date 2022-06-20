@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/components/adaptive/windowsTitleBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -52,20 +51,17 @@ Widget _androidScaffold(
   return WillPopScope(
     onWillPop: () => getNavigation().navigateBackOrHomeAsync(context),
     child: Scaffold(
-      appBar: WindowsTitleBar('Assistant for No Man\'s Sky'),
-      body: Scaffold(
-        appBar: appBar,
-        body: animateWidgetIn(
-          child: BackgroundWrapper(
-            key: Key(bgType.toString()),
-            backgroundType: bgType,
-            body: body,
-          ),
+      appBar: appBar,
+      body: animateWidgetIn(
+        child: BackgroundWrapper(
+          key: Key(bgType.toString()),
+          backgroundType: bgType,
+          body: body,
         ),
-        drawer: drawer,
-        floatingActionButton: floatingActionButton,
-        floatingActionButtonLocation: floatingActionButtonLocation,
       ),
+      drawer: drawer,
+      floatingActionButton: floatingActionButton,
+      floatingActionButtonLocation: floatingActionButtonLocation,
     ),
   );
 }

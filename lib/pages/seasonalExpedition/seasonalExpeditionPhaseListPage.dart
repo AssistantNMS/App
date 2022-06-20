@@ -16,17 +16,20 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
   final String seasonId;
   final DateTime startDate;
   final DateTime endDate;
+  final bool isCustomExp;
   const SeasonalExpeditionPhaseListPage(
     this.seasonId, {
     Key key,
     this.startDate,
     this.endDate,
+    this.isCustomExp = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: getSeasonalExpeditionRepo().getById(context, seasonId),
+      future:
+          getSeasonalExpeditionRepo().getById(context, seasonId, isCustomExp),
       builder: (BuildContext futureContext, snapshot) =>
           StoreConnector<AppState, ExpeditionViewModel>(
         converter: (store) => ExpeditionViewModel.fromStore(store),
@@ -41,7 +44,15 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
       BuildContext storeContext,
       AsyncSnapshot<ResultWithValue<SeasonalExpeditionSeason>> snapshot,
       ExpeditionViewModel viewModel) {
-    Widget errorWidget = asyncSnapshotHandler(storeContext, snapshot);
+    Widget errorWidget = asyncSnapshotHandler(
+      storeContext,
+      snapshot,
+      isValidFunction: (ResultWithValue<SeasonalExpeditionSeason> expResult) {
+        if (expResult.hasFailed) return false;
+        if (expResult.value == null) return false;
+        return true;
+      },
+    );
     if (errorWidget != null) {
       return simpleGenericPageScaffold(
         storeContext,
@@ -55,26 +66,52 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
     if (endDate != null) season.endDate = endDate;
 
     List<Widget> widgets = List.empty(growable: true);
+
+    bool infoNotComplete = (season?.rewards?.length ?? 0) < 1;
+    if (infoNotComplete) {
+      const mesg =
+          'This data is incomplete and we are working on getting accurate information!';
+
+      widgets.add(Container(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 4, left: 4, right: 4, bottom: 8),
+          child: Column(
+            children: const [
+              Icon(Icons.error, color: Colors.white),
+              Text(mesg),
+            ],
+          ),
+        ),
+        color: Colors.red,
+      ));
+    }
+
     widgets.add(seasonalExpeditionDetailTilePresenter(
       storeContext,
       season,
       viewModel.useAltGlyphs,
     ));
-    widgets.add(Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4),
-      child: positiveButton(
-        storeContext,
-        title: getTranslations().fromKey(LocaleKey.rewards),
-        onPress: () => adaptiveBottomModalSheet(
+
+    if (season.rewards.isNotEmpty) {
+      widgets.add(Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 4),
+        child: positiveButton(
           storeContext,
-          hasRoundedCorners: true,
-          builder: (_) => ExpeditionRewardsListModalBottomSheet(
-            '',
-            season.rewards,
+          title: getTranslations().fromKey(LocaleKey.rewards),
+          onPress: () => adaptiveBottomModalSheet(
+            storeContext,
+            hasRoundedCorners: true,
+            builder: (_) => ExpeditionRewardsListModalBottomSheet(
+              '',
+              season.rewards,
+            ),
           ),
         ),
-      ),
-    ));
+      ));
+    } else {
+      widgets.add(emptySpace1x());
+      widgets.add(customDivider());
+    }
     if (season.captainSteveYoutubePlaylist != null &&
         season.captainSteveYoutubePlaylist.length > 5) {
       String seasNum =
@@ -104,7 +141,7 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
 
     return simpleGenericPageScaffold(
       storeContext,
-      title: season.title,
+      title: season?.title ?? getTranslations().fromKey(LocaleKey.unknown),
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (context, index) => widgets[index],

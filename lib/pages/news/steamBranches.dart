@@ -52,6 +52,7 @@ class _SteamBranchesPageWidget extends State<SteamBranchesPage> {
           ),
           PositionedIndicatorContainer(
             controller: controller,
+            constraints: const BoxConstraints(minWidth: 10),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,

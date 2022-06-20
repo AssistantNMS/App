@@ -3,8 +3,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/dialogs/baseDialog.dart';
-
 class AsyncSettingTilePresenter extends StatefulWidget {
   final String title;
   final IconData icon;
@@ -31,7 +29,7 @@ class _AsyncSettingTilePresenterWidget
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return flatCard(
       child: genericListTile(
         context,
         leadingImage: null,
@@ -54,7 +52,6 @@ class _AsyncSettingTilePresenterWidget
         },
         trailing: isLoading ? getLoading().smallLoadingIndicator() : Icon(icon),
       ),
-      margin: const EdgeInsets.all(0.0),
     );
   }
 }
@@ -65,21 +62,25 @@ Future<dynamic> asyncSettingTileWithSuccessFunc<T>(
     LocaleKey errorMessage,
     Function(T) successFunc,
     LocaleKey successMessage) async {
-  var readResult = await asyncFunc();
+  ResultWithValue<T> readResult = await asyncFunc();
   if (readResult.hasFailed) {
-    simpleDialog(
+    getDialog().showSimpleDialog(
       context,
       getTranslations().fromKey(LocaleKey.error),
-      getTranslations().fromKey(errorMessage),
-      buttons: [simpleDialogCloseButton(context)],
+      Text(getTranslations().fromKey(errorMessage)),
+      buttonBuilder: (BuildContext ctx) => [
+        getDialog().simpleDialogCloseButton(ctx),
+      ],
     );
   } else {
     successFunc(readResult.value);
-    simpleDialog(
+    getDialog().showSimpleDialog(
       context,
       getTranslations().fromKey(LocaleKey.success),
-      getTranslations().fromKey(successMessage),
-      buttons: [simpleDialogCloseButton(context)],
+      Text(getTranslations().fromKey(successMessage)),
+      buttonBuilder: (BuildContext ctx) => [
+        getDialog().simpleDialogCloseButton(ctx),
+      ],
     );
   }
 }
@@ -89,20 +90,24 @@ Future<dynamic> asyncSettingTileGenericFunc<T>(
     Future<Result> Function() asyncFunc,
     LocaleKey errorMessage,
     LocaleKey successMessage) async {
-  var readResult = await asyncFunc();
+  Result readResult = await asyncFunc();
   if (readResult.hasFailed) {
-    simpleDialog(
+    getDialog().showSimpleDialog(
       context,
       getTranslations().fromKey(LocaleKey.error),
-      getTranslations().fromKey(errorMessage),
-      buttons: [simpleDialogCloseButton(context)],
+      Text(getTranslations().fromKey(errorMessage)),
+      buttonBuilder: (BuildContext ctx) => [
+        getDialog().simpleDialogCloseButton(ctx),
+      ],
     );
   } else {
-    simpleDialog(
+    getDialog().showSimpleDialog(
       context,
       getTranslations().fromKey(LocaleKey.success),
-      getTranslations().fromKey(successMessage),
-      buttons: [simpleDialogCloseButton(context)],
+      Text(getTranslations().fromKey(successMessage)),
+      buttonBuilder: (BuildContext ctx) => [
+        getDialog().simpleDialogCloseButton(ctx),
+      ],
     );
   }
 }

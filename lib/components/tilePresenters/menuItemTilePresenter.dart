@@ -1,9 +1,9 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../contracts/menuItem.dart';
+import '../../contracts/customMenuItem.dart';
 
-Widget menuItemTilePresenter(BuildContext context, MenuItem menuItem) =>
+Widget menuItemTilePresenter(BuildContext context, CustomMenuItem menuItem) =>
     GestureDetector(
       child: Card(
         child: Column(

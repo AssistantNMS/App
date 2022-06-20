@@ -1,10 +1,8 @@
-import 'package:adaptive_dialog/adaptive_dialog.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import '../../constants/AnalyticsEvent.dart';
 
 import '../../constants/Patreon.dart';
-import '../dialogs/asyncInputDialog.dart';
 
 Widget headingSettingTilePresenter(String name) {
   return ListTile(
@@ -68,21 +66,20 @@ Widget listSettingTilePresenter(BuildContext context, String name, String value,
     List<DropdownOption> options,
     {Function(String) onChange}) {
   void Function() tempOnChange;
-  tempOnChange = () async {
-    String result = await showConfirmationDialog(
-      context: context,
-      title: name,
-      actions: options
+  tempOnChange = () {
+    getDialog().showOptionsDialog(
+      context,
+      name,
+      options
           .map(
-            (opt) => AlertDialogAction(
-              label: opt.title,
-              key: opt.value,
-              isDefaultAction: opt.title == value,
+            (opt) => DropdownOption(
+              opt.title,
+              value: opt.value,
             ),
           )
           .toList(),
+      onSuccess: (ctx, value) => onChange(value),
     );
-    onChange(result);
   };
 
   return flatCard(
@@ -112,7 +109,7 @@ Widget patreonCodeSettingTilePresenter(
   patreonCodeModal = () async {
     baseOnChange();
 
-    String code = await asyncInputDialog(context, name);
+    String code = await getDialog().asyncInputDialog(context, name);
     String newName = (code == null || code.isEmpty) ? '' : code;
     bool codeIsCorrect = Patreon.codes.any(
       (code) => code == newName.toUpperCase(),

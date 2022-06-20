@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 import '../../contracts/genericPageItem.dart';
-import '../dialogs/quantityDialog.dart';
 
 SpeedDialChild cartFloatingActionButton(
         BuildContext context,
@@ -18,10 +17,10 @@ SpeedDialChild cartFloatingActionButton(
       label: isDesktop ? getTranslations().fromKey(LocaleKey.cart) : null,
       foregroundColor: getTheme().fabForegroundColourSelector(context),
       backgroundColor: getTheme().fabColourSelector(context),
-      onTap: () => showQuantityDialog(
+      onTap: () => getDialog().showQuantityDialog(
         context,
         controller,
-        onSuccess: (String quantity) {
+        onSuccess: (BuildContext ctx, String quantity) {
           int intQuantity = int.tryParse(quantity);
           if (intQuantity == null) return;
           addToCart(genericItem, intQuantity);

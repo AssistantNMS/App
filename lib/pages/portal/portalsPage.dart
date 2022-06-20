@@ -2,7 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/dialogs/baseDialog.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/portalTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
@@ -119,29 +118,39 @@ class _PortalsPageState extends State<PortalsPage> {
   }
 
   void onDelete(PortalRecord portal, PortalViewModel portalViewModel) {
-    simpleDialog(
+    getDialog().showSimpleDialog(
       context,
       getTranslations().fromKey(LocaleKey.delete),
-      getTranslations().fromKey(LocaleKey.areYouSure),
-      buttons: [
-        simpleDialogCloseButton(context),
-        simpleDialogPositiveButton(context,
-            title: LocaleKey.yes,
-            onTap: () => portalViewModel.removePortal(portal.uuid)),
+      Text(getTranslations().fromKey(LocaleKey.areYouSure)),
+      buttonBuilder: (BuildContext ctx) => [
+        getDialog().simpleDialogCloseButton(ctx),
+        getDialog().simpleDialogPositiveButton(
+          ctx,
+          title: LocaleKey.yes,
+          onTap: () {
+            portalViewModel.removePortal(portal.uuid);
+            getNavigation().pop(ctx);
+          },
+        ),
       ],
     );
   }
 
   void deleteAll(PortalViewModel portalViewModel) {
-    simpleDialog(
+    getDialog().showSimpleDialog(
       context,
       getTranslations().fromKey(LocaleKey.deleteAll),
-      getTranslations().fromKey(LocaleKey.areYouSure),
-      buttons: [
-        simpleDialogCloseButton(context),
-        simpleDialogPositiveButton(context,
-            title: LocaleKey.yes,
-            onTap: () => portalViewModel.removeAllPortals()),
+      Text(getTranslations().fromKey(LocaleKey.areYouSure)),
+      buttonBuilder: (BuildContext ctx) => [
+        getDialog().simpleDialogCloseButton(ctx),
+        getDialog().simpleDialogPositiveButton(
+          ctx,
+          title: LocaleKey.yes,
+          onTap: () {
+            portalViewModel.removeAllPortals();
+            getNavigation().pop(ctx);
+          },
+        ),
       ],
     );
   }

@@ -3,6 +3,7 @@ import 'package:assistantnms_app/components/common/cachedFutureBuilder.dart';
 import 'package:flutter/material.dart';
 import '../../constants/NmsUIConstants.dart';
 import '../../contracts/generated/expeditionViewModel.dart' as expedition_api;
+import '../../contracts/seasonalExpedition/expeditionMilestoneType.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../pages/seasonalExpedition/seasonalExpeditionPhaseListPage.dart';
 import '../../redux/modules/expedition/expeditionViewModel.dart';
@@ -94,7 +95,8 @@ Widget seasonalExpeditionPhaseTilePresenter(BuildContext context,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           genericItemName(seasonalExpedition.title),
-          genericItemDescription(description)
+          genericItemDescription(description),
+          emptySpace1x(),
         ],
       ),
       onTap: () {
@@ -136,12 +138,39 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
         margin: const EdgeInsets.all(4.0),
       );
 
+  bool hasRewards = seasonalExpeditionMilestone.rewards.isNotEmpty;
+
+  void Function(bool) checkBoxOnTap;
+  checkBoxOnTap = (bool newValue) => newValue
+      ? viewModel.addToClaimedRewards(
+          seasonalExpeditionMilestone.id,
+        )
+      : viewModel.removeFromClaimedRewards(
+          seasonalExpeditionMilestone.id,
+        );
+
+  void Function() rewardOnTap = () => checkBoxOnTap(!isClaimed);
+  if (hasRewards) {
+    rewardOnTap = () => adaptiveBottomModalSheet(
+          context,
+          hasRoundedCorners: true,
+          builder: (_) => ExpeditionRewardsListModalBottomSheet(
+            seasonalExpeditionMilestone.id,
+            seasonalExpeditionMilestone.rewards,
+          ),
+        );
+  }
+
   return Card(
     child: seasonalExpeditionBase(
       context,
       90,
       seasonalExpeditionMilestone.title,
       seasonalExpeditionMilestone.icon,
+      topLeftBanner: seasonalExpeditionMilestone.type ==
+              SeasonalExpeditionMilestoneType.Optional
+          ? 'Optional'
+          : null,
       bodyFlex: 8,
       bodyDisplayFunc: () => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -149,44 +178,34 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
         children: <Widget>[
           textWrapper(seasonalExpeditionMilestone.title, fontSize: 20),
           textWrapper(description ?? ''),
+          emptySpace1x(),
         ],
       ),
-      trailingFlex: 4,
+      trailingFlex: hasRewards ? 4 : 2,
       trailingDisplayFunc: () => Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Row(
             children: [
-              const Padding(
-                padding: EdgeInsets.only(right: 4),
-                child: Icon(
-                  Icons.info_sharp,
-                  size: 30,
+              if (hasRewards) ...[
+                const Padding(
+                  padding: EdgeInsets.only(right: 4),
+                  child: Icon(
+                    Icons.info_sharp,
+                    size: 30,
+                  ),
                 ),
-              ),
+              ],
               adaptiveCheckbox(
                 value: isClaimed,
-                onChanged: (bool newValue) => newValue
-                    ? viewModel.addToClaimedRewards(
-                        seasonalExpeditionMilestone.id,
-                      )
-                    : viewModel.removeFromClaimedRewards(
-                        seasonalExpeditionMilestone.id,
-                      ),
+                onChanged: checkBoxOnTap,
               ),
             ],
           ),
         ],
       ),
-      onTap: () => adaptiveBottomModalSheet(
-        context,
-        hasRoundedCorners: true,
-        builder: (_) => ExpeditionRewardsListModalBottomSheet(
-          seasonalExpeditionMilestone.id,
-          seasonalExpeditionMilestone.rewards,
-        ),
-      ),
+      onTap: rewardOnTap,
     ),
   );
 }
@@ -197,6 +216,7 @@ Widget seasonalExpeditionBase(
   String title,
   String imagePath, {
   bool useMaterial,
+  String topLeftBanner,
   Color backgroundColour,
   int imageFlex = 4,
   int bodyFlex = 9,
@@ -205,7 +225,7 @@ Widget seasonalExpeditionBase(
   Widget Function() trailingDisplayFunc,
   Function() onTap,
 }) {
-  var child = InkWell(
+  InkWell innerChild = InkWell(
     borderRadius: BorderRadius.circular(6.0),
     child: Row(children: [
       Expanded(
@@ -241,6 +261,16 @@ Widget seasonalExpeditionBase(
     ]),
     onTap: onTap,
   );
+  Widget child = innerChild;
+  if (topLeftBanner != null) {
+    child = ClipRect(
+      child: Banner(
+        message: 'Optional', // TODO translate
+        location: BannerLocation.topEnd,
+        child: innerChild,
+      ),
+    );
+  }
   return Container(
     height: height,
     padding: const EdgeInsets.all(0),
@@ -293,11 +323,14 @@ Widget expeditionInProgressPresenter(
 }
 
 Widget rewardFromSeasonalExpeditionTilePresenter(
-    BuildContext context, String seasId) {
+  BuildContext context,
+  String seasId,
+  bool isCustom,
+) {
   return flatCard(
     shadowColor: Colors.transparent,
     child: CachedFutureBuilder(
-      future: getSeasonalExpeditionRepo().getById(context, seasId),
+      future: getSeasonalExpeditionRepo().getById(context, seasId, isCustom),
       whileLoading: getLoading().smallLoadingTile(context),
       whenDoneLoading: (ResultWithValue<SeasonalExpeditionSeason> snapshot) {
         SeasonalExpeditionSeason item = snapshot.value;
@@ -310,7 +343,10 @@ Widget rewardFromSeasonalExpeditionTilePresenter(
           borderRadius: NMSUIConstants.gameItemBorderRadius,
           onTap: () async => await getNavigation().navigateAsync(
             context,
-            navigateTo: (_) => SeasonalExpeditionPhaseListPage(seasId),
+            navigateTo: (_) => SeasonalExpeditionPhaseListPage(
+              seasId,
+              isCustomExp: isCustom,
+            ),
           ),
         );
       },

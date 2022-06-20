@@ -9,10 +9,14 @@ class SeasonalExpeditionJsonRepository extends BaseJsonService
   //
   @override
   Future<ResultWithValue<List<SeasonalExpeditionSeason>>> getAll(
-      BuildContext context) async {
+    BuildContext context,
+    bool isCustom,
+  ) async {
+    String jsonFile = isCustom
+        ? 'en/SeasonalExpeditionCustom.lang'
+        : getTranslations().fromKey(LocaleKey.seasonalExpeditionJson);
     try {
-      List responseDetailsJson = await getListfromJson(
-          context, getTranslations().fromKey(LocaleKey.seasonalExpeditionJson));
+      List responseDetailsJson = await getListfromJson(context, jsonFile);
       List<SeasonalExpeditionSeason> seasonalExp = responseDetailsJson
           .map((m) => SeasonalExpeditionSeason.fromJson(m))
           .toList();
@@ -28,16 +32,25 @@ class SeasonalExpeditionJsonRepository extends BaseJsonService
 
   @override
   Future<ResultWithValue<SeasonalExpeditionSeason>> getById(
-      BuildContext context, String id) async {
+    BuildContext context,
+    String id,
+    bool isCustom,
+  ) async {
     ResultWithValue<List<SeasonalExpeditionSeason>> expeditionsResult =
-        await getAll(context);
+        await getAll(context, isCustom);
     if (expeditionsResult.hasFailed) {
       return ResultWithValue(
           false, SeasonalExpeditionSeason(), expeditionsResult.errorMessage);
     }
     try {
       SeasonalExpeditionSeason selectedexpedition =
-          expeditionsResult.value.firstWhere((r) => r.id == id);
+          expeditionsResult.value.firstWhere(
+        (r) => r.id == id,
+        orElse: () => null,
+      );
+      if (selectedexpedition == null) {
+        throw Exception('expedition not found');
+      }
       return ResultWithValue<SeasonalExpeditionSeason>(
           true, selectedexpedition, '');
     } catch (exception) {

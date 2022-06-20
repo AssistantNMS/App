@@ -7,8 +7,11 @@ import '../../pages/generic/genericPage.dart';
 import '../common/image.dart';
 
 Widget genericTileWithBackgroundColourPresenter(
-    BuildContext context, GenericPageItem genericItem, bool isHero,
-    {void Function() onTap}) {
+  BuildContext context,
+  GenericPageItem genericItem,
+  bool isHero, {
+  void Function() onTap,
+}) {
   String itemIcon = (genericItem.icon == null || genericItem.icon.isEmpty)
       ? getPath().unknownImagePath
       : genericItem.icon;

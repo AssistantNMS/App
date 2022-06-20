@@ -4,6 +4,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../../constants/ApiUrls.dart';
 import '../../contracts/generated/communityLinkViewModel.dart';
+import '../../contracts/generated/communityMissionProgressItemViewModel.dart';
 import '../../contracts/generated/communitySpotlightViewModel.dart';
 import '../../contracts/generated/onlineMeetup2020SubmissionViewModel.dart';
 import '../../integration/dependencyInjection.dart';
@@ -67,6 +68,33 @@ class CommunityApiService extends BaseApiService {
     } catch (exception) {
       getLog().e("getAllCommunityLinks Api Exception: ${exception.toString()}");
       return ResultWithValue<List<CommuntySpotlightViewModel>>(
+          false, List.empty(growable: true), exception.toString());
+    }
+  }
+
+  Future<ResultWithValue<List<CommunityMissionProgressItemViewModel>>>
+      getAllCommunityMissionProgressData(
+          DateTime startDate, DateTime endDate) async {
+    String url = ApiUrls.communityMissionProgress +
+        '/' +
+        simpleDate(startDate) +
+        '/' +
+        simpleDate(endDate);
+    try {
+      final response = await apiGet(url);
+      if (response.hasFailed) {
+        return ResultWithValue<List<CommunityMissionProgressItemViewModel>>(
+            false, List.empty(growable: true), response.errorMessage);
+      }
+      final List newsList = json.decode(response.value);
+      List<CommunityMissionProgressItemViewModel> links = newsList
+          .map((r) => CommunityMissionProgressItemViewModel.fromJson(r))
+          .toList();
+      return ResultWithValue(true, links, '');
+    } catch (exception) {
+      getLog().e(
+          "getAllCommunityMissionProgressData Api Exception: ${exception.toString()}");
+      return ResultWithValue<List<CommunityMissionProgressItemViewModel>>(
           false, List.empty(growable: true), exception.toString());
     }
   }

@@ -6,9 +6,11 @@ import '../../components/common/image.dart';
 import '../../components/expeditionAlphabetTranslation.dart';
 import '../../components/tilePresenters/eggTraitTilePresenter.dart';
 import '../../components/tilePresenters/inventoryTilePresenter.dart';
+import '../../components/tilePresenters/majorUpdateTilePresenter.dart';
 import '../../components/tilePresenters/requiredItemTilePresenter.dart';
 import '../../components/tilePresenters/rewardFromTilePresenter.dart';
 import '../../components/tilePresenters/seasonalExpeditionTilePresenter.dart';
+import '../../components/tilePresenters/starshipRewardTilePresenter.dart';
 import '../../components/tilePresenters/statBonusPresenter.dart';
 import '../../components/tilePresenters/twitchTilePresenter.dart';
 import '../../constants/AppImage.dart';
@@ -18,6 +20,8 @@ import '../../constants/UsageKey.dart';
 import '../../contracts/cart/cartItem.dart';
 import '../../contracts/chargeBy.dart';
 import '../../contracts/data/eggTrait.dart';
+import '../../contracts/data/majorUpdateItem.dart';
+import '../../contracts/data/starshipScrap.dart';
 import '../../contracts/enum/blueprintSource.dart';
 import '../../contracts/enum/currencyType.dart';
 import '../../contracts/genericPageAllRequired.dart';
@@ -539,7 +543,7 @@ List<Widget> getStatBonuses(
   List<Widget> statBonusWidgets = List.empty(growable: true);
   if (statBonuses.isNotEmpty) {
     statBonusWidgets.add(emptySpace3x());
-    var title = getTranslations().fromKey(LocaleKey.stats);
+    String title = getTranslations().fromKey(LocaleKey.stats);
     statBonusWidgets.add(genericItemText(title));
     statBonusWidgets.addAll(genericItemWithOverflowButton(
       context,
@@ -562,7 +566,7 @@ List<Widget> getProceduralStatBonuses(
   List<Widget> statBonusWidgets = List.empty(growable: true);
   if (statBonuses.isNotEmpty) {
     statBonusWidgets.add(emptySpace3x());
-    var title = getTranslations()
+    String title = getTranslations()
         .fromKey(LocaleKey.proceduralStats)
         .replaceAll('{0}', numStatsMin.toString())
         .replaceAll('{1}', numStatsMax.toString());
@@ -607,23 +611,11 @@ List<Widget> getEggTraits(
 List<Widget> getRewardFrom(
   BuildContext context,
   GenericPageItem genericItem,
-  bool displayGenericItemColour,
-) {
+  bool displayGenericItemColour, {
+  List<StarshipScrap> starshipScrapItems,
+}) {
   List<Widget> rewardsFromWidgets = List.empty(growable: true);
   List<String> usages = genericItem?.usage ?? [];
-
-  List<String> expSeasonKeySplit = UsageKey.isExpeditionSeason.split("{0}");
-  if (usages.any((u) => u.contains(expSeasonKeySplit[0]))) {
-    String expSeasUsageKey =
-        usages.firstWhere((u) => u.contains(expSeasonKeySplit[0]));
-    String expSeasonNum = expSeasUsageKey
-        .replaceAll(expSeasonKeySplit[0], '')
-        .replaceAll(expSeasonKeySplit[1], '');
-    rewardsFromWidgets.add(rewardFromSeasonalExpeditionTilePresenter(
-      context,
-      'seas-$expSeasonNum',
-    ));
-  }
 
   if (usages.any((u) => u.contains(UsageKey.isQuicksilver))) {
     if (genericItem.baseValueUnits > 0 &&
@@ -636,16 +628,37 @@ List<Widget> getRewardFrom(
     }
   }
 
-  List<String> twitchCampaignKeySplit = UsageKey.isTwitchCampaign.split("{0}");
-  if (usages.any((u) => u.contains(twitchCampaignKeySplit[0]))) {
-    String expSeasUsageKey =
-        usages.firstWhere((u) => u.contains(twitchCampaignKeySplit[0]));
-    String expSeasonNum = expSeasUsageKey
-        .replaceAll(twitchCampaignKeySplit[0], '')
-        .replaceAll(twitchCampaignKeySplit[1], '');
-    rewardsFromWidgets.add(rewardFromTwitchTilePresenter(
+  for (String usageKey in usages) {
+    List<String> expSeasonKeySplit = UsageKey.isExpeditionSeason.split("{0}");
+    if (usageKey.contains(expSeasonKeySplit[0])) {
+      String expSeasonNum = usageKey
+          .replaceAll(expSeasonKeySplit[0], '')
+          .replaceAll(expSeasonKeySplit[1], '');
+      rewardsFromWidgets.add(rewardFromSeasonalExpeditionTilePresenter(
+        context,
+        'seas-$expSeasonNum',
+        false,
+      ));
+    }
+
+    List<String> twitchCampaignKeySplit =
+        UsageKey.isTwitchCampaign.split("{0}");
+    if (usageKey.contains(twitchCampaignKeySplit[0])) {
+      String expSeasonNum = usageKey
+          .replaceAll(twitchCampaignKeySplit[0], '')
+          .replaceAll(twitchCampaignKeySplit[1], '');
+      rewardsFromWidgets.add(rewardFromTwitchTilePresenter(
+        context,
+        expSeasonNum,
+        displayGenericItemColour,
+      ));
+    }
+  }
+
+  if (usages.any((u) => u.contains(UsageKey.isRewardFromShipScrap))) {
+    rewardsFromWidgets.add(rewardFromStarshipScrapTilePresenter(
       context,
-      expSeasonNum,
+      starshipScrapItems,
       displayGenericItemColour,
     ));
   }
@@ -659,4 +672,17 @@ List<Widget> getRewardFrom(
     genericItemText(getTranslations().fromKey(LocaleKey.rewardFrom)),
     ...rewardsFromWidgets,
   ];
+}
+
+List<Widget> getFromUpdate(
+  BuildContext context,
+  MajorUpdateItem addedInUpdate,
+) {
+  List<Widget> updateWidgets = List.empty(growable: true);
+  updateWidgets.add(emptySpace3x());
+  String title = getTranslations().fromKey(LocaleKey.addedInUpdate);
+  updateWidgets.add(genericItemText(title));
+  updateWidgets.add(majorUpdateItemDetailTilePresenter(context, addedInUpdate));
+
+  return updateWidgets;
 }

@@ -8,15 +8,22 @@ Future<void> main() async {
   var pubSpecString = await pubSpecFile.readAsString();
   var doc = Pubspec.parse(pubSpecString);
 
-  // print(doc.version.build);
-  await writeBuildNumFile(doc.version.build[0].toString());
+  String buildName = doc.version.major.toString() + '.';
+  buildName += doc.version.minor.toString() + '.';
+  buildName += doc.version.patch.toString();
+
+  String buildNum = doc.version.build[0].toString();
+  // String buildNum = doc.version.build[0].toString();
+  await writeBuildNumFile(buildNum, buildName);
   print('Done');
 }
 
-Future writeBuildNumFile(String buildNum) async {
+Future writeBuildNumFile(String buildNum, String buildName) async {
   if (buildNum.isEmpty) return;
   print('Writing to appVersionNum.dart');
   final file = File('./lib/env/appVersionNum.dart');
-  await file.writeAsString('const appsBuildNum = $buildNum;');
+  String contents = 'const appsBuildNum = $buildNum;\n';
+  contents += 'const appsBuildName = \'$buildName\';';
+  await file.writeAsString(contents);
   print('Writing to file Success');
 }

@@ -63,10 +63,11 @@ Widget genericPageScaffold<T>(
       context,
       title: Text(title),
       showHomeAction: true,
-      shortcutActions: (showShortcutLinks || additionalShortcutLinks.isNotEmpty)
-          ? getShortcutActions(context,
-              additionalShortcutLinks: additionalShortcutLinks)
-          : null,
+      shortcutActions:
+          (showShortcutLinks || (additionalShortcutLinks ?? []).isNotEmpty)
+              ? getShortcutActions(context,
+                  additionalShortcutLinks: additionalShortcutLinks)
+              : null,
     ),
     body: body(context, snapshot),
     floatingActionButton: floatingActionButton,

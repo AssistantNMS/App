@@ -52,17 +52,20 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
         String paramString =
             (params.isNotEmpty) ? ('?' + params.join('&')) : '';
         String fullLink = '$baseUrl$paramString';
+        String displayLink = fullLink.replaceAll('https://', '');
 
         List<Widget> widgets = List.empty(growable: true);
-        widgets.add(emptySpace1x());
+        widgets.add(emptySpace2x());
         widgets.add(Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              fullLink,
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontSize: 18),
+            Expanded(
+              child: Text(
+                displayLink,
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 2,
+              ),
             ),
           ],
         ));
@@ -72,7 +75,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Force language'), // TODO translate
+                Text(getTranslations().fromKey(LocaleKey.shareForceLanguage)),
                 adaptiveCheckbox(
                   value: forceLang,
                   onChanged: (bool newValue) {
@@ -86,7 +89,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Include name'), // TODO translate
+                Text(getTranslations().fromKey(LocaleKey.shareIncludeName)),
                 adaptiveCheckbox(
                   value: includeName,
                   onChanged: (bool newValue) {
@@ -102,13 +105,13 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
         widgets.add(customDivider());
         widgets.add(ListTile(
           leading: const Icon(Icons.share),
-          title: const Text('Copy to clipboard'), // TODO translate
+          title: Text(getTranslations().fromKey(LocaleKey.copyToClipboard)),
           onTap: () {
             Clipboard.setData(ClipboardData(text: fullLink));
             getSnackbar().showSnackbar(
               storeContext,
               LocaleKey.share,
-              description: fullLink,
+              description: displayLink,
               onNegative: () async {
                 await getNavigation().pop(context);
                 await getNavigation().pop(context);
@@ -116,13 +119,29 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
             );
           },
         ));
+        widgets.add(ListTile(
+          leading: const Icon(Icons.open_in_new),
+          title: Text(getTranslations().fromKey(LocaleKey.shareOpenLink)),
+          onTap: () => launchExternalURL(fullLink),
+        ));
+
+        if (isAndroid || isiOS) {
+          widgets.add(ListTile(
+            leading: const Icon(Icons.interests_outlined),
+            title: Text(getTranslations().fromKey(LocaleKey.shareOpenMenu)),
+            onTap: () async {
+              await getNavigation().pop(context);
+              shareTextManual(fullLink);
+            },
+          ));
+        }
 
         widgets.add(emptySpace8x());
 
         return AnimatedSize(
           duration: AppDuration.modal,
           child: Container(
-            constraints: modalDefaultSize(context),
+            constraints: modalSmallHeightSize(context),
             child: ListView.builder(
               padding: NMSUIConstants.buttonPadding,
               itemCount: widgets.length,

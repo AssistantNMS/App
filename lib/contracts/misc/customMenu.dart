@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/integration/dependencyInjection.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';
@@ -194,12 +195,24 @@ List<CustomMenu> getMenuOptionsSection3(
       drawerIcon: localGetDrawerFromIcon(Icons.map_sharp),
       title: LocaleKey.seasonalExpeditionSeasons,
       navigateToNamed: Routes.seasonalExpeditionPage,
+      // onLongPress: (navCtx) {
+      //   getNavigation().navigateAwayFromHomeAsync(
+      //     navCtx,
+      //     navigateTo: (_) => const CustomSeasonalExpeditionSeasonListPage(),
+      //   );
+      // },
     ),
     CustomMenu(
       icon: localGetFromIcon(Icons.new_releases_sharp),
       drawerIcon: localGetDrawerFromIcon(Icons.new_releases_sharp),
       title: LocaleKey.nmsNews,
       navigateToNamed: Routes.newsPage,
+    ),
+    CustomMenu(
+      icon: localGetFromIcon(Icons.new_releases_sharp),
+      drawerIcon: localGetDrawerFromIcon(Icons.new_releases_sharp),
+      title: LocaleKey.newItemsAdded,
+      navigateToNamed: Routes.majorUpdates,
     ),
     CustomMenu(
       icon: localGetFromIcon(Icons.show_chart),
@@ -259,7 +272,6 @@ List<CustomMenu> getMenuOptionsSection3(
       icon: localGetFromIcon(Icons.more_horiz),
       drawerIcon: localGetDrawerFromIcon(Icons.more_horiz),
       title: LocaleKey.more,
-      hideInCustom: true,
       navigateToNamed: Routes.retiredDrawerMenuPage,
     ),
   ];
@@ -275,12 +287,12 @@ List<CustomMenu> getMenuOptionsSection4(
       getCorrectlySizedImageFromIcon(context, icon, colour: drawerIconColour);
 
   return [
-    // CustomMenu(
-    //   icon: localGetFromIcon(Icons.sync),
-    //   drawerIcon: localGetDrawerFromIcon(Icons.sync),
-    //   title: LocaleKey.synchronize,
-    //   navigateToNamed: Routes.syncPage,
-    // ),
+    CustomMenu(
+      icon: localGetFromIcon(Icons.sync),
+      drawerIcon: localGetDrawerFromIcon(Icons.sync),
+      title: LocaleKey.synchronize,
+      navigateToNamed: Routes.syncPage,
+    ),
     CustomMenu(
       icon: localGetFromIcon(Icons.feedback),
       drawerIcon: localGetDrawerFromIcon(Icons.feedback),

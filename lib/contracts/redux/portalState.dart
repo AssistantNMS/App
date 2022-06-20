@@ -25,6 +25,9 @@ class PortalState {
         availableTags: availableTags ?? this.availableTags);
   }
 
+  factory PortalState.fromGoogleJson(String json) =>
+      PortalState.fromJson(jsonDecode(json));
+
   factory PortalState.fromJson(Map<String, dynamic> json) {
     if (json == null) return PortalState.initial();
     try {

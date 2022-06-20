@@ -1,5 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/constants/UsageKey.dart';
+import 'package:assistantnms_app/contracts/data/alphabetTranslation.dart';
+import 'package:assistantnms_app/contracts/data/majorUpdateItem.dart';
+import 'package:assistantnms_app/contracts/data/starshipScrap.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/IdPrefix.dart';
@@ -9,6 +12,7 @@ import '../contracts/data/quicksilverStore.dart';
 import '../contracts/data/updateItemDetail.dart';
 import '../contracts/enum/currencyType.dart';
 import '../contracts/genericPageItem.dart';
+import '../contracts/helloGames/quickSilverStoreDetails.dart';
 import '../contracts/processor.dart';
 import '../contracts/processorRecipePageData.dart';
 import '../contracts/recharge.dart';
@@ -54,6 +58,8 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   item.usedInCooking = List.empty();
   item.chargedBy = Recharge.initial();
   item.usedToRecharge = List.empty();
+  item.starshipScrapItems = List.empty();
+  item.addedInUpdate = null;
 
   if ((usage ?? []).contains(UsageKey.hasUsedToCraft)) {
     item.usedInRecipes = await getAllPossibleOutputsFromInput(context, itemId);
@@ -77,6 +83,12 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   }
   if ((usage ?? []).contains(UsageKey.hasUsedToRecharge)) {
     item.usedToRecharge = await usedToRechargeFuture(context, itemId);
+  }
+  if ((usage ?? []).contains(UsageKey.isRewardFromShipScrap)) {
+    item.starshipScrapItems = await rewardStarshipScrapFuture(context, itemId);
+  }
+  if ((usage ?? []).contains(UsageKey.isAddedInTrackedUpdate)) {
+    item.addedInUpdate = await fromTrackedUpdateFuture(context, itemId);
   }
 
   itemResult.value.eggTraits = await eggTraitsFuture(context, itemId);
@@ -167,7 +179,7 @@ Future<ResultWithValue<ProcessorRecipePageData>> processorPageDetails(
 }
 
 Future<List<Recharge>> usedToRechargeFuture(context, String itemId) async {
-  var rechargeItems =
+  ResultWithValue<List<Recharge>> rechargeItems =
       await getRechargeRepo().getRechargeByChargeById(context, itemId);
   if (rechargeItems.hasFailed) {
     return List.empty(growable: true);
@@ -176,7 +188,8 @@ Future<List<Recharge>> usedToRechargeFuture(context, String itemId) async {
 }
 
 Future<Recharge> rechargedByFuture(context, String itemId) async {
-  var rechargeItem = await getRechargeRepo().getRechargeById(context, itemId);
+  ResultWithValue<Recharge> rechargeItem =
+      await getRechargeRepo().getRechargeById(context, itemId);
   if (rechargeItem.hasFailed) {
     return Recharge();
   }
@@ -245,11 +258,31 @@ Future<List<PlatformControlMapping>> controlMappingsFuture(
 }
 
 Future<String> translationFuture(context, String itemId) async {
-  var translationResult = await getDataRepo().getTranslation(context, itemId);
+  ResultWithValue<AlphabetTranslation> translationResult =
+      await getDataRepo().getTranslation(context, itemId);
   if (translationResult.hasFailed) {
     return '';
   }
   return translationResult.value.text;
+}
+
+Future<List<StarshipScrap>> rewardStarshipScrapFuture(
+    context, String itemId) async {
+  ResultWithValue<List<StarshipScrap>> items =
+      await getDataRepo().getStarshipScrapDataForItem(context, itemId);
+  if (items.hasFailed) {
+    return List.empty();
+  }
+  return items.value;
+}
+
+Future<MajorUpdateItem> fromTrackedUpdateFuture(context, String itemId) async {
+  ResultWithValue<MajorUpdateItem> item =
+      await getDataRepo().getMajorUpdatesForItem(context, itemId);
+  if (item.hasFailed) {
+    return null;
+  }
+  return item.value;
 }
 
 // -----------------------------------------------------------------------------------------------------------------
@@ -361,14 +394,15 @@ Future<ResultWithValue<List<UpdateItemDetail>>> getUpdateNewItemsList(
 
 Future<ResultWithValue<List<GenericPageItem>>> getUpdateNewItemsDetailsList(
     BuildContext context,
-    UpdateItemDetail details,
+    List<String> itemIds,
     List<LocaleKey> repoJsonStrings) async {
-  var allItemsResult = await getAllFromLocaleKeys(context, repoJsonStrings);
+  ResultWithValue<List<GenericPageItem>> allItemsResult =
+      await getAllFromLocaleKeys(context, repoJsonStrings);
   if (allItemsResult.hasFailed) return allItemsResult;
 
   List<GenericPageItem> results = List.empty(growable: true);
-  for (var item in allItemsResult.value) {
-    if (!details.itemIds.any((newItem) => newItem == item.id)) continue;
+  for (GenericPageItem item in allItemsResult.value) {
+    if (!itemIds.any((newItem) => newItem == item.id)) continue;
     results.add(item);
   }
   results.sort((a, b) => a.name.compareTo(b.name));
@@ -467,16 +501,16 @@ Future<ResultWithValue<Processor>> processorOutputDetailsFuture(
     await getProcessorRepo(procId.contains(IdPrefix.refiner))
         .getById(context, procId);
 
-Future<ResultWithDoubleValue<QuicksilverStore, List<RequiredItemDetails>>>
-    quickSilverItemDetailsFuture(context, int missionId) async {
+Future<ResultWithValue<QuicksilverStoreDetails>> quickSilverItemDetailsFuture(
+    context, int missionId) async {
   ResultWithValue<QuicksilverStore> qsItemsResult =
       await getDataRepo().getQuickSilverItem(context, missionId);
   if (qsItemsResult.hasFailed) {
-    return ResultWithDoubleValue<QuicksilverStore, List<RequiredItemDetails>>(
-        false, null, List.empty(), qsItemsResult.errorMessage);
+    return ResultWithValue<QuicksilverStoreDetails>(
+        false, null, qsItemsResult.errorMessage);
   }
 
-  ResultWithValue<List<RequiredItemDetails>> reqItemsResult =
+  ResultWithValue<List<RequiredItemDetails>> itemsResult =
       await requiredItemDetailsFromInputs(
     context,
     qsItemsResult.value.items
@@ -484,9 +518,27 @@ Future<ResultWithDoubleValue<QuicksilverStore, List<RequiredItemDetails>>>
         .toList(),
   );
 
-  List<RequiredItemDetails> reqList = reqItemsResult.value;
-  if (reqItemsResult.hasFailed) reqList = List.empty();
+  List<RequiredItemDetails> itemList =
+      itemsResult.isSuccess ? itemsResult.value : List.empty();
 
-  return ResultWithDoubleValue<QuicksilverStore, List<RequiredItemDetails>>(
-      true, qsItemsResult.value, reqList, '');
+  ResultWithValue<List<RequiredItemDetails>> itemsReqResult =
+      await requiredItemDetailsFromInputs(
+    context,
+    qsItemsResult.value.itemsRequired
+        .map((qs) => RequiredItem(id: qs, quantity: 0))
+        .toList(),
+  );
+
+  List<RequiredItemDetails> itemsReqList =
+      itemsReqResult.isSuccess ? itemsReqResult.value : List.empty();
+
+  return ResultWithValue<QuicksilverStoreDetails>(
+    true,
+    QuicksilverStoreDetails(
+      store: qsItemsResult.value,
+      items: itemList,
+      itemsRequired: itemsReqList,
+    ),
+    '',
+  );
 }
