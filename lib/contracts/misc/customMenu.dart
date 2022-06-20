@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/integration/dependencyInjection.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';

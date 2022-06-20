@@ -11,7 +11,6 @@ import '../../constants/NmsUIConstants.dart';
 import '../../contracts/enum/feedbackQuestionType.dart';
 import '../../contracts/generated/feedbackAnsweredViewModel.dart';
 import '../../contracts/generated/feedbackViewModel.dart';
-import '../../integration/dependencyInjection.dart';
 
 class FeedbackQuestionsPage extends StatefulWidget {
   final FeedbackViewModel feedbackForm;
