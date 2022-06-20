@@ -2,6 +2,7 @@
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide UIConstants;
+import 'package:assistantnms_app/contracts/generated/feedbackQuestionAnsweredViewModel.dart';
 import 'package:assistantnms_app/contracts/generated/feedbackQuestionViewModel.dart';
 import 'package:flutter/material.dart';
 
@@ -102,32 +103,32 @@ class _FeedbackQuestionsWidget extends State<FeedbackQuestionsPage> {
       setState(() {
         isLoading = true;
       });
-      Result result = await getApiRepo().sendFeedbackForm(answerForm);
+      // Result result = await getApiRepo().sendFeedbackForm(answerForm);
       setState(() {
         isLoading = false;
       });
-      if (result.hasFailed) {
-        getDialog().showSimpleDialog(
-          context,
-          getTranslations().fromKey(LocaleKey.error),
-          Text(getTranslations().fromKey(LocaleKey.feedbackNotSubmitted)),
-          buttonBuilder: (BuildContext ctx) => [
-            getDialog().simpleDialogCloseButton(ctx),
-          ],
-        );
-      } else {
-        getDialog().showSimpleDialog(
-          context,
-          getTranslations().fromKey(LocaleKey.success),
-          Text(getTranslations().fromKey(LocaleKey.feedbackSubmitted)),
-          buttonBuilder: (BuildContext ctx) => [
-            getDialog().simpleDialogCloseButton(
-              context,
-              onTap: () async => await getNavigation().navigateHomeAsync(ctx),
-            ),
-          ],
-        );
-      }
+      // if (result.hasFailed) {
+      //   getDialog().showSimpleDialog(
+      //     context,
+      //     getTranslations().fromKey(LocaleKey.error),
+      //     Text(getTranslations().fromKey(LocaleKey.feedbackNotSubmitted)),
+      //     buttonBuilder: (BuildContext ctx) => [
+      //       getDialog().simpleDialogCloseButton(ctx),
+      //     ],
+      //   );
+      // } else {
+      //   getDialog().showSimpleDialog(
+      //     context,
+      //     getTranslations().fromKey(LocaleKey.success),
+      //     Text(getTranslations().fromKey(LocaleKey.feedbackSubmitted)),
+      //     buttonBuilder: (BuildContext ctx) => [
+      //       getDialog().simpleDialogCloseButton(
+      //         context,
+      //         onTap: () async => await getNavigation().navigateHomeAsync(ctx),
+      //       ),
+      //     ],
+      //   );
+      // }
     };
 
     bool isButtonEnabled = submitButtonEnabled(feedbackForm, answerForm);
@@ -145,7 +146,7 @@ class _FeedbackQuestionsWidget extends State<FeedbackQuestionsPage> {
 
   bool submitButtonEnabled(
       FeedbackViewModel feedbackForm, FeedbackAnsweredViewModel answerForm) {
-    int numberRequired = 0;
+    int numberRequired = 1;
     for (var questionObj in feedbackForm.questions) {
       if (questionObj.type == FeedbackQuestionType.FiveOptionScale ||
           questionObj.type == FeedbackQuestionType.YesUnknownNo) {
@@ -157,8 +158,10 @@ class _FeedbackQuestionsWidget extends State<FeedbackQuestionsPage> {
     if (answerForm.answers == null || answerForm.answers.isEmpty) {
       return false;
     }
-    for (var answer in answerForm.answers) {
-      if (answer.answer != NMSUIConstants.FeedbackAnswerDefault) {
+    for (FeedbackQuestionAnsweredViewModel answer in answerForm.answers) {
+      if (answer.answer != null &&
+          answer.answer != NMSUIConstants.FeedbackAnswerDefault &&
+          answer.answer.isNotEmpty) {
         numberValid++;
       }
     }
