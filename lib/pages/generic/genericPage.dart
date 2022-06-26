@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/contracts/creature/creatureHarvest.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -301,12 +302,14 @@ class GenericPage extends StatelessWidget {
     // ----------------------------- Rewards from ------------------------------
 
     List<StarshipScrap> starshipScrapItems = genericItem.starshipScrapItems;
+    List<CreatureHarvest> creatureHarvests = genericItem.creatureHarvests;
 
     widgets.addAll(getRewardFrom(
       context,
       genericItem,
       vm.displayGenericItemColour,
       starshipScrapItems: starshipScrapItems,
+      creatureHarvests: creatureHarvests,
     ));
 
     // ------------------------------ Egg Traits -------------------------------

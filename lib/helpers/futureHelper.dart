@@ -6,6 +6,7 @@ import 'package:assistantnms_app/contracts/data/starshipScrap.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/IdPrefix.dart';
+import '../contracts/creature/creatureHarvest.dart';
 import '../contracts/data/eggTrait.dart';
 import '../contracts/data/platformControlMapping.dart';
 import '../contracts/data/quicksilverStore.dart';
@@ -59,6 +60,7 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   item.chargedBy = Recharge.initial();
   item.usedToRecharge = List.empty();
   item.starshipScrapItems = List.empty();
+  item.creatureHarvests = List.empty();
   item.addedInUpdate = null;
 
   if ((usage ?? []).contains(UsageKey.hasUsedToCraft)) {
@@ -89,6 +91,9 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   }
   if ((usage ?? []).contains(UsageKey.isAddedInTrackedUpdate)) {
     item.addedInUpdate = await fromTrackedUpdateFuture(context, itemId);
+  }
+  if ((usage ?? []).contains(UsageKey.hasCreatureHarvest)) {
+    item.creatureHarvests = await creatureHarvestsFuture(context, itemId);
   }
 
   itemResult.value.eggTraits = await eggTraitsFuture(context, itemId);
@@ -283,6 +288,16 @@ Future<MajorUpdateItem> fromTrackedUpdateFuture(context, String itemId) async {
     return null;
   }
   return item.value;
+}
+
+Future<List<CreatureHarvest>> creatureHarvestsFuture(
+    context, String itemId) async {
+  ResultWithValue<List<CreatureHarvest>> items = await getCreatureHarvestRepo()
+      .getCreatureHarvestsForItem(context, itemId);
+  if (items.hasFailed) {
+    return null;
+  }
+  return items.value;
 }
 
 // -----------------------------------------------------------------------------------------------------------------
