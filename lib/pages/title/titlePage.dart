@@ -3,12 +3,10 @@
 import 'package:after_layout/after_layout.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide UIConstants;
-import 'package:assistantnms_app/redux/modules/titles/actions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/common/actionItem.dart';
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/titleDataPresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/redux/appState.dart';
