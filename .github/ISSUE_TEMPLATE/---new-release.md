@@ -25,9 +25,11 @@ assignees: Khaoz-Topsy
   - [ ] Copy content of `release_notes.txt` into Apple webpage
   - [ ] Submit for Apple review
 - [ ] Create Github release ([New Release](https://github.com/AssistantNMS/App/releases/new))
-  - [ ] Merge Pull Request
-  - [ ] Tag main branch
+  - [ ] Tag develop branch (1.112)
+  - [ ] Use appropriate tag (1.112.0)
   - [ ] Attach `.aab`
   - [ ] Attach `.apk`
   - [ ] Attach `.ipa`
-  - [ ] Use appropriate tag
+  - [ ] Attach `.msix`
+- [ ] Merge Pull Request when update is out for everyone 🎉
+
