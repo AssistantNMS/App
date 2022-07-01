@@ -11,6 +11,7 @@ Widget creatureHarvestTilePresenter(BuildContext context,
   if (description.isEmpty) {
     description = creatureHarvest.harvestType == 0 ? 'Kill' : 'Harvest';
   }
+
   return flatCard(
     child: genericListTileWithSubtitle(
       context,

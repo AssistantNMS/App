@@ -4,22 +4,27 @@ import 'package:flutter/material.dart';
 @immutable
 class TitleState {
   final List<String> owned;
+  final bool hideCompleted;
 
   const TitleState({
     this.owned,
+    this.hideCompleted,
   });
 
   factory TitleState.initial() {
     return TitleState(
       owned: List.empty(growable: true),
+      hideCompleted: false,
     );
   }
 
   TitleState copyWith({
     List<String> owned,
+    bool hideCompleted,
   }) {
     return TitleState(
-      owned: owned ?? List.empty(growable: true),
+      owned: owned ?? this.owned,
+      hideCompleted: hideCompleted ?? this.hideCompleted,
     );
   }
 
@@ -27,12 +32,12 @@ class TitleState {
     if (json == null) return TitleState.initial();
     try {
       return TitleState(
-        owned: readListSafe<String>(
-          json,
-          'owned',
-          (p) => p.toString(),
-        ).toList(),
-      );
+          owned: readListSafe<String>(
+            json,
+            'owned',
+            (p) => p.toString(),
+          ).toList(),
+          hideCompleted: readBoolSafe(json, 'hideCompleted'));
     } catch (exception) {
       return TitleState.initial();
     }
@@ -40,5 +45,6 @@ class TitleState {
 
   Map<String, dynamic> toJson() => {
         'owned': owned,
+        'hideCompleted': hideCompleted,
       };
 }

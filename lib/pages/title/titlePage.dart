@@ -3,9 +3,11 @@
 import 'package:after_layout/after_layout.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide UIConstants;
+import 'package:assistantnms_app/redux/modules/titles/actions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
+import '../../components/common/actionItem.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/titleDataPresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
@@ -34,6 +36,10 @@ class _TitlePageState extends State<TitlePage> {
         converter: (store) => TitleViewModel.fromStore(store),
         rebuildOnChange: false,
         builder: (_, viewModel) {
+          String extraKey = '';
+          if (viewModel.hideCompleted) {
+            extraKey = viewModel.owned.length.toString();
+          }
           return TitlePageView(
             viewModel,
             selection,
@@ -41,7 +47,7 @@ class _TitlePageState extends State<TitlePage> {
               selection = itemList;
             }),
             key: Key(
-                'Title-View-${viewModel.playerTitle}-${(selection ?? []).length}'),
+                'Title-View-${viewModel.playerTitle}-${(selection ?? []).length}-$extraKey'),
           );
         });
   }
@@ -101,6 +107,7 @@ class _TitlePageViewState extends State<TitlePageView>
       context,
       (selection ?? List.empty()),
       (viewModel.owned ?? List.empty()),
+      viewModel.hideCompleted ?? false,
     );
 
     if (viewModel.playerTitle == null || viewModel.playerTitle.isEmpty) {
@@ -109,7 +116,11 @@ class _TitlePageViewState extends State<TitlePageView>
   }
 
   void getFiltered(
-      BuildContext context, List<String> selection, List<String> owned) async {
+    BuildContext context,
+    List<String> selection,
+    List<String> owned,
+    bool hideCompleted,
+  ) async {
     ResultWithValue<List<TitleData>> allItems =
         await getTitleRepo().getAll(context);
 
@@ -168,20 +179,37 @@ class _TitlePageViewState extends State<TitlePageView>
     String numTiles = titleDataWithOwned.isNotEmpty
         ? titleDataWithOwned.length.toString()
         : '...';
-    return basicGenericPageScaffold(
-      context,
-      title: '$title - $owned / $numTiles',
-      actions: [
-        ActionItem(
-          icon: Icons.edit,
-          onPressed: () => setPlayerName(context, viewModel),
-          text: getTranslations().fromKey(LocaleKey.playerName),
+    List<TitleDataWithOwned> filtered = titleDataWithOwned
+        .where(
+          (item) => (viewModel.hideCompleted == false || item.isOwned == false),
         )
-      ],
+        .toList();
+
+    return Scaffold(
+      appBar: getBaseWidget().appBarForSubPage(
+        context,
+        title: Text('$title - $owned / $numTiles'),
+        actions: [
+          ActionItem(
+            icon: Icons.edit,
+            onPressed: () => setPlayerName(context, viewModel),
+            text: getTranslations().fromKey(LocaleKey.playerName),
+          ),
+          ActionItem(
+            icon: viewModel.hideCompleted
+                ? Icons.check_box_outline_blank_rounded
+                : Icons.check_box_outlined,
+            onPressed: () =>
+                viewModel.setHideCompleted(!viewModel.hideCompleted),
+            text: getTranslations().fromKey(LocaleKey.showOwned),
+          ),
+          goHomeAction(context),
+        ],
+      ),
       body: isLoading
           ? getLoading().fullPageLoading(context)
           : SearchableList<TitleDataWithOwned>(
-              () async => ResultWithValue(true, titleDataWithOwned, ''),
+              () async => ResultWithValue(true, filtered, ''),
               listItemDisplayer: titleDataTilePresenter(viewModel),
               listItemSearch: searchTitle,
               key: Key('title-Search-List-${titleDataWithOwned.length}'),
