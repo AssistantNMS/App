@@ -13,6 +13,7 @@ class UsageKey {
   static const String isQuicksilver = 'IsQuicksilver';
   static const String isRewardFromShipScrap = 'IsRewardFromShipScrap';
   static const String isAddedInTrackedUpdate = 'IsAddedInTrackedUpdate';
+  static const String hasCreatureHarvest = 'HasCreatureHarvest';
 
   static const String isExpeditionSeason = 'IsExpeditionSeason{0}Reward';
   static const String isTwitchCampaign = 'IsTwitchCampaign{0}Reward';

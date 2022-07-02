@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/contracts/creature/creatureHarvest.dart';
 import 'package:assistantnms_app/contracts/data/starshipScrap.dart';
 
 import 'data/majorUpdateItem.dart';
@@ -49,6 +50,7 @@ class GenericPageItem {
   int numStatsMin;
   List<EggTrait> eggTraits;
   List<PlatformControlMapping> controlMappings;
+  List<CreatureHarvest> creatureHarvests;
   String translation;
   List<String> usage;
 
@@ -82,6 +84,7 @@ class GenericPageItem {
     this.statBonuses,
     this.proceduralStatBonuses,
     this.starshipScrapItems,
+    this.creatureHarvests,
     this.addedInUpdate,
     this.numStatsMax,
     this.numStatsMin,

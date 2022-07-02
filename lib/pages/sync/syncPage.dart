@@ -272,7 +272,7 @@ class _SyncWidget extends State<SyncPage> {
             return service.saveFileLocally(
               jsonContent,
               'Please select a location to save the file',
-              GoogleDrive.portalJson,
+              GoogleDrive.inventoryJson,
             );
           },
           LocaleKey.inventoryNotUploaded,

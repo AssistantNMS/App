@@ -22,6 +22,7 @@ import '../services/base/pathService.dart';
 import '../services/base/themeService.dart';
 import '../services/json/AlienPuzzleRepository.dart';
 import '../services/json/AlienPuzzleRewardsJsonRepository.dart';
+import '../services/json/CreatureHarvestJsonRepository.dart';
 import '../services/json/DataJsonRepository.dart';
 import '../services/json/ExploitJsonRepository.dart';
 import '../services/json/FactionJsonRepository.dart';
@@ -33,6 +34,7 @@ import '../services/json/TechTreeJsonRepository.dart';
 import '../services/json/TitleJsonRepository.dart';
 import '../services/json/interface/IAlienPuzzleJsonRepository.dart';
 import '../services/json/interface/IAlienPuzzleRewardsJsonRepository.dart';
+import '../services/json/interface/ICreatureHarvestJsonRepository.dart';
 import '../services/json/interface/IDataJsonRepository.dart';
 import '../services/json/interface/IExploitRepository.dart';
 import '../services/json/interface/IFactionJsonRepository.dart';
@@ -81,6 +83,8 @@ void initDependencyInjection(EnvironmentSettings _env) {
   getIt.registerSingleton<ISeasonalExpeditionJsonRepository>(
       SeasonalExpeditionJsonRepository());
   getIt.registerSingleton<IFactionJsonRepository>(FactionJsonRepository());
+  getIt.registerSingleton<ICreatureHarvestJsonRepository>(
+      CreatureHarvestJsonRepository());
 
   getIt.registerSingleton<IAudioPlayerService>(
     isWindows ? WindowsAudioPlayerService() : AudioPlayerService(),
@@ -119,6 +123,8 @@ IAlienPuzzleRewardsJsonRepository getAlienPuzzleRewardsRepo() =>
 ISeasonalExpeditionJsonRepository getSeasonalExpeditionRepo() =>
     getIt<ISeasonalExpeditionJsonRepository>();
 IFactionJsonRepository getFactionRepo() => getIt<IFactionJsonRepository>();
+ICreatureHarvestJsonRepository getCreatureHarvestRepo() =>
+    getIt<ICreatureHarvestJsonRepository>();
 
 IAudioPlayerService getAudioPlayer() => getIt<IAudioPlayerService>();
 LocalNotificationService getLocalNotification() =>

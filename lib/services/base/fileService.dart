@@ -6,7 +6,10 @@ import 'package:file_picker/file_picker.dart';
 
 class FileService {
   Future<Result> saveFileLocally(
-      String jsonContent, String title, String defaultFileName) async {
+    String jsonContent,
+    String title,
+    String defaultFileName,
+  ) async {
     try {
       final stream = Stream.fromIterable(jsonContent.codeUnits);
 
@@ -37,7 +40,8 @@ class FileService {
   }
 
   Future<ResultWithValue<T>> readFileFromLocal<T>(
-      T Function(String jsonContent) readFileFunc) async {
+    T Function(String jsonContent) readFileFunc,
+  ) async {
     try {
       FilePickerResult result = await FilePicker.platform.pickFiles();
 

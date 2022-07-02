@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/common/image.dart';
 import '../../components/expeditionAlphabetTranslation.dart';
+import '../../components/tilePresenters/creatureHarvestTilePresenter.dart';
 import '../../components/tilePresenters/eggTraitTilePresenter.dart';
 import '../../components/tilePresenters/inventoryTilePresenter.dart';
 import '../../components/tilePresenters/majorUpdateTilePresenter.dart';
@@ -19,6 +20,7 @@ import '../../constants/Routes.dart';
 import '../../constants/UsageKey.dart';
 import '../../contracts/cart/cartItem.dart';
 import '../../contracts/chargeBy.dart';
+import '../../contracts/creature/creatureHarvest.dart';
 import '../../contracts/data/eggTrait.dart';
 import '../../contracts/data/majorUpdateItem.dart';
 import '../../contracts/data/starshipScrap.dart';
@@ -612,6 +614,7 @@ List<Widget> getRewardFrom(
   GenericPageItem genericItem,
   bool displayGenericItemColour, {
   List<StarshipScrap> starshipScrapItems,
+  List<CreatureHarvest> creatureHarvests,
 }) {
   List<Widget> rewardsFromWidgets = List.empty(growable: true);
   List<String> usages = genericItem?.usage ?? [];
@@ -660,6 +663,18 @@ List<Widget> getRewardFrom(
       starshipScrapItems,
       displayGenericItemColour,
     ));
+  }
+
+  if (usages.any((u) => u.contains(UsageKey.hasCreatureHarvest))) {
+    if (creatureHarvests != null && creatureHarvests.isNotEmpty) {
+      for (CreatureHarvest creatureHarvest in creatureHarvests) {
+        rewardsFromWidgets.add(creatureHarvestTilePresenter(
+          context,
+          creatureHarvest,
+          displayGenericItemColour,
+        ));
+      }
+    }
   }
 
   if (rewardsFromWidgets.isEmpty) {

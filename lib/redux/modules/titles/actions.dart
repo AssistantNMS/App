@@ -13,3 +13,8 @@ class RemoveTitleAction extends PersistToStorage {
 class RemoveAllTitlesAction extends PersistToStorage {
   RemoveAllTitlesAction();
 }
+
+class SetHideCompletedAction extends PersistToStorage {
+  final bool hideCompleted;
+  SetHideCompletedAction(this.hideCompleted);
+}

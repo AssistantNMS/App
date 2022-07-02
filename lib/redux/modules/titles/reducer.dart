@@ -7,6 +7,7 @@ final titleReducer = combineReducers<TitleState>([
   TypedReducer<TitleState, AddTitleAction>(_addTitle),
   TypedReducer<TitleState, RemoveTitleAction>(_removeTitle),
   TypedReducer<TitleState, RemoveAllTitlesAction>(_removeAllTitles),
+  TypedReducer<TitleState, SetHideCompletedAction>(_setHideCompletedAction),
 ]);
 
 TitleState _addTitle(TitleState state, AddTitleAction action) {
@@ -30,4 +31,9 @@ TitleState _removeTitle(TitleState state, RemoveTitleAction action) {
 
 TitleState _removeAllTitles(TitleState state, RemoveAllTitlesAction action) {
   return state.copyWith(owned: List.empty(growable: true));
+}
+
+TitleState _setHideCompletedAction(
+    TitleState state, SetHideCompletedAction action) {
+  return state.copyWith(hideCompleted: action.hideCompleted);
 }

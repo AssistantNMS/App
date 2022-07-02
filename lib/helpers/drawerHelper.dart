@@ -136,7 +136,7 @@ List<Widget> _mapToDrawerItem(BuildContext context, List<CustomMenu> menus) {
       context,
       image: menu.drawerIcon ?? menu.icon,
       key: menu.title,
-      //navigateToNamed: menu.navigateToNamed,
+      navigateToNamed: menu.navigateToNamed,
       navigateToExternal: menu.navigateToExternal,
       isLocked: menu.isLocked,
       isNew: menu.isNew,
