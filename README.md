@@ -9,6 +9,7 @@
   ![madeWithLove](./.github/img/made-with-love.svg)
   [![licence](./.github/img/licence-badge.svg)](https://github.com/AssistantNMS/App/blob/master/LICENCE.md)<br />
   [![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd] 
+  ![Profile views](https://komarev.com/ghpvc/?username=AssistantNMS&color=green&style=for-the-badge)
 
   [![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
   [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
@@ -46,10 +47,10 @@ After 2 years of development and maintenance, the app was made open source so th
 
 <div align="center">
 
-  [![PlayStore](./.github/img/PlayStore.png)][googlePlayStore]
-  [![AppStore](./.github/img/AppStore.png)][appleAppStore]
-  [![PWA](./.github/img/pwa.png)][assistantnmsWebapp]
-  [![WindowsStore](./.github/img/WindowsStore.png)][windowsStore]
+  [![PlayStore](https://github.com/AssistantNMS/.github/blob/main/img/PlayStore.png?raw=true)][googlePlayStore]
+  [![AppStore](https://github.com/AssistantNMS/.github/blob/main/img/AppStore.png?raw=true)][appleAppStore]
+  [![PWA](https://github.com/AssistantNMS/.github/blob/main/img/pwa.png?raw=true)][assistantnmsWebapp]
+  [![WindowsStore](https://github.com/AssistantNMS/.github/blob/main/img/WindowsStore.png?raw=true)][windowsStore]
   
 </div>
 

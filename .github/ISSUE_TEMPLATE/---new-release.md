@@ -12,6 +12,7 @@ assignees: Khaoz-Topsy
 - [ ] Regenerate AssistantApps server data from the AssistantNMS.Data tool
 - [ ] Verify that AssistantNMS.Data audits have all passed
 - [ ] Make sure content of `release_notes.txt` is ready for production
+- [ ] Run the versionNumberScript `dart scripts\versionNumScript.dart`
 - [ ] Create new item in Admin tool
   - [ ] Copy content of `release_notes.txt` to Markdown
   - [ ] Future date release date
@@ -24,6 +25,9 @@ assignees: Khaoz-Topsy
 - [ ] Go through manual iOS steps
   - [ ] Copy content of `release_notes.txt` into Apple webpage
   - [ ] Submit for Apple review
+- [ ] Go through manual WindowsStore steps
+  - [ ] Copy content of `release_notes.txt` into store webpage
+  - [ ] Submit for Microsoft review
 - [ ] Create Github release ([New Release](https://github.com/AssistantNMS/App/releases/new))
   - [ ] Tag develop branch (1.112)
   - [ ] Use appropriate tag (1.112.0)
