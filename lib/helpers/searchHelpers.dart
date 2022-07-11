@@ -56,9 +56,8 @@ bool searchNews(NewsItem option, String search) =>
     option.name.toLowerCase().contains(search) ||
     option.description.toLowerCase().contains(search);
 
-bool searchCommunityLinks(CommunityLinkViewModel option, String search) =>
-    option.name.toLowerCase().contains(search) ||
-    option.subtitle.toLowerCase().contains(search);
+bool searchCommunityLinksByName(CommunityLinkViewModel option, String search) =>
+    option.name.toLowerCase().contains(search);
 
 bool searchGroup(GenericPageItem item, String searchText) =>
     (item.group ?? '').toLowerCase().contains(searchText);
