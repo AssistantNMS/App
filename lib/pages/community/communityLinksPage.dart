@@ -63,39 +63,41 @@ class _CommunityLinksPageWidget extends State<CommunityLinksPage>
       );
     }
 
+    ActionItem questionWidget = ActionItem(
+      icon: Icons.help_outline,
+      onPressed: () => getDialog().showSimpleHelpDialog(
+        context,
+        getTranslations().fromKey(LocaleKey.help),
+        'Information supplied by NMS Community Search\n\n${NmsExternalUrls.communitySearchHomepage}',
+        buttonBuilder: (BuildContext dialogCtx) => [
+          GestureDetector(
+            child: Padding(
+              child: Text(getTranslations().fromKey(LocaleKey.viewPostOnline)),
+              padding: const EdgeInsets.all(12),
+            ),
+            onTap: () => launchExternalURL(
+              NmsExternalUrls.communitySearchHomepage,
+            ),
+          ),
+          GestureDetector(
+            child: Padding(
+              child: Text(getTranslations().fromKey(LocaleKey.close)),
+              padding: const EdgeInsets.all(12),
+            ),
+            onTap: () => getNavigation().pop(dialogCtx),
+          ),
+        ],
+      ),
+    );
+
     return getBaseWidget().appScaffold(
       context,
-      appBar: getBaseWidget().appBarForSubPage(context,
-          title: Text(getTranslations().fromKey(LocaleKey.communityLinks)),
-          showHomeAction: true,
-          actions: [
-            ActionItem(
-              icon: Icons.help_outline,
-              onPressed: () => getDialog().showSimpleHelpDialog(
-                context,
-                getTranslations().fromKey(LocaleKey.help),
-                'Information supplied by NMS Community Search\n\n${NmsExternalUrls.communitySearchHomepage}',
-                buttonBuilder: (BuildContext dialogCtx) => [
-                  GestureDetector(
-                    child: Padding(
-                      child: Text(
-                          getTranslations().fromKey(LocaleKey.viewPostOnline)),
-                      padding: const EdgeInsets.all(12),
-                    ),
-                    onTap: () => launchExternalURL(
-                        NmsExternalUrls.communitySearchHomepage),
-                  ),
-                  GestureDetector(
-                    child: Padding(
-                      child: Text(getTranslations().fromKey(LocaleKey.close)),
-                      padding: const EdgeInsets.all(12),
-                    ),
-                    onTap: () => getNavigation().pop(dialogCtx),
-                  ),
-                ],
-              ),
-            ),
-          ]),
+      appBar: getBaseWidget().appBarForSubPage(
+        context,
+        title: Text(getTranslations().fromKey(LocaleKey.communityLinks)),
+        showHomeAction: true,
+        actions: [questionWidget],
+      ),
       body: SearchableList<CommunityLinkViewModel>(
         () => getAllCommunityLinks(),
         listItemDisplayer: tilePresenter,
