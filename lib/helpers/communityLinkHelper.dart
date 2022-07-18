@@ -1,5 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../constants/NmsExternalUrls.dart';
 import '../contracts/generated/communityLinkChipColourViewModel.dart';
@@ -81,6 +82,18 @@ Widget renderSingleLink(BuildContext linkContext, String link) {
         ],
       ),
     ),
-    onTap: () => launchExternalURL(link),
+    onTap: () => launchExternalURL(localLink),
+    onLongPress: () {
+      Clipboard.setData(ClipboardData(text: localLink));
+      getSnackbar().showSnackbar(
+        linkContext,
+        LocaleKey.copyToClipboard,
+        description: localLink,
+        onNegative: () async {
+          await getNavigation().pop(linkContext);
+          await getNavigation().pop(linkContext);
+        },
+      );
+    },
   );
 }

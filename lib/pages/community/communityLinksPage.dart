@@ -42,7 +42,7 @@ class _CommunityLinksPageWidget extends State<CommunityLinksPage>
     if (hasFailed) return ResultWithValue(false, List.empty(), '');
 
     List<CommunityLinkViewModel> newValue = meta.items
-        .where((comLink) => comLink.id != 'recpPVVj6xvTGVLrx')
+        .where((comLink) => comLink.customId != 'AssistantNMS')
         .toList();
     newValue.sort(
       (a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()),
@@ -63,27 +63,55 @@ class _CommunityLinksPageWidget extends State<CommunityLinksPage>
       );
     }
 
-    return getBaseWidget().appScaffold(context,
-        appBar: getBaseWidget().appBarForSubPage(
-          context,
+    return getBaseWidget().appScaffold(
+      context,
+      appBar: getBaseWidget().appBarForSubPage(context,
           title: Text(getTranslations().fromKey(LocaleKey.communityLinks)),
           showHomeAction: true,
+          actions: [
+            ActionItem(
+              icon: Icons.help_outline,
+              onPressed: () => getDialog().showSimpleHelpDialog(
+                context,
+                getTranslations().fromKey(LocaleKey.help),
+                'Information supplied by NMS Community Search\n\n${NmsExternalUrls.communitySearchHomepage}',
+                buttonBuilder: (BuildContext dialogCtx) => [
+                  GestureDetector(
+                    child: Padding(
+                      child: Text(
+                          getTranslations().fromKey(LocaleKey.viewPostOnline)),
+                      padding: const EdgeInsets.all(12),
+                    ),
+                    onTap: () => launchExternalURL(
+                        NmsExternalUrls.communitySearchHomepage),
+                  ),
+                  GestureDetector(
+                    child: Padding(
+                      child: Text(getTranslations().fromKey(LocaleKey.close)),
+                      padding: const EdgeInsets.all(12),
+                    ),
+                    onTap: () => getNavigation().pop(dialogCtx),
+                  ),
+                ],
+              ),
+            ),
+          ]),
+      body: SearchableList<CommunityLinkViewModel>(
+        () => getAllCommunityLinks(),
+        listItemDisplayer: tilePresenter,
+        listItemSearch: searchCommunityLinksByName,
+        minListForSearch: 20,
+        addFabPadding: true,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => launchExternalURL(
+          NmsExternalUrls.communitySearchAddLinkForm,
         ),
-        body: SearchableList<CommunityLinkViewModel>(
-          () => getAllCommunityLinks(),
-          listItemDisplayer: tilePresenter,
-          listItemSearch: searchCommunityLinksByName,
-          minListForSearch: 20,
-          addFabPadding: true,
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => launchExternalURL(
-            NmsExternalUrls.communitySearchAddLinkForm,
-          ),
-          heroTag: 'AddCommunitySearchLink',
-          child: const Icon(Icons.add),
-          foregroundColor: getTheme().fabForegroundColourSelector(context),
-          backgroundColor: getTheme().fabColourSelector(context),
-        ));
+        heroTag: 'AddCommunitySearchLink',
+        child: const Icon(Icons.add),
+        foregroundColor: getTheme().fabForegroundColourSelector(context),
+        backgroundColor: getTheme().fabColourSelector(context),
+      ),
+    );
   }
 }

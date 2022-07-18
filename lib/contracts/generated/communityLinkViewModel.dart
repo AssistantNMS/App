@@ -14,6 +14,7 @@ class CommunityLinkViewModel {
     this.banners,
     this.desc,
     this.tags,
+    this.customId,
     this.links,
   });
 
@@ -22,6 +23,7 @@ class CommunityLinkViewModel {
   String icon;
   List<String> banners;
   String desc;
+  String customId;
   List<String> tags;
   List<String> links;
 
@@ -39,6 +41,7 @@ class CommunityLinkViewModel {
           (dynamic json) => json.toString(),
         ),
         desc: readStringSafe(json, 'desc'),
+        customId: readStringSafe(json, 'customId'),
         tags: readListSafe<String>(
           json,
           'tags',

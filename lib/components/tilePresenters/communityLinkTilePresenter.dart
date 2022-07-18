@@ -15,11 +15,14 @@ Widget Function(
         leading: Hero(
           key: Key(communityLink.id),
           tag: communityLink.id,
-          child: networkImage(
-            handleCommunitySearchIcon(communityLink.icon),
-            boxfit: BoxFit.cover,
-            height: 50.0,
-            width: 50.0,
+          child: ClipRRect(
+            borderRadius: const BorderRadius.all(Radius.circular(4)),
+            child: networkImage(
+              handleCommunitySearchIcon(communityLink.icon),
+              boxfit: BoxFit.cover,
+              height: 50.0,
+              width: 50.0,
+            ),
           ),
         ),
         title: Text(
