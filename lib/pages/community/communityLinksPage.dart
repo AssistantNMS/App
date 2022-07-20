@@ -8,6 +8,7 @@ import '../../components/tilePresenters/communityLinkTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/generated/communityLinkMetaViewModel.dart';
 import '../../contracts/generated/communityLinkViewModel.dart';
+import '../../helpers/columnHelper.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../integration/dependencyInjection.dart';
 
@@ -98,10 +99,13 @@ class _CommunityLinksPageWidget extends State<CommunityLinksPage>
         showHomeAction: true,
         actions: [questionWidget],
       ),
-      body: SearchableList<CommunityLinkViewModel>(
+      body: SearchableGrid<CommunityLinkViewModel>(
         () => getAllCommunityLinks(),
-        listItemDisplayer: tilePresenter,
-        listItemSearch: searchCommunityLinksByName,
+        // listItemDisplayer: tilePresenter,
+        // listItemSearch: searchCommunityLinksByName,
+        gridItemDisplayer: tilePresenter,
+        gridItemSearch: searchCommunityLinksByName,
+        gridViewColumnCalculator: getCommunityLinkColumnCount,
         minListForSearch: 20,
         addFabPadding: true,
       ),

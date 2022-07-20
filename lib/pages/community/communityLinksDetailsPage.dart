@@ -2,6 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
+import '../../components/tilePresenters/communityLinkTilePresenter.dart';
 import '../../contracts/generated/communityLinkChipColourViewModel.dart';
 import '../../contracts/generated/communityLinkViewModel.dart';
 import '../../helpers/communityLinkHelper.dart';
@@ -98,16 +99,7 @@ class CommunityLinksDetailsPage extends StatelessWidget {
 
     List<Widget> wrapChildren = List.empty(growable: true);
     for (String tag in communityLink.tags) {
-      wrapChildren.add(Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 2),
-        child: Chip(
-          label: Text(tag, style: const TextStyle(color: Colors.black)),
-          labelPadding: const EdgeInsets.symmetric(horizontal: 4),
-          elevation: 5,
-          shadowColor: Colors.black,
-          backgroundColor: handleTagColour(tag, chipColours),
-        ),
-      ));
+      wrapChildren.add(communityTag(tag, chipColours));
     }
 
     widgets.add(Wrap(alignment: WrapAlignment.center, children: wrapChildren));

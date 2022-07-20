@@ -91,7 +91,6 @@ Widget renderSingleLink(BuildContext linkContext, String link) {
         description: localLink,
         onNegative: () async {
           await getNavigation().pop(linkContext);
-          await getNavigation().pop(linkContext);
         },
       );
     },
