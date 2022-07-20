@@ -45,10 +45,7 @@ List<Widget> getDrawerItems(context, DrawerSettingsViewModel viewModel) {
             context,
             hasRoundedCorners: true,
             builder: (BuildContext innerContext) {
-              return const UpdateBottomSheet(
-                AppImage.updateOutlaws,
-                'f6ba56d2-6c56-4a76-839f-8cf836a73cc5',
-              );
+              return const UpdateBottomSheet();
             },
           );
         },

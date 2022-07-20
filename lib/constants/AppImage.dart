@@ -113,6 +113,7 @@ class AppImage {
   static const String updateFrontiers = update + 'frontiers.png';
   static const String updateSentinal = update + 'sentinal.png';
   static const String updateOutlaws = update + 'outlaws.png';
+  static const String updateEndurance = update + 'endurance.png';
 
   static const String controls = base + 'buttons/';
   static const String controlUnknown = base + 'buttons/unknown.png';
