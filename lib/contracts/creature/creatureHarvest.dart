@@ -12,12 +12,14 @@ class CreatureHarvest {
     this.itemId,
     this.creatureType,
     this.description,
+    this.wikiLink,
   });
 
   final int harvestType;
   final String itemId;
   final String creatureType;
   final String description;
+  final String wikiLink;
 
   factory CreatureHarvest.fromRawJson(String str) =>
       CreatureHarvest.fromJson(json.decode(str));
@@ -28,5 +30,6 @@ class CreatureHarvest {
         itemId: readStringSafe(json, 'ItemId'),
         creatureType: readStringSafe(json, 'CreatureType'),
         description: readStringSafe(json, 'Description'),
+        wikiLink: readStringSafe(json, 'WikiLink'),
       );
 }

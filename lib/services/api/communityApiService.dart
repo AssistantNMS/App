@@ -3,6 +3,9 @@ import 'dart:convert';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../../constants/ApiUrls.dart';
+import '../../constants/NmsExternalUrls.dart';
+import '../../contracts/generated/communityLinkChipColourViewModel.dart';
+import '../../contracts/generated/communityLinkMetaViewModel.dart';
 import '../../contracts/generated/communityLinkViewModel.dart';
 import '../../contracts/generated/communityMissionProgressItemViewModel.dart';
 import '../../contracts/generated/communitySpotlightViewModel.dart';
@@ -12,23 +15,41 @@ import '../../integration/dependencyInjection.dart';
 class CommunityApiService extends BaseApiService {
   CommunityApiService() : super(getEnv().baseApi);
 
-  Future<ResultWithValue<List<CommunityLinkViewModel>>>
+  Future<ResultWithValue<CommunityLinkMetaViewModel>>
       getAllCommunityLinks() async {
+    CommunityLinkMetaViewModel result = CommunityLinkMetaViewModel.empty();
     try {
-      final response = await apiGet(ApiUrls.communityLinks);
+      final response = await webGet(NmsExternalUrls.communitySearchList);
       if (response.hasFailed) {
-        return ResultWithValue<List<CommunityLinkViewModel>>(
-            false, List.empty(growable: true), response.errorMessage);
+        return ResultWithValue<CommunityLinkMetaViewModel>(
+          false,
+          CommunityLinkMetaViewModel.empty(),
+          response.errorMessage,
+        );
       }
       final List newsList = json.decode(response.value);
-      var links =
+      result.items =
           newsList.map((r) => CommunityLinkViewModel.fromJson(r)).toList();
-      return ResultWithValue(true, links, '');
     } catch (exception) {
       getLog().e("getAllCommunityLinks Api Exception: ${exception.toString()}");
-      return ResultWithValue<List<CommunityLinkViewModel>>(
-          false, List.empty(growable: true), exception.toString());
+      return ResultWithValue<CommunityLinkMetaViewModel>(
+          false, CommunityLinkMetaViewModel.empty(), exception.toString());
     }
+
+    try {
+      final response = await webGet(NmsExternalUrls.communitySearchChipColours);
+      if (response.isSuccess) {
+        final List newsList = json.decode(response.value);
+        result.chipColours = newsList
+            .map((r) => CommunityLinkChipColourViewModel.fromJson(r))
+            .toList();
+      }
+    } catch (exception) {
+      getLog().e(
+          "getAllCommunityLinks communitySearchChipColours Api Exception: ${exception.toString()}");
+    }
+
+    return ResultWithValue(true, result, '');
   }
 
   Future<ResultWithValue<List<OnlineMeetup2020SubmissionViewModel>>>
@@ -66,7 +87,8 @@ class CommunityApiService extends BaseApiService {
           newsList.map((r) => CommuntySpotlightViewModel.fromJson(r)).toList();
       return ResultWithValue(true, links, '');
     } catch (exception) {
-      getLog().e("getAllCommunityLinks Api Exception: ${exception.toString()}");
+      getLog().e(
+          "getAllCommunitySpotlights Api Exception: ${exception.toString()}");
       return ResultWithValue<List<CommuntySpotlightViewModel>>(
           false, List.empty(growable: true), exception.toString());
     }
