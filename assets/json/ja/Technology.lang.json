@@ -2,7 +2,7 @@
   {
     "Id": "tech1",
     "Icon": "technology/1.png",
-    "Name": "ハザード対策システム",
+    "Name": "危険防御",
     "Group": "エクソスーツの対環境シールド",
     "Description": "エクソスーツの<CATALYST>危険防御<>システムは常時使用者の環境を管理し、\n安定化させる役割を担っている。 \n基礎的な反応防御は<TECHNOLOGY>環境的なシールド<>で強化され、特定の条件に対する防御力が上昇する。\nこの装置は<CATALYST>ナトリウム系物質<>でチャージできる。 危険防御システムのチャージを怠ると生命の維持が出来なくなるため注意が必要だ。",
     "BaseValueUnits": 1.0,
@@ -23,9 +23,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "危険防御バッテリー",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
+        "Name": "低温防御",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "1"
+      },
+      {
+        "Name": "熱耐性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "heat",
         "Value": "100"
       },
       {
@@ -35,27 +41,15 @@
         "Value": "100"
       },
       {
-        "Name": "有毒物質によるダメージ防御",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "toxic",
-        "Value": "100"
-      },
-      {
-        "Name": "低温によるダメージ防御",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "cold",
-        "Value": "100"
-      },
-      {
         "Name": "高温によるダメージ防御",
         "LocaleKeyTemplate": "enabled",
         "Image": "heat",
         "Value": "100"
       },
       {
-        "Name": "ダッシュ回復時間",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Name": "有毒物質によるダメージ防御",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "toxic",
         "Value": "100"
       }
     ],
@@ -88,10 +82,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "危険防御バッテリー",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "低温防御",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -120,15 +114,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "生命維持タンク",
+        "Name": "ソーラーパネルパワー",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "100"
       },
       {
-        "Name": "ソーラーパネルパワー",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Name": "危険防御バッテリー",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
         "Value": "100"
       }
     ],
@@ -157,7 +151,7 @@
     ],
     "StatBonuses": [
       {
-        "Name": "生命維持タンク",
+        "Name": "ソーラーパネルパワー",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "10"
@@ -191,24 +185,30 @@
         "Name": "ジェットパックタンク",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "275"
+        "Value": "100"
       },
       {
         "Name": "燃料効率",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "初期ブーストパワー",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "damage",
-        "Value": "100"
+        "Value": "275"
       },
       {
         "Name": "リチャージ速度",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "高度なジャンプシステム",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      },
+      {
+        "Name": "初期ブーストパワー",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "damage",
         "Value": "100"
       }
     ],
@@ -241,28 +241,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "ジェットパックタンク",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "jetpack",
-        "Value": "20"
-      },
-      {
-        "Name": "リチャージ速度",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
-        "Value": "10"
-      },
-      {
-        "Name": "走行距離",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
-        "Value": "10"
-      },
-      {
-        "Name": "ダッシュ回復時間",
+        "Name": "燃料効率",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "20"
+      },
+      {
+        "Name": "初期ブーストパワー",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "damage",
+        "Value": "110"
+      },
+      {
+        "Name": "走行速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "unknown",
+        "Value": "0.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -294,9 +288,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "高度なジャンプシステム",
+        "Name": "効率型ウォータージェット",
         "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "water",
         "Value": "1"
       }
     ],
@@ -334,9 +328,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "熱耐性",
+        "Name": "冷気耐性",
         "LocaleKeyTemplate": "percentage",
-        "Image": "heat",
+        "Image": "cold",
         "Value": "20"
       }
     ],
@@ -374,9 +368,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "冷気耐性",
+        "Name": "毒耐性",
         "LocaleKeyTemplate": "percentage",
-        "Image": "cold",
+        "Image": "toxic",
         "Value": "20"
       }
     ],
@@ -414,9 +408,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "毒耐性",
+        "Name": "放射線耐性",
         "LocaleKeyTemplate": "percentage",
-        "Image": "toxic",
+        "Image": "rad",
         "Value": "20"
       }
     ],
@@ -454,9 +448,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "放射線耐性",
+        "Name": "呼吸効率",
         "LocaleKeyTemplate": "percentage",
-        "Image": "rad",
+        "Image": "water",
         "Value": "20"
       }
     ],
@@ -493,10 +487,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "呼吸効率",
+        "Name": "走行距離",
         "LocaleKeyTemplate": "percentage",
-        "Image": "water",
-        "Value": "33"
+        "Image": "recharge",
+        "Value": "133"
       }
     ],
     "ConsumableRewardTexts": []
@@ -554,14 +548,7 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "主体力",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "prot",
-        "Value": "20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -593,14 +580,7 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "主体力",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "prot",
-        "Value": "20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -662,9 +642,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "効率型ウォータージェット",
+        "Name": "飛行中リチャージ",
         "LocaleKeyTemplate": "enabled",
-        "Image": "water",
+        "Image": "recharge2",
         "Value": "1"
       }
     ],
@@ -701,10 +681,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "酸素再ルーティング",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "water",
-        "Value": "1"
+        "Name": "低温によるダメージ防御",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "cold",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -730,14 +710,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "翻訳された言葉",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -769,14 +742,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "翻訳された言葉",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "2"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -808,14 +774,7 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "翻訳された言葉",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "3"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -843,14 +802,7 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "翻訳された言葉",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -858,7 +810,7 @@
     "Icon": "technology/23.png",
     "Name": "パルスドライブ",
     "Group": "宇宙船飛行ブースター",
-    "Description": "周囲の星系で宇宙空間の移動、ブースト、\nパルスジャンプをする際に使用する。\n \nパルスドライブのチャージには<EXOTIC>三重水素<>が必要。三重水素は<COMMODITY>宇宙近くの小惑星<>で豊富に存在している。\n\n<IMG>PULSEJUMP<>を長押しでパルスジャンプ。<IMG>BOOST<>を長押しするとフライト速度を加速できる。",
+    "Description": "周囲の星系で宇宙空間の移動、ブースト、\nパルスジャンプをする際に使用する。\n \nパルスドライブのチャージには<EXOTIC>三重水素<>が必要。三重水素は<COMMODITY>宇宙近くの小惑星<>で豊富に存在している。宇宙船のスキャナー（<IMG>SCAN<>）を使えば、三重水素が存在する場所を特定できる。\n\n<IMG>PULSEJUMP<>を長押しでパルスジャンプ。<IMG>BOOST<>を長押しするとフライト速度を加速できる。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -887,15 +839,21 @@
         "Value": "100"
       },
       {
-        "Name": "加速する",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "9,900"
-      },
-      {
         "Name": "パルスドライブパワー",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "操縦性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "100"
+      },
+      {
+        "Name": "加速する",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -928,22 +886,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "パルスドライブ燃料効率",
+        "Name": "パルスドライブパワー",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
+        "Image": "recharge2",
+        "Value": "85"
       },
       {
-        "Name": "加速する",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
+        "Name": "内部生命維持システム有効",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.1"
       },
       {
         "Name": "操縦性",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "10"
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -979,6 +937,12 @@
         "Name": "発射コスト",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "自動リチャージ",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -1015,10 +979,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "発射コスト",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "-20"
+        "Name": "自動リチャージ",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "0.8"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1052,14 +1016,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "自動リチャージ",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1121,13 +1078,19 @@
         "Name": "ハイパードライブ範囲",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "100"
+        "Value": "1"
       },
       {
         "Name": "ワープセルの効率性",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
+        "Value": "10,000"
+      },
+      {
+        "Name": "ハイパードライブ即時緊急起動",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1157,7 +1120,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "ハイパードライブ範囲",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1185,7 +1155,14 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "ハイパードライブ範囲",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1213,7 +1190,14 @@
         "Quantity": 5
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "ハイパードライブ範囲",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1247,7 +1231,7 @@
         "Name": "シールド強度",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "0.65"
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1281,14 +1265,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "シールド強度",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "0.05"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1318,10 +1295,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "発射速度",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "1"
+        "Name": "散熱",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      },
+      {
+        "Name": "射程距離",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "精度",
@@ -1330,34 +1313,22 @@
         "Value": "100"
       },
       {
-        "Name": "総砲撃数",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "散熱",
+        "Name": "熱回復",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "0"
+        "Value": "-100"
       },
       {
-        "Name": "ダメージ",
+        "Name": "発射速度",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "6,500"
       },
       {
-        "Name": "射程距離",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "5,000"
-      },
-      {
-        "Name": "熱回復",
+        "Name": "総砲撃数",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "10"
+        "Image": "ammo",
+        "Value": "2.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1387,14 +1358,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "熱回復",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "-20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1424,10 +1388,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "発射速度",
+        "Name": "散熱",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "7.5"
+      },
+      {
+        "Name": "射程距離",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "精度",
@@ -1436,34 +1406,22 @@
         "Value": "100"
       },
       {
-        "Name": "総砲撃数",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "散熱",
+        "Name": "熱回復",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
         "Value": "7.5"
       },
       {
-        "Name": "ダメージ",
+        "Name": "発射速度",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "320"
       },
       {
-        "Name": "射程距離",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,500"
-      },
-      {
-        "Name": "熱回復",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Name": "総砲撃数",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "6"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1551,22 +1509,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "散熱",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "150"
-      },
-      {
         "Name": "ダメージ",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "250"
+        "Value": "1"
       },
       {
-        "Name": "衝撃時にシールドリチャージ",
+        "Name": "散熱",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "shieldStrength",
-        "Value": "0.2"
+        "Image": "time",
+        "Value": "250"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1596,20 +1548,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "散熱",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "10"
-      },
-      {
-        "Name": "衝撃時にシールドリチャージ",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "shieldStrength",
-        "Value": "0.1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1639,45 +1578,39 @@
     ],
     "StatBonuses": [
       {
-        "Name": "発射速度",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "2"
+        "Name": "散熱",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      },
+      {
+        "Name": "射程距離",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "900"
       },
       {
         "Name": "精度",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "1,000"
+        "Value": "1,400"
+      },
+      {
+        "Name": "熱回復",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "1.5"
+      },
+      {
+        "Name": "発射速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "280"
       },
       {
         "Name": "総砲撃数",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "14"
-      },
-      {
-        "Name": "散熱",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "50"
-      },
-      {
-        "Name": "ダメージ",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "280"
-      },
-      {
-        "Name": "射程距離",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "500"
-      },
-      {
-        "Name": "熱回復",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
         "Value": "100"
       }
     ],
@@ -1710,16 +1643,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "精度",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
-        "Value": "20"
-      },
-      {
         "Name": "射程距離",
         "LocaleKeyTemplate": "percentage",
         "Image": "range",
-        "Value": "25"
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1751,46 +1678,40 @@
     ],
     "StatBonuses": [
       {
-        "Name": "発射速度",
+        "Name": "散熱",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "9"
+      },
+      {
+        "Name": "射程距離",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "50"
       },
       {
         "Name": "精度",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "50"
+        "Value": "100"
+      },
+      {
+        "Name": "熱回復",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "3"
+      },
+      {
+        "Name": "発射速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "205"
       },
       {
         "Name": "総砲撃数",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "散熱",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "200"
-      },
-      {
-        "Name": "ダメージ",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "205"
-      },
-      {
-        "Name": "射程距離",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "2,200"
-      },
-      {
-        "Name": "熱回復",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "6.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1826,10 +1747,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "散熱",
-        "LocaleKeyTemplate": "percentage",
+        "Name": "熱回復",
+        "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
-        "Value": "20"
+        "Value": "1.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1861,46 +1782,40 @@
     ],
     "StatBonuses": [
       {
-        "Name": "発射速度",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "3"
+        "Name": "散熱",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "200"
+      },
+      {
+        "Name": "射程距離",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "100"
       },
       {
         "Name": "精度",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "100"
+        "Value": "200"
+      },
+      {
+        "Name": "熱回復",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "2"
+      },
+      {
+        "Name": "発射速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "600"
       },
       {
         "Name": "総砲撃数",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "2"
-      },
-      {
-        "Name": "散熱",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "ダメージ",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "600"
-      },
-      {
-        "Name": "射程距離",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,250"
-      },
-      {
-        "Name": "熱回復",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "3"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1932,10 +1847,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "散熱",
-        "LocaleKeyTemplate": "percentage",
+        "Name": "熱回復",
+        "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
-        "Value": "10"
+        "Value": "1.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1972,12 +1887,6 @@
     ],
     "StatBonuses": [
       {
-        "Name": "ハイパードライブ範囲",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "100"
-      },
-      {
         "Name": "ワープセルの効率性",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
@@ -1987,6 +1896,12 @@
         "Name": "艦隊の調整",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "1"
+      },
+      {
+        "Name": "調査の防御能力",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
         "Value": "1"
       }
     ],
@@ -2222,6 +2137,12 @@
         "Value": "100"
       },
       {
+        "Name": "調査モード：オン",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      },
+      {
         "Name": "動物分析の報酬",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
@@ -2314,9 +2235,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "調査モード：オン",
+        "Name": "生体機械スタン",
         "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "lightning",
         "Value": "1"
       }
     ],
@@ -2761,7 +2682,7 @@
     "Icon": "technology/76.png",
     "Name": "プラズマランチャー",
     "Group": "グレネード",
-    "Description": "ハイインパクト型投射兵器。撃ち出されたプラズマ弾は、地面や障害物に当たると跳ね返り、内蔵タイマーにより大爆発を起こす。\n \n<FUEL>変動性プラズマ<>でチャージできる。使用時に注意を怠ると、使用者がダメージを受けることになる。\n \n<IMG>ALTATTACK<>を押して使用する。",
+    "Description": "ハイインパクト型投射兵器。撃ち出されたプラズマ弾は、地面や障害物に当たると跳ね返り、内蔵タイマーにより大爆発を起こす。\n\n<FUEL>変動性プラズマ<>でチャージできる。\n使用時に注意を怠ると、使用者がダメージを受けることになる。\n\n<IMG>ALTATTACK<>を押して使用する。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -2806,22 +2727,16 @@
         "Value": "100"
       },
       {
-        "Name": "着弾後点火",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "damage",
-        "Value": "1"
-      },
-      {
         "Name": "着弾火災の持続時間",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "5"
+        "Value": "1"
       },
       {
         "Name": "着弾火災のダメージ",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "50"
+        "Value": "5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3404,15 +3319,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "燃料消費",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "トップスピード",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "ブーストタンクサイズ",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
         "Value": "100"
       },
       {
@@ -3422,10 +3337,10 @@
         "Value": "100"
       },
       {
-        "Name": "アングルグリップ",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
+        "Name": "マインレーザーパワー",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3461,16 +3376,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "推進グリップ",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "300"
-      },
-      {
-        "Name": "アングルグリップ",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
+        "Name": "マインレーザーパワー",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "0.66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3506,16 +3415,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "推進グリップ",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "50"
-      },
-      {
-        "Name": "アングルグリップ",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "210"
+        "Name": "マインレーザーパワー",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "2.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3551,16 +3454,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "推進グリップ",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "50"
-      },
-      {
-        "Name": "アングルグリップ",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
+        "Name": "マインレーザーパワー",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "0.66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3592,9 +3489,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "スキャンする",
+        "Name": "ブーストパワー",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -3631,9 +3528,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "スキャンする",
+        "Name": "ブーストパワー",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -3670,21 +3567,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "ブースト",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "燃料消費",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       },
       {
-        "Name": "ブーストパワー",
+        "Name": "アングルグリップ",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "ブーストタンクサイズ",
+        "Name": "加速",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -3721,16 +3618,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "マインレーザーパワー",
+        "Name": "ダメージ",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "80"
-      },
-      {
-        "Name": "マインレーザー効率",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Image": "damage",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3762,16 +3653,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "マインレーザーパワー",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
-        "Name": "上級エクソクラフトマインレーザー",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "武器動力の効率性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3803,22 +3688,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "ダメージ",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "320"
-      },
-      {
-        "Name": "武器動力の効率性",
+        "Name": "エクソクラフトのソーラーパネル",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "発射速度",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3851,21 +3724,27 @@
     ],
     "StatBonuses": [
       {
-        "Name": "燃料消費",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "トップスピード",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
       },
       {
-        "Name": "加速",
+        "Name": "ブーストタンクサイズ",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
+        "Value": "100"
+      },
+      {
+        "Name": "推進グリップ",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "マインレーザー効率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
         "Value": "100"
       }
     ],
@@ -3902,22 +3781,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "ダメージ",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "220"
-      },
-      {
-        "Name": "武器動力の効率性",
+        "Name": "エクソクラフトのソーラーパネル",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "発射速度",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3953,22 +3820,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "マインレーザーパワー",
+        "Name": "ダメージ",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "240"
-      },
-      {
-        "Name": "マインレーザー効率",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "上級エクソクラフトマインレーザー",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "damage",
         "Value": "1"
+      },
+      {
+        "Name": "武器動力の効率性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4004,9 +3865,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "スキャンする",
+        "Name": "ブーストパワー",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -4043,10 +3904,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "燃料消費",
+        "Name": "ブーストタンクサイズ",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-20"
+        "Image": "ammo",
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4832,14 +4693,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "ハイパードライブ範囲",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "200"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4871,14 +4725,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "ハイパードライブ範囲",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "300"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4910,14 +4757,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "ハイパードライブ範囲",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "800"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4949,14 +4789,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "ハイパードライブ範囲",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4988,14 +4821,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "ハイパードライブ範囲",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5027,14 +4853,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "ハイパードライブ範囲",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5066,14 +4885,7 @@
         "Quantity": 150
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "飛行中リチャージ",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recharge2",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5101,7 +4913,14 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "翻訳された言葉",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "translate",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -5135,10 +4954,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "パルスドライブ燃料効率",
+        "Name": "パルスドライブパワー",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "34"
+        "Image": "recharge2",
+        "Value": "66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5174,10 +4993,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "パルスドライブパワー",
+        "Name": "加速する",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "130"
+        "Image": "recovery",
+        "Value": "30"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5211,14 +5030,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "ハイパードライブ即時緊急起動",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5252,10 +5064,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "総砲撃数",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "3"
+        "Name": "精度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "300"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5623,7 +5435,7 @@
     "Icon": "technology/160.png",
     "Name": "脈打つ心臓",
     "Group": "融合した有機テクノロジー",
-    "Description": "この温かく命ある内臓は、\n線維状の金属性上部構造で船の中心に結び付けられている。この心臓がなければ、船は命なき抜け殻に過ぎないだろう。\n\n<IMG>PULSEJUMP<>を長押しして心臓にパルスジャンプを発動させる。<IMG>BOOST<>長押しでスピードブースト。",
+    "Description": "この温かく命ある内臓は、線維状の金属性上部構造で船の中心に結び付けられている。この心臓がなければ、船は命なき抜け殻に過ぎないだろう。\n\n<IMG>PULSEJUMP<>を長押しして心臓にパルスジャンプを発動させる。\n<IMG>BOOST<>長押しでスピードブースト。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -5653,15 +5465,21 @@
         "Value": "100"
       },
       {
-        "Name": "加速する",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "9,900"
-      },
-      {
         "Name": "パルスドライブパワー",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
+        "Value": "50"
+      },
+      {
+        "Name": "操縦性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "100"
+      },
+      {
+        "Name": "加速する",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -5699,6 +5517,12 @@
         "Name": "発射コスト",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "自動リチャージ",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -5736,13 +5560,19 @@
         "Name": "ハイパードライブ範囲",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "100"
+        "Value": "1"
       },
       {
         "Name": "ワープセルの効率性",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
+        "Value": "10,000"
+      },
+      {
+        "Name": "ハイパードライブ即時緊急起動",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5779,7 +5609,7 @@
         "Name": "シールド強度",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "0.65"
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5812,10 +5642,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "発射速度",
+        "Name": "散熱",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "10"
+      },
+      {
+        "Name": "射程距離",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "精度",
@@ -5824,34 +5660,22 @@
         "Value": "100"
       },
       {
+        "Name": "熱回復",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "10"
+      },
+      {
+        "Name": "発射速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "340"
+      },
+      {
         "Name": "総砲撃数",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "散熱",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "7.5"
-      },
-      {
-        "Name": "ダメージ",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "320"
-      },
-      {
-        "Name": "射程距離",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,500"
-      },
-      {
-        "Name": "熱回復",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "6"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5884,16 +5708,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "散熱",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "3.5"
-      },
-      {
         "Name": "ダメージ",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "250"
+        "Value": "1"
+      },
+      {
+        "Name": "散熱",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "280"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5927,7 +5751,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "調査の効率性",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recovery",
+        "Value": "10,000"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -6064,9 +5895,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "高温防御",
+        "Name": "毒性防御",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "heat",
+        "Image": "toxic",
         "Value": "3"
       }
     ],
@@ -6104,9 +5935,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "低温防御",
+        "Name": "高温防御",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
+        "Image": "heat",
         "Value": "3"
       }
     ],
@@ -6144,9 +5975,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "毒性防御",
+        "Name": "放射線防御",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
+        "Image": "rad",
         "Value": "3"
       }
     ],
@@ -6184,9 +6015,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "放射線防御",
+        "Name": "酸素タンク",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "rad",
+        "Image": "oxygen",
         "Value": "3"
       }
     ],
@@ -6222,14 +6053,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "エクソクラフトのソーラーパネル",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "400"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -6264,9 +6088,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "スキャンする",
+        "Name": "ブーストパワー",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -6304,16 +6128,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "燃料消費",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-50"
-      },
-      {
         "Name": "トップスピード",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
+      },
+      {
+        "Name": "ブーストタンクサイズ",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "50"
       },
       {
         "Name": "推進グリップ",
@@ -6322,10 +6146,10 @@
         "Value": "100"
       },
       {
-        "Name": "アングルグリップ",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
+        "Name": "マインレーザーパワー",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6362,10 +6186,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "燃料消費",
+        "Name": "ブーストタンクサイズ",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-20"
+        "Image": "ammo",
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6402,9 +6226,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "スキャンする",
+        "Name": "ブーストパワー",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -6442,21 +6266,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "ブースト",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "燃料消費",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       },
       {
-        "Name": "ブーストパワー",
+        "Name": "アングルグリップ",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "ブーストタンクサイズ",
+        "Name": "加速",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -6494,16 +6318,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "マインレーザーパワー",
+        "Name": "ダメージ",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "100"
-      },
-      {
-        "Name": "マインレーザー効率",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Image": "damage",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6536,16 +6354,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "マインレーザーパワー",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
-        "Name": "上級エクソクラフトマインレーザー",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "武器動力の効率性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6582,22 +6394,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "ダメージ",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "420"
-      },
-      {
-        "Name": "武器動力の効率性",
+        "Name": "エクソクラフトのソーラーパネル",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "発射速度",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.35"
+        "Value": "35"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6667,27 +6467,27 @@
     ],
     "StatBonuses": [
       {
+        "Name": "毒性防御",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "toxic",
+        "Value": "1"
+      },
+      {
         "Name": "高温防御",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "heat",
         "Value": "1"
       },
       {
-        "Name": "低温防御",
+        "Name": "酸素タンク",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
+        "Image": "oxygen",
         "Value": "1"
       },
       {
         "Name": "放射線防御",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "rad",
-        "Value": "1"
-      },
-      {
-        "Name": "毒性防御",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
         "Value": "1"
       }
     ],
@@ -6885,6 +6685,12 @@
         "Name": "発射コスト",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "自動リチャージ",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "25"
       }
     ],
@@ -6895,7 +6701,7 @@
     "Icon": "products/79.png",
     "Name": "波形エンジン",
     "Group": "高カスタム宇宙船エンジン",
-    "Description": "従来の宇宙船の<TECHNOLOGY>パルスエンジン<>を高度にチューニングしたもの。波面占有率を極限まで高め、<STELLAR>効率の良さ<>と<STELLAR>応答性の高さ<>を両立させたパルスを実現する\n\nパルスエンジンのチャージには<EXOTIC>三重水素<>が必要。 三重水素は<COMMODITY>宇宙近くの小惑星<>で豊富に存在している。\n\n<IMG>PULSEJUMP<>を長押しでパルスジャンプ。<IMG>BOOST<>を長押しするとフライト速度を加速できる。",
+    "Description": "従来の宇宙船の<TECHNOLOGY>パルスドライブ<>を高度にチューニングしたもの。波面占有率を極限まで高め、<STELLAR>効率の良さ<>と<STELLAR>応答性の高さ<>を両立させたパルスを実現する\n\nパルスドライブのチャージには<EXOTIC>三重水素<>が必要。 三重水素は<COMMODITY>宇宙近くの小惑星<>で豊富に存在している。スキャン（<IMG>SCAN<>）で<TECHNOLOGY>三重水素が豊富な小惑星<>が探せる。\n\n<IMG>PULSEJUMP<>を長押しでパルスジャンプ。<IMG>BOOST<>を長押しするとフライト速度を加速できる。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -6925,12 +6731,6 @@
         "Value": "100"
       },
       {
-        "Name": "加速する",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "11,900"
-      },
-      {
         "Name": "パルスドライブパワー",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
@@ -6940,7 +6740,25 @@
         "Name": "操縦性",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "25"
+        "Value": "10"
+      },
+      {
+        "Name": "加速する",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "内部生命維持システム有効",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.25"
+      },
+      {
+        "Name": "操縦性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6981,13 +6799,19 @@
         "Name": "ハイパードライブ範囲",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "600"
+        "Value": "1"
       },
       {
         "Name": "ワープセルの効率性",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "200"
+        "Value": "60,000"
+      },
+      {
+        "Name": "ハイパードライブ即時緊急起動",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7019,14 +6843,7 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "内部生命維持システム有効",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -7061,10 +6878,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "危険防御バッテリー",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "低温防御",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7101,10 +6918,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "危険防御バッテリー",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "低温防御",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7484,15 +7301,15 @@
         "Value": "300"
       },
       {
-        "Name": "生体機械スタン",
-        "LocaleKeyTemplate": "enabled",
+        "Name": "スタン持続時間",
+        "LocaleKeyTemplate": "seconds",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "スタン持続時間",
-        "LocaleKeyTemplate": "seconds",
-        "Image": "lightning",
+        "Name": "スタンした存在へのダメージ",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "3.5"
       },
       {
@@ -7535,15 +7352,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "生体機械スタン",
-        "LocaleKeyTemplate": "enabled",
+        "Name": "スタン持続時間",
+        "LocaleKeyTemplate": "seconds",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "スタン持続時間",
-        "LocaleKeyTemplate": "seconds",
-        "Image": "lightning",
+        "Name": "スタンした存在へのダメージ",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "5"
       }
     ],
@@ -7580,22 +7397,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "着弾後点火",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "damage",
-        "Value": "1"
-      },
-      {
         "Name": "着弾火災の持続時間",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "3.5"
+        "Value": "1"
       },
       {
         "Name": "着弾火災のダメージ",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "80"
+        "Value": "3.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7605,7 +7416,7 @@
     "Icon": "technology/208.png",
     "Name": "中性子キャノン",
     "Group": "爆発性エネルギー兵器",
-    "Description": "<TECHNOLOGY>マルチツール<>用の<STELLAR>高エネルギー武器<>アタッチメント。中性子キャノンは、大気中の粒子にエネルギーを与え、敵ターゲットに向けて放ち、<STELLAR>一帯に大きなダメージ<>を与える。\n\n<IMG>CYCLEWEAPON<>を押して射撃モードにアクセスする。<IMG>ATTACK<>で武器をチャージし、放して<STELLAR>イオン化された粒子を斉射<>する。\n\nキャノンはすぐに1発発射できるが、<TECHNOLOGY>長くチャージ<>すると、<TECHNOLOGY>放出される粒子の速度と量<>が大幅に増加する。",
+    "Description": "<TECHNOLOGY>マルチツール<>用の<STELLAR>高エネルギー武器<>アタッチメント。中性子キャノンは、大気中の粒子にエネルギーを与え、敵ターゲットに向けて放ち、<STELLAR>一帯に大きなダメージ<>を与える。\n\n<IMG>CYCLEWEAPON<>を押して射撃モードにアクセスする。<IMG>ATTACK<>で武器をチャージし、離して<STELLAR>イオン化された粒子を斉射<>する。\n\nキャノンはすぐに1発発射できるが、<TECHNOLOGY>長くチャージ<>すると、<TECHNOLOGY>放出される粒子の速度と量<>が大幅に増加する。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -7761,8 +7572,8 @@
     ],
     "StatBonuses": [
       {
-        "Name": "スタンした存在へのダメージ",
-        "LocaleKeyTemplate": "defaultTemplate",
+        "Name": "着弾後点火",
+        "LocaleKeyTemplate": "enabled",
         "Image": "damage",
         "Value": "1.2"
       }
@@ -7799,20 +7610,13 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "ミノタウロスAIパイロット",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
     "Id": "tech212",
     "Icon": "technology/212.png",
-    "Name": "センチネルハードフレームの左腕",
+    "Name": "センチネルハードフレームレフトアーム",
     "Group": "ミノタウロスの四肢の代替品",
     "Description": "センチネルハードフレームから回収された部品のコレクションで、<TECHNOLOGY>ミノタウロス<>ヘビーエクソクラフトハイブリッドに適合するように再調整されている。\n\n<TECHNOLOGY>ミノタウロスレーザー<>と一緒に取り付けると、<STELLAR>マイニングレーザー<>を強力な戦闘アップグレードに変容させ、<TECHNOLOGY>スタン<>した存在に対して大ダメージを与えることができる。",
     "BaseValueUnits": 1.0,
@@ -7841,34 +7645,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "スタンした存在へのダメージ",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "5"
-      },
-      {
-        "Name": "マインレーザーパワー",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
         "Name": "着弾後点火",
         "LocaleKeyTemplate": "enabled",
         "Image": "damage",
-        "Value": "1"
+        "Value": "5"
       },
       {
         "Name": "着弾火災の持続時間",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "3.5"
+        "Value": "1"
       },
       {
         "Name": "着弾火災のダメージ",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "80"
+        "Value": "3.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7876,7 +7668,7 @@
   {
     "Id": "tech213",
     "Icon": "technology/213.png",
-    "Name": "センチネルハードフレームの右腕",
+    "Name": "センチネルハードフレームライトアーム",
     "Group": "ミノタウロスの四肢の代替品",
     "Description": "センチネルハードフレームから回収された部品のコレクションで、<TECHNOLOGY>ミノタウロス<>ヘビーエクソクラフトハイブリッドに適合するように再調整されている。\n\nこの四肢オーバーライドは<STELLAR>専用の戦闘システム<>としても機能する。高速の<TECHNOLOGY>スタン発射物<>を展開し、ミノタウロスの主砲の優れた支援武器となる。\n\n<IMG>CYCLEWEAPON<>で利用可能な武器モードを切り替えられる。",
     "BaseValueUnits": 1.0,
@@ -7905,22 +7697,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "ダメージ",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "20"
-      },
-      {
-        "Name": "武器動力の効率性",
+        "Name": "エクソクラフトのソーラーパネル",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "発射速度",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7953,15 +7733,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "燃料消費",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-10"
-      },
-      {
         "Name": "ブーストタンクサイズ",
         "LocaleKeyTemplate": "percentage",
         "Image": "ammo",
+        "Value": "90"
+      },
+      {
+        "Name": "加速",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
         "Value": "25"
       }
     ],
@@ -7997,14 +7777,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "ミノタウロスAIパイロット",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8037,7 +7810,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "ハイパードライブ範囲",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -8062,14 +7842,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "加速する",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8100,28 +7873,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "パルスドライブ燃料効率",
+        "Name": "パルスドライブパワー",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "80"
+        "Image": "recharge2",
+        "Value": "20"
       },
       {
-        "Name": "自動リチャージ",
+        "Name": "内部生命維持システム有効",
         "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "1"
-      },
-      {
-        "Name": "加速する",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
-      },
-      {
-        "Name": "操縦性",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "10"
+        "Image": "prot",
+        "Value": "1.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8148,14 +7909,273 @@
         "Quantity": 10
       }
     ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech220",
+    "Icon": "technology/144.png",
+    "Name": "フライトアシストのオーバーライド",
+    "Group": "高性能宇宙船パイロットモジュール",
+    "Description": "グレーマーケットの電子モジュール。宇宙船には、通常、重要な安全モジュールやパイロット補助モジュールがフライバイワイヤー操作システムに搭載されているが、このモジュールを使えばそうしたシステムを無効にすることができる。合法かどうか怪しく、また高速で小惑星に衝突してしまう可能性を孕んでいるにも関わらず、本モジュールは密輸人や傭兵など腕に自信のあるパイロット達の間で人気がある。\n\n宇宙での戦闘中の船の<STELLAR>ドリフト<>性能を高めるように特別にチューニングされている。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 460,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 200
+      },
+      {
+        "Id": "raw34",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 1
+      }
+    ],
     "StatBonuses": [
       {
-        "Name": "加速する",
+        "Name": "内部生命維持システム有効",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.1"
+      },
+      {
+        "Name": "操縦性",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "target",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech221",
+    "Icon": "technology/221.png",
+    "Name": "インターステラースキャナー",
+    "Group": "長距離センサーテクノロジー",
+    "Description": "貨物船の<TECHNOLOGY>銀河スケールセンサー<>をアップグレードする。\n\nこのデバイスを使うと、星系を訪れることなくその場所の<STELLAR>詳しい経済や紛争データ<>を閲覧できるようになる。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 70
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 160
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech222",
+    "Icon": "technology/221.png",
+    "Name": "特異点エンジン",
+    "Group": "ワームホール推進ドライブ",
+    "Description": "極めて実験的で不安定な<TECHNOLOGY>貨物船ハイパードライブテクノロジー<>。重力を大きく変化させるこのデバイスを使えば、貨物船のリアクターコア内奥深くに<SPECIAL>ワームホール<>を発生させることで、船全体を反転させ、宇宙の向こう側へと移動することができる。\n\n<STELLAR>貨物船の船長<>と話せば、このハイパードライブを起動できる。<FUEL>警告<>：目的地をどこにするかは決められない点には留意すること。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "調査のスピード",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech223",
+    "Icon": "technology/223.png",
+    "Name": "大気制御ユニット",
+    "Group": "貨物船の生命維持システムモジュール",
+    "Description": "有機生命体の乗員が安全に過ごせるようにする貨物船の重要なサブシステム。\n\n破壊されたり、電力供給が断たれたりした場合でも、一定期間であれば<STELLAR>呼吸に適した大気<>を生成することができる。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 120
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech224",
+    "Icon": "products/82.png",
+    "Name": "ニューラルシールド",
+    "Group": "敵対探査ディフレクター",
+    "Description": "脈打つ美しいナノチューブの束が船の神経集合体を通っている。この構造体を必要に応じて活性化させることで、敵の<STELLAR>貨物探知<>を<STELLER>ブロック<>する地場を発生させることができる。\n\nスキャンされている際に、<TECHNOLOGY>クイックメニュー<>（<IMG>QUICK_MENU<>）を使うことで、船にスキャンをブロックできるかどうかを尋ねられる。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "ハイパードライブ範囲",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
         "Value": "1"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech225",
+    "Icon": "products/83.png",
+    "Name": "葉緑体膜",
+    "Group": "知覚船のノード",
+    "Description": "藍色細菌の浸出液が船の透明な皮膚層の真下にある膜を満たす。\n\n太陽光を浴びると、膜は<STELLAR>自動的に神経集合体をリチャージ<>する。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 460,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech226",
+    "Icon": "products/85.png",
+    "Name": "ワームホールブレイン",
+    "Group": "知覚船のノード",
+    "Description": "ワームホールブレインがあることで、船は<TECHNOLOGY>それ自体では到達不可能な範囲に存在する星系を見ることができる<>。ワームホールブレインは、神経物質の束で構成されており、小型の特異点を取り囲み、船の視覚野に直接繋がっている。\n\n船にその能力が備わっている場合には、<STELLAR>ギャラクシーマップ上に詳細な経済や紛争の状況<>が表示されるようになる。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech227",
+    "Icon": "technology/118.png",
+    "Name": "抽出ユニット",
+    "Group": "恒星抽出コア",
+    "Description": "複雑な吸入口と圧縮チューブのシステムを介して、星間媒体から直接資源を採取する。集まる物質は、その時点でいる<TECHNOLOGY>星のクラス<>により<TECHNOLOGY>変化<>する。\n\nエネルギーは貨物船の主電気回路から供給する。完全に<STELLAR>自動的<>に動作する。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]

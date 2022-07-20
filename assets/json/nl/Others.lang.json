@@ -764,7 +764,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/35.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -785,7 +786,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/36.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -806,7 +808,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/37.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -1020,9 +1023,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Schade",
+        "Name": "Vuursnelheid",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "8"
       }
     ],
@@ -1053,14 +1056,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Boosten",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "5"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1090,10 +1086,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Bereik hyperdrive",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
+        "Name": "Efficiëntie warpcel",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5,000"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1125,10 +1121,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Lanceerkosten",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "-10"
+        "Name": "Automatisch opladen",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "0.9"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1158,14 +1154,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Schildkracht",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "0.05"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1195,10 +1184,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Manoeuvreerbaarheid",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "5"
+        "Name": "Interne lifesupport ingeschakeld",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.05"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1384,7 +1373,7 @@
     "Icon": "other/52.png",
     "Name": "Titel: 'Elke procedurele'",
     "Group": "Unieke persoonlijke identificatie",
-    "Description": "Een exclusieve <STELLAR>verkennerstitel<> die de deterministische aard van het bestaan reflecteert\n\nZet deze titel op je vaandel bij een <TECHNOLOGY>gedaantemodulator<>.",
+    "Description": "Een exclusieve <STELLAR>verkennerstitel<> die de deterministische aard van het bestaan reflecteert.\n\nZet deze titel op je vaandel bij een <TECHNOLOGY>gedaantemodulator<>.",
     "BaseValueUnits": 800.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -1406,7 +1395,7 @@
     "Icon": "other/52.png",
     "Name": "Titel: 'De eerste'",
     "Group": "Unieke persoonlijke identificatie",
-    "Description": "Een exclusieve <STELLAR>verkennerstitel<> die betrekking heeft op je plek in het universum\n\nZet deze titel op je vaandel bij een <TECHNOLOGY>gedaantemodulator<>.",
+    "Description": "Een exclusieve <STELLAR>verkennerstitel<> die betrekking heeft op je plek in het universum.\n\nZet deze titel op je vaandel bij een <TECHNOLOGY>gedaantemodulator<>.",
     "BaseValueUnits": 800.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -1428,7 +1417,7 @@
     "Icon": "other/52.png",
     "Name": "Titel: 'De laatste'",
     "Group": "Unieke persoonlijke identificatie",
-    "Description": "Een exclusieve <STELLAR>verkennerstitel<> die betrekking heeft op je plek in het universum\n\nZet deze titel op je vaandel bij een <TECHNOLOGY>gedaantemodulator<>.",
+    "Description": "Een exclusieve <STELLAR>verkennerstitel<> die betrekking heeft op je plek in het universum.\n\nZet deze titel op je vaandel bij een <TECHNOLOGY>gedaantemodulator<>.",
     "BaseValueUnits": 800.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
@@ -1639,7 +1628,7 @@
     "Icon": "other/52.png",
     "Name": "Titel: 'Gesimuleerde'",
     "Group": "Unieke persoonlijke identificatie",
-    "Description": "Een exclusieve <STELLAR>verkennerstitel<> die de deterministische aard van het bestaan reflecteert\n\nZet deze titel op je vaandel bij een <TECHNOLOGY>gedaantemodulator<>.",
+    "Description": "Een exclusieve <STELLAR>verkennerstitel<> die de deterministische aard van het bestaan reflecteert.\n\nZet deze titel op je vaandel bij een <TECHNOLOGY>gedaantemodulator<>.",
     "BaseValueUnits": 800.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -1661,7 +1650,7 @@
     "Icon": "other/52.png",
     "Name": "Titel: 'Onbekende'",
     "Group": "Unieke persoonlijke identificatie",
-    "Description": "Een exclusieve <STELLAR>verkennerstitel<> die betrekking heeft op je plek in het universum\n\nZet deze titel op je vaandel bij een <TECHNOLOGY>gedaantemodulator<>.",
+    "Description": "Een exclusieve <STELLAR>verkennerstitel<> die betrekking heeft op je plek in het universum.\n\nZet deze titel op je vaandel bij een <TECHNOLOGY>gedaantemodulator<>.",
     "BaseValueUnits": 800.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
@@ -1774,7 +1763,8 @@
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -1795,7 +1785,8 @@
     "Colour": "2C7C9F",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -2752,7 +2743,7 @@
     "Icon": "other/124.png",
     "Name": "Atlas-vuurwerkpakket",
     "Group": "Vuurwerkpakket",
-    "Description": "Een pakket met drie soorten luxe vuurwerk. Dit adembenemende vuurwerk creëert de beeltenis van een Atlas-interface met behulp van <TECHNOLOGY>indium<>, <COMMODITY>goud<> en <FUEL>cadmium<>. Ontsteek het en geniet van het spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
+    "Description": "Een pakket met drie soorten luxe vuurwerk. Dit adembenemende vuurwerk creëert de beeltenis van een Atlas-interface met behulp van<TECHNOLOGY>indium<>, <COMMODITY>goud<> en <FUEL>cadmium<>. Ontsteek het en geniet van het spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
     "BaseValueUnits": 250.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4170,10 +4161,10 @@
   {
     "Id": "other188",
     "Icon": "other/188.png",
-    "Name": "Vleesachtig touw",
+    "Name": "VLEESACHTIG TOUW",
     "Group": "Intestinaal fragment",
     "Description": "De opgerolde overblijfselen van het <SPECIAL>spijsverteringskanaal<> van een hongerige tentakel. Hoewel de vlezige wanden nog steeds stuiptrekkingen vertonen, kunnen er met geen mogelijkheid nieuwe tentakels uit groeien.\n\nDit soort bijzonder slachtafval wordt zelden verhandeld op de galactische markt en is dus <STELLAR>zeer waardevol<>.",
-    "BaseValueUnits": 160016.0,
+    "BaseValueUnits": 16016.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
@@ -6129,9 +6120,9 @@
   {
     "Id": "other272",
     "Icon": "other/272.png",
-    "Name": "Geheugenfragment (multitool)",
+    "Name": "Geheugenfragment (persoonlijk wapen)",
     "Group": "Illegale technologie Echo",
-    "Description": "De versplinterde herinneringen van een <STELLAR>eerder bestaan<>. Het fluistert een onbekende naam, diep vanuit de vezels.\n\nDe herinnering manifesteert zich als een <TECHNOLOGY>technologie-upgrade voor de multitool<> om je te helpen in deze iteratie. <STELLAR>Absorbeer<> deze herinnering met <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>DE DOOD IS NIET HET EINDE<> <IMG>SLASH<> <STELLAR>DE LUS GAAT DOOR<>",
+    "Description": "De versplinterde herinneringen van een <STELLAR>eerder bestaan<>. Het fluistert een onbekende naam, diep vanuit de vezels.\n\nDe herinnering manifesteert zich als een <TECHNOLOGY>multitoolwapen<> om je te helpen in deze iteratie. <STELLAR>Absorbeer<> deze herinnering met <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>DE DOOD IS NIET HET EINDE<> <IMG>SLASH<> <STELLAR>DE LUS GAAT DOOR<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6154,9 +6145,9 @@
   {
     "Id": "other273",
     "Icon": "other/273.png",
-    "Name": "Geheugenfragment (ruimteschip)",
+    "Name": "Geheugenfragment (ruimteschipwapen)",
     "Group": "Illegale technologie Echo",
-    "Description": "De versplinterde herinneringen van een <STELLAR>eerder bestaan<>. Het fluistert een onbekende naam, diep vanuit de vezels.\n\nDe herinnering manifesteert zich als een <TECHNOLOGY>technologie-upgrade voor je ruimteschip<> om je te helpen in deze iteratie. <STELLAR>Absorbeer<> deze herinnering met <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>DE DOOD IS NIET HET EINDE<> <IMG>SLASH<> <STELLAR>DE LUS GAAT DOOR<>",
+    "Description": "De versplinterde herinneringen van een <STELLAR>eerder bestaan<>. Het fluistert een onbekende naam, diep vanuit de vezels.\n\nDe herinnering manifesteert zich als een <TECHNOLOGY>ruimteschipwapen<> om je te helpen in deze iteratie. <STELLAR>Absorbeer<> deze herinnering met <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>DE DOOD IS NIET HET EINDE<> <IMG>SLASH<> <STELLAR>DE LUS GAAT DOOR<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6254,9 +6245,9 @@
   {
     "Id": "other277",
     "Icon": "other/277.png",
-    "Name": "Geheugenfragment (Exocraft)",
+    "Name": "Geheugenfragment (exocraft)",
     "Group": "Illegale technologie Echo",
-    "Description": "De versplinterde herinneringen van een <STELLAR>eerder bestaan<>. Het fluistert een onbekende naam, diep vanuit de vezels.\n\nDe herinnering manifesteert zich als een <TECHNOLOGY>xx<> om je te helpen in deze iteratie. <STELLAR>Absorbeer<> deze herinnering met <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>DE DOOD IS NIET HET EINDE<> <IMG>SLASH<> <STELLAR>DE LUS GAAT DOOR<>",
+    "Description": "De versplinterde herinneringen van een <STELLAR>eerder bestaan<>. Het fluistert een onbekende naam, diep vanuit de vezels.\n\nDe herinnering manifesteert zich als een <TECHNOLOGY>exocraft-upgrade<> om je te helpen in deze iteratie. <STELLAR>Absorbeer<> deze herinnering met <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>DE DOOD IS NIET HET EINDE<> <IMG>SLASH<> <STELLAR>DE LUS GAAT DOOR<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6354,7 +6345,7 @@
   {
     "Id": "other280",
     "Icon": "other/280.png",
-    "Name": "Geheugenafdruk: I",
+    "Name": "Geheugenafdruk I",
     "Group": "Lus-artefact",
     "Description": "In dit vreemde materiaal is een herinnering <STELLAR>gebrand<>, als een echo van een ander leven.\n\n'Ik had nog nooit zoiets gezien als de leviathan.\nZo groot dat hij de zon verduistert.\nIk wilde het. Ik verdien hem! Hij zal van mij zijn.\nMaar hij verzette zich en wilde niet zomaar komen.\nHij bleef jammeren terwijl de infraversneller zijn werk deed.\nHij sleurde me bijna met zich mee. Misschien heeft hij dat ook wel gedaan. Misschien...'",
     "BaseValueUnits": 16.0,
@@ -6375,7 +6366,7 @@
   {
     "Id": "other281",
     "Icon": "other/280.png",
-    "Name": "Geheugenafdruk: II",
+    "Name": "Geheugenafdruk II",
     "Group": "Lus-artefact",
     "Description": "In dit vreemde materiaal is een herinnering <STELLAR>gebrand<>, als een echo van een ander leven.\n\n'Ik heb steeds dezelfde nachtmerrie: er klinkt een gehuil in de cockpit en het dashboard is besmeurd met bloed.\nIk slaap niet meer. Ik zweef langs vage sterren.\nEn ineens was hij daar: majestueus, drijvend in de oceaan in de ruimte.\nHij doet het vuur in me weer oplaaien. Ik moet 'm hebben.\nHij sloeg met zijn grote vin en mijn hele romp was weg.'",
     "BaseValueUnits": 16.0,
@@ -6417,9 +6408,9 @@
   {
     "Id": "other283",
     "Icon": "other/280.png",
-    "Name": "Geheugenafdruk: IV",
+    "Name": "Geheugenafdruk IV",
     "Group": "Lus-artefact",
-    "Description": "In dit vreemde materiaal is een herinnering <STELLAR>gebrand<>, als een echo van een ander leven.\n\n'De jacht is voorbij en ik heb verloren. De giganten zullen voortbestaan en ik niet.\nToen ik uit de lucht viel, zag ik een ander schip naast dat van mij vallen. Toen nog een, en nog een.\nMisschien heb ik het me verbeeld. Dat mijn stervende brein het niet meer goed registreerde.\nDie wezens waren zo mooi. Maar het is allemaal voorbij.\nZe zullen me niet langer kwellen.'",
+    "Description": "In dit vreemde materiaal is een herinnering <STELLAR>gebrand<>, als een echo van een ander leven.\n\n'De jacht is voorbij en ik heb verloren.\nDe giganten zullen voortbestaan en ik niet.\nToen ik uit de lucht viel, zag ik een ander schip naast dat van mij vallen. Toen nog een, en nog een.\nMisschien heb ik het me verbeeld. Dat mijn stervende brein het niet meer goed registreerde.\nDie wezens waren zo mooi. Maar het is allemaal voorbij.\nZe zullen me niet langer kwellen.'",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "Colour": "4D2957",
@@ -6438,7 +6429,7 @@
   {
     "Id": "other284",
     "Icon": "other/280.png",
-    "Name": "Geheugenafdruk: Z",
+    "Name": "Geheugenafdruk V",
     "Group": "Lus-artefact",
     "Description": "In dit vreemde materiaal is een herinnering <STELLAR>gebrand<>, als een echo van een ander leven.\n\n'Ik stond oog in oog met een wezen, het mooiste en bizarste wat ik ooit heb gezien.\nOok zonder waarneembare ogen geloof ik niet dat hij blind is.\nHij was enorm, glorieus, sereen. Maar ineens bewoog hij zijn tentakels en was hij weg.\nSindsdien heb ik nergens anders meer aan gedacht. Ik kan alleen maar aan de walvis denken. walvis. walvis. <SPECIAL>gehuil<>.'",
     "BaseValueUnits": 16.0,
@@ -6556,6 +6547,533 @@
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
       "IsExpeditionSeason7Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other289",
+    "Icon": "products/93.png",
+    "Name": "Broedblaas",
+    "Group": "Opslagblaas intelligent schip",
+    "Description": "Een <SPECIAL>extra opslagknobbel<> voor <TECHNOLOGY>intelligente<> ruimteschepen. Bij het uitkomen wordt de parasiet in deze blaas op het schip geënt, waarbij het gebruik van zijn holle ingewanden wordt uitgewisseld voor essentiële voedingsstoffen van de gastheer.\n\nGebruik <VAL_ON><IMG>FE_ALT1<><> om de groei te activeren en het <VAL_ON>broedproces<> te starten.",
+    "BaseValueUnits": 125000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Evolueer extra opslagruimte"
+    ]
+  },
+  {
+    "Id": "other290",
+    "Icon": "products/91.png",
+    "Name": "Psychonisch ei",
+    "Group": "Pulserende dooierblaas",
+    "Description": "Een kronkelende blaas met genetisch vloeistof, ontworpen om de creatie van nieuwe <TECHNOLOGY>bio-geïnfuseerde technologie<> voor een <TECHNOLOGY>intelligent ruimteschip<> te bevorderen.\n\nHet embryo zal uitgroeien tot een <TECHNOLOGY>biotechnologische upgrade<>. <STELLAR>Start de biogenese<> met <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 126000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Groeit uit tot nieuwe intelligente technologie"
+    ]
+  },
+  {
+    "Id": "other291",
+    "Icon": "other/291.png",
+    "Name": "Droomantenne",
+    "Group": "Toegangsapparaat tot het onderbewustzijn",
+    "Description": "Een signaalontvanger en -versterker, afgestemd op de golflengte van het onbewuste. Het heeft alle kleuren tegelijk en splitst het omringende licht op in een glinsterende regenboog.\n\n<FUEL>Waarschuwing:<> het dragen van deze antenne in de verre ruimte kan de aandacht trekken van <SPECIAL>kosmische megafauna<>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod58",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other292",
+    "Icon": "other/278.png",
+    "Name": "Vrachtschipcoördinaatzender",
+    "Group": "Een laatste link met thuis",
+    "Description": "Een geïmproviseerd apparaat gemaakt van geborgen elektronische componenten die jarenlang in diepe opslag werden bewaard. Met deze wirwar van draden ga je proberen contact te maken met de laatst bekende overblijfselen van de thuiswereld van het vrachtschip.\n\nSelecteer het apparaat en selecteer Uitzenden (<IMG>FE_ALT1<>) om te zoeken.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 60
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 20
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Probeer te contact maken"
+    ]
+  },
+  {
+    "Id": "other293",
+    "Icon": "other/293.png",
+    "Name": "Zwaar vrachtschipspoor",
+    "Group": "Vervanging voor motorstraal vrachtschip",
+    "Description": "Een exclusieve <STELLAR>motorstraalmodulator voor vrachtschepen<>.\n\n. Energierijke uitlaatgassen condenseren razendsnel wanneer ze de kolossale motoren van het vrachtschip verlaten, waarna ze ineenstorten tot microsingulariteiten.\n\nVerander het uiterlijk van je vrachtschip bij de <TECHNOLOGY>upgradeterminal<> op de <VAL_ON>brug<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other294",
+    "Icon": "other/294.png",
+    "Name": "Cape van de vlootcommandant",
+    "Group": "Ontgrendelbare cape",
+    "Description": "Een exclusieve <STELLAR>uiterlijke aanpassing van het exopak<>.\n\nMeester, commandant en sterrenreiziger. Doe je cape om en voer het bevel.\n\nVerander het uiterlijk van je exopak bij een <TECHNOLOGY>gedaantemodulator<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other295",
+    "Icon": "other/52.png",
+    "Name": "Titel: 'De zoeker'",
+    "Group": "Unieke persoonlijke identificatie",
+    "Description": "Een exclusieve <STELLAR>verkennerstitel<> ter ere van de voltooiing van de expeditie <STELLAR>Poolster<> en het voltooien van een lange tocht aan boord van een vlaggenschip.\n\nZet deze titel op je vaandel bij een <TECHNOLOGY>gedaantemodulator<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other296",
+    "Icon": "other/296.png",
+    "Name": "Helios-ei",
+    "Group": "Gevangen ruimteprotozoa",
+    "Description": "Een levend, bevrucht ei, <TRADEABLE>klaar om uit te komen!<>\n\nHet straalt een spookachtige gloed uit dat er zowel prachtig als vervloekt uitziet.\n\nScans geven aan dat het wezen het genetisch potentieel heeft om <SPECIAL>geleiachtig<> en <TECHNOLOGY>spectraal<> te worden.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2987",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other297",
+    "Icon": "other/297.png",
+    "Name": "Exclusief ruimteschip",
+    "Group": "Exclusief ruimteschip",
+    "Description": "Een exclusief en veelzijdig <STELLAR>ruimteschip<> met een gebalanceerde uitrusting. De verschillende vooraf geïnstalleerde wapens maken tal van ruimtegevechtstactieken mogelijk.\n\n<STELLAR>Claim<> dit schip om het toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige schip er voor in. Op een planeet kun je schepen oproepen via het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other298",
+    "Icon": "other/298.png",
+    "Name": "Exclusief ruimteschip",
+    "Group": "Exclusief ruimteschip",
+    "Description": "Een exclusief <STELLAR>ruimteschip<>. Dit schip is gespecialiseerd in luchtgevechten, heeft superieure mobiliteit en geavanceerde vuurwapens, en is uitgerust een verbeterde <TECHNOLOGY>positronuitwerper<>.\n\n<STELLAR>Claim<> dit schip om het toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige schip er voor in. Op een planeet kun je schepen oproepen via het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other299",
+    "Icon": "other/299.png",
+    "Name": "Exclusief ruimteschip",
+    "Group": "Exclusief ruimteschip",
+    "Description": "Een exclusief <STELLAR>ruimteschip<> gespecialiseerd in het vervoeren van vracht. Dit vrachtschip is vooraf uitgerust met verbeterde <TECHNOLOGY>afweerschilden<> en een <TECHNOLOGY>ladingscandeflector<> en is ideaal om ervoor te zorgen dat kostbare goederen – legaal of anderszins – intact blijven tijdens het transport.\n\n<STELLAR>Claim<> dit schip om het toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige schip er voor in. Op een planeet kun je schepen oproepen via het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other300",
+    "Icon": "other/300.png",
+    "Name": "Exclusief ruimteschip",
+    "Group": "Exclusief ruimteschip",
+    "Description": "Een exclusief <STELLAR>ruimteschip<> met geavanceerde <TECHNOLOGY>hyperdrive<>-mogelijkheden en een vooraf geïnstalleerde <TECHNOLOGY>noodwarpmotor<>, zodat je je efficiënt en ongehinderd een weg kunt banen van ster naar ster.\n\n<STELLAR>Claim<> dit schip om het toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige schip er voor in. Op een planeet kun je schepen oproepen via het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other301",
+    "Icon": "other/301.png",
+    "Name": "Exclusief ruimteschip",
+    "Group": "Exclusief ruimteschip",
+    "Description": "Een exclusief <STELLAR>ruimteschip<>. Dit schip is gestroomlijnd, zeer wendbaar en uitgerust met een geavanceerde <TECHNOLOGY>infraversneller<> voor een voordeel in ruimtegevechten.\n\n<STELLAR>Claim<> dit schip om het toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige schip er voor in. Op een planeet kun je schepen oproepen via het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other302",
+    "Icon": "other/302.png",
+    "Name": "Exclusief ei",
+    "Group": "Exclusief ei van gezelschapsdier",
+    "Description": "Een levend, bevrucht ei, <TRADEABLE>klaar om uit te komen!<>\n\nUit scans blijkt dat het wezen binnenin het genetisch potentieel heeft om een <STELLAR>grillige<> persoonlijkheid te ontwikkelen met een voorkeur voor leuke spelletjes.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other303",
+    "Icon": "other/303.png",
+    "Name": "Exclusief ei",
+    "Group": "Exclusief ei van gezelschapsdier",
+    "Description": "Een levend, bevrucht ei, <TRADEABLE>klaar om uit te komen!<>\n\nUit scans blijkt dat het wezen binnenin het genetisch potentieel heeft om een <STELLAR>loyale<> persoonlijkheid te ontwikkelen en verlangd naar een meester om zich volledig aan toe te wijden.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other304",
+    "Icon": "other/304.png",
+    "Name": "Exclusieve multitool",
+    "Group": "Exclusief multifunctioneel overlevingsapparaat",
+    "Description": "Een exclusieve <STELLAR>multitool<>. Dit wapen is voorzien van het veelzijdige <TECHNOLOGY>neutronenkanon<>, wat een krachtig salvo aan atmosferische deeltjes afvuurt. Hoe langer het kanon wordt opgeladen, hoe dodelijker de knal.\n\n<STELLAR>Pak<> deze multitool om 'm toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige multitool er voor in. Wissel tussen actieve multitools via het gedeelte Functies van het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other305",
+    "Icon": "other/305.png",
+    "Name": "Exclusieve multitool",
+    "Group": "Exclusief multifunctioneel overlevingsapparaat",
+    "Description": "Een exclusieve <STELLAR>multitool<>. Dit wapen is uitgerust met de tactische <TECHNOLOGY>verlammingsmortier<> en dodelijke <TECHNOLOGY>vuurspeer<>, waarmee je aanvallers kunt uitschakelen en krachtige schoten kunt afvuren.\n\n<STELLAR>Pak<> deze multitool om 'm toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige multitool er voor in. Wissel tussen actieve multitools via het gedeelte Functies van het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other306",
+    "Icon": "other/306.png",
+    "Name": "Exclusieve multitool",
+    "Group": "Exclusief multifunctioneel overlevingsapparaat",
+    "Description": "Een exclusieve <STELLAR>multitool<>. Dit wapen is uitgerust met een krachtig <TECHNOLOGY>verhullingsapparaat<>, waarmee je onopvallend kunt ontsnappen aan vijandige confrontaties.\n\n<STELLAR>Pak<> deze multitool om 'm toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige multitool er voor in. Wissel tussen actieve multitools via het gedeelte Functies van het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other307",
+    "Icon": "other/124.png",
+    "Name": "Atlas-vuurwerkpakket",
+    "Group": "Vuurwerkpakket",
+    "Description": "Een pakket met drie soorten luxe vuurwerk. Dit adembenemende vuurwerk creëert de beeltenis van een Atlas-interface met behulp van<TECHNOLOGY>indium<>, <COMMODITY>goud<> en <FUEL>cadmium<>. Ontsteek het en geniet van het spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other308",
+    "Icon": "other/124.png",
+    "Name": "Atlas-vuurwerkpakket",
+    "Group": "Vuurwerkpakket",
+    "Description": "Een pakket met drie soorten luxe vuurwerk. Dit adembenemende vuurwerk creëert de beeltenis van een Atlas-interface met behulp van<TECHNOLOGY>indium<>, <COMMODITY>goud<> en <FUEL>cadmium<>. Ontsteek het en geniet van het spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other309",
+    "Icon": "other/124.png",
+    "Name": "Atlas-vuurwerkpakket",
+    "Group": "Vuurwerkpakket",
+    "Description": "Een pakket met drie soorten luxe vuurwerk. Dit adembenemende vuurwerk creëert de beeltenis van een Atlas-interface met behulp van<TECHNOLOGY>indium<>, <COMMODITY>goud<> en <FUEL>cadmium<>. Ontsteek het en geniet van het spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other310",
+    "Icon": "other/124.png",
+    "Name": "Atlas-vuurwerkpakket",
+    "Group": "Vuurwerkpakket",
+    "Description": "Een pakket met drie soorten luxe vuurwerk. Dit adembenemende vuurwerk creëert de beeltenis van een Atlas-interface met behulp van<TECHNOLOGY>indium<>, <COMMODITY>goud<> en <FUEL>cadmium<>. Ontsteek het en geniet van het spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other311",
+    "Icon": "other/124.png",
+    "Name": "Atlas-vuurwerkpakket",
+    "Group": "Vuurwerkpakket",
+    "Description": "Een pakket met drie soorten luxe vuurwerk. Dit adembenemende vuurwerk creëert de beeltenis van een Atlas-interface met behulp van<TECHNOLOGY>indium<>, <COMMODITY>goud<> en <FUEL>cadmium<>. Ontsteek het en geniet van het spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

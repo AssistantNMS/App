@@ -764,7 +764,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/35.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -785,7 +786,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/36.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -806,7 +808,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/37.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -1020,9 +1023,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Dano",
+        "Name": "Taxa de disparos",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "8"
       }
     ],
@@ -1053,14 +1056,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Incrementar",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "5"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1090,10 +1086,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Alcance do hiperpropulsor",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
+        "Name": "Eficiência da célula de dobra",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5,000"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1125,10 +1121,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Custo de lançamento",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "-10"
+        "Name": "Recarga automática",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "0.9"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1158,14 +1154,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Força do escudo",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "0.05"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1195,10 +1184,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Mobilidade",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "5"
+        "Name": "Sistema de sobrevivência interno ativado",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.05"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1774,7 +1763,8 @@
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -1795,7 +1785,8 @@
     "Colour": "2C7C9F",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3617,7 +3608,7 @@
     "Icon": "other/165.png",
     "Name": "Ovo de G. Oestridinzeus",
     "Group": "Ovo de companheiro exclusivo",
-    "Description": "Um ovo fértil, com vida e <TRADEABLE>pronto para eclodir!<>\n\nO peso dentro do ovo muda constantemente conforme a criatura dentro dele se balança energicamente.\n\nVerificações indicam que o ser dentro do ovo tem potencial genético para ser <TRADEABLE>dócil<>, companheiro, capaz de interações gentis.",
+    "Description": "Um ovo fértil, com vida e <TRADEABLE>pronto para eclodir!<>\n\nO peso dentro do ovo muda constantemente conforme a criatura dentro dele se balança energicamente.\n\nVerificações indicam que o ser dentro do ovo tem potencial genético para ser <TRADEABLE>doce<>, companheiro, capaz de interações gentis.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4173,7 +4164,7 @@
     "Name": "Corda de carne",
     "Group": "Fragmento intestinal",
     "Description": "O que sobrou do trato digestivo de um <SPECIAL>tentáculo faminto<>. As paredes carnudas ainda se mexem, mas não há como um novo tentáculo surgir...\n\nÉ raro essa víscera especial ser negociada na bolsa de valores galáctica, por isso ela é <STELLAR>extremamente valiosa<>.",
-    "BaseValueUnits": 160016.0,
+    "BaseValueUnits": 16016.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
@@ -4194,7 +4185,7 @@
     "Icon": "other/189.png",
     "Name": "Cria repulsiva",
     "Group": "Embrião faminto",
-    "Description": "O embrião frágil de um <SPECIAL>tentáculo faminto<> ainda gotejando pasta mucosa. Ele grita e se retrai quando é tocado.\n\nPode ser extraído de sacos embrionários com a ajuda de um <TECHNOLOGY>sintetizador visceral<>.",
+    "Description": "O embrião frágil de um <SPECIAL>tentáculo faminto<>, ainda gotejando pasta mucosa. Ele grita e se retrai quando é tocado.\n\nPode ser extraído de sacos embrionários com a ajuda de um <TECHNOLOGY>sintetizador visceral<>.",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4216,7 +4207,7 @@
     "Icon": "other/190.png",
     "Name": "Lançador de carne",
     "Group": "Dispositivo consumível de pirotecnia",
-    "Description": "Um fogo de artifício luxuoso. Este foguete de pirotecnia orgânica parte para o céu e explode, liberando gosma, plasma e vermes pequenos. Acenda-o para criar um show repugnante no céu.\n\nPosicione o tubo de lançamento com a ajuda do <VAL_ON>menu de construção<> (<IMG>BUILD_MENU<>). <FUEL>Atenção<>: mire-o longe de seres vivos. Não é recomendado usá-lo em ambientes fechados.",
+    "Description": "Um fogo de artifício luxuoso. Esse foguete de pirotecnia orgânica parte para o céu e explode, liberando gosma, plasma e vermes pequenos. Acenda-o para criar um show repugnante no céu.\n\nPosicione o tubo de lançamento com a ajuda do <VAL_ON>menu de construção<> (<IMG>BUILD_MENU<>). <FUEL>Atenção<>: mire-o longe de seres vivos. Não é recomendado usá-lo em ambientes fechados.",
     "BaseValueUnits": 50.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -4260,7 +4251,7 @@
     "Icon": "other/52.png",
     "Name": "Título: 'Verme Soberano'",
     "Group": "Identificação pessoal personalizada",
-    "Description": "Um <STELLAR>título de explorador<> exclusivo em homenagem à conclusão da expedição <STELLAR>Surgimento<>.\n\nAplique este título ao seu emblema em um <TECHNOLOGY>modificador de aparência<>.",
+    "Description": "Um <STELLAR>título de explorador<> exclusivo em homenagem à conclusão da expedição <STELLAR>Surgimento<>.\n\nAplique esse título ao seu emblema em um <TECHNOLOGY>modificador de aparência<>.",
     "BaseValueUnits": 800.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
@@ -4331,7 +4322,7 @@
     "Icon": "other/195.png",
     "Name": "Rastro desagradável",
     "Group": "Sobreposição do Exaustor do Exotraje",
-    "Description": "Uma <STELLAR>sobreposição de aparência do exotraje<> exclusiva.\n\nPrende uma biocâmara ativa aos bocais de escape do jetpack. Durante o voo, os impulsionadores se aquecem e expelem o líquido gosmento contido dentro.\n<STELLAR>Observação<>: contém vermes vivos. Os que forem ejetados poderão infestar os ecossistemas locais.\n\nTransforme o aspecto do seu exotraje em um <TECHNOLOGY>modificador de aparência<>.",
+    "Description": "Uma <STELLAR>sobreposição de aparência do exotraje<> exclusiva.\n\nPrende uma biocâmara ativa aos bocais de escape do jetpack. Durante o voo, os impulsionadores se aquecem e expelem o líquido gosmento contido dentro.\n<STELLAR>Observação<>: contém vermes vivos. Os que forem ejetados poderão infestar os ecossistemas locais.\n\nTransforme o aspecto do seu exotraje, usando um <TECHNOLOGY>modificador de aparência<>.",
     "BaseValueUnits": 800.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
@@ -4354,7 +4345,7 @@
     "Icon": "other/196.png",
     "Name": "Ovo de verme de areia",
     "Group": "Cria titânica",
-    "Description": "Um ovo fértil, com vida e <TRADEABLE>pronto para eclodir<>!\n\nDentro da casca, está um pequeno verme faminto. Seus tentáculos se mexem sem parar.\n\nVerificações indicam que o ser dentro do ovo tem potencial genético para ser <FUEL>amaldiçoado<> e <FUEL>insaciável<>.",
+    "Description": "Um ovo fértil com vida e <TRADEABLE>pronto para eclodir!<>\n\nDentro da casca, está um pequeno verme faminto. Seus tentáculos se mexem sem parar.\n\nVerificações indicam que o ser dentro do ovo tem potencial genético para ser <FUEL>amaldiçoado<> e <FUEL>insaciável<>.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4376,7 +4367,7 @@
     "Icon": "other/197.png",
     "Name": "Troféu titânico",
     "Group": "Crânio ornamental",
-    "Description": "Um ornamento exclusivo de base construível.\n\nEste crânio com muitos dentes já pertenceu a um grande vertebrado sem pernas, primo do verme de areia titã. A mandíbula poderosa tem força suficiente para esmagar uma multiferramenta e os ossos da maioria das criaturas.",
+    "Description": "Um ornamento exclusivo de base construível.\n\nEsse crânio com muitos dentes já pertenceu a um grande vertebrado sem pernas, primo do verme de areia titã. A mandíbula poderosa tem força suficiente para esmagar uma multiferramenta e os ossos da maioria das criaturas.",
     "BaseValueUnits": 500.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4403,7 +4394,7 @@
     "Icon": "other/198.png",
     "Name": "Capacete da voracidade",
     "Group": "Capacete desbloqueável",
-    "Description": "Uma <STELLAR>sobreposição de aparência do exotraje<> exclusiva.\n\nRedistribua seus órgãos faciais e deixe outros exploradores alarmados ao assumir a aparência de um cultista do verme de areia. Este capacete de biossilicone protege contra todos os riscos planetários conhecidos, mas pode parecer um pouco pegajoso para o usuário.\n\nCom um ritual, transforme a cabeça da sua aparência de <STELLAR>vy'keen<> em um <TECHNOLOGY>modificador de aparência<>.",
+    "Description": "Uma <STELLAR>sobreposição de aparência do exotraje<> exclusiva.\n\nRedistribua seus órgãos faciais e deixe outros exploradores alarmados ao assumir a aparência de um cultista do verme de areia. Esse capacete de biossilicone protege contra todos os riscos planetários conhecidos, mas pode parecer um pouco pegajoso para o usuário.\n\nCom um ritual, transforme a cabeça da sua aparência de <STELLAR>Vy'keen<>, usando um <TECHNOLOGY>modificador de aparência<>.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
@@ -4425,7 +4416,7 @@
     "Icon": "other/187.png",
     "Name": "Fólio de pele de verme: 1",
     "Group": "Pergaminho de carne",
-    "Description": "Palavras antigas estão entalhadas neste <STELLAR>documento vivo<>. Elas dizem:\n\n'O verme soberano se ergue sobre a terra poeirenta. Sua carne se torna o céu.\nNossas carapaças patéticas não conseguem acompanhar. Não conseguem atingir a altura nem a extensão dele.\nNós nos oferecemos para o solo.\nImploramos que nosso sacrifício seja aceito'.",
+    "Description": "Palavras antigas estão entalhadas nesse <STELLAR>documento vivo<>. Elas dizem:\n\n'O verme soberano se ergue sobre a terra poeirenta. Sua carne se torna o céu.\nNossas carapaças patéticas não conseguem acompanhar. Não conseguem atingir a altura nem a extensão dele.\nNós nos oferecemos para o solo.\nImploramos que nosso sacrifício seja aceito'.",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4446,7 +4437,7 @@
     "Icon": "other/187.png",
     "Name": "Fólio de pele de verme: 2",
     "Group": "Pergaminho de carne",
-    "Description": "Palavras antigas estão entalhadas neste <STELLAR>documento vivo<>. Elas dizem:\n\n'A poeira era sufocante. \nNossos olhos ficaram vermelhos e lacrimejaram. \nMas era impossível escapar da verdade.\nAs veias do Atlas haviam surgido'.",
+    "Description": "Palavras antigas estão entalhadas nesse <STELLAR>documento vivo<>. Elas dizem:\n\n'A poeira era sufocante. \nNossos olhos ficaram vermelhos e lacrimejaram. \nMas era impossível escapar da verdade.\nAs veias do Atlas haviam surgido'.",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4467,7 +4458,7 @@
     "Icon": "other/187.png",
     "Name": "Fólio de pele de verme: 3",
     "Group": "Pergaminho de carne",
-    "Description": "Palavras antigas estão entalhadas neste <STELLAR>documento vivo<>. Elas dizem:\n\n'Agora, a cada tempestade, nós imploramos para sermos escolhidos.\nCom os braços para o céu e o rosto no chão, nós chamamos com toda a força que temos!\nQuando as gotas de chuva pesadas atingem o solo, as veias do Atlas respondem.\nA felicidade que sentimos ao sermos consumidos é indescritível'.",
+    "Description": "Palavras antigas estão entalhadas nesse <STELLAR>documento vivo<>. Elas dizem:\n\n'Agora, a cada tempestade, nós imploramos para sermos escolhidos.\nCom os braços para o céu e o rosto no chão, nós chamamos com toda a força que temos!\nQuando as gotas de chuva pesada atingem o solo, as veias do Atlas respondem.\nA felicidade que sentimos ao sermos consumidos é indescritível'.",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4488,7 +4479,7 @@
     "Icon": "other/187.png",
     "Name": "Fólio de pele de verme: 4",
     "Group": "Pergaminho de carne",
-    "Description": "Palavras antigas estão entalhadas neste <STELLAR>documento vivo<>. Elas dizem:\n\n'Nós tombamos enquanto ele engole, mas agarramos as paredes lisas o melhor que podemos. \nAh, como é bom chegar até o estômago ainda acordado. \nRespirar fundo! Como nossos pulmões gorgolejam!\nA substância viscosa entope nosso nariz e faz nossos olhos arderem, \nembora já estejamos cegos na escuridão quente'.",
+    "Description": "Palavras antigas estão entalhadas nesse <STELLAR>documento vivo<>. Elas dizem:\n\n'Nós tombamos enquanto ele engole, mas agarramos as paredes lisas o melhor que podemos. \nAh, como é bom chegar até o estômago ainda acordado. \nRespirar fundo! Como nossos pulmões gorgolejam!\nA substância viscosa entope nosso nariz e faz nossos olhos arderem, \nembora já estejamos cegos na escuridão quente'.",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4509,7 +4500,7 @@
     "Icon": "other/187.png",
     "Name": "Fólio de pele de verme: 5",
     "Group": "Pergaminho de carne",
-    "Description": "Palavras antigas estão entalhadas neste <STELLAR>documento vivo<>. Elas dizem:\n\n'Maldita seja a agonia da regurgitação. \nMaldita seja esta carne frágil que ainda me prende!\nMeus irmãos renasceram, surgindo da poeira abençoada como novos tentáculos. \nSão capilares cintilantes das grandiosas veias, serpenteando para dentro da areia.\nEu serei paciente. Até a próxima tempestade'.",
+    "Description": "Palavras antigas estão entalhadas nesse <STELLAR>documento vivo<>. Elas dizem:\n\n'Maldita seja a agonia da regurgitação. \nMaldita seja esta carne frágil que ainda me prende!\nMeus irmãos renasceram, surgindo da poeira abençoada como novos tentáculos. \nSão capilares cintilantes das grandiosas veias, serpenteando para dentro da areia.\nEu serei paciente. Até a próxima tempestade'.",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6106,7 +6097,7 @@
     "Icon": "other/271.png",
     "Name": "Fragmento de memória (classe)",
     "Group": "Eco de tecnologia rebelde",
-    "Description": "Os restos despedaçados de uma <STELLAR>existência anterior<>. Ele sussurra, um nome incognoscível nas profundezas de suas fibras.\n\nA memória se manifestará como uma <TECHNOLOGY>atualização de classe de nave ou de multiferramenta<> para ajudar você nesta iteração. <STELLAR>Absorva<> esta memória com <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>A MORTE NÃO É O FIM <> <IMG>SLASH<> <STELLAR>O LOOP CONTINUA<>",
+    "Description": "Os restos despedaçados de uma <STELLAR>existência anterior<>. Ela sussurra, um nome incognoscível nas profundezas de suas fibras.\n\nA memória se manifestará como uma <TECHNOLOGY>atualização de classe de nave ou de multiferramenta<> para ajudar você nessa iteração. <STELLAR>Absorva<> essa memória com <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>A MORTE NÃO É O FIM <> <IMG>SLASH<> <STELLAR>O LOOP CONTINUA<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6129,9 +6120,9 @@
   {
     "Id": "other272",
     "Icon": "other/272.png",
-    "Name": "Fragmento de memória (multiferramenta)",
+    "Name": "Fragmento de memória (arma pessoal)",
     "Group": "Eco de tecnologia rebelde",
-    "Description": "Os restos despedaçados de uma <STELLAR>existência anterior<>. Ele sussurra, um nome incognoscível nas profundezas de suas fibras.\n\nA memória se manifestará como uma <TECHNOLOGY>atualização tecnológica de multiferramenta<> para ajudar você nesta iteração. <STELLAR>Absorva<> esta memória com <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>A MORTE NÃO É O FIM <> <IMG>SLASH<> <STELLAR>O LOOP CONTINUA<>",
+    "Description": "Os restos despedaçados de uma <STELLAR>existência anterior<>. Ela sussurra, um nome incognoscível nas profundezas de suas fibras.\n\nA memória se manifestará como uma <TECHNOLOGY>arma multiferramenta<> para ajudar você nessa iteração. <STELLAR>Absorva<> essa memória com <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>A MORTE NÃO É O FIM <> <IMG>SLASH<> <STELLAR>O LOOP CONTINUA<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6154,9 +6145,9 @@
   {
     "Id": "other273",
     "Icon": "other/273.png",
-    "Name": "Fragmento de memória (nave)",
+    "Name": "Fragmento de memória (arma da nave)",
     "Group": "Eco de tecnologia rebelde",
-    "Description": "Os restos despedaçados de uma <STELLAR>existência anterior<>. Ele sussurra, um nome incognoscível nas profundezas de suas fibras.\n\nA memória se manifestará como uma <TECHNOLOGY>atualização tecnológica de nave<> para ajudar você nesta iteração. <STELLAR>Absorva<> esta memória com <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>A MORTE NÃO É O FIM <> <IMG>SLASH<> <STELLAR>O LOOP CONTINUA<>",
+    "Description": "Os restos despedaçados de uma <STELLAR>existência anterior<>. Ela sussurra, um nome incognoscível nas profundezas de suas fibras.\n\nA memória se manifestará como uma <TECHNOLOGY>arma de nave<> para ajudar você nessa iteração. <STELLAR>Absorva<> essa memória com <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>A MORTE NÃO É O FIM <> <IMG>SLASH<> <STELLAR>O LOOP CONTINUA<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6254,9 +6245,9 @@
   {
     "Id": "other277",
     "Icon": "other/277.png",
-    "Name": "Fragmento de memória (Exoveículo)",
+    "Name": "Fragmento de memória (exoveículo)",
     "Group": "Eco de tecnologia rebelde",
-    "Description": "Os restos despedaçados de uma <STELLAR>existência anterior<>. Ele sussurra, um nome incognoscível nas profundezas de suas fibras.\n\nA memória se manifestará como uma <TECHNOLOGY>Atualização de exoveículo<> para ajudar você nesta iteração. <STELLAR>Absorva<> esta memória com <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>A MORTE NÃO É O FIM <> <IMG>SLASH<> <STELLAR>O LOOP CONTINUA<>",
+    "Description": "Os restos despedaçados de uma <STELLAR>existência anterior<>. Ela sussurra, um nome incognoscível nas profundezas de suas fibras.\n\nA memória se manifestará como uma <TECHNOLOGY>atualização de exoveículo<> para ajudar você nessa iteração. <STELLAR>Absorva<> essa memória com <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>A MORTE NÃO É O FIM <> <IMG>SLASH<> <STELLAR>O LOOP CONTINUA<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6419,7 +6410,7 @@
     "Icon": "other/280.png",
     "Name": "Impressão de memória: IV",
     "Group": "Artefato perdido",
-    "Description": "Uma memória está <STELLAR>gravada<> neste material estranho, um eco de outra vida...\n\n'A caçada terminou, e eu perdi. Os gigantes perdurarão, e eu vou acabar.\nEnquanto caía do céu, eu vi outra nave caindo ao lado da minha. E então outra, e mais uma.\nEu imaginei isso. Falhas de uma mente moribunda...\nEssas criaturas eram tão belas. Mas agora tudo terminou.\nElas não vão mais assombrar meus pensamentos.'",
+    "Description": "Uma memória está <STELLAR>gravada<> nesse material estranho, um eco de outra vida...\n\n'A caçada terminou, e eu perdi.\nOs gigantes perdurarão, e eu vou acabar.\nEnquanto caía do céu, eu vi outra nave caindo ao lado da minha. E então outra, e mais uma.\nEu imaginei isso. Falhas de uma mente moribunda...\nEssas criaturas eram tão belas. Mas agora tudo terminou.\nElas não vão mais assombrar meus pensamentos.'.",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "Colour": "4D2957",
@@ -6556,6 +6547,533 @@
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
       "IsExpeditionSeason7Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other289",
+    "Icon": "products/93.png",
+    "Name": "Bolsa primordial",
+    "Group": "Bolsa de armazenamento para nave inteligente",
+    "Description": "Um <SPECIAL>nódulo de armazenamento adicional<> para naves <TECHNOLOGY>inteligentes<>. Ao chocar, o parasita de dentro dessa bolsa é enxertado na nave, trocando o uso de suas entranhas cavernosas pelos nutrientes vitais do hospedeiro.\n\nUse <VAL_ON><IMG>FE_ALT1<><> para ativar o crescimento e começar o <VAL_ON>processo de eclosão<>.",
+    "BaseValueUnits": 125000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Evoluir armazenamento adicional"
+    ]
+  },
+  {
+    "Id": "other290",
+    "Icon": "products/91.png",
+    "Name": "Ovo psicônico",
+    "Group": "Saco vitelino pulsante",
+    "Description": "Um saco contorcido de fluido genético, projetado para promover a criação de uma nova <TECHNOLOGY>tecnologia biológica<> para uma <TECHNOLOGY>nave inteligente<>.\n\nO embrião vai virar uma <TECHNOLOGY>atualização de biotecnologia<>. <STELLAR>Comece a biogênese<> com <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 126000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Eclodir em uma nova tecnologia inteligente"
+    ]
+  },
+  {
+    "Id": "other291",
+    "Icon": "other/291.png",
+    "Name": "Sonho aéreo",
+    "Group": "Dispositivo de acesso subconsciente",
+    "Description": "Um receptor e amplificador de sinal, sintonizado com o comprimento de onda da mente inconsciente. São todas as cores de uma vez, dividindo a luz ao redor em um arco-íris brilhoso.\n\n<FUEL>Aviso:<> carregar essa antena para o espaço pode chamar a atenção de <SPECIAL>megafaunas cósmicas<>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod58",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other292",
+    "Icon": "other/278.png",
+    "Name": "Transmissor de coordenadas de nave cargueira",
+    "Group": "Uma última ligação para casa",
+    "Description": "Um dispositivo improvisado com componentes eletrônicos reciclados, armazenados por muitos anos. Essa desordem de fios vai tentar entrar em contato com os últimos sobreviventes do planeta de origem da nave cargueira.\n\nSelecione o dispositivo e selecione Transmitir (<IMG>FE_ALT1<>) para iniciar o processo de localização.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 60
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 20
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Tente entrar em contato"
+    ]
+  },
+  {
+    "Id": "other293",
+    "Icon": "other/293.png",
+    "Name": "Rastro de nave cargueira de alta gravidade",
+    "Group": "Sobreposição de combustão do motor da nave cargueira",
+    "Description": "Um <STELLAR>modificador de combustão do motor da nave cargueira<>.\n\nGases de exaustão de alta energia condensam, conforme saem dos enormes motores da nave cargueira, tornando-se singularidades minúsculas.\n\nTransforme a aparência da sua nave cargueira no <TECHNOLOGY>terminal de controle de atualizações<> na <VAL_ON>ponte<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other294",
+    "Icon": "other/294.png",
+    "Name": "Capa do comandante da frota",
+    "Group": "Capa desbloqueável",
+    "Description": "Uma <STELLAR>sobreposição de aparência do exotraje<> exclusiva.\n\nMestre, comandante, viajante das estrelas. Pegue sua capa e prepare-se para assumir o leme.\n\nTransforme o aspecto do seu exotraje, usando um <TECHNOLOGY>modificador de aparência<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other295",
+    "Icon": "other/52.png",
+    "Name": "Título: 'O Buscador'",
+    "Group": "Identificação pessoal personalizada",
+    "Description": "Um <STELLAR>título de explorador<> exclusivo em homenagem à conclusão da expedição <STELLAR>Estrela-Guia<> e a conclusão de uma longa viagem a bordo de uma nave capital.\n\nAplique esse título ao seu emblema em um <TECHNOLOGY>modificador de aparência<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other296",
+    "Icon": "other/296.png",
+    "Name": "Ovo de hélio",
+    "Group": "Protozoários espaciais obtidos",
+    "Description": "Um ovo fértil, com vida e <TRADEABLE>pronto para eclodir!<>\n\nFlutuando dentro da casca está um brilho assustador, um sinal lindo e amaldiçoado.\n\nVerificações indicam que o ser dentro do ovo tem potencial genético para ser <SPECIAL>gelatinoso<> e <TECHNOLOGY>espectral<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2987",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other297",
+    "Icon": "other/297.png",
+    "Name": "Nave exclusiva",
+    "Group": "Nave exclusiva",
+    "Description": "Uma <STELLAR>nave<> exclusiva, com uma construção versátil e equipamentos equilibrados. A variedade de armas possibilita muitas táticas no combate espacial.\n\n<STELLAR>Obtenha<> esta nave para adicioná-la à sua coleção ou <STELLAR>troque<> sua nave atual por ela. Enquanto estiver em um planeta, chame naves no menu rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other298",
+    "Icon": "other/298.png",
+    "Name": "Nave exclusiva",
+    "Group": "Nave exclusiva",
+    "Description": "Uma <STELLAR>nave<> exclusiva. Especializada em ataque com as mãos, esta nave tem mobilidade superior e poder de fogo avançado, além de ter um <TECHNOLOGY>ejetor de pósitrons<> aprimorado.\n\n<STELLAR>Obtenha<> esta nave para adicioná-la à sua coleção ou <STELLAR>troque<> sua nave atual por ela. Enquanto estiver em um planeta, chame naves no menu rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other299",
+    "Icon": "other/299.png",
+    "Name": "Nave exclusiva",
+    "Group": "Nave exclusiva",
+    "Description": "Uma <STELLAR>nave<> exclusiva, especializada no transporte de cargas. Pré-equipada com <TECHNOLOGY>escudos defletores<> aprimorados e um <TECHNOLOGY>defletor de verificação de carga<>, esta nave é ideal para garantir que seus bens preciosos, legais ou não, fiquem intactos no trânsito.\n\n<STELLAR>Obtenha<> esta nave para adicioná-la à sua coleção ou <STELLAR>troque<> sua nave atual por ela. Enquanto estiver em um planeta, chame naves no menu rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other300",
+    "Icon": "other/300.png",
+    "Name": "Nave exclusiva",
+    "Group": "Nave exclusiva",
+    "Description": "Uma <STELLAR>nave<> exclusiva, com <TECHNOLOGY>hiperpropulsor<> avançado e um <TECHNOLOGY>propulsor de dobra emergencial<> pré-equipado para fazer uma rota eficiente de estrela a estrela.\n\n<STELLAR>Obtenha<> esta nave para adicioná-la à sua coleção ou <STELLAR>troque<> sua nave atual por ela. Enquanto estiver em um planeta, chame naves no menu rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other301",
+    "Icon": "other/301.png",
+    "Name": "Nave exclusiva",
+    "Group": "Nave exclusiva",
+    "Description": "Uma <STELLAR>nave<> exclusiva. Aperfeiçoada, ágil e pré-equipada com um <TECHNOLOGY>acelerador de infracorte<> avançado para ganhar vantagem no combate espacial.\n\n<STELLAR>Obtenha<> esta nave para adicioná-la à sua coleção ou <STELLAR>troque<> sua nave atual por ela. Enquanto estiver em um planeta, chame naves no menu rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other302",
+    "Icon": "other/302.png",
+    "Name": "Ovo exclusivo",
+    "Group": "Ovo de companheiro exclusivo",
+    "Description": "Um ovo fértil, com vida e <TRADEABLE>pronto para eclodir!<>\n\nVerificações indicam que o ser dentro do ovo tem potencial genético para desenvolver uma personalidade <STELLAR>excêntrica<>, com uma tendência a ser brincalhão.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other303",
+    "Icon": "other/303.png",
+    "Name": "Ovo exclusivo",
+    "Group": "Ovo de companheiro exclusivo",
+    "Description": "Um ovo fértil, com vida e <TRADEABLE>pronto para eclodir!<>\n\nVerificações indicam que o ser dentro do ovo tem potencial genético para desenvolver uma personalidade <STELLAR>leal<>, querendo achar um mestre para colocar no centro do seu universo.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other304",
+    "Icon": "other/304.png",
+    "Name": "Multiferramenta exclusiva",
+    "Group": "Dispositivo de sobrevivência multifuncional e exclusivo",
+    "Description": "Uma <STELLAR>multiferramenta<> exclusiva. Esta arma vem equipada com o versátil <TECHNOLOGY>canhão de nêutrons<>, que fornece rajadas poderosas de partículas atmosféricas. Quanto mais tempo for carregado, mais mortal será a explosão.\n\n<STELLAR>Pegue<> esta multiferramenta para adicioná-la à sua coleção ou <STELLAR>troque<> sua multiferramenta atual por ela. Alterne entre multiferramentas ativas na seção Utilidades do menu rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other305",
+    "Icon": "other/305.png",
+    "Name": "Multiferramenta exclusiva",
+    "Group": "Dispositivo de sobrevivência multifuncional e exclusivo",
+    "Description": "Uma <STELLAR>multiferramenta<> exclusiva. Esta arma vem com o tático <TECHNOLOGY>morteiro paralisante<> e a letal <TECHNOLOGY>arma de precisão<> pré-instalados, para acabar com agressores e proporcionar tiros poderosos.\n\n<STELLAR>Pegue<> esta multiferramenta para adicioná-la à sua coleção ou <STELLAR>troque<> sua multiferramenta atual por ela. Alterne entre multiferramentas ativas na seção Utilidades do menu rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other306",
+    "Icon": "other/306.png",
+    "Name": "Multiferramenta exclusiva",
+    "Group": "Dispositivo de sobrevivência multifuncional e exclusivo",
+    "Description": "Uma <STELLAR>multiferramenta<> exclusiva. Esta arma vem com um poderoso <TECHNOLOGY>dispositivo de camuflagem<> pré-instalado para uma fuga furtiva de confrontos hostis.\n\n<STELLAR>Pegue<> esta multiferramenta para adicioná-la à sua coleção ou <STELLAR>troque<> sua multiferramenta atual por ela. Alterne entre multiferramentas ativas na seção Utilidades do menu rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other307",
+    "Icon": "other/124.png",
+    "Name": "Pacote de fogos de artifício do Atlas",
+    "Group": "Multipacote de pirotecnia",
+    "Description": "Um pacote com três fogos de artifício variados e luxuosos. Esses itens de pirotecnia impressionantes causam explosões de <TECHNOLOGY>índio<>, <COMMODITY>ouro<> e <FUEL>cádmio<> e reproduzem a imagem de uma Interface do Atlas. Acenda-os para criar um show cintilante no céu.\n\nPosicione o tubo de lançamento com a ajuda do <VAL_ON>menu de construção<> (<IMG>BUILD_MENU<>). <FUEL>Atenção:<> mire-os longe de seres vivos. Não é recomendado usá-los em ambientes fechados.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other308",
+    "Icon": "other/124.png",
+    "Name": "Pacote de fogos de artifício do Atlas",
+    "Group": "Multipacote de pirotecnia",
+    "Description": "Um pacote com três fogos de artifício variados e luxuosos. Esses itens de pirotecnia impressionantes causam explosões de <TECHNOLOGY>índio<>, <COMMODITY>ouro<> e <FUEL>cádmio<> e reproduzem a imagem de uma Interface do Atlas. Acenda-os para criar um show cintilante no céu.\n\nPosicione o tubo de lançamento com a ajuda do <VAL_ON>menu de construção<> (<IMG>BUILD_MENU<>). <FUEL>Atenção:<> mire-os longe de seres vivos. Não é recomendado usá-los em ambientes fechados.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other309",
+    "Icon": "other/124.png",
+    "Name": "Pacote de fogos de artifício do Atlas",
+    "Group": "Multipacote de pirotecnia",
+    "Description": "Um pacote com três fogos de artifício variados e luxuosos. Esses itens de pirotecnia impressionantes causam explosões de <TECHNOLOGY>índio<>, <COMMODITY>ouro<> e <FUEL>cádmio<> e reproduzem a imagem de uma Interface do Atlas. Acenda-os para criar um show cintilante no céu.\n\nPosicione o tubo de lançamento com a ajuda do <VAL_ON>menu de construção<> (<IMG>BUILD_MENU<>). <FUEL>Atenção:<> mire-os longe de seres vivos. Não é recomendado usá-los em ambientes fechados.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other310",
+    "Icon": "other/124.png",
+    "Name": "Pacote de fogos de artifício do Atlas",
+    "Group": "Multipacote de pirotecnia",
+    "Description": "Um pacote com três fogos de artifício variados e luxuosos. Esses itens de pirotecnia impressionantes causam explosões de <TECHNOLOGY>índio<>, <COMMODITY>ouro<> e <FUEL>cádmio<> e reproduzem a imagem de uma Interface do Atlas. Acenda-os para criar um show cintilante no céu.\n\nPosicione o tubo de lançamento com a ajuda do <VAL_ON>menu de construção<> (<IMG>BUILD_MENU<>). <FUEL>Atenção:<> mire-os longe de seres vivos. Não é recomendado usá-los em ambientes fechados.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other311",
+    "Icon": "other/124.png",
+    "Name": "Pacote de fogos de artifício do Atlas",
+    "Group": "Multipacote de pirotecnia",
+    "Description": "Um pacote com três fogos de artifício variados e luxuosos. Esses itens de pirotecnia impressionantes causam explosões de <TECHNOLOGY>índio<>, <COMMODITY>ouro<> e <FUEL>cádmio<> e reproduzem a imagem de uma Interface do Atlas. Acenda-os para criar um show cintilante no céu.\n\nPosicione o tubo de lançamento com a ajuda do <VAL_ON>menu de construção<> (<IMG>BUILD_MENU<>). <FUEL>Atenção:<> mire-os longe de seres vivos. Não é recomendado usá-los em ambientes fechados.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

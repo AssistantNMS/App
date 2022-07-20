@@ -23,9 +23,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Батарея системы защиты от вредных факторов",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
+        "Name": "Защита от холода",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "1"
+      },
+      {
+        "Name": "Сопротивление жару",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "heat",
         "Value": "100"
       },
       {
@@ -35,27 +41,15 @@
         "Value": "100"
       },
       {
-        "Name": "Защита (урон от токсинов)",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "toxic",
-        "Value": "100"
-      },
-      {
-        "Name": "Защита (урон от холода)",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "cold",
-        "Value": "100"
-      },
-      {
         "Name": "Защита (урон от тепла)",
         "LocaleKeyTemplate": "enabled",
         "Image": "heat",
         "Value": "100"
       },
       {
-        "Name": "Время восстановления ускорения",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Name": "Защита (урон от токсинов)",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "toxic",
         "Value": "100"
       }
     ],
@@ -88,10 +82,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Батарея системы защиты от вредных факторов",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "Защита от холода",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -120,15 +114,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Баки системы жизнеобеспечения",
+        "Name": "Энергия солнечной панели",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "100"
       },
       {
-        "Name": "Энергия солнечной панели",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Name": "Батарея системы защиты от вредных факторов",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
         "Value": "100"
       }
     ],
@@ -157,7 +151,7 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Баки системы жизнеобеспечения",
+        "Name": "Энергия солнечной панели",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "10"
@@ -191,24 +185,30 @@
         "Name": "Баки реактивного ранца",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "275"
+        "Value": "100"
       },
       {
         "Name": "Баки реактивного ранца",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Исходная мощность усилителя",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "damage",
-        "Value": "100"
+        "Value": "275"
       },
       {
         "Name": "Скорость перезарядки",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "Продвинутая система прыжков",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      },
+      {
+        "Name": "Исходная мощность усилителя",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "damage",
         "Value": "100"
       }
     ],
@@ -243,26 +243,20 @@
       {
         "Name": "Баки реактивного ранца",
         "LocaleKeyTemplate": "percentage",
-        "Image": "jetpack",
-        "Value": "20"
-      },
-      {
-        "Name": "Скорость перезарядки",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
-        "Value": "10"
-      },
-      {
-        "Name": "Дальность бега",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
-        "Value": "10"
-      },
-      {
-        "Name": "Время восстановления ускорения",
-        "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "20"
+      },
+      {
+        "Name": "Исходная мощность усилителя",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "damage",
+        "Value": "110"
+      },
+      {
+        "Name": "Скорость бега",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "unknown",
+        "Value": "0.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -294,9 +288,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Продвинутая система прыжков",
+        "Name": "Эффективные водометы",
         "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "water",
         "Value": "1"
       }
     ],
@@ -334,9 +328,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Сопротивление жару",
+        "Name": "Сопротивление холоду",
         "LocaleKeyTemplate": "percentage",
-        "Image": "heat",
+        "Image": "cold",
         "Value": "20"
       }
     ],
@@ -374,9 +368,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Сопротивление холоду",
+        "Name": "Сопротивление токсинам",
         "LocaleKeyTemplate": "percentage",
-        "Image": "cold",
+        "Image": "toxic",
         "Value": "20"
       }
     ],
@@ -414,9 +408,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Сопротивление токсинам",
+        "Name": "Сопротивление радиации",
         "LocaleKeyTemplate": "percentage",
-        "Image": "toxic",
+        "Image": "rad",
         "Value": "20"
       }
     ],
@@ -454,9 +448,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Сопротивление радиации",
+        "Name": "Эффективность дыхания",
         "LocaleKeyTemplate": "percentage",
-        "Image": "rad",
+        "Image": "water",
         "Value": "20"
       }
     ],
@@ -493,10 +487,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Эффективность дыхания",
+        "Name": "Дальность бега",
         "LocaleKeyTemplate": "percentage",
-        "Image": "water",
-        "Value": "33"
+        "Image": "recharge",
+        "Value": "133"
       }
     ],
     "ConsumableRewardTexts": []
@@ -554,14 +548,7 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Основное здоровье",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "prot",
-        "Value": "20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -593,14 +580,7 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Основное здоровье",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "prot",
-        "Value": "20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -662,9 +642,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Эффективные водометы",
+        "Name": "Перезарядка в воздухе",
         "LocaleKeyTemplate": "enabled",
-        "Image": "water",
+        "Image": "recharge2",
         "Value": "1"
       }
     ],
@@ -701,10 +681,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Перенаправление кислорода",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "water",
-        "Value": "1"
+        "Name": "Защита (урон от холода)",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "cold",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -730,14 +710,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Переведенные слова",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -769,14 +742,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Переведенные слова",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "2"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -808,14 +774,7 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Переведенные слова",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "3"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -843,14 +802,7 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Переведенные слова",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -858,7 +810,7 @@
     "Icon": "technology/23.png",
     "Name": "Импульсный двигатель",
     "Group": "Корабельный ускоритель полета",
-    "Description": "Реактивный полет, ускорения и импульсные прыжки в пределах системы.\n \nДля зарядки импульсного двигателя требуется <EXOTIC>тритий<>. Тритий в изобилии встречается в <COMMODITY>скоплениях астероидов рядом с планетами<>.\n\nУдерживайте <IMG>PULSEJUMP<>, чтобы совершить импульсный прыжок.\nУдерживайте <IMG>BOOST<>, чтобы активировать ускоритель в полете.",
+    "Description": "Реактивный полет, ускорения и импульсные прыжки в пределах системы.\n \nДля зарядки импульсного двигателя требуется <EXOTIC>тритий<>. Тритий в изобилии встречается в <COMMODITY>скоплениях астероидов рядом с планетами<>. Воспользуйтесь сканером звездолета (<IMG>SCAN<>), чтобы найти тритий.\n\nУдерживайте <IMG>PULSEJUMP<>, чтобы совершить импульсный прыжок.\nУдерживайте <IMG>BOOST<>, чтобы активировать ускоритель в полете.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -887,15 +839,21 @@
         "Value": "100"
       },
       {
-        "Name": "Ускорение",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "9,900"
-      },
-      {
         "Name": "Мощность импульсного привода",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Маневренность",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "100"
+      },
+      {
+        "Name": "Ускорение",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -928,22 +886,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Топливная эффективность импульсного привода",
+        "Name": "Мощность импульсного привода",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
+        "Image": "recharge2",
+        "Value": "85"
       },
       {
-        "Name": "Ускорение",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
+        "Name": "Внутренняя система жизнеобеспечения включена",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.1"
       },
       {
         "Name": "Маневренность",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "10"
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -979,6 +937,12 @@
         "Name": "Стоимость запуска",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Автоматическая подзарядка",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -1015,10 +979,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Стоимость запуска",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "-20"
+        "Name": "Автоматическая подзарядка",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "0.8"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1052,14 +1016,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Автоматическая подзарядка",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1121,13 +1078,19 @@
         "Name": "Дальность",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "100"
+        "Value": "1"
       },
       {
         "Name": "Эффективность варп-ячеек",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
+        "Value": "10,000"
+      },
+      {
+        "Name": "Мгновенная активация гипердвигателя",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1157,7 +1120,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Дальность",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1185,7 +1155,14 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Дальность",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1213,7 +1190,14 @@
         "Quantity": 5
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Дальность",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1247,7 +1231,7 @@
         "Name": "Крепость щита",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "0.65"
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1281,14 +1265,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Крепость щита",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "0.05"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1318,10 +1295,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Скорострельность",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "1"
+        "Name": "Распределение тепла",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      },
+      {
+        "Name": "Дальность",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "Точность",
@@ -1330,34 +1313,22 @@
         "Value": "100"
       },
       {
-        "Name": "Всего пушек",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "Распределение тепла",
+        "Name": "Охлаждение",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "0"
+        "Value": "-100"
       },
       {
-        "Name": "Урон",
+        "Name": "Скорострельность",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "6,500"
       },
       {
-        "Name": "Дальность",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "5,000"
-      },
-      {
-        "Name": "Охлаждение",
+        "Name": "Всего пушек",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "10"
+        "Image": "ammo",
+        "Value": "2.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1387,14 +1358,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Охлаждение",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "-20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1424,10 +1388,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Скорострельность",
+        "Name": "Распределение тепла",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "7.5"
+      },
+      {
+        "Name": "Дальность",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "Точность",
@@ -1436,34 +1406,22 @@
         "Value": "100"
       },
       {
-        "Name": "Всего пушек",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "Распределение тепла",
+        "Name": "Охлаждение",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
         "Value": "7.5"
       },
       {
-        "Name": "Урон",
+        "Name": "Скорострельность",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "320"
       },
       {
-        "Name": "Дальность",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,500"
-      },
-      {
-        "Name": "Охлаждение",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Name": "Всего пушек",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "6"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1551,22 +1509,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Распределение тепла",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "150"
-      },
-      {
         "Name": "Урон",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "250"
+        "Value": "1"
       },
       {
-        "Name": "Щит перезаряжается при попадании",
+        "Name": "Распределение тепла",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "shieldStrength",
-        "Value": "0.2"
+        "Image": "time",
+        "Value": "250"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1596,20 +1548,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Распределение тепла",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "10"
-      },
-      {
-        "Name": "Щит перезаряжается при попадании",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "shieldStrength",
-        "Value": "0.1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1639,45 +1578,39 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Скорострельность",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "2"
+        "Name": "Распределение тепла",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      },
+      {
+        "Name": "Дальность",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "900"
       },
       {
         "Name": "Точность",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "1,000"
+        "Value": "1,400"
+      },
+      {
+        "Name": "Охлаждение",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "1.5"
+      },
+      {
+        "Name": "Скорострельность",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "280"
       },
       {
         "Name": "Всего пушек",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "14"
-      },
-      {
-        "Name": "Распределение тепла",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "50"
-      },
-      {
-        "Name": "Урон",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "280"
-      },
-      {
-        "Name": "Дальность",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "500"
-      },
-      {
-        "Name": "Охлаждение",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
         "Value": "100"
       }
     ],
@@ -1710,16 +1643,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Точность",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
-        "Value": "20"
-      },
-      {
         "Name": "Дальность",
         "LocaleKeyTemplate": "percentage",
         "Image": "range",
-        "Value": "25"
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1751,46 +1678,40 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Скорострельность",
+        "Name": "Распределение тепла",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "9"
+      },
+      {
+        "Name": "Дальность",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "50"
       },
       {
         "Name": "Точность",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "50"
+        "Value": "100"
+      },
+      {
+        "Name": "Охлаждение",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "3"
+      },
+      {
+        "Name": "Скорострельность",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "205"
       },
       {
         "Name": "Всего пушек",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "Распределение тепла",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "200"
-      },
-      {
-        "Name": "Урон",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "205"
-      },
-      {
-        "Name": "Дальность",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "2,200"
-      },
-      {
-        "Name": "Охлаждение",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "6.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1826,10 +1747,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Распределение тепла",
-        "LocaleKeyTemplate": "percentage",
+        "Name": "Охлаждение",
+        "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
-        "Value": "20"
+        "Value": "1.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1861,46 +1782,40 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Скорострельность",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "3"
+        "Name": "Распределение тепла",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "200"
+      },
+      {
+        "Name": "Дальность",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "100"
       },
       {
         "Name": "Точность",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "100"
+        "Value": "200"
+      },
+      {
+        "Name": "Охлаждение",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "2"
+      },
+      {
+        "Name": "Скорострельность",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "600"
       },
       {
         "Name": "Всего пушек",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "2"
-      },
-      {
-        "Name": "Распределение тепла",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "Урон",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "600"
-      },
-      {
-        "Name": "Дальность",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,250"
-      },
-      {
-        "Name": "Охлаждение",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "3"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1932,10 +1847,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Распределение тепла",
-        "LocaleKeyTemplate": "percentage",
+        "Name": "Охлаждение",
+        "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
-        "Value": "10"
+        "Value": "1.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1972,12 +1887,6 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Дальность",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "100"
-      },
-      {
         "Name": "Эффективность варп-ячеек",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
@@ -1987,6 +1896,12 @@
         "Name": "Взаимодействие флота",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "1"
+      },
+      {
+        "Name": "Оборона экспедиции",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
         "Value": "1"
       }
     ],
@@ -2222,6 +2137,12 @@
         "Value": "100"
       },
       {
+        "Name": "Разведка включена",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      },
+      {
         "Name": "Вознаграждение за анализ фауны",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
@@ -2314,9 +2235,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Разведка включена",
+        "Name": "Оглушение биомеханических целей",
         "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "lightning",
         "Value": "1"
       }
     ],
@@ -2806,22 +2727,16 @@
         "Value": "100"
       },
       {
-        "Name": "Возгорание после попадания",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "damage",
-        "Value": "1"
-      },
-      {
         "Name": "Длительность горения",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "5"
+        "Value": "1"
       },
       {
         "Name": "Урон от горения",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "50"
+        "Value": "5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3404,15 +3319,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Расход топлива",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "Максимальная скорость",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "Размер резервуара ускорителя",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
         "Value": "100"
       },
       {
@@ -3422,10 +3337,10 @@
         "Value": "100"
       },
       {
-        "Name": "Угловой захват",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
+        "Name": "Мощность расщепителя",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3461,16 +3376,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Передний захват",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "300"
-      },
-      {
-        "Name": "Угловой захват",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
+        "Name": "Мощность расщепителя",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "0.66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3506,16 +3415,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Передний захват",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "50"
-      },
-      {
-        "Name": "Угловой захват",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "210"
+        "Name": "Мощность расщепителя",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "2.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3551,16 +3454,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Передний захват",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "50"
-      },
-      {
-        "Name": "Угловой захват",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
+        "Name": "Мощность расщепителя",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "0.66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3592,9 +3489,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Сканирование",
+        "Name": "Увеличить мощность",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -3631,9 +3528,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Сканирование",
+        "Name": "Увеличить мощность",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -3670,21 +3567,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Ускорение",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "Расход топлива",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       },
       {
-        "Name": "Увеличить мощность",
+        "Name": "Угловой захват",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "Размер резервуара ускорителя",
+        "Name": "Ускорение",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -3721,16 +3618,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Мощность расщепителя",
+        "Name": "Урон",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "80"
-      },
-      {
-        "Name": "Эффективность расщепителя",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Image": "damage",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3762,16 +3653,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Мощность расщепителя",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
-        "Name": "Улучшенный расщепитель для вездехода",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "Энергомощность оружия",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3803,22 +3688,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Урон",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "320"
-      },
-      {
-        "Name": "Энергомощность оружия",
+        "Name": "Солнечные панели вездехода",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Скорострельность",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3851,21 +3724,27 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Расход топлива",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "Максимальная скорость",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
       },
       {
-        "Name": "Ускорение",
+        "Name": "Размер резервуара ускорителя",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
+        "Value": "100"
+      },
+      {
+        "Name": "Передний захват",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Эффективность расщепителя",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
         "Value": "100"
       }
     ],
@@ -3902,22 +3781,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Урон",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "220"
-      },
-      {
-        "Name": "Энергомощность оружия",
+        "Name": "Солнечные панели вездехода",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Скорострельность",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3953,22 +3820,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Мощность расщепителя",
+        "Name": "Урон",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "240"
-      },
-      {
-        "Name": "Эффективность расщепителя",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "Улучшенный расщепитель для вездехода",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "damage",
         "Value": "1"
+      },
+      {
+        "Name": "Энергомощность оружия",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4004,9 +3865,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Сканирование",
+        "Name": "Увеличить мощность",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -4043,10 +3904,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Расход топлива",
+        "Name": "Размер резервуара ускорителя",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-20"
+        "Image": "ammo",
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4832,14 +4693,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Дальность",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "200"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4871,14 +4725,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Дальность",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "300"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4910,14 +4757,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Дальность",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "800"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4949,14 +4789,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Дальность",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4988,14 +4821,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Дальность",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5027,14 +4853,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Дальность",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5066,14 +4885,7 @@
         "Quantity": 150
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Перезарядка в воздухе",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recharge2",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5101,7 +4913,14 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Переведенные слова",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "translate",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -5135,10 +4954,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Топливная эффективность импульсного привода",
+        "Name": "Мощность импульсного привода",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "34"
+        "Image": "recharge2",
+        "Value": "66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5174,10 +4993,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Мощность импульсного привода",
+        "Name": "Ускорение",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "130"
+        "Image": "recovery",
+        "Value": "30"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5211,14 +5030,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Мгновенная активация гипердвигателя",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5252,10 +5064,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Всего пушек",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "3"
+        "Name": "Точность",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "300"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5653,15 +5465,21 @@
         "Value": "100"
       },
       {
-        "Name": "Ускорение",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "9,900"
-      },
-      {
         "Name": "Мощность импульсного привода",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
+        "Value": "50"
+      },
+      {
+        "Name": "Маневренность",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "100"
+      },
+      {
+        "Name": "Ускорение",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -5699,6 +5517,12 @@
         "Name": "Стоимость запуска",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Автоматическая подзарядка",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -5736,13 +5560,19 @@
         "Name": "Дальность",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "100"
+        "Value": "1"
       },
       {
         "Name": "Эффективность варп-ячеек",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
+        "Value": "10,000"
+      },
+      {
+        "Name": "Мгновенная активация гипердвигателя",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5779,7 +5609,7 @@
         "Name": "Крепость щита",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "0.65"
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5812,10 +5642,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Скорострельность",
+        "Name": "Распределение тепла",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "10"
+      },
+      {
+        "Name": "Дальность",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "Точность",
@@ -5824,34 +5660,22 @@
         "Value": "100"
       },
       {
+        "Name": "Охлаждение",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "10"
+      },
+      {
+        "Name": "Скорострельность",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "340"
+      },
+      {
         "Name": "Всего пушек",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "Распределение тепла",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "7.5"
-      },
-      {
-        "Name": "Урон",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "320"
-      },
-      {
-        "Name": "Дальность",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,500"
-      },
-      {
-        "Name": "Охлаждение",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "6"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5884,16 +5708,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Распределение тепла",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "3.5"
-      },
-      {
         "Name": "Урон",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "250"
+        "Value": "1"
+      },
+      {
+        "Name": "Распределение тепла",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "280"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5927,7 +5751,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Эффективность экспедиции",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recovery",
+        "Value": "10,000"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -6064,9 +5895,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Защита от тепла",
+        "Name": "Защита от токсинов",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "heat",
+        "Image": "toxic",
         "Value": "3"
       }
     ],
@@ -6104,9 +5935,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Защита от холода",
+        "Name": "Защита от тепла",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
+        "Image": "heat",
         "Value": "3"
       }
     ],
@@ -6144,9 +5975,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Защита от токсинов",
+        "Name": "Защита от радиации",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
+        "Image": "rad",
         "Value": "3"
       }
     ],
@@ -6184,9 +6015,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Защита от радиации",
+        "Name": "Кислородный баллон",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "rad",
+        "Image": "oxygen",
         "Value": "3"
       }
     ],
@@ -6222,14 +6053,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Солнечные панели вездехода",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "400"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -6264,9 +6088,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Сканирование",
+        "Name": "Увеличить мощность",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -6304,16 +6128,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Расход топлива",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-50"
-      },
-      {
         "Name": "Максимальная скорость",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
+      },
+      {
+        "Name": "Размер резервуара ускорителя",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "50"
       },
       {
         "Name": "Передний захват",
@@ -6322,10 +6146,10 @@
         "Value": "100"
       },
       {
-        "Name": "Угловой захват",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
+        "Name": "Мощность расщепителя",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6362,10 +6186,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Расход топлива",
+        "Name": "Размер резервуара ускорителя",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-20"
+        "Image": "ammo",
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6402,9 +6226,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Сканирование",
+        "Name": "Увеличить мощность",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -6442,21 +6266,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Ускорение",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "Расход топлива",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       },
       {
-        "Name": "Увеличить мощность",
+        "Name": "Угловой захват",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "Размер резервуара ускорителя",
+        "Name": "Ускорение",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -6494,16 +6318,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Мощность расщепителя",
+        "Name": "Урон",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "100"
-      },
-      {
-        "Name": "Эффективность расщепителя",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Image": "damage",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6536,16 +6354,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Мощность расщепителя",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
-        "Name": "Улучшенный расщепитель для вездехода",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "Энергомощность оружия",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6582,22 +6394,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Урон",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "420"
-      },
-      {
-        "Name": "Энергомощность оружия",
+        "Name": "Солнечные панели вездехода",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Скорострельность",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.35"
+        "Value": "35"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6667,27 +6467,27 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Защита от токсинов",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "toxic",
+        "Value": "1"
+      },
+      {
         "Name": "Защита от тепла",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "heat",
         "Value": "1"
       },
       {
-        "Name": "Защита от холода",
+        "Name": "Кислородный баллон",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
+        "Image": "oxygen",
         "Value": "1"
       },
       {
         "Name": "Защита от радиации",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "rad",
-        "Value": "1"
-      },
-      {
-        "Name": "Защита от токсинов",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
         "Value": "1"
       }
     ],
@@ -6885,6 +6685,12 @@
         "Name": "Стоимость запуска",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Автоматическая подзарядка",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "25"
       }
     ],
@@ -6895,7 +6701,7 @@
     "Icon": "products/79.png",
     "Name": "Волновой двигатель",
     "Group": "Значительно доработанный двигатель звездолета",
-    "Description": "Точно настроенная модификация обычного <TECHNOLOGY>импульсного двигателя<> звездолета. Заполненность волнового фронта повышена до предела, что создает <STELLAR>эффективный<> и <STELLAR>крайне отзывчивый<> импульс.\n\nДля зарядки двигателя рекомендуется использовать <EXOTIC>тритий<>. Он в изобилии встречается в <COMMODITY>скоплениях астероидов рядом с планетами<>.\n\nУдерживайте <IMG>PULSEJUMP<>, чтобы совершить импульсный прыжок. Удерживайте <IMG>BOOST<>, чтобы активировать ускоритель.",
+    "Description": "Точно настроенная модификация обычного <TECHNOLOGY>импульсного двигателя<> звездолета. Заполненность волнового фронта повышена до предела, что создает <STELLAR>эффективный<> и <STELLAR>крайне отзывчивый<> импульс.\n\nДля зарядки двигателя рекомендуется использовать <EXOTIC>тритий<>. Он в изобилии встречается в <COMMODITY>скоплениях астероидов рядом с планетами<>. Выполните сканирование (<IMG>SCAN<>), чтобы найти <TECHNOLOGY>богатые тритием астероиды<>.\n\nУдерживайте <IMG>PULSEJUMP<>, чтобы совершить импульсный прыжок. Удерживайте <IMG>BOOST<>, чтобы активировать ускоритель.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -6925,12 +6731,6 @@
         "Value": "100"
       },
       {
-        "Name": "Ускорение",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "11,900"
-      },
-      {
         "Name": "Мощность импульсного привода",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
@@ -6940,7 +6740,25 @@
         "Name": "Маневренность",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "25"
+        "Value": "10"
+      },
+      {
+        "Name": "Ускорение",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "Внутренняя система жизнеобеспечения включена",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.25"
+      },
+      {
+        "Name": "Маневренность",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6981,13 +6799,19 @@
         "Name": "Дальность",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "600"
+        "Value": "1"
       },
       {
         "Name": "Эффективность варп-ячеек",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "200"
+        "Value": "60,000"
+      },
+      {
+        "Name": "Мгновенная активация гипердвигателя",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7019,14 +6843,7 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Внутренняя система жизнеобеспечения включена",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -7061,10 +6878,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Батарея системы защиты от вредных факторов",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "Защита от холода",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7101,10 +6918,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Батарея системы защиты от вредных факторов",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "Защита от холода",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7484,15 +7301,15 @@
         "Value": "300"
       },
       {
-        "Name": "Оглушение биомеханических целей",
-        "LocaleKeyTemplate": "enabled",
+        "Name": "Длительность оглушения",
+        "LocaleKeyTemplate": "seconds",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "Длительность оглушения",
-        "LocaleKeyTemplate": "seconds",
-        "Image": "lightning",
+        "Name": "Наносит урон оглушенным целям",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "3.5"
       },
       {
@@ -7535,15 +7352,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Оглушение биомеханических целей",
-        "LocaleKeyTemplate": "enabled",
+        "Name": "Длительность оглушения",
+        "LocaleKeyTemplate": "seconds",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "Длительность оглушения",
-        "LocaleKeyTemplate": "seconds",
-        "Image": "lightning",
+        "Name": "Наносит урон оглушенным целям",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "5"
       }
     ],
@@ -7580,22 +7397,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Возгорание после попадания",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "damage",
-        "Value": "1"
-      },
-      {
         "Name": "Длительность горения",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "3.5"
+        "Value": "1"
       },
       {
         "Name": "Урон от горения",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "80"
+        "Value": "3.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7761,8 +7572,8 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Наносит урон оглушенным целям",
-        "LocaleKeyTemplate": "defaultTemplate",
+        "Name": "Возгорание после попадания",
+        "LocaleKeyTemplate": "enabled",
         "Image": "damage",
         "Value": "1.2"
       }
@@ -7799,14 +7610,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "ИИ-пилот «Минотавра»",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -7841,34 +7645,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Наносит урон оглушенным целям",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "5"
-      },
-      {
-        "Name": "Мощность расщепителя",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
         "Name": "Возгорание после попадания",
         "LocaleKeyTemplate": "enabled",
         "Image": "damage",
-        "Value": "1"
+        "Value": "5"
       },
       {
         "Name": "Длительность горения",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "3.5"
+        "Value": "1"
       },
       {
         "Name": "Урон от горения",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "80"
+        "Value": "3.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7905,22 +7697,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Урон",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "20"
-      },
-      {
-        "Name": "Энергомощность оружия",
+        "Name": "Солнечные панели вездехода",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Скорострельность",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7953,15 +7733,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Расход топлива",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-10"
-      },
-      {
         "Name": "Размер резервуара ускорителя",
         "LocaleKeyTemplate": "percentage",
         "Image": "ammo",
+        "Value": "90"
+      },
+      {
+        "Name": "Ускорение",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
         "Value": "25"
       }
     ],
@@ -7997,14 +7777,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "ИИ-пилот «Минотавра»",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8037,7 +7810,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Дальность",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -8062,14 +7842,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Ускорение",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8100,28 +7873,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Топливная эффективность импульсного привода",
+        "Name": "Мощность импульсного привода",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "80"
+        "Image": "recharge2",
+        "Value": "20"
       },
       {
-        "Name": "Автоматическая подзарядка",
+        "Name": "Внутренняя система жизнеобеспечения включена",
         "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "1"
-      },
-      {
-        "Name": "Ускорение",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
-      },
-      {
-        "Name": "Маневренность",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "10"
+        "Image": "prot",
+        "Value": "1.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8148,14 +7909,273 @@
         "Quantity": 10
       }
     ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech220",
+    "Icon": "technology/144.png",
+    "Name": "Обход помощи при полете",
+    "Group": "Усовершенствованный модуль пилотирования звездолета",
+    "Description": "Этот полузапрещенный электронный модуль отключает важные модули безопасности и помощи пилоту, которые обычно встроены в систему управления звездолетом. Несмотря на сомнительный юридический статус и причастность к серии столкновений с астероидами на высокой скорости, этот модуль пользуется популярностью среди контрабандистов, наемников и тех, кто считает себя продвинутыми пилотами.\n\nСпециально настроен для увеличения способности звездолета <STELLAR>входить в занос<> во время полета.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 460,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 200
+      },
+      {
+        "Id": "raw34",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 1
+      }
+    ],
     "StatBonuses": [
       {
-        "Name": "Ускорение",
+        "Name": "Внутренняя система жизнеобеспечения включена",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.1"
+      },
+      {
+        "Name": "Маневренность",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "target",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech221",
+    "Icon": "technology/221.png",
+    "Name": "Межзвездный сканер",
+    "Group": "Технология сенсоров дальнего действия",
+    "Description": "Улучшение <TECHNOLOGY>галактических сканеров<> грузового судна.\n\nЭто устройство позволяет получать <STELLAR>подробные данные об экономике и уровне конфликта<> в звездных системах, даже если вы их не посещали.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 70
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 160
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech222",
+    "Icon": "technology/221.png",
+    "Name": "Сингулярный двигатель",
+    "Group": "Реактивный двигатель на базе червоточины",
+    "Description": "Нестабильный экспериментальный <TECHNOLOGY>гипердвигатель грузового судна<>. С помощью сверхгравитации создает <SPECIAL>червоточину<> глубоко внутри ядра реактора грузового судна, схлопывая весь корабль и перемещая его по вселенной.\n\nПоговорите с <STELLAR>командиром грузового судна<>, чтобы включить двигатель.<FUEL>Внимание<>: при этом пункт назначения может случайно измениться.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Скорость экспедиции",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech223",
+    "Icon": "technology/223.png",
+    "Name": "Модуль управления атмосферой",
+    "Group": "Модуль системы жизнеобеспечения грузового судна",
+    "Description": "Важнейшая подсистема грузового судна, необходимая для поддержания на борту пригодной для жизни и безопасной среды для всех органических существ.\n\nСпособна поддерживать <STELLAR>пригодную для дыхания атмосферу<> даже в случае повреждения или отключения питания, но только в течение короткого периода времени.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 120
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech224",
+    "Icon": "products/82.png",
+    "Name": "Нейронное экранирование",
+    "Group": "Глушитель враждебных сканеров",
+    "Description": "Красивое переплетение нанотрубок, пронизывающих скопление нейронов корабля. Эта структура может быть запитана по желанию корабля, создавая поле, которое <STELLER>блокирует<> враждебное <STELLAR>сканирование груза<>.\n\nВоспользуйтесь <TECHNOLOGY>быстрым меню<> (<IMG>QUICK_MENU<>) во время сканирования, чтобы узнать, может ли корабль заблокировать его.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Дальность",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
         "Value": "1"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech225",
+    "Icon": "products/83.png",
+    "Name": "Хлоропластовая мембрана",
+    "Group": "Узел разумного корабля",
+    "Description": "Наполненная раствором цианобактерий мембрана, лежащая прямо под полупрозрачным кожным слоем корабля.\n\nМембрана <STELLAR>автоматически перезаряжает скопление нейронов<> при наличии солнечного света.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 460,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech226",
+    "Icon": "products/85.png",
+    "Name": "Мозг червоточины",
+    "Group": "Узел разумного корабля",
+    "Description": "Мозг червоточины позволяет кораблю <TECHNOLOGY>видеть системы далеко за пределами его собственного восприятия<>. Он состоит из нитей нейронной материи, обернутых вокруг микросингулярности и привязанных непосредственно к зрительной коре мозга корабля.\n\n<STELLAR>Подробные данные об экономике и уровне конфликта<> станут доступны на галактической карте, если корабль того пожелает.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech227",
+    "Icon": "technology/118.png",
+    "Name": "Модуль извлекателя",
+    "Group": "Ядро звездного извлекателя",
+    "Description": "Извлекает ресурсы прямо из межзвездного вещества посредством сложной системы всасывающих приемников и конденсационных трубок. Собранное вещество <TECHNOLOGY>зависит<> от <TECHNOLOGY>классификации<> местной звезды.\n\nЗапитан напрямую от основного электрического контура грузового судна. Работает полностью <STELLAR>автономно<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]

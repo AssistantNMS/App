@@ -1560,41 +1560,26 @@
             "Cost": 1,
             "Children": [
               {
-                "Id": "conTech20",
-                "Title": "信息模块",
-                "Icon": "constructedTechnology/20.png",
-                "Cost": 1,
-                "Children": [
-                  {
-                    "Id": "conTech21",
-                    "Title": "通讯站",
-                    "Icon": "constructedTechnology/21.png",
-                    "Cost": 1,
-                    "Children": []
-                  }
-                ]
-              },
-              {
-                "Id": "conTech4",
-                "Title": "保健站",
-                "Icon": "constructedTechnology/4.png",
-                "Cost": 5,
-                "Children": [
-                  {
-                    "Id": "conTech5",
-                    "Title": "危险防护单元",
-                    "Icon": "constructedTechnology/5.png",
-                    "Cost": 3,
-                    "Children": []
-                  }
-                ]
-              },
-              {
                 "Id": "conTech10",
                 "Title": "基地传送模块",
                 "Icon": "constructedTechnology/10.png",
                 "Cost": 2,
                 "Children": [
+                  {
+                    "Id": "conTech4",
+                    "Title": "保健站",
+                    "Icon": "constructedTechnology/4.png",
+                    "Cost": 5,
+                    "Children": [
+                      {
+                        "Id": "conTech5",
+                        "Title": "危险防护单元",
+                        "Icon": "constructedTechnology/5.png",
+                        "Cost": 3,
+                        "Children": []
+                      }
+                    ]
+                  },
                   {
                     "Id": "conTech44",
                     "Title": "氧气收集器",
@@ -1663,18 +1648,34 @@
                     "Children": []
                   },
                   {
+                    "Id": "conTech8",
+                    "Title": "信号增强器",
+                    "Icon": "constructedTechnology/8.png",
+                    "Cost": 1,
+                    "Children": [
+                      {
+                        "Id": "conTech20",
+                        "Title": "信息模块",
+                        "Icon": "constructedTechnology/20.png",
+                        "Cost": 1,
+                        "Children": [
+                          {
+                            "Id": "conTech21",
+                            "Title": "通讯站",
+                            "Icon": "constructedTechnology/21.png",
+                            "Cost": 1,
+                            "Children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
                     "Id": "conTech13",
                     "Title": "便携式精炼机",
                     "Icon": "constructedTechnology/13.png",
                     "Cost": 10,
                     "Children": [
-                      {
-                        "Id": "conTech8",
-                        "Title": "信号增强器",
-                        "Icon": "constructedTechnology/8.png",
-                        "Cost": 1,
-                        "Children": []
-                      },
                       {
                         "Id": "conTech14",
                         "Title": "中型精炼机",
@@ -1797,10 +1798,10 @@
                 "Cost": 12,
                 "Children": [
                   {
-                    "Id": "build395",
+                    "Id": "build884",
                     "Title": "轨道强化艇物质化器",
-                    "Icon": "building/395.png",
-                    "Cost": 15,
+                    "Icon": "building/884.png",
+                    "Cost": 1,
                     "Children": []
                   }
                 ]
@@ -5056,6 +5057,13 @@
                 "Cost": 460,
                 "Children": [
                   {
+                    "Id": "tech220",
+                    "Title": "超控飞行协助",
+                    "Icon": "technology/144.png",
+                    "Cost": 460,
+                    "Children": []
+                  },
+                  {
                     "Id": "tech145",
                     "Title": "亚光速放大器",
                     "Icon": "technology/144.png",
@@ -6208,7 +6216,15 @@
                 "Title": "物质束",
                 "Icon": "technology/28.png",
                 "Cost": 5,
-                "Children": []
+                "Children": [
+                  {
+                    "Id": "tech221",
+                    "Title": "星际扫描仪",
+                    "Icon": "technology/221.png",
+                    "Cost": 4,
+                    "Children": []
+                  }
+                ]
               }
             ]
           }
@@ -6216,6 +6232,12 @@
       },
       {
         "Id": "tree10-subTree2",
+        "Name": "货船建造模块",
+        "CostType": "None",
+        "Children": []
+      },
+      {
+        "Id": "tree10-subTree3",
         "Name": "货船重着色",
         "CostType": "Nanites",
         "Children": [

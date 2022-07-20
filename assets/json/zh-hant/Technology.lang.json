@@ -23,9 +23,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "風險防護電池",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
+        "Name": "冷防護",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "1"
+      },
+      {
+        "Name": "抗熱",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "heat",
         "Value": "100"
       },
       {
@@ -35,27 +41,15 @@
         "Value": "100"
       },
       {
-        "Name": "毒傷害防護",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "toxic",
-        "Value": "100"
-      },
-      {
-        "Name": "冷傷害防護",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "cold",
-        "Value": "100"
-      },
-      {
         "Name": "熱傷害防護",
         "LocaleKeyTemplate": "enabled",
         "Image": "heat",
         "Value": "100"
       },
       {
-        "Name": "衝刺恢復時間",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Name": "毒傷害防護",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "toxic",
         "Value": "100"
       }
     ],
@@ -88,10 +82,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "風險防護電池",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "冷防護",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -120,15 +114,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "維生系統槽",
+        "Name": "太陽能板能量",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "100"
       },
       {
-        "Name": "太陽能板能量",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Name": "風險防護電池",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
         "Value": "100"
       }
     ],
@@ -157,7 +151,7 @@
     ],
     "StatBonuses": [
       {
-        "Name": "維生系統槽",
+        "Name": "太陽能板能量",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "10"
@@ -191,24 +185,30 @@
         "Name": "噴射背包儲槽",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "275"
+        "Value": "100"
       },
       {
         "Name": "燃料效率",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "初始加速能量",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "damage",
-        "Value": "100"
+        "Value": "275"
       },
       {
         "Name": "補充能量速率",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "先進跳躍系統",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      },
+      {
+        "Name": "初始加速能量",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "damage",
         "Value": "100"
       }
     ],
@@ -241,28 +241,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "噴射背包儲槽",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "jetpack",
-        "Value": "20"
-      },
-      {
-        "Name": "補充能量速率",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
-        "Value": "10"
-      },
-      {
-        "Name": "衝刺距離",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
-        "Value": "10"
-      },
-      {
-        "Name": "衝刺恢復時間",
+        "Name": "燃料效率",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "20"
+      },
+      {
+        "Name": "初始加速能量",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "damage",
+        "Value": "110"
+      },
+      {
+        "Name": "衝刺速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "unknown",
+        "Value": "0.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -294,9 +288,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "先進跳躍系統",
+        "Name": "高效水槍",
         "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "water",
         "Value": "1"
       }
     ],
@@ -334,9 +328,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "抗熱",
+        "Name": "抗冷",
         "LocaleKeyTemplate": "percentage",
-        "Image": "heat",
+        "Image": "cold",
         "Value": "20"
       }
     ],
@@ -374,9 +368,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "抗冷",
+        "Name": "抗毒",
         "LocaleKeyTemplate": "percentage",
-        "Image": "cold",
+        "Image": "toxic",
         "Value": "20"
       }
     ],
@@ -414,9 +408,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "抗毒",
+        "Name": "抗輻射",
         "LocaleKeyTemplate": "percentage",
-        "Image": "toxic",
+        "Image": "rad",
         "Value": "20"
       }
     ],
@@ -454,9 +448,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "抗輻射",
+        "Name": "呼吸效率",
         "LocaleKeyTemplate": "percentage",
-        "Image": "rad",
+        "Image": "water",
         "Value": "20"
       }
     ],
@@ -493,10 +487,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "呼吸效率",
+        "Name": "衝刺距離",
         "LocaleKeyTemplate": "percentage",
-        "Image": "water",
-        "Value": "33"
+        "Image": "recharge",
+        "Value": "133"
       }
     ],
     "ConsumableRewardTexts": []
@@ -506,7 +500,7 @@
     "Icon": "technology/13.png",
     "Name": "危險物質防護手套",
     "Group": "強化套裝擴充",
-    "Description": "升級<TECHNOLOGY>強化套裝手套<>的金屬防護層。\n\n強化金屬與催化防護層兩者的改良混合產品，能讓使用者安全處理<CATALYST>危險物質<>，也能施展採集特定<TRADEABLE>可栽種植物<>時所需的必要能力。",
+    "Description": "升級<TECHNOLOGY>強化套裝手套<>的金屬防護層。\n\n強化金屬與催化防護層兩者的改良混合產品，能讓使用者安全處理<CATALYST>危險物質<>，也能施展採集特定<TRADEABLE>可栽種植物<>時所需的必要力量。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -554,14 +548,7 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "核心生命值",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "prot",
-        "Value": "20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -593,14 +580,7 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "核心生命值",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "prot",
-        "Value": "20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -662,9 +642,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "高效水槍",
+        "Name": "空中補充能量",
         "LocaleKeyTemplate": "enabled",
-        "Image": "water",
+        "Image": "recharge2",
         "Value": "1"
       }
     ],
@@ -701,10 +681,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "重牽氧氣管線",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "water",
-        "Value": "1"
+        "Name": "冷傷害防護",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "cold",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -730,14 +710,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "翻譯詞彙",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -769,14 +742,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "翻譯詞彙",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "2"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -808,14 +774,7 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "翻譯詞彙",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "3"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -843,14 +802,7 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "翻譯詞彙",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -858,7 +810,7 @@
     "Icon": "technology/23.png",
     "Name": "脈衝驅動器",
     "Group": "太空船飛行加速器",
-    "Description": "太空飛行推進器，能在當地星系加速並發動脈衝跳躍。\n \n提醒使用者，替脈衝引擎充能時需要<EXOTIC>氚<>。在<COMMODITY>近太空的小行星帶<>可以找到大量氚。\n\n按住 <IMG>PULSEJUMP<> 發動脈衝跳躍。\n按住 <IMG>BOOST<> 啟動飛行加速功能。",
+    "Description": "太空飛行推進器，能在當地星系加速並發動脈衝跳躍。\n \n提醒使用者，脈衝引擎需使用<EXOTIC>氚<>充能。<COMMODITY>近太空的小行星帶<>可以找到大量氚。使用太空船掃描器 (<IMG>SCAN<>) 找出氚。\n\n按住 <IMG>PULSEJUMP<> 發動脈衝跳躍。\n按住 <IMG>BOOST<> 啟動飛行加速功能。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -887,15 +839,21 @@
         "Value": "100"
       },
       {
-        "Name": "強化",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "9,900"
-      },
-      {
         "Name": "脈衝驅動器動力",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "操控性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "100"
+      },
+      {
+        "Name": "強化",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -928,22 +886,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "脈衝驅動器燃料效率",
+        "Name": "脈衝驅動器動力",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
+        "Image": "recharge2",
+        "Value": "85"
       },
       {
-        "Name": "強化",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
+        "Name": "已開啟內部維生系統",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.1"
       },
       {
         "Name": "操控性",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "10"
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -953,7 +911,7 @@
     "Icon": "technology/25.png",
     "Name": "啟動推進器",
     "Group": "垂直起飛系統",
-    "Description": "重要的起飛與降落輪組系統。\n\n建議使用氘製的特殊燃料補充推進器。發射程序啟動前需有充足燃料。\n\n按住 <IMG>THRUST<> 自星球起飛。\n按住 <IMG>BOOST<> 啟動啟動飛行加速功能。",
+    "Description": "重要的起飛與降落輪組系統。\n\n建議使用二氫製的特殊燃料補充推進器。發射程序啟動前需有充足燃料。\n\n按住 <IMG>THRUST<> 自星球起飛。\n按住 <IMG>BOOST<> 啟動飛行中加速。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -979,6 +937,12 @@
         "Name": "啟動花費",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "自動充能",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -1015,10 +979,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "啟動花費",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "-20"
+        "Name": "自動充能",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "0.8"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1052,14 +1016,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "自動充能",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1121,13 +1078,19 @@
         "Name": "超空間驅動器範圍",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "100"
+        "Value": "1"
       },
       {
         "Name": "跳躍能量包效率",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
+        "Value": "10,000"
+      },
+      {
+        "Name": "瞬間超空間驅動器緊急行動",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1157,7 +1120,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "超空間驅動器範圍",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1185,7 +1155,14 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "超空間驅動器範圍",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1213,7 +1190,14 @@
         "Quantity": 5
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "超空間驅動器範圍",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1247,7 +1231,7 @@
         "Name": "防護罩強度",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "0.65"
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1281,14 +1265,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "防護罩強度",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "0.05"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1318,10 +1295,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "射擊速度",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "1"
+        "Name": "熱能分散",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      },
+      {
+        "Name": "射程",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "準確度",
@@ -1330,34 +1313,22 @@
         "Value": "100"
       },
       {
-        "Name": "總計大砲數量：",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "熱能分散",
+        "Name": "熱度復原",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "0"
+        "Value": "-100"
       },
       {
-        "Name": "傷害",
+        "Name": "射擊速度",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "6,500"
       },
       {
-        "Name": "射程",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "5,000"
-      },
-      {
-        "Name": "熱度復原",
+        "Name": "總計大砲數量：",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "10"
+        "Image": "ammo",
+        "Value": "2.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1387,14 +1358,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "熱度復原",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "-20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1424,10 +1388,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "射擊速度",
+        "Name": "熱能分散",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "7.5"
+      },
+      {
+        "Name": "射程",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "準確度",
@@ -1436,34 +1406,22 @@
         "Value": "100"
       },
       {
-        "Name": "總計大砲數量：",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "熱能分散",
+        "Name": "熱度復原",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
         "Value": "7.5"
       },
       {
-        "Name": "傷害",
+        "Name": "射擊速度",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "320"
       },
       {
-        "Name": "射程",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,500"
-      },
-      {
-        "Name": "熱度復原",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Name": "總計大砲數量：",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "6"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1551,22 +1509,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "熱能分散",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "150"
-      },
-      {
         "Name": "傷害",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "250"
+        "Value": "1"
       },
       {
-        "Name": "防護罩在受到衝擊時充能",
+        "Name": "熱能分散",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "shieldStrength",
-        "Value": "0.2"
+        "Image": "time",
+        "Value": "250"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1596,20 +1548,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "熱能分散",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "10"
-      },
-      {
-        "Name": "防護罩在受到衝擊時充能",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "shieldStrength",
-        "Value": "0.1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1639,45 +1578,39 @@
     ],
     "StatBonuses": [
       {
-        "Name": "射擊速度",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "2"
+        "Name": "熱能分散",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      },
+      {
+        "Name": "射程",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "900"
       },
       {
         "Name": "準確度",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "1,000"
+        "Value": "1,400"
+      },
+      {
+        "Name": "熱度復原",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "1.5"
+      },
+      {
+        "Name": "射擊速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "280"
       },
       {
         "Name": "總計大砲數量：",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "14"
-      },
-      {
-        "Name": "熱能分散",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "50"
-      },
-      {
-        "Name": "傷害",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "280"
-      },
-      {
-        "Name": "射程",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "500"
-      },
-      {
-        "Name": "熱度復原",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
         "Value": "100"
       }
     ],
@@ -1710,16 +1643,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "準確度",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
-        "Value": "20"
-      },
-      {
         "Name": "射程",
         "LocaleKeyTemplate": "percentage",
         "Image": "range",
-        "Value": "25"
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1751,46 +1678,40 @@
     ],
     "StatBonuses": [
       {
-        "Name": "射擊速度",
+        "Name": "熱能分散",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "9"
+      },
+      {
+        "Name": "射程",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "50"
       },
       {
         "Name": "準確度",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "50"
+        "Value": "100"
+      },
+      {
+        "Name": "熱度復原",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "3"
+      },
+      {
+        "Name": "射擊速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "205"
       },
       {
         "Name": "總計大砲數量：",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "熱能分散",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "200"
-      },
-      {
-        "Name": "傷害",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "205"
-      },
-      {
-        "Name": "射程",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "2,200"
-      },
-      {
-        "Name": "熱度復原",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "6.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1826,10 +1747,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "熱能分散",
-        "LocaleKeyTemplate": "percentage",
+        "Name": "熱度復原",
+        "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
-        "Value": "20"
+        "Value": "1.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1861,46 +1782,40 @@
     ],
     "StatBonuses": [
       {
-        "Name": "射擊速度",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "3"
+        "Name": "熱能分散",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "200"
+      },
+      {
+        "Name": "射程",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "100"
       },
       {
         "Name": "準確度",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "100"
+        "Value": "200"
+      },
+      {
+        "Name": "熱度復原",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "2"
+      },
+      {
+        "Name": "射擊速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "600"
       },
       {
         "Name": "總計大砲數量：",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "2"
-      },
-      {
-        "Name": "熱能分散",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "傷害",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "600"
-      },
-      {
-        "Name": "射程",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,250"
-      },
-      {
-        "Name": "熱度復原",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "3"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1932,10 +1847,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "熱能分散",
-        "LocaleKeyTemplate": "percentage",
+        "Name": "熱度復原",
+        "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
-        "Value": "10"
+        "Value": "1.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1972,12 +1887,6 @@
     ],
     "StatBonuses": [
       {
-        "Name": "超空間驅動器範圍",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "100"
-      },
-      {
         "Name": "跳躍能量包效率",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
@@ -1987,6 +1896,12 @@
         "Name": "艦隊協作",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "1"
+      },
+      {
+        "Name": "探險自衛機制",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
         "Value": "1"
       }
     ],
@@ -2222,6 +2137,12 @@
         "Value": "100"
       },
       {
+        "Name": "調查開啟",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      },
+      {
         "Name": "動物分析獎勵",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
@@ -2314,9 +2235,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "調查開啟",
+        "Name": "生物機械暈眩",
         "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "lightning",
         "Value": "1"
       }
     ],
@@ -2761,7 +2682,7 @@
     "Icon": "technology/76.png",
     "Name": "電漿發射器",
     "Group": "爆裂手榴彈",
-    "Description": "高衝擊射彈武器。發射出的電漿彈接觸到表面後會持續反彈，直到內部計時器啟動大爆炸。\n\n使用<FUEL>不穩定電漿<>補充。使用時如果不小心，可能會傷害使用者。\n\n按住 <IMG>ATTACK<> 即可啟動。",
+    "Description": "高衝擊射彈武器。發射持續將彈殼彈回的電漿彈，直到內部計時器啟動大爆炸。\n\n使用<FUEL>不穩定電漿<>補充。使用時如果不小心，可能會傷害使用者。\n\n按 <IMG>ATTACK<> 啟動。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -2806,22 +2727,16 @@
         "Value": "100"
       },
       {
-        "Name": "衝擊點火",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "damage",
-        "Value": "1"
-      },
-      {
         "Name": "衝擊火焰持續時間",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "5"
+        "Value": "1"
       },
       {
         "Name": "衝擊火焰傷害",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "50"
+        "Value": "5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3404,15 +3319,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "燃料使用",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "最高速度",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "加速槽尺寸",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
         "Value": "100"
       },
       {
@@ -3422,10 +3337,10 @@
         "Value": "100"
       },
       {
-        "Name": "過彎抓地力",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
+        "Name": "採礦雷射能量",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3461,16 +3376,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "前進抓地力",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "300"
-      },
-      {
-        "Name": "過彎抓地力",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
+        "Name": "採礦雷射能量",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "0.66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3506,16 +3415,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "前進抓地力",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "50"
-      },
-      {
-        "Name": "過彎抓地力",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "210"
+        "Name": "採礦雷射能量",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "2.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3551,16 +3454,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "前進抓地力",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "50"
-      },
-      {
-        "Name": "過彎抓地力",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
+        "Name": "採礦雷射能量",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "0.66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3592,9 +3489,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "掃描",
+        "Name": "加速能量",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -3631,9 +3528,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "掃描",
+        "Name": "加速能量",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -3670,21 +3567,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "加速",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "燃料使用",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       },
       {
-        "Name": "加速能量",
+        "Name": "過彎抓地力",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "加速槽尺寸",
+        "Name": "加速",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -3721,16 +3618,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "採礦雷射能量",
+        "Name": "傷害",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "80"
-      },
-      {
-        "Name": "採礦雷射效率",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Image": "damage",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3762,16 +3653,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "採礦雷射能量",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
-        "Name": "改良強化艇採礦雷射",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "武器能量效率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3803,22 +3688,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "傷害",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "320"
-      },
-      {
-        "Name": "武器能量效率",
+        "Name": "強化艇太陽能板",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "射速",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3851,21 +3724,27 @@
     ],
     "StatBonuses": [
       {
-        "Name": "燃料使用",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "最高速度",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
       },
       {
-        "Name": "加速",
+        "Name": "加速槽尺寸",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
+        "Value": "100"
+      },
+      {
+        "Name": "前進抓地力",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "採礦雷射效率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
         "Value": "100"
       }
     ],
@@ -3902,22 +3781,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "傷害",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "220"
-      },
-      {
-        "Name": "武器能量效率",
+        "Name": "強化艇太陽能板",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "射速",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3953,22 +3820,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "採礦雷射能量",
+        "Name": "傷害",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "240"
-      },
-      {
-        "Name": "採礦雷射效率",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "改良強化艇採礦雷射",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "damage",
         "Value": "1"
+      },
+      {
+        "Name": "武器能量效率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4004,9 +3865,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "掃描",
+        "Name": "加速能量",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -4043,10 +3904,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "燃料使用",
+        "Name": "加速槽尺寸",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-20"
+        "Image": "ammo",
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4832,14 +4693,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "超空間驅動器範圍",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "200"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4871,14 +4725,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "超空間驅動器範圍",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "300"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4910,14 +4757,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "超空間驅動器範圍",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "800"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4949,14 +4789,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "超空間驅動器範圍",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4988,14 +4821,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "超空間驅動器範圍",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5027,14 +4853,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "超空間驅動器範圍",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5066,14 +4885,7 @@
         "Quantity": 150
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "空中補充能量",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recharge2",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5101,7 +4913,14 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "翻譯詞彙",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "translate",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -5135,10 +4954,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "脈衝驅動器燃料效率",
+        "Name": "脈衝驅動器動力",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "34"
+        "Image": "recharge2",
+        "Value": "66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5174,10 +4993,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "脈衝驅動器動力",
+        "Name": "強化",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "130"
+        "Image": "recovery",
+        "Value": "30"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5211,14 +5030,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "瞬間超空間驅動器緊急行動",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5252,10 +5064,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "總計大砲數量：",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "3"
+        "Name": "準確度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "300"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5653,15 +5465,21 @@
         "Value": "100"
       },
       {
-        "Name": "強化",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "9,900"
-      },
-      {
         "Name": "脈衝驅動器動力",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
+        "Value": "50"
+      },
+      {
+        "Name": "操控性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "100"
+      },
+      {
+        "Name": "強化",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -5699,6 +5517,12 @@
         "Name": "啟動花費",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "自動充能",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -5736,13 +5560,19 @@
         "Name": "超空間驅動器範圍",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "100"
+        "Value": "1"
       },
       {
         "Name": "跳躍能量包效率",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
+        "Value": "10,000"
+      },
+      {
+        "Name": "瞬間超空間驅動器緊急行動",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5779,7 +5609,7 @@
         "Name": "防護罩強度",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "0.65"
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5812,10 +5642,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "射擊速度",
+        "Name": "熱能分散",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "10"
+      },
+      {
+        "Name": "射程",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "準確度",
@@ -5824,34 +5660,22 @@
         "Value": "100"
       },
       {
+        "Name": "熱度復原",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "10"
+      },
+      {
+        "Name": "射擊速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "340"
+      },
+      {
         "Name": "總計大砲數量：",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "熱能分散",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "7.5"
-      },
-      {
-        "Name": "傷害",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "320"
-      },
-      {
-        "Name": "射程",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,500"
-      },
-      {
-        "Name": "熱度復原",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "6"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5884,16 +5708,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "熱能分散",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "3.5"
-      },
-      {
         "Name": "傷害",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "250"
+        "Value": "1"
+      },
+      {
+        "Name": "熱能分散",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "280"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5927,7 +5751,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "探險效率",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recovery",
+        "Value": "10,000"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -6064,9 +5895,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "熱防護",
+        "Name": "毒物防護",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "heat",
+        "Image": "toxic",
         "Value": "3"
       }
     ],
@@ -6104,9 +5935,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "冷防護",
+        "Name": "熱防護",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
+        "Image": "heat",
         "Value": "3"
       }
     ],
@@ -6144,9 +5975,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "毒物防護",
+        "Name": "輻射防護",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
+        "Image": "rad",
         "Value": "3"
       }
     ],
@@ -6184,9 +6015,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "輻射防護",
+        "Name": "氧氣罐",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "rad",
+        "Image": "oxygen",
         "Value": "3"
       }
     ],
@@ -6222,14 +6053,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "強化艇太陽能板",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "400"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -6264,9 +6088,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "掃描",
+        "Name": "加速能量",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -6304,16 +6128,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "燃料使用",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-50"
-      },
-      {
         "Name": "最高速度",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
+      },
+      {
+        "Name": "加速槽尺寸",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "50"
       },
       {
         "Name": "前進抓地力",
@@ -6322,10 +6146,10 @@
         "Value": "100"
       },
       {
-        "Name": "過彎抓地力",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
+        "Name": "採礦雷射能量",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6362,10 +6186,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "燃料使用",
+        "Name": "加速槽尺寸",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-20"
+        "Image": "ammo",
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6402,9 +6226,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "掃描",
+        "Name": "加速能量",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -6442,21 +6266,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "加速",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "燃料使用",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       },
       {
-        "Name": "加速能量",
+        "Name": "過彎抓地力",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "加速槽尺寸",
+        "Name": "加速",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -6494,16 +6318,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "採礦雷射能量",
+        "Name": "傷害",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "100"
-      },
-      {
-        "Name": "採礦雷射效率",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Image": "damage",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6536,16 +6354,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "採礦雷射能量",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
-        "Name": "改良強化艇採礦雷射",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "武器能量效率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6582,22 +6394,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "傷害",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "420"
-      },
-      {
-        "Name": "武器能量效率",
+        "Name": "強化艇太陽能板",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "射速",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.35"
+        "Value": "35"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6667,27 +6467,27 @@
     ],
     "StatBonuses": [
       {
+        "Name": "毒物防護",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "toxic",
+        "Value": "1"
+      },
+      {
         "Name": "熱防護",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "heat",
         "Value": "1"
       },
       {
-        "Name": "冷防護",
+        "Name": "氧氣罐",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
+        "Image": "oxygen",
         "Value": "1"
       },
       {
         "Name": "輻射防護",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "rad",
-        "Value": "1"
-      },
-      {
-        "Name": "毒物防護",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
         "Value": "1"
       }
     ],
@@ -6885,6 +6685,12 @@
         "Name": "啟動花費",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "自動充能",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "25"
       }
     ],
@@ -6895,7 +6701,7 @@
     "Icon": "products/79.png",
     "Name": "波形引擎",
     "Group": "高度客製化太空船引擎",
-    "Description": "經高度調整的常規太空船<TECHNOLOGY>脈衝引擎<>。波陣面使用率已達到極限，可產生<STELLAR>高效率<>與<STELLAR>高響應<>的脈衝事件。\n\n提醒使用者，驅動器需使用<EXOTIC>氚<>充能。在<COMMODITY>近太空的小行星帶<>可以找到大量氚。\n\n按住 <IMG>PULSEJUMP<> 發動脈衝跳躍。按住 <IMG>BOOST<> 啟動飛行加速功能。",
+    "Description": "經高度調整的常規太空船<TECHNOLOGY>脈衝引擎<>。波陣面使用率已達到極限，可產生<STELLAR>高效率<>與<STELLAR>高響應<>的脈衝事件。\n\n提醒使用者，驅動器需使用<EXOTIC>氚<>充能。<COMMODITY>近太空的小行星帶<>可以找到大量氚。掃描 (<IMG>SCAN<>) 即可找尋<TECHNOLOGY>富含氚的小行星<>。\n\n按住 <IMG>PULSEJUMP<> 發動脈衝跳躍。按住 <IMG>BOOST<> 啟動飛行加速功能。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -6925,12 +6731,6 @@
         "Value": "100"
       },
       {
-        "Name": "強化",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "11,900"
-      },
-      {
         "Name": "脈衝驅動器動力",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
@@ -6940,7 +6740,25 @@
         "Name": "操控性",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "25"
+        "Value": "10"
+      },
+      {
+        "Name": "強化",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "已開啟內部維生系統",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.25"
+      },
+      {
+        "Name": "操控性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6981,13 +6799,19 @@
         "Name": "超空間驅動器範圍",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "600"
+        "Value": "1"
       },
       {
         "Name": "跳躍能量包效率",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "200"
+        "Value": "60,000"
+      },
+      {
+        "Name": "瞬間超空間驅動器緊急行動",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6997,7 +6821,7 @@
     "Icon": "tradeItems/25.png",
     "Name": "加壓膠囊",
     "Group": "太空船維生系統元件",
-    "Description": "舉足輕重的太空船安全構件，對外軌道飛行起至關重要的作用。\n\n加壓膠囊這款專門元件，既能確保<STELLAR>可呼吸空氣環境<>，也可預防非傳統式駕駛艙發生災難性爆炸。",
+    "Description": "舉足輕重的太空船安全構件，對外軌道飛行起了至關重要的作用。\n\n加壓膠囊是一款專門元件，既能確保<STELLAR>可呼吸空氣環境<>，也可預防非傳統式駕駛艙發生災難性爆炸。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -7019,14 +6843,7 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "已開啟內部維生系統",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -7061,10 +6878,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "風險防護電池",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "冷防護",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7101,10 +6918,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "風險防護電池",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "冷防護",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7484,15 +7301,15 @@
         "Value": "300"
       },
       {
-        "Name": "生物機械暈眩",
-        "LocaleKeyTemplate": "enabled",
+        "Name": "暈眩時間",
+        "LocaleKeyTemplate": "seconds",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "暈眩時間",
-        "LocaleKeyTemplate": "seconds",
-        "Image": "lightning",
+        "Name": "對暈眩的實體造成傷害",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "3.5"
       },
       {
@@ -7535,15 +7352,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "生物機械暈眩",
-        "LocaleKeyTemplate": "enabled",
+        "Name": "暈眩時間",
+        "LocaleKeyTemplate": "seconds",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "暈眩時間",
-        "LocaleKeyTemplate": "seconds",
-        "Image": "lightning",
+        "Name": "對暈眩的實體造成傷害",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "5"
       }
     ],
@@ -7580,22 +7397,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "衝擊點火",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "damage",
-        "Value": "1"
-      },
-      {
         "Name": "衝擊火焰持續時間",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "3.5"
+        "Value": "1"
       },
       {
         "Name": "衝擊火焰傷害",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "80"
+        "Value": "3.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7761,8 +7572,8 @@
     ],
     "StatBonuses": [
       {
-        "Name": "對暈眩的實體造成傷害",
-        "LocaleKeyTemplate": "defaultTemplate",
+        "Name": "衝擊點火",
+        "LocaleKeyTemplate": "enabled",
         "Image": "damage",
         "Value": "1.2"
       }
@@ -7799,14 +7610,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "彌諾陶洛斯人工智慧駕駛員",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -7841,34 +7645,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "對暈眩的實體造成傷害",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "5"
-      },
-      {
-        "Name": "採礦雷射能量",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
         "Name": "衝擊點火",
         "LocaleKeyTemplate": "enabled",
         "Image": "damage",
-        "Value": "1"
+        "Value": "5"
       },
       {
         "Name": "衝擊火焰持續時間",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "3.5"
+        "Value": "1"
       },
       {
         "Name": "衝擊火焰傷害",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "80"
+        "Value": "3.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7905,22 +7697,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "傷害",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "20"
-      },
-      {
-        "Name": "武器能量效率",
+        "Name": "強化艇太陽能板",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "射速",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7953,15 +7733,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "燃料使用",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-10"
-      },
-      {
         "Name": "加速槽尺寸",
         "LocaleKeyTemplate": "percentage",
         "Image": "ammo",
+        "Value": "90"
+      },
+      {
+        "Name": "加速",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
         "Value": "25"
       }
     ],
@@ -7997,14 +7777,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "彌諾陶洛斯人工智慧駕駛員",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8037,7 +7810,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "超空間驅動器範圍",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -8062,14 +7842,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "強化",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8100,28 +7873,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "脈衝驅動器燃料效率",
+        "Name": "脈衝驅動器動力",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "80"
+        "Image": "recharge2",
+        "Value": "20"
       },
       {
-        "Name": "自動充能",
+        "Name": "已開啟內部維生系統",
         "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "1"
-      },
-      {
-        "Name": "強化",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
-      },
-      {
-        "Name": "操控性",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "10"
+        "Image": "prot",
+        "Value": "1.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8148,14 +7909,273 @@
         "Quantity": 10
       }
     ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech220",
+    "Icon": "technology/144.png",
+    "Name": "飛行輔助覆寫",
+    "Group": "高級太空船駕駛員模組",
+    "Description": "這種來自灰市的電子模組，能夠關閉重要的安全和駕駛輔助模組，後兩者通常會直接裝在太空船的線傳控制系統中。除了它可疑的法律定位，還有可能會導致一系列的高速小行星撞擊外，這個模組在走私者、傭兵，還有那些自認為是高超駕駛員的人之間十分熱門。\n\n經過特別調校，能讓太空船在太空飛行時<STELLAR>甩尾<>。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 460,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 200
+      },
+      {
+        "Id": "raw34",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 1
+      }
+    ],
     "StatBonuses": [
       {
-        "Name": "強化",
+        "Name": "已開啟內部維生系統",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.1"
+      },
+      {
+        "Name": "操控性",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "target",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech221",
+    "Icon": "technology/221.png",
+    "Name": "星際掃描器",
+    "Group": "遠距離感測器科技",
+    "Description": "一種貨船<TECHNOLOGY>銀河級感測器<>的升級。\n\n此驅動器能讓使用者在沒拜訪過一個星系的情況下，也能取得該星系的<STELLAR>詳細經濟和衝突資料<>。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 70
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 160
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech222",
+    "Icon": "technology/221.png",
+    "Name": "奇異點引擎",
+    "Group": "蟲洞推進驅動器",
+    "Description": "一種不穩定且高度實驗性質的<TECHNOLOGY>貨船超空間驅動器科技<>。這種超重力裝置能夠在貨船的反應爐核心深處產生一個<SPECIAL>蟲洞<>，顛倒整艘船艦，並在宇宙中瞬間移動。\n\n和<STELLAR>貨船指揮官<>對話即可啟動此驅動器。<FUEL>警告<>：無法控制目的地。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "探險速度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech223",
+    "Icon": "technology/223.png",
+    "Name": "大氣控制器",
+    "Group": "貨船維生系統模組",
+    "Description": "一種極為重要的貨船子系統，對於維持船上所有有機生命體的宜居且安全環境至關重要。\n\n即使在損壞或斷電時也能產生有限的<STELLAR>可呼吸大氣<>，但只能短時間維持。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 120
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech224",
+    "Icon": "products/82.png",
+    "Name": "神經防護罩",
+    "Group": "敵對探測反射器",
+    "Description": "一個美麗的活體奈米管路，遍布太空船的神經電路板。如果太空船適合，此結構可以藉其產生能量，建立一個能夠<STELLER>阻擋<>敵對<STELLAR>貨物探測<>的力場。\n\n進行掃描時按下<TECHNOLOGY>快捷選單<> (<IMG>QUICK_MENU<>)，即可查詢此太空船是否會阻擋掃描。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "超空間驅動器範圍",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
         "Value": "1"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech225",
+    "Icon": "products/83.png",
+    "Name": "葉綠體黏膜",
+    "Group": "感知太空船節點",
+    "Description": "與藍藻黏膜的融合，位於太空船的半透明真皮層之下。\n\n此黏膜暴露在陽光之下時，會<STELLAR>自動替神經電路板充電<>。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 460,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech226",
+    "Icon": "products/85.png",
+    "Name": "蟲洞腦",
+    "Group": "感知太空船節點",
+    "Description": "蟲洞腦能讓太空船<TECHNOLOGY>看到遠超其體驗的星系<>。擁有神經物質束，包覆在微奇異點上，直接連接到太空船的視覺皮層。\n\n若太空船允許，可以在銀河系地圖上看到<STELLAR>詳細的經濟和衝突資料<>。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech227",
+    "Icon": "technology/118.png",
+    "Name": "抽取單位",
+    "Group": "恆星萃取器核心",
+    "Description": "透過複雜的吸取和冷凝管系統，直接從星體中心收集資源。收集而來的資源會因當地的<TECHNOLOGY>星球分類<>而<TECHNOLOGY>有所不同<>。\n\n直接透過貨船的主電子迴圈充電。功能完全<STELLAR>自動<>。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]
