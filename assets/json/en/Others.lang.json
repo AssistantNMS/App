@@ -1056,9 +1056,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Damage",
+        "Name": "Fire Rate",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "8"
       }
     ],
@@ -1089,14 +1089,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Boost",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "5"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1126,10 +1119,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Hyperdrive Range",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
+        "Name": "Warp Cell Efficiency",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5,000"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1161,10 +1154,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Launch Cost",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "-10"
+        "Name": "Automatic Recharging",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "0.9"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1194,14 +1187,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Shield Strength",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "0.05"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1231,10 +1217,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Maneuverability",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "5"
+        "Name": "Internal Life Support Enabled",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.05"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4200,10 +4186,10 @@
   {
     "Id": "other188",
     "Icon": "other/188.png",
-    "Name": "Fleshy Rope",
+    "Name": "Flesh Rope",
     "Group": "Intestinal Fragment",
     "Description": "The coiled remains of a <SPECIAL>Hungering Tendril<>'s digestive tract. Though its meaty walls still convulse, there is surely no way for a fresh tendril to regrow from these meagre scraps...\n\nSuch specialist offal is rarely traded on the Galactic Exchange and is thus <STELLAR>highly valuable<>.",
-    "BaseValueUnits": 160016.0,
+    "BaseValueUnits": 16016.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
@@ -6586,6 +6572,503 @@
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
       "IsExpeditionSeason7Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other289",
+    "Icon": "products/93.png",
+    "Name": "Spawning Sac",
+    "Group": "Sentient Vessel Storage Sac",
+    "Description": "An <SPECIAL>additional storage nodule<> for <TECHNOLOGY>Sentient<> starships. Upon hatching, the parasite inside this sac is grafted upon the vessel, exchanging the use of its cavernous innards for vital nutrients from the host.\n\nUse <VAL_ON><IMG>FE_ALT1<><> to trigger growth and begin the <VAL_ON>hatching process<>.",
+    "BaseValueUnits": 125000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Evolve additional storage"
+    ]
+  },
+  {
+    "Id": "other290",
+    "Icon": "products/91.png",
+    "Name": "Psychonic Egg",
+    "Group": "Pulsating Yolk Sac",
+    "Description": "A writhing sac of genetic fluid, designed to foster the creation of new <TECHNOLOGY>bio-infused technology<> for a <TECHNOLOGY>sentient starship<>.\n\nThe embryo will grow into <TECHNOLOGY>bio-technology upgrade<>. <STELLAR>Begin biogenesis<> with <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 126000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Hatch into new sentient technology"
+    ]
+  },
+  {
+    "Id": "other291",
+    "Name": "Dream Aerial",
+    "Group": "Subconscious Access Device",
+    "Description": "A signal receiver and amplifier, tuned to the wavelength of the unconscious mind. It is every colour all at once, splitting the surrounding light into a shimmering rainbow.\n\n<FUEL>Warning:<> Carrying this antenna into deep space may attract the attention of <SPECIAL>cosmic megafauna<>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod58",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other292",
+    "Icon": "other/278.png",
+    "Name": "Homeworld Repeater",
+    "Group": "A Last Link Home",
+    "Description": "A makeshift device, cobbled from salvaged electronic components kept in deep storage for many years. This jumble of wires will attempt to make contact with the last-known remnants of the freighter's homeworld.\n\nSelect the device and select Broadcast (<IMG>FE_ALT1<>) to begin the location process.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 60
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 20
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Attempt to make contact"
+    ]
+  },
+  {
+    "Id": "other293",
+    "Name": "High-Gravity Freighter Trail",
+    "Group": "Freighter Engine Flare Override",
+    "Description": "An exclusive <STELLAR>Freighter Engine Flare Modifier<>.\n\nHigh-energy exhaust gases rapid condense as they exit the freighter's colossal engines, collapsing into micro-singularities.\n\nTransform the appearance of your freighter at the <TECHNOLOGY>Upgrade Control Terminal<> on the <VAL_ON>bridge<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other294",
+    "Name": "Fleet Commander's Cape",
+    "Group": "Unlockable Cape",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nMaster, commander, voyager of the stars. Don your cloak and prepare to take the helm.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other295",
+    "Icon": "other/52.png",
+    "Name": "Title: 'The Seeker'",
+    "Group": "Bespoke Personal Identification",
+    "Description": "An exclusive <STELLAR>Explorer Title<>, commemorating completion of the <STELLAR>Polestar<> expedition, and the completion of a long cruise aboard a capital ship.\n\nApply this title to your banner at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other296",
+    "Name": "Helios Egg",
+    "Group": "Captured Space Protozoa",
+    "Description": "A living, fertile egg, <TRADEABLE>ready to hatch!<>\n\nFloating within the shell is a haunting glow, a beacon both beautiful and cursed.\n\nScans indicate the being within has the genetic potential to be <SPECIAL>gelatinous<> and <TECHNOLOGY>spectral<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2987",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other297",
+    "Name": "Moganonj's Infinite Protector",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>, with a generous inventory capacity, and a balanced loadout of weaponry to allow for a variety of defence tactics.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other298",
+    "Name": "End of the Kumiok",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>. Specialised in dogfighting, this craft boasts superior mobility and advanced firepower, and is fitted with an upgraded <TECHNOLOGY>Positron Ejector<>.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other299",
+    "Name": "Sesakis's Gamble HX8",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>, specialised in transporting cargo. Pre-fitted with upgraded <TECHNOLOGY>Deflector Shields<> and a <TECHNOLOGY>Cargo Scan Deflector<>, this hauler craft is ideal for ensuring precious goods - legal or otherwise - stay intact in transit.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other300",
+    "Name": "The Nemesis of the Korvax",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>, with a spacious hold for hauling goods, and a pre-fitted <TECHNOLOGY>Emergency Warp Unit<> for hastily evading dangerous encounters.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other301",
+    "Name": "MS4 Maiseha",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>. Streamlined, agile, and pre-fitted with an advanced <TECHNOLOGY>Infra-Knife Accelerator<> for an edge in space combat.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other302",
+    "Name": "H. Skipwhae Egg",
+    "Group": "Exclusive Companion Egg",
+    "Description": "A living, fertile egg, <TRADEABLE>ready to hatch!<>\n\nThe stocky creature within snuffles curiously at the inside of the shell.\n\nScans indicate the being within has the genetic potential for a <STELLAR>whimsical<> nature, with a proclivity towards joyful play.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other303",
+    "Name": "H. Oakarboe Egg",
+    "Group": "Exclusive Companion Egg",
+    "Description": "A living, fertile egg, <TRADEABLE>ready to hatch!<>\n\nThe beast within wriggles and fidgets, yearning to unfurl its long neck.\n\nScans indicate the being within has the genetic potential for a <STELLAR>loyal<> nature, longing to find a master to place at the centre of its universe.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other304",
+    "Name": "Memories of the Abyss Z80-10L-N",
+    "Group": "Exclusive Multifunction Survival Device",
+    "Description": "An exclusive <STELLAR>Multi-Tool<>. This weapon comes equipped with the versatile <TECHNOLOGY>Neutron Cannon<>, which delivers powerful volleys of atmospheric particles - the longer it is charged, the more deadly the blast.\n\n<STELLAR>Take<> this Multi-Tool to add it to your collection, or <STELLAR>Exchange<> it with your current Multi-Tool. Swap between active Multi-Tools from the Utilities section of the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other305",
+    "Name": "Isotope Tuner Mark XVII",
+    "Group": "Exclusive Multifunction Survival Device",
+    "Description": "An exclusive <STELLAR>Multi-Tool<>. This weapon comes with the tactical <TECHNOLOGY>Paralysis Mortar<> and lethal <TECHNOLOGY>Blaze Javelin<> pre-installed, for disabling aggressors and delivering powerful shots.\n\n<STELLAR>Take<> this Multi-Tool to add it to your collection, or <STELLAR>Exchange<> it with your current Multi-Tool. Swap between active Multi-Tools from the Utilities section of the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other306",
+    "Name": "Ozone Auditor Mark XI",
+    "Group": "Exclusive Multifunction Survival Device",
+    "Description": "An exclusive <STELLAR>Multi-Tool<>. This weapon comes with a powerful <TECHNOLOGY>Cloaking Device<> pre-installed, for stealthy escape from hostile confrontations.\n\n<STELLAR>Take<> this Multi-Tool to add it to your collection, or <STELLAR>Exchange<> it with your current Multi-Tool. Swap between active Multi-Tools from the Utilities section of the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other307",
+    "Icon": "other/124.png",
+    "Name": "Atlas Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of luxury fireworks. These stunning pyrotechnics render the likeness of an Atlas Interface, in bursts of <TECHNOLOGY>indium<>, <COMMODITY>gold<> and <FUEL>cadmium<>. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other308",
+    "Icon": "other/124.png",
+    "Name": "Atlas Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of luxury fireworks. These stunning pyrotechnics render the likeness of an Atlas Interface, in bursts of <TECHNOLOGY>indium<>, <COMMODITY>gold<> and <FUEL>cadmium<>. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other309",
+    "Icon": "other/124.png",
+    "Name": "Atlas Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of luxury fireworks. These stunning pyrotechnics render the likeness of an Atlas Interface, in bursts of <TECHNOLOGY>indium<>, <COMMODITY>gold<> and <FUEL>cadmium<>. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other310",
+    "Icon": "other/124.png",
+    "Name": "Atlas Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of luxury fireworks. These stunning pyrotechnics render the likeness of an Atlas Interface, in bursts of <TECHNOLOGY>indium<>, <COMMODITY>gold<> and <FUEL>cadmium<>. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other311",
+    "Icon": "other/124.png",
+    "Name": "Atlas Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of luxury fireworks. These stunning pyrotechnics render the likeness of an Atlas Interface, in bursts of <TECHNOLOGY>indium<>, <COMMODITY>gold<> and <FUEL>cadmium<>. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other312",
+    "Icon": "products/84.png",
+    "Name": "%NAME% Implant",
+    "Group": "Potent Nodule",
+    "Description": "A pre-grown bionic implant, designed to facilitate the fusion of <TECHNOLOGY>bio-technology<> to <TECHNOLOGY>sentient starships<>. Use <VAL_ON><IMG>FE_ALT1<><> to begin the <STELLAR>installation process<>.\n\n%TECH_DESC%",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

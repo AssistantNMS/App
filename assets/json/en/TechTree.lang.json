@@ -1560,41 +1560,26 @@
             "Cost": 1,
             "Children": [
               {
-                "Id": "conTech20",
-                "Title": "Message Module",
-                "Icon": "constructedTechnology/20.png",
-                "Cost": 1,
-                "Children": [
-                  {
-                    "Id": "conTech21",
-                    "Title": "Communications Station",
-                    "Icon": "constructedTechnology/21.png",
-                    "Cost": 1,
-                    "Children": []
-                  }
-                ]
-              },
-              {
-                "Id": "conTech4",
-                "Title": "Health Station",
-                "Icon": "constructedTechnology/4.png",
-                "Cost": 5,
-                "Children": [
-                  {
-                    "Id": "conTech5",
-                    "Title": "Hazard Protection Unit",
-                    "Icon": "constructedTechnology/5.png",
-                    "Cost": 3,
-                    "Children": []
-                  }
-                ]
-              },
-              {
                 "Id": "conTech10",
                 "Title": "Base Teleport Module",
                 "Icon": "constructedTechnology/10.png",
                 "Cost": 2,
                 "Children": [
+                  {
+                    "Id": "conTech4",
+                    "Title": "Health Station",
+                    "Icon": "constructedTechnology/4.png",
+                    "Cost": 5,
+                    "Children": [
+                      {
+                        "Id": "conTech5",
+                        "Title": "Hazard Protection Unit",
+                        "Icon": "constructedTechnology/5.png",
+                        "Cost": 3,
+                        "Children": []
+                      }
+                    ]
+                  },
                   {
                     "Id": "conTech44",
                     "Title": "Oxygen Harvester",
@@ -1663,18 +1648,34 @@
                     "Children": []
                   },
                   {
+                    "Id": "conTech8",
+                    "Title": "Signal Booster",
+                    "Icon": "constructedTechnology/8.png",
+                    "Cost": 1,
+                    "Children": [
+                      {
+                        "Id": "conTech20",
+                        "Title": "Message Module",
+                        "Icon": "constructedTechnology/20.png",
+                        "Cost": 1,
+                        "Children": [
+                          {
+                            "Id": "conTech21",
+                            "Title": "Communications Station",
+                            "Icon": "constructedTechnology/21.png",
+                            "Cost": 1,
+                            "Children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
                     "Id": "conTech13",
                     "Title": "Portable Refiner",
                     "Icon": "constructedTechnology/13.png",
                     "Cost": 10,
                     "Children": [
-                      {
-                        "Id": "conTech8",
-                        "Title": "Signal Booster",
-                        "Icon": "constructedTechnology/8.png",
-                        "Cost": 1,
-                        "Children": []
-                      },
                       {
                         "Id": "conTech14",
                         "Title": "Medium Refiner",
@@ -1797,10 +1798,10 @@
                 "Cost": 12,
                 "Children": [
                   {
-                    "Id": "build395",
+                    "Id": "build884",
                     "Title": "Orbital Exocraft Materialiser",
-                    "Icon": "building/395.png",
-                    "Cost": 15,
+                    "Icon": "",
+                    "Cost": 1,
                     "Children": []
                   }
                 ]
@@ -6216,6 +6217,12 @@
       },
       {
         "Id": "tree10-subTree2",
+        "Name": "Freighter Construction Modules",
+        "CostType": "None",
+        "Children": []
+      },
+      {
+        "Id": "tree10-subTree3",
         "Name": "Freighter Recolouring",
         "CostType": "Nanites",
         "Children": [
