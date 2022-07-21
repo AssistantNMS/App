@@ -1,10 +1,9 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+
 import '../../constants/AppDuration.dart';
 import '../../constants/Modal.dart';
-
-import '../../constants/NmsUIConstants.dart';
 import '../../contracts/redux/appState.dart';
 import '../../contracts/requiredItem.dart';
 import '../../contracts/requiredItemDetails.dart';
