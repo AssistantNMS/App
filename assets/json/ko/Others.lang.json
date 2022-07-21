@@ -764,7 +764,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/35.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -785,7 +786,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/36.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -806,7 +808,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/37.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -1020,9 +1023,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "위력",
+        "Name": "발사 속도",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "8"
       }
     ],
@@ -1053,14 +1056,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "부스트",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "5"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1090,10 +1086,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "하이퍼드라이브 거리",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
+        "Name": "워프 셀 효율",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5,000"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1125,10 +1121,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "발진 가격",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "-10"
+        "Name": "자동 재충전 중",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "0.9"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1158,14 +1154,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "방어막 강도",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "0.05"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1195,10 +1184,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "기동성",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "5"
+        "Name": "내부 생명 유지 장치 사용 가능",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.05"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1774,7 +1763,8 @@
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -1795,7 +1785,8 @@
     "Colour": "2C7C9F",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -2775,7 +2766,7 @@
     "Icon": "other/125.png",
     "Name": "파랑-빨강 아틀라스 폭죽",
     "Group": "소모형 불꽃놀이 장치",
-    "Description": "<COMMODITY>인듐<>과 <TECHNOLOGY>카드뮴<>의 폭발로 만들어지는 아틀라스 인터페이스의 굉장히 아름다운 불꽃놀이의 향연입니다. 점화하여 하늘에 반짝이는 작품을 만들어보세요.\n\n <VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "Description": "<COMMODITY>인듐<>과 <TECHNOLOGY>카드뮴<>의 폭발로 만들어지는 아틀라스 인터페이스의 굉장히 아름다운 불꽃놀이의 향연입니다. 점화하여 하늘에 반짝이는 작품을 만들어보세요.\n \n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
     "BaseValueUnits": 50.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -2798,7 +2789,7 @@
     "Icon": "other/126.png",
     "Name": "금색-파랑 아틀라스 폭죽",
     "Group": "소모형 불꽃놀이 장치",
-    "Description": "<COMMODITY>금<>과 <TECHNOLOGY>인듐<>의 폭발로 만들어지는 아틀라스 인터페이스의 굉장히 아름다운 불꽃놀이의 향연입니다. 점화하여 하늘에 반짝이는 작품을 만들어보세요.\n\n <VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "Description": "<COMMODITY>금<>과 <TECHNOLOGY>인듐<>의 폭발로 만들어지는 아틀라스 인터페이스의 굉장히 아름다운 불꽃놀이의 향연입니다. 점화하여 하늘에 반짝이는 작품을 만들어보세요.\n \n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
     "BaseValueUnits": 50.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -2821,7 +2812,7 @@
     "Icon": "other/127.png",
     "Name": "빨강-금색 아틀라스 폭죽",
     "Group": "소모형 불꽃놀이 장치",
-    "Description": "<COMMODITY>카드뮴<>과 <TECHNOLOGY>금<>의 폭발로 만들어지는 아틀라스 인터페이스의 굉장히 아름다운 불꽃놀이의 향연입니다. 점화하여 하늘에 반짝이는 작품을 만들어보세요.\n\n <VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "Description": "<COMMODITY>카드뮴<>과 <TECHNOLOGY>금<>의 폭발로 만들어지는 아틀라스 인터페이스의 굉장히 아름다운 불꽃놀이의 향연입니다. 점화하여 하늘에 반짝이는 작품을 만들어보세요.\n \n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
     "BaseValueUnits": 50.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -2871,7 +2862,7 @@
     "Icon": "other/129.png",
     "Name": "에오카이의 최고 탐구자",
     "Group": "독점 함선",
-    "Description": "독점 <STELLAR>함선<>으로, 효율적인 은하계 탐험을 위해 업그레이드된 <TECHNOLOGY>하이퍼드라이브<>가 장착되어 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "Description": "독점 <STELLAR>함선<>으로, 효율적인 은하계 탐험을 위해 업그레이드된 <TECHNOLOGY>하이퍼드라이브<>가 장착되어 있습니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -2894,7 +2885,7 @@
     "Icon": "other/130.png",
     "Name": "HOSHIS HP7",
     "Group": "독점 함선",
-    "Description": "독점 <STELLAR>함선<>으로, 적 함선을 효율적으로 파괴하기 위해 업그레이드된 <TECHNOLOGY>인프라나이프<>가 장착되어 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "Description": "독점 <STELLAR>함선<>으로, 적 함선을 효율적으로 파괴하기 위해 업그레이드된 <TECHNOLOGY>인프라나이프<>가 장착되어 있습니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -2916,7 +2907,7 @@
     "Icon": "other/131.png",
     "Name": "쿠다마의 대적",
     "Group": "독점 함선",
-    "Description": "독점 <STELLAR>함선<>으로, 적 함선을 효율적으로 파괴하기 위해 업그레이드된 <TECHNOLOGY>양전자 배출기<>가 장착되어 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "Description": "독점 <STELLAR>함선<>으로, 적 함선을 효율적으로 파괴하기 위해 업그레이드된 <TECHNOLOGY>양전자 배출기<>가 장착되어 있습니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -2938,7 +2929,7 @@
     "Icon": "other/132.png",
     "Name": "궁극의 긍지 JB2",
     "Group": "독점 함선",
-    "Description": "넓은 화물칸이 있는 독점 <STELLAR>함선<>으로, 업그레이드된 <TECHNOLOGY>편향 방어막<>과 <TECHNOLOGY>사이클로트론 발리스타<>가 장착되어 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "Description": "넓은 화물칸이 있는 독점 <STELLAR>함선<>으로, 업그레이드된 <TECHNOLOGY>편향 방어막<>과 <TECHNOLOGY>사이클로트론 발리스타<>가 장착되어 있습니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -2960,7 +2951,7 @@
     "Icon": "other/133.png",
     "Name": "최고의 노래 JZ4",
     "Group": "독점 함선",
-    "Description": "독점 <STELLAR>함선<>으로, 효율적인 우주 탐험을 위해 강력한 <TECHNOLOGY>페이즈 빔<>과 업그레이드된 <TECHNOLOGY>펄스 엔진<>이 장착되어 있습니다. 또한, <TECHNOLOGY>경제 스캐너<>로 성계의 자세한 경제 데이터를 원거리에서 확인할 수 있어, 은하계 무역로 계획을 수립하는 데 도움 됩니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "Description": "독점 <STELLAR>함선<>으로, 효율적인 우주 탐험을 위해 강력한 <TECHNOLOGY>페이즈 빔<>과 업그레이드된 <TECHNOLOGY>펄스 엔진<>이 장착되어 있습니다. 또한, <TECHNOLOGY>경제 스캐너<>로 성계의 자세한 경제 데이터를 원거리에서 확인할 수 있어, 은하계 무역로 계획을 수립하는 데 도움 됩니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -3463,7 +3454,7 @@
     "Icon": "other/158.png",
     "Name": "VV5 아리야즈",
     "Group": "독점 함선",
-    "Description": "독점 <STELLAR>함선<>으로, 효율적인 우주 탐험을 위해 강력한 <TECHNOLOGY>페이즈 빔<>과 업그레이드된 <TECHNOLOGY>펄스 엔진<>이 장착되어 있습니다. 또한, <TECHNOLOGY>순간이동 수신기<>로 <STELLAR>먼 곳에서도<> 효과적으로 제품들과 소재들을 모아 함선으로 순간이동시킬 수 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "Description": "독점 <STELLAR>함선<>으로, 효율적인 우주 탐험을 위해 강력한 <TECHNOLOGY>페이즈 빔<>과 업그레이드된 <TECHNOLOGY>펄스 엔진<>이 장착되어 있습니다. 또한, <TECHNOLOGY>순간이동 수신기<>로 <STELLAR>먼 곳에서도<> 효과적으로 제품들과 소재들을 모아 함선으로 순간이동시킬 수 있습니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -3485,7 +3476,7 @@
     "Icon": "other/159.png",
     "Name": "지리쉬의 예지",
     "Group": "독점 함선",
-    "Description": "독점 <STELLAR>함선<>으로, 효율적인 은하계 탐험을 위해 업그레이드된 <TECHNOLOGY>하이퍼드라이브<>가 장착되어 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "Description": "독점 <STELLAR>함선<>으로, 효율적인 은하계 탐험을 위해 업그레이드된 <TECHNOLOGY>하이퍼드라이브<>가 장착되어 있습니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -3507,7 +3498,7 @@
     "Icon": "other/160.png",
     "Name": "하다치의 발견 KH3",
     "Group": "독점 함선",
-    "Description": "독점 <STELLAR>함선<>으로, 적 함선을 효율적으로 파괴하기 위해 업그레이드된 <TECHNOLOGY>인프라나이프<>가 장착되어 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "Description": "독점 <STELLAR>함선<>으로, 적 함선을 효율적으로 파괴하기 위해 업그레이드된 <TECHNOLOGY>인프라나이프<>가 장착되어 있습니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -3529,7 +3520,7 @@
     "Icon": "other/161.png",
     "Name": "완전한 잠 LO1",
     "Group": "독점 함선",
-    "Description": "넓은 화물칸이 있는 독점 <STELLAR>함선<>으로, 업그레이드된 <TECHNOLOGY>편향 방어막<>과 <TECHNOLOGY>사이클로트론 발리스타<>가 장착되어 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "Description": "넓은 화물칸이 있는 독점 <STELLAR>함선<>으로, 업그레이드된 <TECHNOLOGY>편향 방어막<>과 <TECHNOLOGY>사이클로트론 발리스타<>가 장착되어 있습니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -3551,7 +3542,7 @@
     "Icon": "other/162.png",
     "Name": "운명의 히와미하",
     "Group": "독점 함선",
-    "Description": "독점 <STELLAR>함선<>으로, 적 함선을 효율적으로 파괴하기 위해 업그레이드된 <TECHNOLOGY>양전자 배출기<>가 장착되어 있습니다.\n\n<STELLAR>함선을 획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "Description": "독점 <STELLAR>함선<>으로, 적 함선을 효율적으로 파괴하기 위해 업그레이드된 <TECHNOLOGY>양전자 배출기<>가 장착되어 있습니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4151,7 +4142,7 @@
     "Icon": "other/186.png",
     "Name": "몸부림 치는 원고",
     "Group": "추종자 문서",
-    "Description": "광신적인 글귀가 적힌 투명한 <STELLAR>웜의 가죽<>입니다. 손을 대면 꿈틀거립니다.\n\n'아이들이 가장 먼저 눈치를 챘다.\n쿵 쿵 쿵, 모래 깊은 속에서 천둥이 친다.\n첫 번째 웜이 머리 위의 검은 번개처럼 하늘을 갈랐다. \n웜들이 하나씩 사막에서 솟아올랐다. 웜은 이주하고 있었다.\n폭풍 시즌마다 우리는 선택되길 희망했다. 우리는 사막에 줄을 서고 손을 하늘로 뻗었다.\n누구든 구멍으로 들어갈 수 있다.\n우리는 위대한 웜 앞에서 모두 동등하다.'",
+    "Description": "광신적인 글귀가 적힌 반투명한 <STELLAR>웜의 가죽<>입니다. 손을 대면 꿈틀거립니다.\n\n'아이들이 가장 먼저 눈치를 챘다.\n쿵, 쿵, 쿵. 모래 깊은 속에서 천둥이 친다.\n첫 번째 웜이 머리 위의 검은 번개처럼 하늘을 갈랐다. \n웜들이 하나씩 사막에서 솟아올랐다. 웜은 이주하고 있었다.\n우리는 폭풍이 올 때마다 선택받길 희망했다. 우리는 사막에 줄을 서고 손을 하늘로 뻗었다.\n누구든 구멍으로 들어갈 수 있다.\n우리는 위대한 웜 앞에서 모두 동등하다.'",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4172,8 +4163,8 @@
     "Icon": "other/188.png",
     "Name": "다육질 끈",
     "Group": "내장 조각",
-    "Description": "<SPECIAL>굶주린 덩굴<>의 꼬여 있는 소화기관의 남은 부분입니다. 아직 덩어리진 살점이 꿈틀거리고 있지만 이런 빈약한 잔해에서 다시 덩굴이 자라날 것 같지는 않습니다...\n\n이런 특수한 기관은 은하계 거래소에서 아주 가끔 거래가 이루어지며 <STELLAR>그 값이 엄청납니다<>.",
-    "BaseValueUnits": 160016.0,
+    "Description": "<SPECIAL>굶주린 덩굴<>의 꼬여 있는 소화기관의 남은 부분입니다. 아직 덩어리진 살점이 꿈틀거리고 있지만, 이런 빈약한 잔해에서 다시 덩굴이 자라날 것 같지는 않습니다...\n\n이런 특수한 기관은 은하계 거래소에서 아주 가끔 거래가 이루어지며 <STELLAR>그 값이 엄청납니다<>.",
+    "BaseValueUnits": 16016.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
@@ -4194,7 +4185,7 @@
     "Icon": "other/189.png",
     "Name": "부정한 알",
     "Group": "굶주린 배아",
-    "Description": "여전히 버터처럼 점액이 떨어지는 <SPECIAL>굶주린 덩굴<>의 연약한 배아입니다. 손을 대면 울부짖는 소리와 함께 움츠려 듭니다.\n\n<TECHNOLOGY>내장 합성기<>의 도움을 받아 미발달한 알집에서 추출할 수 있습니다.",
+    "Description": "여전히 버터처럼 점액이 떨어지는 <SPECIAL>굶주린 덩굴<>의 연약한 배아입니다. 손을 대면 울부짖는 소리와 함께 움츠러듭니다.\n\n<TECHNOLOGY>내장 합성기<>의 도움을 받아 미발달한 알집에서 추출할 수 있습니다.",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4260,7 +4251,7 @@
     "Icon": "other/52.png",
     "Name": "칭호: '벌레 군주'",
     "Group": "맞춤형 개인 식별자",
-    "Description": "<STELLAR>태동<> 원정의 완료를 기념하는 독점 <STELLAR>탐험가 칭호<>입니다.\n\n<TECHNOLOGY>외모 수정기<>에서 이 칭호를 배너에 적용시킬 수 있습니다.",
+    "Description": "<STELLAR>태동<> 원정의 완료를 기념하는 독점 <STELLAR>탐험가 칭호<>입니다.\n\n<TECHNOLOGY>외모 수정기<>에서 이 칭호를 배너에 적용할 수 있습니다.",
     "BaseValueUnits": 800.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
@@ -4331,7 +4322,7 @@
     "Icon": "other/195.png",
     "Name": "섬뜩한 궤적",
     "Group": "제트팩 배기 오버라이드",
-    "Description": "독점 <STELLAR>엑소슈트 외관 오버라이드<>입니다.\n\n제트팩의 배기 노즐에 활성화된 바이오 체임버를 부착합니다. 비행 중에 내부에 담긴 점액질을 데우고 방출합니다.\n<STELLAR>주의<>: 살아있는 웜이 들어있습니다. 방출된 웜은 지역 생태계를 망칠 수 있습니다.\n\n<TECHNOLOGY>외모 수정기<>에서 엑소슈트의 외형을 변경할 수 있습니다.",
+    "Description": "전용 <STELLAR>엑소슈트 외관 오버라이드<>입니다.\n\n제트팩의 배기 노즐에 활성화된 바이오 체임버를 부착합니다. 비행 도중 내부에 담긴 점액질을 데우고 방출합니다.\n<STELLAR>주의<>: 살아있는 웜이 들어있습니다. 방출된 웜은 지역 생태계를 망칠 수 있습니다.\n\n<TECHNOLOGY>외모 수정기<>에서 엑소슈트의 외형을 변경할 수 있습니다.",
     "BaseValueUnits": 800.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
@@ -4354,7 +4345,7 @@
     "Icon": "other/196.png",
     "Name": "샌드웜 알",
     "Group": "타이탄의 알",
-    "Description": "<TRADEABLE>부화 준비가 된<> 살아있는 수정란입니다!\n\n껍질 안에 웅크린 굶주린 벌레가 쉴 새 없이 꿈틀거립니다.\n\n스캔 결과 내부 생명체는 유전적으로 <FUEL>저주<>받았으며 <FUEL>만족을 모르는<> 것 같습니다.",
+    "Description": "<TRADEABLE>부화 준비가 된<> 살아있는 수정란입니다!\n\n껍질 안에 웅크린 굶주린 벌레가 쉴 새 없이 꿈틀거립니다.\n\n스캔 결과 내부 생명체는 <FUEL>지독한<> 성격과 <FUEL>만족을 모르는<> 성격을 갖출 유전적 잠재력을 지니고 있습니다.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4376,7 +4367,7 @@
     "Icon": "other/197.png",
     "Name": "타이탄의 트로피",
     "Group": "장식용 두개골",
-    "Description": "독점 기지 장식물입니다.\n\n이 이빨이 많은 두개골은 타이탄 샌드웜의 친척인 다리 없는 대형 척추동물의 것이었습니다. 강력한 턱은 멀티툴과 대부분의 생명체의 뼈를 부수기에 충분한 위력을 발휘할 수 있습니다.",
+    "Description": "전용 기지 장식물입니다.\n\n이 이빨이 많은 두개골은 타이탄 샌드웜의 친척인 다리 없는 대형 척추동물의 것이었습니다. 이 동물의 강력한 턱은 멀티툴과 대부분의 생명체 뼈를 부술 정도로 위력적입니다.",
     "BaseValueUnits": 500.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4403,7 +4394,7 @@
     "Icon": "other/198.png",
     "Name": "포식 투구",
     "Group": "해제 가능한 헬멧",
-    "Description": "독점 <STELLAR>엑소슈트 외관 오버라이드<>입니다.\n\n샌드웜 추종자의 모습을 따라 얼굴 기관을 재배치하고 다른 탐험가를 놀라게 하십시오. 이 생체 실리콘 헬멧은 모든 알려진 행성 유해 요소를 차단하지만, 착용자는 약간의 축축함을 느낄 수 있습니다.\n\n<TECHNOLOGY>외모 수정기<>에서 <STELLAR>바이-킨<> 외형의 머리를 의례적으로 변경할 수 있습니다.",
+    "Description": "전용 <STELLAR>엑소슈트 외관 오버라이드<>입니다.\n\n샌드웜 추종자의 모습을 따라 얼굴 기관을 재배치하고 다른 탐험가를 놀라게 하십시오. 이 생체 실리콘 헬멧은 모든 알려진 행성 유해 요소를 차단하지만, 착용자는 약간의 축축함을 느낄 수 있습니다.\n\n<TECHNOLOGY>외모 수정기<>에서 <STELLAR>바이-킨<> 외형의 머리를 의례적으로 변경할 수 있습니다.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
@@ -4425,7 +4416,7 @@
     "Icon": "other/187.png",
     "Name": "벌레 가죽 문서: 1",
     "Group": "다육질 두루마리",
-    "Description": "고대의 단어들이 이 <STELLAR>살아있는 문서<>에 새겨져 있습니다. \n\n'벌레 군주가 먼지투성이 대지 위에 우뚝 서고 그 살점은 하늘이 된다.\n우리의 애처로운 껍질은 따라갈 수 없고, 그 높이에 닿을 수 없고, 그 깊이에 다가갈 수 없다.\n우리는 대지에 자신을 바친다.\n우리의 희생이 받아들여지길 간청한다.'",
+    "Description": "고대의 단어들이 이 <STELLAR>살아있는 문서<>에 새겨져 있습니다.\n\n'벌레 군주가 먼지투성이 대지 위에 우뚝 서고 그 살점은 하늘이 된다.\n우리의 애처로운 껍질은 따라갈 수 없고, 그 높이에 닿을 수 없고, 그 깊이에 다가갈 수 없다.\n우리는 대지에 자신을 바친다.\n우리의 희생이 받아들여지길 간청한다.'",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4446,7 +4437,7 @@
     "Icon": "other/187.png",
     "Name": "벌레 가죽 문서: 2",
     "Group": "다육질 두루마리",
-    "Description": "고대의 단어들이 이 <STELLAR>살아있는 문서<>에 새겨져 있습니다.\n\n'먼지에 목이 매인다. \n눈을 붉어지고 눈물이 흐른다. \n하지만 진실에서 달아날 수는 없었다. \n아틀라스의 혈관이 드러났다.'",
+    "Description": "고대의 단어들이 이 <STELLAR>살아있는 문서<>에 새겨져 있습니다.\n\n'먼지에 목이 멘다. \n눈을 붉어지고 눈물이 흐른다. \n하지만 진실에서 달아날 수는 없었다.\n아틀라스의 혈관이 드러났다.'",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4488,7 +4479,7 @@
     "Icon": "other/187.png",
     "Name": "벌레 가죽 문서: 4",
     "Group": "다육질 두루마리",
-    "Description": "고대의 단어들이 이 <STELLAR>살아있는 문서<>에 새겨져 있습니다.\n\n'벌레가 삼키고 우리는 넘어지지만, 최선을 다해 미끄러운 벽을 붙잡는다.\n오! 여전히 깨어있는 모래주머니에 다가가리라. \n폐가 꿈틀거린다.\n점균이 우리의 코를 막고 눈을 찌른다. \n이 따뜻한 어둠 속에서 우리는 이미 눈이 멀었다.'",
+    "Description": "고대의 단어들이 이 <STELLAR>살아있는 문서<>에 새겨져 있습니다.\n\n'벌레가 삼키고 우리는 넘어지지만, 최선을 다해 미끄러운 벽을 붙잡는다. \n오! 여전히 깨어있는 모래주머니에 다가가리라. \n폐가 꿈틀거린다.\n점균이 우리의 코를 막고 눈을 찌른다. \n이 따뜻한 어둠 속에서 우리는 이미 눈이 멀었다.'",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4509,7 +4500,7 @@
     "Icon": "other/187.png",
     "Name": "벌레 가죽 문서: 5",
     "Group": "다육질 두루마리",
-    "Description": "고대의 단어들이 이 <STELLAR>살아있는 문서<>에 새겨져 있습니다.\n\n'역류의 고통을 저주한다. \n아직도 나를 가두고 있는 이 연약한 육신을 저주한다!\n나의 형제들은 축복받은 먼지에서 덩굴로 새로이 태어났다. \n거대한 정맥에서 반짝이는 모세혈관이 모래 속으로 흘러들어간다.\n나는 다음 폭풍까지 인내할 것이다.'",
+    "Description": "고대의 단어들이 이 <STELLAR>살아있는 문서<>에 새겨져 있습니다.\n\n'역류의 고통을 저주한다. \n아직도 나를 가두고 있는 이 연약한 육신을 저주한다!\n나의 형제들은 축복받은 먼지에서 덩굴로 새로이 태어났다. \n거대한 정맥에서 반짝이는 모세혈관이 모래 속으로 흘러 들어간다.\n나는 다음 폭풍까지 인내할 것이다.'",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4830,7 +4821,7 @@
     "Icon": "other/218.png",
     "Name": "해적 지도 조각 2/3",
     "Group": "변환된 지형 데이터",
-    "Description": "좌표 정보의 일부로 해적 세력 <SPECIAL>파괴단<>에게 침몰된 <STELLAR>화물선<>에서 찾았습니다. 해적의 선언문의 일부가 포함되어 있습니다.\n\n'은하계 터널은 파괴단의 것이다!'\n\n항법 정보는 손상되었지만 <STELLAR>화물선 선장<>에게서 얻은 정보와 연관이 있는 것 같습니다.",
+    "Description": "좌표 정보의 일부로, 해적 세력 <SPECIAL>파괴단<>에게 침몰된 <STELLAR>화물선<>에서 찾았습니다. 해적 선언문의 일부가 포함되어 있습니다.\n\n'은하계 터널은 파괴단의 것이다!'\n\n항법 정보는 손상되었지만 <STELLAR>화물선 선장<>에게서 얻은 정보와 연관이 있는 것 같습니다.",
     "BaseValueUnits": 88.0,
     "CurrencyType": "Credits",
     "Colour": "4D2957",
@@ -4882,7 +4873,7 @@
     "Icon": "other/220.png",
     "Name": "해적 지도",
     "Group": "불법 지형 데이터",
-    "Description": "해적 세력 <SPECIAL>파괴단<>의 희생자들에게서 얻은 <COMMODITY>보물 좌표 데이터<>를 조합했습니다.",
+    "Description": "해적 세력 <SPECIAL>파괴된<>의 희생자들에게서 얻은 <COMMODITY>보물 좌표 데이터<>를 조합했습니다.",
     "BaseValueUnits": 888.0,
     "CurrencyType": "Credits",
     "Colour": "4D2957",
@@ -5439,7 +5430,7 @@
     "Icon": "other/243.png",
     "Name": "파괴 원정 데칼",
     "Group": "장식",
-    "Description": "독점 데칼로, 기지에 멋진 장식을 더할 수 있습니다.\n\n이 데칼은 <STELLAR>파괴단<> 원정과 영광스러운 악탈품, 그리고 해적 비밀의 발견을 기념합니다.",
+    "Description": "독점 데칼로, 기지에 멋진 장식을 더할 수 있습니다.\n\n이 데칼은 <STELLAR>파괴단<> 원정과 영광스러운 악탈품, 그리고 해적의 비밀 발견을 기념합니다.",
     "BaseValueUnits": 400.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6106,7 +6097,7 @@
     "Icon": "other/271.png",
     "Name": "기억 파편 (클래스)",
     "Group": "변질 기술 에코",
-    "Description": "산산이 부서진 <STELLAR>이전 존재<>의 흔적. 섬유질 안에 깊이 박혀 있는 미지의 이름을 속삭입니다.\n\n기억은 반복 속에서 당신을 돕기 위해 <TECHNOLOGY>함선이나 멀티툴 클래스 업그레이드<>로 나타날 것입니다. <VAL_ON><IMG>FE_ALT1<><>로 이 기억을 <STELLAR>흡수하십시오<>.\n\n<SPECIAL>죽음은 끝이 아닙니다<> <IMG>SLASH<> <STELLAR>순환은 계속됩니다<>",
+    "Description": "산산이 부서진 <STELLAR>이전 존재<>의 흔적. 섬유질 안에 깊이 박혀 있는 미지의 이름을 속삭입니다.\n\n기억은 반복 속에서 당신을 돕기 위해 <TECHNOLOGY>함선 또는 멀티툴 클래스 업그레이드<>로 나타날 것입니다. <VAL_ON><IMG>FE_ALT1<><>로 이 기억을 <STELLAR>흡수하십시오<>.\n\n<SPECIAL>죽음은 끝이 아닙니다<> <IMG>SLASH<> <STELLAR>순환은 계속됩니다<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6129,9 +6120,9 @@
   {
     "Id": "other272",
     "Icon": "other/272.png",
-    "Name": "기억 파편 (멀티툴)",
+    "Name": "기억 파편 (개인 무기)",
     "Group": "변질 기술 에코",
-    "Description": "산산이 부서진 <STELLAR>이전 존재<>의 흔적. 섬유질 안에 깊이 박혀 있는 미지의 이름을 속삭입니다.\n\n기억은 반복 속에서 당신을 돕기 위해 <TECHNOLOGY>멀티툴 기술 업그레이드<>로 나타날 것입니다. <VAL_ON><IMG>FE_ALT1<><>로 이 기억을 <STELLAR>흡수하십시오<>.\n\n<SPECIAL>죽음은 끝이 아닙니다<> <IMG>SLASH<> <STELLAR>순환은 계속됩니다<>",
+    "Description": "산산이 부서진 <STELLAR>이전 존재<>의 흔적. 섬유질 안에 깊이 박혀 있는 미지의 이름을 속삭입니다.\n\n기억은 반복 속에서 당신을 돕기 위해 <TECHNOLOGY>멀티툴 무기<>로 나타날 것입니다. <VAL_ON><IMG>FE_ALT1<><>로 이 기억을 <STELLAR>흡수하십시오<>.\n\n<SPECIAL>죽음은 끝이 아닙니다<> <IMG>SLASH<> <STELLAR>순환은 계속됩니다<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6154,9 +6145,9 @@
   {
     "Id": "other273",
     "Icon": "other/273.png",
-    "Name": "기억 파편 (함선)",
+    "Name": "기억 파편 (함선 무기)",
     "Group": "변질 기술 에코",
-    "Description": "산산이 부서진 <STELLAR>이전 존재<>의 흔적. 섬유질 안에 깊이 박혀 있는 미지의 이름을 속삭입니다.\n\n기억은 반복 속에서 당신을 돕기 위해 <TECHNOLOGY>함선 기술 업그레이드<>으로 나타날 것입니다. <VAL_ON><IMG>FE_ALT1<><>로 이 기억을 <STELLAR>흡수하십시오<>.\n\n<SPECIAL>죽음은 끝이 아닙니다<> <IMG>SLASH<> <STELLAR>순환은 계속됩니다<>",
+    "Description": "산산이 부서진 <STELLAR>이전 존재<>의 흔적. 섬유질 안에 깊이 박혀 있는 미지의 이름을 속삭입니다.\n\n기억은 반복 속에서 당신을 돕기 위해 <TECHNOLOGY>함선 무기<>로 나타날 것입니다. <VAL_ON><IMG>FE_ALT1<><>로 이 기억을 <STELLAR>흡수하십시오<>.\n\n<SPECIAL>죽음은 끝이 아닙니다<> <IMG>SLASH<> <STELLAR>순환은 계속됩니다<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6354,7 +6345,7 @@
   {
     "Id": "other280",
     "Icon": "other/280.png",
-    "Name": "기억 각인: I",
+    "Name": "기억 각인 I",
     "Group": "순환 유물",
     "Description": "기묘한 물질에 기억이 <STELLAR>아로새겨져<> 있습니다. 다른 생애의 메아리입니다.\n\n'그 리바이어던은 지금까지 봤던 것과 전혀 달랐다.\n태양을 가릴 정도로 어마어마한 녀석이었다.\n갖고 싶었다. 난 자격이 있으니까! 반드시 손 안에 넣고 말 것이다.\n하지만 놈은 저항했고 좀처럼 복종하지 않았다.\n기어이 살덩이를 인프라나이프로 깎게 되었을 때 녀석은 울부짖고 또 울부짖었다.\n그 순간 속절없이 무너질 뻔했다. 아니, 어쩌면 이미 굴복한 걸지도. 아마도...'",
     "BaseValueUnits": 16.0,
@@ -6375,7 +6366,7 @@
   {
     "Id": "other281",
     "Icon": "other/280.png",
-    "Name": "기억 각인: II",
+    "Name": "기억 각인 II",
     "Group": "순환 유물",
     "Description": "기묘한 물질에 기억이 <STELLAR>아로새겨져<> 있습니다. 다른 생애의 메아리입니다.\n\n'항상 똑같은 악몽에 시달리고 있다. 귀가 멀 것 같은 외마디 비명... 내 조종석이었다. 계기판 조종간마저 찐득한 피투성이였다.\n잠자는 것조차 포기했다. 별이 흐려지며 맥박을 치듯 지나가고 있었다.\n그때 그것을 보았다. 장엄하게 표류하는 우주의 바다.\n내 안에 무언가가 갈망으로 불타고 있었다. 어떻게든 가지고 싶었다.\n이윽고 그것의 거대한 지느러미가 굽어지면서 선체가 날아갔다...'",
     "BaseValueUnits": 16.0,
@@ -6396,7 +6387,7 @@
   {
     "Id": "other282",
     "Icon": "other/280.png",
-    "Name": "기억 각인: III",
+    "Name": "기억 각인 III",
     "Group": "순환 유물",
     "Description": "기묘한 물질에 기억이 <STELLAR>아로새겨져<> 있습니다. 다른 생애의 메아리입니다.\n\n'오늘은 그날이었어야 했다. 그들의 시간이 임박했다.\n내 것으로 만들어야 한다. 그들은 지금까지 봤던 것과 전혀 달랐다.\n모든 걸 준비했다. 하지만 놈은 생각했던 것보다 빠르게 움직였다. 나보다 먼저, 내가 어디로 날아갈지 정확히 아는 것처럼.\n거대한 촉수가 내 함선을 휘감았고, 조종석을 짓눌렀다. 놈이 슈트를 뼈가 있는 곳까지 압박했다. 이 슈트가 내 무덤이 되겠지.'",
     "BaseValueUnits": 16.0,
@@ -6417,9 +6408,9 @@
   {
     "Id": "other283",
     "Icon": "other/280.png",
-    "Name": "기억 각인: IV",
+    "Name": "기억 각인 IV",
     "Group": "순환 유물",
-    "Description": "기묘한 물질에 기억이 <STELLAR>아로새겨져<> 있습니다. 다른 생애의 메아리입니다...\n\n'추격은 끝났다. 내가 졌다. 거인들은 남고 나는 끝날 것이다.\n내 함선이 떨어지던 중에 다른 함선도 함께 떨어지고 있었다. 한 척 더, 또 한 척 더.\n그저 상상이었을지도 모른다. 글쎄, 죽어가던 머리가 오작동했을지도 모르지.\n비할 데 없이 아름다운 존재들이었다. 하지만 이제 다 끝났다.\n더 이상 놈들도 내 머릿속을 침범하지 않겠지.'",
+    "Description": "기묘한 물질에 기억이 <STELLAR>아로새겨져<> 있습니다. 다른 생애의 메아리입니다...\n\n'추격은 끝났다. 내가 졌다.\n거인들은 남고 나는 스러질 것이다.\n내 함선이 떨어지는 동안 다른 함선도 함께 떨어지고 있었다. 한 척 더, 또 한 척 더.\n그저 상상이었을지도 모른다. 글쎄, 죽어가던 머리가 오작동했을지도 모르지.\n비할 데 없이 아름다운 존재들이었다. 하지만 이제 다 끝났다.\n더 이상 놈들도 내 머릿속을 침범하지 않겠지.'",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "Colour": "4D2957",
@@ -6438,7 +6429,7 @@
   {
     "Id": "other284",
     "Icon": "other/280.png",
-    "Name": "기억 각인: V",
+    "Name": "기억 각인 V",
     "Group": "순환 유물",
     "Description": "기묘한 물질에 기억이 <STELLAR>아로새겨져<> 있습니다. 다른 생애의 메아리입니다...\n\n'내가 마주친 건... 그 어떤 것보다도 아름답고 기묘한 생물이었다.\n눈으로 확인할 수 있는 부위는 없었다. 다만, 시각은 있는 것 같다.\n거대하고 우아하다. 그리고 고요했다. 이윽고 촉수가 움직이더니 금세 사라지고 말았다.\n그 이후로 다른 것은 생각나지 않았다. 그저 고래 생각만이 맴돌고 있다. 고래. 고래. 그 <SPECIAL>울부짖음<>.'",
     "BaseValueUnits": 16.0,
@@ -6556,6 +6547,533 @@
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
       "IsExpeditionSeason7Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other289",
+    "Icon": "products/93.png",
+    "Name": "산란 주머니",
+    "Group": "지성체 혈관 비축 주머니",
+    "Description": "<TECHNOLOGY>지성체<> 함선을 위한 <SPECIAL>추가 비축용 뿌리혹<>입니다. 부화하면 주머니 안의 기생충이 함선에 이식되며, 기생충의 해면으로 된 내장을 사용해 숙주에게 중요한 영양분을 공급할 수 있습니다.\n\n<VAL_ON><IMG>FE_ALT1<><>로 성장을 촉진하고 <VAL_ON>부화 절차<>를 시작하세요.",
+    "BaseValueUnits": 125000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "추가 비축 진화"
+    ]
+  },
+  {
+    "Id": "other290",
+    "Icon": "products/91.png",
+    "Name": "신경 자극 알",
+    "Group": "맥동하는 난황 주머니",
+    "Description": "유전액이 든 채 흔들거리는 주머니로, <TECHNOLOGY>지성체 함선<>의 새로운 <TECHNOLOGY>생체 주입 기술<> 생성을 촉진하기 위해 만들어졌습니다.\n\n배아는 자라서 <TECHNOLOGY>생물학 기술 업그레이드<>로 변합니다. <VAL_ON><IMG>FE_ALT1<><>로 <STELLAR>생물 발생 절차<>를 시작하세요.",
+    "BaseValueUnits": 126000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "새로운 지성체 기술에 부화시키기"
+    ]
+  },
+  {
+    "Id": "other291",
+    "Icon": "other/291.png",
+    "Name": "꿈의 더듬이",
+    "Group": "잠재의식 접근 장치",
+    "Description": "무의식의 파장에 맞게 조정한 신호 수신기와 증폭기입니다. 모든 색을 품고 있다가 주변의 빛을 분열시켜 희미한 무지개를 만들어 냅니다.\n\n<FUEL>경고:<> 이 더듬이를 심우주로 들고 가면 <SPECIAL>거대 우주동물<>의 주의를 끌 수 있습니다.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod58",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other292",
+    "Icon": "other/278.png",
+    "Name": "화물선 좌표 전송기",
+    "Group": "마지막 고향 링크",
+    "Description": "회수한 전자 부품으로 만든 임시변통 장치로, 오랫동안 깊숙한 곳에 보관되어 있었습니다. 이 뒤죽박죽인 전선으로 화물선의 고향에서 마지막으로 알려진 이들과 상대화 접촉을 시도할 것입니다.\n\n장치를 선택하고 송출(<IMG>FE_ALT1<>)을 선택하면 수색 절차를 시작합니다.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 60
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 20
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "접촉 시도"
+    ]
+  },
+  {
+    "Id": "other293",
+    "Icon": "other/293.png",
+    "Name": "고중력 화물선 궤적",
+    "Group": "화물선 엔진 플레어 오버라이드",
+    "Description": "전용 <STELLAR>화물선 엔진 플레어 수정기<>입니다.\n\n고에너지 배기가스가 화물선의 거대 엔진을 빠져나가는 동안 빠르게 응축된 뒤 마이크로 특이성으로 붕괴됩니다.\n\n<VAL_ON>함교<>의 <TECHNOLOGY>업그레이드 제어 터미널<>에서 화물선의 외관을 변경할 수 있습니다.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other294",
+    "Icon": "other/294.png",
+    "Name": "함대 사령관의 망토",
+    "Group": "해제 가능한 망토",
+    "Description": "전용 <STELLAR>엑소슈트 외관 오버라이드<>입니다.\n\n마스터, 지휘관, 우주의 항해사에게 맞는 복장입니다. 망토를 두르고 조종간을 잡을 준비를 하십시오.\n\n<TECHNOLOGY>외모 수정기<>에서 엑소슈트의 외관을 변경할 수 있습니다.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other295",
+    "Icon": "other/52.png",
+    "Name": "칭호: '탐구자'",
+    "Group": "맞춤형 개인 식별자",
+    "Description": "<STELLAR>북극성<> 원정을 완료하고 주력함의 오랜 항해를 마친 것을 기념하는 독점 <STELLAR>탐험가 칭호<>입니다.\n\n<TECHNOLOGY>외모 수정기<>에서 이 칭호를 배너에 적용할 수 있습니다.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other296",
+    "Icon": "other/296.png",
+    "Name": "헬리오스 알",
+    "Group": "포획된 우주 원생동물",
+    "Description": "<TRADEABLE>부화 준비가 된<> 살아있는 수정란입니다!\n\n껍질 안에는 아름다우면서도 더러운 빛이 등불처럼 떠다닙니다.\n\n스캔 결과 내부 생명체는 <SPECIAL>젤리 같은<> 성질 및 <TECHNOLOGY>유체<> 같은 유전적 잠재력을 지니고 있습니다.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2987",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other297",
+    "Icon": "other/297.png",
+    "Name": "독점 함선",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>입니다. 다재다능한 구조와 균형잡힌 적재 능력을 갖추었습니다. 다양한 무기가 달려 있어 우주전에서 폭넓은 전술을 구사할 수 있습니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other298",
+    "Icon": "other/298.png",
+    "Name": "독점 함선",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>입니다. 공중전에 특화되었습니다. 우월한 기동성과 진보한 화력을 자랑하며 업그레이드된 <TECHNOLOGY>양전자 배출기<>가 달려 있습니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other299",
+    "Icon": "other/299.png",
+    "Name": "독점 함선",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>입니다. 화물 운송에 특화되었습니다. 업그레이드된 <TECHNOLOGY>편향 방어막<>과 <TECHNOLOGY>화물 스캔 편향기<>가 달려 있어, 합법 여부에 상관없이 귀중한 화물을 안전하게 옮기는 데 이상적입니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other300",
+    "Icon": "other/300.png",
+    "Name": "독점 함선",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>입니다. 최첨단 <TECHNOLOGY>하이퍼드라이브<> 기능을 갖추고 있으며 행성 간에 효율적이고 자유롭게 경로를 개척할 수 있는 <TECHNOLOGY>비상 워프 드라이브<>가 달려 있습니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other301",
+    "Icon": "other/301.png",
+    "Name": "독점 함선",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>입니다. 현대적이고 날렵하며 우주전에서 우위를 점할 수 있도록 <TECHNOLOGY>인프라나이프 가속기<>가 달려 있습니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other302",
+    "Icon": "other/302.png",
+    "Name": "독점 알",
+    "Group": "독점 반려동물의 알",
+    "Description": "살아있는 수정란으로 <TRADEABLE>곧 부화합니다!<>\n\n스캔 결과 내부 생명체는 즐거운 놀이만 찾으려는 버릇과 함께 유전적으로 <STELLAR>변덕스러운<> 성격을 가질 것으로 추정됩니다.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other303",
+    "Icon": "other/303.png",
+    "Name": "독점 알",
+    "Group": "독점 반려동물의 알",
+    "Description": "살아있는 수정란으로 <TRADEABLE>곧 부화합니다!<>\n\n스캔 결과 내부 생명체는 자신의 생에서 중심을 차지할 주인을 찾고자 갈망하며 유전적으로 <STELLAR>충실한<> 성격을 가질 것으로 추정됩니다.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other304",
+    "Icon": "other/304.png",
+    "Name": "독점 멀티툴",
+    "Group": "독점 다기능 생존 장치",
+    "Description": "독점 <STELLAR>멀티툴<>입니다. 강력한 대기 입자를 일제히 투하하며 충전 시간에 따라 폭발이 강해지는 <TECHNOLOGY>중성자 캐논<>이 달려 있습니다.\n\n멀티툴을 <STELLAR>챙겨<> 수집품에 추가하거나, 소지한 멀티툴과 <STELLAR>교환<>하십시오. 빠른 메뉴(<IMG>QUICK_MENU<>)의 유틸리티에서 활성화된 멀티툴을 교체하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other305",
+    "Icon": "other/305.png",
+    "Name": "독점 멀티툴",
+    "Group": "독점 다기능 생존 장치",
+    "Description": "독점 <STELLAR>멀티툴<>입니다. 공격자를 무력화하고 강력한 사격을 할 수 있는 전술 <TECHNOLOGY>마비 박격포<>와 치명적인 <TECHNOLOGY>블레이즈 자벨린<>이 달려 있습니다.\n\n멀티툴을 <STELLAR>챙겨<> 수집품에 추가하거나, 소지한 멀티툴과 <STELLAR>교환<>하십시오. 빠른 메뉴(<IMG>QUICK_MENU<>)의 유틸리티에서 활성화된 멀티툴을 교체하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other306",
+    "Icon": "other/306.png",
+    "Name": "독점 멀티툴",
+    "Group": "독점 다기능 생존 장치",
+    "Description": "독점 <STELLAR>멀티툴<>입니다. 적대적 대상과 마주칠 경우 몰래 탈출할 수 있도록 강력한 <TECHNOLOGY>은폐 장치<>가 달려 있습니다.\n\n멀티툴을 <STELLAR>챙겨<> 수집품에 추가하거나, 소지한 멀티툴과 <STELLAR>교환<>하십시오. 빠른 메뉴(<IMG>QUICK_MENU<>)의 유틸리티에서 활성화된 멀티툴을 교체하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other307",
+    "Icon": "other/124.png",
+    "Name": "아틀라스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "세 가지 종류의 호화로운 폭죽이 들어있는 팩입니다. <TECHNOLOGY>인듐<>, <COMMODITY>금<>, <FUEL>카드뮴<>이 폭발하는 모습은 아틀라스 인터페이스와 흡사합니다. 점화시키면 하늘에 광채를 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다. ",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other308",
+    "Icon": "other/124.png",
+    "Name": "아틀라스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "세 가지 종류의 호화로운 폭죽이 들어있는 팩입니다. <TECHNOLOGY>인듐<>, <COMMODITY>금<>, <FUEL>카드뮴<>이 폭발하는 모습은 아틀라스 인터페이스와 흡사합니다. 점화시키면 하늘에 광채를 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다. ",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other309",
+    "Icon": "other/124.png",
+    "Name": "아틀라스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "세 가지 종류의 호화로운 폭죽이 들어있는 팩입니다. <TECHNOLOGY>인듐<>, <COMMODITY>금<>, <FUEL>카드뮴<>이 폭발하는 모습은 아틀라스 인터페이스와 흡사합니다. 점화시키면 하늘에 광채를 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다. ",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other310",
+    "Icon": "other/124.png",
+    "Name": "아틀라스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "세 가지 종류의 호화로운 폭죽이 들어있는 팩입니다. <TECHNOLOGY>인듐<>, <COMMODITY>금<>, <FUEL>카드뮴<>이 폭발하는 모습은 아틀라스 인터페이스와 흡사합니다. 점화시키면 하늘에 광채를 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다. ",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other311",
+    "Icon": "other/124.png",
+    "Name": "아틀라스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "세 가지 종류의 호화로운 폭죽이 들어있는 팩입니다. <TECHNOLOGY>인듐<>, <COMMODITY>금<>, <FUEL>카드뮴<>이 폭발하는 모습은 아틀라스 인터페이스와 흡사합니다. 점화시키면 하늘에 광채를 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다. ",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

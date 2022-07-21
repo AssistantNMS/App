@@ -343,6 +343,32 @@ class DataJsonRepository extends BaseJsonService
   }
 
   @override
+  Future<ResultWithValue<MajorUpdateItem>> getLatestMajorUpdate(
+      BuildContext context) async {
+    ResultWithValue<List<MajorUpdateItem>> allItemsResult =
+        await getMajorUpdates(context);
+    if (allItemsResult.hasFailed) {
+      return ResultWithValue<MajorUpdateItem>(
+          false, null, allItemsResult.errorMessage);
+    }
+
+    try {
+      MajorUpdateItem item = allItemsResult.value.first;
+
+      if (item == null) {
+        return ResultWithValue<MajorUpdateItem>(false, null, 'No update found');
+      }
+
+      return ResultWithValue<MajorUpdateItem>(true, item, '');
+    } catch (exception) {
+      getLog().e(
+          "DataJsonRepository getLatestMajorUpdate Exception: ${exception.toString()}");
+      return ResultWithValue<MajorUpdateItem>(
+          false, null, exception.toString());
+    }
+  }
+
+  @override
   Future<ResultWithValue<MajorUpdateItem>> getMajorUpdatesForItem(
       BuildContext context, String itemId) async {
     ResultWithValue<List<MajorUpdateItem>> allItemsResult =

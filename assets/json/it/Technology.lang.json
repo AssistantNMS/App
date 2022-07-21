@@ -23,9 +23,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Batteria protezione rischi",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
+        "Name": "Protezione dal freddo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "1"
+      },
+      {
+        "Name": "Resistenza al calore",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "heat",
         "Value": "100"
       },
       {
@@ -35,27 +41,15 @@
         "Value": "100"
       },
       {
-        "Name": "Schermatura da tossicità",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "toxic",
-        "Value": "100"
-      },
-      {
-        "Name": "Schermatura dal gelo",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "cold",
-        "Value": "100"
-      },
-      {
         "Name": "Schermatura dal calore",
         "LocaleKeyTemplate": "enabled",
         "Image": "heat",
         "Value": "100"
       },
       {
-        "Name": "Tempo recupero scatto",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Name": "Schermatura da tossicità",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "toxic",
         "Value": "100"
       }
     ],
@@ -88,10 +82,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Batteria protezione rischi",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "Protezione dal freddo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -120,15 +114,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Serbatoi di supporto vitale",
+        "Name": "Alimentazione a pannelli solari",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "100"
       },
       {
-        "Name": "Alimentazione a pannelli solari",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Name": "Batteria protezione rischi",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
         "Value": "100"
       }
     ],
@@ -157,7 +151,7 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Serbatoi di supporto vitale",
+        "Name": "Alimentazione a pannelli solari",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "10"
@@ -191,24 +185,30 @@
         "Name": "Serbatoi jet pack",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "275"
+        "Value": "100"
       },
       {
         "Name": "Rendimento carburante",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Potenza spinta iniziale",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "damage",
-        "Value": "100"
+        "Value": "275"
       },
       {
         "Name": "Tasso di ricarica",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "Sistema di salto avanzato",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      },
+      {
+        "Name": "Potenza spinta iniziale",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "damage",
         "Value": "100"
       }
     ],
@@ -241,28 +241,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Serbatoi jet pack",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "jetpack",
-        "Value": "20"
-      },
-      {
-        "Name": "Tasso di ricarica",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
-        "Value": "10"
-      },
-      {
-        "Name": "Distanza scatto",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
-        "Value": "10"
-      },
-      {
-        "Name": "Tempo recupero scatto",
+        "Name": "Rendimento carburante",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "20"
+      },
+      {
+        "Name": "Potenza spinta iniziale",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "damage",
+        "Value": "110"
+      },
+      {
+        "Name": "Velocità scatto",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "unknown",
+        "Value": "0.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -294,9 +288,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Sistema di salto avanzato",
+        "Name": "Idrogetti efficienti",
         "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "water",
         "Value": "1"
       }
     ],
@@ -334,9 +328,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Resistenza al calore",
+        "Name": "Resistenza al freddo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "heat",
+        "Image": "cold",
         "Value": "20"
       }
     ],
@@ -374,9 +368,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Resistenza al freddo",
+        "Name": "Resistenza alle tossine",
         "LocaleKeyTemplate": "percentage",
-        "Image": "cold",
+        "Image": "toxic",
         "Value": "20"
       }
     ],
@@ -414,9 +408,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Resistenza alle tossine",
+        "Name": "Resistenza alle radiazioni",
         "LocaleKeyTemplate": "percentage",
-        "Image": "toxic",
+        "Image": "rad",
         "Value": "20"
       }
     ],
@@ -454,9 +448,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Resistenza alle radiazioni",
+        "Name": "Efficienza respirazione",
         "LocaleKeyTemplate": "percentage",
-        "Image": "rad",
+        "Image": "water",
         "Value": "20"
       }
     ],
@@ -493,10 +487,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Efficienza respirazione",
+        "Name": "Distanza scatto",
         "LocaleKeyTemplate": "percentage",
-        "Image": "water",
-        "Value": "33"
+        "Image": "recharge",
+        "Value": "133"
       }
     ],
     "ConsumableRewardTexts": []
@@ -554,14 +548,7 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Integrità nucleo",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "prot",
-        "Value": "20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -593,14 +580,7 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Integrità nucleo",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "prot",
-        "Value": "20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -662,9 +642,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Idrogetti efficienti",
+        "Name": "Ricarica aerea",
         "LocaleKeyTemplate": "enabled",
-        "Image": "water",
+        "Image": "recharge2",
         "Value": "1"
       }
     ],
@@ -701,10 +681,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Deviatore d'ossigeno",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "water",
-        "Value": "1"
+        "Name": "Schermatura dal gelo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "cold",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -730,14 +710,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Parole tradotte",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -769,14 +742,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Parole tradotte",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "2"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -808,14 +774,7 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Parole tradotte",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "3"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -843,14 +802,7 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Parole tradotte",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -858,7 +810,7 @@
     "Icon": "technology/23.png",
     "Name": "Motore a impulso",
     "Group": "Sistema di turbo per astronave",
-    "Description": "Propulsione spaziale che aumenta la velocità e permette il salto nei sistemi locali.\n \nPer ricaricare il motore è necessario del <EXOTIC>trizio<>, che abbonda nei <COMMODITY>campi di asteroidi vicino ai pianeti<>.\n\nTieni premuto <IMG>PULSEJUMP<> per attivare il salto a impulso.\nTieni premuto <IMG>BOOST<> per attivare il turbo durante il volo.",
+    "Description": "Propulsione spaziale che aumenta la velocità e permette il salto nei sistemi locali.\n \nPer ricaricare il motore è necessario del <EXOTIC>trizio<>, che abbonda nei <COMMODITY>campi di asteroidi vicino ai pianeti<>. Individua trizio con lo scanner (<IMG>SCAN<>) dell'astronave.\n\nTieni premuto <IMG>PULSEJUMP<> per attivare il salto a impulso.\nTieni premuto <IMG>BOOST<> per attivare il turbo durante il volo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -887,15 +839,21 @@
         "Value": "100"
       },
       {
-        "Name": "Turbo",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "9,900"
-      },
-      {
         "Name": "Potenza motore a impulso",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Manovrabilità",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "100"
+      },
+      {
+        "Name": "Turbo",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -928,22 +886,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Rendimento carburante motore a impulso",
+        "Name": "Potenza motore a impulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
+        "Image": "recharge2",
+        "Value": "85"
       },
       {
-        "Name": "Turbo",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
+        "Name": "Sistemi di supporto vitale interni attivati",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.1"
       },
       {
         "Name": "Manovrabilità",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "10"
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -979,6 +937,12 @@
         "Name": "Costo di lancio",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Ricarica automatica",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -1015,10 +979,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Costo di lancio",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "-20"
+        "Name": "Ricarica automatica",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "0.8"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1052,14 +1016,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Ricarica automatica",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1121,13 +1078,19 @@
         "Name": "Portata iperguida",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "100"
+        "Value": "1"
       },
       {
         "Name": "Efficienza celle di curvatura",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
+        "Value": "10,000"
+      },
+      {
+        "Name": "Attivazione istantanea iperguida",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1157,7 +1120,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Portata iperguida",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1185,7 +1155,14 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Portata iperguida",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1213,7 +1190,14 @@
         "Quantity": 5
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Portata iperguida",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1247,7 +1231,7 @@
         "Name": "Potenza scudo",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "0.65"
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1281,14 +1265,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Potenza scudo",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "0.05"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1318,10 +1295,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Cadenza",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "1"
+        "Name": "Dispersione di calore",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      },
+      {
+        "Name": "Gittata",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "Precisione",
@@ -1330,34 +1313,22 @@
         "Value": "100"
       },
       {
-        "Name": "Numero totale cannoni",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "Dispersione di calore",
+        "Name": "Recupero termico",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "0"
+        "Value": "-100"
       },
       {
-        "Name": "Danni",
+        "Name": "Cadenza",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "6,500"
       },
       {
-        "Name": "Gittata",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "5,000"
-      },
-      {
-        "Name": "Recupero termico",
+        "Name": "Numero totale cannoni",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "10"
+        "Image": "ammo",
+        "Value": "2.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1387,14 +1358,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Recupero termico",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "-20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1424,10 +1388,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Cadenza",
+        "Name": "Dispersione di calore",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "7.5"
+      },
+      {
+        "Name": "Gittata",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "Precisione",
@@ -1436,34 +1406,22 @@
         "Value": "100"
       },
       {
-        "Name": "Numero totale cannoni",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "Dispersione di calore",
+        "Name": "Recupero termico",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
         "Value": "7.5"
       },
       {
-        "Name": "Danni",
+        "Name": "Cadenza",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "320"
       },
       {
-        "Name": "Gittata",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,500"
-      },
-      {
-        "Name": "Recupero termico",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Name": "Numero totale cannoni",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "6"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1551,22 +1509,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Dispersione di calore",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "150"
-      },
-      {
         "Name": "Danni",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "250"
+        "Value": "1"
       },
       {
-        "Name": "Ricarica dello scudo all'impatto",
+        "Name": "Dispersione di calore",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "shieldStrength",
-        "Value": "0.2"
+        "Image": "time",
+        "Value": "250"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1596,20 +1548,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Dispersione di calore",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "10"
-      },
-      {
-        "Name": "Ricarica dello scudo all'impatto",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "shieldStrength",
-        "Value": "0.1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1639,45 +1578,39 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Cadenza",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "2"
+        "Name": "Dispersione di calore",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      },
+      {
+        "Name": "Gittata",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "900"
       },
       {
         "Name": "Precisione",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "1,000"
+        "Value": "1,400"
+      },
+      {
+        "Name": "Recupero termico",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "1.5"
+      },
+      {
+        "Name": "Cadenza",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "280"
       },
       {
         "Name": "Numero totale cannoni",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "14"
-      },
-      {
-        "Name": "Dispersione di calore",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "50"
-      },
-      {
-        "Name": "Danni",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "280"
-      },
-      {
-        "Name": "Gittata",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "500"
-      },
-      {
-        "Name": "Recupero termico",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
         "Value": "100"
       }
     ],
@@ -1710,16 +1643,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Precisione",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
-        "Value": "20"
-      },
-      {
         "Name": "Gittata",
         "LocaleKeyTemplate": "percentage",
         "Image": "range",
-        "Value": "25"
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1751,46 +1678,40 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Cadenza",
+        "Name": "Dispersione di calore",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "9"
+      },
+      {
+        "Name": "Gittata",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "50"
       },
       {
         "Name": "Precisione",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "50"
+        "Value": "100"
+      },
+      {
+        "Name": "Recupero termico",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "3"
+      },
+      {
+        "Name": "Cadenza",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "205"
       },
       {
         "Name": "Numero totale cannoni",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "Dispersione di calore",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "200"
-      },
-      {
-        "Name": "Danni",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "205"
-      },
-      {
-        "Name": "Gittata",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "2,200"
-      },
-      {
-        "Name": "Recupero termico",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "6.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1826,10 +1747,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Dispersione di calore",
-        "LocaleKeyTemplate": "percentage",
+        "Name": "Recupero termico",
+        "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
-        "Value": "20"
+        "Value": "1.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1861,46 +1782,40 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Cadenza",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "3"
+        "Name": "Dispersione di calore",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "200"
+      },
+      {
+        "Name": "Gittata",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "100"
       },
       {
         "Name": "Precisione",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "100"
+        "Value": "200"
+      },
+      {
+        "Name": "Recupero termico",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "2"
+      },
+      {
+        "Name": "Cadenza",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "600"
       },
       {
         "Name": "Numero totale cannoni",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "2"
-      },
-      {
-        "Name": "Dispersione di calore",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "Danni",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "600"
-      },
-      {
-        "Name": "Gittata",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,250"
-      },
-      {
-        "Name": "Recupero termico",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "3"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1932,10 +1847,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Dispersione di calore",
-        "LocaleKeyTemplate": "percentage",
+        "Name": "Recupero termico",
+        "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
-        "Value": "10"
+        "Value": "1.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1972,12 +1887,6 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Portata iperguida",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "100"
-      },
-      {
         "Name": "Efficienza celle di curvatura",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
@@ -1987,6 +1896,12 @@
         "Name": "Coordinamento flotta",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "1"
+      },
+      {
+        "Name": "Difese spedizione",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
         "Value": "1"
       }
     ],
@@ -2222,6 +2137,12 @@
         "Value": "100"
       },
       {
+        "Name": "Prospezione attiva",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      },
+      {
         "Name": "Ricompense analisi della fauna",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
@@ -2314,9 +2235,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Prospezione attiva",
+        "Name": "Stordimento biomeccanico",
         "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "lightning",
         "Value": "1"
       }
     ],
@@ -2806,22 +2727,16 @@
         "Value": "100"
       },
       {
-        "Name": "Innesco post-impatto",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "damage",
-        "Value": "1"
-      },
-      {
         "Name": "Durata fuoco dell'impatto",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "5"
+        "Value": "1"
       },
       {
         "Name": "Danni fuoco dell'impatto",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "50"
+        "Value": "5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3404,15 +3319,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Utilizzo carburante",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "Velocità massima",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "Dimensioni serbatoio turbo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
         "Value": "100"
       },
       {
@@ -3422,10 +3337,10 @@
         "Value": "100"
       },
       {
-        "Name": "Aderenza in curva",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
+        "Name": "Potenza laser minerario",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3461,16 +3376,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Trazione",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "300"
-      },
-      {
-        "Name": "Aderenza in curva",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
+        "Name": "Potenza laser minerario",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "0.66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3506,16 +3415,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Trazione",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "50"
-      },
-      {
-        "Name": "Aderenza in curva",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "210"
+        "Name": "Potenza laser minerario",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "2.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3551,16 +3454,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Trazione",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "50"
-      },
-      {
-        "Name": "Aderenza in curva",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
+        "Name": "Potenza laser minerario",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "0.66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3592,9 +3489,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Scansiona",
+        "Name": "Potenza turbo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -3631,9 +3528,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Scansiona",
+        "Name": "Potenza turbo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -3670,21 +3567,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Turbo",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "Utilizzo carburante",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       },
       {
-        "Name": "Potenza turbo",
+        "Name": "Aderenza in curva",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "Dimensioni serbatoio turbo",
+        "Name": "Accelerazione",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -3721,16 +3618,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Potenza laser minerario",
+        "Name": "Danni",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "80"
-      },
-      {
-        "Name": "Efficienza laser minerario",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Image": "damage",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3762,16 +3653,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Potenza laser minerario",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
-        "Name": "Laser minerario avanzato da exoscafo",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "Efficienza energetica arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3803,22 +3688,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Danni",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "320"
-      },
-      {
-        "Name": "Efficienza energetica arma",
+        "Name": "Pannelli solari exoscafo",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Cadenza di fuoco",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3851,21 +3724,27 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Utilizzo carburante",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "Velocità massima",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
       },
       {
-        "Name": "Accelerazione",
+        "Name": "Dimensioni serbatoio turbo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
+        "Value": "100"
+      },
+      {
+        "Name": "Trazione",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Efficienza laser minerario",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
         "Value": "100"
       }
     ],
@@ -3902,22 +3781,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Danni",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "220"
-      },
-      {
-        "Name": "Efficienza energetica arma",
+        "Name": "Pannelli solari exoscafo",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Cadenza di fuoco",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3953,22 +3820,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Potenza laser minerario",
+        "Name": "Danni",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "240"
-      },
-      {
-        "Name": "Efficienza laser minerario",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "Laser minerario avanzato da exoscafo",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "damage",
         "Value": "1"
+      },
+      {
+        "Name": "Efficienza energetica arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4004,9 +3865,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Scansiona",
+        "Name": "Potenza turbo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -4043,10 +3904,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Utilizzo carburante",
+        "Name": "Dimensioni serbatoio turbo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-20"
+        "Image": "ammo",
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4832,14 +4693,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Portata iperguida",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "200"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4871,14 +4725,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Portata iperguida",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "300"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4910,14 +4757,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Portata iperguida",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "800"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4949,14 +4789,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Portata iperguida",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4988,14 +4821,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Portata iperguida",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5027,14 +4853,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Portata iperguida",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5066,14 +4885,7 @@
         "Quantity": 150
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Ricarica aerea",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recharge2",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5101,7 +4913,14 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Parole tradotte",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "translate",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -5135,10 +4954,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Rendimento carburante motore a impulso",
+        "Name": "Potenza motore a impulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "34"
+        "Image": "recharge2",
+        "Value": "66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5174,10 +4993,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Potenza motore a impulso",
+        "Name": "Turbo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "130"
+        "Image": "recovery",
+        "Value": "30"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5211,14 +5030,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Attivazione istantanea iperguida",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5252,10 +5064,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Numero totale cannoni",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "3"
+        "Name": "Precisione",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "300"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5653,15 +5465,21 @@
         "Value": "100"
       },
       {
-        "Name": "Turbo",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "9,900"
-      },
-      {
         "Name": "Potenza motore a impulso",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
+        "Value": "50"
+      },
+      {
+        "Name": "Manovrabilità",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "100"
+      },
+      {
+        "Name": "Turbo",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -5699,6 +5517,12 @@
         "Name": "Costo di lancio",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Ricarica automatica",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -5736,13 +5560,19 @@
         "Name": "Portata iperguida",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "100"
+        "Value": "1"
       },
       {
         "Name": "Efficienza celle di curvatura",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
+        "Value": "10,000"
+      },
+      {
+        "Name": "Attivazione istantanea iperguida",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5779,7 +5609,7 @@
         "Name": "Potenza scudo",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "0.65"
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5812,10 +5642,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Cadenza",
+        "Name": "Dispersione di calore",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "10"
+      },
+      {
+        "Name": "Gittata",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "Precisione",
@@ -5824,34 +5660,22 @@
         "Value": "100"
       },
       {
+        "Name": "Recupero termico",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "10"
+      },
+      {
+        "Name": "Cadenza",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "340"
+      },
+      {
         "Name": "Numero totale cannoni",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "Dispersione di calore",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "7.5"
-      },
-      {
-        "Name": "Danni",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "320"
-      },
-      {
-        "Name": "Gittata",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,500"
-      },
-      {
-        "Name": "Recupero termico",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "6"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5884,16 +5708,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Dispersione di calore",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "3.5"
-      },
-      {
         "Name": "Danni",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "250"
+        "Value": "1"
+      },
+      {
+        "Name": "Dispersione di calore",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "280"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5927,7 +5751,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Efficienza spedizione",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recovery",
+        "Value": "10,000"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -6064,9 +5895,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Protezione dal calore",
+        "Name": "Protezione dalle tossine",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "heat",
+        "Image": "toxic",
         "Value": "3"
       }
     ],
@@ -6104,9 +5935,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Protezione dal freddo",
+        "Name": "Protezione dal calore",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
+        "Image": "heat",
         "Value": "3"
       }
     ],
@@ -6144,9 +5975,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Protezione dalle tossine",
+        "Name": "Protezione dalle radiazioni",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
+        "Image": "rad",
         "Value": "3"
       }
     ],
@@ -6184,9 +6015,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Protezione dalle radiazioni",
+        "Name": "Serbatoio di ossigeno",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "rad",
+        "Image": "oxygen",
         "Value": "3"
       }
     ],
@@ -6222,14 +6053,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Pannelli solari exoscafo",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "400"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -6264,9 +6088,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Scansiona",
+        "Name": "Potenza turbo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -6304,16 +6128,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Utilizzo carburante",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-50"
-      },
-      {
         "Name": "Velocità massima",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
+      },
+      {
+        "Name": "Dimensioni serbatoio turbo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "50"
       },
       {
         "Name": "Trazione",
@@ -6322,10 +6146,10 @@
         "Value": "100"
       },
       {
-        "Name": "Aderenza in curva",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
+        "Name": "Potenza laser minerario",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6362,10 +6186,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Utilizzo carburante",
+        "Name": "Dimensioni serbatoio turbo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-20"
+        "Image": "ammo",
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6402,9 +6226,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Scansiona",
+        "Name": "Potenza turbo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -6442,21 +6266,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Turbo",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "Utilizzo carburante",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       },
       {
-        "Name": "Potenza turbo",
+        "Name": "Aderenza in curva",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "Dimensioni serbatoio turbo",
+        "Name": "Accelerazione",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -6494,16 +6318,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Potenza laser minerario",
+        "Name": "Danni",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "100"
-      },
-      {
-        "Name": "Efficienza laser minerario",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Image": "damage",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6536,16 +6354,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Potenza laser minerario",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
-        "Name": "Laser minerario avanzato da exoscafo",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "Efficienza energetica arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6582,22 +6394,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Danni",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "420"
-      },
-      {
-        "Name": "Efficienza energetica arma",
+        "Name": "Pannelli solari exoscafo",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Cadenza di fuoco",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.35"
+        "Value": "35"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6667,27 +6467,27 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Protezione dalle tossine",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "toxic",
+        "Value": "1"
+      },
+      {
         "Name": "Protezione dal calore",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "heat",
         "Value": "1"
       },
       {
-        "Name": "Protezione dal freddo",
+        "Name": "Serbatoio di ossigeno",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
+        "Image": "oxygen",
         "Value": "1"
       },
       {
         "Name": "Protezione dalle radiazioni",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "rad",
-        "Value": "1"
-      },
-      {
-        "Name": "Protezione dalle tossine",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
         "Value": "1"
       }
     ],
@@ -6885,6 +6685,12 @@
         "Name": "Costo di lancio",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "Ricarica automatica",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "25"
       }
     ],
@@ -6895,7 +6701,7 @@
     "Icon": "products/79.png",
     "Name": "Motore a onde",
     "Group": "Motore dell'astronave altamente personalizzato",
-    "Description": "Una versione migliorata del <TECHNOLOGY>motore a impulso<> delle astronavi tradizionali. La capacità del fronte d'onda è stata potenziata al massimo, creando una propulsione tanto <STELLAR>efficiente<> quanto <STELLAR>estremamente reattiva<>.\n\nPer ricaricare il motore è necessario del <EXOTIC>trizio<>, che abbonda nei <COMMODITY>campi di asteroidi vicino ai pianeti<>.\n\nTieni premuto <IMG>PULSEJUMP<> per attivare il salto a impulso. Tieni premuto <IMG>BOOST<> per attivare il turbo durante il volo.",
+    "Description": "Una versione migliorata del <TECHNOLOGY>motore a impulso<> delle astronavi tradizionali. La capacità del fronte d'onda è stata potenziata al massimo, creando una propulsione tanto <STELLAR>efficiente<> quanto <STELLAR>estremamente reattiva<>.\n\nPer ricaricare il motore è necessario del <EXOTIC>trizio<>, che abbonda nei <COMMODITY>campi di asteroidi vicino ai pianeti<>. Scansiona (<IMG>SCAN<>) per cercare <TECHNOLOGY>asteroidi ricchi di trizio<>.\n\nTieni premuto <IMG>PULSEJUMP<> per attivare il salto a impulso. Tieni premuto <IMG>BOOST<> per attivare il turbo durante il volo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -6925,12 +6731,6 @@
         "Value": "100"
       },
       {
-        "Name": "Turbo",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "11,900"
-      },
-      {
         "Name": "Potenza motore a impulso",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
@@ -6940,7 +6740,25 @@
         "Name": "Manovrabilità",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "25"
+        "Value": "10"
+      },
+      {
+        "Name": "Turbo",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "Sistemi di supporto vitale interni attivati",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.25"
+      },
+      {
+        "Name": "Manovrabilità",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6981,13 +6799,19 @@
         "Name": "Portata iperguida",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "600"
+        "Value": "1"
       },
       {
         "Name": "Efficienza celle di curvatura",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "200"
+        "Value": "60,000"
+      },
+      {
+        "Name": "Attivazione istantanea iperguida",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7019,14 +6843,7 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Sistemi di supporto vitale interni attivati",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -7061,10 +6878,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Batteria protezione rischi",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "Protezione dal freddo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7101,10 +6918,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Batteria protezione rischi",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "Protezione dal freddo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7484,15 +7301,15 @@
         "Value": "300"
       },
       {
-        "Name": "Stordimento biomeccanico",
-        "LocaleKeyTemplate": "enabled",
+        "Name": "Durata stordimento",
+        "LocaleKeyTemplate": "seconds",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "Durata stordimento",
-        "LocaleKeyTemplate": "seconds",
-        "Image": "lightning",
+        "Name": "Danni a entità stordite",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "3.5"
       },
       {
@@ -7535,15 +7352,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Stordimento biomeccanico",
-        "LocaleKeyTemplate": "enabled",
+        "Name": "Durata stordimento",
+        "LocaleKeyTemplate": "seconds",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "Durata stordimento",
-        "LocaleKeyTemplate": "seconds",
-        "Image": "lightning",
+        "Name": "Danni a entità stordite",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "5"
       }
     ],
@@ -7580,22 +7397,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Innesco post-impatto",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "damage",
-        "Value": "1"
-      },
-      {
         "Name": "Durata fuoco dell'impatto",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "3.5"
+        "Value": "1"
       },
       {
         "Name": "Danni fuoco dell'impatto",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "80"
+        "Value": "3.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7761,8 +7572,8 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Danni a entità stordite",
-        "LocaleKeyTemplate": "defaultTemplate",
+        "Name": "Innesco post-impatto",
+        "LocaleKeyTemplate": "enabled",
         "Image": "damage",
         "Value": "1.2"
       }
@@ -7799,14 +7610,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Pilota IA Minotauro",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -7841,34 +7645,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Danni a entità stordite",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "5"
-      },
-      {
-        "Name": "Potenza laser minerario",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
         "Name": "Innesco post-impatto",
         "LocaleKeyTemplate": "enabled",
         "Image": "damage",
-        "Value": "1"
+        "Value": "5"
       },
       {
         "Name": "Durata fuoco dell'impatto",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "3.5"
+        "Value": "1"
       },
       {
         "Name": "Danni fuoco dell'impatto",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "80"
+        "Value": "3.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7905,22 +7697,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Danni",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "20"
-      },
-      {
-        "Name": "Efficienza energetica arma",
+        "Name": "Pannelli solari exoscafo",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Cadenza di fuoco",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7953,15 +7733,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Utilizzo carburante",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-10"
-      },
-      {
         "Name": "Dimensioni serbatoio turbo",
         "LocaleKeyTemplate": "percentage",
         "Image": "ammo",
+        "Value": "90"
+      },
+      {
+        "Name": "Accelerazione",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
         "Value": "25"
       }
     ],
@@ -7997,14 +7777,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Pilota IA Minotauro",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8037,7 +7810,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Portata iperguida",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -8062,14 +7842,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Turbo",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8100,28 +7873,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Rendimento carburante motore a impulso",
+        "Name": "Potenza motore a impulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "80"
+        "Image": "recharge2",
+        "Value": "20"
       },
       {
-        "Name": "Ricarica automatica",
+        "Name": "Sistemi di supporto vitale interni attivati",
         "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "1"
-      },
-      {
-        "Name": "Turbo",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
-      },
-      {
-        "Name": "Manovrabilità",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "10"
+        "Image": "prot",
+        "Value": "1.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8148,14 +7909,273 @@
         "Quantity": 10
       }
     ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech220",
+    "Icon": "technology/144.png",
+    "Name": "Override dell'assistenza di volo",
+    "Group": "Modulo pilota astronave avanzato",
+    "Description": "Questo modulo elettronico proveniente dal mercato grigio disabilita i moduli critici di sicurezza e assistenza del pilota solitamente integrati nel sistema di controllo di volo elettrico dell'astronave. Nonostante il fatto che sia di dubbia legalità e il suo coinvolgimento in diversi impatti con asteroidi ad alta velocità, questo modulo rimane popolare tra contrabbandieri, mercenari e quelli che si considerano piloti esperti.\n\nMesso a punto appositamente per aumentare la capacità dell'astronave di <STELLAR>derapare<> durante il volo nello spazio.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 460,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 200
+      },
+      {
+        "Id": "raw34",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 1
+      }
+    ],
     "StatBonuses": [
       {
-        "Name": "Turbo",
+        "Name": "Sistemi di supporto vitale interni attivati",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.1"
+      },
+      {
+        "Name": "Manovrabilità",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "target",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech221",
+    "Icon": "technology/221.png",
+    "Name": "Scanner interstellare",
+    "Group": "Tecnologia di sensori a lungo raggio",
+    "Description": "Un potenziamento per i <TECHNOLOGY>sensori galattici dell'astronave<>.\n\nQuesto dispositivo permette di ottenere <STELLAR>informazioni economiche e militari dettagliate<> su un sistema senza averlo visitato in precedenza.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 70
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 160
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech222",
+    "Icon": "technology/221.png",
+    "Name": "Motore a singolarità",
+    "Group": "Motore a propulsione di portali",
+    "Description": "Una componente instabile e altamente sperimentale di <TECHNOLOGY>tecnologia di iperguida mercantile<>. Questo dispositivo a gravità estrema genera un <SPECIAL>portale<> nel cuore del reattore del mercantile, invertendo l'intera nave e trasportandola nell'universo.\n\nParla con il <STELLAR>comandante del mercantile<> per avviare il motore. <FUEL>Attenzione<>: la destinazione non è controllabile.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Velocità spedizione",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech223",
+    "Icon": "technology/223.png",
+    "Name": "Unità di controllo atmosferico",
+    "Group": "Modulo di supporto vitale del mercantile",
+    "Description": "Un importante sottosistema del mercantile, essenziale per il mantenimento di un ambiente abitabile e sicuro per tutte le forme di vita organiche a bordo.\n\nCapace di generare un'<STELLAR>atmosfera respirabile<> limitata anche quando danneggiato o non alimentato, ma solo per un breve periodo di tempo.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 120
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech224",
+    "Icon": "products/82.png",
+    "Name": "Scudo neurale",
+    "Group": "Deflettore di sonde ostili",
+    "Description": "Una bellissima trama vivente di nanotubi, intrecciata nell'assemblaggio neurale della nave. Questa struttura può essere alimentata quando la nave lo ritiene opportuno, creando un campo che <STELLER>blocca<> le <STELLAR>sonde cargo<> ostili.\n\nUsa il <TECHNOLOGY>menu rapido<> (<IMG>QUICK_MENU<>) mentre è in corso una scansione per chiedere alla nave di bloccare la scansione.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Portata iperguida",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
         "Value": "1"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech225",
+    "Icon": "products/83.png",
+    "Name": "Membrana di cloroplasti",
+    "Group": "Nodo della nave senziente",
+    "Description": "Una membrana piena di cianobatteri che si trova appena sotto lo strato dermico traslucido della nave.\n\nLa membrana <STELLAR>ricarica automaticamente l'assemblaggio neurale<> quando è esposta alla luce solare.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 460,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech226",
+    "Icon": "products/85.png",
+    "Name": "Cervello portale",
+    "Group": "Nodo della nave senziente",
+    "Description": "Il cervello portale consente alla nave di <TECHNOLOGY>visualizzare sistemi molto lontani<>. È costituito da filamenti di materia neurale avvolti attorno a una micro singolarità e legati direttamente alla corteccia visiva della nave.\n\nI <STELLAR>dati economici e bellici dettagliati<> saranno disponibili sulla mappa galattica, se la nave lo consentirà.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech227",
+    "Icon": "technology/118.png",
+    "Name": "Unità di estrazione",
+    "Group": "Nucleo dell'estrattore stellare",
+    "Description": "Raccoglie risorse direttamente dal mezzo interstellare, tramite un complesso sistema di prese di aspirazione e tubi di condensazione. La sostanza raccolta <TECHNOLOGY>varia<> in base alla <TECHNOLOGY>classificazione stellare<> locale.\n\nAlimentata direttamente dal circuito elettrico principale del mercantile. Il suo funzionamento è completamente <STELLAR>autonomo<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]

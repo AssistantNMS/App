@@ -23,9 +23,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "유해 요소 방호 배터리",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
+        "Name": "냉기 보호",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "1"
+      },
+      {
+        "Name": "열 저항",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "heat",
         "Value": "100"
       },
       {
@@ -35,27 +41,15 @@
         "Value": "100"
       },
       {
-        "Name": "독 피해 방호",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "toxic",
-        "Value": "100"
-      },
-      {
-        "Name": "냉기 피해 방호",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "cold",
-        "Value": "100"
-      },
-      {
         "Name": "열 피해 방호",
         "LocaleKeyTemplate": "enabled",
         "Image": "heat",
         "Value": "100"
       },
       {
-        "Name": "달리기 회복 시간",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Name": "독 피해 방호",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "toxic",
         "Value": "100"
       }
     ],
@@ -88,10 +82,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "유해 요소 방호 배터리",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "냉기 보호",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -99,9 +93,9 @@
   {
     "Id": "tech3",
     "Icon": "technology/3.png",
-    "Name": "생명 유지 장치",
+    "Name": "생명유지장치",
     "Group": "슈트 생존 파워팩",
-    "Description": "엑소 슈트의 주요 기능인 <TECHNOLOGY>생명유지장치<>는 지속적으로 호흡 가능한 <FUEL>산소<>를 필터링하고 제공합니다.\n\n엑소슈트의 사용자의 생존을 보장하는 것 뿐 아니라, 생명유지장치는 여분의 산소를 이용해 보조 장치를 위한 에너지를 생산합니다. 이 장치들에는 <TECHNOLOGY>제트팩<>, <TECHNOLOGY>속도 강화기<> 그리고 <TECHNOLOGY>토치<> 등이 포함됩니다.",
+    "Description": "엑소 슈트의 주요 기능인 <TECHNOLOGY>생명유지장치<>는 지속적으로 호흡 가능한 <FUEL>산소<>를 필터링하고 제공합니다.\n\n생명유지장치는 엑소슈트의 사용자의 생존을 보장할 뿐 아니라, 여분의 산소를 이용해 보조 장치를 위한 에너지를 생산합니다. 이 장치에는 <TECHNOLOGY>제트팩<>, <TECHNOLOGY>속도 강화기<>, <TECHNOLOGY>토치<> 등이 포함됩니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -120,15 +114,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "생명유지 탱크",
+        "Name": "태양전지 동력",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "100"
       },
       {
-        "Name": "태양전지 동력",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Name": "유해 요소 방호 배터리",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
         "Value": "100"
       }
     ],
@@ -157,7 +151,7 @@
     ],
     "StatBonuses": [
       {
-        "Name": "생명유지 탱크",
+        "Name": "태양전지 동력",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "10"
@@ -191,24 +185,30 @@
         "Name": "제트팩 탱크",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "275"
+        "Value": "100"
       },
       {
         "Name": "연료 효율",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "초기 추력",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "damage",
-        "Value": "100"
+        "Value": "275"
       },
       {
         "Name": "재충전률",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "개량형 점프 시스템",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      },
+      {
+        "Name": "초기 추력",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "damage",
         "Value": "100"
       }
     ],
@@ -241,28 +241,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "제트팩 탱크",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "jetpack",
-        "Value": "20"
-      },
-      {
-        "Name": "재충전률",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
-        "Value": "10"
-      },
-      {
-        "Name": "달리기 거리",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
-        "Value": "10"
-      },
-      {
-        "Name": "달리기 회복 시간",
+        "Name": "연료 효율",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "20"
+      },
+      {
+        "Name": "초기 추력",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "damage",
+        "Value": "110"
+      },
+      {
+        "Name": "달리기 속도",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "unknown",
+        "Value": "0.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -294,9 +288,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "개량형 점프 시스템",
+        "Name": "효율적인 워터제트",
         "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "water",
         "Value": "1"
       }
     ],
@@ -306,7 +300,7 @@
     "Id": "tech8",
     "Icon": "technology/8.png",
     "Name": "냉각제 유동망",
-    "Group": "유해 요소 방호 유닛",
+    "Group": "유해 요소 방호 장비 유닛",
     "Description": "사용자는 극도로 뜨거운 세계에서 열기에 대한 보호를 받습니다.\n\n표피 분산망을 통해 저장되어 있는 액체 프레늄을 방출해 사용자가 대기 또는 태양에서 발생하는 열을 일시적으로 중화합니다.\n\n장치는 뜨거운 환경에서 찾을 수 있는 <EARTH>광물 추출물<>로 충전합니다. 사용자의 엑소슈트 인벤토리에 설치되면 자동으로 작동합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -334,9 +328,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "열 저항",
+        "Name": "냉기 저항",
         "LocaleKeyTemplate": "percentage",
-        "Image": "heat",
+        "Image": "cold",
         "Value": "20"
       }
     ],
@@ -346,7 +340,7 @@
     "Id": "tech9",
     "Icon": "technology/9.png",
     "Name": "보온층",
-    "Group": "유해 요소 방호 유닛",
+    "Group": "유해 요소 방호 장비 유닛",
     "Description": "사용자는 극도로 추운 세계에서 추위에 대한 보호를 받습니다.\n\n사용자의 엑소슈트에 몸의 표면 전체로 캘리듐을 고르게 분산시켜주는 열 전달 통로가 존재하며, 편안한 신체 온도를 유지합니다.\n\n장치는 얼어 붙은 환경에서 찾을 수 있는 <EARTH>광물 추출물<>로 충전합니다. 사용자의 엑소슈트 인벤토리에 설치되면 자동으로 작동합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -374,9 +368,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "냉기 저항",
+        "Name": "독소 저항",
         "LocaleKeyTemplate": "percentage",
-        "Image": "cold",
+        "Image": "toxic",
         "Value": "20"
       }
     ],
@@ -386,7 +380,7 @@
     "Id": "tech10",
     "Icon": "technology/10.png",
     "Name": "독소 억제기",
-    "Group": "유해 요소 방호 유닛",
+    "Group": "유해 요소 방호 장비 유닛",
     "Description": "사용자는 독성 피해에 대한 보호를 받습니다.\n\n억제기 내의 반응물이 사용자와 접촉하는 독성 액체를 제거해 질식 위험 등을 낮춰줍니다.\n\n장치는 독성 환경에서 찾을 수 있는 <EARTH>광물 추출물<>로 충전합니다. 사용자의 엑소슈트 인벤토리에 설치되면 자동으로 작동합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -414,9 +408,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "독소 저항",
+        "Name": "방사선 저항",
         "LocaleKeyTemplate": "percentage",
-        "Image": "toxic",
+        "Image": "rad",
         "Value": "20"
       }
     ],
@@ -426,7 +420,7 @@
     "Id": "tech11",
     "Icon": "technology/11.png",
     "Name": "방사선 편향기",
-    "Group": "유해 요소 방호 유닛",
+    "Group": "유해 요소 방호 장비 유닛",
     "Description": "사용자가 방사능 피해에 대한 보호를 받습니다.\n\n방사능을 유발하는 행성계를 탐사할 때 사용자의 위험도를 크게 낮춰줍니다. 미세진동으로 전자기파 반사를 증가시켜 흡수율을 낮춰줍니다. \n\n장치는 방사성 환경에서 찾을 수 있는 <EARTH>광물 추출물<>로 충전합니다. 사용자의 엑소슈트 인벤토리에 설치되면 자동으로 작동합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -454,9 +448,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "방사선 저항",
+        "Name": "호흡 효율",
         "LocaleKeyTemplate": "percentage",
-        "Image": "rad",
+        "Image": "water",
         "Value": "20"
       }
     ],
@@ -493,10 +487,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "호흡 효율",
+        "Name": "달리기 거리",
         "LocaleKeyTemplate": "percentage",
-        "Image": "water",
-        "Value": "33"
+        "Image": "recharge",
+        "Value": "133"
       }
     ],
     "ConsumableRewardTexts": []
@@ -506,7 +500,7 @@
     "Icon": "technology/13.png",
     "Name": "방호장갑",
     "Group": "엑소슈트 증강물",
-    "Description": "<TECHNOLOGY>엑소슈트 장갑<>의 금속 보호대를 업그레이드 합니다.\n\n강화 금속과 촉매 보호제를 높은 수준으로 혼합하여 사용자가 안전하게 <CATALYST>유해 요소<>를 다룰 수 있고 특정 <TRADEABLE>재배 가능<> 식물을 채집하기 위한 힘을 제공합니다.",
+    "Description": "<TECHNOLOGY>엑소슈트 장갑<>의 금속 보호대를 업그레이드 합니다.\n\n강화 금속과 촉매 보호제를 높은 수준으로 혼합하여, 사용자가 안전하게 <CATALYST>유해 요소<>를 다룰 수 있고 특정 <TRADEABLE>재배 가능<> 식물을 채집하기 위한 힘을 제공합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -554,14 +548,7 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "코어 내구도",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "prot",
-        "Value": "20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -593,14 +580,7 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "코어 내구도",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "prot",
-        "Value": "20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -662,9 +642,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "효율적인 워터제트",
+        "Name": "공중 재충전",
         "LocaleKeyTemplate": "enabled",
-        "Image": "water",
+        "Image": "recharge2",
         "Value": "1"
       }
     ],
@@ -701,10 +681,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "산소 공급 재분배",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "water",
-        "Value": "1"
+        "Name": "냉기 피해 방호",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "cold",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -730,14 +710,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "번역한 단어 수",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -769,14 +742,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "번역한 단어 수",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "2"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -808,14 +774,7 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "번역한 단어 수",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "3"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -843,14 +802,7 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "번역한 단어 수",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -858,7 +810,7 @@
     "Icon": "technology/23.png",
     "Name": "펄스 엔진",
     "Group": "함선 비행 부스터",
-    "Description": "우주 비행 추진체, 부스트 및 선택적인 펄스 점프를 통해 인접 행성계 사이를 이동할 수 있습니다.\n \n펄스 엔진의 충전 시에는 <EXOTIC>삼중 수소<>를 사용하는 것이 좋습니다. 삼중 수소는 <COMMODITY>가까운 우주의 소행성대<>에 풍족합니다.\n\n<IMG>PULSEJUMP<>을 길게 눌러 펄스 점프를 개시합니다.\n<IMG>BOOST<>을 눌러 비행 시 속도 부스트를 사용합니다.",
+    "Description": "우주 비행 추진체, 부스트 및 선택적인 펄스 점프를 통해 인접 행성계 사이를 이동할 수 있습니다.\n \n펄스 엔진의 충전 시에는 <EXOTIC>삼중 수소<>를 사용하는 것이 좋습니다. 삼중 수소는 <COMMODITY>가까운 우주의 소행성대<>에 풍족합니다. 함선 스캐너(<IMG>SCAN<>)로 삼중 수소를 발견합니다.\n\n<IMG>PULSEJUMP<>을 길게 눌러 펄스 점프를 개시합니다.\n<IMG>BOOST<>을 눌러 비행 시 속도 부스트를 사용합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -887,15 +839,21 @@
         "Value": "100"
       },
       {
-        "Name": "부스트",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "9,900"
-      },
-      {
         "Name": "펄스 드라이브 동력",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "기동성",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "100"
+      },
+      {
+        "Name": "부스트",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -928,22 +886,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "펄스드라이브 연료 효율",
+        "Name": "펄스 드라이브 동력",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
+        "Image": "recharge2",
+        "Value": "85"
       },
       {
-        "Name": "부스트",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
+        "Name": "내부 생명 유지 장치 사용 가능",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.1"
       },
       {
         "Name": "기동성",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "10"
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -979,6 +937,12 @@
         "Name": "발진 가격",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "자동 재충전 중",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -1015,10 +979,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "발진 가격",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "-20"
+        "Name": "자동 재충전 중",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "0.8"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1052,14 +1016,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "자동 재충전 중",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1121,13 +1078,19 @@
         "Name": "하이퍼드라이브 거리",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "100"
+        "Value": "1"
       },
       {
         "Name": "워프 셀 효율",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
+        "Value": "10,000"
+      },
+      {
+        "Name": "즉각적인 긴급 하이퍼드라이브",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1157,7 +1120,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "하이퍼드라이브 거리",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1185,7 +1155,14 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "하이퍼드라이브 거리",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1213,7 +1190,14 @@
         "Quantity": 5
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "하이퍼드라이브 거리",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1247,7 +1231,7 @@
         "Name": "방어막 강도",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "0.65"
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1281,14 +1265,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "방어막 강도",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "0.05"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1318,10 +1295,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "발사 속도",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "1"
+        "Name": "열 확산",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      },
+      {
+        "Name": "사정거리",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "정확도",
@@ -1330,34 +1313,22 @@
         "Value": "100"
       },
       {
-        "Name": "총 캐논 수",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "열 확산",
+        "Name": "열회수",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "0"
+        "Value": "-100"
       },
       {
-        "Name": "위력",
+        "Name": "발사 속도",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "6,500"
       },
       {
-        "Name": "사정거리",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "5,000"
-      },
-      {
-        "Name": "열회수",
+        "Name": "총 캐논 수",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "10"
+        "Image": "ammo",
+        "Value": "2.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1387,14 +1358,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "열회수",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "-20"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1424,10 +1388,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "발사 속도",
+        "Name": "열 확산",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "7.5"
+      },
+      {
+        "Name": "사정거리",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "정확도",
@@ -1436,34 +1406,22 @@
         "Value": "100"
       },
       {
-        "Name": "총 캐논 수",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "열 확산",
+        "Name": "열회수",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
         "Value": "7.5"
       },
       {
-        "Name": "위력",
+        "Name": "발사 속도",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "320"
       },
       {
-        "Name": "사정거리",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,500"
-      },
-      {
-        "Name": "열회수",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Name": "총 캐논 수",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "6"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1551,22 +1509,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "열 확산",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "150"
-      },
-      {
         "Name": "위력",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "250"
+        "Value": "1"
       },
       {
-        "Name": "충격 시 방어막 재충전",
+        "Name": "열 확산",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "shieldStrength",
-        "Value": "0.2"
+        "Image": "time",
+        "Value": "250"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1596,20 +1548,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "열 확산",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "10"
-      },
-      {
-        "Name": "충격 시 방어막 재충전",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "shieldStrength",
-        "Value": "0.1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1639,45 +1578,39 @@
     ],
     "StatBonuses": [
       {
-        "Name": "발사 속도",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "2"
+        "Name": "열 확산",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      },
+      {
+        "Name": "사정거리",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "900"
       },
       {
         "Name": "정확도",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "1,000"
+        "Value": "1,400"
+      },
+      {
+        "Name": "열회수",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "1.5"
+      },
+      {
+        "Name": "발사 속도",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "280"
       },
       {
         "Name": "총 캐논 수",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "14"
-      },
-      {
-        "Name": "열 확산",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "50"
-      },
-      {
-        "Name": "위력",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "280"
-      },
-      {
-        "Name": "사정거리",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "500"
-      },
-      {
-        "Name": "열회수",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
         "Value": "100"
       }
     ],
@@ -1710,16 +1643,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "정확도",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
-        "Value": "20"
-      },
-      {
         "Name": "사정거리",
         "LocaleKeyTemplate": "percentage",
         "Image": "range",
-        "Value": "25"
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1751,46 +1678,40 @@
     ],
     "StatBonuses": [
       {
-        "Name": "발사 속도",
+        "Name": "열 확산",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "9"
+      },
+      {
+        "Name": "사정거리",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "50"
       },
       {
         "Name": "정확도",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "50"
+        "Value": "100"
+      },
+      {
+        "Name": "열회수",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "3"
+      },
+      {
+        "Name": "발사 속도",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "205"
       },
       {
         "Name": "총 캐논 수",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "열 확산",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "200"
-      },
-      {
-        "Name": "위력",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "205"
-      },
-      {
-        "Name": "사정거리",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "2,200"
-      },
-      {
-        "Name": "열회수",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "6.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1826,10 +1747,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "열 확산",
-        "LocaleKeyTemplate": "percentage",
+        "Name": "열회수",
+        "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
-        "Value": "20"
+        "Value": "1.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1861,46 +1782,40 @@
     ],
     "StatBonuses": [
       {
-        "Name": "발사 속도",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "3"
+        "Name": "열 확산",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "200"
+      },
+      {
+        "Name": "사정거리",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "100"
       },
       {
         "Name": "정확도",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "100"
+        "Value": "200"
+      },
+      {
+        "Name": "열회수",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "2"
+      },
+      {
+        "Name": "발사 속도",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "600"
       },
       {
         "Name": "총 캐논 수",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "2"
-      },
-      {
-        "Name": "열 확산",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "위력",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "600"
-      },
-      {
-        "Name": "사정거리",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,250"
-      },
-      {
-        "Name": "열회수",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "3"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1932,10 +1847,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "열 확산",
-        "LocaleKeyTemplate": "percentage",
+        "Name": "열회수",
+        "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
-        "Value": "10"
+        "Value": "1.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1972,12 +1887,6 @@
     ],
     "StatBonuses": [
       {
-        "Name": "하이퍼드라이브 거리",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "100"
-      },
-      {
         "Name": "워프 셀 효율",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
@@ -1987,6 +1896,12 @@
         "Name": "함대 조화",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "1"
+      },
+      {
+        "Name": "원정 방어",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
         "Value": "1"
       }
     ],
@@ -2222,6 +2137,12 @@
         "Value": "100"
       },
       {
+        "Name": "측량 활성화됨",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      },
+      {
         "Name": "동물 분석 보상",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
@@ -2314,9 +2235,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "측량 활성화됨",
+        "Name": "바이오 메커닉 스턴",
         "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "lightning",
         "Value": "1"
       }
     ],
@@ -2411,7 +2332,7 @@
     "Icon": "technology/69.png",
     "Name": "마이닝 빔",
     "Group": "광물 추출 레이저",
-    "Description": "<FUEL>탄소 기반 원소<>로 충전하는 멀티툴인 <TECHNOLOGY>마이닝 빔<>입니다.\n<IMG>ATTACK<>으로 빔을 사용합니다.\n\n멀티툴 내부에 집중경을 설치하여 <STELLAR>고에너지 빔<>을 사용할 수 있도록 합니다. 이 빔은 일반 <STELLAR>유기 또는 지질적인 사물<>의 분자를 자극하는 방법으로 효율적인 채광 도구로 사용됩니다.\n\n<FUEL>경고<>: 동식물 및 광물 파괴 시 센티널이 등장할 수 있습니다.",
+    "Description": "<FUEL>탄소 기반 원소<>로 충전하는 멀티툴인 <TECHNOLOGY>마이닝 빔<>입니다. <IMG>ATTACK<>으로 빔을 사용합니다.\n\n멀티툴 내부에 집중경을 설치하여 <STELLAR>고에너지 빔<>을 사용할 수 있도록 합니다. 이 빔은 일반 <STELLAR>유기 또는 지질적인 사물<>의 분자를 자극하는 방법으로 효율적인 채광 도구로 사용됩니다.\n\n<FUEL>경고<>: 동식물 및 광물 파괴 시 센티널이 등장할 수 있습니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -2806,22 +2727,16 @@
         "Value": "100"
       },
       {
-        "Name": "충격 후 점화",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "damage",
-        "Value": "1"
-      },
-      {
         "Name": "충격 화재 지속 시간",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "5"
+        "Value": "1"
       },
       {
         "Name": "충격 화재 피해",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "50"
+        "Value": "5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3404,15 +3319,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "연료 사용량",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "최고 속도",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "부스트 탱크 크기",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
         "Value": "100"
       },
       {
@@ -3422,10 +3337,10 @@
         "Value": "100"
       },
       {
-        "Name": "경사진 손잡이",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
+        "Name": "마이닝 레이저 출력",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3461,16 +3376,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "전방 손잡이",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "300"
-      },
-      {
-        "Name": "경사진 손잡이",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
+        "Name": "마이닝 레이저 출력",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "0.66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3506,16 +3415,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "전방 손잡이",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "50"
-      },
-      {
-        "Name": "경사진 손잡이",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "210"
+        "Name": "마이닝 레이저 출력",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "2.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3551,16 +3454,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "전방 손잡이",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "50"
-      },
-      {
-        "Name": "경사진 손잡이",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
+        "Name": "마이닝 레이저 출력",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "0.66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3592,9 +3489,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "스캔",
+        "Name": "추력",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -3631,9 +3528,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "스캔",
+        "Name": "추력",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -3670,21 +3567,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "부스트",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "연료 사용량",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       },
       {
-        "Name": "추력",
+        "Name": "경사진 손잡이",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "부스트 탱크 크기",
+        "Name": "가속",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -3721,16 +3618,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "마이닝 레이저 출력",
+        "Name": "피해",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "80"
-      },
-      {
-        "Name": "마이닝 레이저 효율",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Image": "damage",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3762,16 +3653,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "마이닝 레이저 출력",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
-        "Name": "첨단 엑소크래프트 마이닝 레이저",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "무기 동력 효율",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3803,22 +3688,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "피해",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "320"
-      },
-      {
-        "Name": "무기 동력 효율",
+        "Name": "엑소크래프트 태양 전지판",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "연사율",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3851,21 +3724,27 @@
     ],
     "StatBonuses": [
       {
-        "Name": "연료 사용량",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
         "Name": "최고 속도",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
       },
       {
-        "Name": "가속",
+        "Name": "부스트 탱크 크기",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
+        "Value": "100"
+      },
+      {
+        "Name": "전방 손잡이",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "마이닝 레이저 효율",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
         "Value": "100"
       }
     ],
@@ -3902,22 +3781,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "피해",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "220"
-      },
-      {
-        "Name": "무기 동력 효율",
+        "Name": "엑소크래프트 태양 전지판",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "연사율",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3953,22 +3820,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "마이닝 레이저 출력",
+        "Name": "피해",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "240"
-      },
-      {
-        "Name": "마이닝 레이저 효율",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "첨단 엑소크래프트 마이닝 레이저",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "damage",
         "Value": "1"
+      },
+      {
+        "Name": "무기 동력 효율",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4004,9 +3865,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "스캔",
+        "Name": "추력",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -4043,10 +3904,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "연료 사용량",
+        "Name": "부스트 탱크 크기",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-20"
+        "Image": "ammo",
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4832,14 +4693,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "하이퍼드라이브 거리",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "200"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4871,14 +4725,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "하이퍼드라이브 거리",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "300"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4910,14 +4757,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "하이퍼드라이브 거리",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "800"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4949,14 +4789,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "하이퍼드라이브 거리",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4988,14 +4821,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "하이퍼드라이브 거리",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5027,14 +4853,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "하이퍼드라이브 거리",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5066,14 +4885,7 @@
         "Quantity": 150
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "공중 재충전",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recharge2",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5101,7 +4913,14 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "번역한 단어 수",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "translate",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -5135,10 +4954,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "펄스드라이브 연료 효율",
+        "Name": "펄스 드라이브 동력",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "34"
+        "Image": "recharge2",
+        "Value": "66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5174,10 +4993,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "펄스 드라이브 동력",
+        "Name": "부스트",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "130"
+        "Image": "recovery",
+        "Value": "30"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5211,14 +5030,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "즉각적인 긴급 하이퍼드라이브",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5252,10 +5064,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "총 캐논 수",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "3"
+        "Name": "정확도",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "300"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5623,7 +5435,7 @@
     "Icon": "technology/160.png",
     "Name": "맥동하는 심장",
     "Group": "융합된 유기 기술",
-    "Description": "섬유질의 금속성 상부 구조가 이 따뜻한 중요 기관을 함선의 코어와 결합시키고 있습니다. 이것이 없다면 함선은 그저 죽은 듯한 껍질에 불과할 것입니다.\n\n<IMG>PULSEJUMP<>을 동시에 길게 눌러 심장에게 펄스 점프 개시를 부탁합니다.\n<IMG>BOOST<>을 길게 눌러 속도 증폭을 요청합니다.",
+    "Description": "섬유질의 금속성 상부 구조가 이 따뜻하고 중요한 기관을 함선 코어와 결합하고 있습니다. 이 구조가 없으면 함선은 생명이 빠진 껍질에 불과할 것입니다.\n\n<IMG>PULSEJUMP<>을 길게 눌러 심장에 펄스 점프 개시를 요청합니다.\n<IMG>BOOST<>을 길게 눌러 속도 증폭을 요청합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -5653,15 +5465,21 @@
         "Value": "100"
       },
       {
-        "Name": "부스트",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "9,900"
-      },
-      {
         "Name": "펄스 드라이브 동력",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
+        "Value": "50"
+      },
+      {
+        "Name": "기동성",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "100"
+      },
+      {
+        "Name": "부스트",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -5699,6 +5517,12 @@
         "Name": "발진 가격",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "자동 재충전 중",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -5736,13 +5560,19 @@
         "Name": "하이퍼드라이브 거리",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "100"
+        "Value": "1"
       },
       {
         "Name": "워프 셀 효율",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
+        "Value": "10,000"
+      },
+      {
+        "Name": "즉각적인 긴급 하이퍼드라이브",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5779,7 +5609,7 @@
         "Name": "방어막 강도",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "0.65"
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5812,10 +5642,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "발사 속도",
+        "Name": "열 확산",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "time",
         "Value": "10"
+      },
+      {
+        "Name": "사정거리",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "0"
       },
       {
         "Name": "정확도",
@@ -5824,34 +5660,22 @@
         "Value": "100"
       },
       {
+        "Name": "열회수",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "10"
+      },
+      {
+        "Name": "발사 속도",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "340"
+      },
+      {
         "Name": "총 캐논 수",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "1"
-      },
-      {
-        "Name": "열 확산",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "7.5"
-      },
-      {
-        "Name": "위력",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "320"
-      },
-      {
-        "Name": "사정거리",
-        "LocaleKeyTemplate": "meter",
-        "Image": "range",
-        "Value": "1,500"
-      },
-      {
-        "Name": "열회수",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Value": "6"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5884,16 +5708,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "열 확산",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "3.5"
-      },
-      {
         "Name": "위력",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "250"
+        "Value": "1"
+      },
+      {
+        "Name": "열 확산",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "280"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5927,7 +5751,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "원정 효율",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recovery",
+        "Value": "10,000"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -6064,9 +5895,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "열 보호",
+        "Name": "독 보호",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "heat",
+        "Image": "toxic",
         "Value": "3"
       }
     ],
@@ -6104,9 +5935,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "냉기 보호",
+        "Name": "열 보호",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
+        "Image": "heat",
         "Value": "3"
       }
     ],
@@ -6144,9 +5975,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "독 보호",
+        "Name": "방사선 보호",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
+        "Image": "rad",
         "Value": "3"
       }
     ],
@@ -6184,9 +6015,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "방사선 보호",
+        "Name": "산소 탱크",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "rad",
+        "Image": "oxygen",
         "Value": "3"
       }
     ],
@@ -6222,14 +6053,7 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "엑소크래프트 태양 전지판",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "400"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -6264,9 +6088,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "스캔",
+        "Name": "추력",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -6304,16 +6128,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "연료 사용량",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-50"
-      },
-      {
         "Name": "최고 속도",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
+      },
+      {
+        "Name": "부스트 탱크 크기",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "50"
       },
       {
         "Name": "전방 손잡이",
@@ -6322,10 +6146,10 @@
         "Value": "100"
       },
       {
-        "Name": "경사진 손잡이",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
+        "Name": "마이닝 레이저 출력",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6362,10 +6186,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "연료 사용량",
+        "Name": "부스트 탱크 크기",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-20"
+        "Image": "ammo",
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6402,9 +6226,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "스캔",
+        "Name": "추력",
         "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -6442,21 +6266,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "부스트",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "연료 사용량",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       },
       {
-        "Name": "추력",
+        "Name": "경사진 손잡이",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "부스트 탱크 크기",
+        "Name": "가속",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -6494,16 +6318,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "마이닝 레이저 출력",
+        "Name": "피해",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "100"
-      },
-      {
-        "Name": "마이닝 레이저 효율",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
+        "Image": "damage",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6536,16 +6354,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "마이닝 레이저 출력",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
-        "Name": "첨단 엑소크래프트 마이닝 레이저",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
+        "Name": "무기 동력 효율",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6582,22 +6394,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "피해",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "420"
-      },
-      {
-        "Name": "무기 동력 효율",
+        "Name": "엑소크래프트 태양 전지판",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "연사율",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.35"
+        "Value": "35"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6667,27 +6467,27 @@
     ],
     "StatBonuses": [
       {
+        "Name": "독 보호",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "toxic",
+        "Value": "1"
+      },
+      {
         "Name": "열 보호",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "heat",
         "Value": "1"
       },
       {
-        "Name": "냉기 보호",
+        "Name": "산소 탱크",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
+        "Image": "oxygen",
         "Value": "1"
       },
       {
         "Name": "방사선 보호",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "rad",
-        "Value": "1"
-      },
-      {
-        "Name": "독 보호",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
         "Value": "1"
       }
     ],
@@ -6885,6 +6685,12 @@
         "Name": "발진 가격",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
+        "Value": "100"
+      },
+      {
+        "Name": "자동 재충전 중",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
         "Value": "25"
       }
     ],
@@ -6895,7 +6701,7 @@
     "Icon": "products/79.png",
     "Name": "파형 엔진",
     "Group": "최고급 개조 함선 엔진",
-    "Description": "일반적인 함선에 사용할 수 있는 최고급 사양 <TECHNOLOGY>펄스 엔진<>입니다. 파면 사용량을 극한까지 끌어올려 <STELLAR>효율적<>이고 <STELLAR>반응성이 좋은<> 펄스 엔진 성능을 보입니다.\n\n충전 시에는 <EXOTIC>삼중 수소<>를 사용하기를 추천합니다. 삼중 수소는 <COMMODITY>가까운 우주의 소행성대<>에 풍족합니다.\n\n<IMG>PULSEJUMP<>을 동시에 길게 눌러 펄스 점프를 개시합니다.<IMG>BOOST<>을 길게 눌러 비행 시 속도 부스트를 사용합니다.",
+    "Description": "일반적인 함선에 사용할 수 있는 최고급 사양 <TECHNOLOGY>펄스 엔진<>입니다. 파면 사용량을 극한까지 끌어올려 <STELLAR>효율적<>이고 <STELLAR>반응성이 좋은<> 펄스 엔진 성능을 보입니다.\n\n충전 시에는 <EXOTIC>삼중 수소<>를 사용하기를 추천합니다. 삼중 수소는 <COMMODITY>가까운 우주의 소행성대<>에 풍족합니다. 스캔(<IMG>SCAN)<>으로 <TECHNOLOGY>삼중 수소가 풍부한 소행성<>을 탐색할 수 있습니다.\n\n<IMG>PULSEJUMP<>을 동시에 길게 눌러 펄스 점프를 개시합니다. <IMG>BOOST<>을 길게 눌러 비행 시 속도 부스트를 사용합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -6925,12 +6731,6 @@
         "Value": "100"
       },
       {
-        "Name": "부스트",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "11,900"
-      },
-      {
         "Name": "펄스 드라이브 동력",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
@@ -6940,7 +6740,25 @@
         "Name": "기동성",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "25"
+        "Value": "10"
+      },
+      {
+        "Name": "부스트",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "내부 생명 유지 장치 사용 가능",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.25"
+      },
+      {
+        "Name": "기동성",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6950,7 +6768,7 @@
     "Icon": "other/148.png",
     "Name": "프레임시프트 발사기",
     "Group": "불법 개조된 워프 드라이브",
-    "Description": "시험용 드라이브 개조품으로 일반적인 <TECHNOLOGY>하이퍼드라이브<> 기술에 적용할 수 있으며 워프를 시행할 때 주변 기하구조를 일그러뜨려 표준 드라이브보다 <STELLAR>범위<>와 <STELLAR>효율<>을 상당히 높일 수 있습니다.\n\n하이퍼드라이브 시스템은 <STELLAR>은하계 지도<>에서 사용할 수 있습니다.",
+    "Description": "시험용 드라이브 개조품으로 일반적인 <TECHNOLOGY>하이퍼드라이브<> 기술에 적용할 수 있으며, 워프를 시행할 때 주변 기하구조를 일그러뜨려 표준 드라이브에 비해 <STELLAR>범위<>와 <STELLAR>효율<>을 상당히 높일 수 있습니다.\n\n하이퍼드라이브 시스템은 <STELLAR>은하계 지도<>에서 사용하시길 바랍니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -6981,13 +6799,19 @@
         "Name": "하이퍼드라이브 거리",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "600"
+        "Value": "1"
       },
       {
         "Name": "워프 셀 효율",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "200"
+        "Value": "60,000"
+      },
+      {
+        "Name": "즉각적인 긴급 하이퍼드라이브",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6997,7 +6821,7 @@
     "Icon": "tradeItems/25.png",
     "Name": "가압 캡슐",
     "Group": "함선 생명 유지 유닛",
-    "Description": "함선의 주요한 안전 장치로 궤도 밖 운행에 필수입니다.\n\n가압 캡슐은 <STELLAR>호흡할 수 있는 대기<>를 생성하고 특별한 구조의 조종석이 끔찍하게 폭발하는 사고를 방지합니다.",
+    "Description": "함선의 주요한 안전장치로 궤도 밖 운행에 필수적입니다.\n\n가압 캡슐은 <STELLAR>호흡할 수 있는 대기<>를 생성하여 특별한 구조의 조종석이 끔찍하게 폭발하는 사고를 방지합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -7019,14 +6843,7 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "내부 생명 유지 장치 사용 가능",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -7034,7 +6851,7 @@
     "Icon": "technology/191.png",
     "Name": "내장 합성기",
     "Group": "천상의 부화 장치",
-    "Description": "이계의 기술입니다. 매혹적인 막은 젤처럼 부드럽고 은은한 진홍빛 광채를 내뿜습니다.\n\n합성기의 따뜻한 포옹으로 사용자는 <SPECIAL>굶주린 덩굴<>의 미발달한 알집에서 <STELLAR>부정한 알<>을 추출할 수 있습니다.",
+    "Description": "다른 세계의 기술로 탄생한 결과물입니다. 매혹적인 막은 젤처럼 부드러우며 은은한 진홍빛 광채를 내뿜습니다.\n\n사용자는 합성기의 따뜻한 포옹을 이용해 <SPECIAL>굶주린 덩굴<>의 미발달한 알집에서 <STELLAR>부정한 알<>을 추출할 수 있습니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -7061,10 +6878,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "유해 요소 방호 배터리",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "냉기 보호",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7074,7 +6891,7 @@
     "Icon": "technology/192.png",
     "Name": "기록 보관소 오버라이드 임플란트",
     "Group": "피하 접근 회로",
-    "Description": "텍스트 인식 유해 요소에 대한 안전장치로 개발된 <TECHNOLOGY>생체공학적 방화벽<>입니다. 무언가 미끈거리는 재질로 코팅되어 있으며, 표면이 부글거리기 시작합니다.\n\n피부 아래에 삽입된 임플란트는 <SPECIAL>행성 기록 보관소<>에 봉인된 고대의 금지된 텍스트에 접근할 수 있게 해줍니다.\n<FUEL>경고<>: 금지된 텍스트의 봉인을 풀지 마십시오. 금지된 텍스트에 노출되는 것은 극도로 위험합니다.",
+    "Description": "텍스트 인식 유해 요소에 대한 안전장치로 개발된 <TECHNOLOGY>생체공학적 방화벽<>입니다. 무언가 미끈거리는 재질로 코팅되어 있으며, 표면이 부글거리기 시작합니다.\n\n피부 아래에 삽입된 임플란트는 <SPECIAL>행성 기록 보관소<>에 봉인된 고대의 금지된 텍스트에 접근할 수 있게 해줍니다.\n<FUEL>경고<>: 금지된 텍스트의 봉인을 풀지 마십시오. 금지된 텍스트에 노출되는 행위는 극도로 위험합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -7101,10 +6918,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "유해 요소 방호 배터리",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "20"
+        "Name": "냉기 보호",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "cold",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7484,15 +7301,15 @@
         "Value": "300"
       },
       {
-        "Name": "바이오 메커닉 스턴",
-        "LocaleKeyTemplate": "enabled",
+        "Name": "스턴 시간",
+        "LocaleKeyTemplate": "seconds",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "스턴 시간",
-        "LocaleKeyTemplate": "seconds",
-        "Image": "lightning",
+        "Name": "기절한 엔티티에게 입히는 피해",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "3.5"
       },
       {
@@ -7535,15 +7352,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "바이오 메커닉 스턴",
-        "LocaleKeyTemplate": "enabled",
+        "Name": "스턴 시간",
+        "LocaleKeyTemplate": "seconds",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "스턴 시간",
-        "LocaleKeyTemplate": "seconds",
-        "Image": "lightning",
+        "Name": "기절한 엔티티에게 입히는 피해",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "5"
       }
     ],
@@ -7580,22 +7397,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "충격 후 점화",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "damage",
-        "Value": "1"
-      },
-      {
         "Name": "충격 화재 지속 시간",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "3.5"
+        "Value": "1"
       },
       {
         "Name": "충격 화재 피해",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "80"
+        "Value": "3.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7605,7 +7416,7 @@
     "Icon": "technology/208.png",
     "Name": "중성자 캐논",
     "Group": "폭발 에너지 무기",
-    "Description": "<TECHNOLOGY>멀티툴<>용 <STELLAR>고에너지 무기<>입니다. 중성자 캐논은 대기 입자에 에너지를 공급해 적대 목표물을 향해 발사하며 <STELLAR>상당한 범위 피해<>를 줍니다.\n\n<IMG>CYCLEWEAPON<>을 눌러 사격 모드를 사용할 수 있습니다. <IMG>ATTACK<>으로 충전한 다음, 놓으면 <STELLAR>이온 입자를 일제히<> 사격합니다.\n\n캐논으로 즉시 단발을 발사할 수도 있고 <TECHNOLOGY>오래 충전하면<> <TECHNOLOGY>입자 속도와 발사량<>이 상당히 증가합니다.",
+    "Description": "<TECHNOLOGY>멀티툴<>용 <STELLAR>고에너지 무기<>입니다. 중성자 캐논은 대기 입자에 에너지를 공급해 적대 목표물을 향해 발사하며 <STELLAR>상당한 범위 피해<>를 줍니다.\n\n<IMG>CYCLEWEAPON<>을 눌러 사격 모드를 사용할 수 있습니다. <IMG>ATTACK<>으로 충전한 다음, 놓으면 <STELLAR>이온 입자를 일제히<> 사격합니다.\n\n캐논으로 즉시 단발을 발사할 수 있으며, <TECHNOLOGY>오래 충전하면<> <TECHNOLOGY>입자 속도와 발사량<>이 대폭 증가합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -7761,8 +7572,8 @@
     ],
     "StatBonuses": [
       {
-        "Name": "기절한 엔티티에게 입히는 피해",
-        "LocaleKeyTemplate": "defaultTemplate",
+        "Name": "충격 후 점화",
+        "LocaleKeyTemplate": "enabled",
         "Image": "damage",
         "Value": "1.2"
       }
@@ -7799,14 +7610,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "미노타우로스 AI 파일럿",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -7841,34 +7645,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "기절한 엔티티에게 입히는 피해",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "5"
-      },
-      {
-        "Name": "마이닝 레이저 출력",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "50"
-      },
-      {
         "Name": "충격 후 점화",
         "LocaleKeyTemplate": "enabled",
         "Image": "damage",
-        "Value": "1"
+        "Value": "5"
       },
       {
         "Name": "충격 화재 지속 시간",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "3.5"
+        "Value": "1"
       },
       {
         "Name": "충격 화재 피해",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "80"
+        "Value": "3.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7905,22 +7697,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "피해",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "20"
-      },
-      {
-        "Name": "무기 동력 효율",
+        "Name": "엑소크래프트 태양 전지판",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "연사율",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "0.5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7953,15 +7733,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "연료 사용량",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "-10"
-      },
-      {
         "Name": "부스트 탱크 크기",
         "LocaleKeyTemplate": "percentage",
         "Image": "ammo",
+        "Value": "90"
+      },
+      {
+        "Name": "가속",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
         "Value": "25"
       }
     ],
@@ -7997,14 +7777,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "미노타우로스 AI 파일럿",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8037,7 +7810,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "하이퍼드라이브 거리",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -8062,14 +7842,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "부스트",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8100,28 +7873,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "펄스드라이브 연료 효율",
+        "Name": "펄스 드라이브 동력",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "80"
+        "Image": "recharge2",
+        "Value": "20"
       },
       {
-        "Name": "자동 재충전 중",
+        "Name": "내부 생명 유지 장치 사용 가능",
         "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "1"
-      },
-      {
-        "Name": "부스트",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "15"
-      },
-      {
-        "Name": "기동성",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "10"
+        "Image": "prot",
+        "Value": "1.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8148,14 +7909,273 @@
         "Quantity": 10
       }
     ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech220",
+    "Icon": "technology/144.png",
+    "Name": "비행 지원 오버라이드",
+    "Group": "첨단 함선 파일럿 모듈",
+    "Description": "암시장에서 구한 이 전자식 모듈은 함선의 플라이 바이 와이어 제어 장치에 내장된 주요 안전 및 파일럿 지원 모듈을 비활성화합니다. 법적으로도 의심스럽고 빠른 속도의 소행성과 충돌할 가능성도 내포하고 있지만 밀수업자, 용병과 자신을 뛰어난 파일럿으로 자처하는 사람들에게 인기가 많은 모듈입니다.\n\n함선의 우주 비행 <STELLAR>드리프트<> 성능 향상을 위해 특별히 조율되었습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 460,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 200
+      },
+      {
+        "Id": "raw34",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 1
+      }
+    ],
     "StatBonuses": [
       {
-        "Name": "부스트",
+        "Name": "내부 생명 유지 장치 사용 가능",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.1"
+      },
+      {
+        "Name": "기동성",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "target",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech221",
+    "Icon": "technology/221.png",
+    "Name": "성간 스캐너",
+    "Group": "장거리 센서 기술",
+    "Description": "화물선의 <TECHNOLOGY>은하계 단위 센서용<> 업그레이드입니다.\n\n이 장치는 사용자가 성계를 방문하지 않고도 해당 성계의 <STELLAR>자세한 경제 및 분쟁 데이터<>를 확인할 수 있도록 해줍니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 70
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 160
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech222",
+    "Icon": "technology/221.png",
+    "Name": "특이점 엔진",
+    "Group": "웜홀 추진 드라이브",
+    "Description": "불안정하고 실험적인 성격이 강한 <TECHNOLOGY>화물선 하이퍼드라이브 기술<>입니다. 화물선의 노심 깊숙한 내부에 <SPECIAL>웜홀<>을 생성하는 극중력 장치로, 함선 전체를 반전시키고 우주 너머로 전송합니다.\n\n<STELLAR>화물선 사령관<>과 대화해 드라이브를 시작하세요. <FUEL>경고<>: 목적지는 제어할 수 없습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod18",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "원정 속도",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech223",
+    "Icon": "technology/223.png",
+    "Name": "대기 제어 유닛",
+    "Group": "화물선 생명 유지 장치 모듈",
+    "Description": "탑승한 모든 유기 생명체를 위해 안전하고 거주 가능한 환경을 유지하는 데 필수적인 주요 화물선 서브시스템입니다.\n\n손상되거나 전원이 끊겨도 일정 시간 동안 <STELLAR>호흡 가능한 대기<>를 생성할 수 있습니다. 단, 지속 시간은 길지 않습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 4,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 120
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech224",
+    "Icon": "products/82.png",
+    "Name": "신경 차폐기",
+    "Group": "적대적 프로브 편향기",
+    "Description": "함선의 신경 집합체에 엮인 아름다운 생체 나노튜브 직물입니다. 이 구조물은 함선이 적합한 상태가 되면 작동하며 적대적인 <STELLER>화물 프로브<>를 <STELLAR>방해<>하는 장을 생성합니다.\n\n스캔이 진행 중일 때 <TECHNOLOGY>빠른 메뉴<>(<IMG>QUICK_MENU<>)에서 사용해 프로브를 방해하십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "하이퍼드라이브 거리",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
         "Value": "1"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech225",
+    "Icon": "products/83.png",
+    "Name": "엽록체 세포막",
+    "Group": "지성체 함선 노드",
+    "Description": "시아노박테리아를 주입해 함선의 반투명 진피층 바로 밑에 달린 막을 채웁니다.\n\n이 막은 태양빛에 노출되면 <STELLAR>신경 집합체를 자동으로 충전<>합니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 460,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech226",
+    "Icon": "products/85.png",
+    "Name": "웜홀 두뇌",
+    "Group": "지성체 함선 노드",
+    "Description": "웜홀 두뇌는 함선이 <TECHNOLOGY>자신의 경험을 능가하는 규모의 성계를 시각화<>합니다. 이 두뇌는 여러 신경물질 가닥으로 구성되어 있으며, 마이크로 특이점을 감싸고 함선의 시각 피질에 직접 묶입니다.\n\n함선이 허락하면 은하계 지도에서 <STELLAR>자세한 경제 및 분쟁 데이터<>를 이용할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw52",
+        "Quantity": 40
+      },
+      {
+        "Id": "cook40",
+        "Quantity": 15
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech227",
+    "Icon": "technology/118.png",
+    "Name": "추출기 유닛",
+    "Group": "성간 추출기 코어",
+    "Description": "흡입구와 압축 튜브로 이루어진 복잡한 장치를 통해 성간물질에서 자원을 직접 수집합니다. 수집한 재료는 주변 <TECHNOLOGY>별의 유형<>에 따라 <TECHNOLOGY>달라집니다<>.\n\n화물선의 주요 전력 회로에서 직접 전력을 공급합니다. 모든 기능을 <STELLAR>자율적으로<> 수행합니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]

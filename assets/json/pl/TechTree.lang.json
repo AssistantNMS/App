@@ -1560,41 +1560,26 @@
             "Cost": 1,
             "Children": [
               {
-                "Id": "conTech20",
-                "Title": "Moduł komunikatu",
-                "Icon": "constructedTechnology/20.png",
-                "Cost": 1,
-                "Children": [
-                  {
-                    "Id": "conTech21",
-                    "Title": "Stacja komunikacyjna",
-                    "Icon": "constructedTechnology/21.png",
-                    "Cost": 1,
-                    "Children": []
-                  }
-                ]
-              },
-              {
-                "Id": "conTech4",
-                "Title": "Stacja lecznicza",
-                "Icon": "constructedTechnology/4.png",
-                "Cost": 5,
-                "Children": [
-                  {
-                    "Id": "conTech5",
-                    "Title": "Jednostka ochrony przed zagrożeniami",
-                    "Icon": "constructedTechnology/5.png",
-                    "Cost": 3,
-                    "Children": []
-                  }
-                ]
-              },
-              {
                 "Id": "conTech10",
                 "Title": "Moduł teleportacyjny bazy",
                 "Icon": "constructedTechnology/10.png",
                 "Cost": 2,
                 "Children": [
+                  {
+                    "Id": "conTech4",
+                    "Title": "Stacja lecznicza",
+                    "Icon": "constructedTechnology/4.png",
+                    "Cost": 5,
+                    "Children": [
+                      {
+                        "Id": "conTech5",
+                        "Title": "Jednostka ochrony przed zagrożeniami",
+                        "Icon": "constructedTechnology/5.png",
+                        "Cost": 3,
+                        "Children": []
+                      }
+                    ]
+                  },
                   {
                     "Id": "conTech44",
                     "Title": "Żniwiarka tlenu",
@@ -1663,18 +1648,34 @@
                     "Children": []
                   },
                   {
+                    "Id": "conTech8",
+                    "Title": "Wzmacniacz sygnału",
+                    "Icon": "constructedTechnology/8.png",
+                    "Cost": 1,
+                    "Children": [
+                      {
+                        "Id": "conTech20",
+                        "Title": "Moduł komunikatu",
+                        "Icon": "constructedTechnology/20.png",
+                        "Cost": 1,
+                        "Children": [
+                          {
+                            "Id": "conTech21",
+                            "Title": "Stacja komunikacyjna",
+                            "Icon": "constructedTechnology/21.png",
+                            "Cost": 1,
+                            "Children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
                     "Id": "conTech13",
                     "Title": "Mobilny rafinator",
                     "Icon": "constructedTechnology/13.png",
                     "Cost": 10,
                     "Children": [
-                      {
-                        "Id": "conTech8",
-                        "Title": "Wzmacniacz sygnału",
-                        "Icon": "constructedTechnology/8.png",
-                        "Cost": 1,
-                        "Children": []
-                      },
                       {
                         "Id": "conTech14",
                         "Title": "Średni rafinator",
@@ -1797,10 +1798,10 @@
                 "Cost": 12,
                 "Children": [
                   {
-                    "Id": "build395",
+                    "Id": "build884",
                     "Title": "Orbitalny materializator egzopojazdu",
-                    "Icon": "building/395.png",
-                    "Cost": 15,
+                    "Icon": "building/884.png",
+                    "Cost": 1,
                     "Children": []
                   }
                 ]
@@ -5056,6 +5057,13 @@
                 "Cost": 460,
                 "Children": [
                   {
+                    "Id": "tech220",
+                    "Title": "Obejście wspomagania lotu",
+                    "Icon": "technology/144.png",
+                    "Cost": 460,
+                    "Children": []
+                  },
+                  {
                     "Id": "tech145",
                     "Title": "Wzmacniacz podświetlny",
                     "Icon": "technology/144.png",
@@ -6208,7 +6216,15 @@
                 "Title": "Promień materii",
                 "Icon": "technology/28.png",
                 "Cost": 5,
-                "Children": []
+                "Children": [
+                  {
+                    "Id": "tech221",
+                    "Title": "Skaner międzygwiezdny",
+                    "Icon": "technology/221.png",
+                    "Cost": 4,
+                    "Children": []
+                  }
+                ]
               }
             ]
           }
@@ -6216,6 +6232,12 @@
       },
       {
         "Id": "tree10-subTree2",
+        "Name": "Moduły budowy frachtowca",
+        "CostType": "None",
+        "Children": []
+      },
+      {
+        "Id": "tree10-subTree3",
         "Name": "Zmiana koloru frachtowca",
         "CostType": "Nanites",
         "Children": [

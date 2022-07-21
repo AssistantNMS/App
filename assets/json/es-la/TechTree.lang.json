@@ -228,7 +228,7 @@
                     "Children": [
                       {
                         "Id": "build587",
-                        "Title": "Semirrampa de piedra",
+                        "Title": "Media rampa de piedra",
                         "Icon": "building/587.png",
                         "Cost": 1,
                         "Children": []
@@ -407,7 +407,7 @@
                     "Children": [
                       {
                         "Id": "build763",
-                        "Title": "Semirrampa de aleación",
+                        "Title": "Media rampa de aleación",
                         "Icon": "building/763.png",
                         "Cost": 1,
                         "Children": []
@@ -933,7 +933,7 @@
                     "Children": [
                       {
                         "Id": "build587",
-                        "Title": "Semirrampa de piedra",
+                        "Title": "Media rampa de piedra",
                         "Icon": "building/587.png",
                         "Cost": 1,
                         "Children": []
@@ -1112,7 +1112,7 @@
                     "Children": [
                       {
                         "Id": "build763",
-                        "Title": "Semirrampa de aleación",
+                        "Title": "Media rampa de aleación",
                         "Icon": "building/763.png",
                         "Cost": 1,
                         "Children": []
@@ -1560,41 +1560,26 @@
             "Cost": 1,
             "Children": [
               {
-                "Id": "conTech20",
-                "Title": "Módulo de mensajes",
-                "Icon": "constructedTechnology/20.png",
-                "Cost": 1,
-                "Children": [
-                  {
-                    "Id": "conTech21",
-                    "Title": "Estación de comunicación",
-                    "Icon": "constructedTechnology/21.png",
-                    "Cost": 1,
-                    "Children": []
-                  }
-                ]
-              },
-              {
-                "Id": "conTech4",
-                "Title": "Estación de salud",
-                "Icon": "constructedTechnology/4.png",
-                "Cost": 5,
-                "Children": [
-                  {
-                    "Id": "conTech5",
-                    "Title": "Unidad de protección contra peligros",
-                    "Icon": "constructedTechnology/5.png",
-                    "Cost": 3,
-                    "Children": []
-                  }
-                ]
-              },
-              {
                 "Id": "conTech10",
                 "Title": "Módulo de teletransporte de base",
                 "Icon": "constructedTechnology/10.png",
                 "Cost": 2,
                 "Children": [
+                  {
+                    "Id": "conTech4",
+                    "Title": "Estación de salud",
+                    "Icon": "constructedTechnology/4.png",
+                    "Cost": 5,
+                    "Children": [
+                      {
+                        "Id": "conTech5",
+                        "Title": "Unidad de protección contra peligros",
+                        "Icon": "constructedTechnology/5.png",
+                        "Cost": 3,
+                        "Children": []
+                      }
+                    ]
+                  },
                   {
                     "Id": "conTech44",
                     "Title": "Recolector de oxígeno",
@@ -1663,18 +1648,34 @@
                     "Children": []
                   },
                   {
+                    "Id": "conTech8",
+                    "Title": "Intensificador de señal",
+                    "Icon": "constructedTechnology/8.png",
+                    "Cost": 1,
+                    "Children": [
+                      {
+                        "Id": "conTech20",
+                        "Title": "Módulo de mensajes",
+                        "Icon": "constructedTechnology/20.png",
+                        "Cost": 1,
+                        "Children": [
+                          {
+                            "Id": "conTech21",
+                            "Title": "Estación de comunicación",
+                            "Icon": "constructedTechnology/21.png",
+                            "Cost": 1,
+                            "Children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
                     "Id": "conTech13",
                     "Title": "Refinería portátil",
                     "Icon": "constructedTechnology/13.png",
                     "Cost": 10,
                     "Children": [
-                      {
-                        "Id": "conTech8",
-                        "Title": "Intensificador de señal",
-                        "Icon": "constructedTechnology/8.png",
-                        "Cost": 1,
-                        "Children": []
-                      },
                       {
                         "Id": "conTech14",
                         "Title": "Refinería mediana",
@@ -1797,10 +1798,10 @@
                 "Cost": 12,
                 "Children": [
                   {
-                    "Id": "build395",
+                    "Id": "build884",
                     "Title": "Materializador de exonave orbital",
-                    "Icon": "building/395.png",
-                    "Cost": 15,
+                    "Icon": "building/884.png",
+                    "Cost": 1,
                     "Children": []
                   }
                 ]
@@ -4026,13 +4027,13 @@
                     "Children": [
                       {
                         "Id": "build587",
-                        "Title": "Semirrampa de piedra",
+                        "Title": "Media rampa de piedra",
                         "Icon": "building/587.png",
                         "Cost": 1,
                         "Children": [
                           {
                             "Id": "build627",
-                            "Title": "Plataforma de semirrampa de piedra",
+                            "Title": "Plataforma de media rampa de piedra",
                             "Icon": "building/627.png",
                             "Cost": 3,
                             "Children": []
@@ -4387,13 +4388,13 @@
                     "Children": [
                       {
                         "Id": "build763",
-                        "Title": "Semirrampa de aleación",
+                        "Title": "Media rampa de aleación",
                         "Icon": "building/763.png",
                         "Cost": 1,
                         "Children": [
                           {
                             "Id": "build806",
-                            "Title": "Plataforma de semirrampa de aleación",
+                            "Title": "Plataforma de media rampa de aleación",
                             "Icon": "building/806.png",
                             "Cost": 3,
                             "Children": []
@@ -4905,7 +4906,7 @@
               },
               {
                 "Id": "tech1",
-                "Title": "Protección frente a peligros",
+                "Title": "Protección contra peligros",
                 "Icon": "technology/1.png",
                 "Cost": 1,
                 "Children": [
@@ -5055,6 +5056,13 @@
                 "Icon": "technology/144.png",
                 "Cost": 460,
                 "Children": [
+                  {
+                    "Id": "tech220",
+                    "Title": "Anulación de asistencia de vuelo",
+                    "Icon": "technology/144.png",
+                    "Cost": 460,
+                    "Children": []
+                  },
                   {
                     "Id": "tech145",
                     "Title": "Amplificador de subluz",
@@ -6208,7 +6216,15 @@
                 "Title": "Rayo de materia",
                 "Icon": "technology/28.png",
                 "Cost": 5,
-                "Children": []
+                "Children": [
+                  {
+                    "Id": "tech221",
+                    "Title": "Escáner interestelar",
+                    "Icon": "technology/221.png",
+                    "Cost": 4,
+                    "Children": []
+                  }
+                ]
               }
             ]
           }
@@ -6216,6 +6232,12 @@
       },
       {
         "Id": "tree10-subTree2",
+        "Name": "Módulos de construcción de carguero",
+        "CostType": "None",
+        "Children": []
+      },
+      {
+        "Id": "tree10-subTree3",
         "Name": "Repintar carguero",
         "CostType": "Nanites",
         "Children": [

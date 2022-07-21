@@ -764,7 +764,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/35.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -785,7 +786,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/36.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -806,7 +808,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/37.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -1020,9 +1023,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Dégâts",
+        "Name": "Cadence de tir",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "8"
       }
     ],
@@ -1053,14 +1056,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Turbo",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "5"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1090,10 +1086,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Portée hyperpropulsion",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
+        "Name": "Efficacité de la cellule de distorsion",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5,000"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1125,10 +1121,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Coût de lancement",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "-10"
+        "Name": "Recharge automatique",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "0.9"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1158,14 +1154,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Solidité du bouclier",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "0.05"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1195,10 +1184,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Manœuvrabilité",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "5"
+        "Name": "Système de survie interne activé",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.05"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1774,7 +1763,8 @@
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -1795,7 +1785,8 @@
     "Colour": "2C7C9F",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3418,7 +3409,7 @@
     "Icon": "other/156.png",
     "Name": "Traînée de bulles de jetpack",
     "Group": "Changement de l'échappement du jetpack",
-    "Description": "Un <STELLAR>changement d'apparence de l'exocombinaison<> exclusif.\n\nUne huile conditionnée est ajoutée au moteur du jetpack et crée un flot de bulles aux airs perlés quand il est mis en marche.\n\nTransformez l'apparence de votre exocombinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "Description": "Un <STELLAR>changement d'apparence de combinaison<> exclusif.\n\nUne huile conditionnée est ajoutée au moteur du jetpack et crée un flot de bulles aux airs perlés quand il est mis en marche.\n\nTransformez l'apparence de votre exocombinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
     "BaseValueUnits": 800.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
@@ -3441,7 +3432,7 @@
     "Icon": "other/157.png",
     "Name": "Œuf de compagnon murmurant",
     "Group": "Suppot atroce",
-    "Description": "Un œuf vivant et fertile, <TRADEABLE>prêt à éclore !<>\n\nUne ombre tremble sous la membrane protectrice de l'œuf.\n\nLes scanographies indiquent que l'embryon a le potentiel génétique pour devenir <FUEL>cauchemardesque<> et <FUEL>démoniaque<>.",
+    "Description": "Un œuf vivant, fertile, <TRADEABLE>prêt à éclore !<>\n\nUne ombre tremble sous la membrane protectrice de l'œuf.\n\nLes scanographies indiquent que l'embryon a le potentiel génétique pour devenir <FUEL>cauchemardesque<> et <FUEL>démoniaque<>.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -3573,7 +3564,7 @@
     "Icon": "other/163.png",
     "Name": "Œuf de P. Sheptefalae",
     "Group": "Œuf de compagnon exclusif",
-    "Description": "Un œuf vivant et fertile, <TRADEABLE>prêt à éclore !<>\n\nDans son armure de chair et de cristal, la créature qu'il renferme gratte doucement sa surface.\n\nLes scanographies indiquent que l'embryon a le potentiel génétique pour devenir profondément <TRADEABLE>dévoué<> à la protection de son maître.",
+    "Description": "Un œuf vivant, fertile, <TRADEABLE>prêt à éclore !<>\n\nDans son armure de chair et de cristal, la créature qu'il renferme gratte doucement sa surface.\n\nLes scanographies indiquent que l'embryon a le potentiel génétique pour devenir profondément <TRADEABLE>dévoué<> à la protection de son maître.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -3617,7 +3608,7 @@
     "Icon": "other/165.png",
     "Name": "G. Œuf d'Oestridinzeus",
     "Group": "Œuf de compagnon exclusif",
-    "Description": "Un œuf vivant et fertile, <TRADEABLE>prêt à éclore !<>\n\nLa masse à l'intérieur de cet œuf bouge constamment, comme si la créature à l'intérieur rebondissait avec énergie.\n\nLes scanographies indiquent que l'être à l'intérieur a le potentiel génétique pour être un <TRADEABLE>compagnon au tempérament doux<>, apaisé par des interactions douces.",
+    "Description": "Un œuf vivant et fertile, <TRADEABLE>prêt à éclore !<>\n\nLa masse à l'intérieur de cet œuf bouge constamment, comme si la créature à l'intérieur rebondissait avec énergie.\n\nLes scans indiquent que l'être à l'intérieur a le potentiel génétique pour être un <TRADEABLE>compagnon au tempérament doux<>, apaisé par des interactions douces.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -3639,7 +3630,7 @@
     "Icon": "other/166.png",
     "Name": "V. Œuf de Pentaamqum",
     "Group": "Œuf de compagnon exclusif",
-    "Description": "Un œuf vivant et fertile, <TRADEABLE>prêt à éclore !<>\n\nLe reptile écailleux qui se trouve à l'intérieur gratte la coquille de ses griffes, avide de prouver sa férocité.\n\nLes scanographies indiquent que l'être qui se trouve à l'intérieur a le potentiel génétique pour être un <FUEL>chasseur féroce<>, terrassant ses proies et les créatures rivales avec ses puissantes mâchoires.",
+    "Description": "Un œuf vivant et fertile, <TRADEABLE>prêt à éclore !<>\n\nLe reptile écailleux qui se trouve à l'intérieur gratte la coquille de ses griffes, avide de prouver sa férocité.\n\nLes analyses indiquent que l'être qui se trouve à l'intérieur a le potentiel génétique pour être un <FUEL>chasseur féroce<>, terrassant ses proies et les créatures rivales avec ses puissantes mâchoires.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4170,10 +4161,10 @@
   {
     "Id": "other188",
     "Icon": "other/188.png",
-    "Name": "Corde de chair",
+    "Name": "CORDE DE CHAIR",
     "Group": "Fragments d’intestin",
     "Description": "Les restes enroulés d’un appareil digestif de <SPECIAL>vrille affamée<>. Même si les parois charnues convulsent encore, ces pauvres restes ne donneront sûrement jamais naissance à une nouvelle vrille...\n\nCe genre d’abat spécifique est rarement négocié à l’Échange galactique, ce qui lui octroie une <STELLAR>grande valeur<>.",
-    "BaseValueUnits": 160016.0,
+    "BaseValueUnits": 16016.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
@@ -4376,7 +4367,7 @@
     "Icon": "other/197.png",
     "Name": "Trophée titanesque",
     "Group": "Crâne ornemental",
-    "Description": "Un ornement de base exclusif à construire.\n\nCe crâne denté appartenait à un grand vertébré apode, cousin du ver des sables titan. Ses mâchoires sont assez puissantes pour broyer un multi-outil ou les os de la plupart des créatures.",
+    "Description": "Une décoration exclusive à construire sur votre base.\n\nCe crâne denté appartenait à un grand vertébré apode, cousin du ver des sables titan. Ses mâchoires sont assez puissantes pour broyer un multi-outil ou les os de la plupart des créatures.",
     "BaseValueUnits": 500.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6129,9 +6120,9 @@
   {
     "Id": "other272",
     "Icon": "other/272.png",
-    "Name": "Fragment de mémoire (multi-outil)",
+    "Name": "Fragment de mémoire (arme personnelle)",
     "Group": "Écho de technologie renégate",
-    "Description": "Les restes éparpillés d'une <STELLAR>existence antérieure<>. Elle chuchote un nom inconnu au plus profond de ses fibres.\n\nCe souvenir se manifeste sous forme d'<TECHNOLOGY>amélioration technologique pour multi-outil<> pour vous aider dans cette itération. <STELLAR>Absorbez<> ce souvenir avec <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>LA MORT N'EST PAS LA FIN<> <IMG>SLASH<> <STELLAR>LA BOUCLE CONTINUE<>",
+    "Description": "Les restes éparpillés d'une <STELLAR>existence antérieure<>. Elle chuchote un nom inconnu au plus profond de ses fibres.\n\nCe souvenir se manifeste sous forme d'<TECHNOLOGY>arme de multi-outil<> pour vous aider dans cette itération. <STELLAR>Absorbez<> ce souvenir avec <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>LA MORT N'EST PAS LA FIN<> <IMG>SLASH<> <STELLAR>LA BOUCLE CONTINUE<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6154,9 +6145,9 @@
   {
     "Id": "other273",
     "Icon": "other/273.png",
-    "Name": "Fragment de mémoire (vaisseau)",
+    "Name": "Fragment de mémoire (arme de vaisseau)",
     "Group": "Écho de technologie renégate",
-    "Description": "Les restes éparpillés d'une <STELLAR>existence antérieure<>. Elle chuchote un nom inconnu au plus profond de ses fibres.\n\nCe souvenir se manifeste sous forme d'<TECHNOLOGY>amélioration technologique pour vaisseau spatial<> pour vous aider dans cette itération. <STELLAR>Absorbez<> ce souvenir avec <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>LA MORT N'EST PAS LA FIN<> <IMG>SLASH<> <STELLAR>LA BOUCLE CONTINUE<>",
+    "Description": "Les restes éparpillés d'une <STELLAR>existence antérieure<>. Elle chuchote un nom inconnu au plus profond de ses fibres.\n\nCe souvenir se manifeste sous forme d'<TECHNOLOGY>arme de vaisseau<> pour vous aider dans cette itération. <STELLAR>Absorbez<> ce souvenir avec <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>LA MORT N'EST PAS LA FIN<> <IMG>SLASH<> <STELLAR>LA BOUCLE CONTINUE<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6254,9 +6245,9 @@
   {
     "Id": "other277",
     "Icon": "other/277.png",
-    "Name": "Fragment de mémoire (Exonef)",
+    "Name": "Fragment de mémoire (exonef)",
     "Group": "Écho de technologie renégate",
-    "Description": "Les restes éparpillés d'une <STELLAR>existence antérieure<>. Elle chuchote un nom inconnu au plus profond de ses fibres.\n\nCe souvenir se manifeste sous forme d'<TECHNOLOGY>xx<> pour vous aider dans cette itération. <STELLAR>Absorbez<> ce souvenir avec <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>LA MORT N'EST PAS LA FIN<> <IMG>SLASH<> <STELLAR>LA BOUCLE CONTINUE<>",
+    "Description": "Les restes éparpillés d'une <STELLAR>existence antérieure<>. Elle chuchote un nom inconnu au plus profond de ses fibres.\n\nCe souvenir se manifeste sous forme d'<TECHNOLOGY>amélioration d'exonef<> pour vous aider dans cette itération. <STELLAR>Absorbez<> ce souvenir avec <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>LA MORT N'EST PAS LA FIN<> <IMG>SLASH<> <STELLAR>LA BOUCLE CONTINUE<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6354,7 +6345,7 @@
   {
     "Id": "other280",
     "Icon": "other/280.png",
-    "Name": "Empreinte de souvenir : I",
+    "Name": "Empreinte de souvenir I",
     "Group": "Artefact de la boucle",
     "Description": "Un souvenir est <STELLAR>gravé<> dans cette matière étrange, un écho d'une autre vie...\n\n'Je n'avais jamais vu quoi que ce soit qui ressemble au léviathan.\nSuffisamment grand pour occulter le soleil.\nJe le voulais. Je le mérite ! Je l'aurai.\nMais il a résisté, il refusait de venir à moi.\nIl a crié et crié tandis que l'infralame tailladait sa chair.\nIl a failli m'emporter avec lui. Peut-être qu'il l'a fait. Peut-être...'",
     "BaseValueUnits": 16.0,
@@ -6375,7 +6366,7 @@
   {
     "Id": "other281",
     "Icon": "other/280.png",
-    "Name": "Empreinte de souvenir : II",
+    "Name": "Empreinte de souvenir II",
     "Group": "Artefact de la boucle",
     "Description": "Un souvenir est <STELLAR>gravé<> dans cette matière étrange, un écho d'une autre vie...\n\n'Le même cauchemar me poursuit : un gémissement emplit mon cockpit, les commandes du tableau de bord sont enduites de sang collant.\nJ'ai abandonné l'idée de dormir. Je me propulse à travers les étoiles.\nEt puis il fut là : majestueux, dérivant dans l'océan de l'espace.\nQuelque chose en moi brûle pour lui. Je dois l'avoir.\nSa grande nageoire s'est pliée vers mon vaisseau, et je n'eus plus de coque...'",
     "BaseValueUnits": 16.0,
@@ -6396,7 +6387,7 @@
   {
     "Id": "other282",
     "Icon": "other/280.png",
-    "Name": "Empreinte de souvenir : III",
+    "Name": "Empreinte de souvenir III",
     "Group": "Artefact de la boucle",
     "Description": "Un souvenir est <STELLAR>gravé<> dans cette matière étrange, un écho d'une autre vie...\n\n'Aujourd'hui aurait dû être le jour. Leur heure était proche.\nJe dois l'avoir. Je n'avais jamais rien vu de pareil.\nTout était prêt. Mais il a bougé à une vitesse impossible. Comme s'il savait exactement là où j'allais, avant que je ne le sache moi-même.\nUn grand tentacule a agrippé mon vaisseau, mon cockpit... écrasant ma combinaison jusqu'aux os. Cette combinaison sera mon tombeau.'",
     "BaseValueUnits": 16.0,
@@ -6417,9 +6408,9 @@
   {
     "Id": "other283",
     "Icon": "other/280.png",
-    "Name": "Empreinte de souvenir : IV",
+    "Name": "Empreinte de souvenir IV",
     "Group": "Artefact de la boucle",
-    "Description": "Un souvenir est <STELLAR>gravé<> dans cette matière étrange, un écho d'une autre vie...\n\n'La chasse est terminée, et j'ai perdu. Les géants perdureront, et ma fin viendra.\nAlors que je chutais dans le ciel, je vis un autre vaisseau tomber à côté du mien. Puis un autre, et un autre.\nJe l'ai peut-être imaginé. Les soubresauts d'un cerveau mourant...\nCes créatures étaient magnifiques. Mais tout est fini maintenant.\nElles ne hanteront plus mes pensées.'",
+    "Description": "Un souvenir est <STELLAR>gravé<> dans cette matière étrange, un écho d'une autre vie...\n\n'La chasse est terminée, et j'ai perdu.\nLes géants perdureront, et ma fin viendra.\nAlors que je chutais dans le ciel, je vis un autre vaisseau tomber à côté du mien. Puis un autre, et un autre.\nJe l'ai peut-être imaginé. Les soubresauts d'un cerveau mourant...\nCes créatures étaient magnifiques. Mais tout est fini maintenant.\nElles ne hanteront plus mes pensées.'",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "Colour": "4D2957",
@@ -6438,7 +6429,7 @@
   {
     "Id": "other284",
     "Icon": "other/280.png",
-    "Name": "Empreinte de souvenir : V",
+    "Name": "Empreinte de souvenir V",
     "Group": "Artefact de la boucle",
     "Description": "Un souvenir est <STELLAR>gravé<> dans cette matière étrange, écho d'une autre vie...\n\n'Je me suis retrouvé face à une créature plus belle et plus bizarre que tout ce que je n'ai jamais vu.\nMalgré l'absence d'yeux visibles, je ne crois pas qu'elle soit aveugle.\nElle était immense, glorieuse, paisible. Mais ensuite, d'un coup de tentacules, elle avait disparu.\nJe n'ai pensé à rien d'autre depuis. Je ne pense qu'à la baleine. baleine. baleine. <SPECIAL>cri<>.'",
     "BaseValueUnits": 16.0,
@@ -6556,6 +6547,533 @@
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
       "IsExpeditionSeason7Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other289",
+    "Icon": "products/93.png",
+    "Name": "Sac de ponte",
+    "Group": "Sac de stockage de vaisseau Sentinelle ",
+    "Description": "Un <SPECIAL>nodule de stockage supplémentaire<> pour les vaisseaux <TECHNOLOGY>conscients<>. Lors de l'éclosion, le parasite à l'intérieur de ce sac est greffé sur le vaisseau et échange l'utilisation de ses entrailles creuses contre des nutriments vitaux de l'hôte.\n\nUtilisez <VAL_ON><IMG>FE_ALT1<><> pour déclencher la croissance et commencer le <VAL_ON>processus d'éclosion<>.",
+    "BaseValueUnits": 125000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Faire évoluer du stockage supplémentaire"
+    ]
+  },
+  {
+    "Id": "other290",
+    "Icon": "products/91.png",
+    "Name": "Œuf psychonique",
+    "Group": "Sac vitellin frémissant",
+    "Description": "Un sac de fluide génétique parcouru de frémissements, conçu pour favoriser la création d'une nouvelle <TECHNOLOGY>technologie bio-infusée<> pour un <TECHNOLOGY>vaisseau conscient<>.\n\nL'embryon grandira pour devenir une <TECHNOLOGY>amélioration de biotechnologie<>. <STELLAR>Commencez la biogenèse<> avec <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 126000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Éclot en une nouvelle technologie consciente"
+    ]
+  },
+  {
+    "Id": "other291",
+    "Icon": "other/291.png",
+    "Name": "Antenne onirique",
+    "Group": "Appareil d'accès subconscient",
+    "Description": "Un récepteur et un amplificateur de signal, réglé sur la fréquence de l'esprit inconscient. Il est de toutes les couleurs à la fois, fractionnant la lumière environnante en un arc-en-ciel chatoyant.\n\n<FUEL>Attention :<> Dans l'espace lointain, cette antenne peut attirer l'attention d'une <SPECIAL>mégafaune cosmique<>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod58",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other292",
+    "Icon": "other/278.png",
+    "Name": "Diffuseur de coordonnées de cargo",
+    "Group": "Ultime attache",
+    "Description": "Un appareil de fortune, bricolé à partir de composants électroniques récupérés et conservés en lieu sûr pendant de nombreuses années. Cet enchevêtrement de câbles tentera d'entrer en contact avec les derniers vestiges connus de la planète d'origine du cargo.\n\nSélectionnez l'appareil, puis Diffuser (<IMG>FE_ALT1<>) pour commencer le processus de localisation.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 60
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 20
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Tentez d'établir le contact"
+    ]
+  },
+  {
+    "Id": "other293",
+    "Icon": "other/293.png",
+    "Name": "Traînée de cargo à haute gravité",
+    "Group": "Forçage de la fusée du moteur du cargo",
+    "Description": "Un <STELLAR>modificateur exclusif pour la fusée de moteur du cargo<>.\n\nLes gaz de combustion à haute énergie se condensent rapidement en sortant des moteurs colossaux du cargo jusqu'à se transformer en micro-singularités.\n\nTransformez l'apparence de votre cargo au <TECHNOLOGY>terminal de contrôle des améliorations<> sur le <VAL_ON>pont<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other294",
+    "Icon": "other/294.png",
+    "Name": "Cape de commandant de flotte",
+    "Group": "Cape à débloquer",
+    "Description": "Un <STELLAR>changement d'apparence de combinaison<> exclusif.\n\nMaître, commandant, voyageur stellaire. Revêtez votre cape et préparez-vous à prendre la barre.\n\nTransformez l'apparence de votre combinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other295",
+    "Icon": "other/52.png",
+    "Name": "Titre : 'le Chercheur'",
+    "Group": "Identification personnelle sur mesure",
+    "Description": "Un <STELLAR>titre d'explorateur<> exclusif, commémorant l'accomplissement de l'expédition <STELLAR>Étoile polaire<> et la fin d'un long voyage à bord d'un vaisseau amiral.\n\nAppliquez ce titre à votre bannière dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other296",
+    "Icon": "other/296.png",
+    "Name": "Œuf d'Hélios",
+    "Group": "Protozoaire spatial capturé",
+    "Description": "Un œuf vivant, fertile, <TRADEABLE>prêt à éclore !<>\n\nÀ l'intérieur de la coquille flotte une lueur obsédante, comme un flambeau à la fois splendide et maudit.\n\nLa scanographie indique que l'être qu'il renferme a le potentiel génétique d'être <SPECIAL>gélatineux<> et <TECHNOLOGY>spectral<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2987",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other297",
+    "Icon": "other/297.png",
+    "Name": "Vaisseau exclusif",
+    "Group": "Vaisseau exclusif",
+    "Description": "Un <STELLAR>vaisseau<> exclusif, de construction polyvalente et au chargement équilibré. La diversité de l'armement intégré permet une large gamme de tactiques en combat spatial.\n\n<STELLAR>Réclamez<> ce vaisseau pour l'ajouter à votre collection, ou <STELLAR>échangez<>-le contre votre vaisseau actuel. Lorsque vous êtes sur une planète, appelez les vaisseaux depuis le menu rapide (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other298",
+    "Icon": "other/298.png",
+    "Name": "Vaisseau exclusif",
+    "Group": "Vaisseau exclusif",
+    "Description": "Un <STELLAR>vaisseau<> exclusif. Spécialisé en combat spatial, ce vaisseau bénéficie d'une mobilité supérieure et d'une puissance de feu avancée, et est fourni avec un <TECHNOLOGY>éjecteur à positrons<> amélioré.\n\n<STELLAR>Réclamez<> ce vaisseau pour l'ajouter à votre collection, ou <STELLAR>échangez<>-le contre votre vaisseau actuel. Lorsque vous êtes sur une planète, appelez les vaisseaux depuis le menu rapide (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other299",
+    "Icon": "other/299.png",
+    "Name": "Vaisseau exclusif",
+    "Group": "Vaisseau exclusif",
+    "Description": "Un <STELLAR>vaisseau<> spécialisé en transport de marchandises. Équipé d'office avec des <TECHNOLOGY>boucliers déflecteurs<> améliorés et un <TECHNOLOGY>déflecteur d'analyse de cargaison<>, ce transporteur est idéal pour veiller à ce que les marchandises précieuses, légales ou non, restent intactes pendant le transport.\n\n<STELLAR>Récupérez<> ce vaisseau pour l'ajouter à votre collection, ou <STELLAR>échangez<>-le contre votre vaisseau actuel. Lorsque vous êtes sur une planète, appelez les vaisseaux depuis le menu rapide (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other300",
+    "Icon": "other/300.png",
+    "Name": "Vaisseau exclusif",
+    "Group": "Vaisseau exclusif",
+    "Description": "Un <STELLAR>vaisseau<> exclusif, doté de capacités d'<TECHNOLOGY>hyperpropulsion<> avancées et équipé d'office d'un <TECHNOLOGY>générateur de distorsion d'urgence<> pour vous déplacer efficacement et sans entraves d'une étoile à l'autre.\n\n<STELLAR>Réclamez<> ce vaisseau pour l'ajouter à votre collection, ou <STELLAR>échangez<>-le contre votre vaisseau actuel. Lorsque vous êtes sur une planète, appelez les vaisseaux depuis le menu rapide (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other301",
+    "Icon": "other/301.png",
+    "Name": "Vaisseau exclusif",
+    "Group": "Vaisseau exclusif",
+    "Description": "Un <STELLAR>vaisseau<> exclusif. Fuselé et agile, il est équipé d'office d'un <TECHNOLOGY>accélérateur d'infra-couteau<> pour un avantage en combat spatial.\n\n<STELLAR>Réclamez<> ce vaisseau pour l'ajouter à votre collection, ou <STELLAR>échangez<>-le contre votre vaisseau actuel. Lorsque vous êtes sur une planète, appelez les vaisseaux depuis le menu rapide (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other302",
+    "Icon": "other/302.png",
+    "Name": "Œuf exclusif",
+    "Group": "Œuf de compagnon exclusif",
+    "Description": "Un œuf vivant et fertile, <TRADEABLE>prêt à éclore !<>\n\nLes scanographies indiquent que l'être dans cet œuf a le potentiel génétique pour devenir <STELLAR>capricieux<>, avec une propension à s'amuser.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other303",
+    "Icon": "other/303.png",
+    "Name": "Œuf exclusif",
+    "Group": "Œuf de compagnon exclusif",
+    "Description": "Un œuf vivant et fertile, <TRADEABLE>prêt à éclore !<>\n\nLes scanographies indiquent que l'être dans cet œuf a le potentiel génétique pour devenir <STELLAR>loyal<>, désireux de trouver un maître à placer au centre de l'univers.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other304",
+    "Icon": "other/304.png",
+    "Name": "Multi-outil exclusif",
+    "Group": "Dispositif de survie multi-fonctions exclusif",
+    "Description": "Un <STELLAR>multi-outil<> exclusif. Cette arme est équipée d'office du <TECHNOLOGY>canon à neutrons<> versatile, qui tire de puissantes salves de particules atmosphériques ; plus il est chargé, plus le tir est mortel.\n\n<STELLAR>Prenez<> ce multi-outil pour l'ajouter à votre collection, ou <STELLAR>échangez<>-le contre votre multi-outil actuel. Changez de multi-outil depuis la section Utilitaires du menu rapide (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other305",
+    "Icon": "other/305.png",
+    "Name": "Multi-outil exclusif",
+    "Group": "Dispositif de survie multi-fonctions exclusif",
+    "Description": "Un <STELLAR>multi-outil<> exclusif. Cette arme est équipée d'office du <TECHNOLOGY>mortier paralysant<> tactique et du redoutable <TECHNOLOGY>dard ardent<>, pour paralyser les agresseurs et effectuer des tirs puissants.\n\n<STELLAR>Prenez<> ce multi-outil pour l'ajouter à votre collection, ou <STELLAR>échangez<>-le contre votre multi-outil actuel. Changez de multi-outil depuis la section Utilitaires du menu rapide (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other306",
+    "Icon": "other/306.png",
+    "Name": "Multi-outil exclusif",
+    "Group": "Dispositif de survie multi-fonctions exclusif",
+    "Description": "Un <STELLAR>multi-outil<> exclusif. Cette arme est équipée d'office d'un <TECHNOLOGY>système de camouflage<> puissant, pour échapper aux confrontations ennemies en toute discrétion.\n\n<STELLAR>Prenez<> ce multi-outil pour l'ajouter à votre collection, ou <STELLAR>échangez<>-le contre votre multi-outil actuel. Changez de multi-outil depuis la section Utilitaires du menu rapide (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other307",
+    "Icon": "other/124.png",
+    "Name": "Pack de feux d'artifice Atlas",
+    "Group": "Multi-pack de pyrotechnie",
+    "Description": "Un pack de trois sortes de feux d'artifice de luxe. Cette incroyable pyrotechnie imite le visuel de l'interface Atlas, en explosions d'<TECHNOLOGY>indium<>, d'<COMMODITY>or<> et de <FUEL>cadmium<>. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis <VAL_ON>menu de construction<> (<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur. ",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other308",
+    "Icon": "other/124.png",
+    "Name": "Pack de feux d'artifice Atlas",
+    "Group": "Multi-pack de pyrotechnie",
+    "Description": "Un pack de trois sortes de feux d'artifice de luxe. Cette incroyable pyrotechnie imite le visuel de l'interface Atlas, en explosions d'<TECHNOLOGY>indium<>, d'<COMMODITY>or<> et de <FUEL>cadmium<>. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis <VAL_ON>menu de construction<> (<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur. ",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other309",
+    "Icon": "other/124.png",
+    "Name": "Pack de feux d'artifice Atlas",
+    "Group": "Multi-pack de pyrotechnie",
+    "Description": "Un pack de trois sortes de feux d'artifice de luxe. Cette incroyable pyrotechnie imite le visuel de l'interface Atlas, en explosions d'<TECHNOLOGY>indium<>, d'<COMMODITY>or<> et de <FUEL>cadmium<>. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis <VAL_ON>menu de construction<> (<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur. ",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other310",
+    "Icon": "other/124.png",
+    "Name": "Pack de feux d'artifice Atlas",
+    "Group": "Multi-pack de pyrotechnie",
+    "Description": "Un pack de trois sortes de feux d'artifice de luxe. Cette incroyable pyrotechnie imite le visuel de l'interface Atlas, en explosions d'<TECHNOLOGY>indium<>, d'<COMMODITY>or<> et de <FUEL>cadmium<>. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis <VAL_ON>menu de construction<> (<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur. ",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other311",
+    "Icon": "other/124.png",
+    "Name": "Pack de feux d'artifice Atlas",
+    "Group": "Multi-pack de pyrotechnie",
+    "Description": "Un pack de trois sortes de feux d'artifice de luxe. Cette incroyable pyrotechnie imite le visuel de l'interface Atlas, en explosions d'<TECHNOLOGY>indium<>, d'<COMMODITY>or<> et de <FUEL>cadmium<>. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis <VAL_ON>menu de construction<> (<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur. ",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

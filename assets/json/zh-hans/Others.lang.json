@@ -764,7 +764,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/35.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -785,7 +786,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/36.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -806,7 +808,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/37.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -1020,9 +1023,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "伤害",
+        "Name": "射速",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "recharge2",
         "Value": "8"
       }
     ],
@@ -1053,14 +1056,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "推进器",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "5"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1090,10 +1086,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "超光速推进装置范围",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "50"
+        "Name": "曲速电池效率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5,000"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1125,10 +1121,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "发射消耗",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "-10"
+        "Name": "自动充能",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "0.9"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1158,14 +1154,7 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "护盾强度",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
-        "Value": "0.05"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1195,10 +1184,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "操控性",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "5"
+        "Name": "已启用内部维生系统",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1.05"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1774,7 +1763,8 @@
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -1795,7 +1785,8 @@
     "Colour": "2C7C9F",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4173,7 +4164,7 @@
     "Name": "血肉之绳",
     "Group": "脏器碎片",
     "Description": "一根<SPECIAL>饥饿的触手<>的消化道残骸。虽然上面的肉壁依旧在不停抽搐，但是这些残渣绝不可能复原成真正的触手......\n\n银河交易所中极少能见到这种特殊脏器，因此拥有着<STELLAR>十分宝贵<>的价值。",
-    "BaseValueUnits": 160016.0,
+    "BaseValueUnits": 16016.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
@@ -4238,7 +4229,7 @@
     "Icon": "other/191.png",
     "Name": "血肉发射器包",
     "Group": "烟火技术组合包",
-    "Description": "一捆奢华的烟花。这种有机火箭烟花可升入天空，引爆无数黏质、黏液和蠕虫，让血肉漫天飞溅。点燃就可以在天空中开启一场令人作呕的表演\n\n可以通过<VAL_ON>建造菜单<>（<IMG>BUILD_MENU<>）来放置发射筒。<FUEL>警告<>：不可瞄准活体生物。不建议在室内使用。",
+    "Description": "一捆奢华的烟花。这种有机火箭烟花可升入天空，引爆无数黏质、黏液和蠕虫，让血肉漫天飞溅。点燃就可以在天空中开启一场令人作呕的表演。\n\n可以通过<VAL_ON>建造菜单<>（<IMG>BUILD_MENU<>）来放置发射筒。<FUEL>警告<>：不可瞄准活体生物。不建议在室内使用。",
     "BaseValueUnits": 250.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4488,7 +4479,7 @@
     "Icon": "other/187.png",
     "Name": "虫蜕经书：4",
     "Group": "肉质文卷",
-    "Description": "这份<STELLAR>活经文<>上刻着古老的文字。上面写道：\n\n“吞噬之时，吾等瑟瑟发抖，然依旧尽力攀爬粘液之墙，\n呜呼哀哉！只为在清醒时分到达砂囊。\n尽力喘息！吾等咳呛不已！\n黏质堵住了吾等的鼻腔，刺痛了眼睛，\n但是在这温暖的黑暗之中，光明又与吾等何干。”",
+    "Description": "这份<STELLAR>活经文<>上刻着古老的文字。上面写道：\n\n“吞噬之时，吾等瑟瑟发抖，然依旧尽力攀爬粘液之墙，呜呼哀哉！\n只为在清醒时分到达砂囊。\n尽力喘息！吾等咳呛不已！\n黏质堵住了吾等的鼻腔，刺痛了眼睛，\n但是在这温暖的黑暗之中，光明又与吾等何干。”",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6106,7 +6097,7 @@
     "Icon": "other/271.png",
     "Name": "记忆碎片（等级）",
     "Group": "反叛技术回音",
-    "Description": "一块 <STELLAR>已故生命体<>的记忆碎片残骸。在纤维的深处仿佛轻轻的低语着一个陌生的名字。\n\n这些记忆将作为一个<TECHNOLOGY>飞船或者多用途工具升级组件<>来帮助你进行此次迭代。按<VAL_ON><IMG>FE_ALT1<><><STELLAR>吸收<>这份记忆。\n\n<SPECIAL>死亡不是结束<><IMG>SLASH<><STELLAR>循环将会继续<>",
+    "Description": "一块 <STELLAR>已故生命体<>的记忆碎片残骸。在纤维的深处仿佛轻轻的低语着一个陌生的名字。\n\n这些记忆将作为一个<TECHNOLOGY>飞船或者多用途工具升级组件<>来帮助你进行此次迭代。按<STELLAR><>FE_ALT1<VAL_ON><IMG><>吸收<>这份记忆。\n\n<SPECIAL>死亡不是结束<><IMG>SLASH<><STELLAR>循环将会继续<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6129,9 +6120,9 @@
   {
     "Id": "other272",
     "Icon": "other/272.png",
-    "Name": "记忆碎片（多用途工具）",
+    "Name": "记忆碎片（个人武器）",
     "Group": "反叛技术回音",
-    "Description": "一块 <STELLAR>已故生命体<>的记忆碎片残骸。在纤维的深处仿佛轻轻的低语着一个陌生的名字。\n\n这些记忆将作为一个<TECHNOLOGY>多用途工具技术升级组件<>来帮助你进行此次迭代。按<VAL_ON><IMG>FE_ALT1<><><STELLAR>吸收<>这份记忆。\n\n<SPECIAL>死亡不是结束<><IMG>SLASH<><STELLAR>循环将会继续<>",
+    "Description": "一块 <STELLAR>已故生命体<>的记忆碎片残骸。在纤维的深处仿佛轻轻的低语着一个陌生的名字。\n\n这些记忆将作为一个<TECHNOLOGY>多用途工具武器组件<>来帮助你进行此次迭代。按<STELLAR><>FE_ALT1<VAL_ON><IMG><>吸收<>这份记忆。\n\n<SPECIAL>死亡不是结束<><IMG>SLASH<><STELLAR>循环将会继续<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6154,9 +6145,9 @@
   {
     "Id": "other273",
     "Icon": "other/273.png",
-    "Name": "记忆碎片（飞船）",
+    "Name": "记忆碎片（飞船武器）",
     "Group": "反叛技术回音",
-    "Description": "一块 <STELLAR>已故生命体<>的记忆碎片残骸。在纤维的深处仿佛轻轻的低语着一个陌生的名字。\n\n这些记忆将作为一个<TECHNOLOGY>飞船技术升级组件<>来帮助你进行此次迭代。按<VAL_ON><IMG>FE_ALT1<><><STELLAR>吸收<>这份记忆。\n\n<SPECIAL>死亡不是结束<><IMG>SLASH<><STELLAR>循环将会继续<>",
+    "Description": "一块 <STELLAR>已故生命体<>的记忆碎片残骸。在纤维的深处仿佛轻轻的低语着一个陌生的名字。\n\n这些记忆将作为一个<TECHNOLOGY>飞船武器组件<>来帮助你进行此次迭代。按<STELLAR><>FE_ALT1<VAL_ON><IMG><>吸收<>这份记忆。\n\n<SPECIAL>死亡不是结束<><IMG>SLASH<><STELLAR>循环将会继续<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6256,7 +6247,7 @@
     "Icon": "other/277.png",
     "Name": "记忆碎片（强化艇）",
     "Group": "反叛技术回音",
-    "Description": "一块 <STELLAR>已故生命体<>的记忆碎片残骸。在纤维的深处仿佛轻轻的低语着一个陌生的名字。\n\n这些记忆将作为一个<TECHNOLOGY>强化艇器升级<>来帮助你进行此次迭代。按<VAL_ON><IMG>FE_ALT1<><><STELLAR>吸收<>这份记忆。\n\n<SPECIAL>死亡不是结束<><IMG>SLASH<><STELLAR>循环将会继续<>",
+    "Description": "一块 <STELLAR>已故生命体<>的记忆碎片残骸。在纤维的深处仿佛轻轻的低语着一个陌生的名字。\n\n这些记忆将作为一个<TECHNOLOGY>强化艇升级组件<>来帮助你进行此次迭代。按<STELLAR><>FE_ALT1<VAL_ON><IMG><>吸收<>这份记忆。\n\n<SPECIAL>死亡不是结束<><IMG>SLASH<><STELLAR>循环将会继续<>",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -6354,7 +6345,7 @@
   {
     "Id": "other280",
     "Icon": "other/280.png",
-    "Name": "铭记记忆：I",
+    "Name": "铭记记忆 I",
     "Group": "循环遗物",
     "Description": "记忆被<STELLAR>烙进<>了这种奇怪的材料，是另一个生命的回音......\n\n“我从来没见过这样的巨兽。\n体型大得好似能遮住太阳的一角。\n我想得到它。只有我才配得到它！它会是我的。\n但是它在抵抗，不愿意乖乖就擒。\n在红外切割机割入它肉体的同时，它不断地哀嚎。\n我差点与它同归于尽。也许我已经......”",
     "BaseValueUnits": 16.0,
@@ -6375,7 +6366,7 @@
   {
     "Id": "other281",
     "Icon": "other/280.png",
-    "Name": "铭记记忆：II",
+    "Name": "铭记记忆 II",
     "Group": "循环遗物",
     "Description": "记忆被<STELLAR>烙进<>了这种奇怪的材料，是另一个生命的回音......\n\n“我被同一个噩梦追逐着：哀嚎充斥着我的驾驶舱，控制面板上涂满了鲜血。\n我放弃了睡眠。在群星睡眼朦胧时，我依然醒着。\n然后我看见了它：在太空的海洋中漂浮着的雄伟生物。\n我体内有什么东西正在为它而燃，我必须得到它。\n它那巨大的鳍朝我的船挥来，接着我的船体便消失了......”",
     "BaseValueUnits": 16.0,
@@ -6396,7 +6387,7 @@
   {
     "Id": "other282",
     "Icon": "other/280.png",
-    "Name": "铭记记忆：III",
+    "Name": "铭记记忆 III",
     "Group": "循环遗物",
     "Description": "记忆被<STELLAR>烙进<>了这种奇怪的材料，是另一个生命的回音......\n\n“就是今天了。那个时候马上就要到来了。\n它必须是我的。我从来没见过那样的生物。\n一切都准备好了，但它的移动速度超过了我的想象，而且它可以非常精准地预测我的飞行轨迹。\n一根巨大的触手抓住了我的飞船，我的驾驶舱，扼住了我包裹在太空服内的骨骼。这套太空服将会是我的坟墓。”",
     "BaseValueUnits": 16.0,
@@ -6417,9 +6408,9 @@
   {
     "Id": "other283",
     "Icon": "other/280.png",
-    "Name": "铭记记忆：IV",
+    "Name": "铭记记忆 IV",
     "Group": "循环遗物",
-    "Description": "记忆被<STELLAR>烙进<>了这种奇怪的材料，是另一个生命的回音......\n\n“这场追逐结束了，而我是输家。巨兽会存活，我则迎来终结。\n在我从空中坠落时，我看见了另一艘飞船与我同落，接着一艘又一艘。\n我死前最后的想法是......\n那些生物太美了，然而一切都结束了。\n它们不会再在我脑中萦绕不去了。”",
+    "Description": "记忆被<STELLAR>烙进了<>这种奇怪的材料，是另一个生命的回音......“\n\n这场追逐结束了，而我是输家。\n巨兽会存活，我则迎来终结。\n在我从空中坠落时，我看见了另一艘飞船与我同落，接着一艘又一艘。\n我死前最后的想法是......\n那些生物太美了，然而一切都结束了。\n它们不会再在我脑中萦绕不去了。”",
     "BaseValueUnits": 16.0,
     "CurrencyType": "Credits",
     "Colour": "4D2957",
@@ -6438,7 +6429,7 @@
   {
     "Id": "other284",
     "Icon": "other/280.png",
-    "Name": "铭记记忆：V",
+    "Name": "铭记记忆 V",
     "Group": "循环遗物",
     "Description": "记忆被<STELLAR>烙进<>了这种奇怪的材料，是另一个生命的回音......\n\n“我面对面地遇到了一种我见过的最美丽且怪异的生物。\n尽管不知道它们的眼睛在哪，可我认为它们肯定看得见。\n它巨大、壮丽又安详，它的触手轻轻一抽，它便不见了。\n从那以后，我再也无法思考其他事物。那头巨鲸在我的脑中萦绕不去。巨鲸，巨鲸......<SPECIAL>哀嚎<>。“",
     "BaseValueUnits": 16.0,
@@ -6556,6 +6547,533 @@
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
       "IsExpeditionSeason7Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other289",
+    "Icon": "products/93.png",
+    "Name": "腐化的囊",
+    "Group": "有感知力的飞船存储囊",
+    "Description": "一个<SPECIAL>额外的储存结点<>，用于<TECHNOLOGY>有感知力的<>飞船。孵化后，这个囊中的寄生虫会被嫁接到容器上，它的内脏会转换为宿主的重要营养。\n\n使用<VAL_ON><IMG>FE_ALT1<><>来触发生长，开始<VAL_ON>孵化过程<>。",
+    "BaseValueUnits": 125000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "进化额外的存储空间"
+    ]
+  },
+  {
+    "Id": "other290",
+    "Icon": "products/91.png",
+    "Name": "心灵之卵",
+    "Group": "搏动的卵黄囊",
+    "Description": "一个蠕动的基因液囊，旨在促进创造新的<TECHNOLOGY>生物注入技术<>，用于<TECHNOLOGY>有感知力的飞船<>。\n\n胚胎将成长为<TECHNOLOGY>生物技术升级组件<>。<STELLAR>用<VAL_ON><IMG>FE_ALT1<><>开始生物合成<>。",
+    "BaseValueUnits": 126000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "孵化为新的有感知力的技术"
+    ]
+  },
+  {
+    "Id": "other291",
+    "Icon": "other/291.png",
+    "Name": "梦境飞行",
+    "Group": "潜意识访问设备",
+    "Description": "一个信号接收放大器，根据无意识思维的波长进行调整。它同时具有各种颜色，能将周遭的光线分割成一道道闪亮的彩虹。\n\n<FUEL>警告<>：携带此天线进入深空可能会引起<SPECIAL>宇宙巨型生物的注意<>。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod58",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod116",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other292",
+    "Icon": "other/278.png",
+    "Name": "货船坐标发射器",
+    "Group": "家的最后踪迹",
+    "Description": "一个临时装置，由保存在储藏库中多年的废旧电子元件拼凑而成。这团杂乱无章的电线网将试图与这艘货船的最后一个已知家园的遗迹取得联系。\n\n选择设备并选择广播（<IMG>FE_ALT1<>），开始定位过程。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 60
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 20
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "试图进行联系"
+    ]
+  },
+  {
+    "Id": "other293",
+    "Icon": "other/293.png",
+    "Name": "高重力货船尾迹",
+    "Group": "货船驱动信号器超控",
+    "Description": "专属<STELLAR>货船驱动信号器修改器<>。\n\n高能废气在离开货船巨大的引擎时会迅速凝结，坍塌成微观粒子。\n\n在<VAL_ON>舰桥<>上的<TECHNOLOGY>升级控制终端<>改变货船外观。",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other294",
+    "Icon": "other/294.png",
+    "Name": "舰队指挥官披风",
+    "Group": "可解锁披风",
+    "Description": "专属的<STELLAR>套装外观<>。\n\n指挥官，领主，群星中的旅者。披上你的斗篷，准备掌舵。\n\n可以在<TECHNOLOGY>外观修改器<>中使用以更改你的套装外观。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other295",
+    "Icon": "other/52.png",
+    "Name": "头衔：探寻者",
+    "Group": "定制个人身份",
+    "Description": "专属<STELLAR>探险家头衔<>，纪念你完成了<STELLAR>极星<>远征，并完成了主力飞船上的漫长航行。\n\n请使用<TECHNOLOGY>外观修改器<>在你的旗帜上应用此头衔。",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other296",
+    "Icon": "other/296.png",
+    "Name": "赫利俄斯之卵",
+    "Group": "捕获的太空原生生物",
+    "Description": "一个有生命的、可生育的卵，<TRADEABLE>已可孵化！<>\n\n壳里萦绕着漂浮的光球，散发着美丽而具有诅咒气息的光辉。\n\n根据扫描结果显示，里面的生物拥有<SPECIAL>凝胶状<>以及<TECHNOLOGY>发光<>的基因潜质。",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2987",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other297",
+    "Icon": "other/297.png",
+    "Name": "专属飞船",
+    "Group": "专属飞船",
+    "Description": "专属的<STELLAR>飞船<>，配备多样化的构建和平衡的装载。各种预置武器使得驾驶员能够在太空战斗中采取一系列的战术。\n\n<STELLAR>收取<>这艘飞船，将它加入你的收藏，或与你现在的飞船<STELLAR>交换<>。在行星上时，使用快捷菜单（<IMG>QUICK_MENU<>）召唤飞船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other298",
+    "Icon": "other/298.png",
+    "Name": "专属飞船",
+    "Group": "专属飞船",
+    "Description": "专属的<STELLAR>飞船<>，拥有卓越的机动性和先进的火力，专门用于空战。配备升级版<TECHNOLOGY>正电子冲击波<>。\n\n<STELLAR>收取<>这艘飞船，将它加入你的收藏，或与你现在的飞船<STELLAR>交换<>。在行星上时，使用快捷菜单（<IMG>QUICK_MENU<>）召唤飞船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other299",
+    "Icon": "other/299.png",
+    "Name": "专属飞船",
+    "Group": "专属飞船",
+    "Description": "专属的<STELLAR>飞船<>，专门用于运输货物。预先安装了升级版<TECHNOLOGY>偏导护盾<>和<TECHNOLOGY>货物扫描偏导器<>，这艘运输船是确保珍贵货物（不管合法与否）在运输中保持完好的理想选择。\n\n<STELLAR>收取<>这艘飞船，将它加入你的收藏，或与你现在的飞船<STELLAR>交换<>。在行星上时，使用快捷菜单（<IMG>QUICK_MENU<>）召唤飞船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other300",
+    "Icon": "other/300.png",
+    "Name": "专属飞船",
+    "Group": "专属飞船",
+    "Description": "专属的<STELLAR>飞船<>，具有先进的<TECHNOLOGY>超光速推进器<>能力和预装的<TECHNOLOGY>紧急曲速驱动器<>，可在星际间开辟一条高效、不受约束的路线。\n\n<STELLAR>收取<>这艘飞船，将它加入你的收藏，或与你现在的飞船<STELLAR>交换<>。在行星上时，使用快捷菜单（<IMG>QUICK_MENU<>）召唤飞船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other301",
+    "Icon": "other/301.png",
+    "Name": "专属飞船",
+    "Group": "专属飞船",
+    "Description": "专属的<STELLAR>飞船<>，流线型设计，格外敏捷，并预装了先进的<TECHNOLOGY>红外切割机加速器<>，在太空作战中独具优势。\n\n<STELLAR>收取<>这艘飞船，将它加入你的收藏，或与你现在的飞船<STELLAR>交换<>。在行星上时，使用快捷菜单（<IMG>QUICK_MENU<>）召唤飞船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other302",
+    "Icon": "other/302.png",
+    "Name": "专属卵",
+    "Group": "专属同伴卵",
+    "Description": "一颗活生生的受精卵，<TRADEABLE>已可孵化！<>\n\n根据扫描结果显示，里面的生物拥有特殊的基因潜质，具有<STELLAR>异想天开<>的特质，倾向于快乐的游戏行为。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other303",
+    "Icon": "other/303.png",
+    "Name": "专属卵",
+    "Group": "专属同伴卵",
+    "Description": "一颗活生生的受精卵，<TRADEABLE>已可孵化！<>\n\n根据扫描结果显示，里面的生物拥有特殊的基因潜质，具有<STELLAR>忠诚<>的特质，渴望找到主人并将其视为宇宙的中心。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other304",
+    "Icon": "other/304.png",
+    "Name": "专属多用途工具",
+    "Group": "专属多功能生存装置",
+    "Description": "专属的<STELLAR>多用途工具<>。这款武器配备了多功能<TECHNOLOGY>中子大炮<>，可以发射强大的大气粒子，充能时间越长，爆炸杀伤力越大。\n\n<STELLAR>收下<>这个多用途工具，将它加入你的收藏，或与你现在的多用途工具<STELLAR>交换<>。在快捷菜单（<IMG>QUICK_MENU<>）中的工具部分切换可用的多用途工具。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other305",
+    "Icon": "other/305.png",
+    "Name": "专属多用途工具",
+    "Group": "专属多功能生存装置",
+    "Description": "专属的<STELLAR>多用途工具<>。这款武器预装了战术性的<TECHNOLOGY>瘫痪迫击炮<>和致命的<TECHNOLOGY>火焰标枪<>，可以支持强有力的射击并使敌人丧失行动能力。\n\n<STELLAR>收下<>这个多用途工具，将它加入你的收藏，或与你现在的多用途工具<STELLAR>交换<>。在快捷菜单（<IMG>QUICK_MENU<>）中的工具部分切换可用的多用途工具。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other306",
+    "Icon": "other/306.png",
+    "Name": "专属多用途工具",
+    "Group": "专属多功能生存装置",
+    "Description": "专属的<STELLAR>多用途工具<>。这件专门武器预装了强力的<TECHNOLOGY>隐形装置<>，用于隐蔽地逃离冲突。\n\n<STELLAR>收下<>这个多用途工具，将它加入你的收藏，或与你现在的多用途工具<STELLAR>交换<>。在快捷菜单（<IMG>QUICK_MENU<>）中的工具部分切换可用的多用途工具。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other307",
+    "Icon": "other/124.png",
+    "Name": "阿特拉斯烟花包",
+    "Group": "烟火技术组合包",
+    "Description": "一包包含三种奢华烟花的组合包。这些惊人的烟花含有<TECHNOLOGY>铟<>、<COMMODITY>金<>和<FUEL>镉<>，在空中爆发后，呈现出阿特拉斯表层界面。点燃它，你就可以在天空中开启一场炫丽的光影表演。\n\n可以通过<VAL_ON>建造菜单<>（<IMG>BUILD_MENU<>）来放置发射筒。<FUEL>警告<>：不可瞄准活体生物。不建议在室内使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other308",
+    "Icon": "other/124.png",
+    "Name": "阿特拉斯烟花包",
+    "Group": "烟火技术组合包",
+    "Description": "一包包含三种奢华烟花的组合包。这些惊人的烟花含有<TECHNOLOGY>铟<>、<COMMODITY>金<>和<FUEL>镉<>，在空中爆发后，呈现出阿特拉斯表层界面。点燃它，你就可以在天空中开启一场炫丽的光影表演。\n\n可以通过<VAL_ON>建造菜单<>（<IMG>BUILD_MENU<>）来放置发射筒。<FUEL>警告<>：不可瞄准活体生物。不建议在室内使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other309",
+    "Icon": "other/124.png",
+    "Name": "阿特拉斯烟花包",
+    "Group": "烟火技术组合包",
+    "Description": "一包包含三种奢华烟花的组合包。这些惊人的烟花含有<TECHNOLOGY>铟<>、<COMMODITY>金<>和<FUEL>镉<>，在空中爆发后，呈现出阿特拉斯表层界面。点燃它，你就可以在天空中开启一场炫丽的光影表演。\n\n可以通过<VAL_ON>建造菜单<>（<IMG>BUILD_MENU<>）来放置发射筒。<FUEL>警告<>：不可瞄准活体生物。不建议在室内使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other310",
+    "Icon": "other/124.png",
+    "Name": "阿特拉斯烟花包",
+    "Group": "烟火技术组合包",
+    "Description": "一包包含三种奢华烟花的组合包。这些惊人的烟花含有<TECHNOLOGY>铟<>、<COMMODITY>金<>和<FUEL>镉<>，在空中爆发后，呈现出阿特拉斯表层界面。点燃它，你就可以在天空中开启一场炫丽的光影表演。\n\n可以通过<VAL_ON>建造菜单<>（<IMG>BUILD_MENU<>）来放置发射筒。<FUEL>警告<>：不可瞄准活体生物。不建议在室内使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other311",
+    "Icon": "other/124.png",
+    "Name": "阿特拉斯烟花包",
+    "Group": "烟火技术组合包",
+    "Description": "一包包含三种奢华烟花的组合包。这些惊人的烟花含有<TECHNOLOGY>铟<>、<COMMODITY>金<>和<FUEL>镉<>，在空中爆发后，呈现出阿特拉斯表层界面。点燃它，你就可以在天空中开启一场炫丽的光影表演。\n\n可以通过<VAL_ON>建造菜单<>（<IMG>BUILD_MENU<>）来放置发射筒。<FUEL>警告<>：不可瞄准活体生物。不建议在室内使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

@@ -1560,41 +1560,26 @@
             "Cost": 1,
             "Children": [
               {
-                "Id": "conTech20",
-                "Title": "メッセージモジュール",
-                "Icon": "constructedTechnology/20.png",
-                "Cost": 1,
-                "Children": [
-                  {
-                    "Id": "conTech21",
-                    "Title": "通信ステーション",
-                    "Icon": "constructedTechnology/21.png",
-                    "Cost": 1,
-                    "Children": []
-                  }
-                ]
-              },
-              {
-                "Id": "conTech4",
-                "Title": "体力ステーション",
-                "Icon": "constructedTechnology/4.png",
-                "Cost": 5,
-                "Children": [
-                  {
-                    "Id": "conTech5",
-                    "Title": "危険防御ユニット",
-                    "Icon": "constructedTechnology/5.png",
-                    "Cost": 3,
-                    "Children": []
-                  }
-                ]
-              },
-              {
                 "Id": "conTech10",
                 "Title": "基地テレポートモジュール",
                 "Icon": "constructedTechnology/10.png",
                 "Cost": 2,
                 "Children": [
+                  {
+                    "Id": "conTech4",
+                    "Title": "体力ステーション",
+                    "Icon": "constructedTechnology/4.png",
+                    "Cost": 5,
+                    "Children": [
+                      {
+                        "Id": "conTech5",
+                        "Title": "危険防御ユニット",
+                        "Icon": "constructedTechnology/5.png",
+                        "Cost": 3,
+                        "Children": []
+                      }
+                    ]
+                  },
                   {
                     "Id": "conTech44",
                     "Title": "酸素収集機",
@@ -1663,18 +1648,34 @@
                     "Children": []
                   },
                   {
+                    "Id": "conTech8",
+                    "Title": "信号ブースター",
+                    "Icon": "constructedTechnology/8.png",
+                    "Cost": 1,
+                    "Children": [
+                      {
+                        "Id": "conTech20",
+                        "Title": "メッセージモジュール",
+                        "Icon": "constructedTechnology/20.png",
+                        "Cost": 1,
+                        "Children": [
+                          {
+                            "Id": "conTech21",
+                            "Title": "通信ステーション",
+                            "Icon": "constructedTechnology/21.png",
+                            "Cost": 1,
+                            "Children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
                     "Id": "conTech13",
                     "Title": "ポータブル精製機",
                     "Icon": "constructedTechnology/13.png",
                     "Cost": 10,
                     "Children": [
-                      {
-                        "Id": "conTech8",
-                        "Title": "信号ブースター",
-                        "Icon": "constructedTechnology/8.png",
-                        "Cost": 1,
-                        "Children": []
-                      },
                       {
                         "Id": "conTech14",
                         "Title": "中型精製機",
@@ -1797,10 +1798,10 @@
                 "Cost": 12,
                 "Children": [
                   {
-                    "Id": "build395",
+                    "Id": "build884",
                     "Title": "軌道エクソクラフト具現化装置",
-                    "Icon": "building/395.png",
-                    "Cost": 15,
+                    "Icon": "building/884.png",
+                    "Cost": 1,
                     "Children": []
                   }
                 ]
@@ -4905,7 +4906,7 @@
               },
               {
                 "Id": "tech1",
-                "Title": "ハザード対策システム",
+                "Title": "危険防御",
                 "Icon": "technology/1.png",
                 "Cost": 1,
                 "Children": [
@@ -5055,6 +5056,13 @@
                 "Icon": "technology/144.png",
                 "Cost": 460,
                 "Children": [
+                  {
+                    "Id": "tech220",
+                    "Title": "フライトアシストのオーバーライド",
+                    "Icon": "technology/144.png",
+                    "Cost": 460,
+                    "Children": []
+                  },
                   {
                     "Id": "tech145",
                     "Title": "亜光速アンプリファイア",
@@ -6208,7 +6216,15 @@
                 "Title": "物質転送ビーム",
                 "Icon": "technology/28.png",
                 "Cost": 5,
-                "Children": []
+                "Children": [
+                  {
+                    "Id": "tech221",
+                    "Title": "インターステラースキャナー",
+                    "Icon": "technology/221.png",
+                    "Cost": 4,
+                    "Children": []
+                  }
+                ]
               }
             ]
           }
@@ -6216,6 +6232,12 @@
       },
       {
         "Id": "tree10-subTree2",
+        "Name": "貨物船建造モジュール",
+        "CostType": "None",
+        "Children": []
+      },
+      {
+        "Id": "tree10-subTree3",
         "Name": "貨物船リカラー",
         "CostType": "Nanites",
         "Children": [
