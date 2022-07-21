@@ -1,8 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:custom_refresh_indicator/custom_refresh_indicator.dart';
 import 'package:flutter/material.dart';
 import '../../components/tilePresenters/youtubersTilePresenter.dart';
-import '../../components/common/loading.dart';
 
 class SteamBranchesPage extends StatefulWidget {
   const SteamBranchesPage({Key key}) : super(key: key);
@@ -23,7 +21,7 @@ class _SteamBranchesPageWidget extends State<SteamBranchesPage> {
   }
 
   getSteamBranches() async {
-    var branchResult =
+    ResultWithValue<List<SteamBranchesViewModel>> branchResult =
         await getAssistantAppsSteam().getSteamBranches(AssistantAppType.NMS);
 
     setState(() {
@@ -35,47 +33,6 @@ class _SteamBranchesPageWidget extends State<SteamBranchesPage> {
 
   @override
   Widget build(BuildContext context) {
-    return CustomRefreshIndicator(
-      offsetToArmed: 150.0,
-      trailingScrollIndicatorVisible: false,
-      onRefresh: () => getSteamBranches(),
-      child: getBody(context),
-      builder: (context, child, controller) => Stack(
-        children: <Widget>[
-          AnimatedBuilder(
-            child: child,
-            animation: controller,
-            builder: (context, child) => Opacity(
-              opacity: 1.0 - controller.value.clamp(0.0, 0.9),
-              child: child,
-            ),
-          ),
-          PositionedIndicatorContainer(
-            controller: controller,
-            constraints: const BoxConstraints(minWidth: 10),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(32.0),
-                  child: Container(
-                    color: getTheme().getScaffoldBackgroundColour(context),
-                    child: Padding(
-                      padding: const EdgeInsets.all(6),
-                      child: oldLoadingSpinner(),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget getBody(BuildContext context) {
     if (hasFailed) return getLoading().customErrorWidget(context);
     if (isLoading) return getLoading().fullPageLoading(context);
     return SingleChildScrollView(
