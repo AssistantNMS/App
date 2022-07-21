@@ -74,11 +74,11 @@ Widget getExpeditionBodyFromFuture(
     );
   }
 
-  int milliSinceEpoch = DateTime.now().millisecondsSinceEpoch;
+  // int milliSinceEpoch = DateTime.now().millisecondsSinceEpoch;
   List<SeasonalExpeditionSeason> pastSeasons = snapshot.data.value.past
-      .where(
-        (seas) => seas.startDate.millisecondsSinceEpoch < milliSinceEpoch,
-      )
+      // .where(
+      //   (seas) => seas.startDate.millisecondsSinceEpoch < milliSinceEpoch,
+      // )
       .toList();
   pastSeasons.sort((a, b) =>
       (a.startDate.millisecondsSinceEpoch > b.startDate.millisecondsSinceEpoch)
