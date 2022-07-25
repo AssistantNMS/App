@@ -23,15 +23,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Cold Protection",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
-        "Value": "1"
-      },
-      {
-        "Name": "Heat Resistance",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "heat",
+        "Name": "Hazard Protection Battery",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
         "Value": "100"
       },
       {
@@ -41,15 +35,27 @@
         "Value": "100"
       },
       {
+        "Name": "Toxic Damage Shielding",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "toxic",
+        "Value": "100"
+      },
+      {
+        "Name": "Cold Damage Shielding",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "cold",
+        "Value": "100"
+      },
+      {
         "Name": "Heat Damage Shielding",
         "LocaleKeyTemplate": "enabled",
         "Image": "heat",
         "Value": "100"
       },
       {
-        "Name": "Toxic Damage Shielding",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "toxic",
+        "Name": "Sprint Recovery Time",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -82,10 +88,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Cold Protection",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
-        "Value": "0.2"
+        "Name": "Hazard Protection Battery",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -114,15 +120,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Solar Panel Power",
+        "Name": "Life Support Tanks",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "100"
       },
       {
-        "Name": "Hazard Protection Battery",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
+        "Name": "Solar Panel Power",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -151,7 +157,7 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Solar Panel Power",
+        "Name": "Life Support Tanks",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "10"
@@ -185,30 +191,24 @@
         "Name": "Jetpack Tanks",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "100"
+        "Value": "275"
       },
       {
         "Name": "Fuel Efficiency",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "275"
-      },
-      {
-        "Name": "Recharge Rate",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
         "Value": "100"
-      },
-      {
-        "Name": "Advanced Jump System",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
       },
       {
         "Name": "Initial Boost Power",
         "LocaleKeyTemplate": "percentage",
         "Image": "damage",
+        "Value": "100"
+      },
+      {
+        "Name": "Recharge Rate",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -241,22 +241,28 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Fuel Efficiency",
+        "Name": "Jetpack Tanks",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "jetpack",
         "Value": "20"
       },
       {
-        "Name": "Initial Boost Power",
+        "Name": "Recharge Rate",
         "LocaleKeyTemplate": "percentage",
-        "Image": "damage",
-        "Value": "110"
+        "Image": "recharge",
+        "Value": "10"
       },
       {
-        "Name": "Sprint Speed",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "Value": "0.1"
+        "Name": "Sprint Distance",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "10"
+      },
+      {
+        "Name": "Sprint Recovery Time",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -288,9 +294,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Efficient Waterjets",
+        "Name": "Advanced Jump System",
         "LocaleKeyTemplate": "enabled",
-        "Image": "water",
+        "Image": "enabled",
         "Value": "1"
       }
     ],
@@ -328,9 +334,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Cold Resistance",
+        "Name": "Heat Resistance",
         "LocaleKeyTemplate": "percentage",
-        "Image": "cold",
+        "Image": "heat",
         "Value": "20"
       }
     ],
@@ -368,9 +374,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Toxic Resistance",
+        "Name": "Cold Resistance",
         "LocaleKeyTemplate": "percentage",
-        "Image": "toxic",
+        "Image": "cold",
         "Value": "20"
       }
     ],
@@ -408,9 +414,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Radiation Resistance",
+        "Name": "Toxic Resistance",
         "LocaleKeyTemplate": "percentage",
-        "Image": "rad",
+        "Image": "toxic",
         "Value": "20"
       }
     ],
@@ -448,9 +454,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Breathing Efficiency",
+        "Name": "Radiation Resistance",
         "LocaleKeyTemplate": "percentage",
-        "Image": "water",
+        "Image": "rad",
         "Value": "20"
       }
     ],
@@ -487,10 +493,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Sprint Distance",
+        "Name": "Breathing Efficiency",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
-        "Value": "133"
+        "Image": "water",
+        "Value": "33"
       }
     ],
     "ConsumableRewardTexts": []
@@ -548,7 +554,14 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Core Health",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "Value": "20"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -580,7 +593,14 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Core Health",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "Value": "20"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -642,9 +662,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Airborne Recharging",
+        "Name": "Efficient Waterjets",
         "LocaleKeyTemplate": "enabled",
-        "Image": "recharge2",
+        "Image": "water",
         "Value": "1"
       }
     ],
@@ -681,10 +701,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Cold Damage Shielding",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "cold",
-        "Value": "100"
+        "Name": "Oxygen Rerouting",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "water",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -710,7 +730,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Words Translated",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "translate",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -742,7 +769,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Words Translated",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "translate",
+        "Value": "2"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -774,7 +808,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Words Translated",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "translate",
+        "Value": "3"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -802,7 +843,14 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Words Translated",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "translate",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -839,22 +887,22 @@
         "Value": "100"
       },
       {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "9,900"
+      },
+      {
         "Name": "Pulse Drive Power",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "Maneuverability",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "100"
-      },
-      {
-        "Name": "Boost",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "100"
+        "Name": "Flight Assist Reduction",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "unknown",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -886,22 +934,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Pulse Drive Power",
+        "Name": "Pulse Drive Fuel Efficiency",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "85"
+        "Image": "recovery",
+        "Value": "15"
       },
       {
-        "Name": "Internal Life Support Enabled",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1.1"
+        "Name": "Boost",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "15"
       },
       {
         "Name": "Maneuverability",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "0.5"
+        "Value": "10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -937,12 +985,6 @@
         "Name": "Launch Cost",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "100"
-      },
-      {
-        "Name": "Automatic Recharging",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -979,10 +1021,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Automatic Recharging",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "0.8"
+        "Name": "Launch Cost",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "-20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1016,7 +1058,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Automatic Recharging",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1078,19 +1127,13 @@
         "Name": "Hyperdrive Range",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "1"
+        "Value": "100"
       },
       {
         "Name": "Warp Cell Efficiency",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "10,000"
-      },
-      {
-        "Name": "Instant Hyperdrive Scramble",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "Value": "1"
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1120,14 +1163,7 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Hyperdrive Range",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1155,14 +1191,7 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Hyperdrive Range",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1190,14 +1219,7 @@
         "Quantity": 5
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Hyperdrive Range",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1231,7 +1253,7 @@
         "Name": "Shield Strength",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "1"
+        "Value": "0.65"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1265,7 +1287,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Shield Strength",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "0.05"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1295,16 +1324,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Heat Dispersion",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "Range",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "range",
-        "Value": "0"
+        "Name": "Fire Rate",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "1"
       },
       {
         "Name": "Accuracy",
@@ -1313,22 +1336,34 @@
         "Value": "100"
       },
       {
-        "Name": "Heat Recovery",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "-100"
-      },
-      {
-        "Name": "Fire Rate",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "6,500"
-      },
-      {
         "Name": "Total Cannon Count",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "2.5"
+        "Value": "1"
+      },
+      {
+        "Name": "Heat Dispersion",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "0"
+      },
+      {
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "6,500"
+      },
+      {
+        "Name": "Range",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "5,000"
+      },
+      {
+        "Name": "Heat Recovery",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1358,7 +1393,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Heat Recovery",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "-20"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1388,16 +1430,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Heat Dispersion",
+        "Name": "Fire Rate",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "recharge2",
         "Value": "7.5"
-      },
-      {
-        "Name": "Range",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "range",
-        "Value": "0"
       },
       {
         "Name": "Accuracy",
@@ -1406,22 +1442,34 @@
         "Value": "100"
       },
       {
-        "Name": "Heat Recovery",
+        "Name": "Total Cannon Count",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "1"
+      },
+      {
+        "Name": "Heat Dispersion",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
         "Value": "7.5"
       },
       {
-        "Name": "Fire Rate",
+        "Name": "Damage",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "damage",
         "Value": "320"
       },
       {
-        "Name": "Total Cannon Count",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "6"
+        "Name": "Range",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "1,500"
+      },
+      {
+        "Name": "Heat Recovery",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1509,16 +1557,22 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Heat Dispersion",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "150"
+      },
+      {
         "Name": "Damage",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "1"
+        "Value": "250"
       },
       {
-        "Name": "Heat Dispersion",
+        "Name": "Shield recharge on impact",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "250"
+        "Image": "shieldStrength",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1548,7 +1602,20 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Heat Dispersion",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "10"
+      },
+      {
+        "Name": "Shield recharge on impact",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "shieldStrength",
+        "Value": "0.1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1578,39 +1645,45 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Heat Dispersion",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "Range",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "range",
-        "Value": "900"
+        "Name": "Fire Rate",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "2"
       },
       {
         "Name": "Accuracy",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "1,400"
-      },
-      {
-        "Name": "Heat Recovery",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "1.5"
-      },
-      {
-        "Name": "Fire Rate",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "280"
+        "Value": "1,000"
       },
       {
         "Name": "Total Cannon Count",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
+        "Value": "14"
+      },
+      {
+        "Name": "Heat Dispersion",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "50"
+      },
+      {
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "280"
+      },
+      {
+        "Name": "Range",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "500"
+      },
+      {
+        "Name": "Heat Recovery",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
         "Value": "100"
       }
     ],
@@ -1643,10 +1716,16 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Accuracy",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "20"
+      },
+      {
         "Name": "Range",
         "LocaleKeyTemplate": "percentage",
         "Image": "range",
-        "Value": "80"
+        "Value": "25"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1678,40 +1757,46 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Heat Dispersion",
+        "Name": "Fire Rate",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "recharge2",
         "Value": "9"
-      },
-      {
-        "Name": "Range",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "range",
-        "Value": "50"
       },
       {
         "Name": "Accuracy",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "100"
-      },
-      {
-        "Name": "Heat Recovery",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "3"
-      },
-      {
-        "Name": "Fire Rate",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "205"
+        "Value": "50"
       },
       {
         "Name": "Total Cannon Count",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "6.5"
+        "Value": "1"
+      },
+      {
+        "Name": "Heat Dispersion",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "200"
+      },
+      {
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "205"
+      },
+      {
+        "Name": "Range",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "2,200"
+      },
+      {
+        "Name": "Heat Recovery",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1747,10 +1832,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Heat Recovery",
-        "LocaleKeyTemplate": "defaultTemplate",
+        "Name": "Heat Dispersion",
+        "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "1.2"
+        "Value": "20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1782,40 +1867,46 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Heat Dispersion",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "200"
-      },
-      {
-        "Name": "Range",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "range",
-        "Value": "100"
+        "Name": "Fire Rate",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "3"
       },
       {
         "Name": "Accuracy",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "200"
-      },
-      {
-        "Name": "Heat Recovery",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "2"
-      },
-      {
-        "Name": "Fire Rate",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "600"
+        "Value": "100"
       },
       {
         "Name": "Total Cannon Count",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "3"
+        "Value": "2"
+      },
+      {
+        "Name": "Heat Dispersion",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      },
+      {
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "600"
+      },
+      {
+        "Name": "Range",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "1,250"
+      },
+      {
+        "Name": "Heat Recovery",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1847,10 +1938,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Heat Recovery",
-        "LocaleKeyTemplate": "defaultTemplate",
+        "Name": "Heat Dispersion",
+        "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "1.1"
+        "Value": "10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1887,6 +1978,12 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Hyperdrive Range",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "100"
+      },
+      {
         "Name": "Warp Cell Efficiency",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
@@ -1896,12 +1993,6 @@
         "Name": "Fleet Coordination",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "1"
-      },
-      {
-        "Name": "Expedition Defenses",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "prot",
         "Value": "1"
       }
     ],
@@ -2137,12 +2228,6 @@
         "Value": "100"
       },
       {
-        "Name": "Surveying Enabled",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      },
-      {
         "Name": "Fauna Analysis Rewards",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
@@ -2159,6 +2244,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
         "Value": "100"
+      },
+      {
+        "Name": "Mineral Analysis Rewards",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "unknown",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -2235,9 +2326,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Bio-Mechanical Stun",
+        "Name": "Surveying Enabled",
         "LocaleKeyTemplate": "enabled",
-        "Image": "lightning",
+        "Image": "enabled",
         "Value": "1"
       }
     ],
@@ -2728,16 +2819,22 @@
         "Value": "100"
       },
       {
+        "Name": "Post-Impact Ignition",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
         "Name": "Impact Fire Duration",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "1"
+        "Value": "5"
       },
       {
         "Name": "Impact Fire Damage",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3320,15 +3417,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Top Speed",
+        "Name": "Fuel Usage",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "recovery",
         "Value": "100"
       },
       {
-        "Name": "Boost Tank Size",
+        "Name": "Top Speed",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge",
         "Value": "100"
       },
       {
@@ -3338,10 +3435,10 @@
         "Value": "100"
       },
       {
-        "Name": "Mining Laser Power",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "1"
+        "Name": "Angular Grip",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3377,10 +3474,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Mining Laser Power",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "0.66"
+        "Name": "Forwards Grip",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "300"
+      },
+      {
+        "Name": "Angular Grip",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3416,10 +3519,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Mining Laser Power",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "2.1"
+        "Name": "Forwards Grip",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "50"
+      },
+      {
+        "Name": "Angular Grip",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "210"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3455,10 +3564,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Mining Laser Power",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "0.66"
+        "Name": "Forwards Grip",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "50"
+      },
+      {
+        "Name": "Angular Grip",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3490,9 +3605,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Boost Power",
+        "Name": "Scan",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "accuracy",
         "Value": "100"
       }
     ],
@@ -3529,9 +3644,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Boost Power",
+        "Name": "Scan",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "accuracy",
         "Value": "100"
       }
     ],
@@ -3568,21 +3683,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Fuel Usage",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
+        "Name": "Boost",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
       },
       {
-        "Name": "Angular Grip",
+        "Name": "Boost Power",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "Acceleration",
+        "Name": "Boost Tank Size",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
         "Value": "100"
       }
     ],
@@ -3619,10 +3734,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Damage",
+        "Name": "Mining Laser Power",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "1"
+        "Image": "mining",
+        "Value": "80"
+      },
+      {
+        "Name": "Mining Laser Efficiency",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3654,10 +3775,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Weapon Power Efficiency",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
+        "Name": "Mining Laser Power",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "50"
+      },
+      {
+        "Name": "Advanced Exocraft Mining Laser",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3689,10 +3816,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Exocraft Solar Panels",
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "320"
+      },
+      {
+        "Name": "Weapon Power Efficiency",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "50"
+        "Value": "100"
+      },
+      {
+        "Name": "Rate of Fire",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3725,27 +3864,21 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Fuel Usage",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
         "Name": "Top Speed",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
       },
       {
-        "Name": "Boost Tank Size",
+        "Name": "Acceleration",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "Value": "100"
-      },
-      {
-        "Name": "Forwards Grip",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
-      },
-      {
-        "Name": "Mining Laser Efficiency",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -3782,10 +3915,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Exocraft Solar Panels",
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "220"
+      },
+      {
+        "Name": "Weapon Power Efficiency",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "50"
+        "Value": "100"
+      },
+      {
+        "Name": "Rate of Fire",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3821,16 +3966,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Damage",
+        "Name": "Mining Laser Power",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "1"
+        "Image": "mining",
+        "Value": "240"
       },
       {
-        "Name": "Weapon Power Efficiency",
+        "Name": "Mining Laser Efficiency",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "time",
         "Value": "100"
+      },
+      {
+        "Name": "Advanced Exocraft Mining Laser",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3866,9 +4017,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Boost Power",
+        "Name": "Scan",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "accuracy",
         "Value": "100"
       }
     ],
@@ -3905,10 +4056,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Boost Tank Size",
+        "Name": "Fuel Usage",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "Value": "80"
+        "Image": "recovery",
+        "Value": "-20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4694,7 +4845,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Hyperdrive Range",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "200"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4726,7 +4884,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Hyperdrive Range",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "300"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4758,7 +4923,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Hyperdrive Range",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "800"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4790,7 +4962,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Hyperdrive Range",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4822,7 +5001,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Hyperdrive Range",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4854,7 +5040,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Hyperdrive Range",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4886,7 +5079,14 @@
         "Quantity": 150
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Airborne Recharging",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recharge2",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4914,14 +5114,7 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Words Translated",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4955,10 +5148,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Pulse Drive Power",
+        "Name": "Pulse Drive Fuel Efficiency",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
+        "Image": "recovery",
+        "Value": "34"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4994,10 +5187,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Boost",
+        "Name": "Pulse Drive Power",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "30"
+        "Image": "recharge2",
+        "Value": "130"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5031,7 +5224,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Instant Hyperdrive Scramble",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -5065,10 +5265,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Accuracy",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
-        "Value": "300"
+        "Name": "Total Cannon Count",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "3"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5463,24 +5663,18 @@
         "Name": "Pulse Drive Fuel Efficiency",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Pulse Drive Power",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
         "Value": "50"
-      },
-      {
-        "Name": "Maneuverability",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "100"
       },
       {
         "Name": "Boost",
         "LocaleKeyTemplate": "enabled",
         "Image": "recovery",
+        "Value": "9,900"
+      },
+      {
+        "Name": "Pulse Drive Power",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -5518,12 +5712,6 @@
         "Name": "Launch Cost",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "100"
-      },
-      {
-        "Name": "Automatic Recharging",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -5561,19 +5749,13 @@
         "Name": "Hyperdrive Range",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "1"
+        "Value": "100"
       },
       {
         "Name": "Warp Cell Efficiency",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "10,000"
-      },
-      {
-        "Name": "Instant Hyperdrive Scramble",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "Value": "1"
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5610,7 +5792,7 @@
         "Name": "Shield Strength",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "1"
+        "Value": "0.65"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5643,16 +5825,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Heat Dispersion",
+        "Name": "Fire Rate",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "recharge2",
         "Value": "10"
-      },
-      {
-        "Name": "Range",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "range",
-        "Value": "0"
       },
       {
         "Name": "Accuracy",
@@ -5661,22 +5837,34 @@
         "Value": "100"
       },
       {
-        "Name": "Heat Recovery",
+        "Name": "Total Cannon Count",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "1"
+      },
+      {
+        "Name": "Heat Dispersion",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
         "Value": "10"
       },
       {
-        "Name": "Fire Rate",
+        "Name": "Damage",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "damage",
         "Value": "340"
       },
       {
-        "Name": "Total Cannon Count",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "6"
+        "Name": "Range",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "1,500"
+      },
+      {
+        "Name": "Heat Recovery",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5709,16 +5897,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Damage",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "1"
-      },
-      {
         "Name": "Heat Dispersion",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
+        "Value": "3.5"
+      },
+      {
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "280"
+      },
+      {
+        "Name": "Shield recharge on impact",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "shieldStrength",
+        "Value": "0.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5752,14 +5946,7 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Expedition Efficiency",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recovery",
-        "Value": "10,000"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5896,9 +6083,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Toxic Protection",
+        "Name": "Heat Protection",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
+        "Image": "heat",
         "Value": "3"
       }
     ],
@@ -5936,9 +6123,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Heat Protection",
+        "Name": "Cold Protection",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "heat",
+        "Image": "cold",
         "Value": "3"
       }
     ],
@@ -5976,9 +6163,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Radiation Protection",
+        "Name": "Toxic Protection",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "rad",
+        "Image": "toxic",
         "Value": "3"
       }
     ],
@@ -6016,9 +6203,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Oxygen Tank",
+        "Name": "Radiation Protection",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "oxygen",
+        "Image": "rad",
         "Value": "3"
       }
     ],
@@ -6054,7 +6241,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Exocraft Solar Panels",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "400"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -6089,9 +6283,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Boost Power",
+        "Name": "Scan",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "accuracy",
         "Value": "100"
       }
     ],
@@ -6129,16 +6323,16 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Fuel Usage",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "-50"
+      },
+      {
         "Name": "Top Speed",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
-      },
-      {
-        "Name": "Boost Tank Size",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "Value": "50"
       },
       {
         "Name": "Forwards Grip",
@@ -6147,10 +6341,10 @@
         "Value": "100"
       },
       {
-        "Name": "Mining Laser Power",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "1"
+        "Name": "Angular Grip",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6187,10 +6381,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Boost Tank Size",
+        "Name": "Fuel Usage",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "Value": "80"
+        "Image": "recovery",
+        "Value": "-20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6227,9 +6421,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Boost Power",
+        "Name": "Scan",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "accuracy",
         "Value": "100"
       }
     ],
@@ -6267,21 +6461,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Fuel Usage",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
+        "Name": "Boost",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
       },
       {
-        "Name": "Angular Grip",
+        "Name": "Boost Power",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "Acceleration",
+        "Name": "Boost Tank Size",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
         "Value": "100"
       }
     ],
@@ -6319,10 +6513,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Damage",
+        "Name": "Mining Laser Power",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "1"
+        "Image": "mining",
+        "Value": "100"
+      },
+      {
+        "Name": "Mining Laser Efficiency",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6355,10 +6555,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Weapon Power Efficiency",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
+        "Name": "Mining Laser Power",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "50"
+      },
+      {
+        "Name": "Advanced Exocraft Mining Laser",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6395,10 +6601,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Exocraft Solar Panels",
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "420"
+      },
+      {
+        "Name": "Weapon Power Efficiency",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "35"
+        "Value": "100"
+      },
+      {
+        "Name": "Rate of Fire",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.35"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6468,27 +6686,27 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Toxic Protection",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
-        "Value": "1"
-      },
-      {
         "Name": "Heat Protection",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "heat",
         "Value": "1"
       },
       {
-        "Name": "Oxygen Tank",
+        "Name": "Cold Protection",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "oxygen",
+        "Image": "cold",
         "Value": "1"
       },
       {
         "Name": "Radiation Protection",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "rad",
+        "Value": "1"
+      },
+      {
+        "Name": "Toxic Protection",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "toxic",
         "Value": "1"
       }
     ],
@@ -6686,12 +6904,6 @@
         "Name": "Launch Cost",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "100"
-      },
-      {
-        "Name": "Automatic Recharging",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
         "Value": "25"
       }
     ],
@@ -6732,6 +6944,12 @@
         "Value": "100"
       },
       {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "11,900"
+      },
+      {
         "Name": "Pulse Drive Power",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
@@ -6741,25 +6959,7 @@
         "Name": "Maneuverability",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "10"
-      },
-      {
-        "Name": "Boost",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Internal Life Support Enabled",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1.25"
-      },
-      {
-        "Name": "Maneuverability",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "0.5"
+        "Value": "25"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6800,19 +7000,13 @@
         "Name": "Hyperdrive Range",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "1"
+        "Value": "600"
       },
       {
         "Name": "Warp Cell Efficiency",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "60,000"
-      },
-      {
-        "Name": "Instant Hyperdrive Scramble",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "Value": "2"
+        "Value": "200"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6844,7 +7038,14 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Internal Life Support Enabled",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -6880,10 +7081,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Cold Protection",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
-        "Value": "0.2"
+        "Name": "Hazard Protection Battery",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6921,10 +7122,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Cold Protection",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
-        "Value": "0.2"
+        "Name": "Hazard Protection Battery",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7304,15 +7505,15 @@
         "Value": "300"
       },
       {
-        "Name": "Stun Duration",
-        "LocaleKeyTemplate": "seconds",
+        "Name": "Bio-Mechanical Stun",
+        "LocaleKeyTemplate": "enabled",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "Damage to stunned entities",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Name": "Stun Duration",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "lightning",
         "Value": "3.5"
       },
       {
@@ -7355,15 +7556,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Stun Duration",
-        "LocaleKeyTemplate": "seconds",
+        "Name": "Bio-Mechanical Stun",
+        "LocaleKeyTemplate": "enabled",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "Damage to stunned entities",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Name": "Stun Duration",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "lightning",
         "Value": "5"
       }
     ],
@@ -7400,16 +7601,22 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Post-Impact Ignition",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
         "Name": "Impact Fire Duration",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "1"
+        "Value": "3.5"
       },
       {
         "Name": "Impact Fire Damage",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "3.5"
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7575,8 +7782,8 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Post-Impact Ignition",
-        "LocaleKeyTemplate": "enabled",
+        "Name": "Damage to stunned entities",
+        "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "Value": "1.2"
       }
@@ -7613,7 +7820,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Minotaur AI Pilot",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -7648,22 +7862,34 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Damage to stunned entities",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "5"
+      },
+      {
+        "Name": "Mining Laser Power",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "50"
+      },
+      {
         "Name": "Post-Impact Ignition",
         "LocaleKeyTemplate": "enabled",
         "Image": "damage",
-        "Value": "5"
+        "Value": "1"
       },
       {
         "Name": "Impact Fire Duration",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "1"
+        "Value": "3.5"
       },
       {
         "Name": "Impact Fire Damage",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "3.5"
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7700,10 +7926,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Exocraft Solar Panels",
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Weapon Power Efficiency",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "50"
+        "Value": "100"
+      },
+      {
+        "Name": "Rate of Fire",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7726,25 +7964,25 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw31",
-        "Quantity": 120
+        "Id": "cur81",
+        "Quantity": 1
       },
       {
-        "Id": "prod149",
-        "Quantity": 1
+        "Id": "raw31",
+        "Quantity": 120
       }
     ],
     "StatBonuses": [
       {
+        "Name": "Fuel Usage",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "-10"
+      },
+      {
         "Name": "Boost Tank Size",
         "LocaleKeyTemplate": "percentage",
         "Image": "ammo",
-        "Value": "90"
-      },
-      {
-        "Name": "Acceleration",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
         "Value": "25"
       }
     ],
@@ -7768,19 +8006,26 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
+        "Id": "cur83",
+        "Quantity": 1
+      },
+      {
         "Id": "prod1",
         "Quantity": 1
       },
       {
         "Id": "prod23",
         "Quantity": 1
-      },
-      {
-        "Id": "prod159",
-        "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Minotaur AI Pilot",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -7809,18 +8054,11 @@
         "Quantity": 2
       },
       {
-        "Id": "other228",
+        "Id": "trade41",
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Hyperdrive Range",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -7845,7 +8083,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -7876,16 +8121,28 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Pulse Drive Power",
+        "Name": "Pulse Drive Fuel Efficiency",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "20"
+        "Image": "recovery",
+        "Value": "80"
       },
       {
-        "Name": "Internal Life Support Enabled",
+        "Name": "Automatic Recharging",
         "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1.1"
+        "Image": "recovery",
+        "Value": "1"
+      },
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "15"
+      },
+      {
+        "Name": "Maneuverability",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7912,7 +8169,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -7947,16 +8211,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Internal Life Support Enabled",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1.1"
+        "Name": "Flight Assist Reduction",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "unknown",
+        "Value": "0.6"
       },
       {
         "Name": "Maneuverability",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "0.5"
+        "Value": "10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8024,14 +8288,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Expedition Speed",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8093,14 +8350,7 @@
         "Quantity": 15
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Hyperdrive Range",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8129,7 +8379,14 @@
         "Quantity": 15
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Automatic Recharging",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
