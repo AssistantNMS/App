@@ -35,6 +35,7 @@ class CatalogueItemPage extends StatelessWidget {
             isHero: true,
           ),
           listItemSearch: searchGenericPageItem,
+          addFabPadding: true,
           key: Key(
               '${getTranslations().currentLanguage} ${viewModel.genericTileIsCompact} - ${viewModel.displayGenericItemColour}'),
         ),

@@ -30,6 +30,7 @@ class AllItemsPageComponent extends StatelessWidget {
         key: Key(
             '${getTranslations().currentLanguage} ${viewModel.genericTileIsCompact} - ${viewModel.displayGenericItemColour}'),
         hintText: hintText,
+        addFabPadding: true,
       ),
       // ResponsiveListDetailView<GenericPageItem>(
       //   () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),
