@@ -1,2 +1,2 @@
-const appsBuildNum = 282;
-const appsBuildName = '1.114.0';
+const appsBuildNum = 284;
+const appsBuildName = '1.114.2';

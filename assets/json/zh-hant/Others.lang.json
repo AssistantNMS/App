@@ -93,95 +93,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other5",
-    "Icon": "other/5.png",
-    "Name": "導航資料",
-    "Group": "加密導航資料",
-    "Description": "加密的導航資料。這款攜帶方便的資料裝置存有與星球區域相關的所有地圖資訊。\n\n也許能在太空站跟<TRADEABLE>地圖學家<>交換<STELLAR>可用星圖<>。",
-    "BaseValueUnits": 1000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "0063B7",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/5.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other6",
-    "Icon": "other/6.png",
-    "Name": "空投艙座標資料",
-    "Group": "加密導航資料",
-    "Description": "用於<TECHNOLOGY>訊號強化器<>的加密導航資訊。\n\n若正確解密，將顯示<TECHNOLOGY>空投艙<>位置或<SPECIAL>強化套裝升級<>地點。",
-    "BaseValueUnits": 85000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "1A2733",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/6.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other7",
-    "Icon": "other/6.png",
-    "Name": "日誌加密金鑰",
-    "Group": "未完成的資料程序",
-    "Description": "<TECHNOLOGY>貨船緊急日誌<>的加密覆寫程序片段。\n\n若要取得紀錄資料的完整存取權限可能需要此程序中的許多部份。",
-    "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "1A2733",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/7.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other8",
-    "Icon": "other/8.png",
-    "Name": "防衛信函",
-    "Group": "系統當局付費替代品",
-    "Description": "一個象徵，賦予持有者系統當局的支持來對付海盜攻擊。",
-    "BaseValueUnits": 10000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "1A2733",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/8.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsNoLongerObtainable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other9",
     "Icon": "other/9.png",
     "Name": "大開眼界",
@@ -819,29 +730,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other38",
-    "Icon": "building/350.png",
-    "Name": "太空船倉儲擴充",
-    "Group": "太空船擴充模組",
-    "Description": "從一艘<STELLAR>回收的太空船<>收集的科技模組。可以從<STELLAR>貨船墜機地點<>收集，或在<STELLAR>巡防艦探勘<>中回收。\n\n可在太空站的<TECHNOLOGY>太空船改造站<>中，將其用於擴充太空船倉儲空間。",
-    "BaseValueUnits": 125000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsRewardFromShipScrap",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other39",
     "Icon": "tradeItems/21.png",
     "Name": "溫度板",
@@ -1023,9 +911,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "射擊速度",
+        "Name": "傷害",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "damage",
         "Value": "8"
       }
     ],
@@ -1056,7 +944,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "強化",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1086,10 +981,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "跳躍能量包效率",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "5,000"
+        "Name": "超空間驅動器範圍",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1121,10 +1016,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "自動充能",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "0.9"
+        "Name": "啟動花費",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1154,7 +1049,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "防護罩強度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "0.05"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1184,10 +1086,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "已開啟內部維生系統",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1.05"
+        "Name": "操控性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1774,280 +1676,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other79",
-    "Icon": "other/79.png",
-    "Name": "蠕動同伴",
-    "Group": "觸手管家",
-    "Description": "深淵懼獸的精華被捕捉後，在此隔離，作為科學與裝飾用途。\n\n為囚禁同伴，使用最高品質的限制力場。同伴不可能逃跑。同伴絕不會逃跑。逃跑。",
-    "BaseValueUnits": 800.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw31",
-        "Quantity": 30
-      },
-      {
-        "Id": "raw34",
-        "Quantity": 30
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other80",
-    "Icon": "other/80.png",
-    "Name": "爍頂毒菇",
-    "Group": "有機裝飾",
-    "Description": "這種真菌以高密度毛細管系統與生物發光性質著稱。一系列化學反應循環，讓這種毒菇夜晚發光。\n\n可為基地提供景觀美化的機會。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other81",
-    "Icon": "other/81.png",
-    "Name": "乾枯殘幹",
-    "Group": "有機裝飾",
-    "Description": "從複製樹林採收的一根古老殘幹，估計壽命超過十萬年。其樹皮發出令人愉悅的青苔香味。\n\n可為基地提供景觀美化的機會。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other82",
-    "Icon": "other/82.png",
-    "Name": "泥土小屋",
-    "Group": "有機裝飾",
-    "Description": "簡樸的泥土小屋，其外觀是根據Saxm A13星球濃霧中發現的神祕結構體設計。類似的結構體在宇宙四處都有發現，但其來源至今仍然沒有經過驗證的假設。\n\n可為基地提供景觀美化的機會。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other83",
-    "Icon": "other/83.png",
-    "Name": "幾丁質籠",
-    "Group": "有機裝飾",
-    "Description": "來源不明的蛋白質構造，在太空異常上複製。其骨骼結構中常有空氣滯留，造成籠子的中心溫度較暖或較冷。\n\n可為基地提供景觀美化的機會。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other84",
-    "Icon": "other/84.png",
-    "Name": "海神花輪",
-    "Group": "有機裝飾",
-    "Description": "特殊的生命體，其形體以一圈發光腺體為主，難以分類為動物或植物。濃密的尖刺，保護美味的發光腺體不受獵食性生物捕食。\n\n可為基地提供景觀美化的機會。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other85",
-    "Icon": "other/85.png",
-    "Name": "機警芋頭",
-    "Group": "有機裝飾",
-    "Description": "這個詭異生物身上有著眼睛般的突起，不但可以接收光線，還能進行簡單的計算，但是它究竟在看什麼，也無從得知......\n\n可為基地提供景觀美化的機會。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other86",
-    "Icon": "other/86.png",
-    "Name": "虛空空殼",
-    "Group": "有機裝飾",
-    "Description": "這個蛋殼仍然低聲吟著歌，彷彿是遠方合唱的一員......\n\n可為基地提供景觀美化的機會。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other87",
-    "Icon": "other/87.png",
-    "Name": "板莖",
-    "Group": "有機裝飾",
-    "Description": "這種樹木頂部有著寬大的板狀樹葉，光合作用效率相當高，野外的個體可生長極高。這種室內品種經過育種，適合居家裝飾。\n\n可為基地提供景觀美化的機會。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other88",
-    "Icon": "other/88.png",
-    "Name": "複合球莖",
-    "Group": "有機裝飾",
-    "Description": "這個植物結構體抗氧化物含量豐富，但外表有一層厚厚的鱗甲覆蓋，因此難以人工栽培。\n\n可為基地提供景觀美化的機會。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other89",
     "Icon": "other/89.png",
     "Name": "銀河旅行者同盟旗幟",
@@ -2156,207 +1784,6 @@
     "ConsumableRewardTexts": [
       "用這顆蛋孵化出新的同伴！"
     ]
-  },
-  {
-    "Id": "other99",
-    "Icon": "other/99.png",
-    "Name": "銀河旅行者同盟貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片貼花代表銀河旅行者同盟與流浪探險的價值。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other100",
-    "Icon": "other/100.png",
-    "Name": "胺基樞紐貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片貼花代表胺基樞紐，以及共同歸屬感、冒險與發現的處世原則。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other101",
-    "Icon": "other/101.png",
-    "Name": "42號咖啡館貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片貼花代表42號咖啡館，以及友情、玩樂與享受人生的精神。歡迎來到咖啡館！",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other102",
-    "Icon": "other/102.png",
-    "Name": "旅行者聯盟貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片貼花代表旅行者聯盟。紀錄、協助、創造、溝通。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other103",
-    "Icon": "other/103.png",
-    "Name": "奇譚帝國貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片貼花代表奇譚帝國，以及慈善、仁慈、和平與理性的精神。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other104",
-    "Icon": "other/104.png",
-    "Name": "三發煙火",
-    "Group": "消耗型煙火表演裝置",
-    "Description": "豪華煙火，特色是三連發的彩色盛宴。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<>（<IMG>BUILD_MENU<>）放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
-    "BaseValueUnits": 60.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other105",
-    "Icon": "other/105.png",
-    "Name": "雙彩煙火",
-    "Group": "消耗型煙火表演裝置",
-    "Description": "豪華煙火，施放時爆發出銦與鎘的閃亮三角。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<>（<IMG>BUILD_MENU<>）放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
-    "BaseValueUnits": 60.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other106",
-    "Icon": "other/106.png",
-    "Name": "赫克之輪煙火",
-    "Group": "消耗型煙火表演裝置",
-    "Description": "豪華煙火，火焰效果炫目，施放時在空中旋轉的圓弧軌跡，引人入迷。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<>（<IMG>BUILD_MENU<>）放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
-    "BaseValueUnits": 60.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
   },
   {
     "Id": "other107",
@@ -2578,28 +2005,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other117",
-    "Icon": "building/350.png",
-    "Name": "強化套裝擴充元件",
-    "Group": "升級元件",
-    "Description": "能擴充使用者<STELLAR>強化套裝儲存空間<>的先進生存科技模組。\n\n內含奈米擴充填料，能在強化套裝中創造穩定的子空間跳躍虛空，進而增加<STELLAR>道具欄容量<>。可在<STELLAR>太空站<>上的強化套裝升級終端站套用此擴充。",
-    "BaseValueUnits": 155000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other118",
     "Icon": "other/118.png",
     "Name": "簡化噴射背包組",
@@ -2690,33 +2095,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other122",
-    "Icon": "other/122.png",
-    "Name": "先鋒探勘貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片貼花是著名的「A 向量」太空船，紀念第一次完成<STELLAR>探險<>「先鋒」。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other123",
     "Icon": "other/123.png",
     "Name": "先鋒探勘貼花",
@@ -2758,102 +2136,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other125",
-    "Icon": "other/125.png",
-    "Name": "藍紅寰宇煙火",
-    "Group": "消耗型煙火表演裝置",
-    "Description": "令人驚奇的火焰技術，施放時爆發出<TECHNOLOGY>銦<>與<FUEL>鎘<>的光芒。在天空中描繪出寰宇介面的畫像。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<>（<IMG>BUILD_MENU<>）放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward",
-      "IsExpeditionSeason2Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other126",
-    "Icon": "other/126.png",
-    "Name": "金藍寰宇煙火",
-    "Group": "消耗型煙火表演裝置",
-    "Description": "令人驚奇的火焰技術，施放時爆發出<COMMODITY>金<>與<TECHNOLOGY>銦<>的光芒。在天空中描繪出寰宇介面的畫像。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<>（<IMG>BUILD_MENU<>）放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward",
-      "IsExpeditionSeason2Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other127",
-    "Icon": "other/127.png",
-    "Name": "紅金寰宇煙火",
-    "Group": "消耗型煙火表演裝置",
-    "Description": "令人驚奇的火焰技術，施放時爆發出<FUEL>鎘<>與<COMMODITY>金<>的光芒。在天空中描繪出寰宇介面的畫像。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<>（<IMG>BUILD_MENU<>）放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward",
-      "IsExpeditionSeason2Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other128",
-    "Icon": "other/128.png",
-    "Name": "先鋒探勘旗幟",
-    "Group": "可解鎖的裝飾",
-    "Description": "特殊的可建造基地裝飾。\n作工精緻的<STELLAR>鑲金旗幟<>，上面畫的是著名的「A 向量」太空船。將這支旗幟插在可居住的基地，紀念第一次完成<STELLAR>探險<>「先鋒」。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 80
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -3225,49 +2507,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other147",
-    "Icon": "other/147.png",
-    "Name": "神話信標",
-    "Group": "實驗召喚技術",
-    "Description": "這是納達對<TRANS_TRA>吉客族<>、<TRANS_EXP>科瓦族<>和<TRANS_WAR>維金族<>故事中偵測到的異常模式進行研究的成果。\n\n信標會廣播<STELLAR>信號回音<>，並調整成可偵測納達的旅行者同伴所對應的<SPECIAL>史學史通量<>。\n\n專家波羅不願意預測廣播的結果。",
-    "BaseValueUnits": 80.0,
-    "CurrencyType": "Quicksilver",
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "放大附近的史學史回音"
-    ]
-  },
-  {
-    "Id": "other148",
-    "Icon": "other/148.png",
-    "Name": "史學史劑量計",
-    "Group": "個人現實通量顯示器",
-    "Description": "納達在<TRANS_TRA>吉客族<>、<TRANS_EXP>科瓦族<>和<TRANS_WAR>維金族<>的故事中偵測到有新的模式浮現。\n\n劑量計裝置會測量關鍵器物地點周圍的<SPECIAL>史學史通量<>暴露度。不尋常的歷史偏移紀錄使納達得以追蹤信號。\n\n使用這個裝置從外星器物地點<STELLAR>傳輸歷史資料<>，以協助納達與波羅的研究。",
-    "BaseValueUnits": 3200.0,
-    "CurrencyType": "Credits",
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other149",
     "Icon": "other/52.png",
     "Name": "頭銜：叛離者",
@@ -3352,33 +2591,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other154",
-    "Icon": "other/154.png",
-    "Name": "地圖學家探險貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n\n這片貼花紀念你成功拍攝紀錄，並從探險行星逃離的成就。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -3780,451 +2992,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other173",
-    "Icon": "other/173.png",
-    "Name": "藍色觀星貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片貼花描繪一位探險家在柔和的藍天中凝望群星。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other174",
-    "Icon": "other/174.png",
-    "Name": "紅色跨步者貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片貼花描繪一隻巨大外星怪獸在鐵鏽色的土地上跨步行進。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other175",
-    "Icon": "other/175.png",
-    "Name": "登陸太空船貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片貼花描繪一艘登陸的太空船，正等待著駕駛員的歸來。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other176",
-    "Icon": "other/176.png",
-    "Name": "紫色銀河核心貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片貼花描繪兩艘太空船前往一個銀河核心的旅程。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other177",
-    "Icon": "other/177.png",
-    "Name": "遺失的測深球貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片貼花描繪傳說中的鬧鬼潛水面罩。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other178",
-    "Icon": "other/178.png",
-    "Name": "太空異常貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片貼花描繪一艘太空船經過納達與波羅異常的家。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other179",
-    "Icon": "other/179.png",
-    "Name": "滿帆",
-    "Group": "裝飾",
-    "Description": "這面完全展開的船帆複製了古代海上貿易吉客族船隻的設計，是非常引人注目的航海主題家飾。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other180",
-    "Icon": "other/180.png",
-    "Name": "偏置帆",
-    "Group": "裝飾",
-    "Description": "這些偏置的船帆複製了古代海上貿易吉客族船隻的設計，是非常引人注目的航海主題家飾。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other181",
-    "Icon": "other/181.png",
-    "Name": "不對稱帆",
-    "Group": "裝飾",
-    "Description": "這些不對稱的船帆複製了古代海上貿易吉客族船隻的設計，是非常引人注目的航海主題家飾。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other182",
-    "Icon": "other/182.png",
-    "Name": "垂掛帆布",
-    "Group": "裝飾",
-    "Description": "這些垂掛的半帆複製了古代海上貿易吉客族船隻的設計，是非常引人注目的航海主題家飾。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other183",
-    "Icon": "other/183.png",
-    "Name": "黑與金旅行者海報",
-    "Group": "裝飾",
-    "Description": "獨特的自黏防皺牆面藝術作品。\n這張豪華的黑與金海報描繪一名貌似阿波羅的旅行者。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other184",
-    "Icon": "other/184.png",
-    "Name": "異常家園海報",
-    "Group": "裝飾",
-    "Description": "獨特的自黏防皺牆面藝術作品。\n這張色彩明亮的海報描繪太空異常的線框插圖。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other185",
-    "Icon": "other/185.png",
-    "Name": "要牛奶嗎？海報",
-    "Group": "裝飾",
-    "Description": "獨特的自黏防皺牆面藝術作品。\n這張海報描繪口感濃滑，美味無比的杯裝溫原始奶。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other186",
-    "Icon": "other/186.png",
-    "Name": "扭曲手稿",
-    "Group": "教派成員文件",
-    "Description": "一片晶瑩剔透的<STELLAR>巨蟲皮紙<>，上頭刻寫著狂熱無比的文字。受到觸碰時，紙張會變得扭曲。\n\n「孩子是最先發現的。\n轟隆轟隆轟隆地在沙土深處鳴響著。\n第一隻巨蟲越過我們頭頂上空時，就如同黑色閃電般劈開天際。\n一隻接著一隻，從沙漠中突起。遷徙著。\n每次風暴季來臨，我們都希望被選中。我們在沙漠排成長長的列隊，雙手朝天乞求。\n任何人都能獻身其胃袋之中。\n我們眾生平等於巨蟲之下。」",
-    "BaseValueUnits": 1616.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "4D2957",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other188",
-    "Icon": "other/188.png",
-    "Name": "血肉之繩",
-    "Group": "腸壁碎片",
-    "Description": "一根<SPECIAL>飢渴觸手<>消化束的蜷曲殘骸。儘管它多肉的內壁依舊在蠕動，但這堆貧弱的遺骸不可能再長出一根新觸手的......\n\n如此特殊的內臟遺骸在銀河交易所內相當罕見，因此<STELLAR>極度珍貴<>。",
-    "BaseValueUnits": 16016.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "4D2957",
-    "Usages": [
-      "HasRefinedToCreate",
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other189",
-    "Icon": "other/189.png",
-    "Name": "汙穢之卵",
-    "Group": "飢渴胚胎",
-    "Description": "<SPECIAL>飢渴觸手<>的脆弱胚胎，仍在不斷滴流黏液油。當被碰觸時，會慟哭並且蜷縮起來。\n\n可使用<TECHNOLOGY>內臟合成器<>從胚囊內取出。",
-    "BaseValueUnits": 16.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "CCCCCC",
-    "Usages": [
-      "HasRefinedToCreate",
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other190",
-    "Icon": "other/190.png",
-    "Name": "血肉發射器",
-    "Group": "消耗型煙火表演裝置",
-    "Description": "豪華煙火。這種有機煙火能衝上天爆炸，造成整灘黏液、電漿和蟲子飛濺。點燃即可在天空中製造令人作嘔的效果。\n\n從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other191",
     "Icon": "other/191.png",
     "Name": "血肉發射器包",
@@ -4265,33 +3032,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other193",
-    "Icon": "other/193.png",
-    "Name": "湧現探險貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n\n這片貼花紀念著<STELLAR>湧現<>探險的完成。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -4363,33 +3103,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other197",
-    "Icon": "other/197.png",
-    "Name": "泰坦戰利品",
-    "Group": "裝飾頭骨",
-    "Description": "特殊的可建造基地裝飾。\n\n這顆多齒頭骨曾屬於某隻無足的巨型脊椎動物，泰坦沙蟲的近親。其強大巨顎足以咬碎工具組和大多數生物的骨骼。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 100
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other198",
     "Icon": "other/198.png",
     "Name": "饗宴之盔",
@@ -4423,7 +3136,8 @@
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4444,7 +3158,8 @@
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4465,7 +3180,8 @@
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4486,7 +3202,8 @@
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4507,7 +3224,8 @@
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4697,33 +3415,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other213",
-    "Icon": "other/213.png",
-    "Name": "外星生物學探險貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n\n這片貼花紀念<STELLAR>外星生物學<>探險的完成，慶祝旅行者和居住在宇宙中的無數物種和平共處。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other214",
     "Icon": "other/214.png",
     "Name": "外星生物學探險旗幟",
@@ -4759,29 +3450,6 @@
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
       "IsExpeditionSeason5Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other216",
-    "Icon": "other/216.png",
-    "Name": "偽造護照",
-    "Group": "覆蓋數位記錄",
-    "Description": "偽造的<TECHNOLOGY>太空船註冊文件<>。此數位簽名保證不含以前的犯罪或不端行為紀錄。\n\n可用於在<TECHNOLOGY>太空站台核心<>重設任何負面<STELLAR>陣營評價<>記錄。",
-    "BaseValueUnits": 256000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward",
-      "IsExpeditionSeason7Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4869,41 +3537,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other220",
-    "Icon": "other/220.png",
-    "Name": "海盜地圖",
-    "Group": "非法地理資料",
-    "Description": "重新拼湊起來的<COMMODITY>寶藏座標資料<>，從海盜陣營<SPECIAL>「毀滅」<>的受害者身上取得。",
-    "BaseValueUnits": 888.0,
-    "CurrencyType": "Credits",
-    "Colour": "4D2957",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "other217",
-        "Quantity": 1
-      },
-      {
-        "Id": "other218",
-        "Quantity": 1
-      },
-      {
-        "Id": "other219",
-        "Quantity": 1
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "將資料轉換成強化套裝導航記號"
-    ]
-  },
-  {
     "Id": "other221",
     "Icon": "other/221.png",
     "Name": "會合點信標",
@@ -4946,176 +3579,6 @@
     "ConsumableRewardTexts": [
       "接受自由之聲的召喚"
     ]
-  },
-  {
-    "Id": "other223",
-    "Icon": "other/223.png",
-    "Name": "血鹽",
-    "Group": "走私物品",
-    "Description": "一瓶又髒又臭的水晶。這些有機鹽使用黏性蒸發陷阱生產，用來製造非法費洛蒙。\n\n在幾乎所有銀河交易終端站購買此物品，皆為<SPECIAL>違法<>。僅可在<FUEL>亡命之徒星系<>中取得穩定供貨。\n\n將違禁物品販售到受商業管制的太空，有機會獲得<TRADEABLE>極高利潤<>。",
-    "BaseValueUnits": 2000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other224",
-    "Icon": "other/224.png",
-    "Name": "偷來的 DNA 樣本",
-    "Group": "走私物品",
-    "Description": "裝有未註冊 DNA 樣本的密封小瓶，沒有防止非法基因竄改的標準生物安全機制。\n\n在幾乎所有銀河交易終端站購買此物品，皆為<SPECIAL>違法<>。僅可在<FUEL>亡命之徒星系<>中取得穩定供貨。\n\n將違禁物品販售到受商業管制的太空，有機會獲得<TRADEABLE>極高利潤<>。",
-    "BaseValueUnits": 9000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsEggIngredient",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other225",
-    "Icon": "other/225.png",
-    "Name": "月亮乙太",
-    "Group": "走私物品",
-    "Description": "一大桶高揮發性液體。其煙霧極易燃，可做為強力鎮靜劑使用。\n\n在幾乎所有銀河交易終端站購買此物品，皆為<SPECIAL>違法<>。僅可在<FUEL>亡命之徒星系<>中取得穩定供貨。\n\n將違禁物品販售到受商業管制的太空，有機會獲得<TRADEABLE>極高利潤<>。",
-    "BaseValueUnits": 18000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other226",
-    "Icon": "other/226.png",
-    "Name": "稜彩羽毛",
-    "Group": "走私物品",
-    "Description": "美麗耀眼、真空密封的一束羽毛。為製作這千變萬化、不可思議的迷人飾物而失去生命的動物，早已經滅絕了。\n\n在幾乎所有銀河交易終端站購買此物品，皆為<SPECIAL>違法<>。僅可在<FUEL>亡命之徒星系<>中取得穩定供貨。\n\n將違禁物品販售到受商業管制的太空，有機會獲得<TRADEABLE>極高利潤<>。",
-    "BaseValueUnits": 32000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other227",
-    "Icon": "other/227.png",
-    "Name": "嘎啦嘎啦",
-    "Group": "走私物品",
-    "Description": "一罐現已禁用的維金族戰鬥氣體，傳統上會在戰鬥前夕吸入。\n\n在幾乎所有銀河交易終端站購買此物品，皆為<SPECIAL>違法<>。僅可在<FUEL>亡命之徒星系<>中取得穩定供貨。\n\n將違禁物品販售到受商業管制的太空，有機會獲得<TRADEABLE>極高利潤<>。",
-    "BaseValueUnits": 58000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other228",
-    "Icon": "other/228.png",
-    "Name": "盜版迴路",
-    "Group": "走私物品",
-    "Description": "這些無照的迴路，是對繳獲的太空站台核心進行逆向工程而製成的產物，應用於各種黑市和灰色市場技術。\n\n在幾乎所有銀河交易終端站購買此物品，皆為<SPECIAL>違法<>。僅可在<FUEL>亡命之徒星系<>中取得穩定供貨。\n\n將違禁物品販售到受商業管制的太空，有機會獲得<TRADEABLE>極高利潤<>。",
-    "BaseValueUnits": 68000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasUsedToCraft",
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other229",
-    "Icon": "other/229.png",
-    "Name": "禁用武器",
-    "Group": "走私物品",
-    "Description": "這些強力武器是用巡警部隊的回收殘骸拼湊而成的，是整個銀河系亡命之徒的最愛。\n\n在幾乎所有銀河交易終端站購買此物品，皆為<SPECIAL>違法<>。僅可在<FUEL>亡命之徒星系<>中取得穩定供貨。\n\n將違禁物品販售到受商業管制的太空，有機會獲得<TRADEABLE>極高利潤<>。",
-    "BaseValueUnits": 83000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other230",
-    "Icon": "other/230.png",
-    "Name": "第一世代遺物",
-    "Group": "走私物品",
-    "Description": "失落的吉客族帝國遺物，受到銀河系所有主要文明的譴責和禁止。\n\n在幾乎所有銀河交易終端站購買此物品，皆為<SPECIAL>違法<>。僅可在<FUEL>亡命之徒星系<>中取得穩定供貨。\n\n將違禁物品販售到受商業管制的太空，有機會獲得<TRADEABLE>極高利潤<>。",
-    "BaseValueUnits": 98000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
   },
   {
     "Id": "other231",
@@ -5161,249 +3624,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other233",
-    "Icon": "other/233.png",
-    "Name": "恐怖船長法恩海報",
-    "Group": "裝飾",
-    "Description": "獨特的自黏防皺牆面藝術作品。\n很少有維金族會不知道恐怖船長法恩和他令人毛骨悚然的事蹟，但是沒人能確定他是真實的歷史人物，還是只是為了嚇唬不聽話的小孩而編造的故事。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other234",
-    "Icon": "other/234.png",
-    "Name": "亡命之徒海報",
-    "Group": "裝飾",
-    "Description": "獨特的自黏防皺牆面藝術作品。\n對海盜、逃犯和反抗巡警法律的叛逆致敬。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other235",
-    "Icon": "other/235.png",
-    "Name": "雷斯柏 XIII 海報",
-    "Group": "裝飾",
-    "Description": "獨特的自黏防皺牆面藝術作品。\n這張無政府主義海報描繪了一個臭名昭著、被海盜佔領的星球。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other236",
-    "Icon": "other/236.png",
-    "Name": "海盜旗幟",
-    "Group": "特殊旗幟",
-    "Description": "這面天鵝絨旗幟上印有鮮紅色的頭骨，代表著對敵對團體的警告。\n\n特殊的可建造基地裝飾。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other237",
-    "Icon": "other/237.png",
-    "Name": "統一旗幟",
-    "Group": "特殊旗幟",
-    "Description": "集體合作設計出來的標準，是數個星際工會協力的結晶。\n\n特殊的可建造基地裝飾。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other238",
-    "Icon": "other/238.png",
-    "Name": "紋章旗幟",
-    "Group": "特殊旗幟",
-    "Description": "這面旗幟的精緻金色刺繡，能立刻為任何可居住基地增添一股優雅和考究感。\n\n特殊的可建造基地裝飾。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other239",
-    "Icon": "other/239.png",
-    "Name": "軌道旗幟",
-    "Group": "特殊旗幟",
-    "Description": "醒目的深紅色和灰色織物，用抽象手法描繪在警惕之眼注視下的行星軌道。\n\n特殊的可建造基地裝飾。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other240",
-    "Icon": "other/240.png",
-    "Name": "蓊鬱旗幟",
-    "Group": "特殊旗幟",
-    "Description": "對比鮮明的綠色和紫色設計，這面旗幟的靈感來自尋找蓊鬱星系的生命體。\n\n特殊的可建造基地裝飾。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other241",
-    "Icon": "other/241.png",
-    "Name": "反覆無常箱體",
-    "Group": "漂浮的遠古之物",
-    "Description": "特殊的可建造基地裝飾。\n\n這個方塊型生命體從另一個現實漂流到軌道站中，被一名旅行商人捕獲。重新安置在可居住的基地後，會平靜地陪伴著你。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 100
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other242",
     "Icon": "other/52.png",
     "Name": "頭銜：「毀滅獵人」",
@@ -5422,33 +3642,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other243",
-    "Icon": "other/243.png",
-    "Name": "毀滅殆盡探險貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n\n這片貼花紀念<STELLAR>「毀滅殆盡」<>探險的完成、獲取不義之財的榮耀，以及海盜秘密的發現。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -5823,222 +4016,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other261",
-    "Icon": "other/261.png",
-    "Name": "巨蟲狩獵 I 貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片<SPECIAL>被詛咒<>的貼花描繪強大的<STELLAR>泰坦巨蟲<>。\n\n「蟲王佇立於沙土之上，其血肉遮天。」",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other262",
-    "Icon": "other/262.png",
-    "Name": "巨蟲狩獵 II 貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片<SPECIAL>被詛咒<>的貼花描繪了強大的<STELLAR>泰坦巨蟲<>。\n\n「寰宇血脈已浮出地面。」",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other263",
-    "Icon": "other/263.png",
-    "Name": "巨蟲狩獵 III 貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片<SPECIAL>被詛咒<>的貼花描繪了強大的<STELLAR>泰坦巨蟲<>。\n\n「我們被吞噬時的狂歡難以言喻。」",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other264",
-    "Icon": "other/264.png",
-    "Name": "巨蟲狩獵 IV 貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片<SPECIAL>被詛咒<>的貼花描繪了強大的<STELLAR>泰坦巨蟲<>。\n\n「我們受其吞食時會不住踉蹌，最好抓緊光滑的壁面。」",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other265",
-    "Icon": "other/265.png",
-    "Name": "巨蟲狩獵 V 貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n這片<SPECIAL>被詛咒<>的貼花描繪了強大的<STELLAR>泰坦巨蟲<>。\n\n「我的弟兄們都已經獲得新生，作為新生觸手從神聖塵土中崛起。」",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other266",
-    "Icon": "other/266.png",
-    "Name": "宇宙飛行海報",
-    "Group": "裝飾",
-    "Description": "獨特的自黏防皺牆面藝術作品。\n一張慶祝太空船升空喜悅的海報。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other267",
-    "Icon": "other/267.png",
-    "Name": "軌道海報",
-    "Group": "裝飾",
-    "Description": "獨特的自黏防皺牆面藝術作品。\n這張海報描繪了一個正從沉思探險家上方經過的太空站。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other268",
-    "Icon": "other/268.png",
-    "Name": "船隻型錄海報",
-    "Group": "裝飾",
-    "Description": "獨特的自黏防皺牆面藝術作品。\n這張海報列出了一系列太空船的剪影。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -6507,33 +4484,6 @@
     ]
   },
   {
-    "Id": "other287",
-    "Icon": "other/287.png",
-    "Name": "龐然大物探險貼花",
-    "Group": "裝飾",
-    "Description": "特殊的可放置貼花，可以裝飾基地，增添個人風格。\n\n這片貼花紀念著<STELLAR>龐然大物<>探險的完成，以及延續世世代代詛咒的終結。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other288",
     "Icon": "other/288.png",
     "Name": "龐然大物探險旗幟",
@@ -6556,120 +4506,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other289",
-    "Icon": "products/93.png",
-    "Name": "繁殖卵囊",
-    "Group": "知覺太空船倉儲卵囊",
-    "Description": "一個<SPECIAL>知覺<>太空船的<TECHNOLOGY>額外倉儲結節<>。孵化時，卵囊內的寄生蟲會寄生到船艙上，利用其海綿狀的內部構造與宿主交換重要養分。\n\n按下 <VAL_ON><IMG>FE_ALT1<><> 以觸發成長，並開始<VAL_ON>孵化過程<>。",
-    "BaseValueUnits": 125000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "進化額外倉儲"
-    ]
-  },
-  {
-    "Id": "other290",
-    "Icon": "products/91.png",
-    "Name": "精神卵",
-    "Group": "脈動卵黃囊",
-    "Description": "一個扭動的基因液囊，用來促進<TECHNOLOGY>知覺太空船<>創造新的<TECHNOLOGY>生物結合科技<>。\n\n胚胎將會成長為<TECHNOLOGY>生物科技升級<>。按下 <VAL_ON><IMG>FE_ALT1<><> 即可<STELLAR>開始生物合成<>。",
-    "BaseValueUnits": 126000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "孵化成新的知覺科技"
-    ]
-  },
-  {
-    "Id": "other291",
-    "Icon": "other/291.png",
-    "Name": "夢境天線",
-    "Group": "潛意識存取裝置",
-    "Description": "一個訊號接收器和放大器，調諧至無意識思維的波長。它同時呈現出每一種顏色，將周圍的光線分成閃閃發光的彩虹。\n\n<FUEL>警告：<>攜帶此天線進入深空可能會引起<SPECIAL>宇宙巨型動物<>的注意。",
-    "BaseValueUnits": 16.0,
-    "CurrencyType": "Credits",
-    "Colour": "311A49",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "prod58",
-        "Quantity": 3
-      },
-      {
-        "Id": "prod116",
-        "Quantity": 1
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other292",
-    "Icon": "other/278.png",
-    "Name": "貨船座標廣播裝置",
-    "Group": "最後連結的家",
-    "Description": "一種臨時性裝置，由保存多年的回收電子元件拼湊而成。這些雜亂無章的電線會試圖與貨船母星最後已知的殘存體取得聯繫。\n\n選擇裝置並選擇廣播 (<IMG>FE_ALT1<>) 來開始定位程序。",
-    "BaseValueUnits": 16.0,
-    "CurrencyType": "Credits",
-    "Colour": "311A49",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw10",
-        "Quantity": 60
-      },
-      {
-        "Id": "raw33",
-        "Quantity": 20
-      },
-      {
-        "Id": "prod113",
-        "Quantity": 1
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "嘗試聯繫"
-    ]
-  },
-  {
     "Id": "other293",
     "Icon": "other/293.png",
     "Name": "高重力貨船尾跡",
@@ -6681,7 +4517,8 @@
     "Colour": "2C7C9F",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6702,7 +4539,8 @@
     "Colour": "008951",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6723,7 +4561,8 @@
     "Colour": "008951",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6744,7 +4583,8 @@
     "Colour": "4D2987",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

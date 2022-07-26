@@ -47,6 +47,7 @@ Widget languageSettingTilePresenter(
     if (onChange == null) return;
 
     String temp = await getTranslations().langaugeSelectionPage(context);
+    // if null, no language selected
     if (temp != null) onChange(getTranslations().getLocaleFromKey(temp));
   };
   LocalizationMap currentLocal =

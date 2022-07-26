@@ -5,6 +5,7 @@ import '../../constants/NmsUIConstants.dart';
 import '../../contracts/generated/expeditionViewModel.dart' as expedition_api;
 import '../../contracts/seasonalExpedition/expeditionMilestoneType.dart';
 import '../../integration/dependencyInjection.dart';
+import '../../pages/generic/genericPageDescripHighlightText.dart';
 import '../../pages/seasonalExpedition/seasonalExpeditionPhaseListPage.dart';
 import '../../redux/modules/expedition/expeditionViewModel.dart';
 
@@ -17,7 +18,10 @@ import '../modalBottomSheet/expeditionRewardsListModalBottomSheet.dart';
 import '../portal/portalGlyphList.dart';
 
 Widget seasonalExpeditionDetailTilePresenter(
-    BuildContext context, SeasonalExpeditionSeason season, useAltGlyphs) {
+  BuildContext context,
+  SeasonalExpeditionSeason season,
+  bool useAltGlyphs,
+) {
   return Column(
     children: [
       seasonalExpeditionBase(
@@ -177,7 +181,16 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           textWrapper(seasonalExpeditionMilestone.title, fontSize: 20),
-          textWrapper(description ?? ''),
+          Container(
+            child: textWithHighlightTags(
+              context,
+              description ?? '',
+              List.empty(),
+              textAlign: TextAlign.left,
+              maxLines: 1,
+            ),
+            margin: const EdgeInsets.only(left: 4.0),
+          ),
           emptySpace1x(),
         ],
       ),

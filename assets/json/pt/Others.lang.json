@@ -93,95 +93,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other5",
-    "Icon": "other/5.png",
-    "Name": "Dados de Navegação",
-    "Group": "Dados de Navegação Criptografados",
-    "Description": "Dados de navegação codificados. Esta unidade de dados altamente portátil contém todas as informações cartográficas relevantes para uma região planetária.\n\nPode ser negociada com um <TRADEABLE>Cartógrafo<> a bordo de uma Estação Espacial em troca de <STELLAR>mapas estelares utilizáveis<>.",
-    "BaseValueUnits": 1000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "0063B7",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/5.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other6",
-    "Icon": "other/6.png",
-    "Name": "Coordenadas da Cápsula de Escape",
-    "Group": "Dados de Navegação Criptografados",
-    "Description": "Dados de navegação codificados para entrada num <TECHNOLOGY>Impulsionador de Sinal<>.\n\nAo ser desencriptado, irá revelar a localização de uma <TECHNOLOGY>Cápsula de escape<> que contém <SPECIAL>Atualizações de Exofato<>.",
-    "BaseValueUnits": 85000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "1A2733",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/6.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other7",
-    "Icon": "other/6.png",
-    "Name": "Chave de encriptação de Registo",
-    "Group": "Sequência de Dados Incompleta",
-    "Description": "Um fragmento da sequência de encriptação de sobrecarga para um <TECHNOLOGY>registo de emergência de um cargueiro<>.\n\nPodem ser necessárias várias partes da sequência para aceder aos dados guardados.",
-    "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "1A2733",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/7.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other8",
-    "Icon": "other/8.png",
-    "Name": "Memorando de Defesa",
-    "Group": "Substituto de Pagamento da Autoridade do Sistema",
-    "Description": "Um sinal que autoriza o portador a ter o apoio das autoridades do sistema a lidar com ataques de pirataria.",
-    "BaseValueUnits": 10000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "1A2733",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/8.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsNoLongerObtainable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other9",
     "Icon": "other/9.png",
     "Name": "Estupefacto",
@@ -819,29 +730,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other38",
-    "Icon": "building/350.png",
-    "Name": "Aumento do Armazenamento da Nave",
-    "Group": "Módulo de Expansão da Nave Espacial",
-    "Description": "Um módulo de tecnologia recolhido dos restos de uma <STELLAR>nave espacial recuperada<>. Pode ser recolhido de <STELLAR>locais de acidentes de cargueiros<> ou recuperado em <STELLAR>expedições de fragatas<>.\n\nNas <TECHNOLOGY>Lojas de Naves Espaciais<> apropriadas, pode ser usado para expandir a capacidade de armazenamento da nave.",
-    "BaseValueUnits": 125000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsRewardFromShipScrap",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other39",
     "Icon": "tradeItems/21.png",
     "Name": "Painéis Térmicos",
@@ -1023,9 +911,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Cadência de Tiro",
+        "Name": "Danos",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "damage",
         "Value": "8"
       }
     ],
@@ -1056,7 +944,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Impulso",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1086,10 +981,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Eficiência da Célula de Velocidade Warp",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "5,000"
+        "Name": "Alcance da Hiperdrive",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1121,10 +1016,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Recarregamento Automático",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "0.9"
+        "Name": "Custo de Lançamento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1154,7 +1049,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Força do Escudo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "0.05"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1184,10 +1086,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Suporte de Vida Interno Ativado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1.05"
+        "Name": "Manobrabilidade",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1774,280 +1676,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other79",
-    "Icon": "other/79.png",
-    "Name": "Companhia contorcida",
-    "Group": "Guardião tentacular",
-    "Description": "A essência capturada de um horror abissal, reservado para uso científico e decorativo.\n\nO campo de força protetor é da mais alta qualidade. A companhia não pode escapar. A companhia não irá escapar. Escapar.",
-    "BaseValueUnits": 800.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw31",
-        "Quantity": 30
-      },
-      {
-        "Id": "raw34",
-        "Quantity": 30
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other80",
-    "Icon": "other/80.png",
-    "Name": "Cogumelo de Topo Luminoso",
-    "Group": "Decoração orgânica",
-    "Description": "Este tipo de fungo é particularmente notável pela sua densa rede capilar e qualidades bioluminescentes. Uma cadeia circulante de reações químicas produz o brilho noturno deste cogumelo.\n\nProporciona oportunidades de paisagismo decorativo para bases.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other81",
-    "Icon": "other/81.png",
-    "Name": "Cepa Sapiente",
-    "Group": "Decoração orgânica",
-    "Description": "Esta antiga cepa foi colhida numa colónia de árvores clonais, que se estima ter mais de cem milénios de vida. A sua casca liberta uma agradável fragrância de musgo.\n\nProporciona oportunidades de paisagismo decorativo para bases.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other82",
-    "Icon": "other/82.png",
-    "Name": "Cabana de Argila",
-    "Group": "Decoração orgânica",
-    "Description": "Esta simples cabana de argila foi reproduzida segundo uma misteriosa estrutura descoberta nas brumas do planeta Saxm A13. Estruturas semelhantes foram encontradas ao longo de todo o universo, sem que nenhuma hipótese fosse confirmada quanto à sua origem.\n\nProporciona oportunidades de paisagismo decorativo para bases.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other83",
-    "Icon": "other/83.png",
-    "Name": "Caixa Quitinosa",
-    "Group": "Decoração orgânica",
-    "Description": "Uma formação proteica de origem indeterminada, replicada a bordo da Anomalia Espacial. A sua estrutura esquelética conserva frequentemente bolsas de ar, originando temperaturas ligeiramente mais quentes ou frias no centro da jaula.\n\nProporciona oportunidades de paisagismo decorativo para bases.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other84",
-    "Icon": "other/84.png",
-    "Name": "Prótea Circular",
-    "Group": "Decoração orgânica",
-    "Description": "Esta forma de vida invulgar, dominada por um círculo de glândulas fotóforas, é difícil de classificar claramente dentro da flora ou da fauna. As espessas colunas de espinhos ajudam a proteger as suas saborosas glândulas dos predadores.\n\nProporciona oportunidades de paisagismo decorativo para bases.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other85",
-    "Icon": "other/85.png",
-    "Name": "Inhame Vigilante",
-    "Group": "Decoração orgânica",
-    "Description": "As protrusões em forma de olhos deste organismo bizarro podem processar a luz e realizar cálculos simples, mas não se sabe ao certo aquilo que procuram...\n\nProporciona oportunidades de paisagismo decorativo para bases.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other86",
-    "Icon": "other/86.png",
-    "Name": "Folhelho Vazio",
-    "Group": "Decoração orgânica",
-    "Description": "Esta casca de ovo ainda sussurra uma melodia esvaída, como se estivesse unida a um coro longínquo...\n\nProporciona oportunidades de paisagismo decorativo para bases.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other87",
-    "Icon": "other/87.png",
-    "Name": "Haste-prato",
-    "Group": "Decoração orgânica",
-    "Description": "A folha ampla em forma de prato desta árvore é muito eficiente para a fotossíntese, com os espécimes silvestres a crescerem até alturas extraordinárias. Esta variedade doméstica é cultivada para o interior de habitações.\n\nProporciona oportunidades de paisagismo decorativo para bases.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other88",
-    "Icon": "other/88.png",
-    "Name": "Bolbo Composto",
-    "Group": "Decoração orgânica",
-    "Description": "Esta estrutura vegetativa é rica em antioxidantes, mas a sua espessa camada de escamas torna o seu cultivo pouco prático.\n\nProporciona oportunidades de paisagismo decorativo para bases.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other89",
     "Icon": "other/89.png",
     "Name": "Estandarte da Aliança de Viajantes Galácticos",
@@ -2156,207 +1784,6 @@
     "ConsumableRewardTexts": [
       "Choca este ovo para obter um novo companheiro!"
     ]
-  },
-  {
-    "Id": "other99",
-    "Icon": "other/99.png",
-    "Name": "Decalque da Aliança de Viajantes Galácticos",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque representa a Aliança de Viajantes Galácticos, e o valor da exploração nómada.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other100",
-    "Icon": "other/100.png",
-    "Name": "Decalque de Hub Amínico",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque representa o Hub Amínico, e os princípios de comunidade, aventura e descoberta.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other101",
-    "Icon": "other/101.png",
-    "Name": "Decalque Café 42",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque representa o Café 42, e o espírito da amizade, diversão e bom ambiente. Bem-vindo ao Café!",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other102",
-    "Icon": "other/102.png",
-    "Name": "Decalque da Federação Unida de Viajantes",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque representa a Federação Unida de Viajantes. Documenta, ajuda, cria, comunica.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other103",
-    "Icon": "other/103.png",
-    "Name": "Decalque do Império Qitaniano",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque representa o Império Qitaniano, e o espírito da caridade, gentileza, paz e razoabilidade.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other104",
-    "Icon": "other/104.png",
-    "Name": "Fogo de Artifício Tripla Explosão",
-    "Group": "Dispositivo pirotécnico consumível",
-    "Description": "Um fogo de artifício de luxo, com uma sinfonia de cores em três explosões. Faz a ignição para criar brilhantes desenhos no céu.\n\nPosiciona o tubo de lançamento através do <VAL_ON>Menu de Construção<> (<IMG>BUILD_MENU<>). <FUEL>Aviso<>: Não apontar a criaturas vivas. Não recomendado para uso interno.",
-    "BaseValueUnits": 60.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other105",
-    "Icon": "other/105.png",
-    "Name": "Fogo de Artifício Duplo Cromado",
-    "Group": "Dispositivo pirotécnico consumível",
-    "Description": "Um fogo de artifício de luxo, que explode em rasgos de índio e cádmio. Faz a ignição para criar brilhantes desenhos no céu.\n\nPosiciona o tubo de lançamento através do <VAL_ON>Menu de Construção<> (<IMG>BUILD_MENU<>). <FUEL>Aviso<>: Não apontar a criaturas vivas. Não recomendado para uso interno.",
-    "BaseValueUnits": 60.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other106",
-    "Icon": "other/106.png",
-    "Name": "Fogo de Artifício Roda de Hirk",
-    "Group": "Dispositivo pirotécnico consumível",
-    "Description": "Um fogo de artifício de luxo. Quando ativada, esta maravilha pirotécnica gira e contorce-se numa espiral hipnotizadora. Faz a ignição para criar brilhantes desenhos no céu.\n\nPosiciona o tubo de lançamento através do <VAL_ON>Menu de Construção<> (<IMG>BUILD_MENU<>). <FUEL>Aviso<>: Não apontar a criaturas vivas. Não recomendado para uso interno.",
-    "BaseValueUnits": 60.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
   },
   {
     "Id": "other107",
@@ -2578,28 +2005,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other117",
-    "Icon": "building/350.png",
-    "Name": "Unidade de Expansão do Exofato",
-    "Group": "Unidade de atualização",
-    "Description": "Um módulo de tecnologia de sobrevivência avançada que permite a expansão do <STELLAR>Armazenamento do Exofato<>.\n\nOs nano-expansores pré-embalados criam espaços vazios de sub-warp no Exofato, aumentando a <STELLAR>capacidade de inventário<>. Aplica este aumento no terminal de atualização do Exofato a bordo da <STELLAR>Estação Espacial<>.",
-    "BaseValueUnits": 155000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other118",
     "Icon": "other/118.png",
     "Name": "Unidade Jetpack simplificada",
@@ -2690,33 +2095,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other122",
-    "Icon": "other/122.png",
-    "Name": "Decalque Expedição de Pioneiros",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque apresenta a edição dourada da icónica nave Alfa Vetor e comemora a conclusão da <STELLAR>Expedição<> inaugural: Pioneiros.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other123",
     "Icon": "other/123.png",
     "Name": "Estandarte Expedição de Pioneiros",
@@ -2758,102 +2136,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other125",
-    "Icon": "other/125.png",
-    "Name": "Fogo de Artifício de Atlas Azul-Vermelho",
-    "Group": "Dispositivo pirotécnico consumível",
-    "Description": "Uma deslumbrante representação pirotécnica de um Interface Atlas, em explosões de <TECHNOLOGY>índio<> e <FUEL>cádmio<>. Faz a ignição para criar brilhantes desenhos no céu.\n\nPosiciona o tubo de lançamento através do <VAL_ON>Menu de Construção<> (<IMG>BUILD_MENU<>). <FUEL>Aviso<>: Não apontar a criaturas vivas. Não recomendado para uso interno.",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward",
-      "IsExpeditionSeason2Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other126",
-    "Icon": "other/126.png",
-    "Name": "Fogo de Artifício de Atlas Dourado-Azul",
-    "Group": "Dispositivo pirotécnico consumível",
-    "Description": "Uma deslumbrante representação pirotécnica de um Interface Atlas, em explosões de <COMMODITY>ouro<> e <TECHNOLOGY>índio<>. Faz a ignição para criar brilhantes desenhos no céu.\n\nPosiciona o tubo de lançamento através do <VAL_ON>Menu de Construção<> (<IMG>BUILD_MENU<>). <FUEL>Aviso<>: Não apontar a criaturas vivas. Não recomendado para uso interno.",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward",
-      "IsExpeditionSeason2Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other127",
-    "Icon": "other/127.png",
-    "Name": "Fogo de Artifício de Atlas Vermelho-Dourado",
-    "Group": "Dispositivo pirotécnico consumível",
-    "Description": "Uma deslumbrante representação pirotécnica de um Interface Atlas, em explosões de <FUEL>cádmio<> e <COMMODITY>ouro<>. Faz a ignição para criar brilhantes desenhos no céu.\n\nPosiciona o tubo de lançamento através do <VAL_ON>Menu de Construção<> (<IMG>BUILD_MENU<>). <FUEL>Aviso<>: Não apontar a criaturas vivas. Não recomendado para uso interno.",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward",
-      "IsExpeditionSeason2Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other128",
-    "Icon": "other/128.png",
-    "Name": "Bandeira Expedição de Pioneiros",
-    "Group": "Decoração desbloqueável",
-    "Description": "Um ornamento de construção exclusivo para bases.\nEsta elaborada <STELLAR>bandeira com bordas douradas<> possui uma representação da icónica nave Alfa Vetor. Coloca-a numa base habitável para comemorar a conclusão da <STELLAR>Expedição<> inaugural: Pioneiros.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 80
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -3225,49 +2507,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other147",
-    "Icon": "other/147.png",
-    "Name": "Emissor Mítico",
-    "Group": "Tecnologia de convocação experimental",
-    "Description": "O resultado da pesquisa de Nada relativamente a padrões incomuns detetados nas histórias dos <TRANS_TRA>Gek<>, <TRANS_EXP>Korvax<> e <TRANS_WAR>Vy'keen<>.\n\nO emissor transmite um <STELLAR>eco de sinal<> sintonizado com a deslocação do <SPECIAL>fluxo historiográfico<> mapeado pelos companheiros Viajantes de Nada.\n\nO Especialista Polo não parece querer prever os resultados da transmissão.",
-    "BaseValueUnits": 80.0,
-    "CurrencyType": "Quicksilver",
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "Amplificar ecos historiográficos próximos"
-    ]
-  },
-  {
-    "Id": "other148",
-    "Icon": "other/148.png",
-    "Name": "Dosímetro historiográfico",
-    "Group": "Monitor de fluxos de realidade pessoal",
-    "Description": "Nada detetou um novo padrão emergente das histórias dos <TRANS_TRA>Gek<>, <TRANS_EXP>Korvax<> e <TRANS_WAR>Vy'keen<>.\n\nO dosímetro mede a exposição ao <SPECIAL>fluxo historiográfico<> perto de locais de artefactos. Os registos de deslocações históricas incomuns permitem que Nada rastreie o sinal.\n\nAjuda Nada e Polo na sua pesquisa ao utilizares este dispositivo para <STELLAR>transmitires dados históricos<> de locais de artefactos alienígenas.",
-    "BaseValueUnits": 3200.0,
-    "CurrencyType": "Credits",
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other149",
     "Icon": "other/52.png",
     "Name": "Título: 'Rebelde'",
@@ -3352,33 +2591,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other154",
-    "Icon": "other/154.png",
-    "Name": "Decalque da Expedição Cartógrafos",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\n\nEste decalque comemora o teu sucesso no registo e escape do planeta de expedição.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -3780,451 +2992,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other173",
-    "Icon": "other/173.png",
-    "Name": "Decalque Astrónomo Azul",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque mostra um explorador a admirar as estrelas num céu azul suave.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other174",
-    "Icon": "other/174.png",
-    "Name": "Decalque Strider Vermelho",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque mostra uma besta alienígena colossal a caminhar sobre uma paisagem cor de ferrugem.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other175",
-    "Icon": "other/175.png",
-    "Name": "Decalque de Nave Aterrada",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque mostra uma nave espacial, a aguardar o retorno do seu piloto.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other176",
-    "Icon": "other/176.png",
-    "Name": "Decalque de Núcleo Galáctico Roxo",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque mostra um par de naves espaciais a viajar em direção a um núcleo galáctico.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other177",
-    "Icon": "other/177.png",
-    "Name": "Decalque de Batisfera Perdida",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque mostra uma lendária máscara de mergulho assombrada.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other178",
-    "Icon": "other/178.png",
-    "Name": "Decalque de Anomalia Espacial",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque mostra uma nave espacial a passar pela casa anómala de Nada e Polo.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other179",
-    "Icon": "other/179.png",
-    "Name": "Vela Completa",
-    "Group": "Decoração",
-    "Description": "Esta vela completa reproduz o design dos antigos navios de comércio marítimo dos Gek e faz uma impressionante decoração de casa com tema náutico.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other180",
-    "Icon": "other/180.png",
-    "Name": "Velas Descentradas",
-    "Group": "Decoração",
-    "Description": "Estas velas descentradas replicam o design dos antigos navios de comércio marítimo dos Gek e fazem uma impressionante decoração de casa com tema náutico.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other181",
-    "Icon": "other/181.png",
-    "Name": "Velas Assimétricas",
-    "Group": "Decoração",
-    "Description": "Estas velas assimétricas replicam o design dos antigos navios de comércio marítimo dos Gek e fazem uma impressionante decoração de casa com tema náutico.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other182",
-    "Icon": "other/182.png",
-    "Name": "Tela Drapeada",
-    "Group": "Decoração",
-    "Description": "Esta meia vela de tela drapeada replica o design dos antigos navios de comércio marítimo dos Gek e fazem uma impressionante decoração de casa com tema náutico.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other183",
-    "Icon": "other/183.png",
-    "Name": "Póster Viajante Preto e Dourado",
-    "Group": "Decoração",
-    "Description": "Uma peça exclusiva de arte de parede autocolante e à prova de vincos.\nEste póster refinado a preto e dourado retrata um Viajante à semelhança da imagem de Apolo.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other184",
-    "Icon": "other/184.png",
-    "Name": "Póster Casa Anómala",
-    "Group": "Decoração",
-    "Description": "Uma peça exclusiva de arte de parede autocolante e à prova de vincos.\nEste póster extremamente colorido retrata o esquema de uma ilustração da Anomalia Espacial.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other185",
-    "Icon": "other/185.png",
-    "Name": "Póster Leite?",
-    "Group": "Decoração",
-    "Description": "Uma peça exclusiva de arte de parede autocolante e à prova de vincos.\nEste póster retrata um copo de delicioso Protoleite, quente e cremoso.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other186",
-    "Icon": "other/186.png",
-    "Name": "Manuscrito Contorcido",
-    "Group": "Documento dos Cultistas",
-    "Description": "Uma folha translúcida de <STELLAR>pergaminho de verme<>, inscrito com um texto fanático. Contorce-se ao toque.\n\n'As crianças foram as primeiras a notar.\nUm bum bum bum a ribombar debaixo da areia.\nO primeiro verme atravessou o céu como um raio negro ao saltar no ar. \nVerme atrás de verme, erguiam-se do deserto. A migrar.\nEm cada estação da tempestade, esperamos ser escolhidos. Dispomo-nos em linhas pelo deserto, com os braços levantados para o céu.\nQualquer um pode entrar na bocarra.\nSomos todos iguais perante os grandes vermes.'",
-    "BaseValueUnits": 1616.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "4D2957",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other188",
-    "Icon": "other/188.png",
-    "Name": "Corda Carnuda",
-    "Group": "Fragmento Intestinal",
-    "Description": "Os restos mortais enrolados do trato digestivo de um <SPECIAL>Tentáculo Faminto<>. Embora as paredes carnudas ainda se contorçam, é impossível um tentáculo novo renascer destes restos débeis...\n\nEstas entranhas especiais raramente são comercializadas na Troca Galáctica e, como tal, são <STELLAR>extremamente valiosas<>.",
-    "BaseValueUnits": 16016.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "4D2957",
-    "Usages": [
-      "HasRefinedToCreate",
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other189",
-    "Icon": "other/189.png",
-    "Name": "Crias Vis",
-    "Group": "Embrião Faminto",
-    "Description": "O frágil embrião de um <SPECIAL>Tentáculo Faminto<>, ainda cheio de muco. Geme e retorce-se ao toque.\n\nPode ser extraído de sacos embrionários com a ajuda de um <TECHNOLOGY>Sintetizador Visceral<>.",
-    "BaseValueUnits": 16.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "CCCCCC",
-    "Usages": [
-      "HasRefinedToCreate",
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other190",
-    "Icon": "other/190.png",
-    "Name": "Lança-Carne",
-    "Group": "Dispositivo pirotécnico consumível",
-    "Description": "Um fogo de artifício de luxo. Estes pirotécnicos orgânicos são lançados para o céu e explodem num salpico de lodo, plasma e pequenos vermes. Faz a ignição para criar desenhos repugnantes no céu.\n\nPosiciona o tubo de lançamento através do <VAL_ON>Menu de Construção<> (<IMG>BUILD_MENU<>). <FUEL>Aviso<>: não apontar a criaturas vivas. Não recomendado para uso em espaços interiores.",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other191",
     "Icon": "other/191.png",
     "Name": "Pacote de Lança-Carne",
@@ -4265,33 +3032,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other193",
-    "Icon": "other/193.png",
-    "Name": "Decalque da Expedição Emergência",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\n\nEste decalque comemora a conclusão da expedição <STELLAR>Emergência<>.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -4363,33 +3103,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other197",
-    "Icon": "other/197.png",
-    "Name": "Troféu Titânico",
-    "Group": "Crânio Decorativo",
-    "Description": "Uma base de construção ornamental exclusiva.\n\nEste crânio repleto de dentes pertenceu outrora a um enorme vertebrado sem pernas, primo do verme da areia titã. Os maxilares poderosos conseguem aplicar força suficiente para esmagar uma Multiferramenta e os ossos da maioria das criaturas.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 100
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other198",
     "Icon": "other/198.png",
     "Name": "Elmo do Festim",
@@ -4423,7 +3136,8 @@
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4444,7 +3158,8 @@
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4465,7 +3180,8 @@
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4486,7 +3202,8 @@
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4507,7 +3224,8 @@
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason4Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4697,33 +3415,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other213",
-    "Icon": "other/213.png",
-    "Name": "Decalque da Expedição Exobiologia",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\n\nEste decalque comemora a conclusão da expedição <STELLAR>Exobiologia<> e celebra a coexistência pacífica dos Viajantes com as inúmeras espécies de vida selvagem que habitam o universo.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other214",
     "Icon": "other/214.png",
     "Name": "Estandarte da Expedição Exobiologia",
@@ -4759,29 +3450,6 @@
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
       "IsExpeditionSeason5Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other216",
-    "Icon": "other/216.png",
-    "Name": "Passaporte Falsificado",
-    "Group": "Registo Digital Substituído",
-    "Description": "Um <TECHNOLOGY>documento de registo de nave espacial<> falsificado. Esta assinatura digital está garantidamente livre de crimes ou contraordenações anteriores.\n\nPode ser utilizado para redefinir quaisquer registos de <STELLAR>classificação de fação<> negativos num <TECHNOLOGY>Núcleo da Estação Espacial<>.",
-    "BaseValueUnits": 256000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward",
-      "IsExpeditionSeason7Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4869,41 +3537,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other220",
-    "Icon": "other/220.png",
-    "Name": "Mapa Pirata",
-    "Group": "Dados Geográficos Ilícitos",
-    "Description": "<COMMODITY>Dados de coordenadas do tesouro<> reagrupados, obtidos das vítimas da fação pirata <SPECIAL>A Praga<>.",
-    "BaseValueUnits": 888.0,
-    "CurrencyType": "Credits",
-    "Colour": "4D2957",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "other217",
-        "Quantity": 1
-      },
-      {
-        "Id": "other218",
-        "Quantity": 1
-      },
-      {
-        "Id": "other219",
-        "Quantity": 1
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "Converter dados para o marcador de navegação do Exofato"
-    ]
-  },
-  {
     "Id": "other221",
     "Icon": "other/221.png",
     "Name": "Emissor do ponto de encontro",
@@ -4946,176 +3579,6 @@
     "ConsumableRewardTexts": [
       "Aceita a chamada da Voz da Liberdade"
     ]
-  },
-  {
-    "Id": "other223",
-    "Icon": "other/223.png",
-    "Name": "Sal de Sangue",
-    "Group": "Mercadorias Contrabandeadas",
-    "Description": "Frascos de cristais turvos e malcheirosos. Produzidos em armadilhas de evaporação viscosa, estes sais orgânicos são utilizados no fabrico de feromonas ilegais.\n\nA compra é <SPECIAL>ilegal<> em quase todos os terminais comerciais galácticos. O fornecimento regular só está disponível em <FUEL>sistemas de bandidos<>.\n\nA venda de mercadorias proibidas em espaços comercialmente regulamentados pode ser <TRADEABLE>altamente lucrativa<>.",
-    "BaseValueUnits": 2000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other224",
-    "Icon": "other/224.png",
-    "Name": "Amostras de ADN Roubadas",
-    "Group": "Mercadorias Contrabandeadas",
-    "Description": "Frascos vedados de amostras de ADN não registadas, sem mecanismos de biossegurança padrão que impedem a adulteração genética ilegal.\n\nA compra é <SPECIAL>ilegal<> em quase todos os terminais comerciais galácticos. O fornecimento regular só está disponível em <FUEL>sistemas de bandidos<>.\n\nA venda de mercadorias proibidas em espaços comercialmente regulamentados pode ser <TRADEABLE>altamente lucrativa<>.",
-    "BaseValueUnits": 9000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsEggIngredient",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other225",
-    "Icon": "other/225.png",
-    "Name": "Éter Lunar",
-    "Group": "Mercadorias Contrabandeadas",
-    "Description": "Uma cuba de líquido altamente volátil. Os vapores são extremamente inflamáveis e funcionam como um poderoso sedativo.\n\nA compra é <SPECIAL>ilegal<> em quase todos os terminais comerciais galácticos. O fornecimento regular só está disponível em <FUEL>sistemas de bandidos<>.\n\nA venda de mercadorias proibidas em espaços comercialmente regulamentados pode ser <TRADEABLE>altamente lucrativa<>.",
-    "BaseValueUnits": 18000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other226",
-    "Icon": "other/226.png",
-    "Name": "Penas Prismáticas",
-    "Group": "Mercadorias Contrabandeadas",
-    "Description": "Um pacote selado a vácuo de penas deslumbrantes. O animal que deu a vida por esta beleza impossível e caleidoscópica está extinto há muito tempo.\n\nA compra é <SPECIAL>ilegal<> em quase todos os terminais comerciais galácticos. O fornecimento regular só está disponível em <FUEL>sistemas de bandidos<>.\n\nA venda de mercadorias proibidas em espaços comercialmente regulamentados pode ser <TRADEABLE>altamente lucrativa<>.",
-    "BaseValueUnits": 32000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other227",
-    "Icon": "other/227.png",
-    "Name": "GrahGrah",
-    "Group": "Mercadorias Contrabandeadas",
-    "Description": "Uma botija de gás de batalha Vy'keen atualmente proibido, que segundo a tradição se inalava na véspera da batalha.\n\nA compra é <SPECIAL>ilegal<> em quase todos os terminais comerciais galácticos. O fornecimento regular só está disponível em <FUEL>sistemas de bandidos<>.\n\nA venda de mercadorias proibidas em espaços comercialmente regulamentados pode ser <TRADEABLE>altamente lucrativa<>.",
-    "BaseValueUnits": 58000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other228",
-    "Icon": "other/228.png",
-    "Name": "Circuitos Falsificados",
-    "Group": "Mercadorias Contrabandeadas",
-    "Description": "Concebidos por meio de engenharia invertida do núcleo capturado de uma estação espacial, estes circuitos não licenciados são utilizados numa ampla gama de tecnologias do mercado negro e cinzento.\n\nA compra é <SPECIAL>ilegal<> em quase todos os terminais comerciais galácticos. O fornecimento regular só está disponível em <FUEL>sistemas de bandidos<>.\n\nA venda de mercadorias proibidas em espaços comercialmente regulamentados pode ser <TRADEABLE>altamente lucrativa<>.",
-    "BaseValueUnits": 68000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasUsedToCraft",
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other229",
-    "Icon": "other/229.png",
-    "Name": "Armas Proibidas",
-    "Group": "Mercadorias Contrabandeadas",
-    "Description": "Pirateadas a partir dos restos recuperados das forças Sentinela, estas potentes armas são as favoritas dos bandidos de toda a galáxia.\n\nA compra é <SPECIAL>ilegal<> em quase todos os terminais comerciais galácticos. O fornecimento regular só está disponível em <FUEL>sistemas de bandidos<>.\n\nA venda de mercadorias proibidas em espaços comercialmente regulamentados pode ser <TRADEABLE>altamente lucrativa<>.",
-    "BaseValueUnits": 83000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other230",
-    "Icon": "other/230.png",
-    "Name": "Relíquias da Primeira Geração",
-    "Group": "Mercadorias Contrabandeadas",
-    "Description": "Relíquias do Império Gek caído, condenadas e banidas por todas as principais civilizações da galáxia.\n\nA compra é <SPECIAL>ilegal<> em quase todos os terminais comerciais galácticos. O fornecimento regular só está disponível em <FUEL>sistemas de bandidos<>.\n\nA venda de mercadorias proibidas em espaços comercialmente regulamentados pode ser <TRADEABLE>altamente lucrativa<>.",
-    "BaseValueUnits": 98000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
   },
   {
     "Id": "other231",
@@ -5161,249 +3624,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other233",
-    "Icon": "other/233.png",
-    "Name": "Póster do Terrível Capitão Fahng",
-    "Group": "Decoração",
-    "Description": "Uma exclusiva peça de arte de parede autocolante e à prova de vincos.\nPoucos Vy'keen não estão familiarizados com o Terrível Capitão Fahng e as suas façanhas arrepiantes, embora não se saiba ao certo se é uma figura histórica real ou simplesmente uma história inventada para assustar crias desobedientes.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other234",
-    "Icon": "other/234.png",
-    "Name": "Póster de Bandido",
-    "Group": "Decoração",
-    "Description": "Uma exclusiva peça de arte de parede autocolante e à prova de vincos.\nUm tributo rebelde aos piratas, fugitivos e resistência contra as leis dos Sentinelas.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other235",
-    "Icon": "other/235.png",
-    "Name": "Póster de Resbur XIII",
-    "Group": "Decoração",
-    "Description": "Uma exclusiva peça de arte de parede autocolante e à prova de vincos.\nEste póster anarquista retrata um notável planeta ocupado por piratas.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other236",
-    "Icon": "other/236.png",
-    "Name": "Bandeira Pirata",
-    "Group": "Bandeira Exclusiva",
-    "Description": "O crânio vermelho brilhante estampado nesta bandeira aveludada serve como um aviso para as entidades hostis.\n\nUma base de construção ornamental exclusiva.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other237",
-    "Icon": "other/237.png",
-    "Name": "Bandeira da União",
-    "Group": "Bandeira Exclusiva",
-    "Description": "Uma bandeira concebida graças à cooperação entre várias guildas intergalácticas.\n\nUma base de construção ornamental exclusiva.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other238",
-    "Icon": "other/238.png",
-    "Name": "Bandeira Heráldica",
-    "Group": "Bandeira Exclusiva",
-    "Description": "O delicado bordado dourado desta bandeira fornece instantaneamente elegância e requinte a qualquer base habitável.\n\nUma base de construção ornamental exclusiva.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other239",
-    "Icon": "other/239.png",
-    "Name": "Bandeira Orbital",
-    "Group": "Bandeira Exclusiva",
-    "Description": "Uma representação abstrata de órbitas planetárias sob um olhar atento, costurada a partir de impressionantes tecidos carmesim e cinza.\n\nUma base de construção ornamental exclusiva.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other240",
-    "Icon": "other/240.png",
-    "Name": "Bandeira Viridiana",
-    "Group": "Bandeira Exclusiva",
-    "Description": "Com um design contrastante em verde e púrpura, esta bandeira foi inspirada naqueles que procuram galáxias verdejantes.\n\nUma base de construção ornamental exclusiva.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other241",
-    "Icon": "other/241.png",
-    "Name": "Cubo Instável",
-    "Group": "Primitivo Flutuante",
-    "Description": "Uma base de construção ornamental exclusiva.\n\nEsta forma de vida cúbica foi parar a uma estação orbital de outra realidade, onde foi capturada por um comerciante viajante. Fornece companheirismo tranquilo quando é realojada numa base habitável.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 100
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other242",
     "Icon": "other/52.png",
     "Name": "Título: 'Caçador da Praga'",
@@ -5422,33 +3642,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other243",
-    "Icon": "other/243.png",
-    "Name": "Decalque da Expedição Praguejados",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\n\nEste decalque comemora a conclusão da expedição <STELLAR>Praguejados<>, a obtenção gloriosa de lucros ilícitos e a descoberta de um segredo pirata.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -5823,222 +4016,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other261",
-    "Icon": "other/261.png",
-    "Name": "Decalque da Caça ao Verme I",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque <SPECIAL>amaldiçoado<> apresenta o poderoso <STELLAR>Verme Titã<>.\n\n'O lorde verme eleva-se da terra poeirenta, a sua pele torna-se o céu.'",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other262",
-    "Icon": "other/262.png",
-    "Name": "Decalque da Caça ao Verme II",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque <SPECIAL>amaldiçoado<> apresenta o poderoso <STELLAR>Verme Titã<>.\n\n'As veias do Atlas tinham emergido.'",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other263",
-    "Icon": "other/263.png",
-    "Name": "Decalque da Caça ao Verme III",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque <SPECIAL>amaldiçoado<> apresenta o poderoso <STELLAR>Verme Titã<>.\n\n'O êxtase do nosso consumo é indescritível.'",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other264",
-    "Icon": "other/264.png",
-    "Name": "Decalque da Caça ao Verme IV",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque <SPECIAL>amaldiçoado<> apresenta o poderoso <STELLAR>Verme Titã<>.\n\n'Tombamos à medida que engole, mas tentamos agarrarmo-nos o melhor possível às paredes escorregadias.'",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other265",
-    "Icon": "other/265.png",
-    "Name": "Decalque da Caça ao Verme V",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\nEste decalque <SPECIAL>amaldiçoado<> apresenta o poderoso <STELLAR>Verme Titã<>.\n\n'Os meus irmãos renasceram, ascenderam da poeira abençoada como tentáculos novos.'",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other266",
-    "Icon": "other/266.png",
-    "Name": "Póster de Voo Cósmico",
-    "Group": "Decoração",
-    "Description": "Uma exclusiva peça de arte de parede autocolante e à prova de vincos.\nUm póster que celebra a alegria de descolar numa nave espacial.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other267",
-    "Icon": "other/267.png",
-    "Name": "Póster Orbital",
-    "Group": "Decoração",
-    "Description": "Uma exclusiva peça de arte de parede autocolante e à prova de vincos.\nEste póster retrata uma Estação Espacial a emergir acima de um explorador pensativo.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other268",
-    "Icon": "other/268.png",
-    "Name": "Póster do Catálogo de Naves",
-    "Group": "Decoração",
-    "Description": "Uma exclusiva peça de arte de parede autocolante e à prova de vincos.\nEste póster retrata uma variedade de silhuetas de naves espaciais.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -6507,33 +4484,6 @@
     ]
   },
   {
-    "Id": "other287",
-    "Icon": "other/287.png",
-    "Name": "Decalque da Expedição Leviatã",
-    "Group": "Decoração",
-    "Description": "Um decalque exclusivo para colocar, decorar e dar estilo às bases.\n\nEste decalque comemora a conclusão da expedição <STELLAR>Leviatã<> e a libertação de uma maldição que abarcou gerações.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other288",
     "Icon": "other/288.png",
     "Name": "Estandarte da Expedição Leviatã",
@@ -6556,120 +4506,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other289",
-    "Icon": "products/93.png",
-    "Name": "Cápsula de Reprodução",
-    "Group": "Cápsula de Armazenamento da Nave Senciente",
-    "Description": "Um <SPECIAL>nódulo de armazenamento adicional<> para naves espaciais <TECHNOLOGY>Sencientes<>. Ao eclodir, o parasita dentro desta cápsula é enxertado na nave, trocando a utilização das suas vísceras cavernosas por nutrientes vitais do hospedeiro.\n\nUtiliza <VAL_ON><IMG>FE_ALT1<><> para ativar o crescimento e iniciar o <VAL_ON>processo de eclosão<>.",
-    "BaseValueUnits": 125000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "Criar armazenamento adicional"
-    ]
-  },
-  {
-    "Id": "other290",
-    "Icon": "products/91.png",
-    "Name": "Ovo Psicónico",
-    "Group": "Cápsula de Gema Pulsante",
-    "Description": "Uma cápsula de fluido genético, concebida para promover a criação de uma nova <TECHNOLOGY>tecnologia bio-infundida<> para uma <TECHNOLOGY>nave espacial senciente<>.\n\nO embrião tornar-se-á numa <TECHNOLOGY>atualização de biotecnologia<>. <STELLAR>Começa a biogénese<> com <VAL_ON><IMG>FE_ALT1<><>.",
-    "BaseValueUnits": 126000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "Eclodir na nova tecnologia senciente"
-    ]
-  },
-  {
-    "Id": "other291",
-    "Icon": "other/291.png",
-    "Name": "Antena dos Sonhos",
-    "Group": "Dispositivo de Acesso ao Subconsciente",
-    "Description": "Um recetor de sinal e um amplificador, sintonizados no comprimento de onda da mente inconsciente. Todas as cores de uma só vez, dividindo a luz circundante num arco-íris cintilante.\n\n<FUEL>Aviso:<> levar esta antena para o espaço profundo pode atrair a atenção da <SPECIAL>megafauna cósmica<>.",
-    "BaseValueUnits": 16.0,
-    "CurrencyType": "Credits",
-    "Colour": "311A49",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "prod58",
-        "Quantity": 3
-      },
-      {
-        "Id": "prod116",
-        "Quantity": 1
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other292",
-    "Icon": "other/278.png",
-    "Name": "Emissora de Coordenadas do Cargueiro",
-    "Group": "Uma Última Ligação a Casa",
-    "Description": "Um dispositivo improvisado, concebido a partir de componentes eletrónicos recuperados mantidos em armazenamento profundo durante muitos anos. Este emaranhado de fios vai tentar contactar com os últimos vestígios conhecidos do mundo natal do cargueiro.\n\nSeleciona o dispositivo e seleciona Transmissão (<IMG>FE_ALT1<>) para iniciar o processo de localização.",
-    "BaseValueUnits": 16.0,
-    "CurrencyType": "Credits",
-    "Colour": "311A49",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw10",
-        "Quantity": 60
-      },
-      {
-        "Id": "raw33",
-        "Quantity": 20
-      },
-      {
-        "Id": "prod113",
-        "Quantity": 1
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "Tentar contactar"
-    ]
-  },
-  {
     "Id": "other293",
     "Icon": "other/293.png",
     "Name": "Rasto do Cargueiro de Alta Gravidade",
@@ -6681,7 +4517,8 @@
     "Colour": "2C7C9F",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6702,7 +4539,8 @@
     "Colour": "008951",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6723,7 +4561,8 @@
     "Colour": "008951",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6744,7 +4583,8 @@
     "Colour": "4D2987",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

@@ -302,9 +302,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Weapon_Scan_Secondary",
+        "Name": "Recompensas de análisis de minerales",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
+        "Image": "target",
         "MinValue": "10",
         "MaxValue": "20"
       }
@@ -354,9 +354,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Weapon_Scan_Secondary",
+        "Name": "Recompensas de análisis de minerales",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
+        "Image": "target",
         "MinValue": "25",
         "MaxValue": "50"
       }
@@ -406,9 +406,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Weapon_Scan_Secondary",
+        "Name": "Recompensas de análisis de minerales",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
+        "Image": "target",
         "MinValue": "50",
         "MaxValue": "100"
       }
@@ -458,9 +458,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Weapon_Scan_Secondary",
+        "Name": "Recompensas de análisis de minerales",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
+        "Image": "target",
         "MinValue": "65",
         "MaxValue": "100"
       }
@@ -509,9 +509,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Weapon_Scan_Secondary",
+        "Name": "Recompensas de análisis de minerales",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
+        "Image": "target",
         "MinValue": "10",
         "MaxValue": "110"
       }
@@ -2099,7 +2099,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Energía de panel solar",
+        "Name": "Tanques de soporte vital",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "MinValue": "5",
@@ -2107,9 +2107,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Batería de protección contra peligros",
+        "Name": "Energía de panel solar",
         "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
+        "Image": "recovery",
         "MinValue": "101",
         "MaxValue": "110"
       }
@@ -2135,7 +2135,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Energía de panel solar",
+        "Name": "Tanques de soporte vital",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "MinValue": "20",
@@ -2143,9 +2143,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Batería de protección contra peligros",
+        "Name": "Energía de panel solar",
         "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
+        "Image": "recovery",
         "MinValue": "101",
         "MaxValue": "125"
       }
@@ -2171,7 +2171,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Energía de panel solar",
+        "Name": "Tanques de soporte vital",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "MinValue": "50",
@@ -2179,9 +2179,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Batería de protección contra peligros",
+        "Name": "Energía de panel solar",
         "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
+        "Image": "recovery",
         "MinValue": "125",
         "MaxValue": "150"
       }
@@ -2206,7 +2206,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Energía de panel solar",
+        "Name": "Tanques de soporte vital",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "MinValue": "5",
@@ -2214,9 +2214,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Batería de protección contra peligros",
+        "Name": "Energía de panel solar",
         "LocaleKeyTemplate": "percentage",
-        "Image": "prot",
+        "Image": "recovery",
         "MinValue": "101",
         "MaxValue": "175"
       }
@@ -2241,6 +2241,14 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Resistencia al calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "heat",
+        "MinValue": "1",
+        "MaxValue": "10"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Resistencia al frío",
         "LocaleKeyTemplate": "percentage",
         "Image": "cold",
@@ -2249,25 +2257,17 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Resistencia tóxica",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "toxic",
-        "MinValue": "1",
-        "MaxValue": "10"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Eficiencia de respiración",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "water",
-        "MinValue": "1",
-        "MaxValue": "10"
-      },
-      {
-        "AlwaysChoose": false,
         "Name": "Resistencia a la radiación",
         "LocaleKeyTemplate": "percentage",
         "Image": "rad",
+        "MinValue": "1",
+        "MaxValue": "10"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Resistencia tóxica",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "toxic",
         "MinValue": "1",
         "MaxValue": "10"
       }
@@ -2293,43 +2293,43 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": true,
-        "Name": "Eficiencia de combustible",
+        "Name": "Depósitos de jetpack",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "jetpack",
         "MinValue": "100",
         "MaxValue": "150"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Velocidad de carrera",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "0.1",
-        "MaxValue": "0.2"
+        "Name": "Distancia de carrera",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "20"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Suit_Jetpack",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.01",
-        "MaxValue": "1.1"
+        "Name": "Tiempo de recuperación de carrera",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "1",
+        "MaxValue": "10"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Eficiencia de combustible",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "90",
+        "MaxValue": "95"
       },
       {
         "AlwaysChoose": false,
         "Name": "Índice de recarga",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
-        "MinValue": "90",
-        "MaxValue": "95"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Energía de propulsión inicial",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "damage",
-        "MinValue": "101",
-        "MaxValue": "105"
+        "MinValue": "1",
+        "MaxValue": "5"
       }
     ]
   },
@@ -2353,51 +2353,51 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": true,
-        "Name": "Eficiencia de combustible",
+        "Name": "Depósitos de jetpack",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "jetpack",
         "MinValue": "100",
         "MaxValue": "150"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Velocidad de carrera",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "0.1",
-        "MaxValue": "0.3"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Suit_Jetpack",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.1",
-        "MaxValue": "1.2"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Índice de recarga",
+        "Name": "Distancia de carrera",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
-        "MinValue": "85",
-        "MaxValue": "90"
+        "MinValue": "10",
+        "MaxValue": "30"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Sistema de salto avanzado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "MinValue": "1.01",
-        "MaxValue": "1.05"
+        "Name": "Tiempo de recuperación de carrera",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "10",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Eficiencia de combustible",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "85",
+        "MaxValue": "90"
       },
       {
         "AlwaysChoose": false,
         "Name": "Energía de propulsión inicial",
         "LocaleKeyTemplate": "percentage",
         "Image": "damage",
-        "MinValue": "105",
-        "MaxValue": "110"
+        "MinValue": "101",
+        "MaxValue": "105"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Índice de recarga",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "5",
+        "MaxValue": "10"
       }
     ]
   },
@@ -2421,51 +2421,51 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": true,
-        "Name": "Eficiencia de combustible",
+        "Name": "Depósitos de jetpack",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "jetpack",
         "MinValue": "150",
         "MaxValue": "200"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Velocidad de carrera",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "0.2",
-        "MaxValue": "0.5"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Suit_Jetpack",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.2",
-        "MaxValue": "1.3"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Índice de recarga",
+        "Name": "Distancia de carrera",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
-        "MinValue": "80",
-        "MaxValue": "90"
+        "MinValue": "20",
+        "MaxValue": "50"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Sistema de salto avanzado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "MinValue": "1.01",
-        "MaxValue": "1.05"
+        "Name": "Tiempo de recuperación de carrera",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "20",
+        "MaxValue": "30"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Eficiencia de combustible",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "80",
+        "MaxValue": "90"
       },
       {
         "AlwaysChoose": false,
         "Name": "Energía de propulsión inicial",
         "LocaleKeyTemplate": "percentage",
         "Image": "damage",
-        "MinValue": "110",
-        "MaxValue": "115"
+        "MinValue": "101",
+        "MaxValue": "105"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Índice de recarga",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "15"
       }
     ]
   },
@@ -2489,51 +2489,51 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": true,
-        "Name": "Eficiencia de combustible",
+        "Name": "Depósitos de jetpack",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "jetpack",
         "MinValue": "200",
         "MaxValue": "225"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Velocidad de carrera",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "0.4",
-        "MaxValue": "0.5"
+        "Name": "Distancia de carrera",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "40",
+        "MaxValue": "50"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Suit_Jetpack",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.3",
-        "MaxValue": "1.5"
+        "Name": "Tiempo de recuperación de carrera",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "30",
+        "MaxValue": "50"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Eficiencia de combustible",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "80",
+        "MaxValue": "90"
+      },
+      {
+        "AlwaysChoose": true,
+        "Name": "Energía de propulsión inicial",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "damage",
+        "MinValue": "105",
+        "MaxValue": "110"
       },
       {
         "AlwaysChoose": false,
         "Name": "Índice de recarga",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
-        "MinValue": "80",
-        "MaxValue": "90"
-      },
-      {
-        "AlwaysChoose": true,
-        "Name": "Sistema de salto avanzado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "MinValue": "1.05",
-        "MaxValue": "1.1"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Energía de propulsión inicial",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "damage",
-        "MinValue": "115",
-        "MaxValue": "125"
+        "MinValue": "15",
+        "MaxValue": "25"
       }
     ]
   },
@@ -2556,51 +2556,51 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": true,
-        "Name": "Eficiencia de combustible",
+        "Name": "Depósitos de jetpack",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "jetpack",
         "MinValue": "100",
         "MaxValue": "230"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Velocidad de carrera",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "0.1",
-        "MaxValue": "0.6"
+        "Name": "Distancia de carrera",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Suit_Jetpack",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.01",
-        "MaxValue": "1.6"
+        "Name": "Tiempo de recuperación de carrera",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "1",
+        "MaxValue": "60"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Eficiencia de combustible",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "75",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": true,
+        "Name": "Energía de propulsión inicial",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "damage",
+        "MinValue": "101",
+        "MaxValue": "115"
       },
       {
         "AlwaysChoose": false,
         "Name": "Índice de recarga",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
-        "MinValue": "75",
-        "MaxValue": "95"
-      },
-      {
-        "AlwaysChoose": true,
-        "Name": "Sistema de salto avanzado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "MinValue": "1.01",
-        "MaxValue": "1.15"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Energía de propulsión inicial",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "damage",
-        "MinValue": "105",
-        "MaxValue": "130"
+        "MinValue": "5",
+        "MaxValue": "30"
       }
     ]
   },
@@ -2624,17 +2624,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Tanques de soporte vital",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "shieldStrength",
         "MinValue": "10",
         "MaxValue": "15"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Suit_Armour_Shield",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "unknown",
+        "Name": "Salud principal",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
         "MinValue": "20",
         "MaxValue": "20"
       }
@@ -2660,17 +2660,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Tanques de soporte vital",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "shieldStrength",
         "MinValue": "15",
         "MaxValue": "20"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Suit_Armour_Shield",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "unknown",
+        "Name": "Salud principal",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
         "MinValue": "20",
         "MaxValue": "20"
       }
@@ -2696,17 +2696,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Tanques de soporte vital",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "shieldStrength",
         "MinValue": "20",
         "MaxValue": "30"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Suit_Armour_Shield",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "unknown",
+        "Name": "Salud principal",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
         "MinValue": "20",
         "MaxValue": "20"
       }
@@ -2732,17 +2732,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Tanques de soporte vital",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "shieldStrength",
         "MinValue": "30",
         "MaxValue": "35"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Suit_Armour_Shield",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "unknown",
+        "Name": "Salud principal",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
         "MinValue": "20",
         "MaxValue": "20"
       }
@@ -2767,17 +2767,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Tanques de soporte vital",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "shieldStrength",
         "MinValue": "10",
         "MaxValue": "35"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Suit_Armour_Shield",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "unknown",
+        "Name": "Salud principal",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
         "MinValue": "20",
         "MaxValue": "20"
       }
@@ -2801,9 +2801,9 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Redireccionamiento de oxígeno",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "water",
+        "Name": "Tanque de oxígeno",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "oxygen",
         "MinValue": "60",
         "MaxValue": "85"
       }
@@ -2827,9 +2827,9 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Redireccionamiento de oxígeno",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "water",
+        "Name": "Tanque de oxígeno",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "oxygen",
         "MinValue": "75",
         "MaxValue": "105"
       }
@@ -2853,9 +2853,9 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Redireccionamiento de oxígeno",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "water",
+        "Name": "Tanque de oxígeno",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "oxygen",
         "MinValue": "95",
         "MaxValue": "105"
       }
@@ -2881,17 +2881,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Tanque de oxígeno",
+        "Name": "Protección antirradiación",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "oxygen",
+        "Image": "rad",
         "MinValue": "180",
         "MaxValue": "265"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Resistencia al calor",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "heat",
+        "Name": "Escudo de daño por radiación",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "rad",
         "MinValue": "95",
         "MaxValue": "99"
       }
@@ -2917,17 +2917,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Tanque de oxígeno",
+        "Name": "Protección antirradiación",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "oxygen",
+        "Image": "rad",
         "MinValue": "200",
         "MaxValue": "265"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Resistencia al calor",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "heat",
+        "Name": "Escudo de daño por radiación",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "rad",
         "MinValue": "85",
         "MaxValue": "95"
       }
@@ -2953,17 +2953,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Tanque de oxígeno",
+        "Name": "Protección antirradiación",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "oxygen",
+        "Image": "rad",
         "MinValue": "220",
         "MaxValue": "265"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Resistencia al calor",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "heat",
+        "Name": "Escudo de daño por radiación",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "rad",
         "MinValue": "80",
         "MaxValue": "90"
       }
@@ -2989,17 +2989,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Protección antirradiación",
+        "Name": "Protección antitóxicos",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "rad",
+        "Image": "toxic",
         "MinValue": "180",
         "MaxValue": "265"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Escudo de daño por radiación",
+        "Name": "Escudo de daño tóxico",
         "LocaleKeyTemplate": "enabled",
-        "Image": "rad",
+        "Image": "toxic",
         "MinValue": "95",
         "MaxValue": "99"
       }
@@ -3025,17 +3025,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Protección antirradiación",
+        "Name": "Protección antitóxicos",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "rad",
+        "Image": "toxic",
         "MinValue": "200",
         "MaxValue": "265"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Escudo de daño por radiación",
+        "Name": "Escudo de daño tóxico",
         "LocaleKeyTemplate": "enabled",
-        "Image": "rad",
+        "Image": "toxic",
         "MinValue": "85",
         "MaxValue": "95"
       }
@@ -3061,17 +3061,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Protección antirradiación",
+        "Name": "Protección antitóxicos",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "rad",
+        "Image": "toxic",
         "MinValue": "220",
         "MaxValue": "265"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Escudo de daño por radiación",
+        "Name": "Escudo de daño tóxico",
         "LocaleKeyTemplate": "enabled",
-        "Image": "rad",
+        "Image": "toxic",
         "MinValue": "80",
         "MaxValue": "90"
       }
@@ -3097,17 +3097,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Protección anticalor",
+        "Name": "Protección antifrío",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "heat",
+        "Image": "cold",
         "MinValue": "180",
         "MaxValue": "265"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Escudo de daño por calor",
+        "Name": "Escudo de daño por frío",
         "LocaleKeyTemplate": "enabled",
-        "Image": "heat",
+        "Image": "cold",
         "MinValue": "95",
         "MaxValue": "99"
       }
@@ -3133,17 +3133,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Protección anticalor",
+        "Name": "Protección antifrío",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "heat",
+        "Image": "cold",
         "MinValue": "200",
         "MaxValue": "265"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Escudo de daño por calor",
+        "Name": "Escudo de daño por frío",
         "LocaleKeyTemplate": "enabled",
-        "Image": "heat",
+        "Image": "cold",
         "MinValue": "85",
         "MaxValue": "95"
       }
@@ -3169,17 +3169,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Protección anticalor",
+        "Name": "Protección antifrío",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "heat",
+        "Image": "cold",
         "MinValue": "220",
         "MaxValue": "265"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Escudo de daño por calor",
+        "Name": "Escudo de daño por frío",
         "LocaleKeyTemplate": "enabled",
-        "Image": "heat",
+        "Image": "cold",
         "MinValue": "80",
         "MaxValue": "90"
       }
@@ -3205,17 +3205,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Protección antitóxicos",
+        "Name": "Protección anticalor",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
+        "Image": "heat",
         "MinValue": "180",
         "MaxValue": "265"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Escudo de daño tóxico",
+        "Name": "Escudo de daño por calor",
         "LocaleKeyTemplate": "enabled",
-        "Image": "toxic",
+        "Image": "heat",
         "MinValue": "95",
         "MaxValue": "99"
       }
@@ -3241,17 +3241,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Protección antitóxicos",
+        "Name": "Protección anticalor",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
+        "Image": "heat",
         "MinValue": "200",
         "MaxValue": "265"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Escudo de daño tóxico",
+        "Name": "Escudo de daño por calor",
         "LocaleKeyTemplate": "enabled",
-        "Image": "toxic",
+        "Image": "heat",
         "MinValue": "85",
         "MaxValue": "95"
       }
@@ -3277,17 +3277,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Protección antitóxicos",
+        "Name": "Protección anticalor",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
+        "Image": "heat",
         "MinValue": "220",
         "MaxValue": "265"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Escudo de daño tóxico",
+        "Name": "Escudo de daño por calor",
         "LocaleKeyTemplate": "enabled",
-        "Image": "toxic",
+        "Image": "heat",
         "MinValue": "80",
         "MaxValue": "90"
       }
@@ -3315,11 +3315,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Energía del motor de pulso",
+        "Name": "Eficiencia de combustible del motor de pulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "MinValue": "90",
-        "MaxValue": "95"
+        "Image": "recovery",
+        "MinValue": "10",
+        "MaxValue": "5"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "1",
+        "MaxValue": "5"
       },
       {
         "AlwaysChoose": false,
@@ -3328,14 +3336,6 @@
         "Image": "target",
         "MinValue": "1",
         "MaxValue": "5"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Soporte vital interno activado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "MinValue": "1.01",
-        "MaxValue": "1.05"
       },
       {
         "AlwaysChoose": true,
@@ -3369,27 +3369,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Energía del motor de pulso",
+        "Name": "Eficiencia de combustible del motor de pulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "MinValue": "85",
-        "MaxValue": "90"
+        "Image": "recovery",
+        "MinValue": "15",
+        "MaxValue": "10"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "10"
       },
       {
         "AlwaysChoose": false,
         "Name": "Maniobrabilidad",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "MinValue": "5",
+        "MinValue": "1",
         "MaxValue": "10"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Soporte vital interno activado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "MinValue": "1.01",
-        "MaxValue": "1.1"
       },
       {
         "AlwaysChoose": true,
@@ -3423,11 +3423,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Energía del motor de pulso",
+        "Name": "Eficiencia de combustible del motor de pulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "MinValue": "80",
-        "MaxValue": "85"
+        "Image": "recovery",
+        "MinValue": "20",
+        "MaxValue": "15"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "15"
       },
       {
         "AlwaysChoose": false,
@@ -3435,15 +3443,7 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "MinValue": "5",
-        "MaxValue": "15"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Soporte vital interno activado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "MinValue": "1.05",
-        "MaxValue": "1.12"
+        "MaxValue": "12"
       },
       {
         "AlwaysChoose": true,
@@ -3477,27 +3477,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Energía del motor de pulso",
+        "Name": "Eficiencia de combustible del motor de pulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "MinValue": "80",
-        "MaxValue": "80"
+        "Image": "recovery",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "10",
+        "MaxValue": "15"
       },
       {
         "AlwaysChoose": false,
         "Name": "Maniobrabilidad",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "MinValue": "10",
-        "MaxValue": "15"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Soporte vital interno activado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "MinValue": "1.05",
-        "MaxValue": "1.12"
+        "MinValue": "5",
+        "MaxValue": "12"
       },
       {
         "AlwaysChoose": true,
@@ -3528,11 +3528,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Energía del motor de pulso",
+        "Name": "Eficiencia de combustible del motor de pulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "MinValue": "75",
-        "MaxValue": "95"
+        "Image": "recovery",
+        "MinValue": "25",
+        "MaxValue": "5"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "1",
+        "MaxValue": "20"
       },
       {
         "AlwaysChoose": false,
@@ -3540,15 +3548,7 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "MinValue": "1",
-        "MaxValue": "20"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Soporte vital interno activado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "MinValue": "1.01",
-        "MaxValue": "1.14"
+        "MaxValue": "14"
       },
       {
         "AlwaysChoose": true,
@@ -3582,11 +3582,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Eficacia de célula de transposición",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "5,000",
-        "MaxValue": "10,000"
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "MinValue": "50",
+        "MaxValue": "100"
       }
     ]
   },
@@ -3612,11 +3612,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Eficacia de célula de transposición",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "10,000",
-        "MaxValue": "15,000"
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "MinValue": "100",
+        "MaxValue": "150"
       }
     ]
   },
@@ -3642,19 +3642,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Eficacia de célula de transposición",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "15,000",
-        "MaxValue": "20,000"
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "MinValue": "150",
+        "MaxValue": "200"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Encriptación de hiperturbo instantánea",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "MinValue": "1",
-        "MaxValue": "1"
+        "Name": "Eficacia de célula de transposición",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "100",
+        "MaxValue": "100"
       }
     ]
   },
@@ -3680,19 +3680,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Eficacia de célula de transposición",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "20,000",
-        "MaxValue": "25,000"
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "MinValue": "200",
+        "MaxValue": "250"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Encriptación de hiperturbo instantánea",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "MinValue": "1",
-        "MaxValue": "1"
+        "Name": "Eficacia de célula de transposición",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "100",
+        "MaxValue": "100"
       }
     ]
   },
@@ -3715,19 +3715,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Eficacia de célula de transposición",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "5,000",
-        "MaxValue": "30,000"
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "MinValue": "50",
+        "MaxValue": "300"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Encriptación de hiperturbo instantánea",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "MinValue": "1",
-        "MaxValue": "1"
+        "Name": "Eficacia de célula de transposición",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "100",
+        "MaxValue": "100"
       }
     ]
   },
@@ -3753,11 +3753,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Armour_Health",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "shieldStrength",
-        "MinValue": "5",
-        "MaxValue": "10"
+        "Image": "prot",
+        "MinValue": "0.05",
+        "MaxValue": "0.1"
       }
     ]
   },
@@ -3783,11 +3783,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Armour_Health",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "shieldStrength",
-        "MinValue": "5",
-        "MaxValue": "10"
+        "Image": "prot",
+        "MinValue": "0.05",
+        "MaxValue": "0.1"
       }
     ]
   },
@@ -3813,11 +3813,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Armour_Health",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "shieldStrength",
-        "MinValue": "10",
-        "MaxValue": "20"
+        "Image": "prot",
+        "MinValue": "0.1",
+        "MaxValue": "0.2"
       }
     ]
   },
@@ -3843,11 +3843,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Armour_Health",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "shieldStrength",
-        "MinValue": "20",
-        "MaxValue": "20"
+        "Image": "prot",
+        "MinValue": "0.2",
+        "MaxValue": "0.2"
       }
     ]
   },
@@ -3870,11 +3870,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Armour_Health",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "shieldStrength",
-        "MinValue": "5",
-        "MaxValue": "25"
+        "Image": "prot",
+        "MinValue": "0.05",
+        "MaxValue": "0.25"
       }
     ]
   },
@@ -3900,11 +3900,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "8",
+        "MaxValue": "16"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "8",
-        "MaxValue": "16"
+        "MinValue": "1",
+        "MaxValue": "1.01"
       },
       {
         "AlwaysChoose": false,
@@ -3912,15 +3920,7 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
         "MinValue": "0.1",
-        "MaxValue": "1.1"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1",
-        "MaxValue": "1.01"
+        "MaxValue": "1"
       }
     ]
   },
@@ -3946,27 +3946,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "12",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "12",
-        "MaxValue": "20"
+        "MinValue": "1.01",
+        "MaxValue": "1.02"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "0.6",
-        "MaxValue": "1.6"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.01",
-        "MaxValue": "1.02"
+        "MinValue": "1",
+        "MaxValue": "2"
       }
     ]
   },
@@ -3992,27 +3992,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "16",
+        "MaxValue": "24"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "16",
-        "MaxValue": "24"
+        "MinValue": "1.02",
+        "MaxValue": "1.02"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "1.6",
-        "MaxValue": "2.1"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.02",
-        "MaxValue": "1.03"
+        "MinValue": "2",
+        "MaxValue": "3"
       }
     ]
   },
@@ -4038,27 +4038,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "20",
+        "MaxValue": "28"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "20",
-        "MaxValue": "28"
+        "MinValue": "1.02",
+        "MaxValue": "1.02"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "2.1",
-        "MaxValue": "2.1"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.03",
-        "MaxValue": "1.03"
+        "MinValue": "3",
+        "MaxValue": "3"
       }
     ]
   },
@@ -4081,11 +4081,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "8",
+        "MaxValue": "32"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "8",
-        "MaxValue": "32"
+        "MinValue": "1",
+        "MaxValue": "1.03"
       },
       {
         "AlwaysChoose": false,
@@ -4093,15 +4101,7 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
         "MinValue": "0.1",
-        "MaxValue": "2.6"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1",
-        "MaxValue": "1.04"
+        "MaxValue": "3.5"
       }
     ]
   },
@@ -4127,17 +4127,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Weapons_Missiles",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.1",
-        "MaxValue": "1.35"
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "10",
+        "MaxValue": "35"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Dispersión de calor",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "damage",
         "MinValue": "30",
         "MaxValue": "40"
       }
@@ -4165,17 +4165,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Weapons_Missiles",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.35",
-        "MaxValue": "1.55"
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "35",
+        "MaxValue": "55"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Dispersión de calor",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "damage",
         "MinValue": "40",
         "MaxValue": "50"
       }
@@ -4203,17 +4203,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Weapons_Missiles",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.55",
-        "MaxValue": "1.75"
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "55",
+        "MaxValue": "75"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Dispersión de calor",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "damage",
         "MinValue": "50",
         "MaxValue": "60"
       }
@@ -4241,17 +4241,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Weapons_Missiles",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.75",
-        "MaxValue": "1.95"
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "75",
+        "MaxValue": "95"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Dispersión de calor",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "damage",
         "MinValue": "60",
         "MaxValue": "70"
       }
@@ -4276,17 +4276,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Weapons_Missiles",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.1",
-        "MaxValue": "2"
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "10",
+        "MaxValue": "100"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Dispersión de calor",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "damage",
         "MinValue": "30",
         "MaxValue": "80"
       }
@@ -4314,11 +4314,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "3"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "1",
-        "MaxValue": "3"
+        "MinValue": "1.01",
+        "MaxValue": "1.04"
       },
       {
         "AlwaysChoose": false,
@@ -4327,14 +4335,6 @@
         "Image": "time",
         "MinValue": "1",
         "MaxValue": "4"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.01",
-        "MaxValue": "1.04"
       }
     ]
   },
@@ -4360,11 +4360,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "3",
+        "MaxValue": "5"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "3",
-        "MaxValue": "5"
+        "MinValue": "1.04",
+        "MaxValue": "1.06"
       },
       {
         "AlwaysChoose": false,
@@ -4373,14 +4381,6 @@
         "Image": "time",
         "MinValue": "4",
         "MaxValue": "6"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.04",
-        "MaxValue": "1.06"
       }
     ]
   },
@@ -4406,11 +4406,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "5",
+        "MaxValue": "6"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "5",
-        "MaxValue": "6"
+        "MinValue": "1.06",
+        "MaxValue": "1.1"
       },
       {
         "AlwaysChoose": false,
@@ -4419,14 +4427,6 @@
         "Image": "time",
         "MinValue": "6",
         "MaxValue": "10"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.06",
-        "MaxValue": "1.1"
       }
     ]
   },
@@ -4452,11 +4452,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "6",
+        "MaxValue": "8"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "6",
-        "MaxValue": "8"
+        "MinValue": "1.06",
+        "MaxValue": "1.1"
       },
       {
         "AlwaysChoose": false,
@@ -4465,14 +4473,6 @@
         "Image": "time",
         "MinValue": "6",
         "MaxValue": "10"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.06",
-        "MaxValue": "1.1"
       }
     ]
   },
@@ -4495,27 +4495,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "2",
+        "MaxValue": "8"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "2",
-        "MaxValue": "8"
+        "MinValue": "1.05",
+        "MaxValue": "1.1"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "5",
+        "MinValue": "1",
         "MaxValue": "10"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.01",
-        "MaxValue": "1.1"
       }
     ]
   },
@@ -4541,11 +4541,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "2",
+        "MaxValue": "6"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "2",
-        "MaxValue": "6"
+        "MinValue": "1.01",
+        "MaxValue": "1.05"
       },
       {
         "AlwaysChoose": false,
@@ -4553,15 +4561,7 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
         "MinValue": "1",
-        "MaxValue": "5"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.01",
-        "MaxValue": "1.03"
+        "MaxValue": "3"
       }
     ]
   },
@@ -4587,27 +4587,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "4",
+        "MaxValue": "10"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "4",
-        "MaxValue": "10"
+        "MinValue": "1.01",
+        "MaxValue": "1.05"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "1",
+        "MinValue": "3",
         "MaxValue": "5"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.03",
-        "MaxValue": "1.05"
       }
     ]
   },
@@ -4633,11 +4633,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "8",
+        "MaxValue": "12"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "8",
-        "MaxValue": "12"
+        "MinValue": "1.05",
+        "MaxValue": "1.1"
       },
       {
         "AlwaysChoose": false,
@@ -4645,15 +4653,7 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
         "MinValue": "5",
-        "MaxValue": "10"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.05",
-        "MaxValue": "1.07"
+        "MaxValue": "7"
       }
     ]
   },
@@ -4679,27 +4679,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "10",
+        "MaxValue": "12"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "10",
-        "MaxValue": "12"
+        "MinValue": "1.05",
+        "MaxValue": "1.1"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "5",
-        "MaxValue": "10"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.07",
-        "MaxValue": "1.09"
+        "MinValue": "7",
+        "MaxValue": "9"
       }
     ]
   },
@@ -4722,11 +4722,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "2",
+        "MaxValue": "14"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "2",
-        "MaxValue": "14"
+        "MinValue": "1.01",
+        "MaxValue": "1.15"
       },
       {
         "AlwaysChoose": false,
@@ -4734,15 +4742,7 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
         "MinValue": "1",
-        "MaxValue": "15"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.01",
-        "MaxValue": "1.13"
+        "MaxValue": "13"
       }
     ]
   },
@@ -4768,27 +4768,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "2",
+        "MaxValue": "6"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "2",
-        "MaxValue": "6"
+        "MinValue": "1.01",
+        "MaxValue": "1.05"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "1",
-        "MaxValue": "5"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.1",
-        "MaxValue": "1.2"
+        "MinValue": "10",
+        "MaxValue": "20"
       }
     ]
   },
@@ -4814,27 +4814,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "4",
+        "MaxValue": "10"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "4",
-        "MaxValue": "10"
+        "MinValue": "1.01",
+        "MaxValue": "1.05"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "1",
-        "MaxValue": "5"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.2",
-        "MaxValue": "1.25"
+        "MinValue": "20",
+        "MaxValue": "25"
       }
     ]
   },
@@ -4860,27 +4860,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "8",
+        "MaxValue": "12"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "8",
-        "MaxValue": "12"
+        "MinValue": "1.05",
+        "MaxValue": "1.1"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "5",
-        "MaxValue": "10"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.25",
-        "MaxValue": "1.3"
+        "MinValue": "25",
+        "MaxValue": "30"
       }
     ]
   },
@@ -4906,27 +4906,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "10",
+        "MaxValue": "12"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "10",
-        "MaxValue": "12"
+        "MinValue": "1.1",
+        "MaxValue": "1.15"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "10",
-        "MaxValue": "15"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.3",
-        "MaxValue": "1.35"
+        "MinValue": "30",
+        "MaxValue": "35"
       }
     ]
   },
@@ -4949,27 +4949,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "2",
+        "MaxValue": "14"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "2",
-        "MaxValue": "14"
+        "MinValue": "1.01",
+        "MaxValue": "1.2"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "1",
-        "MaxValue": "20"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.1",
-        "MaxValue": "1.4"
+        "MinValue": "10",
+        "MaxValue": "40"
       }
     ]
   },
@@ -4993,7 +4993,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_StunGun",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "MinValue": "5",
@@ -5001,19 +5001,19 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_TerrainEdit",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.95",
-        "MaxValue": "0.99"
+        "Name": "Eficiencia energética del arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "95",
+        "MaxValue": "99"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Paneles solares de la exonave",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "97",
-        "MaxValue": "99"
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "0.97",
+        "MaxValue": "0.99"
       }
     ]
   },
@@ -5037,7 +5037,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_StunGun",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "MinValue": "10",
@@ -5045,19 +5045,19 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_TerrainEdit",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.9",
-        "MaxValue": "0.95"
+        "Name": "Eficiencia energética del arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "90",
+        "MaxValue": "95"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Paneles solares de la exonave",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "95",
-        "MaxValue": "97"
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "0.95",
+        "MaxValue": "0.97"
       }
     ]
   },
@@ -5081,7 +5081,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_StunGun",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "MinValue": "20",
@@ -5089,19 +5089,19 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_TerrainEdit",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.85",
-        "MaxValue": "0.9"
+        "Name": "Eficiencia energética del arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "85",
+        "MaxValue": "90"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Paneles solares de la exonave",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "93",
-        "MaxValue": "95"
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "0.93",
+        "MaxValue": "0.95"
       }
     ]
   },
@@ -5125,7 +5125,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_StunGun",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "MinValue": "30",
@@ -5133,19 +5133,19 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_TerrainEdit",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.8",
-        "MaxValue": "0.85"
+        "Name": "Eficiencia energética del arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "80",
+        "MaxValue": "85"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Paneles solares de la exonave",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "90",
-        "MaxValue": "93"
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "0.9",
+        "MaxValue": "0.93"
       }
     ]
   },
@@ -5169,19 +5169,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_Gun",
+        "Name": "Potencia de láser de extracción",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "mining",
         "MinValue": "5",
         "MaxValue": "10"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Daño",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.95",
-        "MaxValue": "0.99"
+        "Name": "Eficiencia de láser de extracción",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "95",
+        "MaxValue": "99"
       }
     ]
   },
@@ -5205,19 +5205,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_Gun",
+        "Name": "Potencia de láser de extracción",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "mining",
         "MinValue": "10",
         "MaxValue": "20"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Daño",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.9",
-        "MaxValue": "0.95"
+        "Name": "Eficiencia de láser de extracción",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "90",
+        "MaxValue": "95"
       }
     ]
   },
@@ -5241,19 +5241,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_Gun",
+        "Name": "Potencia de láser de extracción",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "mining",
         "MinValue": "20",
         "MaxValue": "30"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Daño",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.85",
-        "MaxValue": "0.9"
+        "Name": "Eficiencia de láser de extracción",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "85",
+        "MaxValue": "90"
       }
     ]
   },
@@ -5277,19 +5277,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_Gun",
+        "Name": "Potencia de láser de extracción",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "mining",
         "MinValue": "30",
         "MaxValue": "40"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Daño",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.8",
-        "MaxValue": "0.85"
+        "Name": "Eficiencia de láser de extracción",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "80",
+        "MaxValue": "85"
       }
     ]
   },
@@ -5313,7 +5313,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Agarre angular",
+        "Name": "Aumentar energía",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "MinValue": "10",
@@ -5321,9 +5321,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Aceleración",
+        "Name": "Aumentar tamaño de tanque",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
         "MinValue": "10",
         "MaxValue": "20"
       }
@@ -5349,7 +5349,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Agarre angular",
+        "Name": "Aumentar energía",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "MinValue": "20",
@@ -5357,9 +5357,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Aceleración",
+        "Name": "Aumentar tamaño de tanque",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
         "MinValue": "15",
         "MaxValue": "30"
       }
@@ -5385,7 +5385,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Agarre angular",
+        "Name": "Aumentar energía",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "MinValue": "35",
@@ -5393,9 +5393,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Aceleración",
+        "Name": "Aumentar tamaño de tanque",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
         "MinValue": "30",
         "MaxValue": "50"
       }
@@ -5421,7 +5421,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Agarre angular",
+        "Name": "Aumentar energía",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "MinValue": "55",
@@ -5429,9 +5429,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Aceleración",
+        "Name": "Aumentar tamaño de tanque",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
         "MinValue": "50",
         "MaxValue": "60"
       }
@@ -5457,17 +5457,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "MinValue": "95",
-        "MaxValue": "99"
+        "Image": "recovery",
+        "MinValue": "-5",
+        "MaxValue": "-1"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Agarre delantero",
+        "Name": "Velocidad punta",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "recharge",
         "MinValue": "101",
         "MaxValue": "103"
       }
@@ -5493,17 +5493,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "MinValue": "90",
-        "MaxValue": "95"
+        "Image": "recovery",
+        "MinValue": "-10",
+        "MaxValue": "-5"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Agarre delantero",
+        "Name": "Velocidad punta",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "recharge",
         "MinValue": "103",
         "MaxValue": "108"
       }
@@ -5529,17 +5529,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "MinValue": "85",
-        "MaxValue": "90"
+        "Image": "recovery",
+        "MinValue": "-15",
+        "MaxValue": "-10"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Agarre delantero",
+        "Name": "Velocidad punta",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "recharge",
         "MinValue": "108",
         "MaxValue": "115"
       }
@@ -5565,17 +5565,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "MinValue": "80",
-        "MaxValue": "85"
+        "Image": "recovery",
+        "MinValue": "-20",
+        "MaxValue": "-15"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Agarre delantero",
+        "Name": "Velocidad punta",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "recharge",
         "MinValue": "110",
         "MaxValue": "115"
       }
@@ -5601,25 +5601,25 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "MinValue": "90",
-        "MaxValue": "99"
+        "Image": "recovery",
+        "MinValue": "-10",
+        "MaxValue": "-1"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Agarre delantero",
+        "Name": "Velocidad punta",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "recharge",
         "MinValue": "103",
         "MaxValue": "105"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Eficiencia de láser de extracción",
+        "Name": "Aceleración",
         "LocaleKeyTemplate": "percentage",
-        "Image": "time",
+        "Image": "recharge",
         "MinValue": "10",
         "MaxValue": "15"
       }
@@ -5645,25 +5645,25 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "MinValue": "85",
-        "MaxValue": "90"
+        "Image": "recovery",
+        "MinValue": "-15",
+        "MaxValue": "-10"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Agarre delantero",
+        "Name": "Velocidad punta",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "recharge",
         "MinValue": "105",
         "MaxValue": "108"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Eficiencia de láser de extracción",
+        "Name": "Aceleración",
         "LocaleKeyTemplate": "percentage",
-        "Image": "time",
+        "Image": "recharge",
         "MinValue": "15",
         "MaxValue": "20"
       }
@@ -5689,25 +5689,25 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "MinValue": "75",
-        "MaxValue": "85"
+        "Image": "recovery",
+        "MinValue": "-25",
+        "MaxValue": "-15"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Agarre delantero",
+        "Name": "Velocidad punta",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "recharge",
         "MinValue": "108",
         "MaxValue": "110"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Eficiencia de láser de extracción",
+        "Name": "Aceleración",
         "LocaleKeyTemplate": "percentage",
-        "Image": "time",
+        "Image": "recharge",
         "MinValue": "20",
         "MaxValue": "25"
       }
@@ -5733,25 +5733,25 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "MinValue": "70",
-        "MaxValue": "85"
+        "Image": "recovery",
+        "MinValue": "-30",
+        "MaxValue": "-15"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Agarre delantero",
+        "Name": "Velocidad punta",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "recharge",
         "MinValue": "110",
         "MaxValue": "110"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Eficiencia de láser de extracción",
+        "Name": "Aceleración",
         "LocaleKeyTemplate": "percentage",
-        "Image": "time",
+        "Image": "recharge",
         "MinValue": "25",
         "MaxValue": "30"
       }
@@ -5777,7 +5777,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_StunGun",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "MinValue": "5",
@@ -5785,11 +5785,11 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Paneles solares de la exonave",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "97",
-        "MaxValue": "99"
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "0.97",
+        "MaxValue": "0.99"
       }
     ]
   },
@@ -5813,7 +5813,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_StunGun",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "MinValue": "10",
@@ -5821,11 +5821,11 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Paneles solares de la exonave",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "95",
-        "MaxValue": "97"
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "0.95",
+        "MaxValue": "0.97"
       }
     ]
   },
@@ -5849,7 +5849,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_StunGun",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "MinValue": "20",
@@ -5857,11 +5857,11 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Paneles solares de la exonave",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "93",
-        "MaxValue": "95"
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "0.93",
+        "MaxValue": "0.95"
       }
     ]
   },
@@ -5885,7 +5885,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_StunGun",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "MinValue": "30",
@@ -5893,11 +5893,11 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Paneles solares de la exonave",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "90",
-        "MaxValue": "93"
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "0.9",
+        "MaxValue": "0.93"
       }
     ]
   },
@@ -5920,19 +5920,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_Gun",
+        "Name": "Potencia de láser de extracción",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "mining",
         "MinValue": "10",
         "MaxValue": "20"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Daño",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.9",
-        "MaxValue": "0.95"
+        "Name": "Eficiencia de láser de extracción",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "90",
+        "MaxValue": "95"
       }
     ]
   },
@@ -5955,19 +5955,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_Gun",
+        "Name": "Potencia de láser de extracción",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "mining",
         "MinValue": "20",
         "MaxValue": "30"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Daño",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.85",
-        "MaxValue": "0.9"
+        "Name": "Eficiencia de láser de extracción",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "85",
+        "MaxValue": "90"
       }
     ]
   },
@@ -5990,19 +5990,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_Gun",
+        "Name": "Potencia de láser de extracción",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Image": "mining",
         "MinValue": "30",
         "MaxValue": "40"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Daño",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.8",
-        "MaxValue": "0.85"
+        "Name": "Eficiencia de láser de extracción",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "80",
+        "MaxValue": "85"
       }
     ]
   },
@@ -6025,7 +6025,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_StunGun",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "MinValue": "10",
@@ -6033,19 +6033,19 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_TerrainEdit",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.9",
-        "MaxValue": "0.95"
+        "Name": "Eficiencia energética del arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "90",
+        "MaxValue": "95"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Paneles solares de la exonave",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "95",
-        "MaxValue": "97"
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "0.95",
+        "MaxValue": "0.97"
       }
     ]
   },
@@ -6068,7 +6068,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_StunGun",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "MinValue": "20",
@@ -6076,19 +6076,19 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_TerrainEdit",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.85",
-        "MaxValue": "0.9"
+        "Name": "Eficiencia energética del arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "85",
+        "MaxValue": "90"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Paneles solares de la exonave",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "93",
-        "MaxValue": "95"
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "0.93",
+        "MaxValue": "0.95"
       }
     ]
   },
@@ -6111,7 +6111,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_StunGun",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "MinValue": "30",
@@ -6119,19 +6119,19 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Vehicle_TerrainEdit",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "MinValue": "0.8",
-        "MaxValue": "0.85"
+        "Name": "Eficiencia energética del arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "80",
+        "MaxValue": "85"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Paneles solares de la exonave",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "90",
-        "MaxValue": "93"
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "0.9",
+        "MaxValue": "0.93"
       }
     ]
   },
@@ -6154,17 +6154,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "MinValue": "90",
-        "MaxValue": "95"
+        "Image": "recovery",
+        "MinValue": "-10",
+        "MaxValue": "-5"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Aceleración",
+        "Name": "Aumentar tamaño de tanque",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
         "MinValue": "10",
         "MaxValue": "15"
       }
@@ -6189,17 +6189,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "MinValue": "85",
-        "MaxValue": "90"
+        "Image": "recovery",
+        "MinValue": "-15",
+        "MaxValue": "-10"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Aceleración",
+        "Name": "Aumentar tamaño de tanque",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
         "MinValue": "15",
         "MaxValue": "25"
       }
@@ -6224,17 +6224,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "MinValue": "80",
-        "MaxValue": "85"
+        "Image": "recovery",
+        "MinValue": "-20",
+        "MaxValue": "-15"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Aceleración",
+        "Name": "Aumentar tamaño de tanque",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
         "MinValue": "25",
         "MaxValue": "30"
       }
@@ -6260,11 +6260,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Energía del motor de pulso",
+        "Name": "Eficiencia de combustible del motor de pulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "MinValue": "90",
-        "MaxValue": "95"
+        "Image": "recovery",
+        "MinValue": "10",
+        "MaxValue": "5"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "1",
+        "MaxValue": "5"
       },
       {
         "AlwaysChoose": false,
@@ -6273,14 +6281,6 @@
         "Image": "target",
         "MinValue": "1",
         "MaxValue": "5"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Soporte vital interno activado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "MinValue": "1.01",
-        "MaxValue": "1.05"
       },
       {
         "AlwaysChoose": true,
@@ -6312,27 +6312,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Energía del motor de pulso",
+        "Name": "Eficiencia de combustible del motor de pulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "MinValue": "85",
-        "MaxValue": "90"
+        "Image": "recovery",
+        "MinValue": "15",
+        "MaxValue": "10"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "10"
       },
       {
         "AlwaysChoose": false,
         "Name": "Maniobrabilidad",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "MinValue": "5",
+        "MinValue": "1",
         "MaxValue": "10"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Soporte vital interno activado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "MinValue": "1.01",
-        "MaxValue": "1.1"
       },
       {
         "AlwaysChoose": true,
@@ -6364,11 +6364,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Energía del motor de pulso",
+        "Name": "Eficiencia de combustible del motor de pulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "MinValue": "80",
-        "MaxValue": "85"
+        "Image": "recovery",
+        "MinValue": "20",
+        "MaxValue": "15"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "15"
       },
       {
         "AlwaysChoose": false,
@@ -6376,15 +6384,7 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "MinValue": "5",
-        "MaxValue": "15"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Soporte vital interno activado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "MinValue": "1.05",
-        "MaxValue": "1.12"
+        "MaxValue": "12"
       },
       {
         "AlwaysChoose": true,
@@ -6416,27 +6416,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Energía del motor de pulso",
+        "Name": "Eficiencia de combustible del motor de pulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "MinValue": "80",
-        "MaxValue": "80"
+        "Image": "recovery",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "10",
+        "MaxValue": "15"
       },
       {
         "AlwaysChoose": false,
         "Name": "Maniobrabilidad",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "MinValue": "10",
-        "MaxValue": "15"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Soporte vital interno activado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "MinValue": "1.05",
-        "MaxValue": "1.12"
+        "MinValue": "5",
+        "MaxValue": "12"
       },
       {
         "AlwaysChoose": true,
@@ -6468,11 +6468,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Recarga automática",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "MinValue": "0.95",
-        "MaxValue": "0.9"
+        "Name": "Costo de lanzamiento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "MinValue": "-5",
+        "MaxValue": "-10"
       }
     ]
   },
@@ -6496,11 +6496,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Recarga automática",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "MinValue": "0.9",
-        "MaxValue": "0.85"
+        "Name": "Costo de lanzamiento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "MinValue": "-10",
+        "MaxValue": "-15"
       }
     ]
   },
@@ -6524,11 +6524,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Recarga automática",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "MinValue": "0.85",
-        "MaxValue": "0.8"
+        "Name": "Costo de lanzamiento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "MinValue": "-15",
+        "MaxValue": "-20"
       }
     ]
   },
@@ -6552,17 +6552,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Recarga automática",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "MinValue": "0.8",
-        "MaxValue": "0.8"
+        "Name": "Costo de lanzamiento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "MinValue": "-20",
+        "MaxValue": "-20"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Ship_PulseDrive",
+        "Name": "Recarga automática",
         "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
+        "Image": "recovery",
         "MinValue": "1",
         "MaxValue": "1"
       }
@@ -6588,11 +6588,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Eficacia de célula de transposición",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "5,000",
-        "MaxValue": "10,000"
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "MinValue": "50",
+        "MaxValue": "100"
       }
     ]
   },
@@ -6616,11 +6616,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Eficacia de célula de transposición",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "10,000",
-        "MaxValue": "15,000"
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "MinValue": "100",
+        "MaxValue": "150"
       }
     ]
   },
@@ -6644,19 +6644,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Eficacia de célula de transposición",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "15,000",
-        "MaxValue": "20,000"
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "MinValue": "150",
+        "MaxValue": "200"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Encriptación de hiperturbo instantánea",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "MinValue": "1",
-        "MaxValue": "1"
+        "Name": "Eficacia de célula de transposición",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "100",
+        "MaxValue": "100"
       }
     ]
   },
@@ -6680,19 +6680,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Eficacia de célula de transposición",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "MinValue": "20,000",
-        "MaxValue": "25,000"
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "MinValue": "200",
+        "MaxValue": "250"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Encriptación de hiperturbo instantánea",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "MinValue": "1",
-        "MaxValue": "1"
+        "Name": "Eficacia de célula de transposición",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "100",
+        "MaxValue": "100"
       }
     ]
   },
@@ -6716,11 +6716,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Armour_Health",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "shieldStrength",
-        "MinValue": "5",
-        "MaxValue": "10"
+        "Image": "prot",
+        "MinValue": "0.05",
+        "MaxValue": "0.1"
       }
     ]
   },
@@ -6744,11 +6744,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Armour_Health",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "shieldStrength",
-        "MinValue": "5",
-        "MaxValue": "10"
+        "Image": "prot",
+        "MinValue": "0.05",
+        "MaxValue": "0.1"
       }
     ]
   },
@@ -6772,11 +6772,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Armour_Health",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "shieldStrength",
-        "MinValue": "10",
-        "MaxValue": "20"
+        "Image": "prot",
+        "MinValue": "0.1",
+        "MaxValue": "0.2"
       }
     ]
   },
@@ -6800,11 +6800,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Armour_Health",
+        "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
-        "Image": "shieldStrength",
-        "MinValue": "20",
-        "MaxValue": "20"
+        "Image": "prot",
+        "MinValue": "0.2",
+        "MaxValue": "0.2"
       }
     ]
   },
@@ -6828,11 +6828,19 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "8",
+        "MaxValue": "16"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "8",
-        "MaxValue": "16"
+        "MinValue": "1",
+        "MaxValue": "1.01"
       },
       {
         "AlwaysChoose": false,
@@ -6840,15 +6848,7 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
         "MinValue": "0.1",
-        "MaxValue": "1.1"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1",
-        "MaxValue": "1.01"
+        "MaxValue": "1"
       }
     ]
   },
@@ -6872,27 +6872,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "12",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "12",
-        "MaxValue": "20"
+        "MinValue": "1.01",
+        "MaxValue": "1.02"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "0.6",
-        "MaxValue": "1.6"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.01",
-        "MaxValue": "1.02"
+        "MinValue": "1",
+        "MaxValue": "2"
       }
     ]
   },
@@ -6916,27 +6916,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "16",
+        "MaxValue": "24"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "16",
-        "MaxValue": "24"
+        "MinValue": "1.02",
+        "MaxValue": "1.02"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "1.6",
-        "MaxValue": "2.1"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.02",
-        "MaxValue": "1.03"
+        "MinValue": "2",
+        "MaxValue": "3"
       }
     ]
   },
@@ -6960,27 +6960,27 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "20",
+        "MaxValue": "28"
+      },
+      {
+        "AlwaysChoose": false,
         "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "MinValue": "20",
-        "MaxValue": "28"
+        "MinValue": "1.02",
+        "MaxValue": "1.02"
       },
       {
         "AlwaysChoose": false,
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "MinValue": "2.1",
-        "MaxValue": "2.1"
-      },
-      {
-        "AlwaysChoose": false,
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "MinValue": "1.03",
-        "MaxValue": "1.03"
+        "MinValue": "3",
+        "MaxValue": "3"
       }
     ]
   },
@@ -7004,25 +7004,25 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Weapons_Missiles",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.1",
-        "MaxValue": "1.35"
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "10",
+        "MaxValue": "35"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Dispersión de calor",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "damage",
         "MinValue": "30",
         "MaxValue": "40"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Armour_Shield",
+        "Name": "Recarga de escudo al impacto",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
+        "Image": "shieldStrength",
         "MinValue": "0.05",
         "MaxValue": "0.1"
       }
@@ -7048,25 +7048,25 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Weapons_Missiles",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.35",
-        "MaxValue": "1.55"
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "35",
+        "MaxValue": "55"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Dispersión de calor",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "damage",
         "MinValue": "40",
         "MaxValue": "50"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Armour_Shield",
+        "Name": "Recarga de escudo al impacto",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
+        "Image": "shieldStrength",
         "MinValue": "0.1",
         "MaxValue": "0.15"
       }
@@ -7092,25 +7092,25 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Weapons_Missiles",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.55",
-        "MaxValue": "1.75"
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "55",
+        "MaxValue": "75"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Dispersión de calor",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "damage",
         "MinValue": "50",
         "MaxValue": "60"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Armour_Shield",
+        "Name": "Recarga de escudo al impacto",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
+        "Image": "shieldStrength",
         "MinValue": "0.15",
         "MaxValue": "0.2"
       }
@@ -7136,25 +7136,25 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Weapons_Missiles",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "MinValue": "1.75",
-        "MaxValue": "1.95"
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "75",
+        "MaxValue": "95"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Dispersión de calor",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "damage",
         "MinValue": "60",
         "MaxValue": "70"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Ship_Armour_Shield",
+        "Name": "Recarga de escudo al impacto",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
+        "Image": "shieldStrength",
         "MinValue": "0.2",
         "MaxValue": "0.3"
       }
@@ -7178,17 +7178,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": true,
-        "Name": "Recarga automática",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "MinValue": "0.9",
-        "MaxValue": "0.95"
+        "Name": "Costo de lanzamiento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "MinValue": "-10",
+        "MaxValue": "-5"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Maniobrabilidad",
+        "Name": "Potenciar",
         "LocaleKeyTemplate": "percentage",
-        "Image": "target",
+        "Image": "recovery",
         "MinValue": "1",
         "MaxValue": "1"
       }
@@ -7212,17 +7212,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": true,
-        "Name": "Recarga automática",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "MinValue": "0.85",
-        "MaxValue": "0.9"
+        "Name": "Costo de lanzamiento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "MinValue": "-15",
+        "MaxValue": "-10"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Maniobrabilidad",
+        "Name": "Potenciar",
         "LocaleKeyTemplate": "percentage",
-        "Image": "target",
+        "Image": "recovery",
         "MinValue": "2",
         "MaxValue": "5"
       }
@@ -7246,17 +7246,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": true,
-        "Name": "Recarga automática",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "MinValue": "0.8",
-        "MaxValue": "0.85"
+        "Name": "Costo de lanzamiento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "MinValue": "-20",
+        "MaxValue": "-15"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Maniobrabilidad",
+        "Name": "Potenciar",
         "LocaleKeyTemplate": "percentage",
-        "Image": "target",
+        "Image": "recovery",
         "MinValue": "5",
         "MaxValue": "8"
       }
@@ -7280,17 +7280,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": true,
-        "Name": "Recarga automática",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "MinValue": "0.8",
-        "MaxValue": "0.8"
+        "Name": "Costo de lanzamiento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "MinValue": "-20",
+        "MaxValue": "-20"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Maniobrabilidad",
+        "Name": "Potenciar",
         "LocaleKeyTemplate": "percentage",
-        "Image": "target",
+        "Image": "recovery",
         "MinValue": "8",
         "MaxValue": "10"
       }
@@ -7314,17 +7314,17 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": true,
-        "Name": "Recarga automática",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "MinValue": "0.75",
-        "MaxValue": "0.95"
+        "Name": "Costo de lanzamiento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "MinValue": "-25",
+        "MaxValue": "-5"
       },
       {
         "AlwaysChoose": false,
-        "Name": "Maniobrabilidad",
+        "Name": "Potenciar",
         "LocaleKeyTemplate": "percentage",
-        "Image": "target",
+        "Image": "recovery",
         "MinValue": "1",
         "MaxValue": "10"
       }
@@ -7348,7 +7348,7 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Freighter_Teleport",
+        "Name": "Rango de hiperturbo",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
         "MinValue": "200",
@@ -7356,9 +7356,9 @@
       },
       {
         "AlwaysChoose": false,
-        "Name": "Coordinación de flota",
+        "Name": "Eficacia de célula de transposición",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "recovery",
         "MinValue": "1",
         "MaxValue": "1"
       }
@@ -7382,9 +7382,9 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Capacidad comercial de la expedición",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "trade",
+        "Name": "Velocidad de la expedición",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
         "MinValue": "15",
         "MaxValue": "15"
       }
@@ -7408,11 +7408,11 @@
     "ProceduralStatBonuses": [
       {
         "AlwaysChoose": false,
-        "Name": "Capacidad científica de la expedición",
+        "Name": "Eficacia de la expedición",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "science",
-        "MinValue": "85",
-        "MaxValue": "80"
+        "Image": "recovery",
+        "MinValue": "15",
+        "MaxValue": "20"
       }
     ]
   }

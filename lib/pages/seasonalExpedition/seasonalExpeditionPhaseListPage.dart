@@ -92,9 +92,11 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
       viewModel.useAltGlyphs,
     ));
 
+    widgets.add(emptySpace1x());
+
     if (season.rewards.isNotEmpty) {
       widgets.add(Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 4),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: positiveButton(
           storeContext,
           title: getTranslations().fromKey(LocaleKey.rewards),
@@ -109,14 +111,16 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
         ),
       ));
     } else {
-      widgets.add(emptySpace1x());
       widgets.add(customDivider());
     }
+
     if (season.captainSteveYoutubePlaylist != null &&
         season.captainSteveYoutubePlaylist.length > 5) {
-      String seasNum =
-          seasonId.replaceAll('seas-', '').replaceAll('-redux', '');
-      widgets.add(Card(
+      widgets.add(emptySpace1x());
+      String seasNum = seasonId
+          .replaceAll('seas-', '') //
+          .replaceAll('-redux', '');
+      widgets.add(flatCard(
         child: captainSteveYoutubeVideoTile(
           storeContext,
           season.captainSteveYoutubePlaylist,
