@@ -93,95 +93,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other5",
-    "Icon": "other/5.png",
-    "Name": "ナビゲーションデータ",
-    "Group": "暗号化されたナビゲーションデータ",
-    "Description": "暗号化されたナビゲーションデータ。\nこの移植性の高いデータユニットには、\nとある惑星の地図情報がすべて保存されている。\n\n宇宙ステーションにいる<TRADEABLE>地図製作者<>に、\n<STELLAR>利用可能な星図<>と交換してもらえるかもしれない。",
-    "BaseValueUnits": 1000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "0063B7",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/5.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other6",
-    "Icon": "other/6.png",
-    "Name": "投下ポッド座標データ",
-    "Group": "暗号化されたナビゲーションデータ",
-    "Description": "<TECHNOLOGY>信号ブースター<>に入力する暗号化されたナビゲーションデータ。\n\n正しく解読されれば同一の惑星上の<SPECIAL>エクソスーツアップグレード<>を含んだ<TECHNOLOGY>投下ポッド<>の位置が分かる。",
-    "BaseValueUnits": 85000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "1A2733",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/6.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other7",
-    "Icon": "other/6.png",
-    "Name": "ログ暗号鍵",
-    "Group": "データプロセス未完了",
-    "Description": "<TECHNOLOGY>貨物船の緊急事態ログ<>の暗号化\nオーバーライドプロセスの一部。\n\nプロセスの中には、記録データへの\nフルアクセス許可が必要なものもある。",
-    "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "1A2733",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/7.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other8",
-    "Icon": "other/8.png",
-    "Name": "防衛通信システム",
-    "Group": "当局専用通貨",
-    "Description": "これを所有する者は海賊対策当局の支援を得ることができる。",
-    "BaseValueUnits": 10000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "1A2733",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/8.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsNoLongerObtainable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other9",
     "Icon": "other/9.png",
     "Name": "ワーオ！",
@@ -819,29 +730,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other38",
-    "Icon": "building/350.png",
-    "Name": "宇宙船積載量拡張",
-    "Group": "宇宙船拡張モジュール",
-    "Description": "宇宙船の残骸からサルベージされた\nモジュール型機械。\n<STELLAR>貨物船の墜落現場<>から回収、\nあるいは<STELLAR>フリゲートでの探検<>中に\nサルベージできる場合もある。\n\n適切な<TECHNOLOGY>宇宙船艤装場<>で使えば、\n宇宙船の積載量を増やすことができる。",
-    "BaseValueUnits": 125000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsRewardFromShipScrap",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other39",
     "Icon": "tradeItems/21.png",
     "Name": "サーマルパネル",
@@ -1023,9 +911,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "発射速度",
+        "Name": "ダメージ",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "damage",
         "Value": "8"
       }
     ],
@@ -1056,7 +944,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "加速する",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1086,10 +981,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "ワープセルの効率性",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "5,000"
+        "Name": "ハイパードライブ範囲",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1121,10 +1016,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "自動リチャージ",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "0.9"
+        "Name": "発射コスト",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1154,7 +1049,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "シールド強度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "0.05"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1184,10 +1086,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "内部生命維持システム有効",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1.05"
+        "Name": "操縦性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1774,280 +1676,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other79",
-    "Icon": "other/79.png",
-    "Name": "うごめく相棒",
-    "Group": "触手の君",
-    "Description": "科学および装飾のためにとらえた、深海の危険生物の一端。\n\n脱出を防ぐフォースフィールドは最高性能であり、\n逃れることなく同道させられる。\nそう、決して逃れ出ることなどなく。決して。",
-    "BaseValueUnits": 800.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw31",
-        "Quantity": 30
-      },
-      {
-        "Id": "raw34",
-        "Quantity": 30
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other80",
-    "Icon": "other/80.png",
-    "Name": "フレアキャップ・トードスツール",
-    "Group": "有機物デコレーション",
-    "Description": "脈管密度の高さと生物発光が特徴の菌類。\n化学変化の循環連鎖により夜間に光を発する。\n\n基地の景観を改良するために使用できる。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other81",
-    "Icon": "other/81.png",
-    "Name": "しなびた大株",
-    "Group": "有機物デコレーション",
-    "Description": "単為系樹木コロニーから採取された、\n年季の入った切り株。\n推定10万年以上の樹齢を誇る。\n樹皮からコケ類を思わせる芳香を発している。\n\n基地の景観を改良するために使用できる。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other82",
-    "Icon": "other/82.png",
-    "Name": "泥の小屋",
-    "Group": "有機物デコレーション",
-    "Description": "この質素な泥の小屋は惑星サクスムA13の霧の中で発見された謎の構造物をモデルにしている。\n同類と思しき構造物が宇宙の方々で確認されているが、その起源に関する仮説はいずれも証明されるに至っていない。\n\n基地の景観を改良するために使用できる。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other83",
-    "Icon": "other/83.png",
-    "Name": "キチン質のケージ",
-    "Group": "有機物デコレーション",
-    "Description": "出所不明のタンパク体をスペースアノマリー上で複製したもの。\n骨格構造内にエアポケットが残っていることが多く、ケージ構造の中心部分の温度が若干高かったり低かったりすることがある。\n\n基地の景観を改良するために使用できる。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other84",
-    "Icon": "other/84.png",
-    "Name": "プロテアホイール",
-    "Group": "有機物デコレーション",
-    "Description": "環状に並ぶ発光腺が特徴的なこの独特な生命体は、\n植物相にも動物相にも明確に分類しにくい。\n棘が幾重にも並んでおり、風味豊かな発光腺を捕食者から守る一助となっている。\n\n基地の景観を改良するために使用できる。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other85",
-    "Icon": "other/85.png",
-    "Name": "慧眼たるタロ",
-    "Group": "有機物デコレーション",
-    "Description": "この奇妙な生物の目のような突出部位は光刺激の受容\nと単純な計算の両機能を有するようだが、\n何を見るためのものなのかは不明である。\n\n基地の景観を改良するために使用できる。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other86",
-    "Icon": "other/86.png",
-    "Name": "虚無の殻",
-    "Group": "有機物デコレーション",
-    "Description": "この卵殻は今でもかすかな歌を奏で続けている。遥か彼方の輪唱に応えるかのように...\n\n基地の景観を改良するために使用できる。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other87",
-    "Icon": "other/87.png",
-    "Name": "プレートステム",
-    "Group": "有機物デコレーション",
-    "Description": "この樹木の頂部にある平板状の葉は光合成効率が非常に高く、野生種は驚異的な高さにまで生長しうる。\nこの個体は住居の内装向けに調整した変種である。\n\n基地の景観を改良するために使用できる。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other88",
-    "Icon": "other/88.png",
-    "Name": "融合鱗茎",
-    "Group": "有機物デコレーション",
-    "Description": "この植物系構造物は抗酸化物を高濃度で含むものの、鱗状の厚い外皮ゆえに耕作には不向きである。\n\n基地の景観を改良するために使用できる。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other89",
     "Icon": "other/89.png",
     "Name": "銀河旅行者同盟のバナー",
@@ -2156,207 +1784,6 @@
     "ConsumableRewardTexts": [
       "この卵が孵化すると、新しいコンパニオンになる！"
     ]
-  },
-  {
-    "Id": "other99",
-    "Icon": "other/99.png",
-    "Name": "銀河旅行者同盟のステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。\nこれで基地に遊び心を加えよう。\nこのステッカーは銀河旅行者同盟を象徴し、\n放浪の旅の価値を示している。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other100",
-    "Icon": "other/100.png",
-    "Name": "アミノハブのステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。\nこれで基地に遊び心を加えよう。\nこのステッカーはアミノハブを象徴し、\nコミュニティ、探索、発見の原則を示している。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other101",
-    "Icon": "other/101.png",
-    "Name": "カフェ42のステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。\nこれで基地に遊び心を加えよう。\nこのステッカーはカフェ42を象徴し、\n「仲間と楽しくいい気分」を表している。\n最果てのカフェへようこそ！",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other102",
-    "Icon": "other/102.png",
-    "Name": "統一旅人連盟のステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。\nこれで基地に遊び心を加えよう。\nこのステッカーは統一旅人連盟を象徴する。\n記録し、助け、生み出し、伝えよ！",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other103",
-    "Icon": "other/103.png",
-    "Name": "キタニアン帝国のステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。\nこれで基地に遊び心を加えよう。\nこのステッカーはキタニアン帝国を象徴し、\n博愛、思いやり、平和、道理の精神を表している。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other104",
-    "Icon": "other/104.png",
-    "Name": "三段炸裂花火",
-    "Group": "使用可能な花火装置",
-    "Description": "三段階に彩りを炸裂させる豪華絢爛な花火。\n着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>(<IMG>BUILD_MENU<>)から\n打ち上げチューブを設置できる。\n<FUEL>警告<>：生物に向けて発砲しないこと。\n室内での使用は推奨しない。",
-    "BaseValueUnits": 60.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other105",
-    "Icon": "other/105.png",
-    "Name": "二重クロム花火",
-    "Group": "使用可能な花火装置",
-    "Description": "インジウムとカドミウムを\nV字型に輝かせる豪華絢爛な花火。\n着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>(<IMG>BUILD_MENU<>)から\n打ち上げチューブを設置できる。\n<FUEL>警告<>：生物に向けて発砲しないこと。\n室内での使用は推奨しない。",
-    "BaseValueUnits": 60.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other106",
-    "Icon": "other/106.png",
-    "Name": "ハークの輪花火",
-    "Group": "使用可能な花火装置",
-    "Description": "目が回るほどの渦を描いて燃える豪華絢爛な花火。\n着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>(<IMG>BUILD_MENU<>)から\n打ち上げチューブを設置できる。\n<FUEL>警告<>：生物に向けて発砲しないこと。\n室内での使用は推奨しない。",
-    "BaseValueUnits": 60.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
   },
   {
     "Id": "other107",
@@ -2578,28 +2005,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other117",
-    "Icon": "building/350.png",
-    "Name": "エクソスーツ拡張ユニット",
-    "Group": "アップグレードユニット",
-    "Description": "<STELLAR>エクソスーツの保管容量<>を拡張できる高度なサバイバルテクノロジーモジュール。\n\nあらかじめパックされたナノ拡張剤がエクソスーツの中に安定した空間を作製し、<STELLAR>アイテムケースの容量<>が増加する。<STELLAR>宇宙ステーション<>にあるエクソスーツのアップグレードターミナルで拡張を適用できる。",
-    "BaseValueUnits": 155000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other118",
     "Icon": "other/118.png",
     "Name": "流線形ジェットパックユニット",
@@ -2690,33 +2095,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other122",
-    "Icon": "other/122.png",
-    "Name": "パイオニア探検デカール",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\n象徴的な宇宙船アルファベクターを象ったゴールドカラー版で、初の<STELLAR>探検<>である「パイオニア」達成を記念したもの。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other123",
     "Icon": "other/123.png",
     "Name": "パイオニア探検バナー",
@@ -2758,102 +2136,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other125",
-    "Icon": "other/125.png",
-    "Name": "青と赤のアトラスの花火",
-    "Group": "使用可能な花火装置",
-    "Description": "アトラスのインターフェースを<TECHNOLOGY>インジウム<>と<FUEL>カドミウム<>で描き出す。着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>(<IMG>BUILD_MENU<>)から\n打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて発砲しないこと。室内での使用は推奨しない。",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward",
-      "IsExpeditionSeason2Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other126",
-    "Icon": "other/126.png",
-    "Name": "金と青のアトラスの花火",
-    "Group": "使用可能な花火装置",
-    "Description": "アトラスのインターフェースを<COMMODITY>金<>と<TECHNOLOGY>インジウム<>で描き出す。着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>(<IMG>BUILD_MENU<>)から\n打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて発砲しないこと。室内での使用は推奨しない。",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward",
-      "IsExpeditionSeason2Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other127",
-    "Icon": "other/127.png",
-    "Name": "赤と金のアトラスの花火",
-    "Group": "使用可能な花火装置",
-    "Description": "アトラスのインターフェースを<FUEL>カドミウム<>と<COMMODITY>金<>で描き出す。着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>(<IMG>BUILD_MENU<>)から\n打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて発砲しないこと。室内での使用は推奨しない。",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward",
-      "IsExpeditionSeason2Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other128",
-    "Icon": "other/128.png",
-    "Name": "パイオニア探検フラッグ",
-    "Group": "アンロック可能なデコレーション",
-    "Description": "建設可能な基地装飾品。\n象徴的な宇宙船アルファベクターを象った<STELLAR>金色に縁取られた旗<>。初の<STELLAR>探検<>である「パイオニア」達成を記念して居住可能な基地に設置できる。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 80
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -3225,49 +2507,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other147",
-    "Icon": "other/147.png",
-    "Name": "神話ビーコン",
-    "Group": "実験的招集テクノロジー",
-    "Description": "ナーダによる<TRANS_TRA>ゲック<>、<TRANS_EXP>コーバックス<>、<TRANS_WAR>ヴァイキーン<>の話から検知した不思議なパターンの研究結果。\n\nビーコンは、ナーダの仲間のトラベラーがマッピングした<SPECIAL>歴史の変遷<>に調和した<STELLAR>エコー信号<>を出している。\n\n専門家ポーロはこの信号の結果に対する予測を望んでいない。",
-    "BaseValueUnits": 80.0,
-    "CurrencyType": "Quicksilver",
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "付近の歴史的残響を増幅する"
-    ]
-  },
-  {
-    "Id": "other148",
-    "Icon": "other/148.png",
-    "Name": "ヒストログラフィー測定器",
-    "Group": "個人用歴史変遷モニター",
-    "Description": "ナーダが<TRANS_TRA>ゲック<>、<TRANS_EXP>コーバックス<>、<TRANS_WAR>ヴァイキーン<>の話から出現する新たなパターンを検知した。\n\n測定器で重要な遺物のある現場の周辺を測定すると、<SPECIAL>歴史の変遷<>が明らかになる。際立った歴史的変化の記録があれば、ナーダが信号を追跡できるようになる。\n\nナーこのデバイスを使って異星人の遺物のある場所から<STELLAR>歴史データを送信<>して、ナーダとポーロの研究を手伝ってあげよう。",
-    "BaseValueUnits": 3200.0,
-    "CurrencyType": "Credits",
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other149",
     "Icon": "other/52.png",
     "Name": "称号：反逆者",
@@ -3352,33 +2591,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other154",
-    "Icon": "other/154.png",
-    "Name": "地図製作者探検ステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\n\nこのステッカーは、探検先の惑星を記録し、脱出に成功したことを記念するものである。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -3780,452 +2992,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other173",
-    "Icon": "other/173.png",
-    "Name": "青色の星見のステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこのステッカーは淡い青色の空に浮かぶ星を見上げる探検家を模している。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other174",
-    "Icon": "other/174.png",
-    "Name": "赤色のストライダーのステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこのステッカーは赤茶けた大地を闊歩する巨大なエイリアンの獣を模している。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other175",
-    "Icon": "other/175.png",
-    "Name": "着陸した宇宙船のステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこのステッカーは着陸した宇宙船がパイロットの帰還を待っている様子を模している。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other176",
-    "Icon": "other/176.png",
-    "Name": "紫色のギャラクティックコアのステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこのステッカーはギャラクティックコアを目指して旅する2隻の宇宙船を模している。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other177",
-    "Icon": "other/177.png",
-    "Name": "古い潜水球のステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこのステッカーは伝説的な呪いの潜水マスクを模している。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other178",
-    "Icon": "other/178.png",
-    "Name": "スペースアノマリーのステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこのステッカーはナーダとポーロの異質な故郷を過ぎゆく宇宙船を模している。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other179",
-    "Icon": "other/179.png",
-    "Name": "フルセイル",
-    "Group": "デコレーション",
-    "Description": "このフルセイルはゲックが大昔に使用していた交易船のデザインを模している。海をテーマにした印象的な家庭用装飾品。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other180",
-    "Icon": "other/180.png",
-    "Name": "オフセットセイル",
-    "Group": "デコレーション",
-    "Description": "このオフセットセイルはゲックが大昔に使用していた交易船のデザインを模している。海をテーマにした印象的な家庭用装飾品。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other181",
-    "Icon": "other/181.png",
-    "Name": "アシンメトリカルセイル",
-    "Group": "デコレーション",
-    "Description": "このアシンメトリカルセイルはゲックが大昔に使用していた交易船のデザインを模している。海をテーマにした印象的な家庭用装飾品。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other182",
-    "Icon": "other/182.png",
-    "Name": "ドレープドキャンバス",
-    "Group": "デコレーション",
-    "Description": "このドレープドキャンバスはゲックが大昔に使用していた交易船のデザインを模している。海をテーマにした印象的な家庭用装飾品。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other183",
-    "Icon": "other/183.png",
-    "Name": "黒と金のトラベラーのポスター",
-    "Group": "デコレーション",
-    "Description": "のりもいらずシワにもならない特製のウォールアート。\n華やかな黒と金のポスターにはアポロに似たトラベラーが描かれている。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other184",
-    "Icon": "other/184.png",
-    "Name": "異常な家のポスター",
-    "Group": "デコレーション",
-    "Description": "のりもいらずシワにもならない特製のウォールアート。\n鮮やかな色のポスターにはスペースアノマリーの簡略化されたイラストが描かれている。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other185",
-    "Icon": "other/185.png",
-    "Name": "「ミルク？」のポスター",
-    "Group": "デコレーション",
-    "Description": "のりもいらずシワにもならない特製のウォールアート。\nこのポスターにはクリーミーでおいしそうなホカホカのプロトミルクが描かれている。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other186",
-    "Icon": "other/186.png",
-    "Name": "のたうつ手稿",
-    "Group": "狂信者の文書",
-    "Description": "<STELLAR>ワームの上質皮紙<>でできた透明な紙。狂信的な文章が書かれている。触れるとのたうつ。\n\n「最初に気付いたのは子どもたちだった。\nドン、ドン、ドン、砂の下深いところで轟いていた。\n最初のワームが頭上を飛ぶさまは黒い稲妻が空を裂くようだった。\nワームは次から次へと砂漠から昇っていった。\n嵐の季節になるたびに、それぞれ自分が選ばれることを望んだ。列を作って砂漠を渡り、空に腕を伸ばした。\n誰でも胃袋に入れる可能性がある。\n大いなるワームの前で我々はみな平等だ」",
-    "BaseValueUnits": 1616.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "4D2957",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other188",
-    "Icon": "other/188.png",
-    "Name": "肉の綱",
-    "Group": "腸の破片",
-    "Description": "<SPECIAL>飢えた落とし子<>の消化管がらせん状になったもの。肉厚の壁はまだ痙攣しているが、このわずかな肉片から落とし子が再生することはないだろう...\n\nこれほどまでに特殊な内臓が銀河市場で取引されることはほとんどないため、<STELLAR>非常に高い価値<>を持つ。",
-    "BaseValueUnits": 16016.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "4D2957",
-    "Usages": [
-      "HasRefinedToCreate",
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other189",
-    "Icon": "other/189.png",
-    "Name": "おぞましき落とし子",
-    "Group": "飢えた胚",
-    "Description": "<SPECIAL>飢えた蔓<>の壊れやすい胚。まだ粘液状の栄養分が滴っている。触れると泣き叫んで逃れようと身を引く。\n\n<TECHNOLOGY>内臓器官同調機<>を使えば、胚のうから取り出せるかもしれない。",
-    "BaseValueUnits": 16.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "CCCCCC",
-    "Usages": [
-      "HasRefinedToCreate",
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other190",
-    "Icon": "other/190.png",
-    "Name": "フレッシュランチャー",
-    "Group": "使用可能な花火装置",
-    "Description": "絢爛豪華な花火。有機花火が空に打ち上げられ、爆発してスライム、プラズマ、小さなワームをぶちまける。着火すると空にスプラッタな光景を作り上げる。\n\n<VAL_ON>ビルドメニュー<>(<IMG>BUILD_MENU<>)から打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて発砲しないこと。室内での使用は推奨しない。",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other191",
     "Icon": "other/191.png",
     "Name": "フレッシュランチャーパック",
@@ -4266,33 +3032,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other193",
-    "Icon": "other/193.png",
-    "Name": "緊急探検ステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\n\nこのステッカーは探検「<STELLAR>緊急<>」達成を記念している。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -4360,33 +3099,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other197",
-    "Icon": "other/197.png",
-    "Name": "タイタントロフィー",
-    "Group": "装飾用の頭蓋骨",
-    "Description": "建設可能な基地装飾品。\n\n歯がたくさんある頭蓋骨で、元は巨大なサンドワームの従兄弟とも言える大型の無足脊椎動物のものだった。強力な顎の力はマルチツールを破壊し、大抵の生物の骨を砕く。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 100
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -4703,33 +3415,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other213",
-    "Icon": "other/213.png",
-    "Name": "宇宙生物学探検ステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これでベースに遊び心を加えよう。\n\nこのステッカーは探検「<STELLAR>宇宙生物学<>」達成を記念しており、トラベラーとこの世界に息づく数多の野生生物種との平和な共存関係を祝福している。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other214",
     "Icon": "other/214.png",
     "Name": "宇宙生物学探検バナー",
@@ -4765,29 +3450,6 @@
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
       "IsExpeditionSeason5Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other216",
-    "Icon": "other/216.png",
-    "Name": "偽造パスポート",
-    "Group": "上書きされたデジタルレコード",
-    "Description": "偽造 <TECHNOLOGY>宇宙船登録書類<>。このデジタル署名は、これまでに重犯罪および軽犯罪歴がないことを保証する。\n\n<TECHNOLOGY>宇宙ステーションコア<>で使用することで、任意のネガティブな<STELLAR>派閥の評価<>記録をリセットできる。",
-    "BaseValueUnits": 256000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward",
-      "IsExpeditionSeason7Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4875,41 +3537,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other220",
-    "Icon": "other/220.png",
-    "Name": "海賊のマップ",
-    "Group": "不正な地理データ",
-    "Description": "海賊団「<SPECIAL>ザ・ブライト<>」に襲われた者から取得した<COMMODITY>宝の在処の座標<>を再構築したもの。",
-    "BaseValueUnits": 888.0,
-    "CurrencyType": "Credits",
-    "Colour": "4D2957",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "other217",
-        "Quantity": 1
-      },
-      {
-        "Id": "other218",
-        "Quantity": 1
-      },
-      {
-        "Id": "other219",
-        "Quantity": 1
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "データをエクソスーツ誘導マーカーに変換"
-    ]
-  },
-  {
     "Id": "other221",
     "Icon": "other/221.png",
     "Name": "ランデブービーコン",
@@ -4952,176 +3579,6 @@
     "ConsumableRewardTexts": [
       "自由の声の呼びかけを承諾する"
     ]
-  },
-  {
-    "Id": "other223",
-    "Icon": "other/223.png",
-    "Name": "血塩",
-    "Group": "密輸品",
-    "Description": "悪臭を放つどす黒い結晶の入った瓶。中身は粘性蒸発トラップ内で生産された有機塩であり、違法フェロモンの製造に使用される。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は<SPECIAL>違法<>である。定期供給は<FUEL>無法者星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<>が得られるかもしれない。",
-    "BaseValueUnits": 2000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other224",
-    "Icon": "other/224.png",
-    "Name": "盗まれたDNAサンプル",
-    "Group": "密輸品",
-    "Description": "遺伝子の違法な改変を防ぐための標準的なバイオセキュリティ機構が施されていない、未登録のDNAサンプルが入った密閉バイアル。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
-    "BaseValueUnits": 9000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsEggIngredient",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other225",
-    "Icon": "other/225.png",
-    "Name": "ムーンエーテル",
-    "Group": "密輸品",
-    "Description": "バットに入った非常に揮発性の高い液体。その気体は極めて引火性が高く、また強力な鎮静薬としての効能を持つ。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
-    "BaseValueUnits": 18000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other226",
-    "Icon": "other/226.png",
-    "Name": "プリズムフェザー",
-    "Group": "密輸品",
-    "Description": "真空密閉されたまばゆいばかりの美しい羽根の束。万華鏡のように見る者を魅了するこの非現実的な羽を残した動物は絶滅して久しい。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
-    "BaseValueUnits": 32000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other227",
-    "Icon": "other/227.png",
-    "Name": "ウガァウガァ",
-    "Group": "密輸品",
-    "Description": "現在では使用が禁止されているヴァイキーンのバトルガスキャニスター。伝統的に戦闘の直前に吸入して使用されていた。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
-    "BaseValueUnits": 58000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other228",
-    "Icon": "other/228.png",
-    "Name": "模造回路",
-    "Group": "密輸品",
-    "Description": "捕獲した宇宙ステーションコアをリバースエンジニアリングして作られた回路。この非正規の回路は、ブラックマーケットやグレーマーケットのテクノロジーに広く使用される。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
-    "BaseValueUnits": 68000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasUsedToCraft",
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other229",
-    "Icon": "other/229.png",
-    "Name": "禁止された武器",
-    "Group": "密輸品",
-    "Description": "回収されたセンチネル軍の残骸品を組み合わせて作られた強力な武器。銀河中のならず者たちが好んで使用する。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
-    "BaseValueUnits": 83000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other230",
-    "Icon": "other/230.png",
-    "Name": "はじまりの民のレリック",
-    "Group": "密輸品",
-    "Description": "没落したゲックの帝国の遺物。全銀河の主要な文明によってその使用を非難、禁止された。\n\nほぼ全ての銀河貿易ターミナルにおいて購入は <SPECIAL>違法<> である。定期供給は <FUEL>無法者の星系<> 内でのみ可能である。\n\n禁制品の市販が規制されている区域内で販売すれば、<TRADEABLE>かなりの利益<> が得られるかもしれない。",
-    "BaseValueUnits": 98000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
   },
   {
     "Id": "other231",
@@ -5167,249 +3624,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other233",
-    "Icon": "other/233.png",
-    "Name": "恐怖の船長ファングのポスター",
-    "Group": "デコレーション",
-    "Description": "粘着性があり、しわになりにくいウォールアート。\n船長ファングと恐るべき悪行の数々を知らないヴァイキーンはほとんどいない。この船長が実在の人物であるかどうかは定かではない。もしかすると、生意気な若造を震え上がらせるための作り話かもしれない。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other234",
-    "Icon": "other/234.png",
-    "Name": "無法者のポスター",
-    "Group": "デコレーション",
-    "Description": "粘着性があり、しわになりにくいウォールアート。\n海賊や前科者、センチネルの法に従わない反乱者を称えている。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other235",
-    "Icon": "other/235.png",
-    "Name": "レスブールXIIIのポスター",
-    "Group": "デコレーション",
-    "Description": "粘着性があり、しわになりにくいウォールアート。\n海賊が支配する悪名高き星を描いた反政府ポスター。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other236",
-    "Icon": "other/236.png",
-    "Name": "海賊フラッグ",
-    "Group": "限定フラッグ",
-    "Description": "ビロードのような旗に刻まれたこの真っ赤な頭蓋骨は、敵対陣営に対する警告として機能する。\n\n建設可能な特製の基地装飾品。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other237",
-    "Icon": "other/237.png",
-    "Name": "団結のフラッグ",
-    "Group": "限定フラッグ",
-    "Description": "複数の銀河間ギルドの協力で生まれた記章。\n\n建設可能な特製の基地装飾品。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other238",
-    "Icon": "other/238.png",
-    "Name": "紋章のフラッグ",
-    "Group": "限定フラッグ",
-    "Description": "この旗に施された繊細な金色の刺繍は、居住可能なあらゆる基地を洗練された優雅さで彩る。\n\n建設可能な特製の基地装飾品。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other239",
-    "Icon": "other/239.png",
-    "Name": "オービタルフラッグ",
-    "Group": "限定フラッグ",
-    "Description": "真紅色と灰色の布地を使って凝視する瞳が縫い付けられた、惑星軌道の抽象的な表現。\n\n建設可能な特製の基地装飾品。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other240",
-    "Icon": "other/240.png",
-    "Name": "青緑のフラッグ",
-    "Group": "限定フラッグ",
-    "Description": "対照的な緑と紫でデザインされたこの旗は、緑豊かな銀河を探す者にインスパイアされたもの。\n\n建設可能な特製の基地装飾品。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other241",
-    "Icon": "other/241.png",
-    "Name": "ウェイワードキューブ",
-    "Group": "漂う原始の者",
-    "Description": "建設可能な特製の基地装飾品。\n\n別の次元から軌道ステーションに流れ着いたところを旅の商人に囚われた立方体の生命体。居住可能な基地で飼うことで、おとなしいペットになる。",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 100
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other242",
     "Icon": "other/52.png",
     "Name": "称号：「荒廃のハンター」",
@@ -5428,33 +3642,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other243",
-    "Icon": "other/243.png",
-    "Name": "荒廃の探検ステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\n\nこのステッカーは探検「<STELLAR>ザ・ブライト<>」の成功、不正に奪われた金の華麗な奪取、そして海賊の秘密の発見を記念したもの。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -5829,222 +4016,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other261",
-    "Icon": "other/261.png",
-    "Name": "ワーム狩りIステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこの<SPECIAL>呪われた<>ステッカーは<STELLAR>タイタンワーム<>を模している。\n\n「ワームロードは砂塵舞う大地にそびえ立ち、その身体は空となる。」",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other262",
-    "Icon": "other/262.png",
-    "Name": "ワーム狩りIIステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこの<SPECIAL>呪われた<>ステッカーは<STELLAR>タイタンワーム<>を模している。\n\n「アトラスの血管が顕になっていた。」",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other263",
-    "Icon": "other/263.png",
-    "Name": "ワーム狩りIIIステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこの<SPECIAL>呪われた<>ステッカーは<STELLAR>タイタンワーム<>を模している。\n\n「疲弊した末の歓喜は言葉にならない。」",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other264",
-    "Icon": "other/264.png",
-    "Name": "ワーム狩りIVステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこの<SPECIAL>呪われた<>ステッカーは<STELLAR>タイタンワーム<>を模している。\n\n「それが飲み込むたびに我々は転がったが、滑りやすい壁を力の限り掴んだ。」",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other265",
-    "Icon": "other/265.png",
-    "Name": "ワーム狩りVステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。これで基地に遊び心を加えよう。\nこの<SPECIAL>呪われた<>ステッカーは<STELLAR>タイタンワーム<>を模している。\n\n「我が同志たちは生まれ変わった、新たな蔓となって聖なる塵から立ち上がった。」",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other266",
-    "Icon": "other/266.png",
-    "Name": "宇宙飛行ポスター",
-    "Group": "デコレーション",
-    "Description": "粘着性があり、しわになりにくいウォールアート。\n宇宙船に乗って飛び立つ喜びを祝うポスター。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other267",
-    "Icon": "other/267.png",
-    "Name": "オービタルポスター",
-    "Group": "デコレーション",
-    "Description": "粘着性があり、しわになりにくいウォールアート。\n物思いにふける探検家の頭上に浮かぶ宇宙ステーションが描かれている。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other268",
-    "Icon": "other/268.png",
-    "Name": "艦船のカタログポスター",
-    "Group": "デコレーション",
-    "Description": "粘着性があり、しわになりにくいウォールアート。\n様々な宇宙船のシルエットが並んでいる。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -6513,33 +4484,6 @@
     ]
   },
   {
-    "Id": "other287",
-    "Icon": "other/287.png",
-    "Name": "リバイアサン探検ステッカー",
-    "Group": "デコレーション",
-    "Description": "設置可能な特製ステッカー。基地に遊び心を加えよう。\n\nこのステッカーは探検「<STELLAR>リバイアサン<>」の達成と、何世代にもわたる呪いの解除を記念している。",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other288",
     "Icon": "other/288.png",
     "Name": "リバイアサン探検バナー",
@@ -6562,120 +4506,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other289",
-    "Icon": "products/93.png",
-    "Name": "産卵嚢",
-    "Group": "知的生命船の保管嚢",
-    "Description": "<TECHNOLOGY>知的生命<>船用の<SPECIAL>追加保管モジュール<>。 孵化すると、この嚢内にいた寄生体が船の船体にくっつき、ホストから不可欠な栄養を受け取るのと引き換えに、洞窟のような体内を使用できるようにする。\n\n<VAL_ON><IMG>FE_ALT1<><>で成長と<VAL_ON>孵化プロセスを<>を開始させられる。",
-    "BaseValueUnits": 125000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "追加の保管庫を進化させる"
-    ]
-  },
-  {
-    "Id": "other290",
-    "Icon": "products/91.png",
-    "Name": "サイコニックエッグ",
-    "Group": "脈動する卵黄嚢",
-    "Description": "遺伝子の液体が入った蠢く袋。<TECHNOLOGY>知覚宇宙船<>の新たな<TECHNOLOGY>生体融合テクノロジー<>作成を促進するべく作られたもの。\n\n胚は<TECHNOLOGY>バイオテクノロジーアップグレード<>へと成長する。<VAL_ON><IMG>FE_ALT1<><>で<STELLAR>生合成を始める<>ことができる。",
-    "BaseValueUnits": 126000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "新たな知的テクノロジーに孵化する"
-    ]
-  },
-  {
-    "Id": "other291",
-    "Icon": "other/291.png",
-    "Name": "ドリームエアリアル",
-    "Group": "潜在意識アクセス装置",
-    "Description": "無意識の波長に合わせられた信号受信機/増幅機。あらゆる色を備え、周囲の光を煌めく虹へと分割する。\n\n<FUEL>警告：<>このアンテナを深宇宙に持ち込むと、<SPECIAL>宇宙の巨大生物<>の注意を引く可能性がある。",
-    "BaseValueUnits": 16.0,
-    "CurrencyType": "Credits",
-    "Colour": "311A49",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "prod58",
-        "Quantity": 3
-      },
-      {
-        "Id": "prod116",
-        "Quantity": 1
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other292",
-    "Icon": "other/278.png",
-    "Name": "貨物船座標発信機",
-    "Group": "故郷との最後の繋がり",
-    "Description": "サルベージしたあり合わせの電子部品で作られた急造デバイス。何年にも渡り、貯蔵庫の奥深くに眠っていた。ワイヤーが絡み合ったこのデバイスを使えば、この貨物船の故郷の星の生存者にコンタクトできるかもしれない。\n\nデバイスを選択し、それに続いて「発信する」（<IMG>FE_ALT1<>）を選択すれば、位置特定プロセスが開始される。",
-    "BaseValueUnits": 16.0,
-    "CurrencyType": "Credits",
-    "Colour": "311A49",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw10",
-        "Quantity": 60
-      },
-      {
-        "Id": "raw33",
-        "Quantity": 20
-      },
-      {
-        "Id": "prod113",
-        "Quantity": 1
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "コンタクトを試みる"
-    ]
-  },
-  {
     "Id": "other293",
     "Icon": "other/293.png",
     "Name": "高重力貨物船の排気煙",
@@ -6687,7 +4517,8 @@
     "Colour": "2C7C9F",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6708,7 +4539,8 @@
     "Colour": "008951",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6729,7 +4561,8 @@
     "Colour": "008951",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6750,7 +4583,8 @@
     "Colour": "4D2987",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

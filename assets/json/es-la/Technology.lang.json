@@ -23,15 +23,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Protección antifrío",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
-        "Value": "1"
-      },
-      {
-        "Name": "Resistencia al calor",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "heat",
+        "Name": "Batería de protección contra peligros",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
         "Value": "100"
       },
       {
@@ -41,15 +35,27 @@
         "Value": "100"
       },
       {
+        "Name": "Escudo de daño tóxico",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "toxic",
+        "Value": "100"
+      },
+      {
+        "Name": "Escudo de daño por frío",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "cold",
+        "Value": "100"
+      },
+      {
         "Name": "Escudo de daño por calor",
         "LocaleKeyTemplate": "enabled",
         "Image": "heat",
         "Value": "100"
       },
       {
-        "Name": "Escudo de daño tóxico",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "toxic",
+        "Name": "Tiempo de recuperación de carrera",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -82,10 +88,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Protección antifrío",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
-        "Value": "0.2"
+        "Name": "Batería de protección contra peligros",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -114,15 +120,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Energía de panel solar",
+        "Name": "Tanques de soporte vital",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "100"
       },
       {
-        "Name": "Batería de protección contra peligros",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
+        "Name": "Energía de panel solar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
         "Value": "100"
       }
     ],
@@ -151,7 +157,7 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Energía de panel solar",
+        "Name": "Tanques de soporte vital",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "10"
@@ -185,30 +191,24 @@
         "Name": "Depósitos de jetpack",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "100"
+        "Value": "275"
       },
       {
         "Name": "Eficiencia de combustible",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "275"
-      },
-      {
-        "Name": "Índice de recarga",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
         "Value": "100"
-      },
-      {
-        "Name": "Sistema de salto avanzado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
       },
       {
         "Name": "Energía de propulsión inicial",
         "LocaleKeyTemplate": "percentage",
         "Image": "damage",
+        "Value": "100"
+      },
+      {
+        "Name": "Índice de recarga",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -241,22 +241,28 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Eficiencia de combustible",
+        "Name": "Depósitos de jetpack",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "jetpack",
         "Value": "20"
       },
       {
-        "Name": "Energía de propulsión inicial",
+        "Name": "Índice de recarga",
         "LocaleKeyTemplate": "percentage",
-        "Image": "damage",
-        "Value": "110"
+        "Image": "recharge",
+        "Value": "10"
       },
       {
-        "Name": "Velocidad de carrera",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "unknown",
-        "Value": "0.1"
+        "Name": "Distancia de carrera",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "10"
+      },
+      {
+        "Name": "Tiempo de recuperación de carrera",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -288,9 +294,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Propulsores acuáticos eficientes",
+        "Name": "Sistema de salto avanzado",
         "LocaleKeyTemplate": "enabled",
-        "Image": "water",
+        "Image": "enabled",
         "Value": "1"
       }
     ],
@@ -328,9 +334,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Resistencia al frío",
+        "Name": "Resistencia al calor",
         "LocaleKeyTemplate": "percentage",
-        "Image": "cold",
+        "Image": "heat",
         "Value": "20"
       }
     ],
@@ -368,9 +374,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Resistencia tóxica",
+        "Name": "Resistencia al frío",
         "LocaleKeyTemplate": "percentage",
-        "Image": "toxic",
+        "Image": "cold",
         "Value": "20"
       }
     ],
@@ -408,9 +414,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Resistencia a la radiación",
+        "Name": "Resistencia tóxica",
         "LocaleKeyTemplate": "percentage",
-        "Image": "rad",
+        "Image": "toxic",
         "Value": "20"
       }
     ],
@@ -448,9 +454,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Eficiencia de respiración",
+        "Name": "Resistencia a la radiación",
         "LocaleKeyTemplate": "percentage",
-        "Image": "water",
+        "Image": "rad",
         "Value": "20"
       }
     ],
@@ -487,10 +493,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Distancia de carrera",
+        "Name": "Eficiencia de respiración",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
-        "Value": "133"
+        "Image": "water",
+        "Value": "33"
       }
     ],
     "ConsumableRewardTexts": []
@@ -548,7 +554,14 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Salud principal",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "Value": "20"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -580,7 +593,14 @@
         "Quantity": 16
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Salud principal",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "Value": "20"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -642,9 +662,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Recarga en vuelo",
+        "Name": "Propulsores acuáticos eficientes",
         "LocaleKeyTemplate": "enabled",
-        "Image": "recharge2",
+        "Image": "water",
         "Value": "1"
       }
     ],
@@ -681,10 +701,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Escudo de daño por frío",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "cold",
-        "Value": "100"
+        "Name": "Redireccionamiento de oxígeno",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "water",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -710,7 +730,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Palabras traducidas",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "translate",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -742,7 +769,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Palabras traducidas",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "translate",
+        "Value": "2"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -774,7 +808,14 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Palabras traducidas",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "translate",
+        "Value": "3"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -802,7 +843,14 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Palabras traducidas",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "translate",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -839,22 +887,22 @@
         "Value": "100"
       },
       {
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "9,900"
+      },
+      {
         "Name": "Energía del motor de pulso",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "Maniobrabilidad",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "100"
-      },
-      {
-        "Name": "Potenciar",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "100"
+        "Name": "Reducción de asistencia de vuelo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "unknown",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -886,22 +934,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Energía del motor de pulso",
+        "Name": "Eficiencia de combustible del motor de pulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "85"
+        "Image": "recovery",
+        "Value": "15"
       },
       {
-        "Name": "Soporte vital interno activado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1.1"
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "15"
       },
       {
         "Name": "Maniobrabilidad",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "0.5"
+        "Value": "10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -937,12 +985,6 @@
         "Name": "Costo de lanzamiento",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "100"
-      },
-      {
-        "Name": "Recarga automática",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -979,10 +1021,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Recarga automática",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "0.8"
+        "Name": "Costo de lanzamiento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "-20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1016,7 +1058,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Recarga automática",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1078,19 +1127,13 @@
         "Name": "Rango de hiperturbo",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "1"
+        "Value": "100"
       },
       {
         "Name": "Eficacia de célula de transposición",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "10,000"
-      },
-      {
-        "Name": "Encriptación de hiperturbo instantánea",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "Value": "1"
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1120,14 +1163,7 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Rango de hiperturbo",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1155,14 +1191,7 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Rango de hiperturbo",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1190,14 +1219,7 @@
         "Quantity": 5
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Rango de hiperturbo",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -1231,7 +1253,7 @@
         "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "1"
+        "Value": "0.65"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1265,7 +1287,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Fuerza del escudo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "0.05"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1295,16 +1324,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Dispersión de calor",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "Alcance",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "range",
-        "Value": "0"
+        "Name": "Velocidad de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "1"
       },
       {
         "Name": "Precisión",
@@ -1313,22 +1336,34 @@
         "Value": "100"
       },
       {
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "-100"
-      },
-      {
-        "Name": "Velocidad de disparo",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "6,500"
-      },
-      {
         "Name": "Recuento total de cañones",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "2.5"
+        "Value": "1"
+      },
+      {
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "0"
+      },
+      {
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "6,500"
+      },
+      {
+        "Name": "Alcance",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "5,000"
+      },
+      {
+        "Name": "Recuperación de calor",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1358,7 +1393,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Recuperación de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "-20"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1388,16 +1430,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Dispersión de calor",
+        "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "recharge2",
         "Value": "7.5"
-      },
-      {
-        "Name": "Alcance",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "range",
-        "Value": "0"
       },
       {
         "Name": "Precisión",
@@ -1406,22 +1442,34 @@
         "Value": "100"
       },
       {
-        "Name": "Recuperación de calor",
+        "Name": "Recuento total de cañones",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "1"
+      },
+      {
+        "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
         "Value": "7.5"
       },
       {
-        "Name": "Velocidad de disparo",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "damage",
         "Value": "320"
       },
       {
-        "Name": "Recuento total de cañones",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "6"
+        "Name": "Alcance",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "1,500"
+      },
+      {
+        "Name": "Recuperación de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1509,16 +1557,22 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "150"
+      },
+      {
         "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "1"
+        "Value": "250"
       },
       {
-        "Name": "Dispersión de calor",
+        "Name": "Recarga de escudo al impacto",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "250"
+        "Image": "shieldStrength",
+        "Value": "0.2"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1548,7 +1602,20 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "10"
+      },
+      {
+        "Name": "Recarga de escudo al impacto",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "shieldStrength",
+        "Value": "0.1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1578,39 +1645,45 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Dispersión de calor",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      },
-      {
-        "Name": "Alcance",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "range",
-        "Value": "900"
+        "Name": "Velocidad de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "2"
       },
       {
         "Name": "Precisión",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "1,400"
-      },
-      {
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "1.5"
-      },
-      {
-        "Name": "Velocidad de disparo",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "280"
+        "Value": "1,000"
       },
       {
         "Name": "Recuento total de cañones",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
+        "Value": "14"
+      },
+      {
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "50"
+      },
+      {
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "280"
+      },
+      {
+        "Name": "Alcance",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "500"
+      },
+      {
+        "Name": "Recuperación de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
         "Value": "100"
       }
     ],
@@ -1643,10 +1716,16 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Precisión",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "20"
+      },
+      {
         "Name": "Alcance",
         "LocaleKeyTemplate": "percentage",
         "Image": "range",
-        "Value": "80"
+        "Value": "25"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1678,40 +1757,46 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Dispersión de calor",
+        "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "recharge2",
         "Value": "9"
-      },
-      {
-        "Name": "Alcance",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "range",
-        "Value": "50"
       },
       {
         "Name": "Precisión",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "100"
-      },
-      {
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "3"
-      },
-      {
-        "Name": "Velocidad de disparo",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "205"
+        "Value": "50"
       },
       {
         "Name": "Recuento total de cañones",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "6.5"
+        "Value": "1"
+      },
+      {
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "200"
+      },
+      {
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "205"
+      },
+      {
+        "Name": "Alcance",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "2,200"
+      },
+      {
+        "Name": "Recuperación de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1747,10 +1832,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "1.2"
+        "Value": "20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1782,40 +1867,46 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Dispersión de calor",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "200"
-      },
-      {
-        "Name": "Alcance",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "range",
-        "Value": "100"
+        "Name": "Velocidad de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "3"
       },
       {
         "Name": "Precisión",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
-        "Value": "200"
-      },
-      {
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
-        "Value": "2"
-      },
-      {
-        "Name": "Velocidad de disparo",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
-        "Value": "600"
+        "Value": "100"
       },
       {
         "Name": "Recuento total de cañones",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "ammo",
-        "Value": "3"
+        "Value": "2"
+      },
+      {
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      },
+      {
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "600"
+      },
+      {
+        "Name": "Alcance",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "1,250"
+      },
+      {
+        "Name": "Recuperación de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1847,10 +1938,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Recuperación de calor",
-        "LocaleKeyTemplate": "defaultTemplate",
+        "Name": "Dispersión de calor",
+        "LocaleKeyTemplate": "percentage",
         "Image": "time",
-        "Value": "1.1"
+        "Value": "10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1887,6 +1978,12 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "100"
+      },
+      {
         "Name": "Eficacia de célula de transposición",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
@@ -1896,12 +1993,6 @@
         "Name": "Coordinación de flota",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "1"
-      },
-      {
-        "Name": "Defensas de la expedición",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "prot",
         "Value": "1"
       }
     ],
@@ -2137,12 +2228,6 @@
         "Value": "100"
       },
       {
-        "Name": "Inspección activada",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "enabled",
-        "Value": "1"
-      },
-      {
         "Name": "Recompensas de análisis de fauna",
         "LocaleKeyTemplate": "percentage",
         "Image": "accuracy",
@@ -2159,6 +2244,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "time",
         "Value": "100"
+      },
+      {
+        "Name": "Recompensas de análisis de minerales",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "unknown",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -2235,9 +2326,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Aturdimiento biomecánico",
+        "Name": "Inspección activada",
         "LocaleKeyTemplate": "enabled",
-        "Image": "lightning",
+        "Image": "enabled",
         "Value": "1"
       }
     ],
@@ -2727,16 +2818,22 @@
         "Value": "100"
       },
       {
+        "Name": "Encendido posimpacto",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
         "Name": "Duración de fuego de impacto",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "1"
+        "Value": "5"
       },
       {
         "Name": "Daño por fuego de impacto",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "5"
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3319,15 +3416,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Velocidad punta",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "recovery",
         "Value": "100"
       },
       {
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Velocidad punta",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
+        "Image": "recharge",
         "Value": "100"
       },
       {
@@ -3337,10 +3434,10 @@
         "Value": "100"
       },
       {
-        "Name": "Potencia de láser de extracción",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "1"
+        "Name": "Agarre angular",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3376,10 +3473,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Potencia de láser de extracción",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "0.66"
+        "Name": "Agarre delantero",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "300"
+      },
+      {
+        "Name": "Agarre angular",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3415,10 +3518,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Potencia de láser de extracción",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "2.1"
+        "Name": "Agarre delantero",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "50"
+      },
+      {
+        "Name": "Agarre angular",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "210"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3454,10 +3563,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Potencia de láser de extracción",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "0.66"
+        "Name": "Agarre delantero",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "50"
+      },
+      {
+        "Name": "Agarre angular",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "66"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3489,9 +3604,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Aumentar energía",
+        "Name": "Escanear",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "accuracy",
         "Value": "100"
       }
     ],
@@ -3528,9 +3643,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Aumentar energía",
+        "Name": "Escanear",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "accuracy",
         "Value": "100"
       }
     ],
@@ -3567,21 +3682,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Uso de combustible",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
       },
       {
-        "Name": "Agarre angular",
+        "Name": "Aumentar energía",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "Aceleración",
+        "Name": "Aumentar tamaño de tanque",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
         "Value": "100"
       }
     ],
@@ -3618,10 +3733,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Daño",
+        "Name": "Potencia de láser de extracción",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "1"
+        "Image": "mining",
+        "Value": "80"
+      },
+      {
+        "Name": "Eficiencia de láser de extracción",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3653,10 +3774,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Eficiencia energética del arma",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
+        "Name": "Potencia de láser de extracción",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "50"
+      },
+      {
+        "Name": "Láser de extracción de exonave avanzado",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3688,10 +3815,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Paneles solares de la exonave",
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "320"
+      },
+      {
+        "Name": "Eficiencia energética del arma",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "50"
+        "Value": "100"
+      },
+      {
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3724,27 +3863,21 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Uso de combustible",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
         "Name": "Velocidad punta",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
       },
       {
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Aceleración",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "Value": "100"
-      },
-      {
-        "Name": "Agarre delantero",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "100"
-      },
-      {
-        "Name": "Eficiencia de láser de extracción",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
+        "Image": "recharge",
         "Value": "100"
       }
     ],
@@ -3781,10 +3914,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Paneles solares de la exonave",
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "220"
+      },
+      {
+        "Name": "Eficiencia energética del arma",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "50"
+        "Value": "100"
+      },
+      {
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3820,16 +3965,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Daño",
+        "Name": "Potencia de láser de extracción",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "1"
+        "Image": "mining",
+        "Value": "240"
       },
       {
-        "Name": "Eficiencia energética del arma",
+        "Name": "Eficiencia de láser de extracción",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
+        "Image": "time",
         "Value": "100"
+      },
+      {
+        "Name": "Láser de extracción de exonave avanzado",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3865,9 +4016,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Aumentar energía",
+        "Name": "Escanear",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "accuracy",
         "Value": "100"
       }
     ],
@@ -3904,10 +4055,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "Value": "80"
+        "Image": "recovery",
+        "Value": "-20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4693,7 +4844,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "200"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4725,7 +4883,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "300"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4757,7 +4922,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "800"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4789,7 +4961,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4821,7 +5000,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4853,7 +5039,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Rango de hiperturbo",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4885,7 +5078,14 @@
         "Quantity": 150
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Recarga en vuelo",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recharge2",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -4913,14 +5113,7 @@
         "Quantity": 100
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Palabras traducidas",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "translate",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -4954,10 +5147,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Energía del motor de pulso",
+        "Name": "Eficiencia de combustible del motor de pulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "66"
+        "Image": "recovery",
+        "Value": "34"
       }
     ],
     "ConsumableRewardTexts": []
@@ -4993,10 +5186,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Potenciar",
+        "Name": "Energía del motor de pulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "30"
+        "Image": "recharge2",
+        "Value": "130"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5030,7 +5223,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Encriptación de hiperturbo instantánea",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "target",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -5064,10 +5264,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Precisión",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "accuracy",
-        "Value": "300"
+        "Name": "Recuento total de cañones",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "3"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5462,24 +5662,18 @@
         "Name": "Eficiencia de combustible del motor de pulso",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Energía del motor de pulso",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
         "Value": "50"
-      },
-      {
-        "Name": "Maniobrabilidad",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "100"
       },
       {
         "Name": "Potenciar",
         "LocaleKeyTemplate": "enabled",
         "Image": "recovery",
+        "Value": "9,900"
+      },
+      {
+        "Name": "Energía del motor de pulso",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
         "Value": "100"
       }
     ],
@@ -5517,12 +5711,6 @@
         "Name": "Costo de lanzamiento",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "100"
-      },
-      {
-        "Name": "Recarga automática",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
         "Value": "50"
       }
     ],
@@ -5560,19 +5748,13 @@
         "Name": "Rango de hiperturbo",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "1"
+        "Value": "100"
       },
       {
         "Name": "Eficacia de célula de transposición",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "10,000"
-      },
-      {
-        "Name": "Encriptación de hiperturbo instantánea",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "Value": "1"
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5609,7 +5791,7 @@
         "Name": "Fuerza del escudo",
         "LocaleKeyTemplate": "percentage",
         "Image": "prot",
-        "Value": "1"
+        "Value": "0.65"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5642,16 +5824,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Dispersión de calor",
+        "Name": "Velocidad de disparo",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "time",
+        "Image": "recharge2",
         "Value": "10"
-      },
-      {
-        "Name": "Alcance",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "range",
-        "Value": "0"
       },
       {
         "Name": "Precisión",
@@ -5660,22 +5836,34 @@
         "Value": "100"
       },
       {
-        "Name": "Recuperación de calor",
+        "Name": "Recuento total de cañones",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "1"
+      },
+      {
+        "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
         "Value": "10"
       },
       {
-        "Name": "Velocidad de disparo",
+        "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "damage",
         "Value": "340"
       },
       {
-        "Name": "Recuento total de cañones",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "ammo",
-        "Value": "6"
+        "Name": "Alcance",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "1,500"
+      },
+      {
+        "Name": "Recuperación de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5708,16 +5896,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Daño",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "1"
-      },
-      {
         "Name": "Dispersión de calor",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "time",
+        "Value": "3.5"
+      },
+      {
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
         "Value": "280"
+      },
+      {
+        "Name": "Recarga de escudo al impacto",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "shieldStrength",
+        "Value": "0.1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -5751,14 +5945,7 @@
         "Quantity": 3
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Eficacia de la expedición",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recovery",
-        "Value": "10,000"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -5895,9 +6082,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Protección antitóxicos",
+        "Name": "Protección anticalor",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
+        "Image": "heat",
         "Value": "3"
       }
     ],
@@ -5935,9 +6122,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Protección anticalor",
+        "Name": "Protección antifrío",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "heat",
+        "Image": "cold",
         "Value": "3"
       }
     ],
@@ -5975,9 +6162,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Protección antirradiación",
+        "Name": "Protección antitóxicos",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "rad",
+        "Image": "toxic",
         "Value": "3"
       }
     ],
@@ -6015,9 +6202,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Tanque de oxígeno",
+        "Name": "Protección antirradiación",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "oxygen",
+        "Image": "rad",
         "Value": "3"
       }
     ],
@@ -6053,7 +6240,14 @@
         "Quantity": 2
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Paneles solares de la exonave",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "400"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -6088,9 +6282,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Aumentar energía",
+        "Name": "Escanear",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "accuracy",
         "Value": "100"
       }
     ],
@@ -6128,16 +6322,16 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Uso de combustible",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "-50"
+      },
+      {
         "Name": "Velocidad punta",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
-      },
-      {
-        "Name": "Aumentar tamaño de tanque",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "Value": "50"
       },
       {
         "Name": "Agarre delantero",
@@ -6146,10 +6340,10 @@
         "Value": "100"
       },
       {
-        "Name": "Potencia de láser de extracción",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "mining",
-        "Value": "1"
+        "Name": "Agarre angular",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6186,10 +6380,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Aumentar tamaño de tanque",
+        "Name": "Uso de combustible",
         "LocaleKeyTemplate": "percentage",
-        "Image": "ammo",
-        "Value": "80"
+        "Image": "recovery",
+        "Value": "-20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6226,9 +6420,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Aumentar energía",
+        "Name": "Escanear",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
+        "Image": "accuracy",
         "Value": "100"
       }
     ],
@@ -6266,21 +6460,21 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Uso de combustible",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
       },
       {
-        "Name": "Agarre angular",
+        "Name": "Aumentar energía",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
         "Value": "100"
       },
       {
-        "Name": "Aceleración",
+        "Name": "Aumentar tamaño de tanque",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
+        "Image": "ammo",
         "Value": "100"
       }
     ],
@@ -6318,10 +6512,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Daño",
+        "Name": "Potencia de láser de extracción",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
-        "Value": "1"
+        "Image": "mining",
+        "Value": "100"
+      },
+      {
+        "Name": "Eficiencia de láser de extracción",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6354,10 +6554,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Eficiencia energética del arma",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "100"
+        "Name": "Potencia de láser de extracción",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "50"
+      },
+      {
+        "Name": "Láser de extracción de exonave avanzado",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6394,10 +6600,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Paneles solares de la exonave",
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "420"
+      },
+      {
+        "Name": "Eficiencia energética del arma",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "35"
+        "Value": "100"
+      },
+      {
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.35"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6467,27 +6685,27 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Protección antitóxicos",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "toxic",
-        "Value": "1"
-      },
-      {
         "Name": "Protección anticalor",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "heat",
         "Value": "1"
       },
       {
-        "Name": "Tanque de oxígeno",
+        "Name": "Protección antifrío",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "oxygen",
+        "Image": "cold",
         "Value": "1"
       },
       {
         "Name": "Protección antirradiación",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "rad",
+        "Value": "1"
+      },
+      {
+        "Name": "Protección antitóxicos",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "toxic",
         "Value": "1"
       }
     ],
@@ -6685,12 +6903,6 @@
         "Name": "Costo de lanzamiento",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "100"
-      },
-      {
-        "Name": "Recarga automática",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
         "Value": "25"
       }
     ],
@@ -6731,6 +6943,12 @@
         "Value": "100"
       },
       {
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "11,900"
+      },
+      {
         "Name": "Energía del motor de pulso",
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge2",
@@ -6740,25 +6958,7 @@
         "Name": "Maniobrabilidad",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "10"
-      },
-      {
-        "Name": "Potenciar",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "100"
-      },
-      {
-        "Name": "Soporte vital interno activado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1.25"
-      },
-      {
-        "Name": "Maniobrabilidad",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "target",
-        "Value": "0.5"
+        "Value": "25"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6799,19 +6999,13 @@
         "Name": "Rango de hiperturbo",
         "LocaleKeyTemplate": "lightYear",
         "Image": "hyperDrive",
-        "Value": "1"
+        "Value": "600"
       },
       {
         "Name": "Eficacia de célula de transposición",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "60,000"
-      },
-      {
-        "Name": "Encriptación de hiperturbo instantánea",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "target",
-        "Value": "2"
+        "Value": "200"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6843,7 +7037,14 @@
         "Quantity": 4
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Soporte vital interno activado",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -6879,10 +7080,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Protección antifrío",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
-        "Value": "0.2"
+        "Name": "Batería de protección contra peligros",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -6920,10 +7121,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Protección antifrío",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "cold",
-        "Value": "0.2"
+        "Name": "Batería de protección contra peligros",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "20"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7303,15 +7504,15 @@
         "Value": "300"
       },
       {
-        "Name": "Duración del aturdimiento",
-        "LocaleKeyTemplate": "seconds",
+        "Name": "Aturdimiento biomecánico",
+        "LocaleKeyTemplate": "enabled",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "Daño a entidades aturdidas",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Name": "Duración del aturdimiento",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "lightning",
         "Value": "3.5"
       },
       {
@@ -7354,15 +7555,15 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Duración del aturdimiento",
-        "LocaleKeyTemplate": "seconds",
+        "Name": "Aturdimiento biomecánico",
+        "LocaleKeyTemplate": "enabled",
         "Image": "lightning",
         "Value": "1"
       },
       {
-        "Name": "Daño a entidades aturdidas",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "damage",
+        "Name": "Duración del aturdimiento",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "lightning",
         "Value": "5"
       }
     ],
@@ -7399,16 +7600,22 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Encendido posimpacto",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
         "Name": "Duración de fuego de impacto",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "1"
+        "Value": "3.5"
       },
       {
         "Name": "Daño por fuego de impacto",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "3.5"
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7574,8 +7781,8 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Encendido posimpacto",
-        "LocaleKeyTemplate": "enabled",
+        "Name": "Daño a entidades aturdidas",
+        "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
         "Value": "1.2"
       }
@@ -7612,7 +7819,14 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Piloto de IA de Minotauro",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -7647,22 +7861,34 @@
     ],
     "StatBonuses": [
       {
+        "Name": "Daño a entidades aturdidas",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "5"
+      },
+      {
+        "Name": "Potencia de láser de extracción",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "mining",
+        "Value": "50"
+      },
+      {
         "Name": "Encendido posimpacto",
         "LocaleKeyTemplate": "enabled",
         "Image": "damage",
-        "Value": "5"
+        "Value": "1"
       },
       {
         "Name": "Duración de fuego de impacto",
         "LocaleKeyTemplate": "seconds",
         "Image": "recharge",
-        "Value": "1"
+        "Value": "3.5"
       },
       {
         "Name": "Daño por fuego de impacto",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recharge2",
-        "Value": "3.5"
+        "Value": "80"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7699,10 +7925,22 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Paneles solares de la exonave",
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Eficiencia energética del arma",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "50"
+        "Value": "100"
+      },
+      {
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7725,25 +7963,25 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw31",
-        "Quantity": 120
+        "Id": "cur81",
+        "Quantity": 1
       },
       {
-        "Id": "prod149",
-        "Quantity": 1
+        "Id": "raw31",
+        "Quantity": 120
       }
     ],
     "StatBonuses": [
       {
+        "Name": "Uso de combustible",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "-10"
+      },
+      {
         "Name": "Aumentar tamaño de tanque",
         "LocaleKeyTemplate": "percentage",
         "Image": "ammo",
-        "Value": "90"
-      },
-      {
-        "Name": "Aceleración",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recharge",
         "Value": "25"
       }
     ],
@@ -7767,19 +8005,26 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
+        "Id": "cur83",
+        "Quantity": 1
+      },
+      {
         "Id": "prod1",
         "Quantity": 1
       },
       {
         "Id": "prod23",
         "Quantity": 1
-      },
-      {
-        "Id": "prod159",
-        "Quantity": 1
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Piloto de IA de Minotauro",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -7808,18 +8053,11 @@
         "Quantity": 2
       },
       {
-        "Id": "other228",
+        "Id": "trade41",
         "Quantity": 2
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Rango de hiperturbo",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -7844,7 +8082,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -7875,16 +8120,28 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Energía del motor de pulso",
+        "Name": "Eficiencia de combustible del motor de pulso",
         "LocaleKeyTemplate": "percentage",
-        "Image": "recharge2",
-        "Value": "20"
+        "Image": "recovery",
+        "Value": "80"
       },
       {
-        "Name": "Soporte vital interno activado",
+        "Name": "Recarga automática",
         "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1.1"
+        "Image": "recovery",
+        "Value": "1"
+      },
+      {
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "15"
+      },
+      {
+        "Name": "Maniobrabilidad",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -7911,7 +8168,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -7946,16 +8210,16 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Soporte vital interno activado",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1.1"
+        "Name": "Reducción de asistencia de vuelo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "unknown",
+        "Value": "0.6"
       },
       {
         "Name": "Maniobrabilidad",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
-        "Value": "0.5"
+        "Value": "10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8023,14 +8287,7 @@
         "Quantity": 1
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Velocidad de la expedición",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "time",
-        "Value": "100"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8092,14 +8349,7 @@
         "Quantity": 15
       }
     ],
-    "StatBonuses": [
-      {
-        "Name": "Rango de hiperturbo",
-        "LocaleKeyTemplate": "lightYear",
-        "Image": "hyperDrive",
-        "Value": "1"
-      }
-    ],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
   {
@@ -8128,7 +8378,14 @@
         "Quantity": 15
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Recarga automática",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {

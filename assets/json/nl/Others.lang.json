@@ -93,95 +93,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other5",
-    "Icon": "other/5.png",
-    "Name": "Navigatiegegevens",
-    "Group": "Versleutelde navigatiegegevens",
-    "Description": "Versleutelde navigatiegegevens. Deze zeer mobiele gegevens-unit bevat alle relevante cartografische informatie over een planetaire regio.\n\nKan worden geruild bij een <TRADEABLE>cartograaf<> aan boord van een ruimtestation voor <STELLAR>bruikbare sterrenkaarten<>.",
-    "BaseValueUnits": 1000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "0063B7",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/5.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other6",
-    "Icon": "other/6.png",
-    "Name": "Noodcapsule coördinaatgegevens",
-    "Group": "Versleutelde navigatiegegevens",
-    "Description": "Versleutelde navigatiegegevens die kunnen worden ingevoerd in een <TECHNOLOGY>signaalversterker<>.\n\nNa ontcijfering onthullen ze de locatie van een <TECHNOLOGY>noodcapsule<> met <SPECIAL>exopak-upgrades<>.",
-    "BaseValueUnits": 85000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "1A2733",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/6.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other7",
-    "Icon": "other/6.png",
-    "Name": "Encryptiecode logboek",
-    "Group": "Onvolledige gegevenssequentie",
-    "Description": "Een fragment van de sequentie voor het overschrijven van de encryptie voor het <TECHNOLOGY>noodlogboek van een vrachtschip<>.\n\nEr kunnen meerdere delen van de sequentie nodig zijn om volledig toegang te krijgen tot de vastgelegde gegevens.",
-    "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "1A2733",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/7.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other8",
-    "Icon": "other/8.png",
-    "Name": "Verdedigingscoupon",
-    "Group": "Betaalmiddel voor lokale overheid",
-    "Description": "Een coupon die de eigenaar recht geeft op de steun van de lokale autoriteiten bij aanvallen door piraten.",
-    "BaseValueUnits": 10000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "1A2733",
-    "CdnUrl": "https://cdn.nmsassistant.com/other/8.png",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsNoLongerObtainable"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other9",
     "Icon": "other/9.png",
     "Name": "Verbluft",
@@ -819,29 +730,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other38",
-    "Icon": "building/350.png",
-    "Name": "Opslaguitbreiding ruimteschip",
-    "Group": "Ruimteschip-uitbreidingsmodule",
-    "Description": "Een technologiemodule die afkomstig is uit de restanten van een <STELLAR>geborgen ruimteschip<>. Kan ook worden gevonden op <STELLAR>crashlocaties van vrachtschepen<> of worden geborgen tijdens <STELLAR>fregatexpedities<>.\n\nKan worden gebruikt om de opslagcapaciteit van een ruimteschip te vergroten bij een <TECHNOLOGY>terminal voor ruimteschipbenodigdheden<> in een ruimtestation.",
-    "BaseValueUnits": 125000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsRewardFromShipScrap",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other39",
     "Icon": "tradeItems/21.png",
     "Name": "Thermische panelen",
@@ -1023,9 +911,9 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Vuursnelheid",
+        "Name": "Schade",
         "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "recharge2",
+        "Image": "damage",
         "Value": "8"
       }
     ],
@@ -1056,7 +944,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Boosten",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1086,10 +981,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Efficiëntie warpcel",
-        "LocaleKeyTemplate": "percentage",
-        "Image": "recovery",
-        "Value": "5,000"
+        "Name": "Bereik hyperdrive",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1121,10 +1016,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Automatisch opladen",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "recovery",
-        "Value": "0.9"
+        "Name": "Lanceerkosten",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1154,7 +1049,14 @@
         "Quantity": 10
       }
     ],
-    "StatBonuses": [],
+    "StatBonuses": [
+      {
+        "Name": "Schildkracht",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "0.05"
+      }
+    ],
     "ConsumableRewardTexts": []
   },
   {
@@ -1184,10 +1086,10 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Interne lifesupport ingeschakeld",
-        "LocaleKeyTemplate": "enabled",
-        "Image": "prot",
-        "Value": "1.05"
+        "Name": "Manoeuvreerbaarheid",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "5"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1774,280 +1676,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other79",
-    "Icon": "other/79.png",
-    "Name": "Krioelende metgezel",
-    "Group": "Gedrocht met tentakels",
-    "Description": "Opgevangen extract van een vreselijk gedrocht, bewaard voor wetenschappelijk en decoratief gebruik.\n\nZijn krachtveld is van de allerhoogste kwaliteit. De metgezel mag niet ontsnappen. De metgezel zal niet ontsnappen. Ontsnappen.",
-    "BaseValueUnits": 800.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw31",
-        "Quantity": 30
-      },
-      {
-        "Id": "raw34",
-        "Quantity": 30
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other80",
-    "Icon": "other/80.png",
-    "Name": "Lichtgevende zwam",
-    "Group": "Organische decoratie",
-    "Description": "Deze schimmelsoort valt op door zijn vele haarvaten en lichtgevende eigenschappen. Een circulerende keten van chemische reacties zorgt voor de nachtelijke gloed van de zwam.\n\nBiedt mogelijkheden voor de inrichting van tuinen voor basissen.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other81",
-    "Icon": "other/81.png",
-    "Name": "Verschrompelde stronk",
-    "Group": "Organische decoratie",
-    "Description": "Deze oude stronk is afkomstig uit een kolonie van gekloonde bomen, die naar schatting meer dan honderd millennia hebben geleefd. De bast geeft een aangename mosgeur af.\n\nBiedt mogelijkheden voor de inrichting van tuinen voor basissen.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other82",
-    "Icon": "other/82.png",
-    "Name": "Lemen hut",
-    "Group": "Organische decoratie",
-    "Description": "Deze eenvoudige lemen hut is gemodelleerd naar een mysterieus bouwwerk dat is ontdekt in de mist van de planeet Saxm A13. Vergelijkbare constructies zijn overal in het universum aangetroffen. Hun herkomst is nog niet bewezen.\n\nBiedt mogelijkheden voor de inrichting van tuinen voor basissen.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other83",
-    "Icon": "other/83.png",
-    "Name": "Chitineuze kooi",
-    "Group": "Organische decoratie",
-    "Description": "Een proteïneformatie van onbekende oorsprong, gerepliceerd aan boord van de anomalie in de ruimte. De skeletstructuur kan luchtbellen vasthouden, wat zorgt voor iets hogere of lagere temperaturen in het midden van de kooi.\n\nBiedt mogelijkheden voor de inrichting van tuinen voor basissen.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other84",
-    "Icon": "other/84.png",
-    "Name": "Protearad",
-    "Group": "Organische decoratie",
-    "Description": "Het is lastig om te bepalen of deze ongewone levensvorm met zijn opvallende rad van fotofoorklieren tot de flora of de fauna behoort. De dikke stengels met doornen beschermen de smakelijke klieren tegen roofdieren.\n\nBiedt mogelijkheden voor de inrichting van tuinen voor basissen.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other85",
-    "Icon": "other/85.png",
-    "Name": "Waakzame taro",
-    "Group": "Organische decoratie",
-    "Description": "De oogachtige uitsteeksels op dit bizarre organisme kunnen zowel licht verwerken als eenvoudige berekeningen uitvoeren, hoewel het niet duidelijk is waar ze naar kijken.\n\nBiedt mogelijkheden voor de inrichting van tuinen voor basissen.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other86",
-    "Icon": "other/86.png",
-    "Name": "Leeg omhulsel",
-    "Group": "Organische decoratie",
-    "Description": "Deze eierschaal fluistert nog altijd een zwak lied, alsof hij van grote afstand is verbonden met een koor.\n\nBiedt mogelijkheden voor de inrichting van tuinen voor basissen.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other87",
-    "Icon": "other/87.png",
-    "Name": "Plaatstam",
-    "Group": "Organische decoratie",
-    "Description": "Het brede, plaatachtige blad van deze boom is zeer geschikt voor fotosynthese. In het wild kunnen deze bomen gigantisch groot worden. Deze inheemse soort wordt gekweekt voor de inrichting van woonomgevingen.\n\nBiedt mogelijkheden voor de inrichting van tuinen voor basissen.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other88",
-    "Icon": "other/88.png",
-    "Name": "Samengestelde bol",
-    "Group": "Organische decoratie",
-    "Description": "Deze vegetatieve structuur bevat veel antioxidanten, hoewel hij door de dikke schubbenlaag niet geschikt is voor de landbouw.\n\nBiedt mogelijkheden voor de inrichting van tuinen voor basissen.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 40
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other89",
     "Icon": "other/89.png",
     "Name": "Vaandel Alliantie van Galactische Reizigers",
@@ -2156,207 +1784,6 @@
     "ConsumableRewardTexts": [
       "Broed dit ei uit voor een nieuw gezelschapsdier!"
     ]
-  },
-  {
-    "Id": "other99",
-    "Icon": "other/99.png",
-    "Name": "Sticker Alliantie van Galactische Reizigers",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nDeze sticker van de Alliantie van Galactische Reizigers staat voor het belang van nomadische verkenning.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other100",
-    "Icon": "other/100.png",
-    "Name": "Sticker aminocentrum",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nDeze sticker van het aminocentrum staat voor de principes van gemeenschap, avontuur en ontdekking.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other101",
-    "Icon": "other/101.png",
-    "Name": "Sticker Café 42",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nDeze sticker van Café 42 staat voor vriendschap, plezier en goede vibes. Welkom in het café!",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other102",
-    "Icon": "other/102.png",
-    "Name": "Sticker Verenigde Federatie van Reizigers",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nDeze sticker staat voor de Verenigde Federatie van Reizigers. Documenteer, help, maak en communiceer.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other103",
-    "Icon": "other/103.png",
-    "Name": "Sticker van het Qitaniaanse rijk",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nDeze sticker van het Qitaniaanse rijk staat voor naastenliefde, vriendelijkheid, vrede en redelijkheid.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other104",
-    "Icon": "other/104.png",
-    "Name": "Drievoudig vuurwerk",
-    "Group": "Vuurwerkapparaat",
-    "Description": "Luxueus vuurwerk met een drievoudige kleurensymfonie. Ontsteek het en geniet van het spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>Bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
-    "BaseValueUnits": 60.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other105",
-    "Icon": "other/105.png",
-    "Name": "Tweevoudig chroomvuurwerk",
-    "Group": "Vuurwerkapparaat",
-    "Description": "Luxueus vuurwerk dat explodeert in sprankelende stukjes indium en cadmium. Ontsteek het en geniet van het spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>Bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
-    "BaseValueUnits": 60.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other106",
-    "Icon": "other/106.png",
-    "Name": "Wiel met Hirk-vuurwerk",
-    "Group": "Vuurwerkapparaat",
-    "Description": "Luxueus vuurwerk. Eenmaal geactiveerd draait dit pyrotechnische wonder rond in een betoverende spiraal. Ontsteek het en geniet van het spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>Bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
-    "BaseValueUnits": 60.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
   },
   {
     "Id": "other107",
@@ -2578,28 +2005,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other117",
-    "Icon": "building/350.png",
-    "Name": "Exopak-uitbreidingsunit",
-    "Group": "Upgrade-eenheid",
-    "Description": "Een geavanceerde, technologische overlevingsmodule waarmee je de <STELLAR>exopakopslag<> vergroot.\n\nVoorverpakte nano-expanders creëren gestabiliseerde subwarpgaten in het exopak, wat de <STELLAR>inventariscapaciteit<> vergroot. Voer deze verbetering uit bij de upgradeterminal voor het exopak aan boord van een <STELLAR>ruimtestation<>.",
-    "BaseValueUnits": 155000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other118",
     "Icon": "other/118.png",
     "Name": "Gestroomlijnde jetpack-unit",
@@ -2690,33 +2095,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other122",
-    "Icon": "other/122.png",
-    "Name": "Expeditiesticker Pionier",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nDit is een sticker met de gouden uitvoering van het iconische ruimteschip Alpha Vector, ter ere van de voltooiing van de eerste <STELLAR>expeditie<>, 'Pioniers'.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other123",
     "Icon": "other/123.png",
     "Name": "Expeditievaandel Pionier",
@@ -2758,102 +2136,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other125",
-    "Icon": "other/125.png",
-    "Name": "Blauw-rood Atlas-vuurwerk",
-    "Group": "Vuurwerkapparaat",
-    "Description": "Deze ademende vuurwerkversie van een Atlas-interface maakt gebruik van <TECHNOLOGY>indium<> en <FUEL>cadmium<>. Ontsteek het en geniet van het spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward",
-      "IsExpeditionSeason2Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other126",
-    "Icon": "other/126.png",
-    "Name": "Goud-blauw Atlas-vuurwerk",
-    "Group": "Vuurwerkapparaat",
-    "Description": "Deze ademende vuurwerkversie van een Atlas-interface maakt gebruik van <COMMODITY>goud<> en <TECHNOLOGY>indium<>. Ontsteek het en geniet van het spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward",
-      "IsExpeditionSeason2Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other127",
-    "Icon": "other/127.png",
-    "Name": "Rood-goud Atlas-vuurwerk",
-    "Group": "Vuurwerkapparaat",
-    "Description": "Deze ademende vuurwerkversie van een Atlas-interface maakt gebruik van <FUEL>cadmium<> en <COMMODITY>goud<>. Ontsteek het en geniet van het spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward",
-      "IsExpeditionSeason2Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other128",
-    "Icon": "other/128.png",
-    "Name": "Expeditievlag Pionier",
-    "Group": "Ontgrendelbare decoratie",
-    "Description": "Een exclusieve basisdecoratie.\nDeze grote <STELLAR>met goud omrande vlag<> bevat een afbeelding van het iconische ruimteschip Alpha Vector. Plaats de vlag in een bewoonbare basis ter ere van de voltooiing van de eerste <STELLAR>expeditie<>, 'Pioniers'.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason1Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 80
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -3225,49 +2507,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other147",
-    "Icon": "other/147.png",
-    "Name": "Mythebaken",
-    "Group": "Experimentele oproeptechnologie",
-    "Description": "Voortgekomen uit Nada's onderzoek naar ongebruikelijke patronen in de verhalen de <TRANS_TRA>Gek<>, <TRANS_EXP>Korvax<> en <TRANS_WAR>Vy'keen<>.\n\nHet baken zendt een <STELLAR>signaalecho<> uit, afgestemd op de <SPECIAL>historiografische flux<> die in kaart is gebracht door Nada's bevriende Reizigers.\n\nSpecialist Polo waagt zich niet aan voorspellingen over het resultaat van de uitzending.",
-    "BaseValueUnits": 80.0,
-    "CurrencyType": "Quicksilver",
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "Versterk historische echo's in de buurt"
-    ]
-  },
-  {
-    "Id": "other148",
-    "Icon": "other/148.png",
-    "Name": "Historiografische dosimeter",
-    "Group": "Persoonlijke werkelijkheidsfluxmonitor",
-    "Description": "Nada heeft een nieuw patroon gedetecteerd in de verhalen van de <TRANS_TRA>Gek<>, <TRANS_EXP>Korvax<> en <TRANS_WAR>Vy'keen<>.\n\nMet de dosimeter kun je de blootstelling aan de <SPECIAL>historiografische flux<> rond belangrijke artefactlocaties meten. Aan de hand van opnamen van ongebruikelijke historische veranderingen kan Nada het signaal traceren.\n\nHelp Nada en Polo met hun onderzoek door met dit apparaat <STELLAR>historische gegevens te versturen<> over locaties met buitenaardse artefacten.",
-    "BaseValueUnits": 3200.0,
-    "CurrencyType": "Credits",
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other149",
     "Icon": "other/52.png",
     "Name": "Titel: 'Afwijkend'",
@@ -3352,33 +2591,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other154",
-    "Icon": "other/154.png",
-    "Name": "Expeditiesticker Cartografen",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\n\nDeze sticker krijg je voor het succesvol documenteren en ontsnappen van de planeet.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -3780,452 +2992,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other173",
-    "Icon": "other/173.png",
-    "Name": "Sticker blauwe sterrenstaarder",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nOp deze sticker staat een ontdekkingsreiziger die naar de sterren staart onder een blauwe hemel.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other174",
-    "Icon": "other/174.png",
-    "Name": "Sticker rode draver",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nOp deze sticker staat een kolossaal, buitenaards beest dat door een roestkleurig landschap draaft.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other175",
-    "Icon": "other/175.png",
-    "Name": "Sticker geland schip",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nOp deze sticker staat een geland ruimteschip dat wacht op de terugkeer van zijn piloot.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other176",
-    "Icon": "other/176.png",
-    "Name": "Sticker paars centrum sterrenstelsel",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nOp deze sticker staan twee ruimteschepen die naar het centrum van een sterrenstelsel vliegen.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other177",
-    "Icon": "other/177.png",
-    "Name": "Sticker verloren bathysfeer",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nOp deze sticker staat een legendarisch, spookachtig duikmasker.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other178",
-    "Icon": "other/178.png",
-    "Name": "Sticker anomalie in de ruimte",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nOp deze sticker staat een ruimteschip dat langs het vreemde thuis van Nada en Polo raast.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other179",
-    "Icon": "other/179.png",
-    "Name": "Volledig zeil",
-    "Group": "Decoratie",
-    "Description": "Dit volledige zeil is een replica van de zeilen van de oude handelsschepen van de Gek. Het zorgt voor een levendige nautische sfeer in huis.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other180",
-    "Icon": "other/180.png",
-    "Name": "Reeks zeilen",
-    "Group": "Decoratie",
-    "Description": "Deze reeks zeilen zijn replica's van de zeilen van de oude handelsschepen van de Gek. Ze zorgen voor een levendige nautische sfeer in huis.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other181",
-    "Icon": "other/181.png",
-    "Name": "Asymmetrische zeilen",
-    "Group": "Decoratie",
-    "Description": "Deze asymmetrische zeilen zijn replica's van de zeilen van de oude handelsschepen van de Gek. Ze zorgen voor een levendige nautische sfeer in huis.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other182",
-    "Icon": "other/182.png",
-    "Name": "Canvas zeil",
-    "Group": "Decoratie",
-    "Description": "Dit canvas halfzeil is een replica van de zeilen van de oude handelsschepen van de Gek. Het zorgt voor een levendige nautische sfeer in huis.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other183",
-    "Icon": "other/183.png",
-    "Name": "Poster met reiziger in zwart en goud",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve, zelfklevende, kreukvrije wandversiering.\nEen weelderige zwart-gouden poster waarop een Reiziger is afgebeeld als Apollo.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other184",
-    "Icon": "other/184.png",
-    "Name": "Poster met anomalie-huis",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve, zelfklevende, kreukvrije wandversiering.\nEen felgekleurde poster van een draadframeafbeelding van de anomalie in de ruimte.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other185",
-    "Icon": "other/185.png",
-    "Name": "Poster met melk?",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve, zelfklevende, kreukvrije wandversiering.\nEen poster met daarop een heerlijk, romig glas warme protomelk.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign3Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other186",
-    "Icon": "other/186.png",
-    "Name": "Kronkelend manuscript",
-    "Group": "Document van sekte",
-    "Description": "Een doorzichtig vel <STELLAR>worm-velijn<>, beschreven door een fanaticus. Het kronkelt als je het aanraakt.\n\n'De kinderen merkten ze als eersten op.\nEen bonzend en donderend geluid, diep onder het zand.\nDe eerste worm sprong door de lucht als een zwarte bliksemschicht. \nDe ene worm na de andere verrees uit de woestijn. Ze migreerden.\nElk stormseizoen hopen we dat we worden uitverkoren. We gaan in de woestijn in lange rijen staan, met onze armen naar de lucht geheven.\nIedereen mag de muil in.\nVoor de grote wormen zijn we allemaal gelijk.'",
-    "BaseValueUnits": 1616.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "4D2957",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other188",
-    "Icon": "other/188.png",
-    "Name": "VLEESACHTIG TOUW",
-    "Group": "Intestinaal fragment",
-    "Description": "De opgerolde overblijfselen van het <SPECIAL>spijsverteringskanaal<> van een hongerige tentakel. Hoewel de vlezige wanden nog steeds stuiptrekkingen vertonen, kunnen er met geen mogelijkheid nieuwe tentakels uit groeien.\n\nDit soort bijzonder slachtafval wordt zelden verhandeld op de galactische markt en is dus <STELLAR>zeer waardevol<>.",
-    "BaseValueUnits": 16016.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "4D2957",
-    "Usages": [
-      "HasRefinedToCreate",
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other189",
-    "Icon": "other/189.png",
-    "Name": "Walgelijke smurrie",
-    "Group": "Hongerig embryo",
-    "Description": "Het kwetsbare embryo van een <SPECIAL>hongerig tentakel<>, nog druipend van de slijmboter. Het kreunt en deinst terug als je het aanraakt.\n\nKan worden gewonnen uit embryonale blazen met behulp van een <TECHNOLOGY>viscerale synthesizer<>.",
-    "BaseValueUnits": 16.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "CCCCCC",
-    "Usages": [
-      "HasRefinedToCreate",
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other190",
-    "Icon": "other/190.png",
-    "Name": "Vleeswerper",
-    "Group": "Vuurwerkapparaat",
-    "Description": "Luxueus vuurwerk. Dit organisch siervuurwerk schiet de lucht in en spettert uiteen in een brij van slijm, plasma en wormen. Ontsteek het voor een weerzinwekkend spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
-    "BaseValueUnits": 50.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "262626",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other191",
     "Icon": "other/191.png",
     "Name": "Vleeswerperpakket",
@@ -4266,33 +3032,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other193",
-    "Icon": "other/193.png",
-    "Name": "Expeditiesticker Verschijning",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\n\nDeze sticker krijg je na de voltooiing van de expeditie <STELLAR>Verschijning<>.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -4360,33 +3099,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other197",
-    "Icon": "other/197.png",
-    "Name": "Titanische trofee",
-    "Group": "Sierschedel",
-    "Description": "Een exclusieve basisdecoratie.\n\nDeze schedel met veel tanden is van een groot pootloos gewerveld dier, de neef van de Titan-worm. De kaken zijn krachtig genoeg om een multitool en de botten van de meeste wezens te verbrijzelen.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 100
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -4703,33 +3415,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other213",
-    "Icon": "other/213.png",
-    "Name": "Expeditiesticker Exobiologie",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\n\nDeze sticker herinnert aan de voltooiing van de expeditie <STELLAR>Exobiologie<> en is een eerbetoon aan het vreedzaam samenleven van reizigers met de talloze diersoorten in het universum.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other214",
     "Icon": "other/214.png",
     "Name": "Expeditievaandel Exobiologie",
@@ -4765,29 +3450,6 @@
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
       "IsExpeditionSeason5Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other216",
-    "Icon": "other/216.png",
-    "Name": "Vals paspoort",
-    "Group": "Overschreven digitaal rapport",
-    "Description": "Een vals <TECHNOLOGY>registratiedocument van het ruimteschip<>. Aan deze digitale handtekening zijn gegarandeerd geen eerdere misdaden gekoppeld.\n\nKan worden gebruikt om een slechte <STELLAR>reputatie bij een factie<> te resetten bij de <TECHNOLOGY>stationskern<>.",
-    "BaseValueUnits": 256000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward",
-      "IsExpeditionSeason7Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4875,41 +3537,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other220",
-    "Icon": "other/220.png",
-    "Name": "Piratenkaart",
-    "Group": "Illegale geografische gegevens",
-    "Description": "Herstelde <COMMODITY>coördinaten van een schat<>, gevonden bij slachtoffers van de piratenbende <SPECIAL>de Verwoesters<>.",
-    "BaseValueUnits": 888.0,
-    "CurrencyType": "Credits",
-    "Colour": "4D2957",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "other217",
-        "Quantity": 1
-      },
-      {
-        "Id": "other218",
-        "Quantity": 1
-      },
-      {
-        "Id": "other219",
-        "Quantity": 1
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "Gegevens converteren naar navigatiemarkering exopak"
-    ]
-  },
-  {
     "Id": "other221",
     "Icon": "other/221.png",
     "Name": "Baken trefpunt",
@@ -4952,176 +3579,6 @@
     "ConsumableRewardTexts": [
       "Accepteer de uitnodiging van de Stem van de Vrijheid"
     ]
-  },
-  {
-    "Id": "other223",
-    "Icon": "other/223.png",
-    "Name": "Bloedzout",
-    "Group": "Gesmokkelde goederen",
-    "Description": "Potten met duistere, stinkende kristallen. Deze organische zouten worden geproduceerd in kleverige verdampingsvallen en gebruikt bij de vervaardiging van illegale feromonen.\n\nDe aankoop is <SPECIAL>illegaal<> bij vrijwel alle galactische handelsterminals. Er is wel regelmatig voorraad in <FUEL>stelsels van bandieten<>.\n\nHet verkopen van verboden goederen in gereguleerde gebieden kan <TRADEABLE>zeer winstgevend<> zijn.",
-    "BaseValueUnits": 2000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other224",
-    "Icon": "other/224.png",
-    "Name": "Gestolen DNA-monsters",
-    "Group": "Gesmokkelde goederen",
-    "Description": "Verzegelde flesjes met ongeregistreerde DNA-monsters, zonder de gangbare bioveiligheidsmechanismen die illegale genetische manipulatie voorkomen.\n\nDe aankoop is <SPECIAL>illegaal<> bij vrijwel alle galactische handelsterminals. Er is wel regelmatig voorraad in <FUEL>stelsels van bandieten<>.\n\nHet verkopen van verboden goederen in gereguleerde gebieden kan <TRADEABLE>zeer winstgevend<> zijn.",
-    "BaseValueUnits": 9000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsEggIngredient",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other225",
-    "Icon": "other/225.png",
-    "Name": "Maanether",
-    "Group": "Gesmokkelde goederen",
-    "Description": "Een vat met zeer vluchtige vloeistof. De dampen zijn zeer brandbaar en werken als een krachtig kalmerend middel.\n\nDe aankoop is <SPECIAL>illegaal<> bij vrijwel alle galactische handelsterminals. Er is wel regelmatig voorraad in <FUEL>stelsels van bandieten<>.\n\nHet verkopen van verboden goederen in gereguleerde gebieden kan <TRADEABLE>zeer winstgevend<> zijn.",
-    "BaseValueUnits": 18000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other226",
-    "Icon": "other/226.png",
-    "Name": "Prismatische veren",
-    "Group": "Gesmokkelde goederen",
-    "Description": "Een bundel adembenemend mooie veren in vacuümverpakking. Het dier dat zijn leven gaf voor dit bonte amulet is al lang geleden uitgestorven.\n\nDe aankoop is <SPECIAL>illegaal<> bij vrijwel alle galactische handelsterminals. Er is wel regelmatig voorraad in <FUEL>stelsels van bandieten<>.\n\nHet verkopen van verboden goederen in gereguleerde gebieden kan <TRADEABLE>zeer winstgevend<> zijn.",
-    "BaseValueUnits": 32000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other227",
-    "Icon": "other/227.png",
-    "Name": "GrahGrah",
-    "Group": "Gesmokkelde goederen",
-    "Description": "Een fles van het inmiddels verboden strijdgas van de Vy'keen. Dit werd vroeger ingeademd op de avond voor een veldslag.\n\nDe aankoop is <SPECIAL>illegaal<> bij vrijwel alle galactische handelsterminals. Er is wel regelmatig voorraad in <FUEL>stelsels van bandieten<>.\n\nHet verkopen van verboden goederen in gereguleerde gebieden kan <TRADEABLE>zeer winstgevend<> zijn.",
-    "BaseValueUnits": 58000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other228",
-    "Icon": "other/228.png",
-    "Name": "Imitatiecircuits",
-    "Group": "Gesmokkelde goederen",
-    "Description": "Deze ongelicenseerde circuits zijn gemaakt van buitgemaakte stationskernen. Ze worden gebruikt in allerlei technologieën voor de zwarte en grijze markt.\n\nDe aankoop is <SPECIAL>illegaal<> bij vrijwel alle galactische handelsterminals. Er is wel regelmatig voorraad in <FUEL>stelsels van bandieten<>.\n\nHet verkopen van verboden goederen in gereguleerde gebieden kan <TRADEABLE>zeer winstgevend<> zijn.",
-    "BaseValueUnits": 68000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasUsedToCraft",
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other229",
-    "Icon": "other/229.png",
-    "Name": "Verboden wapens",
-    "Group": "Gesmokkelde goederen",
-    "Description": "Deze krachtige wapens zijn gemaakt van achtergebleven onderdelen van gesneuvelde Sentinel-soldaten. Bandieten in het hele sterrenstelsel zweren erbij.\n\nDe aankoop is <SPECIAL>illegaal<> bij vrijwel alle galactische handelsterminals. Er is wel regelmatig voorraad in <FUEL>stelsels van bandieten<>.\n\nHet verkopen van verboden goederen in gereguleerde gebieden kan <TRADEABLE>zeer winstgevend<> zijn.",
-    "BaseValueUnits": 83000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other230",
-    "Icon": "other/230.png",
-    "Name": "Relikwieën van Eerstgeborenen",
-    "Group": "Gesmokkelde goederen",
-    "Description": "Relikwieën uit het gevallen Gek-rijk, verketterd en verboden door alle grote beschavingen in het sterrenstelsel.\n\nDe aankoop is <SPECIAL>illegaal<> bij vrijwel alle galactische handelsterminals. Er is wel regelmatig voorraad in <FUEL>stelsels van bandieten<>.\n\nHet verkopen van verboden goederen in gereguleerde gebieden kan <TRADEABLE>zeer winstgevend<> zijn.",
-    "BaseValueUnits": 98000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 25.0,
-    "Colour": "383838",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
   },
   {
     "Id": "other231",
@@ -5167,249 +3624,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other233",
-    "Icon": "other/233.png",
-    "Name": "Poster van gruwelkapitein Fahng",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve, zelfklevende, kreukvrije wandversiering.\nVrijwel alle Vy'keen kennen gruwelkapitein Fahng en zijn bloedstollende avonturen. Het is niet duidelijk of hij echt heeft bestaan of dat het verhaal is verzonnen om ongehoorzame welpen angst aan te jagen.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other234",
-    "Icon": "other/234.png",
-    "Name": "Poster van bandiet",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve, zelfklevende, kreukvrije wandversiering.\nEen rebels eerbetoon aan piraten, voortvluchtigen en het verzet tegen de Sentinel-wet.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other235",
-    "Icon": "other/235.png",
-    "Name": "Poster van Resbur XIII",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve, zelfklevende, kreukvrije wandversiering.\nOp deze anarchistische poster staat een planeet die is bezet door beruchte piraten.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other236",
-    "Icon": "other/236.png",
-    "Name": "Schedelvlag",
-    "Group": "Exclusieve vlag",
-    "Description": "De felrode schedel op deze fluweelachtige vlag dient als waarschuwing voor vijanden.\n\nEen exclusieve basisdecoratie.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other237",
-    "Icon": "other/237.png",
-    "Name": "Eenheidsvlag",
-    "Group": "Exclusieve vlag",
-    "Description": "Een standaarddesign dat gezamenlijk door verschillende intergalactische gildes is ontworpen.\n\nEen exclusieve basisdecoratie.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other238",
-    "Icon": "other/238.png",
-    "Name": "Heraldische vlag",
-    "Group": "Exclusieve vlag",
-    "Description": "Het subtiele gouden borduurwerk op deze vlag maakt elke bewoonbare basis direct een stuk stijlvoller en verfijnder.\n\nEen exclusieve basisdecoratie.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other239",
-    "Icon": "other/239.png",
-    "Name": "Ruimtebaanvlag",
-    "Group": "Exclusieve vlag",
-    "Description": "Een abstracte weergave van planetaire omlopen onder een waakzaam oog, gemaakt van opvallende rode en grijze stoffen.\n\nEen exclusieve basisdecoratie.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other240",
-    "Icon": "other/240.png",
-    "Name": "Viridiaanse vlag",
-    "Group": "Exclusieve vlag",
-    "Description": "Deze vlag met zijn contrasterende groene en paarse ontwerp is geïnspireerd op mensen die op zoek zijn naar groene sterrenstelsels.\n\nEen exclusieve basisdecoratie.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other241",
-    "Icon": "other/241.png",
-    "Name": "Eigenzinnige kubus",
-    "Group": "Zwevende primitieve levensvorm",
-    "Description": "Een exclusieve basisdecoratie.\n\nDeze kubusvormige levensvorm kwam vanuit een andere realiteit terecht in een ruimtestation, waar hij werd gevangen door een rondreizende handelaar. Biedt rustig gezelschap bij herplaatsing in een bewoonbare basis.",
-    "BaseValueUnits": 500.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw2",
-        "Quantity": 100
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other242",
     "Icon": "other/52.png",
     "Name": "Titel: 'Bedwinger van de Verwoesters'",
@@ -5428,33 +3642,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other243",
-    "Icon": "other/243.png",
-    "Name": "Expeditiesticker Verwoesters",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\n\nDeze sticker krijg je na de voltooiing van de expeditie <STELLAR>De Verwoesters<>, het glorieuze opstrijken van onrechtmatig verkregen winst en de ontdekking van een piratengeheim.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -5829,222 +4016,6 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other261",
-    "Icon": "other/261.png",
-    "Name": "Sticker wormenjacht I",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nOp deze <SPECIAL>vervloekte<> sticker staat de machtige <STELLAR>Titan-worm<>.\n\n'De wormheer torent hoog boven de stoffige aarde uit. Zijn vlees vult de lucht.'",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other262",
-    "Icon": "other/262.png",
-    "Name": "Sticker wormenjacht II",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nOp deze <SPECIAL>vervloekte<> sticker staat de machtige <STELLAR>Titan-worm<>.\n\n'De aderen van de Atlas waren verschenen.'",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other263",
-    "Icon": "other/263.png",
-    "Name": "Sticker wormenjacht III",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nOp deze <SPECIAL>vervloekte<> sticker staat de machtige <STELLAR>Titan-worm<>.\n\n'De extase van onze consumptie is onbeschrijfelijk.'",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other264",
-    "Icon": "other/264.png",
-    "Name": "Sticker wormenjacht IV",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nOp deze <SPECIAL>vervloekte<> sticker staat de machtige <STELLAR>Titan-worm<>.\n\n'We vallen als hij slikt, maar grijpen de gladde muren zo goed mogelijk vast.'",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other265",
-    "Icon": "other/265.png",
-    "Name": "Sticker wormenjacht V",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\nOp deze <SPECIAL>vervloekte<> sticker staat de machtige <STELLAR>Titan-worm<>.\n\n'Mijn soortgenoten zijn herboren, verrezen als verse tentakels uit het gezegende stof.'",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other266",
-    "Icon": "other/266.png",
-    "Name": "Poster van kosmische vlucht",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve, zelfklevende, kreukvrije wandversiering.\nDeze poster laat zien hoe leuk het is om op te stijgen in een ruimteschip.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other267",
-    "Icon": "other/267.png",
-    "Name": "Poster van ruimtebaan",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve, zelfklevende, kreukvrije wandversiering.\nOp deze poster staat een ruimtestation dat opdoemt boven een peinzende ontdekkingsreiziger.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other268",
-    "Icon": "other/268.png",
-    "Name": "Poster van scheepscatalogus",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve, zelfklevende, kreukvrije wandversiering.\nDeze poster bevat allerlei silhouetten van ruimteschepen.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Quicksilver",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 25
-      }
-    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -6513,33 +4484,6 @@
     ]
   },
   {
-    "Id": "other287",
-    "Icon": "other/287.png",
-    "Name": "Expeditiesticker Leviathan",
-    "Group": "Decoratie",
-    "Description": "Een exclusieve sticker om je basis wat te verfraaien.\n\nDeze sticker krijg je na de voltooiing van de expeditie <STELLAR>Leviathan<> en het opheffen van een tientallen jaren oude vloek.",
-    "BaseValueUnits": 400.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
-    "Colour": "2C7C9F",
-    "Usages": [
-      "HasDevProperties",
-      "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw1",
-        "Quantity": 20
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
     "Id": "other288",
     "Icon": "other/288.png",
     "Name": "Expeditievaandel Leviathan",
@@ -6562,120 +4506,6 @@
     "ConsumableRewardTexts": []
   },
   {
-    "Id": "other289",
-    "Icon": "products/93.png",
-    "Name": "Broedblaas",
-    "Group": "Opslagblaas intelligent schip",
-    "Description": "Een <SPECIAL>extra opslagknobbel<> voor <TECHNOLOGY>intelligente<> ruimteschepen. Bij het uitkomen wordt de parasiet in deze blaas op het schip geënt, waarbij het gebruik van zijn holle ingewanden wordt uitgewisseld voor essentiële voedingsstoffen van de gastheer.\n\nGebruik <VAL_ON><IMG>FE_ALT1<><> om de groei te activeren en het <VAL_ON>broedproces<> te starten.",
-    "BaseValueUnits": 125000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "Evolueer extra opslagruimte"
-    ]
-  },
-  {
-    "Id": "other290",
-    "Icon": "products/91.png",
-    "Name": "Psychonisch ei",
-    "Group": "Pulserende dooierblaas",
-    "Description": "Een kronkelende blaas met genetisch vloeistof, ontworpen om de creatie van nieuwe <TECHNOLOGY>bio-geïnfuseerde technologie<> voor een <TECHNOLOGY>intelligent ruimteschip<> te bevorderen.\n\nHet embryo zal uitgroeien tot een <TECHNOLOGY>biotechnologische upgrade<>. <STELLAR>Start de biogenese<> met <VAL_ON><IMG>FE_ALT1<><>.",
-    "BaseValueUnits": 126000.0,
-    "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
-    "Colour": "1A2733",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "Groeit uit tot nieuwe intelligente technologie"
-    ]
-  },
-  {
-    "Id": "other291",
-    "Icon": "other/291.png",
-    "Name": "Droomantenne",
-    "Group": "Toegangsapparaat tot het onderbewustzijn",
-    "Description": "Een signaalontvanger en -versterker, afgestemd op de golflengte van het onbewuste. Het heeft alle kleuren tegelijk en splitst het omringende licht op in een glinsterende regenboog.\n\n<FUEL>Waarschuwing:<> het dragen van deze antenne in de verre ruimte kan de aandacht trekken van <SPECIAL>kosmische megafauna<>.",
-    "BaseValueUnits": 16.0,
-    "CurrencyType": "Credits",
-    "Colour": "311A49",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "prod58",
-        "Quantity": 3
-      },
-      {
-        "Id": "prod116",
-        "Quantity": 1
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": []
-  },
-  {
-    "Id": "other292",
-    "Icon": "other/278.png",
-    "Name": "Vrachtschipcoördinaatzender",
-    "Group": "Een laatste link met thuis",
-    "Description": "Een geïmproviseerd apparaat gemaakt van geborgen elektronische componenten die jarenlang in diepe opslag werden bewaard. Met deze wirwar van draden ga je proberen contact te maken met de laatst bekende overblijfselen van de thuiswereld van het vrachtschip.\n\nSelecteer het apparaat en selecteer Uitzenden (<IMG>FE_ALT1<>) om te zoeken.",
-    "BaseValueUnits": 16.0,
-    "CurrencyType": "Credits",
-    "Colour": "311A49",
-    "Usages": [
-      "HasDevProperties",
-      "IsConsumable",
-      "IsAddedInTrackedUpdate"
-    ],
-    "BlueprintCost": 1,
-    "BlueprintCostType": "None",
-    "BlueprintSource": 0,
-    "RequiredItems": [
-      {
-        "Id": "raw10",
-        "Quantity": 60
-      },
-      {
-        "Id": "raw33",
-        "Quantity": 20
-      },
-      {
-        "Id": "prod113",
-        "Quantity": 1
-      }
-    ],
-    "StatBonuses": [],
-    "ConsumableRewardTexts": [
-      "Probeer te contact maken"
-    ]
-  },
-  {
     "Id": "other293",
     "Icon": "other/293.png",
     "Name": "Zwaar vrachtschipspoor",
@@ -6687,7 +4517,8 @@
     "Colour": "2C7C9F",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6708,7 +4539,8 @@
     "Colour": "008951",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6729,7 +4561,8 @@
     "Colour": "008951",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6750,7 +4583,8 @@
     "Colour": "4D2987",
     "Usages": [
       "HasDevProperties",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
