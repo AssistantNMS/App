@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/constants/AppImage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -114,13 +115,27 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
       widgets.add(customDivider());
     }
 
+    if (season.gameModeType != null && season.gameModeType != 'Normal') {
+      widgets.add(emptySpace1x());
+      widgets.add(Card(
+        child: ListTile(
+          leading: localImage(
+            AppImage.base + 'special/${season.gameModeType}.png',
+          ),
+          title: Text(season.gameMode),
+        ),
+        margin: const EdgeInsets.symmetric(horizontal: 16),
+      ));
+      widgets.add(emptySpace1x());
+    }
+
     if (season.captainSteveYoutubePlaylist != null &&
         season.captainSteveYoutubePlaylist.length > 5) {
       widgets.add(emptySpace1x());
       String seasNum = seasonId
           .replaceAll('seas-', '') //
           .replaceAll('-redux', '');
-      widgets.add(flatCard(
+      widgets.add(Card(
         child: captainSteveYoutubeVideoTile(
           storeContext,
           season.captainSteveYoutubePlaylist,
@@ -128,6 +143,7 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
               .fromKey(LocaleKey.walkthroughPlaylistExpeditionsSeasonNum)
               .replaceAll('{0}', seasNum),
         ),
+        margin: const EdgeInsets.symmetric(horizontal: 16),
       ));
       widgets.add(emptySpace1x());
     }

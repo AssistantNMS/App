@@ -18,6 +18,8 @@ class SeasonalExpeditionSeason {
     this.startDate,
     this.endDate,
     this.portalCode,
+    this.gameMode,
+    this.gameModeType,
     this.captainSteveYoutubePlaylist,
     this.phases,
     this.rewards,
@@ -30,6 +32,8 @@ class SeasonalExpeditionSeason {
   DateTime startDate;
   DateTime endDate;
   String portalCode;
+  String gameMode;
+  String gameModeType;
   String captainSteveYoutubePlaylist;
   List<SeasonalExpeditionPhase> phases;
   List<SeasonalExpeditionReward> rewards;
@@ -46,6 +50,8 @@ class SeasonalExpeditionSeason {
         startDate: readDateSafe(json, 'StartDate'),
         endDate: readDateSafe(json, 'EndDate'),
         portalCode: readStringSafe(json, 'PortalCode'),
+        gameMode: readStringSafe(json, 'GameMode'),
+        gameModeType: readStringSafe(json, 'GameModeType'),
         captainSteveYoutubePlaylist:
             readStringSafe(json, 'CaptainSteveYoutubePlaylist'),
         phases: readListSafe<SeasonalExpeditionPhase>(
