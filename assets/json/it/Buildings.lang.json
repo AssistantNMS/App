@@ -8177,7 +8177,7 @@
   {
     "Id": "build403",
     "Icon": "building/403.png",
-    "Name": "Gruppo di stoccaggio",
+    "Name": "Unità di stoccaggio",
     "Group": "Parte della base recuperata",
     "Description": "Una versatile unità di stoccaggio, recuperata dai resti di un mercantile alla deriva.",
     "BaseValueUnits": 250.0,
@@ -17024,8 +17024,8 @@
     "Id": "build862",
     "Icon": "building/862.png",
     "Name": "Dritto",
-    "Group": "Modulo mercantile principale",
-    "Description": "Questo corridoio pressurizzato si collega in modo intelligente alle stanze mercantili esistenti, unendo gli spazi abitabili presenti nelle grandi navi stellari.\n\nDopo averlo posizionato, questo pezzo flessibile di corridoio si espanderà e si contrarrà <STELLAR>automaticamente<> per <STELLAR>formare curve o intersezioni<>.",
+    "Group": "Modulo di cargo di base",
+    "Description": "Collega le stanze.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17053,8 +17053,8 @@
     "Id": "build863",
     "Icon": "building/863.png",
     "Name": "Intersezione a L",
-    "Group": "Modulo mercantile principale",
-    "Description": "Questo corridoio pressurizzato si collega in modo intelligente alle stanze mercantili esistenti, unendo gli spazi abitabili presenti nelle grandi navi stellari.\n\nDopo averlo posizionato, questo pezzo flessibile di corridoio si espanderà e si contrarrà <STELLAR>automaticamente<> per <STELLAR>formare curve o intersezioni<>.",
+    "Group": "Modulo di cargo di base",
+    "Description": "Collega le stanze.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17082,8 +17082,8 @@
     "Id": "build864",
     "Icon": "building/864.png",
     "Name": "Intersezione a T",
-    "Group": "Modulo mercantile principale",
-    "Description": "Questo corridoio pressurizzato si collega in modo intelligente alle stanze mercantili esistenti, unendo gli spazi abitabili presenti nelle grandi navi stellari.\n\nDopo averlo posizionato, questo pezzo flessibile di corridoio si espanderà e si contrarrà <STELLAR>automaticamente<> per <STELLAR>formare curve o intersezioni<>.",
+    "Group": "Modulo di cargo di base",
+    "Description": "Collega le stanze.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17111,7 +17111,7 @@
     "Id": "build865",
     "Icon": "building/865.png",
     "Name": "Corridoio mercantile in vetro",
-    "Group": "Modulo mercantile principale",
+    "Group": "Modulo di cargo di base",
     "Description": "Questo corridoio pressurizzato si collega in modo intelligente alle stanze mercantili esistenti, unendo gli spazi abitabili presenti nelle grandi navi stellari. Il soffitto in vetro a bassa espansione e resistente alle radiazioni regala una vista sullo spazio profondo.\n\nDopo averlo posizionato, questo pezzo flessibile si espanderà e si contrarrà <STELLAR>automaticamente<> per <STELLAR>formare curve o giunzioni<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -17139,9 +17139,9 @@
   {
     "Id": "build866",
     "Icon": "building/866.png",
-    "Name": "Modulo scala",
-    "Group": "Modulo mercantile principale",
-    "Description": "Una scala mercantile incorporata per il passaggio verticale tra i ponti mercantili.\n\nSi collega direttamente ai <TECHNOLOGY>corridoi<>.",
+    "Name": "Sala ladder",
+    "Group": "Modulo di cargo di base",
+    "Description": "Salire",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17155,7 +17155,7 @@
     "RequiredItems": [
       {
         "Id": "raw32",
-        "Quantity": 10
+        "Quantity": 30
       }
     ],
     "StatBonuses": [],
@@ -17165,8 +17165,8 @@
     "Id": "build867",
     "Icon": "building/867.png",
     "Name": "Piattaforma esterna",
-    "Group": "Modulo mercantile principale",
-    "Description": "Un ponte di osservazione non protetto. Consente di uscire dallo scafo del mercantile e di osservare direttamente l'immensità dello spazio.\n\nÈ necessario installare una <STELLAR>porta stagna<> per consentire l'accesso agli spazi esterni.",
+    "Group": "Modulo di cargo di base",
+    "Description": "Piattaforma esterna",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17190,7 +17190,7 @@
     "Id": "build868",
     "Icon": "building/868.png",
     "Name": "Pedana esterna",
-    "Group": "Modulo mercantile principale",
+    "Group": "Modulo di cargo di base",
     "Description": "Questa pedana esterna si collega in modo intelligente alle sale mercantili già presenti, creando un ponte all'esterno dello scafo delle grandi astronavi.\n\nÈ necessario installare una <STELLAR>porta stagna<> per consentire l'accesso agli spazi esterni.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -17214,9 +17214,9 @@
   {
     "Id": "build869",
     "Icon": "building/869.png",
-    "Name": "Stanza scanner",
+    "Name": "Scanner Room",
     "Group": "Esplorazione planetaria",
-    "Description": "Equipaggiamento mercantile integrato e avanzato. Quando viene usato, questo <TECHNOLOGY>scanner planetario<> sonda tutti i corpi celesti nel sistema solare locale. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nLune e pianeti scansionati vengono <STELLAR>scoperti<> e i sensori raccolgono dati di alto livello come condizioni meteorologiche e risorse disponibili.",
+    "Description": "Scanner Room",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17247,9 +17247,9 @@
   {
     "Id": "build870",
     "Icon": "building/870.png",
-    "Name": "Sala del commercio galattico",
-    "Group": "Modulo mercantile avanzato",
-    "Description": "Equipaggiamento mercantile integrato che fornisce un accesso locale istantaneo al <TECHNOLOGY>mercato galattico<> di risorse e beni preziosi.\n\nQuesto modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.",
+    "Name": "Modulo del negozio",
+    "Group": "Modulo di specializzazione",
+    "Description": "Compra le tue cose Vendi le tue cose.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17280,9 +17280,9 @@
   {
     "Id": "build871",
     "Icon": "building/871.png",
-    "Name": "Centro di comando della flotta",
+    "Name": "Sala comandi della flotta",
     "Group": "Terminale di gestione delle spedizioni",
-    "Description": "<TECHNOLOGY>Postazione di gestione della flotta<>. Questa postazione di comunicazione olografica avanzata è vitale per la gestione delle spedizioni della flotta dall'ammiraglia. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nPer gestire più di una spedizione contemporaneamente, sono necessarie <STELLAR>più postazioni<>.",
+    "Description": "Comanda la tua flotta.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17445,9 +17445,9 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "Sala tecnologica (vuota)",
-    "Group": "Modulo mercantile avanzato",
-    "Description": "Una camera spaziosa dall'aspetto tecnico per ampliare gli spazi abitabili all'interno di grandi astronavi.",
+    "Name": "Stanza a tema tecnologico",
+    "Group": "Modulo di specializzazione",
+    "Description": "Stanza a tema tecnologico",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17474,9 +17474,9 @@
   {
     "Id": "build877",
     "Icon": "building/877.png",
-    "Name": "Camera di coltivazione",
+    "Name": "Camera di pianta piccola",
     "Group": "Modulo agricolo",
-    "Description": "Una bio-camera a temperatura controllata. Un terreno ricco di sostanze nutritive fornisce le condizioni ideali per la coltivazione di colture agricole.\n\nQuesto modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.",
+    "Description": "Cresce le tue piante.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17507,9 +17507,9 @@
   {
     "Id": "build878",
     "Icon": "building/878.png",
-    "Name": "Doppia camera di coltivazione",
+    "Name": "Camera di pianta grande",
     "Group": "Modulo agricolo",
-    "Description": "Una bio-camera a temperatura controllata. Due terreni ricchi di sostanze nutritive forniscono le condizioni ideali per la coltivazione di colture agricole.\n\nQuesto modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.",
+    "Description": "Cresce le tue piante.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17541,7 +17541,7 @@
     "Id": "build879",
     "Icon": "building/879.png",
     "Name": "Stanza nutrimenti",
-    "Group": "Modulo mercantile avanzato",
+    "Group": "Modulo di specializzazione",
     "Description": "Un modulo <TECHNOLOGY>trasformatore di sostanze nutritive<> integrato in grado di raffinare gli ingredienti raccolti in prodotti alimentari commestibili. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nSi avvisa che il consumo dei prodotti generati è interamente a proprio rischio.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -17606,9 +17606,9 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "Stanza biologica (vuota)",
-    "Group": "Modulo mercantile avanzato",
-    "Description": "Questa spaziosa camera a serra filtra e ossigena l'aria in modo naturale e offre un piccolo rifugio verde all'interno del mercantile.",
+    "Name": "Stanza a tema bio",
+    "Group": "Modulo di specializzazione",
+    "Description": "Stanza a tema bio",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17635,9 +17635,9 @@
   {
     "Id": "build882",
     "Icon": "building/882.png",
-    "Name": "Stanza del raffinatore",
-    "Group": "Modulo mercantile avanzato",
-    "Description": "Equipaggiamento mercantile integrato fondamentale. Il <TECHNOLOGY>raffinatore del mercantile<> consente di trasformare <COMMODITY>tre<> sostanze diverse in materiali più potenti e avanzati.\n\nQuesto modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.",
+    "Name": "Modulo di raffinazione",
+    "Group": "Modulo di specializzazione",
+    "Description": "Rifinisce le tue cose.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17668,9 +17668,9 @@
   {
     "Id": "build883",
     "Icon": "building/883.png",
-    "Name": "Stanza dell'estrattore stellare",
-    "Group": "Modulo mercantile avanzato",
-    "Description": "Equipaggiamento mercantile integrato e avanzato. Raccoglie risorse direttamente dal mezzo interstellare tramite un complesso sistema di prese di aspirazione e tubi di condensazione. La sostanza raccolta <TECHNOLOGY>varia<> in base alla <TECHNOLOGY>classificazione stellare<> locale.\n\nQuesto modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.",
+    "Name": "Sala extractor",
+    "Group": "Modulo di specializzazione",
+    "Description": "Sala extractor",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17701,9 +17701,9 @@
   {
     "Id": "build884",
     "Icon": "building/884.png",
-    "Name": "Materializzatore orbitale di exoscafo",
+    "Name": "Modulo di espiatura orbitale",
     "Group": "Modulo mercantile a dispiegamento rapido",
-    "Description": "Equipaggiamento mercantile integrato e avanzato. La costruzione permette di richiamare qualsiasi exoscafo nello stesso sistema del mercantile. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nSi interfaccia con il <STELLAR>menu rapido dell'exotuta<> per un utilizzo più semplice.",
+    "Description": "Convoca il tuo exocraft.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17800,9 +17800,9 @@
   {
     "Id": "build887",
     "Icon": "building/887.png",
-    "Name": "Stanza di stoccaggio",
+    "Name": "Modulo di archiviazione",
     "Group": "Modulo mercantile personalizzato",
-    "Description": "Stiva ibrida ad alta capacità installabile nei mercantili interstellari. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nLa capacità di inventario si interfaccia direttamente con i <TECHNOLOGY>contenitori di stoccaggio<> planetari e il modulo può essere <STELLAR>rinominato<> per facilitarne l'identificazione.",
+    "Description": "Memorizza le tue cose.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17829,9 +17829,9 @@
   {
     "Id": "build888",
     "Icon": "building/888.png",
-    "Name": "Stanza di stoccaggio",
+    "Name": "Modulo di archiviazione",
     "Group": "Modulo mercantile personalizzato",
-    "Description": "Stiva ibrida ad alta capacità installabile nei mercantili interstellari. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nLa capacità di inventario si interfaccia direttamente con i <TECHNOLOGY>contenitori di stoccaggio<> planetari e il modulo può essere <STELLAR>rinominato<> per facilitarne l'identificazione.",
+    "Description": "Memorizza le tue cose.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17858,9 +17858,9 @@
   {
     "Id": "build889",
     "Icon": "building/889.png",
-    "Name": "Stanza di stoccaggio",
+    "Name": "Modulo di archiviazione",
     "Group": "Modulo mercantile personalizzato",
-    "Description": "Stiva ibrida ad alta capacità installabile nei mercantili interstellari. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nLa capacità di inventario si interfaccia direttamente con i <TECHNOLOGY>contenitori di stoccaggio<> planetari e il modulo può essere <STELLAR>rinominato<> per facilitarne l'identificazione.",
+    "Description": "Memorizza le tue cose.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17887,9 +17887,9 @@
   {
     "Id": "build890",
     "Icon": "building/890.png",
-    "Name": "Stanza di stoccaggio",
+    "Name": "Modulo di archiviazione",
     "Group": "Modulo mercantile personalizzato",
-    "Description": "Stiva ibrida ad alta capacità installabile nei mercantili interstellari. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nLa capacità di inventario si interfaccia direttamente con i <TECHNOLOGY>contenitori di stoccaggio<> planetari e il modulo può essere <STELLAR>rinominato<> per facilitarne l'identificazione.",
+    "Description": "Memorizza le tue cose.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17916,9 +17916,9 @@
   {
     "Id": "build891",
     "Icon": "building/891.png",
-    "Name": "Stanza di stoccaggio",
+    "Name": "Modulo di archiviazione",
     "Group": "Modulo mercantile personalizzato",
-    "Description": "Stiva ibrida ad alta capacità installabile nei mercantili interstellari. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nLa capacità di inventario si interfaccia direttamente con i <TECHNOLOGY>contenitori di stoccaggio<> planetari e il modulo può essere <STELLAR>rinominato<> per facilitarne l'identificazione.",
+    "Description": "Memorizza le tue cose.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17945,9 +17945,9 @@
   {
     "Id": "build892",
     "Icon": "building/892.png",
-    "Name": "Stanza di stoccaggio",
+    "Name": "Modulo di archiviazione",
     "Group": "Modulo mercantile personalizzato",
-    "Description": "Stiva ibrida ad alta capacità installabile nei mercantili interstellari. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nLa capacità di inventario si interfaccia direttamente con i <TECHNOLOGY>contenitori di stoccaggio<> planetari e il modulo può essere <STELLAR>rinominato<> per facilitarne l'identificazione.",
+    "Description": "Memorizza le tue cose.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17974,9 +17974,9 @@
   {
     "Id": "build893",
     "Icon": "building/893.png",
-    "Name": "Stanza di stoccaggio",
+    "Name": "Modulo di archiviazione",
     "Group": "Modulo mercantile personalizzato",
-    "Description": "Stiva ibrida ad alta capacità installabile nei mercantili interstellari. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nLa capacità di inventario si interfaccia direttamente con i <TECHNOLOGY>contenitori di stoccaggio<> planetari e il modulo può essere <STELLAR>rinominato<> per facilitarne l'identificazione.",
+    "Description": "Memorizza le tue cose.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18003,9 +18003,9 @@
   {
     "Id": "build894",
     "Icon": "building/894.png",
-    "Name": "Stanza di stoccaggio",
+    "Name": "Modulo di archiviazione",
     "Group": "Modulo mercantile personalizzato",
-    "Description": "Stiva ibrida ad alta capacità installabile nei mercantili interstellari. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nLa capacità di inventario si interfaccia direttamente con i <TECHNOLOGY>contenitori di stoccaggio<> planetari e il modulo può essere <STELLAR>rinominato<> per facilitarne l'identificazione.",
+    "Description": "Memorizza le tue cose.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18032,9 +18032,9 @@
   {
     "Id": "build895",
     "Icon": "building/895.png",
-    "Name": "Stanza di stoccaggio",
+    "Name": "Modulo di archiviazione",
     "Group": "Modulo mercantile personalizzato",
-    "Description": "Stiva ibrida ad alta capacità installabile nei mercantili interstellari. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nLa capacità di inventario si interfaccia direttamente con i <TECHNOLOGY>contenitori di stoccaggio<> planetari e il modulo può essere <STELLAR>rinominato<> per facilitarne l'identificazione.",
+    "Description": "Memorizza le tue cose.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18061,9 +18061,9 @@
   {
     "Id": "build896",
     "Icon": "building/896.png",
-    "Name": "Stanza di stoccaggio",
+    "Name": "Modulo di archiviazione",
     "Group": "Modulo mercantile personalizzato",
-    "Description": "Stiva ibrida ad alta capacità installabile nei mercantili interstellari. Questo modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.\n\nLa capacità di inventario si interfaccia direttamente con i <TECHNOLOGY>contenitori di stoccaggio<> planetari e il modulo può essere <STELLAR>rinominato<> per facilitarne l'identificazione.",
+    "Description": "Memorizza le tue cose.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,9 +18090,9 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "Sala industriale (vuota)",
-    "Group": "Modulo mercantile avanzato",
-    "Description": "Una camera spaziosa dall'aspetto industriale per ampliare gli spazi abitabili all'interno di grandi astronavi.",
+    "Name": "Stanza a tema industriale",
+    "Group": "Modulo di specializzazione",
+    "Description": "Stanza a tema industriale",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20624,9 +20624,9 @@
   {
     "Id": "build994",
     "Icon": "building/994.png",
-    "Name": "Finestra rinforzata",
-    "Group": "Modulo mercantile principale",
-    "Description": "Una lastra di vetro a dilatazione termica ridotta.\n\nPuò essere montata nello scafo del mercantile per godere della vista sullo spazio.",
+    "Name": "Finestra",
+    "Group": "Modulo di cargo di base",
+    "Description": "Facciamo la ricerca.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20653,9 +20653,9 @@
   {
     "Id": "build995",
     "Icon": "building/995.png",
-    "Name": "Porta stagna",
-    "Group": "Modulo mercantile principale",
-    "Description": "Una porta spessa e robusta.\n\nSigillata ermeticamente per l'installazione nello scafo del mercantile o tra corridoi interni e stanze.",
+    "Name": "Porte",
+    "Group": "Modulo di cargo di base",
+    "Description": "Andiamo fuori.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20669,7 +20669,91 @@
     "RequiredItems": [
       {
         "Id": "raw32",
-        "Quantity": 40
+        "Quantity": 30
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build996",
+    "Icon": "building/865.png",
+    "Name": "Dritto",
+    "Group": "Modulo di cargo di base",
+    "Description": "Collega le stanze.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 5
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 30
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build997",
+    "Icon": "building/997.png",
+    "Name": "Intersezione a L",
+    "Group": "Modulo di cargo di base",
+    "Description": "Collega le stanze.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 5
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 30
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build998",
+    "Icon": "building/998.png",
+    "Name": "Intersezione a T",
+    "Group": "Modulo di cargo di base",
+    "Description": "Collega le stanze.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 5
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 30
       }
     ],
     "StatBonuses": [],
