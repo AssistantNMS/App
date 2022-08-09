@@ -351,6 +351,7 @@ Future<ResultWithValue<List<InventorySlotWithGenericPageItem>>>
 
     results.add(InventorySlotWithGenericPageItem(
       pageItem: InventorySlotDetails.fromGenericPageItem(getByIdResult.value),
+      name: getByIdResult.value.name,
       quantity: slot.quantity,
     ));
   }
