@@ -20,7 +20,7 @@ steps:
 - script: |
     ls
   displayName: 'debug'
-  workingDirectory: $(Agent.BuildDirectory)/lib
+  workingDirectory: $(Agent.BuildDirectory)
 
 - task: FlutterInstall@0
   inputs:
