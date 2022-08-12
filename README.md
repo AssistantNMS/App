@@ -49,7 +49,7 @@ After 2 years of development and maintenance, the app was made open source so th
 
   [![PlayStore](https://github.com/AssistantNMS/.github/blob/main/img/PlayStore.png?raw=true)][googlePlayStore]
   [![AppStore](https://github.com/AssistantNMS/.github/blob/main/img/AppStore.png?raw=true)][appleAppStore]
-  [![PWA](https://github.com/AssistantNMS/.github/blob/main/img/pwa.png?raw=true)][assistantnmsWebapp]
+  [![PWA](https://github.com/AssistantNMS/.github/raw/main/img/webVersion2.png?raw=true)][assistantnmsWebapp]
   [![WindowsStore](https://github.com/AssistantNMS/.github/blob/main/img/WindowsStore.png?raw=true)][windowsStore]
   
 </div>
