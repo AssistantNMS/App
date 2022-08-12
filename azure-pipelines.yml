@@ -24,14 +24,14 @@ steps:
     version: 'latest'
 
 - script: |
-    $(DartToolPath)/dart $(build.artifactstagingdirectory)\scripts\versionNumScript.dart
-    $(DartToolPath)/dart $(build.artifactstagingdirectory)\scripts\pubspecScript.dart
+    $(DartToolPath)/dart $(build.artifactstagingdirectory)/scripts/versionNumScript.dart
+    $(DartToolPath)/dart $(build.artifactstagingdirectory)/scripts/pubspecScript.dart
   displayName: 'Run dart scripts'
 
 - script: |
     ls
   displayName: 'debug'
-  workingDirectory: $(build.artifactstagingdirectory)\lib
+  workingDirectory: $(build.artifactstagingdirectory)/lib
 
 - script: |
     flutter pub run msix:create
