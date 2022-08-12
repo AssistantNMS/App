@@ -4,46 +4,41 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+  - main
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: |
-    echo "const remoteConfigsApiKey = '$(remoteConfigsApiKey)';" > $(Build.Repository.LocalPath)/lib/env.dart
-    echo "const patreonOAuthClientId = '$(patreonOAuthClientId)';" >> $(Build.Repository.LocalPath)/lib/env.dart
-    echo "const identityName = '$(msixIdentityName)';" >> $(Build.Repository.LocalPath)/lib/env.dart
-    echo "const publisher = '$(msixPublisher)';" >> $(Build.Repository.LocalPath)/lib/env.dart
-  displayName: 'Setup env.dart file'
+  - script: |
+      echo "const remoteConfigsApiKey = '$(remoteConfigsApiKey)';" > $(Build.Repository.LocalPath)/lib/env.dart
+      echo "const patreonOAuthClientId = '$(patreonOAuthClientId)';" >> $(Build.Repository.LocalPath)/lib/env.dart
+      echo "const identityName = '$(msixIdentityName)';" >> $(Build.Repository.LocalPath)/lib/env.dart
+      echo "const publisher = '$(msixPublisher)';" >> $(Build.Repository.LocalPath)/lib/env.dart
+    displayName: 'Setup env.dart file'
 
-- task: FlutterInstall@0
-  inputs:
-    mode: 'auto'
-    channel: 'stable'
-    version: 'latest'
+  - task: FlutterInstall@0
+    inputs:
+      mode: 'auto'
+      channel: 'stable'
+      version: 'latest'
 
-- task: FlutterCommand@0
-  inputs:
-    projectDirectory: '$(Build.Repository.LocalPath)'
-    arguments: 'pub get'
+  - task: FlutterCommand@0
+    inputs:
+      projectDirectory: '$(Build.Repository.LocalPath)'
+      arguments: 'pub get'
 
-- script: |
-    $(DartToolPath)/dart $(Build.Repository.LocalPath)/scripts/versionNumScript.dart
-    $(DartToolPath)/dart $(Build.Repository.LocalPath)/scripts/pubspecScript.dart
-  displayName: 'Run dart scripts'
+  - script: |
+      $(DartToolPath)/dart $(Build.Repository.LocalPath)/scripts/versionNumScript.dart
+      $(DartToolPath)/dart $(Build.Repository.LocalPath)/scripts/pubspecScript.dart
+    displayName: 'Run dart scripts'
 
-- script: |
-    ls
-  displayName: 'debug'
-  workingDirectory: $(Build.Repository.LocalPath)/lib
+  - script: |
+      $(FlutterToolPath)/flutter pub run msix:create
+    displayName: 'Create Windows installer'
 
-- script: |
-    flutter pub run msix:create
-  displayName: 'Create Windows installer'
-
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: './build/windows/runner/Release/assistantnms_app.msix'
-    artifact: 'assistantnms_app_installer'
-    publishLocation: 'pipeline'
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.Repository.LocalPath)/build/windows/runner/Release/assistantnms_app.msix'
+      artifact: 'assistantnms_app_installer'
+      publishLocation: 'pipeline'
