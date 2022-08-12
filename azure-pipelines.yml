@@ -16,21 +16,17 @@ steps:
     echo "const identityName = '$(msixIdentityName)';" >> $(Build.Repository.LocalPath)/lib/env.dart
     echo "const publisher = '$(msixPublisher)';" >> $(Build.Repository.LocalPath)/lib/env.dart
   displayName: 'Setup env.dart file'
-  
-- script: |
-    echo `cat $(Build.Repository.LocalPath)/lib/env.dart`
-  displayName: 'Display env.dart file'
-
-- script: |
-    ls
-  displayName: 'debug'
-  workingDirectory: $(Build.Repository.LocalPath)
 
 - task: FlutterInstall@0
   inputs:
     mode: 'auto'
     channel: 'stable'
     version: 'latest'
+
+- task: FlutterCommand@0
+  inputs:
+    projectDirectory: '$(Build.Repository.LocalPath)'
+    arguments: 'pub get'
 
 - script: |
     $(DartToolPath)/dart $(Build.Repository.LocalPath)/scripts/versionNumScript.dart
