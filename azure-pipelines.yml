@@ -38,12 +38,14 @@ steps:
   displayName: 'debug'
   workingDirectory: $(Build.Repository.LocalPath)/lib
 
-- script: |
-    flutter pub run msix:create
+- task: FlutterCommand@0
+  inputs:
+    projectDirectory: '$(Build.Repository.LocalPath)'
+    arguments: 'pub run msix:create'
   displayName: 'Create Windows installer'
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: './build/windows/runner/Release/assistantnms_app.msix'
+    targetPath: '$(Build.Repository.LocalPath)/build/windows/runner/Release/assistantnms_app.msix'
     artifact: 'assistantnms_app_installer'
     publishLocation: 'pipeline'
