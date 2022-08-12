@@ -61,7 +61,7 @@ Widget genericItemSalvagedData(BuildContext context, String salvagedData,
       child: genericItemIntCurrency(
         context,
         salvagedData,
-        '${getPath().imageAssetPathPrefix}/curiosities/16.png',
+        '${getPath().imageAssetPathPrefix}/constructedTechnology/90.png',
         colour: colour,
       ),
     );

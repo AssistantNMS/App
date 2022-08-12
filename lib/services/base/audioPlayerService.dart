@@ -1,4 +1,3 @@
-import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 
@@ -76,12 +75,10 @@ class AudioPlayerService extends IAudioPlayerService {
         builder,
   }) {
     return StreamBuilder(
-      stream: getPlayer().current,
-      builder: (BuildContext audioCtx, AsyncSnapshot<Playing> asyncSnapshot) {
-        final Audio audio = asyncSnapshot?.data?.audio?.audio;
-        bool isLoading =
-            asyncSnapshot.connectionState == ConnectionState.done &&
-                audio == null;
+      stream: getPlayer().isPlaying,
+      builder: (BuildContext audioCtx, AsyncSnapshot<bool> asyncSnapshot) {
+        bool isLoading = asyncSnapshot.connectionState == ConnectionState.done;
+        bool isPlaying = asyncSnapshot.data ?? false;
 
         AudioStreamBuilderEvent current = AudioStreamBuilderEvent(
           title: '',
@@ -89,21 +86,8 @@ class AudioPlayerService extends IAudioPlayerService {
           album: '',
           image: '',
           isLoading: isLoading,
-          isPlaying: true,
+          isPlaying: isPlaying,
         );
-
-        if (!isLoading) {
-          Metas metas = (audio?.metas != null) ? audio?.metas : null;
-          String title = metas?.title;
-          String artist = metas?.artist;
-          current = current.copyWith(
-            title: title,
-            artist: artist,
-            album: getTranslations().fromKey(LocaleKey.nmsfm),
-            image: '',
-            isLoading: isLoading,
-          );
-        }
 
         return builder(audioCtx, current);
       },

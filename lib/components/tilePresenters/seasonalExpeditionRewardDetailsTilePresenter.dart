@@ -10,7 +10,6 @@ import '../../contracts/seasonalExpedition/seasonalExpeditionReward.dart';
 import '../../pages/generic/genericPage.dart';
 
 const double itemPadding = 16.0;
-const String fakeAppId = 'other0';
 
 Widget seasonalExpeditionRewardDetailTilePresenter(
   BuildContext context,
@@ -18,21 +17,16 @@ Widget seasonalExpeditionRewardDetailTilePresenter(
   List<RequiredItemDetails> rewardLookups, {
   bool showBackgroundColours = true,
 }) {
-  RequiredItemDetails reward =
-      rewardLookups.firstWhere((r) => r.id == expReward.id, orElse: () => null);
-  if (expReward.id == fakeAppId) {
-    reward = RequiredItemDetails(
-      id: expReward.id,
-      name: getTranslations().fromKey(LocaleKey.unknown),
-    );
-    if (expReward.type == ExpeditionRewardType.TeachWord) {
-      reward.icon = AppImage.allFaction;
-      reward.name = getTranslations().fromKey(LocaleKey.learnNewWord);
-    }
-    if (expReward.type == ExpeditionRewardType.JetpackBoost) {
-      reward.icon = '${AppImage.base}technology/5.png';
-      reward.name = getTranslations().fromKey(LocaleKey.jetpackBoost);
-    }
+  RequiredItemDetails reward = rewardLookups.firstWhere(
+    (r) => r.id == expReward.id,
+    orElse: () => null,
+  );
+  String rewardIcon = reward.icon;
+  String rewardName = reward.name;
+
+  if (expReward.type == ExpeditionRewardType.JetpackBoost) {
+    rewardIcon = '${AppImage.base}technology/5.png';
+    rewardName = getTranslations().fromKey(LocaleKey.jetpackBoost);
   }
   if (reward == null) {
     return genericListTile(
@@ -64,6 +58,8 @@ Widget seasonalExpeditionRewardDetailTilePresenter(
   }
 
   if (expReward.type == ExpeditionRewardType.TeachWord) {
+    rewardIcon = AppImage.allFaction;
+    rewardName = getTranslations().fromKey(LocaleKey.learnNewWord);
     subtitleText = '${expReward.amountMin} %';
   }
   if (expReward.type == ExpeditionRewardType.JetpackBoost) {
@@ -73,13 +69,13 @@ Widget seasonalExpeditionRewardDetailTilePresenter(
   bool addPadding = subtitleText == null;
   ListTile tile = genericListTileWithSubtitle(
     context,
-    leadingImage: reward.icon,
-    name: reward.name ?? getTranslations().fromKey(LocaleKey.unknown),
+    leadingImage: rewardIcon,
+    name: rewardName ?? getTranslations().fromKey(LocaleKey.unknown),
     borderRadius: NMSUIConstants.gameItemBorderRadius,
     subtitle: addPadding ? null : Text(subtitleText ?? ''),
     imageBackgroundColour: showBackgroundColours ? reward.colour : null,
     onTap: () async {
-      if (expReward.id == fakeAppId) return;
+      if (expReward.type == ExpeditionRewardType.TeachWord) return;
       await getNavigation().navigateAsync(
         context,
         navigateTo: (context) => GenericPage(reward.id),

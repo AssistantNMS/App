@@ -124,8 +124,8 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
   @override
   void dispose() {
     _connectivitySubscription.cancel();
-    getAudioPlayer().stop();
-    getAudioPlayer().dispose();
+    // getAudioPlayer().stop();
+    // getAudioPlayer().dispose();
     super.dispose();
   }
 }
@@ -158,7 +158,7 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
           artist = savedMetas?.artist;
         }
 
-        Widget playStopWidget = (isPlaying)
+        Widget playStopWidget = (event.isPlaying)
             ? getCorrectlySizedImageFromIcon(context, Icons.stop)
             : getCorrectlySizedImageFromIcon(context, Icons.play_arrow);
 
@@ -176,7 +176,7 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
                 isPlaying = false;
               });
             };
-            if (isPlaying) {
+            if (event.isPlaying) {
               stopFunction();
               return;
             }

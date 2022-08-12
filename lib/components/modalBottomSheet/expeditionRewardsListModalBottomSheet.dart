@@ -80,7 +80,10 @@ class _ExpeditionRewardsListModalBottomSheetWidget
     List<RequiredItemDetails> rewardLookups = snapshot.value;
     List<Widget Function()> widgetFuncs = widget.rewards
         .map((reward) => () => seasonalExpeditionRewardDetailTilePresenter(
-            futureContext, reward, rewardLookups))
+              futureContext,
+              reward,
+              rewardLookups,
+            ))
         .toList();
 
     if (widget.milestoneId != null && widget.milestoneId.isNotEmpty) {

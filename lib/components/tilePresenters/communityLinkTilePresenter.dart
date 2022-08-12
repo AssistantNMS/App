@@ -12,7 +12,7 @@ Widget Function(BuildContext, CommunityLinkViewModel)
 ) {
   return (BuildContext context, CommunityLinkViewModel communityLink) {
     return Padding(
-      padding: const EdgeInsets.only(top: 4, left: 4, right: 4),
+      padding: const EdgeInsets.only(top: 4),
       child: GestureDetector(
         child: Card(
           child: Column(

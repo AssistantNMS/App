@@ -5,8 +5,8 @@ class InventorySlotWithGenericPageItem extends InventorySlot {
   String name;
 
   InventorySlotWithGenericPageItem(
-      {InventorySlotDetails pageItem, int quantity})
+      {InventorySlotDetails pageItem, String name, int quantity})
       : super(pageItem: pageItem, quantity: quantity) {
-    name = pageItem.name;
+    name = name;
   }
 }
