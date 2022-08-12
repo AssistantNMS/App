@@ -11,11 +11,15 @@ pool:
 
 steps:
 - script: |
-    echo "const remoteConfigsApiKey = '$(remoteConfigsApiKey)';" > ./lib/env.dart
-    echo "const patreonOAuthClientId = '$(patreonOAuthClientId)';" > ./lib/env.dart
-    echo "const identityName = '$(msixIdentityName)';" > ./lib/env.dart
-    echo "const publisher = '$(msixPublisher)';" > ./lib/env.dart
+    echo "const remoteConfigsApiKey = '$(remoteConfigsApiKey)';" > $(Build.Repository.LocalPath)/lib/env.dart
+    echo "const patreonOAuthClientId = '$(patreonOAuthClientId)';" >> $(Build.Repository.LocalPath)/lib/env.dart
+    echo "const identityName = '$(msixIdentityName)';" >> $(Build.Repository.LocalPath)/lib/env.dart
+    echo "const publisher = '$(msixPublisher)';" >> $(Build.Repository.LocalPath)/lib/env.dart
   displayName: 'Setup env.dart file'
+  
+- script: |
+    echo `cat $(Build.Repository.LocalPath)/lib/env.dart`
+  displayName: 'Display env.dart file'
 
 - script: |
     ls
