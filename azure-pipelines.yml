@@ -20,7 +20,7 @@ steps:
 - script: |
     ls
   displayName: 'debug'
-  workingDirectory: $(Agent.BuildDirectory)
+  workingDirectory: $(Build.Repository.LocalPath)
 
 - task: FlutterInstall@0
   inputs:
@@ -29,14 +29,14 @@ steps:
     version: 'latest'
 
 - script: |
-    $(DartToolPath)/dart $(Agent.BuildDirectory)/scripts/versionNumScript.dart
-    $(DartToolPath)/dart $(Agent.BuildDirectory)/scripts/pubspecScript.dart
+    $(DartToolPath)/dart $(Build.Repository.LocalPath)/scripts/versionNumScript.dart
+    $(DartToolPath)/dart $(Build.Repository.LocalPath)/scripts/pubspecScript.dart
   displayName: 'Run dart scripts'
 
 - script: |
     ls
   displayName: 'debug'
-  workingDirectory: $(Agent.BuildDirectory)/lib
+  workingDirectory: $(Build.Repository.LocalPath)/lib
 
 - script: |
     flutter pub run msix:create
