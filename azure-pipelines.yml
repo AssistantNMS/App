@@ -1,0 +1,39 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: |
+    echo "const remoteConfigsApiKey = '$(remoteConfigsApiKey)';" > ./lib/env.dart
+    echo "const patreonOAuthClientId = '$(patreonOAuthClientId)';" > ./lib/env.dart
+    echo "const identityName = '$(msixIdentityName)';" > ./lib/env.dart
+    echo "const publisher = '$(msixPublisher)';" > ./lib/env.dart
+  displayName: 'Setup env.dart file'
+
+- task: FlutterInstall@0
+  inputs:
+    mode: 'auto'
+    channel: 'stable'
+    version: 'latest'
+
+- script: |
+    dart scripts\versionNumScript.dart
+    dart scripts\pubspecScript.dart
+  displayName: 'Run dart scripts'
+
+- script: |
+    flutter pub run msix:create
+  displayName: 'Create Windows installer'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: './build/windows/runner/Release/assistantnms_app.msix'
+    artifact: 'assistantnms_app_installer'
+    publishLocation: 'pipeline'
