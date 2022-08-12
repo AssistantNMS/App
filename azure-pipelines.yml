@@ -17,6 +17,11 @@ steps:
     echo "const publisher = '$(msixPublisher)';" > ./lib/env.dart
   displayName: 'Setup env.dart file'
 
+- script: |
+    ls
+  displayName: 'debug'
+  workingDirectory: $(Agent.BuildDirectory)/lib
+
 - task: FlutterInstall@0
   inputs:
     mode: 'auto'
@@ -24,14 +29,14 @@ steps:
     version: 'latest'
 
 - script: |
-    $(DartToolPath)/dart $(build.artifactstagingdirectory)/scripts/versionNumScript.dart
-    $(DartToolPath)/dart $(build.artifactstagingdirectory)/scripts/pubspecScript.dart
+    $(DartToolPath)/dart $(Agent.BuildDirectory)/scripts/versionNumScript.dart
+    $(DartToolPath)/dart $(Agent.BuildDirectory)/scripts/pubspecScript.dart
   displayName: 'Run dart scripts'
 
 - script: |
     ls
   displayName: 'debug'
-  workingDirectory: $(build.artifactstagingdirectory)/lib
+  workingDirectory: $(Agent.BuildDirectory)/lib
 
 - script: |
     flutter pub run msix:create
