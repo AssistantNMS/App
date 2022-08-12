@@ -34,14 +34,7 @@ steps:
   displayName: 'Run dart scripts'
 
 - script: |
-    ls
-  displayName: 'debug'
-  workingDirectory: $(Build.Repository.LocalPath)/lib
-
-- task: FlutterCommand@0
-  inputs:
-    projectDirectory: '$(Build.Repository.LocalPath)'
-    arguments: 'pub run msix:create'
+    $(FlutterToolPath)/flutter pub run msix:create
   displayName: 'Create Windows installer'
 
 - task: PublishPipelineArtifact@1
