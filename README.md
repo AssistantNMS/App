@@ -27,7 +27,7 @@ The **Assistant for No Man's Sky** is an app that gives users information about 
 
 > This app was originally released in early August 2019! The app was originally named No Man's Sky Recipes, when submitting the app to the Apple Store it was rejected due to the name and so the app was renamed. 
 
-After 2 years of development and maintenance, the app was made open source so that the community could have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
+After 3 years of development and maintenance, the app was made open source so that the community could have greater control and oversight of what goes into the apps and hopefully some people might want to help fix bugs 😅
 
 <div align="center">
   <h3>
