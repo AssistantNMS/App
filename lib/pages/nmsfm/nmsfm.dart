@@ -7,9 +7,13 @@ import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AppAudio.dart';
+import '../../constants/AppDuration.dart';
 import '../../constants/AppImage.dart';
+import '../../constants/Nmsfm.dart';
 import '../../contracts/misc/audioStreamBuilderEvent.dart';
+import '../../contracts/nmsfm/zenoFMNowPlaying.dart';
 import '../../integration/dependencyInjection.dart';
+import '../../services/api/zenoFMApiService.dart';
 import 'nmsfmTrackList.dart';
 
 class NMSFMPage extends StatefulWidget {
@@ -22,6 +26,11 @@ class NMSFMPage extends StatefulWidget {
 class _NMSFMPageWidget extends State<NMSFMPage> {
   ConnectivityResult _connectivityStatus = ConnectivityResult.none;
   StreamSubscription<ConnectivityResult> _connectivitySubscription;
+
+  _isOnline() {
+    return _connectivityStatus != ConnectivityResult.none ||
+        isiOS; // Connectivity plugin subscription to connectivity does not work on ios 🙄
+  }
 
   @override
   initState() {
@@ -65,8 +74,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
       ),
     ));
 
-    bool isOnline = _connectivityStatus != ConnectivityResult.none ||
-        isiOS; // Connectivity plugin subscription to connectivity does not work on ios 🙄
+    bool isOnline = _isOnline();
 
     if (isOnline && !isDesktop) {
       widgets.add(const AudioStreamPresenter());
@@ -138,8 +146,32 @@ class AudioStreamPresenter extends StatefulWidget {
 }
 
 class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
+  Timer _timer;
+  String _title = '';
+  String _artist = '';
   bool isPlaying = false;
   AudioStreamBuilderEvent savedMetas;
+
+  _AudioStreamPresenterWidget() {
+    initTimer();
+  }
+
+  initTimer() {
+    if (_timer != null && _timer.isActive) _timer.cancel();
+    _timer = Timer.periodic(AppDuration.zenoFMRefreshInterval, (Timer t) async {
+      if (isPlaying == false) return;
+
+      ZenoFMApiService service = ZenoFMApiService();
+      ResultWithValue<ZenoFmNowPlaying> nowPlayingResult =
+          await service.getNowPlaying(nmsfmId);
+      if (nowPlayingResult.hasFailed) return;
+
+      setState(() {
+        _title = nowPlayingResult.value.title;
+        _artist = nowPlayingResult.value.artist;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -149,14 +181,10 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
         bool isLoading = event.isLoading;
 
         String title = getTranslations().fromKey(LocaleKey.nmsfm);
-        if (event?.title?.isNotEmpty ?? false) title = event?.title;
-        if (savedMetas?.title?.isNotEmpty ?? false) title = savedMetas?.title;
+        if (_title.isNotEmpty ?? false) title = _title;
 
         String artist = 'Now Streaming'; // TODO translate
-        if (event?.artist?.isNotEmpty ?? false) artist = event?.artist;
-        if (savedMetas?.artist?.isNotEmpty ?? false) {
-          artist = savedMetas?.artist;
-        }
+        if (_artist.isNotEmpty ?? false) artist = _artist;
 
         Widget playStopWidget = (event.isPlaying)
             ? getCorrectlySizedImageFromIcon(context, Icons.stop)
@@ -181,7 +209,7 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
               return;
             }
             getAudioPlayer().openUrl(
-              'https://stream.zenolive.com/9kz76c8mdg8uv.aac',
+              ZenoFMUrlTemplate.streamUrl.replaceAll('{0}', nmsfmId),
               AudioStreamOpenUrlModel(
                 title: title,
                 artist: artist,

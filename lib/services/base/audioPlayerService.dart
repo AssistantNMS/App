@@ -53,7 +53,10 @@ class AudioPlayerService extends IAudioPlayerService {
 
   @override
   Future<void> openLocal(
-      String localPath, Key uniqueKey, AudioStreamOpenUrlModel model) {
+    String localPath,
+    Key uniqueKey,
+    AudioStreamOpenUrlModel model,
+  ) {
     this.uniqueKey = uniqueKey;
     return getPlayer().open(
       Audio(
@@ -77,14 +80,10 @@ class AudioPlayerService extends IAudioPlayerService {
     return StreamBuilder(
       stream: getPlayer().isPlaying,
       builder: (BuildContext audioCtx, AsyncSnapshot<bool> asyncSnapshot) {
-        bool isLoading = asyncSnapshot.connectionState == ConnectionState.done;
+        bool isLoading = asyncSnapshot.connectionState != ConnectionState.done;
         bool isPlaying = asyncSnapshot.data ?? false;
 
         AudioStreamBuilderEvent current = AudioStreamBuilderEvent(
-          title: '',
-          artist: '',
-          album: '',
-          image: '',
           isLoading: isLoading,
           isPlaying: isPlaying,
         );
@@ -114,10 +113,6 @@ class AudioPlayerService extends IAudioPlayerService {
         }
 
         AudioStreamBuilderEvent current = AudioStreamBuilderEvent(
-          title: '',
-          artist: '',
-          album: '',
-          image: '',
           isLoading: isLoading,
           isPlaying: isPlaying,
         );
