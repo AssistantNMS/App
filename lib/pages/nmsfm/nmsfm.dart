@@ -224,6 +224,12 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
       },
     );
   }
+
+  @override
+  void dispose() {
+    if (_timer != null && _timer.isActive) _timer.cancel();
+    super.dispose();
+  }
 }
 
 class LocalAudioPresenter extends StatelessWidget {
