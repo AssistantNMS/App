@@ -177,6 +177,7 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
   Widget build(BuildContext context) {
     return getAudioPlayer().audioStreamBuilder(
       uniqueKey: const Key('Streaming'),
+      playerContext: context,
       builder: (BuildContext context, AudioStreamBuilderEvent event) {
         bool isLoading = event.isLoading;
 
@@ -244,6 +245,7 @@ class LocalAudioPresenter extends StatelessWidget {
     Key uniqueKey = Key(localPath);
     return getAudioPlayer().audioLocalBuilder(
       uniqueKey: uniqueKey,
+      playerContext: context,
       builder: (BuildContext context, AudioStreamBuilderEvent event) {
         bool isPlaying = event.isPlaying;
 

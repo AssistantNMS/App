@@ -71,6 +71,7 @@ class AudioPlayerService extends IAudioPlayerService {
   @override
   Widget audioStreamBuilder({
     Key uniqueKey,
+    BuildContext playerContext,
     Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
@@ -96,6 +97,7 @@ class AudioPlayerService extends IAudioPlayerService {
   @override
   Widget audioLocalBuilder({
     Key uniqueKey,
+    BuildContext playerContext,
     Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
