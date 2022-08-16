@@ -87,7 +87,7 @@ Widget Function(BuildContext context, InventorySlotWithGenericPageItem invSlot)
             genericListTile(
               context,
               leadingImage: invSlot.icon,
-              name: invSlot.name,
+              name: invSlot.name ?? 'unknown',
               quantity: invSlot.quantity,
               trailing: popupMenu(
                 context,
