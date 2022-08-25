@@ -7,13 +7,13 @@ import 'dart:convert';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class NomNomInventoryViewModel {
+  final String name;
+  final List<NomNomInventorySlotViewModel> slots;
+
   NomNomInventoryViewModel({
     this.name,
     this.slots,
   });
-
-  final String name;
-  final List<NomNomInventorySlotViewModel> slots;
 
   factory NomNomInventoryViewModel.fromRawJson(String str) =>
       NomNomInventoryViewModel.fromJson(json.decode(str));
@@ -30,13 +30,15 @@ class NomNomInventoryViewModel {
 }
 
 class NomNomInventorySlotViewModel {
+  final String appId;
+  final String icon;
+  final int quantity;
+
   NomNomInventorySlotViewModel({
     this.appId,
+    this.icon,
     this.quantity,
   });
-
-  final String appId;
-  final int quantity;
 
   factory NomNomInventorySlotViewModel.fromRawJson(String str) =>
       NomNomInventorySlotViewModel.fromJson(json.decode(str));

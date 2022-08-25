@@ -12,7 +12,12 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import '../../constants/AppDuration.dart';
 import '../../constants/Modal.dart';
 import '../../constants/NmsUIConstants.dart';
+import '../../constants/UserSelectionIcons.dart';
+import '../../contracts/inventory/inventory.dart';
+import '../../contracts/inventory/inventorySlot.dart';
+import '../../contracts/inventory/inventorySlotDetails.dart';
 import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/inventoryState.dart';
 import '../../redux/modules/setting/shareViewModel.dart';
 import '../../redux/modules/viewModel/syncPageViewModel.dart';
 
@@ -91,7 +96,30 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
                   });
                   return;
                 }
-                // viewModel.restoreInventory();
+
+                List<Inventory> invs = List.empty(growable: true);
+                for (NomNomInventoryViewModel apiInv in invResult.value) {
+                  List<InventorySlot> newSlots = List.empty(growable: true);
+                  for (NomNomInventorySlotViewModel apiSlots in apiInv.slots) {
+                    newSlots.add(InventorySlot(
+                      uuid: getNewGuid(),
+                      quantity: apiSlots.quantity,
+                      pageItem: InventorySlotDetails(
+                        icon: apiSlots.icon,
+                        id: apiSlots.appId,
+                      ),
+                    ));
+                  }
+                  invs.add(Inventory(
+                    icon: UserSelectionIcons.inventory[0],
+                    name: apiInv.name,
+                    slots: newSlots,
+                  ));
+                }
+                viewModel.restoreInventory(InventoryState(
+                  containers: invs,
+                  orderByType: viewModel.inventoryState.orderByType,
+                ));
 
                 setState(() {
                   networkState = NetworkState.Success;
