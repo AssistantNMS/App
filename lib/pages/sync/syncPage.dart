@@ -3,8 +3,10 @@ import 'package:assistantnms_app/constants/GoogleDrive.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../components/common/rowHelper.dart';
+import '../../components/modalBottomSheet/syncWithNomNomModalBottomSheet.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/asyncSettingTilePresenter.dart';
 import '../../components/tilePresenters/settingTilePresenter.dart';
@@ -294,6 +296,22 @@ class _SyncWidget extends State<SyncPage> {
         LocaleKey.inventoryRestored,
       ),
     ));
+
+    // widgets.add(flatCard(
+    //   child: genericListTile(
+    //     context,
+    //     leadingImage: null,
+    //     name: 'Sync with NomNom save editor',
+    //     onTap: () {
+    //       adaptiveBottomModalSheet(
+    //         context,
+    //         hasRoundedCorners: true,
+    //         builder: (BuildContext innerContext) =>
+    //             const SyncWithNomNomBottomSheet(),
+    //       );
+    //     },
+    //   ),
+    // ));
 
     // widgets.add(genericItemDescription(
     //     'This sync feature is only intended to allow you to back up your app data to Google Drive.'));

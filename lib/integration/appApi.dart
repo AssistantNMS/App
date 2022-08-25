@@ -8,6 +8,7 @@ import '../contracts/generated/addFriendCodeViewModel.dart';
 import '../contracts/generated/feedbackAnsweredViewModel.dart';
 import '../contracts/generated/feedbackViewModel.dart';
 import '../contracts/generated/friendCodeViewModel.dart';
+import '../contracts/generated/nomNomInventoryViewModel.dart';
 import '../contracts/generated/stripeDonationViewModel.dart';
 import '../contracts/nmsfm/nmsfmTrackData.dart';
 import 'dependencyInjection.dart';
@@ -110,6 +111,26 @@ class AppApi extends BaseApiService {
       getLog().e("getNmsfmTrackList Api Exception: ${exception.toString()}");
       return ResultWithValue<List<NmsfmTrackData>>(
           false, List.empty(growable: true), exception.toString());
+    }
+  }
+
+  Future<ResultWithValue<List<NomNomInventoryViewModel>>>
+      getInventoryFromNomNom(String code) async {
+    try {
+      final response = await apiGet(ApiUrls.NomNomInv + '/' + code);
+      if (response.hasFailed) {
+        return ResultWithValue<List<NomNomInventoryViewModel>>(
+            false, List.empty(), response.errorMessage);
+      }
+      final List newsList = json.decode(response.value);
+      List<NomNomInventoryViewModel> news =
+          newsList.map((r) => NomNomInventoryViewModel.fromJson(r)).toList();
+      return ResultWithValue(true, news, '');
+    } catch (exception) {
+      getLog()
+          .e("getInventoryFromNomNom Api Exception: ${exception.toString()}");
+      return ResultWithValue<List<NomNomInventoryViewModel>>(
+          false, List.empty(), exception.toString());
     }
   }
 }
