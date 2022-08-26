@@ -1,17 +1,14 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/GoogleDrive.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../components/common/rowHelper.dart';
-import '../../components/modalBottomSheet/syncWithNomNomModalBottomSheet.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/asyncSettingTilePresenter.dart';
 import '../../components/tilePresenters/settingTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
-import '../../constants/AppImage.dart';
+import '../../constants/GoogleDrive.dart';
 import '../../contracts/redux/appState.dart';
 import '../../contracts/redux/inventoryState.dart';
 import '../../contracts/redux/portalState.dart';
