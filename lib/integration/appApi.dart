@@ -117,7 +117,7 @@ class AppApi extends BaseApiService {
   Future<ResultWithValue<List<NomNomInventoryViewModel>>>
       getInventoryFromNomNom(String code) async {
     try {
-      final response = await apiGet(ApiUrls.NomNomInv + '/' + code);
+      final response = await apiGet(ApiUrls.nomNomInv + '/' + code);
       if (response.hasFailed) {
         return ResultWithValue<List<NomNomInventoryViewModel>>(
             false, List.empty(), response.errorMessage);
