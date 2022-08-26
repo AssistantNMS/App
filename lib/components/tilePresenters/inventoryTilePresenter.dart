@@ -101,12 +101,14 @@ Widget Function(BuildContext context, InventorySlotWithGenericPageItem invSlot)
               ),
             );
 
-Widget inventorySlotTileWithContainersPresenter(BuildContext context,
-        InventorySlotWithContainersAndGenericPageItem invSlot) =>
+Widget inventorySlotTileWithContainersPresenter(
+  BuildContext context,
+  InventorySlotWithContainersAndGenericPageItem invSlot,
+) =>
     genericListTileWithSubtitle(
       context,
       leadingImage: invSlot.icon,
-      name: invSlot.name,
+      name: invSlot.name ?? 'test',
       subtitle: Text(
         '${invSlot.quantity.toString()} - ${joinStringList(invSlot.containers.map((i) => i.name).toList(), ', ')}',
         maxLines: 1,

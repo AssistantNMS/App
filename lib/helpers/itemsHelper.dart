@@ -363,19 +363,23 @@ Future<ResultWithValue<List<InventorySlotWithGenericPageItem>>>
 
 Future<ResultWithValue<List<InventorySlotWithContainersAndGenericPageItem>>>
     getDetailedInventorySlotsWithContainer(
-        BuildContext context, List<Inventory> inventories) async {
+  BuildContext context,
+  List<Inventory> inventories,
+) async {
   Map<String, InventorySlotWithContainersAndGenericPageItem> invSlotMap = {};
   for (Inventory inventory in inventories) {
     for (InventorySlot slot in inventory.slots) {
-      InventoryBasicInfo nameId =
+      InventoryBasicInfo basicInfo =
           InventoryBasicInfo(inventory.uuid, inventory.name, inventory.icon);
       if (invSlotMap.containsKey(slot.id)) {
-        invSlotMap.update(slot.id,
-            (InventorySlotWithContainersAndGenericPageItem orig) {
-          orig.quantity += slot.quantity;
-          orig.containers.add(nameId);
-          return orig;
-        });
+        invSlotMap.update(
+          slot.id,
+          (InventorySlotWithContainersAndGenericPageItem orig) {
+            orig.quantity += slot.quantity;
+            orig.containers.add(basicInfo);
+            return orig;
+          },
+        );
       } else {
         ResultWithValue<IGenericRepository> repoResult =
             getRepoFromId(context, slot.id);
@@ -383,14 +387,17 @@ Future<ResultWithValue<List<InventorySlotWithContainersAndGenericPageItem>>>
 
         ResultWithValue<GenericPageItem> getByIdResult =
             await repoResult.value.getById(context, slot.id);
+
         if (!getByIdResult.isSuccess) continue;
         invSlotMap.putIfAbsent(
           slot.id,
           () => InventorySlotWithContainersAndGenericPageItem(
-            container: nameId,
-            pageItem:
-                InventorySlotDetails.fromGenericPageItem(getByIdResult.value),
+            container: basicInfo,
             quantity: slot.quantity,
+            name: getByIdResult.value.name,
+            pageItem: InventorySlotDetails.fromGenericPageItem(
+              getByIdResult.value,
+            ),
           ),
         );
       }
