@@ -26,7 +26,9 @@ class SearchAllInventoriesPage extends StatelessWidget {
           title: getTranslations().fromKey(LocaleKey.inventoryManagement),
           body: SearchableList<InventorySlotWithContainersAndGenericPageItem>(
             () => getDetailedInventorySlotsWithContainer(
-                context, viewModel.containers),
+              context,
+              viewModel.containers,
+            ),
             listItemDisplayer: inventorySlotTileWithContainersPresenter,
             listItemSearch: searchInventory,
             key: Key('numItems: ${viewModel.containers.length}'),

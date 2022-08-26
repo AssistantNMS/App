@@ -129,3 +129,16 @@ Widget veritasVelezTile(BuildContext context, {String subtitle}) =>
       trailing: const Icon(Icons.open_in_new),
       onTap: () => launchExternalURL(NmsExternalUrls.veritasVelezTwitter),
     );
+
+Widget nomNomDownloadTile(BuildContext context, {String subtitle}) =>
+    genericListTileWithSubtitleAndImageCount(
+      context,
+      leadingImage: localImage(
+        AppImage.nomnom,
+        padding: const EdgeInsets.all(8),
+      ),
+      title: 'NomNom',
+      subtitle: Text(subtitle ?? NmsExternalUrls.nomNomWebsite, maxLines: 1),
+      trailing: const Icon(Icons.open_in_new),
+      onTap: () => launchExternalURL(NmsExternalUrls.nomNomWebsite),
+    );

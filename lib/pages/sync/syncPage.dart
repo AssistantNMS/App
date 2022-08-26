@@ -11,6 +11,7 @@ import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/asyncSettingTilePresenter.dart';
 import '../../components/tilePresenters/settingTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
+import '../../constants/AppImage.dart';
 import '../../contracts/redux/appState.dart';
 import '../../contracts/redux/inventoryState.dart';
 import '../../contracts/redux/portalState.dart';
@@ -298,10 +299,11 @@ class _SyncWidget extends State<SyncPage> {
     ));
 
     // widgets.add(flatCard(
-    //   child: genericListTile(
+    //   child: genericListTileWithSubtitle(
     //     context,
-    //     leadingImage: null,
+    //     leadingImage: AppImage.nomnom,
     //     name: 'Sync with NomNom save editor',
+    //     subtitle: const Text('Transfer your in game inventory'),
     //     onTap: () {
     //       adaptiveBottomModalSheet(
     //         context,

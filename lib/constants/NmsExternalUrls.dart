@@ -46,4 +46,5 @@ class NmsExternalUrls {
       'https://raw.githubusercontent.com/NMSCD/Community-Search/main/src/assets/data/chipColours.json';
   static const String communitySearchAddLinkForm =
       'https://airtable.com/shrhZOQrrp9a9zoJk';
+  static const String nomNomWebsite = 'https://cengelha.github.io/NomNom/';
 }
