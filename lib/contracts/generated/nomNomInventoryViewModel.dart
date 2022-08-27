@@ -31,12 +31,10 @@ class NomNomInventoryViewModel {
 
 class NomNomInventorySlotViewModel {
   final String appId;
-  final String icon;
   final int quantity;
 
   NomNomInventorySlotViewModel({
     this.appId,
-    this.icon,
     this.quantity,
   });
 

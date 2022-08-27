@@ -108,10 +108,7 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
                     newSlots.add(InventorySlot(
                       uuid: getNewGuid(),
                       quantity: apiSlots.quantity,
-                      pageItem: InventorySlotDetails(
-                        icon: apiSlots.icon,
-                        id: apiSlots.appId,
-                      ),
+                      id: apiSlots.appId,
                     ));
                   }
                   invs.add(Inventory(

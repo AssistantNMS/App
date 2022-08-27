@@ -8,7 +8,6 @@ import '../contracts/genericPageItem.dart';
 import '../contracts/inventory/inventory.dart';
 import '../contracts/inventory/inventoryBasicInfo.dart';
 import '../contracts/inventory/inventorySlot.dart';
-import '../contracts/inventory/inventorySlotDetails.dart';
 import '../contracts/inventory/inventorySlotWithContainerAndGenericPageItem.dart';
 import '../contracts/inventory/inventorySlotWithGenericPageItem.dart';
 import '../contracts/requiredItem.dart';
@@ -350,7 +349,7 @@ Future<ResultWithValue<List<InventorySlotWithGenericPageItem>>>
     if (!getByIdResult.isSuccess) continue;
 
     results.add(InventorySlotWithGenericPageItem(
-      pageItem: InventorySlotDetails.fromGenericPageItem(getByIdResult.value),
+      id: getByIdResult.value?.id ?? '',
       name: getByIdResult.value?.name ?? '',
       quantity: slot.quantity,
     ));
@@ -394,10 +393,8 @@ Future<ResultWithValue<List<InventorySlotWithContainersAndGenericPageItem>>>
           () => InventorySlotWithContainersAndGenericPageItem(
             container: basicInfo,
             quantity: slot.quantity,
+            id: getByIdResult.value.id,
             name: getByIdResult.value.name,
-            pageItem: InventorySlotDetails.fromGenericPageItem(
-              getByIdResult.value,
-            ),
           ),
         );
       }

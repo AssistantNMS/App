@@ -174,3 +174,31 @@ Widget genericHomeTileWithRequiredItemsBody(
         navigateTo: (context) => GenericPage(genericItem.id)),
   );
 }
+
+Widget genericItemTilePresenterWrapper(
+  BuildContext context, {
+  String appId,
+  Widget Function(BuildContext, RequiredItemDetails) builder,
+  Widget Function(BuildContext) errorBuilder,
+}) {
+  return FutureBuilder<ResultWithValue<RequiredItemDetails>>(
+    key: Key('appId-$appId'),
+    future: requiredItemDetails(context, RequiredItem(id: appId, quantity: 0)),
+    builder: (
+      BuildContext context,
+      AsyncSnapshot<ResultWithValue<RequiredItemDetails>> snapshot,
+    ) {
+      Widget errorWidget = asyncSnapshotHandler(
+        context,
+        snapshot,
+        loader: () => getLoading().smallLoadingTile(context),
+        invalidBuilder: () => errorBuilder(context),
+        isValidFunction: (ResultWithValue<RequiredItemDetails> p0) =>
+            p0.isSuccess,
+      );
+      if (errorWidget != null) return errorWidget;
+
+      return builder(context, snapshot.data.value);
+    },
+  );
+}

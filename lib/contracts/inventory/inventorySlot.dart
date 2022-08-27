@@ -5,16 +5,12 @@ import './inventorySlotDetails.dart';
 class InventorySlot {
   String uuid;
   String id;
-  String icon;
   int quantity;
 
-  InventorySlot({InventorySlotDetails pageItem, this.quantity, this.uuid}) {
-    id = pageItem.id;
-    icon = pageItem.icon;
-  }
+  InventorySlot({this.id, this.quantity, this.uuid});
 
   factory InventorySlot.fromJson(Map<String, dynamic> json) => InventorySlot(
-        pageItem: InventorySlotDetails.fromJson(json["pageItem"]),
+        id: InventorySlotDetails.fromJson(json["pageItem"])?.id ?? '',
         quantity: readIntSafe(json, 'quantity'),
         uuid: getNewGuid(),
       );
@@ -22,7 +18,6 @@ class InventorySlot {
   Map<String, dynamic> toJson() => {
         'pageItem': InventorySlotDetails(
           id: id,
-          icon: icon,
         ).toJson(),
         'quantity': quantity
       };

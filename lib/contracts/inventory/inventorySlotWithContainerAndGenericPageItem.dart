@@ -1,4 +1,3 @@
-import './inventorySlotDetails.dart';
 import 'inventoryBasicInfo.dart';
 import 'inventorySlotWithGenericPageItem.dart';
 
@@ -7,11 +6,11 @@ class InventorySlotWithContainersAndGenericPageItem
   List<InventoryBasicInfo> containers;
 
   InventorySlotWithContainersAndGenericPageItem({
-    InventorySlotDetails pageItem,
+    String id,
     InventoryBasicInfo container,
     String name,
     int quantity,
-  }) : super(pageItem: pageItem, name: name, quantity: quantity) {
+  }) : super(id: id, name: name, quantity: quantity) {
     containers = List.empty(growable: true);
     containers.add(container);
   }

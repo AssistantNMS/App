@@ -32,7 +32,7 @@ class SearchAllInventoriesPage extends StatelessWidget {
             listItemDisplayer: inventorySlotTileWithContainersPresenter,
             listItemSearch: searchInventory,
             key: Key('numItems: ${viewModel.containers.length}'),
-            minListForSearch: 0,
+            minListForSearch: 10,
           ),
         );
       },
