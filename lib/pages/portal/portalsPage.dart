@@ -5,6 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/portalTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
+import '../../constants/Routes.dart';
 import '../../contracts/portal/portalRecord.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/searchHelpers.dart';
@@ -16,7 +17,7 @@ class PortalsPage extends StatefulWidget {
   const PortalsPage({Key key}) : super(key: key);
 
   @override
-  _PortalsPageState createState() => _PortalsPageState();
+  createState() => _PortalsPageState();
 }
 
 class _PortalsPageState extends State<PortalsPage> {
@@ -34,11 +35,10 @@ class _PortalsPageState extends State<PortalsPage> {
         title: getTranslations().fromKey(LocaleKey.savedPortalCoordinates),
         actions: [
           ActionItem(
-            icon: Icons.help_outline,
-            onPressed: () => getDialog().showSimpleHelpDialog(
+            icon: Icons.screen_rotation_alt_rounded,
+            onPressed: () => getNavigation().navigateAwayFromHomeAsync(
               context,
-              getTranslations().fromKey(LocaleKey.help),
-              getTranslations().fromKey(LocaleKey.cartContent),
+              navigateToNamed: Routes.portalConverter,
             ),
           )
         ],

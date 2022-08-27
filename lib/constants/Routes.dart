@@ -38,6 +38,7 @@ import '../pages/newItemsInUpdate/majorUpdatesPage.dart';
 import '../pages/newItemsInUpdate/newItemsPage.dart';
 import '../pages/news/newsShellPage.dart';
 import '../pages/nmsfm/nmsfm.dart';
+import '../pages/portal/portalConverterPage.dart';
 import '../pages/portal/portalsPage.dart';
 import '../pages/power/solarPanelCalcPage.dart';
 import '../pages/seasonalExpedition/seasonalExpeditionSeasonListPage.dart';
@@ -109,6 +110,7 @@ class Routes {
   static const String guideV2 = '/guideV2';
   static const String majorUpdates = '/majorUpdates';
   static const String starshipScrap = '/starshipScrap';
+  static const String portalConverter = '/portalConverter';
 }
 
 Map<String, Widget Function(BuildContext)> initNamedRoutes(
@@ -192,6 +194,7 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.guideV2: (context) => const AssistantAppsGuidesPage(),
     Routes.majorUpdates: (context) => const MajorUpdatesPage(),
     Routes.starshipScrap: (context) => StarshipScrapPage(),
+    Routes.portalConverter: (context) => PortalConverterPage(),
   });
   return routes;
 }

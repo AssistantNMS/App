@@ -37,6 +37,7 @@ class AnalyticsEvent {
   static const String portalPage = 'Portal_Page_View';
   static const String addPortalPage = 'Add_Portal_Page_View';
   static const String viewPortalPage = 'View_Portal_Page_View';
+  static const String portalConverterPage = 'Portal_Converter_Page_View';
   static const String advancedSeachPage = 'Advanced_Search_Page_View';
   static const String guidePage = 'Guide_Page_View';
   static const String guideDetailsPage = 'Guide_Details_Page_View';

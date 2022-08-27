@@ -23,7 +23,7 @@ class ViewPortalPage extends StatefulWidget {
   const ViewPortalPage(this.item, {Key key}) : super(key: key);
 
   @override
-  _ViewPortalPageState createState() => _ViewPortalPageState(item);
+  createState() => _ViewPortalPageState(item);
 }
 
 class _ViewPortalPageState extends State<ViewPortalPage> {
@@ -117,7 +117,7 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
         description: gAddress,
       );
     };
-    widgets.add(galacticAddress(context, item.codes, onCopy));
+    widgets.add(galacticAddress(context, item.codes, onCopy: onCopy));
 
     String url = NmsExternalUrls.nmsPortals + hexString;
     Future Function() onTap;
@@ -133,14 +133,9 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
 
     widgets.add(emptySpace8x());
 
-    return Column(
-      children: [
-        Expanded(
-          child: listWithScrollbar(
-              itemCount: widgets.length,
-              itemBuilder: (context, index) => widgets[index]),
-        ),
-      ],
+    return listWithScrollbar(
+      itemCount: widgets.length,
+      itemBuilder: (context, index) => widgets[index],
     );
   }
 }
