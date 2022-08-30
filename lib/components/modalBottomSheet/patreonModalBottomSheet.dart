@@ -12,10 +12,12 @@ import '../../constants/Routes.dart';
 class PatreonModalBottomSheet extends StatelessWidget {
   final DateTime unlockDate;
   final void Function(BuildContext dialogCtx) onTap;
+  final Future<void> Function(BuildContext dialogCtx) onSettingsTap;
   const PatreonModalBottomSheet({
     Key key,
     this.unlockDate,
     this.onTap,
+    this.onSettingsTap,
   }) : super(key: key);
 
   @override
@@ -87,10 +89,15 @@ class PatreonModalBottomSheet extends StatelessWidget {
           positiveButton(
             context,
             title: getTranslations().fromKey(LocaleKey.settings),
-            onPress: () => getNavigation().navigateAwayFromHomeAsync(
-              context,
-              navigateToNamed: Routes.settings,
-            ),
+            onPress: () async {
+              if (onSettingsTap != null) {
+                await onSettingsTap(context);
+              }
+              await getNavigation().navigateAwayFromHomeAsync(
+                context,
+                navigateToNamed: Routes.settings,
+              );
+            },
           ),
         ),
       ),
@@ -124,6 +131,7 @@ void handlePatreonBottomModalSheetWhenTapped(
   bool isPatron, {
   @required DateTime unlockDate,
   @required void Function(BuildContext dialogCtx) onTap,
+  Future<void> Function(BuildContext dialogCtx) onSettingsTap,
 }) {
   bool isLocked = isPatreonFeatureLocked(unlockDate, isPatron);
   if (isLocked == false) {
@@ -135,6 +143,7 @@ void handlePatreonBottomModalSheetWhenTapped(
     navContext,
     hasRoundedCorners: true,
     builder: (BuildContext innerContext) => PatreonModalBottomSheet(
+      onSettingsTap: onSettingsTap,
       unlockDate: unlockDate,
       onTap: onTap,
     ),

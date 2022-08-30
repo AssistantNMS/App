@@ -14,7 +14,6 @@ import '../../constants/UserSelectionIcons.dart';
 import '../../contracts/generated/nomNomInventoryViewModel.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';
-import '../../contracts/inventory/inventorySlotDetails.dart';
 import '../../contracts/redux/appState.dart';
 import '../../contracts/redux/inventoryState.dart';
 import '../../integration/dependencyInjection.dart';

@@ -7,6 +7,7 @@ import '../../components/common/rowHelper.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/asyncSettingTilePresenter.dart';
 import '../../components/tilePresenters/settingTilePresenter.dart';
+import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/GoogleDrive.dart';
 import '../../contracts/redux/appState.dart';
@@ -295,22 +296,12 @@ class _SyncWidget extends State<SyncPage> {
       ),
     ));
 
-    // widgets.add(flatCard(
-    //   child: genericListTileWithSubtitle(
-    //     context,
-    //     leadingImage: AppImage.nomnom,
-    //     name: 'Sync with NomNom save editor',
-    //     subtitle: const Text('Transfer your in game inventory'),
-    //     onTap: () {
-    //       adaptiveBottomModalSheet(
-    //         context,
-    //         hasRoundedCorners: true,
-    //         builder: (BuildContext innerContext) =>
-    //             const SyncWithNomNomBottomSheet(),
-    //       );
-    //     },
-    //   ),
-    // ));
+    widgets.add(flatCard(
+      child: nomNomOpenSyncModalTile(
+        context,
+        viewModel.isPatron,
+      ),
+    ));
 
     // widgets.add(genericItemDescription(
     //     'This sync feature is only intended to allow you to back up your app data to Google Drive.'));
