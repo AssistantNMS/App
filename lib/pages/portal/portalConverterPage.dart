@@ -59,7 +59,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
     if (codes.length >= 12) return;
     setState(() {
       codes.add(code);
-      var tempHexStr = allUpperCase(intArrayToHex(codes));
+      String tempHexStr = allUpperCase(intArrayToHex(codes));
       _setHexCoordText(tempHexStr);
       if (codes.isNotEmpty) disableEditBtns = false;
     });
@@ -77,7 +77,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
     if (codes.isEmpty) return;
     setState(() {
       codes = codes.sublist(0, codes.length - 1);
-      var tempHexStr = allUpperCase(intArrayToHex(codes));
+      String tempHexStr = allUpperCase(intArrayToHex(codes));
       _setHexCoordText(tempHexStr);
       if (codes.isEmpty) disableEditBtns = true;
     });
@@ -87,7 +87,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
     if (codes.isEmpty) return;
     setState(() {
       codes = [];
-      var tempHexStr = allUpperCase(intArrayToHex(codes));
+      String tempHexStr = allUpperCase(intArrayToHex(codes));
       _setHexCoordText(tempHexStr);
       disableEditBtns = true;
     });
@@ -122,9 +122,11 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
           controller.text = newValue;
           controller.selection =
               TextSelection.collapsed(offset: newValue.length);
-          setState(() {
-            counter++;
-          });
+          if (newValue.length >= 4) {
+            setState(() {
+              counter++;
+            });
+          }
         },
       ),
     );
@@ -167,7 +169,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
     ];
     Widget galAddrSpace = genericItemName(' : ');
 
-    var hexCodeWidget = Padding(
+    Padding hexCodeWidget = Padding(
       padding: NMSUIConstants.buttonPadding,
       child: TextField(
         controller: _hexCoordController,
@@ -317,7 +319,10 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                 bool anyAreNull = intCoords.any((coord) => coord == null);
                 if (anyAreNull == false && intCoords.length == 12) {
                   innerBuilder.add(
-                    twoLinePortalGlyphList(intCoords, useAltGlyphs: true),
+                    twoLinePortalGlyphList(
+                      intCoords,
+                      useAltGlyphs: portalViewModel.useAltGlyphs,
+                    ),
                   );
                 } else {
                   innerBuilder.add(genericItemName(
@@ -327,7 +332,10 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
               }
             } else {
               innerBuilder.add(
-                twoLinePortalGlyphList(codes, useAltGlyphs: true),
+                twoLinePortalGlyphList(
+                  codes,
+                  useAltGlyphs: portalViewModel.useAltGlyphs,
+                ),
               );
             }
 
