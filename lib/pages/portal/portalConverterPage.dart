@@ -5,23 +5,18 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import '../../components/common/textFormatter.dart';
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 
+import '../../components/common/textFormatter.dart';
 import '../../components/portal/galacticAddress.dart';
 import '../../components/portal/portalGlyphList.dart';
+import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../constants/AnalyticsEvent.dart';
-import '../../constants/NmsExternalUrls.dart';
 import '../../constants/NmsUIConstants.dart';
 import '../../contracts/enum/portalAddressType.dart';
-import '../../contracts/misc/segmentViewItem.dart';
 import '../../contracts/misc/segmentViewMultiBuilder.dart';
-import '../../contracts/portal/portalRecord.dart';
 import '../../contracts/redux/appState.dart';
-import '../../helpers/genericHelper.dart';
 import '../../helpers/hexHelper.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
-import 'addPortalPage.dart';
 
 class PortalConverterPage extends StatefulWidget {
   const PortalConverterPage({Key key}) : super(key: key);
@@ -32,7 +27,7 @@ class PortalConverterPage extends StatefulWidget {
 
 class _PortalConverterPageState extends State<PortalConverterPage> {
   PortalAddressType input = PortalAddressType.Glyphs;
-  PortalAddressType output = PortalAddressType.GalacticCoords;
+  int outputIndex = 0;
   List<int> codes = List.empty(growable: true);
   bool disableEditBtns = false;
   int counter = 0;
@@ -135,6 +130,15 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
     );
   }
 
+  _galAddressCopy(BuildContext localContext, String newTxt) {
+    Clipboard.setData(ClipboardData(text: newTxt));
+    getSnackbar().showSnackbar(
+      localContext,
+      LocaleKey.galacticAddressCopied,
+      description: newTxt,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return basicGenericPageScaffold(
@@ -190,7 +194,8 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
     double maxWidth = screenIsSmol ? screenWidth : (screenWidth * 0.7);
     List<SegmentViewMultiBuilder> portalOptions = [
       SegmentViewMultiBuilder(
-        title: LocaleKey.portals, // TODO translate
+        enumIndex: PortalAddressType.Code.index,
+        title: LocaleKey.hexCoordLabel,
         builders: [
           (innerCtx) => [
                 emptySpace2x(),
@@ -215,7 +220,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                   _galAddrBController.text,
                   _galAddrCController.text,
                   _galAddrDController.text,
-                )),
+                ).value),
               );
             } else {
               innerBuilder.add(genericItemName(
@@ -229,7 +234,8 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
         ],
       ),
       SegmentViewMultiBuilder(
-        title: LocaleKey.renamePortal, // TODO translate
+        enumIndex: PortalAddressType.Glyphs.index,
+        title: LocaleKey.portalAddress,
         builders: [
           (innerCtx) => [
                 emptySpace2x(),
@@ -290,15 +296,49 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                 ),
                 emptySpace1x(),
               ],
-          (innerCtx) => [
-                emptySpace1x(),
+          (innerCtx) {
+            List<Widget> innerBuilder = List.empty(growable: true);
+            innerBuilder.add(emptySpace2x());
+
+            if (input == PortalAddressType.GalacticCoords) {
+              ResultWithValue<String> convertResult =
+                  portalCodesFromGalacticAddress(
+                context,
+                _galAddrPlanetIndexController.text,
+                _galAddrAController.text,
+                _galAddrBController.text,
+                _galAddrCController.text,
+                _galAddrDController.text,
+              );
+              if (convertResult.hasFailed == true) {
+                innerBuilder.add(genericItemName(convertResult.value));
+              } else {
+                List<int> intCoords = hexToIntArray(convertResult.value);
+                bool anyAreNull = intCoords.any((coord) => coord == null);
+                if (anyAreNull == false && intCoords.length == 12) {
+                  innerBuilder.add(
+                    twoLinePortalGlyphList(intCoords, useAltGlyphs: true),
+                  );
+                } else {
+                  innerBuilder.add(genericItemName(
+                    getTranslations().fromKey(LocaleKey.galacticAddressInvalid),
+                  ));
+                }
+              }
+            } else {
+              innerBuilder.add(
                 twoLinePortalGlyphList(codes, useAltGlyphs: true),
-                emptySpace1x(),
-              ],
+              );
+            }
+
+            innerBuilder.add(emptySpace2x());
+            return innerBuilder;
+          },
         ],
       ),
       SegmentViewMultiBuilder(
-        title: LocaleKey.galacticAddress, // TODO translate
+        enumIndex: PortalAddressType.GalacticCoords.index,
+        title: LocaleKey.galacticAddress,
         builders: [
           (innerCtx) => [
                 emptySpace2x(),
@@ -349,7 +389,13 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                   ...noConversionNeededWidgets
                 else ...[
                   emptySpace2x(),
-                  galacticAddress(innerCtx, codes, hideTextHeading: true),
+                  galacticAddress(
+                    innerCtx,
+                    codes,
+                    hideTextHeading: true,
+                    onCopy: (String newTxt) =>
+                        _galAddressCopy(innerCtx, newTxt),
+                  ),
                   emptySpace1x(),
                 ],
               ],
@@ -375,19 +421,21 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
     }
     outputWidgets.add(customDivider());
 
+    var outputOptions =
+        portalOptions.where((opt) => opt.enumIndex != input.index).toList();
     outputWidgets.add(emptySpace1x());
     outputWidgets.add(adaptiveSegmentedControl(
       context,
-      controlItems: portalOptions.map((s) => s.toSegmentOption()).toList(),
-      currentSelection: output.index,
+      controlItems: outputOptions.map((s) => s.toSegmentOption()).toList(),
+      currentSelection: outputIndex,
       onSegmentChosen: (index) {
         setState(() {
-          output = portalAddressTypeValues.map[index.toString()];
+          outputIndex = index;
         });
       },
     ));
 
-    var outputBuilder = portalOptions[output.index].builders[1];
+    var outputBuilder = outputOptions[outputIndex].builders[1];
     List<Widget> outputBuilderWidgets = outputBuilder(context);
     for (Widget outputBuilderWidget in outputBuilderWidgets) {
       outputWidgets.add(outputBuilderWidget);

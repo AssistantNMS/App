@@ -10,7 +10,6 @@ import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';
-import '../../contracts/inventory/inventorySlotDetails.dart';
 import '../../contracts/inventory/inventorySlotWithGenericPageItem.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/itemsHelper.dart';

@@ -84,7 +84,7 @@ String intCodeToHexString(int code, int add, int mod) {
 
 String padBy4String(String input) => padString(input, 4);
 
-String portalCodesFromGalacticAddress(
+ResultWithValue<String> portalCodesFromGalacticAddress(
   BuildContext context,
   String galAddrPlanetIndex,
   String galAddrA,
@@ -105,7 +105,13 @@ String portalCodesFromGalacticAddress(
       int.parse(galAddrD, radix: 16) < 0,
     ];
 
-    if (inValidList.contains(true)) {}
+    if (inValidList.contains(true)) {
+      return ResultWithValue<String>(
+        false,
+        getTranslations().fromKey(LocaleKey.galacticAddressInvalid),
+        '',
+      );
+    }
 
     // A
     int sectionAValueStep1 = int.parse(galAddrA, radix: 16);
@@ -134,8 +140,12 @@ String portalCodesFromGalacticAddress(
         sectionCValueStep4 +
         sectionAValueStep4;
 
-    return allUpperCase(portalAddr);
+    return ResultWithValue<String>(true, allUpperCase(portalAddr), '');
   } catch (_) {
-    return getTranslations().fromKey(LocaleKey.galacticAddress);
+    return ResultWithValue<String>(
+      false,
+      getTranslations().fromKey(LocaleKey.galacticAddressInvalid),
+      '',
+    );
   }
 }
