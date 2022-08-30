@@ -162,11 +162,6 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
     if (portalViewModel.useAltGlyphs) colour = 'alt';
     List<Widget> inputWidgets = List.empty(growable: true);
     List<Widget> outputWidgets = List.empty(growable: true);
-    List<Widget> noConversionNeededWidgets = [
-      emptySpace2x(),
-      genericItemName('No conversion needed'), // TODO translate
-      emptySpace1x(),
-    ];
     Widget galAddrSpace = genericItemName(' : ');
 
     Padding hexCodeWidget = Padding(
@@ -208,9 +203,6 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                 emptySpace2x(),
               ],
           (innerCtx) {
-            if (input == PortalAddressType.Code) {
-              return noConversionNeededWidgets;
-            }
             List<Widget> innerBuilder = List.empty(growable: true);
             innerBuilder.add(emptySpace2x());
             if (input == PortalAddressType.GalacticCoords) {
@@ -393,19 +385,14 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                 emptySpace2x(),
               ],
           (innerCtx) => [
-                if (input == PortalAddressType.GalacticCoords)
-                  ...noConversionNeededWidgets
-                else ...[
-                  emptySpace2x(),
-                  galacticAddress(
-                    innerCtx,
-                    codes,
-                    hideTextHeading: true,
-                    onCopy: (String newTxt) =>
-                        _galAddressCopy(innerCtx, newTxt),
-                  ),
-                  emptySpace1x(),
-                ],
+                emptySpace2x(),
+                galacticAddress(
+                  innerCtx,
+                  codes,
+                  hideTextHeading: true,
+                  onCopy: (String newTxt) => _galAddressCopy(innerCtx, newTxt),
+                ),
+                emptySpace1x(),
               ],
         ],
       ),
