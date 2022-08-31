@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantapps_flutter_common/contracts/enum/networkState.dart';
+import 'package:assistantnms_app/constants/Routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -45,8 +46,13 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
             'Sync your in game inventory with the app through the NomNom save editor!\nOnly available for PC'));
         widgets.add(localImage(AppImage.nomNomHeader));
         widgets.add(emptySpace2x());
-        widgets.add(Card(
-          child: nomNomDownloadTile(context, subtitle: 'Download from Github'),
+        widgets.add(positiveButton(
+          context,
+          title: 'Instructions',
+          onPress: () => getNavigation().navigateAwayFromHomeAsync(
+            context,
+            navigateToNamed: Routes.nomNomInventoryTutorial,
+          ),
         ));
         widgets.add(emptySpace2x());
 

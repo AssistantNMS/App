@@ -137,7 +137,7 @@ Widget nomNomDownloadTile(BuildContext context, {String subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
       leadingImage: localImage(
-        AppImage.nomnom,
+        AppImage.nomNom,
         padding: const EdgeInsets.all(8),
       ),
       title: 'NomNom',
@@ -157,7 +157,7 @@ Widget nomNomOpenSyncModalTile(
   );
   return genericListTileWithSubtitle(
     context,
-    leadingImage: AppImage.nomnom,
+    leadingImage: AppImage.nomNom,
     name: 'Sync with NomNom save editor', // TODO translate
     subtitle: const Text('Transfer your in game inventory'),
     trailing: isLocked ? const Icon(Icons.lock) : null,
