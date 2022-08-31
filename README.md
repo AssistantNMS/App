@@ -2,7 +2,7 @@
   
   # Assistant for No Man's Sky
   ### Android & iOS app built in Flutter  
-  ![header](./.github/img/header.png)
+  ![header](https://github.com/AssistantNMS/.github/blob/main/img/banner.png?raw=true)
   
   <br />
   
