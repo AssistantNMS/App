@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantapps_flutter_common/contracts/enum/networkState.dart';
-import 'package:assistantnms_app/constants/Routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -10,6 +9,7 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import '../../constants/AppDuration.dart';
 import '../../constants/AppImage.dart';
 import '../../constants/Modal.dart';
+import '../../constants/Routes.dart';
 import '../../constants/NmsUIConstants.dart';
 import '../../constants/UserSelectionIcons.dart';
 import '../../contracts/generated/nomNomInventoryViewModel.dart';
@@ -19,7 +19,6 @@ import '../../contracts/redux/appState.dart';
 import '../../contracts/redux/inventoryState.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../redux/modules/viewModel/syncPageViewModel.dart';
-import '../tilePresenters/youtubersTilePresenter.dart';
 
 class SyncWithNomNomBottomSheet extends StatefulWidget {
   const SyncWithNomNomBottomSheet({Key key}) : super(key: key);
