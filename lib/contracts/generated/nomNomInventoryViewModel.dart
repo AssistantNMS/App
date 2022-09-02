@@ -8,10 +8,12 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class NomNomInventoryViewModel {
   final String name;
+  final int type;
   final List<NomNomInventorySlotViewModel> slots;
 
   NomNomInventoryViewModel({
     this.name,
+    this.type,
     this.slots,
   });
 
@@ -21,6 +23,7 @@ class NomNomInventoryViewModel {
   factory NomNomInventoryViewModel.fromJson(Map<String, dynamic> json) =>
       NomNomInventoryViewModel(
         name: readStringSafe(json, 'name'),
+        type: readIntSafe(json, 'type'),
         slots: readListSafe<NomNomInventorySlotViewModel>(
           json,
           'slots',

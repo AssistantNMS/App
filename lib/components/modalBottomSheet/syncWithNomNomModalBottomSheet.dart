@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantapps_flutter_common/contracts/enum/networkState.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -116,7 +115,8 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
                     ));
                   }
                   invs.add(Inventory(
-                    icon: UserSelectionIcons.inventory[0],
+                    icon: UserSelectionIcons
+                        .nomNomInventoryTypeIcons[apiInv.type],
                     name: apiInv.name,
                     slots: newSlots,
                   ));
