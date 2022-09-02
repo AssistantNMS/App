@@ -25,7 +25,9 @@ Widget galacticAddress(
         style: textStyle,
       ));
     } else {
-      var gAddr = '$section1Code:$section2Code:$section3Code:$section4Code';
+      String gAddr = allUpperCase(
+        '$section1Code:$section2Code:$section3Code:$section4Code',
+      );
       widgets.add(Text(gAddr, style: textStyle));
       if (onCopy != null) {
         onTap = () => onCopy(gAddr);

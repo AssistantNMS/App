@@ -126,16 +126,38 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
                   orderByType: viewModel.inventoryState.orderByType,
                 ));
 
-                setState(() {
-                  networkState = NetworkState.Success;
-                });
+                // setState(() {
+                //   networkState = NetworkState.Success;
+                // });
 
-                getNavigation().pop(context);
+                await getNavigation().popUntil(
+                  context,
+                  [
+                    Routes.inventoryList,
+                    Routes.syncPage,
+                    Routes.catalogueHome,
+                    Routes.customHome,
+                    Routes.home,
+                  ],
+                );
               },
               onChanged: (value) {},
             ),
           ));
         }
+
+        // if (networkState == NetworkState.Success) {
+        //   Future.delayed(const Duration(milliseconds: 250)).then(
+        //     (value) => getSnackbar().showSnackbar(
+        //       context,
+        //       LocaleKey.success,
+        //       onPositive: (() async {
+        //         await getNavigation().pop(context);
+        //         await getNavigation().pop(context);
+        //       }),
+        //     ),
+        //   );
+        // }
 
         widgets.add(emptySpace8x());
 
