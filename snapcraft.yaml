@@ -1,0 +1,18 @@
+name: assistantnms
+version: '1.116.0'
+summary: A companion app for the game No Man's Sky
+description: View all the possible recipes, live status of Community events and so much more from your phone and everywhere else!
+
+confinement: strict
+base: core18
+
+parts:
+  assistantnms:
+    plugin: flutter
+    source: https://github.com/AssistantNMS/App.git
+    flutter-target: lib/main.dart
+
+apps:
+  assistantnms:
+    command: super_cool_app
+    extensions: [flutter-dev]

@@ -148,7 +148,7 @@ class _PortalPageState extends State<AddPortalPage> {
         List<String> tempTags = List.from(item.tags)
             .map((cc) => cc as String)
             .toList(); //So that it isn't passed by reference
-        Navigator.pop(
+        getNavigation().pop(
           context,
           PortalRecord(
             name: name,
@@ -167,13 +167,9 @@ class _PortalPageState extends State<AddPortalPage> {
 
   Widget getBody(BuildContext context, PortalViewModel portalViewModel) {
     List<Widget> widgets = List.empty(growable: true);
-    const double runSpacing = 1;
-    const double spacing = 1;
-    const columns = 4;
-    final w = (MediaQuery.of(context).size.width - runSpacing * (columns - 1)) /
-        columns;
-    String color = getTheme().getIsDark(context) ? 'white' : 'black';
-    if (portalViewModel.useAltGlyphs) color = 'alt';
+
+    String colour = getTheme().getIsDark(context) ? 'white' : 'black';
+    if (portalViewModel.useAltGlyphs) colour = 'alt';
 
     widgets.add(Container(
       margin: const EdgeInsets.all(2.0),
@@ -257,7 +253,7 @@ class _PortalPageState extends State<AddPortalPage> {
                           '${getPath().imageAssetPathPrefix}/portals/alt/0.png',
                         ),
                         inactiveThumbImage: AssetImage(
-                          '${getPath().imageAssetPathPrefix}/portals/$color/0.png',
+                          '${getPath().imageAssetPathPrefix}/portals/$colour/0.png',
                         ),
                         onChanged: (altGlyph) {
                           portalViewModel.toggleAltGlyphs();
@@ -267,26 +263,10 @@ class _PortalPageState extends State<AddPortalPage> {
                   ],
                 ),
                 Flexible(
-                  child: Wrap(
-                    runSpacing: runSpacing,
-                    spacing: spacing,
-                    alignment: WrapAlignment.center,
-                    children: List.generate(16, (index) {
-                      String hexNum = index.toRadixString(16);
-                      return FittedBox(
-                        child: RawMaterialButton(
-                          onPressed: () => _addCode(index),
-                          fillColor: Colors.transparent,
-                          constraints:
-                              BoxConstraints.tightFor(width: w, height: w),
-                          child: localImage(
-                            '${getPath().imageAssetPathPrefix}/portals/$color/$hexNum.png',
-                            width: w,
-                            height: w,
-                          ),
-                        ),
-                      );
-                    }),
+                  child: portalInput(
+                    context,
+                    colour: colour,
+                    addCode: _addCode,
                   ),
                 ),
               ],

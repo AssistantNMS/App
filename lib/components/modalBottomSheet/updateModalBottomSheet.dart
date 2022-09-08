@@ -7,15 +7,8 @@ import '../../contracts/data/majorUpdateItem.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../pages/newItemsInUpdate/majorUpdatesDetailPage.dart';
 
-class UpdateBottomSheet extends StatefulWidget {
+class UpdateBottomSheet extends StatelessWidget {
   const UpdateBottomSheet({Key key}) : super(key: key);
-
-  @override
-  _UpdateBottomSheetWidget createState() => _UpdateBottomSheetWidget();
-}
-
-class _UpdateBottomSheetWidget extends State<UpdateBottomSheet> {
-  _UpdateBottomSheetWidget();
 
   @override
   Widget build(BuildContext context) {

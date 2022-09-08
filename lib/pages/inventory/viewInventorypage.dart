@@ -10,7 +10,6 @@ import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';
-import '../../contracts/inventory/inventorySlotDetails.dart';
 import '../../contracts/inventory/inventorySlotWithGenericPageItem.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/itemsHelper.dart';
@@ -92,7 +91,7 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
           () => getDetailedInventorySlots(context, inventory.slots),
           listItemDisplayer: inventorySlotInContainerTilePresenter(
             onEdit: (InventorySlot slot) {
-              var controller = TextEditingController(
+              TextEditingController controller = TextEditingController(
                 text: slot.quantity.toString(),
               );
               getDialog().showQuantityDialog(
@@ -129,8 +128,9 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
 
               int quantityInt = int.tryParse(quantity);
               InventorySlot inv = InventorySlot(
-                  pageItem: InventorySlotDetails.fromGenericPageItem(temp),
-                  quantity: quantityInt);
+                id: temp.id,
+                quantity: quantityInt,
+              );
 
               vm.addInventorySlotToInventory(inventory.uuid, inv);
               forceUpdate();

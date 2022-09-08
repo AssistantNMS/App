@@ -78,6 +78,7 @@ class AppImage {
   static const String underConstruction = 'special/underConstruction.png';
   static const String communityMissionProgress =
       'special/communityMissionProgress.png';
+  static const String nomNomHeader = 'special/nomNomHeader.png';
 
   static const String expeditionSeasonBackgroundPrefix =
       base + 'special/expedition-';
@@ -127,6 +128,7 @@ class AppImage {
   static const String podcast1616 = 'contributors/podcast1616.jpg';
   static const String cyberpunk2350 = 'contributors/cyberpunk2350.jpg';
   static const String veritasVelez = 'contributors/veritasVelez.jpg';
+  static const String nomNom = 'contributors/nomnomSimple.png';
   static const String assistantNMSIcon = 'icon.png';
   static const String assistantNMSWindowIcon = 'window_icon.png';
   static const String kurtlIcon = 'KurtLourens.png';

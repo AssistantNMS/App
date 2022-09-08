@@ -11,6 +11,7 @@ class InventoryListViewModel {
   List<Inventory> containers;
   InventoryOrderByType orderByType;
   bool mergeInventoryQuantities;
+  bool isPatron;
 
   Function(Inventory inventory) addInventory;
   Function(Inventory inventory) editInventory;
@@ -25,6 +26,7 @@ class InventoryListViewModel {
     this.removeInventory,
     this.setOrderByType,
     this.mergeInventoryQuantities,
+    this.isPatron,
   });
 
   static InventoryListViewModel fromStore(Store<AppState> store) {
@@ -32,6 +34,7 @@ class InventoryListViewModel {
       containers: getContainers(store.state),
       orderByType: getOrderByType(store.state),
       mergeInventoryQuantities: getMergeInventoryQuantities(store.state),
+      isPatron: getIsPatron(store.state),
       addInventory: (Inventory inventory) =>
           store.dispatch(AddInventoryAction(inventory)),
       editInventory: (Inventory inventory) =>

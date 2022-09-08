@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/GoogleDrive.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
@@ -9,6 +8,7 @@ import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/asyncSettingTilePresenter.dart';
 import '../../components/tilePresenters/settingTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
+import '../../constants/GoogleDrive.dart';
 import '../../contracts/redux/appState.dart';
 import '../../contracts/redux/inventoryState.dart';
 import '../../contracts/redux/portalState.dart';
@@ -294,6 +294,14 @@ class _SyncWidget extends State<SyncPage> {
         LocaleKey.inventoryRestored,
       ),
     ));
+
+// TODO NomNom feature
+    // widgets.add(flatCard(
+    //   child: nomNomOpenSyncModalTile(
+    //     context,
+    //     viewModel.isPatron,
+    //   ),
+    // ));
 
     // widgets.add(genericItemDescription(
     //     'This sync feature is only intended to allow you to back up your app data to Google Drive.'));

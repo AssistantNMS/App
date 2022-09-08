@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';
 import '../../constants/NmsExternalUrls.dart';
+import '../../constants/Patreon.dart';
+import '../modalBottomSheet/patreonModalBottomSheet.dart';
+import '../modalBottomSheet/syncWithNomNomModalBottomSheet.dart';
 
 Widget devilinPixyTile(BuildContext context) => genericListTileWithSubtitle(
       context,
@@ -129,3 +132,53 @@ Widget veritasVelezTile(BuildContext context, {String subtitle}) =>
       trailing: const Icon(Icons.open_in_new),
       onTap: () => launchExternalURL(NmsExternalUrls.veritasVelezTwitter),
     );
+
+Widget nomNomDownloadTile(BuildContext context, {String subtitle}) =>
+    genericListTileWithSubtitleAndImageCount(
+      context,
+      leadingImage: localImage(
+        AppImage.nomNom,
+        padding: const EdgeInsets.all(8),
+      ),
+      title: 'NomNom',
+      subtitle: Text(subtitle ?? NmsExternalUrls.nomNomWebsite, maxLines: 1),
+      trailing: const Icon(Icons.open_in_new),
+      onTap: () => launchExternalURL(NmsExternalUrls.nomNomWebsite),
+    );
+
+Widget nomNomOpenSyncModalTile(
+  BuildContext context,
+  bool isPatron, {
+  String subtitle,
+}) {
+  bool isLocked = isPatreonFeatureLocked(
+    PatreonEarlyAccessFeature.syncInventoryPage,
+    isPatron,
+  );
+  return genericListTileWithSubtitle(
+    context,
+    leadingImage: AppImage.nomNom,
+    name: 'Sync with NomNom save editor', // TODO translate
+    subtitle: const Text('Transfer your in game inventory'),
+    trailing: isLocked ? const Icon(Icons.lock) : null,
+    onTap: () {
+      handlePatreonBottomModalSheetWhenTapped(
+        context,
+        isPatron,
+        unlockDate: PatreonEarlyAccessFeature.syncInventoryPage,
+        onSettingsTap: (BuildContext dialogCtx) async {
+          getNavigation().pop(dialogCtx);
+          await Future.delayed(const Duration(milliseconds: 250));
+        },
+        onTap: (dialogCtx) {
+          adaptiveBottomModalSheet(
+            context,
+            hasRoundedCorners: true,
+            builder: (BuildContext innerContext) =>
+                const SyncWithNomNomBottomSheet(),
+          );
+        },
+      );
+    },
+  );
+}

@@ -51,8 +51,11 @@ class LoadingWidgetService implements ILoadingWidgetService {
     return Center(
       child: Column(
         children: [
-          localImage(AppImage.error,
-              width: 500, padding: const EdgeInsets.all(8)),
+          localImage(
+            AppImage.error,
+            width: 250,
+            padding: const EdgeInsets.all(8),
+          ),
           Text(
             text ?? getTranslations().fromKey(LocaleKey.somethingWentWrong),
             style: const TextStyle(fontSize: 30),

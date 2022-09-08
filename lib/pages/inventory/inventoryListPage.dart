@@ -134,6 +134,15 @@ class _InventoryListState extends State<InventoryListPage> {
         ),
       ));
       widgets.addAll(getContainers(viewModel));
+
+// TODO NomNom feature
+      // widgets.add(Card(
+      //   child: nomNomOpenSyncModalTile(
+      //     context,
+      //     viewModel.isPatron,
+      //   ),
+      // ));
+
       widgets.add(emptySpace10x());
     }
 

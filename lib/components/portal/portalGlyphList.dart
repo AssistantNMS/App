@@ -38,3 +38,49 @@ Widget twoLinePortalGlyphList(List<int> currentCodes,
 Widget oneLinePortalGlyphList(List<int> currentCodes,
         {bool useAltGlyphs = false}) =>
     portalGlyphList(currentCodes, 12, useAltGlyphs: useAltGlyphs);
+
+Widget portalInput(
+  BuildContext context, {
+  @required String colour,
+  @required void Function(int) addCode,
+  double width,
+  bool isDisabled = false,
+}) {
+  const double runSpacing = 1;
+  const double spacing = 1;
+  const columns = 4;
+  double localWidth = width ?? MediaQuery.of(context).size.width;
+  final w = (localWidth - runSpacing * (columns - 1)) / columns;
+
+  return Wrap(
+    runSpacing: runSpacing,
+    spacing: spacing,
+    alignment: WrapAlignment.center,
+    children: List.generate(16, (index) {
+      String hexNum = index.toRadixString(16);
+
+      Widget imgChild = localImage(
+        '${getPath().imageAssetPathPrefix}/portals/$colour/$hexNum.png',
+        width: w,
+        height: w,
+      );
+
+      return FittedBox(
+        child: RawMaterialButton(
+          onPressed: () => addCode(index),
+          // fillColor: Colors.transparent,
+          constraints: BoxConstraints.tightFor(width: w, height: w),
+          child: (isDisabled == false)
+              ? imgChild
+              : ColorFiltered(
+                  colorFilter: ColorFilter.mode(
+                    getTheme().getScaffoldBackgroundColour(context),
+                    BlendMode.saturation,
+                  ),
+                  child: imgChild,
+                ),
+        ),
+      );
+    }),
+  );
+}

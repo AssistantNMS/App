@@ -8,7 +8,6 @@ import '../contracts/genericPageItem.dart';
 import '../contracts/inventory/inventory.dart';
 import '../contracts/inventory/inventoryBasicInfo.dart';
 import '../contracts/inventory/inventorySlot.dart';
-import '../contracts/inventory/inventorySlotDetails.dart';
 import '../contracts/inventory/inventorySlotWithContainerAndGenericPageItem.dart';
 import '../contracts/inventory/inventorySlotWithGenericPageItem.dart';
 import '../contracts/requiredItem.dart';
@@ -350,7 +349,7 @@ Future<ResultWithValue<List<InventorySlotWithGenericPageItem>>>
     if (!getByIdResult.isSuccess) continue;
 
     results.add(InventorySlotWithGenericPageItem(
-      pageItem: InventorySlotDetails.fromGenericPageItem(getByIdResult.value),
+      id: getByIdResult.value?.id ?? '',
       name: getByIdResult.value?.name ?? '',
       quantity: slot.quantity,
     ));
@@ -363,19 +362,23 @@ Future<ResultWithValue<List<InventorySlotWithGenericPageItem>>>
 
 Future<ResultWithValue<List<InventorySlotWithContainersAndGenericPageItem>>>
     getDetailedInventorySlotsWithContainer(
-        BuildContext context, List<Inventory> inventories) async {
+  BuildContext context,
+  List<Inventory> inventories,
+) async {
   Map<String, InventorySlotWithContainersAndGenericPageItem> invSlotMap = {};
   for (Inventory inventory in inventories) {
     for (InventorySlot slot in inventory.slots) {
-      InventoryBasicInfo nameId =
+      InventoryBasicInfo basicInfo =
           InventoryBasicInfo(inventory.uuid, inventory.name, inventory.icon);
       if (invSlotMap.containsKey(slot.id)) {
-        invSlotMap.update(slot.id,
-            (InventorySlotWithContainersAndGenericPageItem orig) {
-          orig.quantity += slot.quantity;
-          orig.containers.add(nameId);
-          return orig;
-        });
+        invSlotMap.update(
+          slot.id,
+          (InventorySlotWithContainersAndGenericPageItem orig) {
+            orig.quantity += slot.quantity;
+            orig.containers.add(basicInfo);
+            return orig;
+          },
+        );
       } else {
         ResultWithValue<IGenericRepository> repoResult =
             getRepoFromId(context, slot.id);
@@ -383,14 +386,15 @@ Future<ResultWithValue<List<InventorySlotWithContainersAndGenericPageItem>>>
 
         ResultWithValue<GenericPageItem> getByIdResult =
             await repoResult.value.getById(context, slot.id);
+
         if (!getByIdResult.isSuccess) continue;
         invSlotMap.putIfAbsent(
           slot.id,
           () => InventorySlotWithContainersAndGenericPageItem(
-            container: nameId,
-            pageItem:
-                InventorySlotDetails.fromGenericPageItem(getByIdResult.value),
+            container: basicInfo,
             quantity: slot.quantity,
+            id: getByIdResult.value.id,
+            name: getByIdResult.value.name,
           ),
         );
       }

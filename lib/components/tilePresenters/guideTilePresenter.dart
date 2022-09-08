@@ -43,7 +43,7 @@ Widget guideTilePresenter(BuildContext context, NmsGuide guideDetails) {
     children: <Widget>[
       Image(
           image: AssetImage(
-        guideDetails.image == null
+        guideDetails.image.isEmpty
             ? '${getPath().imageAssetPathPrefix}/defaultGuide.png'
             : 'assets/guide/${guideDetails.folder}/${guideDetails.image}',
       )),

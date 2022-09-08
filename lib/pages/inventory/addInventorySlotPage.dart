@@ -11,7 +11,6 @@ import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';
-import '../../contracts/inventory/inventorySlotDetails.dart';
 import '../../contracts/redux/appState.dart';
 import '../../pages/inventory/addEditInventoryPage.dart';
 import '../../redux/modules/inventory/InventorySlotGenericViewModel.dart';
@@ -45,13 +44,13 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
         body: getBody(context, viewModel),
         fab: FloatingActionButton(
           onPressed: () async {
-            var invUuid = inventory?.uuid ?? viewModel.containers[0].uuid;
-            var invSlot = InventorySlot(
-              pageItem: InventorySlotDetails.fromGenericPageItem(genericItem),
+            String invUuid = inventory?.uuid ?? viewModel.containers[0].uuid;
+            InventorySlot invSlot = InventorySlot(
+              id: genericItem.id,
               quantity: int.tryParse(quantityController.text ?? "0") ?? 0,
             );
             viewModel.addInventorySlotToInventory(invUuid, invSlot);
-            Navigator.of(context).pop();
+            getNavigation().pop(context);
           },
           heroTag: 'AddInventorySlotPage',
           child: const Icon(Icons.check),
