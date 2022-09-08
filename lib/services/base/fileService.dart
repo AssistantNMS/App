@@ -30,7 +30,10 @@ class FileService {
       }
 
       getLog().d('save file to: ' + outputFile);
-      download(stream, outputFile);
+      await download(stream, outputFile);
+
+      File file = File(outputFile);
+      await file.readAsString(); // Try read the file to ensure it exists
 
       return Result(true, '');
     } catch (ex) {
