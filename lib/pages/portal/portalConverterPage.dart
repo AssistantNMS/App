@@ -363,9 +363,10 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                   width: maxWidth,
                   child: TextField(
                     controller: _galAddrPlanetIndexController,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Planet index', // TODO translate
+                    decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      labelText: getTranslations()
+                          .fromKey(LocaleKey.galacticAddressPlanetIndex),
                     ),
                     textCapitalization: TextCapitalization.characters,
                     inputFormatters: [
