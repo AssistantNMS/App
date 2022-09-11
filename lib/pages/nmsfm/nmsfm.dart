@@ -164,7 +164,10 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
       ZenoFMApiService service = ZenoFMApiService();
       ResultWithValue<ZenoFmNowPlaying> nowPlayingResult =
           await service.getNowPlaying(nmsfmId);
-      if (nowPlayingResult.hasFailed) return;
+      if (nowPlayingResult.hasFailed) {
+        getLog().i('nowPlayingResult failed');
+        return;
+      }
 
       setState(() {
         _title = nowPlayingResult.value.title;
@@ -185,6 +188,7 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
         if (_title.isNotEmpty ?? false) title = _title;
 
         String artist = 'Now Streaming'; // TODO translate
+        getLog().i('_artist: ' + _artist);
         if (_artist.isNotEmpty ?? false) artist = _artist;
 
         Widget playStopWidget = (event.isPlaying)
