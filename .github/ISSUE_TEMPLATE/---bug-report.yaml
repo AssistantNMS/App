@@ -1,0 +1,61 @@
+name: "\U0001F41B Bug report"
+title: '[Bug]: '
+description: |
+  Thank you for reporting issues!
+  Please make sure that you have looked at and read the "I found a Bug and I want to report it" section of the Contributing to AssistantNMS document: https://github.com/AssistantNMS/App/blob/main/.github/CONTRIBUTING.md
+labels: bug
+body:
+  - type: textarea
+    id: description
+    validations:
+      required: true
+    attributes:
+      label: Describe the bug
+      description: |
+        A clear and concise description of what the bug is. If you for example disagree with what the name of an game item is please point out what you believe it should say.
+      placeholder: 🐛🐜🪲
+  - type: textarea
+    id: steps-to-reproduce
+    validations:
+      required: true
+    attributes:
+      label: To Reproduce
+      description: |
+        Steps to reproduce the behavior:
+      value: |
+        1. Go to 'Bone Cream' item page
+        2. Click on add to cart button
+        3. Give a quantity
+        4. It fails to add to cart
+  - type: textarea
+    id: expected
+    validations:
+      required: true
+    attributes:
+      label: Expected behavior
+      description: |
+        A clear and concise description of what you expected to happen.
+  - type: dropdown
+    id: device
+    validations:
+      required: true
+    attributes:
+      label: Where did you find this problem?
+      multiple: false
+      options:
+        - Android
+        - iOS
+        - Windows
+        - WebApp
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Please recreate the issue and attach/paste the logs from the app onto this issue. You can find the logs on the settings page, there is a "Logs" option.
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: |
+        Add any other context or screenshots about the feature request here.
