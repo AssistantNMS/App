@@ -81,7 +81,8 @@ class AudioPlayerService extends IAudioPlayerService {
     return StreamBuilder(
       stream: getPlayer().isPlaying,
       builder: (BuildContext audioCtx, AsyncSnapshot<bool> asyncSnapshot) {
-        bool isLoading = asyncSnapshot.connectionState != ConnectionState.done;
+        bool isLoading =
+            asyncSnapshot.connectionState == ConnectionState.waiting;
         bool isPlaying = asyncSnapshot.data ?? false;
 
         AudioStreamBuilderEvent current = AudioStreamBuilderEvent(
