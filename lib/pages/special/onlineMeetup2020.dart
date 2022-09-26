@@ -126,7 +126,7 @@ class _OnlineMeetup2020Widget extends State<OnlineMeetup2020Page> {
                 negativeButton(
                   title: getTranslations().fromKey(LocaleKey.noticeReject),
                   onPress: () async {
-                    introViewModel.hideOnlineMeetup2020();
+                    // introViewModel.hideOnlineMeetup2020();
                     await getNavigation().navigateHomeAsync(context);
                   },
                 ),

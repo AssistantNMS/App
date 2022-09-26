@@ -6,6 +6,7 @@ import 'package:assistantnms_app/contracts/generated/feedbackQuestionAnsweredVie
 import 'package:assistantnms_app/contracts/generated/feedbackQuestionViewModel.dart';
 import 'package:flutter/material.dart';
 
+import '../../integration/dependencyInjection.dart';
 import './feedbackComponents.dart';
 import '../../constants/NmsUIConstants.dart';
 import '../../contracts/enum/feedbackQuestionType.dart';
@@ -102,32 +103,32 @@ class _FeedbackQuestionsWidget extends State<FeedbackQuestionsPage> {
       setState(() {
         isLoading = true;
       });
-      // Result result = await getApiRepo().sendFeedbackForm(answerForm);
+      Result result = await getApiRepo().sendFeedbackForm(answerForm);
       setState(() {
         isLoading = false;
       });
-      // if (result.hasFailed) {
-      //   getDialog().showSimpleDialog(
-      //     context,
-      //     getTranslations().fromKey(LocaleKey.error),
-      //     Text(getTranslations().fromKey(LocaleKey.feedbackNotSubmitted)),
-      //     buttonBuilder: (BuildContext ctx) => [
-      //       getDialog().simpleDialogCloseButton(ctx),
-      //     ],
-      //   );
-      // } else {
-      //   getDialog().showSimpleDialog(
-      //     context,
-      //     getTranslations().fromKey(LocaleKey.success),
-      //     Text(getTranslations().fromKey(LocaleKey.feedbackSubmitted)),
-      //     buttonBuilder: (BuildContext ctx) => [
-      //       getDialog().simpleDialogCloseButton(
-      //         context,
-      //         onTap: () async => await getNavigation().navigateHomeAsync(ctx),
-      //       ),
-      //     ],
-      //   );
-      // }
+      if (result.hasFailed) {
+        getDialog().showSimpleDialog(
+          context,
+          getTranslations().fromKey(LocaleKey.error),
+          Text(getTranslations().fromKey(LocaleKey.feedbackNotSubmitted)),
+          buttonBuilder: (BuildContext ctx) => [
+            getDialog().simpleDialogCloseButton(ctx),
+          ],
+        );
+      } else {
+        getDialog().showSimpleDialog(
+          context,
+          getTranslations().fromKey(LocaleKey.success),
+          Text(getTranslations().fromKey(LocaleKey.feedbackSubmitted)),
+          buttonBuilder: (BuildContext ctx) => [
+            getDialog().simpleDialogCloseButton(
+              context,
+              onTap: () async => await getNavigation().navigateHomeAsync(ctx),
+            ),
+          ],
+        );
+      }
     };
 
     bool isButtonEnabled = submitButtonEnabled(feedbackForm, answerForm);

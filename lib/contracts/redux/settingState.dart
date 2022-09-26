@@ -12,7 +12,6 @@ class SettingState {
   final bool guidesIsCompact;
   final bool genericTileIsCompact;
   final bool showMaterialTheme;
-  final bool isRelease118IntroHidden;
   final bool displayGenericItemColour;
   final bool isValentines2020IntroHidden;
   final bool isValentines2021IntroHidden;
@@ -38,7 +37,6 @@ class SettingState {
     this.guidesIsCompact,
     this.genericTileIsCompact,
     this.showMaterialTheme,
-    this.isRelease118IntroHidden,
     this.displayGenericItemColour,
     this.isValentines2020IntroHidden,
     this.isValentines2021IntroHidden,
@@ -66,7 +64,6 @@ class SettingState {
       guidesIsCompact: false,
       genericTileIsCompact: true,
       showMaterialTheme: true,
-      isRelease118IntroHidden: false,
       displayGenericItemColour: true,
       isValentines2020IntroHidden: false,
       isValentines2021IntroHidden: false,
@@ -94,7 +91,6 @@ class SettingState {
     bool guidesIsCompact,
     bool genericTileIsCompact,
     bool showMaterialTheme,
-    bool isRelease118IntroHidden,
     bool displayGenericItemColour,
     bool isValentines2020IntroHidden,
     bool isValentines2021IntroHidden,
@@ -120,8 +116,6 @@ class SettingState {
       selectedLanguage: selectedLanguage ?? this.selectedLanguage,
       genericTileIsCompact: genericTileIsCompact ?? this.genericTileIsCompact,
       showMaterialTheme: showMaterialTheme ?? this.showMaterialTheme,
-      isRelease118IntroHidden:
-          isRelease118IntroHidden ?? this.isRelease118IntroHidden,
       displayGenericItemColour:
           displayGenericItemColour ?? this.displayGenericItemColour,
       isValentines2020IntroHidden:
@@ -157,7 +151,6 @@ class SettingState {
         guidesIsCompact: readBoolSafe(json, 'guidesIsCompact'),
         genericTileIsCompact: readBoolSafe(json, 'genericTileIsCompact'),
         showMaterialTheme: readBoolSafe(json, 'showMaterialTheme'),
-        isRelease118IntroHidden: readBoolSafe(json, 'isRelease118IntroHidden'),
         displayGenericItemColour:
             readBoolSafe(json, 'displayGenericItemColour'),
         isValentines2020IntroHidden:
@@ -193,7 +186,6 @@ class SettingState {
         'guidesIsCompact': guidesIsCompact,
         'genericTileIsCompact': genericTileIsCompact,
         'showMaterialTheme': showMaterialTheme,
-        'isRelease118IntroHidden': isRelease118IntroHidden,
         'displayGenericItemColour': displayGenericItemColour,
         'isValentines2020IntroHidden': isValentines2020IntroHidden,
         'isValentines2021IntroHidden': isValentines2021IntroHidden,
