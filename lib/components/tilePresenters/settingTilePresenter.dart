@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import '../../constants/AnalyticsEvent.dart';
 
-import '../../constants/Patreon.dart';
+import '../../env.dart';
 
 Widget headingSettingTilePresenter(String name) {
   return ListTile(

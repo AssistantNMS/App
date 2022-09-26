@@ -1,11 +1,3 @@
-class Patreon {
-  static const List<String> codes = [
-    'PAT1120',
-    'ALPHATESTER',
-    'KURTISCOOL',
-  ];
-}
-
 class PatreonEarlyAccessFeature {
   static DateTime manufacturingPuzzleAvailableFrom = DateTime(2020, 12, 3);
   static DateTime upgradeModuleStatsAvailableFrom = DateTime(2021, 2, 19);
