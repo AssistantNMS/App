@@ -2,7 +2,8 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 Widget translatorTilePresenter(BuildContext context,
-        TranslatorLeaderboardItemViewModel contributor, int index) =>
+        TranslatorLeaderboardItemViewModel contributor, int index,
+        {void Function() onTap}) =>
     genericListTileWithNetworkImage(
       context,
       imageUrl: contributor.profileImageUrl,

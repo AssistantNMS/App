@@ -6,7 +6,8 @@ import '../../contracts/helloGames/newsItem.dart';
 import '../../contracts/helloGames/releaseNote.dart';
 import '../../helpers/genericHelper.dart';
 
-Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release) {
+Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release,
+    {void Function() onTap}) {
   List<Widget> platformChips = List.empty(growable: true);
   if (release.isPc) {
     platformChips.add(genericChip(context, "PC", color: Colors.red));
@@ -69,7 +70,8 @@ Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release) {
   );
 }
 
-Widget newsItemTilePresenter(BuildContext context, NewsItem newsItem) {
+Widget newsItemTilePresenter(BuildContext context, NewsItem newsItem,
+    {void Function() onTap}) {
   Widget image = networkImage(
     newsItem.image,
     loading: localImage('${getPath().imageAssetPathPrefix}/defaultNews.jpg'),

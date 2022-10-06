@@ -108,12 +108,13 @@ List<Widget> Function(
 //   );
 // }
 
-Widget Function(BuildContext context, InventorySlotWithGenericPageItem invSlot)
-    inventorySlotInContainerTilePresenter({
+Widget Function(BuildContext context, InventorySlotWithGenericPageItem invSlot,
+    {void Function() onTap}) inventorySlotInContainerTilePresenter({
   Function(InventorySlot) onEdit,
   Function(InventorySlot) onDelete,
 }) {
-  return (BuildContext context, InventorySlotWithGenericPageItem invSlot) {
+  return (BuildContext context, InventorySlotWithGenericPageItem invSlot,
+      {void Function() onTap}) {
     return genericItemTilePresenterWrapper(
       context,
       appId: invSlot.id,
@@ -146,8 +147,9 @@ Widget Function(BuildContext context, InventorySlotWithGenericPageItem invSlot)
 
 Widget inventorySlotTileWithContainersPresenter(
   BuildContext context,
-  InventorySlotWithContainersAndGenericPageItem invSlot,
-) {
+  InventorySlotWithContainersAndGenericPageItem invSlot, {
+  void Function() onTap,
+}) {
   return genericItemTilePresenterWrapper(
     context,
     appId: invSlot.id,

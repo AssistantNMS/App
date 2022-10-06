@@ -114,8 +114,9 @@ class AdvancedSearchResults extends StatelessWidget {
 
     return SearchableList<GenericPageItem>(
       getSearchListFutureFromList(displayItems),
-      listItemDisplayer: (BuildContext ctx, GenericPageItem item) =>
-          genericTilePresenter(ctx, item, false),
+      listItemDisplayer: (BuildContext ctx, GenericPageItem item,
+              {void Function() onTap}) =>
+          genericTilePresenter(ctx, item, false, onTap: onTap),
       listItemSearch: search,
       key: Key(getTranslations().currentLanguage),
       hintText: getTranslations().fromKey(LocaleKey.searchItems),

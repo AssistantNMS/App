@@ -27,8 +27,8 @@ class SelectGenericItemPage extends StatelessWidget {
       body: StoreConnector<AppState, GenericPageViewModel>(
           converter: (store) => GenericPageViewModel.fromStore(store),
           builder: (_, viewModel) {
-            Null Function(GenericPageItem genericPageItem) onTap;
-            onTap = (GenericPageItem genericPageItem) {
+            Null Function(GenericPageItem genericPageItem) localOnTap;
+            localOnTap = (GenericPageItem genericPageItem) {
               Navigator.pop(context, genericPageItem);
             };
             var presenter = getListItemDisplayer(
@@ -38,9 +38,10 @@ class SelectGenericItemPage extends StatelessWidget {
             return SearchableList<GenericPageItem>(
               () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),
               listItemDisplayer:
-                  (BuildContext context, GenericPageItem genericPageItem) =>
+                  (BuildContext context, GenericPageItem genericPageItem,
+                          {void Function() onTap}) =>
                       presenter(context, genericPageItem,
-                          onTap: () => onTap(genericPageItem)),
+                          onTap: () => localOnTap(genericPageItem)),
               listItemSearch: search,
               key: Key(
                   '${getTranslations().currentLanguage} ${viewModel.genericTileIsCompact} - ${viewModel.displayGenericItemColour}'),

@@ -72,12 +72,13 @@ class _PortalsPageState extends State<PortalsPage> {
   Widget getBody(BuildContext context, PortalViewModel portalViewModel) {
     return SearchableList<PortalRecord>(
       getSearchListFutureFromList(portalViewModel.portals),
-      listItemDisplayer: (BuildContext context, PortalRecord portal) =>
+      listItemDisplayer: (BuildContext context, PortalRecord portal,
+              {void Function() onTap}) =>
           portalTilePresenter(
         context,
         portal,
         useAltGlyphs: portalViewModel.useAltGlyphs,
-        onTap: () => onTap(portal),
+        onTap: () => onLocalTap(portal),
         onEdit: () => onEdit(portal, portalViewModel),
         onDelete: () => onDelete(portal, portalViewModel),
       ),
@@ -90,7 +91,7 @@ class _PortalsPageState extends State<PortalsPage> {
     );
   }
 
-  void onTap(PortalRecord portal) async {
+  void onLocalTap(PortalRecord portal) async {
     await getNavigation().navigateAsync(
       context,
       navigateTo: (context) => ViewPortalPage(portal),
