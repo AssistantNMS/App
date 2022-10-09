@@ -1319,7 +1319,7 @@
     "Icon": "constructedTechnology/46.png",
     "Name": "Mineraalextractor",
     "Group": "Elektriciteitsdistributie-module",
-    "Description": "Een geautomatiseerde mineraalmijn. Kies een locatie met de <TECHNOLOGY>landmeter<>-upgrade voor het <TECHNOLOGY>analysevizier<>. De snelheid van de mineralenextractie en de mineralenopbrengst verschillen per locatie.\n\nHeeft <STELLAR>energie<> nodig. Koppel hem aan <TECHNOLOGY>silo's<> met <TECHNOLOGY>leidingen<> om te oogsten op handigere locaties.",
+    "Description": "Een geautomatiseerde mineraalmijn. Kies een locatie met de <TECHNOLOGY>detector<>-upgrade voor het <TECHNOLOGY>analysevizier<>. De snelheid van de mineralenextractie en de mineralenopbrengst verschillen per locatie.\n\nHeeft <STELLAR>energie<> nodig. Koppel hem aan <TECHNOLOGY>silo's<> met <TECHNOLOGY>leidingen<> om te oogsten op handigere locaties.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -1350,7 +1350,7 @@
     "Icon": "constructedTechnology/47.png",
     "Name": "Gasextractor",
     "Group": "Elektriciteitsdistributie-module",
-    "Description": "Een geautomatiseerde gasmijn. Kies een locatie met de <TECHNOLOGY>landmeter<>-upgrade voor het <TECHNOLOGY>analysevizier<>. De snelheid van de gasextractie en de gasopbrengst verschillen per locatie.\n\nHeeft <STELLAR>energie<> nodig. Koppel hem aan <TECHNOLOGY>silo's<> met <TECHNOLOGY>leidingen<> om te oogsten op handigere locaties.",
+    "Description": "Een geautomatiseerde gasmijn. Kies een locatie met de <TECHNOLOGY>detector<>-upgrade voor het <TECHNOLOGY>analysevizier<>. De snelheid van de gasextractie en de gasopbrengst verschillen per locatie.\n\nHeeft <STELLAR>energie<> nodig. Koppel hem aan <TECHNOLOGY>silo's<> met <TECHNOLOGY>leidingen<> om te oogsten op handigere locaties.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -1472,7 +1472,7 @@
     "Icon": "constructedTechnology/51.png",
     "Name": "Elektromagnetische generator",
     "Group": "Elektriciteitsdistributie-module",
-    "Description": "Mits geplaatst in een gebied met een krachtig veld kan met de efficiënte elektromagnetische dynamo's <STELLAR>bijna oneindig veel energie<> worden opgewekt.\n\nVind geschikte locaties met de <TECHNOLOGY>landmeter<>-upgrade voor het <TECHNOLOGY>analysevizier<>. De energieopbrengst verschilt per locatie.",
+    "Description": "Mits geplaatst in een gebied met een krachtig veld kan met de efficiënte elektromagnetische dynamo's <STELLAR>bijna oneindig veel energie<> worden opgewekt.\n\nVind geschikte locaties met de <TECHNOLOGY>detector<>-upgrade voor het <TECHNOLOGY>analysevizier<>. De energieopbrengst verschilt per locatie.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -2624,10 +2624,9 @@
     "Icon": "constructedTechnology/91.png",
     "Name": "Atlas-pas v1",
     "Group": "Toegangskaart",
-    "Description": "Beveiligings- en toegangspas die door veel galactische soorten wordt verstrekt aan bepaalde reizigers.\n\nBiedt toegang tot gebieden en buitenposten met een laag beveiligingsniveau.",
+    "Description": "Beveiligings- en toegangspas die door veel galactische soorten wordt verstrekt aan bepaalde Reizigers.\n\nBiedt toegang tot gebieden en buitenposten met een laag beveiligingsniveau.",
     "BaseValueUnits": 825.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2653,10 +2652,9 @@
     "Icon": "constructedTechnology/91.png",
     "Name": "Atlas-pas v2",
     "Group": "Toegangskaart",
-    "Description": "Beveiligings- en toegangspas die door veel galactische soorten wordt verstrekt aan bepaalde reizigers.\n \nBiedt toegang tot gebieden en buitenposten met een gemiddeld beveiligingsniveau.",
+    "Description": "Beveiligings- en toegangspas die door veel galactische soorten wordt verstrekt aan bepaalde Reizigers.\n \nBiedt toegang tot gebieden en buitenposten met een gemiddeld beveiligingsniveau.",
     "BaseValueUnits": 1856.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2682,12 +2680,12 @@
     "Icon": "constructedTechnology/91.png",
     "Name": "Atlas-pas v3",
     "Group": "Toegangskaart",
-    "Description": "Beveiligings- en toegangspas die door veel galactische soorten wordt verstrekt aan bepaalde reizigers.\n \nBiedt toegang tot gebieden en buitenposten met een hoog beveiligingsniveau.",
+    "Description": "Beveiligings- en toegangspas die door veel galactische soorten wordt verstrekt aan bepaalde Reizigers.\n \nBiedt toegang tot gebieden en buitenposten met een hoog beveiligingsniveau.",
     "BaseValueUnits": 2613.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties"
     ],
     "BlueprintCost": 1,
@@ -2821,9 +2819,9 @@
   {
     "Id": "conTech99",
     "Icon": "building/350.png",
-    "Name": "Opslaguitbreiding ruimteschip",
+    "Name": "Opslaguitbreiding",
     "Group": "Ruimteschip-uitbreidingsmodule",
-    "Description": "Een technologiemodule die afkomstig is uit de restanten van een <STELLAR>geborgen ruimteschip<>. Kan ook worden gevonden op <STELLAR>crashlocaties van vrachtschepen<> of worden geborgen tijdens <STELLAR>fregatexpedities<>.\n\nKan worden gebruikt om de opslagcapaciteit van een ruimteschip te vergroten bij een <TECHNOLOGY>terminal voor ruimteschipbenodigdheden<> in een ruimtestation.",
+    "Description": "Een technologiemodule die afkomstig is uit de restanten van een <STELLAR>geborgen ruimteschip<STELLAR>. Kan ook worden gevonden op <STELLAR>crashlocaties van vrachtschepen<> of worden geborgen tijdens <STELLAR>fregatexpedities<>.\n\nKan worden gebruikt om de opslagcapaciteit van een ruimteschip te vergroten bij een <TECHNOLOGY>terminal voor ruimteschipbenodigdheden<> in een ruimtestation.",
     "BaseValueUnits": 125000.0,
     "CurrencyType": "None",
     "MaxStackSize": 15.0,
@@ -2865,9 +2863,9 @@
   {
     "Id": "conTech101",
     "Icon": "constructedTechnology/101.png",
-    "Name": "Noodcapsule coördinaatgegevens",
+    "Name": "Upgradediagram exopak",
     "Group": "Versleutelde navigatiegegevens",
-    "Description": "Versleutelde navigatiegegevens die kunnen worden ingevoerd in een <TECHNOLOGY>signaalversterker<>.\n\nNa ontcijfering onthullen ze de locatie van een <TECHNOLOGY>noodcapsule<> met <SPECIAL>exopak-upgrades<>.",
+    "Description": "Versleutelde navigatiegegevens die, wanneer gedecodeerd, de locatie onthullen van een <STELLAR>noodcapsule<> met een <>inventarisupgrade<> voor het exopak.\n\nSelecteer de coördinaten in de inventaris en gebruik <TECHNOLOGY>Route bepalen<TECHNOLOGY> (<IMG>FE_ALT1<>) om de locatie te markeren op het display van je exopak.",
     "BaseValueUnits": 85000.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -2876,12 +2874,14 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
-    "ConsumableRewardTexts": []
+    "ConsumableRewardTexts": [
+      "Gegevens converteren naar navigatiemarkering exopak"
+    ]
   },
   {
     "Id": "conTech102",
@@ -2913,6 +2913,92 @@
     "BaseValueUnits": 10000.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech104",
+    "Icon": "other/269.png",
+    "Name": "Geheugenfragment",
+    "Group": "Technologie-echo",
+    "Description": "De versplinterde herinneringen van een <STELLAR>vervallen Reiziger<>. Het fluistert een onbekende naam, diep vanuit de vezels.\n\nDe herinnering manifesteert zich als een <TECHNOLOGY> belangrijke technologie-upgrade<> om je te helpen op je reizen. <STELLAR>Absorbeer<> deze herinnering met <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Opnemen via het voedingssysteem van het exopak"
+    ]
+  },
+  {
+    "Id": "conTech105",
+    "Icon": "other/270.png",
+    "Name": "Geheugenfragment (inventaris)",
+    "Group": "Illegale technologie Echo",
+    "Description": "De versplinterde herinneringen van een <STELLAR>vervallen Reiziger<>. Het fluistert een onbekende naam, diep vanuit de vezels.\n\nDe herinnering manifesteert zich als een <TECHNOLOGY> inventarisuitbreiding<> om je te helpen op je reizen. <STELLAR>Absorbeer<> deze herinnering met <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Opnemen via het voedingssysteem van het exopak"
+    ]
+  },
+  {
+    "Id": "conTech106",
+    "Icon": "products/169.png",
+    "Name": "Pakket %NAME%",
+    "Group": "Gearchiveerd technologiepakket",
+    "Description": "Een gearchiveerd <TECHNOLOGY>bedradingspakket<> voor een eenvoudige opslag van basistechnologie. Gebruik <VAL_ON><IMG>FE_ALT1<><> om te beginnen met de <STELLAR>installatie<>.\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech107",
+    "Icon": "products/84.png",
+    "Name": "Knooppunt %NAME%",
+    "Group": "Genetische opslagplaats",
+    "Description": "Een cryogeen bevroren knooppunt, ontworpen om de archivering van <TECHNOLOGY>biotechnologie<> voor <TECHNOLOGY>intelligente ruimteschepen<> te vergemakkelijken. Gebruik <VAL_ON><IMG>FE_ALT1<><> om het <STELLAR>installatieproces<> te starten.\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
     "Colour": "1A2733",
     "Usages": [
       "HasDevProperties",

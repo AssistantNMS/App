@@ -880,7 +880,7 @@
     "Icon": "constructedTechnology/29.png",
     "Name": "强化艇终端",
     "Group": "专家终端",
-    "Description": "一座专为机械师需求而定制的研究站，内含制作载具设计软件。",
+    "Description": "一座专为技师需求而定制的研究站，内含制作载具设计软件。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -2627,7 +2627,6 @@
     "Description": "星系中不少主要种族授予特定旅行者的安保与通行权限卡。\n\n可用此卡进入低级的禁区和前哨基站系统。",
     "BaseValueUnits": 825.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2656,7 +2655,6 @@
     "Description": "星系中不少主要种族授予特定旅行者的安保与通行权限卡。\n\n可用此卡进入中级的禁区和前哨基站系统。",
     "BaseValueUnits": 1856.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2685,9 +2683,9 @@
     "Description": "星系中不少主要种族授予特定旅行者的安保与通行权限卡。\n\n可用此卡进入高级的禁区和前哨基站系统。",
     "BaseValueUnits": 2613.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties"
     ],
     "BlueprintCost": 1,
@@ -2799,7 +2797,7 @@
     "Icon": "products/91.png",
     "Name": "心灵之卵",
     "Group": "搏动的卵黄囊",
-    "Description": "一个蠕动的基因液囊，旨在促进创造新的<TECHNOLOGY>生物注入技术<>，用于<TECHNOLOGY>有感知力的飞船<>。\n\n胚胎将成长为<TECHNOLOGY>生物技术升级组件<>。用<VAL_ON><IMG>FE_ALT1<><><STELLAR>开始生物合成<>。",
+    "Description": "一个蠕动的基因液囊，旨在促进创造新的<TECHNOLOGY>生物注入技术<>，用于<TECHNOLOGY>有感知力的飞船<>。\n\n胚胎将成长为<TECHNOLOGY>生物技术升级组件<>。<STELLAR>用<VAL_ON><IMG>FE_ALT1<><>开始生物合成<>。",
     "BaseValueUnits": 126000.0,
     "CurrencyType": "None",
     "MaxStackSize": 15.0,
@@ -2821,7 +2819,7 @@
   {
     "Id": "conTech99",
     "Icon": "building/350.png",
-    "Name": "飞船储备扩充",
+    "Name": "储备扩充",
     "Group": "飞船扩展模块",
     "Description": "从<STELLAR>飞船残骸<>里采集出来的技术模块。也可以从<STELLAR>货船失事地点<>获得，或在<STELLAR>护卫舰远征<>期间回收。\n\n你可以前往空间站的<TECHNOLOGY>飞船装备装置<>使用它来扩充飞船的仓储容量。",
     "BaseValueUnits": 125000.0,
@@ -2865,9 +2863,9 @@
   {
     "Id": "conTech101",
     "Icon": "constructedTechnology/101.png",
-    "Name": "空降舱坐标数据",
+    "Name": "套装升级图纸",
     "Group": "破译的导航数据",
-    "Description": "输入<TECHNOLOGY>信号增强器<>即可编码导航数据。\n\n正确解码后能揭示一处含有<SPECIAL>套装升级<>的<TECHNOLOGY>空降舱<>的位置。",
+    "Description": "加密导航数据，若成功破译，就能定位一个含有套装<STELLAR>库存升级<>的<TECHNOLOGY>空降舱<>。\n\n在库存中选择坐标并使用<TECHNOLOGY>规划路线<>（<IMG>FE_ALT1<>）在你的套装显示屏上标记位置。",
     "BaseValueUnits": 85000.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -2876,12 +2874,14 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
-    "ConsumableRewardTexts": []
+    "ConsumableRewardTexts": [
+      "将数据转换为套装导航标记"
+    ]
   },
   {
     "Id": "conTech102",
@@ -2913,6 +2913,92 @@
     "BaseValueUnits": 10000.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech104",
+    "Icon": "other/269.png",
+    "Name": "记忆碎片",
+    "Group": "技术回音",
+    "Description": "一位<STELLAR>逝去旅行者<>的残骸。纤维深处仍然在低语着一个陌生的名字。\n\n那段记忆将化为<TECHNOLOGY>重要技术升级<>帮助你完成自己的旅行。使用<IMG>FE_ALT1<><STELLAR>吸收<>这段记忆<VAL_ON><>。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "通过套装的营养系统摄取"
+    ]
+  },
+  {
+    "Id": "conTech105",
+    "Icon": "other/270.png",
+    "Name": "记忆碎片（库存）",
+    "Group": "反叛技术回音",
+    "Description": "一位<STELLAR>逝去旅行者<>的残骸。纤维深处仍然在低语着一个陌生的名字。\n\n那段记忆将化为<TECHNOLOGY>库存扩展<>帮助你完成自己的旅行。使用<IMG>FE_ALT1<><STELLAR>吸收<>这段记忆<VAL_ON><>。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "通过套装的营养系统摄取"
+    ]
+  },
+  {
+    "Id": "conTech106",
+    "Icon": "products/169.png",
+    "Name": "%NAME%包裹",
+    "Group": "归档的技术包",
+    "Description": "已归档的<TECHNOLOGY>线缆包<>，用于便捷存储核心科技。使用<VAL_ON><IMG>FE_ALT1<><>启动<STELLAR>安装流程<>。\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech107",
+    "Icon": "products/84.png",
+    "Name": "%NAME%节点",
+    "Group": "基因库",
+    "Description": "经过低温冷冻处理的节点，旨在方便<TECHNOLOGY>有感知力的飞船<>的<TECHNOLOGY>生物技术<>的归档。使用<VAL_ON><IMG>FE_ALT1<><>启动<STELLAR>安装流程<>。\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
     "Colour": "1A2733",
     "Usages": [
       "HasDevProperties",

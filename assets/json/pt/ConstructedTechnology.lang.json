@@ -880,7 +880,7 @@
     "Icon": "constructedTechnology/29.png",
     "Name": "Terminal de Exonaves",
     "Group": "Terminal especializado",
-    "Description": "Uma estação de pesquisa adaptada às necessidades da mecânica; equipada com software de design veicular personalizado.",
+    "Description": "Uma estação de pesquisa adaptada às necessidades dos Técnicos e equipada com software de design veicular personalizado.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -2627,7 +2627,6 @@
     "Description": "Acesso concedido a determinados viajantes por muitas espécies galácticas primárias.\n\nConcede acesso a zonas restritas e postos avançados de nível de segurança reduzido.",
     "BaseValueUnits": 825.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2656,7 +2655,6 @@
     "Description": "Acesso concedido a determinados viajantes por muitas espécies galácticas primárias.\n\nConcede acesso a zonas restritas e postos avançados de nível de segurança intermédio.",
     "BaseValueUnits": 1856.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2685,9 +2683,9 @@
     "Description": "Acesso concedido a determinados viajantes por muitas espécies galácticas primárias.\n\nConcede acesso a zonas restritas e postos avançados de nível de segurança avançado.",
     "BaseValueUnits": 2613.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties"
     ],
     "BlueprintCost": 1,
@@ -2821,7 +2819,7 @@
   {
     "Id": "conTech99",
     "Icon": "building/350.png",
-    "Name": "Aumento do Armazenamento da Nave",
+    "Name": "Aumento de Armazenamento",
     "Group": "Módulo de Expansão da Nave Espacial",
     "Description": "Um módulo de tecnologia recolhido dos restos de uma <STELLAR>nave espacial recuperada<>. Pode ser recolhido de <STELLAR>locais de acidentes de cargueiros<> ou recuperado em <STELLAR>expedições de fragatas<>.\n\nNas <TECHNOLOGY>Lojas de Naves Espaciais<> apropriadas, pode ser usado para expandir a capacidade de armazenamento da nave.",
     "BaseValueUnits": 125000.0,
@@ -2865,9 +2863,9 @@
   {
     "Id": "conTech101",
     "Icon": "constructedTechnology/101.png",
-    "Name": "Coordenadas da Cápsula de Escape",
+    "Name": "Mapa de atualização do exofato",
     "Group": "Dados de Navegação Criptografados",
-    "Description": "Dados de navegação codificados para entrada num <TECHNOLOGY>Impulsionador de Sinal<>.\n\nAo ser desencriptado, irá revelar a localização de uma <TECHNOLOGY>Cápsula de escape<> que contém <SPECIAL>Atualizações de Exofato<>.",
+    "Description": "Dados de navegação codificados que, ao serem desencriptados, irão revelar a localização de uma <TECHNOLOGY>Cápsula de Escape<> que contém uma <STELLAR>Atualização do Inventário<> do Exofato.\n\nSeleciona as coordenadas no inventário e usa <TECHNOLOGY>Traçar Rota<> (<IMG>FE_ALT1<>) para afixar a localização no visor do Exofato.",
     "BaseValueUnits": 85000.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -2876,12 +2874,14 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
-    "ConsumableRewardTexts": []
+    "ConsumableRewardTexts": [
+      "Converter dados para o marcador de navegação do Exofato"
+    ]
   },
   {
     "Id": "conTech102",
@@ -2913,6 +2913,92 @@
     "BaseValueUnits": 10000.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech104",
+    "Icon": "other/269.png",
+    "Name": "Fragmento de Memória",
+    "Group": "Eco Tecnológico",
+    "Description": "Os restos despedaçados de um <STELLAR>viajante expirado<>. Sussurra um nome incognoscível guardado nas profundezas das suas fibras.\n\nA memória vai manifestar-se como uma <TECHNOLOGY>atualização tecnológica importante<> para te ajudar nas tuas viagens. <STELLAR>Absorve<> esta memória com <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Ingerir item pelo sistema de nutrição do fato"
+    ]
+  },
+  {
+    "Id": "conTech105",
+    "Icon": "other/270.png",
+    "Name": "Fragmento de Memória (Inventário)",
+    "Group": "Eco Tecnológico Errático",
+    "Description": "Os restos despedaçados de um <STELLAR>viajante expirado<>. Sussurra um nome incognoscível guardado nas profundezas das suas fibras.\n\nA memória vai manifestar-se como uma <TECHNOLOGY>expansão de inventário<> para te ajudar nas tuas viagens. <STELLAR>Absorve<> esta memória com <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Ingerir item pelo sistema de nutrição do fato"
+    ]
+  },
+  {
+    "Id": "conTech106",
+    "Icon": "products/169.png",
+    "Name": "Embalagem de %NAME%",
+    "Group": "Embalagem de tecnologia arquivada",
+    "Description": "Uma <TECHNOLOGY>embalagem de cablagem<> arquivada, concebida para permitir o armazenamento fácil de tecnologia central. Utiliza <VAL_ON><IMG>FE_ALT1<><> para iniciar o <STELLAR>processo de instalação<>.\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech107",
+    "Icon": "products/84.png",
+    "Name": "Nó de %NAME%",
+    "Group": "Repositório genético",
+    "Description": "Um nódulo criogenicamente congelado, concebido para facilitar o arquivo da <TECHNOLOGY>biotecnologia<> para <TECHNOLOGY>naves espaciais sencientes<>. Utiliza <VAL_ON><IMG>FE_ALT1<><> para iniciar o <STELLAR>processo de instalação<>.\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
     "Colour": "1A2733",
     "Usages": [
       "HasDevProperties",

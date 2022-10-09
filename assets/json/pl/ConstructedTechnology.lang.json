@@ -880,7 +880,7 @@
     "Icon": "constructedTechnology/29.png",
     "Name": "Terminal egzopojazdów",
     "Group": "Terminal specjalistyczny",
-    "Description": "Stacja badawcza stworzona z myślą o potrzebach mechaników, wyposażona w stosowne oprogramowanie do projektowania pojazdów.",
+    "Description": "Stacja badawcza stworzona z myślą o potrzebach techników, wyposażona w stosowne oprogramowanie do projektowania pojazdów.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -2627,7 +2627,6 @@
     "Description": "Przepustka przyznawana konkretnym podróżnikom przez różne gatunki galaktyczne.\n\nDaje dostęp do obszarów o niskim poziomie zastrzeżenia i systemów placówek.",
     "BaseValueUnits": 825.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2656,7 +2655,6 @@
     "Description": "Przepustka przyznawana konkretnym podróżnikom przez różne gatunki galaktyczne.\n\nDaje dostęp do  obszarów o średnim poziomie zastrzeżenia i systemów placówek.",
     "BaseValueUnits": 1856.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2685,9 +2683,9 @@
     "Description": "Przepustka przyznawana konkretnym podróżnikom przez różne gatunki galaktyczne.\n\nDaje dostęp do  obszarów o wysokim poziomie zastrzeżenia i systemów placówek.",
     "BaseValueUnits": 2613.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties"
     ],
     "BlueprintCost": 1,
@@ -2821,7 +2819,7 @@
   {
     "Id": "conTech99",
     "Icon": "building/350.png",
-    "Name": "Modyfikacja ładowni statku gwiezdnego",
+    "Name": "Modyfikacja magazynu",
     "Group": "Moduł rozszerzenia statku gwiezdnego",
     "Description": "Moduł technologiczny zebrany ze szczątków <STELLAR>odzyskanego statku gwiezdnego<>. Można go też zebrać z <STELLAR>wraków frachtowców<> albo podczas <STELLAR>ekspedycji fregat<>.\n\nMoże zostać użyty, aby rozszerzyć pojemność magazynową statku gwiezdnego u <TECHNOLOGY>dealera statków gwiezdnych<> na stacji kosmicznej.",
     "BaseValueUnits": 125000.0,
@@ -2865,9 +2863,9 @@
   {
     "Id": "conTech101",
     "Icon": "constructedTechnology/101.png",
-    "Name": "Dane współrzędnych kapsuły desantowej",
+    "Name": "Mapa ulepszeń egzokombinezonu",
     "Group": "Zaszyfrowane dane nawigacyjne",
-    "Description": "Zakodowane dane nawigacyjne do wprowadzenia do <TECHNOLOGY>wzmacniacza sygnału<>.\n\nPo właściwym odszyfrowaniu, ujawnią położenie <TECHNOLOGY>kapsuł desantowych<>, zawierających <SPECIAL>ulepszenia egzokombinezonu<>.",
+    "Description": "Zaszyfrowane dane nawigacyjne, które po prawidłowym odszyfrowaniu ujawnią lokalizację <TECHNOLOGY>kapsuły desantowej<> zawierającej <STELLAR>ulepszenie ekwipunku<> egzokombinezonu.\n\nWybierz współrzędne w ekwipunku i użyj <TECHNOLOGY>wytyczania trasy<> (<IMG>FE_ALT1<>), aby przypiąć lokalizację na wyświetlaczu egzokombinezonu.",
     "BaseValueUnits": 85000.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -2876,12 +2874,14 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
-    "ConsumableRewardTexts": []
+    "ConsumableRewardTexts": [
+      "Przekonwertuj dane na znacznik nawigacyjny egzokombinezonu"
+    ]
   },
   {
     "Id": "conTech102",
@@ -2913,6 +2913,92 @@
     "BaseValueUnits": 10000.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech104",
+    "Icon": "other/269.png",
+    "Name": "Fragment wspomnienia",
+    "Group": "Echo technologii",
+    "Description": "Zniszczone pozostałości <STELLAR>zmarłej istoty podróżującej<>. Z głębi jego włókien wydobywa się szept nieznanego pochodzenia.\n\nWspomnienie urzeczywistni się jako <TECHNOLOGY>ważne ulepszenie technologii<>, które pomoże ci w podróży. <STELLAR>Wchłoń<> wspomnienie, używając <VAL_ON><IMG>FE_ALT1<><>",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Wchłoń przedmiot poprzez system odżywczy kombinezonu"
+    ]
+  },
+  {
+    "Id": "conTech105",
+    "Icon": "other/270.png",
+    "Name": "Fragment wspomnienia (ekwipunek)",
+    "Group": "Echo zbuntowanej technologii",
+    "Description": "Zniszczone pozostałości <STELLAR>zmarłej istoty podróżującej<>. Z głębi jego włókien wydobywa się szept nieznanego pochodzenia.\n\nWspomnienie urzeczywistni się jako <TECHNOLOGY>rozszerzenie ekwipunku<>, które pomoże ci w podróży. <STELLAR>Wchłoń<> wspomnienie, używając <VAL_ON><IMG>FE_ALT1<><>",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Wchłoń przedmiot poprzez system odżywczy kombinezonu"
+    ]
+  },
+  {
+    "Id": "conTech106",
+    "Icon": "products/169.png",
+    "Name": "Pakiet %NAME%",
+    "Group": "Zarchiwizowany pakiet technologii",
+    "Description": "Zarchiwizowany <TECHNOLOGY>pakiet okablowania<>, zaprojektowany w celu ułatwienia przechowania technologii podstawowej. Użyj <VAL_ON><IMG>FE_ALT1<><>, by rozpocząć <STELLAR>proces instalacji<>.\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech107",
+    "Icon": "products/84.png",
+    "Name": "Węzeł %NAME%",
+    "Group": "Repozytorium genetyczne",
+    "Description": "Kriogenicznie zamrożony węzeł, zaprojektowany w celu ułatwienia archiwizacji <TECHNOLOGY>biotechnologii<> dla <TECHNOLOGY>odczuwających statków gwiezdnych<>. Użyj <VAL_ON><IMG>FE_ALT1<><>, aby rozpocząć <STELLAR>proces instalacji<>.\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
     "Colour": "1A2733",
     "Usages": [
       "HasDevProperties",

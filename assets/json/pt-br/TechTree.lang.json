@@ -4901,6 +4901,13 @@
                     "Icon": "technology/143.png",
                     "Cost": 360,
                     "Children": []
+                  },
+                  {
+                    "Id": "tech228",
+                    "Title": "Transporte comercial",
+                    "Icon": "technology/228.png",
+                    "Cost": 90,
+                    "Children": []
                   }
                 ]
               },
@@ -5154,7 +5161,7 @@
                     "Children": [
                       {
                         "Id": "tech27",
-                        "Title": "Recarregador de sistema de decolagem",
+                        "Title": "Autocarregador de decolagem",
                         "Icon": "technology/26.png",
                         "Cost": 460,
                         "Children": []
@@ -5563,19 +5570,19 @@
               },
               {
                 "Id": "tech94",
-                "Title": "Incremento de sinal do exoveículo",
+                "Title": "Radar do exoveículo",
                 "Icon": "technology/94.png",
                 "Cost": 120,
                 "Children": [
                   {
                     "Id": "tech174",
-                    "Title": "Incremento de sinal avançado",
+                    "Title": "Amplificador de radar",
                     "Icon": "technology/96.png",
                     "Cost": 210,
                     "Children": [
                       {
                         "Id": "tech96",
-                        "Title": "Atualização tau do incremento de sinal do exoveículo",
+                        "Title": "Ressonador de potência de radar",
                         "Icon": "technology/96.png",
                         "Cost": 320,
                         "Children": []
@@ -5586,7 +5593,7 @@
               },
               {
                 "Id": "tech97",
-                "Title": "Módulo de aceleração do exoveículo",
+                "Title": "Incrementos do exoveículo",
                 "Icon": "technology/97.png",
                 "Cost": 180,
                 "Children": [
@@ -5607,14 +5614,14 @@
                 "Children": [
                   {
                     "Id": "tech99",
-                    "Title": "Atualização sigma do laser minerador do exoveículo",
+                    "Title": "Laser avançado do exoveículo",
                     "Icon": "technology/99.png",
                     "Cost": 210,
                     "Children": []
                   },
                   {
                     "Id": "tech100",
-                    "Title": "Canhão do exoveículo",
+                    "Title": "Canhão montado",
                     "Icon": "technology/100.png",
                     "Cost": 210,
                     "Children": []
@@ -6247,6 +6254,527 @@
             "Icon": "curiosities/61.png",
             "Cost": 5000,
             "Children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": "tree11",
+    "Name": "",
+    "Trees": [
+      {
+        "Id": "tree11-subTree1",
+        "Name": "",
+        "CostType": "SalvagedData",
+        "Children": []
+      },
+      {
+        "Id": "tree11-subTree2",
+        "Name": "Módulos de transporte",
+        "CostType": "SalvagedData",
+        "Children": [
+          {
+            "Id": "conTech23",
+            "Title": "Geocompartimento do Andarilho",
+            "Icon": "constructedTechnology/23.png",
+            "Cost": 4,
+            "Children": [
+              {
+                "Id": "conTech27",
+                "Title": "Estação para chamada de exoveículo",
+                "Icon": "constructedTechnology/27.png",
+                "Cost": 12,
+                "Children": [
+                  {
+                    "Id": "build884",
+                    "Title": "Materializador orbital de exoveículo",
+                    "Icon": "building/884.png",
+                    "Cost": 1,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "conTech22",
+                "Title": "Geocompartimento do Nômade",
+                "Icon": "constructedTechnology/22.png",
+                "Cost": 8,
+                "Children": []
+              },
+              {
+                "Id": "conTech63",
+                "Title": "Geocompartimento do Minotauro",
+                "Icon": "constructedTechnology/63.png",
+                "Cost": 10,
+                "Children": []
+              },
+              {
+                "Id": "conTech26",
+                "Title": "Câmara do Nautilon",
+                "Icon": "constructedTechnology/26.png",
+                "Cost": 10,
+                "Children": []
+              },
+              {
+                "Id": "conTech25",
+                "Title": "Geocompartimento do Peregrino",
+                "Icon": "constructedTechnology/25.png",
+                "Cost": 10,
+                "Children": []
+              },
+              {
+                "Id": "conTech24",
+                "Title": "Geocompartimento do Colossus",
+                "Icon": "constructedTechnology/24.png",
+                "Cost": 8,
+                "Children": []
+              },
+              {
+                "Id": "conTech40",
+                "Title": "Iniciador da corrida",
+                "Icon": "constructedTechnology/40.png",
+                "Cost": 10,
+                "Children": [
+                  {
+                    "Id": "conTech39",
+                    "Title": "Obstáculo da corrida",
+                    "Icon": "constructedTechnology/39.png",
+                    "Cost": 10,
+                    "Children": []
+                  },
+                  {
+                    "Id": "conTech38",
+                    "Title": "Amplificador de força da corrida",
+                    "Icon": "constructedTechnology/38.png",
+                    "Cost": 10,
+                    "Children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": "tree12",
+    "Name": "Atualizações do exoveículo",
+    "Trees": [
+      {
+        "Id": "tree12-subTree1",
+        "Name": "Plantas de atualizações criáveis",
+        "CostType": "Nanites",
+        "Children": [
+          {
+            "Id": "tech90",
+            "Title": "Mecanismo de fusão",
+            "Icon": "technology/90.png",
+            "Cost": 120,
+            "Children": [
+              {
+                "Id": "tech101",
+                "Title": "Propulsor Humboldt",
+                "Icon": "technology/101.png",
+                "Cost": 120,
+                "Children": [
+                  {
+                    "Id": "tech104",
+                    "Title": "Sonar de alta potência",
+                    "Icon": "technology/104.png",
+                    "Cost": 10,
+                    "Children": [
+                      {
+                        "Id": "tech105",
+                        "Title": "Gerador osmótico",
+                        "Icon": "technology/105.png",
+                        "Cost": 350,
+                        "Children": []
+                      },
+                      {
+                        "Id": "tech103",
+                        "Title": "Feixe de tétis",
+                        "Icon": "technology/98.png",
+                        "Cost": 450,
+                        "Children": []
+                      },
+                      {
+                        "Id": "tech102",
+                        "Title": "Canhão do Nautilon",
+                        "Icon": "technology/102.png",
+                        "Cost": 250,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Id": "tech170",
+                "Title": "Aquecedor de megawatts",
+                "Icon": "technology/9.png",
+                "Cost": 120,
+                "Children": []
+              },
+              {
+                "Id": "tech171",
+                "Title": "Unidade de filtragem de ar",
+                "Icon": "technology/10.png",
+                "Cost": 120,
+                "Children": []
+              },
+              {
+                "Id": "tech172",
+                "Title": "Escudo de nêutrons",
+                "Icon": "technology/11.png",
+                "Cost": 120,
+                "Children": []
+              },
+              {
+                "Id": "tech169",
+                "Title": "Proteção térmica",
+                "Icon": "technology/8.png",
+                "Cost": 120,
+                "Children": []
+              },
+              {
+                "Id": "tech94",
+                "Title": "Radar do exoveículo",
+                "Icon": "technology/94.png",
+                "Cost": 120,
+                "Children": [
+                  {
+                    "Id": "tech174",
+                    "Title": "Amplificador de radar",
+                    "Icon": "technology/96.png",
+                    "Cost": 210,
+                    "Children": [
+                      {
+                        "Id": "tech96",
+                        "Title": "Ressonador de potência de radar",
+                        "Icon": "technology/96.png",
+                        "Cost": 320,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Id": "tech97",
+                "Title": "Incrementos do exoveículo",
+                "Icon": "technology/97.png",
+                "Cost": 180,
+                "Children": [
+                  {
+                    "Id": "tech173",
+                    "Title": "Sistema de combustível Ícaro",
+                    "Icon": "technology/173.png",
+                    "Cost": 120,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "tech98",
+                "Title": "Laser minerador do exoveículo",
+                "Icon": "technology/98.png",
+                "Cost": 180,
+                "Children": [
+                  {
+                    "Id": "tech99",
+                    "Title": "Laser avançado do exoveículo",
+                    "Icon": "technology/99.png",
+                    "Cost": 210,
+                    "Children": []
+                  },
+                  {
+                    "Id": "tech100",
+                    "Title": "Canhão montado",
+                    "Icon": "technology/100.png",
+                    "Cost": 210,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "tech175",
+                "Title": "Motor Dédalo",
+                "Icon": "technology/90.png",
+                "Cost": 120,
+                "Children": [
+                  {
+                    "Id": "tech183",
+                    "Title": "Unidade de controle do ambiente",
+                    "Icon": "technology/1.png",
+                    "Cost": 120,
+                    "Children": [
+                      {
+                        "Id": "tech178",
+                        "Title": "Chama de Ariadne",
+                        "Icon": "technology/97.png",
+                        "Cost": 180,
+                        "Children": [
+                          {
+                            "Id": "tech176",
+                            "Title": "Servomecanismos autolubrificantes",
+                            "Icon": "technology/90.png",
+                            "Cost": 120,
+                            "Children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech177",
+                    "Title": "Conjunto de radares do Minotauro",
+                    "Icon": "technology/94.png",
+                    "Cost": 120,
+                    "Children": [
+                      {
+                        "Id": "tech211",
+                        "Title": "Piloto de IA do Minotauro",
+                        "Icon": "technology/211.png",
+                        "Cost": 480,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech179",
+                    "Title": "Laser do Minotauro",
+                    "Icon": "technology/98.png",
+                    "Cost": 180,
+                    "Children": [
+                      {
+                        "Id": "tech180",
+                        "Title": "Laser de precisão do Minotauro",
+                        "Icon": "technology/99.png",
+                        "Cost": 210,
+                        "Children": []
+                      },
+                      {
+                        "Id": "tech181",
+                        "Title": "Canhão do Minotauro",
+                        "Icon": "technology/100.png",
+                        "Cost": 210,
+                        "Children": []
+                      },
+                      {
+                        "Id": "tech182",
+                        "Title": "Perfurador do Minotauro",
+                        "Icon": "technology/100.png",
+                        "Cost": 210,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": "tree13",
+    "Name": "Atualizações da nave",
+    "Trees": [
+      {
+        "Id": "tree13-subTree1",
+        "Name": "Plantas de atualizações criáveis",
+        "CostType": "Nanites",
+        "Children": [
+          {
+            "Id": "tech23",
+            "Title": "Mecanismo de pulso",
+            "Icon": "technology/23.png",
+            "Cost": 1,
+            "Children": [
+              {
+                "Id": "tech144",
+                "Title": "Propulsor de instabilidade",
+                "Icon": "technology/144.png",
+                "Cost": 460,
+                "Children": [
+                  {
+                    "Id": "tech220",
+                    "Title": "Substituição de assistência de voo",
+                    "Icon": "technology/144.png",
+                    "Cost": 460,
+                    "Children": []
+                  },
+                  {
+                    "Id": "tech145",
+                    "Title": "Amplificador subluz",
+                    "Icon": "technology/144.png",
+                    "Cost": 460,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "tech28",
+                "Title": "Receptor de teletransporte",
+                "Icon": "technology/28.png",
+                "Cost": 150,
+                "Children": [
+                  {
+                    "Id": "tech40",
+                    "Title": "Scanner de conflitos",
+                    "Icon": "technology/40.png",
+                    "Cost": 150,
+                    "Children": []
+                  },
+                  {
+                    "Id": "tech39",
+                    "Title": "Scanner de economia",
+                    "Icon": "technology/39.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech216",
+                        "Title": "Defletor de verificação de carga",
+                        "Icon": "technology/216.png",
+                        "Cost": 240,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Id": "tech25",
+                "Title": "Impulsionador de decolagem",
+                "Icon": "technology/25.png",
+                "Cost": 1,
+                "Children": [
+                  {
+                    "Id": "tech26",
+                    "Title": "Impulsionadores eficientes",
+                    "Icon": "technology/26.png",
+                    "Cost": 120,
+                    "Children": [
+                      {
+                        "Id": "tech27",
+                        "Title": "Autocarregador de decolagem",
+                        "Icon": "technology/26.png",
+                        "Cost": 460,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Id": "tech33",
+                "Title": "Escudo defletor",
+                "Icon": "technology/33.png",
+                "Cost": 1,
+                "Children": [
+                  {
+                    "Id": "tech34",
+                    "Title": "Blindagem ablativa",
+                    "Icon": "technology/34.png",
+                    "Cost": 85,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "tech37",
+                "Title": "Canhão de fótons",
+                "Icon": "technology/37.png",
+                "Cost": 1,
+                "Children": [
+                  {
+                    "Id": "tech46",
+                    "Title": "Ótica não linear",
+                    "Icon": "technology/46.png",
+                    "Cost": 75,
+                    "Children": []
+                  },
+                  {
+                    "Id": "tech35",
+                    "Title": "Lança-foguetes",
+                    "Icon": "technology/35.png",
+                    "Cost": 100,
+                    "Children": [
+                      {
+                        "Id": "tech36",
+                        "Title": "Tubos grandes de foguete",
+                        "Icon": "technology/36.png",
+                        "Cost": 50,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech41",
+                    "Title": "Feixe de fases",
+                    "Icon": "technology/41.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech42",
+                        "Title": "Delimitador Fourier",
+                        "Icon": "technology/42.png",
+                        "Cost": 120,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech43",
+                    "Title": "Ejetor de pósitrons",
+                    "Icon": "technology/43.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech44",
+                        "Title": "Compressor de fragmentos",
+                        "Icon": "technology/44.png",
+                        "Cost": 120,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech45",
+                    "Title": "Acelerador de infracorte",
+                    "Icon": "technology/45.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech147",
+                        "Title": "Ressonador Q",
+                        "Icon": "technology/147.png",
+                        "Cost": 120,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech47",
+                    "Title": "Balista ciclotrônica",
+                    "Icon": "technology/47.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech48",
+                        "Title": "Bomba Dyson",
+                        "Icon": "technology/48.png",
+                        "Cost": 120,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       }

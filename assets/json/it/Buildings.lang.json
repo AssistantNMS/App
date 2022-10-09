@@ -5727,7 +5727,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5755,7 +5756,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5930,7 +5932,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/303.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6286,7 +6289,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/316.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7686,7 +7690,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7714,7 +7719,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7742,7 +7748,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7877,7 +7884,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7969,7 +7977,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -8472,7 +8481,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
+      "IsTwitchCampaign4Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -9054,7 +9064,7 @@
     "Icon": "building/436.png",
     "Name": "Mappa insediamento",
     "Group": "Mappa planetaria specialista",
-    "Description": "Una mappa che mostra la posizione di un insediamento planetario vicino, ottenuta da un <STELLAR>cartografo di una stazione spaziale<>.\n\nSeleziona la mappa e usa Traccia rotta (<IMG>FE_ALT1<>) per mettere in evidenza la posizione sul display dell'exotuta.",
+    "Description": "Una mappa che mostra la posizione di un insediamento planetario vicino, ottenuta da un <STELLAR>cartografo di una stazione spaziale<>.\n\nSeleziona la mappa e usa <VAL_ON>Traccia rotta (<IMG>FE_ALT1<>)<> per mettere in evidenza la posizione sul display dell'exotuta.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -9092,8 +9102,16 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw1",
-        "Quantity": 25
+        "Id": "prod6",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
       }
     ],
     "StatBonuses": [],
@@ -16756,7 +16774,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16952,7 +16971,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
+      "IsExpeditionSeason7Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -17445,7 +17465,7 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "Sala tecnologica (vuota)",
+    "Name": "Sala tecnologica (espansione)",
     "Group": "Modulo mercantile avanzato",
     "Description": "Una camera spaziosa dall'aspetto tecnico per ampliare gli spazi abitabili all'interno di grandi astronavi.",
     "BaseValueUnits": 1.0,
@@ -17606,7 +17626,7 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "Stanza biologica (vuota)",
+    "Name": "Stanza biologica (espansione)",
     "Group": "Modulo mercantile avanzato",
     "Description": "Questa spaziosa camera a serra filtra e ossigena l'aria in modo naturale e offre un piccolo rifugio verde all'interno del mercantile.",
     "BaseValueUnits": 1.0,
@@ -17736,7 +17756,7 @@
     "Icon": "building/885.png",
     "Name": "Stanza dello specialista di exoscafi",
     "Group": "Terminale di lavoro",
-    "Description": "Equipaggiamento mercantile di ricerca integrato pensato per le esigenze dei <TECHNOLOGY>meccanici di exoscafi<> e dotato di software di progettazione veicolare su misura.\n\nQuesto modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.",
+    "Description": "Equipaggiamento mercantile di ricerca integrato pensato per le esigenze dei <TECHNOLOGY>tecnici di exoscafi<> e dotato di software di progettazione veicolare su misura.\n\nQuesto modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,7 +18110,7 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "Sala industriale (vuota)",
+    "Name": "Sala industriale (espansione)",
     "Group": "Modulo mercantile avanzato",
     "Description": "Una camera spaziosa dall'aspetto industriale per ampliare gli spazi abitabili all'interno di grandi astronavi.",
     "BaseValueUnits": 1.0,
@@ -19820,7 +19840,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19847,7 +19868,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19874,7 +19896,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20678,9 +20701,9 @@
   {
     "Id": "build996",
     "Icon": "building/996.png",
-    "Name": "Vetro Scale Mercantile",
+    "Name": "Scala mercantile in vetro",
     "Group": "Modulo mercantile principale",
-    "Description": "Questo modulo d'espansione permette di costruire rapidamente spazi abitabili all'interno di grandi astronavi.\n\nL'unità di costruzione è completa di compartimenti espandibili e di tutte le giunture necessarie.",
+    "Description": "Una scala robusta, antiscivolo con inclinazione ergonomica, per il passaggio verticale tra i ponti mercantili.\n\nCostruita in vetro a bassa dilatazione termica, questa scala offre all'utente una vista emozionante sullo spazio profondo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20707,9 +20730,9 @@
   {
     "Id": "build997",
     "Icon": "building/997.png",
-    "Name": "Piattaforma Esterna Scale Mercantile",
+    "Name": "Scale esterne mercantile",
     "Group": "Modulo mercantile principale",
-    "Description": "Questo modulo d'espansione permette di costruire rapidamente spazi abitabili all'interno di grandi astronavi.\n\nL'unità di costruzione è completa di compartimenti espandibili e di tutte le giunture necessarie.",
+    "Description": "Una scala robusta, antiscivolo con inclinazione ergonomica, per il passaggio verticale tra i ponti mercantili.\n\nQuesta scala robusta può essere fissata <STELLAR>all'esterno<> dello scafo del mercantile, creando collegamenti tra passerelle e piattaforme esterne.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20734,12 +20757,13 @@
     "Icon": "building/998.png",
     "Name": "Parete interna mercantile",
     "Group": "Modulo mercantile principale",
-    "Description": "Questo modulo d'espansione permette di costruire rapidamente spazi abitabili all'interno di grandi astronavi.\n\nL'unità di costruzione è completa di compartimenti espandibili e di tutte le giunture necessarie.",
+    "Description": "Una parete interna per suddividere i grandi spazi del mercantile. Si adatta perfettamente all'arredamento della stanza circostante.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20756,14 +20780,15 @@
   {
     "Id": "build999",
     "Icon": "building/999.png",
-    "Name": "Sala industriale B (vuota)",
+    "Name": "Variante camera di espansione",
     "Group": "Modulo mercantile avanzato",
     "Description": "Una camera spaziosa dall'aspetto industriale per ampliare gli spazi abitabili all'interno di grandi astronavi.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

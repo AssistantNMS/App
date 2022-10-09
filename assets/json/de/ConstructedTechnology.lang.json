@@ -880,7 +880,7 @@
     "Icon": "constructedTechnology/29.png",
     "Name": "Exo-Fahrzeug-Terminal",
     "Group": "Spezialistenterminal",
-    "Description": "Eine auf die Bedürfnisse von Mechanikern zugeschnittene Forschungsstation. Ausgestattet mit spezieller Software zur Fahrzeugentwicklung.",
+    "Description": "Eine auf die Bedürfnisse von Technikern zugeschnittene Forschungsstation. Ausgestattet mit spezieller Software zur Fahrzeugentwicklung.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -2627,7 +2627,6 @@
     "Description": "Ein Sicherheits- und Genehmigungspass, den bestimmte Reisende von vielen wichtigen Spezies der Galaxie erhalten.\n\nGewährt Zugang zu beschränkten Bereichen und Außenposten-Systemen mit niedriger Sicherheitsstufe.",
     "BaseValueUnits": 825.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2656,7 +2655,6 @@
     "Description": "Ein Sicherheits- und Genehmigungspass, den bestimmte Reisende von vielen wichtigen Spezies der Galaxie erhalten.\n \nGewährt Zugang zu beschränkten Bereichen und Außenposten-Systemen mit mittlerer Sicherheitsstufe.",
     "BaseValueUnits": 1856.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2685,9 +2683,9 @@
     "Description": "Ein Sicherheits- und Genehmigungspass, den bestimmte Reisende von vielen wichtigen Spezies der Galaxie erhalten.\n \nGewährt Zugang zu beschränkten Bereichen und Außenposten-Systemen mit hoher Sicherheitsstufe.",
     "BaseValueUnits": 2613.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties"
     ],
     "BlueprintCost": 1,
@@ -2821,7 +2819,7 @@
   {
     "Id": "conTech99",
     "Icon": "building/350.png",
-    "Name": "Raumschiff-Lagererweiterung",
+    "Name": "Lagererweiterung",
     "Group": "Raumschiff-Erweiterungsmodul",
     "Description": "Ein Technologiemodul, das aus den Überresten eines <STELLAR>geretteten Raumschiffs<> geborgen wurde. Kann auch an <STELLAR>Frachter-Absturzstellen<> gesammelt oder während <STELLAR>Fregattenexpeditionen<> geborgen werden.\n\nMan kann damit bei der <TECHNOLOGY>Raumschiffausstattung<> einer Raumstation die Lagerkapazität des Raumschiffs erweitern.",
     "BaseValueUnits": 125000.0,
@@ -2865,9 +2863,9 @@
   {
     "Id": "conTech101",
     "Icon": "constructedTechnology/101.png",
-    "Name": "Absprungkapsel-Koordinatendaten",
+    "Name": "Exo-Anzug-Upgrade-Karte",
     "Group": "Verschlüsselte Navigationsdaten",
-    "Description": "Verschlüsselte Navigationsdaten zur Eingabe in einen <TECHNOLOGY>Signalbooster<>.\n\nKorrekt entschlüsselt wird die Position einer <TECHNOLOGY>Absprungkapsel<> mit <SPECIAL>Exo-Anzug-Upgrades<> enthüllt.",
+    "Description": "Verschlüsselte Navigationsdaten, die korrekt entschlüsselt werden müssen, um die Position einer <TECHNOLOGY>Absprungkapsel<> mit Exo-Anzug-<STELLAR>Inventar-Upgrade<> preiszugeben.\n\nWähle die Koordinaten im Inventar aus und nutze <TECHNOLOGY>Route planen<> (<IMG>FE_ALT1<>), um den Ort in der Anzeige deines Exo-Anzugs einzustellen.",
     "BaseValueUnits": 85000.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -2876,12 +2874,14 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
-    "ConsumableRewardTexts": []
+    "ConsumableRewardTexts": [
+      "Daten in Exo-Anzug-Navigationsmarkierung umwandeln."
+    ]
   },
   {
     "Id": "conTech102",
@@ -2913,6 +2913,92 @@
     "BaseValueUnits": 10000.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech104",
+    "Icon": "other/269.png",
+    "Name": "Erinnerungsfragment",
+    "Group": "Technologie-Echo",
+    "Description": "Die zerschmetterten Überreste eines <STELLAR>verstorbenen Reisenden<>. Es flüstert, da ist ein unbekannter Name tief in seinen Fasern.\n\nDie Erinnerung wird sich als ein <TECHNOLOGY>wichtiges technologisches Upgrade<> herausstellen, das dir auf deinen Reisen helfen wird. <STELLAR>Absorbiere<> diese Erinnerung mit <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Gegenstand mittels des Ernährungssystems verzehren."
+    ]
+  },
+  {
+    "Id": "conTech105",
+    "Icon": "other/270.png",
+    "Name": "Erinnerungsfragment (Inventar)",
+    "Group": "Aberrantes Technologie-Echo",
+    "Description": "Die zerschmetterten Überreste eines <STELLAR>verstorbenen Reisenden<>. Es flüstert, da ist ein unbekannter Name tief in seinen Fasern.\n\nDie Erinnerung wird sich als eine <TECHNOLOGY>Inventarerweiterung<> herausstellen, die dir auf deinen Reisen helfen wird. <STELLAR>Absorbiere<> diese Erinnerung mit <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Gegenstand mittels des Ernährungssystems verzehren."
+    ]
+  },
+  {
+    "Id": "conTech106",
+    "Icon": "products/169.png",
+    "Name": "%NAME%-Paket",
+    "Group": "Archiviertes Technologiepaket",
+    "Description": "Ein archiviertes <TECHNOLOGY>Verkabelungspaket<> zur einfachen Lagerung von Kerntechnologie. Verwende <VAL_ON><IMG>FE_ALT1<><>, um den <STELLAR>Installationsprozess<> zu starten.\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech107",
+    "Icon": "products/84.png",
+    "Name": "%NAME% Knotenpunkt",
+    "Group": "Genetischer Speicher",
+    "Description": "Kryogenisch eingefrorener Knotenpunkt, der die Archivierung von <TECHNOLOGY>Biotechnologie<> für <TECHNOLOGY>empfindungsfähige Raumschiffe<> erleichtern soll. Verwende <VAL_ON><IMG>FE_ALT1<><>, um mit dem <STELLAR>Installationsprozess<> zu beginnen.\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
     "Colour": "1A2733",
     "Usages": [
       "HasDevProperties",

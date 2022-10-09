@@ -5727,7 +5727,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5755,7 +5756,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5930,7 +5932,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/303.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6286,7 +6289,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/316.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7686,7 +7690,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7714,7 +7719,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7742,7 +7748,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7877,7 +7884,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7969,7 +7977,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -8472,7 +8481,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
+      "IsTwitchCampaign4Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -9054,7 +9064,7 @@
     "Icon": "building/436.png",
     "Name": "Siedlungskarte",
     "Group": "Spezialisierte Planetenkarte",
-    "Description": "Eine Karte von einer planetarischen Siedlung in der Nähe, die beim <STELLAR>Raumstation-Kartografen<> gekauft wurde.\n\nWähle die Karte aus und nutze „Route planen“ (<IMG>FE_ALT1<>), um den Ort in der Anzeige deines Exo-Anzugs einzustellen.",
+    "Description": "Eine Karte von einer planetarischen Siedlung in der Nähe, die beim <STELLAR>Raumstation-Kartografen<> gekauft wurde.\n\nWähle die Karte aus und nutze <VAL_ON>„Route planen“ (<IMG>FE_ALT1<>)<>, um den Ort in der Anzeige deines Exo-Anzugs einzustellen.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -9092,8 +9102,16 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw1",
-        "Quantity": 25
+        "Id": "prod6",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
       }
     ],
     "StatBonuses": [],
@@ -9755,7 +9773,7 @@
     "Icon": "building/463.png",
     "Name": "Verzierter Hocker",
     "Group": "Dekoration",
-    "Description": "Ein stilvoller, verstärkter Hocker mit drei Beinen, der bis zum zehnfachen Gewicht eines erwachsenen Vy‘Keen tragen kann. Der Sitz aus Polyurethan-Nanit passt sich jeder Körperform an, weswegen dieser eigentlich schlichte Stuhl dem Sitzenden überraschend hohen Komfort bietet.",
+    "Description": "Ein stilvoller, verstärkter Hocker mit drei Beinen, der bis zum zehnfachen Gewicht eines erwachsenen Vy’keen tragen kann. Der Sitz aus Polyurethan-Nanit passt sich jeder Körperform an, weswegen dieser eigentlich schlichte Stuhl dem Sitzenden überraschend hohen Komfort bietet.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -9833,7 +9851,7 @@
     "Icon": "building/466.png",
     "Name": "Verwitterter Wandbehang",
     "Group": "Dekoration",
-    "Description": "Eine schwere Wanddekoration aus Leinwand. Dank der Aufhängung mit Vy‘Keen-Militärseilen hält diese Dekoration für deine Basis allen Wetterbedingungen stand.",
+    "Description": "Eine schwere Wanddekoration aus Leinwand. Dank der Aufhängung mit Vy’keen-Militärseilen hält diese Dekoration für deine Basis allen Wetterbedingungen stand.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -9859,7 +9877,7 @@
     "Icon": "building/467.png",
     "Name": "Kleiner verwitterter Wandbehang",
     "Group": "Dekoration",
-    "Description": "Ein Set aus vier kleinen Leinwand-Wanddekorationen. Dank der Aufhängung mit Vy‘Keen-Militärseilen hält diese Dekoration für deine Basis allen Wetterbedingungen stand.",
+    "Description": "Ein Set aus vier kleinen Leinwand-Wanddekorationen. Dank der Aufhängung mit Vy’keen-Militärseilen hält diese Dekoration für deine Basis allen Wetterbedingungen stand.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -9885,7 +9903,7 @@
     "Icon": "building/468.png",
     "Name": "Verwittertes Hängetriptychon",
     "Group": "Dekoration",
-    "Description": "Ein Set aus drei kleinen Leinwand-Wanddekorationen. Dank der Aufhängung mit Vy‘Keen-Militärseilen hält diese Dekoration für deine Basis allen Wetterbedingungen stand.",
+    "Description": "Ein Set aus drei kleinen Leinwand-Wanddekorationen. Dank der Aufhängung mit Vy’keen-Militärseilen hält diese Dekoration für deine Basis allen Wetterbedingungen stand.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -16756,7 +16774,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16952,7 +16971,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
+      "IsExpeditionSeason7Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -17445,7 +17465,7 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "Technikraum (leer)",
+    "Name": "Technikraum (Erweiterung)",
     "Group": "Fortgeschrittenes Frachtermodul",
     "Description": "Eine geräumige Kammer mit technischem Charme zur Erweiterung der bewohnbaren Räume in großen Raumschiffen.",
     "BaseValueUnits": 1.0,
@@ -17606,7 +17626,7 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "Biologischer Raum (leer)",
+    "Name": "Biologischer Raum (Erweiterung)",
     "Group": "Fortgeschrittenes Frachtermodul",
     "Description": "Dieses geräumige Treibhaus filtert auf natürliche Weise die Luft und reichert sie mit Sauerstoff an. Eine kleine grüne Oase in deinem Frachter.",
     "BaseValueUnits": 1.0,
@@ -17736,7 +17756,7 @@
     "Icon": "building/885.png",
     "Name": "Exo-Fahrzeug-Spezialisten-Raum",
     "Group": "Arbeiter-Terminal",
-    "Description": "Integrierte, auf die Bedürfnisse von <TECHNOLOGY>Exo-Fahrzeug-Mechanikern<> zugeschnittene Frachter-Forschungsausrüstung. Ausgestattet mit maßgeschneiderter Software für die Fahrzeugkonstruktion.\n\nDieses Modul wird als <STELLAR>ganzer Raum<> platziert und kommt mit vorinstallierten Funktionseinheiten.",
+    "Description": "Integrierte, auf die Bedürfnisse von <TECHNOLOGY>Exo-Fahrzeug-Technikern<> zugeschnittene Frachter-Forschungsausrüstung. Ausgestattet mit maßgeschneiderter Software für die Fahrzeugkonstruktion.\n\nDieses Modul wird als <STELLAR>ganzer Raum<> platziert und kommt mit vorinstallierten Funktionseinheiten.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,7 +18110,7 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "Industrieraum (leer)",
+    "Name": "Industrieraum (Erweiterung)",
     "Group": "Fortgeschrittenes Frachtermodul",
     "Description": "Eine geräumige Kammer mit industriellem Charme zur Erweiterung der bewohnbaren Räume in großen Raumschiffen.",
     "BaseValueUnits": 1.0,
@@ -19812,7 +19832,7 @@
     "Icon": "building/964.png",
     "Name": "Schreckenskapitän-Fahng-Poster",
     "Group": "Dekoration",
-    "Description": "Ein exklusives selbstklebendes, knitterfreies Wandkunstwerk.\nNur wenige Vy‘Keen wissen nichts von den schaurigen Taten des Schreckenskapitäns Fahng – wenn auch unbekannt ist, ob es sich um eine reale historische Figur handelt oder nur um eine erfundene Geschichte, um ungehorsame Junge zu erschrecken.",
+    "Description": "Ein exklusives selbstklebendes, knitterfreies Wandkunstwerk.\nNur wenige Vy’keen wissen nichts von den schaurigen Taten des Schreckenskapitäns Fahng – wenn auch unbekannt ist, ob es sich um eine reale historische Figur handelt oder nur um eine erfundene Geschichte, um ungehorsame Junge zu erschrecken.",
     "BaseValueUnits": 400.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -19820,7 +19840,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19847,7 +19868,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19874,7 +19896,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20678,9 +20701,9 @@
   {
     "Id": "build996",
     "Icon": "building/996.png",
-    "Name": "Glas Frachtertreppe",
+    "Name": "Frachter-Glasstufen",
     "Group": "Kern-Frachtermodul",
-    "Description": "Dank diesem Erweiterungsmodul können in großen Raumschiffen schnell bewohnbare Räume gebaut werden.\n\nDie Baueinheit wird mit Druckschotten und allen nötigen Aufsatzpunkten gefertigt.",
+    "Description": "Eine robuste, rutschfeste Treppe mit einer ergonomischen Neigung für den vertikalen Übergang zwischen den Decks von Frachtschiffen.\n\nDiese Treppe ist aus Glas mit geringer Wärmeausdehnung gefertigt und bietet dem Benutzer einen aufregenden Blick in die Tiefe des Weltraums.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20707,9 +20730,9 @@
   {
     "Id": "build997",
     "Icon": "building/997.png",
-    "Name": "Außenplattform Frachtertreppe",
+    "Name": "Frachtschiff-Außentreppe",
     "Group": "Kern-Frachtermodul",
-    "Description": "Dank diesem Erweiterungsmodul können in großen Raumschiffen schnell bewohnbare Räume gebaut werden.\n\nDie Baueinheit wird mit Druckschotten und allen nötigen Aufsatzpunkten gefertigt.",
+    "Description": "Eine robuste, rutschfeste Treppe mit ergonomischer Neigung für den vertikalen Übergang zwischen den Decks von Frachtern.\n\nDiese robuste Treppe kann <STELLAR>außerhalb<> des Frachterrumpfes angebracht werden, um Verbindungen zwischen Außenlaufstegen und Plattformen zu schaffen.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20734,12 +20757,13 @@
     "Icon": "building/998.png",
     "Name": "Innere Frachterwand",
     "Group": "Kern-Frachtermodul",
-    "Description": "Dank diesem Erweiterungsmodul können in großen Raumschiffen schnell bewohnbare Räume gebaut werden.\n\nDie Baueinheit wird mit Druckschotten und allen nötigen Aufsatzpunkten gefertigt.",
+    "Description": "Eine Innenwand zur Unterteilung großer Frachtraumflächen. Passt sich nahtlos an die Ästhetik des umgebenden Raums an.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20756,14 +20780,15 @@
   {
     "Id": "build999",
     "Icon": "building/999.png",
-    "Name": "Industrieraum B (leer)",
+    "Name": "Erweiterungsraum-Variante",
     "Group": "Fortgeschrittenes Frachtermodul",
     "Description": "Eine geräumige Kammer mit industriellem Charme zur Erweiterung der bewohnbaren Räume in großen Raumschiffen.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

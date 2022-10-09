@@ -880,7 +880,7 @@
     "Icon": "constructedTechnology/29.png",
     "Name": "強化艇終端站",
     "Group": "專家終端站",
-    "Description": "根據技師的需求量身打造的研究站，配備訂製載具設計軟體。",
+    "Description": "根據技術員的需求量身打造的研究站，配備訂製載具設計軟體。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -2627,7 +2627,6 @@
     "Description": "銀河系中許多主要物種核發的安全通關證，僅限發證對象使用。\n\n持證者可進入低等限制區與基地系統。",
     "BaseValueUnits": 825.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2656,7 +2655,6 @@
     "Description": "銀河系中許多主要物種核發的安全通關證，僅限發證對象使用。\n\n持證者可進入中等限制區與基地系統。",
     "BaseValueUnits": 1856.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2685,9 +2683,9 @@
     "Description": "銀河系中許多主要物種核發的安全通關證，僅限發證對象使用。\n\n持證者可進入高等限制區與基地系統。",
     "BaseValueUnits": 2613.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties"
     ],
     "BlueprintCost": 1,
@@ -2774,8 +2772,8 @@
     "Id": "conTech97",
     "Icon": "products/93.png",
     "Name": "繁殖卵囊",
-    "Group": "知覺太空船倉儲卵囊",
-    "Description": "<SPECIAL>知覺<>太空船的<TECHNOLOGY>額外倉儲結節<>。孵化時，卵囊內的寄生蟲會寄生到船艙上，利用其寬敞的內部構造與宿主交換重要養分。\n\n按下 <VAL_ON><IMG>FE_ALT1<><> 以觸發成長，並開始<VAL_ON>孵化過程<>。",
+    "Group": "感知太空船倉儲卵囊",
+    "Description": "一個<SPECIAL>知覺<>太空船的<TECHNOLOGY>額外倉儲結節<>。孵化時，卵囊內的寄生蟲會寄生到船艙上，利用其海綿狀的內部構造與宿主交換重要養分。\n\n按下 <VAL_ON><IMG>FE_ALT1<><> 以觸發成長，並開始<VAL_ON>孵化過程<>。",
     "BaseValueUnits": 125000.0,
     "CurrencyType": "None",
     "MaxStackSize": 15.0,
@@ -2791,7 +2789,7 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": [
-      "形成額外的倉儲空間"
+      "進化額外倉儲"
     ]
   },
   {
@@ -2821,7 +2819,7 @@
   {
     "Id": "conTech99",
     "Icon": "building/350.png",
-    "Name": "太空船倉儲擴充",
+    "Name": "倉儲擴充",
     "Group": "太空船擴充模組",
     "Description": "從一艘<STELLAR>回收的太空船<>收集的科技模組。可以從<STELLAR>貨船墜機地點<>收集，或在<STELLAR>巡防艦探勘<>中回收。\n\n可在太空站的<TECHNOLOGY>太空船改造站<>中，將其用於擴充太空船倉儲空間。",
     "BaseValueUnits": 125000.0,
@@ -2865,9 +2863,9 @@
   {
     "Id": "conTech101",
     "Icon": "constructedTechnology/101.png",
-    "Name": "空投艙座標資料",
+    "Name": "強化套裝升級圖",
     "Group": "加密導航資料",
-    "Description": "用於<TECHNOLOGY>訊號強化器<>的加密導航資訊。\n\n若正確解密，將顯示<TECHNOLOGY>空投艙<>位置或<SPECIAL>強化套裝升級<>地點。",
+    "Description": "加密導航資訊在正確解密後，會揭露內含強化套裝<STELLAR>道具欄升級<>的<TECHNOLOGY>空投艙<>位置。\n\n選擇道具欄中的座標，並使用<TECHNOLOGY>規劃路線<> (<IMG>FE_ALT1<>)，即可在你的強化套裝顯示器中釘選該地點。",
     "BaseValueUnits": 85000.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -2876,12 +2874,14 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
-    "ConsumableRewardTexts": []
+    "ConsumableRewardTexts": [
+      "將資料轉換成強化套裝導航記號"
+    ]
   },
   {
     "Id": "conTech102",
@@ -2913,6 +2913,92 @@
     "BaseValueUnits": 10000.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech104",
+    "Icon": "other/269.png",
+    "Name": "記憶碎片",
+    "Group": "科技回音",
+    "Description": "<STELLAR>亡故旅行者<>的破碎殘片。不斷發出低語，其纖維中深藏著一個不可知的名字。\n\n記憶將會以<TECHNOLOGY>重要科技升級<>的形式顯現，在旅途中協助你。按下 <VAL_ON><IMG>FE_ALT1<><> <STELLAR>吸收<>這個記憶。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "透過套裝的營養系統攝取道具"
+    ]
+  },
+  {
+    "Id": "conTech105",
+    "Icon": "other/270.png",
+    "Name": "記憶碎片 (道具欄)",
+    "Group": "失常科技回音",
+    "Description": "<STELLAR>亡故旅行者<>的破碎殘片。不斷發出低語，其纖維中深藏著一個不可知的名字。\n\n記憶將會以<TECHNOLOGY>道具欄擴充<>的形式顯現，在旅途中協助你。按下 <VAL_ON><IMG>FE_ALT1<><> <STELLAR>吸收<>這個記憶。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "透過套裝的營養系統攝取道具"
+    ]
+  },
+  {
+    "Id": "conTech106",
+    "Icon": "products/169.png",
+    "Name": "%NAME% 包裹",
+    "Group": "封存技術包裹",
+    "Description": "一個封存的<TECHNOLOGY>線路套裝<>，以輕鬆儲存核心科技為目的而設計。按下 <VAL_ON><IMG>FE_ALT1<><> 開始進行<STELLAR>安裝程序<>。\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech107",
+    "Icon": "products/84.png",
+    "Name": "%NAME% 節點",
+    "Group": "基因庫",
+    "Description": "一個低溫凍結的節點，用來幫助<TECHNOLOGY>感知太空船<>保存<TECHNOLOGY>生物科技<>檔案。按下 <VAL_ON><IMG>FE_ALT1<><> 即可開始進行<STELLAR>安裝程序<>。\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
     "Colour": "1A2733",
     "Usages": [
       "HasDevProperties",

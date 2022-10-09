@@ -244,7 +244,7 @@
         "Name": "喷气背包罐",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "20"
+        "Value": "25"
       },
       {
         "Name": "再充能速率",
@@ -262,7 +262,7 @@
         "Name": "冲刺恢复时间",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "20"
+        "Value": "40"
       }
     ],
     "ConsumableRewardTexts": []
@@ -1032,7 +1032,7 @@
   {
     "Id": "tech27",
     "Icon": "technology/26.png",
-    "Name": "发射系统充能器",
+    "Name": "启动自动充能器",
     "Group": "飞船发射系统升级",
     "Description": "安装在飞船<TECHNOLOGY>发射推进器<>上的光伏板能够在飞船停止运作时进行缓慢的涓流充电。\n\n收集的光用于融合大气中的氢，并随着时间的推移<STELLAR>自动为发射推进器补充燃料<>。",
     "BaseValueUnits": 1.0,
@@ -1916,7 +1916,7 @@
     "Icon": "technology/48.png",
     "Name": "戴森泵",
     "Group": "飞船回旋加速升级",
-    "Description": "用吸热巨型结构包围整个装置，取代<TECHNOLOGY>回旋加速弩炮<>的提示接收器。回收热量输出以提升战斗效率。\n\n显著提升<STELLAR>热性能<>。",
+    "Description": "用吸热巨型结构包围整个装置，取代<TECHNOLOGY>回旋加速弩炮<>的散热器。回收热量输出以提升战斗效率。\n\n显著提升<STELLAR>热性能<>。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -2246,10 +2246,10 @@
         "Value": "100"
       },
       {
-        "Name": "矿物分析奖励",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "target",
-        "Value": "1"
+        "Name": "矿物群系分析奖励",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3580,7 +3580,7 @@
   {
     "Id": "tech94",
     "Icon": "technology/94.png",
-    "Name": "强化艇信号推进器",
+    "Name": "强化艇雷达",
     "Group": "强化艇扫描装备",
     "Description": "大型复合实地子空间雷达。\n \n由于其巨大的能量消耗和内部亚原子不稳定性，仅安装于强化艇上。\n\n按 <IMG>QUICK_MENU<> 来激活信号推进器。",
     "BaseValueUnits": 1.0,
@@ -3615,9 +3615,9 @@
   {
     "Id": "tech96",
     "Icon": "technology/96.png",
-    "Name": "强化艇信号推进器升级（陶型）",
-    "Group": "强化艇信号推进器升级",
-    "Description": "允许强化艇信号推进器获得额外建筑类型。",
+    "Name": "雷达功率共振器",
+    "Group": "强化艇信号侦察升级",
+    "Description": "允许强化艇雷达获得额外建筑类型。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -3654,7 +3654,7 @@
   {
     "Id": "tech97",
     "Icon": "technology/97.png",
-    "Name": "强化艇加速模块",
+    "Name": "强化艇推进器",
     "Group": "强化艇发动机升级",
     "Description": "与发动机相结合的高效等离子注射器，能够实现短程速度爆发。",
     "BaseValueUnits": 1.0,
@@ -3750,7 +3750,7 @@
   {
     "Id": "tech99",
     "Icon": "technology/99.png",
-    "Name": "强化艇开采激光升级（西格玛型）",
+    "Name": "高级强化艇激光",
     "Group": "强化艇开采升级",
     "Description": "提升强化艇开采激光的力量。",
     "BaseValueUnits": 1.0,
@@ -3791,7 +3791,7 @@
   {
     "Id": "tech100",
     "Icon": "technology/100.png",
-    "Name": "强化艇悬挂大炮",
+    "Name": "悬挂大炮",
     "Group": "强化艇武器配件",
     "Description": "由于此强力武器的能量要求，必须安装于强化艇进行射击。",
     "BaseValueUnits": 1.0,
@@ -6253,9 +6253,9 @@
   {
     "Id": "tech174",
     "Icon": "technology/96.png",
-    "Name": "先进信号增强器",
-    "Group": "强化艇信号推进器升级",
-    "Description": "允许强化艇信号推进器获得额外建筑类型。",
+    "Name": "雷达增幅器",
+    "Group": "强化艇信号侦察升级",
+    "Description": "允许强化艇雷达获得额外建筑类型。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -7052,7 +7052,7 @@
     "Icon": "technology/191.png",
     "Name": "脏腑合成器",
     "Group": "缥缈的孵化室",
-    "Description": "一件包含超凡技术的物品。这种装置的接入膜有着凝胶般的柔软质地，而且还在不停闪烁着柔和的猩红色光芒。\n\n其温暖的腔室能够允许使用者从<SPECIAL>饥饿的触手<>留下的发育囊中提取<STELLAR>邪恶滋生<>。",
+    "Description": "一件不可思议的高科技物品。这种装置的接入膜有着凝胶般的柔软质地，而且还在不停闪烁着柔和的猩红色光芒。\n\n其温暖的腔室能够允许使用者从<SPECIAL>饥饿的触手<>留下的发育囊中提取<STELLAR>邪恶滋生<>。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -7091,7 +7091,7 @@
   {
     "Id": "tech192",
     "Icon": "technology/192.png",
-    "Name": "档案馆超控植入物",
+    "Name": "档案馆分流植入物",
     "Group": "皮下许可电路",
     "Description": "用于避免因文字造成意识损坏的<TECHNOLOGY>生物防火墙<>。外面摸上去滑溜溜的，而且表面已经开始冒泡。\n\n进行皮下安装之后，这种装置将允许使用者查看<SPECIAL>行星档案馆<>中的古代禁忌文本。\n<FUEL>警告<>：请勿揭示禁忌文字。接触禁忌文字将带来极端威胁！",
     "BaseValueUnits": 1.0,
@@ -7832,7 +7832,7 @@
   {
     "Id": "tech212",
     "Icon": "technology/212.png",
-    "Name": "护卫强化外壳左臂",
+    "Name": "强化外壳左臂",
     "Group": "弥诺陶洛斯肢体替换组件",
     "Description": "从一台护卫强化外壳上回收的构件，针对<TECHNOLOGY>弥诺陶洛斯<>重型混合强化艇进行了改装处理。\n\n与<TECHNOLOGY>弥诺陶洛斯激光<>一同安装后会给开采激光提供<STELLAR>强大的升级组件<>，能够对被<TECHNOLOGY>眩晕<>的实体造成重创。",
     "BaseValueUnits": 1.0,
@@ -7896,7 +7896,7 @@
   {
     "Id": "tech213",
     "Icon": "technology/213.png",
-    "Name": "护卫强化外壳右臂",
+    "Name": "强化外壳右臂",
     "Group": "弥诺陶洛斯肢体替换组件",
     "Description": "一组从护卫强化外壳上回收的构件，经过改造后适用于<TECHNOLOGY>弥诺陶洛斯<>重型混合强化艇。\n\n这个肢体超控自身也可以作为<STELLAR>专用战斗系统<>。它可以部署高速<TECHNOLOGY>眩晕弹<>，是弥诺陶洛斯主炮的绝佳辅助武器。\n\n使用<IMG>CLEWEAPON<>以循环可用的武器模式。",
     "BaseValueUnits": 1.0,
@@ -7948,7 +7948,7 @@
   {
     "Id": "tech214",
     "Icon": "technology/214.png",
-    "Name": "护卫强化外壳腿部",
+    "Name": "强化外壳腿部",
     "Group": "弥诺陶洛斯肢体替换组件",
     "Description": "从一台护卫强化外壳上回收的构件，针对<TECHNOLOGY>弥诺陶洛斯<>重型混合强化艇进行了改装处理。\n\n安装后能够显著提升弥诺陶洛斯的<TECHNOLOGY>驱动器以及机动<>系统。",
     "BaseValueUnits": 1.0,
@@ -7990,7 +7990,7 @@
   {
     "Id": "tech215",
     "Icon": "technology/215.png",
-    "Name": "护卫强化外壳机体",
+    "Name": "强化外壳机体",
     "Group": "弥诺陶洛斯核心替换组件",
     "Description": "从一台护卫强化外壳上回收的构件，针对<TECHNOLOGY>弥诺陶洛斯<>重型混合强化艇进行了改装处理。\n\n能够作为半自主<TECHNOLOGY>智能导航插件<>使用。安装后，弥诺陶洛斯将能够<STELLAR>独立跨越行星<>并与敌人<STELLAR>交战<>，除此以外还能进行<STELLAR>采矿<>以帮助自己的主要操作员。\n\n当主要操作员进入驾驶舱后，人工智能驾驶员将移交设备控制权。",
     "BaseValueUnits": 1.0,
@@ -8183,7 +8183,7 @@
     "Icon": "technology/144.png",
     "Name": "超控飞行协助",
     "Group": "高级飞船驾驶模块",
-    "Description": "这种灰色市场流通的电子模块能使关键的安全和飞行员辅助模块失效。这些模块通常被植入飞船的线控飞行控制系统，尽管它的合法性令人怀疑，而且与一系列高速小行星撞击事故有关，但这个装置仍然受到走私者、雇佣兵和其他自以为是资深驾驶员的人的欢迎。\n\n经过专门调整，以增加飞船在太空飞行中<STELLAR>漂移<>的能力。",
+    "Description": "这种灰色市场流通的电子模块能使关键的安全和飞行员辅助模块失效。这些模块通常被植入飞船的飞控系统，尽管它的合法性令人怀疑，而且与一系列高速小行星撞击事故有关，但这个装置仍然受到走私者、雇佣兵和其他自以为是资深驾驶员的人的欢迎。\n\n经过专门调整，以增加飞船在太空飞行中<STELLAR>漂移<>的能力。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -8228,8 +8228,8 @@
     "Id": "tech221",
     "Icon": "technology/221.png",
     "Name": "星际扫描仪",
-    "Group": "远距离传感器技术",
-    "Description": "货船<TECHNOLOGY>星际传感器<>升级组件。\n\n此件装置允许使用者能够在此前未曾拜访某恒星系的前提下查看其<STELLAR>详细经济和冲突数据<>。",
+    "Group": "长距离传感器技术",
+    "Description": "货船<TECHNOLOGY>星际传感器<>升级。\n\n此件装置允许使用者能够在不用拜访恒星系的前提下查看<STELLAR>详细经济和冲突数据<>。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -8262,7 +8262,7 @@
     "Icon": "technology/222.png",
     "Name": "奇点引擎",
     "Group": "虫洞推进装置",
-    "Description": "一件不稳定的、高度实验性的<TECHNOLOGY>货船超光速推进器技术<>。这个极端重力装置在货船反应堆核心深处产生一个<SPECIAL>虫洞<>，将整艘船倒置，使其在宇宙中穿行。\n\n与<STELLAR>货船指挥官<>对话，以启动该驱动器。<FUEL>警告<>：目的地无法控制。",
+    "Description": "一件不稳定的、高度实验性的<TECHNOLOGY>货运飞船超光速推进器技术<>。这个极端重力装置在货船反应堆核心深处产生一个<SPECIAL>虫洞<>，将整艘船倒置，使其在宇宙中穿行。\n\n与<STELLAR>货船指挥官<>对话，以启动该驱动器。<FUEL>警告<>：目的地无法控制。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -8328,7 +8328,7 @@
     "Icon": "products/82.png",
     "Name": "神经护盾",
     "Group": "敌方探测偏导器",
-    "Description": "一个由纳米管编织而成的美丽活体，贯穿于飞船的神经组件。这个结构可以在飞船认为合适的时候被激活，形成一个<STELLER>阻挡<>敌对的<STELLAR>货物探针<>的力场。\n\n在扫描过程中使用<TECHNOLOGY>快捷菜单<>（<IMG>QUICK_MENU<>）以询问该飞船是否可能会阻挡扫描。",
+    "Description": "一个由纳米管编织而成的美丽活体，贯穿于飞船的神经组件。这个结构可以在飞船认为合适的时候被激活，形成一个<STELLER>阻挡<>敌对的<STELLAR>货物探针<>的力场。在扫描过程中\n\n使用<TECHNOLOGY>快捷菜单<>（<IMG>QUICK_MENU<>）以询问该飞船是否可能会阻挡扫描。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -8356,8 +8356,8 @@
     "Id": "tech225",
     "Icon": "products/83.png",
     "Name": "叶绿体膜",
-    "Group": "有感知力的容器节点",
-    "Description": "飞船的半透明皮肤层下安装了由叶绿素填充的薄膜。\n\n暴露在阳光下时，这层膜会<STELLAR>自动为神经线路板充电<>。",
+    "Group": "有感知的容器节点",
+    "Description": "飞船的半透明皮肤层下安装了由叶绿素填充的薄膜。\n\n暴露在阳光下时，这层膜会<STELLAR>自动为神经组件充电<>。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -8392,8 +8392,8 @@
     "Id": "tech226",
     "Icon": "products/85.png",
     "Name": "虫洞脑",
-    "Group": "有感知力的容器节点",
-    "Description": "虫洞脑可以使得飞船<TECHNOLOGY>展望远远超出其自身经验的行星系统<>。 它由多股神经物质组成，包裹着一个微型星体，并直接与飞船的视觉皮层相连。\n\n如果飞船允许，星系图上可以显示<STELLAR>详细经济和冲突数据<>。",
+    "Group": "有感知的容器节点",
+    "Description": "虫洞脑可以使得飞船<TECHNOLOGY>展望远远超出其自身经验的行星系统<>。 它由多股神经物质组成，包裹着一个微型星体，并直接与飞船的视觉皮层相连。\n\n<STELLAR>如果飞船允许，星系图上可以显示详细的经济和冲突数据<>。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -8435,6 +8435,47 @@
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech228",
+    "Icon": "technology/228.png",
+    "Name": "贸易飞艇",
+    "Group": "商贸导弹召唤装置",
+    "Description": "直接连接至<TECHNOLOGY>银河交易网络<>的私人火箭装置。这种单元将允许使用者在一艘小型太空飞船中装载货物。发射之后，飞船助攻的货物将被运输至最近的贸易枢纽并<STELLAR>自动出售<>。\n\n用<IMG>QUICK_MENU<><STELLAR>召唤<>贸易火箭。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw7",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "交易火箭",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]
