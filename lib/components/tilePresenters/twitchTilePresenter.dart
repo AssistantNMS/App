@@ -1,14 +1,13 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import '../../constants/AppImage.dart';
-import '../../contracts/requiredItem.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/AppImage.dart';
 import '../../constants/NmsUIConstants.dart';
+import '../../contracts/requiredItem.dart';
 import '../../contracts/requiredItemDetails.dart';
 import '../../contracts/twitch/twitchCampaignData.dart';
 import '../../contracts/twitch/twitchCampaignReward.dart';
 import '../../helpers/itemsHelper.dart';
-import '../../integration/dependencyInjection.dart';
 import '../../pages/generic/genericPage.dart';
 import '../../pages/helloGames/twitch/twitchCampaignDetailPage.dart';
 
