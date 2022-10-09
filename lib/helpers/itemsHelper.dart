@@ -14,6 +14,7 @@ import '../contracts/requiredItem.dart';
 import '../contracts/requiredItemDetails.dart';
 import '../contracts/requiredItemTreeDetails.dart';
 
+import '../contracts/twitch/twitchCampaignData.dart';
 import '../integration/dependencyInjection.dart';
 import '../services/json/interface/IGenericRepository.dart';
 
@@ -405,4 +406,28 @@ Future<ResultWithValue<List<InventorySlotWithContainersAndGenericPageItem>>>
       invSlotMap.values.toList();
   results.sort((a, b) => a.name.compareTo(b.name));
   return ResultWithValue(results.isNotEmpty, results, '');
+}
+
+Future<ResultWithValue<TwitchCampaignData>> twitchCampaignDetails(
+    BuildContext twCxt, String campaignId) async {
+  ResultWithValue<List<TwitchCampaignData>> allItems =
+      await getDataRepo().getTwitchDrops(twCxt);
+  if (allItems.hasFailed) {
+    return ResultWithValue(
+      false,
+      TwitchCampaignData(),
+      allItems.errorMessage,
+    );
+  }
+
+  try {
+    int campaignIdInt = int.parse(campaignId);
+    TwitchCampaignData selectedGeneric =
+        allItems.value.firstWhere((r) => r.id == campaignIdInt);
+    return ResultWithValue<TwitchCampaignData>(true, selectedGeneric, '');
+  } catch (exception) {
+    getLog().e("TwitchCampaignDetails Exception: ${exception.toString()}");
+    return ResultWithValue<TwitchCampaignData>(
+        false, TwitchCampaignData(), exception.toString());
+  }
 }
