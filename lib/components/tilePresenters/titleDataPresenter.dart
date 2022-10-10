@@ -7,15 +7,16 @@ import '../../contracts/titleDataWithOwned.dart';
 import '../../helpers/currencyHelper.dart';
 import '../../redux/modules/titles/titleViewModel.dart';
 
-Widget Function(BuildContext, TitleDataWithOwned) titleDataTilePresenter(
-        TitleViewModel viewModel) =>
-    (BuildContext context, TitleDataWithOwned titleData) {
-      return TitleDataTile(
-        viewModel,
-        titleData,
-        key: Key(titleData.id),
-      );
-    };
+Widget Function(BuildContext, TitleDataWithOwned, {void Function() onTap})
+    titleDataTilePresenter(TitleViewModel viewModel) =>
+        (BuildContext context, TitleDataWithOwned titleData,
+            {void Function() onTap}) {
+          return TitleDataTile(
+            viewModel,
+            titleData,
+            key: Key(titleData.id),
+          );
+        };
 
 class TitleDataTile extends StatefulWidget {
   final TitleViewModel viewModel;
