@@ -884,7 +884,7 @@
     "Icon": "constructedTechnology/29.png",
     "Name": "Exocraft Terminal",
     "Group": "Specialist terminal",
-    "Description": "A research station tailored to the needs of Mechanics, and equipped with bespoke vehicular design software.",
+    "Description": "A research station tailored to the needs of Technicians, and equipped with bespoke vehicular design software.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -2635,7 +2635,6 @@
     "Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n\nProvides access to low level restricted areas and outpost systems.",
     "BaseValueUnits": 825.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2664,7 +2663,6 @@
     "Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n \nProvides access to mid-tier restricted areas and outpost systems.",
     "BaseValueUnits": 1856.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2693,9 +2691,9 @@
     "Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n \nProvides access to high level restricted areas and outpost systems.",
     "BaseValueUnits": 2613.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties"
     ],
     "BlueprintCost": 1,
@@ -2829,7 +2827,7 @@
   {
     "Id": "conTech99",
     "Icon": "building/350.png",
-    "Name": "Starship Storage Augmentation",
+    "Name": "Storage Augmentation",
     "Group": "Starship Expansion Module",
     "Description": "A technology module harvested from the remains of a <STELLAR>salvaged starship<>. May also be collected from <STELLAR>freighter crash sites<> or salvaged during <STELLAR>frigate expeditions<>.\n\nCan be used to expand starship storage capacity at the Space Station's <TECHNOLOGY>Starship Outfitter<>.",
     "BaseValueUnits": 125000.0,
@@ -2873,9 +2871,9 @@
   {
     "Id": "conTech101",
     "Icon": "constructedTechnology/101.png",
-    "Name": "Drop Pod Coordinate Data",
+    "Name": "Exosuit Upgrade Chart",
     "Group": "Encrypted Navigation Data",
-    "Description": "Encoded navigation data for input into a <TECHNOLOGY>Signal Booster<>.\n\nWhen properly decrypted, will reveal the location of a <TECHNOLOGY>Drop Pod<> containing <SPECIAL>Exosuit Upgrades<>.",
+    "Description": "Encoded navigation data which, when properly decrypted, will reveal the location of a <TECHNOLOGY>Drop Pod<> containing an Exosuit <STELLAR>Inventory Upgrade<>.\n\nSelect the coordinates in the inventory and use <TECHNOLOGY>Plot Route<> (<IMG>FE_ALT1<>) to pin the location in your Exosuit display.",
     "BaseValueUnits": 85000.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -2884,12 +2882,14 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
-    "ConsumableRewardTexts": []
+    "ConsumableRewardTexts": [
+      "Convert data to Exosuit navigation marker"
+    ]
   },
   {
     "Id": "conTech102",
@@ -2921,6 +2921,92 @@
     "BaseValueUnits": 10000.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech104",
+    "Icon": "other/269.png",
+    "Name": "Memory Fragment",
+    "Group": "Technology Echo",
+    "Description": "The shattered remnants of an <STELLAR>expired traveller<>. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an <TECHNOLOGY>important technology upgrade<> to aid you on your travels. <STELLAR>Absorb<> this memory with <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Ingest item via suit nutrient system"
+    ]
+  },
+  {
+    "Id": "conTech105",
+    "Icon": "other/270.png",
+    "Name": "Memory Fragment (Inventory)",
+    "Group": "Rogue Technology Echo",
+    "Description": "The shattered remnants of an <STELLAR>expired traveller<>. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an <TECHNOLOGY>inventory expansion<> to aid you on your travels. <STELLAR>Absorb<> this memory with <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Ingest item via suit nutrient system"
+    ]
+  },
+  {
+    "Id": "conTech106",
+    "Icon": "products/169.png",
+    "Name": "Archived Technology Package",
+    "Group": "",
+    "Description": "An archived <TECHNOLOGY>wiring package<>, designed to allow easy storage of core technology. Use <VAL_ON><IMG>FE_ALT1<><> to begin the <STELLAR>installation process<>.\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech107",
+    "Icon": "products/84.png",
+    "Name": "Genetic Repository",
+    "Group": "",
+    "Description": "A cryogenically frozen node, designed to facilitate the archival of <TECHNOLOGY>bio-technology<> for <TECHNOLOGY>sentient starships<>. Use <VAL_ON><IMG>FE_ALT1<><> to begin the <STELLAR>installation process<>.\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
     "Colour": "1A2733",
     "Usages": [
       "HasDevProperties",

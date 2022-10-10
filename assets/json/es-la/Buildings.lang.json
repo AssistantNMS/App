@@ -3356,7 +3356,7 @@
     "Icon": "building/174.png",
     "Name": "Suelo de piscina central",
     "Group": "Módulo de construcción acuática",
-    "Description": "Una escotilla de piscina central holográfica. Facilita el acceso al interior y al exterior de entornos acuáticos.\n\nLos sistemas de presurización se ocultan por toda la sala de forma automática y con discreción.",
+    "Description": "Una escotilla de suelo holográfica. Facilita el acceso al interior y al exterior de entornos acuáticos.\n\nLos sistemas de presurización se ocultan por toda la sala de forma automática y con discreción.",
     "BaseValueUnits": 10.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -5727,7 +5727,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5755,7 +5756,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5930,7 +5932,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/303.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6286,7 +6289,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/316.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7686,7 +7690,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7714,7 +7719,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7742,7 +7748,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7877,7 +7884,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7969,7 +7977,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -8472,7 +8481,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
+      "IsTwitchCampaign4Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -9054,7 +9064,7 @@
     "Icon": "building/436.png",
     "Name": "Mapa del asentamiento",
     "Group": "Carta planetaria de especialista",
-    "Description": "Un mapa que muestra la ubicación de un asentamiento planetario cercano, obtenido del <STELLAR>cartógrafo de la estación espacial<>.\n\nSelecciona el mapa y usa Trazar ruta (<IMG>FE_ALT1<>) para fijar la ubicación en la pantalla de tu exotraje.",
+    "Description": "Un mapa que muestra la ubicación de un asentamiento planetario cercano, adquirido del <STELLAR>cartógrafo de la estación espacial<>.\n\nSelecciona el mapa y usa <VAL_ON>Trazar rumbo (<IMG>FE_ALT1<>)<> para fijar la ubicación en la pantalla de tu exotraje.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -9092,8 +9102,16 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw1",
-        "Quantity": 25
+        "Id": "prod6",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
       }
     ],
     "StatBonuses": [],
@@ -15746,7 +15764,7 @@
   {
     "Id": "build810",
     "Icon": "building/809.png",
-    "Name": "Chip de pulsos de bytes: 'Cosenos va de las manos'",
+    "Name": "Chip de pulsos de bytes: El coseno nunca te olvidará",
     "Group": "Cristal de contención de audio",
     "Description": "Una red de almacenamiento de datos que contiene una sola <TECHNOLOGY>pista musical de pulsos de bytes<>.\n\nLos datos de la pista se agregarán a la sección 'Otras pistas' de la <TECHNOLOGY>Biblioteca de pulsos de bytes<>. Accede a la librería desde la sección de utilidades en el menú rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 800.0,
@@ -16756,7 +16774,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16942,9 +16961,9 @@
   {
     "Id": "build859",
     "Icon": "building/859.png",
-    "Name": "Póster de Leviatán",
+    "Name": "Póster de leviatán",
     "Group": "Decoración",
-    "Description": "Una pieza exclusiva de arte de pared autoadhesiva a prueba de arrugas.\nEste póster representa una cápsula de fragatas biológicas planeando tranquilamente por el cosmos.",
+    "Description": "Una exclusiva pieza de arte mural autoadhesiva y a prueba de arrugas.\nEste póster muestra un conjunto de fragatas biológicas deslizándose serenamente por el cosmos.",
     "BaseValueUnits": 400.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -16952,7 +16971,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
+      "IsExpeditionSeason7Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16971,7 +16991,7 @@
     "Icon": "building/860.png",
     "Name": "El póster del bucle",
     "Group": "Decoración",
-    "Description": "Una pieza exclusiva de arte de pared autoadhesiva a prueba de arrugas.\nEste póster representa la naturaleza reiterativa del tiempo.",
+    "Description": "Una exclusiva pieza de arte mural autoadhesiva y a prueba de arrugas.\nEste póster representa la naturaleza reiterativa del tiempo.",
     "BaseValueUnits": 400.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -16998,7 +17018,7 @@
     "Icon": "building/861.png",
     "Name": "Póster de empalme temporal",
     "Group": "Decoración",
-    "Description": "Una pieza exclusiva de arte de pared autoadhesiva a prueba de arrugas.\nEste póster es un recordatorio de la naturaleza no lineal de la realidad.",
+    "Description": "Una exclusiva pieza de arte mural autoadhesiva y a prueba de arrugas.\nEste póster es un recordatorio de la naturaleza no lineal de la realidad.",
     "BaseValueUnits": 400.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -17445,7 +17465,7 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "Sala de tecnología (Vacía)",
+    "Name": "Sala de Tecnología (Expansión)",
     "Group": "Módulo de carguero avanzado",
     "Description": "Una amplia cámara de estética técnica, para ampliar espacios habitables en el interior de grandes naves espaciales.",
     "BaseValueUnits": 1.0,
@@ -17606,7 +17626,7 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "Sala biológica (vacía)",
+    "Name": "Sala Biológica (Expansión)",
     "Group": "Módulo de carguero avanzado",
     "Description": "Esta espaciosa cámara de efecto invernadero filtra y oxigena naturalmente el suministro de aire, y ofrece un pequeño santuario de vegetación en la habitación del carguero.",
     "BaseValueUnits": 1.0,
@@ -17736,7 +17756,7 @@
     "Icon": "building/885.png",
     "Name": "Habitación del especialista en exonave",
     "Group": "Terminal de trabajadores",
-    "Description": "Equipo de investigación integrado al carguero adaptado a las necesidades de los <TECHNOLOGY>mecánicos de exonave<> y equipado con software de diseño de vehículos a medida.\n\nEste módulo se coloca como una <STELLAR>sala completa<> y viene con sus unidades funcionales preinstaladas.",
+    "Description": "Equipamiento de investigación de carguero integrado adaptado a las necesidades de los <TECHNOLOGY>técnicos de exonaves<> y equipado con software de diseño de vehículos.\n\nEste módulo se coloca como una <STELLAR>habitación completa<> e incluye unidades funcionales preinstaladas.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,7 +18110,7 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "Sala Industrial (Vacía)",
+    "Name": "Sala Industrial (Expansión)",
     "Group": "Módulo de carguero avanzado",
     "Description": "Una espaciosa cámara de estética industrial, para ampliar espacios habitables en el interior de grandes naves espaciales.",
     "BaseValueUnits": 1.0,
@@ -18933,9 +18953,9 @@
   {
     "Id": "build930",
     "Icon": "building/930.png",
-    "Name": "Ballenato de fragata orgánica",
-    "Group": "Complemento de base ornamental",
-    "Description": "Un leviatán cósmico joven, adecuado para reubicarse en una base habitable.\n\nEsta misteriosa criatura está encerrada en un campo de crono-preservación para garantizar que permanezca eternamente joven, juguetona y con un tamaño manejable.",
+    "Name": "Ternero de fragata orgánica",
+    "Group": "Compañero ornamental de base",
+    "Description": "Un leviatán cósmico joven que puede realojarse en una base habitable.\n\nEsta misteriosa criatura está encerrada en un campo de cronopreservación para garantizar su juventud eterna, personalidad juguetona y tamaño manejable.",
     "BaseValueUnits": 500.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -19709,7 +19729,7 @@
     "Icon": "building/960.png",
     "Name": "Lanzador de carne",
     "Group": "Dispositivo pirotécnico consumible",
-    "Description": "Fuegos artificiales de lujo. Esta pirotecnia orgánica se lanza al cielo y estalla en una explosión de baba, plasma y gusanos. Se enciende para crear espectáculos asquerosos en el cielo.\n\nColoca el tubo de lanzamiento en el <VAL_ON>Menú de construcción<> (<IMG>BUILD_MENU<>). <FUEL>Advertencia<>: No lo apuntes a criaturas vivas. No se recomienda su uso en interiores.",
+    "Description": "Fuegos artificiales de lujo. Estos artefactos pirotécnicos orgánicos se elevan hacia el cielo y su explosión provoca un estallido de lodo, plasma y restos de gusano. Se prenden para crear espectáculos repugnantes en el cielo.\n\nColoca el tubo de lanzamiento a través del <VAL_ON>menú de construcción<> (<IMG>BUILD_MENU<>). <FUEL>Advertencia<>: No apuntar a criaturas vivas. No se recomienda su uso en interiores.",
     "BaseValueUnits": 50.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -19731,7 +19751,7 @@
     "Icon": "building/961.png",
     "Name": "Calcomanía de la expedición de emergencia",
     "Group": "Decoración",
-    "Description": "Una calcomanía decorativa exclusiva para adornar y darle estilo a las bases.\n\nEsta calcomanía conmemora la finalización de la expedición de <STELLAR>emergencia<>.",
+    "Description": "Una exclusiva calcomanía decorativa, para adornar y dar estilo a las bases.\n\nEsta calcomanía conmemora la finalización de la expedición <STELLAR>Emergencia<>.",
     "BaseValueUnits": 400.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -19758,7 +19778,7 @@
     "Icon": "building/962.png",
     "Name": "Trofeo titánico",
     "Group": "Cráneo decorativo",
-    "Description": "Un exclusivo adorno de base edificable.\n\nEste cráneo con muchos dientes perteneció a un gran vertebrado sin patas, primo del gusano de arena titánico. Sus poderosas mandíbulas pueden ejercer suficiente fuerza como para aplastar una multiherramienta y los huesos de la mayoría de las criaturas.",
+    "Description": "Un exclusivo adorno de base edificable.\n\nEsta calavera de múltiples colmillos perteneció a una enorme criatura vertebrada sin patas de la familia del gusano titán. Sus poderosas fauces tienen la fuerza suficiente como para destrozar una multiherramienta y los huesos de la mayoría de las criaturas.",
     "BaseValueUnits": 500.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -19820,7 +19840,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19847,7 +19868,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19874,7 +19896,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20296,9 +20319,9 @@
   {
     "Id": "build982",
     "Icon": "building/982.png",
-    "Name": "Calcomanía de la expedición Leviatán",
+    "Name": "Calcomanía de expedición Leviatán",
     "Group": "Decoración",
-    "Description": "Una calcomanía decorativa exclusiva para adornar y darle estilo a las bases.\n\nEsta calcomanía conmemora la finalización de la expedición <STELLAR>Leviatán<> y el final de una maldición generacional.",
+    "Description": "Una exclusiva calcomanía decorativa para adornar y dar estilo a las bases.\n\nEsta calcomanía conmemora la finalización de la expedición <STELLAR>Leviatán<> y la desaparición de la maldición generacional.",
     "BaseValueUnits": 400.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -20678,9 +20701,9 @@
   {
     "Id": "build996",
     "Icon": "building/996.png",
-    "Name": "Cristal Escaleras De Carguero",
+    "Name": "Escaleras de cristal de carguero",
     "Group": "Módulo central de carguero",
-    "Description": "Este módulo de expansión permite la rápida construcción de espacios habitables en el interior de grandes naves.\n\nLa unidad de construcción se fabrica por completo, con mamparos de presión y todos los puntos de anclaje necesarios.",
+    "Description": "Una escalera robusta y antideslizante con una inclinación ergonómica, para atravesar verticalmente entre cubiertas de cargueros.\n\nConstruidas con vidrio de baja expansión térmica, estas escaleras brindan al usuario una vista emocionante del espacio profundo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20707,9 +20730,9 @@
   {
     "Id": "build997",
     "Icon": "building/997.png",
-    "Name": "Plataforma Exterior Escaleras De Carguero",
+    "Name": "Escaleras exteriores del carguero",
     "Group": "Módulo central de carguero",
-    "Description": "Este módulo de expansión permite la rápida construcción de espacios habitables en el interior de grandes naves.\n\nLa unidad de construcción se fabrica por completo, con mamparos de presión y todos los puntos de anclaje necesarios.",
+    "Description": "Una escalera robusta y antideslizante con una inclinación ergonómica, para atravesar verticalmente entre cubiertas de cargueros.\n\nEstas sólidas escaleras se pueden colocar <STELLAR>fuera<> del casco del carguero, creando conexiones entre las pasarelas exteriores y las plataformas.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20734,12 +20757,13 @@
     "Icon": "building/998.png",
     "Name": "Pared interior de carguero",
     "Group": "Módulo central de carguero",
-    "Description": "Este módulo de expansión permite la rápida construcción de espacios habitables en el interior de grandes naves.\n\nLa unidad de construcción se fabrica por completo, con mamparos de presión y todos los puntos de anclaje necesarios.",
+    "Description": "Un muro interior para subdividir grandes espacios de cargueros. Se configura a la perfección para adaptarse a la estética de la sala circundante.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20756,14 +20780,15 @@
   {
     "Id": "build999",
     "Icon": "building/999.png",
-    "Name": "Sala Industrial B (Vacía)",
+    "Name": "Variante de sala de expansión",
     "Group": "Módulo de carguero avanzado",
     "Description": "Una espaciosa cámara de estética industrial, para ampliar espacios habitables en el interior de grandes naves espaciales.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

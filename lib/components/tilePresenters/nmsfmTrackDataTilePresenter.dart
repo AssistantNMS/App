@@ -2,7 +2,8 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import '../../contracts/nmsfm/nmsfmTrackData.dart';
 
-Widget nmsfmTrackTilePresenter(BuildContext context, NmsfmTrackData track) {
+Widget nmsfmTrackTilePresenter(BuildContext context, NmsfmTrackData track,
+    {void Function() onTap}) {
   bool hasArtist = track.artist != null && track.artist.isNotEmpty;
   bool hasTime = track.runtimeInSeconds != null && track.runtimeInSeconds > 0;
 

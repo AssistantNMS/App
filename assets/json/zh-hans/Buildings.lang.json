@@ -5727,7 +5727,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5755,7 +5756,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5930,7 +5932,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/303.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6286,7 +6289,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/316.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7686,7 +7690,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7714,7 +7719,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7742,7 +7748,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7877,7 +7884,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7969,7 +7977,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -8472,7 +8481,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
+      "IsTwitchCampaign4Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -9054,7 +9064,7 @@
     "Icon": "building/436.png",
     "Name": "定居点图表",
     "Group": "专业星图",
-    "Description": "显示附近行星定居点的地图，可在<STELLAR>空间站的制图师处获得<>。\n\n选择地图并使用规划路线（<IMG>FE_ALT1<>）以在你的套装界面固定地点。",
+    "Description": "显示附近行星定居点的地图，可在<STELLAR>空间站的制图师处获得<>。\n\n选择地图并使用<VAL_ON>规划路线（<IMG>FE_ALT1<>）<>以在你的套装屏幕中标记该地点。",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -9092,8 +9102,16 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw1",
-        "Quantity": 25
+        "Id": "prod6",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
       }
     ],
     "StatBonuses": [],
@@ -16756,7 +16774,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16952,7 +16971,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
+      "IsExpeditionSeason7Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -17216,7 +17236,7 @@
     "Icon": "building/869.png",
     "Name": "扫描仪室",
     "Group": "星际探针",
-    "Description": "先进的集成货船设备。使用时这个<TECHNOLOGY>行星扫描仪<>可以探测本地太阳系内的所有天体。该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。\n\n扫描到的行星和卫星会被计为<STELLAR>已发现<>，同时传感器会收集包括天气状况和突出资源在内的高级数据。",
+    "Description": "先进的集成货船设备。使用时这个<TECHNOLOGY>行星扫描仪<>可以探测本地太阳系内的所有天体。该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。\n\n扫描到的行星和卫星会被计为<STELLAR>发现<>，同时传感器会收集包括天气状况和突出资源在内的高级数据。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17282,7 +17302,7 @@
     "Icon": "building/871.png",
     "Name": "舰队指挥室",
     "Group": "远征管理终端",
-    "Description": "核心<TECHNOLOGY>舰队管理站<>。这一先进的全息通讯站对于主力飞船从舒适角度管理舰队远征是至关重要的。该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。\n\n建议使用者需要<STELLAR>多座站点<>同时管理多个远征。",
+    "Description": "核心<TECHNOLOGY>舰队管理站<>。这一先进的全息通讯站对于主力飞船从舒适角度管理舰队探险是至关重要的。该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。\n\n建议使用者需要<STELLAR>多座站点<>同时管理多个远征。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17315,7 +17335,7 @@
     "Icon": "building/872.png",
     "Name": "传送室",
     "Group": "远距离物质传输设备",
-    "Description": "重要的集成货船装备。这台<TECHNOLOGY>个人传送设备<>允许使用者在货船、行星基地之间以及连接其网络的任何空间站界标之间快速移动。敦促使用者在插入其负担不起的任何内容之前验证网络完整性。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
+    "Description": "重要的集成货船设备。这台<TECHNOLOGY>个人传送设备<>允许使用者在货船，行星基地之间以及连接其网络的任何空间站终端之间快速移动。敦促使用者在插入其负担不起的任何内容之前验证网络完整性。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17348,7 +17368,7 @@
     "Icon": "building/873.png",
     "Name": "外观修改器房间",
     "Group": "定制个人视觉效果",
-    "Description": "集成货船装备，允许使用者<TECHNOLOGY>调整个人外观<>设置。该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。\n\n模块应用先进的全息技术以重新调整使用者周围的光线，允许使用者采用任何想要的外观。在使用前，必须将可视数据正确地格式化。",
+    "Description": "集成货船设备，允许使用者<TECHNOLOGY>调整个人外观<>设置。该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。\n\n模块应用先进的全息技术以重新调整使用者周围的光线，允许使用者采用任何想要的外观。在使用前，必须将可视数据正确地格式化。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17381,7 +17401,7 @@
     "Icon": "building/874.png",
     "Name": "科学专家房间",
     "Group": "工人终端",
-    "Description": "集成货船研究装备，专为<TECHNOLOGY>科学家<>需求而定制，配备内容用于科学设计图的研究及开发。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
+    "Description": "集成货船研究设备，专为<TECHNOLOGY>科学家<>需求而定制，配备内容用于科学设计图的分析及发展。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17412,9 +17432,9 @@
   {
     "Id": "build875",
     "Icon": "building/875.png",
-    "Name": "建造专家房间",
+    "Name": "建筑专家房间",
     "Group": "工人终端",
-    "Description": "集成货船研究装备，专为<TECHNOLOGY>建造监督者<>需求而定制，配备了用于农业和工程设计软件。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
+    "Description": "集成货船研究设备，专为<TECHNOLOGY>建造监督者<>需求而定制，配备了用于建筑和驱动器的设计软件。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17445,7 +17465,7 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "技术室（空）",
+    "Name": "技术室（扩展）",
     "Group": "高级货船模块",
     "Description": "一个具有技术美感的宽敞舱室，用于扩大大型宇宙飞船内的可居住空间。",
     "BaseValueUnits": 1.0,
@@ -17575,7 +17595,7 @@
     "Icon": "building/880.png",
     "Name": "农业专家房间",
     "Group": "工人终端",
-    "Description": "集成货船研究装备，专为<TECHNOLOGY>农民<>需求而定制，配备内容用于可耕种农作物的分析及培育。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
+    "Description": "集成货船研究设备，专为<TECHNOLOGY>农民<>需求而定制，配备内容用于可耕种农作物的分析及培育。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17606,7 +17626,7 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "生物室（空）",
+    "Name": "生物室（扩展）",
     "Group": "高级货船模块",
     "Description": "这个宽敞的温室对空气供应进行自然过滤和充氧，并为货船的居住环境提供了一个小小的绿色避难所。",
     "BaseValueUnits": 1.0,
@@ -17637,7 +17657,7 @@
     "Icon": "building/882.png",
     "Name": "精炼室",
     "Group": "高级货船模块",
-    "Description": "重要的集成货船设备。<TECHNOLOGY>货船精炼机<>可以将<COMMODITY>三<>种不同的物质加工成功能更强、更先进的材料。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
+    "Description": "重要的集成货船设备。<TECHNOLOGY>装备精炼机<>可以将<COMMODITY>三<>种不同的物质加工成功能更强、更先进的材料。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17703,7 +17723,7 @@
     "Icon": "building/884.png",
     "Name": "轨道强化艇物质化器",
     "Group": "快速部署货船模块",
-    "Description": "先进的集成货船设备。建造后，用户可以召唤与其货船同在一个星系的任何自有强化艇。该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。\n\n与<STELLAR>套装快速命令菜单<>结合即可更方便使用。",
+    "Description": "先进的集成货船设备。建造召唤站后，用户可以召唤与其货船同在一个星系的任何自有强化艇。该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。\n\n与<STELLAR>套装快速命令菜单<>结合即可更方便使用。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17736,7 +17756,7 @@
     "Icon": "building/885.png",
     "Name": "强化艇专家房间",
     "Group": "工人终端",
-    "Description": "集成货船研究装备，专为<TECHNOLOGY>强化艇工程师<>需求而定制，配备了定制的载具设计软件。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
+    "Description": "集成货船研究设备，专为<TECHNOLOGY>强化艇技师<>的需求而定制，配备了定制的车辆设计软件。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17769,7 +17789,7 @@
     "Icon": "building/886.png",
     "Name": "武器终端室",
     "Group": "工人终端",
-    "Description": "集成货船研究装备，专为<TECHNOLOGY>军械士<>需求而定制，配备内容用于开发弹药和炸药以及某些民用技术。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
+    "Description": "集成货船研究设备，专为<TECHNOLOGY>军械士<>需求而定制，配备内容用于开发弹药和炸药以及某些民用技术提供装备。\n\n该模块作为一个<STELLAR>完整的房间<>设置，并预装了其功能单元。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,7 +18110,7 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "工业室（空）",
+    "Name": "工业室（扩展）",
     "Group": "高级货船模块",
     "Description": "一个具有工业美感的宽敞舱室，用于扩大大型宇宙飞船内的可居住空间。",
     "BaseValueUnits": 1.0,
@@ -18355,7 +18375,7 @@
     "Icon": "building/907.png",
     "Name": "朝圣者海报",
     "Group": "装饰",
-    "Description": "一件专属的自附着防皱墙壁艺术。\n\n这张海报是在向在群星中开辟前路的开拓者们致敬。",
+    "Description": "一件专属自附着的无褶皱墙壁艺术。\n\n这张海报对在群星中开辟前路的开拓者们表示了敬意。",
     "BaseValueUnits": 400.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -18382,7 +18402,7 @@
     "Icon": "building/908.png",
     "Name": "极星海报",
     "Group": "装饰",
-    "Description": "一件专属的自附着防皱墙壁艺术。\n\n这张海报是在向无畏求索的探险家和领航员们致敬。",
+    "Description": "一件专属自附着的无褶皱墙壁艺术。\n\n这张海报对无畏求索的探险家和领航员们表示了敬意。",
     "BaseValueUnits": 400.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -18409,7 +18429,7 @@
     "Icon": "building/909.png",
     "Name": "重型运输海报",
     "Group": "装饰",
-    "Description": "一件专属的自附着防皱墙壁艺术。\n\n这张海报是在向兢兢业业地确保群星上的生命们吃饱穿暖的货船船员们致敬。",
+    "Description": "一件专属自附着的无褶皱墙壁艺术。\n\n这张海报对兢兢业业地确保群星上的生命们吃饱穿暖的货船船员们表示了敬意。",
     "BaseValueUnits": 400.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -18436,7 +18456,7 @@
     "Icon": "building/910.png",
     "Name": "高大的穗草",
     "Group": "有机装饰",
-    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和气候条件下生长。该品种的特点是拥有长而薄的叶片，上面覆盖着细毛。",
+    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和天气条件下生长。该品种的特点是长而薄的叶片，上面覆盖着细毛。",
     "BaseValueUnits": 500.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -18463,7 +18483,7 @@
     "Icon": "building/911.png",
     "Name": "低矮的穗草",
     "Group": "有机装饰",
-    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和气候条件下生长。这个品种和它高大的亲戚一样，以长硬毛的叶片为特征，但它的叶片略微厚实，生长得也更加密集。",
+    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和天气条件下生长。这个品种和它高大的亲戚一样，以长硬毛的叶片为特征，但它的叶片略微厚实、生长得也更加密集。",
     "BaseValueUnits": 500.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -18490,7 +18510,7 @@
     "Icon": "building/912.png",
     "Name": "平刃草",
     "Group": "有机装饰",
-    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和气候条件下生长。宽而平的叶片分泌出一种芳香而令人厌恶的汁液，以阻止捕食者靠近。",
+    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和天气条件下生长。宽而平的叶片分泌出一种芳香而令人厌恶的汁液，以阻止捕食者靠近。",
     "BaseValueUnits": 500.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -18517,7 +18537,7 @@
     "Icon": "building/913.png",
     "Name": "环形草",
     "Group": "有机装饰",
-    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和气候条件下生长。这个品种的特点是形态优美的卷曲叶片，它能够卷曲和展开，使植物保持恒定的内部温度。",
+    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和天气条件下生长。这个品种的特点是形态优美的卷曲叶片，它能够卷曲和展开，使植物保持恒定的内部温度。",
     "BaseValueUnits": 500.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -18544,7 +18564,7 @@
     "Icon": "building/914.png",
     "Name": "缎带草",
     "Group": "有机装饰",
-    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和气候条件下生长。这种草与某些品种的海藻是近亲，可以通过长长的波纹状叶片和精细的六边形表面纹理来识别。",
+    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和天气条件下生长。这种草与某些品种的海藻是近亲，可以通过长长的波纹状叶片和精细的六边形表面纹理来识别。",
     "BaseValueUnits": 500.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -18571,7 +18591,7 @@
     "Icon": "building/915.png",
     "Name": "裂爪草",
     "Group": "有机装饰",
-    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和气候条件下生长。裂爪草在植株结构上更类似于灌木，而不是真正的草。它具有大而带有光泽的叶子，可以快速进行光合作用。",
+    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和天气条件下生长。裂爪草在植株结构上更类似于灌木，而不是真正的草。它具有大而带有光泽的叶子，可以快速进行光合作用。",
     "BaseValueUnits": 500.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -18598,7 +18618,7 @@
     "Icon": "building/916.png",
     "Name": "触角草",
     "Group": "有机装饰",
-    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和气候条件下生长。这个品种的叶片更像是近乎木质的、树枝状的铠甲，将用于储存水分的树脂厚脉与外界隔绝开来。",
+    "Description": "一种坚韧的观赏草，适合在所有生物群落、土壤类型和天气条件下生长。这个品种的叶片更像是近乎木质的、树枝状的铠甲，将用于储存水分和树脂的厚脉与外界隔绝开来。",
     "BaseValueUnits": 500.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -18625,7 +18645,7 @@
     "Icon": "building/917.png",
     "Name": "出航海报",
     "Group": "装饰",
-    "Description": "一件专属的自附着防皱墙壁艺术。\n这幅大型绘画描绘的是一艘主力飞船消失在无尽夜空中的场景。",
+    "Description": "一幅自附着且无褶皱的专属墙壁艺术。\n这幅大型绘画描绘的是一艘主力飞船消失在无尽夜空中的场景。",
     "BaseValueUnits": 400.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -18652,7 +18672,7 @@
     "Icon": "building/918.png",
     "Name": "外交海报",
     "Group": "装饰",
-    "Description": "一件专属的自附着防皱墙壁艺术。\n这张海报代表了旅行者在宇宙主流外星物种中的地位。",
+    "Description": "一件专属自附着的无褶皱墙壁艺术。\n这张海报代表了旅行者在宇宙主流外星物种中的地位。",
     "BaseValueUnits": 400.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -18679,7 +18699,7 @@
     "Icon": "building/919.png",
     "Name": "字节节拍海报",
     "Group": "装饰",
-    "Description": "一件专属的自附着防皱墙壁艺术。\n这幅大型绘画描绘了一个字节节拍芯片，其中包含了一首生动的乐曲。",
+    "Description": "一幅自附着且无褶皱的专属墙壁艺术。\n这幅大型绘画描绘了一个字节节拍芯片，其中包含了一首生动的乐曲。",
     "BaseValueUnits": 400.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -18706,7 +18726,7 @@
     "Icon": "building/920.png",
     "Name": "艾梅里尔货船尾迹",
     "Group": "货船驱动信号器超控",
-    "Description": "专属<STELLAR>货船驱动信号器修改器<>。\n\n货船驱动器的极度高温激发了这个艾梅里尔盐过滤器，使排气管染上了鲜艳的绿色。\n\n在<VAL_ON>舰桥<>上的<TECHNOLOGY>升级组件控制终端<>改变货船外观。",
+    "Description": "专属<STELLAR>货船驱动信号器修改器<>。\n\n货船驱动器的极度高温激发了这个艾梅里尔盐过滤器，使排气管染上了鲜艳的绿色。\n\n在<VAL_ON>舰桥<>上的<TECHNOLOGY>升级控制终端<>改变货船外观。",
     "BaseValueUnits": 800.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -18727,7 +18747,7 @@
     "Icon": "building/921.png",
     "Name": "黄金货船尾迹",
     "Group": "货船驱动信号器超控",
-    "Description": "专属<STELLAR>货船驱动信号器修改器<>。\n\n货船驱动器的极度高温激发了这个钠过滤器，使排气管染上了鲜艳的黄金色。\n\n在<VAL_ON>舰桥<>上的<TECHNOLOGY>升级组件控制终端<>改变货船外观。",
+    "Description": "专属<STELLAR>货船驱动信号器修改器<>。\n\n货船驱动器的极度高温激发了这个钠过滤器，使排气管染上了鲜艳的金色。\n\n在<VAL_ON>舰桥<>上的<TECHNOLOGY>升级控制终端<>改变货船外观。",
     "BaseValueUnits": 800.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -18749,7 +18769,7 @@
     "Icon": "building/922.png",
     "Name": "反物质货船尾迹",
     "Group": "货船驱动信号器超控",
-    "Description": "专属<STELLAR>货船驱动信号器修改器<>。\n\n粒子加速器随着货船驱动器的热量而启动，在排气管上划出一条深色的反物质痕迹。\n\n在<VAL_ON>舰桥<>上的<TECHNOLOGY>升级组件控制终端<>改变货船外观。",
+    "Description": "专属<STELLAR>货船驱动信号器修改器<>。\n\n粒子加速器随着货船驱动器的热量而启动，在排气管上划出一条深色的反物质痕迹。\n\n在<VAL_ON>舰桥<>上的<TECHNOLOGY>升级控制终端<>改变货船外观。",
     "BaseValueUnits": 800.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -18791,7 +18811,7 @@
   {
     "Id": "build925",
     "Icon": "building/925.png",
-    "Name": "导航档案室",
+    "Name": "导航档案",
     "Group": "安全地图容器",
     "Description": "一个安全的密封容器，旨在为重要导航图的存储提供一个近乎坚不可摧的储存室。\n\n这个档案库被设计成可以挺过数千年的时光摧残，完全不含电子构件。",
     "BaseValueUnits": 500.0,
@@ -18913,7 +18933,7 @@
     "Icon": "building/929.png",
     "Name": "极星远征旗帜",
     "Group": "定制个人身份",
-    "Description": "装备上这枚专属的<STELLAR>个人旗帜<>，纪念你完成“极星”<STELLAR>远征<>并完成了主力飞船上的漫长航行。\n\n在外观修改器<TECHNOLOGY>中将这面旗帜应用至你的个人档案<>。",
+    "Description": "装备上这枚专属的<STELLAR>个人旗帜<>，纪念你完成‘极星’<STELLAR>远征<>并完成了主力飞船上的漫长航行。\n\n在外观修改器<TECHNOLOGY>中将这面旗帜应用至你的个人档案<>。",
     "BaseValueUnits": 220.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -19758,7 +19778,7 @@
     "Icon": "building/962.png",
     "Name": "泰坦奖杯",
     "Group": "装饰头骨",
-    "Description": "一件专属的可建造基地装饰。\n\n这个长满利齿的头骨曾经属于外形酷似巨型沙虫的大型无腿脊椎动物。强有力的下颚足以粉碎多用途工具以及绝大多数生物的骨骼。",
+    "Description": "一件专属的可建造基地装饰。\n\n这个长满利齿的头骨曾经属于外形酷似巨型沙虫的大型无腿有脊椎动物。强有力的下颚足以粉碎多用途工具以及绝大多数生物的骨骼。",
     "BaseValueUnits": 500.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -19820,7 +19840,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19847,7 +19868,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19874,7 +19896,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20678,9 +20701,9 @@
   {
     "Id": "build996",
     "Icon": "building/996.png",
-    "Name": "玻璃 货船楼梯",
+    "Name": "货船玻璃楼梯",
     "Group": "核心货船模块",
-    "Description": "这种扩展模块允许在大型星际飞船内快速建造居住空间。\n\n制成的建筑单位配备了压力舱壁和所有必要的配件点。",
+    "Description": "一段牢固的防滑楼梯，符合人体工程学的坡度将允许你轻松前往不同垂直高度的货船甲板。\n\n这些楼梯采用低热膨胀玻璃制造，能够为使用者提供深空漫步的刺激景象。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20707,9 +20730,9 @@
   {
     "Id": "build997",
     "Icon": "building/997.png",
-    "Name": "外部平台 货船楼梯",
+    "Name": "货船外层楼梯",
     "Group": "核心货船模块",
-    "Description": "这种扩展模块允许在大型星际飞船内快速建造居住空间。\n\n制成的建筑单位配备了压力舱壁和所有必要的配件点。",
+    "Description": "一段牢固的防滑楼梯，符合人体工程学的坡度将允许你轻松前往不同垂直高度的货船甲板。\n\n这些坚固的楼梯能够固定在飞船船体<STELLAR>外侧<>，并借此连接外部走廊与平台。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20734,12 +20757,13 @@
     "Icon": "building/998.png",
     "Name": "货船内部墙",
     "Group": "核心货船模块",
-    "Description": "这种扩展模块允许在大型星际飞船内快速建造居住空间。\n\n制成的建筑单位配备了压力舱壁和所有必要的配件点。",
+    "Description": "用来分隔大型货船空间的内墙。能够针对周遭环境的美学风格进行无缝调整。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20756,14 +20780,15 @@
   {
     "Id": "build999",
     "Icon": "building/999.png",
-    "Name": "工业室B（空）",
+    "Name": "扩展房间种类",
     "Group": "高级货船模块",
     "Description": "一个具有工业美感的宽敞舱室，用于扩大大型宇宙飞船内的可居住空间。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

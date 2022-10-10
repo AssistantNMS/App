@@ -12,8 +12,8 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
   Widget build(BuildContext context) {
     const iconFgColour = Colors.white;
     return IntroSlider(
-      slides: [
-        Slide(
+      listContentConfig: [
+        ContentConfig(
           title: 'NomNom Inventory Sync!', // TODO translate
           centerWidget: Column(
             children: [
@@ -30,7 +30,7 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
           colorBegin: getTheme().getScaffoldBackgroundColour(context),
           colorEnd: getTheme().getScaffoldBackgroundColour(context),
         ),
-        Slide(
+        ContentConfig(
           title: 'NomNom Inventory Sync!', // TODO translate
           centerWidget: Column(
             children: [
@@ -46,7 +46,7 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
           colorBegin: getTheme().getScaffoldBackgroundColour(context),
           colorEnd: getTheme().getScaffoldBackgroundColour(context),
         ),
-        Slide(
+        ContentConfig(
           title: 'NomNom Inventory Sync!', // TODO translate
           centerWidget: Column(
             children: [
@@ -65,9 +65,11 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
       renderNextBtn: const Icon(Icons.navigate_next, color: iconFgColour),
       renderDoneBtn: const Icon(Icons.done, color: iconFgColour),
       onDonePress: () => getNavigation().pop(context),
-      colorDot: Colors.white,
-      colorActiveDot: getTheme().getSecondaryColour(context),
-      backgroundColorAllSlides: getTheme().getBackgroundColour(context),
+      indicatorConfig: IndicatorConfig(
+        colorIndicator: Colors.white,
+        colorActiveIndicator: getTheme().getSecondaryColour(context),
+      ),
+      backgroundColorAllTabs: getTheme().getBackgroundColour(context),
     );
   }
 }

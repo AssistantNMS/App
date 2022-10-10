@@ -99,7 +99,8 @@ class FavouritesPage extends StatelessWidget {
         snapshot.data,
         compare: (a, b) => a.name.compareTo(b.name),
       ),
-      listItemDisplayer: (BuildContext _, RequiredItemDetails reqItems) {
+      listItemDisplayer: (BuildContext _, RequiredItemDetails reqItems,
+          {void Function() onTap}) {
         var favouritesBackgroundPresenter =
             requiredItemDetailsBackgroundTilePresenter(
           viewModel.displayGenericItemColour,

@@ -880,7 +880,7 @@
     "Icon": "constructedTechnology/29.png",
     "Name": "Терминал вездехода",
     "Group": "Терминал специалиста",
-    "Description": "Исследовательская станция, где есть все, что нужно любому механику; оснащена лучшим программным обеспечением для разработки и обслуживания деталей машин.",
+    "Description": "Исследовательская станция, где есть все, что нужно любому технику; оснащена лучшим программным обеспечением для разработки и обслуживания деталей машин.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -2627,7 +2627,6 @@
     "Description": "Пропуск, который многие основные виды дарят завоевавшим их доверие странникам.\n\nДает доступ к закрытым зонам и аванпостам низкого уровня секретности.",
     "BaseValueUnits": 825.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2656,7 +2655,6 @@
     "Description": "Пропуск, который многие основные виды дарят завоевавшим их доверие странникам.\n \nДает доступ к закрытым зонам и аванпостам среднего уровня секретности.",
     "BaseValueUnits": 1856.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2685,9 +2683,9 @@
     "Description": "Пропуск, который многие основные виды дарят завоевавшим их доверие странникам.\n \nДает доступ к закрытым зонам и аванпостам высокого уровня секретности.",
     "BaseValueUnits": 2613.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties"
     ],
     "BlueprintCost": 1,
@@ -2821,7 +2819,7 @@
   {
     "Id": "conTech99",
     "Icon": "building/350.png",
-    "Name": "Улучшение хранилища звездолета",
+    "Name": "Улучшение хранилища",
     "Group": "Модуль расширения звездолета",
     "Description": "Технологический модуль, добытый из останков \n<STELLAR>звездолета<>. Такие можно найти на <STELLAR>месте крушения грузового судна<> или добыть во время <STELLAR>экспедиции фрегата<>.\n\nИх можно использовать, чтобы расширить хранилище звездолета в <TECHNOLOGY>блоке оснащения звездолета<> на космической станции.",
     "BaseValueUnits": 125000.0,
@@ -2865,9 +2863,9 @@
   {
     "Id": "conTech101",
     "Icon": "constructedTechnology/101.png",
-    "Name": "Координаты капсулы",
+    "Name": "Карта улучшения экзокостюма",
     "Group": "Зашифрованные навигационные данные",
-    "Description": "Зашифрованные навигационные данные для ввода в <TECHNOLOGY>усилитель сигнала<>.\n\nПри правильной расшифровке сообщат координаты <TECHNOLOGY>капсулы<> или <SPECIAL>улучшений для экзокостюма<>.",
+    "Description": "Зашифрованные навигационные данные, расшифровка которых позволит определить местоположение <TECHNOLOGY>капсулы<> с <STELLAR>улучшением инвентаря<> экзокостюма.\n\nВыберите координаты в инвентаре и <TECHNOLOGY>проложите маршрут<> (<IMG>FE_ALT1<>), чтобы закрепить местоположение на экране вашего экзокостюма.",
     "BaseValueUnits": 85000.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -2876,12 +2874,14 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
-    "ConsumableRewardTexts": []
+    "ConsumableRewardTexts": [
+      "Преобразовать данные в навигационную метку экзокостюма"
+    ]
   },
   {
     "Id": "conTech102",
@@ -2913,6 +2913,92 @@
     "BaseValueUnits": 10000.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech104",
+    "Icon": "other/269.png",
+    "Name": "Фрагмент памяти",
+    "Group": "Эхо технологии",
+    "Description": "Разбитые остатки <STELLAR>погибшего Странника<>. Он шепчет неизвестное имя, сохраненное глубоко внутри.\n\nПамять воплотится в виде <TECHNOLOGY>важного улучшения технологии<>, которое поможет вам в ваших странствиях.<STELLAR>Впитайте<> эту память с помощью <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Употребить предмет в пищу через систему питания костюма"
+    ]
+  },
+  {
+    "Id": "conTech105",
+    "Icon": "other/270.png",
+    "Name": "Фрагмент памяти (инвентарь)",
+    "Group": "Эхо полузабытой технологии",
+    "Description": "Разбитые остатки <STELLAR>погибшего Странника<>. Он шепчет неизвестное имя, сохраненное глубоко внутри.\n\nПамять воплотится в виде <TECHNOLOGY>расширения инвентаря<>, которое поможет вам в ваших странствиях.<STELLAR>Впитайте<> эту память с помощью <VAL_ON><IMG>FE_ALT1<><>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Употребить предмет в пищу через систему питания костюма"
+    ]
+  },
+  {
+    "Id": "conTech106",
+    "Icon": "products/169.png",
+    "Name": "Пакет запакованной технологии",
+    "Group": "",
+    "Description": "Запакованный <TECHNOLOGY>комплект проводки<>, разработанный для упрощения хранения основной технологии. Используйте <VAL_ON><IMG>FE_ALT1<><>, чтобы начать <STELLAR>установку<>.\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech107",
+    "Icon": "products/84.png",
+    "Name": "Генетический архив",
+    "Group": "",
+    "Description": "Узел криогенной заморозки, предназначенный для облегчения запаковки <TECHNOLOGY>биотехнологий<> <TECHNOLOGY>разумных звездолетов<>. Используйте <VAL_ON><IMG>FE_ALT1<><>, чтобы начать <STELLAR>процесс установки<>.\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
     "Colour": "1A2733",
     "Usages": [
       "HasDevProperties",

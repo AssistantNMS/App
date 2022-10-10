@@ -91,7 +91,8 @@ class NewsShellPage extends StatelessWidget {
         columnWidget = SearchableList<SteamNewsItemViewModel>(
           () => getAssistantAppsSteam().getSteamNews(AssistantAppType.NMS),
           listItemDisplayer:
-              (BuildContext localContext, SteamNewsItemViewModel newsItem) =>
+              (BuildContext localContext, SteamNewsItemViewModel newsItem,
+                      {void Function() onTap}) =>
                   steamNewsItemTilePresenter(localContext, newsItem, 0),
           listItemSearch: (_, __) => true,
           addFabPadding: true,

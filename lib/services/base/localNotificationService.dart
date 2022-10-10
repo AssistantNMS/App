@@ -13,8 +13,8 @@ class LocalNotificationService {
     AndroidInitializationSettings initializationSettingsAndroid =
         const AndroidInitializationSettings('notification');
 
-    IOSInitializationSettings initializationSettingsIOS =
-        const IOSInitializationSettings(
+    DarwinInitializationSettings initializationSettingsIOS =
+        const DarwinInitializationSettings(
       requestSoundPermission: false,
       requestBadgePermission: false,
       requestAlertPermission: false,
@@ -86,8 +86,8 @@ class LocalNotificationService {
       groupKey: 'com.assistantnms.app.timers',
     );
 
-    IOSNotificationDetails iOSPlatformChannelSpecifics =
-        const IOSNotificationDetails();
+    DarwinNotificationDetails iOSPlatformChannelSpecifics =
+        const DarwinNotificationDetails();
 
     NotificationDetails platformChannelSpecifics = NotificationDetails(
       android: androidPlatformChannelSpecifics,

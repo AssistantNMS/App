@@ -5727,7 +5727,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5755,7 +5756,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5930,7 +5932,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/303.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6286,7 +6289,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/316.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7686,7 +7690,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7714,7 +7719,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7742,7 +7748,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7877,7 +7884,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7969,7 +7977,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -8472,7 +8481,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
+      "IsTwitchCampaign4Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -9054,7 +9064,7 @@
     "Icon": "building/436.png",
     "Name": "Diagramme de colonie",
     "Group": "Diagramme planétaire de spécialiste",
-    "Description": "Une carte montrant l'emplacement d'une colonie planétaire proche, acquise auprès d'un <STELLAR>cartographe de station spatiale<>.\n\nSélectionnez la carte et utilisez l'option Calculer un itinéraire (<IMG>FE_ALT1<>) pour marquer l'emplacement sur l'affichage de votre exocombinaison.",
+    "Description": "Une carte montrant l'emplacement d'une colonie planétaire proche, acquise auprès d'un <STELLAR>cartographe de station spatiale<>.\n\nSélectionnez la carte et utilisez l'option <VAL_ON>Calculer un itinéraire (<IMG>FE_ALT1<>)<> pour marquer l'emplacement sur l'affichage de votre exocombinaison.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -9092,8 +9102,16 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw1",
-        "Quantity": 25
+        "Id": "prod6",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
       }
     ],
     "StatBonuses": [],
@@ -16756,7 +16774,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16952,7 +16971,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
+      "IsExpeditionSeason7Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -17445,7 +17465,7 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "Pièce technologique (vide)",
+    "Name": "Pièce technologique (Extension)",
     "Group": "Module de cargo avancé",
     "Description": "Une chambre spacieuse avec une esthétique technique, pour agrandir les espaces habitables à l'intérieur des grands vaisseaux.",
     "BaseValueUnits": 1.0,
@@ -17606,7 +17626,7 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "Pièce biologique (vide)",
+    "Name": "Pièce biologique (Extension)",
     "Group": "Module de cargo avancé",
     "Description": "Cette serre spacieuse filtre et oxygène naturellement l'air, et constitue un petit havre de verdure dans le cargo.",
     "BaseValueUnits": 1.0,
@@ -17736,7 +17756,7 @@
     "Icon": "building/885.png",
     "Name": "Pièce du spécialiste de l'exonef",
     "Group": "Terminal de travailleurs",
-    "Description": "Équipement de recherche de cargo intégré conçu pour les <TECHNOLOGY>mécaniciens d'exonef<> et équipé d'un logiciel spécialisé dans la conception de véhicules.\n\nCe module est placé sous forme de <STELLAR>pièce entière<> et est fourni avec ses unités fonctionnelles déjà installées.",
+    "Description": "Équipement de recherche de cargo intégré conçu pour les <TECHNOLOGY>techniciens d'exonef<> et équipé d'un logiciel spécialisé dans la conception de véhicules.\n\nCe module est placé sous forme de <STELLAR>pièce entière<> et est fourni avec ses unités fonctionnelles déjà installées.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,7 +18110,7 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "Pièce industrielle (vide)",
+    "Name": "Pièce industrielle (Extension)",
     "Group": "Module de cargo avancé",
     "Description": "Une chambre spacieuse avec une esthétique industrielle, pour agrandir les espaces habitables à l'intérieur des grands vaisseaux.",
     "BaseValueUnits": 1.0,
@@ -18380,7 +18400,7 @@
   {
     "Id": "build908",
     "Icon": "building/908.png",
-    "Name": "Affiche Étoile polaire",
+    "Name": "AFFICHE Étoile polaire",
     "Group": "Décoration",
     "Description": "Une œuvre d'art mural exclusive, adhésive et infroissable.\n\nCette affiche est dédiée aux explorateurs et aux aventuriers audacieux en quête de nouveaux horizons.",
     "BaseValueUnits": 400.0,
@@ -19820,7 +19840,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19847,7 +19868,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19874,7 +19896,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20678,9 +20701,9 @@
   {
     "Id": "build996",
     "Icon": "building/996.png",
-    "Name": "Verre Escaliers De Cargo",
+    "Name": "Escalier en verre pour cargo",
     "Group": "Module de cargo principal",
-    "Description": "Ce module d'extension permet une construction d'espaces habitables rapide à l'intérieur des vaisseaux de grande taille.\n\nL'unité de construction préfabriquée comprend une cloison de pressurisation ainsi que tous les points d'ancrage nécessaires.",
+    "Description": "Un escalier robuste et antidérapant avec une inclinaison ergonomique pour circuler verticalement entre les ponts de cargo.\n\nConstruits à partir de verre à faible dilatation thermique, ces escaliers offrent à l'utilisateur une vue passionnante sur l'espace lointain.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20707,9 +20730,9 @@
   {
     "Id": "build997",
     "Icon": "building/997.png",
-    "Name": "Plateforme Extérieure Escaliers De Cargo",
+    "Name": "Escalier d'extérieur pour cargo",
     "Group": "Module de cargo principal",
-    "Description": "Ce module d'extension permet une construction d'espaces habitables rapide à l'intérieur des vaisseaux de grande taille.\n\nL'unité de construction préfabriquée comprend une cloison de pressurisation ainsi que tous les points d'ancrage nécessaires.",
+    "Description": "Un escalier robuste et antidérapant avec une inclinaison ergonomique pour circuler verticalement entre les ponts de cargo.\n\nCes escaliers robustes peuvent être fixés à <STELLAR>l'extérieur<> de la coque du cargo, créant des connexions entre les passerelles extérieures et les plates-formes.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20734,12 +20757,13 @@
     "Icon": "building/998.png",
     "Name": "Mur interne de cargo",
     "Group": "Module de cargo principal",
-    "Description": "Ce module d'extension permet une construction d'espaces habitables rapide à l'intérieur des vaisseaux de grande taille.\n\nL'unité de construction préfabriquée comprend une cloison de pressurisation ainsi que tous les points d'ancrage nécessaires.",
+    "Description": "Un mur intérieur pour subdiviser les grands espaces du cargo. S'adapte de façon fluide à l'esthétique de la pièce environnante.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20756,14 +20780,15 @@
   {
     "Id": "build999",
     "Icon": "building/999.png",
-    "Name": "Pièce industrielle B (vide)",
+    "Name": "Variante de pièce d'extension",
     "Group": "Module de cargo avancé",
     "Description": "Une chambre spacieuse avec une esthétique industrielle, pour agrandir les espaces habitables à l'intérieur des grands vaisseaux.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

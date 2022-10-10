@@ -1,9 +1,9 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/AppImage.dart';
-import 'package:assistantnms_app/contracts/requiredItem.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/AppImage.dart';
 import '../../constants/NmsUIConstants.dart';
+import '../../contracts/requiredItem.dart';
 import '../../contracts/requiredItemDetails.dart';
 import '../../contracts/twitch/twitchCampaignData.dart';
 import '../../contracts/twitch/twitchCampaignReward.dart';
@@ -13,31 +13,59 @@ import '../../pages/helloGames/twitch/twitchCampaignDetailPage.dart';
 
 Widget rewardFromTwitchTilePresenter(
     BuildContext context, String campaignId, bool displayBackgroundColour) {
-  return flatCard(
-    shadowColor: Colors.transparent,
-    child: genericListTileWithSubtitle(
-      context,
-      leadingImage:
-          displayBackgroundColour ? AppImage.twitchAlt : AppImage.twitch,
-      borderRadius: NMSUIConstants.gameItemBorderRadius,
-      name: getTranslations()
-          .fromKey(LocaleKey.twitchCampaignNum)
-          .replaceAll('{0}', campaignId),
-      subtitle: Text(getTranslations().fromKey(LocaleKey.twitchDrop)),
-      onTap: () async => await getNavigation().navigateAsync(
+  //
+
+  return FutureBuilder<ResultWithValue<TwitchCampaignData>>(
+    key: Key(campaignId),
+    future: twitchCampaignDetails(context, campaignId),
+    builder: (BuildContext context,
+        AsyncSnapshot<ResultWithValue<TwitchCampaignData>> snapshot) {
+      Widget errorWidget = asyncSnapshotHandler(
         context,
-        navigateTo: (context) => TwitchCampaignDetailPage(
-          id: int.parse(campaignId),
-          displayGenericItemColour: displayBackgroundColour,
+        snapshot,
+        loader: () => getLoading().smallLoadingTile(context),
+        isValidFunction: (ResultWithValue<TwitchCampaignData> result) {
+          if (snapshot.data.hasFailed ||
+              snapshot.data.value == null ||
+              snapshot.data.value.id == null) {
+            return false;
+          }
+          return true;
+        },
+      );
+      if (errorWidget != null) return errorWidget;
+
+      TwitchCampaignData campaign = snapshot.data.value;
+      return flatCard(
+        shadowColor: Colors.transparent,
+        child: genericListTileWithSubtitle(
+          context,
+          leadingImage:
+              displayBackgroundColour ? AppImage.twitchAlt : AppImage.twitch,
+          borderRadius: NMSUIConstants.gameItemBorderRadius,
+          name: getTranslations()
+              .fromKey(LocaleKey.twitchCampaignNum)
+              .replaceAll('{0}', campaignId),
+          subtitle: Text(simpleDate(campaign.startDate) +
+              ' -> ' +
+              simpleDate(campaign.endDate)),
+          onTap: () async => await getNavigation().navigateAsync(
+            context,
+            navigateTo: (context) => TwitchCampaignDetailPage(
+              id: int.parse(campaignId),
+              displayGenericItemColour: displayBackgroundColour,
+            ),
+          ),
         ),
-      ),
-    ),
+      );
+    },
   );
 }
 
-Widget Function(BuildContext, TwitchCampaignData)
+Widget Function(BuildContext, TwitchCampaignData, {void Function() onTap})
     twitchCampaignListTilePresenter(bool displayBackgroundColour) {
-  return (BuildContext context, TwitchCampaignData campaign) {
+  return (BuildContext context, TwitchCampaignData campaign,
+      {void Function() onTap}) {
     return flatCard(
       child: genericListTileWithSubtitle(
         context,

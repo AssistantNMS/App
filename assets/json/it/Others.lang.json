@@ -4,7 +4,7 @@
     "Icon": "other/1.png",
     "Name": "Mappa planetaria",
     "Group": "Dati cartografici",
-    "Description": "Una mappa di un pianeta vicino. Vi sono state contrassegnate le coordinate di un <TECHNOLOGY>segnale di emergenza<>.\n\nSeleziona la mappa e Traccia rotta (<IMG>FE_ALT1<>) per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
+    "Description": "Una mappa di un pianeta vicino. Vi sono state contrassegnate le coordinate di un <TECHNOLOGY>segnale di emergenza<>.\n\nSeleziona la mappa e <VAL_ON>Traccia rotta (<IMG>FE_ALT1<>)<> per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -27,7 +27,7 @@
     "Icon": "other/1.png",
     "Name": "Mappa planetaria",
     "Group": "Dati cartografici",
-    "Description": "Una mappa di un pianeta vicino, recuperata dall'<STELLAR>archivio informazioni locali<> nell'edificio di un archivio planetario.\n\nVi è stata contrassegnata la posizione di <SPECIAL>antiche rovine<> che probabilmente contengono tesori preziosi.\n\nSeleziona la mappa e usa Traccia rotta (<IMG>FE_ALT1<>) per mettere in evidenza la posizione sul display dell'exotuta.",
+    "Description": "Una mappa di un pianeta vicino, recuperata dall'<STELLAR>archivio informazioni locali<> nell'edificio di un archivio planetario.\n\nVi è stata contrassegnata la posizione di <SPECIAL>antiche rovine<> che probabilmente contengono tesori preziosi.\n\nSeleziona la mappa e usa <VAL_ON>Traccia rotta (<IMG>FE_ALT1<>)<> per mettere in evidenza la posizione sul display dell'exotuta.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -371,7 +371,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsExpeditionSeason2Reward"
+      "IsExpeditionSeason2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -393,7 +394,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsExpeditionSeason2Reward"
+      "IsExpeditionSeason2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -414,7 +416,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/23.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -436,7 +439,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsExpeditionSeason2Reward"
+      "IsExpeditionSeason2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -457,7 +461,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/25.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -741,7 +746,6 @@
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
-      "IsRewardFromShipScrap",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -757,14 +761,13 @@
     "Name": "Serbatoio di refrigerante",
     "Group": "Componente secondario astronave",
     "Description": "Un prezioso componente di un'astronave smantellata, creato dall'<TECHNOLOGY>unità di allestimento dell'astronave<> di una <TRADEABLE>stazione spaziale<>. \n\nIl componente è utile solo come rottame da vendere presso un <VAL_ON>terminale di commercio<>.",
-    "BaseValueUnits": 200000.0,
+    "BaseValueUnits": 10000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 25.0,
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
       "IsEggIngredient",
-      "IsRewardFromShipScrap",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -780,9 +783,9 @@
     "Name": "Rotoli di nanocavi",
     "Group": "Componente secondario astronave",
     "Description": "Un prezioso componente di un'astronave smantellata, creato dall'<TECHNOLOGY>unità di allestimento dell'astronave<> di una <TRADEABLE>stazione spaziale<>. \n\nIl componente è utile solo come rottame da vendere presso un <VAL_ON>terminale di commercio<>.",
-    "BaseValueUnits": 400000.0,
+    "BaseValueUnits": 12000.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
+    "MaxStackSize": 25.0,
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
@@ -798,13 +801,13 @@
   },
   {
     "Id": "other42",
-    "Icon": "tradeItems/21.png",
+    "Icon": "tradeItems/5.png",
     "Name": "Circuiti riciclati",
     "Group": "Componente secondario astronave",
     "Description": "Un prezioso componente di un'astronave smantellata, creato dall'<TECHNOLOGY>unità di allestimento dell'astronave<> di una <TRADEABLE>stazione spaziale<>. \n\nIl componente è utile solo come rottame da vendere presso un <VAL_ON>terminale di commercio<>.",
-    "BaseValueUnits": 600000.0,
+    "BaseValueUnits": 520000.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
+    "MaxStackSize": 25.0,
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
@@ -820,13 +823,13 @@
   },
   {
     "Id": "other43",
-    "Icon": "tradeItems/22.png",
+    "Icon": "tradeItems/27.png",
     "Name": "Regolatori subatomici",
     "Group": "Componente secondario astronave",
     "Description": "Un prezioso componente di un'astronave smantellata, creato dall'<TECHNOLOGY>unità di allestimento dell'astronave<> di una <TRADEABLE>stazione spaziale<>. \n\nIl componente è utile solo come rottame da vendere presso un <VAL_ON>terminale di commercio<>.",
-    "BaseValueUnits": 800000.0,
+    "BaseValueUnits": 940000.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 10.0,
+    "MaxStackSize": 25.0,
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
@@ -842,13 +845,13 @@
   },
   {
     "Id": "other44",
-    "Icon": "tradeItems/23.png",
+    "Icon": "tradeItems/8.png",
     "Name": "Scarti di indio compressi",
     "Group": "Componente secondario astronave",
     "Description": "Un prezioso componente di un'astronave smantellata, creato dall'<TECHNOLOGY>unità di allestimento dell'astronave<> di una <TRADEABLE>stazione spaziale<>. \n\nIl componente è utile solo come rottame da vendere presso un <VAL_ON>terminale di commercio<>.",
-    "BaseValueUnits": 3000000.0,
+    "BaseValueUnits": 3100000.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
+    "MaxStackSize": 25.0,
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
@@ -864,13 +867,13 @@
   },
   {
     "Id": "other45",
-    "Icon": "tradeItems/23.png",
+    "Icon": "tradeItems/15.png",
     "Name": "Sfiati IA astronave",
     "Group": "Componente secondario astronave",
     "Description": "Un prezioso componente di un'astronave smantellata, creato dall'<TECHNOLOGY>unità di allestimento dell'astronave<> di una <TRADEABLE>stazione spaziale<>. \n\nIl componente è utile solo come rottame da vendere presso un <VAL_ON>terminale di commercio<>.",
-    "BaseValueUnits": 50000000.0,
+    "BaseValueUnits": 12000000.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
+    "MaxStackSize": 25.0,
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
@@ -2652,7 +2655,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason3Reward"
+      "IsExpeditionSeason3Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3133,7 +3137,6 @@
     "Description": "Questo <STELLAR>documento vivente<> è inciso con parole antiche che dicono:\n\n'Il signore dei vermi torreggia su questa terra desolata, la sua carne muta nel cielo.\nI nostri involucri patetici non possono seguirlo, non possono raggiungere la sua profondità.\nOffriamo i nostri corpi alla terra.\nImploriamo che il nostro sacrificio venga accettato'.",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
@@ -3155,7 +3158,6 @@
     "Description": "Questo <STELLAR>documento vivente<> è inciso con parole antiche che dicono:\n\n'La polvere era soffocante.\nI nostri occhi erano arrossati e lacrimavano.\nMa non potevamo sfuggire alla verità.\nLe vene dell'Atlante erano emerse'.",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
@@ -3177,7 +3179,6 @@
     "Description": "Questo <STELLAR>documento vivente<> è inciso con parole antiche che dicono:\n\n'Ora, durante ogni tempesta, supplichiamo di essere scelti;\nprostrati a terra, braccia sul viso e viso nella polvere, chiamiamo con tutta la forza che abbiamo!\nQuando le pesanti gocce di pioggia colpiscono il terreno, le vene dell'Atlante rispondono.\nL'estasi del nostro consumo non può essere descritta a parole'.",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
@@ -3199,7 +3200,6 @@
     "Description": "Questo <STELLAR>documento vivente<> è inciso con parole antiche che dicono:\n\n'Cadiamo mentre esso ingoia, ma ci aggrappiamo alle pareti scivolose come possiamo - \nOh! Sarebbe meraviglioso raggiungere il ventriglio ancora coscienti. \nRespira profondamente! Ascolta il gorgoglio dei nostri polmoni!\nIl viscidume intasa i nostri nasi e irrita i nostri occhi,\nanche se in questa oscurità tiepida, noi siamo già ciechi'.",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
@@ -3221,7 +3221,6 @@
     "Description": "Questo <STELLAR>documento vivente<> è inciso con parole antiche che dicono:\n\n'Sia maledetta l'agonia del rigurgito,\nsia maledetta questa carne debole che è la mia prigione!\nI miei fratelli sono rinati, ascesi dalla polvere benedetta come tentacoli neonati.\nCapillari scintillanti rispetto alle grandi vene, serpeggiano lontano nella sabbia.\nSarò paziente. Fino alla prossima tempesta'.",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
@@ -3240,7 +3239,7 @@
     "Icon": "other/205.png",
     "Name": "Mappa planetaria",
     "Group": "Dati cartografici segreti",
-    "Description": "Una mappa di un pianeta vicino. Vi è stato contrassegnato un <FUEL>luogo di interesse<>. Di solito in luoghi simili è possibile recuperare <TECHNOLOGY>progetti<> di <STELLAR>nuovi prodotti<>.\n\nSeleziona la mappa e Traccia rotta (<IMG>FE_ALT1<>) per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
+    "Description": "Una mappa di un pianeta vicino. Vi è stato contrassegnato un <FUEL>luogo di interesse<>. Di solito in luoghi simili è possibile recuperare progetti di <STELLAR>nuovi prodotti<>.\n\nSeleziona la mappa e <VAL_ON>Traccia rotta (<IMG>FE_ALT1<>)<> per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3263,7 +3262,7 @@
     "Icon": "other/206.png",
     "Name": "Mappa planetaria",
     "Group": "Dati cartografici d'emergenza",
-    "Description": "Una mappa di un pianeta vicino. Vi sono state contrassegnate le coordinate di un <TECHNOLOGY>segnale di emergenza<>.\n\nSeleziona la mappa e Traccia rotta (<IMG>FE_ALT1<>) per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
+    "Description": "Una mappa di un pianeta vicino. Vi sono state contrassegnate le coordinate di un <TECHNOLOGY>segnale di emergenza<>.\n\nSeleziona la mappa e <VAL_ON>Traccia rotta (<IMG>FE_ALT1<>)<> per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3286,7 +3285,7 @@
     "Icon": "other/207.png",
     "Name": "Mappa planetaria",
     "Group": "Dati cartografici commerciali",
-    "Description": "Una mappa di un pianeta vicino. Vi è stato contrassegnato un <COMMODITY>avamposto abitato<> di qualche tipo.\n\nSeleziona la mappa e Traccia rotta (<IMG>FE_ALT1<>) per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
+    "Description": "Una mappa di un pianeta vicino. Vi è stato contrassegnato un <COMMODITY>avamposto abitato<> di qualche tipo.\n\nSeleziona la mappa e <VAL_ON>Traccia rotta (<IMG>FE_ALT1<>)<> per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3309,7 +3308,7 @@
     "Icon": "other/208.png",
     "Name": "Mappa planetaria",
     "Group": "Dati cartografici alieni",
-    "Description": "Una mappa di un pianeta vicino. Vi è stata contrassegnata la <SPECIAL>posizione di un antico manufatto<>.\n\nSeleziona la mappa e Traccia rotta (<IMG>FE_ALT1<>) per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
+    "Description": "Una mappa di un pianeta vicino. Vi è stata contrassegnata la <SPECIAL>posizione di un antico manufatto<>.\n\nSeleziona la mappa e <VAL_ON>Traccia rotta (<IMG>FE_ALT1<>)<> per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3332,7 +3331,7 @@
     "Icon": "other/1.png",
     "Name": "Mappa planetaria",
     "Group": "Dati cartografici",
-    "Description": "Una mappa di un pianeta vicino. Vi è stata contrassegnata la <SPECIAL>posizione di un antico manufatto<>.\n\nSeleziona la mappa e Traccia rotta (<IMG>FE_ALT1<>) per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
+    "Description": "Una mappa di un pianeta vicino. Vi è stata contrassegnata la <SPECIAL>posizione di un antico manufatto<>.\n\nSeleziona la mappa e <VAL_ON>Traccia rotta (<IMG>FE_ALT1<>)<> per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -4599,7 +4598,7 @@
     "Icon": "other/297.png",
     "Name": "Protettore infinito di Moganonj",
     "Group": "Astronave esclusiva",
-    "Description": "Un'<STELLAR>astronave<> esclusiva, con una capacità di inventario generosa e armamenti bilanciati per permettere di adottare diverse tattiche difensive.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "Description": "Un'<STELLAR>astronave<> esclusiva con un ampio inventario e un carico di armi bilanciato per consentire un'ampia varietà di strategie difensive.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4619,7 +4618,7 @@
   {
     "Id": "other298",
     "Icon": "other/298.png",
-    "Name": "Fine dei Kumiok",
+    "Name": "Fine del Kumiok",
     "Group": "Astronave esclusiva",
     "Description": "Un'<STELLAR>astronave<> esclusiva. Quest'astronave specializzata negli scontri aerei vanta una mobilità superiore e una potenza di fuoco avanzata ed è dotata di un <TECHNOLOGY>eiettore di positroni<> potenziato.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -4641,7 +4640,7 @@
   {
     "Id": "other299",
     "Icon": "other/299.png",
-    "Name": "Azzardo di Sesaki HX8",
+    "Name": "Scommessa di Sesakis HX8",
     "Group": "Astronave esclusiva",
     "Description": "Un'<STELLAR>astronave<> esclusiva specializzata nel trasporto di carichi. Questa nave trasportatrice è già dotata di <TECHNOLOGY>scudi deflettori<> potenziati e di un <TECHNOLOGY>deflettore di scansione del carico<> ed è la scelta ideale se vuoi assicurarti che i tuoi beni preziosi, legali o meno, rimangano intatti durante il trasporto.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -4663,9 +4662,9 @@
   {
     "Id": "other300",
     "Icon": "other/300.png",
-    "Name": "Nemesi dei Korvax",
+    "Name": "La nemesi dei Korvax",
     "Group": "Astronave esclusiva",
-    "Description": "Un'<STELLAR>astronave<> esclusiva, con molto spazio per trasportare beni e un <TECHNOLOGY>motore di curvatura d'emergenza<> premontato per evitare prontamente incontri pericolosi.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "Description": "Un'<STELLAR>astronave<> esclusiva con una stiva spaziosa per il trasporto di merci e già dotata di <TECHNOLOGY>unità di curvatura d'emergenza<> per sfuggire rapidamente agli incontri pericolosi.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4709,7 +4708,7 @@
     "Icon": "other/302.png",
     "Name": "Uovo di H. Skipwhae",
     "Group": "Uovo di compagno esclusivo",
-    "Description": "Un uovo fertilizzato, <TRADEABLE>pronto a schiudersi!<>\n\nLa creatura tozza al suo interno annusa curiosamente l'interno del guscio.\n\nLe scansioni indicano che l'essere al suo interno ha il potenziale genetico per sviluppare una personalità <STELLAR>stravagante<>, con un'inclinazione al gioco scherzoso.",
+    "Description": "Un uovo fertilizzato, <TRADEABLE>pronto a schiudersi!<>\n\nLa grossa creatura al suo interno sbuffa curiosa da dentro il guscio.\n\nLe scansioni indicano che l'essere al suo interno ha il potenziale genetico per sviluppare una personalità <STELLAR>stravagante<>, con un'inclinazione al gioco scherzoso.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4731,7 +4730,7 @@
     "Icon": "other/303.png",
     "Name": "Uovo di H. Oakarboe",
     "Group": "Uovo di compagno esclusivo",
-    "Description": "Un uovo fertilizzato, <TRADEABLE>pronto a schiudersi!<>\n\nLa bestia al suo interno si dimena e si agita, desiderosa di spiegare il suo lungo collo.\n\nLe scansioni indicano che l'essere al suo interno ha il potenziale genetico per sviluppare una personalità <STELLAR>leale<> e desiderosa di trovare un maestro da porre al centro del suo universo.",
+    "Description": "Un uovo fertilizzato, <TRADEABLE>pronto a schiudersi!<>\n\nLa creatura all'interno si dimena e si agita, desiderosa di dispiegare il suo lungo collo.\n\nLe scansioni indicano che l'essere al suo interno ha il potenziale genetico per sviluppare una personalità <STELLAR>leale<> e desiderosa di trovare un maestro da porre al centro del suo universo.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -4751,7 +4750,7 @@
   {
     "Id": "other304",
     "Icon": "other/304.png",
-    "Name": "Memorie dell'abisso Z80-10L-N",
+    "Name": "Ricordi degli Abissi Z80-10L-N",
     "Group": "Dispositivo di sopravvivenza multifunzione esclusivo",
     "Description": "Un <STELLAR>multi-tool<> esclusivo. Quest'arma è dotata del versatile <TECHNOLOGY>cannone neutronico<>, che scaglia potenti raffiche di particelle atmosferiche: più a lungo viene caricato, più letale sarà l'esplosione.\n\n<STELLAR>Prendi<> questo multi-tool per aggiungerlo alla tua collezione o <STELLAR>scambialo<> con il tuo multi-tool attuale. Cambia il multi-tool attivo dalla sezione Strumenti del menu rapido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -4773,7 +4772,7 @@
   {
     "Id": "other305",
     "Icon": "other/305.png",
-    "Name": "Sintonizzatore di isotopi Mark XVII",
+    "Name": "Sintonizzatore d'isotopi Mark XVII",
     "Group": "Dispositivo di sopravvivenza multifunzione esclusivo",
     "Description": "Un <STELLAR>multi-tool<> esclusivo. Quest'arma comprende uno strategico <TECHNOLOGY>mortaio paralizzante<> e una letale <TECHNOLOGY>Lancia di luce<> che acceca il nemico e lancia colpi potenti.\n\n<STELLAR>Prendi<> questo multi-tool per aggiungerlo alla tua collezione o <STELLAR>scambialo<> con il tuo multi-tool attuale. Cambia il multi-tool attivo dalla sezione Strumenti del menu rapido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -4795,7 +4794,7 @@
   {
     "Id": "other306",
     "Icon": "other/306.png",
-    "Name": "Ascoltatore dell'ozono Mark XI",
+    "Name": "Ascolta-ozono Mark XI",
     "Group": "Dispositivo di sopravvivenza multifunzione esclusivo",
     "Description": "Un <STELLAR>multi-tool<> esclusivo. Quest'arma è dotata di un <TECHNOLOGY>dispositivo di occultamento<> premontato per fuggire furtivamente dagli incontri ostili.\n\n<STELLAR>Prendi<> questo multi-tool per aggiungerlo alla tua collezione o <STELLAR>scambialo<> con il tuo multi-tool attuale. Cambia il multi-tool attivo dalla sezione Strumenti del menu rapido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -4915,6 +4914,377 @@
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
       "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other312",
+    "Icon": "other/312.png",
+    "Name": "Horizon Vector NX",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva. Questo velivolo da battaglia vanta una manovrabilità estrema, avvantaggiandolo nei combattimenti nello spazio.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "FFFFFF",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other313",
+    "Icon": "other/313.png",
+    "Name": "Infinite Neon Mark XXII",
+    "Group": "Dispositivo di sopravvivenza multifunzione esclusivo",
+    "Description": "Un <STELLAR>multi-tool<> esclusivo. Questo fucile dal colore acceso conferisce all'utente capacità difensive innovative in caso di scontro terrestre.\n\n<STELLAR>Prendi<> questo multi-tool per aggiungerlo alla tua collezione o <STELLAR>scambialo<> con il tuo multi-tool attuale. Cambia il multi-tool attivo dalla sezione Strumenti del menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "FFFFFF",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other314",
+    "Icon": "other/314.png",
+    "Name": "Hiwamiha del destino",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other315",
+    "Icon": "other/315.png",
+    "Name": "Follia di Inzakita PY9",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other316",
+    "Icon": "other/316.png",
+    "Name": "Il figlio del sole",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other317",
+    "Icon": "other/317.png",
+    "Name": "Habika BF3",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other318",
+    "Icon": "other/318.png",
+    "Name": "Ultime ceneri PL4",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other319",
+    "Icon": "other/319.png",
+    "Name": "Uovo di Z. Speltwireum",
+    "Group": "Uovo di compagno esclusivo",
+    "Description": "Un uovo fertilizzato, <TRADEABLE>pronto a schiudersi!<>",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other320",
+    "Icon": "other/320.png",
+    "Name": "Uovo di O. Crabubireus",
+    "Group": "Uovo di compagno esclusivo",
+    "Description": "Un uovo fertilizzato, <TRADEABLE>pronto a schiudersi!<>",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other321",
+    "Icon": "other/321.png",
+    "Name": "Accordatore quantistico di Yauza",
+    "Group": "Dispositivo di sopravvivenza multifunzione esclusivo",
+    "Description": "Un <STELLAR>multi-tool<> esclusivo.\n\n<STELLAR>Prendi<> questo multi-tool per aggiungerlo alla tua collezione o <STELLAR>scambialo<> con il tuo multi-tool attuale. Cambia il multi-tool attivo dalla sezione Strumenti del menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other322",
+    "Icon": "other/322.png",
+    "Name": "Sussurri dell'abisso 4-F33-QP4",
+    "Group": "Dispositivo di sopravvivenza multifunzione esclusivo",
+    "Description": "Un <STELLAR>multi-tool<> esclusivo.\n\n<STELLAR>Prendi<> questo multi-tool per aggiungerlo alla tua collezione o <STELLAR>scambialo<> con il tuo multi-tool attuale. Cambia il multi-tool attivo dalla sezione Strumenti del menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other323",
+    "Icon": "other/323.png",
+    "Name": "Pacchetto fuochi d'artificio assortiti",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio assortiti, contenente fuochi d'artificio di tipo <COMMODITY>lussuoso<>, <FUEL>Atlante<> e <TRADEABLE>carnoso<>. Accendili per creare spettacoli affascinanti nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Nota bene<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other324",
+    "Icon": "other/323.png",
+    "Name": "Pacchetto fuochi d'artificio assortiti",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio assortiti, contenente fuochi d'artificio di tipo <COMMODITY>lussuoso<>, <FUEL>Atlante<> e <TRADEABLE>carnoso<>. Accendili per creare spettacoli affascinanti nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Nota bene<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other325",
+    "Icon": "other/323.png",
+    "Name": "Pacchetto fuochi d'artificio assortiti",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio assortiti, contenente fuochi d'artificio di tipo <COMMODITY>lussuoso<>, <FUEL>Atlante<> e <TRADEABLE>carnoso<>. Accendili per creare spettacoli affascinanti nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Nota bene<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other326",
+    "Icon": "other/323.png",
+    "Name": "Pacchetto fuochi d'artificio assortiti",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio assortiti, contenente fuochi d'artificio di tipo <COMMODITY>lussuoso<>, <FUEL>Atlante<> e <TRADEABLE>carnoso<>. Accendili per creare spettacoli affascinanti nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Nota bene<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other327",
+    "Icon": "other/323.png",
+    "Name": "Pacchetto fuochi d'artificio assortiti",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio assortiti, contenente fuochi d'artificio di tipo <COMMODITY>lussuoso<>, <FUEL>Atlante<> e <TRADEABLE>carnoso<>. Accendili per creare spettacoli affascinanti nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Nota bene<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other328",
+    "Icon": "other/328.png",
+    "Name": "Casco solare",
+    "Group": "Casco sbloccabile",
+    "Description": "Un'apparenza esclusiva di esosuuit override.\nTrasforma l'aspetto del tuo esosuit a un modificatore di aspetto.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

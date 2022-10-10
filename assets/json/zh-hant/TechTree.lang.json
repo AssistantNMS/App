@@ -4901,6 +4901,13 @@
                     "Icon": "technology/143.png",
                     "Cost": 360,
                     "Children": []
+                  },
+                  {
+                    "Id": "tech228",
+                    "Title": "貿易太空梭",
+                    "Icon": "technology/228.png",
+                    "Cost": 90,
+                    "Children": []
                   }
                 ]
               },
@@ -5154,7 +5161,7 @@
                     "Children": [
                       {
                         "Id": "tech27",
-                        "Title": "啟動系統充能器",
+                        "Title": "啟動自動充電器",
                         "Icon": "technology/26.png",
                         "Cost": 460,
                         "Children": []
@@ -5563,19 +5570,19 @@
               },
               {
                 "Id": "tech94",
-                "Title": "強化艇訊號強化器",
+                "Title": "強化艇雷達",
                 "Icon": "technology/94.png",
                 "Cost": 120,
                 "Children": [
                   {
                     "Id": "tech174",
-                    "Title": "先進訊號強化器",
+                    "Title": "雷達增幅器",
                     "Icon": "technology/96.png",
                     "Cost": 210,
                     "Children": [
                       {
                         "Id": "tech96",
-                        "Title": "強化艇訊號強化器升級 Tau",
+                        "Title": "雷達能量共振器",
                         "Icon": "technology/96.png",
                         "Cost": 320,
                         "Children": []
@@ -5586,7 +5593,7 @@
               },
               {
                 "Id": "tech97",
-                "Title": "強化艇加速模組",
+                "Title": "強化艇強化器",
                 "Icon": "technology/97.png",
                 "Cost": 180,
                 "Children": [
@@ -5607,14 +5614,14 @@
                 "Children": [
                   {
                     "Id": "tech99",
-                    "Title": "強化艇採礦雷射升級 Sigma",
+                    "Title": "先進強化艇雷射",
                     "Icon": "technology/99.png",
                     "Cost": 210,
                     "Children": []
                   },
                   {
                     "Id": "tech100",
-                    "Title": "強化艇大砲",
+                    "Title": "固定大砲",
                     "Icon": "technology/100.png",
                     "Cost": 210,
                     "Children": []
@@ -6232,7 +6239,7 @@
       },
       {
         "Id": "tree10-subTree2",
-        "Name": "貨船建設模組",
+        "Name": "貨船建造模組",
         "CostType": "None",
         "Children": []
       },
@@ -6247,6 +6254,527 @@
             "Icon": "curiosities/61.png",
             "Cost": 5000,
             "Children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": "tree11",
+    "Name": "",
+    "Trees": [
+      {
+        "Id": "tree11-subTree1",
+        "Name": "",
+        "CostType": "SalvagedData",
+        "Children": []
+      },
+      {
+        "Id": "tree11-subTree2",
+        "Name": "運輸模組",
+        "CostType": "SalvagedData",
+        "Children": [
+          {
+            "Id": "conTech23",
+            "Title": "漂泊者強化艇停泊灣",
+            "Icon": "constructedTechnology/23.png",
+            "Cost": 4,
+            "Children": [
+              {
+                "Id": "conTech27",
+                "Title": "強化艇召喚站",
+                "Icon": "constructedTechnology/27.png",
+                "Cost": 12,
+                "Children": [
+                  {
+                    "Id": "build884",
+                    "Title": "軌道強化艇具象器",
+                    "Icon": "building/884.png",
+                    "Cost": 1,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "conTech22",
+                "Title": "流浪者強化艇停泊灣",
+                "Icon": "constructedTechnology/22.png",
+                "Cost": 8,
+                "Children": []
+              },
+              {
+                "Id": "conTech63",
+                "Title": "彌諾陶洛斯停泊灣",
+                "Icon": "constructedTechnology/63.png",
+                "Cost": 10,
+                "Children": []
+              },
+              {
+                "Id": "conTech26",
+                "Title": "巡洋龍船艙",
+                "Icon": "constructedTechnology/26.png",
+                "Cost": 10,
+                "Children": []
+              },
+              {
+                "Id": "conTech25",
+                "Title": "朝聖者強化艇停泊灣",
+                "Icon": "constructedTechnology/25.png",
+                "Cost": 10,
+                "Children": []
+              },
+              {
+                "Id": "conTech24",
+                "Title": "巨人強化艇停泊灣",
+                "Icon": "constructedTechnology/24.png",
+                "Cost": 8,
+                "Children": []
+              },
+              {
+                "Id": "conTech40",
+                "Title": "競賽起訖點",
+                "Icon": "constructedTechnology/40.png",
+                "Cost": 10,
+                "Children": [
+                  {
+                    "Id": "conTech39",
+                    "Title": "競賽障礙物",
+                    "Icon": "constructedTechnology/39.png",
+                    "Cost": 10,
+                    "Children": []
+                  },
+                  {
+                    "Id": "conTech38",
+                    "Title": "競賽力增幅器",
+                    "Icon": "constructedTechnology/38.png",
+                    "Cost": 10,
+                    "Children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": "tree12",
+    "Name": "強化艇升級",
+    "Trees": [
+      {
+        "Id": "tree12-subTree1",
+        "Name": "可製作升級設計圖",
+        "CostType": "Nanites",
+        "Children": [
+          {
+            "Id": "tech90",
+            "Title": "核融合引擎",
+            "Icon": "technology/90.png",
+            "Cost": 120,
+            "Children": [
+              {
+                "Id": "tech101",
+                "Title": "洪保德驅動器",
+                "Icon": "technology/101.png",
+                "Cost": 120,
+                "Children": [
+                  {
+                    "Id": "tech104",
+                    "Title": "高功率聲納",
+                    "Icon": "technology/104.png",
+                    "Cost": 10,
+                    "Children": [
+                      {
+                        "Id": "tech105",
+                        "Title": "滲透發電機",
+                        "Icon": "technology/105.png",
+                        "Cost": 350,
+                        "Children": []
+                      },
+                      {
+                        "Id": "tech103",
+                        "Title": "忒堤斯光束",
+                        "Icon": "technology/98.png",
+                        "Cost": 450,
+                        "Children": []
+                      },
+                      {
+                        "Id": "tech102",
+                        "Title": "巡洋龍砲",
+                        "Icon": "technology/102.png",
+                        "Cost": 250,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Id": "tech170",
+                "Title": "百萬瓦發熱器",
+                "Icon": "technology/9.png",
+                "Cost": 120,
+                "Children": []
+              },
+              {
+                "Id": "tech171",
+                "Title": "空氣過濾裝置",
+                "Icon": "technology/10.png",
+                "Cost": 120,
+                "Children": []
+              },
+              {
+                "Id": "tech172",
+                "Title": "中子防護罩",
+                "Icon": "technology/11.png",
+                "Cost": 120,
+                "Children": []
+              },
+              {
+                "Id": "tech169",
+                "Title": "熱能緩衝器",
+                "Icon": "technology/8.png",
+                "Cost": 120,
+                "Children": []
+              },
+              {
+                "Id": "tech94",
+                "Title": "強化艇雷達",
+                "Icon": "technology/94.png",
+                "Cost": 120,
+                "Children": [
+                  {
+                    "Id": "tech174",
+                    "Title": "雷達增幅器",
+                    "Icon": "technology/96.png",
+                    "Cost": 210,
+                    "Children": [
+                      {
+                        "Id": "tech96",
+                        "Title": "雷達能量共振器",
+                        "Icon": "technology/96.png",
+                        "Cost": 320,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Id": "tech97",
+                "Title": "強化艇強化器",
+                "Icon": "technology/97.png",
+                "Cost": 180,
+                "Children": [
+                  {
+                    "Id": "tech173",
+                    "Title": "伊卡洛斯燃料系統",
+                    "Icon": "technology/173.png",
+                    "Cost": 120,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "tech98",
+                "Title": "強化艇採礦雷射",
+                "Icon": "technology/98.png",
+                "Cost": 180,
+                "Children": [
+                  {
+                    "Id": "tech99",
+                    "Title": "先進強化艇雷射",
+                    "Icon": "technology/99.png",
+                    "Cost": 210,
+                    "Children": []
+                  },
+                  {
+                    "Id": "tech100",
+                    "Title": "固定大砲",
+                    "Icon": "technology/100.png",
+                    "Cost": 210,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "tech175",
+                "Title": "代達洛斯引擎",
+                "Icon": "technology/90.png",
+                "Cost": 120,
+                "Children": [
+                  {
+                    "Id": "tech183",
+                    "Title": "環境管控裝置",
+                    "Icon": "technology/1.png",
+                    "Cost": 120,
+                    "Children": [
+                      {
+                        "Id": "tech178",
+                        "Title": "阿里阿德涅火焰",
+                        "Icon": "technology/97.png",
+                        "Cost": 180,
+                        "Children": [
+                          {
+                            "Id": "tech176",
+                            "Title": "自動潤滑伺服",
+                            "Icon": "technology/90.png",
+                            "Cost": 120,
+                            "Children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech177",
+                    "Title": "彌諾陶洛斯雷達陣列",
+                    "Icon": "technology/94.png",
+                    "Cost": 120,
+                    "Children": [
+                      {
+                        "Id": "tech211",
+                        "Title": "彌諾陶洛斯人工智慧駕駛員",
+                        "Icon": "technology/211.png",
+                        "Cost": 480,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech179",
+                    "Title": "彌諾陶洛斯雷射",
+                    "Icon": "technology/98.png",
+                    "Cost": 180,
+                    "Children": [
+                      {
+                        "Id": "tech180",
+                        "Title": "精準彌諾陶洛斯雷射",
+                        "Icon": "technology/99.png",
+                        "Cost": 210,
+                        "Children": []
+                      },
+                      {
+                        "Id": "tech181",
+                        "Title": "彌諾陶洛斯大砲",
+                        "Icon": "technology/100.png",
+                        "Cost": 210,
+                        "Children": []
+                      },
+                      {
+                        "Id": "tech182",
+                        "Title": "彌諾陶洛斯鑽機",
+                        "Icon": "technology/100.png",
+                        "Cost": 210,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": "tree13",
+    "Name": "太空船升級",
+    "Trees": [
+      {
+        "Id": "tree13-subTree1",
+        "Name": "可製作升級設計圖",
+        "CostType": "Nanites",
+        "Children": [
+          {
+            "Id": "tech23",
+            "Title": "脈衝驅動器",
+            "Icon": "technology/23.png",
+            "Cost": 1,
+            "Children": [
+              {
+                "Id": "tech144",
+                "Title": "無常驅動器",
+                "Icon": "technology/144.png",
+                "Cost": 460,
+                "Children": [
+                  {
+                    "Id": "tech220",
+                    "Title": "飛行輔助覆寫",
+                    "Icon": "technology/144.png",
+                    "Cost": 460,
+                    "Children": []
+                  },
+                  {
+                    "Id": "tech145",
+                    "Title": "次光速增幅器",
+                    "Icon": "technology/144.png",
+                    "Cost": 460,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "tech28",
+                "Title": "瞬間傳送接收器",
+                "Icon": "technology/28.png",
+                "Cost": 150,
+                "Children": [
+                  {
+                    "Id": "tech40",
+                    "Title": "衝突掃描器",
+                    "Icon": "technology/40.png",
+                    "Cost": 150,
+                    "Children": []
+                  },
+                  {
+                    "Id": "tech39",
+                    "Title": "經濟掃描器",
+                    "Icon": "technology/39.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech216",
+                        "Title": "貨物掃描反射器",
+                        "Icon": "technology/216.png",
+                        "Cost": 240,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Id": "tech25",
+                "Title": "啟動推進器",
+                "Icon": "technology/25.png",
+                "Cost": 1,
+                "Children": [
+                  {
+                    "Id": "tech26",
+                    "Title": "高效推進器",
+                    "Icon": "technology/26.png",
+                    "Cost": 120,
+                    "Children": [
+                      {
+                        "Id": "tech27",
+                        "Title": "啟動自動充電器",
+                        "Icon": "technology/26.png",
+                        "Cost": 460,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Id": "tech33",
+                "Title": "反射防護罩",
+                "Icon": "technology/33.png",
+                "Cost": 1,
+                "Children": [
+                  {
+                    "Id": "tech34",
+                    "Title": "燒蝕裝甲",
+                    "Icon": "technology/34.png",
+                    "Cost": 85,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "tech37",
+                "Title": "光子砲",
+                "Icon": "technology/37.png",
+                "Cost": 1,
+                "Children": [
+                  {
+                    "Id": "tech46",
+                    "Title": "非線性光學",
+                    "Icon": "technology/46.png",
+                    "Cost": 75,
+                    "Children": []
+                  },
+                  {
+                    "Id": "tech35",
+                    "Title": "火箭發射器",
+                    "Icon": "technology/35.png",
+                    "Cost": 100,
+                    "Children": [
+                      {
+                        "Id": "tech36",
+                        "Title": "大型火箭管",
+                        "Icon": "technology/36.png",
+                        "Cost": 50,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech41",
+                    "Title": "相位光束",
+                    "Icon": "technology/41.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech42",
+                        "Title": "傅立葉解限器",
+                        "Icon": "technology/42.png",
+                        "Cost": 120,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech43",
+                    "Title": "正電子彈射器",
+                    "Icon": "technology/43.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech44",
+                        "Title": "碎片超載器",
+                        "Icon": "technology/44.png",
+                        "Cost": 120,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech45",
+                    "Title": "紅外線刀加速器",
+                    "Icon": "technology/45.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech147",
+                        "Title": "Q-共振器",
+                        "Icon": "technology/147.png",
+                        "Cost": 120,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech47",
+                    "Title": "迴旋加速弩砲",
+                    "Icon": "technology/47.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech48",
+                        "Title": "戴森泵",
+                        "Icon": "technology/48.png",
+                        "Cost": 120,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       }

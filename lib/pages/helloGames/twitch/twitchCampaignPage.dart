@@ -20,7 +20,8 @@ class TwitchCampaignPage extends StatelessWidget {
     return StoreConnector<AppState, GenericItemViewModel>(
       converter: (store) => GenericItemViewModel.fromStore(store),
       builder: (_, viewModel) {
-        Widget Function(BuildContext, TwitchCampaignData) listTilePresenter =
+        Widget Function(BuildContext, TwitchCampaignData,
+                {void Function() onTap}) listTilePresenter =
             twitchCampaignListTilePresenter(viewModel.displayGenericItemColour);
         return simpleGenericPageScaffold(
           context,

@@ -4901,6 +4901,13 @@
                     "Icon": "technology/143.png",
                     "Cost": 360,
                     "Children": []
+                  },
+                  {
+                    "Id": "tech228",
+                    "Title": "商業シャトル",
+                    "Icon": "technology/228.png",
+                    "Cost": 90,
+                    "Children": []
                   }
                 ]
               },
@@ -5154,7 +5161,7 @@
                     "Children": [
                       {
                         "Id": "tech27",
-                        "Title": "発射エンジン再充填器",
+                        "Title": "オートチャージャーを起動する",
                         "Icon": "technology/26.png",
                         "Cost": 460,
                         "Children": []
@@ -5563,19 +5570,19 @@
               },
               {
                 "Id": "tech94",
-                "Title": "エクソクラフト信号ブースター",
+                "Title": "エクソクラフトレーダー",
                 "Icon": "technology/94.png",
                 "Cost": 120,
                 "Children": [
                   {
                     "Id": "tech174",
-                    "Title": "高度信号ブースター",
+                    "Title": "レーダー増幅器",
                     "Icon": "technology/96.png",
                     "Cost": 210,
                     "Children": [
                       {
                         "Id": "tech96",
-                        "Title": "エクソクラフト信号ブースターアップグレード タウ",
+                        "Title": "レーダーパワー共鳴装置",
                         "Icon": "technology/96.png",
                         "Cost": 320,
                         "Children": []
@@ -5586,7 +5593,7 @@
               },
               {
                 "Id": "tech97",
-                "Title": "エクソクラフト加速モジュール",
+                "Title": "エクソクラフトブースター",
                 "Icon": "technology/97.png",
                 "Cost": 180,
                 "Children": [
@@ -5607,14 +5614,14 @@
                 "Children": [
                   {
                     "Id": "tech99",
-                    "Title": "エクソクラフトマインレーザーアップグレード シグマ",
+                    "Title": "高機能エクソクラフトレーザー",
                     "Icon": "technology/99.png",
                     "Cost": 210,
                     "Children": []
                   },
                   {
                     "Id": "tech100",
-                    "Title": "エクソクラフト装備型キャノン",
+                    "Title": "据え付け型キャノン",
                     "Icon": "technology/100.png",
                     "Cost": 210,
                     "Children": []
@@ -6247,6 +6254,527 @@
             "Icon": "curiosities/61.png",
             "Cost": 5000,
             "Children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": "tree11",
+    "Name": "",
+    "Trees": [
+      {
+        "Id": "tree11-subTree1",
+        "Name": "",
+        "CostType": "SalvagedData",
+        "Children": []
+      },
+      {
+        "Id": "tree11-subTree2",
+        "Name": "輸送モジュール",
+        "CostType": "SalvagedData",
+        "Children": [
+          {
+            "Id": "conTech23",
+            "Title": "ローマー・ジオベイ",
+            "Icon": "constructedTechnology/23.png",
+            "Cost": 4,
+            "Children": [
+              {
+                "Id": "conTech27",
+                "Title": "エクソクラフト召喚ステーション",
+                "Icon": "constructedTechnology/27.png",
+                "Cost": 12,
+                "Children": [
+                  {
+                    "Id": "build884",
+                    "Title": "軌道エクソクラフト具現化装置",
+                    "Icon": "building/884.png",
+                    "Cost": 1,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "conTech22",
+                "Title": "ノーマッド・ジオベイ",
+                "Icon": "constructedTechnology/22.png",
+                "Cost": 8,
+                "Children": []
+              },
+              {
+                "Id": "conTech63",
+                "Title": "ミノタウロス・ジオベイ",
+                "Icon": "constructedTechnology/63.png",
+                "Cost": 10,
+                "Children": []
+              },
+              {
+                "Id": "conTech26",
+                "Title": "ノーティロン格納庫",
+                "Icon": "constructedTechnology/26.png",
+                "Cost": 10,
+                "Children": []
+              },
+              {
+                "Id": "conTech25",
+                "Title": "ピルグリム・ジオベイ",
+                "Icon": "constructedTechnology/25.png",
+                "Cost": 10,
+                "Children": []
+              },
+              {
+                "Id": "conTech24",
+                "Title": "コロッサス・ジオベイ",
+                "Icon": "constructedTechnology/24.png",
+                "Cost": 8,
+                "Children": []
+              },
+              {
+                "Id": "conTech40",
+                "Title": "レース開始地点",
+                "Icon": "constructedTechnology/40.png",
+                "Cost": 10,
+                "Children": [
+                  {
+                    "Id": "conTech39",
+                    "Title": "レースの障害物",
+                    "Icon": "constructedTechnology/39.png",
+                    "Cost": 10,
+                    "Children": []
+                  },
+                  {
+                    "Id": "conTech38",
+                    "Title": "レースブースト",
+                    "Icon": "constructedTechnology/38.png",
+                    "Cost": 10,
+                    "Children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": "tree12",
+    "Name": "エクソクラフトアップグレード",
+    "Trees": [
+      {
+        "Id": "tree12-subTree1",
+        "Name": "作成可能なアップグレードの設計図",
+        "CostType": "Nanites",
+        "Children": [
+          {
+            "Id": "tech90",
+            "Title": "核融合エンジン",
+            "Icon": "technology/90.png",
+            "Cost": 120,
+            "Children": [
+              {
+                "Id": "tech101",
+                "Title": "フンボルトドライブ",
+                "Icon": "technology/101.png",
+                "Cost": 120,
+                "Children": [
+                  {
+                    "Id": "tech104",
+                    "Title": "ハイパワーソナー",
+                    "Icon": "technology/104.png",
+                    "Cost": 10,
+                    "Children": [
+                      {
+                        "Id": "tech105",
+                        "Title": "浸透圧発電機",
+                        "Icon": "technology/105.png",
+                        "Cost": 350,
+                        "Children": []
+                      },
+                      {
+                        "Id": "tech103",
+                        "Title": "テティスビーム",
+                        "Icon": "technology/98.png",
+                        "Cost": 450,
+                        "Children": []
+                      },
+                      {
+                        "Id": "tech102",
+                        "Title": "ノーティロンキャノン",
+                        "Icon": "technology/102.png",
+                        "Cost": 250,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Id": "tech170",
+                "Title": "メガワットヒーター",
+                "Icon": "technology/9.png",
+                "Cost": 120,
+                "Children": []
+              },
+              {
+                "Id": "tech171",
+                "Title": "空気ろ過ユニット",
+                "Icon": "technology/10.png",
+                "Cost": 120,
+                "Children": []
+              },
+              {
+                "Id": "tech172",
+                "Title": "中性子シールド",
+                "Icon": "technology/11.png",
+                "Cost": 120,
+                "Children": []
+              },
+              {
+                "Id": "tech169",
+                "Title": "サーマルバッファー",
+                "Icon": "technology/8.png",
+                "Cost": 120,
+                "Children": []
+              },
+              {
+                "Id": "tech94",
+                "Title": "エクソクラフトレーダー",
+                "Icon": "technology/94.png",
+                "Cost": 120,
+                "Children": [
+                  {
+                    "Id": "tech174",
+                    "Title": "レーダー増幅器",
+                    "Icon": "technology/96.png",
+                    "Cost": 210,
+                    "Children": [
+                      {
+                        "Id": "tech96",
+                        "Title": "レーダーパワー共鳴装置",
+                        "Icon": "technology/96.png",
+                        "Cost": 320,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Id": "tech97",
+                "Title": "エクソクラフトブースター",
+                "Icon": "technology/97.png",
+                "Cost": 180,
+                "Children": [
+                  {
+                    "Id": "tech173",
+                    "Title": "イカロス燃料システム",
+                    "Icon": "technology/173.png",
+                    "Cost": 120,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "tech98",
+                "Title": "エクソクラフトマインレーザー",
+                "Icon": "technology/98.png",
+                "Cost": 180,
+                "Children": [
+                  {
+                    "Id": "tech99",
+                    "Title": "高機能エクソクラフトレーザー",
+                    "Icon": "technology/99.png",
+                    "Cost": 210,
+                    "Children": []
+                  },
+                  {
+                    "Id": "tech100",
+                    "Title": "据え付け型キャノン",
+                    "Icon": "technology/100.png",
+                    "Cost": 210,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "tech175",
+                "Title": "ダイダロスエンジン",
+                "Icon": "technology/90.png",
+                "Cost": 120,
+                "Children": [
+                  {
+                    "Id": "tech183",
+                    "Title": "環境制御ユニット",
+                    "Icon": "technology/1.png",
+                    "Cost": 120,
+                    "Children": [
+                      {
+                        "Id": "tech178",
+                        "Title": "アリアドネの炎",
+                        "Icon": "technology/97.png",
+                        "Cost": 180,
+                        "Children": [
+                          {
+                            "Id": "tech176",
+                            "Title": "自己給脂サーボ",
+                            "Icon": "technology/90.png",
+                            "Cost": 120,
+                            "Children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech177",
+                    "Title": "ミノタウロス・レーダーアレイ",
+                    "Icon": "technology/94.png",
+                    "Cost": 120,
+                    "Children": [
+                      {
+                        "Id": "tech211",
+                        "Title": "ミノタウロスAIパイロット",
+                        "Icon": "technology/211.png",
+                        "Cost": 480,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech179",
+                    "Title": "ミノタウロス・レーザー",
+                    "Icon": "technology/98.png",
+                    "Cost": 180,
+                    "Children": [
+                      {
+                        "Id": "tech180",
+                        "Title": "ミノタウロス精密レーザー",
+                        "Icon": "technology/99.png",
+                        "Cost": 210,
+                        "Children": []
+                      },
+                      {
+                        "Id": "tech181",
+                        "Title": "ミノタウロス・キャノン",
+                        "Icon": "technology/100.png",
+                        "Cost": 210,
+                        "Children": []
+                      },
+                      {
+                        "Id": "tech182",
+                        "Title": "ミノタウロス掘削装置",
+                        "Icon": "technology/100.png",
+                        "Cost": 210,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": "tree13",
+    "Name": "宇宙船アップグレード",
+    "Trees": [
+      {
+        "Id": "tree13-subTree1",
+        "Name": "作成可能なアップグレードの設計図",
+        "CostType": "Nanites",
+        "Children": [
+          {
+            "Id": "tech23",
+            "Title": "パルスドライブ",
+            "Icon": "technology/23.png",
+            "Cost": 1,
+            "Children": [
+              {
+                "Id": "tech144",
+                "Title": "不安定性ドライブ",
+                "Icon": "technology/144.png",
+                "Cost": 460,
+                "Children": [
+                  {
+                    "Id": "tech220",
+                    "Title": "フライトアシストのオーバーライド",
+                    "Icon": "technology/144.png",
+                    "Cost": 460,
+                    "Children": []
+                  },
+                  {
+                    "Id": "tech145",
+                    "Title": "亜光速アンプリファイア",
+                    "Icon": "technology/144.png",
+                    "Cost": 460,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "tech28",
+                "Title": "テレポート受信機",
+                "Icon": "technology/28.png",
+                "Cost": 150,
+                "Children": [
+                  {
+                    "Id": "tech40",
+                    "Title": "紛争状況スキャナー",
+                    "Icon": "technology/40.png",
+                    "Cost": 150,
+                    "Children": []
+                  },
+                  {
+                    "Id": "tech39",
+                    "Title": "経済状況スキャナー",
+                    "Icon": "technology/39.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech216",
+                        "Title": "貨物スキャンディフレクター",
+                        "Icon": "technology/216.png",
+                        "Cost": 240,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Id": "tech25",
+                "Title": "発射エンジン",
+                "Icon": "technology/25.png",
+                "Cost": 1,
+                "Children": [
+                  {
+                    "Id": "tech26",
+                    "Title": "エコエンジン",
+                    "Icon": "technology/26.png",
+                    "Cost": 120,
+                    "Children": [
+                      {
+                        "Id": "tech27",
+                        "Title": "オートチャージャーを起動する",
+                        "Icon": "technology/26.png",
+                        "Cost": 460,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Id": "tech33",
+                "Title": "ディフレクターシールド",
+                "Icon": "technology/33.png",
+                "Cost": 1,
+                "Children": [
+                  {
+                    "Id": "tech34",
+                    "Title": "アブレーションアーマー",
+                    "Icon": "technology/34.png",
+                    "Cost": 85,
+                    "Children": []
+                  }
+                ]
+              },
+              {
+                "Id": "tech37",
+                "Title": "フォトンキャノン",
+                "Icon": "technology/37.png",
+                "Cost": 1,
+                "Children": [
+                  {
+                    "Id": "tech46",
+                    "Title": "非線形光学",
+                    "Icon": "technology/46.png",
+                    "Cost": 75,
+                    "Children": []
+                  },
+                  {
+                    "Id": "tech35",
+                    "Title": "ロケットランチャー ",
+                    "Icon": "technology/35.png",
+                    "Cost": 100,
+                    "Children": [
+                      {
+                        "Id": "tech36",
+                        "Title": "大型ロケットチューブ",
+                        "Icon": "technology/36.png",
+                        "Cost": 50,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech41",
+                    "Title": "フェーズビーム",
+                    "Icon": "technology/41.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech42",
+                        "Title": "フォーリエデリミッター",
+                        "Icon": "technology/42.png",
+                        "Cost": 120,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech43",
+                    "Title": "ポジトロン・イジェクター",
+                    "Icon": "technology/43.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech44",
+                        "Title": "フラグメントスーパーチャージャー",
+                        "Icon": "technology/44.png",
+                        "Cost": 120,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech45",
+                    "Title": "インフラナイフ・アクセル",
+                    "Icon": "technology/45.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech147",
+                        "Title": "Q-リゾネーター",
+                        "Icon": "technology/147.png",
+                        "Cost": 120,
+                        "Children": []
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "tech47",
+                    "Title": "サイクロトロン・バリスタ",
+                    "Icon": "technology/47.png",
+                    "Cost": 150,
+                    "Children": [
+                      {
+                        "Id": "tech48",
+                        "Title": "ダイソンパンプ",
+                        "Icon": "technology/48.png",
+                        "Cost": 120,
+                        "Children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       }

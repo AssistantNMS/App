@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 import '../../contracts/generated/onlineMeetup2020SubmissionViewModel.dart';
 
 Widget onlineMeetup2020SubmissionTilePresenter(
-    BuildContext context, OnlineMeetup2020SubmissionViewModel submission) {
-  Function() onTap;
-  onTap = () => launchExternalURL(submission.externalUrl);
+    BuildContext context, OnlineMeetup2020SubmissionViewModel submission,
+    {void Function() onTap}) {
+  Function() localOnTap;
+  localOnTap = () => launchExternalURL(submission.externalUrl);
   Row userInfoNameAndImageRow = Row(
     mainAxisSize: MainAxisSize.max,
     children: (submission.userName != null && submission.userName.length > 1)
@@ -36,7 +37,7 @@ Widget onlineMeetup2020SubmissionTilePresenter(
                 Positioned(
                   child: IconButton(
                     icon: const Icon(Icons.open_in_new, size: 36),
-                    onPressed: onTap,
+                    onPressed: localOnTap,
                   ),
                   top: 0,
                   right: 8,
@@ -88,6 +89,6 @@ Widget onlineMeetup2020SubmissionTilePresenter(
       elevation: 5,
       margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
     ),
-    onTap: onTap,
+    onTap: localOnTap,
   );
 }

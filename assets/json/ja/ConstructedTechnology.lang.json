@@ -880,7 +880,7 @@
     "Icon": "constructedTechnology/29.png",
     "Name": "エクソクラフトターミナル",
     "Group": "スペシャリストターミナル",
-    "Description": "機械工のニーズに合わせた研究所。特注の車両デザインソフトウェアの設備が整っている。",
+    "Description": "エンジニアのニーズに合わせた研究所。特注の車両デザインソフトウェアの設備が整っている。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -2627,7 +2627,6 @@
     "Description": "銀河系の生命体から特定のトラベラーに\n与えられるセキュリティーパス。\n\n低レベルの立入禁止区域やアウトポストの\nシステムにアクセスできるようになる。",
     "BaseValueUnits": 825.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2653,10 +2652,9 @@
     "Icon": "constructedTechnology/91.png",
     "Name": "アトラスパス ver2",
     "Group": "アクセスカード",
-    "Description": "銀河系の生命体から特定のトラベラーに\n与えられるセキュリティーパス。\n\n中レベルの立入禁止区域やアウトポストの\nシステムにアクセスできるようになる。",
+    "Description": "銀河系の生命体から特定のトラベラーに与えられるセキュリティーパス。\n\n中レベルの立入禁止区域やアウトポストのシステムにアクセスできるようになる。",
     "BaseValueUnits": 1856.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
       "HasDevProperties"
@@ -2682,12 +2680,12 @@
     "Icon": "constructedTechnology/91.png",
     "Name": "アトラスパス ver3",
     "Group": "アクセスカード",
-    "Description": "銀河系の生命体から特定のトラベラーに\n与えられるセキュリティーパス。\n\n高レベルの立入禁止区域やアウトポストの\nシステムにアクセスできるようになる。",
+    "Description": "銀河系の生命体から特定のトラベラーに与えられるセキュリティーパス。\n\n高レベルの立入禁止区域やアウトポストのシステムにアクセスできるようになる。",
     "BaseValueUnits": 2613.0,
     "CurrencyType": "None",
-    "MaxStackSize": 5.0,
     "Colour": "0063B7",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties"
     ],
     "BlueprintCost": 1,
@@ -2775,7 +2773,7 @@
     "Icon": "products/93.png",
     "Name": "産卵嚢",
     "Group": "知的生命船の保管嚢",
-    "Description": "<TECHNOLOGY>知的生命<>船用の<SPECIAL>追加保管モジュール<>。 孵化すると、この嚢内にいた寄生体が船体にくっつき、ホストから不可欠な栄養を受け取るのと引き換えに、洞窟のような体内を使用できるようにする。\n\n<VAL_ON><IMG>FE_ALT1<><>で成長と<VAL_ON>孵化プロセスを<>を開始させられる。",
+    "Description": "<TECHNOLOGY>知的生命<>船用の<SPECIAL>追加保管小結節<>。 孵化すると、この嚢内にいた寄生体が船の船体にくっつき、ホストから生命維持に必要な栄養を受け取るのと引き換えに、洞窟のような体内を使用できるようにする。\n\n<VAL_ON><IMG>FE_ALT1<><>で成長と<VAL_ON>孵化プロセスを<>を開始させられる。",
     "BaseValueUnits": 125000.0,
     "CurrencyType": "None",
     "MaxStackSize": 15.0,
@@ -2821,7 +2819,7 @@
   {
     "Id": "conTech99",
     "Icon": "building/350.png",
-    "Name": "宇宙船積載量拡張",
+    "Name": "積載量拡張",
     "Group": "宇宙船拡張モジュール",
     "Description": "宇宙船の残骸からサルベージされた\nモジュール型機械。\n<STELLAR>貨物船の墜落現場<>から回収、\nあるいは<STELLAR>フリゲートでの探検<>中に\nサルベージできる場合もある。\n\n適切な<TECHNOLOGY>宇宙船艤装場<>で使えば、\n宇宙船の積載量を増やすことができる。",
     "BaseValueUnits": 125000.0,
@@ -2865,9 +2863,9 @@
   {
     "Id": "conTech101",
     "Icon": "constructedTechnology/101.png",
-    "Name": "投下ポッド座標データ",
+    "Name": "エクソスーツアップグレードのチャート",
     "Group": "暗号化されたナビゲーションデータ",
-    "Description": "<TECHNOLOGY>信号ブースター<>に入力する暗号化されたナビゲーションデータ。\n\n正しく解読されれば同一の惑星上の<SPECIAL>エクソスーツアップグレード<>を含んだ<TECHNOLOGY>投下ポッド<>の位置が分かる。",
+    "Description": "暗号化されたナビゲーションデータ。正しく復号化すると、エクススーツ<STELLAR>アイテムケースのアップグレード<>が入った<TECHNOLOGY>投下ポッド<>の座標を示す。\n\nアイテムケースで座標を選択し、<TECHNOLOGY>ルート設定<>(<IMG>FE_ALT1<>)を行うと、エクソスーツのディスプレイに場所がブックマークされる。",
     "BaseValueUnits": 85000.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -2876,12 +2874,14 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
-    "ConsumableRewardTexts": []
+    "ConsumableRewardTexts": [
+      "データをエクソスーツ誘導マーカーに変換"
+    ]
   },
   {
     "Id": "conTech102",
@@ -2913,6 +2913,92 @@
     "BaseValueUnits": 10000.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech104",
+    "Icon": "other/269.png",
+    "Name": "記憶の断片",
+    "Group": "テクノロジーエコー",
+    "Description": "<STELLAR>息絶えたトラベラー<>の粉々になった残骸。かけらの奥深くでは、決して知りえない名前を囁く。\n\nそのメモリーには<TECHNOLOGY>重要なテクノロジーアップデート<>の情報が含まれており、あなたの旅の手助けになるだろう。このメモリーは<VAL_ON><IMG>FE_ALT1<><>で<STELLAR>吸収<>できる。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "アイテムをスーツの栄養補給システムから摂取"
+    ]
+  },
+  {
+    "Id": "conTech105",
+    "Icon": "other/270.png",
+    "Name": "記憶の断片（アイテムケース）",
+    "Group": "ローグテクノロジーエコー",
+    "Description": "<STELLAR>息絶えたトラベラー<>の粉々になった残骸。かけらの奥深くでは、決して知りえない名前を囁く。\n\nそのメモリーには<TECHNOLOGY>アイテムケースの拡張<>の情報が含まれており、あなたの旅の手助けになるだろう。このメモリーは<VAL_ON><IMG>FE_ALT1<><>で<STELLAR>吸収<>できる。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "アイテムをスーツの栄養補給システムから摂取"
+    ]
+  },
+  {
+    "Id": "conTech106",
+    "Icon": "products/169.png",
+    "Name": "アーカイブされたテクノロジーパッケージ",
+    "Group": "",
+    "Description": "アーカイブされた<TECHNOLOGY>ワイヤーパッケージ。<>これを使えばコアテクノロジーを容易にインストール可能。<VAL_ON><IMG>FE_ALT1<><>で<STELLAR>インストール作業<>を始められる。\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech107",
+    "Icon": "products/84.png",
+    "Name": "遺伝子保管所",
+    "Group": "",
+    "Description": "極低温保存されたノード。<TECHNOLOGY>有知性宇宙船<>に使う<TECHNOLOGY>バイオテクノロジー<>のアーカイブに役立つ。<VAL_ON><IMG>FE_ALT1<><>で<STELLAR>インストールプロセス<>を開始する。\n\n%TECH_DESC%",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "None",
     "Colour": "1A2733",
     "Usages": [
       "HasDevProperties",

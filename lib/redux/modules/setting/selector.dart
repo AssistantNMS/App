@@ -16,9 +16,6 @@ bool getGenericTileIsCompact(AppState state) =>
 bool getShowMaterialTheme(AppState state) =>
     state?.settingState?.showMaterialTheme ?? false;
 
-bool getIsRelease118IntroHidden(AppState state) =>
-    state?.settingState?.isRelease118IntroHidden ?? false;
-
 bool getDisplayGenericItemColour(AppState state) =>
     state?.settingState?.displayGenericItemColour ?? false;
 

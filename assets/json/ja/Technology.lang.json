@@ -244,7 +244,7 @@
         "Name": "ジェットパックタンク",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "20"
+        "Value": "25"
       },
       {
         "Name": "リチャージ速度",
@@ -262,7 +262,7 @@
         "Name": "ダッシュ回復時間",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "20"
+        "Value": "40"
       }
     ],
     "ConsumableRewardTexts": []
@@ -714,7 +714,7 @@
     "Icon": "curiosities/65.png",
     "Name": "単純な翻訳機",
     "Group": "自動言語解析ツール",
-    "Description": "自動翻訳デバイス。近くで行われている\n会話を録音し、コンテクスト学習システム\nにデータを走らせてその意味を特定し、\n解析する。\n\nエントリーモデルのためメモリーが\n少なく、それが翻訳能力を制限している。",
+    "Description": "自動翻訳デバイス。近くで行われている会話を録音して構文を解析し、コンテクスト学習システムでデータを分析してその意味を特定する。\n\nエントリーモデルのためメモリーが少なく、翻訳能力は制限されている。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -745,7 +745,7 @@
     "Icon": "curiosities/65.png",
     "Name": "標準的な翻訳機",
     "Group": "自動言語解析ツール",
-    "Description": "自動翻訳デバイス。近くで行われている\n会話を録音し、コンテクスト学習システム\nにデータを走らせてその意味を特定し、\n解析する。\n\n並列言語プロセッサにより、より多くの\n会話を録音し、翻訳することができる。",
+    "Description": "自動翻訳デバイス。近くで行われている会話を録音して構文を解析し、コンテクスト学習システムでデータを分析してその意味を特定する。\n\n並列言語プロセッサを搭載したことで、より多くの会話を録音して翻訳することが可能になっている。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -784,7 +784,7 @@
     "Icon": "curiosities/65.png",
     "Name": "高度な翻訳機",
     "Group": "自動言語解析ツール",
-    "Description": "自動翻訳デバイス。近くで行われている\n会話を録音し、コンテクスト学習システム\nにデータを走らせてその意味を特定し、\n解析する。\n\n大量のメモリー配列とオーバークロック\nした言語プロセッサにより、かなりの\n量の会話をリアルタイムで\n翻訳することができる。",
+    "Description": "自動翻訳デバイス。近くで行われている会話を録音して構文を解析し、コンテクスト学習システムでデータを分析してその意味を特定する。\n\n大量のメモリーとオーバークロックした言語プロセッサを搭載したことで、かなりの量の会話をリアルタイムに翻訳することが可能になっている。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -823,7 +823,7 @@
     "Icon": "technology/22.png",
     "Name": "アルテミスの翻訳機",
     "Group": "自動言語解析ツール",
-    "Description": "自動翻訳デバイス。現存する翻訳データを\nプリロードしてキャリブレートする必要\nがあり、<STELLAR>アルテミス<>とネットワークで\n接続しないと機能しない。\n\nホストのトランスレーションサービスへの\nアクセスがない場合でも、少量であれば\nオンボードの回路によって\nリアルタイム翻訳を行うことができる。",
+    "Description": "自動翻訳デバイス。事前に既存の翻訳データを取り込んで補正を行う必要があり、<STELLAR>アルテミスとのネットワーク接続<>がないと機能しない。\n\nホストトランスレーションサービスに接続できない場合でも、わずかな単語数であれば搭載された回路でリアルタイムでの翻訳を行うことが可能。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -1032,7 +1032,7 @@
   {
     "Id": "tech27",
     "Icon": "technology/26.png",
-    "Name": "発射エンジン再充填器",
+    "Name": "オートチャージャーを起動する",
     "Group": "宇宙船発射システムアップグレード",
     "Description": "宇宙船の<TECHNOLOGY>発射エンジン<>に装着する光発電パネル。停泊中に燃料をわずかながら補充できる。\n\n光から得た電力で大気から二水素を合成し、<STELLAR>発射エンジンの燃料を自動的に少しずつリチャージ<>する。",
     "BaseValueUnits": 1.0,
@@ -1263,7 +1263,7 @@
     "Icon": "technology/34.png",
     "Name": "アブレーションアーマー",
     "Group": "宇宙船シールドアップグレード",
-    "Description": "宇宙船防御列に超高温のシールドレイヤー\n\nを追加することで、向かってくる熱を蒸発させる。\n\n<STELLAR>宇宙船シールド性能<>が大幅に上昇する。",
+    "Description": "宇宙船防御列に超高温のシールドレイヤー\nを追加することで、向かってくる熱を\n蒸発させる。\n\n<STELLAR>宇宙船シールド性能<>が大幅に上昇する。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -1582,7 +1582,7 @@
     "Icon": "technology/42.png",
     "Name": "フォーリエデリミッター",
     "Group": "フェーズビームアップグレード",
-    "Description": "<TECHNOLOGY>フェーズビーム<>の配線を\n\nナノマシンベースの電気回路で配線し直して、レーザーパワーにある\n標準回路をバイパスする。\n\n<STELLAR>熱発散<>が大幅に改善される。",
+    "Description": "<TECHNOLOGY>フェーズビーム<>の配線を\nナノマシンベースの電気回路で\n配線し直して、レーザーパワーにある\n標準回路をバイパスする。\n\n<STELLAR>熱発散<>が大幅に改善される。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -1694,7 +1694,7 @@
     "Icon": "technology/44.png",
     "Name": "フラグメントスーパーチャージャー",
     "Group": "宇宙船ポジトロン・イジェクターアップグレード",
-    "Description": "<TECHNOLOGY>ポジトロン・イジェクター<>の\n\n発射メカニズムを組み直すことで、粒子の速度と正確性が上昇する。\n\n<STELLAR>範囲<>と<STELLAR>正確性<>が改善される。",
+    "Description": "<TECHNOLOGY>ポジトロン・イジェクター<>の\n発射メカニズムを組み直すことで、\n粒子の速度と正確性が上昇する。\n\n<STELLAR>範囲<>と<STELLAR>正確性<>が改善される。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -1806,7 +1806,7 @@
     "Icon": "technology/46.png",
     "Name": "非線形光学",
     "Group": "フォトンキャノンアップグレード",
-    "Description": "標準的な<TECHNOLOGY>フォトンキャノン<>の光学を\n\n実験的なガラス配列と交換することで、戦闘性能を増強させる。\n\n<STELLAR>放熱板容量<>が大幅に改善される。",
+    "Description": "標準的な<TECHNOLOGY>フォトンキャノン<>の光学を\n実験的なガラス配列と交換することで、\n戦闘性能を増強させる。\n\n<STELLAR>放熱板容量<>が大幅に改善される。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -1916,7 +1916,7 @@
     "Icon": "technology/48.png",
     "Name": "ダイソンパンプ",
     "Group": "宇宙船サイクロトロンアップグレード",
-    "Description": "全体のユニットを吸熱性の巨大板を\n\n取り囲むことで<TECHNOLOGY>サイクロトロン・バリスタ<>の放熱板を交換する。 熱の出力が\n再利用され、戦闘効率が上昇する。\n\n<STELLAR>熱性能<>が大幅に改善される。",
+    "Description": "<TECHNOLOGY>サイクロトロン・バリスタ<>のヒートシンクを取り外し、代わりにユニット全体を巨大な熱吸収体で囲う。 放出される熱は、戦闘効率の向上用に再利用される。\n\n<STELLAR>熱性能<>が大幅に改善される。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -2247,9 +2247,9 @@
       },
       {
         "Name": "鉱物分析の報酬",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "target",
-        "Value": "1"
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -2259,7 +2259,7 @@
     "Icon": "technology/64.png",
     "Name": "波形リサイクラー",
     "Group": "マルチツールアップグレード",
-    "Description": "マルチツールの<TECHNOLOGY>スキャンシステム<>に\n\n強力な側面加工を挿入することで、装置のリチャージ頻度を改善する。\n\n<STELLAR>潜在スキャン周波数<>を上昇させる。",
+    "Description": "マルチツールの<TECHNOLOGY>スキャンシステム<>に\n強力な側面加工を挿入することで、\n装置のリチャージ頻度を改善する。\n\n<STELLAR>潜在スキャン周波数<>を上昇させる。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -2652,7 +2652,7 @@
     "Icon": "technology/73.png",
     "Name": "バレルイオナイザー",
     "Group": "ボルトキャスターアップグレード",
-    "Description": "<TECHNOLOGY>ボルトキャスター<>のシリンダーに\n\n強力なイオン化装置を挿入することで、空気中の発射安定性が上昇する。\n\n<STELLAR>装置の正確性<>が改善され、使用者は\n戦闘性能の低下を感じることなくより\n長時間発砲を続けることができるようになる。",
+    "Description": "<TECHNOLOGY>ボルトキャスター<>のシリンダーに\n強力なイオン化装置を挿入することで、\n空気中の発射安定性が上昇する。\n\n<STELLAR>装置の正確性<>が改善され、使用者は\n戦闘性能の低下を感じることなくより\n長時間発砲を続けることができるようになる。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -2955,7 +2955,7 @@
     "Icon": "technology/79.png",
     "Name": "マスアクセル",
     "Group": "ブレーズジャベリンアップグレード",
-    "Description": "<TECHNOLOGY>ブレーズジャベリン<>の燃焼室を拡張する\n\nことで、内部の粒子アクセルの到達する質量と速度が改善される。\n\n<STELLAR>武器のダメージ<>が大幅に改善される。",
+    "Description": "<TECHNOLOGY>ブレーズジャベリン<>の燃焼室を拡張する\nことで、内部の粒子アクセルの\n到達する質量と速度が改善される。\n\n<STELLAR>武器のダメージ<>が大幅に改善される。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -3191,7 +3191,7 @@
     "Icon": "technology/83.png",
     "Name": "アンプカートリッジ",
     "Group": "パルススピッターアップグレード",
-    "Description": "専門調波共鳴装置が<TECHNOLOGY>パルススピッター<>に\n\n挿入された弾薬を分裂させ、少ない原料でより多くの発砲ができるよう効率的に製造する。\n\n<STELLAR>武器の弾倉サイズ<>が上昇する。",
+    "Description": "専門調波共鳴装置が<TECHNOLOGY>パルススピッター<>に\n挿入された弾薬を分裂させ、少ない原料で\nより多くの発砲ができるよう効率的に製造する。\n\n<STELLAR>武器の弾倉サイズ<>が上昇する。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -3580,7 +3580,7 @@
   {
     "Id": "tech94",
     "Icon": "technology/94.png",
-    "Name": "エクソクラフト信号ブースター",
+    "Name": "エクソクラフトレーダー",
     "Group": "エクソクラフトスキャン装備",
     "Description": "大きく複雑なフィールドベースのサブスペースレーダー。\n\n電力消費の多さと、固有の原子核内部の不安定性が理由で、エクソクラフトにのみインストールされている。\n\n<IMG>QUICK_MENU<>を押して信号ブースターを起動する。",
     "BaseValueUnits": 1.0,
@@ -3615,9 +3615,9 @@
   {
     "Id": "tech96",
     "Icon": "technology/96.png",
-    "Name": "エクソクラフト信号ブースターアップグレード タウ",
-    "Group": "エクソクラフト信号ブースターアップグレード",
-    "Description": "エクソクラフト信号ブースターが追加の建物タイプを取得できるようになる。",
+    "Name": "レーダーパワー共鳴装置",
+    "Group": "エクソクラフト信号検知アップグレード",
+    "Description": "エクソクラフトレーダーが追加の建物タイプを捕捉できるようになる。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -3654,7 +3654,7 @@
   {
     "Id": "tech97",
     "Icon": "technology/97.png",
-    "Name": "エクソクラフト加速モジュール",
+    "Name": "エクソクラフトブースター",
     "Group": "エクソクラフトエンジンアップグレード",
     "Description": "短いスピードバーストを可能にする、エンジンと連結する効率的なプラズマインジェクター。",
     "BaseValueUnits": 1.0,
@@ -3750,7 +3750,7 @@
   {
     "Id": "tech99",
     "Icon": "technology/99.png",
-    "Name": "エクソクラフトマインレーザーアップグレード シグマ",
+    "Name": "高機能エクソクラフトレーザー",
     "Group": "エクソクラフトマインレーザーアップグレード",
     "Description": "エクソクラフトマインレーザーの出力を上げる。",
     "BaseValueUnits": 1.0,
@@ -3791,7 +3791,7 @@
   {
     "Id": "tech100",
     "Icon": "technology/100.png",
-    "Name": "エクソクラフト装備型キャノン",
+    "Name": "据え付け型キャノン",
     "Group": "エクソクラフト戦闘用アタッチメント",
     "Description": "利用に必要な電力量を確保するため、エクソクラフトに取り付ける必要がある。",
     "BaseValueUnits": 1.0,
@@ -6253,9 +6253,9 @@
   {
     "Id": "tech174",
     "Icon": "technology/96.png",
-    "Name": "高度信号ブースター",
-    "Group": "エクソクラフト信号ブースターアップグレード",
-    "Description": "エクソクラフト信号ブースターが追加の建物タイプを取得できるようになる。",
+    "Name": "レーダー増幅器",
+    "Group": "エクソクラフト信号検知アップグレード",
+    "Description": "エクソクラフトレーダーが追加の建物タイプを捕捉できるようになる。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -7091,7 +7091,7 @@
   {
     "Id": "tech192",
     "Icon": "technology/192.png",
-    "Name": "アーカイブオーバーライドインプラント",
+    "Name": "アーカイブバイパスインプラント",
     "Group": "皮下接触回路",
     "Description": "<TECHNOLOGY>バイオ技術によるファイアウォール<>であり、文字認識災害に対するセーフガードとして開発された。何かヌルヌルしたもので覆われており、表面が泡立ち始めている。\n\n皮膚の下に埋め込むと、<SPECIAL>惑星アーカイブ<>で古代の禁じられた文章に管理者権限でアクセスできるようになる。\n<FUEL>警告<>：禁じられた文章を解かないこと。禁じられた文章に触れることは非常な危険を伴う。",
     "BaseValueUnits": 1.0,
@@ -7430,7 +7430,7 @@
     "Icon": "technology/204.png",
     "Name": "クロ―キング装置",
     "Group": "アクティブカモフラージュユニット",
-    "Description": "このモジュールを起動すると、<VAL_ON>エクソスーツ生命維持<>システムからパワーが引き出されてユーザー周辺の重力場を操作し、光を屈折させて<STELLAR>アクティブカモフラージュ効果<>を作り出す。\n\nこの<STELLAR>一時的な<>効果を使用して、敵の注意を引きたくない場合に避けることができる。 警告：ジェットパックの起動や、マルチツール武器システムの起動など、エクソスーツを一気に操作すると、アクティブカモフラージュが切れてしまう。",
+    "Description": "このモジュールを起動すると、<VAL_ON>エクソスーツ生命維持<>システムからパワーが引き出されてユーザー周辺の重力場を操作し、光を屈折させて<STELLAR>アクティブカモフラージュ効果<>を作り出す。\n\nこの<STELLAR>一時的な<>効果を使用して、敵の注意を引きたくない場合に避けることができる。 警告：ジェットパックの起動や、マルチツール武器システムの起動など、エクソスーツで激しい動きをすると、アクティブカモフラージュは中断される。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -7832,7 +7832,7 @@
   {
     "Id": "tech212",
     "Icon": "technology/212.png",
-    "Name": "センチネルハードフレームレフトアーム",
+    "Name": "ハードフレームの左腕",
     "Group": "ミノタウロスの四肢の代替品",
     "Description": "センチネルハードフレームから回収された部品のコレクションで、<TECHNOLOGY>ミノタウロス<>ヘビーエクソクラフトハイブリッドに適合するように再調整されている。\n\n<TECHNOLOGY>ミノタウロスレーザー<>と一緒に取り付けると、<STELLAR>マイニングレーザー<>を強力な戦闘アップグレードに変容させ、<TECHNOLOGY>スタン<>した存在に対して大ダメージを与えることができる。",
     "BaseValueUnits": 1.0,
@@ -7896,7 +7896,7 @@
   {
     "Id": "tech213",
     "Icon": "technology/213.png",
-    "Name": "センチネルハードフレームライトアーム",
+    "Name": "ハードフレームの右腕",
     "Group": "ミノタウロスの四肢の代替品",
     "Description": "センチネルハードフレームから回収された部品のコレクションで、<TECHNOLOGY>ミノタウロス<>ヘビーエクソクラフトハイブリッドに適合するように再調整されている。\n\nこの四肢オーバーライドは<STELLAR>専用の戦闘システム<>としても機能する。高速の<TECHNOLOGY>スタン発射物<>を展開し、ミノタウロスの主砲の優れた支援武器となる。\n\n<IMG>CYCLEWEAPON<>で利用可能な武器モードを切り替えられる。",
     "BaseValueUnits": 1.0,
@@ -7948,7 +7948,7 @@
   {
     "Id": "tech214",
     "Icon": "technology/214.png",
-    "Name": "センチネルハードフレームレッグ",
+    "Name": "ハードフレームレッグ",
     "Group": "ミノタウロスの四肢の代替品",
     "Description": "センチネルのハードフレームから回収されたコンポーネントのコレクションで、<TECHNOLOGY>ミノタウロス<>ハイブリッドエクソクラフトに合わせて再調整された。\n\n取り付けると、ミノタウロスの<TECHNOLOGY>エンジンおよび機動システム<>が大幅に改善される。",
     "BaseValueUnits": 1.0,
@@ -7990,7 +7990,7 @@
   {
     "Id": "tech215",
     "Icon": "technology/215.png",
-    "Name": "センチネルハードフレームボディ",
+    "Name": "ハードフレームボディ",
     "Group": "ミノタウロス コアの代替品",
     "Description": "センチネルのハードフレームから回収されたコンポーネントのコレクションで、<TECHNOLOGY>ミノタウロス<>ハイブリッドエクソクラフトに合わせて再調整された。\n\n半自律型<TECHNOLOGY>人工パイロットプラグイン<>として機能する。インストールすると、ミノタウロスは自分で<STELLAR>惑星を横断<>し、<STELLAR>戦闘<>または<STELLAR>採掘<>活動に従事してメインオペレーターを支援する。\n\nメインオペレーターがコクピットに入ると、AI パイロットは常にコントロールを譲る。",
     "BaseValueUnits": 1.0,
@@ -8435,6 +8435,47 @@
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech228",
+    "Icon": "technology/228.png",
+    "Name": "商業シャトル",
+    "Group": "商業ミサイル呼び出し装置",
+    "Description": "<TECHNOLOGY>銀河貿易ネットワーク<>に直接接続している個人用ロケット装置。この装置は、アイテムと一緒に小型の宇宙船を積むことができる。発射後、アイテムは最寄りの貿易ターミナルに輸送され、<STELLAR>自動的に売却<>される。\n\n<IMG>QUICK_MENU<>で商業シャトルを<STELLAR>呼び出す<>。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw7",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "貿易ロケット",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

@@ -6,8 +6,12 @@ import 'package:flutter/material.dart';
 import '../../contracts/generated/communitySpotlightViewModel.dart';
 
 Widget communitySpotlightTilePresenter(
-    BuildContext context, CommuntySpotlightViewModel communitySpotlight) {
-  Function() onTap = () => launchExternalURL(communitySpotlight.externalUrl);
+  BuildContext context,
+  CommuntySpotlightViewModel communitySpotlight, {
+  void Function() onTap,
+}) {
+  Function() localOnTap =
+      onTap ?? () => launchExternalURL(communitySpotlight.externalUrl);
   Row userInfoNameAndImageRow = Row(
     children: (communitySpotlight.userName != null &&
             communitySpotlight.userName.length > 1)
@@ -38,7 +42,7 @@ Widget communitySpotlightTilePresenter(
             Positioned(
               child: IconButton(
                 icon: const Icon(Icons.open_in_new, size: 32),
-                onPressed: onTap,
+                onPressed: localOnTap,
               ),
               top: 0,
               right: 8,
@@ -112,7 +116,7 @@ Widget communitySpotlightTilePresenter(
       elevation: 5,
       margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
     ),
-    onTap: onTap,
+    onTap: localOnTap,
   );
   // return genericListTileWithNetworkImage(
   //     context,

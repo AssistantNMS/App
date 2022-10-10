@@ -51,7 +51,7 @@ import '../pages/sync/syncPage.dart';
 import '../pages/techTree/unlockableTechTreePage.dart';
 import '../pages/timer/timerPage.dart';
 import '../pages/title/titlePage.dart';
-import '../pages/tutuorial/nomNomInventorySyncTutorial.dart';
+import '../pages/tutorial/nomNomInventorySyncTutorial.dart';
 import '../pages/whatIsNew/enhancedWhatIsNewPage.dart';
 import 'AnalyticsEvent.dart';
 

@@ -5,10 +5,13 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:wiredash/wiredash.dart';
 
 import '../../constants/HomepageItems.dart';
 import '../../constants/Routes.dart';
 import '../../contracts/redux/appState.dart';
+import '../../env/appVersionNum.dart';
+import '../../integration/dependencyInjection.dart';
 import '../../redux/modules/setting/introViewModel.dart';
 import '../../theme/themes.dart';
 
@@ -35,15 +38,6 @@ class AppShell extends StatelessWidget {
     return StoreConnector<AppState, IntroViewModel>(
       converter: (store) => IntroViewModel.fromStore(store),
       builder: (_, introViewModel) {
-        String initialRoute = HomepageItem.defaultHomepageItem().routeToNamed;
-        try {
-          initialRoute = HomepageItem.getByType(
-            introViewModel.homepageType,
-          ).routeToNamed;
-        } catch (ex) {
-          initialRoute = HomepageItem.defaultHomepageItem().routeToNamed;
-        }
-
         return AdaptiveTheme(
           initial: AdaptiveThemeMode.dark,
           light: getDynamicTheme(
@@ -60,7 +54,7 @@ class AppShell extends StatelessWidget {
               Key('android-${introViewModel.currentLanguage}'),
               theme,
               darkTheme,
-              initialRoute,
+              introViewModel,
               routes,
               localizationsDelegates,
               getLanguage().supportedLocales(),
@@ -76,7 +70,7 @@ class AppShell extends StatelessWidget {
     Key key,
     ThemeData theme,
     ThemeData darkTheme,
-    String initialRoute,
+    IntroViewModel introViewModel,
     Map<String, Widget Function(BuildContext)> routes,
     List<LocalizationsDelegate<dynamic>> localizationsDelegates,
     List<Locale> supportedLocales,
@@ -93,16 +87,46 @@ class AppShell extends StatelessWidget {
       );
     }
 
-    MaterialApp matApp = MaterialApp(
-      key: key,
-      title: 'Assistant for No Man\'s Sky',
-      theme: theme,
-      darkTheme: darkTheme,
-      initialRoute: initialRoute,
-      routes: routes,
-      scrollBehavior: scrollBehavior,
-      localizationsDelegates: localizationsDelegates,
-      supportedLocales: supportedLocales,
+    String initialRoute = HomepageItem.defaultHomepageItem().routeToNamed;
+    try {
+      initialRoute = HomepageItem.getByType(
+        introViewModel.homepageType,
+      ).routeToNamed;
+    } catch (ex) {
+      initialRoute = HomepageItem.defaultHomepageItem().routeToNamed;
+    }
+
+    Widget matApp = Wiredash(
+      projectId: getEnv().wiredashProjectId,
+      secret: getEnv().wiredashSecret,
+      options: WiredashOptionsData(
+        locale: getTranslations().getLocaleFromKey(
+          introViewModel.currentLanguage,
+        ),
+      ),
+      feedbackOptions: WiredashFeedbackOptions(
+        email: EmailPrompt.optional,
+        collectMetaData: (metaData) => metaData
+          // information about your app build
+          ..buildNumber = appsBuildNum.toString()
+          ..buildVersion = appsBuildName
+          ..buildCommit = appsCommit
+
+          // custom metadata
+          ..custom['currentLang'] = introViewModel.currentLanguage
+          ..custom['isPatron'] = introViewModel.isPatron,
+      ),
+      child: MaterialApp(
+        key: key,
+        title: 'Assistant for No Man\'s Sky',
+        theme: theme,
+        darkTheme: darkTheme,
+        initialRoute: initialRoute,
+        routes: routes,
+        scrollBehavior: scrollBehavior,
+        localizationsDelegates: localizationsDelegates,
+        supportedLocales: supportedLocales,
+      ),
     );
 
     if (!isWindows) return matApp;

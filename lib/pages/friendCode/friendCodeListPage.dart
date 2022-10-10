@@ -40,7 +40,8 @@ class _FriendCodeListWidget extends State<FriendCodeListPage> {
       body: SearchableList<FriendCodeViewModel>(
         () => getApiRepo().getFriendCodes(showPC, showPS4, showXb1),
         listItemDisplayer:
-            (BuildContext context, FriendCodeViewModel friendCode) =>
+            (BuildContext context, FriendCodeViewModel friendCode,
+                    {void Function() onTap}) =>
                 friendCodeTilePresenter(context, context, friendCode),
         listItemSearch: (FriendCodeViewModel option, String search) =>
             option.name.toLowerCase().contains(search.toLowerCase()),

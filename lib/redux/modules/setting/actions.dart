@@ -14,8 +14,6 @@ class ToggleIsGenericTileCompact extends PersistToStorage {}
 
 class ToggleShowMaterialTheme extends PersistToStorage {}
 
-class HideRelease118Intro extends PersistToStorage {}
-
 class ToggleDisplayGenericItemColour extends PersistToStorage {}
 
 class HideValentines2020Intro extends PersistToStorage {}

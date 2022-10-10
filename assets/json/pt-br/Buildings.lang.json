@@ -5727,7 +5727,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5755,7 +5756,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5930,7 +5932,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/303.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6286,7 +6289,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/316.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7686,7 +7690,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7714,7 +7719,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7742,7 +7748,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7877,7 +7884,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7969,7 +7977,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -8472,7 +8481,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
+      "IsTwitchCampaign4Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -9054,7 +9064,7 @@
     "Icon": "building/436.png",
     "Name": "Mapa do Povoado",
     "Group": "Mapa Planetário Especialista",
-    "Description": "Um mapa que mostra a localização de um povoado planetário próximo, adquirido do <STELLAR>Cartógrafo da Estação Espacial<>.\n\nSelecione o mapa e use Planejar rota (<IMG>FE_ALT1<>) para fixar a localização na tela do seu exotraje.",
+    "Description": "Um mapa que mostra a localização de um povoado planetário próximo, adquirido do <STELLAR>cartógrafo da estação espacial<>.\n\nSelecione o mapa e use <VAL_ON>Planejar rota (<IMG>FE_ALT1<>)<> para fixar a localização na tela do seu exotraje.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -9092,8 +9102,16 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw1",
-        "Quantity": 25
+        "Id": "prod6",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
       }
     ],
     "StatBonuses": [],
@@ -16756,7 +16774,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16952,7 +16971,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
+      "IsExpeditionSeason7Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -17081,7 +17101,7 @@
   {
     "Id": "build864",
     "Icon": "building/864.png",
-    "Name": "Junção em T",
+    "Name": "JUNÇÃO EM T",
     "Group": "Módulo central de nave cargueira",
     "Description": "Este corredor pressurizado junta-se de forma inteligente às salas de naves cargueiras já existentes, conectando espaços habitáveis dentro de grandes naves.\n\nEsta peça de corredor flexível expande e contrai <STELLAR>automaticamente<> para <STELLAR>formar curvas ou junções<> quando colocada.",
     "BaseValueUnits": 1.0,
@@ -17445,7 +17465,7 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "Sala tecnológica (vazia)",
+    "Name": "Sala tecnológica (expansão)",
     "Group": "Módulo avançado de nave cargueira",
     "Description": "Uma câmara espaçosa com uma estética técnica para expandir espaços habitáveis dentro de naves grandes.",
     "BaseValueUnits": 1.0,
@@ -17606,7 +17626,7 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "Sala biológica (vazia)",
+    "Name": "Sala biológica (expansão)",
     "Group": "Módulo avançado de nave cargueira",
     "Description": "Esta câmara espaçosa de estufa filtra e oxigena naturalmente o fornecimento de ar e oferece um pequeno santuário ecológico em naves cargueiras.",
     "BaseValueUnits": 1.0,
@@ -17736,7 +17756,7 @@
     "Icon": "building/885.png",
     "Name": "Sala do especialista em exoveículos",
     "Group": "Terminal do trabalhador",
-    "Description": "Equipamento integrado de pesquisa de naves cargueiras projetado para as demandas de <TECHNOLOGY>mecânicos de exoveículos<> e equipado com software de design veicular.\n\nEste módulo é colocado como uma <STELLAR>sala inteira<> e acompanha unidades funcionais pré-instaladas.",
+    "Description": "Equipamento integrado de pesquisa de naves cargueiras projetado para as demandas de <TECHNOLOGY>técnicos de exoveículos<> e equipado com software de design veicular.\n\nEste módulo é colocado como uma <STELLAR>sala inteira<> e acompanha unidades funcionais pré-instaladas.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,7 +18110,7 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "Sala industrial (vazia)",
+    "Name": "Sala industrial (expansão)",
     "Group": "Módulo avançado de nave cargueira",
     "Description": "Uma câmara espaçosa com estética industrial para expandir espaços habitáveis dentro de naves grandes.",
     "BaseValueUnits": 1.0,
@@ -19820,7 +19840,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19847,7 +19868,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19874,7 +19896,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20678,9 +20701,9 @@
   {
     "Id": "build996",
     "Icon": "building/996.png",
-    "Name": "Vidro Escada De Nave Cargueira",
+    "Name": "Escada de vidro de nave cargueira",
     "Group": "Módulo central de nave cargueira",
-    "Description": "Este módulo de expansão permite a construção rápida de espaços habitáveis dentro de naves grandes.\n\nA unidade de construção já é fabricada com parede interna de pressão e todos os pontos de fixação necessários.",
+    "Description": "Uma escada resistente e antiderrapante com uma inclinação ergonômica. Serve para passar verticalmente entre os conveses da nave cargueira.\n\nConstruída com vidro expansível, térmico e baixo, ela oferece uma visão incrível do espaço.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20707,9 +20730,9 @@
   {
     "Id": "build997",
     "Icon": "building/997.png",
-    "Name": "Plataforma Externa Escada De Nave Cargueira",
+    "Name": "Escada exterior de nave cargueira",
     "Group": "Módulo central de nave cargueira",
-    "Description": "Este módulo de expansão permite a construção rápida de espaços habitáveis dentro de naves grandes.\n\nA unidade de construção já é fabricada com parede interna de pressão e todos os pontos de fixação necessários.",
+    "Description": "Uma escada resistente e antiderrapante com uma inclinação ergonômica. Serve para passar verticalmente entre os conveses da nave cargueira.\n\nEla pode ser fixada no <STELLAR>lado de fora<> da fuselagem da nave cargueira, criando conexões entre as passarelas e plataformas externas.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20734,12 +20757,13 @@
     "Icon": "building/998.png",
     "Name": "Parede interna de nave cargueira",
     "Group": "Módulo central de nave cargueira",
-    "Description": "Este módulo de expansão permite a construção rápida de espaços habitáveis dentro de naves grandes.\n\nA unidade de construção já é fabricada com parede interna de pressão e todos os pontos de fixação necessários.",
+    "Description": "Uma parede interna para dividir espaços grandes da nave cargueira. Adapta-se perfeitamente à estética do recinto.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20756,14 +20780,15 @@
   {
     "Id": "build999",
     "Icon": "building/999.png",
-    "Name": "Sala industrial B (vazia)",
+    "Name": "Variante da sala de expansão",
     "Group": "Módulo avançado de nave cargueira",
     "Description": "Uma câmara espaçosa com estética industrial para expandir espaços habitáveis dentro de naves grandes.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

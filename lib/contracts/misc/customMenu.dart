@@ -1,5 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
+import 'package:wiredash/wiredash.dart';
 
 import '../../constants/AppImage.dart';
 import '../../constants/Routes.dart';
@@ -296,7 +297,9 @@ List<CustomMenu> getMenuOptionsSection4(
       icon: localGetFromIcon(Icons.feedback),
       drawerIcon: localGetDrawerFromIcon(Icons.feedback),
       title: LocaleKey.feedback,
-      navigateToNamed: Routes.feedback,
+      onTap: (tapCtx) {
+        Wiredash.of(tapCtx).show(inheritMaterialTheme: true);
+      },
     ),
     // if (!isApple) ...[
     //   CustomMenu(

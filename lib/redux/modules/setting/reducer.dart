@@ -9,7 +9,6 @@ final settingReducer = combineReducers<SettingState>([
   TypedReducer<SettingState, ToggleIsGenericTileCompact>(
       _toggleIsGenericTileCompact),
   TypedReducer<SettingState, ToggleShowMaterialTheme>(_toggleShowMaterialTheme),
-  TypedReducer<SettingState, HideRelease118Intro>(_hideRelease118Intro),
   TypedReducer<SettingState, ToggleDisplayGenericItemColour>(
       _toggleDisplayGenericItemColour),
   TypedReducer<SettingState, HideValentines2020Intro>(_hideValentines2020Intro),
@@ -41,8 +40,6 @@ SettingState _toggleIsGenericTileCompact(SettingState state, _) =>
     state.copyWith(genericTileIsCompact: !state.genericTileIsCompact);
 SettingState _toggleShowMaterialTheme(SettingState state, _) =>
     state.copyWith(showMaterialTheme: !state.showMaterialTheme);
-SettingState _hideRelease118Intro(SettingState state, _) =>
-    state.copyWith(isRelease118IntroHidden: true);
 SettingState _toggleDisplayGenericItemColour(SettingState state, _) =>
     state.copyWith(displayGenericItemColour: !state.displayGenericItemColour);
 SettingState _hideValentines2020Intro(SettingState state, _) =>

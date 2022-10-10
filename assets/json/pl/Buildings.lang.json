@@ -5727,7 +5727,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5755,7 +5756,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5930,7 +5932,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/303.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6286,7 +6289,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/316.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7686,7 +7690,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7714,7 +7719,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7742,7 +7748,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7877,7 +7884,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7969,7 +7977,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -8472,7 +8481,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
+      "IsTwitchCampaign4Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -9054,7 +9064,7 @@
     "Icon": "building/436.png",
     "Name": "Mapa osady",
     "Group": "Specjalistyczna mapa planetarna",
-    "Description": "Mapa wskazująca lokalizację pobliskiej osady planetarnej, uzyskana od <STELLAR>kartografa stacji kosmicznej<>.\n\nWybierz mapę i użyj wytyczania trasy (<IMG>FE_ALT1<>), by przypiąć lokalizację na wyświetlaczu egzokombinezonu.",
+    "Description": "Mapa wskazująca lokalizację pobliskiej osady planetarnej, uzyskana od <STELLAR>kartografa stacji kosmicznej<>.\n\nWybierz mapę i użyj wytyczania trasy <VAL_ON>(<IMG>FE_ALT1<>)<>, by przypiąć lokalizację na wyświetlaczu egzokombinezonu.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -9092,8 +9102,16 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw1",
-        "Quantity": 25
+        "Id": "prod6",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
       }
     ],
     "StatBonuses": [],
@@ -16756,7 +16774,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16952,7 +16971,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
+      "IsExpeditionSeason7Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -17445,7 +17465,7 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "Pomieszczenie technologiczne (puste)",
+    "Name": "Pomieszczenie technologiczne (rozszerzenie)",
     "Group": "Zaawansowany moduł frachtowca",
     "Description": "Przestronna komora o technicznej estetyce, do powiększenia przestrzeni mieszkalnych wewnątrz dużych statków kosmicznych.",
     "BaseValueUnits": 1.0,
@@ -17606,7 +17626,7 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "Pomieszczenie biologiczne (puste)",
+    "Name": "Pomieszczenie biologiczne (rozszerzenie)",
     "Group": "Zaawansowany moduł frachtowca",
     "Description": "Ta przestronna komora szklarni w naturalny sposób filtruje i natlenia powietrze oraz jest niewielkim zielonym azylem dla mieszkańców frachtowca.",
     "BaseValueUnits": 1.0,
@@ -17736,7 +17756,7 @@
     "Icon": "building/885.png",
     "Name": "Pomieszczenie specjalisty ds. egzopojazdu",
     "Group": "Terminal pracownika",
-    "Description": "Zintegrowane wyposażenie badawcze frachtowca dostosowane do potrzeb <TECHNOLOGY>mechaników egzopojazdów<> i wyposażone w oprogramowanie do projektowania tychże pojazdów.\n\nModuł ten jest dodawany w formie <STELLAR>całego pomieszczenia<> i jest dostarczany z fabrycznie zainstalowanymi jednostkami funkcyjnymi.",
+    "Description": "Zintegrowane wyposażenie badawcze frachtowca dostosowane do potrzeb <TECHNOLOGY>techników egzopojazdów<> i wyposażone w oprogramowanie do projektowania tychże pojazdów.\n\nModuł ten jest dodawany w formie <STELLAR>całego pomieszczenia<> i jest dostarczany z fabrycznie zainstalowanymi jednostkami funkcyjnymi.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,7 +18110,7 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "Pomieszczenie przemysłowe (puste)",
+    "Name": "Pomieszczenie przemysłowe (rozszerzenie)",
     "Group": "Zaawansowany moduł frachtowca",
     "Description": "Przestronna komora o przemysłowej estetyce, do powiększenia przestrzeni mieszkalnych wewnątrz dużych statków kosmicznych.",
     "BaseValueUnits": 1.0,
@@ -19820,7 +19840,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19847,7 +19868,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19874,7 +19896,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20678,9 +20701,9 @@
   {
     "Id": "build996",
     "Icon": "building/996.png",
-    "Name": "Szkło Schody Frachtowca",
+    "Name": "Szklane schody frachtowca",
     "Group": "Główny moduł frachtowca",
-    "Description": "Ten moduł rozszerzający pozwala na szybką budowę obszarów mieszkalnych we wnętrzu dużych statków gwiezdnych.\n\nJednostka budowlana jest od razu wyposażona w grodzie ciśnieniowe i wszystkie potrzebne punkty podłączeniowe.",
+    "Description": "Solidne, antypoślizgowe schody o ergonomicznym nachyleniu, umożliwiające przechodzenie w pionie między pokładami frachtowca.\n\nZbudowane ze szkła o niskiej rozszerzalności termicznej, schody te zapewniają użytkownikowi zapierający dech widok na głęboką przestrzeń kosmiczną.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20707,9 +20730,9 @@
   {
     "Id": "build997",
     "Icon": "building/997.png",
-    "Name": "Platforma Zewnętrzna Schody Frachtowca",
+    "Name": "Zewnętrzne schody frachtowca",
     "Group": "Główny moduł frachtowca",
-    "Description": "Ten moduł rozszerzający pozwala na szybką budowę obszarów mieszkalnych we wnętrzu dużych statków gwiezdnych.\n\nJednostka budowlana jest od razu wyposażona w grodzie ciśnieniowe i wszystkie potrzebne punkty podłączeniowe.",
+    "Description": "Solidne, antypoślizgowe schody o ergonomicznym nachyleniu, umożliwiające przechodzenie w pionie między pokładami frachtowca.\n\nTe wytrzymałe schody mogą być montowane <STELLAR>na zewnątrz<> kadłuba frachtowca, tworząc połączenia pomiędzy zewnętrznymi pomostami i platformami.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20734,12 +20757,13 @@
     "Icon": "building/998.png",
     "Name": "Wewnętrzna ściana frachtowca",
     "Group": "Główny moduł frachtowca",
-    "Description": "Ten moduł rozszerzający pozwala na szybką budowę obszarów mieszkalnych we wnętrzu dużych statków gwiezdnych.\n\nJednostka budowlana jest od razu wyposażona w grodzie ciśnieniowe i wszystkie potrzebne punkty podłączeniowe.",
+    "Description": "Ściana wewnętrzna do podziału dużych przestrzeni frachtowca. Bezproblemowo dopasowuje się do estetyki otaczającego ją pomieszczenia.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20756,14 +20780,15 @@
   {
     "Id": "build999",
     "Icon": "building/999.png",
-    "Name": "Pomieszczenie przemysłowe B (puste)",
+    "Name": "Wariant rozszerzenia pomieszczenia",
     "Group": "Zaawansowany moduł frachtowca",
     "Description": "Przestronna komora o przemysłowej estetyce, do powiększenia przestrzeni mieszkalnych wewnątrz dużych statków kosmicznych.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

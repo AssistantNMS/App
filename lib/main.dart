@@ -23,6 +23,8 @@ Future main() async {
     // from env.dart
     remoteConfigsApiKey: remoteConfigsApiKey,
     patreonOAuthClientId: patreonOAuthClientId,
+    wiredashProjectId: wiredashProjectId,
+    wiredashSecret: wiredashSecret,
   );
 
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
