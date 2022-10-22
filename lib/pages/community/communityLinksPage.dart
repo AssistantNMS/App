@@ -53,7 +53,7 @@ class _CommunityLinksPageWidget extends State<CommunityLinksPage>
 
   @override
   Widget build(BuildContext context) {
-    Widget Function(BuildContext, CommunityLinkViewModel) tilePresenter =
+    ListItemDisplayerType<CommunityLinkViewModel> tilePresenter =
         communityLinkTilePresenter(meta.chipColours);
 
     if (isLoading) {
