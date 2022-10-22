@@ -50,7 +50,7 @@ Widget patronFeatureTilePresenter(BuildContext context, String featureName,
       return;
     }
 
-    prettyDialogAsync(
+    prettyDialog(
       context,
       AppImage.patreonFeature,
       getTranslations().fromKey(LocaleKey.featureNotAvailable),
