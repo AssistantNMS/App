@@ -306,9 +306,10 @@ ResultWithValue<IGenericRepository> getRepoFromId(context, String id) {
     return ResultWithValue<IGenericRepository>(
         true, getGenericRepo(LocaleKey.tradeItemsJson), '');
   }
-  // if (id.contains(IdPrefix.upgrade))
-  //   return ResultWithValue<IGenericRepository>(
-  //       true, getGenericRepo(LocaleKey.upgradeModulesJson), '');
+  if (id.contains(IdPrefix.upgrade)) {
+    return ResultWithValue<IGenericRepository>(
+        true, getGenericRepo(LocaleKey.upgradeModulesJson), '');
+  }
   if (id.contains(IdPrefix.techMod)) {
     return ResultWithValue<IGenericRepository>(
         true, getGenericRepo(LocaleKey.technologyModulesJson), '');

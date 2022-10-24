@@ -105,6 +105,10 @@ class AppImage {
   static const String bclass = base + 'special/bclass.png';
   static const String cclass = base + 'special/cclass.png';
 
+  static const String nomnomIntroStep2 = base + 'special/nomNomStep2.png';
+  static const String nomnomIntroStep3 = base + 'special/nomNomStep3.png';
+  static const String nomnomIntroStep4 = base + 'special/nomNomStep4.png';
+
   static const String statImages = base + 'stats';
 
   static const String update = 'update/';

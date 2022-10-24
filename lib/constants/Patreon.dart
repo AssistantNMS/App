@@ -8,7 +8,7 @@ class PatreonEarlyAccessFeature {
   static DateTime season3Expedition = DateTime(2021, 9, 18);
   static DateTime newMilestonesPage = DateTime(2022, 4, 1);
   static DateTime newMajorUpdatesPage = DateTime(2022, 6, 18);
-  static DateTime syncInventoryPage = DateTime(2022, 10, 2);
+  static DateTime syncInventoryPage = DateTime(2022, 11, 25);
 }
 
 bool isPatreonFeatureLocked(DateTime unlockDate, bool isPatron) {
