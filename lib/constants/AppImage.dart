@@ -125,6 +125,7 @@ class AppImage {
   static const String platformPC = base + 'platformPc.png';
   static const String platformPS = base + 'platformPs4.png';
   static const String platformXB = base + 'platformXb1.png';
+  static const String platformSW = base + 'platformNsw.png';
 
   static const String proceduralTraveller =
       'contributors/proceduralTraveller.jpg';
