@@ -13,6 +13,7 @@ class ReleaseNote {
   bool isPs5;
   bool isXb1;
   bool isXbsx;
+  bool isNsw;
 
   ReleaseNote({
     this.name,
@@ -23,6 +24,7 @@ class ReleaseNote {
     this.isPs5,
     this.isXb1,
     this.isXbsx,
+    this.isNsw,
   });
 
   factory ReleaseNote.fromRawJson(String str) =>
@@ -39,6 +41,7 @@ class ReleaseNote {
         isPs5: json["isPs5"],
         isXb1: json["isXb1"],
         isXbsx: json["isXbsx"],
+        isNsw: json["isNsw"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -50,5 +53,6 @@ class ReleaseNote {
         "isPs5": isPs5,
         "isXb1": isXb1,
         "isXbsx": isXbsx,
+        "isNsw": isNsw,
       };
 }
