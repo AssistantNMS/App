@@ -123,6 +123,7 @@ class MajorUpdatesDetailPage extends StatelessWidget {
       itemCount: listItems.length,
       itemBuilder: (BuildContext context, int index) => listItems[index],
       padding: const EdgeInsets.only(bottom: 64),
+      scrollController: ScrollController(),
     );
   }
 }
