@@ -6,11 +6,14 @@ import '../../contracts/generated/communityLinkViewModel.dart';
 import '../../helpers/communityLinkHelper.dart';
 import '../../pages/community/communityLinksDetailsPage.dart';
 
-Widget Function(BuildContext, CommunityLinkViewModel)
-    communityLinkTilePresenter(
+ListItemDisplayerType<CommunityLinkViewModel> communityLinkTilePresenter(
   List<CommunityLinkChipColourViewModel> chipColours,
 ) {
-  return (BuildContext context, CommunityLinkViewModel communityLink) {
+  return (
+    BuildContext ctx,
+    CommunityLinkViewModel item, {
+    void Function() onTap,
+  }) {
     return Padding(
       padding: const EdgeInsets.only(top: 4),
       child: GestureDetector(
@@ -20,14 +23,14 @@ Widget Function(BuildContext, CommunityLinkViewModel)
               Row(
                 children: [
                   Hero(
-                    key: Key(communityLink.id),
-                    tag: communityLink.id,
+                    key: Key(item.id),
+                    tag: item.id,
                     child: ClipRRect(
                       borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(4),
                       ),
                       child: networkImage(
-                        handleCommunitySearchIcon(communityLink.icon),
+                        handleCommunitySearchIcon(item.icon),
                         boxfit: BoxFit.cover,
                         height: 50.0,
                         width: 50.0,
@@ -37,7 +40,7 @@ Widget Function(BuildContext, CommunityLinkViewModel)
                   emptySpace1x(),
                   Expanded(
                     child: Text(
-                      communityLink.name,
+                      item.name,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 20),
@@ -45,13 +48,13 @@ Widget Function(BuildContext, CommunityLinkViewModel)
                   ),
                 ],
               ),
-              if ((communityLink.desc ?? '').isNotEmpty) ...[
+              if ((item.desc ?? '').isNotEmpty) ...[
                 const Divider(height: 2),
                 emptySpace1x(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: genericItemDescription(
-                    communityLink.desc ?? '',
+                    item.desc ?? '',
                     maxLines: 2,
                   ),
                 ),
@@ -60,7 +63,7 @@ Widget Function(BuildContext, CommunityLinkViewModel)
               const Divider(height: 2),
               Wrap(
                 alignment: WrapAlignment.center,
-                children: communityLink.tags
+                children: item.tags
                     .map((tag) => communityTag(tag, chipColours))
                     .toList(),
               ),
@@ -69,9 +72,9 @@ Widget Function(BuildContext, CommunityLinkViewModel)
           ),
         ),
         onTap: () => getNavigation().navigateAwayFromHomeAsync(
-          context,
+          ctx,
           navigateTo: (_) => CommunityLinksDetailsPage(
-            communityLink,
+            item,
             chipColours,
           ),
         ),

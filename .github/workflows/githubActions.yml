@@ -1,0 +1,49 @@
+name: Flutter Deploy
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+on:
+  push:
+    branches: ['develop']
+
+jobs:
+  build:
+    runs-on: windows-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v1
+
+      - name: Write env file
+        env:
+          ENV_DART: ${{ secrets.ENV_DART }}
+        run: |
+          $Env:ENV_DART | Out-File ./lib/env.dart
+
+      - name: Enable web
+        run: flutter config --enable-web
+
+      - name: Build release version
+        run: flutter build web -t lib/prod.dart --release
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'build/web'
+
+      - name: Deploy GitHub Pages site
+        uses: actions/deploy-pages@v1.2.2

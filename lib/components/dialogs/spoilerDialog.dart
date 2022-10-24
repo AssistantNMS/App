@@ -5,7 +5,10 @@ import '../../constants/AppImage.dart';
 import 'prettyDialog.dart';
 
 void handleSpoilerDialog(
-    BuildContext context, String route, bool dontShowSpoilerAlert) {
+  BuildContext context,
+  String route,
+  bool dontShowSpoilerAlert,
+) {
   Future Function(BuildContext) navigateAway;
   navigateAway = (dialogCtx) => getNavigation().navigateAwayFromHomeAsync(
         dialogCtx,
@@ -16,7 +19,7 @@ void handleSpoilerDialog(
     return;
   }
 
-  prettyDialogAsync(
+  prettyDialog(
     context,
     AppImage.alert,
     getTranslations().fromKey(LocaleKey.spoilerAlert),

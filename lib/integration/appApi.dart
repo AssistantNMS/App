@@ -64,8 +64,14 @@ class AppApi extends BaseApiService {
   }
 
   Future<ResultWithValue<List<FriendCodeViewModel>>> getFriendCodes(
-      bool showPc, bool showPs4, bool showXb1) async {
-    String queryParams = 'showPc=$showPc&showPs4=$showPs4&showXb1=$showXb1';
+      bool showPc, bool showPs4, bool showXb1, bool showNsw) async {
+    List<String> queryParamsList = [
+      'showPc=$showPc',
+      'showPs4=$showPs4',
+      'showXb1=$showXb1',
+      'showNsw=$showNsw'
+    ];
+    String queryParams = queryParamsList.join('&');
     try {
       final response = await apiGet('${ApiUrls.friendCode}?$queryParams');
       if (response.hasFailed) {
