@@ -63,22 +63,19 @@ Widget languageSettingTilePresenter(
   );
 }
 
-Widget listSettingTilePresenter(BuildContext context, String name, String value,
-    List<DropdownOption> options,
-    {Function(String) onChange}) {
+Widget listSettingTilePresenter(
+  BuildContext context,
+  String name,
+  Widget trailing,
+  List<DropdownOption> options, {
+  Function(String) onChange,
+}) {
   void Function() tempOnChange;
   tempOnChange = () {
     getDialog().showOptionsDialog(
       context,
       name,
-      options
-          .map(
-            (opt) => DropdownOption(
-              opt.title,
-              value: opt.value,
-            ),
-          )
-          .toList(),
+      options,
       onSuccess: (ctx, value) => onChange(value),
     );
   };
@@ -89,7 +86,7 @@ Widget listSettingTilePresenter(BuildContext context, String name, String value,
       leadingImage: null,
       name: name,
       onTap: tempOnChange,
-      trailing: Text(value),
+      trailing: trailing,
     ),
   );
 }

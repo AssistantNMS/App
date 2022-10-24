@@ -84,12 +84,15 @@ class Settings extends StatelessWidget {
     widgets.add(listSettingTilePresenter(
       context,
       getTranslations().fromKey(LocaleKey.platform),
-      SelectedPlatform.getFromValue(viewModel.platformIndex).title,
+      localImage(SelectedPlatform.getFromValue(viewModel.platformIndex).icon),
       availablePlatforms
-          .map((hp) => DropdownOption(
-                hp.title,
-                value: hp.index.toString(),
-              ))
+          .map(
+            (hp) => DropdownOption(
+              hp.title,
+              value: hp.index.toString(),
+              icon: SelectedPlatform.getFromValue(hp.index).icon,
+            ),
+          )
           .toList(),
       onChange: (String newValue) {
         if (newValue == null) return;
@@ -102,8 +105,10 @@ class Settings extends StatelessWidget {
     widgets.add(listSettingTilePresenter(
       context,
       getTranslations().fromKey(LocaleKey.settingsFont),
-      getTranslations().fromKey(
-        SelectedFont.getFromFontFamily(viewModel.fontFamily).localeKey,
+      Text(
+        getTranslations().fromKey(
+          SelectedFont.getFromFontFamily(viewModel.fontFamily).localeKey,
+        ),
       ),
       availableFonts
           .map((hp) => DropdownOption(
@@ -120,8 +125,10 @@ class Settings extends StatelessWidget {
     widgets.add(listSettingTilePresenter(
       context,
       getTranslations().fromKey(LocaleKey.homepage),
-      getTranslations().fromKey(
-        getLocaleFromHomepageType(viewModel.homepageType),
+      Text(
+        getTranslations().fromKey(
+          getLocaleFromHomepageType(viewModel.homepageType),
+        ),
       ),
       homepageItems
           .map((hp) => DropdownOption(
@@ -232,6 +239,7 @@ class Settings extends StatelessWidget {
     return listWithScrollbar(
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }
