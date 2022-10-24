@@ -153,6 +153,7 @@ class _AddEditTimerState extends State<AddEditTimerPage> {
     return listWithScrollbar(
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 
