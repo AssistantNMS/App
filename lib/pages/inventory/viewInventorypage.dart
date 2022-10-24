@@ -45,6 +45,7 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
   @override
   Widget build(BuildContext context) {
     return StoreConnector<AppState, InventoryListViewModel>(
+      key: Key('_ViewInventoryListState counter: $_counter'),
       converter: (store) => InventoryListViewModel.fromStore(store),
       builder: (_, viewModel) {
         for (var container in viewModel.containers) {
@@ -70,22 +71,23 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
     Inventory inventory,
   ) {
     return StoreConnector<AppState, InventorySlotViewModel>(
+      key: Key('numItems: ${inventory.slots.length}, counter: $_counter'),
       converter: (store) => InventorySlotViewModel.fromStore(store),
       builder: (_, vm) => basicGenericPageScaffold(
         context,
         title: inventory.name,
         actions: [
           ActionItem(
-              icon: Icons.edit,
-              onPressed: () async {
-                Inventory temp = await getNavigation().navigateAsync<Inventory>(
-                  context,
-                  navigateTo: (context) =>
-                      AddEditInventoryPage(inventory, true),
-                );
-                if (temp != null) listViewmodel.editInventory(temp);
-                forceUpdate();
-              }),
+            icon: Icons.edit,
+            onPressed: () async {
+              Inventory temp = await getNavigation().navigateAsync<Inventory>(
+                context,
+                navigateTo: (context) => AddEditInventoryPage(inventory, true),
+              );
+              if (temp != null) listViewmodel.editInventory(temp);
+              forceUpdate();
+            },
+          ),
         ],
         body: SearchableList<InventorySlotWithGenericPageItem>(
           () => getDetailedInventorySlots(context, inventory.slots),
@@ -102,6 +104,7 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
                   if (intQuantity == null) return;
                   slot.quantity = intQuantity;
                   vm.editInventorySlotInInventory(inventory.uuid, slot);
+                  forceUpdate();
                 },
               );
             },
