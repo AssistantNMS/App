@@ -11,76 +11,86 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const iconFgColour = Colors.white;
+    var listContentConfig = [
+      ContentConfig(
+        title: getTranslations() //
+            .fromKey(LocaleKey.stepNum)
+            .replaceAll('{0}', '1'),
+        centerWidget: Column(
+          children: [
+            localImage(AppImage.nomNom),
+            emptySpace8x(),
+            genericItemGroup(
+              getTranslations().fromKey(LocaleKey.downloadNomNom),
+            ),
+            flatCard(
+              child: nomNomDownloadTile(
+                context,
+                subtitle: getTranslations() //
+                    .fromKey(LocaleKey.downloadFromGithub),
+              ),
+            ),
+            emptySpace3x(),
+          ],
+        ),
+        colorBegin: getTheme().getScaffoldBackgroundColour(context),
+        colorEnd: getTheme().getScaffoldBackgroundColour(context),
+      ),
+      ContentConfig(
+        title:
+            getTranslations().fromKey(LocaleKey.stepNum).replaceAll('{0}', '2'),
+        centerWidget: Column(
+          children: [
+            genericItemGroup(getTranslations().fromKey(LocaleKey.nomNomStep2)),
+            tutorialImage(
+              context,
+              title: getTranslations()
+                  .fromKey(LocaleKey.stepNum)
+                  .replaceAll('{0}', '2'),
+              icon: AppImage.nomnomIntroStep2,
+            ),
+            // genericItemDescription(
+            //   '"Bases & Storage" > "Sync to AssistantNMS" > "Generate code"',
+            // ),
+            emptySpace3x(),
+          ],
+        ),
+        colorBegin: getTheme().getScaffoldBackgroundColour(context),
+        colorEnd: getTheme().getScaffoldBackgroundColour(context),
+      ),
+      ContentConfig(
+        title:
+            getTranslations().fromKey(LocaleKey.stepNum).replaceAll('{0}', '3'),
+        centerWidget: Column(
+          children: [
+            genericItemGroup(getTranslations().fromKey(LocaleKey.nomNomStep3)),
+            tutorialImage(
+              context,
+              title: getTranslations().fromKey(LocaleKey.nomNomStep3),
+              icon: AppImage.nomnomIntroStep3,
+            ),
+            emptySpace3x(),
+          ],
+        ),
+        colorBegin: getTheme().getScaffoldBackgroundColour(context),
+        colorEnd: getTheme().getScaffoldBackgroundColour(context),
+      ),
+      ContentConfig(
+        title:
+            getTranslations().fromKey(LocaleKey.stepNum).replaceAll('{0}', '4'),
+        centerWidget: Column(
+          children: [
+            genericItemGroup(getTranslations().fromKey(LocaleKey.nomNomStep4)),
+            localImage(AppImage.nomnomIntroStep4),
+            emptySpace3x(),
+          ],
+        ),
+        colorBegin: getTheme().getScaffoldBackgroundColour(context),
+        colorEnd: getTheme().getScaffoldBackgroundColour(context),
+      ),
+    ];
     return IntroSlider(
-      listContentConfig: [
-        ContentConfig(
-          title: 'Step 1', // TODO translate
-          centerWidget: Column(
-            children: [
-              localImage(AppImage.nomNom),
-              emptySpace8x(),
-              genericItemGroup('Download and run NomNom'),
-              flatCard(
-                child: nomNomDownloadTile(
-                  context,
-                  subtitle: 'Download from Github',
-                ), // TODO translate
-              ),
-              emptySpace3x(),
-            ],
-          ),
-          colorBegin: getTheme().getScaffoldBackgroundColour(context),
-          colorEnd: getTheme().getScaffoldBackgroundColour(context),
-        ),
-        ContentConfig(
-          title: 'Step 2', // TODO translate
-          centerWidget: Column(
-            children: [
-              genericItemGroup('Open up the menu in NomNom'),
-              tutorialImage(
-                context,
-                title: 'Step 2',
-                icon: AppImage.nomnomIntroStep2,
-              ),
-              // genericItemDescription(
-              //   '"Bases & Storage" > "Sync to AssistantNMS" > "Generate code"',
-              // ),
-              emptySpace3x(),
-            ],
-          ),
-          colorBegin: getTheme().getScaffoldBackgroundColour(context),
-          colorEnd: getTheme().getScaffoldBackgroundColour(context),
-        ),
-        ContentConfig(
-          title: 'Step 3', // TODO translate
-          centerWidget: Column(
-            children: [
-              genericItemGroup(
-                  'Select the inventory to sync and generate the code'),
-              tutorialImage(
-                context,
-                title: 'Step 3',
-                icon: AppImage.nomnomIntroStep3,
-              ),
-              emptySpace3x(),
-            ],
-          ),
-          colorBegin: getTheme().getScaffoldBackgroundColour(context),
-          colorEnd: getTheme().getScaffoldBackgroundColour(context),
-        ),
-        ContentConfig(
-          title: 'Step 4', // TODO translate
-          centerWidget: Column(
-            children: [
-              genericItemGroup('Enter the code into the app'),
-              localImage(AppImage.nomnomIntroStep4),
-              emptySpace3x(),
-            ],
-          ),
-          colorBegin: getTheme().getScaffoldBackgroundColour(context),
-          colorEnd: getTheme().getScaffoldBackgroundColour(context),
-        ),
-      ],
+      listContentConfig: listContentConfig,
       renderSkipBtn: const Icon(Icons.skip_next, color: iconFgColour),
       renderNextBtn: const Icon(Icons.navigate_next, color: iconFgColour),
       renderDoneBtn: const Icon(Icons.done, color: iconFgColour),
