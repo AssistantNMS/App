@@ -34,6 +34,6 @@ assignees: Khaoz-Topsy
   - [ ] Attach `.aab`
   - [ ] Attach `.apk`
   - [ ] Attach `.ipa`
-  - [ ] Attach `.msix`
+  - [ ] Attach `.exe`
 - [ ] Merge Pull Request when update is out for everyone 🎉
 
