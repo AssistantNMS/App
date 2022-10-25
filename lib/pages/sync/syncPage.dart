@@ -296,12 +296,13 @@ class _SyncWidget extends State<SyncPage> {
       ),
     ));
 
-    widgets.add(flatCard(
-      child: nomNomOpenSyncModalTile(
-        context,
-        viewModel.isPatron,
-      ),
-    ));
+// TODO NomNom feature
+    // widgets.add(flatCard(
+    //   child: nomNomOpenSyncModalTile(
+    //     context,
+    //     viewModel.isPatron,
+    //   ),
+    // ));
 
     // widgets.add(genericItemDescription(
     //     'This sync feature is only intended to allow you to back up your app data to Google Drive.'));
