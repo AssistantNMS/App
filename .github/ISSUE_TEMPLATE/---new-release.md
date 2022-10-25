@@ -1,7 +1,7 @@
 ---
 name: "\U0001F4E6 New Release"
 about: Steps to release a new version
-title: Release 2.xx
+title: Release 2.x.x
 labels: pre-release
 assignees: Khaoz-Topsy
 
@@ -29,8 +29,8 @@ assignees: Khaoz-Topsy
   - [ ] Copy content of `release_notes.txt` into store webpage
   - [ ] Submit for Microsoft review
 - [ ] Create Github release ([New Release](https://github.com/AssistantNMS/App/releases/new))
-  - [ ] Tag develop branch (1.112)
-  - [ ] Use appropriate tag (1.112.0)
+  - [ ] Tag develop branch (2.x.x)
+  - [ ] Use appropriate tag (2.x.x)
   - [ ] Attach `.aab`
   - [ ] Attach `.apk`
   - [ ] Attach `.ipa`
