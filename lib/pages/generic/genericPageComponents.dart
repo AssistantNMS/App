@@ -120,10 +120,15 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
       genericItem.group = genericItem.group.replaceAll('%NAME%', itemName);
     }
 
-    widgets.add(genericItemGroup(
-      genericItem.group,
-      key: Key('${genericItem.id}-item-group'),
-    ));
+    widgets.add(
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: genericItemGroup(
+          genericItem.group,
+          key: Key('${genericItem.id}-item-group'),
+        ),
+      ),
+    );
   }
 
   widgets.addAll(getConsumableRewards(
@@ -134,12 +139,20 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
 
   if (genericItem.description != null && genericItem.description.isNotEmpty) {
     widgets.add(emptySpace(0.5));
+    List<Widget> descriptWidgets = genericPageDescripHighlightText(
+      bodyDetailsCtx,
+      genericItem.description,
+      genericItem.controlMappings ?? List.empty(),
+    );
     widgets.addAll(
-      genericPageDescripHighlightText(
-        bodyDetailsCtx,
-        genericItem.description,
-        genericItem.controlMappings ?? List.empty(),
-      ),
+      descriptWidgets
+          .map(
+            (highlightWidget) => Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: highlightWidget,
+            ),
+          )
+          .toList(),
     );
   }
 

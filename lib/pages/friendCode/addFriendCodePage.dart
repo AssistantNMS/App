@@ -37,7 +37,8 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
   List<Widget> options = [
     getSegmentedControlOption(pc),
     getSegmentedControlOption(ps4),
-    getSegmentedControlOption(xb1)
+    getSegmentedControlOption(xb1),
+    getSegmentedControlOption(nsw)
   ];
 
   @override
@@ -109,7 +110,8 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
             setState(() {
               _isLoading = true;
             });
-            var submissionResult = await getApiRepo().submitFriendCode(apiObj);
+            Result submissionResult =
+                await getApiRepo().submitFriendCode(apiObj);
             setState(() {
               _isLoading = false;
             });
@@ -149,7 +151,9 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
   }
 
   Widget getBody(
-      BuildContext context, FriendCodeSettingsViewModel friendCodeVm) {
+    BuildContext context,
+    FriendCodeSettingsViewModel friendCodeVm,
+  ) {
     if (_isLoading) return getLoading().fullPageLoading(context);
     List<Widget> widgets = List.empty(growable: true);
 

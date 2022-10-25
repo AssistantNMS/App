@@ -111,12 +111,14 @@ class DialogService implements IDialogService {
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: options
-              .map((opt) => genericListTile(
-                    dialogCtx,
-                    leadingImage: null,
-                    name: opt.title,
-                    onTap: () => tempOnChange(dialogCtx, opt.value),
-                  ))
+              .map(
+                (opt) => genericListTile(
+                  dialogCtx,
+                  leadingImage: opt.icon,
+                  name: opt.title,
+                  onTap: () => tempOnChange(dialogCtx, opt.value),
+                ),
+              )
               .toList(),
         ),
         actions: [

@@ -253,7 +253,9 @@ Future<List<EggTrait>> eggTraitsFuture(context, String itemId) async {
 }
 
 Future<List<PlatformControlMapping>> controlMappingsFuture(
-    context, int platformIndex) async {
+  context,
+  int platformIndex,
+) async {
   ResultWithValue<List<PlatformControlMapping>> mappingsResult =
       await getDataRepo().getControlMapping(context, platformIndex);
   if (mappingsResult.hasFailed) {
@@ -272,7 +274,9 @@ Future<String> translationFuture(context, String itemId) async {
 }
 
 Future<List<StarshipScrap>> rewardStarshipScrapFuture(
-    context, String itemId) async {
+  context,
+  String itemId,
+) async {
   ResultWithValue<List<StarshipScrap>> items =
       await getDataRepo().getStarshipScrapDataForItem(context, itemId);
   if (items.hasFailed) {

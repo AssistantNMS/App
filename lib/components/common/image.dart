@@ -124,18 +124,22 @@ ListTile gameItemListTileWithSubtitle(context,
   );
 }
 
-Widget genericItemImage(context, String icon,
-    {bool disableZoom = false,
-    String imageHero,
-    String name = 'Zoom',
-    bool hdAvailable = false,
-    Function onTap}) {
+Widget genericItemImage(
+  context,
+  String icon, {
+  bool disableZoom = false,
+  String imageHero,
+  String name = 'Zoom',
+  bool hdAvailable = false,
+  double height = 100,
+  Function onTap,
+}) {
   String itemIcon =
       (icon == null || icon.isEmpty) ? getPath().unknownImagePath : icon;
   return Center(
     child: GestureDetector(
       child: Container(
-        child: localImage(itemIcon, imageHero: imageHero, height: 100),
+        child: localImage(itemIcon, imageHero: imageHero, height: height),
         margin: const EdgeInsets.all(4.0),
       ),
       onTap: onTap ??

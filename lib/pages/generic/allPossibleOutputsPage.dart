@@ -50,6 +50,7 @@ class AllPossibleOutputsPage<T> extends StatelessWidget {
           child: listWithScrollbar(
             itemCount: widgets.length,
             itemBuilder: (context, index) => widgets[index],
+            scrollController: ScrollController(),
           ),
         ),
       ],

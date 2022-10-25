@@ -83,8 +83,12 @@ class _TimersPageViewState extends State<TimersPageView> {
       initTimer(newTimer: temp);
     };
 
-    Widget Function(BuildContext presenterContext, TimerItem timer) presenter;
-    presenter = (BuildContext presenterContext, TimerItem timer) =>
+    ListItemDisplayerType<TimerItem> presenter;
+    presenter = (
+      BuildContext presenterContext,
+      TimerItem timer, {
+      void Function() onTap,
+    }) =>
         timerTilePresenter(
             presenterContext, timer, onEdit, (String id) => deleteTimer(id));
 

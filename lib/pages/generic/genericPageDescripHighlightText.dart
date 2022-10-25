@@ -186,8 +186,11 @@ Widget textWithHighlightTags(
   );
 }
 
-List<Widget> genericPageDescripHighlightText(BuildContext context, String text,
-    List<PlatformControlMapping> controlLookup) {
+List<Widget> genericPageDescripHighlightText(
+  BuildContext context,
+  String text,
+  List<PlatformControlMapping> controlLookup,
+) {
   List<RichText> paragraphNodes = List.empty(growable: true);
   if (!text.contains('<>')) return [genericItemDescription(text)];
 

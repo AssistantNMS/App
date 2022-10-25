@@ -208,6 +208,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
       itemCount: listItems.length,
       itemBuilder: (BuildContext context, int index) => listItems[index],
       padding: const EdgeInsets.only(top: 12, left: 12, right: 12, bottom: 64),
+      scrollController: ScrollController(),
     );
   }
 

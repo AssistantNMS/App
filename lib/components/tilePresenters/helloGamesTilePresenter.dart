@@ -10,7 +10,7 @@ Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release,
     {void Function() onTap}) {
   List<Widget> platformChips = List.empty(growable: true);
   if (release.isPc) {
-    platformChips.add(genericChip(context, "PC", color: Colors.red));
+    platformChips.add(genericChip(context, "PC", color: Colors.red[400]));
   }
   if (release.isPs4) {
     platformChips.add(genericChip(context, "PS4", color: Colors.blue));
@@ -23,6 +23,10 @@ Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release,
   }
   if (release.isXbsx) {
     platformChips.add(genericChip(context, "X/S", color: Colors.green));
+  }
+  if (release.isNsw) {
+    platformChips
+        .add(genericChip(context, "Nintendo Switch", color: Colors.red[900]));
   }
   /*
   return genericListTileWithSubtitle(

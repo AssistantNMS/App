@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/constants/AppImage.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/common/image.dart';
@@ -14,13 +15,16 @@ Widget quicksilverStoreTilePresenter(
     int currentTierPercentage) {
   if (currentTierPercentage == 100) currentTier += 1;
 
+  bool iconIsEmpty = details.icon == null || details.icon.isEmpty;
   return gameItemListTileWithSubtitle(
     context,
-    leadingImage: details.icon,
+    leadingImage: iconIsEmpty ? AppImage.unknown : details.icon,
     imageGreyScale: quicksilverItem.tier >= currentTier,
     name: details.name,
     subtitle: Text("Tier: ${quicksilverItem.tier}"),
-    onTap: () async => await getNavigation().navigateAsync(context,
-        navigateTo: (context) => GenericPage(details.id)),
+    onTap: () async => await getNavigation().navigateAsync(
+      context,
+      navigateTo: (context) => GenericPage(details.id),
+    ),
   );
 }

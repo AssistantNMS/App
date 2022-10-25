@@ -13,16 +13,19 @@ class ControlMappingList {
     this.win,
     this.psn,
     this.xbx,
+    this.nsw,
   });
 
   List<PlatformControlMapping> win;
   List<PlatformControlMapping> psn;
   List<PlatformControlMapping> xbx;
+  List<PlatformControlMapping> nsw;
 
   List<PlatformControlMapping> getPlatformControlsFromIndex(int platformIndex) {
     // if (platformIndex == 0) return win;
     if (platformIndex == 1) return psn;
     if (platformIndex == 2) return xbx;
+    if (platformIndex == 3) return nsw;
 
     return win;
   }
@@ -32,11 +35,25 @@ class ControlMappingList {
 
   factory ControlMappingList.fromJson(Map<String, dynamic> json) =>
       ControlMappingList(
-        win: readListSafe(json, "Win",
-            (dynamic innerJson) => PlatformControlMapping.fromJson(innerJson)),
-        psn: readListSafe(json, "Psn",
-            (dynamic innerJson) => PlatformControlMapping.fromJson(innerJson)),
-        xbx: readListSafe(json, "Xbx",
-            (dynamic innerJson) => PlatformControlMapping.fromJson(innerJson)),
+        win: readListSafe(
+          json,
+          "Win",
+          (dynamic innerJson) => PlatformControlMapping.fromJson(innerJson),
+        ),
+        psn: readListSafe(
+          json,
+          "Psn",
+          (dynamic innerJson) => PlatformControlMapping.fromJson(innerJson),
+        ),
+        xbx: readListSafe(
+          json,
+          "Xbx",
+          (dynamic innerJson) => PlatformControlMapping.fromJson(innerJson),
+        ),
+        nsw: readListSafe(
+          json,
+          "Nsw",
+          (dynamic innerJson) => PlatformControlMapping.fromJson(innerJson),
+        ),
       );
 }

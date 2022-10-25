@@ -29,6 +29,71 @@ class SyncWithNomNomBottomSheet extends StatefulWidget {
 class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
   NetworkState networkState = NetworkState.Pending;
 
+  Future<void> Function(String) codeInput(
+    BuildContext innerContext,
+    SyncPageViewModel viewModel,
+  ) {
+    return (String fullCode) async {
+      setState(() {
+        networkState = NetworkState.Loading;
+      });
+      ResultWithValue<List<NomNomInventoryViewModel>> invResult =
+          await getApiRepo().getInventoryFromNomNom(fullCode);
+      if (invResult.hasFailed) {
+        setState(() {
+          networkState = NetworkState.Error;
+        });
+        return;
+      }
+
+      try {
+        List<Inventory> invs = List.empty(growable: true);
+        for (NomNomInventoryViewModel apiInv in invResult.value) {
+          List<InventorySlot> newSlots = List.empty(growable: true);
+          for (NomNomInventorySlotViewModel apiSlots in apiInv.slots) {
+            newSlots.add(InventorySlot(
+              uuid: getNewGuid(),
+              quantity: apiSlots.quantity,
+              id: apiSlots.appId,
+            ));
+          }
+          invs.add(Inventory(
+            icon: UserSelectionIcons.nomNomInventoryTypeIcons[apiInv.type],
+            name: apiInv.name,
+            slots: newSlots,
+          ));
+        }
+        viewModel.restoreInventory(InventoryState(
+          containers: invs,
+          orderByType: viewModel.inventoryState.orderByType,
+        ));
+      } catch (exception) {
+        getLog().e(exception.toString());
+
+        getDialog().showSimpleDialog(
+          innerContext,
+          "Something went wrong",
+          Text(exception.toString()),
+        );
+      }
+
+      setState(() {
+        networkState = NetworkState.Success;
+      });
+
+      await getNavigation().popUntil(
+        innerContext,
+        [
+          Routes.inventoryList,
+          Routes.syncPage,
+          Routes.catalogueHome,
+          Routes.customHome,
+          Routes.home,
+        ],
+      );
+    };
+  }
+
   @override
   Widget build(BuildContext context) {
     return StoreConnector<AppState, SyncPageViewModel>(
@@ -91,56 +156,7 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
               textStyle: const TextStyle(color: Colors.black),
               errorAnimationController: errorController,
               controller: TextEditingController(),
-              onCompleted: (String fullCode) async {
-                setState(() {
-                  networkState = NetworkState.Loading;
-                });
-                ResultWithValue<List<NomNomInventoryViewModel>> invResult =
-                    await getApiRepo().getInventoryFromNomNom(fullCode);
-                if (invResult.hasFailed) {
-                  setState(() {
-                    networkState = NetworkState.Error;
-                  });
-                  return;
-                }
-
-                List<Inventory> invs = List.empty(growable: true);
-                for (NomNomInventoryViewModel apiInv in invResult.value) {
-                  List<InventorySlot> newSlots = List.empty(growable: true);
-                  for (NomNomInventorySlotViewModel apiSlots in apiInv.slots) {
-                    newSlots.add(InventorySlot(
-                      uuid: getNewGuid(),
-                      quantity: apiSlots.quantity,
-                      id: apiSlots.appId,
-                    ));
-                  }
-                  invs.add(Inventory(
-                    icon: UserSelectionIcons
-                        .nomNomInventoryTypeIcons[apiInv.type],
-                    name: apiInv.name,
-                    slots: newSlots,
-                  ));
-                }
-                viewModel.restoreInventory(InventoryState(
-                  containers: invs,
-                  orderByType: viewModel.inventoryState.orderByType,
-                ));
-
-                // setState(() {
-                //   networkState = NetworkState.Success;
-                // });
-
-                await getNavigation().popUntil(
-                  context,
-                  [
-                    Routes.inventoryList,
-                    Routes.syncPage,
-                    Routes.catalogueHome,
-                    Routes.customHome,
-                    Routes.home,
-                  ],
-                );
-              },
+              onCompleted: codeInput(context, viewModel),
               onChanged: (value) {},
             ),
           ));
