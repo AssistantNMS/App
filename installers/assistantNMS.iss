@@ -18,7 +18,7 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName={autopf}\AssistantNMS
+DefaultDirName={autopf64}\AssistantNMS
 DisableProgramGroupPage=yes
 LicenseFile=C:\Development\Projects\AssistantNMS\assistantnms_app\installers\LICENCE.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
@@ -57,16 +57,6 @@ Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\run
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\nmstest.exp"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\nmstest.lib"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\platform_device_id_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\resources.language-de.pri"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\resources.language-es.pri"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\resources.language-fr.pri"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\resources.language-it.pri"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\resources.language-nl.pri"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\resources.language-pl.pri"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\resources.language-pt.pri"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\resources.language-ru.pri"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\resources.language-zh-hans.pri"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\resources.language-zh-hant.pri"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\url_launcher_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
