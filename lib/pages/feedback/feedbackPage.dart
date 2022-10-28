@@ -9,7 +9,7 @@ import '../../contracts/generated/feedbackAnsweredViewModel.dart';
 import '../../contracts/generated/feedbackQuestionAnsweredViewModel.dart';
 import '../../contracts/generated/feedbackViewModel.dart';
 import '../../integration/dependencyInjection.dart';
-import 'FeedbackQuestionsPage.dart';
+import 'feedbackQuestionsPage.dart';
 
 class FeedbackPage extends StatelessWidget {
   FeedbackPage({Key key}) : super(key: key) {

@@ -9,7 +9,7 @@ import '../../contracts/requiredItemDetails.dart';
 import '../../helpers/genericHelper.dart';
 
 import '../../pages/generic/genericPage.dart';
-import '../../pages/inventory/viewInventorypage.dart';
+import '../../pages/inventory/viewInventoryPage.dart';
 import 'requiredItemTilePresenter.dart';
 
 Widget inventoryTilePresenter(BuildContext context, Inventory inventory,

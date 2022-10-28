@@ -26,7 +26,7 @@ import '../pages/helloGames/newsPage.dart.dart';
 import '../pages/helloGames/releaseNotesPage.dart';
 import '../pages/helloGames/twitch/twitchCampaignPage.dart';
 import '../pages/helloGames/weekendMission/weekendMissionMenuPage.dart';
-import '../pages/homepage/CatalogueHomepage.dart';
+import '../pages/homepage/catalogueHomepage.dart';
 import '../pages/homepage/customHomepage.dart';
 import '../pages/homepage/defaultHomePage.dart';
 import '../pages/inventory/inventoryListPage.dart';
