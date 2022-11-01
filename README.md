@@ -57,7 +57,7 @@ After 2 years of development and maintenance, the app was made open source so th
 
 <br />
 
-![divider](./.github/img/divider2.png)
+![divider](./.github/img/divider4.png)
 
 ## 🏃‍♂️ Running the project
   
@@ -76,7 +76,7 @@ After 2 years of development and maintenance, the app was made open source so th
 
 <br />
 
-![divider](./.github/img/divider2.png)
+![divider](./.github/img/divider4.png)
 
 ## 👪 Contributing
 **Project Owner**: [Khaoz-Topsy][kurtGithub]<br /><br />
@@ -86,7 +86,7 @@ If you would like to help add languages to the app please use this tool [Assista
 
 <br />
 
-![divider](./.github/img/divider2.png)
+![divider](./.github/img/divider4.png)
 
 ## 📦 Builds (CI/CD)
 The Mobile Apps are built and released to the [Google Play Store][googlePlayStore] and [Apple App Store Store][appleAppStore] using [CodeMagic][codeMagic].
@@ -100,7 +100,7 @@ __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed e
 
 <br />
 
-![divider](./.github/img/divider2.png)
+![divider](./.github/img/divider4.png)
 
 ## 🔗 Links
 [![Website](https://img.shields.io/badge/Website-nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantnmsWebsite] <br />
