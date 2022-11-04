@@ -23,7 +23,7 @@ class JourneyMilestonePage extends StatelessWidget {
       body: StoreConnector<AppState, JourneyMilestoneViewModel>(
         converter: (store) => JourneyMilestoneViewModel.fromStore(store),
         builder: (_, viewModel) {
-          Widget Function(BuildContext context, JourneyMilestone milestone)
+          ListItemDisplayerType<JourneyMilestone>
               localJourneyMilestoneTilePresenter =
               journeyMilestoneCurriedTilePresenter(viewModel);
           //
