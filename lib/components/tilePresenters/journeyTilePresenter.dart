@@ -7,9 +7,13 @@ import '../../contracts/journey/journeyMilestoneStat.dart';
 import '../../redux/modules/journeyMilestone/journeyMilestoneViewModel.dart';
 import '../modalBottomSheet/journeyMilestoneModalBottomSheet.dart';
 
-Widget Function(BuildContext context, JourneyMilestone milestone)
-    journeyMilestoneCurriedTilePresenter(JourneyMilestoneViewModel vm) {
-  return (BuildContext context, JourneyMilestone milestone) =>
+ListItemDisplayerType<JourneyMilestone> journeyMilestoneCurriedTilePresenter(
+    JourneyMilestoneViewModel vm) {
+  return (
+    BuildContext context,
+    JourneyMilestone milestone, {
+    void Function() onTap,
+  }) =>
       journeyMilestoneTilePresenter(context, milestone, vm);
 }
 

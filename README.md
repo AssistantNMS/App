@@ -44,8 +44,6 @@ After 3 years of development and maintenance, the app was made open source so th
   </h3>
 </div>
 
-<br />
-
 <div align="center">
 
   [![PlayStore](https://github.com/AssistantNMS/.github/blob/main/img/PlayStore.png?raw=true)][googlePlayStore]
@@ -55,7 +53,7 @@ After 3 years of development and maintenance, the app was made open source so th
   
 </div>
 
-<br />
+![divider](./.github/img/divider4.png)
 
 ## 🏃‍♂️ Running the project
   
@@ -72,7 +70,7 @@ After 3 years of development and maintenance, the app was made open source so th
    - If you want to run the app as an Android app, have the Android emulator running, ensure that the device is showing in the results of this command: `flutter devices` and use the command `flutter run`
    - If you want to run the app as a Windows application, use the command `flutter run -d windows`
 
-<br />
+![divider](./.github/img/divider4.png)
 
 ## 👪 Contributing
 **Project Owner**: [Khaoz-Topsy][kurtGithub]<br /><br />
@@ -80,7 +78,7 @@ Please take a look at the [Contribution Guideline](./.github/CONTRIBUTING.md) be
 
 If you would like to help add languages to the app please use this tool [AssistantApps tool][assistantAppsTools].
 
-<br />
+![divider](./.github/img/divider4.png)
 
 ## 📦 Builds (CI/CD)
 The Mobile Apps are built and released to the [Google Play Store][googlePlayStore] and [Apple App Store Store][appleAppStore] using [CodeMagic][codeMagic].
@@ -90,7 +88,7 @@ The Mobile Apps are built and released to the [Google Play Store][googlePlayStor
 
 __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed even though it actually successfully built and pushed the `.ipa` file to the Apple App Store. This is because they poll the App Store checking if the `.ipa` file is there and after a few attempts throw an error. So ignore build failures for anything that has to do with iOS 🙄.__
 
-<br />
+![divider](./.github/img/divider4.png)
 
 ## 🔗 Links
 [![Website](https://img.shields.io/badge/Website-nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantnmsWebsite] <br />
