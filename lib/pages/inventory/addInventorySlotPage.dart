@@ -13,7 +13,7 @@ import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';
 import '../../contracts/redux/appState.dart';
 import '../../pages/inventory/addEditInventoryPage.dart';
-import '../../redux/modules/inventory/InventorySlotGenericViewModel.dart';
+import '../../redux/modules/inventory/inventorySlotGenericViewModel.dart';
 import '../../redux/modules/inventory/inventoryListViewModel.dart';
 
 class AddInventorySlotPage extends StatefulWidget {

@@ -8,7 +8,7 @@ import Foundation
 import assets_audio_player
 import assets_audio_player_web
 import bitsdojo_window_macos
-import connectivity_plus_macos
+import connectivity_plus
 import dynamic_color
 import firebase_analytics
 import firebase_auth

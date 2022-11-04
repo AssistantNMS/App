@@ -76,7 +76,7 @@ class AppShell extends StatelessWidget {
     List<Locale> supportedLocales,
   ) {
     ScrollBehavior scrollBehavior;
-    if (isWindows) {
+    if (isDesktop) {
       scrollBehavior = const MaterialScrollBehavior().copyWith(
         dragDevices: {
           PointerDeviceKind.mouse,

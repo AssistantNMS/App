@@ -52,6 +52,6 @@ _**Please note:** Just because a feature ticket exists, does not mean that we wi
   - Typically when a feature is built, there is a lot of time spent gathering the data, figuring out how we are going to make use of and store the data within the apps, figuring out how to localise (translate) the data displayed.
 - Some things may not be possible or will take too much time.
 
-You can create a feature request from [here](https://github.com/AssistantNMS/App/issues/new?assignees=&labels=idea&template=---feature-request.md)
+You can create a feature request from [here](https://github.com/AssistantNMS/App/issues/new?assignees=&labels=idea&template=---feature-request.yaml)
 
 
