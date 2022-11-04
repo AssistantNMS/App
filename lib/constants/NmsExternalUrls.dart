@@ -40,8 +40,6 @@ class NmsExternalUrls {
   static const String communityMissionProgress =
       'https://nmscd.github.io/CommunityMission-Progress-Viewer/';
   static const String communitySearchHomepage = 'https://community.nmscd.com';
-  static const String communitySearchList = 'https://community.nmscd.com/communityList.json';
-  static const String communitySearchChipColours = 'https://community.nmscd.com/chipColours.json';
   static const String communitySearchAddLinkForm =
       'https://airtable.com/shrhZOQrrp9a9zoJk';
   static const String nomNomWebsite = 'https://cengelha.github.io/NomNom/';
