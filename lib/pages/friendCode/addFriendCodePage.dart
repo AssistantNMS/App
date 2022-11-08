@@ -47,25 +47,43 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
     friendCodeVm = AddFriendCodeViewModel(languageCode: 'en');
     _nameController = TextEditingController();
     _emailController = TextEditingController();
-    _codeController = maskedTextController(
-      mask: '@@@@-@@@@-@@@@@',
-      defaultText: '',
-      afterChange: (String prev, String next) {
-        _codeController.text = next.toUpperCase();
-        _codeController.selection = TextSelection.collapsed(
-          offset: _codeController.text.length,
-        );
-      },
-    );
-  }
-
-  _AddFriendCodeState() {
-    getAnalytics().trackEvent(AnalyticsEvent.addFriendCodeListPage);
     _validationMap = {
       'name': () => nameValidator(_nameController.text, minLength: 1),
       'email': () => emailValidator(_emailController.text),
       'code': () => friendCodeValidator(_codeController.text),
     };
+    setCodeValidator(false);
+  }
+
+  _AddFriendCodeState() {
+    getAnalytics().trackEvent(AnalyticsEvent.addFriendCodeListPage);
+  }
+
+  setCodeValidator(bool isSwitch) {
+    String friendCodeMask = '@@@@-@@@@-@@@@@';
+    String text = _codeController?.text ?? '';
+    if (isSwitch) {
+      friendCodeMask = '@@-@@@@-@@@@-@@@@';
+      _validationMap['code'] = () => switchFriendCodeValidator(text);
+    } else {
+      friendCodeMask = '@@@@-@@@@-@@@@@';
+      _validationMap['code'] = () => friendCodeValidator(text);
+    }
+
+    if (_codeController == null ||
+        (_codeController as dynamic).mask != friendCodeMask) {
+      getLog().i(friendCodeMask);
+      _codeController = maskedTextController(
+        mask: friendCodeMask,
+        defaultText: '',
+        afterChange: (String prev, String next) {
+          _codeController.text = next.toUpperCase();
+          _codeController.selection = TextSelection.collapsed(
+            offset: _codeController.text.length,
+          );
+        },
+      );
+    }
   }
 
   updateApiObj() {
@@ -82,71 +100,75 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
   Widget build(BuildContext context) {
     return StoreConnector<AppState, FriendCodeSettingsViewModel>(
       converter: (store) => FriendCodeSettingsViewModel.fromStore(store),
-      builder: (_, friendCodeSettingVm) => basicGenericPageScaffold(
-        context,
-        title: getTranslations().fromKey(LocaleKey.friendCode),
-        body: getBody(context, friendCodeSettingVm),
-        fab: FloatingActionButton(
-          onPressed: () async {
-            if (!_allValidationsPassed()) {
-              setState(() {
-                _showValidation = true;
-              });
-              return;
-            }
+      builder: (_, friendCodeSettingVm) {
+        bool isSwitch = friendCodeSettingVm.lastPlatformIndex == 3;
+        setCodeValidator(isSwitch);
+        return basicGenericPageScaffold(
+          context,
+          title: getTranslations().fromKey(LocaleKey.friendCode),
+          body: getBody(context, friendCodeSettingVm),
+          fab: FloatingActionButton(
+            onPressed: () async {
+              if (!_allValidationsPassed()) {
+                setState(() {
+                  _showValidation = true;
+                });
+                return;
+              }
 
-            LocalizationMap currentLocal =
-                getTranslations().getCurrentLocalizationMap(
-              context,
-              friendCodeSettingVm.selectedLanguage,
-            );
-            AddFriendCodeViewModel apiObj = AddFriendCodeViewModel(
-              name: friendCodeVm.name,
-              code: friendCodeVm.code,
-              email: friendCodeVm.email,
-              platformType: friendCodeSettingVm.lastPlatformIndex + 1,
-              languageCode: currentLocal.code,
-            );
-            setState(() {
-              _isLoading = true;
-            });
-            Result submissionResult =
-                await getApiRepo().submitFriendCode(apiObj);
-            setState(() {
-              _isLoading = false;
-            });
-            if (submissionResult.isSuccess) {
-              String thankYou = getTranslations()
-                  .fromKey(LocaleKey.thankYouForSubmittingFriendCode);
-              String checkMail = getTranslations()
-                  .fromKey(LocaleKey.pleaseCheckMailForConfirmation)
-                  .replaceAll('{0}', '(${apiObj.email})');
-              String dialogDescription = '$thankYou $checkMail';
-              prettyDialog(
+              LocalizationMap currentLocal =
+                  getTranslations().getCurrentLocalizationMap(
                 context,
-                '${getPath().imageAssetPathPrefix}/email.png',
-                getTranslations().fromKey(LocaleKey.friendCode),
-                dialogDescription,
-                onlyCancelButton: true,
+                friendCodeSettingVm.selectedLanguage,
               );
-            } else {
-              getDialog().showSimpleDialog(
-                context,
-                getTranslations().fromKey(LocaleKey.error),
-                Text(getTranslations()
-                    .fromKey(LocaleKey.friendCodeNotSubmitted)),
-                buttonBuilder: (BuildContext ctx) => [
-                  getDialog().simpleDialogCloseButton(ctx),
-                ],
+              AddFriendCodeViewModel apiObj = AddFriendCodeViewModel(
+                name: friendCodeVm.name,
+                code: friendCodeVm.code,
+                email: friendCodeVm.email,
+                platformType: friendCodeSettingVm.lastPlatformIndex + 1,
+                languageCode: currentLocal.code,
               );
-            }
-          },
-          heroTag: 'addFriendCode',
-          child: const Icon(Icons.check),
-          foregroundColor: getTheme().fabForegroundColourSelector(context),
-          backgroundColor: getTheme().fabColourSelector(context),
-        ),
-      ),
+              setState(() {
+                _isLoading = true;
+              });
+              Result submissionResult =
+                  await getApiRepo().submitFriendCode(apiObj);
+              setState(() {
+                _isLoading = false;
+              });
+              if (submissionResult.isSuccess) {
+                String thankYou = getTranslations()
+                    .fromKey(LocaleKey.thankYouForSubmittingFriendCode);
+                String checkMail = getTranslations()
+                    .fromKey(LocaleKey.pleaseCheckMailForConfirmation)
+                    .replaceAll('{0}', '(${apiObj.email})');
+                String dialogDescription = '$thankYou $checkMail';
+                prettyDialog(
+                  context,
+                  '${getPath().imageAssetPathPrefix}/email.png',
+                  getTranslations().fromKey(LocaleKey.friendCode),
+                  dialogDescription,
+                  onlyCancelButton: true,
+                );
+              } else {
+                getDialog().showSimpleDialog(
+                  context,
+                  getTranslations().fromKey(LocaleKey.error),
+                  Text(getTranslations()
+                      .fromKey(LocaleKey.friendCodeNotSubmitted)),
+                  buttonBuilder: (BuildContext ctx) => [
+                    getDialog().simpleDialogCloseButton(ctx),
+                  ],
+                );
+              }
+            },
+            heroTag: 'addFriendCode',
+            child: const Icon(Icons.check),
+            foregroundColor: getTheme().fabForegroundColourSelector(context),
+            backgroundColor: getTheme().fabColourSelector(context),
+          ),
+        );
+      },
     );
   }
 
@@ -156,8 +178,9 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
   ) {
     if (_isLoading) return getLoading().fullPageLoading(context);
     List<Widget> widgets = List.empty(growable: true);
+    bool isSwitch = friendCodeVm.lastPlatformIndex == 3;
 
-    var textEditingPadding =
+    EdgeInsets textEditingPadding =
         const EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0);
 
     widgets.add(Padding(
@@ -231,7 +254,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
         textCapitalization: TextCapitalization.characters,
         inputFormatters: [
           FilteringTextInputFormatter(RegExp('[A-z0-9]'), allow: true),
-          LengthLimitingTextInputFormatter(15),
+          LengthLimitingTextInputFormatter(isSwitch ? 17 : 15),
         ],
       ),
     ));
