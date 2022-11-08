@@ -91,6 +91,7 @@ class _AddEditInventoryState extends State<AddEditInventoryPage> {
     return listWithScrollbar(
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

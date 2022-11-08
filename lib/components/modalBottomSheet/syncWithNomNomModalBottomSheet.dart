@@ -17,6 +17,7 @@ import '../../contracts/inventory/inventorySlot.dart';
 import '../../contracts/redux/appState.dart';
 import '../../contracts/redux/inventoryState.dart';
 import '../../integration/dependencyInjection.dart';
+import '../../integration/nomNom.dart';
 import '../../redux/modules/viewModel/syncPageViewModel.dart';
 
 class SyncWithNomNomBottomSheet extends StatefulWidget {
@@ -58,7 +59,7 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
             ));
           }
           invs.add(Inventory(
-            icon: UserSelectionIcons.nomNomInventoryTypeIcons[apiInv.type],
+            icon: getInventoryIconsFromNomNomType(apiInv),
             name: apiInv.name,
             slots: newSlots,
           ));
@@ -77,20 +78,24 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
         );
       }
 
+      getDialog().showSimpleDialog(
+        innerContext,
+        getTranslations().fromKey(LocaleKey.success) + '!',
+        localImage(AppImage.base + 'inventory/special3.png', height: 100),
+        buttonBuilder: (BuildContext buttonContext) => [
+          getDialog().simpleDialogPositiveButton(
+            buttonContext,
+            title: LocaleKey.close,
+            onTap: () => getNavigation().pop(buttonContext).then(
+                  (value) => getNavigation().pop(innerContext),
+                ),
+          )
+        ],
+      );
+
       setState(() {
         networkState = NetworkState.Success;
       });
-
-      await getNavigation().popUntil(
-        innerContext,
-        [
-          Routes.inventoryList,
-          Routes.syncPage,
-          Routes.catalogueHome,
-          Routes.customHome,
-          Routes.home,
-        ],
-      );
     };
   }
 

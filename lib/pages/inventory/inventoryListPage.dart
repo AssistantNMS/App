@@ -5,6 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/inventoryTilePresenter.dart';
+import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/UserSelectionIcons.dart';
 import '../../contracts/inventory/inventory.dart';
@@ -113,9 +114,9 @@ class _InventoryListState extends State<InventoryListPage> {
         ),
       );
     } else {
-      widgets.add(GestureDetector(
-        child: Padding(
-          child: Card(
+      widgets.add(Padding(
+        child: Card(
+          child: InkWell(
             child: Padding(
               child: Center(
                 child: Icon(
@@ -125,23 +126,22 @@ class _InventoryListState extends State<InventoryListPage> {
               ),
               padding: const EdgeInsets.all(12),
             ),
+            onTap: () async => await getNavigation().navigateAsync<Inventory>(
+              context,
+              navigateTo: (context) => SearchAllInventoriesPage(),
+            ),
           ),
-          padding: const EdgeInsets.only(top: 4, bottom: 0),
         ),
-        onTap: () async => await getNavigation().navigateAsync<Inventory>(
-          context,
-          navigateTo: (context) => SearchAllInventoriesPage(),
-        ),
+        padding: const EdgeInsets.only(top: 4, bottom: 0),
       ));
       widgets.addAll(getContainers(viewModel));
 
-// TODO NomNom feature
-      // widgets.add(Card(
-      //   child: nomNomOpenSyncModalTile(
-      //     context,
-      //     viewModel.isPatron,
-      //   ),
-      // ));
+      widgets.add(Card(
+        child: nomNomOpenSyncModalTile(
+          context,
+          viewModel.isPatron,
+        ),
+      ));
 
       widgets.add(emptySpace10x());
     }
