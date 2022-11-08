@@ -10,7 +10,6 @@ import '../../constants/AppImage.dart';
 import '../../constants/Modal.dart';
 import '../../constants/Routes.dart';
 import '../../constants/NmsUIConstants.dart';
-import '../../constants/UserSelectionIcons.dart';
 import '../../contracts/generated/nomNomInventoryViewModel.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';
