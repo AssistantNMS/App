@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
-import 'package:assistantnms_app/components/adaptive/windowsTitleBar.dart';
+import 'package:assistantnms_app/components/adaptive/windowTitleBar.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -76,7 +76,7 @@ class AppShell extends StatelessWidget {
     List<Locale> supportedLocales,
   ) {
     ScrollBehavior scrollBehavior;
-    if (isDesktop) {
+    if (isDesktop || isWeb) {
       scrollBehavior = const MaterialScrollBehavior().copyWith(
         dragDevices: {
           PointerDeviceKind.mouse,
@@ -129,15 +129,18 @@ class AppShell extends StatelessWidget {
       ),
     );
 
-    if (!isWindows) return matApp;
+    if (!isDesktop) return matApp;
 
     return MaterialApp(
       theme: theme,
       darkTheme: darkTheme,
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: WindowsTitleBar('Assistant for No Man\'s Sky'),
-        body: matApp,
+      home: ClipRRect(
+        borderRadius: BorderRadius.circular(8.0),
+        child: Scaffold(
+          appBar: WindowTitleBar('Assistant for No Man\'s Sky'),
+          body: matApp,
+        ),
       ),
     );
   }

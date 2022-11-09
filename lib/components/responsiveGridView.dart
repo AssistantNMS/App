@@ -1,8 +1,11 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-Widget responsiveGrid<T>(BuildContext context, List<T> items,
-    Widget Function(BuildContext context, T item) gridItemPresenter) {
+Widget responsiveGrid<T>(
+  BuildContext context,
+  List<T> items,
+  Widget Function(BuildContext context, T item) gridItemPresenter,
+) {
   double deviceWidth = MediaQuery.of(context).size.width;
   int numberOfColumns = 8;
   if (deviceWidth < 1400.0) numberOfColumns = 7;
@@ -22,8 +25,10 @@ Widget responsiveGrid<T>(BuildContext context, List<T> items,
       crossAxisCount: numberOfColumns,
     ),
     itemCount: items.length,
-    itemBuilder: (BuildContext context, int index) =>
-        gridItemPresenter(context, items[index]),
+    itemBuilder: (BuildContext context, int index) => gridItemPresenter(
+      context,
+      items[index],
+    ),
   );
 }
 

@@ -93,43 +93,44 @@ Widget editCustomMenuItemGridPresenter(
 }
 
 Widget customMenuItemGridPresenter(BuildContext context, CustomMenu menuItem) {
-  Widget card = GestureDetector(
-    child: Card(
-        child: Stack(
-      alignment: Alignment.center,
-      children: [
-        if (menuItem.isLocked) ...[
-          Positioned(
-            top: 5,
-            left: 7,
-            child: Icon(
-              Icons.lock_clock,
-              size: 32,
-              color: getTheme().getDarkModeSecondaryColour(),
-            ),
-          ),
-        ],
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            menuItem.icon,
-            Padding(
-              padding: const EdgeInsets.all(4),
-              child: Text(
-                getTranslations().fromKey(menuItem.title),
-                maxLines: 2,
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                softWrap: false,
+  Widget card = Card(
+    child: InkWell(
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          if (menuItem.isLocked) ...[
+            Positioned(
+              top: 5,
+              left: 7,
+              child: Icon(
+                Icons.lock_clock,
+                size: 32,
+                color: getTheme().getDarkModeSecondaryColour(),
               ),
             ),
           ],
-        ),
-      ],
-    )),
-    onTap: () => customMenuClickHandler(context, menuItem),
-    onLongPress: () =>
-        (menuItem.onLongPress != null) ? menuItem.onLongPress(context) : null,
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              menuItem.icon,
+              Padding(
+                padding: const EdgeInsets.all(4),
+                child: Text(
+                  getTranslations().fromKey(menuItem.title),
+                  maxLines: 2,
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  softWrap: false,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+      onTap: () => customMenuClickHandler(context, menuItem),
+      onLongPress: () =>
+          (menuItem.onLongPress != null) ? menuItem.onLongPress(context) : null,
+    ),
   );
   if (menuItem.isNew) return wrapInNewBanner(context, LocaleKey.newItem, card);
   return card;

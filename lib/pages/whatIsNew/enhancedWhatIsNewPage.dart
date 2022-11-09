@@ -43,6 +43,9 @@ class EnhancedWhatIsNewPage extends StatelessWidget {
                 : plat //
             )
         .toList();
+    if (isLinux) {
+      overriddenPlatList.add(PlatformType.GithubWindowsInstaller);
+    }
 
     return WhatIsNewPage(
       AnalyticsEvent.whatIsNewDetailPage,
