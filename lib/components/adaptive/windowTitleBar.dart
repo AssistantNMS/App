@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 import '../windowsButtons.dart';
 
-class WindowsTitleBar extends StatelessWidget
+class WindowTitleBar extends StatelessWidget
     implements PreferredSizeWidget, ObstructingPreferredSizeWidget {
   final String title;
   final List<ActionItem> actions;
@@ -16,7 +16,7 @@ class WindowsTitleBar extends StatelessWidget
   final Color backgroundColor;
   static const double kMinInteractiveDimensionCupertino = 44.0;
 
-  WindowsTitleBar(this.title,
+  WindowTitleBar(this.title,
       {Key key, this.bottom, this.backgroundColor, this.actions})
       : preferredSize = Size.fromHeight(
             kToolbarHeight + (bottom?.preferredSize?.height ?? 0.0)),
@@ -31,16 +31,20 @@ class WindowsTitleBar extends StatelessWidget
           children: [
             Padding(
               padding: const EdgeInsets.all(4),
-              child: localImage(AppImage.assistantNMSWindowIcon),
+              child: localImage(
+                AppImage.assistantNMSWindowIcon,
+                borderRadius: BorderRadius.circular(4.0),
+              ),
             ),
             Expanded(
               child: MoveWindow(
                 child: Center(
-                    child: Row(
-                  children: [
-                    genericItemDescription(title),
-                  ],
-                )),
+                  child: Row(
+                    children: [
+                      genericItemDescription(title),
+                    ],
+                  ),
+                ),
               ),
             ),
             const WindowButtons(),

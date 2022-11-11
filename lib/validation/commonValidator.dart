@@ -24,3 +24,12 @@ bool friendCodeValidator(String friendCode) {
   }
   return friendCodeValid;
 }
+
+bool switchFriendCodeValidator(String friendCode) {
+  String regexPattern = r"^SW\-[A-z0-9]{4}\-[A-z0-9]{4}\-[A-z0-9]{4}";
+  var friendCodeValid = RegExp(regexPattern).hasMatch(friendCode);
+  if (friendCodeValid == false) {
+    getLog().v('friendCodeValidator: $friendCode failed');
+  }
+  return friendCodeValid;
+}

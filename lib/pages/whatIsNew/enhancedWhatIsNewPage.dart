@@ -37,9 +37,20 @@ class EnhancedWhatIsNewPage extends StatelessWidget {
                 result.value.isNotEmpty));
     if (errorWidget != null) return errorWidget;
 
+    List<PlatformType> overriddenPlatList = getPlatforms()
+        .map((plat) => (plat == PlatformType.Windows)
+                ? PlatformType.GithubWindowsInstaller //
+                : plat //
+            )
+        .toList();
+    if (isLinux) {
+      overriddenPlatList.add(PlatformType.GithubWindowsInstaller);
+    }
+
     return WhatIsNewPage(
       AnalyticsEvent.whatIsNewDetailPage,
       selectedLanguage: viewModel.selectedLanguage,
+      overriddenPlatforms: overriddenPlatList,
       additionalBuilder: (VersionViewModel version) {
         List<Widget> columnWidgets = List.empty(growable: true);
         UpdateItemDetail updateNewItemsThatMatchesThisGuid;

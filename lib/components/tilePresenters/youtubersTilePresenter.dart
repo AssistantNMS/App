@@ -158,8 +158,8 @@ Widget nomNomOpenSyncModalTile(
   return genericListTileWithSubtitle(
     context,
     leadingImage: AppImage.nomNom,
-    name: 'Sync with NomNom save editor', // TODO translate
-    subtitle: const Text('Transfer your in game inventory'),
+    name: getTranslations().fromKey(LocaleKey.syncWithNomNom),
+    subtitle: Text(getTranslations().fromKey(LocaleKey.syncWithNomNomDesc)),
     trailing: isLocked ? const Icon(Icons.lock) : null,
     onTap: () {
       handlePatreonBottomModalSheetWhenTapped(

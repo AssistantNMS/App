@@ -31,8 +31,10 @@ Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(AssistantNMS(env));
 
-  if (isWindows) {
+  if (isDesktop) {
     doWhenWindowReady(() {
+      const initialSize = Size(400, 600);
+      appWindow.minSize = initialSize;
       appWindow.alignment = Alignment.center;
       appWindow.show();
     });

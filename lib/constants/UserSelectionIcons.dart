@@ -1,28 +1,4 @@
 class UserSelectionIcons {
-  static const List<String> nomNomInventoryTypeIcons = [
-    'decal0.png', // Unknown,
-    'special0.png', // Exosuit,
-    'decal0.png', // Starship, // TODO replace
-    'vehicle1.png', // Roamer,
-    'vehicle5.png', // Nomad,
-    'vehicle2.png', // Pilgrim,
-    'vehicle4.png', // Colossus,
-    'vehicle6.png', // Minotaur,
-    'vehicle3.png', // Nautilon,
-    'freighter9.png', // Freighter,  // TODO replace
-    'container0.png', // StorageContainer0,
-    'container1.png', // StorageContainer1,
-    'container2.png', // StorageContainer2,
-    'container3.png', // StorageContainer3,
-    'container4.png', // StorageContainer4,
-    'container5.png', // StorageContainer5,
-    'container6.png', // StorageContainer6,
-    'container7.png', // StorageContainer7,
-    'container8.png', // StorageContainer8,
-    'container9.png', // StorageContainer9,
-    'container9.png', // StorageContainer9,
-  ];
-
   static const List<String> inventory = [
     'decal0.png',
     'decal1.png',
