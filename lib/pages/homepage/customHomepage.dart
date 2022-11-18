@@ -57,8 +57,11 @@ class _CustomHomeWidget extends State<CustomHomepage>
     );
   }
 
-  Widget getBody(bool isEdit, List<CustomMenu> menuItemOptions,
-      CustomMenuSettingsViewModel viewModel) {
+  Widget getBody(
+    bool isEdit,
+    List<CustomMenu> menuItemOptions,
+    CustomMenuSettingsViewModel viewModel,
+  ) {
     List<CustomMenu> orderedMenuItems = List.empty(growable: true);
     for (LocaleKey custMenu in viewModel.menuOrder) {
       for (CustomMenu opt in menuItemOptions) {

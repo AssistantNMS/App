@@ -43,4 +43,6 @@ class NmsExternalUrls {
   static const String communitySearchAddLinkForm =
       'https://airtable.com/shrhZOQrrp9a9zoJk';
   static const String nomNomWebsite = 'https://cengelha.github.io/NomNom/';
+  static const String captainSteveYoutubeDiceRollPlaylist =
+      'https://www.youtube.com/playlist?list=PLFVRR5wqxfgy3LKw29OG3OTekvQdayz4s';
 }
