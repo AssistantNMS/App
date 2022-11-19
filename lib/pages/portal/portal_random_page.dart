@@ -40,15 +40,6 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
   _RandomPortalPageState() {
     getAnalytics().trackEvent(AnalyticsEvent.randomPortalPage);
   }
-  @override
-  void initState() {
-    _rollSlotController0.addListener(() {
-      // trigger setState method to reload ui with new index
-      // in our case the AppBar title will change
-      setState(() {});
-    });
-    super.initState();
-  }
 
   void onStart() {
     // _rollSlotController0.animateRandomly();
