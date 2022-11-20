@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import '../../constants/NmsExternalUrls.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:roll_slot_machine/roll_slot.dart';
@@ -6,12 +7,12 @@ import 'package:roll_slot_machine/roll_slot_controller.dart';
 
 import '../../components/portal/portalGlyphList.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/Routes.dart';
 import '../../contracts/redux/appState.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 
-List<String> portalList = List.generate(16, (index) => index.toRadixString(16));
 const double horizontalPadding = 32;
 
 class RandomPortalPage extends StatefulWidget {
@@ -39,6 +40,16 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
 
   _RandomPortalPageState() {
     getAnalytics().trackEvent(AnalyticsEvent.randomPortalPage);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    Future.delayed(const Duration(milliseconds: 500), () {
+      // Really bad - I did it for the animations!
+      onStart();
+    });
   }
 
   void onStart() {
@@ -84,115 +95,152 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
   Widget getBody(BuildContext bodyCtx, PortalViewModel portalViewModel) {
     bool useAltGlyphs = portalViewModel.useAltGlyphs;
     final size = MediaQuery.of(context).size;
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: horizontalPadding),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Row(
+    List<String> portalList = List.generate(
+      16,
+      (index) => index.toRadixString(16),
+    );
+    var secondReel = [
+      portalList[1],
+      ...portalList.where((p) => p != '1'),
+    ].toList();
+
+    return Column(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        flatCard(
+          child: captainSteveYoutubeVideoTile(
+            bodyCtx,
+            NmsExternalUrls.captainSteveYoutubeDiceRollPlaylist,
+            subtitle: 'Dice Exploration Live',
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: horizontalPadding),
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RollSlotWidget(
                 pageSize: size,
+                portalList: portalList,
                 useAltGlyphs: useAltGlyphs,
                 rollSlotController: _rollSlotController0,
               ),
               RollSlotWidget(
                 pageSize: size,
+                portalList: secondReel,
                 useAltGlyphs: useAltGlyphs,
                 rollSlotController: _rollSlotController1,
               ),
               RollSlotWidget(
                 pageSize: size,
+                portalList: portalList,
                 useAltGlyphs: useAltGlyphs,
                 rollSlotController: _rollSlotController2,
               ),
               RollSlotWidget(
                 pageSize: size,
+                portalList: portalList,
                 useAltGlyphs: useAltGlyphs,
                 rollSlotController: _rollSlotController3,
               ),
             ],
           ),
-          Row(
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: horizontalPadding),
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RollSlotWidget(
                 pageSize: size,
+                portalList: portalList,
                 useAltGlyphs: useAltGlyphs,
                 rollSlotController: _rollSlotController4,
               ),
               RollSlotWidget(
                 pageSize: size,
+                portalList: portalList,
                 useAltGlyphs: useAltGlyphs,
                 rollSlotController: _rollSlotController5,
               ),
               RollSlotWidget(
                 pageSize: size,
+                portalList: portalList,
                 useAltGlyphs: useAltGlyphs,
                 rollSlotController: _rollSlotController6,
               ),
               RollSlotWidget(
                 pageSize: size,
+                portalList: portalList,
                 useAltGlyphs: useAltGlyphs,
                 rollSlotController: _rollSlotController7,
               ),
             ],
           ),
-          Row(
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: horizontalPadding),
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RollSlotWidget(
                 pageSize: size,
+                portalList: portalList,
                 useAltGlyphs: useAltGlyphs,
                 rollSlotController: _rollSlotController8,
               ),
               RollSlotWidget(
                 pageSize: size,
+                portalList: portalList,
                 useAltGlyphs: useAltGlyphs,
                 rollSlotController: _rollSlotController9,
               ),
               RollSlotWidget(
                 pageSize: size,
+                portalList: portalList,
                 useAltGlyphs: useAltGlyphs,
                 rollSlotController: _rollSlotControllerA,
               ),
               RollSlotWidget(
                 pageSize: size,
+                portalList: portalList,
                 useAltGlyphs: useAltGlyphs,
                 rollSlotController: _rollSlotControllerB,
               ),
             ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
 
 class RollSlotWidget extends StatelessWidget {
   final Size pageSize;
+  final List<String> portalList;
   final RollSlotController rollSlotController;
   final bool useAltGlyphs;
 
   const RollSlotWidget({
     Key key,
     @required this.pageSize,
+    @required this.portalList,
     @required this.rollSlotController,
     @required this.useAltGlyphs,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var maxHeight = pageSize.height / 4;
     return ConstrainedBox(
       constraints: BoxConstraints(
-        maxHeight: pageSize.height / 4,
+        maxHeight: maxHeight,
         maxWidth: (pageSize.width - (horizontalPadding * 2)) / 4,
       ),
       child: RollSlot(
         duration: const Duration(milliseconds: 6000),
-        itemExtend: pageSize.height / 5,
+        itemExtend: maxHeight * 0.8,
         shuffleList: false,
         rollSlotController: rollSlotController,
         children: portalList
