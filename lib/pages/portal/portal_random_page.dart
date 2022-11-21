@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import '../../constants/NmsExternalUrls.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:roll_slot_machine/roll_slot.dart';
@@ -9,6 +8,7 @@ import '../../components/portal/portalGlyphList.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
+import '../../constants/NmsExternalUrls.dart';
 import '../../constants/Routes.dart';
 import '../../contracts/redux/appState.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
