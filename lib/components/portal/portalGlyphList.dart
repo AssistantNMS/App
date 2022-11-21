@@ -25,11 +25,23 @@ Widget portalGlyphList(
         String path = 'portals/$type/dot.png';
         if (index < currentCodes.length) {
           String hexNum = currentCodes[index].toRadixString(16);
-          path = 'portals/$type/$hexNum.png';
+          return getPortalImage(context, hexNum, useAltGlyphs);
         }
         return localImage('$basePath/$path');
       },
     );
+
+Widget getPortalImage(
+  BuildContext context,
+  String portalCode,
+  bool useAltGlyphs,
+) {
+  String type = getTheme().getIsDark(context) ? 'white' : 'black';
+  if (useAltGlyphs) type = 'alt';
+  String basePath = getPath().imageAssetPathPrefix;
+  String path = 'portals/$type/$portalCode.png';
+  return localImage('$basePath/$path');
+}
 
 Widget twoLinePortalGlyphList(List<int> currentCodes,
         {bool useAltGlyphs = false}) =>

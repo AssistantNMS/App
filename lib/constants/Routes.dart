@@ -14,6 +14,7 @@ import '../pages/contributors/contributorsPage.dart';
 import '../pages/donation.dart';
 import '../pages/exploits/exploitsPage.dart';
 import '../pages/faction/factionListPage.dart';
+import '../pages/faction/journeyMilestone.dart';
 import '../pages/favourite/favouritesPage.dart';
 import '../pages/feedback/feedbackPage.dart';
 import '../pages/friendCode/friendCodeListPage.dart';
@@ -31,7 +32,6 @@ import '../pages/homepage/customHomepage.dart';
 import '../pages/homepage/defaultHomePage.dart';
 import '../pages/inventory/inventoryListPage.dart';
 import '../pages/ios/appleMenu.dart';
-import '../pages/faction/journeyMilestone.dart';
 import '../pages/language.dart';
 import '../pages/misc/retiredDrawerMenuPage.dart';
 import '../pages/newItemsInUpdate/majorUpdatesPage.dart';
@@ -39,6 +39,7 @@ import '../pages/newItemsInUpdate/newItemsPage.dart';
 import '../pages/news/newsShellPage.dart';
 import '../pages/nmsfm/nmsfm.dart';
 import '../pages/portal/portalConverterPage.dart';
+import '../pages/portal/portal_random_page.dart';
 import '../pages/portal/portalsPage.dart';
 import '../pages/power/solarPanelCalcPage.dart';
 import '../pages/seasonalExpedition/seasonalExpeditionSeasonListPage.dart';
@@ -113,6 +114,7 @@ class Routes {
   static const String starshipScrap = '/starshipScrap';
   static const String portalConverter = '/portalConverter';
   static const String nomNomInventoryTutorial = '/nomNomInventoryTutorial';
+  static const String randomPortal = '/randomPortal';
 }
 
 Map<String, Widget Function(BuildContext)> initNamedRoutes(
@@ -199,6 +201,7 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.portalConverter: (context) => const PortalConverterPage(),
     Routes.nomNomInventoryTutorial: (context) =>
         const NomNomInventorySyncTutorial(),
+    Routes.randomPortal: (context) => const RandomPortalPage(),
   });
   return routes;
 }

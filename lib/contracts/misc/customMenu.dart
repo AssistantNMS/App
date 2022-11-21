@@ -106,6 +106,12 @@ List<CustomMenu> getMenuOptionsSection2(
       drawerIcon: localGetDrawerFromIcon(Icons.star),
       title: LocaleKey.favourites,
       navigateToNamed: Routes.favourites,
+      onLongPress: (longCtx) {
+        getNavigation().navigateAwayFromHomeAsync(
+          context,
+          navigateToNamed: Routes.randomPortal,
+        );
+      },
     ),
     CustomMenu(
       icon: getListTileImage(AppImage.catalogue, size: imageSize),

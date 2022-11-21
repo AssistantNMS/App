@@ -108,14 +108,17 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
 
         List<Widget> widgets = List.empty(growable: true);
         widgets.add(emptySpace2x());
-        widgets.add(genericItemName('NomNom collaboration'));
+        widgets.add(genericItemName(
+          getTranslations().fromKey(LocaleKey.nomNomCollaboration),
+        ));
         widgets.add(genericItemDescription(
-            'Sync your in game inventory with the app through the NomNom save editor!\nOnly available for PC'));
+          getTranslations().fromKey(LocaleKey.nomNomCollaborationDesc),
+        ));
         widgets.add(localImage(AppImage.nomNomHeader));
         widgets.add(emptySpace2x());
         widgets.add(positiveButton(
           context,
-          title: 'Instructions',
+          title: getTranslations().fromKey(LocaleKey.instructions),
           onPress: () => getNavigation().navigateAwayFromHomeAsync(
             context,
             navigateToNamed: Routes.nomNomInventoryTutorial,
@@ -141,6 +144,7 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
               obscureText: false,
               appContext: context,
               animationType: AnimationType.fade,
+              keyboardType: TextInputType.number,
               pinTheme: PinTheme(
                 shape: PinCodeFieldShape.box,
                 borderRadius: BorderRadius.circular(5),
