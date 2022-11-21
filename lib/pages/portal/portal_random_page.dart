@@ -112,7 +112,7 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
           child: captainSteveYoutubeVideoTile(
             bodyCtx,
             NmsExternalUrls.captainSteveYoutubeDiceRollPlaylist,
-            subtitle: 'Dice Exploration Live',
+            subtitle: 'Dice Exploration Playlist',
           ),
         ),
         Padding(
