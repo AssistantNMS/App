@@ -201,11 +201,12 @@ class CommunityMissionPage extends StatelessWidget {
         listWithScrollbar(
           itemCount: widgets.length,
           itemBuilder: (context, index) => widgets[index],
+          scrollController: ScrollController(),
         ),
         Positioned(
           left: 0,
           right: 0,
-          bottom: 0,
+          bottom: 2,
           child: Container(
             child: Padding(
               padding: const EdgeInsets.only(left: 4, right: 4),
