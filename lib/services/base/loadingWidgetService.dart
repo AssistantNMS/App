@@ -31,18 +31,27 @@ class LoadingWidgetService implements ILoadingWidgetService {
   Widget fullPageLoading(BuildContext context, {String loadingText}) => Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Row(children: <Widget>[
-            smallLoadingIndicator(),
-          ], mainAxisAlignment: MainAxisAlignment.center),
-          Row(children: <Widget>[
-            Container(
-              margin: const EdgeInsets.all(12),
-            )
-          ], mainAxisAlignment: MainAxisAlignment.center),
-          Row(children: <Widget>[
-            Text(loadingText ?? getTranslations().fromKey(LocaleKey.loading))
-          ], mainAxisAlignment: MainAxisAlignment.center),
+        children: [
+          Row(
+            children: [
+              smallLoadingIndicator(),
+            ],
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
+          Row(
+            children: [
+              Container(
+                margin: const EdgeInsets.all(12),
+              )
+            ],
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
+          Row(
+            children: [
+              Text(loadingText ?? getTranslations().fromKey(LocaleKey.loading))
+            ],
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
         ],
       );
 

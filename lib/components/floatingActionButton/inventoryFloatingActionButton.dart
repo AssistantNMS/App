@@ -20,7 +20,9 @@ Widget inventoryFloatingActionButton(BuildContext context, String uniqueKey,
     );
 
 SpeedDialChild inventorySpeedDial(
-        BuildContext context, GenericPageItem genericItem) =>
+  BuildContext context,
+  GenericPageItem genericItem,
+) =>
     SpeedDialChild(
       child: Padding(
         child: getListTileImage('fab/inventory.png'),

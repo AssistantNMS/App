@@ -319,6 +319,7 @@ class _PortalPageState extends State<AddPortalPage> {
     return listWithScrollbar(
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }
