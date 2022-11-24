@@ -194,7 +194,7 @@ List<Widget> genericPageDescripHighlightText(
   List<RichText> paragraphNodes = List.empty(growable: true);
   if (!text.contains('<>')) return [genericItemDescription(text)];
 
-  List<String> paragraphs = text.split(RegExp(r'\r?\n'));
+  List<String> paragraphs = text.split(RegExp(r'\r?\n|\/'));
   for (int paragraphIndex = 0;
       paragraphIndex < paragraphs.length;
       paragraphIndex++) {
