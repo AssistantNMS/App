@@ -1,6 +1,7 @@
 // ignore_for_file: no_logic_in_create_state
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/constants/Routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
@@ -52,7 +53,7 @@ class _PortalPageState extends State<AddPortalPage> {
     if (item.codes.length >= 12) return;
     setState(() {
       item.codes.add(code);
-      var tempHexStr = allUpperCase(intArrayToHex(item.codes));
+      String tempHexStr = allUpperCase(intArrayToHex(item.codes));
       _setHexCoordText(tempHexStr);
       if (item.codes.isNotEmpty) disableEditBtns = false;
     });
@@ -84,7 +85,7 @@ class _PortalPageState extends State<AddPortalPage> {
       item = item.copyWith(
         codes: item.codes.sublist(0, item.codes.length - 1),
       );
-      var tempHexStr = allUpperCase(intArrayToHex(item.codes));
+      String tempHexStr = allUpperCase(intArrayToHex(item.codes));
       _setHexCoordText(tempHexStr);
       if (item.codes.isEmpty) disableEditBtns = true;
     });
@@ -96,7 +97,7 @@ class _PortalPageState extends State<AddPortalPage> {
       item = item.copyWith(
         codes: [],
       );
-      var tempHexStr = allUpperCase(intArrayToHex(item.codes));
+      String tempHexStr = allUpperCase(intArrayToHex(item.codes));
       _setHexCoordText(tempHexStr);
       disableEditBtns = true;
     });
@@ -128,12 +129,12 @@ class _PortalPageState extends State<AddPortalPage> {
           ),
         ],
         body: getBody(context, viewModel),
-        fab: getFab(),
+        fab: getFab(context),
       ),
     );
   }
 
-  Widget getFab() {
+  Widget getFab(BuildContext fabCtx) {
     if (item.codes.length != 12) return null;
     String name = (item.name == null)
         ? getTranslations().fromKey(LocaleKey.newPortalEntry)
@@ -149,7 +150,7 @@ class _PortalPageState extends State<AddPortalPage> {
             .map((cc) => cc as String)
             .toList(); //So that it isn't passed by reference
         getNavigation().pop(
-          context,
+          fabCtx,
           PortalRecord(
             name: name,
             uuid: item.uuid,
@@ -160,15 +161,15 @@ class _PortalPageState extends State<AddPortalPage> {
       },
       heroTag: 'AddPortalPage',
       child: const Icon(Icons.check),
-      foregroundColor: getTheme().fabForegroundColourSelector(context),
-      backgroundColor: getTheme().fabColourSelector(context),
+      foregroundColor: getTheme().fabForegroundColourSelector(fabCtx),
+      backgroundColor: getTheme().fabColourSelector(fabCtx),
     );
   }
 
-  Widget getBody(BuildContext context, PortalViewModel portalViewModel) {
+  Widget getBody(BuildContext bodyCtx, PortalViewModel portalViewModel) {
     List<Widget> widgets = List.empty(growable: true);
 
-    String colour = getTheme().getIsDark(context) ? 'white' : 'black';
+    String colour = getTheme().getIsDark(bodyCtx) ? 'white' : 'black';
     if (portalViewModel.useAltGlyphs) colour = 'alt';
 
     widgets.add(Container(
@@ -264,7 +265,7 @@ class _PortalPageState extends State<AddPortalPage> {
                 ),
                 Flexible(
                   child: portalInput(
-                    context,
+                    bodyCtx,
                     colour: colour,
                     addCode: _addCode,
                   ),
@@ -276,22 +277,22 @@ class _PortalPageState extends State<AddPortalPage> {
 
     List<Widget> tags = List.empty(growable: true);
     for (var item in this.item.tags) {
-      tags.add(genericChip(context, item, onTap: () async {
-        _removeTag(context, item);
+      tags.add(genericChip(bodyCtx, item, onTap: () async {
+        _removeTag(bodyCtx, item);
       }));
     }
 
     tags.add(
       genericChip(
-        context,
+        bodyCtx,
         '+' + getTranslations().fromKey(LocaleKey.addTag),
         onTap: () async {
           var availableTags = portalViewModel.availableTags
               .where((at) => !item.tags.contains(at))
               .toList();
           String temp = await getNavigation().navigateAsync(
-            context,
-            navigateTo: (context) => OptionsListPageDialog(
+            bodyCtx,
+            navigateTo: (_) => OptionsListPageDialog(
               'Tags',
               availableTags.map((g) => DropdownOption(g.toString())).toList(),
               addOption: (DropdownOption option) {
@@ -303,7 +304,7 @@ class _PortalPageState extends State<AddPortalPage> {
             ),
           );
           if (temp == null || temp.isEmpty) return;
-          _addTag(context, temp);
+          _addTag(bodyCtx, temp);
         },
       ),
     );
@@ -318,7 +319,7 @@ class _PortalPageState extends State<AddPortalPage> {
 
     return listWithScrollbar(
       itemCount: widgets.length,
-      itemBuilder: (context, index) => widgets[index],
+      itemBuilder: (_, index) => widgets[index],
       scrollController: ScrollController(),
     );
   }

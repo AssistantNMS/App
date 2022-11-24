@@ -106,12 +106,6 @@ List<CustomMenu> getMenuOptionsSection2(
       drawerIcon: localGetDrawerFromIcon(Icons.star),
       title: LocaleKey.favourites,
       navigateToNamed: Routes.favourites,
-      onLongPress: (longCtx) {
-        getNavigation().navigateAwayFromHomeAsync(
-          context,
-          navigateToNamed: Routes.randomPortal,
-        );
-      },
     ),
     CustomMenu(
       icon: getListTileImage(AppImage.catalogue, size: imageSize),
@@ -145,7 +139,10 @@ List<CustomMenu> getMenuOptionsSection2(
 }
 
 List<CustomMenu> getMenuOptionsSection3(
-    BuildContext context, DrawerSettingsViewModel vm, Color drawerIconColour) {
+  BuildContext context,
+  DrawerSettingsViewModel vm,
+  Color drawerIconColour,
+) {
   //
   Widget localGetFromIcon(IconData icon) =>
       getCorrectlySizedImageFromIcon(context, icon,
@@ -177,6 +174,36 @@ List<CustomMenu> getMenuOptionsSection3(
       drawerIcon: getListTileImage(AppImage.portal),
       title: LocaleKey.portalLibrary,
       navigateToNamed: Routes.portals,
+    ),
+    CustomMenu(
+      icon: SizedBox(
+        width: imageSize,
+        height: imageSize,
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            Positioned(
+              child: getListTileImage(AppImage.portal, size: imageSize * 0.66),
+              left: 0,
+              bottom: 0,
+            ),
+            Positioned(
+              child: getCorrectlySizedImageFromIcon(
+                context,
+                Icons.casino_outlined,
+                colour: getTheme().getSecondaryColour(context),
+                maxSize: imageSize * 0.66,
+              ),
+              top: 0,
+              right: 0,
+            ),
+          ],
+        ),
+      ),
+      drawerIcon: getListTileImage(AppImage.portal),
+      title: LocaleKey.randomPortal,
+      navigateToNamed: Routes.randomPortal,
+      hideInDrawer: true,
     ),
     CustomMenu(
       icon: getListTileImage(AppImage.inventory, size: imageSize),

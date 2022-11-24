@@ -118,7 +118,7 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
       converter: (store) => PortalViewModel.fromStore(store),
       builder: (_, viewModel) => basicGenericPageScaffold(
         context,
-        title: getTranslations().fromKey(LocaleKey.savedPortalCoordinates),
+        title: getTranslations().fromKey(LocaleKey.randomPortal),
         actions: [
           ActionItem(
             icon: Icons.screen_rotation_alt_rounded,
