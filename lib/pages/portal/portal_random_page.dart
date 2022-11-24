@@ -83,7 +83,7 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
     });
 
     // _rollSlotController0.animateRandomly();
-    // _rollSlotController1.animateRandomly();
+    _rollSlotController1.animateRandomly();
     _rollSlotController2.animateRandomly();
     _rollSlotController3.animateRandomly();
     _rollSlotController4.animateRandomly();
@@ -146,10 +146,7 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
       16,
       (index) => index.toRadixString(16),
     );
-    List<String> secondReel = [
-      portalList[1],
-      ...portalList.where((p) => p != '1'),
-    ].toList();
+    List<String> secondReel = ['0', '1', '2'].toList();
 
     return Column(
       mainAxisSize: MainAxisSize.max,
