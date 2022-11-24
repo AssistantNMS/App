@@ -28,7 +28,7 @@ class ThemeService implements IThemeService {
 
   @override
   Color getBackgroundColour(BuildContext context) =>
-      darkTheme(defaultFontFamily).backgroundColor;
+      darkTheme(defaultFontFamily).colorScheme.background;
 
   @override
   Color getScaffoldBackgroundColour(BuildContext context) =>
@@ -44,7 +44,8 @@ class ThemeService implements IThemeService {
 
   @override
   Color getH1Colour(BuildContext context) {
-    var textColour = AdaptiveTheme.of(context).theme.textTheme.headline1.color;
+    var textColour =
+        AdaptiveTheme.of(context).theme.textTheme.displayLarge.color;
     if (textColour == null) {
       return getIsDark(context) ? Colors.white : Colors.black;
     }
@@ -73,7 +74,7 @@ class ThemeService implements IThemeService {
 
   @override
   Color getCardBackgroundColour(BuildContext context) =>
-      darkTheme(defaultFontFamily).backgroundColor;
+      darkTheme(defaultFontFamily).colorScheme.background;
 
   @override
   bool useWhiteForeground(Color backgroundColor) =>

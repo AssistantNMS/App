@@ -8,6 +8,7 @@ import '../../contracts/processorRequiredItemDetails.dart';
 import '../../contracts/requiredItemDetails.dart';
 import '../../helpers/genericHelper.dart';
 import '../../helpers/itemsHelper.dart';
+import '../../helpers/themeHelper.dart';
 import '../../pages/generic/genericPage.dart';
 import '../../pages/generic/genericPageProcessorRecipe.dart';
 import 'processorRecipeTilePresentor.dart';
@@ -143,9 +144,7 @@ Widget requiredItemTreeDetailsRowPresenter(BuildContext context,
             if (itemDetails.quantity != null && itemDetails.quantity > 0) ...[
               Text(
                 "${getTranslations().fromKey(LocaleKey.quantity)}: ${itemDetails.quantity.toString()}",
-                style: _subtitleTextStyle(getTheme().getTheme(context)),
-                // style: getTheme(context).textTheme.bodyText2,
-                // style: const TextStyle(color: getTheme(context).textTheme.caption.color),
+                style: _subtitleTextStyle(context),
               ),
             ],
           ],
@@ -205,8 +204,8 @@ Widget requiredItemTreeDetailsRowPresenter(BuildContext context,
   );
 }
 
-TextStyle _subtitleTextStyle(ThemeData theme) {
-  final TextStyle style = theme.textTheme.bodyText2;
-  final Color color = theme.textTheme.caption.color;
+TextStyle _subtitleTextStyle(BuildContext ctx) {
+  final TextStyle style = getThemeBodyMedium(ctx);
+  final Color color = getThemeBodySmall(ctx).color;
   return style.copyWith(color: color);
 }

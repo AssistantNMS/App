@@ -1,5 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide ExternalUrls;
+import 'package:assistantnms_app/helpers/themeHelper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import '../../components/common/image.dart';
@@ -28,11 +29,7 @@ Widget genericItemCredits(BuildContext context, String credits,
         textAlign: TextAlign.center,
         overflow: TextOverflow.ellipsis,
         addDecimal: false,
-        style: getTheme()
-            .getTheme(context)
-            .primaryTextTheme
-            .bodyText1
-            .copyWith(color: colour),
+        style: getThemeBodyLarge(context).copyWith(color: colour),
       ),
       localImage('${getPath().imageAssetPathPrefix}/credits.png', height: 17),
     );
@@ -84,11 +81,7 @@ Widget genericItemIntCurrency(
         currency,
         textAlign: TextAlign.center,
         overflow: TextOverflow.ellipsis,
-        style: getTheme()
-            .getTheme(context)
-            .primaryTextTheme
-            .bodyText1
-            .copyWith(color: colour),
+        style: getThemeBodyLarge(context).copyWith(color: colour),
       ),
       localImage(imageUrl, height: 17),
     );
@@ -100,11 +93,7 @@ Widget genericItemTextWithIcon(BuildContext context, String text, IconData icon,
         text,
         textAlign: TextAlign.center,
         overflow: TextOverflow.ellipsis,
-        style: getTheme()
-            .getTheme(context)
-            .primaryTextTheme
-            .bodyText1
-            .copyWith(color: colour),
+        style: getThemeBodyLarge(context).copyWith(color: colour),
       ),
       Icon(icon, size: 17, color: colour),
       addSpace: addSpace,

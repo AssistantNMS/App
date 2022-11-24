@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../constants/Fonts.dart';
+import '../helpers/themeHelper.dart';
 
 class ExpeditionAlphabetTranslationAnimated extends StatefulWidget {
   final String text;
@@ -40,7 +41,7 @@ class _ExpeditionAlphabetTranslationAnimatedWidget
   @override
   Widget build(BuildContext context) {
     TextStyle currentFont =
-        Theme.of(context).textTheme.subtitle1.copyWith(color: Colors.black);
+        getThemeSubtitle(context).copyWith(color: Colors.black);
     TextStyle expeditionFont =
         currentFont.copyWith(fontFamily: nmsExpeditionFontFamily);
 

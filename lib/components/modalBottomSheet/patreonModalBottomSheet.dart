@@ -8,6 +8,7 @@ import '../../constants/Patreon.dart';
 import '../../constants/AppImage.dart';
 import '../../constants/NmsUIConstants.dart';
 import '../../constants/Routes.dart';
+import '../../helpers/themeHelper.dart';
 
 class PatreonModalBottomSheet extends StatelessWidget {
   final DateTime unlockDate;
@@ -66,7 +67,7 @@ class PatreonModalBottomSheet extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: RichText(
           text: TextSpan(
-            style: Theme.of(context).textTheme.subtitle1,
+            style: getThemeSubtitle(context),
             children: nodes,
           ),
           textAlign: TextAlign.center,
