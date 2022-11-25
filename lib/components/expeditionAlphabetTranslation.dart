@@ -3,6 +3,7 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/Fonts.dart';
+import '../helpers/themeHelper.dart';
 
 class ExpeditionAlphabetTranslation extends StatefulWidget {
   final String text;
@@ -23,7 +24,7 @@ class _ExpeditionAlphabetTranslationWidget
   @override
   Widget build(BuildContext context) {
     TextStyle currentFont =
-        Theme.of(context).textTheme.subtitle1.copyWith(color: Colors.black);
+        getThemeSubtitle(context).copyWith(color: Colors.black);
     TextStyle expeditionFont =
         currentFont.copyWith(fontFamily: nmsExpeditionFontFamily);
 

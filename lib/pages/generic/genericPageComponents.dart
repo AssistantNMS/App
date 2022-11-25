@@ -37,6 +37,7 @@ import '../../contracts/requiredItemDetails.dart';
 import '../../contracts/statBonus.dart';
 import '../../helpers/genericHelper.dart';
 import '../../helpers/heroHelper.dart';
+import '../../helpers/themeHelper.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 import 'allPossibleOutputsPage.dart';
 import 'genericPageAllRequiredRawMaterials.dart';
@@ -215,11 +216,7 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
     String maxStack = genericItem.maxStackSize.toStringAsFixed(0);
     chipList.add(genericItemDescription(
       "$maxStackLang: $maxStack",
-      textStyle: getTheme()
-          .getTheme(context)
-          .primaryTextTheme
-          .bodyText1
-          .copyWith(color: chipColour),
+      textStyle: getThemeBodyLarge(context).copyWith(color: chipColour),
     ));
   }
 

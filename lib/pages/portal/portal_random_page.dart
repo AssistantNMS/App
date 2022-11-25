@@ -1,9 +1,11 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:roll_slot_machine/roll_slot.dart';
 import 'package:roll_slot_machine/roll_slot_controller.dart';
 
+import '../../components/floatingActionButton/randomPortalFloatingActionButton.dart';
 import '../../components/portal/portalGlyphList.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/youtubersTilePresenter.dart';
@@ -23,7 +25,8 @@ class RandomPortalPage extends StatefulWidget {
 }
 
 class _RandomPortalPageState extends State<RandomPortalPage> {
-  List<int> values = List.generate(100, (index) => index);
+  bool fabIsDisabled = true;
+  List<int> currentCode = [];
 
   final _rollSlotController0 = RollSlotController();
   final _rollSlotController1 = RollSlotController();
@@ -46,15 +49,41 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
   void initState() {
     super.initState();
 
+    _rollSlotControllerA.addListener(() {
+      setState(() {
+        if (fabIsDisabled) return;
+        currentCode = [
+          _rollSlotController0.currentIndex,
+          _rollSlotController1.currentIndex,
+          _rollSlotController2.currentIndex,
+          _rollSlotController3.currentIndex,
+          _rollSlotController4.currentIndex,
+          _rollSlotController5.currentIndex,
+          _rollSlotController6.currentIndex,
+          _rollSlotController7.currentIndex,
+          _rollSlotController8.currentIndex,
+          _rollSlotController9.currentIndex,
+          _rollSlotControllerA.currentIndex,
+          _rollSlotControllerB.currentIndex,
+        ];
+        fabIsDisabled = false;
+      });
+    });
+
     Future.delayed(const Duration(milliseconds: 500), () {
       // Really bad - I did it for the animations!
-      onStart();
+      startRoll();
     });
   }
 
-  void onStart() {
+  void startRoll() {
+    setState(() {
+      currentCode = [];
+      fabIsDisabled = true;
+    });
+
     // _rollSlotController0.animateRandomly();
-    // _rollSlotController1.animateRandomly();
+    _rollSlotController1.animateRandomly();
     _rollSlotController2.animateRandomly();
     _rollSlotController3.animateRandomly();
     _rollSlotController4.animateRandomly();
@@ -65,6 +94,22 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
     _rollSlotController9.animateRandomly();
     _rollSlotControllerA.animateRandomly();
     _rollSlotControllerB.animateRandomly();
+
+    Future.delayed(const Duration(milliseconds: 500), () {
+      setState(() {
+        fabIsDisabled = false;
+      });
+    });
+  }
+
+  void copyCode(BuildContext copyCtx) {
+    String hexString = currentCode.map((e) => e.toRadixString(16)).join('');
+    Clipboard.setData(ClipboardData(text: hexString.toUpperCase()));
+    getSnackbar().showSnackbar(
+      copyCtx,
+      LocaleKey.portalCodeCopied,
+      description: hexString.toUpperCase(),
+    );
   }
 
   @override
@@ -73,7 +118,7 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
       converter: (store) => PortalViewModel.fromStore(store),
       builder: (_, viewModel) => basicGenericPageScaffold(
         context,
-        title: getTranslations().fromKey(LocaleKey.savedPortalCoordinates),
+        title: getTranslations().fromKey(LocaleKey.randomPortal),
         actions: [
           ActionItem(
             icon: Icons.screen_rotation_alt_rounded,
@@ -84,9 +129,11 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
           )
         ],
         body: getBody(context, viewModel),
-        fab: FloatingActionButton(
-          onPressed: () => onStart(),
-          child: const Icon(Icons.refresh),
+        fab: randomPortalFAB(
+          context,
+          isDisabled: fabIsDisabled || currentCode.isEmpty,
+          startRoll: () => startRoll(),
+          copyCode: () => copyCode(context),
         ),
       ),
     );
@@ -99,10 +146,7 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
       16,
       (index) => index.toRadixString(16),
     );
-    var secondReel = [
-      portalList[1],
-      ...portalList.where((p) => p != '1'),
-    ].toList();
+    List<String> secondReel = ['0', '1', '2'].toList();
 
     return Column(
       mainAxisSize: MainAxisSize.max,
@@ -232,7 +276,7 @@ class RollSlotWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var maxHeight = pageSize.height / 4;
+    var maxHeight = (pageSize.height - 50) / 4;
     return ConstrainedBox(
       constraints: BoxConstraints(
         maxHeight: maxHeight,
@@ -270,11 +314,12 @@ class BuildItem extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.transparent,
         boxShadow: [
-          BoxShadow(color: const Color(0xff2f5d62).withOpacity(.2)),
+          BoxShadow(
+              color: getTheme().getSecondaryColour(context).withOpacity(.1)),
         ],
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: const Color(0xff2f5d62),
+          color: getTheme().getSecondaryColour(context).withOpacity(.5),
         ),
       ),
       alignment: Alignment.center,

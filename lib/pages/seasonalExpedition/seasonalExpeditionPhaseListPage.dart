@@ -165,6 +165,7 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (context, index) => widgets[index],
+        scrollController: ScrollController(),
       ),
     );
   }

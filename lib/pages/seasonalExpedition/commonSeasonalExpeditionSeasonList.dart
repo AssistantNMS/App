@@ -136,5 +136,6 @@ Widget getExpeditionBodyFromFuture(
     shrinkWrap: true,
     itemCount: listItems.length,
     itemBuilder: (BuildContext context, int index) => listItems[index],
+    scrollController: ScrollController(),
   );
 }

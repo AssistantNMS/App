@@ -65,10 +65,14 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
   }
 
   Widget getBody(
-      BuildContext scaffoldContext, PortalViewModel portalViewModel) {
+    BuildContext scaffoldContext,
+    PortalViewModel portalViewModel,
+  ) {
     List<Widget> widgets = List.empty(growable: true);
-    widgets.add(twoLinePortalGlyphList(item.codes,
-        useAltGlyphs: portalViewModel.useAltGlyphs));
+    widgets.add(twoLinePortalGlyphList(
+      item.codes,
+      useAltGlyphs: portalViewModel.useAltGlyphs,
+    ));
 
     String hexString = allUpperCase(intArrayToHex(item.codes));
     widgets.add(GestureDetector(

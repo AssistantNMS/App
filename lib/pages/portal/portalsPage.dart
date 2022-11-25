@@ -43,29 +43,34 @@ class _PortalsPageState extends State<PortalsPage> {
           )
         ],
         body: getBody(context, portalViewModel),
-        fab: FloatingActionButton(
-          onPressed: () async {
-            PortalRecord temp =
-                await getNavigation().navigateAsync<PortalRecord>(
-              context,
-              navigateTo: (context) => AddPortalPage(
-                PortalRecord(
-                    codes: List.empty(growable: true),
-                    tags: List.empty(growable: true)),
-              ),
-            );
-            if (temp == null || temp is! PortalRecord) return;
-            portalViewModel.addPortal(temp.name, temp.codes, temp.tags);
-            setState(() {
-              _counter++;
-            });
-          },
-          heroTag: 'PortalsPage',
-          child: const Icon(Icons.add),
-          foregroundColor: getTheme().fabForegroundColourSelector(context),
-          backgroundColor: getTheme().fabColourSelector(context),
-        ),
+        fab: getFab(context, portalViewModel),
       ),
+    );
+  }
+
+  Widget getFab(BuildContext fabCtx, PortalViewModel portalViewModel) {
+    Color foregroundColor = getTheme().fabForegroundColourSelector(fabCtx);
+    Color backgroundColor = getTheme().fabColourSelector(fabCtx);
+    return FloatingActionButton(
+      onPressed: () async {
+        PortalRecord currentRecord = PortalRecord(
+          codes: List.empty(growable: true),
+          tags: List.empty(growable: true),
+        );
+        PortalRecord temp = await getNavigation().navigateAsync<PortalRecord>(
+          context,
+          navigateTo: (context) => AddPortalPage(currentRecord),
+        );
+        if (temp == null || temp is! PortalRecord) return;
+        portalViewModel.addPortal(temp.name, temp.codes, temp.tags);
+        setState(() {
+          _counter++;
+        });
+      },
+      heroTag: 'PortalsPage',
+      child: const Icon(Icons.add),
+      foregroundColor: foregroundColor,
+      backgroundColor: backgroundColor,
     );
   }
 

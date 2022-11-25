@@ -147,6 +147,15 @@ class CommunityMissionRewards extends StatelessWidget {
       }
     }
 
+    if (qsStore.items.isEmpty) {
+      widgets.addAll(
+        [
+          emptySpace3x(),
+          genericItemName(getTranslations().fromKey(LocaleKey.noItems)),
+        ],
+      );
+    }
+
     return animateWidgetIn(
       child: Column(children: widgets),
     );

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';
 import '../../contracts/data/platformControlMapping.dart';
+import '../../helpers/themeHelper.dart';
 
 const String paleYellowColourClass = 'C9D68B';
 const String goldColourClass = 'B09857';
@@ -178,7 +179,7 @@ Widget textWithHighlightTags(
 
   return RichText(
     text: TextSpan(
-      style: textStyle ?? Theme.of(context).textTheme.subtitle1,
+      style: textStyle ?? getThemeSubtitle(context),
       children: nodes,
     ),
     textAlign: textAlign,
@@ -194,7 +195,7 @@ List<Widget> genericPageDescripHighlightText(
   List<RichText> paragraphNodes = List.empty(growable: true);
   if (!text.contains('<>')) return [genericItemDescription(text)];
 
-  List<String> paragraphs = text.split(RegExp(r'\r?\n'));
+  List<String> paragraphs = text.split(RegExp(r'\r?\n|\/'));
   for (int paragraphIndex = 0;
       paragraphIndex < paragraphs.length;
       paragraphIndex++) {
