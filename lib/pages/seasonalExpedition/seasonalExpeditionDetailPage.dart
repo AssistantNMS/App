@@ -68,6 +68,7 @@ class SeasonalExpeditionDetailPage extends StatelessWidget {
           child: listWithScrollbar(
             itemCount: widgets.length,
             itemBuilder: (context, index) => widgets[index],
+            scrollController: ScrollController(),
           ),
         ),
       ],
