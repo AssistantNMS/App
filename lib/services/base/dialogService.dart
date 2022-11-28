@@ -133,6 +133,7 @@ class DialogService implements IDialogService {
     context,
     TextEditingController controller, {
     String title,
+    List<int> amounts,
     Function(BuildContext ctx, String) onSuccess,
   }) {
     void onControllerTextChange(
@@ -144,9 +145,9 @@ class DialogService implements IDialogService {
         ..selection = const TextSelection.collapsed(offset: 0);
     }
 
-    List<int> amounts = [1, 2, 3, 5, 10, 25];
+    List<int> localAmounts = (amounts != null) ? amounts : [1, 2, 3, 5, 10, 25];
     List<InputChip> inputs = List.empty(growable: true);
-    for (int amount in amounts) {
+    for (int amount in localAmounts) {
       inputs.add(
         InputChip(
           label: Text(

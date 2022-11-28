@@ -21,6 +21,7 @@ class SettingViewModel {
   final bool showFestiveBackground;
   final int platformIndex;
   final bool mergeInventoryQuantities;
+  final int customHomePageColumnCount;
 
   final Function() toggleGuideIsCompact;
   final Function() toggleGenericTileIsCompact;
@@ -35,6 +36,7 @@ class SettingViewModel {
   final Function(bool) setShowFestiveBackground;
   final Function(int) setPlatformIndex;
   final Function() toggleMergeInventoryQuantities;
+  final Function(int) setCustomHomePageColumnCount;
 
   SettingViewModel({
     this.persistCart,
@@ -52,6 +54,7 @@ class SettingViewModel {
     this.showFestiveBackground,
     this.platformIndex,
     this.mergeInventoryQuantities,
+    this.customHomePageColumnCount,
     //
     this.toggleGuideIsCompact,
     this.toggleGenericTileIsCompact,
@@ -66,6 +69,7 @@ class SettingViewModel {
     this.setShowFestiveBackground,
     this.setPlatformIndex,
     this.toggleMergeInventoryQuantities,
+    this.setCustomHomePageColumnCount,
   });
 
   static SettingViewModel fromStore(Store<AppState> store) => SettingViewModel(
@@ -84,6 +88,7 @@ class SettingViewModel {
         showFestiveBackground: getShowFestiveBackground(store.state),
         platformIndex: getLastPlatformIndex(store.state),
         mergeInventoryQuantities: getMergeInventoryQuantities(store.state),
+        customHomePageColumnCount: getCustomHomePageColumnCount(store.state),
         //
         toggleGuideIsCompact: () => store.dispatch(ToggleIsGuidesCompact()),
         toggleGenericTileIsCompact: () =>
@@ -107,5 +112,7 @@ class SettingViewModel {
             store.dispatch(SetLastPlatformIndex(platformIndex)),
         toggleMergeInventoryQuantities: () =>
             store.dispatch(ToggleMergeInventoryQuantities()),
+        setCustomHomePageColumnCount: (int columns) =>
+            store.dispatch(SetCustomHomePageColumnCount(columns)),
       );
 }

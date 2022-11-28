@@ -157,6 +157,40 @@ class Settings extends StatelessWidget {
       },
     ));
 
+    if (viewModel.homepageType == HomepageType.custom) {
+      widgets.add(
+        flatCard(
+          child: genericListTile(
+            context,
+            leadingImage: null,
+            name:
+                'Force number of columns', //getTranslations().fromKey(LocaleKey.homepage),
+            trailing: viewModel.customHomePageColumnCount == 0
+                ? genericItemName('📱')
+                : Text(viewModel.customHomePageColumnCount.toString()),
+            onTap: () {
+              TextEditingController controller = TextEditingController(
+                text: (viewModel.customHomePageColumnCount < 1)
+                    ? ''
+                    : viewModel.customHomePageColumnCount.toString(),
+              );
+              getDialog().showQuantityDialog(
+                context,
+                controller,
+                amounts: [0, 1, 2, 3, 4, 5],
+                onSuccess: (BuildContext ctx, String quantity) {
+                  int intQuantity = int.tryParse(quantity);
+                  if (intQuantity == null) return;
+                  if (intQuantity > 10) intQuantity = 10;
+                  viewModel.setCustomHomePageColumnCount(intQuantity);
+                },
+              );
+            },
+          ),
+        ),
+      );
+    }
+
     widgets.add(boolSettingTilePresenter(
       context,
       getTranslations().fromKey(LocaleKey.hideSpoilerWarnings),
