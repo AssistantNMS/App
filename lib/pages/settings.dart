@@ -53,7 +53,7 @@ class Settings extends StatelessWidget {
 
     widgets.add(boolSettingTilePresenter(
       context,
-      getTranslations().fromKey(LocaleKey.homeUseCompactTiles),
+      getTranslations().fromKey(LocaleKey.allItemsListUseCompactTiles),
       viewModel.genericTileIsCompact,
       onChange: viewModel.toggleGenericTileIsCompact,
     ));
@@ -163,10 +163,9 @@ class Settings extends StatelessWidget {
           child: genericListTile(
             context,
             leadingImage: null,
-            name:
-                'Force number of columns', //getTranslations().fromKey(LocaleKey.homepage),
+            name: getTranslations().fromKey(LocaleKey.forceNumberOfColumns),
             trailing: viewModel.customHomePageColumnCount == 0
-                ? genericItemName('📱')
+                ? const Icon(Icons.do_not_disturb_alt_outlined, size: 32)
                 : Text(viewModel.customHomePageColumnCount.toString()),
             onTap: () {
               TextEditingController controller = TextEditingController(
