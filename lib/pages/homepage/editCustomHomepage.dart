@@ -41,7 +41,7 @@ class _EditCustomHomeWidget extends State<EditCustomHomepage> {
     int numberOfColumns = 6;
     double secretPadding = 4;
     double deviceWidth = MediaQuery.of(context).size.width;
-    if (widget._numberOfColumns < 0) {
+    if (widget._numberOfColumns < 1) {
       if (deviceWidth < 1000) numberOfColumns = 5;
       if (deviceWidth < 800) numberOfColumns = 4;
       if (deviceWidth < 600) numberOfColumns = 3;

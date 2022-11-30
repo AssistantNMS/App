@@ -47,8 +47,12 @@ class _EditingHomepageWidget extends State<EditingHomepageItem>
 
   @override
   Widget build(BuildContext context) {
-    return editCustomMenuItemGridPresenter(context, menuItem, tileSize,
-        position: _shake());
+    return editCustomMenuItemGridPresenter(
+      context,
+      menuItem,
+      tileSize,
+      position: _shake(),
+    );
   }
 
   @override
@@ -59,8 +63,12 @@ class _EditingHomepageWidget extends State<EditingHomepageItem>
 }
 
 Widget editCustomMenuItemGridPresenter(
-    BuildContext context, CustomMenu menuItem, double tileSize,
-    {double position = 0, bool isBeingDragged = false}) {
+  BuildContext context,
+  CustomMenu menuItem,
+  double tileSize, {
+  double position = 0,
+  bool isBeingDragged = false,
+}) {
   var childWidget = Card(
     shadowColor: Colors.transparent,
     child: Column(
