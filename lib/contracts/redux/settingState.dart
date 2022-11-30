@@ -30,6 +30,7 @@ class SettingState {
   final bool showFestiveBackground;
   final int lastNewsPageIndex;
   final bool mergeInventoryQuantities;
+  final int customHomePageColumnCount;
 
   const SettingState({
     this.persistCart,
@@ -55,6 +56,7 @@ class SettingState {
     this.showFestiveBackground,
     this.lastNewsPageIndex,
     this.mergeInventoryQuantities,
+    this.customHomePageColumnCount,
   });
 
   factory SettingState.initial() {
@@ -82,6 +84,7 @@ class SettingState {
       showFestiveBackground: true,
       lastNewsPageIndex: 0,
       mergeInventoryQuantities: true,
+      customHomePageColumnCount: 0,
     );
   }
 
@@ -109,6 +112,7 @@ class SettingState {
     bool showFestiveBackground,
     int lastNewsPageIndex,
     bool mergeInventoryQuantities,
+    int customHomePageColumnCount,
   }) {
     return SettingState(
       persistCart: persistCart ?? this.persistCart,
@@ -139,6 +143,8 @@ class SettingState {
       lastNewsPageIndex: lastNewsPageIndex ?? this.lastNewsPageIndex,
       mergeInventoryQuantities:
           mergeInventoryQuantities ?? this.mergeInventoryQuantities,
+      customHomePageColumnCount:
+          customHomePageColumnCount ?? this.customHomePageColumnCount,
     );
   }
 
@@ -174,6 +180,8 @@ class SettingState {
         lastNewsPageIndex: readIntSafe(json, 'lastNewsPageIndex'),
         mergeInventoryQuantities:
             readBoolSafe(json, 'mergeInventoryQuantities'),
+        customHomePageColumnCount:
+            readIntSafe(json, 'customHomePageColumnCount'),
       );
     } catch (exception) {
       return SettingState.initial();
@@ -205,5 +213,6 @@ class SettingState {
         'showFestiveBackground': showFestiveBackground,
         'lastNewsPageIndex': lastNewsPageIndex,
         'mergeInventoryQuantities': mergeInventoryQuantities,
+        'customHomePageColumnCount': customHomePageColumnCount,
       };
 }

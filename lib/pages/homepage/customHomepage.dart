@@ -82,8 +82,13 @@ class _CustomHomeWidget extends State<CustomHomepage>
       orderedMenuItems.add(opt);
     }
 
-    return isEdit
-        ? EditCustomHomepage(orderedMenuItems, viewModel.setCustomMenuOrder)
-        : ViewCustomHomepage(orderedMenuItems);
+    if (isEdit) {
+      return EditCustomHomepage(
+        orderedMenuItems,
+        viewModel.customColumnCount,
+        viewModel.setCustomMenuOrder,
+      );
+    }
+    return ViewCustomHomepage(orderedMenuItems, viewModel.customColumnCount);
   }
 }

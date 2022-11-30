@@ -28,6 +28,8 @@ final settingReducer = combineReducers<SettingState>([
   TypedReducer<SettingState, ShowFestiveBackground>(_showFestiveBackground),
   TypedReducer<SettingState, ToggleMergeInventoryQuantities>(
       _toggleMergeInventoryQuantities),
+  TypedReducer<SettingState, SetCustomHomePageColumnCount>(
+      _setCustomHomePageColumnCount),
 ]);
 
 SettingState _editLanguage(SettingState state, ChangeLanguageAction action) {
@@ -85,3 +87,6 @@ SettingState _showFestiveBackground(
 SettingState _toggleMergeInventoryQuantities(
         SettingState state, ToggleMergeInventoryQuantities action) =>
     state.copyWith(mergeInventoryQuantities: !state.mergeInventoryQuantities);
+SettingState _setCustomHomePageColumnCount(
+        SettingState state, SetCustomHomePageColumnCount action) =>
+    state.copyWith(customHomePageColumnCount: action.columnCount);

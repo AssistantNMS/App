@@ -77,3 +77,8 @@ class SetNewsPage extends PersistToStorage {
 class ToggleMergeInventoryQuantities extends PersistToStorage {
   ToggleMergeInventoryQuantities();
 }
+
+class SetCustomHomePageColumnCount extends PersistToStorage {
+  final int columnCount;
+  SetCustomHomePageColumnCount(this.columnCount);
+}

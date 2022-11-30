@@ -53,7 +53,7 @@ class Settings extends StatelessWidget {
 
     widgets.add(boolSettingTilePresenter(
       context,
-      getTranslations().fromKey(LocaleKey.homeUseCompactTiles),
+      getTranslations().fromKey(LocaleKey.allItemsListUseCompactTiles),
       viewModel.genericTileIsCompact,
       onChange: viewModel.toggleGenericTileIsCompact,
     ));
@@ -156,6 +156,39 @@ class Settings extends StatelessWidget {
         }
       },
     ));
+
+    if (viewModel.homepageType == HomepageType.custom) {
+      widgets.add(
+        flatCard(
+          child: genericListTile(
+            context,
+            leadingImage: null,
+            name: getTranslations().fromKey(LocaleKey.forceNumberOfColumns),
+            trailing: viewModel.customHomePageColumnCount == 0
+                ? const Icon(Icons.do_not_disturb_alt_outlined, size: 32)
+                : Text(viewModel.customHomePageColumnCount.toString()),
+            onTap: () {
+              TextEditingController controller = TextEditingController(
+                text: (viewModel.customHomePageColumnCount < 1)
+                    ? ''
+                    : viewModel.customHomePageColumnCount.toString(),
+              );
+              getDialog().showQuantityDialog(
+                context,
+                controller,
+                amounts: [0, 1, 2, 3, 4, 5],
+                onSuccess: (BuildContext ctx, String quantity) {
+                  int intQuantity = int.tryParse(quantity);
+                  if (intQuantity == null) return;
+                  if (intQuantity > 10) intQuantity = 10;
+                  viewModel.setCustomHomePageColumnCount(intQuantity);
+                },
+              );
+            },
+          ),
+        ),
+      );
+    }
 
     widgets.add(boolSettingTilePresenter(
       context,

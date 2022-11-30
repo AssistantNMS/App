@@ -9,9 +9,14 @@ import 'customHomepageComponents.dart';
 
 class EditCustomHomepage extends StatefulWidget {
   final List<CustomMenu> _menuOptions;
+  final int _numberOfColumns;
   final Function(List<LocaleKey>) _setCustomOrder;
-  const EditCustomHomepage(this._menuOptions, this._setCustomOrder, {Key key})
-      : super(key: key);
+  const EditCustomHomepage(
+    this._menuOptions,
+    this._numberOfColumns,
+    this._setCustomOrder, {
+    Key key,
+  }) : super(key: key);
 
   @override
   _EditCustomHomeWidget createState() =>
@@ -33,13 +38,17 @@ class _EditCustomHomeWidget extends State<EditCustomHomepage> {
       });
     }
 
-    double deviceWidth = MediaQuery.of(context).size.width;
     int numberOfColumns = 6;
-    if (deviceWidth < 1000) numberOfColumns = 5;
-    if (deviceWidth < 800) numberOfColumns = 4;
-    if (deviceWidth < 600) numberOfColumns = 3;
-    if (deviceWidth < 400) numberOfColumns = 2;
     double secretPadding = 4;
+    double deviceWidth = MediaQuery.of(context).size.width;
+    if (widget._numberOfColumns < 1) {
+      if (deviceWidth < 1000) numberOfColumns = 5;
+      if (deviceWidth < 800) numberOfColumns = 4;
+      if (deviceWidth < 600) numberOfColumns = 3;
+      if (deviceWidth < 400) numberOfColumns = 2;
+    } else {
+      numberOfColumns = widget._numberOfColumns;
+    }
 
     double tileSize = (deviceWidth / numberOfColumns) - (numberOfColumns * 2);
 

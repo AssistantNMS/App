@@ -51,6 +51,12 @@ List<LocaleKey> getCustomMenuOrder(AppState state) =>
 bool getDontShowSpoilerAlert(AppState state) =>
     state?.settingState?.dontShowSpoilerAlert ?? false;
 
+int getCustomHomePageColumnCount(AppState state) {
+  int safeValue = (state?.settingState?.customHomePageColumnCount ?? 0);
+  if (safeValue < 1) return 0;
+  return safeValue;
+}
+
 String getPlayerName(AppState state) => state?.settingState?.playerName;
 
 int getUselessButtonTaps(AppState state) =>
