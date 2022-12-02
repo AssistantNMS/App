@@ -225,14 +225,18 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
       case CurrencyType.CREDITS:
         chipList.add(
           genericItemCredits(
-              context, genericItem.baseValueUnits.toStringAsFixed(0),
-              colour: chipColour),
+            context,
+            genericItem.baseValueUnits.toStringAsFixed(0),
+            colour: chipColour,
+          ),
         );
         break;
       case CurrencyType.QUICKSILVER:
         chipList.add(genericItemQuicksilver(
-            context, genericItem.baseValueUnits.toStringAsFixed(0),
-            colour: chipColour));
+          context,
+          genericItem.baseValueUnits.toStringAsFixed(0),
+          colour: chipColour,
+        ));
         break;
       case CurrencyType.NONE:
       default:
