@@ -2,6 +2,8 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
+import '../../components/appNotice.dart';
+import '../../components/common/cachedFutureBuilder.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/futureHelper.dart';
@@ -15,37 +17,50 @@ class AllItemsPageComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var hintText = getTranslations().fromKey(LocaleKey.searchItems);
     return StoreConnector<AppState, GenericPageViewModel>(
       converter: (store) => GenericPageViewModel.fromStore(store),
-      builder: (_, viewModel) => //
-          SearchableList<GenericPageItem>(
-        () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),
-        listItemDisplayer: getListItemDisplayer(
-          viewModel.genericTileIsCompact,
-          viewModel.displayGenericItemColour,
-          isHero: true,
-        ),
-        listItemSearch: search,
-        key: Key(
-            '${getTranslations().currentLanguage} ${viewModel.genericTileIsCompact} - ${viewModel.displayGenericItemColour}'),
-        hintText: hintText,
-        addFabPadding: true,
+      builder: (storeCtx, viewModel) => CachedFutureBuilder(
+        future: getAssistantAppsApi().getAppNotices(viewModel.selectedLanguage),
+        whileLoading: getLoading().fullPageLoading(context),
+        whenDoneLoading: (ResultWithValue<List<AppNoticeViewModel>> snapshot) {
+          List<AppNoticeViewModel> notices = List.empty(growable: true);
+          if (snapshot.isSuccess &&
+              snapshot.value != null &&
+              snapshot.value.isNotEmpty) {
+            notices = snapshot.value;
+          }
+          return renderSearchList(storeCtx, viewModel, notices);
+        },
       ),
-      // ResponsiveListDetailView<GenericPageItem>(
-      //   () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),
-      //   getResponsiveListItemDisplayer(
-      //     viewModel.genericTileIsCompact,
-      //     viewModel.displayGenericItemColour,
-      //     isHero: true,
-      //   ),
-      //   search,
-      //   listItemMobileOnTap:
-      //       (BuildContext context, GenericPageItem gameItem) {},
-      //   listItemDesktopOnTap: (BuildContext context, GenericPageItem recipe,
-      //       void Function(Widget) updateDetailView) {},
-      //   key: Key(getTranslations().currentLanguage),
-      // ),
+    );
+  }
+
+  Widget renderSearchList(
+    BuildContext storeCtx,
+    GenericPageViewModel viewModel,
+    List<AppNoticeViewModel> notices,
+  ) {
+    String hintText = getTranslations().fromKey(LocaleKey.searchItems);
+    String renderKey = [
+      getTranslations().currentLanguage.toString(),
+      viewModel.genericTileIsCompact.toString(),
+      viewModel.displayGenericItemColour.toString()
+    ].join('-');
+
+    return SearchableList<GenericPageItem>(
+      () => getAllFromLocaleKeys(storeCtx, getAllItemsLocaleKeys),
+      listItemDisplayer: getListItemDisplayer(
+        viewModel.genericTileIsCompact,
+        viewModel.displayGenericItemColour,
+        isHero: true,
+      ),
+      firstListItemWidget: notices.isNotEmpty
+          ? Column(children: notices.map(appNoticeTileCore).toList())
+          : null,
+      listItemSearch: search,
+      key: Key(renderKey),
+      hintText: hintText,
+      addFabPadding: true,
     );
   }
 }
