@@ -64,9 +64,8 @@ class SetIsPatron extends PersistToStorage {
   SetIsPatron(this.newIsPatron);
 }
 
-class ShowFestiveBackground extends PersistToStorage {
-  final bool show;
-  ShowFestiveBackground(this.show);
+class ToggleShowFestiveBackground extends PersistToStorage {
+  ToggleShowFestiveBackground();
 }
 
 class SetNewsPage extends PersistToStorage {

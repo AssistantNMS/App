@@ -10,6 +10,7 @@ import '../constants/Fonts.dart';
 import '../constants/HomepageItems.dart';
 import '../contracts/enum/homepageType.dart';
 import '../contracts/redux/appState.dart';
+import '../helpers/dateHelper.dart';
 import '../helpers/uselessButtonHelper.dart';
 import '../redux/modules/setting/settingViewModel.dart';
 
@@ -204,14 +205,12 @@ class Settings extends StatelessWidget {
       onChange: viewModel.toggleMergeInventoryQuantities,
     ));
 
-    if (isValentinesPeriod()) {
+    if (isInFestivePeriod()) {
       widgets.add(boolSettingTilePresenter(
         context,
         getTranslations().fromKey(LocaleKey.displaySeasonalBackground),
         viewModel.showFestiveBackground,
-        onChange: () => viewModel.setShowFestiveBackground(
-          !viewModel.showFestiveBackground,
-        ),
+        onChange: () => viewModel.toggleShowFestiveBackground(),
       ));
     }
 

@@ -33,7 +33,7 @@ class SettingViewModel {
   final Function() setShowSpoilerAlert;
   final Function() increaseUselessButtonTaps;
   final Function(bool) setIsPatron;
-  final Function(bool) setShowFestiveBackground;
+  final Function() toggleShowFestiveBackground;
   final Function(int) setPlatformIndex;
   final Function() toggleMergeInventoryQuantities;
   final Function(int) setCustomHomePageColumnCount;
@@ -66,7 +66,7 @@ class SettingViewModel {
     this.setShowSpoilerAlert,
     this.increaseUselessButtonTaps,
     this.setIsPatron,
-    this.setShowFestiveBackground,
+    this.toggleShowFestiveBackground,
     this.setPlatformIndex,
     this.toggleMergeInventoryQuantities,
     this.setCustomHomePageColumnCount,
@@ -106,8 +106,8 @@ class SettingViewModel {
         setShowSpoilerAlert: () => store.dispatch(DontShowSpoilerAlert()),
         increaseUselessButtonTaps: () => store.dispatch(UselessButtonTap()),
         setIsPatron: (bool isPatron) => store.dispatch(SetIsPatron(isPatron)),
-        setShowFestiveBackground: (bool show) =>
-            store.dispatch(ShowFestiveBackground(show)),
+        toggleShowFestiveBackground: () =>
+            store.dispatch(ToggleShowFestiveBackground()),
         setPlatformIndex: (int platformIndex) =>
             store.dispatch(SetLastPlatformIndex(platformIndex)),
         toggleMergeInventoryQuantities: () =>

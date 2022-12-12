@@ -25,7 +25,8 @@ final settingReducer = combineReducers<SettingState>([
   TypedReducer<SettingState, UselessButtonTap>(_uselessButtonTap),
   TypedReducer<SettingState, SetIsPatron>(_setIsPatron),
   TypedReducer<SettingState, SetNewsPage>(_setNewsPage),
-  TypedReducer<SettingState, ShowFestiveBackground>(_showFestiveBackground),
+  TypedReducer<SettingState, ToggleShowFestiveBackground>(
+      _toggleShowFestiveBackground),
   TypedReducer<SettingState, ToggleMergeInventoryQuantities>(
       _toggleMergeInventoryQuantities),
   TypedReducer<SettingState, SetCustomHomePageColumnCount>(
@@ -81,9 +82,9 @@ SettingState _setIsPatron(SettingState state, SetIsPatron action) =>
     state.copyWith(isPatron: action.newIsPatron);
 SettingState _setNewsPage(SettingState state, SetNewsPage action) =>
     state.copyWith(lastNewsPageIndex: action.newsSelection);
-SettingState _showFestiveBackground(
-        SettingState state, ShowFestiveBackground action) =>
-    state.copyWith(showFestiveBackground: action.show);
+SettingState _toggleShowFestiveBackground(
+        SettingState state, ToggleShowFestiveBackground action) =>
+    state.copyWith(showFestiveBackground: !state.showFestiveBackground);
 SettingState _toggleMergeInventoryQuantities(
         SettingState state, ToggleMergeInventoryQuantities action) =>
     state.copyWith(mergeInventoryQuantities: !state.mergeInventoryQuantities);
