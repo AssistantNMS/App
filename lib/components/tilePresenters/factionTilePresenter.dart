@@ -46,23 +46,7 @@ Widget factionMissionTilePresenter(BuildContext context, FactionMission faction,
       : faction.tiers.first;
 
   return ListTile(
-    leading: SizedBox(
-      height: 50,
-      width: 50,
-      child: Stack(
-        alignment: Alignment.center,
-        clipBehavior: Clip.hardEdge,
-        children: [
-          Positioned(
-            height: 100,
-            width: 100,
-            left: -25,
-            top: -25,
-            child: localImage(currentTier.icon),
-          ),
-        ],
-      ),
-    ),
+    leading: localImage(currentTier.icon),
     title: Text(
       faction.name,
       maxLines: 1,

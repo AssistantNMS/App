@@ -3,6 +3,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import '../../../constants/Fonts.dart';
 import '../../../contracts/enum/homepageType.dart';
 import '../../../contracts/redux/appState.dart';
+import '../../../helpers/dateHelper.dart';
 
 String getSelectedLanguage(AppState state) =>
     state?.settingState?.selectedLanguage ?? 'en';
@@ -65,7 +66,7 @@ int getUselessButtonTaps(AppState state) =>
 bool getIsPatron(AppState state) => state?.settingState?.isPatron;
 
 bool getShowFestiveBackground(AppState state) {
-  if (!isValentinesPeriod()) return false;
+  if (!isInFestivePeriod()) return false;
 
   return state?.settingState?.showFestiveBackground ?? true;
 }
