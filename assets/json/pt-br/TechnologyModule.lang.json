@@ -7336,8 +7336,9 @@
     "Name": "Atualização recuperada do hiperpropulsor",
     "Group": "Módulo de nave cargueira recuperada",
     "Description": "Uma atualização implantável de nave cargueira, recuperada de <STELLAR>%NAME%<>.\n\nPode ser reimplantada na sua nave capital para melhorar o <TECHNOLOGY>hiperpropulsor<> dela.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7370,8 +7371,9 @@
     "Name": "Sinalizador de frota recuperado",
     "Group": "Módulo de nave cargueira recuperada",
     "Description": "Uma atualização implantável de nave cargueira, recuperada de <STELLAR>%NAME%<>.\n\nPode ser reimplantada na sua nave capital para melhorar a <TECHNOLOGY>velocidade<> da sua frota.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7396,8 +7398,9 @@
     "Name": "Unidade de combustível de frota recuperada",
     "Group": "Módulo de nave cargueira recuperada",
     "Description": "Uma atualização implantável de nave cargueira, recuperada de <STELLAR>%NAME%<>.\n\nPode ser reimplantada na sua nave capital para melhorar a <TECHNOLOGY>eficiência do combustível<> da sua frota.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "Fragmento de armas de sentinela",
+    "Group": "Módulo de multiferramenta proibido",
+    "Description": "Uma atualização <SPECIAL>anômala<> para os <TECHNOLOGY>sistemas de armamento<> da multiferramenta. Use <VAL_ON><IMG>FE_ALT1<><> para iniciar o <VAL_ON>processo de instalação<> da atualização.\n\nEste estranho fragmento vítreo foi extraído dos <SPECIAL>destroços de sentinelas<>. Não há como saber qual será seu efeito exato sobre a multiferramenta até que a instalação seja concluída.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Dano",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Tempo de recarga",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Taxa de disparos",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "Fragmento de exotraje de sentinela",
+    "Group": "Módulo de exotraje proibido",
+    "Description": "Uma atualização <SPECIAL>anômala<> para o <TECHNOLOGY>exotraje<>. Use <VAL_ON><IMG>FE_ALT1<><> para iniciar o <VAL_ON>processo de instalação<> da atualização.\n\nEste estranho fragmento de destroços foi extraído de uma <SPECIAL>tecnologia dos sentinelas<>. É impossível prever seu efeito exato sobre o desempenho do traje até que a espuma de nanito se espalhe totalmente pelos sistemas do exotraje.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Força do escudo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Integridade do núcleo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Tanques do sistema de sobrevivência",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Energia dos painéis solares",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Eficiência do combustível",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Distância da corrida",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }

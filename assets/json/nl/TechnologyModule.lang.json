@@ -7336,8 +7336,9 @@
     "Name": "Geborgen hyperdrive-upgrade",
     "Group": "Geborgen vrachtschipmodule",
     "Description": "Een verplaatsbare upgrade voor een vrachtschip uit het wrak van <STELLAR>%NAME%<>.\n\nKan worden geïnstalleerd in je eigen vlaggenschip om de <TECHNOLOGY>hyperdrive<> te verbeteren.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7370,8 +7371,9 @@
     "Name": "Geborgen baken",
     "Group": "Geborgen vrachtschipmodule",
     "Description": "Een verplaatsbare upgrade voor een vrachtschip uit het wrak van <STELLAR>%NAME%<>.\n\nKan worden geïnstalleerd in je eigen vlaggenschip om de <TECHNOLOGY>snelheid<> van de vloot te verbeteren.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7396,8 +7398,9 @@
     "Name": "Geborgen brandstofeenheid",
     "Group": "Geborgen vrachtschipmodule",
     "Description": "Een verplaatsbare upgrade voor een vrachtschip uit het wrak van <STELLAR>%NAME%<>.\n\nKan worden geïnstalleerd in je eigen vlaggenschip om de <TECHNOLOGY>brandstofefficiëntie<> van de vloot te verbeteren.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "Sentinel-wapenscherf",
+    "Group": "Verboden multitool-module",
+    "Description": "Een <SPECIAL>abnormale<> upgrade voor de <TECHNOLOGY>wapensystemen<> van de multitool. Gebruik <VAL_ON><IMG>FE_ALT1<><> om de upgrade te <VAL_ON>installeren<>.\n\nDeze griezelige glazen scherf is afkomstig uit <SPECIAL>Sentinel-puin<>. Het exacte effect op de multitool wordt pas duidelijk nadat de installatie is voltooid.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Schade",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Herlaadtijd",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Vuursnelheid",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "Puin uit Sentinel-exopak",
+    "Group": "Verboden exopak-module",
+    "Description": "Een <SPECIAL>abnormale<> upgrade voor het <TECHNOLOGY>exopak<>. Gebruik <VAL_ON><IMG>FE_ALT1<><> om de upgrade te <VAL_ON>installeren<>.\n\nDit vreemde puin is afkomstig uit <SPECIAL>Sentinel-technologie<>. Het exacte effect op de prestaties van het pak wordt pas duidelijk als het nanietschuim volledig is verspreid door de systemen van het exopak.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Schildkracht",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Basisgezondheid",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Lifesupport-tanks",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Zonnepanelen-energie",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Efficiëntie brandstof",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Sprintafstand",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }

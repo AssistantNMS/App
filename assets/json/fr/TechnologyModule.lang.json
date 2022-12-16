@@ -7336,8 +7336,9 @@
     "Name": "Amélioration d'hyperpropulsion récupérée",
     "Group": "Module de cargo récupéré",
     "Description": "Une amélioration de cargo déployable, récupérée sur <STELLAR>%NAME%<>.\n\nPeut être redéployée dans votre propre vaisseau amiral pour améliorer son <TECHNOLOGY>hyperpropulsion<>.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7370,8 +7371,9 @@
     "Name": "Balise de flotte récupérée",
     "Group": "Module de cargo récupéré",
     "Description": "Une amélioration de cargo déployable, récupérée sur <STELLAR>%NAME%<>.\n\nPeut être redéployée dans votre propre vaisseau amiral pour améliorer la <TECHNOLOGY>vitesse<> de votre flotte.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7396,8 +7398,9 @@
     "Name": "Unité de carburant de flotte récupérée",
     "Group": "Module de cargo récupéré",
     "Description": "Une amélioration de cargo déployable, récupérée sur <STELLAR>%NAME%<>.\n\nPeut être redéployée dans votre propre vaisseau amiral pour améliorer l'<TECHNOLOGY>efficacité en carburant<> de votre flotte.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "Fragment d'armes sentinelles",
+    "Group": "Module de multi-outil interdit",
+    "Description": "Une amélioration <SPECIAL>anormale<> pour les <TECHNOLOGY>systèmes d'armes<> du multi-outil. Utilisez <VAL_ON><IMG>FE_ALT1<><> pour lancer le <VAL_ON>processus d'installation<> de l'amélioration.\n\nCe fragment de verre étrange a été récupéré dans des <SPECIAL>débris sentinelles<>. Son effet sur le multi-outil ne sera connu qu'une fois l'installation terminée.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Dégâts",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Temps de rechargement",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Cadence de tir",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "Fragment d'exocombinaison sentinelle",
+    "Group": "Module d'exocombinaison interdit",
+    "Description": "Une amélioration <SPECIAL>anormale<> pour <TECHNOLOGY>exocombinaison<>. Utilisez <VAL_ON><IMG>FE_ALT1<><> pour lancer le <VAL_ON>processus d'installation<> de l'amélioration.\n\nCet étrange fragment de débris a été récupéré dans une <SPECIAL>technologie sentinelle<>. Son effet est impossible à prédire tant que la mousse de nanites n'a pas fini de se répandre dans les systèmes de l'exocombinaison.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Solidité du bouclier",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Santé principale",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Réservoirs du système de survie",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Énergie du panneau solaire",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Efficacité du carburant",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Distance de course",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }

@@ -7336,8 +7336,9 @@
     "Name": "Извлеченное улучшение гипердвигателя",
     "Group": "Извлеченный модуль грузового судна",
     "Description": "Размещаемое улучшение грузового судна, найденное среди обломков судна <STELLAR>%NAME%<>.\n\nМожет быть установлено на ваш крупный корабль для улучшения его <TECHNOLOGY>гипердвигателя<>.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7370,8 +7371,9 @@
     "Name": "Извлеченный маяк флота",
     "Group": "Извлеченный модуль грузового судна",
     "Description": "Размещаемое улучшение грузового судна, найденное среди обломков судна <STELLAR>%NAME%<>.\n\nМожет быть установлено на ваш крупный корабль для улучшения <TECHNOLOGY>скорости<> вашего флота.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7396,8 +7398,9 @@
     "Name": "Извлеченный топливный модуль флота",
     "Group": "Извлеченный модуль грузового судна",
     "Description": "Размещаемое улучшение грузового судна, найденное среди обломков судна <STELLAR>%NAME%<>.\n\nМожет быть установлено на ваш крупный корабль для повышения <TECHNOLOGY>топливной эффективности<> вашего флота.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "Обломок оружия стража",
+    "Group": "Запретный модуль для мультитула",
+    "Description": "<SPECIAL>Аномальное<> улучшение для <TECHNOLOGY>системы вооружения<> мультитула. Нажмите <VAL_ON><IMG>FE_ALT1<><>, чтобы начать <VAL_ON>процесс установки<> улучшения.\n\nЭтот пугающий осколок стекла был извлечен из <SPECIAL>обломков стража<>. Эффект, оказываемый им на мультитул, будет известен только после завершения установки.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Урон",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Время перезарядки",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Скорострельность",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "Фрагмент экзокостюма стража",
+    "Group": "Запретный модуль экзокостюма",
+    "Description": "<SPECIAL>Аномальное<> улучшение для <TECHNOLOGY>экзокостюма<>. Нажмите <VAL_ON><IMG>FE_ALT1<><>, чтобы начать <VAL_ON>процесс установки<> улучшения.\n\nЭтот странный фрагмент был извлечен из <SPECIAL>технологий стража<>. Эффект, оказываемый им на системы экзокостюма, будет известен только после завершения установки.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Крепость щита",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Основное здоровье",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Баки системы жизнеобеспечения",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Энергия солнечной панели",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Баки реактивного ранца",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Дальность бега",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }
