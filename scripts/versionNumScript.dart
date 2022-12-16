@@ -19,8 +19,9 @@ Future<void> main() async {
   final gitDir = await GitDir.fromExisting(p.current);
   final commit = await gitDir.commits();
 
-  await writePubspecFile(pubSpecString, buildName);
+  await updatePubspecFile(pubSpecString, buildName);
   await writeBuildNumFile(buildNum, buildName, commit.keys.first);
+  await updateInnoFile(buildName);
   print('Done');
 }
 
@@ -39,7 +40,7 @@ Future writeBuildNumFile(
   print('Writing to file Success');
 }
 
-Future writePubspecFile(String doc, String buildNum) async {
+Future updatePubspecFile(String doc, String buildNum) async {
   RegExp msixVersionReg = RegExp(r'msix_version:\s\d*\.\d*\.\d*\.\d*');
   final newDoc = doc.replaceAllMapped(msixVersionReg, (match) {
     return 'msix_version: $buildNum.0';
@@ -48,4 +49,17 @@ Future writePubspecFile(String doc, String buildNum) async {
   final pubFile = File('./pubspec.yaml');
   await pubFile.writeAsString(newDoc);
   print('Writing to pubFile Success');
+}
+
+Future updateInnoFile(String buildName) async {
+  final innoFile = File('./installers/assistantNMS.iss');
+  String innoFileString = await innoFile.readAsString();
+
+  RegExp appVersionReg = RegExp(r'#define\sMyAppVersion\s\"\d*\.\d*\.\d*\"');
+  final newDoc = innoFileString.replaceAllMapped(appVersionReg, (match) {
+    return '#define MyAppVersion "$buildName"';
+  });
+
+  await innoFile.writeAsString(newDoc);
+  print('Writing to innoSetup file Success');
 }
