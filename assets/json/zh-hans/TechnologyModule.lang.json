@@ -7336,8 +7336,9 @@
     "Name": "已回收的超光速推进器升级",
     "Group": "已回收的货船模块",
     "Description": "从<STELLAR>%NAME%<>回收的可部署货船升级。\n\n可重新部署至你的主力飞船，改善它的<TECHNOLOGY>超光速推进器<>。",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7370,8 +7371,9 @@
     "Name": "已回收的舰队信标",
     "Group": "已回收的货船模块",
     "Description": "从<STELLAR>%NAME%<>回收的可部署货船升级。\n\n可重新部署至你的主力飞船，改善舰队的<TECHNOLOGY>速度<>。",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7396,8 +7398,9 @@
     "Name": "已回收的舰队燃料装置",
     "Group": "已回收的货船模块",
     "Description": "从<STELLAR>%NAME%<>回收的可部署货船升级。\n\n可重新部署至你的主力飞船，改善舰队的<TECHNOLOGY>燃料效率<>。",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "护卫武器碎片",
+    "Group": "禁忌的多用途工具模块",
+    "Description": "多用途工具<SPECIAL>武器系统<>的<TECHNOLOGY>异常<>升级组件。按<VAL_ON><IMG>FE_ALT1<><>开始升级<VAL_ON>安装流程<>。\n\n从<SPECIAL>护卫残骸<>中提取的诡异玻璃碎片。完成安装流程后才能知道这种升级组件为多用途工具提供的具体效果。",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "伤害",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "装弹时间",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "射速",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "护卫套装碎片",
+    "Group": "禁忌的套装模块",
+    "Description": "<TECHNOLOGY>套装<>的<SPECIAL>异常<>升级组件。按<VAL_ON><IMG>FE_ALT1<><>开始升级<VAL_ON>安装流程<>。\n\n从<SPECIAL>护卫技术<>中提取的诡异碎片。只有当纳米泡沫彻底融入套装系统后才能确定这种升级组件提供的具体效果。",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "护盾强度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "核心生命值",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "维生储罐",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "太阳能板能量",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "燃料效率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "冲刺距离",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }

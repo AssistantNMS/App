@@ -7336,8 +7336,9 @@
     "Name": "Ulepszenie odzyskanego hipernapędu",
     "Group": "Odzyskany moduł frachtowca",
     "Description": "Rozmieszczalne ulepszenie frachtowca, odzyskane z: <STELLAR>%NAME%<>.\n\nMożna ponownie zainstalować na własnym statku głównym, aby ulepszyć jego <TECHNOLOGY>hipernapęd<>.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7370,8 +7371,9 @@
     "Name": "Odzyskane ogniwo floty",
     "Group": "Odzyskany moduł frachtowca",
     "Description": "Rozmieszczalne ulepszenie frachtowca, odzyskane z: <STELLAR>%NAME%<>.\n\nMożna ponownie zainstalować na własnym statku głównym, aby ulepszyć <TECHNOLOGY>szybkość<> swojej floty.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7396,8 +7398,9 @@
     "Name": "Odzyskana jednostka paliwowa floty",
     "Group": "Odzyskany moduł frachtowca",
     "Description": "Rozmieszczalne ulepszenie frachtowca, odzyskane z: <STELLAR>%NAME%<>.\n\nMożna ponownie zainstalować na własnym statku głównym, aby zmniejszyć <TECHNOLOGY>zużycie paliwa<> floty.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "Odłamek broni Strażników",
+    "Group": "Zakazany moduł multinarzędzia",
+    "Description": "<SPECIAL>Anomalne<> ulepszenie <TECHNOLOGY>systemów uzbrojenia<> multinarzędzia. Użyj <VAL_ON><IMG>FE_ALT1<><>, by rozpocząć <VAL_ON>proces instalacji<> ulepszenia.\n\nTen dziwaczny, szklany odłamek został znaleziony przy <SPECIAL>szczątkach Strażników<>. Jego oddziaływanie na multinarzędzie pozostanie nieznane, póki nie ukończysz instalacji.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Obrażenia",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Czas przeładowania",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Szybkostrzelność",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "Fragment egzokombinezonu Strażników",
+    "Group": "Zakazany moduł egzokombinezonu",
+    "Description": "<SPECIAL>Anomalne<> ulepszenie <TECHNOLOGY>egzokombinezonu<>. Użyj <VAL_ON><IMG>FE_ALT1<><>, by rozpocząć <VAL_ON>proces instalacji<> ulepszenia.\n\nTen dziwny złom został pozyskany z <SPECIAL>technologii Strażników<>. Nie da się przewidzieć jego oddziaływania na kombinezon, póki nanitowa pianka nie rozprzestrzeni się po wszystkich systemach.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Siła tarczy",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Zdrowie rdzenia",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Zbiorniki podtrzymania życia",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Zasilanie panelu słonecznego",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Wydajność paliwa",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Dystans sprintu",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }

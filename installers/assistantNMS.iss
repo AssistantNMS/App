@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Assistant for No Man's Sky"
-#define MyAppVersion "2.4.0"
+#define MyAppVersion "2.6.0"
 #define MyAppPublisher "AssistantApps"
 #define MyAppURL "https://nmsassistant.com/"
 #define MyAppExeName "nmstest.exe"

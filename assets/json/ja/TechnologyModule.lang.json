@@ -7336,8 +7336,9 @@
     "Name": "サルベージしたハイパードライブアップグレード",
     "Group": "サルベージした貨物船モジュール",
     "Description": "<STELLAR>%NAME%<>からサルベージした\n展開型貨物船アップグレード。\n\n自分の主力艦に再展開して\n<TECHNOLOGY>ハイパードライブ<>の性能を改善できる。",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7370,8 +7371,9 @@
     "Name": "サルベージした艦隊用ビーコン",
     "Group": "サルベージした貨物船モジュール",
     "Description": "<STELLAR>%NAME%<>からサルベージした\n展開型貨物船アップグレード。\n\n自分の主力艦に再展開して\n艦隊の<TECHNOLOGY>スピード<>を改善できる。",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7396,8 +7398,9 @@
     "Name": "サルベージした艦隊用燃料ユニット",
     "Group": "サルベージした貨物船モジュール",
     "Description": "<STELLAR>%NAME%<>からサルベージした\n展開型貨物船アップグレード。\n\n自分の主力艦に再展開して\n艦隊の<TECHNOLOGY>燃料効率<>を改善できる。",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "センチネルの武器の欠片",
+    "Group": "禁断のマルチツールモジュール",
+    "Description": "マルチツールの<TECHNOLOGY>武器システム<>の<SPECIAL>異常<>アップグレード。アップグレードの<VAL_ON>インストール<>を開始するには<VAL_ON><IMG>FE_ALT1<><>を使用する。\n\nこの不気味でガラス質の欠片は、<SPECIAL>センチネルの残骸<>から抽出された。マルチツールに対する正確な影響は、インストールが完了するまで不明だ。",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "ダメージ",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "リロード時間",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "発射速度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "センチネルエクソスーツの破片",
+    "Group": "禁断のエクソスーツモジュール",
+    "Description": "<TECHNOLOGY>エクソスーツ<>の<SPECIAL>異常<>アップグレード。アップグレードの<VAL_ON>インストール<>を開始するには<VAL_ON><IMG>FE_ALT1<><>を使用する。\n\nこの奇妙な残骸の破片は、<SPECIAL>センチネルテクノロジー<>から抽出された。スーツの性能に対する正確な影響は、ナノマシンフォームがエクソスーツのシステムに行き渡るまで予測できない。",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "シールド強度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "主体力",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "生命維持タンク",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "ソーラーパネルパワー",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "燃料効率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "走行距離",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }
