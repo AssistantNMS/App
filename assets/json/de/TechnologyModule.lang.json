@@ -7336,8 +7336,9 @@
     "Name": "Geborgenes Hyperantrieb-Upgrade",
     "Group": "Geborgenes Frachtermodul",
     "Description": "Ein einsetzbares Frachter-Upgrade, geborgen von der <STELLAR>%NAME%<>.\n\nKann in dein eigenes Hauptschiff wiedereingebaut werden, um dessen <TECHNOLOGY>Hyperantrieb<> zu verbessern.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7370,8 +7371,9 @@
     "Name": "Geborgenes Flottensignal",
     "Group": "Geborgenes Frachtermodul",
     "Description": "Ein einsetzbares Frachter-Upgrade, geborgen von der <STELLAR>%NAME%<>.\n\nKann in dein eigenes Hauptschiff wiedereingebaut werden, um die <TECHNOLOGY>Geschwindigkeit<> deiner Flotte zu verbessern.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7396,8 +7398,9 @@
     "Name": "Geborgene Flotten-Treibstoffeinheit",
     "Group": "Geborgenes Frachtermodul",
     "Description": "Ein einsetzbares Frachter-Upgrade, geborgen von der <STELLAR>%NAME%<>.\n\nKann in dein eigenes Hauptschiff wiedereingebaut werden, um die <TECHNOLOGY>Treibstoffeffizienz<> deiner Flotte zu verbessern.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "Wächter-Waffensplitter",
+    "Group": "Verbotenes Multiwerkzeug-Modul",
+    "Description": "Ein <SPECIAL>ungewöhnliches<> Upgrade für die <TECHNOLOGY>Waffensysteme<> des Multiwerkzeugs. Starte den Upgrade-<VAL_ON>Installationsprozess<> mit <VAL_ON><IMG>FE_ALT1<><>.\n\nDieser unheimliche, glasige Splitter wurde von <SPECIAL>Wächtertrümmern<> geborgen. Seine Auswirkungen auf das Multiwerkzeug sind erst nach der Installation erkennbar.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Schaden",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Nachladezeit",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Feuerrate",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "Wächter-Exo-Anzug-Fragment",
+    "Group": "Verbotenes Exo-Anzug-Modul",
+    "Description": "Ein <SPECIAL>ungewöhnliches<> Upgrade für den <TECHNOLOGY>Exo-Anzug<>. Starte den Upgrade-<VAL_ON>Installationsprozess<> mit <VAL_ON><IMG>FE_ALT1<><>.\n\nDieses seltsame Trümmerfragment wurde aus <SPECIAL>Wächtertechnologie<> gewonnen. Seine Auswirkungen auf die Leistung des Anzugs können unmöglich vorhergesagt werden, bevor der Nanitschaum sämtliche Systeme des Exo-Anzugs durchdrungen hat.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Schildstärke",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Kerngesundheit",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Lebenserhaltungstanks",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Solarmodul-Energie",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Treibstoffeffizienz",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Sprintdistanz",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }

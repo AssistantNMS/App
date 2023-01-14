@@ -7336,8 +7336,9 @@
     "Name": "Miglioramento iperguida recuperato",
     "Group": "Modulo di mercantile recuperato",
     "Description": "Un miglioramento per il mercantile, recuperato dalla nave <STELLAR>%NAME%<>.\n\nPuò essere utilizzato sulla propria ammiraglia per migliorarne l'<TECHNOLOGY>iperguida<>.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7370,8 +7371,9 @@
     "Name": "Radiofaro di flotta recuperato",
     "Group": "Modulo di mercantile recuperato",
     "Description": "Un miglioramento per il mercantile, recuperato dalla nave <STELLAR>%NAME%<>.\n\nPuò essere utilizzato sulla propria ammiraglia per migliorare la <TECHNOLOGY>velocità<> della flotta.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7396,8 +7398,9 @@
     "Name": "Unità di iniezione di flotta recuperata",
     "Group": "Modulo di mercantile recuperato",
     "Description": "Un miglioramento per il mercantile, recuperato dalla nave <STELLAR>%NAME%<>.\n\nPuò essere utilizzato sulla propria ammiraglia per migliorare il <TECHNOLOGY>rendimento del carburante<> della flotta.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "Frammento di armi delle Sentinelle",
+    "Group": "Modulo multi-tool proibito",
+    "Description": "Un potenziamento <SPECIAL>anomalo<> per i <TECHNOLOGY>sistemi d'arma<> del multi-tool. Usa <VAL_ON><IMG>FE_ALT1<><> per avviare il <VAL_ON>processo d'installazione<> del potenziamento.\n\nQuesto inquietante frammento vetroso è stato estratto dai <SPECIAL>rottami di una Sentinella<>. L'effetto esatto che avrà sul multi-tool non sarà noto fino al completamento dell'installazione.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Danni",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Tempo di ricarica",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Cadenza",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "Frammento exotuta di Sentinella",
+    "Group": "Modulo exotuta proibito",
+    "Description": "Un potenziamento <SPECIAL>anomalo<> per l'<TECHNOLOGY>exotuta<>. Usa <VAL_ON><IMG>FE_ALT1<><> per cominciare il <VAL_ON>processo d'installazione<> del potenziamento.\n\nQuesto strano frammento di detriti è stato estratto dalla <SPECIAL>tecnologia delle Sentinelle<>. L'effetto esatto che avrà sulla prestazioni della tuta è impossibile da prevedere finché la schiuma di naniti non si sarà espansa in tutti i sistemi dell'exotuta.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Potenza scudo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Integrità nucleo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Serbatoi di supporto vitale",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Alimentazione a pannelli solari",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Rendimento carburante",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Distanza scatto",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }

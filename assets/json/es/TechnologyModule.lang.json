@@ -7336,8 +7336,9 @@
     "Name": "Mejora de hiperturbo recuperada",
     "Group": "Módulo de carguero recuperado",
     "Description": "Una mejora desplegable del carguero, recuperada de <STELLAR>%NAME%<>.\n\nSe puede volver a desplegar en tu propia nave principal para mejorar su <TECHNOLOGY>hiperturbo<>.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7370,8 +7371,9 @@
     "Name": "Baliza de flota recuperada",
     "Group": "Módulo de carguero recuperado",
     "Description": "Una mejora desplegable del carguero, recuperada de <STELLAR>%NAME%<>.\n\nSe puede volver a desplegar en tu propia nave principal para mejorar la <TECHNOLOGY>velocidad<> de tu flota.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7396,8 +7398,9 @@
     "Name": "Unidad de combustible de flota recuperada",
     "Group": "Módulo de carguero recuperado",
     "Description": "Una mejora desplegable del carguero, recuperada de <STELLAR>%NAME%<>.\n\nSe puede volver a desplegar en tu propia nave principal para mejorar la <TECHNOLOGY>eficiencia de combustible<> de tu flota.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "Fragmento de armas centinela",
+    "Group": "Módulo multiherramienta prohibido",
+    "Description": "Una mejora <SPECIAL>anómala<> para el <TECHNOLOGY>sistema de armas<> de la multiherramienta. Usa <VAL_ON><IMG>FE_ALT1<><> para comenzar el <VAL_ON>proceso de instalación<> de la mejora.\n\nEste espeluznante fragmento vítreo ha sido extraído de <SPECIAL>escombros de centinela<>. Su efecto exacto sobre la multiherramienta no se conocerá hasta que se complete la instalación.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Daño",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Tiempo de recarga",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Cadencia de disparo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "Fragmento de exotraje centinela",
+    "Group": "Módulo de exotraje prohibido",
+    "Description": "Una mejora <SPECIAL>anómala<> para el <TECHNOLOGY>exotraje<>. Usa <VAL_ON><IMG>FE_ALT1<><> para comenzar el <VAL_ON>proceso de instalación<> de la mejora.\n\n Este extraño fragmento de escombros ha sido extraído de <SPECIAL>tecnología centinela<>. Es imposible predecir su efecto exacto sobre el rendimiento del traje antes de que la espuma de nanite se haya esparcido por completo dentro de los sistemas del exotraje.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Potencia del escudo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Salud principal",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Tanques de sop. vital",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Energía de panel solar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Eficiencia de combust.",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Distancia de carrera",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }

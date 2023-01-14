@@ -7336,8 +7336,9 @@
     "Name": "노획된 하이퍼드라이브 업그레이드",
     "Group": "노획한 화물선 모듈",
     "Description": "<STELLAR>%NAME%<>에서 노획했으며, 배치가 가능한 화물선의 업그레이드입니다.\n\n자신의 주력함에 재배치시켜 함선의 <TECHNOLOGY>하이퍼드라이브<>를 개선시킬 수 있습니다.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7370,8 +7371,9 @@
     "Name": "노획된 함대 신호기",
     "Group": "노획한 화물선 모듈",
     "Description": "<STELLAR>%NAME%<>에서 노획했으며, 배치가 가능한 화물선의 업그레이드입니다.\n\n자신의 주력함에 재배치시켜 함대의 <TECHNOLOGY>속도<>를 개선시킬 수 있습니다.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7396,8 +7398,9 @@
     "Name": "노획된 함대 연료 유닛",
     "Group": "노획한 화물선 모듈",
     "Description": "<STELLAR>%NAME%<>에서 노획했으며, 배치가 가능한 화물선의 업그레이드입니다.\n\n자신의 주력함에 재배치시켜 함대의 <TECHNOLOGY>연료 효율<>을 개선시킬 수 있습니다.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "센티널 무기 조각",
+    "Group": "금지된 멀티툴 모듈",
+    "Description": "멀티툴 <TECHNOLOGY>무기 시스템<>을 위한 <SPECIAL>특이<> 업그레이드입니다. <VAL_ON><IMG>FE_ALT1<><>으로 업그레이드 <VAL_ON>설치 절차<>를 시작하십시오.\n\n이 으스스하고 유리 같은 조각은 <SPECIAL>센티널 파편<>에서 추출한 것입니다. 멀티툴에 끼치는 정확한 효과는 설치가 완료되기 전까지 알 수 없습니다.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "위력",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "재장전 시간",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "발사 속도",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "센티널 엑소슈트 파편",
+    "Group": "금지된 엑소슈트 모듈",
+    "Description": "<TECHNOLOGY>엑소슈트<>를 위한 <SPECIAL>특이<> 업그레이드입니다. <VAL_ON><IMG>FE_ALT1<><>으로 업그레이드 <VAL_ON>설치 절차<>를 시작하십시오.\n\n이 이상한 잔해 파편은 <SPECIAL>센티널 기술<>에서 추출한 것입니다. 나노로봇 거품이 엑소슈트 시스템 내부에 완전히 퍼지기 전에는 이 파편이 슈트 기능에 끼치는 정확한 효과를 예측할 수 없습니다.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "방어막 강도",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "코어 내구도",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "생명유지 탱크",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "태양전지 동력",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "연료 효율",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "달리기 거리",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }

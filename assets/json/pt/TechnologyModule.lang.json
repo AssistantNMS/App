@@ -7336,8 +7336,9 @@
     "Name": "Atualização de Hiperdrive Recuperada",
     "Group": "Módulo do Cargueiro Recuperado",
     "Description": "Uma atualização do cargueiro implementável, recuperada de <STELLAR>%NAME%<>.\n\nPode ser reimplementada na sua própria nave capital para melhorar o <TECHNOLOGY>Hiperdrive<>.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7370,8 +7371,9 @@
     "Name": "Emissor da Frota Recuperada",
     "Group": "Módulo do Cargueiro Recuperado",
     "Description": "Uma atualização do cargueiro implementável, recuperada de <STELLAR>%NAME%<>.\n\nPode ser reimplementada na sua própria nave capital para melhorar a <TECHNOLOGY>velocidade<> da sua frota.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7396,8 +7398,9 @@
     "Name": "Unidade de Combustível da Frota Recuperada",
     "Group": "Módulo do Cargueiro Recuperado",
     "Description": "Uma atualização do cargueiro implementável, recuperada de <STELLAR>%NAME%<>.\n\nPode ser reimplementada na sua própria nave capital para melhorar a <TECHNOLOGY>eficiência do combustível<> da sua frota.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "Fragmento de Armas de Sentinela",
+    "Group": "Módulo de Multiferramenta Proibido",
+    "Description": "Uma atualização <SPECIAL>anómala<> para os <TECHNOLOGY>Sistemas de Armas<> da Multiferramenta. Utiliza <VAL_ON><IMG>FE_ALT1<><> para dar início ao <VAL_ON>processo de instalação<> da atualização.\n\nEste fragmento vidrado sinistro foi extraído de <SPECIAL>detritos de Sentinela<>. Não será possível saber o seu efeito exato na Multiferramenta até a instalação estar concluída.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Danos",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Tempo de Recarregamento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Cadência de Tiro",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "Fragmento de Exofato de Sentinela",
+    "Group": "Módulo de Exofato Proibido",
+    "Description": "Uma atualização <SPECIAL>anómala<> para o <TECHNOLOGY>Exofato<>. Utiliza <VAL_ON><IMG>FE_ALT1<><> para dar início ao <VAL_ON>processo de instalação<> da atualização.\n\nEste estranho fragmento de detritos foi extraído de <SPECIAL>tecnologia Sentinela<>. Não será possível prever o seu efeito exato no desempenho do fato até que a espuma de nanite se espalhe completamente pelos sistemas do Exofato.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Força do Escudo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Vida do Núcleo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Tanques de Suporte de Vida",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Energia de Painel Solar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Eficiência do Combustível",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Distância de Corrida",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }

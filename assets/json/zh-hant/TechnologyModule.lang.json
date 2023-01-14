@@ -7336,8 +7336,9 @@
     "Name": "回收的超空間驅動器升級",
     "Group": "回收貨船模組",
     "Description": "從<STELLAR>%NAME%<>回收的可部署貨船升級。\n\n可重新部署至你自己的主力太空船，改善<TECHNOLOGY>超空間驅動器<>。",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7370,8 +7371,9 @@
     "Name": "回收的艦隊信標",
     "Group": "回收貨船模組",
     "Description": "從<STELLAR>%NAME%<>回收的可部署貨船升級。\n\n可重新部署至你自己的主力太空船，改善艦隊的<TECHNOLOGY>速度<>。",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7396,8 +7398,9 @@
     "Name": "回收的艦隊燃料單元",
     "Group": "回收貨船模組",
     "Description": "從<STELLAR>%NAME%<>回收的可部署貨船升級。\n\n可重新部署至你自己的主力太空船，改善艦隊的<TECHNOLOGY>燃料效率<>。",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
     "BlueprintCost": 0,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "巡警武器碎片",
+    "Group": "禁止的工具組模組",
+    "Description": "工具組<TECHNOLOGY>武器系統<>的<SPECIAL>異常<>升級。使用 <VAL_ON><IMG>FE_ALT1<><> 開始升級<VAL_ON>安裝程序<>。\n\n這個詭異的玻璃碎片是從<SPECIAL>巡警殘骸<>中抽取而來。直到安裝完成後，才會知道它對工具組的確切效果。",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "傷害",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "裝填彈藥時間",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "射擊速度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "巡警強化套裝碎片",
+    "Group": "禁止的強化套裝模組",
+    "Description": "<TECHNOLOGY>強化套裝<>的<SPECIAL>異常<>升級。使用 <VAL_ON><IMG>FE_ALT1<><> 開始升級的<VAL_ON>安裝程序<>。\n\n這個奇怪殘骸碎片是從<SPECIAL>巡警科技<>中抽取而來。在奈米泡沫完全擴散於強化裝甲系統內之前，無法預測對裝甲性能的確切影響。",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "防護罩強度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "核心生命值",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "維生系統槽",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "太陽能板能量",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "燃料效率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "衝刺距離",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }

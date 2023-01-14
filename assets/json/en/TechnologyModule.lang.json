@@ -7336,11 +7336,12 @@
     "Name": "Salvaged Hyperdrive Upgrade",
     "Group": "Salvaged Freighter Module",
     "Description": "A deployable freighter upgrade, salvaged from <STELLAR>%NAME%<>.\n\nCan be re-deployed into your own capital ship to improve its <TECHNOLOGY>Hyperdrive<>.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
-    "BlueprintCost": 0,
+    "BlueprintCost": 1,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "NumStatsMin": 2,
@@ -7370,11 +7371,12 @@
     "Name": "Salvaged Fleet Beacon",
     "Group": "Salvaged Freighter Module",
     "Description": "A deployable freighter upgrade, salvaged from <STELLAR>%NAME%<>.\n\nCan be re-deployed into your own capital ship to improve the <TECHNOLOGY>speed<> of your fleet.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
-    "BlueprintCost": 0,
+    "BlueprintCost": 1,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "NumStatsMin": 1,
@@ -7396,11 +7398,12 @@
     "Name": "Salvaged Fleet Fuel Unit",
     "Group": "Salvaged Freighter Module",
     "Description": "A deployable freighter upgrade, salvaged from <STELLAR>%NAME%<>.\n\nCan be re-deployed into your own capital ship to improve the <TECHNOLOGY>fuel efficiency<> of your fleet.",
-    "BaseValueUnits": 0.0,
-    "CurrencyType": "None",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [],
-    "BlueprintCost": 0,
+    "BlueprintCost": 1,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "NumStatsMin": 1,
@@ -7413,6 +7416,116 @@
         "Image": "recovery",
         "MinValue": "15",
         "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod176",
+    "Icon": "products/166.png",
+    "Name": "Sentinel Weapons Shard",
+    "Group": "Forbidden Multi-Tool Module",
+    "Description": "An <SPECIAL>anomalous<> upgrade for the Multi-Tool's <TECHNOLOGY>Weapon Systems<>. Use <VAL_ON><IMG>FE_ALT1<><> to begin upgrade <VAL_ON>installation process<>.\n\nThis eerie, glassy shard has been extracted from <SPECIAL>Sentinel debris<>. Its exact effect upon the Multi-Tool will not be known until after installation is complete.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "MinValue": "1",
+        "MaxValue": "4"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Reload Time",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "MinValue": "-15",
+        "MaxValue": "-1"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Fire Rate",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "1",
+        "MaxValue": "20"
+      }
+    ]
+  },
+  {
+    "Id": "tMod177",
+    "Icon": "products/167.png",
+    "Name": "Sentinel Exosuit Fragment",
+    "Group": "Forbidden Exosuit Module",
+    "Description": "An <SPECIAL>anomalous<> upgrade for <TECHNOLOGY>Exosuit<>. Use <VAL_ON><IMG>FE_ALT1<><> to begin upgrade <VAL_ON>installation process<>.\n\nThis strange fragment of debris has been extracted from <SPECIAL>Sentinel technology<>. Its exact effect upon suit performance is impossible to predict before the nantite foam has fully spread within the Exosuit's systems.",
+    "BaseValueUnits": 480.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "NumStatsMin": 2,
+    "NumStatsMax": 4,
+    "ProceduralStatBonuses": [
+      {
+        "AlwaysChoose": false,
+        "Name": "Shield Strength",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "shieldStrength",
+        "MinValue": "10",
+        "MaxValue": "35"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Core Health",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "prot",
+        "MinValue": "20",
+        "MaxValue": "20"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Life Support Tanks",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "5",
+        "MaxValue": "110"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Solar Panel Power",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "101",
+        "MaxValue": "175"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Fuel Efficiency",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "MinValue": "70",
+        "MaxValue": "95"
+      },
+      {
+        "AlwaysChoose": false,
+        "Name": "Sprint Distance",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "MinValue": "10",
+        "MaxValue": "60"
       }
     ]
   }
