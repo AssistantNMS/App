@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';
 import '../../constants/NmsExternalUrls.dart';
-import '../../constants/Patreon.dart';
-import '../modalBottomSheet/patreonModalBottomSheet.dart';
 import '../modalBottomSheet/syncWithNomNomModalBottomSheet.dart';
 
 Widget devilinPixyTile(BuildContext context) => genericListTileWithSubtitle(
