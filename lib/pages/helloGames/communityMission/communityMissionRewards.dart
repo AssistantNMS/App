@@ -147,7 +147,7 @@ class CommunityMissionRewards extends StatelessWidget {
       }
     }
 
-    if (qsStore.items.isEmpty) {
+    if (qsStore.items.isEmpty && isSpecialQsMission == false) {
       widgets.addAll(
         [
           emptySpace3x(),
