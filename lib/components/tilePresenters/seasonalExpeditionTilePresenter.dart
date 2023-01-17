@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/components/common/cachedFutureBuilder.dart';
 import 'package:flutter/material.dart';
 import '../../constants/NmsUIConstants.dart';
 import '../../contracts/generated/expeditionViewModel.dart' as expedition_api;
@@ -344,7 +343,7 @@ Widget rewardFromSeasonalExpeditionTilePresenter(
     shadowColor: Colors.transparent,
     child: CachedFutureBuilder(
       future: getSeasonalExpeditionRepo().getById(context, seasId, isCustom),
-      whileLoading: getLoading().smallLoadingTile(context),
+      whileLoading: () => getLoading().smallLoadingTile(context),
       whenDoneLoading: (ResultWithValue<SeasonalExpeditionSeason> snapshot) {
         SeasonalExpeditionSeason item = snapshot.value;
         return genericListTileWithSubtitle(

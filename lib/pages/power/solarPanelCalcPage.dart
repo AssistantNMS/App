@@ -5,7 +5,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../components/common/cachedFutureBuilder.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
 import '../../components/tilePresenters/youtubersTilePresenter.dart';
@@ -55,7 +54,7 @@ class _SolarPanelCalcWidget extends State<SolarPanelCalcPage> {
       title: getTranslations().fromKey(LocaleKey.solarPanelBatteryCalculator),
       body: CachedFutureBuilder<List<RequiredItemDetails>>(
         future: requiredItemDetailsFuture(context),
-        whileLoading:
+        whileLoading: () =>
             getLoading().fullPageLoading(context, loadingText: loading),
         whenDoneLoading: (List<RequiredItemDetails> snapshot) {
           return SolarPanelInnerPage(

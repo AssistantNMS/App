@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/appNotice.dart';
-import '../../components/common/cachedFutureBuilder.dart';
 import '../../components/responsiveGridView.dart';
 import '../../contracts/misc/customMenu.dart';
 import '../../contracts/redux/appState.dart';
@@ -31,7 +30,7 @@ class ViewCustomHomepage extends StatelessWidget {
       converter: (store) => WhatIsNewSettingsViewModel.fromStore(store),
       builder: (storeContext, viewModel) => CachedFutureBuilder(
         future: getAssistantAppsApi().getAppNotices(viewModel.selectedLanguage),
-        whileLoading: getLoading().fullPageLoading(context),
+        whileLoading: () => getLoading().fullPageLoading(context),
         whenDoneLoading: (ResultWithValue<List<AppNoticeViewModel>> snapshot) {
           if ( //
               snapshot.hasFailed ||

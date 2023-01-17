@@ -5,7 +5,6 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/adaptive/homePageAppBar.dart';
 import '../../components/appNotice.dart';
-import '../../components/common/cachedFutureBuilder.dart';
 import '../../components/drawer.dart';
 import '../../components/responsiveGridView.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
@@ -52,7 +51,7 @@ class _CatalogueHomeWidget extends State<CatalogueHomepage>
       converter: (store) => WhatIsNewSettingsViewModel.fromStore(store),
       builder: (storeContext, viewModel) => CachedFutureBuilder(
         future: getAssistantAppsApi().getAppNotices(viewModel.selectedLanguage),
-        whileLoading: getLoading().fullPageLoading(storeContext),
+        whileLoading: () => getLoading().fullPageLoading(storeContext),
         whenDoneLoading: (ResultWithValue<List<AppNoticeViewModel>> snapshot) {
           if ( //
               snapshot.hasFailed ||

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/appNotice.dart';
-import '../../components/common/cachedFutureBuilder.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/futureHelper.dart';
@@ -21,7 +20,7 @@ class AllItemsPageComponent extends StatelessWidget {
       converter: (store) => GenericPageViewModel.fromStore(store),
       builder: (storeCtx, viewModel) => CachedFutureBuilder(
         future: getAssistantAppsApi().getAppNotices(viewModel.selectedLanguage),
-        whileLoading: getLoading().fullPageLoading(context),
+        whileLoading: () => getLoading().fullPageLoading(context),
         whenDoneLoading: (ResultWithValue<List<AppNoticeViewModel>> snapshot) {
           List<AppNoticeViewModel> notices = List.empty(growable: true);
           if (snapshot.isSuccess &&

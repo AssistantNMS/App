@@ -3,7 +3,6 @@ import 'package:assistantnms_app/constants/AppImage.dart';
 import 'package:assistantnms_app/constants/NmsExternalUrls.dart';
 import 'package:flutter/material.dart';
 
-import '../../../components/common/cachedFutureBuilder.dart';
 import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../../constants/AnalyticsEvent.dart';
 import '../../../contracts/data/quicksilverStore.dart';
@@ -70,7 +69,7 @@ class CommunityMissionPage extends StatelessWidget {
         future: getLocalCommunityMissionDataAndResultFromApi(context),
         whenDoneLoading: (ResultWithValue<CommunityMissionPageData> snapshot) =>
             getBody(context, snapshot),
-        whileLoading: getLoading().fullPageLoading(
+        whileLoading: () => getLoading().fullPageLoading(
           context,
           loadingText: getTranslations().fromKey(LocaleKey.loading),
         ),
