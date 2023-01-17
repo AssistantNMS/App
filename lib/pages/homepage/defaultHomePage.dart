@@ -26,7 +26,7 @@ class _DefaultHomePageState extends State<DefaultHomePage>
       context,
       appBar: homePageAppBar(getTranslations().fromKey(LocaleKey.title)),
       drawer: const AppDrawer(),
-      body: const AllItemsPageComponent(),
+      body: const AllItemsPageComponent(isHomePage: true),
     );
   }
 }

@@ -2,7 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/appNotice.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/futureHelper.dart';
@@ -12,15 +11,22 @@ import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 
 class AllItemsPageComponent extends StatelessWidget {
-  const AllItemsPageComponent({Key key}) : super(key: key);
+  final bool isHomePage;
+
+  const AllItemsPageComponent({Key key, this.isHomePage}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return StoreConnector<AppState, GenericPageViewModel>(
       converter: (store) => GenericPageViewModel.fromStore(store),
-      builder: (storeCtx, viewModel) => AppNoticesWrapper(
-        child: renderSearchList(storeCtx, viewModel),
-      ),
+      builder: (storeCtx, viewModel) {
+        if (isHomePage) {
+          return AppNoticesWrapper(
+            child: renderSearchList(storeCtx, viewModel),
+          );
+        }
+        return renderSearchList(storeCtx, viewModel);
+      },
     );
   }
 

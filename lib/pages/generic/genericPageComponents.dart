@@ -95,7 +95,10 @@ List<Widget> getBodyTopContent(BuildContext context, GenericPageViewModel vm,
   }
 
   return [
-    Stack(key: Key('${genericItem.id}-bg-stack'), children: stackWidgets),
+    Stack(
+      key: Key('${genericItem.id}-bg-stack'),
+      children: stackWidgets,
+    ),
   ];
 }
 
