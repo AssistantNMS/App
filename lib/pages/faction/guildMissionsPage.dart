@@ -1,7 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/common/cachedFutureBuilder.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/factionTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
@@ -17,7 +16,7 @@ class GuildMissionsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CachedFutureBuilder(
       future: getFactionRepo().getAllMissions(context),
-      whileLoading: simpleGenericPageScaffold(
+      whileLoading: () => simpleGenericPageScaffold(
         context,
         title: getTranslations().fromKey(LocaleKey.loading),
         body: getLoading().fullPageLoading(context),

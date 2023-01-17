@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/components/common/cachedFutureBuilder.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -75,7 +74,7 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
   Widget build(BuildContext context) {
     return CachedFutureBuilder(
       future: getCurrentLoggedInUser(),
-      whileLoading: getLoading().loadingIndicator(),
+      whileLoading: () => getLoading().loadingIndicator(),
       whenDoneLoading: (ResultWithValue<GoogleLoginModel> modelResult) {
         List<Widget> widgets = List.empty(growable: true);
 

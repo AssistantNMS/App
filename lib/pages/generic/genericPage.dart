@@ -3,7 +3,6 @@ import 'package:assistantnms_app/contracts/creature/creatureHarvest.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/common/cachedFutureBuilder.dart';
 import '../../components/modalBottomSheet/shareModalBottomSheet.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/nutrientProcessorRecipeTilePresenter.dart';
@@ -55,12 +54,17 @@ class GenericPage extends StatelessWidget {
             itemId,
             viewModel.platformIndex,
           ),
-          whileLoading: genericPageScaffold<ResultWithValue<GenericPageItem>>(
+          whileLoading: () =>
+              genericPageScaffold<ResultWithValue<GenericPageItem>>(
             context,
             loadingText,
             null,
-            body: (BuildContext context, unused) =>
-                getLoadingBody(context, loadingText, viewModel, itemDetails),
+            body: (BuildContext context, unused) => getLoadingBody(
+              context,
+              loadingText,
+              viewModel,
+              itemDetails,
+            ),
             showShortcutLinks: true,
           ),
           whenDoneLoading: (ResultWithValue<GenericPageItem> snapshot) {

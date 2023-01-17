@@ -5,12 +5,14 @@ import 'package:flutter/material.dart';
 
 import '../../../components/common/prevAndNextPagination.dart';
 import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../../contracts/enum/community_mission_status.dart';
 import 'communityMissionRewards.dart';
 
 class CommunityMissionRewardDetailsPage extends StatefulWidget {
   final int missionId;
   final int missionMin;
   final int missionMax;
+
   const CommunityMissionRewardDetailsPage(
       this.missionId, this.missionMin, this.missionMax,
       {Key key})
@@ -29,6 +31,7 @@ class _CommunityMissionRewardDetailsWidget extends State<StatefulWidget> {
   int missionId;
   final int missionMin;
   final int missionMax;
+
   _CommunityMissionRewardDetailsWidget(
     this.missionId,
     this.missionMin,
@@ -58,7 +61,7 @@ class _CommunityMissionRewardDetailsWidget extends State<StatefulWidget> {
             padding: const EdgeInsets.only(top: 12),
           ),
           customDivider(),
-          CommunityMissionRewards(missionId),
+          CommunityMissionRewards(missionId, CommunityMissionStatus.past),
           emptySpace(16),
         ],
       ),

@@ -7,9 +7,11 @@ import '../../../components/tilePresenters/requiredItemDetailsTilePresenter.dart
 import '../../../constants/AppImage.dart';
 import '../../../contracts/data/quicksilverStore.dart';
 import '../../../contracts/data/quicksilverStoreItem.dart';
+import '../../../contracts/enum/community_mission_status.dart';
 import '../../../contracts/helloGames/quickSilverStoreDetails.dart';
 import '../../../contracts/requiredItemDetails.dart';
 import '../../../helpers/futureHelper.dart';
+import 'community_mission_extra_data.dart';
 
 class CommunityMissionRewards extends StatelessWidget {
   final int missionId;
@@ -17,11 +19,13 @@ class CommunityMissionRewards extends StatelessWidget {
   final int currentTier;
   final int currentTierPercentage;
   final QuicksilverStore qsStore;
+  final CommunityMissionStatus status;
   final List<RequiredItemDetails> itemDetails;
   final List<RequiredItemDetails> requiredItemDetails;
 
   const CommunityMissionRewards(
-    this.missionId, {
+    this.missionId,
+    this.status, {
     Key key,
     this.totalTiers = 0,
     this.currentTier =
@@ -147,7 +151,7 @@ class CommunityMissionRewards extends StatelessWidget {
       }
     }
 
-    if (qsStore.items.isEmpty) {
+    if (qsStore.items.isEmpty && isSpecialQsMission == false) {
       widgets.addAll(
         [
           emptySpace3x(),
@@ -155,6 +159,8 @@ class CommunityMissionRewards extends StatelessWidget {
         ],
       );
     }
+
+    widgets.add(CommunityMissionExtraData(missionId, status));
 
     return animateWidgetIn(
       child: Column(children: widgets),
