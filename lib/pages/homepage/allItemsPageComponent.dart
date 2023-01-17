@@ -18,18 +18,8 @@ class AllItemsPageComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return StoreConnector<AppState, GenericPageViewModel>(
       converter: (store) => GenericPageViewModel.fromStore(store),
-      builder: (storeCtx, viewModel) => CachedFutureBuilder(
-        future: getAssistantAppsApi().getAppNotices(viewModel.selectedLanguage),
-        whileLoading: () => getLoading().fullPageLoading(context),
-        whenDoneLoading: (ResultWithValue<List<AppNoticeViewModel>> snapshot) {
-          List<AppNoticeViewModel> notices = List.empty(growable: true);
-          if (snapshot.isSuccess &&
-              snapshot.value != null &&
-              snapshot.value.isNotEmpty) {
-            notices = snapshot.value;
-          }
-          return renderSearchList(storeCtx, viewModel, notices);
-        },
+      builder: (storeCtx, viewModel) => AppNoticesWrapper(
+        child: renderSearchList(storeCtx, viewModel),
       ),
     );
   }
@@ -37,7 +27,6 @@ class AllItemsPageComponent extends StatelessWidget {
   Widget renderSearchList(
     BuildContext storeCtx,
     GenericPageViewModel viewModel,
-    List<AppNoticeViewModel> notices,
   ) {
     String hintText = getTranslations().fromKey(LocaleKey.searchItems);
     String renderKey = [
@@ -53,9 +42,6 @@ class AllItemsPageComponent extends StatelessWidget {
         viewModel.displayGenericItemColour,
         isHero: true,
       ),
-      firstListItemWidget: notices.isNotEmpty
-          ? Column(children: notices.map(appNoticeTileCore).toList())
-          : null,
       listItemSearch: search,
       key: Key(renderKey),
       hintText: hintText,

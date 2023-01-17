@@ -1,18 +1,14 @@
 import 'package:after_layout/after_layout.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/adaptive/homePageAppBar.dart';
-import '../../components/appNotice.dart';
 import '../../components/drawer.dart';
 import '../../components/responsiveGridView.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/menuItemTilePresenter.dart';
-import '../../contracts/redux/appState.dart';
 import '../../helpers/catalogueHelper.dart';
 import '../../helpers/updateHelper.dart';
-import '../../redux/modules/setting/whatIsNewSettingsViewModel.dart';
 
 class CatalogueHomepage extends StatefulWidget {
   const CatalogueHomepage({Key key}) : super(key: key);
@@ -35,11 +31,11 @@ class _CatalogueHomeWidget extends State<CatalogueHomepage>
       appBar: homePageAppBar(
         getTranslations().fromKey(LocaleKey.catalogue),
       ),
-      body: getBody(),
+      body: getBody(context),
     );
   }
 
-  Widget getBody() {
+  Widget getBody(BuildContext bodyContext) {
     Widget Function(BuildContext gridCtx) renderBody;
     renderBody = (BuildContext gridCtx) => responsiveGrid(
           gridCtx,
@@ -47,30 +43,8 @@ class _CatalogueHomeWidget extends State<CatalogueHomepage>
           menuItemTilePresenter,
         );
 
-    return StoreConnector<AppState, WhatIsNewSettingsViewModel>(
-      converter: (store) => WhatIsNewSettingsViewModel.fromStore(store),
-      builder: (storeContext, viewModel) => CachedFutureBuilder(
-        future: getAssistantAppsApi().getAppNotices(viewModel.selectedLanguage),
-        whileLoading: () => getLoading().fullPageLoading(storeContext),
-        whenDoneLoading: (ResultWithValue<List<AppNoticeViewModel>> snapshot) {
-          if ( //
-              snapshot.hasFailed ||
-                  snapshot.value == null ||
-                  snapshot.value.isEmpty //
-              ) {
-            return renderBody(storeContext);
-          }
-
-          return SingleChildScrollView(
-            child: Column(
-              children: [
-                ...snapshot.value.map(appNoticeTile).toList(),
-                renderBody(storeContext),
-              ],
-            ),
-          );
-        },
-      ),
+    return AppNoticesWrapper(
+      child: renderBody(bodyContext),
     );
   }
 }
