@@ -5,6 +5,7 @@ import 'package:get_it/get_it.dart';
 import '../../services/base/languageService.dart';
 import '../env/environmentSettings.dart';
 import '../services/api/communityApiService.dart';
+import '../services/api/community_mission_progress_api_service.dart';
 import '../services/api/contributorApiService.dart';
 import '../services/api/guideApiService.dart';
 import '../services/api/helloGamesApiService.dart';
@@ -97,6 +98,8 @@ void initDependencyInjection(EnvironmentSettings _env) {
   getIt.registerSingleton<CommunityApiService>(CommunityApiService());
   getIt.registerSingleton<HelloGamesApiService>(HelloGamesApiService());
   getIt.registerSingleton<ContributorApiService>(ContributorApiService());
+  getIt.registerSingleton<CommunityMissionProgressApiService>(
+      CommunityMissionProgressApiService());
 }
 
 EnvironmentSettings getEnv() => getIt<EnvironmentSettings>();
@@ -137,3 +140,5 @@ CommunityApiService getCommunityApiService() => getIt<CommunityApiService>();
 HelloGamesApiService getHelloGamesApiService() => getIt<HelloGamesApiService>();
 ContributorApiService getContributorApiService() =>
     getIt<ContributorApiService>();
+CommunityMissionProgressApiService getCommunityMissionProgressApiService() =>
+    getIt<CommunityMissionProgressApiService>();

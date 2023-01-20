@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/components/common/cachedFutureBuilder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -24,7 +23,7 @@ class AssistantAppsGuidesPage extends StatelessWidget {
       future: getSecureStorageRepo().loadStringFromStorageCheckExpiry(
         StorageKey.assistantAppsApiToken,
       ),
-      whileLoading: getLoading().fullPageLoading(context),
+      whileLoading: () => getLoading().fullPageLoading(context),
       whenDoneLoading: (ResultWithValue<String> tokenResult) {
         return GuideListPage(
           analyticsKey: 'GuideListPage',

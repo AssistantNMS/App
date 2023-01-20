@@ -1,6 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../components/common/cachedFutureBuilder.dart';
 import '../contracts/data/generatedMeta.dart';
 import '../integration/dependencyInjection.dart';
 
@@ -36,7 +35,7 @@ List<Widget> getDrawerItems(context, DrawerSettingsViewModel viewModel) {
 
   widgets.add(CachedFutureBuilder<ResultWithValue<GeneratedMeta>>(
     future: getDataRepo().getGeneratedMeta(context),
-    whileLoading: getLoading().smallLoadingTile(context),
+    whileLoading: () => getLoading().smallLoadingTile(context),
     whenDoneLoading: (ResultWithValue<GeneratedMeta> metaResult) {
       return packageVersionTile(
         metaResult.isSuccess ? metaResult?.value?.gameVersion : 'Unknown',

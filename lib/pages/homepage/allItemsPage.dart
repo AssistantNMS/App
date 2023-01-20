@@ -12,7 +12,7 @@ class AllItemsPage extends StatelessWidget {
     return simpleGenericPageScaffold(
       context,
       title: getTranslations().fromKey(LocaleKey.allItems),
-      body: const AllItemsPageComponent(),
+      body: const AllItemsPageComponent(isHomePage: false),
     );
   }
 }

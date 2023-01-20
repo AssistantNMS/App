@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';
 import '../../constants/NmsExternalUrls.dart';
-import '../../constants/Patreon.dart';
-import '../modalBottomSheet/patreonModalBottomSheet.dart';
 import '../modalBottomSheet/syncWithNomNomModalBottomSheet.dart';
 
 Widget devilinPixyTile(BuildContext context) => genericListTileWithSubtitle(
@@ -151,33 +149,18 @@ Widget nomNomOpenSyncModalTile(
   bool isPatron, {
   String subtitle,
 }) {
-  bool isLocked = isPatreonFeatureLocked(
-    PatreonEarlyAccessFeature.syncInventoryPage,
-    isPatron,
-  );
   return genericListTileWithSubtitle(
     context,
     leadingImage: AppImage.nomNom,
     name: getTranslations().fromKey(LocaleKey.syncWithNomNom),
     subtitle: Text(getTranslations().fromKey(LocaleKey.syncWithNomNomDesc)),
-    trailing: isLocked ? const Icon(Icons.lock) : null,
+    trailing: const Icon(Icons.navigate_next_rounded),
     onTap: () {
-      handlePatreonBottomModalSheetWhenTapped(
+      adaptiveBottomModalSheet(
         context,
-        isPatron,
-        unlockDate: PatreonEarlyAccessFeature.syncInventoryPage,
-        onSettingsTap: (BuildContext dialogCtx) async {
-          getNavigation().pop(dialogCtx);
-          await Future.delayed(const Duration(milliseconds: 250));
-        },
-        onTap: (dialogCtx) {
-          adaptiveBottomModalSheet(
-            context,
-            hasRoundedCorners: true,
-            builder: (BuildContext innerContext) =>
-                const SyncWithNomNomBottomSheet(),
-          );
-        },
+        hasRoundedCorners: true,
+        builder: (BuildContext innerContext) =>
+            const SyncWithNomNomBottomSheet(),
       );
     },
   );

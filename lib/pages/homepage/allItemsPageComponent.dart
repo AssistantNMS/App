@@ -2,8 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/appNotice.dart';
-import '../../components/common/cachedFutureBuilder.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/futureHelper.dart';
@@ -13,32 +11,28 @@ import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 
 class AllItemsPageComponent extends StatelessWidget {
-  const AllItemsPageComponent({Key key}) : super(key: key);
+  final bool isHomePage;
+
+  const AllItemsPageComponent({Key key, this.isHomePage}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return StoreConnector<AppState, GenericPageViewModel>(
       converter: (store) => GenericPageViewModel.fromStore(store),
-      builder: (storeCtx, viewModel) => CachedFutureBuilder(
-        future: getAssistantAppsApi().getAppNotices(viewModel.selectedLanguage),
-        whileLoading: getLoading().fullPageLoading(context),
-        whenDoneLoading: (ResultWithValue<List<AppNoticeViewModel>> snapshot) {
-          List<AppNoticeViewModel> notices = List.empty(growable: true);
-          if (snapshot.isSuccess &&
-              snapshot.value != null &&
-              snapshot.value.isNotEmpty) {
-            notices = snapshot.value;
-          }
-          return renderSearchList(storeCtx, viewModel, notices);
-        },
-      ),
+      builder: (storeCtx, viewModel) {
+        if (isHomePage) {
+          return AppNoticesWrapper(
+            child: renderSearchList(storeCtx, viewModel),
+          );
+        }
+        return renderSearchList(storeCtx, viewModel);
+      },
     );
   }
 
   Widget renderSearchList(
     BuildContext storeCtx,
     GenericPageViewModel viewModel,
-    List<AppNoticeViewModel> notices,
   ) {
     String hintText = getTranslations().fromKey(LocaleKey.searchItems);
     String renderKey = [
@@ -54,9 +48,6 @@ class AllItemsPageComponent extends StatelessWidget {
         viewModel.displayGenericItemColour,
         isHero: true,
       ),
-      firstListItemWidget: notices.isNotEmpty
-          ? Column(children: notices.map(appNoticeTileCore).toList())
-          : null,
       listItemSearch: search,
       key: Key(renderKey),
       hintText: hintText,

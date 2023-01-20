@@ -65,7 +65,7 @@ class _InventoryListState extends State<InventoryListPage> {
                   navigateTo: (context) => OptionsListPageDialog(
                       getTranslations().fromKey(LocaleKey.orderBy), options),
                 );
-                var result = (temp == null || temp.isEmpty) ? '' : temp;
+                String result = (temp == null || temp.isEmpty) ? '' : temp;
                 InventoryOrderByType orderByType = EnumToString.fromString(
                     InventoryOrderByType.values, result);
                 vm.setOrderByType(orderByType);
@@ -73,6 +73,7 @@ class _InventoryListState extends State<InventoryListPage> {
             )
           ],
         );
+
     return StoreConnector<AppState, InventoryListViewModel>(
       converter: (store) => InventoryListViewModel.fromStore(store),
       builder: (_, viewModel) => basicGenericPageScaffold(
@@ -99,7 +100,14 @@ class _InventoryListState extends State<InventoryListPage> {
   }
 
   Widget getBody(BuildContext context, InventoryListViewModel viewModel) {
-    List<Widget> widgets = List.empty(growable: true);
+    List<Widget> widgets = [
+      flatCard(
+        child: nomNomOpenSyncModalTile(
+          context,
+          viewModel.isPatron,
+        ),
+      ),
+    ];
 
     if (viewModel.containers.isEmpty) {
       widgets.add(
@@ -137,13 +145,6 @@ class _InventoryListState extends State<InventoryListPage> {
       ));
       widgets.addAll(getContainers(viewModel));
     }
-
-    widgets.add(Card(
-      child: nomNomOpenSyncModalTile(
-        context,
-        viewModel.isPatron,
-      ),
-    ));
 
     widgets.add(emptySpace10x());
 

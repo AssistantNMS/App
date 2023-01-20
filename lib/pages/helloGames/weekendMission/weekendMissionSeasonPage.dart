@@ -1,7 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../../components/common/cachedFutureBuilder.dart';
 import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../../constants/AppImage.dart';
 import '../../../contracts/weekendStagePageItem.dart';
@@ -64,7 +63,7 @@ class WeekendMissionSeasonPage extends StatelessWidget {
       ],
       body: CachedFutureBuilder<ResultWithValue<WeekendStagePageItem>>(
         future: getCurrentWeekendMissionData(context),
-        whileLoading: getLoading().fullPageLoading(
+        whileLoading: () => getLoading().fullPageLoading(
           context,
           loadingText: getTranslations().fromKey(LocaleKey.loading),
         ),

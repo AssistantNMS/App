@@ -143,7 +143,13 @@ Widget genericItemImage(
         margin: const EdgeInsets.all(4.0),
       ),
       onTap: onTap ??
-          genericItemImageOnTap(context, icon, disableZoom, name, hdAvailable),
+          genericItemImageOnTap(
+            context,
+            icon,
+            disableZoom,
+            name,
+            hdAvailable,
+          ),
     ),
   );
 }
@@ -165,12 +171,22 @@ Widget genericItemImageWithBackground(context, GenericPageItem item,
       color: HexColor(item.colour),
     ),
     onTap: genericItemImageOnTap(
-        context, itemIcon, disableZoom, item.name, hdAvailable),
+      context,
+      itemIcon,
+      disableZoom,
+      item.name,
+      hdAvailable,
+    ),
   );
 }
 
-Function genericItemImageOnTap(BuildContext context, String icon,
-        bool disableZoom, String name, bool hdAvailable) =>
+Function genericItemImageOnTap(
+  BuildContext context,
+  String icon,
+  bool disableZoom,
+  String name,
+  bool hdAvailable,
+) =>
     () async {
       if (disableZoom) return;
 

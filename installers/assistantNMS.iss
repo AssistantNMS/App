@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Assistant for No Man's Sky"
-#define MyAppVersion "2.6.0"
+#define MyAppVersion "2.7.0"
 #define MyAppPublisher "AssistantApps"
 #define MyAppURL "https://nmsassistant.com/"
 #define MyAppExeName "nmstest.exe"
@@ -51,7 +51,6 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\bitsdojo_window_windows_plugin.lib"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\connectivity_plus_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\connectivity_plus_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\dynamic_color_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\flutter_secure_storage_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion

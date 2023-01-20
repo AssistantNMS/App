@@ -176,34 +176,10 @@ List<CustomMenu> getMenuOptionsSection3(
       navigateToNamed: Routes.portals,
     ),
     CustomMenu(
-      icon: SizedBox(
-        width: imageSize,
-        height: imageSize,
-        child: Stack(
-          fit: StackFit.expand,
-          children: [
-            Positioned(
-              child: getListTileImage(AppImage.portal, size: imageSize * 0.66),
-              left: 0,
-              bottom: 0,
-            ),
-            Positioned(
-              child: getCorrectlySizedImageFromIcon(
-                context,
-                Icons.casino_outlined,
-                colour: getTheme().getSecondaryColour(context),
-                maxSize: imageSize * 0.66,
-              ),
-              top: 0,
-              right: 0,
-            ),
-          ],
-        ),
-      ),
-      drawerIcon: getListTileImage(AppImage.portal),
+      icon: randomPortalIcon(context, imageSize),
+      drawerIcon: randomPortalIcon(context, (imageSize * 0.75)),
       title: LocaleKey.randomPortal,
       navigateToNamed: Routes.randomPortal,
-      hideInDrawer: true,
     ),
     CustomMenu(
       icon: getListTileImage(AppImage.inventory, size: imageSize),
@@ -357,6 +333,33 @@ List<CustomMenu> getMenuOptionsSection4(
       navigateToNamed: Routes.socialLinks,
     ),
   ];
+}
+
+Widget randomPortalIcon(BuildContext context, double imageSize) {
+  return SizedBox(
+    width: imageSize,
+    height: imageSize,
+    child: Stack(
+      fit: StackFit.expand,
+      children: [
+        Positioned(
+          child: getListTileImage(AppImage.portal, size: imageSize * 0.66),
+          left: 0,
+          bottom: 0,
+        ),
+        Positioned(
+          child: getCorrectlySizedImageFromIcon(
+            context,
+            Icons.casino_outlined,
+            colour: getTheme().getSecondaryColour(context),
+            maxSize: imageSize * 0.66,
+          ),
+          top: 0,
+          right: 0,
+        ),
+      ],
+    ),
+  );
 }
 
 List<CustomMenu> getMenuOptions(

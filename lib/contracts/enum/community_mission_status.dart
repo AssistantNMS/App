@@ -1,0 +1,4 @@
+enum CommunityMissionStatus {
+  current,
+  past,
+}

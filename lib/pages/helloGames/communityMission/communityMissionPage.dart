@@ -3,10 +3,10 @@ import 'package:assistantnms_app/constants/AppImage.dart';
 import 'package:assistantnms_app/constants/NmsExternalUrls.dart';
 import 'package:flutter/material.dart';
 
-import '../../../components/common/cachedFutureBuilder.dart';
 import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../../constants/AnalyticsEvent.dart';
 import '../../../contracts/data/quicksilverStore.dart';
+import '../../../contracts/enum/community_mission_status.dart';
 import '../../../contracts/helloGames/communityMission.dart';
 import '../../../contracts/helloGames/communityMissionPageData.dart';
 import '../../../contracts/helloGames/quickSilverStoreDetails.dart';
@@ -69,7 +69,7 @@ class CommunityMissionPage extends StatelessWidget {
         future: getLocalCommunityMissionDataAndResultFromApi(context),
         whenDoneLoading: (ResultWithValue<CommunityMissionPageData> snapshot) =>
             getBody(context, snapshot),
-        whileLoading: getLoading().fullPageLoading(
+        whileLoading: () => getLoading().fullPageLoading(
           context,
           loadingText: getTranslations().fromKey(LocaleKey.loading),
         ),
@@ -132,7 +132,7 @@ class CommunityMissionPage extends StatelessWidget {
       child: genericListTileWithSubtitle(
         bodyCtx,
         leadingImage: AppImage.communityMissionProgress,
-        name: 'Community Mission Progress Tracker',
+        name: 'Community Mission Progress Tracker', //TODO translate
         subtitle: const Text('View progress over time'),
         trailing: const Padding(
           padding: EdgeInsets.only(right: 8),
@@ -147,6 +147,7 @@ class CommunityMissionPage extends StatelessWidget {
     widgets.add(customDivider());
     widgets.add(CommunityMissionRewards(
       missionId,
+      CommunityMissionStatus.current,
       currentTier: currentTier,
       currentTierPercentage: percentage,
       totalTiers: totalTiers,
@@ -156,7 +157,9 @@ class CommunityMissionPage extends StatelessWidget {
     ));
 
     Widget viewCommunityMissionsButton(
-        LocaleKey buttonLocale, int missionIdToView) {
+      LocaleKey buttonLocale,
+      int missionIdToView,
+    ) {
       return Expanded(
         child: Padding(
           padding: const EdgeInsets.only(left: 4, right: 4, bottom: 8),
