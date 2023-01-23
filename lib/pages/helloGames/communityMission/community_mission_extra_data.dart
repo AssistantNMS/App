@@ -19,6 +19,11 @@ class CommunityMissionExtraData extends StatelessWidget {
 
   Future<ResultWithValue<CommunityMissionExtraDataPageData>>
       getExtraCommunityMissionData(int localMissionId) async {
+    if (status == CommunityMissionStatus.future) {
+      return ResultWithValue<CommunityMissionExtraDataPageData>(
+          false, null, '');
+    }
+
     ResultWithValue<List<CommunityMissionTracked>> apiResult =
         await getCommunityMissionProgressApiService()
             .getProgressByMission(localMissionId);

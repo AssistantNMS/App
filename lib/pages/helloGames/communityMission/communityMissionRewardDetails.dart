@@ -10,18 +10,23 @@ import 'communityMissionRewards.dart';
 
 class CommunityMissionRewardDetailsPage extends StatefulWidget {
   final int missionId;
+  final int liveMissionId;
   final int missionMin;
   final int missionMax;
 
   const CommunityMissionRewardDetailsPage(
-      this.missionId, this.missionMin, this.missionMax,
-      {Key key})
-      : super(key: key);
+    this.missionId,
+    this.liveMissionId,
+    this.missionMin,
+    this.missionMax, {
+    Key key,
+  }) : super(key: key);
 
   @override
   _CommunityMissionRewardDetailsWidget createState() =>
       _CommunityMissionRewardDetailsWidget(
         missionId,
+        liveMissionId,
         missionMin,
         missionMax,
       );
@@ -29,11 +34,13 @@ class CommunityMissionRewardDetailsPage extends StatefulWidget {
 
 class _CommunityMissionRewardDetailsWidget extends State<StatefulWidget> {
   int missionId;
+  int liveMissionId;
   final int missionMin;
   final int missionMax;
 
   _CommunityMissionRewardDetailsWidget(
     this.missionId,
+    this.liveMissionId,
     this.missionMin,
     this.missionMax,
   );
@@ -48,6 +55,11 @@ class _CommunityMissionRewardDetailsWidget extends State<StatefulWidget> {
   }
 
   Widget getBody(BuildContext context) {
+    int diff = missionId - liveMissionId;
+    CommunityMissionStatus status = CommunityMissionStatus.current;
+    if (diff >= 1) status = CommunityMissionStatus.future;
+    if (diff <= -1) status = CommunityMissionStatus.past;
+
     return prevAndNextPagination(
       context,
       content: ListView(
@@ -61,7 +73,7 @@ class _CommunityMissionRewardDetailsWidget extends State<StatefulWidget> {
             padding: const EdgeInsets.only(top: 12),
           ),
           customDivider(),
-          CommunityMissionRewards(missionId, CommunityMissionStatus.past),
+          CommunityMissionRewards(missionId, status),
           emptySpace(16),
         ],
       ),
