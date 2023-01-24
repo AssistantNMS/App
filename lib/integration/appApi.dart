@@ -6,7 +6,6 @@ import '../constants/ApiUrls.dart';
 import '../constants/AppConfig.dart';
 import '../contracts/generated/addFriendCodeViewModel.dart';
 import '../contracts/generated/feedbackAnsweredViewModel.dart';
-import '../contracts/generated/feedbackViewModel.dart';
 import '../contracts/generated/friendCodeViewModel.dart';
 import '../contracts/generated/nomNomInventoryViewModel.dart';
 import '../contracts/generated/stripeDonationViewModel.dart';
@@ -29,24 +28,6 @@ class AppApi extends BaseApiService {
     } catch (exception) {
       getLog().e("stripeCharge Exception: ${exception.toString()}");
       return ResultWithValue<String>(false, '', exception.toString());
-    }
-  }
-
-  Future<ResultWithValue<FeedbackViewModel>> getLatestFeedbackForm() async {
-    try {
-      final response = await apiGet(ApiUrls.feedback);
-      if (response.hasFailed) {
-        return ResultWithValue<FeedbackViewModel>(
-            false, FeedbackViewModel(), response.errorMessage);
-      }
-      final feedback = json.decode(response.value);
-      FeedbackViewModel feedbackVM = FeedbackViewModel.fromJson(feedback);
-      return ResultWithValue(true, feedbackVM, '');
-    } catch (exception) {
-      getLog()
-          .e("getLatestFeedbackForm Api Exception: ${exception.toString()}");
-      return ResultWithValue<FeedbackViewModel>(
-          false, FeedbackViewModel(), exception.toString());
     }
   }
 

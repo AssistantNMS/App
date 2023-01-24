@@ -96,25 +96,13 @@ class AppShell extends StatelessWidget {
       initialRoute = HomepageItem.defaultHomepageItem().routeToNamed;
     }
 
-    Widget matApp = Wiredash(
-      projectId: getEnv().wiredashProjectId,
-      secret: getEnv().wiredashSecret,
-      options: WiredashOptionsData(
-        locale: getTranslations().getLocaleFromKey(
-          introViewModel.currentLanguage,
-        ),
-      ),
-      feedbackOptions: WiredashFeedbackOptions(
-        email: EmailPrompt.optional,
-        collectMetaData: (metaData) => metaData
-          // information about your app build
-          ..buildNumber = appsBuildNum.toString()
-          ..buildVersion = appsBuildName
-          ..buildCommit = appsCommit
-
-          // custom metadata
-          ..custom['currentLang'] = introViewModel.currentLanguage
-          ..custom['isPatron'] = introViewModel.isPatron,
+    Widget matApp = FeedbackWrapper(
+      options: FeedbackOptions(
+        buildNumber: appsBuildNum.toString(),
+        buildVersion: appsBuildName,
+        buildCommit: appsCommit,
+        currentLang: introViewModel.currentLanguage,
+        isPatron: introViewModel.isPatron,
       ),
       child: MaterialApp(
         key: key,

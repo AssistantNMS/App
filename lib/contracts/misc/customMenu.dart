@@ -307,7 +307,7 @@ List<CustomMenu> getMenuOptionsSection4(
       drawerIcon: localGetDrawerFromIcon(Icons.feedback),
       title: LocaleKey.feedback,
       onTap: (tapCtx) {
-        Wiredash.of(tapCtx).show(inheritMaterialTheme: true);
+        FeedbackWrapper.of(tapCtx).show();
       },
     ),
     // if (!isApple) ...[
