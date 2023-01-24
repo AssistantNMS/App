@@ -172,6 +172,7 @@ class CommunityMissionPage extends StatelessWidget {
               bodyCtx,
               navigateTo: (context) => CommunityMissionRewardDetailsPage(
                 missionIdToView,
+                missionId,
                 communityMissionMin,
                 communityMissionMax,
               ),
