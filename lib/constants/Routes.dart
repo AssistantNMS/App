@@ -16,7 +16,6 @@ import '../pages/exploits/exploitsPage.dart';
 import '../pages/faction/factionListPage.dart';
 import '../pages/faction/journeyMilestone.dart';
 import '../pages/favourite/favouritesPage.dart';
-import '../pages/feedback/feedbackPage.dart';
 import '../pages/friendCode/friendCodeListPage.dart';
 import '../pages/guide/assistantAppsGuidesPage.dart';
 import '../pages/guide/guidesPage.dart';
@@ -161,7 +160,6 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.whatIsNew: (context) => const EnhancedWhatIsNewPage(),
     Routes.communityLinks: (context) => CommunityLinksPage(),
     Routes.socialLinks: (context) => SocialPage(),
-    Routes.feedback: (context) => FeedbackPage(),
     Routes.newItems: (context) => const NewItemsPage(),
     Routes.techTree: (context) => UnlockableTechTreePage(),
     Routes.inventoryList: (context) => const InventoryListPage(),
