@@ -1,8 +1,8 @@
-name: "\U0001F41B Bug report"
-title: '[Bug]: '
+name: '🐛 Bug Report'
 description: |
   Thank you for reporting issues!
   Please make sure that you have looked at and read the "I found a Bug and I want to report it" section of the Contributing guide!
+title: '🐛 Bug Report: '
 labels: bug
 body:
   - type: textarea
@@ -10,7 +10,7 @@ body:
     validations:
       required: true
     attributes:
-      label: Describe the bug
+      label: 📜 Describe the bug
       description: |
         A clear and concise description of what the bug is. If you for example disagree with what the name of an game item is please point out what you believe it should say.
       placeholder: 🐛🐜🪲
@@ -19,7 +19,7 @@ body:
     validations:
       required: true
     attributes:
-      label: To Reproduce
+      label: 👟 To Reproduce
       description: |
         Steps to reproduce the behavior:
       value: |
@@ -32,7 +32,7 @@ body:
     validations:
       required: true
     attributes:
-      label: Expected behavior
+      label: 👍 Expected behavior
       description: |
         A clear and concise description of what you expected to happen.
   - type: dropdown
@@ -40,7 +40,7 @@ body:
     validations:
       required: true
     attributes:
-      label: Where did you find this problem?
+      label: 📱 Where did you find this problem?
       multiple: true
       options:
         - Android
@@ -50,12 +50,28 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Logs
+      label: 🪵 Logs
       description: |
         Please recreate the issue and attach/paste the logs from the app onto this issue. You can find the logs on the settings page, there is a "Logs" option.
-  - type: textarea
-    id: additional
+  - type: checkboxes
+    id: no-duplicate-issues
     attributes:
-      label: Additional context
-      description: |
-        Add any other context or screenshots about the feature request here.
+      label: '👀 Have you checked if this bug report has been created already?'
+      options:
+        - label: "I checked and couldn't find similar issue"
+          required: true
+  - type: checkboxes
+    id: read-code-of-conduct
+    attributes:
+      label: '🏢 Have you read the Code of Conduct?'
+      options:
+        - label: 'I have read the [Code of Conduct](https://github.com/AssistantNMS/App/blob/main/.github/CODE_OF_CONDUCT.md)'
+          required: true
+  - type: dropdown
+    attributes:
+      label: Are you willing to submit PR?
+      description: This is absolutely not required, but we are happy to guide you in the contribution process.
+      options:
+        - Yes I am willing to submit a PR!
+        - No, but I'm happy to collaborate on a PR with someone else
+        - No, I don't have time to work on this right now
