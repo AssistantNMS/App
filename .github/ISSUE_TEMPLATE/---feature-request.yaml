@@ -1,6 +1,6 @@
-name: "\U0001F680 Feature request"
-title: '[Feature]: '
+name: "🚀 Feature request"
 description: Suggest an idea for this project
+title: '🚀 Feature request: '
 labels: idea
 body:
   - type: markdown
@@ -12,26 +12,34 @@ body:
     validations:
       required: true
     attributes:
-      label: Is your feature request related to a problem? Please describe.
-      description: |
-        A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
-  - type: textarea
-    id: solutions
-    validations:
-      required: true
-    attributes:
-      label: Describe the solution you'd like
+      label: 🔖 Describe the solution you'd like
       description: |
         A clear and concise description of what you want to happen.
   - type: textarea
     id: alternatives
     attributes:
-      label: Describe alternatives you've considered
+      label: 🩹 Describe alternatives you've considered
       description: |
         A clear and concise description of any alternative solutions or features you've considered.
-  - type: textarea
-    id: additional
+  - type: checkboxes
+    id: no-duplicate-issues
     attributes:
-      label: Additional context
-      description: |
-        Add any other context or screenshots about the feature request here.
+      label: '👀 Have you checked if this bug report has been created already?'
+      options:
+        - label: "I checked and couldn't find similar issue"
+          required: true
+  - type: checkboxes
+    id: read-code-of-conduct
+    attributes:
+      label: '🏢 Have you read the Code of Conduct?'
+      options:
+        - label: 'I have read the [Code of Conduct](https://github.com/AssistantNMS/App/blob/main/.github/CODE_OF_CONDUCT.md)'
+          required: true
+  - type: dropdown
+    attributes:
+      label: Are you willing to submit PR?
+      description: This is absolutely not required, but we are happy to guide you in the contribution process.
+      options:
+        - Yes I am willing to submit a PR!
+        - No, but I'm happy to collaborate on a PR with someone else
+        - No, I don't have time to work on this right now
