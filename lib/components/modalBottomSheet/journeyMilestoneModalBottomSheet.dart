@@ -1,5 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
+import '../../constants/Modal.dart';
 import '../../contracts/journey/storedJourneyMilestone.dart';
 
 import '../../constants/AppDuration.dart';
@@ -58,10 +59,7 @@ class JourneyMilestoneBottomSheet extends StatelessWidget {
     return AnimatedSize(
       duration: AppDuration.modal,
       child: Container(
-        constraints: BoxConstraints(
-          minHeight: (MediaQuery.of(context).size.height) / 2,
-          maxHeight: (MediaQuery.of(context).size.height) * 0.75,
-        ),
+        constraints: modalFactionSize(context),
         child: ListView.builder(
           padding: const EdgeInsets.all(0),
           itemCount: widgets.length,

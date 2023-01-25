@@ -38,40 +38,45 @@ class _EditCustomHomeWidget extends State<EditCustomHomepage> {
       });
     }
 
-    int numberOfColumns = 6;
-    double secretPadding = 4;
-    double deviceWidth = MediaQuery.of(context).size.width;
-    if (widget._numberOfColumns < 1) {
-      if (deviceWidth < 1000) numberOfColumns = 5;
-      if (deviceWidth < 800) numberOfColumns = 4;
-      if (deviceWidth < 600) numberOfColumns = 3;
-      if (deviceWidth < 400) numberOfColumns = 2;
-    } else {
-      numberOfColumns = widget._numberOfColumns;
-    }
+    return LayoutBuilder(
+      builder: (layoutCtx, BoxConstraints constraints) {
+        int numberOfColumns = 6;
+        double secretPadding = 4;
+        double deviceWidth = constraints.maxWidth;
+        if (widget._numberOfColumns < 1) {
+          if (deviceWidth < 1000) numberOfColumns = 5;
+          if (deviceWidth < 800) numberOfColumns = 4;
+          if (deviceWidth < 600) numberOfColumns = 3;
+          if (deviceWidth < 400) numberOfColumns = 2;
+        } else {
+          numberOfColumns = widget._numberOfColumns;
+        }
 
-    double tileSize = (deviceWidth / numberOfColumns) - (numberOfColumns * 2);
+        double tileSize =
+            (deviceWidth / numberOfColumns) - (numberOfColumns * 2);
 
-    List<Widget> _localTiles = _menuOptions
-        .map((item) => EditingHomepageItem(item, tileSize))
-        .toList();
+        List<Widget> _localTiles = _menuOptions
+            .map((item) => EditingHomepageItem(item, tileSize))
+            .toList();
 
-    return ReorderableWrap(
-      // padding: const EdgeInsets.all(8),
-      children: _localTiles,
-      runSpacing: secretPadding,
-      header: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            genericItemGroup('Tap and hold item to drag and change order')
+        return ReorderableWrap(
+          // padding: const EdgeInsets.all(8),
+          children: _localTiles,
+          runSpacing: secretPadding,
+          header: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                genericItemGroup('Tap and hold item to drag and change order')
+              ],
+            ),
           ],
-        ),
-      ],
-      onReorder: _onReorder,
-      maxMainAxisCount: numberOfColumns,
-      onNoReorder: (int index) {},
-      onReorderStarted: (int index) {},
+          onReorder: _onReorder,
+          maxMainAxisCount: numberOfColumns,
+          onNoReorder: (int index) {},
+          onReorderStarted: (int index) {},
+        );
+      },
     );
   }
 }

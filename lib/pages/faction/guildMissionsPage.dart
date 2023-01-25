@@ -49,6 +49,7 @@ class GuildMissionsPage extends StatelessWidget {
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (listCtx, index) => widgets[index](listCtx),
+        scrollController: ScrollController(),
       ),
     );
   }

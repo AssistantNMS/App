@@ -128,7 +128,11 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
             ),
           )
         ],
-        body: getBody(context, viewModel),
+        body: LayoutBuilder(
+          builder: (layoutCtx, BoxConstraints constraints) {
+            return getBody(layoutCtx, viewModel, constraints);
+          },
+        ),
         fab: randomPortalFAB(
           context,
           isDisabled: fabIsDisabled || currentCode.isEmpty,
@@ -139,9 +143,13 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
     );
   }
 
-  Widget getBody(BuildContext bodyCtx, PortalViewModel portalViewModel) {
+  Widget getBody(
+    BuildContext bodyCtx,
+    PortalViewModel portalViewModel,
+    BoxConstraints constraints,
+  ) {
     bool useAltGlyphs = portalViewModel.useAltGlyphs;
-    final size = MediaQuery.of(context).size;
+    final size = Size(constraints.maxWidth, constraints.maxHeight);
     List<String> portalList = List.generate(
       16,
       (index) => index.toRadixString(16),

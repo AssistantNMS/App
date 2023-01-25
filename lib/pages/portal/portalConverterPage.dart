@@ -149,7 +149,11 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
       title: getTranslations().fromKey(LocaleKey.portalLibrary),
       body: StoreConnector<AppState, PortalViewModel>(
         converter: (store) => PortalViewModel.fromStore(store),
-        builder: (_, viewModel) => getBody(context, viewModel),
+        builder: (_, viewModel) => LayoutBuilder(
+          builder: (layoutCtx, BoxConstraints constraints) {
+            return getBody(layoutCtx, viewModel, constraints);
+          },
+        ),
       ),
     );
   }
@@ -157,6 +161,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
   Widget getBody(
     BuildContext scaffoldContext,
     PortalViewModel portalViewModel,
+    BoxConstraints constraints,
   ) {
     String colour = getTheme().getIsDark(context) ? 'white' : 'black';
     if (portalViewModel.useAltGlyphs) colour = 'alt';
@@ -186,7 +191,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
       ),
     );
 
-    double screenWidth = MediaQuery.of(context).size.width;
+    double screenWidth = constraints.maxWidth;
     bool screenIsSmol = screenWidth < 500;
     double maxWidth = screenIsSmol ? screenWidth : (screenWidth * 0.7);
     List<SegmentViewMultiBuilder> portalOptions = [

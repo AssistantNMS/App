@@ -153,6 +153,7 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (listCtx, index) => widgets[index](listCtx),
+        scrollController: ScrollController(),
       ),
     );
   }

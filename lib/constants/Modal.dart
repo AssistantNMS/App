@@ -19,3 +19,10 @@ BoxConstraints modalFullHeightSize(BuildContext context) {
     minHeight: (MediaQuery.of(context).size.height) / 2,
   );
 }
+
+BoxConstraints modalFactionSize(BuildContext context) {
+  return BoxConstraints(
+    minHeight: (MediaQuery.of(context).size.height) / 2,
+    maxHeight: (MediaQuery.of(context).size.height) * 0.75,
+  );
+}
