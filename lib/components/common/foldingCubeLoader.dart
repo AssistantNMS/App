@@ -3,27 +3,26 @@ import 'package:flutter/widgets.dart';
 
 class FoldingCubeLoader extends StatefulWidget {
   const FoldingCubeLoader({
-    Key key,
+    Key? key,
     this.color,
     this.size = 50.0,
     this.duration = const Duration(seconds: 2),
     this.controller,
-  })  : assert(size != null),
-        super(key: key);
+  }) : super(key: key);
 
-  final Color color;
+  final Color? color;
   final double size;
   final Duration duration;
-  final AnimationController controller;
+  final AnimationController? controller;
 
   @override
-  _FoldingCubeLoaderState createState() => _FoldingCubeLoaderState();
+  createState() => _FoldingCubeLoaderState();
 }
 
 class _FoldingCubeLoaderState extends State<FoldingCubeLoader>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation<double> _rotate1, _rotate2, _rotate3, _rotate4;
+  late AnimationController _controller;
+  late Animation<double> _rotate1, _rotate2, _rotate3, _rotate4;
 
   @override
   void initState() {
@@ -75,7 +74,10 @@ class _FoldingCubeLoaderState extends State<FoldingCubeLoader>
     );
   }
 
-  Widget _cube(int i, {Animation<double> animation}) {
+  Widget _cube(
+    int i, {
+    required Animation<double> animation,
+  }) {
     final _size = widget.size * 0.5, _position = widget.size * .5;
 
     final Matrix4 _tRotate = Matrix4.identity()

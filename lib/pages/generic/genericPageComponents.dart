@@ -47,7 +47,7 @@ List<Widget> getBodyTopContent(BuildContext context, GenericPageViewModel vm,
     GenericPageItem genericItem) {
   List<Widget> stackWidgets = List.empty(growable: true);
   bool hdAvailable = genericItem.cdnUrl != null && //
-      genericItem.cdnUrl.isNotEmpty;
+      genericItem.cdnUrl!.isNotEmpty;
   Color iconColour = getOverlayColour(HexColor(genericItem.colour));
 
   if (vm.displayGenericItemColour) {
@@ -83,7 +83,7 @@ List<Widget> getBodyTopContent(BuildContext context, GenericPageViewModel vm,
     ),
   );
 
-  if ((genericItem?.usage ?? []).contains(UsageKey.hasDevProperties)) {
+  if ((genericItem.usage ?? []).contains(UsageKey.hasDevProperties)) {
     stackWidgets.add(
       getDevSheet(
         context,
@@ -106,20 +106,25 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
     GenericPageViewModel vm, GenericPageItem genericItem) {
   List<Widget> widgets = List.empty(growable: true);
 
-  bool hasSymbol = ((genericItem?.symbol?.length ?? 0) > 0);
+  bool hasSymbol = ((genericItem.symbol?.length ?? 0) > 0);
   String itemName = hasSymbol
       ? "${genericItem.name} (${genericItem.symbol})"
       : genericItem.name;
-  if ((itemName?.length ?? 0) < 1) {
+  if (itemName.isEmpty) {
     itemName = getTranslations().fromKey(LocaleKey.unknown);
   }
-  widgets.add(Hero(
-    key: Key('${genericItem.id}-item-name'),
-    tag: gameItemNameHero(genericItem),
-    child: genericItemName(itemName),
-  ));
+  String? heroTagString = gameItemNameHero(genericItem);
+  widgets.add(
+    heroTagString == null
+        ? genericItemName(itemName)
+        : Hero(
+            key: Key('${genericItem.id}-item-name'),
+            tag: heroTagString,
+            child: genericItemName(itemName),
+          ),
+  );
 
-  if (genericItem.group != null && genericItem.group.isNotEmpty) {
+  if (genericItem.group.isNotEmpty) {
     if (genericItem.group.contains('%NAME%')) {
       genericItem.group = genericItem.group.replaceAll('%NAME%', itemName);
     }
@@ -141,11 +146,11 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
     genericItem.controlMappings ?? List.empty(),
   ));
 
-  if (genericItem.description != null && genericItem.description.isNotEmpty) {
+  if (genericItem.description != null && genericItem.description!.isNotEmpty) {
     widgets.add(emptySpace(0.5));
     List<Widget> descriptWidgets = genericPageDescripHighlightText(
       bodyDetailsCtx,
-      genericItem.description,
+      genericItem.description!,
       genericItem.controlMappings ?? List.empty(),
     );
     widgets.addAll(
@@ -160,8 +165,7 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
     );
   }
 
-  if (genericItem.blueprintSource != null &&
-      genericItem.blueprintSource != BlueprintSource.unknown) {
+  if (genericItem.blueprintSource != BlueprintSource.unknown) {
     String blueprintFromLang =
         getTranslations().fromKey(LocaleKey.blueprintFrom);
     widgets.add(emptySpace1x());
@@ -179,7 +183,7 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
     );
   }
 
-  if (genericItem.additional != null && genericItem.additional != '') {
+  if (genericItem.additional != '') {
     widgets.add(genericItemDescription(genericItem.additional));
   }
 
@@ -193,12 +197,12 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
     ),
   ));
 
-  if (genericItem.translation != null && genericItem.translation.length > 1) {
-    widgets.add(ExpeditionAlphabetTranslation(genericItem.translation));
+  if (genericItem.translation != null && genericItem.translation!.length > 1) {
+    widgets.add(ExpeditionAlphabetTranslation(genericItem.translation!));
   }
 
-  double cookValue = genericItem.cookingValue;
-  if (cookValue != null && cookValue > 0.0) {
+  double cookValue = genericItem.cookingValue ?? 0.0;
+  if (cookValue > 0.0) {
     widgets.add(emptySpace1x());
     widgets.add(animateSlideInFromLeft(
       child: getCookingScore(bodyDetailsCtx, cookValue),
@@ -212,14 +216,13 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
   Color chipColour = getTheme().buttonForegroundColour(context);
   List<Widget> chipList = List.empty(growable: true);
 
-  if (genericItem.maxStackSize != null &&
-      genericItem.maxStackSize > 0.0 &&
+  if (genericItem.maxStackSize > 0.0 &&
       !genericItem.id.contains(IdPrefix.building)) {
     String maxStackLang = getTranslations().fromKey(LocaleKey.maxStackSize);
     String maxStack = genericItem.maxStackSize.toStringAsFixed(0);
     chipList.add(genericItemDescription(
       "$maxStackLang: $maxStack",
-      textStyle: getThemeBodyLarge(context).copyWith(color: chipColour),
+      textStyle: getThemeBodyLarge(context)?.copyWith(color: chipColour),
     ));
   }
 
@@ -293,7 +296,7 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
   //       colour: chipColour));
   // }
 
-  if (genericItem.power != null && genericItem.power != 0) {
+  if (genericItem.power != 0) {
     chipList.add(
       genericItemTextWithIcon(
           context, genericItem.power.toString(), Icons.flash_on,
@@ -331,8 +334,11 @@ List<Widget> getCraftedUsing(
     GenericPageViewModel vm,
     GenericPageItem genericItem,
     List<RequiredItem> resArray,
-    Widget Function(BuildContext context, RequiredItem requiredItem,
-            {Function onTap})
+    Widget Function(
+  BuildContext context,
+  RequiredItem requiredItem, {
+  void Function()? onTap,
+})
         requiredItemsPresenter) {
   List<Widget> craftedUsing = List.empty(growable: true);
   if (resArray.isNotEmpty) {
@@ -379,8 +385,10 @@ List<Widget> getUsedToCreate(
     GenericPageItem genericItem,
     List<RequiredItemDetails> usedToCreateArray,
     Widget Function(
-            BuildContext context, RequiredItemDetails requiredItemDetails,
-            {Function onTap})
+  BuildContext context,
+  RequiredItemDetails requiredItemDetails, {
+  void Function()? onTap,
+})
         requiredItemDetailsPresenter) {
   List<Widget> usedToCreate = List.empty(growable: true);
   if (usedToCreateArray.isNotEmpty) {
@@ -405,8 +413,11 @@ List<Widget> getRequiredItemWidgets(
     GenericPageItem genericItem,
     String title,
     List<RequiredItem> reqArray,
-    Widget Function(BuildContext context, RequiredItem requiredItem,
-            {Function onTap})
+    Widget Function(
+  BuildContext context,
+  RequiredItem requiredItem, {
+  void Function()? onTap,
+})
         requiredItemsPresenter) {
   List<Widget> refineToCreate = List.empty(growable: true);
   if (reqArray.isNotEmpty) {
@@ -457,7 +468,7 @@ List<Widget> getCartItems(BuildContext context, GenericPageViewModel vm,
     GenericPageItem genericItem, List<CartItem> cartItems) {
   List<Widget> cartWidgets = List.empty(growable: true);
 
-  if (cartItems != null && cartItems.isNotEmpty) {
+  if (cartItems.isNotEmpty) {
     cartWidgets.add(emptySpace3x());
     cartWidgets.add(genericItemText(getTranslations().fromKey(LocaleKey.cart)));
     cartWidgets.add(flatCard(
@@ -478,8 +489,7 @@ List<Widget> getCartItems(BuildContext context, GenericPageViewModel vm,
 List<Widget> getInventories(BuildContext context, GenericPageItem genericItem,
     List<Inventory> inventoriesThatContainItem) {
   List<Widget> invWidgets = List.empty(growable: true);
-  if (inventoriesThatContainItem != null &&
-      inventoriesThatContainItem.isNotEmpty) {
+  if (inventoriesThatContainItem.isNotEmpty) {
     invWidgets.add(emptySpace3x());
     invWidgets.add(genericItemText(
         getTranslations().fromKey(LocaleKey.inventoryManagement)));
@@ -506,8 +516,11 @@ List<Widget> getRechargeWith(
     BuildContext context,
     GenericPageItem genericItem,
     List<ChargeBy> rechargeItems,
-    Widget Function(BuildContext context, ChargeBy chargeByItem,
-            {Function onTap})
+    Widget Function(
+  BuildContext context,
+  ChargeBy chargeByItem, {
+  void Function()? onTap,
+})
         chargeByItemPresenter) {
   List<Widget> rechargeWidgets = List.empty(growable: true);
   if (rechargeItems.isNotEmpty) {
@@ -531,8 +544,11 @@ List<Widget> getUsedToRecharge(
     BuildContext context,
     GenericPageItem genericItem,
     List<Recharge> rechargeItems,
-    Widget Function(BuildContext context, Recharge rechargeItem,
-            {Function onTap})
+    Widget Function(
+  BuildContext context,
+  Recharge rechargeItem, {
+  void Function()? onTap,
+})
         usedToRechargeItemPresenter) {
   List<Widget> rechargeWidgets = List.empty(growable: true);
   if (rechargeItems.isNotEmpty) {
@@ -630,11 +646,11 @@ List<Widget> getRewardFrom(
   BuildContext context,
   GenericPageItem genericItem,
   bool displayGenericItemColour, {
-  List<StarshipScrap> starshipScrapItems,
-  List<CreatureHarvest> creatureHarvests,
+  List<StarshipScrap>? starshipScrapItems,
+  List<CreatureHarvest>? creatureHarvests,
 }) {
   List<Widget> rewardsFromWidgets = List.empty(growable: true);
-  List<String> usages = genericItem?.usage ?? [];
+  List<String> usages = genericItem.usage ?? [];
 
   if (usages.any((u) => u.contains(UsageKey.isQuicksilver))) {
     if (genericItem.baseValueUnits > 0 &&
@@ -677,14 +693,15 @@ List<Widget> getRewardFrom(
   if (usages.any((u) => u.contains(UsageKey.isRewardFromShipScrap))) {
     rewardsFromWidgets.add(rewardFromStarshipScrapTilePresenter(
       context,
-      starshipScrapItems,
+      starshipScrapItems ?? List.empty(),
       displayGenericItemColour,
     ));
   }
 
   if (usages.any((u) => u.contains(UsageKey.hasCreatureHarvest))) {
-    if (creatureHarvests != null && creatureHarvests.isNotEmpty) {
-      for (CreatureHarvest creatureHarvest in creatureHarvests) {
+    var localCreatureHarvs = creatureHarvests ?? List.empty();
+    if (localCreatureHarvs.isNotEmpty) {
+      for (CreatureHarvest creatureHarvest in localCreatureHarvs) {
         rewardsFromWidgets.add(creatureHarvestTilePresenter(
           context,
           creatureHarvest,

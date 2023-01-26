@@ -20,14 +20,15 @@ Widget rewardFromTwitchTilePresenter(
     future: twitchCampaignDetails(context, campaignId),
     builder: (BuildContext context,
         AsyncSnapshot<ResultWithValue<TwitchCampaignData>> snapshot) {
-      Widget errorWidget = asyncSnapshotHandler(
+      Widget? errorWidget = asyncSnapshotHandler(
         context,
         snapshot,
         loader: () => getLoading().smallLoadingTile(context),
-        isValidFunction: (ResultWithValue<TwitchCampaignData> result) {
-          if (snapshot.data.hasFailed ||
-              snapshot.data.value == null ||
-              snapshot.data.value.id == null) {
+        isValidFunction: (ResultWithValue<TwitchCampaignData>? result) {
+          if (snapshot.data == null ||
+              snapshot.data?.hasFailed == true ||
+              snapshot.data?.value == null ||
+              snapshot.data?.value.id == null) {
             return false;
           }
           return true;
@@ -35,7 +36,7 @@ Widget rewardFromTwitchTilePresenter(
       );
       if (errorWidget != null) return errorWidget;
 
-      TwitchCampaignData campaign = snapshot.data.value;
+      TwitchCampaignData campaign = snapshot.data!.value;
       return flatCard(
         shadowColor: Colors.transparent,
         child: genericListTileWithSubtitle(
@@ -62,10 +63,13 @@ Widget rewardFromTwitchTilePresenter(
   );
 }
 
-Widget Function(BuildContext, TwitchCampaignData, {void Function() onTap})
+Widget Function(BuildContext, TwitchCampaignData, {void Function()? onTap})
     twitchCampaignListTilePresenter(bool displayBackgroundColour) {
-  return (BuildContext context, TwitchCampaignData campaign,
-      {void Function() onTap}) {
+  return (
+    BuildContext context,
+    TwitchCampaignData campaign, {
+    void Function()? onTap,
+  }) {
     return flatCard(
       child: genericListTileWithSubtitle(
         context,
@@ -100,15 +104,16 @@ Widget Function(BuildContext, TwitchCampaignReward)
             context, RequiredItem(id: reward.id, quantity: 0)),
         builder: (BuildContext context,
             AsyncSnapshot<ResultWithValue<RequiredItemDetails>> snapshot) {
-          Widget errorWidget = asyncSnapshotHandler(
+          Widget? errorWidget = asyncSnapshotHandler(
             context,
             snapshot,
             loader: () => getLoading().smallLoadingTile(context),
-            isValidFunction: (ResultWithValue<RequiredItemDetails> result) {
-              if (snapshot.data.value == null ||
-                  snapshot.data.value.icon == null ||
-                  snapshot.data.value.name == null ||
-                  snapshot.data.value.quantity == null) {
+            isValidFunction: (ResultWithValue<RequiredItemDetails>? result) {
+              if (snapshot.data == null ||
+                  snapshot.data?.value == null ||
+                  snapshot.data?.value.icon == null ||
+                  snapshot.data?.value.name == null ||
+                  snapshot.data?.value.quantity == null) {
                 return false;
               }
               return true;
@@ -116,7 +121,7 @@ Widget Function(BuildContext, TwitchCampaignReward)
           );
           if (errorWidget != null) return errorWidget;
 
-          RequiredItemDetails details = snapshot.data.value;
+          RequiredItemDetails details = snapshot.data!.value;
           int watchTimeInMin = reward.watchTimeInMin;
           String template = getTranslations().fromKey(LocaleKey.minutes);
           if (reward.watchTimeInMin > 30) {

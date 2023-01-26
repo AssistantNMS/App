@@ -11,9 +11,9 @@ import '../../redux/modules/journeyMilestone/factionsViewModel.dart';
 class FactionTierBottomSheet extends StatelessWidget {
   final FactionMission mission;
   final FactionsViewModel viewModel;
-  final StoredFactionMission storedFac;
+  final StoredFactionMission? storedFac;
   const FactionTierBottomSheet(this.mission, this.viewModel, this.storedFac,
-      {Key key})
+      {Key? key})
       : super(key: key);
 
   @override
@@ -43,9 +43,11 @@ class FactionTierBottomSheet extends StatelessWidget {
             currencyFormat(stat.requiredProgress.toString(), addDecimal: false),
           ),
           trailing: IconButton(
-            icon: Icon((storedFac?.missionTierIndex ?? 0) == statIndex
-                ? Icons.radio_button_on
-                : Icons.radio_button_off),
+            icon: Icon(
+              (storedFac?.missionTierIndex ?? 0) == statIndex
+                  ? Icons.radio_button_on
+                  : Icons.radio_button_off,
+            ),
             onPressed: onTap,
           ),
           onTap: onTap,

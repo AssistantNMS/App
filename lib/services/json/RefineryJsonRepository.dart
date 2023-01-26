@@ -35,8 +35,11 @@ class RefineryJsonRepository extends BaseJsonService
     ResultWithValue<List<Processor>> allGenericItemsResult =
         await getAll(context);
     if (allGenericItemsResult.hasFailed) {
-      return ResultWithValue(
-          false, Processor(), allGenericItemsResult.errorMessage);
+      return ResultWithValue<Processor>(
+        false,
+        Processor.fromRawJson('{}', false),
+        allGenericItemsResult.errorMessage,
+      );
     }
     try {
       Processor selectedGeneric =
@@ -46,7 +49,10 @@ class RefineryJsonRepository extends BaseJsonService
       getLog().e(
           "RefinerJsonService $detailsJsonLocale Exception: ${exception.toString()}");
       return ResultWithValue<Processor>(
-          false, Processor(), exception.toString());
+        false,
+        Processor.fromRawJson('{}', false),
+        exception.toString(),
+      );
     }
   }
 
@@ -55,8 +61,11 @@ class RefineryJsonRepository extends BaseJsonService
       context, String id) async {
     ResultWithValue<List<Processor>> refineryResult = await getAll(context);
     if (refineryResult.hasFailed) {
-      return ResultWithValue(
-          false, List.empty(growable: true), refineryResult.errorMessage);
+      return ResultWithValue<List<Processor>>(
+        false,
+        List.empty(),
+        refineryResult.errorMessage,
+      );
     }
     try {
       List<Processor> selectedRefiner =
@@ -66,7 +75,10 @@ class RefineryJsonRepository extends BaseJsonService
       getLog().e(
           "getRefiner ($id) $detailsJsonLocale Exception: ${exception.toString()}");
       return ResultWithValue<List<Processor>>(
-          false, List.empty(growable: true), exception.toString());
+        false,
+        List.empty(),
+        exception.toString(),
+      );
     }
   }
 
@@ -87,7 +99,10 @@ class RefineryJsonRepository extends BaseJsonService
       getLog().e(
           "getRefiner ($id) $detailsJsonLocale Exception: ${exception.toString()}");
       return ResultWithValue<List<Processor>>(
-          false, List.empty(growable: true), exception.toString());
+        false,
+        List.empty(),
+        exception.toString(),
+      );
     }
   }
 }

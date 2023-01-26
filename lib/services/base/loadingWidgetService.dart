@@ -9,7 +9,7 @@ class LoadingWidgetService implements ILoadingWidgetService {
   Widget smallLoadingIndicator() => const CustomSpinner();
 
   @override
-  Widget smallLoadingTile(BuildContext context, {String loadingText}) =>
+  Widget smallLoadingTile(BuildContext context, {String? loadingText}) =>
       ListTile(
         leading: SizedBox(
           width: 50,
@@ -28,7 +28,7 @@ class LoadingWidgetService implements ILoadingWidgetService {
       );
 
   @override
-  Widget fullPageLoading(BuildContext context, {String loadingText}) => Column(
+  Widget fullPageLoading(BuildContext context, {String? loadingText}) => Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -56,7 +56,7 @@ class LoadingWidgetService implements ILoadingWidgetService {
       );
 
   @override
-  Widget customErrorWidget(BuildContext context, {String text}) {
+  Widget customErrorWidget(BuildContext context, {String? text}) {
     return Center(
       child: Column(
         children: [

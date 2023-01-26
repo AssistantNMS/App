@@ -12,7 +12,7 @@ import '../../redux/modules/setting/settingViewModel.dart';
 import '../../services/json/GuidesJsonRepository.dart';
 
 class GuidesPage extends StatelessWidget {
-  GuidesPage({Key key}) : super(key: key) {
+  GuidesPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.guidePage);
   }
 
@@ -28,10 +28,10 @@ class GuidesPage extends StatelessWidget {
     GuidesJsonRepository _guidesRepo = GuidesJsonRepository();
     var presenter = viewModel.guidesIsCompact
         ? (BuildContext context, NmsGuide guideDetails,
-                {void Function() onTap}) =>
+                {void Function()? onTap}) =>
             compactGuideTilePresenter(context, guideDetails)
         : (BuildContext context, NmsGuide guideDetails,
-                {void Function() onTap}) =>
+                {void Function()? onTap}) =>
             guideTilePresenter(context, guideDetails);
     return basicGenericPageScaffold(
       context,

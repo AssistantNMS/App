@@ -8,8 +8,8 @@ class DrawerSettingsViewModel {
   final bool isPatron;
 
   DrawerSettingsViewModel({
-    this.dontShowSpoilerAlert,
-    this.isPatron,
+    required this.dontShowSpoilerAlert,
+    required this.isPatron,
   });
 
   static DrawerSettingsViewModel fromStore(Store<AppState> store) =>

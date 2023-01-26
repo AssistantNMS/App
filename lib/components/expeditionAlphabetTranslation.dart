@@ -7,7 +7,7 @@ import '../helpers/themeHelper.dart';
 
 class ExpeditionAlphabetTranslation extends StatefulWidget {
   final String text;
-  const ExpeditionAlphabetTranslation(this.text, {Key key}) : super(key: key);
+  const ExpeditionAlphabetTranslation(this.text, {Key? key}) : super(key: key);
   @override
   _ExpeditionAlphabetTranslationWidget createState() =>
       // ignore: no_logic_in_create_state
@@ -23,10 +23,10 @@ class _ExpeditionAlphabetTranslationWidget
 
   @override
   Widget build(BuildContext context) {
-    TextStyle currentFont =
-        getThemeSubtitle(context).copyWith(color: Colors.black);
-    TextStyle expeditionFont =
-        currentFont.copyWith(fontFamily: nmsExpeditionFontFamily);
+    TextStyle? currentFont =
+        getThemeSubtitle(context)?.copyWith(color: Colors.black);
+    TextStyle? expeditionFont =
+        currentFont?.copyWith(fontFamily: nmsExpeditionFontFamily);
 
     return Padding(
       padding: const EdgeInsets.only(left: 4),

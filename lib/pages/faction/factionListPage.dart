@@ -8,7 +8,7 @@ import '../../contracts/faction/faction.dart';
 import '../../integration/dependencyInjection.dart';
 
 class FactionPage extends StatelessWidget {
-  FactionPage({Key key}) : super(key: key) {
+  FactionPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.factionPage);
   }
 
@@ -26,8 +26,11 @@ class FactionPage extends StatelessWidget {
     );
   }
 
-  Widget getBody(BuildContext bodyCtx, ResultWithValue<FactionData> snapshot) {
-    if (snapshot == null || snapshot.isSuccess == false) {
+  Widget getBody(
+    BuildContext bodyCtx,
+    ResultWithValue<FactionData> snapshot,
+  ) {
+    if (snapshot.isSuccess == false) {
       return simpleGenericPageScaffold(
         bodyCtx,
         title: getTranslations().fromKey(LocaleKey.error),
@@ -58,6 +61,7 @@ class FactionPage extends StatelessWidget {
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (context, index) => widgets[index],
+        scrollController: ScrollController(),
       ),
     );
   }

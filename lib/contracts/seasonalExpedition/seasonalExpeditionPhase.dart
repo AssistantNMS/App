@@ -10,13 +10,13 @@ import './seasonalExpeditionMilestone.dart';
 
 class SeasonalExpeditionPhase {
   SeasonalExpeditionPhase({
-    this.id,
-    this.icon,
-    this.title,
-    this.description,
-    this.descriptionDone,
-    this.milestones,
-    this.rewards,
+    required this.id,
+    required this.icon,
+    required this.title,
+    required this.description,
+    required this.descriptionDone,
+    required this.milestones,
+    required this.rewards,
   });
 
   String id;
@@ -30,7 +30,7 @@ class SeasonalExpeditionPhase {
   factory SeasonalExpeditionPhase.fromRawJson(String str) =>
       SeasonalExpeditionPhase.fromJson(json.decode(str));
 
-  factory SeasonalExpeditionPhase.fromJson(Map<String, dynamic> json) =>
+  factory SeasonalExpeditionPhase.fromJson(Map<String, dynamic>? json) =>
       SeasonalExpeditionPhase(
         id: readStringSafe(json, 'Id'),
         icon: readStringSafe(json, 'Icon'),

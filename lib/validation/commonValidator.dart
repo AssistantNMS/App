@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 bool nameValidator(String name, {int minLength = 1}) {
-  if (name == null || name.length < minLength) {
+  if (name.length < minLength) {
     getLog().v('nameValidator: $name failed');
     return false;
   }

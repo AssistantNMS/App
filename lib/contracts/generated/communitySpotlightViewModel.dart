@@ -4,14 +4,16 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class CommuntySpotlightViewModel {
   CommuntySpotlightViewModel({
-    this.userName,
-    this.userImage,
-    this.title,
-    this.subtitle,
-    this.externalUrl,
-    this.previewImageUrl,
+    required this.userName,
+    required this.userImage,
+    required this.title,
+    required this.subtitle,
+    required this.externalUrl,
+    required this.previewImageUrl,
   });
 
   String userName;
@@ -24,13 +26,13 @@ class CommuntySpotlightViewModel {
   factory CommuntySpotlightViewModel.fromRawJson(String str) =>
       CommuntySpotlightViewModel.fromJson(json.decode(str));
 
-  factory CommuntySpotlightViewModel.fromJson(Map<String, dynamic> json) =>
+  factory CommuntySpotlightViewModel.fromJson(Map<String, dynamic>? json) =>
       CommuntySpotlightViewModel(
-        userName: json["userName"],
-        userImage: json["userImage"],
-        title: json["title"],
-        subtitle: json["subtitle"],
-        externalUrl: json["externalUrl"],
-        previewImageUrl: json["previewImageUrl"],
+        userName: readStringSafe(json, 'userName'),
+        userImage: readStringSafe(json, 'userImage'),
+        title: readStringSafe(json, 'title'),
+        subtitle: readStringSafe(json, 'subtitle'),
+        externalUrl: readStringSafe(json, 'externalUrl'),
+        previewImageUrl: readStringSafe(json, 'previewImageUrl'),
       );
 }

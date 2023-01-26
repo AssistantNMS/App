@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import '../../contracts/data/alphabetTranslation.dart';
 import '../../contracts/data/controlMappingList.dart';
@@ -22,7 +23,8 @@ class DataJsonRepository extends BaseJsonService
   //
   @override
   Future<ResultWithValue<List<SocialItem>>> getSocial(
-      BuildContext context) async {
+    BuildContext context,
+  ) async {
     try {
       dynamic responseJson = await getJsonFromAssets(context, "data/social");
       List list = json.decode(responseJson);
@@ -39,7 +41,8 @@ class DataJsonRepository extends BaseJsonService
 
   @override
   Future<ResultWithValue<List<UpdateItemDetail>>> getUpdateItems(
-      BuildContext context) async {
+    BuildContext context,
+  ) async {
     try {
       dynamic responseJson = await getJsonFromAssets(context, "data/newItems");
       List list = json.decode(responseJson);
@@ -56,12 +59,17 @@ class DataJsonRepository extends BaseJsonService
 
   @override
   Future<ResultWithValue<UpdateItemDetail>> getUpdateItem(
-      BuildContext context, String itemId) async {
+    BuildContext context,
+    String itemId,
+  ) async {
     ResultWithValue<List<UpdateItemDetail>> allGenericItemsResult =
         await getUpdateItems(context);
     if (allGenericItemsResult.hasFailed) {
       return ResultWithValue(
-          false, UpdateItemDetail(), allGenericItemsResult.errorMessage);
+        false,
+        UpdateItemDetail.fromRawJson('{}'),
+        allGenericItemsResult.errorMessage,
+      );
     }
     try {
       UpdateItemDetail selectedGeneric =
@@ -71,13 +79,17 @@ class DataJsonRepository extends BaseJsonService
     } catch (exception) {
       getLog().e("getUpdateItem Exception: ${exception.toString()}");
       return ResultWithValue<UpdateItemDetail>(
-          false, UpdateItemDetail(), exception.toString());
+        false,
+        UpdateItemDetail.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
   @override
   Future<ResultWithValue<List<QuicksilverStore>>> getQuickSilverItems(
-      BuildContext context) async {
+    BuildContext context,
+  ) async {
     try {
       dynamic responseJson =
           await getJsonFromAssets(context, "data/quicksilverStore");
@@ -96,11 +108,16 @@ class DataJsonRepository extends BaseJsonService
 
   @override
   Future<ResultWithValue<QuicksilverStore>> getQuickSilverItem(
-      BuildContext context, int missionId) async {
+    BuildContext context,
+    int missionId,
+  ) async {
     var allItemsResult = await getQuickSilverItems(context);
     if (allItemsResult.hasFailed) {
       return ResultWithValue<QuicksilverStore>(
-          false, QuicksilverStore(), allItemsResult.errorMessage);
+        false,
+        QuicksilverStore.fromRawJson('{}'),
+        allItemsResult.errorMessage,
+      );
     }
     try {
       QuicksilverStore selectedQS =
@@ -110,13 +127,15 @@ class DataJsonRepository extends BaseJsonService
       getLog().e(
           "DataJsonRepository getQuickSilverItem Exception: ${exception.toString()}");
       return ResultWithValue<QuicksilverStore>(
-          false, QuicksilverStore(), exception.toString());
+          false, QuicksilverStore.fromRawJson('{}'), exception.toString());
     }
   }
 
   @override
   Future<ResultWithValue<List<EggTrait>>> getEggTraits(
-      BuildContext context, String itemId) async {
+    BuildContext context,
+    String itemId,
+  ) async {
     try {
       dynamic responseJson =
           await getJsonFromAssets(context, "data/eggNeuralTraits");
@@ -136,7 +155,8 @@ class DataJsonRepository extends BaseJsonService
 
   @override
   Future<ResultWithValue<List<String>>> getUnusedMileStonePatchImages(
-      BuildContext context) async {
+    BuildContext context,
+  ) async {
     try {
       dynamic responseJson =
           await getJsonFromAssets(context, "data/unusedMilestonePatches");
@@ -152,7 +172,8 @@ class DataJsonRepository extends BaseJsonService
   }
 
   Future<ResultWithValue<List<DevDetail>>> _getDevDetails(
-      BuildContext context) async {
+    BuildContext context,
+  ) async {
     try {
       dynamic responseJson =
           await getJsonFromAssets(context, "data/developerDetails");
@@ -171,35 +192,44 @@ class DataJsonRepository extends BaseJsonService
 
   @override
   Future<ResultWithValue<DevDetail>> getDevDetails(
-      BuildContext context, String itemId) async {
+    BuildContext context,
+    String itemId,
+  ) async {
     ResultWithValue<List<DevDetail>> devItemsResult =
         await _getDevDetails(context);
     if (devItemsResult.hasFailed) {
       return ResultWithValue<DevDetail>(
-          false, null, devItemsResult.errorMessage);
+          false, DevDetail.fromRawJson('{}'), devItemsResult.errorMessage);
     }
 
     try {
-      var devItem = devItemsResult.value
-          .firstWhere((dev) => dev.id == itemId, orElse: () => null);
+      var devItem =
+          devItemsResult.value.firstWhereOrNull((dev) => dev.id == itemId);
 
-      if (devItem == null ||
-          devItem.properties == null ||
-          devItem.properties.isEmpty) {
-        return ResultWithValue<DevDetail>(false, null, 'No dev details');
+      if (devItem == null || devItem.properties.isEmpty) {
+        return ResultWithValue<DevDetail>(
+          false,
+          DevDetail.fromRawJson('{}'),
+          'No dev details',
+        );
       }
 
       return ResultWithValue<DevDetail>(true, devItem, '');
     } catch (exception) {
       getLog().e(
           "DataJsonRepository getDevDetails Exception: ${exception.toString()}");
-      return ResultWithValue<DevDetail>(false, null, exception.toString());
+      return ResultWithValue<DevDetail>(
+        false,
+        DevDetail.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
   @override
   Future<ResultWithValue<GeneratedMeta>> getGeneratedMeta(
-      BuildContext context) async {
+    BuildContext context,
+  ) async {
     try {
       dynamic responseJson = await getJsonFromAssets(context, "data/meta");
       GeneratedMeta meta = GeneratedMeta.fromRawJson(responseJson);
@@ -207,13 +237,19 @@ class DataJsonRepository extends BaseJsonService
     } catch (exception) {
       getLog().e(
           "DataJsonRepository getGeneratedMeta Exception: ${exception.toString()}");
-      return ResultWithValue<GeneratedMeta>(false, null, exception.toString());
+      return ResultWithValue<GeneratedMeta>(
+        false,
+        GeneratedMeta.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
   @override
   Future<ResultWithValue<List<PlatformControlMapping>>> getControlMapping(
-      BuildContext context, int platformIndex) async {
+    BuildContext context,
+    int platformIndex,
+  ) async {
     try {
       dynamic responseJson =
           await getJsonFromAssets(context, "data/controllerLookup");
@@ -226,13 +262,17 @@ class DataJsonRepository extends BaseJsonService
       getLog().e(
           "DataJsonRepository getControlMapping Exception: ${exception.toString()}");
       return ResultWithValue<List<PlatformControlMapping>>(
-          false, List.empty(), exception.toString());
+        false,
+        List.empty(),
+        exception.toString(),
+      );
     }
   }
 
   @override
   Future<ResultWithValue<List<AlphabetTranslation>>> getTranslations(
-      BuildContext context) async {
+    BuildContext context,
+  ) async {
     try {
       dynamic responseJson =
           await getJsonFromAssets(context, "data/alphabetTranslations");
@@ -251,21 +291,29 @@ class DataJsonRepository extends BaseJsonService
 
   @override
   Future<ResultWithValue<AlphabetTranslation>> getTranslation(
-      BuildContext context, String itemId) async {
+    BuildContext context,
+    String itemId,
+  ) async {
     ResultWithValue<List<AlphabetTranslation>> devItemsResult =
         await getTranslations(context);
     if (devItemsResult.hasFailed) {
       return ResultWithValue<AlphabetTranslation>(
-          false, null, devItemsResult.errorMessage);
+        false,
+        AlphabetTranslation.fromRawJson('{}'),
+        devItemsResult.errorMessage,
+      );
     }
 
     try {
-      AlphabetTranslation devItem = devItemsResult.value
-          .firstWhere((dev) => dev.appId == itemId, orElse: () => null);
+      AlphabetTranslation? devItem =
+          devItemsResult.value.firstWhereOrNull((dev) => dev.appId == itemId);
 
       if (devItem == null) {
         return ResultWithValue<AlphabetTranslation>(
-            false, null, 'No translation');
+          false,
+          AlphabetTranslation.fromRawJson('{}'),
+          'No translation',
+        );
       }
 
       return ResultWithValue<AlphabetTranslation>(true, devItem, '');
@@ -273,13 +321,17 @@ class DataJsonRepository extends BaseJsonService
       getLog().e(
           "DataJsonRepository getTranslation Exception: ${exception.toString()}");
       return ResultWithValue<AlphabetTranslation>(
-          false, null, exception.toString());
+        false,
+        AlphabetTranslation.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
   @override
   Future<ResultWithValue<List<TwitchCampaignData>>> getTwitchDrops(
-      BuildContext context) async {
+    BuildContext context,
+  ) async {
     try {
       dynamic responseJson =
           await getJsonFromAssets(context, "data/twitchDrops");
@@ -292,27 +344,39 @@ class DataJsonRepository extends BaseJsonService
       getLog().e(
           "DataJsonRepository getTwitchDrops Exception: ${exception.toString()}");
       return ResultWithValue<List<TwitchCampaignData>>(
-          false, List.empty(), exception.toString());
+        false,
+        List.empty(),
+        exception.toString(),
+      );
     }
   }
 
   @override
   Future<ResultWithValue<TwitchCampaignData>> getTwitchDropById(
-      BuildContext context, int id) async {
+    BuildContext context,
+    int id,
+  ) async {
     ResultWithValue<List<TwitchCampaignData>> devItemsResult =
         await getTwitchDrops(context);
     if (devItemsResult.hasFailed) {
       return ResultWithValue<TwitchCampaignData>(
-          false, null, devItemsResult.errorMessage);
+        false,
+        TwitchCampaignData.fromRawJson('{}'),
+        devItemsResult.errorMessage,
+      );
     }
 
     try {
-      TwitchCampaignData devItem = devItemsResult.value
-          .firstWhere((dev) => dev.id == id, orElse: () => null);
+      TwitchCampaignData? devItem =
+          devItemsResult.value.firstWhere((dev) => dev.id == id);
 
+      // ignore: unnecessary_null_comparison
       if (devItem == null) {
         return ResultWithValue<TwitchCampaignData>(
-            false, null, 'No Twitch campaign');
+          false,
+          TwitchCampaignData.fromRawJson('{}'),
+          'No Twitch campaign',
+        );
       }
 
       return ResultWithValue<TwitchCampaignData>(true, devItem, '');
@@ -320,13 +384,17 @@ class DataJsonRepository extends BaseJsonService
       getLog().e(
           "DataJsonRepository getTwitchDropById Exception: ${exception.toString()}");
       return ResultWithValue<TwitchCampaignData>(
-          false, null, exception.toString());
+        false,
+        TwitchCampaignData.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
   @override
   Future<ResultWithValue<List<MajorUpdateItem>>> getMajorUpdates(
-      BuildContext context) async {
+    BuildContext context,
+  ) async {
     try {
       dynamic responseJson = await getJsonFromAssets(context, "data/updates");
       List list = json.decode(responseJson);
@@ -338,44 +406,63 @@ class DataJsonRepository extends BaseJsonService
       getLog().e(
           "DataJsonRepository getMajorUpdates Exception: ${exception.toString()}");
       return ResultWithValue<List<MajorUpdateItem>>(
-          false, List.empty(), exception.toString());
+        false,
+        List.empty(),
+        exception.toString(),
+      );
     }
   }
 
   @override
   Future<ResultWithValue<MajorUpdateItem>> getLatestMajorUpdate(
-      BuildContext context) async {
+    BuildContext context,
+  ) async {
     ResultWithValue<List<MajorUpdateItem>> allItemsResult =
         await getMajorUpdates(context);
     if (allItemsResult.hasFailed) {
       return ResultWithValue<MajorUpdateItem>(
-          false, null, allItemsResult.errorMessage);
+        false,
+        MajorUpdateItem.fromRawJson('{}'),
+        allItemsResult.errorMessage,
+      );
     }
 
     try {
-      MajorUpdateItem item = allItemsResult.value.first;
-
-      if (item == null) {
-        return ResultWithValue<MajorUpdateItem>(false, null, 'No update found');
+      if (allItemsResult.value.isEmpty) {
+        return ResultWithValue<MajorUpdateItem>(
+          false,
+          MajorUpdateItem.fromRawJson('{}'),
+          'No update found',
+        );
       }
+
+      MajorUpdateItem item = allItemsResult.value.first;
 
       return ResultWithValue<MajorUpdateItem>(true, item, '');
     } catch (exception) {
       getLog().e(
           "DataJsonRepository getLatestMajorUpdate Exception: ${exception.toString()}");
       return ResultWithValue<MajorUpdateItem>(
-          false, null, exception.toString());
+        false,
+        MajorUpdateItem.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
   @override
   Future<ResultWithValue<MajorUpdateItem>> getMajorUpdatesForItem(
-      BuildContext context, String itemId) async {
+    BuildContext context,
+    String itemId,
+  ) async {
     ResultWithValue<List<MajorUpdateItem>> allItemsResult =
         await getMajorUpdates(context);
     if (allItemsResult.hasFailed) {
       return ResultWithValue<MajorUpdateItem>(
-          false, null, allItemsResult.errorMessage);
+        false,
+        MajorUpdateItem.fromRawJson('{}'),
+        allItemsResult.errorMessage,
+      );
     }
 
     try {
@@ -383,9 +470,12 @@ class DataJsonRepository extends BaseJsonService
           .where((all) => all.itemIds.contains(itemId))
           .toList();
 
-      if (items == null || items.isEmpty) {
+      if (items.isEmpty) {
         return ResultWithValue<MajorUpdateItem>(
-            false, null, 'No Starship Scrap data found');
+          false,
+          MajorUpdateItem.fromRawJson('{}'),
+          'No Starship Scrap data found',
+        );
       }
 
       return ResultWithValue<MajorUpdateItem>(true, items.first, '');
@@ -393,13 +483,17 @@ class DataJsonRepository extends BaseJsonService
       getLog().e(
           "DataJsonRepository getMajorUpdatesForItem Exception: ${exception.toString()}");
       return ResultWithValue<MajorUpdateItem>(
-          false, null, exception.toString());
+        false,
+        MajorUpdateItem.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
   @override
   Future<ResultWithValue<List<StarshipScrap>>> getStarshipScrapData(
-      BuildContext context) async {
+    BuildContext context,
+  ) async {
     try {
       dynamic responseJson =
           await getJsonFromAssets(context, "data/starshipScrap");
@@ -412,18 +506,26 @@ class DataJsonRepository extends BaseJsonService
       getLog().e(
           "DataJsonRepository getStarshipScrapData Exception: ${exception.toString()}");
       return ResultWithValue<List<StarshipScrap>>(
-          false, List.empty(), exception.toString());
+        false,
+        List.empty(),
+        exception.toString(),
+      );
     }
   }
 
   @override
   Future<ResultWithValue<List<StarshipScrap>>> getStarshipScrapDataForItem(
-      BuildContext context, String itemId) async {
+    BuildContext context,
+    String itemId,
+  ) async {
     ResultWithValue<List<StarshipScrap>> allItemsResult =
         await getStarshipScrapData(context);
     if (allItemsResult.hasFailed) {
       return ResultWithValue<List<StarshipScrap>>(
-          false, List.empty(), allItemsResult.errorMessage);
+        false,
+        List.empty(),
+        allItemsResult.errorMessage,
+      );
     }
 
     try {
@@ -431,9 +533,12 @@ class DataJsonRepository extends BaseJsonService
           .where((dev) => dev.itemDetails.any((itemD) => itemD.id == itemId))
           .toList();
 
-      if (items == null || items.isEmpty) {
+      if (items.isEmpty) {
         return ResultWithValue<List<StarshipScrap>>(
-            false, null, 'No Starship Scrap data found');
+          false,
+          List.empty(),
+          'No Starship Scrap data found',
+        );
       }
 
       return ResultWithValue<List<StarshipScrap>>(true, items, '');
@@ -441,7 +546,10 @@ class DataJsonRepository extends BaseJsonService
       getLog().e(
           "DataJsonRepository getStarshipScrapDataForItem Exception: ${exception.toString()}");
       return ResultWithValue<List<StarshipScrap>>(
-          false, null, exception.toString());
+        false,
+        List.empty(),
+        exception.toString(),
+      );
     }
   }
 }

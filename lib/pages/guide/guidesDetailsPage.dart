@@ -19,7 +19,7 @@ import '../../services/api/guideApiService.dart';
 
 class GuidesDetailsPage extends StatefulWidget {
   final NmsGuide details;
-  const GuidesDetailsPage(this.details, {Key key}) : super(key: key);
+  const GuidesDetailsPage(this.details, {Key? key}) : super(key: key);
 
   @override
   _GuidesDetailsWidget createState() => _GuidesDetailsWidget(details);
@@ -27,9 +27,9 @@ class GuidesDetailsPage extends StatefulWidget {
 
 class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
   final NmsGuide details;
-  GuideMetaViewModel meta;
-  GuideApiService appApi;
-  bool isMetaLoading;
+  GuideMetaViewModel? meta;
+  late GuideApiService appApi;
+  late bool isMetaLoading;
 
   _GuidesDetailsWidget(this.details) {
     getAnalytics().trackEvent(AnalyticsEvent.guideDetailsPage);
@@ -43,8 +43,7 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
   }
 
   void handleGetGuideMetaData() {
-    if (meta != null && meta.guid != null) return;
-    if (details == null || details.guid == null) return;
+    if (meta != null && meta?.guid != null) return;
 
     appApi.getGuideMetaData(details.guid).then((metaDataResult) {
       if (metaDataResult.hasFailed) {
@@ -73,8 +72,8 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
 
     List<Widget> firstSectionWidgets = List.empty(growable: true);
     firstSectionWidgets.add(genericItemDescription(details.author));
-    if (details.translatedBy != null && details.translatedBy.isNotEmpty) {
-      firstSectionWidgets.add(genericItemDescription(details.translatedBy));
+    if (details.translatedBy != null && details.translatedBy!.isNotEmpty) {
+      firstSectionWidgets.add(genericItemDescription(details.translatedBy!));
     }
     firstSectionWidgets.add(genericItemDescription(dateString));
     widgets
@@ -113,17 +112,14 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
       child: getLoading().loadingIndicator(),
       padding: const EdgeInsets.only(top: 12),
     );
-    if (meta != null &&
-        meta.guid != null &&
-        meta.guid.isNotEmpty &&
-        !isMetaLoading) {
+    if (meta != null && meta?.guid != null && !isMetaLoading) {
       Future<void> Function() likeFunc;
       likeFunc = () async {
         if (isMetaLoading) return;
         setState(() {
           isMetaLoading = true;
         });
-        Result apiResult = await appApi.likeGuide(meta.guid);
+        Result apiResult = await appApi.likeGuide(meta!.guid);
         if (apiResult.hasFailed) {
           getDialog().showSimpleDialog(
             context,
@@ -140,7 +136,7 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
         }
         setState(() {
           isMetaLoading = false;
-          meta.likes += 1;
+          meta!.likes += 1;
         });
       };
       metaWidget = Padding(
@@ -150,12 +146,12 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
           children: [
             genericIconWithText(
               Icons.thumb_up,
-              meta.likes.toString(),
+              meta!.likes.toString(),
               onTap: likeFunc,
             ),
             genericIconWithText(
               Icons.remove_red_eye,
-              meta.views.toString(),
+              meta!.views.toString(),
             ),
           ],
         ),

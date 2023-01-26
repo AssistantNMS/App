@@ -12,8 +12,8 @@ class RequiredItem {
   int quantity;
 
   RequiredItem({
-    this.id,
-    this.quantity,
+    required this.id,
+    this.quantity = 0,
   });
 
   @override
@@ -26,7 +26,7 @@ class RequiredItem {
 
   String toRawJson() => json.encode(toJson());
 
-  factory RequiredItem.fromJson(Map<String, dynamic> json) => RequiredItem(
+  factory RequiredItem.fromJson(Map<String, dynamic>? json) => RequiredItem(
         id: readStringSafe(json, 'Id'),
         quantity: readIntSafe(json, 'Quantity'),
       );

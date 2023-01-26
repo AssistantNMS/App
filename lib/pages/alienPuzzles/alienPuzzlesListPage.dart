@@ -14,9 +14,11 @@ const defaultParamValue = [AlienPuzzleType.Harvester, AlienPuzzleType.Factory];
 class AlienPuzzlesListPage extends StatelessWidget {
   final LocaleKey title;
   final List<AlienPuzzleType> puzzleTypes;
-  AlienPuzzlesListPage(
-      {Key key, this.title, this.puzzleTypes = defaultParamValue})
-      : super(key: key) {
+  AlienPuzzlesListPage({
+    Key? key,
+    required this.title,
+    this.puzzleTypes = defaultParamValue,
+  }) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.alienPuzzlesDetailPage);
   }
 

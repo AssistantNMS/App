@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 class SnackbarService implements ISnackbarService {
   @override
   void showSnackbar(
-    context,
+    BuildContext context,
     LocaleKey lang, {
-    String description,
-    Duration duration,
-    void Function() onPositive,
-    String onPositiveText,
-    IconData onPositiveIcon,
-    void Function() onNegative,
+    String? description,
+    Duration? duration,
+    void Function()? onPositive,
+    String? onPositiveText,
+    IconData? onPositiveIcon,
+    void Function()? onNegative,
   }) {
     // SnackBar snackBar = SnackBar(
     //   elevation: 0,

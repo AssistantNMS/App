@@ -14,10 +14,10 @@ class InventoryViewModel {
   Function(String inventoryUuid) removeInventory;
 
   InventoryViewModel({
-    this.containers,
-    this.addInventory,
-    this.editInventory,
-    this.removeInventory,
+    required this.containers,
+    required this.addInventory,
+    required this.editInventory,
+    required this.removeInventory,
   });
 
   static InventoryViewModel fromStore(Store<AppState> store) {

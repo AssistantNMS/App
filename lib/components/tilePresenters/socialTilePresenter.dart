@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../contracts/data/socialItem.dart';
 
 Widget socialLinkTilePresenter(BuildContext context, SocialItem socialItem,
-        {void Function() onTap}) =>
+        {void Function()? onTap}) =>
     ListTile(
       leading: localImage(
         '${getPath().imageAssetPathPrefix}/${socialItem.icon}',

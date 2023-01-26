@@ -2,16 +2,14 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 class SegmentViewMultiBuilder {
-  @required
   int enumIndex;
-  @required
   LocaleKey title;
-  @required
   List<List<Widget> Function(BuildContext)> builders;
+
   SegmentViewMultiBuilder({
-    this.enumIndex,
-    this.title,
-    this.builders,
+    required this.enumIndex,
+    required this.title,
+    required this.builders,
   });
 
   Widget toSegmentOption() => getSegmentedControlOption(

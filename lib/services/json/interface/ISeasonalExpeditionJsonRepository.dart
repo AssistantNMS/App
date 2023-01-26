@@ -13,7 +13,7 @@ class ISeasonalExpeditionJsonRepository {
   Future<ResultWithValue<SeasonalExpeditionSeason>> getById(
       BuildContext context, String id, bool isCustom) async {
     return ResultWithValue<SeasonalExpeditionSeason>(
-        false, SeasonalExpeditionSeason(), '');
+        false, SeasonalExpeditionSeason.fromRawJson('{}'), '');
   }
 
   // Future<ResultWithValue<AlienPuzzle>> getById(context, String id) async {

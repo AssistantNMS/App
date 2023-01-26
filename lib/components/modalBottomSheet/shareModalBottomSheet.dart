@@ -15,8 +15,11 @@ const shareableAppLink = 'https://app.nmsassistant.com/link{0}/{1}.html';
 class ShareBottomSheet extends StatefulWidget {
   final String itemId;
   final String itemName;
-  const ShareBottomSheet({Key key, this.itemId, this.itemName})
-      : super(key: key);
+  const ShareBottomSheet({
+    Key? key,
+    required this.itemId,
+    required this.itemName,
+  }) : super(key: key);
 
   @override
   _ShareBottomSheetState createState() => _ShareBottomSheetState();
@@ -43,7 +46,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
           params.add('lang=${viewModel.selectedLanguage}');
         }
         if (includeName) {
-          String nameParam = (widget.itemName ?? '').replaceAllMapped(
+          String nameParam = (widget.itemName).replaceAllMapped(
             RegExp(r'/\s/g'),
             (_) => '-',
           );

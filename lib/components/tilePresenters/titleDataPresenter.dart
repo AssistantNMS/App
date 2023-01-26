@@ -7,10 +7,10 @@ import '../../contracts/titleDataWithOwned.dart';
 import '../../helpers/currencyHelper.dart';
 import '../../redux/modules/titles/titleViewModel.dart';
 
-Widget Function(BuildContext, TitleDataWithOwned, {void Function() onTap})
+Widget Function(BuildContext, TitleDataWithOwned, {void Function()? onTap})
     titleDataTilePresenter(TitleViewModel viewModel) =>
         (BuildContext context, TitleDataWithOwned titleData,
-            {void Function() onTap}) {
+            {void Function()? onTap}) {
           return TitleDataTile(
             viewModel,
             titleData,
@@ -21,7 +21,7 @@ Widget Function(BuildContext, TitleDataWithOwned, {void Function() onTap})
 class TitleDataTile extends StatefulWidget {
   final TitleViewModel viewModel;
   final TitleDataWithOwned titleData;
-  const TitleDataTile(this.viewModel, this.titleData, {Key key})
+  const TitleDataTile(this.viewModel, this.titleData, {Key? key})
       : super(key: key);
 
   @override
@@ -53,11 +53,11 @@ class _TitleDataTileState extends State<TitleDataTile> {
     toggleOwned = () => setOwned(!titleData.isOwned, viewModelFunc);
 
     return ListTile(
-      leading: (titleData.appIcon == null || titleData.appIcon.length < 5)
-          ? null
-          : localImage(
+      leading: (titleData.appIcon.length > 5)
+          ? localImage(
               '${getPath().imageAssetPathPrefix}/${titleData.appIcon}',
-            ),
+            )
+          : null,
       title: Text(
         titleData.title.replaceAll(
           "{0}",

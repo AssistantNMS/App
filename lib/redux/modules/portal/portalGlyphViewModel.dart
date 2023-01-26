@@ -7,7 +7,7 @@ class PortalGlyphViewModel {
   final bool useAltGlyphs;
 
   PortalGlyphViewModel({
-    this.useAltGlyphs,
+    required this.useAltGlyphs,
   });
 
   static PortalGlyphViewModel fromStore(Store<AppState> store) {

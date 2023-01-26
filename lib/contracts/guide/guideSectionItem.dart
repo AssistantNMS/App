@@ -14,13 +14,13 @@ class NmsGuideSectionItem {
   List<List<String>> rows;
 
   NmsGuideSectionItem({
-    this.type,
-    this.name,
-    this.content,
-    this.image,
-    this.imageUrl,
-    this.columns,
-    this.rows,
+    required this.type,
+    required this.name,
+    required this.content,
+    required this.image,
+    required this.imageUrl,
+    required this.columns,
+    required this.rows,
   });
 
   factory NmsGuideSectionItem.fromRawJson(String str) =>
@@ -28,21 +28,24 @@ class NmsGuideSectionItem {
 
   String toRawJson() => json.encode(toJson());
 
-  factory NmsGuideSectionItem.fromJson(Map<String, dynamic> json) =>
+  factory NmsGuideSectionItem.fromJson(Map<String, dynamic>? json) =>
       NmsGuideSectionItem(
-        type: guideTypeValues.map[json["type"]],
+        type: guideTypeValues.map[readStringSafe(json, 'type')] ??
+            NmsGuideType.Image,
         content: readStringSafe(json, 'content'),
         imageUrl: readStringSafe(json, 'imageUrl'),
         image: readStringSafe(json, 'image'),
         name: readStringSafe(json, 'name'),
-        columns: json["columns"] != null
-            ? (json["columns"] as List).map((c) => c as String).toList()
-            : List.empty(growable: true),
-        rows: json["rows"] != null
-            ? (json["rows"] as List)
-                .map((r) => (r as List).map((rr) => rr as String).toList())
-                .toList()
-            : List.empty(growable: true),
+        columns: readListSafe(
+          json,
+          'column',
+          (c) => c.toString(),
+        ),
+        rows: readListSafe(
+          json,
+          'rows',
+          (r) => (r as List).map((rr) => rr.toString()).toList(),
+        ),
       );
 
   Map<String, dynamic> toJson() => {

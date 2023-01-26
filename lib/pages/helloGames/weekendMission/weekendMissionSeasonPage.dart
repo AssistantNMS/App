@@ -15,13 +15,13 @@ class WeekendMissionSeasonPage extends StatelessWidget {
   final int minLevel;
   final void Function() navigateToWeekendMissionMenu;
   const WeekendMissionSeasonPage({
-    Key key,
-    this.weekendMissionJson,
-    this.season,
-    this.level,
-    this.minLevel,
-    this.maxLevel,
-    this.navigateToWeekendMissionMenu,
+    Key? key,
+    required this.weekendMissionJson,
+    required this.season,
+    required this.level,
+    required this.minLevel,
+    required this.maxLevel,
+    required this.navigateToWeekendMissionMenu,
   }) : super(key: key);
 
   Future<ResultWithValue<WeekendStagePageItem>> getCurrentWeekendMissionData(
@@ -35,7 +35,10 @@ class WeekendMissionSeasonPage extends StatelessWidget {
 
     if (!weekendMissionResult.isSuccess) {
       return ResultWithValue<WeekendStagePageItem>(
-          false, null, 'Something went wrong');
+        false,
+        WeekendStagePageItem.initial(),
+        'Something went wrong',
+      );
     }
 
     WeekendStagePageItem weekendMissionValue = weekendMissionResult.value;

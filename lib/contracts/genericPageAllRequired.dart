@@ -8,12 +8,13 @@ class GenericPageAllRequired {
   GenericPageItem genericItem;
   List<RequiredItem> requiredItems;
 
-  GenericPageAllRequired(
-      {this.typeName,
-      this.id,
-      this.name,
-      this.genericItem,
-      this.requiredItems});
+  GenericPageAllRequired({
+    required this.typeName,
+    required this.id,
+    required this.name,
+    required this.genericItem,
+    required this.requiredItems,
+  });
 
   static GenericPageAllRequired fromGenericItem(GenericPageItem item) {
     List<RequiredItem> temp = List.empty(growable: true);

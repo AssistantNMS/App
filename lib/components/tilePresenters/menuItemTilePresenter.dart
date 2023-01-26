@@ -25,11 +25,11 @@ Widget menuItemTilePresenter(BuildContext context, CustomMenuItem menuItem) =>
         margin: const EdgeInsets.all(4),
       ),
       onTap: () async {
-        if (menuItem.navigateToExternl != null) {
-          launchExternalURL(menuItem.navigateToExternl);
+        if (menuItem.navigateToExternal != null) {
+          launchExternalURL(menuItem.navigateToExternal!);
           return Future(() {});
         }
-        return await getNavigation().navigateAsync(
+        await getNavigation().navigateAsync(
           context,
           navigateTo: menuItem.navigateTo,
           navigateToNamed: menuItem.navigateToNamed,

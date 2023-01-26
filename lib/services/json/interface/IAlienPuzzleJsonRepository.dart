@@ -12,6 +12,10 @@ class IAlienPuzzleJsonRepository {
   }
 
   Future<ResultWithValue<AlienPuzzle>> getById(context, String id) async {
-    return ResultWithValue<AlienPuzzle>(false, AlienPuzzle(), '');
+    return ResultWithValue<AlienPuzzle>(
+      false,
+      AlienPuzzle.fromJson(<String, dynamic>{}),
+      '',
+    );
   }
 }

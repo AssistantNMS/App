@@ -9,7 +9,7 @@ import '../../helpers/searchHelpers.dart';
 import '../../integration/dependencyInjection.dart';
 
 class ReleaseNotesPage extends StatelessWidget {
-  ReleaseNotesPage({Key key}) : super(key: key) {
+  ReleaseNotesPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.releasesPage);
   }
 

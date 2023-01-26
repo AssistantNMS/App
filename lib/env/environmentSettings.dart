@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:flutter/material.dart';
 
 import 'appVersionNum.dart';
 
@@ -17,17 +16,17 @@ class EnvironmentSettings {
   String wiredashSecret;
 
   EnvironmentSettings({
-    @required this.baseApi,
-    @required this.assistantAppsApiUrl,
-    @required this.assistantAppsAppGuid,
-    @required this.remoteConfigsApiKey,
-    @required this.remoteConfigsConfigId,
-    @required this.donationsEnabled,
-    @required this.isProduction,
-    @required this.currentWhatIsNewGuid,
-    @required this.patreonOAuthClientId,
-    @required this.wiredashProjectId,
-    @required this.wiredashSecret,
+    required this.baseApi,
+    required this.assistantAppsApiUrl,
+    required this.assistantAppsAppGuid,
+    required this.remoteConfigsApiKey,
+    required this.remoteConfigsConfigId,
+    required this.donationsEnabled,
+    required this.isProduction,
+    required this.currentWhatIsNewGuid,
+    required this.patreonOAuthClientId,
+    required this.wiredashProjectId,
+    required this.wiredashSecret,
   });
 
   AssistantAppsEnvironmentSettings toAssistantApps() =>

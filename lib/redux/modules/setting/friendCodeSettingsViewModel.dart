@@ -11,9 +11,9 @@ class FriendCodeSettingsViewModel {
   final Function(int) setPlatformIndex;
 
   FriendCodeSettingsViewModel({
-    this.lastPlatformIndex,
-    this.selectedLanguage,
-    this.setPlatformIndex,
+    required this.lastPlatformIndex,
+    required this.selectedLanguage,
+    required this.setPlatformIndex,
   });
 
   static FriendCodeSettingsViewModel fromStore(Store<AppState> store) =>

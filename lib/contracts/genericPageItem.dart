@@ -21,62 +21,63 @@ class GenericPageItem {
   String name;
   String group;
   double power;
-  String symbol;
-  String cdnUrl;
+  String? symbol;
+  String? cdnUrl;
   String colour;
   String additional;
-  String description;
-  double cookingValue;
+  String? description;
+  double? cookingValue;
   double maxStackSize;
   double baseValueUnits;
   int blueprintCost;
   CurrencyType blueprintCostType;
   CurrencyType currencyType;
   BlueprintSource blueprintSource;
-  List<GenericPageItem> usedInRecipes;
-  List<RequiredItem> requiredItems;
-  List<String> consumableRewards;
-  List<Processor> usedInRefiners;
-  List<Processor> refiners;
-  List<Processor> usedInCooking;
-  List<Processor> cooking;
-  Recharge chargedBy;
-  List<Recharge> usedToRecharge;
-  List<StatBonus> statBonuses;
-  List<ProceduralStatBonus> proceduralStatBonuses;
-  List<StarshipScrap> starshipScrapItems;
-  MajorUpdateItem addedInUpdate;
-  int numStatsMax;
-  int numStatsMin;
-  List<EggTrait> eggTraits;
-  List<PlatformControlMapping> controlMappings;
-  List<CreatureHarvest> creatureHarvests;
-  String translation;
-  List<String> usage;
+  List<GenericPageItem>? usedInRecipes;
+  List<RequiredItem>? requiredItems;
+  List<String>? consumableRewards;
+  List<Processor>? usedInRefiners;
+  List<Processor>? refiners;
+  List<Processor>? usedInCooking;
+  List<Processor>? cooking;
+  Recharge? chargedBy;
+  List<Recharge>? usedToRecharge;
+  List<StatBonus>? statBonuses;
+  List<ProceduralStatBonus>? proceduralStatBonuses;
+  List<StarshipScrap>? starshipScrapItems;
+  MajorUpdateItem? addedInUpdate;
+  int? numStatsMax;
+  int? numStatsMin;
+  List<EggTrait>? eggTraits;
+  List<PlatformControlMapping>? controlMappings;
+  List<CreatureHarvest>? creatureHarvests;
+  String? translation;
+  List<String>? usage;
 
   GenericPageItem({
-    this.typeName,
-    this.id,
-    this.icon,
-    this.name,
-    this.group,
-    this.power,
+    required this.typeName,
+    required this.id,
+    required this.icon,
+    required this.name,
+    required this.group,
+    required this.power,
     this.symbol,
     this.cdnUrl,
-    this.colour,
-    this.additional,
+    required this.colour,
+    required this.additional,
     this.description,
     this.cookingValue,
-    this.maxStackSize,
-    this.baseValueUnits,
-    this.blueprintCost,
-    this.blueprintCostType,
-    this.currencyType,
-    this.blueprintSource,
+    required this.maxStackSize,
+    required this.baseValueUnits,
+    required this.blueprintCost,
+    required this.blueprintCostType,
+    required this.currencyType,
+    required this.blueprintSource,
+    this.usedInRecipes,
     this.requiredItems,
     this.consumableRewards,
-    this.refiners,
     this.usedInRefiners,
+    this.refiners,
     this.usedInCooking,
     this.cooking,
     this.chargedBy,
@@ -124,32 +125,38 @@ class GenericPageItem {
         typeName: typeName,
       );
 
-  factory GenericPageItem.fromJson(Map<String, dynamic> json) =>
+  factory GenericPageItem.fromJson(Map<String, dynamic>? json) =>
       GenericPageItem(
         typeName: readStringSafe(json, 'typeName'),
         id: readStringSafe(json, 'id'),
         icon: readStringSafe(json, 'icon'),
         name: readStringSafe(json, 'name'),
-        power: json["power"] as double,
+        power: readDoubleSafe(json, 'power'),
         group: readStringSafe(json, 'group'),
         cdnUrl: readStringSafe(json, 'cdnUrl'),
+        colour: readStringSafe(json, 'colour'),
         additional: readStringSafe(json, 'additional'),
         description: readStringSafe(json, 'description'),
-        maxStackSize: json["maxStackSize"] as double,
-        cookingValue: json["cookingValue"] as double,
-        baseValueUnits: json["baseValueUnits"] as double,
-        currencyType: currencyTypeValues.map[json["currencyType"]],
+        maxStackSize: readDoubleSafe(json, 'maxStackSize'),
+        cookingValue: readDoubleSafe(json, 'cookingValue'),
+        baseValueUnits: readDoubleSafe(json, 'baseValueUnits'),
+        currencyType:
+            currencyTypeValues.map[readStringSafe(json, 'currencyType')]!,
         blueprintSource:
-            BlueprintSource.values[(json["blueprintSource"] as int ?? 0)],
-        blueprintCost: json["blueprintCost"] as int,
+            BlueprintSource.values[readIntSafe(json, 'blueprintSource')],
+        blueprintCost: readIntSafe(json, 'blueprintCost'),
         blueprintCostType:
-            currencyTypeValues.map[readStringSafe(json, 'blueprintCostType')],
+            currencyTypeValues.map[readStringSafe(json, 'blueprintCostType')]!,
         requiredItems: readListSafe<RequiredItem>(json, 'requiredItems',
             (dynamic json) => RequiredItem.fromJson(json)),
         consumableRewards: readListSafe<String>(
             json, 'consumableRewardTexts', (dynamic json) => json.toString()),
-        chargedBy: json["chargedBy"],
-        usedToRecharge: json["usedToRecharge"],
+        chargedBy: Recharge.fromJson(json?["chargedBy"]),
+        usedToRecharge: readListSafe(
+          json,
+          'usedToRecharge',
+          (r) => Recharge.fromJson(r),
+        ),
         statBonuses: readListSafe<StatBonus>(
             json, 'statBonuses', (dynamic json) => StatBonus.fromJson(json)),
         proceduralStatBonuses: readListSafe<ProceduralStatBonus>(

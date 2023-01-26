@@ -12,7 +12,7 @@ ListItemDisplayerType<CommunityLinkViewModel> communityLinkTilePresenter(
   return (
     BuildContext ctx,
     CommunityLinkViewModel item, {
-    void Function() onTap,
+    void Function()? onTap,
   }) {
     return Padding(
       padding: const EdgeInsets.only(top: 4),
@@ -48,13 +48,13 @@ ListItemDisplayerType<CommunityLinkViewModel> communityLinkTilePresenter(
                   ),
                 ],
               ),
-              if ((item.desc ?? '').isNotEmpty) ...[
+              if ((item.desc).isNotEmpty) ...[
                 const Divider(height: 2),
                 emptySpace1x(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: genericItemDescription(
-                    item.desc ?? '',
+                    item.desc,
                     maxLines: 2,
                   ),
                 ),

@@ -3,6 +3,7 @@
 import 'dart:io';
 import 'package:git/git.dart';
 import 'package:path/path.dart' as p;
+import 'package:pub_semver/src/version.dart';
 import 'package:pubspec_parse/pubspec_parse.dart';
 
 Future<void> main() async {
@@ -10,11 +11,17 @@ Future<void> main() async {
   String pubSpecString = await pubSpecFile.readAsString();
   Pubspec doc = Pubspec.parse(pubSpecString);
 
-  String buildName = doc.version.major.toString() + '.';
-  buildName += doc.version.minor.toString() + '.';
-  buildName += doc.version.patch.toString();
+  Version? version = doc.version;
+  if (version == null) {
+    print('Could not load version info');
+    return;
+  }
 
-  String buildNum = doc.version.build[0].toString();
+  String buildName = version.major.toString() + '.';
+  buildName += version.minor.toString() + '.';
+  buildName += version.patch.toString();
+
+  String? buildNum = doc.version?.build[0].toString();
 
   final gitDir = await GitDir.fromExisting(p.current);
   final commit = await gitDir.commits();
@@ -26,11 +33,11 @@ Future<void> main() async {
 }
 
 Future writeBuildNumFile(
-  String buildNum,
+  String? buildNum,
   String buildName,
   String latestCommit,
 ) async {
-  if (buildNum.isEmpty) return;
+  if (buildNum == null || buildNum.isEmpty) return;
   print('Writing to appVersionNum.dart');
   final file = File('./lib/env/appVersionNum.dart');
   String contents = 'const appsBuildNum = $buildNum;\n';

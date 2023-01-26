@@ -14,7 +14,7 @@ const String xb1 = 'XB';
 const String nsw = 'SW';
 
 class FriendCodeListPage extends StatefulWidget {
-  const FriendCodeListPage({Key key}) : super(key: key);
+  const FriendCodeListPage({Key? key}) : super(key: key);
 
   @override
   _FriendCodeListWidget createState() => _FriendCodeListWidget();
@@ -42,7 +42,7 @@ class _FriendCodeListWidget extends State<FriendCodeListPage> {
         () => getApiRepo().getFriendCodes(showPC, showPS4, showXb1, showNsw),
         listItemDisplayer:
             (BuildContext context, FriendCodeViewModel friendCode,
-                    {void Function() onTap}) =>
+                    {void Function()? onTap}) =>
                 friendCodeTilePresenter(context, context, friendCode),
         listItemSearch: (FriendCodeViewModel option, String search) =>
             option.name.toLowerCase().contains(search.toLowerCase()),

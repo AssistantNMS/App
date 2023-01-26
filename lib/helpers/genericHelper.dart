@@ -21,21 +21,27 @@ import '../pages/generic/genericPageDescripHighlightText.dart';
 
 const int maxNumberOfRowsForRecipeCategory = 3;
 
-Widget genericItemCredits(BuildContext context, String credits,
-        {Color colour}) =>
+Widget genericItemCredits(
+  BuildContext context,
+  String credits, {
+  Color? colour,
+}) =>
     genericItemWithListWidgets(
       CurrencyText(
         credits,
         textAlign: TextAlign.center,
         overflow: TextOverflow.ellipsis,
         addDecimal: false,
-        style: getThemeBodyLarge(context).copyWith(color: colour),
+        style: getThemeBodyLarge(context)?.copyWith(color: colour),
       ),
       localImage('${getPath().imageAssetPathPrefix}/credits.png', height: 17),
     );
 
-Widget genericItemNanites(BuildContext context, String nanites,
-        {Color colour}) =>
+Widget genericItemNanites(
+  BuildContext context,
+  String nanites, {
+  Color? colour,
+}) =>
     Container(
       child: genericItemIntCurrency(
         context,
@@ -44,16 +50,22 @@ Widget genericItemNanites(BuildContext context, String nanites,
         colour: colour,
       ),
     );
-Widget genericItemQuicksilver(BuildContext context, String quicksilver,
-        {Color colour}) =>
+Widget genericItemQuicksilver(
+  BuildContext context,
+  String quicksilver, {
+  Color? colour,
+}) =>
     genericItemIntCurrency(
       context,
       quicksilver,
       '${getPath().imageAssetPathPrefix}/rawMaterials/57.png',
       colour: colour,
     );
-Widget genericItemSalvagedData(BuildContext context, String salvagedData,
-        {Color colour}) =>
+Widget genericItemSalvagedData(
+  BuildContext context,
+  String salvagedData, {
+  Color? colour,
+}) =>
     Container(
       child: genericItemIntCurrency(
         context,
@@ -63,8 +75,10 @@ Widget genericItemSalvagedData(BuildContext context, String salvagedData,
       ),
     );
 Widget genericItemFactoryOverride(
-        BuildContext context, String factoryOverrideAmount,
-        {Color colour}) =>
+  BuildContext context,
+  String factoryOverrideAmount, {
+  Color? colour,
+}) =>
     Container(
       child: genericItemIntCurrency(
         context,
@@ -74,33 +88,44 @@ Widget genericItemFactoryOverride(
       ),
     );
 Widget genericItemIntCurrency(
-        BuildContext context, String currency, String imageUrl,
-        {Color colour}) =>
+  BuildContext context,
+  String currency,
+  String imageUrl, {
+  Color? colour,
+}) =>
     genericItemWithListWidgets(
       Text(
         currency,
         textAlign: TextAlign.center,
         overflow: TextOverflow.ellipsis,
-        style: getThemeBodyLarge(context).copyWith(color: colour),
+        style: getThemeBodyLarge(context)?.copyWith(color: colour),
       ),
       localImage(imageUrl, height: 17),
     );
 
-Widget genericItemTextWithIcon(BuildContext context, String text, IconData icon,
-        {Color colour, bool addSpace = true}) =>
+Widget genericItemTextWithIcon(
+  BuildContext context,
+  String text,
+  IconData icon, {
+  Color? colour,
+  bool addSpace = true,
+}) =>
     genericItemWithListWidgets(
       Text(
         text,
         textAlign: TextAlign.center,
         overflow: TextOverflow.ellipsis,
-        style: getThemeBodyLarge(context).copyWith(color: colour),
+        style: getThemeBodyLarge(context)?.copyWith(color: colour),
       ),
       Icon(icon, size: 17, color: colour),
       addSpace: addSpace,
     );
 
-Widget genericItemWithListWidgets(Widget first, Widget second,
-        {bool addSpace = true}) =>
+Widget genericItemWithListWidgets(
+  Widget first,
+  Widget second, {
+  bool addSpace = true,
+}) =>
     Container(
       child: Wrap(alignment: WrapAlignment.center, children: [
         first,
@@ -111,7 +136,12 @@ Widget genericItemWithListWidgets(Widget first, Widget second,
       margin: const EdgeInsets.all(4.0),
     );
 
-Widget genericIconWithText(IconData icon, String text, {Function onTap}) => Row(
+Widget genericIconWithText(
+  IconData icon,
+  String text, {
+  void Function()? onTap,
+}) =>
+    Row(
       children: [
         GestureDetector(
           child: Padding(
@@ -126,9 +156,12 @@ Widget genericIconWithText(IconData icon, String text, {Function onTap}) => Row(
       ],
     );
 
-List<Widget> genericItemWithOverflowButton<T>(context, List<T> itemArray,
-    Widget Function(BuildContext context, T item) presenter,
-    {Function viewMoreOnPress}) {
+List<Widget> genericItemWithOverflowButton<T>(
+  context,
+  List<T> itemArray,
+  Widget Function(BuildContext context, T item) presenter, {
+  void Function()? viewMoreOnPress,
+}) {
   int numRecords = itemArray.length > maxNumberOfRowsForRecipeCategory
       ? maxNumberOfRowsForRecipeCategory
       : itemArray.length;
@@ -160,7 +193,7 @@ Widget viewMoreButton(context, int numLeftOver, viewMoreOnPress) {
   );
 }
 
-Widget getFloatingActionButtonFromSnapshot(
+Widget? getFloatingActionButtonFromSnapshot(
     BuildContext context,
     TextEditingController controller,
     AsyncSnapshot<ResultWithValue<GenericPageItem>> snapshot) {
@@ -176,29 +209,27 @@ Widget getFloatingActionButtonFromSnapshot(
   }
 
   if (snapshot.data == null ||
-      snapshot.data.value == null ||
-      snapshot.data.value.name == null ||
-      snapshot.data.value.group == null ||
-      snapshot.data.value.description == null ||
-      snapshot.data.value.requiredItems == null ||
-      snapshot.data.value.refiners == null ||
-      snapshot.data.value.usedInRecipes == null ||
-      snapshot.data.value.usedInRefiners == null) {
+      snapshot.data?.value == null ||
+      snapshot.data?.value.name == null ||
+      snapshot.data?.value.group == null ||
+      snapshot.data?.value.description == null ||
+      snapshot.data?.value.requiredItems == null ||
+      snapshot.data?.value.refiners == null ||
+      snapshot.data?.value.usedInRecipes == null ||
+      snapshot.data?.value.usedInRefiners == null) {
     return null;
   }
 
-  return getFloatingActionButton(context, controller, snapshot.data.value);
+  return getFloatingActionButton(context, controller, snapshot.data!.value);
 }
 
-Widget getFloatingActionButton(
+Widget? getFloatingActionButton(
   BuildContext context,
   TextEditingController controller,
   GenericPageItem genericItem, {
-  Function(GenericPageItem item, int quantity) addToCart,
+  void Function(GenericPageItem item, int quantity)? addToCart,
 }) {
-  if (genericItem.name == null ||
-      genericItem.group == null ||
-      genericItem.description == null ||
+  if (genericItem.description == null ||
       genericItem.requiredItems == null ||
       genericItem.refiners == null ||
       genericItem.usedInRecipes == null ||
@@ -243,11 +274,20 @@ Widget getFloatingActionButton(
   );
 }
 
-Widget genericChip(context, String title, {Color color, Function onTap}) =>
+Widget genericChip(
+  context,
+  String title, {
+  Color? color,
+  void Function()? onTap,
+}) =>
     genericChipWidget(context, Text(title), color: color, onTap: onTap);
 
-Widget genericChipWidget(context, Widget content,
-    {Color color, Function onTap}) {
+Widget genericChipWidget(
+  context,
+  Widget content, {
+  Color? color,
+  void Function()? onTap,
+}) {
   var child = Padding(
     child: Chip(
       label: content,
@@ -258,8 +298,11 @@ Widget genericChipWidget(context, Widget content,
   return (onTap == null) ? child : GestureDetector(child: child, onTap: onTap);
 }
 
-List<Widget> getConsumableRewards(context, List<String> consumableRewards,
-    List<PlatformControlMapping> controlLookup) {
+List<Widget> getConsumableRewards(
+  context,
+  List<String> consumableRewards,
+  List<PlatformControlMapping>? controlLookup,
+) {
   List<Widget> widgets = List.empty(growable: true);
 
   for (String consReward in consumableRewards) {
@@ -289,7 +332,7 @@ List<Widget> getConsumableRewards(context, List<String> consumableRewards,
   ];
 }
 
-Widget Function(BuildContext, GenericPageItem, {void Function() onTap})
+Widget Function(BuildContext, GenericPageItem, {void Function()? onTap})
     getListItemDisplayer(
         bool genericTileIsCompact, bool displayGenericItemColour,
         {bool isHero = false}) {
@@ -302,7 +345,7 @@ Widget Function(BuildContext, GenericPageItem, {void Function() onTap})
         ? genericTileWithBackgroundColourPresenter
         : genericTilePresenter;
   }
-  return (BuildContext ctx, GenericPageItem item, {void Function() onTap}) =>
+  return (BuildContext ctx, GenericPageItem item, {void Function()? onTap}) =>
       presenterWithIsHero(ctx, item, isHero, onTap: onTap);
 }
 

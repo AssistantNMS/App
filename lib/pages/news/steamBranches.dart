@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../components/tilePresenters/youtubersTilePresenter.dart';
 
 class SteamBranchesPage extends StatefulWidget {
-  const SteamBranchesPage({Key key}) : super(key: key);
+  const SteamBranchesPage({Key? key}) : super(key: key);
 
   @override
   _SteamBranchesPageWidget createState() => _SteamBranchesPageWidget();
@@ -22,7 +22,7 @@ class _SteamBranchesPageWidget extends State<SteamBranchesPage> {
 
   getSteamBranches() async {
     ResultWithValue<List<SteamBranchesViewModel>> branchResult =
-        await getAssistantAppsSteam().getSteamBranches(AssistantAppType.NMS);
+        await getAssistantAppsSteam().getSteamBranches(AssistantAppType.nms);
 
     setState(() {
       hasFailed = branchResult.hasFailed;

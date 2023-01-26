@@ -22,7 +22,7 @@ class NewsShellPage extends StatelessWidget {
     AppImage.steamNewsIcon,
   ];
 
-  NewsShellPage({Key key}) : super(key: key);
+  NewsShellPage({Key? key}) : super(key: key);
 
   getAppBarTitle(int selectionIndex) {
     switch (selectionIndex) {
@@ -89,10 +89,10 @@ class NewsShellPage extends StatelessWidget {
         break;
       case 3:
         columnWidget = SearchableList<SteamNewsItemViewModel>(
-          () => getAssistantAppsSteam().getSteamNews(AssistantAppType.NMS),
+          () => getAssistantAppsSteam().getSteamNews(AssistantAppType.nms),
           listItemDisplayer:
               (BuildContext localContext, SteamNewsItemViewModel newsItem,
-                      {void Function() onTap}) =>
+                      {void Function()? onTap}) =>
                   steamNewsItemTilePresenter(localContext, newsItem, 0),
           listItemSearch: (_, __) => true,
           addFabPadding: true,

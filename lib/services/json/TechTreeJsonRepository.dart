@@ -25,7 +25,10 @@ class TechTreeJsonRepository extends BaseJsonService
       getLog().e(
           "TechTreeJsonRepository TechTree getAll Exception: ${exception.toString()}");
       return ResultWithValue<List<UnlockableTechTree>>(
-          false, List.empty(growable: true), exception.toString());
+        false,
+        List.empty(),
+        exception.toString(),
+      );
     }
   }
 
@@ -36,27 +39,35 @@ class TechTreeJsonRepository extends BaseJsonService
         await getAll(context);
     if (allItemsResult.hasFailed) {
       return ResultWithValue<TechTree>(
-          false, null, allItemsResult.errorMessage);
+        false,
+        TechTree.fromRawJson('{}'),
+        allItemsResult.errorMessage,
+      );
     }
 
     try {
-      TechTree foundSubtree;
-      for (var tree in allItemsResult.value) {
-        for (var subTree in tree.trees) {
+      TechTree? foundSubtree;
+      for (UnlockableTechTree tree in allItemsResult.value) {
+        for (TechTree subTree in tree.trees) {
           if (subTree.id == subTreeId) {
             foundSubtree = subTree;
+            break;
           }
         }
       }
       return ResultWithValue<TechTree>(
         (foundSubtree != null),
-        foundSubtree,
+        foundSubtree ?? TechTree.fromRawJson('{}'),
         '',
       );
     } catch (exception) {
       getLog().e(
           "TechTreeJsonRepository get subTechTree Exception: ${exception.toString()}");
-      return ResultWithValue<TechTree>(false, TechTree(), exception.toString());
+      return ResultWithValue<TechTree>(
+        false,
+        TechTree.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 }

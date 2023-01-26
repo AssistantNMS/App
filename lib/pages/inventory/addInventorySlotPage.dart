@@ -18,7 +18,7 @@ import '../../redux/modules/inventory/inventoryListViewModel.dart';
 
 class AddInventorySlotPage extends StatefulWidget {
   final GenericPageItem genericItem;
-  const AddInventorySlotPage(this.genericItem, {Key key}) : super(key: key);
+  const AddInventorySlotPage(this.genericItem, {Key? key}) : super(key: key);
 
   @override
   _ViewInventoryListState createState() => _ViewInventoryListState(genericItem);
@@ -26,7 +26,7 @@ class AddInventorySlotPage extends StatefulWidget {
 
 class _ViewInventoryListState extends State<AddInventorySlotPage> {
   final GenericPageItem genericItem;
-  Inventory inventory;
+  late Inventory inventory;
   int _counter = 0;
   TextEditingController quantityController = TextEditingController();
 
@@ -44,10 +44,10 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
         body: getBody(context, viewModel),
         fab: FloatingActionButton(
           onPressed: () async {
-            String invUuid = inventory?.uuid ?? viewModel.containers[0].uuid;
+            String invUuid = inventory.uuid;
             InventorySlot invSlot = InventorySlot(
               id: genericItem.id,
-              quantity: int.tryParse(quantityController.text ?? "0") ?? 0,
+              quantity: int.tryParse(quantityController.text) ?? 0,
             );
             viewModel.addInventorySlotToInventory(invUuid, invSlot);
             getNavigation().pop(context);
@@ -66,9 +66,10 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
     widgets.add(vm.displayGenericItemColour
         ? genericItemImageWithBackground(context, genericItem)
         : genericItemImage(context, genericItem.icon));
-    var itemName = (genericItem.symbol != null && genericItem.symbol.isNotEmpty)
-        ? "${genericItem.name} (${genericItem.symbol})"
-        : genericItem.name;
+    var itemName =
+        (genericItem.symbol != null && genericItem.symbol!.isNotEmpty)
+            ? "${genericItem.name} (${genericItem.symbol})"
+            : genericItem.name;
     widgets.add(genericItemName(itemName));
 
     widgets.add(emptySpace3x());
@@ -79,8 +80,9 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
         Padding(
           child: DropdownButton<Inventory>(
             hint: const Text("Select item"),
-            value: inventory ?? vm.containers[0],
-            onChanged: (Inventory value) {
+            value: inventory,
+            onChanged: (Inventory? value) {
+              if (value == null) return;
               setState(() {
                 inventory = value;
               });
@@ -135,10 +137,12 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
             context,
             title: getTranslations().fromKey(LocaleKey.add),
             onPress: () async {
-              Inventory temp = await getNavigation().navigateAsync<Inventory>(
+              Inventory? temp = await getNavigation().navigateAsync<Inventory>(
                 context,
-                navigateTo: (context) =>
-                    AddEditInventoryPage(Inventory(), false),
+                navigateTo: (context) => AddEditInventoryPage(
+                  Inventory.initial(),
+                  false,
+                ),
               );
               if (temp == null) return;
               viewModel.addInventory(temp);
@@ -158,6 +162,7 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
       key: Key('stateCounter: $_counter'),
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

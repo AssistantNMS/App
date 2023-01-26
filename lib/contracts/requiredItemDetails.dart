@@ -5,12 +5,15 @@ import 'requiredItemTreeDetails.dart';
 class RequiredItemDetails extends RequiredItem {
   String icon;
   String name;
-  String colour;
+  String? colour;
 
-  RequiredItemDetails({id, this.icon, this.name, this.colour, quantity}) {
-    this.id = id;
-    this.quantity = quantity;
-  }
+  RequiredItemDetails({
+    required String id,
+    required this.icon,
+    required this.name,
+    this.colour,
+    int quantity = 0,
+  }) : super(id: id, quantity: quantity);
 
   factory RequiredItemDetails.fromGenericPageItem(
       GenericPageItem generic, int quantity) {
@@ -33,6 +36,14 @@ class RequiredItemDetails extends RequiredItem {
       quantity: reqTree.quantity,
     );
   }
+
+  factory RequiredItemDetails.initial() => RequiredItemDetails(
+        id: '',
+        colour: '',
+        icon: '',
+        name: '',
+        quantity: 0,
+      );
 
   @override
   String toString() {

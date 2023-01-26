@@ -9,7 +9,7 @@ class ViewCustomHomepage extends StatelessWidget {
   final List<CustomMenu> _menuItems;
   final int _numberOfColumns;
 
-  const ViewCustomHomepage(this._menuItems, this._numberOfColumns, {Key key})
+  const ViewCustomHomepage(this._menuItems, this._numberOfColumns, {Key? key})
       : super(key: key);
 
   @override

@@ -8,14 +8,14 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class CommunityLinkViewModel {
   CommunityLinkViewModel({
-    this.id,
-    this.name,
-    this.icon,
-    this.banners,
-    this.desc,
-    this.tags,
-    this.customId,
-    this.links,
+    required this.id,
+    required this.name,
+    required this.icon,
+    required this.banners,
+    required this.desc,
+    required this.tags,
+    required this.customId,
+    required this.links,
   });
 
   String id;
@@ -30,7 +30,7 @@ class CommunityLinkViewModel {
   factory CommunityLinkViewModel.fromRawJson(String str) =>
       CommunityLinkViewModel.fromJson(json.decode(str));
 
-  factory CommunityLinkViewModel.fromJson(Map<String, dynamic> json) =>
+  factory CommunityLinkViewModel.fromJson(Map<String, dynamic>? json) =>
       CommunityLinkViewModel(
         id: readStringSafe(json, 'id'),
         name: readStringSafe(json, 'name'),

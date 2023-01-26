@@ -26,9 +26,9 @@ class WindowsAudioPlayerService extends IAudioPlayerService {
 
   @override
   Widget audioStreamBuilder({
-    Key uniqueKey,
-    BuildContext playerContext,
-    Widget Function(
+    Key? uniqueKey,
+    required BuildContext playerContext,
+    required Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
     )
@@ -39,9 +39,9 @@ class WindowsAudioPlayerService extends IAudioPlayerService {
 
   @override
   Widget audioLocalBuilder({
-    Key uniqueKey,
-    BuildContext playerContext,
-    Widget Function(
+    Key? uniqueKey,
+    required BuildContext playerContext,
+    required Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
     )

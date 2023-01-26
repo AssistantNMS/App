@@ -14,7 +14,7 @@ import 'addPortalPage.dart';
 import 'viewPortalPage.dart';
 
 class PortalsPage extends StatefulWidget {
-  const PortalsPage({Key key}) : super(key: key);
+  const PortalsPage({Key? key}) : super(key: key);
 
   @override
   createState() => _PortalsPageState();
@@ -57,12 +57,12 @@ class _PortalsPageState extends State<PortalsPage> {
           codes: List.empty(growable: true),
           tags: List.empty(growable: true),
         );
-        PortalRecord temp = await getNavigation().navigateAsync<PortalRecord>(
+        PortalRecord? temp = await getNavigation().navigateAsync<PortalRecord>(
           context,
           navigateTo: (context) => AddPortalPage(currentRecord),
         );
-        if (temp == null || temp is! PortalRecord) return;
-        portalViewModel.addPortal(temp.name, temp.codes, temp.tags);
+        if (temp == null) return;
+        portalViewModel.addPortal(temp.name ?? '...', temp.codes, temp.tags);
         setState(() {
           _counter++;
         });
@@ -78,7 +78,7 @@ class _PortalsPageState extends State<PortalsPage> {
     return SearchableList<PortalRecord>(
       getSearchListFutureFromList(portalViewModel.portals),
       listItemDisplayer: (BuildContext context, PortalRecord portal,
-              {void Function() onTap}) =>
+              {void Function()? onTap}) =>
           portalTilePresenter(
         context,
         portal,
@@ -107,13 +107,13 @@ class _PortalsPageState extends State<PortalsPage> {
   }
 
   void onEdit(PortalRecord portal, PortalViewModel portalViewModel) async {
-    PortalRecord temp = await getNavigation().navigateAsync<PortalRecord>(
+    PortalRecord? temp = await getNavigation().navigateAsync<PortalRecord>(
       context,
       navigateTo: (context) => AddPortalPage(portal, isEdit: true),
     );
-    if (temp == null || temp is! PortalRecord) return;
+    if (temp == null) return;
     portalViewModel.editPortal(
-      temp.name,
+      temp.name ?? '...',
       temp.codes,
       temp.tags,
       temp.uuid,

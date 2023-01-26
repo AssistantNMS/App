@@ -13,7 +13,7 @@ import '../../redux/modules/setting/isPatreonViewModel.dart';
 import 'majorUpdatesSpeculationPage.dart';
 
 class MajorUpdatesPage extends StatelessWidget {
-  const MajorUpdatesPage({Key key}) : super(key: key);
+  const MajorUpdatesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +22,13 @@ class MajorUpdatesPage extends StatelessWidget {
       title: getTranslations().fromKey(LocaleKey.newItemsAdded),
       body: StoreConnector<AppState, IsPatreonViewModel>(
         converter: (store) => IsPatreonViewModel.fromStore(store),
-        builder: (_, viewModel) => FutureBuilder(
-          future: getDataRepo().getMajorUpdates(context),
-          builder: (bodyCtx, asyncSnapshot) =>
-              getBodyFromFuture(bodyCtx, asyncSnapshot, viewModel),
-        ),
+        builder: (_, viewModel) {
+          return FutureBuilder<ResultWithValue<List<MajorUpdateItem>>>(
+            future: getDataRepo().getMajorUpdates(context),
+            builder: (bodyCtx, asyncSnapshot) =>
+                getBodyFromFuture(bodyCtx, asyncSnapshot, viewModel),
+          );
+        },
       ),
     );
   }
@@ -38,13 +40,13 @@ class MajorUpdatesPage extends StatelessWidget {
   ) {
     List<Widget> listItems = List.empty(growable: true);
 
-    Widget errorWidget = asyncSnapshotHandler(
+    Widget? errorWidget = asyncSnapshotHandler(
       bodyCtx,
       snapshot,
       loader: () => getLoading().fullPageLoading(bodyCtx),
-      isValidFunction: (ResultWithValue<List<MajorUpdateItem>> expResult) {
-        if (expResult.hasFailed) return false;
-        if (expResult.value == null) return false;
+      isValidFunction: (ResultWithValue<List<MajorUpdateItem>>? expResult) {
+        if (expResult?.hasFailed ?? true) return false;
+        if (expResult?.value == null) return false;
         return true;
       },
     );
@@ -58,6 +60,7 @@ class MajorUpdatesPage extends StatelessWidget {
         title: getTranslations().fromKey(LocaleKey.speculation),
         icon: 'update/speculation.png',
         itemIds: [],
+        updateType: UpdateType.minor,
         releaseDate: DateTime.now(),
       ),
       isPatronLocked: isPatreonFeatureLocked(
@@ -72,12 +75,12 @@ class MajorUpdatesPage extends StatelessWidget {
           onTap: (dialogCtx) => getNavigation().navigateAwayFromHomeAsync(
             dialogCtx,
             navigateTo: (_) =>
-                MajorUpdatesSpeculationPage(items: snapshot.data.value),
+                MajorUpdatesSpeculationPage(items: snapshot.data!.value),
           ),
         );
       },
     ));
-    for (MajorUpdateItem update in snapshot.data.value) {
+    for (MajorUpdateItem update in snapshot.data!.value) {
       listItems.add(majorUpdateTilePresenter(bodyCtx, update));
     }
 

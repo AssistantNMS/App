@@ -2,15 +2,19 @@ import 'package:assistantapps_flutter_common/integration/dependencyInjection.dar
 import 'package:flutter/material.dart';
 
 class FabItem {
-  const FabItem(this.title, this.icon, {this.onPress});
+  const FabItem(
+    this.title,
+    this.icon, {
+    this.onPress,
+  });
 
   final IconData icon;
-  final Function onPress;
+  final void Function()? onPress;
   final String title;
 }
 
 class FabMenuItem extends StatelessWidget {
-  const FabMenuItem(this.item, {Key key}) : super(key: key);
+  const FabMenuItem(this.item, {Key? key}) : super(key: key);
 
   final FabItem item;
 

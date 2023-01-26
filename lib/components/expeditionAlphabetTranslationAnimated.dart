@@ -8,7 +8,7 @@ import '../helpers/themeHelper.dart';
 
 class ExpeditionAlphabetTranslationAnimated extends StatefulWidget {
   final String text;
-  const ExpeditionAlphabetTranslationAnimated(this.text, {Key key})
+  const ExpeditionAlphabetTranslationAnimated(this.text, {Key? key})
       : super(key: key);
   @override
   _ExpeditionAlphabetTranslationAnimatedWidget createState() =>
@@ -20,7 +20,7 @@ class _ExpeditionAlphabetTranslationAnimatedWidget
     extends State<ExpeditionAlphabetTranslationAnimated>
     with TickerProviderStateMixin {
   final String text;
-  Timer _timer;
+  late Timer _timer;
   int _counter = 0;
   final Random _rng = Random();
 
@@ -40,10 +40,10 @@ class _ExpeditionAlphabetTranslationAnimatedWidget
 
   @override
   Widget build(BuildContext context) {
-    TextStyle currentFont =
-        getThemeSubtitle(context).copyWith(color: Colors.black);
-    TextStyle expeditionFont =
-        currentFont.copyWith(fontFamily: nmsExpeditionFontFamily);
+    TextStyle? currentFont =
+        getThemeSubtitle(context)?.copyWith(color: Colors.black);
+    TextStyle? expeditionFont =
+        currentFont?.copyWith(fontFamily: nmsExpeditionFontFamily);
 
     TextSpan content = TextSpan(
       style: currentFont,
@@ -51,7 +51,7 @@ class _ExpeditionAlphabetTranslationAnimatedWidget
           .split('')
           .map((char) {
             bool shoExpFont = _rng.nextInt(100) > 25;
-            TextStyle styleToUse = shoExpFont ? expeditionFont : currentFont;
+            TextStyle? styleToUse = shoExpFont ? expeditionFont : currentFont;
             return Text(char, style: styleToUse);
           })
           .toList()
@@ -81,7 +81,7 @@ class _ExpeditionAlphabetTranslationAnimatedWidget
 
   @override
   void dispose() {
-    if (_timer != null && _timer.isActive) _timer.cancel();
+    if (_timer.isActive) _timer.cancel();
     super.dispose();
   }
 }

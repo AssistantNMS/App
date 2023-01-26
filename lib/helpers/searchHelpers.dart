@@ -24,8 +24,8 @@ bool searchGenericPageItem(GenericPageItem genericItem, String searchText) =>
 //     genericItem.group.toLowerCase().contains(searchText));
 
 bool searchPortal(PortalRecord option, String search) {
-  if (option.name.toLowerCase().contains(search)) return true;
-  if (option.tags == null || option.tags.isEmpty) return false;
+  if ((option.name ?? '').toLowerCase().contains(search)) return true;
+  if (option.tags.isEmpty) return false;
 
   if (option.tags.any((tag) => tag.toLowerCase().contains(search))) {
     return true;
@@ -60,9 +60,9 @@ bool searchCommunityLinksByName(CommunityLinkViewModel option, String search) =>
     option.name.toLowerCase().contains(search);
 
 bool searchGroup(GenericPageItem item, String searchText) =>
-    (item.group ?? '').toLowerCase().contains(searchText);
+    (item.group).toLowerCase().contains(searchText);
 bool searchType(GenericPageItem item, String searchText) =>
-    (item.typeName ?? '').toLowerCase().contains(searchText);
+    (item.typeName).toLowerCase().contains(searchText);
 
 // TODO search by rarity
 bool searchRarity(GenericPageItem item, String searchText) =>
@@ -87,8 +87,8 @@ bool searchTitle(TitleDataWithOwned titleData, String search) {
 }
 
 bool searchNmsfm(NmsfmTrackData track, String search) {
-  if (track.title.toLowerCase().contains(search) ||
-      track.artist.toLowerCase().contains(search)) return true;
+  if ((track.title ?? '').toLowerCase().contains(search) ||
+      (track.artist ?? '').toLowerCase().contains(search)) return true;
   return false;
 }
 

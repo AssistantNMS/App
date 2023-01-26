@@ -10,8 +10,8 @@ class JourneyMilestoneState {
   final List<StoredFactionMission> storedFactions;
 
   const JourneyMilestoneState({
-    this.storedMilestones,
-    this.storedFactions,
+    required this.storedMilestones,
+    required this.storedFactions,
   });
 
   factory JourneyMilestoneState.initial() {
@@ -22,8 +22,8 @@ class JourneyMilestoneState {
   }
 
   JourneyMilestoneState copyWith({
-    List<StoredJourneyMilestone> storedMilestones,
-    List<StoredFactionMission> storedFactions,
+    List<StoredJourneyMilestone>? storedMilestones,
+    List<StoredFactionMission>? storedFactions,
   }) {
     return JourneyMilestoneState(
       storedMilestones: storedMilestones ?? this.storedMilestones,
@@ -31,7 +31,7 @@ class JourneyMilestoneState {
     );
   }
 
-  factory JourneyMilestoneState.fromJson(Map<String, dynamic> json) {
+  factory JourneyMilestoneState.fromJson(Map<String, dynamic>? json) {
     if (json == null) return JourneyMilestoneState.initial();
     try {
       return JourneyMilestoneState(

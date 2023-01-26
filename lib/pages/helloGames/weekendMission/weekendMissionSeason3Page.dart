@@ -12,7 +12,7 @@ import '../../../integration/dependencyInjection.dart';
 import 'weekendMissionDetail.dart';
 
 class WeekendMissionSeason3Page extends StatelessWidget {
-  WeekendMissionSeason3Page({Key key}) : super(key: key) {
+  WeekendMissionSeason3Page({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.weekendMissionSeason3Page);
   }
   Future<ResultWithValue<WeekendStagePageItem>> getCurrentWeekendMissionData(
@@ -21,7 +21,10 @@ class WeekendMissionSeason3Page extends StatelessWidget {
         await getHelloGamesApiService().getWeekendMission();
     if (!apiResult.isSuccess) {
       return ResultWithValue<WeekendStagePageItem>(
-          false, null, apiResult.errorMessage);
+        false,
+        WeekendStagePageItem.initial(),
+        apiResult.errorMessage,
+      );
     }
 
     ResultWithValue<WeekendStagePageItem> weekendMissionResult =
@@ -34,10 +37,13 @@ class WeekendMissionSeason3Page extends StatelessWidget {
 
     if (!weekendMissionResult.isSuccess) {
       return ResultWithValue<WeekendStagePageItem>(
-          false, null, 'Something went wrong');
+        false,
+        WeekendStagePageItem.initial(),
+        'Something went wrong',
+      );
     }
 
-    var weekendMissionValue = weekendMissionResult.value;
+    WeekendStagePageItem weekendMissionValue = weekendMissionResult.value;
     weekendMissionValue.titles = weekendMissionResult.value.titles;
     weekendMissionValue.subtitles = weekendMissionResult.value.subtitles;
     weekendMissionValue.descriptions = weekendMissionResult.value.descriptions;

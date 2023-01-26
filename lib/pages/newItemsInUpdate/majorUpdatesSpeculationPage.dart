@@ -9,7 +9,10 @@ const millisecondsToDaysConversion = 86400000;
 
 class MajorUpdatesSpeculationPage extends StatelessWidget {
   final List<MajorUpdateItem> items;
-  const MajorUpdatesSpeculationPage({Key key, this.items}) : super(key: key);
+  const MajorUpdatesSpeculationPage({
+    Key? key,
+    required this.items,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -220,7 +223,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
     );
   }
 
-  Widget getTableRow(String text, {Color textColor}) {
+  Widget getTableRow(String text, {Color? textColor}) {
     return Padding(
       padding: const EdgeInsets.only(top: 4),
       child: Text(
@@ -232,7 +235,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
   }
 
   Widget getUpdateNameTableRow(String text, UpdateType updateType) {
-    Color textColor;
+    Color? textColor;
     if (updateType == UpdateType.major) {
       textColor = Colors.lightBlue;
     }

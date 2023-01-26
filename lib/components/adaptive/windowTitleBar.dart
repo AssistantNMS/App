@@ -9,16 +9,20 @@ import '../windowsButtons.dart';
 class WindowTitleBar extends StatelessWidget
     implements PreferredSizeWidget, ObstructingPreferredSizeWidget {
   final String title;
-  final List<ActionItem> actions;
+  final List<ActionItem>? actions;
   @override
   final Size preferredSize;
   final dynamic bottom;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   static const double kMinInteractiveDimensionCupertino = 44.0;
 
-  WindowTitleBar(this.title,
-      {Key key, this.bottom, this.backgroundColor, this.actions})
-      : preferredSize = Size.fromHeight(
+  WindowTitleBar(
+    this.title, {
+    Key? key,
+    this.bottom,
+    this.backgroundColor,
+    this.actions,
+  })  : preferredSize = Size.fromHeight(
             kToolbarHeight + (bottom?.preferredSize?.height ?? 0.0)),
         super(key: key);
 

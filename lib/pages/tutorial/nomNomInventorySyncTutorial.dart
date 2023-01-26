@@ -6,7 +6,7 @@ import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AppImage.dart';
 
 class NomNomInventorySyncTutorial extends StatelessWidget {
-  const NomNomInventorySyncTutorial({Key key}) : super(key: key);
+  const NomNomInventorySyncTutorial({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -105,8 +105,8 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
 
   Widget tutorialImage(
     context, {
-    String title,
-    String icon,
+    required String title,
+    required String icon,
   }) {
     return GestureDetector(
       child: Container(

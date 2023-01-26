@@ -7,7 +7,7 @@ List<ActionItem> getShortcutActions(
   BuildContext context, {
   bool hideCart = false,
   bool hideInventory = false,
-  List<ActionItem> additionalShortcutLinks,
+  List<ActionItem>? additionalShortcutLinks,
 }) {
   List<ActionItem> items = List.empty(growable: true);
   items.add(ActionItem(

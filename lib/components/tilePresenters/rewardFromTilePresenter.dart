@@ -7,7 +7,10 @@ import '../../constants/NmsUIConstants.dart';
 import '../../helpers/genericHelper.dart';
 
 Widget rewardFromQuicksilverMerchantTilePresenter(
-    BuildContext context, String qsQuantity, bool displayBackgroundColour) {
+  BuildContext context,
+  String qsQuantity,
+  bool displayBackgroundColour,
+) {
   return flatCard(
     shadowColor: Colors.transparent,
     child: genericListTileWithSubtitle(
@@ -20,7 +23,7 @@ Widget rewardFromQuicksilverMerchantTilePresenter(
         genericItemQuicksilver(
           context,
           qsQuantity,
-          colour: Colors.grey[400],
+          colour: Colors.grey[400]!,
         )
       ]),
       onTap: () => getNavigation().navigateAsync(

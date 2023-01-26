@@ -13,10 +13,10 @@ class ExpeditionViewModel {
   void Function(String) removeFromClaimedRewards;
 
   ExpeditionViewModel({
-    this.useAltGlyphs,
-    this.claimedRewards,
-    this.addToClaimedRewards,
-    this.removeFromClaimedRewards,
+    required this.useAltGlyphs,
+    required this.claimedRewards,
+    required this.addToClaimedRewards,
+    required this.removeFromClaimedRewards,
   });
 
   static ExpeditionViewModel fromStore(Store<AppState> store) {

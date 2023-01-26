@@ -6,14 +6,14 @@ import '../../contracts/titleData.dart';
 
 class TitleDataWithOwned {
   TitleDataWithOwned({
-    this.id,
-    this.title,
-    this.description,
-    this.appId,
-    this.appIcon,
-    this.appName,
-    this.unlockedByStatValue,
-    this.isOwned,
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.appId,
+    required this.appIcon,
+    required this.appName,
+    required this.unlockedByStatValue,
+    required this.isOwned,
   });
 
   String id;

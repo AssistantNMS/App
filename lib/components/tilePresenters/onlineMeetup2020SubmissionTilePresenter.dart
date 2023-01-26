@@ -5,12 +5,12 @@ import '../../contracts/generated/onlineMeetup2020SubmissionViewModel.dart';
 
 Widget onlineMeetup2020SubmissionTilePresenter(
     BuildContext context, OnlineMeetup2020SubmissionViewModel submission,
-    {void Function() onTap}) {
+    {void Function()? onTap}) {
   Function() localOnTap;
   localOnTap = () => launchExternalURL(submission.externalUrl);
   Row userInfoNameAndImageRow = Row(
     mainAxisSize: MainAxisSize.max,
-    children: (submission.userName != null && submission.userName.length > 1)
+    children: (submission.userName.length > 1)
         ? [
             ClipOval(
               child: networkImage(submission.userImage, height: 50, width: 50),
@@ -28,27 +28,26 @@ Widget onlineMeetup2020SubmissionTilePresenter(
           ]
         : [],
   );
-  Widget userInfo =
-      (submission.externalUrl == null || submission.externalUrl.length < 5)
-          ? userInfoNameAndImageRow
-          : Stack(
-              children: [
-                userInfoNameAndImageRow,
-                Positioned(
-                  child: IconButton(
-                    icon: const Icon(Icons.open_in_new, size: 36),
-                    onPressed: localOnTap,
-                  ),
-                  top: 0,
-                  right: 8,
-                  bottom: 0,
-                ),
-              ],
-            );
+  Widget userInfo = (submission.externalUrl.length < 5)
+      ? userInfoNameAndImageRow
+      : Stack(
+          children: [
+            userInfoNameAndImageRow,
+            Positioned(
+              child: IconButton(
+                icon: const Icon(Icons.open_in_new, size: 36),
+                onPressed: localOnTap,
+              ),
+              top: 0,
+              right: 8,
+              bottom: 0,
+            ),
+          ],
+        );
 
   List<Widget> columnWidgets = List.empty(growable: true);
   columnWidgets.add(userInfo);
-  if (submission.text != null && submission.text.length > 1) {
+  if (submission.text.length > 1) {
     columnWidgets.add(customDivider());
     columnWidgets.add(Padding(
       padding: const EdgeInsets.only(top: 8),
@@ -71,8 +70,7 @@ Widget onlineMeetup2020SubmissionTilePresenter(
       clipBehavior: Clip.antiAliasWithSaveLayer,
       child: Column(
         children: [
-          if (submission.imageUrl != null &&
-              submission.imageUrl.length > 5) ...[
+          if (submission.imageUrl.length > 5) ...[
             networkImage(submission.imageUrl, boxfit: BoxFit.fitWidth),
           ],
           Padding(

@@ -5,7 +5,7 @@ import 'package:flutter/foundation.dart' show kReleaseMode;
 
 import '../constants/AppConfig.dart';
 
-FirebaseMessaging firebaseMessaging;
+late FirebaseMessaging firebaseMessaging;
 
 initFirebaseAdMob() async {
   if (isWindows) return;

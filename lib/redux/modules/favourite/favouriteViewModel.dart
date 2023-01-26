@@ -15,11 +15,11 @@ class FavouriteViewModel {
   Function(String itemId) removeFavourite;
 
   FavouriteViewModel({
-    this.favourites,
-    this.genericTileIsCompact,
-    this.displayGenericItemColour,
-    this.addFavourite,
-    this.removeFavourite,
+    required this.favourites,
+    required this.genericTileIsCompact,
+    required this.displayGenericItemColour,
+    required this.addFavourite,
+    required this.removeFavourite,
   });
 
   static FavouriteViewModel fromStore(Store<AppState> store) =>

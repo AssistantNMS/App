@@ -15,7 +15,7 @@ Widget quicksilverStoreTilePresenter(
     int currentTierPercentage) {
   if (currentTierPercentage == 100) currentTier += 1;
 
-  bool iconIsEmpty = details.icon == null || details.icon.isEmpty;
+  bool iconIsEmpty = details.icon.isEmpty;
   return gameItemListTileWithSubtitle(
     context,
     leadingImage: iconIsEmpty ? AppImage.unknown : details.icon,

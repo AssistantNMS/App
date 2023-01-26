@@ -9,8 +9,8 @@ const scopes = [
 ];
 
 class FirebaseService {
-  FirebaseAuth _auth;
-  GoogleSignIn _googleSignIn;
+  late FirebaseAuth _auth;
+  late GoogleSignIn _googleSignIn;
 
   FirebaseService() {
     if (isWindows) return;
@@ -31,8 +31,16 @@ class FirebaseService {
     }
 
     try {
-      final GoogleSignInAccount googleSignInAccount =
+      final GoogleSignInAccount? googleSignInAccount =
           await _googleSignIn.signIn();
+
+      if (googleSignInAccount == null) {
+        return ResultWithValue(
+          false,
+          OAuthUserViewModel(),
+          'googleSignInAccount is null',
+        );
+      }
 
       final GoogleSignInAuthentication googleSignInAuthentication =
           await googleSignInAccount.authentication;
@@ -45,24 +53,24 @@ class FirebaseService {
       await _auth.signInWithCredential(credential);
 
       OAuthUserViewModel vm = OAuthUserViewModel(
-        tokenId: googleSignInAuthentication.idToken,
-        accessToken: googleSignInAuthentication.accessToken,
+        tokenId: googleSignInAuthentication.idToken ?? '',
+        accessToken: googleSignInAuthentication.accessToken ?? '',
         oAuthType: OAuthProviderType.google,
-        username: googleSignInAccount.displayName,
-        profileUrl: googleSignInAccount.photoUrl,
+        username: googleSignInAccount.displayName ?? '',
+        profileUrl: googleSignInAccount.photoUrl ?? '',
         email: googleSignInAccount.email,
       );
       return ResultWithValue(true, vm, '');
     } catch (exception) {
-      getLog().e(exception.message);
-      return ResultWithValue(false, OAuthUserViewModel(), exception.message);
+      getLog().e(exception.toString());
+      return ResultWithValue(false, OAuthUserViewModel(), exception.toString());
     }
   }
 
-  User getCurrentUser() {
+  User? getCurrentUser() {
     if (isWindows) return null;
 
-    User currentUser = FirebaseAuth.instance.currentUser;
+    User? currentUser = FirebaseAuth.instance.currentUser;
     return currentUser;
   }
 

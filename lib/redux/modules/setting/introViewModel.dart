@@ -20,25 +20,25 @@ class IntroViewModel {
   final Function() toggleIntroComplete;
 
   IntroViewModel({
-    this.isValentines2020IntroHidden,
-    this.isValentines2021IntroHidden,
-    this.fontFamily,
-    this.introComplete,
-    this.isPatron,
-    this.homepageType,
-    this.currentLanguage,
+    required this.isValentines2020IntroHidden,
+    required this.isValentines2021IntroHidden,
+    required this.fontFamily,
+    required this.introComplete,
+    required this.isPatron,
+    required this.homepageType,
+    required this.currentLanguage,
     //
-    this.hideValentines2020Intro,
-    this.hideValentines2021Intro,
-    this.toggleIntroComplete,
+    required this.hideValentines2020Intro,
+    required this.hideValentines2021Intro,
+    required this.toggleIntroComplete,
   });
 
   static IntroViewModel fromStore(Store<AppState> store) {
-    Function hideValentines2020Intro;
+    void Function() hideValentines2020Intro;
     hideValentines2020Intro = () => store.dispatch(HideValentines2020Intro());
-    Function hideValentines2021Intro;
+    void Function() hideValentines2021Intro;
     hideValentines2021Intro = () => store.dispatch(HideValentines2021Intro());
-    Function toggleIntroComplete;
+    void Function() toggleIntroComplete;
     toggleIntroComplete = () => store.dispatch(ToggleIntroComplete());
     try {
       return IntroViewModel(
@@ -59,12 +59,14 @@ class IntroViewModel {
       return IntroViewModel(
         isValentines2020IntroHidden: false,
         hideValentines2020Intro: hideValentines2020Intro,
+        isValentines2021IntroHidden: false,
         hideValentines2021Intro: hideValentines2021Intro,
         fontFamily: defaultFontFamily,
         introComplete: false,
         isPatron: false,
         toggleIntroComplete: toggleIntroComplete,
         homepageType: HomepageType.allItemsList,
+        currentLanguage: 'en',
       );
     }
   }

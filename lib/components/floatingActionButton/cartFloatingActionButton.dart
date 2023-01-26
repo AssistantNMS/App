@@ -21,7 +21,7 @@ SpeedDialChild cartFloatingActionButton(
         context,
         controller,
         onSuccess: (BuildContext ctx, String quantity) {
-          int intQuantity = int.tryParse(quantity);
+          int? intQuantity = int.tryParse(quantity);
           if (intQuantity == null) return;
           addToCart(genericItem, intQuantity);
         },

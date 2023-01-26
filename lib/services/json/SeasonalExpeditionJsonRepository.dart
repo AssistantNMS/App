@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
 
@@ -26,7 +27,10 @@ class SeasonalExpeditionJsonRepository extends BaseJsonService
       getLog().e(
           "SeasonalExpeditionJsonRepository Exception: ${exception.toString()}");
       return ResultWithValue<List<SeasonalExpeditionSeason>>(
-          false, List.empty(growable: true), exception.toString());
+        false,
+        List.empty(),
+        exception.toString(),
+      );
     }
   }
 
@@ -40,14 +44,14 @@ class SeasonalExpeditionJsonRepository extends BaseJsonService
         await getAll(context, isCustom);
     if (expeditionsResult.hasFailed) {
       return ResultWithValue(
-          false, SeasonalExpeditionSeason(), expeditionsResult.errorMessage);
+        false,
+        SeasonalExpeditionSeason.fromRawJson('{}'),
+        expeditionsResult.errorMessage,
+      );
     }
     try {
-      SeasonalExpeditionSeason selectedexpedition =
-          expeditionsResult.value.firstWhere(
-        (r) => r.id == id,
-        orElse: () => null,
-      );
+      SeasonalExpeditionSeason? selectedexpedition =
+          expeditionsResult.value.firstWhereOrNull((r) => r.id == id);
       if (selectedexpedition == null) {
         throw Exception('expedition not found');
       }
@@ -57,7 +61,10 @@ class SeasonalExpeditionJsonRepository extends BaseJsonService
       getLog().e(
           "SeasonalExpeditionJsonRepository getById ($id) Exception: ${exception.toString()}");
       return ResultWithValue<SeasonalExpeditionSeason>(
-          false, SeasonalExpeditionSeason(), exception.toString());
+        false,
+        SeasonalExpeditionSeason.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 }

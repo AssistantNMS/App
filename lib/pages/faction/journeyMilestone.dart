@@ -11,7 +11,7 @@ import '../../redux/modules/journeyMilestone/journeyMilestoneViewModel.dart';
 import '../../services/json/JourneyJsonRepository.dart';
 
 class JourneyMilestonePage extends StatelessWidget {
-  JourneyMilestonePage({Key key}) : super(key: key) {
+  JourneyMilestonePage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.journeyMilestonesPage);
   }
 
@@ -38,8 +38,7 @@ class JourneyMilestonePage extends StatelessWidget {
                 [
                   ...viewModel.storedMilestones
                       .map((m) =>
-                          (m.journeyId ?? '') +
-                          (m.journeyStatIndex?.toString() ?? ''))
+                          (m.journeyId) + (m.journeyStatIndex.toString()))
                       .toList(),
                   'handle empty array', // Don't know why I need dis here
                 ],

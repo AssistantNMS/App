@@ -10,10 +10,10 @@ import './platformControlMapping.dart';
 
 class ControlMappingList {
   ControlMappingList({
-    this.win,
-    this.psn,
-    this.xbx,
-    this.nsw,
+    required this.win,
+    required this.psn,
+    required this.xbx,
+    required this.nsw,
   });
 
   List<PlatformControlMapping> win;
@@ -33,7 +33,7 @@ class ControlMappingList {
   factory ControlMappingList.fromRawJson(String str) =>
       ControlMappingList.fromJson(json.decode(str));
 
-  factory ControlMappingList.fromJson(Map<String, dynamic> json) =>
+  factory ControlMappingList.fromJson(Map<String, dynamic>? json) =>
       ControlMappingList(
         win: readListSafe(
           json,

@@ -7,19 +7,23 @@ import '../cart/cartItem.dart';
 class CartState {
   final List<CartItem> craftingItems;
 
-  const CartState({this.craftingItems});
+  const CartState({
+    required this.craftingItems,
+  });
 
   factory CartState.initial() {
     return CartState(craftingItems: List.empty(growable: true));
   }
 
   CartState copyWith({
-    List<CartItem> crftingItems,
+    List<CartItem>? craftingItems,
   }) {
-    return CartState(craftingItems: crftingItems ?? craftingItems);
+    return CartState(
+      craftingItems: craftingItems ?? this.craftingItems,
+    );
   }
 
-  factory CartState.fromJson(Map<String, dynamic> json) {
+  factory CartState.fromJson(Map<String, dynamic>? json) {
     if (json == null) return CartState.initial();
     try {
       return CartState(

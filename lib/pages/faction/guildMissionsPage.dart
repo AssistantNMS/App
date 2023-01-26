@@ -8,7 +8,7 @@ import '../../contracts/faction/guildMission.dart';
 import '../../integration/dependencyInjection.dart';
 
 class GuildMissionsPage extends StatelessWidget {
-  GuildMissionsPage({Key key}) : super(key: key) {
+  GuildMissionsPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.guildMissionsPage);
   }
 
@@ -27,8 +27,10 @@ class GuildMissionsPage extends StatelessWidget {
   }
 
   Widget getBody(
-      BuildContext bodyCtx, ResultWithValue<List<GuildMission>> snapshot) {
-    if (snapshot == null || snapshot.isSuccess == false) {
+    BuildContext bodyCtx,
+    ResultWithValue<List<GuildMission>> snapshot,
+  ) {
+    if (snapshot.isSuccess == false) {
       return simpleGenericPageScaffold(
         bodyCtx,
         title: getTranslations().fromKey(LocaleKey.error),

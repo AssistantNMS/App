@@ -52,14 +52,20 @@ class HelloGamesApiService extends BaseApiService {
       final response = await apiGet(ApiUrls.communityMission);
       if (response.hasFailed) {
         return ResultWithValue<CommunityMission>(
-            false, CommunityMission(), response.errorMessage);
+          false,
+          CommunityMission.fromRawJson('{}'),
+          response.errorMessage,
+        );
       }
       var communityMission = CommunityMission.fromRawJson(response.value);
       return ResultWithValue(true, communityMission, '');
     } catch (exception) {
       getLog().e("getCommunityMission Api Exception: ${exception.toString()}");
       return ResultWithValue<CommunityMission>(
-          false, CommunityMission(), exception.toString());
+        false,
+        CommunityMission.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
@@ -68,14 +74,20 @@ class HelloGamesApiService extends BaseApiService {
       final response = await apiGet(ApiUrls.weekendMission);
       if (response.hasFailed) {
         return ResultWithValue<WeekendMissionViewModel>(
-            false, WeekendMissionViewModel(), response.errorMessage);
+          false,
+          WeekendMissionViewModel.fromRawJson('{}'),
+          response.errorMessage,
+        );
       }
       var mission = WeekendMissionViewModel.fromRawJson(response.value);
       return ResultWithValue(true, mission, '');
     } catch (exception) {
       getLog().e("getWeekendMission Api Exception: ${exception.toString()}");
       return ResultWithValue<WeekendMissionViewModel>(
-          false, WeekendMissionViewModel(), exception.toString());
+        false,
+        WeekendMissionViewModel.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
@@ -86,14 +98,20 @@ class HelloGamesApiService extends BaseApiService {
       final response = await apiGet(url);
       if (response.hasFailed) {
         return ResultWithValue<WeekendMissionViewModel>(
-            false, WeekendMissionViewModel(), response.errorMessage);
+          false,
+          WeekendMissionViewModel.fromRawJson('{}'),
+          response.errorMessage,
+        );
       }
       var mission = WeekendMissionViewModel.fromRawJson(response.value);
       return ResultWithValue(true, mission, '');
     } catch (exception) {
       getLog().e("getWeekendMission Api Exception: ${exception.toString()}");
       return ResultWithValue<WeekendMissionViewModel>(
-          false, WeekendMissionViewModel(), exception.toString());
+        false,
+        WeekendMissionViewModel.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
@@ -102,8 +120,8 @@ class HelloGamesApiService extends BaseApiService {
       String url = ApiUrls.expedition;
       final response = await apiGet(url);
       if (response.hasFailed) {
-        return ResultWithValue<ExpeditionViewModel>(
-            false, ExpeditionViewModel(), response.errorMessage);
+        return ResultWithValue<ExpeditionViewModel>(false,
+            ExpeditionViewModel.fromRawJson('{}'), response.errorMessage);
       }
       ExpeditionViewModel expedition =
           ExpeditionViewModel.fromRawJson(response.value);
@@ -111,7 +129,7 @@ class HelloGamesApiService extends BaseApiService {
     } catch (exception) {
       getLog().e("getExpeditionStatus Api Exception: ${exception.toString()}");
       return ResultWithValue<ExpeditionViewModel>(
-          false, ExpeditionViewModel(), exception.toString());
+          false, ExpeditionViewModel.fromRawJson('{}'), exception.toString());
     }
   }
 }

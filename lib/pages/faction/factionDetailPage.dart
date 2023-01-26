@@ -13,7 +13,7 @@ import 'guildMissionsPage.dart';
 
 class FactionDetailPage extends StatelessWidget {
   final FactionDetail factionDetail;
-  const FactionDetailPage(this.factionDetail, {Key key}) : super(key: key);
+  const FactionDetailPage(this.factionDetail, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +26,6 @@ class FactionDetailPage extends StatelessWidget {
   }
 
   Widget getBody(BuildContext storeContext, FactionsViewModel viewModel) {
-    if (factionDetail == null) {
-      return simpleGenericPageScaffold(
-        storeContext,
-        title: getTranslations().fromKey(LocaleKey.loading),
-        body: getLoading().customErrorWidget(storeContext),
-      );
-    }
-
     List<Widget> widgets = List.empty(growable: true);
     widgets.add(localImage(
       factionDetail.icon,
@@ -54,7 +46,7 @@ class FactionDetailPage extends StatelessWidget {
           .indexWhere((fac) => fac.missionId == mission.id);
       bool isValidIndex = storedFacIndex > -1 &&
           storedFacIndex < viewModel.storedFactions.length;
-      StoredFactionMission reduxMdl =
+      StoredFactionMission? reduxMdl =
           isValidIndex ? viewModel.storedFactions[storedFacIndex] : null;
       widgets.add(
         factionMissionTilePresenter(storeContext, mission, viewModel, reduxMdl),

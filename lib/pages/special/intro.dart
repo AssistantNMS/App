@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class IntroPage extends StatelessWidget {
-  final Function onTap;
+  final void Function()? onTap;
   final void Function(Locale locale) onLocaleChange;
-  const IntroPage(this.onLocaleChange, {Key key, this.onTap}) : super(key: key);
+  const IntroPage(this.onLocaleChange, {Key? key, this.onTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

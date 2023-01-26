@@ -11,7 +11,7 @@ import '../../../contracts/twitch/twitchCampaignData.dart';
 import '../../../redux/modules/generic/genericItemViewModel.dart';
 
 class TwitchCampaignPage extends StatelessWidget {
-  TwitchCampaignPage({Key key}) : super(key: key) {
+  TwitchCampaignPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.twitchCampaignPage);
   }
 
@@ -21,7 +21,7 @@ class TwitchCampaignPage extends StatelessWidget {
       converter: (store) => GenericItemViewModel.fromStore(store),
       builder: (_, viewModel) {
         Widget Function(BuildContext, TwitchCampaignData,
-                {void Function() onTap}) listTilePresenter =
+                {void Function()? onTap}) listTilePresenter =
             twitchCampaignListTilePresenter(viewModel.displayGenericItemColour);
         return simpleGenericPageScaffold(
           context,

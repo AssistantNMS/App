@@ -19,7 +19,7 @@ class GenericPageAllRequiredRawMaterials extends StatefulWidget {
   final bool showBackgroundColours;
   const GenericPageAllRequiredRawMaterials(
       this.item, this.showBackgroundColours,
-      {Key key})
+      {Key? key})
       : super(key: key);
 
   @override
@@ -34,7 +34,9 @@ class _GenericPageAllRequiredRawMaterialsWidget
   int currentSelection = 0;
 
   _GenericPageAllRequiredRawMaterialsWidget(
-      this.item, this.showBackgroundColours) {
+    this.item,
+    this.showBackgroundColours,
+  ) {
     getAnalytics()
         .trackEvent(AnalyticsEvent.genericAllRequiredRawMaterialsPage);
   }
@@ -65,7 +67,7 @@ class _GenericPageAllRequiredRawMaterialsWidget
 
     return basicGenericPageScaffold(
       context,
-      title: item.typeName ?? getTranslations().fromKey(LocaleKey.loading),
+      title: item.typeName,
       body: getBody(context, currentSelection, segmentedWidget),
       fab: getFloatingActionButton(context, controller, item.genericItem),
     );
@@ -75,7 +77,7 @@ class _GenericPageAllRequiredRawMaterialsWidget
     BuildContext context,
     AsyncSnapshot<List<RequiredItemDetails>> snapshot,
   ) {
-    Widget errorWidget = asyncSnapshotHandler(context, snapshot);
+    Widget? errorWidget = asyncSnapshotHandler(context, snapshot);
     if (errorWidget != null) return [errorWidget];
 
     List<Widget> widgets = List.empty(growable: true);
@@ -83,8 +85,8 @@ class _GenericPageAllRequiredRawMaterialsWidget
     Widget Function(BuildContext context, RequiredItemDetails itemDetails)
         requiredItemDetailsPresenter =
         requiredItemDetailsBackgroundTilePresenter(showBackgroundColours);
-    if (snapshot.data.isNotEmpty) {
-      for (RequiredItemDetails item in snapshot.data) {
+    if (snapshot.data!.isNotEmpty) {
+      for (RequiredItemDetails item in snapshot.data!) {
         widgets.add(requiredItemDetailsPresenter(context, item));
       }
     } else {
@@ -110,17 +112,17 @@ class _GenericPageAllRequiredRawMaterialsWidget
     BuildContext context,
     AsyncSnapshot<List<RequiredItemTreeDetails>> snapshot,
   ) {
-    Widget errorWidget = asyncSnapshotHandler(context, snapshot);
+    Widget? errorWidget = asyncSnapshotHandler(context, snapshot);
     if (errorWidget != null) return [errorWidget];
 
     List<Widget> widgets = List.empty(growable: true);
 
-    if (snapshot.data.isNotEmpty) {
+    if (snapshot.data!.isNotEmpty) {
       widgets.add(Expanded(
         child: ListView(
           shrinkWrap: true,
           children: [
-            getTree(context, snapshot.data, CurrencyType.NONE),
+            getTree(context, snapshot.data!, CurrencyType.NONE),
           ],
         ),
       ));
@@ -166,16 +168,10 @@ class _GenericPageAllRequiredRawMaterialsWidget
             ...widgets,
             ...getFlatListBody(builderContext, snapshot)
           ];
-          return Column(
-            children: [
-              Expanded(
-                child: listWithScrollbar(
-                  itemCount: listSpecificWidgets.length,
-                  itemBuilder: (builderContext, index) =>
-                      listSpecificWidgets[index],
-                ),
-              ),
-            ],
+          return listWithScrollbar(
+            itemCount: listSpecificWidgets.length,
+            itemBuilder: (builderContext, index) => listSpecificWidgets[index],
+            scrollController: ScrollController(),
           );
         },
       );

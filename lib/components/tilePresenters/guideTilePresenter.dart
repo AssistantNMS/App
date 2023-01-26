@@ -16,11 +16,11 @@ Widget guideTilePresenter(BuildContext context, NmsGuide guideDetails) {
     Row(
       children: [
         const Icon(Icons.person),
-        Text(guideDetails.author ?? '???'),
+        Text(guideDetails.author),
       ],
     )
   ];
-  if ((guideDetails.minutes ?? 0) > 0) {
+  if ((guideDetails.minutes) > 0) {
     firstRow.add(Row(
       children: [
         const Icon(Icons.timer),
@@ -31,11 +31,11 @@ Widget guideTilePresenter(BuildContext context, NmsGuide guideDetails) {
     ));
   }
   if (guideDetails.translatedBy != null &&
-      guideDetails.translatedBy.isNotEmpty) {
+      guideDetails.translatedBy!.isNotEmpty) {
     firstRow.add(Row(
       children: [
         const Icon(Icons.translate),
-        Text(guideDetails.translatedBy),
+        Text(guideDetails.translatedBy!),
       ],
     ));
   }
@@ -85,12 +85,12 @@ Widget guideTilePresenter(BuildContext context, NmsGuide guideDetails) {
 }
 
 Widget compactGuideTilePresenter(BuildContext context, NmsGuide guideDetails) {
-  String subTitle = (guideDetails.author ?? '???');
+  String subTitle = (guideDetails.author);
   if (guideDetails.translatedBy != null &&
-      guideDetails.translatedBy.isNotEmpty) {
-    subTitle += ' - ' + guideDetails.translatedBy;
+      guideDetails.translatedBy!.isNotEmpty) {
+    subTitle += ' - ' + guideDetails.translatedBy!;
   }
-  if ((guideDetails.minutes ?? 0) > 0) {
+  if (guideDetails.minutes > 0) {
     subTitle += ' - ' +
         getTranslations()
             .fromKey(LocaleKey.minutes)

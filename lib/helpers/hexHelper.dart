@@ -14,8 +14,10 @@ String intArrayToHex(List<int> currentCodes) {
   return hexCodes;
 }
 
-List<int> hexToIntArray(String code) =>
-    code.split('').map((hex) => int.tryParse(hex, radix: 16)).toList();
+List<int> hexToIntArray(String code) => code //
+    .split('')
+    .map((hex) => int.tryParse(hex, radix: 16) ?? 0)
+    .toList();
 
 String allUpperCase(String input) {
   String result = '';

@@ -18,7 +18,7 @@ import 'communityMissionRewardDetails.dart';
 import 'communityMissionRewards.dart';
 
 class CommunityMissionPage extends StatelessWidget {
-  CommunityMissionPage({Key key}) : super(key: key) {
+  CommunityMissionPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.communityMissionPage);
   }
 
@@ -30,19 +30,31 @@ class CommunityMissionPage extends StatelessWidget {
     ResultWithValue<CommunityMission> apiResult =
         await getHelloGamesApiService().getCommunityMission();
     if (apiResult.isSuccess == false) {
-      return ResultWithValue<CommunityMissionPageData>(false, null, '');
+      return ResultWithValue<CommunityMissionPageData>(
+        false,
+        CommunityMissionPageData.initial(),
+        '',
+      );
     }
 
     int missionId = apiResult.value.missionId;
     ResultWithValue<QuicksilverStoreDetails> qsDataResult =
         await quickSilverItemDetailsFuture(context, missionId);
     if (qsDataResult.isSuccess == false) {
-      return ResultWithValue<CommunityMissionPageData>(false, null, '');
+      return ResultWithValue<CommunityMissionPageData>(
+        false,
+        CommunityMissionPageData.initial(),
+        '',
+      );
     }
 
     ResultWithValue<List<QuicksilverStore>> qsItemResult = await allQsItemsTask;
     if (qsItemResult.isSuccess == false) {
-      return ResultWithValue<CommunityMissionPageData>(false, null, '');
+      return ResultWithValue<CommunityMissionPageData>(
+        false,
+        CommunityMissionPageData.initial(),
+        '',
+      );
     }
 
     int communityMissionMax = maxFromArr<QuicksilverStore>(
@@ -77,29 +89,22 @@ class CommunityMissionPage extends StatelessWidget {
     );
   }
 
-  Widget getBody(BuildContext bodyCtx,
-      ResultWithValue<CommunityMissionPageData> snapshot) {
-    if (snapshot.value == null ||
-        snapshot.value.apiData.currentTier == null ||
-        snapshot.value.apiData.totalTiers == null ||
-        snapshot.value.apiData.percentage == null ||
-        snapshot.value.apiData.missionId == null) {
-      return getLoading().customErrorWidget(bodyCtx);
-    }
-
+  Widget getBody(
+    BuildContext bodyCtx,
+    ResultWithValue<CommunityMissionPageData> result,
+  ) {
     List<Widget> widgets = List.empty(growable: true);
 
-    int missionId = snapshot.value.apiData.missionId;
-    int percentage = snapshot.value.apiData.percentage;
-    int totalTiers = snapshot.value.apiData.totalTiers;
-    int currentTier = snapshot.value.apiData.currentTier;
-    QuicksilverStore qsStore = snapshot.value.qsStore;
-    List<RequiredItemDetails> itemDetails = snapshot.value.itemDetails;
-    List<RequiredItemDetails> reqItemDetails =
-        snapshot.value.requiredItemDetails;
+    int missionId = result.value.apiData.missionId;
+    int percentage = result.value.apiData.percentage;
+    int totalTiers = result.value.apiData.totalTiers;
+    int currentTier = result.value.apiData.currentTier;
+    QuicksilverStore qsStore = result.value.qsStore;
+    List<RequiredItemDetails> itemDetails = result.value.itemDetails;
+    List<RequiredItemDetails> reqItemDetails = result.value.requiredItemDetails;
 
-    int communityMissionMax = snapshot.value.communityMissionMax;
-    int communityMissionMin = snapshot.value.communityMissionMin;
+    int communityMissionMax = result.value.communityMissionMax;
+    int communityMissionMin = result.value.communityMissionMin;
 
     widgets.add(emptySpace2x());
     widgets.add(genericItemGroup(

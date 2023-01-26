@@ -8,20 +8,20 @@ import 'shortcutActionButton.dart';
 
 class AppBarForSubPage extends StatelessWidget
     implements PreferredSizeWidget, ObstructingPreferredSizeWidget {
-  final Widget title;
+  final Widget? title;
   final List<ActionItem> actions;
-  final List<ActionItem> shortcutActions;
+  final List<ActionItem>? shortcutActions;
   final bool showHomeAction;
   final bool showBackAction;
   @override
   final Size preferredSize;
   final dynamic bottom;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   static const double kMinInteractiveDimensionCupertino = 44.0;
 
   AppBarForSubPage(this.title, this.actions, this.showHomeAction,
       this.showBackAction, this.shortcutActions,
-      {Key key, this.bottom, this.backgroundColor})
+      {Key? key, this.bottom, this.backgroundColor})
       : preferredSize = Size.fromHeight(
             kToolbarHeight + (bottom?.preferredSize?.height ?? 0.0)),
         super(key: key);
@@ -32,9 +32,9 @@ class AppBarForSubPage extends StatelessWidget
 
   Widget _appBarForAndroid(
     context,
-    Widget title,
+    Widget? title,
     List<ActionItem> actions,
-    List<ActionItem> shortcutActions,
+    List<ActionItem>? shortcutActions,
   ) {
     List<Widget> actionWidgets = List.empty(growable: true);
     if (shortcutActions != null && shortcutActions.isNotEmpty) {
@@ -61,12 +61,14 @@ class AppBarForSubPage extends StatelessWidget
   bool shouldFullyObstruct(BuildContext context) => true;
 }
 
-Widget adaptiveAppBarForSubPageHelper(context,
-    {Widget title,
-    List<ActionItem> actions,
-    bool showHomeAction = false,
-    bool showBackAction = true,
-    List<ActionItem> shortcutActions}) {
+PreferredSizeWidget adaptiveAppBarForSubPageHelper(
+  context, {
+  required Widget? title,
+  required List<ActionItem>? actions,
+  bool showHomeAction = false,
+  bool showBackAction = true,
+  required List<ActionItem>? shortcutActions,
+}) {
   if (actions == null || actions.isEmpty) {
     actions = List.empty(growable: true);
   }

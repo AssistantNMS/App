@@ -28,10 +28,13 @@ class WeekendMissionDetail extends StatefulWidget {
   final Future<ResultWithValue<WeekendStagePageItem>> Function(
           BuildContext context, String seasonId, int level)
       getWeekendMissionSeasonData;
-  const WeekendMissionDetail(this.pageItem, this.getWeekendMissionSeasonData,
-      this.weekendMissionLevelMin, this.weekendMissionLevelMax,
-      {Key key})
-      : super(key: key);
+  const WeekendMissionDetail(
+    this.pageItem,
+    this.getWeekendMissionSeasonData,
+    this.weekendMissionLevelMin,
+    this.weekendMissionLevelMax, {
+    Key? key,
+  }) : super(key: key);
 
   @override
   _WeekendMissionDetailWidget createState() =>
@@ -53,9 +56,6 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
 
   @override
   void afterFirstLayout(BuildContext context) {
-    if (pageItem == null) return;
-    if (pageItem.stage == null) return;
-    if (pageItem.stage.level == null) return;
     getMissionExtraDetails(context, pageItem.stage.level);
   }
 
@@ -118,9 +118,11 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
   }
 
   List<Widget> getAdditionalWidgets(
-      BuildContext context, String captainSteveVideoUrl) {
+    BuildContext context,
+    String captainSteveVideoUrl,
+  ) {
     List<Widget> additionalWidgets = List.empty(growable: true);
-    if (captainSteveVideoUrl != null && captainSteveVideoUrl.length > 5) {
+    if (captainSteveVideoUrl.isNotEmpty) {
       additionalWidgets.add(emptySpace(2));
       additionalWidgets.add(customDivider());
       additionalWidgets.add(emptySpace1x());
@@ -138,23 +140,19 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
 
   @override
   Widget build(BuildContext context) {
-    if (pageItem == null || pageItem.stage == null) {
-      return getLoading().customErrorWidget(context);
-    }
-
     List<Widget> widgets = List.empty(growable: true);
 
     if (pageItem.iteration != null) {
       widgets.add(genericItemImage(
         context,
-        pageItem.iteration.icon,
+        pageItem.iteration!.icon,
         disableZoom: true,
       ));
     }
     widgets.add(genericItemDescription(pageItem.stage.npcMessage));
 
     if (pageItem.stage.npcMessageFlows != null) {
-      widgets.add(messageFlowsButton(context, pageItem.stage.npcMessageFlows));
+      widgets.add(messageFlowsButton(context, pageItem.stage.npcMessageFlows!));
     }
 
     if (pageItem.cost != null) {
@@ -168,7 +166,7 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
         child: requiredItemDetailsTilePresenter(
           context,
           RequiredItemDetails.fromGenericPageItem(
-            pageItem.cost,
+            pageItem.cost!,
             pageItem.stage.quantity,
           ),
         ),
@@ -178,7 +176,7 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
     if (pageItem.stage.portalMessageFlows != null) {
       widgets.add(emptySpace1x());
       widgets.add(
-        messageFlowsButton(context, pageItem.stage.portalMessageFlows),
+        messageFlowsButton(context, pageItem.stage.portalMessageFlows!),
       );
     }
 
@@ -205,8 +203,10 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
         child: StoreConnector<AppState, PortalGlyphViewModel>(
           converter: (store) => PortalGlyphViewModel.fromStore(store),
           builder: (_, viewModel) => portalGlyphList(
-              hexToIntArray(pageItem.stage.portalAddress), 6,
-              useAltGlyphs: viewModel.useAltGlyphs),
+            hexToIntArray(pageItem.stage.portalAddress!),
+            6,
+            useAltGlyphs: viewModel.useAltGlyphs,
+          ),
         ),
       ));
       widgets.add(

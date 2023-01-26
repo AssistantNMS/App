@@ -1,8 +1,8 @@
 class StarshipScrapDetailed {
   StarshipScrapDetailed({
-    this.shipType,
-    this.shipClassType,
-    this.itemDetails,
+    required this.shipType,
+    required this.shipClassType,
+    required this.itemDetails,
   });
 
   String shipType;
@@ -12,19 +12,19 @@ class StarshipScrapDetailed {
 
 class StarshipScrapDetailedItemDetail {
   StarshipScrapDetailedItemDetail({
-    this.id,
-    this.icon,
-    this.name,
+    required this.id,
+    required this.icon,
+    required this.name,
     this.colour,
-    this.percentageChance,
-    this.amountMin,
-    this.amountMax,
+    required this.percentageChance,
+    required this.amountMin,
+    required this.amountMax,
   });
 
   String id;
   String icon;
   String name;
-  String colour;
+  String? colour;
   double percentageChance;
   int amountMin;
   int amountMax;

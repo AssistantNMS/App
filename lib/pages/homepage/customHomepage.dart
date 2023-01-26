@@ -15,7 +15,7 @@ import 'editCustomHomepage.dart';
 import 'viewCustomHomepage.dart';
 
 class CustomHomepage extends StatefulWidget {
-  CustomHomepage({Key key}) : super(key: key) {
+  CustomHomepage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.customHomepage);
   }
   @override

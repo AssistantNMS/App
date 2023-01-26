@@ -9,8 +9,8 @@ class NmsGuideSection {
   String heading;
 
   NmsGuideSection({
-    this.items,
-    this.heading,
+    required this.items,
+    required this.heading,
   });
 
   factory NmsGuideSection.fromRawJson(String str) =>
@@ -18,7 +18,7 @@ class NmsGuideSection {
 
   String toRawJson() => json.encode(toJson());
 
-  factory NmsGuideSection.fromJson(Map<String, dynamic> json) =>
+  factory NmsGuideSection.fromJson(Map<String, dynamic>? json) =>
       NmsGuideSection(
         items: readListSafe<NmsGuideSectionItem>(
           json,

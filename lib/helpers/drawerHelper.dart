@@ -38,7 +38,7 @@ List<Widget> getDrawerItems(context, DrawerSettingsViewModel viewModel) {
     whileLoading: () => getLoading().smallLoadingTile(context),
     whenDoneLoading: (ResultWithValue<GeneratedMeta> metaResult) {
       return packageVersionTile(
-        metaResult.isSuccess ? metaResult?.value?.gameVersion : 'Unknown',
+        metaResult.isSuccess ? metaResult.value.gameVersion : 'Unknown',
         onTap: () {
           adaptiveBottomModalSheet(
             context,
@@ -60,8 +60,8 @@ List<Widget> getDrawerItems(context, DrawerSettingsViewModel viewModel) {
       adaptiveBottomModalSheet(
         context,
         hasRoundedCorners: true,
-        builder: (BuildContext innerC) => AssistantAppsModalBottomSheet(
-          appType: AssistantAppType.NMS,
+        builder: (BuildContext innerC) => const AssistantAppsModalBottomSheet(
+          appType: AssistantAppType.nms,
         ),
       );
     },
@@ -73,16 +73,16 @@ List<Widget> getDrawerItems(context, DrawerSettingsViewModel viewModel) {
 
 Widget _drawerItem(
   BuildContext context, {
-  @required Widget image,
-  @required LocaleKey key,
-  String navigateToNamed,
-  String navigateToExternal,
+  required Widget image,
+  required LocaleKey key,
+  String? navigateToNamed,
+  String? navigateToExternal,
   bool isLocked = false,
   bool isNew = false,
-  Function(BuildContext) onTap,
-  Function(BuildContext) onLongPress,
+  Function(BuildContext)? onTap,
+  Function(BuildContext)? onLongPress,
 }) {
-  Widget isLockedWidget;
+  Widget? isLockedWidget;
   if (isLocked) {
     isLockedWidget = Icon(
       Icons.lock_clock,

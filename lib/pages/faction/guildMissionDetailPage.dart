@@ -8,7 +8,7 @@ import '../../contracts/faction/guildMission.dart';
 
 class GuildMissionDetailPage extends StatefulWidget {
   final GuildMission mission;
-  const GuildMissionDetailPage(this.mission, {Key key}) : super(key: key);
+  const GuildMissionDetailPage(this.mission, {Key? key}) : super(key: key);
   @override
   _GuildMissionDetailPageWidget createState() =>
       _GuildMissionDetailPageWidget();
@@ -20,7 +20,6 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
 
   @override
   Widget build(BuildContext context) {
-    if (widget?.mission == null) return getLoading().fullPageLoading(context);
     List<String> titles = widget.mission.titles;
     if (titles.isEmpty) {
       titles = widget.mission.subtitles;

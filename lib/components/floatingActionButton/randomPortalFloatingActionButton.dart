@@ -4,9 +4,9 @@ import 'dart:math' as math;
 
 Widget randomPortalFAB(
   BuildContext fabCtx, {
-  @required bool isDisabled,
-  @required void Function() startRoll,
-  @required void Function() copyCode,
+  required bool isDisabled,
+  required void Function() startRoll,
+  required void Function() copyCode,
 }) {
   Color foregroundColor = getTheme().fabForegroundColourSelector(fabCtx);
   Color backgroundColor = getTheme().fabColourSelector(fabCtx);
@@ -37,7 +37,7 @@ Widget randomPortalFAB(
 }
 
 class RandomPortalFABLoader extends StatefulWidget {
-  const RandomPortalFABLoader({Key key}) : super(key: key);
+  const RandomPortalFABLoader({Key? key}) : super(key: key);
 
   @override
   createState() => _RandomPortalFABLoaderState();
@@ -45,7 +45,7 @@ class RandomPortalFABLoader extends StatefulWidget {
 
 class _RandomPortalFABLoaderState extends State<RandomPortalFABLoader>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {

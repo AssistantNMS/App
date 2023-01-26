@@ -3,6 +3,10 @@
 //     final product = productFromJson(jsonString);
 // https://app.quicktype.io/
 
+import 'dart:convert';
+
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 import './requiredItem.dart';
 
 class Processor {
@@ -14,22 +18,28 @@ class Processor {
   List<RequiredItem> inputs;
 
   Processor({
-    this.id,
-    this.time,
-    this.isRefiner,
-    this.operation,
-    this.output,
-    this.inputs,
+    required this.id,
+    required this.time,
+    required this.isRefiner,
+    required this.operation,
+    required this.output,
+    required this.inputs,
   });
 
-  factory Processor.fromJson(Map<String, dynamic> json, bool isRefiner) =>
+  factory Processor.fromRawJson(String str, bool isRefiner) =>
+      Processor.fromJson(json.decode(str), isRefiner);
+
+  factory Processor.fromJson(Map<String, dynamic>? json, bool isRefiner) =>
       Processor(
-        id: json["Id"] as String,
-        time: json["Time"] as String,
+        id: readStringSafe(json, 'Id'),
+        time: readStringSafe(json, 'Time'),
         isRefiner: isRefiner,
-        operation: json["Operation"] as String,
-        output: RequiredItem.fromJson(json["Output"]),
-        inputs: List<RequiredItem>.from(
-            json["Inputs"].map((x) => RequiredItem.fromJson(x))),
+        operation: readStringSafe(json, 'Operation'),
+        output: RequiredItem.fromJson(json?["Output"]),
+        inputs: readListSafe(
+          json,
+          'Inputs',
+          (x) => RequiredItem.fromJson(x),
+        ),
       );
 }

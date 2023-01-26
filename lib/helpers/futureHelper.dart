@@ -28,28 +28,32 @@ import '../services/json/interface/IGenericRepository.dart';
 import 'itemsHelper.dart';
 
 Future<ResultWithValue<GenericPageItem>> genericItemFuture(
-    context, String itemId, int platformIndex) async {
-  if (itemId == null) {
-    return ResultWithValue<GenericPageItem>(false, GenericPageItem(),
-        'genericItemFuture - unknown type of item $itemId');
-  }
-
-  ResultWithValue<IGenericRepository> genRepo = getRepoFromId(context, itemId);
+  context,
+  String itemId,
+  int platformIndex,
+) async {
+  ResultWithValue<IGenericRepository?> genRepo = getRepoFromId(context, itemId);
   if (genRepo.hasFailed) {
-    return ResultWithValue<GenericPageItem>(false, GenericPageItem(),
-        'genericItemFuture - unknown type of item $itemId');
+    return ResultWithValue<GenericPageItem>(
+      false,
+      GenericPageItem.fromJson(<String, dynamic>{}),
+      'genericItemFuture - unknown type of item $itemId',
+    );
   }
 
   //await Future.delayed(Duration(seconds: 5));
 
   ResultWithValue<GenericPageItem> itemResult =
-      await genRepo.value.getById(context, itemId);
+      await genRepo.value!.getById(context, itemId);
   if (itemResult.isSuccess == false) {
     return ResultWithValue<GenericPageItem>(
-        false, GenericPageItem(), itemResult.errorMessage);
+      false,
+      GenericPageItem.fromJson(<String, dynamic>{}),
+      itemResult.errorMessage,
+    );
   }
   GenericPageItem item = itemResult.value;
-  List<String> usage = itemResult.value.usage;
+  List<String> usage = itemResult.value.usage ?? List.empty();
 
   item.typeName = getTypeName(context, item.id);
   item.usedInRecipes = List.empty();
@@ -63,36 +67,36 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   item.creatureHarvests = List.empty();
   item.addedInUpdate = null;
 
-  if ((usage ?? []).contains(UsageKey.hasUsedToCraft)) {
+  if (usage.contains(UsageKey.hasUsedToCraft)) {
     item.usedInRecipes = await getAllPossibleOutputsFromInput(context, itemId);
   }
-  if ((usage ?? []).contains(UsageKey.hasRefinedToCreate)) {
+  if (usage.contains(UsageKey.hasRefinedToCreate)) {
     item.usedInRefiners = await refinerRecipesByInputFuture(context, itemId);
   }
-  if ((usage ?? []).contains(UsageKey.hasRefinedUsing)) {
+  if (usage.contains(UsageKey.hasRefinedUsing)) {
     item.refiners = await refinerRecipesByOutputFuture(context, itemId);
   }
-  if ((usage ?? []).contains(UsageKey.hasCookUsing)) {
+  if (usage.contains(UsageKey.hasCookUsing)) {
     item.cooking =
         await nutrientProcessorRecipesByOutputFuture(context, itemId);
   }
-  if ((usage ?? []).contains(UsageKey.hasCookToCreate)) {
+  if (usage.contains(UsageKey.hasCookToCreate)) {
     item.usedInCooking =
         await nutrientProcessorRecipesByInputFuture(context, itemId);
   }
-  if ((usage ?? []).contains(UsageKey.hasChargedBy)) {
+  if (usage.contains(UsageKey.hasChargedBy)) {
     item.chargedBy = await rechargedByFuture(context, itemId);
   }
-  if ((usage ?? []).contains(UsageKey.hasUsedToRecharge)) {
+  if (usage.contains(UsageKey.hasUsedToRecharge)) {
     item.usedToRecharge = await usedToRechargeFuture(context, itemId);
   }
-  if ((usage ?? []).contains(UsageKey.isRewardFromShipScrap)) {
+  if (usage.contains(UsageKey.isRewardFromShipScrap)) {
     item.starshipScrapItems = await rewardStarshipScrapFuture(context, itemId);
   }
-  if ((usage ?? []).contains(UsageKey.isAddedInTrackedUpdate)) {
+  if (usage.contains(UsageKey.isAddedInTrackedUpdate)) {
     item.addedInUpdate = await fromTrackedUpdateFuture(context, itemId);
   }
-  if ((usage ?? []).contains(UsageKey.hasCreatureHarvest)) {
+  if (usage.contains(UsageKey.hasCreatureHarvest)) {
     item.creatureHarvests = await creatureHarvestsFuture(context, itemId);
   }
 
@@ -196,7 +200,7 @@ Future<Recharge> rechargedByFuture(context, String itemId) async {
   ResultWithValue<Recharge> rechargeItem =
       await getRechargeRepo().getRechargeById(context, itemId);
   if (rechargeItem.hasFailed) {
-    return Recharge();
+    return Recharge.initial();
   }
   return rechargeItem.value;
 }
@@ -211,30 +215,29 @@ Future<ResultWithValue<WeekendStagePageItem>> getWeekendMissionSeasonData(
       await WeekendMissionSeasonJsonRepository(weekendMissionFile)
           .getStageById(context, seasonId, level);
   if (getMissionStageResult.hasFailed) {
-    return ResultWithValue<WeekendStagePageItem>(
-        false, null, 'could not retrieve mission stage');
+    return ResultWithValue<WeekendStagePageItem>(false,
+        WeekendStagePageItem.initial(), 'could not retrieve mission stage');
   }
   WeekendStage currentStage = getMissionStageResult.value;
-  WeekendStagePageItem pageItem = WeekendStagePageItem(
-    season: seasonId,
-    stage: currentStage,
-  );
+  WeekendStagePageItem pageItem = WeekendStagePageItem.initial();
+  pageItem.season = seasonId;
+  pageItem.stage = currentStage;
 
-  ResultWithValue<IGenericRepository> getCostDetailsRepo =
+  ResultWithValue<IGenericRepository?> getCostDetailsRepo =
       getRepoFromId(context, currentStage.appId);
   if (getCostDetailsRepo.isSuccess) {
     ResultWithValue<GenericPageItem> costItemResult =
-        await getCostDetailsRepo.value.getById(context, currentStage.appId);
+        await getCostDetailsRepo.value!.getById(context, currentStage.appId);
     if (costItemResult.isSuccess) {
       pageItem.cost = costItemResult.value;
     }
   }
 
-  ResultWithValue<IGenericRepository> iterationDetailsRepo =
+  ResultWithValue<IGenericRepository?> iterationDetailsRepo =
       getRepoFromId(context, currentStage.iterationAppId);
   if (iterationDetailsRepo.isSuccess) {
     ResultWithValue<GenericPageItem> iterationItemResult =
-        await iterationDetailsRepo.value
+        await iterationDetailsRepo.value!
             .getById(context, currentStage.iterationAppId);
     if (iterationItemResult.isSuccess) {
       pageItem.iteration = iterationItemResult.value;
@@ -285,7 +288,7 @@ Future<List<StarshipScrap>> rewardStarshipScrapFuture(
   return items.value;
 }
 
-Future<MajorUpdateItem> fromTrackedUpdateFuture(context, String itemId) async {
+Future<MajorUpdateItem?> fromTrackedUpdateFuture(context, String itemId) async {
   ResultWithValue<MajorUpdateItem> item =
       await getDataRepo().getMajorUpdatesForItem(context, itemId);
   if (item.hasFailed) {
@@ -299,7 +302,7 @@ Future<List<CreatureHarvest>> creatureHarvestsFuture(
   ResultWithValue<List<CreatureHarvest>> items = await getCreatureHarvestRepo()
       .getCreatureHarvestsForItem(context, itemId);
   if (items.hasFailed) {
-    return null;
+    return List.empty();
   }
   return items.value;
 }
@@ -387,6 +390,7 @@ Future<ResultWithValue<List<GenericPageItem>>> getAllFromLocaleKeys(
   List<Future<void>> tasks = List.empty(growable: true);
   for (LocaleKey repJson in repoJsonStrings) {
     IGenericRepository repo = getGenericRepo(repJson);
+    // ignore: unnecessary_null_comparison
     if (repo == null) continue;
     Future<void> getAllTask = repo.getAll(context).then(onFinishTask);
     tasks.add(getAllTask);
@@ -448,11 +452,11 @@ Future<double> getQuickSilverFromId(
 
 Future<double> getNanitesFromId(
     BuildContext context, String itemId, int multiplier) async {
-  ResultWithValue<IGenericRepository> repoResult =
+  ResultWithValue<IGenericRepository?> repoResult =
       getRepoFromId(context, itemId);
   if (repoResult.hasFailed) return 0;
 
-  IGenericRepository repo = repoResult.value;
+  IGenericRepository repo = repoResult.value!;
   ResultWithValue<GenericPageItem> detailsResult =
       await repo.getById(context, itemId);
   if (detailsResult.hasFailed) return 0;
@@ -461,7 +465,7 @@ Future<double> getNanitesFromId(
     return detailsResult.value.baseValueUnits * multiplier;
   }
   if (detailsResult.value.blueprintCostType == CurrencyType.NANITES) {
-    return (detailsResult.value.blueprintCost ?? 0).toDouble() * multiplier;
+    return (detailsResult.value.blueprintCost).toDouble() * multiplier;
   }
 
   return 0;
@@ -487,32 +491,32 @@ Future<double> getFactoryOverridesFromId(
 
 Future<double> getBaseValueCostFromId(BuildContext context,
     CurrencyType currencyType, String itemId, int multiplier) async {
-  ResultWithValue<IGenericRepository> repoResult =
+  ResultWithValue<IGenericRepository?> repoResult =
       getRepoFromId(context, itemId);
   if (repoResult.hasFailed) return 0;
 
-  IGenericRepository repo = repoResult.value;
+  IGenericRepository repo = repoResult.value!;
   ResultWithValue<GenericPageItem> detailsResult =
       await repo.getById(context, itemId);
   if (detailsResult.hasFailed) return 0;
 
   if (detailsResult.value.currencyType != currencyType) return 0;
-  return (detailsResult.value?.baseValueUnits ?? 0.0) * multiplier;
+  return (detailsResult.value.baseValueUnits) * multiplier;
 }
 
 Future<double> getBlueprintCostFromId(BuildContext context,
     CurrencyType currencyType, String itemId, int multiplier) async {
-  ResultWithValue<IGenericRepository> repoResult =
+  ResultWithValue<IGenericRepository?> repoResult =
       getRepoFromId(context, itemId);
   if (repoResult.hasFailed) return 0;
 
-  IGenericRepository repo = repoResult.value;
+  IGenericRepository repo = repoResult.value!;
   ResultWithValue<GenericPageItem> detailsResult =
       await repo.getById(context, itemId);
   if (detailsResult.hasFailed) return 0;
 
   if (detailsResult.value.blueprintCostType != currencyType) return 0;
-  return (detailsResult.value.blueprintCost ?? 0).toDouble() * multiplier;
+  return (detailsResult.value.blueprintCost).toDouble() * multiplier;
 }
 
 Future<ResultWithValue<Processor>> processorOutputDetailsFuture(
@@ -526,7 +530,10 @@ Future<ResultWithValue<QuicksilverStoreDetails>> quickSilverItemDetailsFuture(
       await getDataRepo().getQuickSilverItem(context, missionId);
   if (qsItemsResult.hasFailed) {
     return ResultWithValue<QuicksilverStoreDetails>(
-        false, null, qsItemsResult.errorMessage);
+      false,
+      QuicksilverStoreDetails.initial(),
+      qsItemsResult.errorMessage,
+    );
   }
 
   ResultWithValue<List<RequiredItemDetails>> itemsResult =

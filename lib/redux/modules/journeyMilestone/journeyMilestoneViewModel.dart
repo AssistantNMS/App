@@ -11,8 +11,8 @@ class JourneyMilestoneViewModel {
   Function(String journeyId, int journeyStatIndex) setMilestone;
 
   JourneyMilestoneViewModel({
-    this.storedMilestones,
-    this.setMilestone,
+    required this.storedMilestones,
+    required this.setMilestone,
   });
 
   static JourneyMilestoneViewModel fromStore(Store<AppState> store) {

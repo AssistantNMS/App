@@ -11,7 +11,7 @@ import '../common/rowHelper.dart';
 import '../tilePresenters/settingTilePresenter.dart';
 
 class GoogleLoginBottomSheet extends StatefulWidget {
-  const GoogleLoginBottomSheet({Key key}) : super(key: key);
+  const GoogleLoginBottomSheet({Key? key}) : super(key: key);
 
   @override
   _GoogleLoginBottomSheetWidget createState() =>
@@ -37,7 +37,7 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
         );
       }
 
-      User user = getFirebase().getCurrentUser();
+      User? user = getFirebase().getCurrentUser();
       if (user == null) {
         throw Exception(
           'User is not logged in via Google: ' + authTokenResult.errorMessage,
@@ -45,9 +45,9 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
       }
 
       model.aaAccessToken = authTokenResult.value;
-      model.username = user.displayName;
-      model.profileUrl = user.photoURL;
-      model.email = user.email;
+      model.username = user.displayName ?? '';
+      model.profileUrl = user.photoURL ?? '';
+      model.email = user.email ?? '';
       return ResultWithValue(true, model, '');
     } catch (exception) {
       return ResultWithValue(false, model, exception.toString());

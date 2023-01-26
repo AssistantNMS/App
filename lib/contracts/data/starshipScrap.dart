@@ -8,16 +8,16 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class StarshipScrap {
   StarshipScrap({
-    this.shipType,
-    this.shipClassType,
-    this.itemDetails,
+    required this.shipType,
+    required this.shipClassType,
+    required this.itemDetails,
   });
 
   String shipType;
   String shipClassType;
   List<StarshipScrapItemDetail> itemDetails;
 
-  factory StarshipScrap.fromJson(Map<String, dynamic> json) => StarshipScrap(
+  factory StarshipScrap.fromJson(Map<String, dynamic>? json) => StarshipScrap(
         shipType: readStringSafe(json, 'ShipType'),
         shipClassType: readStringSafe(json, 'ShipClassType'),
         itemDetails: readListSafe(
@@ -30,10 +30,10 @@ class StarshipScrap {
 
 class StarshipScrapItemDetail {
   StarshipScrapItemDetail({
-    this.id,
-    this.percentageChance,
-    this.amountMin,
-    this.amountMax,
+    required this.id,
+    required this.percentageChance,
+    required this.amountMin,
+    required this.amountMax,
   });
 
   String id;
@@ -44,7 +44,7 @@ class StarshipScrapItemDetail {
   factory StarshipScrapItemDetail.fromJson(String str) =>
       StarshipScrapItemDetail.fromMap(json.decode(str));
 
-  factory StarshipScrapItemDetail.fromMap(Map<String, dynamic> json) =>
+  factory StarshipScrapItemDetail.fromMap(Map<String, dynamic>? json) =>
       StarshipScrapItemDetail(
         id: readStringSafe(json, 'Id'),
         percentageChance: readDoubleSafe(json, 'PercentageChance'),

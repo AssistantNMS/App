@@ -3,7 +3,7 @@ import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tzi;
 
 class LocalNotificationService {
-  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
+  late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
 
   LocalNotificationService() {
     tzi.initializeTimeZones();
@@ -27,8 +27,8 @@ class LocalNotificationService {
     flutterLocalNotificationsPlugin.initialize(initializationSettings);
   }
 
-  Future<bool>
-      requestIosPermission() async => await flutterLocalNotificationsPlugin
+  Future<bool?> requestIosPermission() async =>
+      await flutterLocalNotificationsPlugin
           .resolvePlatformSpecificImplementation<
               IOSFlutterLocalNotificationsPlugin>()
           ?.requestPermissions(
@@ -94,7 +94,7 @@ class LocalNotificationService {
       iOS: iOSPlatformChannelSpecifics,
     );
     await flutterLocalNotificationsPlugin.zonedSchedule(
-      notificationId ?? 0,
+      notificationId,
       title,
       body,
       newTzDate,
@@ -106,5 +106,5 @@ class LocalNotificationService {
   }
 
   Future<void> removeScheduledTimerNotification(int notificationId) async =>
-      await flutterLocalNotificationsPlugin.cancel(notificationId ?? 0);
+      await flutterLocalNotificationsPlugin.cancel(notificationId);
 }

@@ -9,7 +9,7 @@ import 'commonSeasonalExpeditionSeasonList.dart';
 import 'seasonExpeditionConstants.dart';
 
 class CustomSeasonalExpeditionSeasonListPage extends StatelessWidget {
-  const CustomSeasonalExpeditionSeasonListPage({Key key}) : super(key: key);
+  const CustomSeasonalExpeditionSeasonListPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

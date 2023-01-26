@@ -40,36 +40,36 @@ class ItemBaseDetail {
   List<String> usage;
 
   ItemBaseDetail({
-    this.id,
-    this.icon,
-    this.name,
-    this.group,
-    this.symbol,
-    this.description,
-    this.additional,
-    this.power,
-    this.colour,
-    this.cdnUrl,
-    this.cookingValue,
-    this.currencyType,
-    this.maxStackSize,
-    this.baseValueUnits,
-    this.requiredItems,
-    this.consumableRewards,
-    this.blueprintSource,
-    this.blueprintCost,
-    this.blueprintCostType,
-    this.statBonuses,
-    this.proceduralStatBonuses,
-    this.numStatsMax,
-    this.numStatsMin,
-    this.usage,
+    required this.id,
+    required this.icon,
+    required this.name,
+    required this.group,
+    required this.symbol,
+    required this.description,
+    required this.additional,
+    required this.power,
+    required this.colour,
+    required this.cdnUrl,
+    required this.cookingValue,
+    required this.currencyType,
+    required this.maxStackSize,
+    required this.baseValueUnits,
+    required this.requiredItems,
+    required this.consumableRewards,
+    required this.blueprintSource,
+    required this.blueprintCost,
+    required this.blueprintCostType,
+    required this.statBonuses,
+    required this.proceduralStatBonuses,
+    required this.numStatsMax,
+    required this.numStatsMin,
+    required this.usage,
   });
 
   factory ItemBaseDetail.fromRawJson(String str) =>
       ItemBaseDetail.fromJson(json.decode(str));
 
-  factory ItemBaseDetail.fromJson(Map<String, dynamic> json) {
+  factory ItemBaseDetail.fromJson(Map<String, dynamic>? json) {
     return ItemBaseDetail(
       id: readStringSafe(json, 'Id'),
       icon: readStringSafe(json, 'Icon'),
@@ -78,20 +78,21 @@ class ItemBaseDetail {
       symbol: readStringSafe(json, 'Abbrev'),
       description: readStringSafe(json, 'Description'),
       additional: readStringSafe(json, 'Additional'),
-      power: json["Power"] as double,
+      power: readDoubleSafe(json, 'Power'),
       colour: readStringSafe(json, 'Colour'),
       cdnUrl: readStringSafe(json, 'CdnUrl'),
-      cookingValue: json["CookingValue"] as double,
-      maxStackSize: json["MaxStackSize"] as double,
-      baseValueUnits: json["BaseValueUnits"] as double,
-      currencyType: currencyTypeValues.map[json["CurrencyType"]],
+      cookingValue: readDoubleSafe(json, 'CookingValue'),
+      maxStackSize: readDoubleSafe(json, 'MaxStackSize'),
+      baseValueUnits: readDoubleSafe(json, 'BaseValueUnits'),
+      currencyType:
+          currencyTypeValues.map[readStringSafe(json, 'CurrencyType')]!,
       requiredItems: readListSafe<RequiredItem>(
           json, 'RequiredItems', (dynamic json) => RequiredItem.fromJson(json)),
       blueprintSource:
-          BlueprintSource.values[(json["BlueprintSource"] as int ?? 0)],
+          BlueprintSource.values[readIntSafe(json, 'BlueprintSource')],
       blueprintCost: readIntSafe(json, 'BlueprintCost'),
       blueprintCostType:
-          currencyTypeValues.map[readStringSafe(json, 'BlueprintCostType')],
+          currencyTypeValues.map[readStringSafe(json, 'BlueprintCostType')]!,
       consumableRewards: readListSafe<String>(
           json, 'ConsumableRewardTexts', (dynamic json) => json.toString()),
       statBonuses: readListSafe<StatBonus>(

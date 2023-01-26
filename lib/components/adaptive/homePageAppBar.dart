@@ -12,12 +12,16 @@ class HomePageAppBar extends StatelessWidget
   @override
   final Size preferredSize;
   final dynamic bottom;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   static const double kMinInteractiveDimensionCupertino = 44.0;
 
-  HomePageAppBar(this.title,
-      {Key key, this.bottom, this.backgroundColor, this.actions})
-      : preferredSize = Size.fromHeight(
+  HomePageAppBar(
+    this.title, {
+    Key? key,
+    this.bottom,
+    this.backgroundColor,
+    required this.actions,
+  })  : preferredSize = Size.fromHeight(
             kToolbarHeight + (bottom?.preferredSize?.height ?? 0.0)),
         super(key: key);
 
@@ -52,7 +56,10 @@ class HomePageAppBar extends StatelessWidget
   bool shouldFullyObstruct(BuildContext context) => true;
 }
 
-Widget homePageAppBar(String title, {List<ActionItem> customActions}) {
+PreferredSizeWidget homePageAppBar(
+  String title, {
+  List<ActionItem>? customActions,
+}) {
   var actions = customActions ?? List.empty(growable: true);
   return HomePageAppBar(
     title,

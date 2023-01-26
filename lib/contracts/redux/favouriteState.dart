@@ -8,7 +8,7 @@ class FavouriteState {
   final List<FavouriteItem> favouriteItems;
 
   const FavouriteState({
-    this.favouriteItems,
+    required this.favouriteItems,
   });
 
   factory FavouriteState.initial() {
@@ -16,13 +16,13 @@ class FavouriteState {
   }
 
   FavouriteState copyWith({
-    List<FavouriteItem> favouriteItems,
+    List<FavouriteItem>? favouriteItems,
   }) {
     return FavouriteState(
         favouriteItems: favouriteItems ?? this.favouriteItems);
   }
 
-  factory FavouriteState.fromJson(Map<String, dynamic> json) {
+  factory FavouriteState.fromJson(Map<String, dynamic>? json) {
     if (json == null) return FavouriteState.initial();
     try {
       return FavouriteState(

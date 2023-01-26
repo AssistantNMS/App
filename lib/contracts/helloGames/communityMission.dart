@@ -13,10 +13,10 @@ class CommunityMission {
   int totalTiers;
 
   CommunityMission({
-    this.missionId,
-    this.currentTier,
-    this.percentage,
-    this.totalTiers,
+    required this.missionId,
+    required this.currentTier,
+    required this.percentage,
+    required this.totalTiers,
   });
 
   factory CommunityMission.fromRawJson(String str) =>
@@ -24,7 +24,7 @@ class CommunityMission {
 
   String toRawJson() => json.encode(toJson());
 
-  factory CommunityMission.fromJson(Map<String, dynamic> json) =>
+  factory CommunityMission.fromJson(Map<String, dynamic>? json) =>
       CommunityMission(
         missionId: readIntSafe(json, 'missionId'),
         currentTier: readIntSafe(json, 'currentTier'),

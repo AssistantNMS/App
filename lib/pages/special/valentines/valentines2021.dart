@@ -10,7 +10,7 @@ import '../../../contracts/redux/appState.dart';
 import '../../../redux/modules/setting/introViewModel.dart';
 
 class Valentines2021 extends StatelessWidget {
-  const Valentines2021({Key key}) : super(key: key);
+  const Valentines2021({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -85,6 +85,7 @@ class Valentines2021 extends StatelessWidget {
             padding: const EdgeInsets.all(12),
             itemCount: widgets.length,
             itemBuilder: (BuildContext context, int index) => widgets[index],
+            scrollController: ScrollController(),
           );
         },
       ),

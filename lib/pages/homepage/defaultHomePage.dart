@@ -9,7 +9,7 @@ import '../../helpers/updateHelper.dart';
 import 'allItemsPageComponent.dart';
 
 class DefaultHomePage extends StatefulWidget {
-  const DefaultHomePage({Key key}) : super(key: key);
+  const DefaultHomePage({Key? key}) : super(key: key);
 
   @override
   _DefaultHomePageState createState() => _DefaultHomePageState();

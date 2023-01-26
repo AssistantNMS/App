@@ -72,7 +72,11 @@ Widget weekendMissionWiki(BuildContext context) {
 }
 
 Widget weekendMissionSeasonTile(
-    Widget imageWidget, String message, String author, Function ontap) {
+  Widget imageWidget,
+  String message,
+  String author,
+  void Function() ontap,
+) {
   return InkWell(
     child: Stack(children: [
       SizedBox(

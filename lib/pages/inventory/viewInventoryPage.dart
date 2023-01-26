@@ -21,7 +21,7 @@ import 'addEditInventoryPage.dart';
 
 class ViewInventoryListPage extends StatefulWidget {
   final String inventoryUuid;
-  const ViewInventoryListPage(this.inventoryUuid, {Key key}) : super(key: key);
+  const ViewInventoryListPage(this.inventoryUuid, {Key? key}) : super(key: key);
 
   @override
   _ViewInventoryListState createState() =>
@@ -80,7 +80,7 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
           ActionItem(
             icon: Icons.edit,
             onPressed: () async {
-              Inventory temp = await getNavigation().navigateAsync<Inventory>(
+              Inventory? temp = await getNavigation().navigateAsync<Inventory>(
                 context,
                 navigateTo: (context) => AddEditInventoryPage(inventory, true),
               );
@@ -100,7 +100,7 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
                 context,
                 controller,
                 onSuccess: (BuildContext ctx, String quantity) {
-                  int intQuantity = int.tryParse(quantity);
+                  int? intQuantity = int.tryParse(quantity);
                   if (intQuantity == null) return;
                   slot.quantity = intQuantity;
                   vm.editInventorySlotInInventory(inventory.uuid, slot);
@@ -118,7 +118,7 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
         ),
         fab: FloatingActionButton(
           onPressed: () async {
-            GenericPageItem temp =
+            GenericPageItem? temp =
                 await getNavigation().navigateAsync<GenericPageItem>(
               context,
               navigateTo: (context) => SelectGenericItemPage(inventory.name),
@@ -129,10 +129,10 @@ class _ViewInventoryListState extends State<ViewInventoryListPage> {
                 title: '', onSuccess: (BuildContext ctx, String quantity) {
               if (quantity == '') return;
 
-              int quantityInt = int.tryParse(quantity);
+              int? quantityInt = int.tryParse(quantity);
               InventorySlot inv = InventorySlot(
                 id: temp.id,
-                quantity: quantityInt,
+                quantity: quantityInt ?? 1,
               );
 
               vm.addInventorySlotToInventory(inventory.uuid, inv);

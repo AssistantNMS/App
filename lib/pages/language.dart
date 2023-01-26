@@ -6,7 +6,7 @@ import '../constants/AnalyticsEvent.dart';
 import '../constants/NmsExternalUrls.dart';
 
 class Language extends StatelessWidget {
-  Language({Key key}) : super(key: key) {
+  Language({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.languageHelpPage);
   }
 

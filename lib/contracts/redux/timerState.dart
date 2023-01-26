@@ -8,7 +8,7 @@ class TimerState {
   final List<TimerItem> timers;
 
   const TimerState({
-    this.timers,
+    required this.timers,
   });
 
   factory TimerState.initial() {
@@ -16,12 +16,12 @@ class TimerState {
   }
 
   TimerState copyWith({
-    List<TimerItem> timers,
+    List<TimerItem>? timers,
   }) {
     return TimerState(timers: timers ?? this.timers);
   }
 
-  factory TimerState.fromJson(Map<String, dynamic> json) {
+  factory TimerState.fromJson(Map<String, dynamic>? json) {
     if (json == null) return TimerState.initial();
     try {
       return TimerState(

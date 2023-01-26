@@ -11,10 +11,10 @@ import '../../helpers/catalogueHelper.dart';
 import '../../helpers/updateHelper.dart';
 
 class CatalogueHomepage extends StatefulWidget {
-  const CatalogueHomepage({Key key}) : super(key: key);
+  const CatalogueHomepage({Key? key}) : super(key: key);
 
   @override
-  _CatalogueHomeWidget createState() => _CatalogueHomeWidget();
+  createState() => _CatalogueHomeWidget();
 }
 
 class _CatalogueHomeWidget extends State<CatalogueHomepage>

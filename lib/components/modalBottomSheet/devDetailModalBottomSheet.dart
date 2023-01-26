@@ -8,7 +8,7 @@ import '../../integration/dependencyInjection.dart';
 
 class DevDetailBottomSheet extends StatefulWidget {
   final String itemId;
-  const DevDetailBottomSheet(this.itemId, {Key key}) : super(key: key);
+  const DevDetailBottomSheet(this.itemId, {Key? key}) : super(key: key);
 
   @override
   _DevDetailBottomSheetWidget createState() =>
@@ -27,7 +27,7 @@ class _DevDetailBottomSheetWidget extends State<DevDetailBottomSheet> {
       future: getDataRepo().getDevDetails(context, itemId),
       builder: (BuildContext futureContext,
           AsyncSnapshot<ResultWithValue<DevDetail>> snapshot) {
-        Widget errorWidget = asyncSnapshotHandler(
+        Widget? errorWidget = asyncSnapshotHandler(
           futureContext,
           snapshot,
         );
@@ -53,15 +53,18 @@ class _DevDetailBottomSheetWidget extends State<DevDetailBottomSheet> {
           () => customDivider(),
         ];
 
-        for (DevProperty prop in snapshot.data.value.properties) {
-          if (prop.value == null || prop.value.isEmpty) continue;
-          widgets.add(() => titleFunc(prop.name));
-          widgets.add(() => bodyFunc(prop.value));
-          // widgets.addAll([
-          //   () => titleFunc(prop.name),
-          //   () => bodyFunc(prop.value),
-          // ]);
-          widgets.add(() => customDivider());
+        ResultWithValue<DevDetail>? detail = snapshot.data;
+        if (detail != null) {
+          for (DevProperty prop in detail.value.properties) {
+            if (prop.value.isEmpty) continue;
+            widgets.add(() => titleFunc(prop.name));
+            widgets.add(() => bodyFunc(prop.value));
+            // widgets.addAll([
+            //   () => titleFunc(prop.name),
+            //   () => bodyFunc(prop.value),
+            // ]);
+            widgets.add(() => customDivider());
+          }
         }
         widgets.add(() => emptySpace8x());
 

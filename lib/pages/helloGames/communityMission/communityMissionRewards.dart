@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/common/image.dart';
@@ -18,15 +19,15 @@ class CommunityMissionRewards extends StatelessWidget {
   final int totalTiers;
   final int currentTier;
   final int currentTierPercentage;
-  final QuicksilverStore qsStore;
+  final QuicksilverStore? qsStore;
   final CommunityMissionStatus status;
-  final List<RequiredItemDetails> itemDetails;
-  final List<RequiredItemDetails> requiredItemDetails;
+  final List<RequiredItemDetails>? itemDetails;
+  final List<RequiredItemDetails>? requiredItemDetails;
 
   const CommunityMissionRewards(
     this.missionId,
     this.status, {
-    Key key,
+    Key? key,
     this.totalTiers = 0,
     this.currentTier =
         100, // So that all items displayed in Community mission pages have colour unless it is the current mission
@@ -44,16 +45,24 @@ class CommunityMissionRewards extends StatelessWidget {
         builder: getBody,
       );
     }
-    return getBodyInternal(context, qsStore, itemDetails, requiredItemDetails);
+    return getBodyInternal(
+      context,
+      qsStore!,
+      itemDetails!,
+      requiredItemDetails,
+    );
   }
 
-  Widget getBody(BuildContext bodyContext,
-      AsyncSnapshot<ResultWithValue<QuicksilverStoreDetails>> snapshot) {
-    Widget errorWidget = asyncSnapshotHandler(bodyContext, snapshot,
-        isValidFunction: (ResultWithValue<QuicksilverStoreDetails> data) {
-      if (snapshot.data.value == null ||
-          snapshot.data.value.items == null ||
-          snapshot.data.value.store.missionId == null) {
+  Widget getBody(
+    BuildContext bodyContext,
+    AsyncSnapshot<ResultWithValue<QuicksilverStoreDetails>> snapshot,
+  ) {
+    Widget? errorWidget = asyncSnapshotHandler(bodyContext, snapshot,
+        isValidFunction: (ResultWithValue<QuicksilverStoreDetails>? data) {
+      if (snapshot.data == null ||
+          snapshot.data?.value == null ||
+          snapshot.data?.value.items == null ||
+          snapshot.data?.value.store.missionId == null) {
         return false;
       }
       return true;
@@ -61,9 +70,9 @@ class CommunityMissionRewards extends StatelessWidget {
     if (errorWidget != null) return errorWidget;
     return getBodyInternal(
       bodyContext,
-      snapshot.data.value.store,
-      snapshot.data.value.items,
-      snapshot.data.value.itemsRequired,
+      snapshot.data!.value.store,
+      snapshot.data!.value.items,
+      snapshot.data!.value.itemsRequired,
     );
   }
 
@@ -71,7 +80,7 @@ class CommunityMissionRewards extends StatelessWidget {
     BuildContext internalContext,
     QuicksilverStore qsStore,
     List<RequiredItemDetails> itemDetails,
-    List<RequiredItemDetails> requiredItemDetails,
+    List<RequiredItemDetails>? requiredItemDetails,
   ) {
     List<Widget> widgets = List.empty(growable: true);
     bool tiersAreValid = totalTiers <= 0 || totalTiers == qsStore.items.length;
@@ -97,10 +106,9 @@ class CommunityMissionRewards extends StatelessWidget {
           }
         }
 
-        for (RequiredItemDetails itemDetails in itemDetails ?? List.empty()) {
-          QuicksilverStoreItem itemFound = qsStore.items.firstWhere(
+        for (RequiredItemDetails itemDetails in itemDetails) {
+          QuicksilverStoreItem? itemFound = qsStore.items.firstWhereOrNull(
             (item) => item.itemId == itemDetails.id,
-            orElse: () => null,
           );
           if (itemFound == null) continue;
 

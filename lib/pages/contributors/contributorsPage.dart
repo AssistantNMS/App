@@ -10,7 +10,7 @@ import '../../contracts/generated/contributorViewModel.dart';
 import '../../integration/dependencyInjection.dart';
 
 class ContributorsPage extends StatefulWidget {
-  const ContributorsPage({Key key}) : super(key: key);
+  const ContributorsPage({Key? key}) : super(key: key);
 
   @override
   _ContributorsWidget createState() => _ContributorsWidget();

@@ -19,7 +19,7 @@ import '../../redux/modules/portal/portalViewModel.dart';
 class AddPortalPage extends StatefulWidget {
   final bool isEdit;
   final PortalRecord item;
-  const AddPortalPage(this.item, {Key key, this.isEdit = false})
+  const AddPortalPage(this.item, {Key? key, this.isEdit = false})
       : super(key: key);
 
   @override
@@ -27,25 +27,23 @@ class AddPortalPage extends StatefulWidget {
 }
 
 class _PortalPageState extends State<AddPortalPage> {
-  String validationMessage;
+  String? validationMessage;
   PortalRecord item;
   final bool isEdit;
-  bool disableEditBtns;
-  bool useAltGlyphs;
-  String _hexString;
-  TextEditingController _hexCoordController;
+  late bool disableEditBtns;
+  String? _hexString;
+  late TextEditingController _hexCoordController;
+
+  _PortalPageState(this.item, {this.isEdit = false}) {
+    getAnalytics().trackEvent(AnalyticsEvent.addPortalPage);
+    disableEditBtns = !isEdit;
+  }
 
   @override
   void initState() {
     super.initState();
     _hexString = allUpperCase(intArrayToHex(item.codes));
     _hexCoordController = TextEditingController(text: _hexString);
-  }
-
-  _PortalPageState(this.item, {this.isEdit = false}) {
-    getAnalytics().trackEvent(AnalyticsEvent.addPortalPage);
-    disableEditBtns = !isEdit;
-    useAltGlyphs = true;
   }
 
   _addCode(int code) {
@@ -59,7 +57,7 @@ class _PortalPageState extends State<AddPortalPage> {
   }
 
   _setCode(List<int> codes) {
-    if (codes.length > 12) codes = codes.take(12);
+    if (codes.length > 12) codes = codes.take(12).toList();
     setState(() {
       item = item.copyWith(codes: codes);
       if (item.codes.isNotEmpty) disableEditBtns = false;
@@ -133,11 +131,11 @@ class _PortalPageState extends State<AddPortalPage> {
     );
   }
 
-  Widget getFab(BuildContext fabCtx) {
+  Widget? getFab(BuildContext fabCtx) {
     if (item.codes.length != 12) return null;
     String name = (item.name == null)
         ? getTranslations().fromKey(LocaleKey.newPortalEntry)
-        : item.name;
+        : item.name!;
 
     return FloatingActionButton(
       onPressed: () async {
@@ -218,7 +216,7 @@ class _PortalPageState extends State<AddPortalPage> {
                     ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.red[400]),
+                            MaterialStateProperty.all<Color>(Colors.red[400]!),
                       ),
                       onPressed: disableEditBtns
                           ? null
@@ -233,7 +231,7 @@ class _PortalPageState extends State<AddPortalPage> {
                     ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.red[800]),
+                            MaterialStateProperty.all<Color>(Colors.red[800]!),
                       ),
                       onPressed: disableEditBtns
                           ? null
@@ -289,7 +287,7 @@ class _PortalPageState extends State<AddPortalPage> {
           var availableTags = portalViewModel.availableTags
               .where((at) => !item.tags.contains(at))
               .toList();
-          String temp = await getNavigation().navigateAsync(
+          String? temp = await getNavigation().navigateAsync(
             bodyCtx,
             navigateTo: (_) => OptionsListPageDialog(
               'Tags',

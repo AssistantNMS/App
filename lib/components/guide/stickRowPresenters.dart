@@ -57,8 +57,12 @@ Widget nmsLinkListItem(NmsGuideSectionItem item) {
   );
 }
 
-Widget nmsImageListItem(context, NmsGuideSectionItem item, String folder) {
-  bool isNetworkImage = (item.image == null || item.image.isEmpty);
+Widget nmsImageListItem(
+  context,
+  NmsGuideSectionItem item,
+  String folder,
+) {
+  bool isNetworkImage = (item.image.isEmpty);
 
   String imagePath = 'guide.png';
   if (isNetworkImage) {
@@ -73,7 +77,7 @@ Widget nmsImageListItem(context, NmsGuideSectionItem item, String folder) {
 
   return GestureDetector(
     child: flatCard(
-      child: (item.image == null || item.image.isEmpty)
+      child: item.image.isEmpty //
           ? networkImage(imagePath)
           : guideImage(imagePath),
     ),

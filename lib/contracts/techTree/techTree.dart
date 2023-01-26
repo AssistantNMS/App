@@ -17,20 +17,23 @@ class TechTree {
   List<TechTreeNode> children;
 
   TechTree({
-    this.id,
-    this.name,
-    this.costType,
-    this.children,
+    required this.id,
+    required this.name,
+    required this.costType,
+    required this.children,
   });
 
   factory TechTree.fromRawJson(String str) =>
       TechTree.fromJson(json.decode(str));
 
-  factory TechTree.fromJson(Map<String, dynamic> json) => TechTree(
+  factory TechTree.fromJson(Map<String, dynamic>? json) => TechTree(
         id: readStringSafe(json, 'Id'),
         name: readStringSafe(json, 'Name'),
-        costType: currencyTypeValues.map[readStringSafe(json, 'CostType')],
-        children: List<TechTreeNode>.from(
-            json['Children'].map((x) => TechTreeNode.fromJson(x))),
+        costType: currencyTypeValues.map[readStringSafe(json, 'CostType')]!,
+        children: readListSafe(
+          json,
+          'Children',
+          (x) => TechTreeNode.fromJson(x),
+        ),
       );
 }

@@ -8,13 +8,13 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class TitleData {
   TitleData({
-    this.id,
-    this.title,
-    this.description,
-    this.appId,
-    this.appIcon,
-    this.appName,
-    this.unlockedByStatValue,
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.appId,
+    required this.appIcon,
+    required this.appName,
+    required this.unlockedByStatValue,
   });
 
   String id;
@@ -28,7 +28,7 @@ class TitleData {
   factory TitleData.fromRawJson(String str) =>
       TitleData.fromJson(json.decode(str));
 
-  factory TitleData.fromJson(Map<String, dynamic> json) => TitleData(
+  factory TitleData.fromJson(Map<String, dynamic>? json) => TitleData(
         id: readStringSafe(json, 'Id'),
         title: readStringSafe(json, 'Title'),
         description: readStringSafe(json, 'Description'),

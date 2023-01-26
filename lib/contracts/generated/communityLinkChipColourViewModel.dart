@@ -8,8 +8,8 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class CommunityLinkChipColourViewModel {
   CommunityLinkChipColourViewModel({
-    this.name,
-    this.colour,
+    required this.name,
+    required this.colour,
   });
 
   String name;
@@ -19,7 +19,7 @@ class CommunityLinkChipColourViewModel {
       CommunityLinkChipColourViewModel.fromJson(json.decode(str));
 
   factory CommunityLinkChipColourViewModel.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic>? json) =>
       CommunityLinkChipColourViewModel(
         name: readStringSafe(json, 'name'),
         colour: readStringSafe(json, 'colour'),

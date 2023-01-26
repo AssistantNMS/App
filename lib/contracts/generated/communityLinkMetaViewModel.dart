@@ -7,8 +7,8 @@ import 'communityLinkViewModel.dart';
 
 class CommunityLinkMetaViewModel {
   CommunityLinkMetaViewModel({
-    this.items,
-    this.chipColours,
+    required this.items,
+    required this.chipColours,
   });
 
   List<CommunityLinkViewModel> items;

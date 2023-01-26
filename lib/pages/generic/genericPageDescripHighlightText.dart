@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';
@@ -15,7 +16,8 @@ const String offWhiteColourClass = 'F5F5F5';
 const String orangeColourClass = 'F3A923';
 const String redColourClass = 'C03022';
 
-String getColourValueFromTag(String tag) {
+String getColourValueFromTag(String? tag) {
+  if (tag == null) return '';
   switch (tag.toUpperCase()) {
     case 'IMG':
       return redColourClass;
@@ -54,20 +56,20 @@ String getColourValueFromTag(String tag) {
 }
 
 InlineSpan renderNode(BuildContext context, String colour, String wordChain) {
-  TextStyle textStyle = (colour != null && colour.length == 6)
+  TextStyle? textStyle = (colour.length == 6) //
       ? TextStyle(color: HexColor(colour))
       : null;
 
   return TextSpan(text: wordChain, style: textStyle);
 }
 
-Widget textWithHighlightTags(
+RichText textWithHighlightTags(
   BuildContext context,
   String text,
   List<PlatformControlMapping> controlLookup, {
   TextAlign textAlign = TextAlign.center,
-  TextStyle textStyle,
-  int maxLines,
+  TextStyle? textStyle,
+  int? maxLines,
 }) {
   RegExp doubleTagRegex = RegExp(r'<\w+>(<\w+>(\w+\s*)*<>)<>');
   RegExp tagStartRegex = RegExp(r'(.*)<(\w+)>(.*)');
@@ -79,7 +81,7 @@ Widget textWithHighlightTags(
     String wordChain = '';
     List<String> words = text.split(' ');
     for (int wordIndex = 0; wordIndex < words.length; wordIndex++) {
-      String word = words[wordIndex];
+      String? word = words[wordIndex];
       String displayWord = word;
       String localTag = '<unused>';
       String leftOverDisplayWordFront = '';
@@ -87,33 +89,28 @@ Widget textWithHighlightTags(
 
       List<RegExpMatch> doubleMatches =
           doubleTagRegex.allMatches(word).toList();
-      if (doubleMatches != null &&
-          doubleMatches.isNotEmpty &&
-          doubleMatches[0].groupCount > 0) {
+      if (doubleMatches.isNotEmpty && doubleMatches[0].groupCount > 0) {
         word = doubleMatches[0].group(1);
       }
 
-      List<RegExpMatch> startMatches = tagStartRegex.allMatches(word).toList();
-      if (startMatches != null &&
-          startMatches.length == 1 &&
-          startMatches[0].groupCount == 3) {
-        leftOverDisplayWordFront = startMatches[0].group(1);
-        displayWord = startMatches[0].group(3);
-        localTag = '<' + startMatches[0].group(2) + '>';
+      List<RegExpMatch> startMatches =
+          tagStartRegex.allMatches(word ?? '').toList();
+      if (startMatches.length == 1 && startMatches[0].groupCount == 3) {
+        leftOverDisplayWordFront = startMatches[0].group(1) ?? '';
+        displayWord = startMatches[0].group(3) ?? '';
+        localTag = '<' + (startMatches[0].group(2) ?? '') + '>';
         currentColourValue = getColourValueFromTag(startMatches[0].group(2));
       }
 
-      List<RegExpMatch> endMatches = tagEndRegex.allMatches(word).toList();
-      bool hasEndMatch = endMatches != null &&
-          endMatches.length == 1 &&
-          endMatches[0].groupCount >= 2;
+      List<RegExpMatch> endMatches =
+          tagEndRegex.allMatches(word ?? '').toList();
+      bool hasEndMatch =
+          endMatches.length == 1 && endMatches[0].groupCount >= 2;
       if (hasEndMatch) {
         displayWord = (endMatches[0].group(1) ?? '').replaceAll(localTag, '');
       }
-      if (endMatches != null &&
-          endMatches.length == 1 &&
-          endMatches[0].groupCount >= 2) {
-        leftOverDisplayWord = endMatches[0].group(2) + ' ';
+      if (endMatches.length == 1 && endMatches[0].groupCount >= 2) {
+        leftOverDisplayWord = (endMatches[0].group(2) ?? '') + ' ';
       }
 
       if (localTag == '<AUDIO>') {
@@ -132,19 +129,15 @@ Widget textWithHighlightTags(
           String lookupKey =
               displayWord.replaceAll('(', '').replaceAll(')', '');
           String imagePath = AppImage.controlUnknown;
-          PlatformControlMapping lookupResult = controlLookup
-              .firstWhere((cl) => cl.key == lookupKey, orElse: () => null);
-          if (lookupResult == null ||
-              lookupResult.icon == null ||
-              lookupResult.icon.isEmpty) {
-            lookupResult = controlLookup.firstWhere(
-                (cl) => cl.key.contains(lookupKey),
-                orElse: () => null);
+          PlatformControlMapping? lookupResult =
+              controlLookup.firstWhereOrNull((cl) => cl.key == lookupKey);
+          if (lookupResult == null || lookupResult.icon.isEmpty) {
+            lookupResult = controlLookup.firstWhereOrNull(
+              (cl) => cl.key.contains(lookupKey),
+            );
           }
 
-          if (lookupResult != null &&
-              lookupResult.icon != null &&
-              lookupResult.icon.isNotEmpty) {
+          if (lookupResult != null && lookupResult.icon.isNotEmpty) {
             imagePath = '${AppImage.controls}${lookupResult.icon}';
           }
           nodes.add(WidgetSpan(

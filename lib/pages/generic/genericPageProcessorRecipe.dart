@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
@@ -21,7 +23,7 @@ import 'genericPage.dart';
 class GenericPageProcessorRecipe extends StatelessWidget {
   final Processor processor;
 
-  GenericPageProcessorRecipe(this.processor, {Key key}) : super(key: key) {
+  GenericPageProcessorRecipe(this.processor, {Key? key}) : super(key: key) {
     String key = '${AnalyticsEvent.processorRecipePage}: ${processor.id}';
     getAnalytics().trackEvent(key);
   }
@@ -51,8 +53,8 @@ class GenericPageProcessorRecipe extends StatelessWidget {
 
   Widget getBody(BuildContext context, FavouriteViewModel vm,
       AsyncSnapshot<ResultWithValue<ProcessorRecipePageData>> snapshot) {
-    Widget errorWidget = asyncSnapshotHandler(context, snapshot,
-        isValidFunction: (ResultWithValue<ProcessorRecipePageData> data) {
+    Widget? errorWidget = asyncSnapshotHandler(context, snapshot,
+        isValidFunction: (ResultWithValue<ProcessorRecipePageData>? data) {
       if (data == null ||
           data.value == null ||
           data.value.inputsDetails == null ||
@@ -70,19 +72,25 @@ class GenericPageProcessorRecipe extends StatelessWidget {
     if (errorWidget != null) return errorWidget;
 
     List<Widget> widgets = List.empty(growable: true);
-    var output = snapshot.data.value.outputDetail;
+    var output = snapshot.data!.value.outputDetail;
     GestureDetector Function(Widget child) gestureDetector;
     gestureDetector = (Widget child) => GestureDetector(
           child: child,
           onTap: () async => await getNavigation().navigateAsync(context,
               navigateTo: (context) => GenericPage(output.id)),
         );
-    Color iconColour = getOverlayColour(HexColor(output.colour));
+    Color iconColour = getOverlayColour(HexColor(output.colour ?? '#000'));
     widgets.add(Stack(
       children: [
         genericItemImage(context, output.icon, hdAvailable: true),
-        getFavouriteStar(output.icon, snapshot.data.value.procId, vm.favourites,
-            iconColour, vm.addFavourite, vm.removeFavourite)
+        getFavouriteStar(
+          output.icon,
+          snapshot.data!.value.procId,
+          vm.favourites,
+          iconColour,
+          vm.addFavourite,
+          vm.removeFavourite,
+        )
       ],
     ));
     if (output.quantity > 1) {
@@ -124,7 +132,7 @@ class GenericPageProcessorRecipe extends StatelessWidget {
         : getTranslations().fromKey(LocaleKey.ingredients);
     widgets.add(genericItemText(inputsIngredientsLocale));
 
-    for (var input in snapshot.data.value.inputsDetails) {
+    for (var input in snapshot.data!.value.inputsDetails) {
       widgets.add(
         Card(
           child: genericListTile(
@@ -141,7 +149,7 @@ class GenericPageProcessorRecipe extends StatelessWidget {
       );
     }
 
-    var otherRefinersArray = snapshot.data.value.similarRefiners
+    var otherRefinersArray = snapshot.data!.value.similarRefiners
         .where((sf) => sf.id != processor.id)
         .toList();
     if (otherRefinersArray.isNotEmpty) {
@@ -163,15 +171,10 @@ class GenericPageProcessorRecipe extends StatelessWidget {
 
     widgets.add(emptySpace8x());
 
-    return Column(
-      children: [
-        Expanded(
-          child: listWithScrollbar(
-            itemCount: widgets.length,
-            itemBuilder: (context, index) => widgets[index],
-          ),
-        ),
-      ],
+    return listWithScrollbar(
+      itemCount: widgets.length,
+      itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

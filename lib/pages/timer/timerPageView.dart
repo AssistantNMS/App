@@ -15,7 +15,8 @@ class TimersPageView extends StatefulWidget {
   final List<TimerItem> timers;
   final void Function(TimerItem) editTimer;
   final void Function(String) deleteTimer;
-  const TimersPageView(this.timers, this.editTimer, this.deleteTimer, {Key key})
+  const TimersPageView(this.timers, this.editTimer, this.deleteTimer,
+      {Key? key})
       : super(key: key);
 
   @override
@@ -24,24 +25,25 @@ class TimersPageView extends StatefulWidget {
 }
 
 class _TimersPageViewState extends State<TimersPageView> {
-  Timer _timer;
+  Timer? _timer;
   final List<TimerItem> timers;
   final void Function(TimerItem) editTimer;
   final void Function(String) deleteTimer;
+
   _TimersPageViewState(this.timers, this.editTimer, this.deleteTimer) {
     initTimer();
   }
 
-  initTimer({TimerItem newTimer}) {
-    if (_timer != null && _timer.isActive) _timer.cancel();
+  initTimer({TimerItem? newTimer}) {
+    if (_timer != null && _timer!.isActive) _timer!.cancel();
     _timer = Timer.periodic(AppDuration.timerPageRefreshInterval, (Timer t) {
       var hasValidTimers = timers.any(
         (t) => t.completionDate.isAfter(DateTime.now()),
       );
-      var newTimerIsNotValid =
-          newTimer == null || newTimer.completionDate.isBefore(DateTime.now());
+      var newTimerIsNotValid = newTimer == null ||
+          (newTimer.completionDate.isBefore(DateTime.now()));
       if (hasValidTimers == false && newTimerIsNotValid == true) {
-        if (_timer != null && _timer.isActive) _timer.cancel();
+        if (_timer != null && _timer!.isActive) _timer!.cancel();
       }
       setState(() {});
     });
@@ -49,7 +51,7 @@ class _TimersPageViewState extends State<TimersPageView> {
 
   @override
   Widget build(BuildContext context) {
-    if (timers == null || timers.isEmpty) {
+    if (timers.isEmpty) {
       return listWithScrollbar(
         itemCount: 1,
         itemBuilder: (context, index) => Container(
@@ -61,16 +63,19 @@ class _TimersPageViewState extends State<TimersPageView> {
           ),
           margin: const EdgeInsets.only(top: 30),
         ),
+        scrollController: ScrollController(),
       );
     }
 
     Function(TimerItem) onEdit;
     onEdit = (TimerItem currentItem) async {
-      TimerItem temp = await getNavigation().navigateAsync<TimerItem>(
+      TimerItem? temp = await getNavigation().navigateAsync<TimerItem>(
         context,
         navigateTo: (context) => AddEditTimerPage(currentItem, false),
       );
-      if (temp == null || temp is! TimerItem) return;
+      if (temp == null) return;
+      if (temp.name == null) return;
+
       editTimer(temp);
       await getLocalNotification()
           .removeScheduledTimerNotification(temp.notificationId);
@@ -78,16 +83,15 @@ class _TimersPageViewState extends State<TimersPageView> {
         temp.completionDate,
         temp.notificationId,
         getTranslations().fromKey(LocaleKey.timerComplete),
-        temp.name,
+        temp.name!,
       );
       initTimer(newTimer: temp);
     };
 
-    ListItemDisplayerType<TimerItem> presenter;
-    presenter = (
+    presenter(
       BuildContext presenterContext,
       TimerItem timer, {
-      void Function() onTap,
+      void Function()? onTap,
     }) =>
         timerTilePresenter(
             presenterContext, timer, onEdit, (String id) => deleteTimer(id));
@@ -105,7 +109,7 @@ class _TimersPageViewState extends State<TimersPageView> {
 
   @override
   void dispose() {
-    if (_timer != null && _timer.isActive) _timer.cancel();
+    if (_timer != null && _timer!.isActive) _timer!.cancel();
     super.dispose();
   }
 }

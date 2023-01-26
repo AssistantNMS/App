@@ -1,7 +1,7 @@
 import 'cartItem.dart';
 
 class Cart {
-  List<CartItem> cartItems;
+  late List<CartItem> cartItems;
 
   Cart() {
     cartItems = List.empty(growable: true);

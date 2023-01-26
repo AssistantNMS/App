@@ -40,7 +40,7 @@ Widget captainSteveTile(BuildContext context) =>
     );
 
 Widget captainSteveYoutubeVideoTile(BuildContext context, String link,
-        {String subtitle}) =>
+        {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
       leadingImage: localImage(
@@ -53,7 +53,7 @@ Widget captainSteveYoutubeVideoTile(BuildContext context, String link,
       onTap: () => launchExternalURL(link),
     );
 
-Widget podcast1616PlaylistTile(BuildContext context, {String subtitle}) =>
+Widget podcast1616PlaylistTile(BuildContext context, {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
       leadingImage: localImage(
@@ -66,7 +66,7 @@ Widget podcast1616PlaylistTile(BuildContext context, {String subtitle}) =>
       onTap: () => launchExternalURL(NmsExternalUrls.podacst1616Youtube),
     );
 
-Widget cyberpunk2350Tile(BuildContext context, {String subtitle}) =>
+Widget cyberpunk2350Tile(BuildContext context, {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
       leadingImage: localImage(
@@ -117,7 +117,7 @@ Widget nmsHomeTile(BuildContext context) =>
       onTap: () => launchExternalURL(NmsExternalUrls.noMansSkyWebsite),
     );
 
-Widget veritasVelezTile(BuildContext context, {String subtitle}) =>
+Widget veritasVelezTile(BuildContext context, {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
       leadingImage: localImage(
@@ -131,7 +131,7 @@ Widget veritasVelezTile(BuildContext context, {String subtitle}) =>
       onTap: () => launchExternalURL(NmsExternalUrls.veritasVelezTwitter),
     );
 
-Widget nomNomDownloadTile(BuildContext context, {String subtitle}) =>
+Widget nomNomDownloadTile(BuildContext context, {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
       leadingImage: localImage(
@@ -145,9 +145,8 @@ Widget nomNomDownloadTile(BuildContext context, {String subtitle}) =>
     );
 
 Widget nomNomOpenSyncModalTile(
-  BuildContext context,
-  bool isPatron, {
-  String subtitle,
+  BuildContext context, {
+  String? subtitle,
 }) {
   return genericListTileWithSubtitle(
     context,

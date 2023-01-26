@@ -5,7 +5,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import '../constants/ApiUrls.dart';
 import '../constants/AppConfig.dart';
 import '../contracts/generated/addFriendCodeViewModel.dart';
-import '../contracts/generated/feedbackAnsweredViewModel.dart';
 import '../contracts/generated/friendCodeViewModel.dart';
 import '../contracts/generated/nomNomInventoryViewModel.dart';
 import '../contracts/generated/stripeDonationViewModel.dart';
@@ -17,7 +16,7 @@ class AppApi extends BaseApiService {
 
   Future<ResultWithValue<String>> stripeCharge(
       String token, double amount) async {
-    StripeDonationViewModel vm = StripeDonationViewModel();
+    StripeDonationViewModel vm = StripeDonationViewModel.fromRawJson('{}');
     vm.amount = amount;
     vm.token = token;
     vm.currency = AppConfig.stripeCurrencyCode;
@@ -28,19 +27,6 @@ class AppApi extends BaseApiService {
     } catch (exception) {
       getLog().e("stripeCharge Exception: ${exception.toString()}");
       return ResultWithValue<String>(false, '', exception.toString());
-    }
-  }
-
-  Future<Result> sendFeedbackForm(FeedbackAnsweredViewModel vm) async {
-    try {
-      final response = await apiPost(ApiUrls.feedback, vm.toRawJson());
-      if (response.hasFailed) {
-        return Result(false, response.errorMessage);
-      }
-      return Result(true, '');
-    } catch (exception) {
-      getLog().e("sendFeedbackForm Api Exception: ${exception.toString()}");
-      return Result(false, exception.toString());
     }
   }
 

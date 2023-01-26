@@ -4,5 +4,8 @@ class CartPageItem {
   int quantity;
   GenericPageItem details;
 
-  CartPageItem({this.quantity, this.details});
+  CartPageItem({
+    required this.quantity,
+    required this.details,
+  });
 }

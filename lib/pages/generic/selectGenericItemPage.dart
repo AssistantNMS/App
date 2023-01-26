@@ -15,14 +15,14 @@ import '../../redux/modules/generic/genericPageViewModel.dart';
 class SelectGenericItemPage extends StatelessWidget {
   final String title;
 
-  const SelectGenericItemPage(this.title, {Key key}) : super(key: key);
+  const SelectGenericItemPage(this.title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var hintText = getTranslations().fromKey(LocaleKey.searchItems);
     return basicGenericPageScaffold(
       context,
-      title: title ?? 'Unknown',
+      title: title,
       drawer: const AppDrawer(),
       body: StoreConnector<AppState, GenericPageViewModel>(
           converter: (store) => GenericPageViewModel.fromStore(store),
@@ -39,7 +39,7 @@ class SelectGenericItemPage extends StatelessWidget {
               () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),
               listItemDisplayer:
                   (BuildContext context, GenericPageItem genericPageItem,
-                          {void Function() onTap}) =>
+                          {void Function()? onTap}) =>
                       presenter(context, genericPageItem,
                           onTap: () => localOnTap(genericPageItem)),
               listItemSearch: search,

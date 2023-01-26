@@ -9,7 +9,11 @@ class IAlienPuzzleRewardsJsonRepository {
   }
 
   Future<ResultWithValue<AlienPuzzleReward>> getById(context, String id) async {
-    return ResultWithValue<AlienPuzzleReward>(false, AlienPuzzleReward(), '');
+    return ResultWithValue<AlienPuzzleReward>(
+      false,
+      AlienPuzzleReward.fromJson(<String, dynamic>{}),
+      '',
+    );
   }
 
   Future<ResultWithValue<List<AlienPuzzleReward>>> getByListOfIds(

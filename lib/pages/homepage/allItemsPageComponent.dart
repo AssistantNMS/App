@@ -13,7 +13,10 @@ import '../../redux/modules/generic/genericPageViewModel.dart';
 class AllItemsPageComponent extends StatelessWidget {
   final bool isHomePage;
 
-  const AllItemsPageComponent({Key key, this.isHomePage}) : super(key: key);
+  const AllItemsPageComponent({
+    Key? key,
+    required this.isHomePage,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

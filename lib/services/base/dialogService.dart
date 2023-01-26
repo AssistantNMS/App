@@ -8,10 +8,10 @@ class DialogService implements IDialogService {
   //
   @override
   void showSimpleDialog(
-    context,
+    BuildContext context,
     String title,
     Widget content, {
-    List<Widget> Function(BuildContext) buttonBuilder,
+    List<Widget> Function(BuildContext)? buttonBuilder,
   }) {
     showDialog(
       context: context,
@@ -30,10 +30,10 @@ class DialogService implements IDialogService {
 
   @override
   void showSimpleHelpDialog(
-    context,
+    BuildContext context,
     String title,
     String helpContent, {
-    List<Widget> Function(BuildContext) buttonBuilder,
+    List<Widget> Function(BuildContext)? buttonBuilder,
   }) {
     showSimpleDialog(
       context,
@@ -57,8 +57,8 @@ class DialogService implements IDialogService {
 
   @override
   Widget simpleDialogCloseButton(
-    context, {
-    Function onTap,
+    BuildContext context, {
+    void Function()? onTap,
   }) =>
       MaterialButton(
         child: Padding(
@@ -75,8 +75,8 @@ class DialogService implements IDialogService {
   @override
   Widget simpleDialogPositiveButton(
     context, {
-    LocaleKey title,
-    Function onTap,
+    LocaleKey? title,
+    void Function()? onTap,
   }) =>
       MaterialButton(
         child: Padding(
@@ -95,7 +95,7 @@ class DialogService implements IDialogService {
     String title,
     List<DropdownOption> options, {
     String selectedValue = '',
-    Function(BuildContext ctx, String value) onSuccess,
+    Function(BuildContext ctx, String value)? onSuccess,
   }) {
     void Function(BuildContext dialogCtx, String value) tempOnChange;
     tempOnChange = (BuildContext dialogCtx, String value) {
@@ -106,7 +106,7 @@ class DialogService implements IDialogService {
     showDialog(
       context: context,
       builder: (BuildContext dialogCtx) => AlertDialog(
-        title: Text(title ?? getTranslations().fromKey(LocaleKey.quantity)),
+        title: Text(title),
         content: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
@@ -132,9 +132,9 @@ class DialogService implements IDialogService {
   void showQuantityDialog(
     context,
     TextEditingController controller, {
-    String title,
-    List<int> amounts,
-    Function(BuildContext ctx, String) onSuccess,
+    String? title,
+    List<int>? amounts,
+    Function(BuildContext ctx, String)? onSuccess,
   }) {
     void onControllerTextChange(
       TextEditingController textEditController,
@@ -192,7 +192,9 @@ class DialogService implements IDialogService {
           buttonCtx,
           onTap: () {
             getNavigation().pop(buttonCtx);
-            onSuccess(buttonCtx, controller.text);
+            if (onSuccess != null) {
+              onSuccess(buttonCtx, controller.text);
+            }
           },
         ),
       ],
@@ -204,7 +206,7 @@ class DialogService implements IDialogService {
     context,
     String title, {
     int currentRating = 0,
-    Function(BuildContext ctx, int) onSuccess,
+    Function(BuildContext ctx, int)? onSuccess,
   }) {
     showDialog(
       context: context,
@@ -219,7 +221,9 @@ class DialogService implements IDialogService {
               currentRating,
               size: 64,
               onTap: (int value) {
-                onSuccess(dialogCtx, value);
+                if (onSuccess != null) {
+                  onSuccess(dialogCtx, value);
+                }
                 getNavigation().pop(dialogCtx);
               },
             ),
@@ -236,14 +240,15 @@ class DialogService implements IDialogService {
   Future<String> asyncInputDialog(
     BuildContext context,
     String title, {
-    String defaultText,
-    List<Widget> Function(BuildContext) buttonBuilder,
-    TextInputType inputType,
+    String? defaultText,
+    List<Widget> Function(BuildContext)? buttonBuilder,
+    TextInputType? inputType,
   }) async {
-    String output = '';
-    List<TextInputFormatter> inputFormatters = inputType == TextInputType.number
-        ? <TextInputFormatter>[FilteringTextInputFormatter.digitsOnly]
-        : null;
+    String? output;
+    List<TextInputFormatter>? inputFormatters =
+        inputType == TextInputType.number
+            ? <TextInputFormatter>[FilteringTextInputFormatter.digitsOnly]
+            : null;
 
     await showDialog<String>(
       context: context,
@@ -279,6 +284,6 @@ class DialogService implements IDialogService {
     );
 
     if (output == null) return '';
-    return output.isNotEmpty ? output : '';
+    return output!.isNotEmpty ? output! : '';
   }
 }

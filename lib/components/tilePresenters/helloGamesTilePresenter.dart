@@ -7,10 +7,10 @@ import '../../contracts/helloGames/releaseNote.dart';
 import '../../helpers/genericHelper.dart';
 
 Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release,
-    {void Function() onTap}) {
+    {void Function()? onTap}) {
   List<Widget> platformChips = List.empty(growable: true);
   if (release.isPc) {
-    platformChips.add(genericChip(context, "PC", color: Colors.red[400]));
+    platformChips.add(genericChip(context, "PC", color: Colors.red[400]!));
   }
   if (release.isPs4) {
     platformChips.add(genericChip(context, "PS4", color: Colors.blue));
@@ -25,8 +25,11 @@ Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release,
     platformChips.add(genericChip(context, "X/S", color: Colors.green));
   }
   if (release.isNsw) {
-    platformChips
-        .add(genericChip(context, "Nintendo Switch", color: Colors.red[900]));
+    platformChips.add(genericChip(
+      context,
+      "Nintendo Switch",
+      color: Colors.red[900]!,
+    ));
   }
   /*
   return genericListTileWithSubtitle(
@@ -75,7 +78,7 @@ Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release,
 }
 
 Widget newsItemTilePresenter(BuildContext context, NewsItem newsItem,
-    {void Function() onTap}) {
+    {void Function()? onTap}) {
   Widget image = networkImage(
     newsItem.image,
     loading: localImage('${getPath().imageAssetPathPrefix}/defaultNews.jpg'),

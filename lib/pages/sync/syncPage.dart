@@ -18,7 +18,7 @@ import '../../redux/modules/viewModel/syncPageViewModel.dart';
 import '../../services/base/fileService.dart';
 
 class SyncPage extends StatefulWidget {
-  const SyncPage({Key key}) : super(key: key);
+  const SyncPage({Key? key}) : super(key: key);
 
   @override
   _SyncWidget createState() => _SyncWidget();
@@ -43,7 +43,7 @@ class _SyncWidget extends State<SyncPage> {
 
   List<Widget> getGoogleDriveWidgets(BuildContext authCtx) {
     List<Widget> widgets = List.empty(growable: true);
-    User user = getFirebase().getCurrentUser();
+    User? user = getFirebase().getCurrentUser();
     if (user != null) {
       widgets.add(headingSettingTilePresenter(
         getTranslations().fromKey(LocaleKey.account),
@@ -53,15 +53,15 @@ class _SyncWidget extends State<SyncPage> {
           children: [
             ListTile(
               leading: ClipOval(
-                child: networkImage(user.photoURL, height: 50, width: 50),
+                child: networkImage(user.photoURL!, height: 50, width: 50),
               ),
               title: Text(
-                user.displayName,
+                user.displayName!,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
               subtitle: Text(
-                user.email,
+                user.email!,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -297,10 +297,7 @@ class _SyncWidget extends State<SyncPage> {
     ));
 
     widgets.add(flatCard(
-      child: nomNomOpenSyncModalTile(
-        context,
-        viewModel.isPatron,
-      ),
+      child: nomNomOpenSyncModalTile(context),
     ));
 
     // widgets.add(genericItemDescription(
@@ -318,6 +315,7 @@ class _SyncWidget extends State<SyncPage> {
       key: Key('counter: ${rebuildCounter.toString()}'),
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

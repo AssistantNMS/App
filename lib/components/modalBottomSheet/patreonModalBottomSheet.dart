@@ -12,11 +12,12 @@ import '../../helpers/themeHelper.dart';
 
 class PatreonModalBottomSheet extends StatelessWidget {
   final DateTime unlockDate;
-  final void Function(BuildContext dialogCtx) onTap;
-  final Future<void> Function(BuildContext dialogCtx) onSettingsTap;
+  final void Function(BuildContext dialogCtx)? onTap;
+  final Future<void> Function(BuildContext dialogCtx)? onSettingsTap;
+
   const PatreonModalBottomSheet({
-    Key key,
-    this.unlockDate,
+    Key? key,
+    required this.unlockDate,
     this.onTap,
     this.onSettingsTap,
   }) : super(key: key);
@@ -91,9 +92,10 @@ class PatreonModalBottomSheet extends StatelessWidget {
             context,
             title: getTranslations().fromKey(LocaleKey.settings),
             onPress: () async {
-              if (onSettingsTap != null) {
-                await onSettingsTap(context);
-              }
+              if (onSettingsTap == null) return;
+
+              await onSettingsTap!(context);
+
               await getNavigation().navigateAwayFromHomeAsync(
                 context,
                 navigateToNamed: Routes.settings,
@@ -130,9 +132,9 @@ class PatreonModalBottomSheet extends StatelessWidget {
 void handlePatreonBottomModalSheetWhenTapped(
   BuildContext navContext,
   bool isPatron, {
-  @required DateTime unlockDate,
-  @required void Function(BuildContext dialogCtx) onTap,
-  Future<void> Function(BuildContext dialogCtx) onSettingsTap,
+  required DateTime unlockDate,
+  required void Function(BuildContext dialogCtx) onTap,
+  Future<void> Function(BuildContext dialogCtx)? onSettingsTap,
 }) {
   bool isLocked = isPatreonFeatureLocked(unlockDate, isPatron);
   if (isLocked == false) {

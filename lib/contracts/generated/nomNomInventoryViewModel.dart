@@ -13,22 +13,22 @@ class NomNomInventoryViewModel {
   final List<NomNomInventorySlotViewModel> slots;
 
   NomNomInventoryViewModel({
-    this.name,
-    this.type,
-    this.subType,
-    this.slots,
+    required this.name,
+    required this.type,
+    required this.subType,
+    required this.slots,
   });
 
   factory NomNomInventoryViewModel.fromRawJson(String str) =>
       NomNomInventoryViewModel.fromJson(json.decode(str));
 
-  factory NomNomInventoryViewModel.fromJson(Map<String, dynamic> json) =>
+  factory NomNomInventoryViewModel.fromJson(Map<String, dynamic>? json) =>
       NomNomInventoryViewModel(
         name: readStringSafe(json, 'name'),
-        type:
-            nomNomInventoryTypeValues.map[readIntSafe(json, 'type').toString()],
+        type: nomNomInventoryTypeValues
+            .map[readIntSafe(json, 'type').toString()]!,
         subType: nomNomSubInventoryTypeValues
-            .map[readIntSafe(json, 'subType').toString()],
+            .map[readIntSafe(json, 'subType').toString()]!,
         slots: readListSafe<NomNomInventorySlotViewModel>(
           json,
           'slots',
@@ -42,14 +42,14 @@ class NomNomInventorySlotViewModel {
   final int quantity;
 
   NomNomInventorySlotViewModel({
-    this.appId,
-    this.quantity,
+    required this.appId,
+    required this.quantity,
   });
 
   factory NomNomInventorySlotViewModel.fromRawJson(String str) =>
       NomNomInventorySlotViewModel.fromJson(json.decode(str));
 
-  factory NomNomInventorySlotViewModel.fromJson(Map<String, dynamic> json) =>
+  factory NomNomInventorySlotViewModel.fromJson(Map<String, dynamic>? json) =>
       NomNomInventorySlotViewModel(
         appId: readStringSafe(json, 'appId'),
         quantity: readIntSafe(json, 'quantity'),

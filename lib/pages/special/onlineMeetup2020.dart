@@ -9,7 +9,7 @@ import '../../contracts/redux/appState.dart';
 import '../../redux/modules/setting/introViewModel.dart';
 
 class OnlineMeetup2020Page extends StatefulWidget {
-  const OnlineMeetup2020Page({Key key}) : super(key: key);
+  const OnlineMeetup2020Page({Key? key}) : super(key: key);
 
   @override
   _OnlineMeetup2020Widget createState() => _OnlineMeetup2020Widget();
@@ -47,103 +47,108 @@ class _OnlineMeetup2020Widget extends State<OnlineMeetup2020Page> {
         )
       ],
       body: StoreConnector<AppState, IntroViewModel>(
-          converter: (store) => IntroViewModel.fromStore(store),
-          builder: (_, introViewModel) {
-            String countdown = '';
-            var dateUtc = DateTime.now().toUtc();
+        converter: (store) => IntroViewModel.fromStore(store),
+        builder: (_, introViewModel) {
+          String countdown = '';
+          var dateUtc = DateTime.now().toUtc();
 
-            String onlineMeetupImage = AppImage.onlineMeetup1;
+          String onlineMeetupImage = AppImage.onlineMeetup1;
 
-            var today = DateTime.now();
-            var nmsOnlineMeetup2020Date = DateTime.utc(2020, 08, 14, 19, 0, 0);
-            var forceAdvert = today.year == nmsOnlineMeetup2020Date.year &&
-                today.month == nmsOnlineMeetup2020Date.month &&
-                today.day == nmsOnlineMeetup2020Date.day;
-            if (forceAdvert) {
-              final int difference =
-                  nmsOnlineMeetup2020Date.difference(dateUtc).inMinutes;
-              if (difference > 1) {
-                countdown += (difference / 60).floor().toString() + 'h ';
-                countdown += (difference % 60).floor().toString() + 'm';
-                onlineMeetupImage = AppImage.onlineMeetup2;
-              }
+          var today = DateTime.now();
+          var nmsOnlineMeetup2020Date = DateTime.utc(2020, 08, 14, 19, 0, 0);
+          var forceAdvert = today.year == nmsOnlineMeetup2020Date.year &&
+              today.month == nmsOnlineMeetup2020Date.month &&
+              today.day == nmsOnlineMeetup2020Date.day;
+          if (forceAdvert) {
+            final int difference =
+                nmsOnlineMeetup2020Date.difference(dateUtc).inMinutes;
+            if (difference > 1) {
+              countdown += (difference / 60).floor().toString() + 'h ';
+              countdown += (difference % 60).floor().toString() + 'm';
+              onlineMeetupImage = AppImage.onlineMeetup2;
             }
+          }
 
-            List<Widget> widgets = [
-              Stack(
-                children: [
-                  Container(
-                    child: GestureDetector(
-                      child: localImage(onlineMeetupImage,
-                          boxfit: BoxFit.fitWidth),
-                      onTap: () => launchExternalURL(
-                          NmsExternalUrls.proceduralTravellerYoutube),
-                    ),
-                    margin: const EdgeInsets.all(0),
+          List<Widget> widgets = [
+            Stack(
+              children: [
+                Container(
+                  child: GestureDetector(
+                    child:
+                        localImage(onlineMeetupImage, boxfit: BoxFit.fitWidth),
+                    onTap: () => launchExternalURL(
+                        NmsExternalUrls.proceduralTravellerYoutube),
                   ),
-                  Positioned.fill(
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        countdown,
-                        style:
-                            const TextStyle(color: Colors.black, fontSize: 32),
-                      ),
+                  margin: const EdgeInsets.all(0),
+                ),
+                Positioned.fill(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      countdown,
+                      style: const TextStyle(color: Colors.black, fontSize: 32),
                     ),
                   ),
-                ],
-              ),
-              Card(
-                child: genericListTileWithSubtitle(
-                  context,
-                  leadingImage: 'contributors/proceduralTraveller.jpg',
-                  name: 'Procedural Traveller',
-                  subtitle: const Text('Join the Discord Server!'),
-                  trailing: const Icon(Icons.open_in_new),
-                  onTap: () => launchExternalURL(
-                      NmsExternalUrls.proceduralTravellerDiscord),
-                ),
-              ),
-              _cardButton(
-                context,
-                'More Information',
-                displayVideo,
-                () => setState(() {
-                  displayVideo = !displayVideo;
-                }),
-              ),
-              if (displayVideo) ...[
-                _youtubeWidget,
-              ],
-              emptySpace1x(),
-              positiveButton(
-                context,
-                title: 'Continue',
-                onPress: () async =>
-                    await getNavigation().navigateHomeAsync(context),
-              ),
-              if (!forceAdvert) ...[
-                negativeButton(
-                  title: getTranslations().fromKey(LocaleKey.noticeReject),
-                  onPress: () async {
-                    // introViewModel.hideOnlineMeetup2020();
-                    await getNavigation().navigateHomeAsync(context);
-                  },
                 ),
               ],
-              emptySpace3x(),
-            ];
-            return listWithScrollbar(
-              shrinkWrap: true,
-              itemCount: widgets.length,
-              itemBuilder: (BuildContext context, int index) => widgets[index],
-            );
-          }),
+            ),
+            Card(
+              child: genericListTileWithSubtitle(
+                context,
+                leadingImage: 'contributors/proceduralTraveller.jpg',
+                name: 'Procedural Traveller',
+                subtitle: const Text('Join the Discord Server!'),
+                trailing: const Icon(Icons.open_in_new),
+                onTap: () => launchExternalURL(
+                    NmsExternalUrls.proceduralTravellerDiscord),
+              ),
+            ),
+            _cardButton(
+              context,
+              'More Information',
+              displayVideo,
+              () => setState(() {
+                displayVideo = !displayVideo;
+              }),
+            ),
+            if (displayVideo) ...[
+              _youtubeWidget,
+            ],
+            emptySpace1x(),
+            positiveButton(
+              context,
+              title: 'Continue',
+              onPress: () async =>
+                  await getNavigation().navigateHomeAsync(context),
+            ),
+            if (!forceAdvert) ...[
+              negativeButton(
+                title: getTranslations().fromKey(LocaleKey.noticeReject),
+                onPress: () async {
+                  // introViewModel.hideOnlineMeetup2020();
+                  await getNavigation().navigateHomeAsync(context);
+                },
+              ),
+            ],
+            emptySpace3x(),
+          ];
+          return listWithScrollbar(
+            shrinkWrap: true,
+            itemCount: widgets.length,
+            itemBuilder: (BuildContext context, int index) => widgets[index],
+            scrollController: ScrollController(),
+          );
+        },
+      ),
     );
   }
 
   Widget _cardButton(
-      BuildContext context, String title, bool isOpen, Function onTap) {
+    BuildContext context,
+    String title,
+    bool isOpen,
+    void Function()? onTap,
+  ) {
     return GestureDetector(
       child: Padding(
         child: Stack(

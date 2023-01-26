@@ -20,7 +20,7 @@ import '../redux/modules/cart/cartViewModel.dart';
 import 'generic/genericPageAllRequiredRawMaterials.dart';
 
 class CartPage extends StatelessWidget {
-  CartPage({Key key}) : super(key: key) {
+  CartPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.cartPage);
   }
 
@@ -60,12 +60,12 @@ class CartPage extends StatelessWidget {
   ) async {
     List<CartPageItem> reqItems = List.empty(growable: true);
     for (CartItem cartItem in viewModel.craftingItems) {
-      ResultWithValue<IGenericRepository> genRepo =
+      ResultWithValue<IGenericRepository?> genRepo =
           getRepoFromId(context, cartItem.id);
       if (genRepo.hasFailed) continue;
 
       ResultWithValue<GenericPageItem> itemResult =
-          await genRepo.value.getById(context, cartItem.id);
+          await genRepo.value!.getById(context, cartItem.id);
       if (itemResult.isSuccess) {
         reqItems.add(CartPageItem(
           quantity: cartItem.quantity,
@@ -81,7 +81,7 @@ class CartPage extends StatelessWidget {
     CartViewModel viewModel,
     AsyncSnapshot<List<CartPageItem>> snapshot,
   ) {
-    Widget errorWidget = asyncSnapshotHandler(context, snapshot);
+    Widget? errorWidget = asyncSnapshotHandler(context, snapshot);
     if (errorWidget != null) return errorWidget;
 
     List<Widget> widgets = List.empty(growable: true);
@@ -92,7 +92,7 @@ class CartPage extends StatelessWidget {
     List<Future<double>> factoryOvrTasks = List.empty(growable: true);
     List<RequiredItemDetails> requiredItems = List.empty(growable: true);
 
-    for (CartPageItem cartDetail in snapshot.data) {
+    for (CartPageItem cartDetail in snapshot.data!) {
       RequiredItemDetails req = RequiredItemDetails.fromGenericPageItem(
           cartDetail.details, cartDetail.quantity);
       widgets.add(requiredItemDetailsTilePresenter(
@@ -108,7 +108,7 @@ class CartPage extends StatelessWidget {
             context,
             controller,
             onSuccess: (BuildContext ctx, String quantity) {
-              int intQuantity = int.tryParse(quantity);
+              int? intQuantity = int.tryParse(quantity);
               if (intQuantity == null) return;
               viewModel.editCartItem(cartDetail.details.id, intQuantity);
             },
@@ -120,15 +120,30 @@ class CartPage extends StatelessWidget {
       ));
 
       creditTasks.add(getCreditsFromId(
-          context, cartDetail.details.id, cartDetail.quantity ?? 1));
+        context,
+        cartDetail.details.id,
+        cartDetail.quantity,
+      ));
       quicksilverTasks.add(getQuickSilverFromId(
-          context, cartDetail.details.id, cartDetail.quantity ?? 1));
+        context,
+        cartDetail.details.id,
+        cartDetail.quantity,
+      ));
       nanitesTasks.add(getNanitesFromId(
-          context, cartDetail.details.id, cartDetail.quantity ?? 1));
+        context,
+        cartDetail.details.id,
+        cartDetail.quantity,
+      ));
       salvagedTechTasks.add(getSalvagedTechFromId(
-          context, cartDetail.details.id, cartDetail.quantity ?? 1));
+        context,
+        cartDetail.details.id,
+        cartDetail.quantity,
+      ));
       factoryOvrTasks.add(getFactoryOverridesFromId(
-          context, cartDetail.details.id, cartDetail.quantity ?? 1));
+        context,
+        cartDetail.details.id,
+        cartDetail.quantity,
+      ));
       requiredItems.add(req);
     }
 
@@ -154,11 +169,12 @@ class CartPage extends StatelessWidget {
             context,
             navigateTo: (context) => GenericPageAllRequiredRawMaterials(
               GenericPageAllRequired(
-                  genericItem: GenericPageItem(),
-                  id: "",
-                  name: "",
-                  typeName: getTranslations().fromKey(LocaleKey.cart),
-                  requiredItems: requiredItems),
+                genericItem: GenericPageItem.fromJson(<String, dynamic>{}),
+                id: "",
+                name: "",
+                typeName: getTranslations().fromKey(LocaleKey.cart),
+                requiredItems: requiredItems,
+              ),
               viewModel.displayGenericItemColour,
             ),
           ),
@@ -205,6 +221,7 @@ class CartPage extends StatelessWidget {
     return listWithScrollbar(
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 
@@ -215,7 +232,7 @@ class CartPage extends StatelessWidget {
     return FutureBuilder(
       future: Future.wait(listOfFutures),
       builder: (context, AsyncSnapshot<List<double>> snapshot) {
-        Widget errorWidget = asyncSnapshotHandler(
+        Widget? errorWidget = asyncSnapshotHandler(
           context,
           snapshot,
           loader: () => getLoading().smallLoadingTile(context),
@@ -223,7 +240,7 @@ class CartPage extends StatelessWidget {
         if (errorWidget != null) return errorWidget;
 
         double total = 0;
-        for (var currency in snapshot.data) {
+        for (var currency in snapshot.data!) {
           total += currency;
         }
         if (total == 0) return const SizedBox(width: 0, height: 0);

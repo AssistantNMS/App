@@ -15,22 +15,25 @@ class TechTreeNode {
   List<TechTreeNode> children;
 
   TechTreeNode({
-    this.id,
-    this.icon,
-    this.title,
-    this.cost,
-    this.children,
+    required this.id,
+    required this.icon,
+    required this.title,
+    required this.cost,
+    required this.children,
   });
 
   factory TechTreeNode.fromRawJson(String str) =>
       TechTreeNode.fromJson(json.decode(str));
 
-  factory TechTreeNode.fromJson(Map<String, dynamic> json) => TechTreeNode(
+  factory TechTreeNode.fromJson(Map<String, dynamic>? json) => TechTreeNode(
         id: readStringSafe(json, 'Id'),
         icon: readStringSafe(json, 'Icon'),
         title: readStringSafe(json, 'Title'),
         cost: readIntSafe(json, "Cost"),
-        children: List<TechTreeNode>.from(
-            json["Children"].map((x) => TechTreeNode.fromJson(x))),
+        children: readListSafe(
+          json,
+          'Children',
+          (x) => TechTreeNode.fromJson(x),
+        ),
       );
 }

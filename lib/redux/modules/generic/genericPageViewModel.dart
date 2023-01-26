@@ -27,18 +27,18 @@ class GenericPageViewModel {
   Function(GenericPageItem item, int quantity) addToCart;
 
   GenericPageViewModel({
-    this.genericTileIsCompact,
-    this.displayGenericItemColour,
-    this.cartItems,
-    this.containers,
-    this.favourites,
-    this.isPatron,
-    this.platformIndex,
-    this.selectedLanguage,
+    required this.genericTileIsCompact,
+    required this.displayGenericItemColour,
+    required this.cartItems,
+    required this.containers,
+    required this.favourites,
+    required this.isPatron,
+    required this.platformIndex,
+    required this.selectedLanguage,
     //
-    this.addToCart,
-    this.addFavourite,
-    this.removeFavourite,
+    required this.addToCart,
+    required this.addFavourite,
+    required this.removeFavourite,
   });
 
   static GenericPageViewModel fromStore(Store<AppState> store) {

@@ -8,7 +8,7 @@ import '../../contracts/redux/appState.dart';
 import '../../redux/modules/setting/guideViewModel.dart';
 
 class AssistantAppsGuidesPage extends StatelessWidget {
-  const AssistantAppsGuidesPage({Key key}) : super(key: key);
+  const AssistantAppsGuidesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

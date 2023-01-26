@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/NmsUIConstants.dart';
@@ -11,14 +12,18 @@ import '../../helpers/itemsHelper.dart';
 import '../../pages/generic/genericPage.dart';
 
 Widget chargeByItemTilePresenter(
-    BuildContext context, ChargeBy recharge, int totalRequired,
-    {Function onTap, bool showBackgroundColours = false}) {
+  BuildContext context,
+  ChargeBy recharge,
+  int totalRequired, {
+  void Function()? onTap,
+  bool showBackgroundColours = false,
+}) {
   var reqItem = RequiredItem(id: recharge.id, quantity: 0);
   return FutureBuilder<ResultWithValue<RequiredItemDetails>>(
       future: requiredItemDetails(context, reqItem),
       builder: (BuildContext context,
           AsyncSnapshot<ResultWithValue<RequiredItemDetails>> snapshot) {
-        Widget errorWidget = asyncSnapshotHandler(
+        Widget? errorWidget = asyncSnapshotHandler(
           context,
           snapshot,
           loader: () => getLoading().smallLoadingTile(context),
@@ -26,7 +31,7 @@ Widget chargeByItemTilePresenter(
         if (errorWidget != null) return errorWidget;
         return chargeByItemDetailsTilePresenter(
           context,
-          snapshot.data.value,
+          snapshot.data!.value,
           recharge,
           totalRequired,
           onTap: onTap,
@@ -35,12 +40,15 @@ Widget chargeByItemTilePresenter(
       });
 }
 
-Widget chargeByItemDetailsTilePresenter(BuildContext context,
-    RequiredItemDetails itemDetails, ChargeBy recharge, int totalRequired,
-    {Function onTap, bool showBackgroundColours = false}) {
+Widget chargeByItemDetailsTilePresenter(
+  BuildContext context,
+  RequiredItemDetails itemDetails,
+  ChargeBy recharge,
+  int totalRequired, {
+  void Function()? onTap,
+  bool showBackgroundColours = false,
+}) {
   String icon = itemDetails.icon;
-  Function navigate;
-  navigate = (context) => GenericPage(itemDetails.id);
 
   return genericListTileWithSubtitle(
     context,
@@ -51,20 +59,26 @@ Widget chargeByItemDetailsTilePresenter(BuildContext context,
     imageBackgroundColour: showBackgroundColours ? itemDetails.colour : null,
     borderRadius: NMSUIConstants.gameItemBorderRadius,
     onTap: onTap ??
-        () async =>
-            await getNavigation().navigateAsync(context, navigateTo: navigate),
+        () async => await getNavigation().navigateAsync(
+              context,
+              navigateTo: (context) => GenericPage(itemDetails.id),
+            ),
   );
 }
 
 Widget usedToRechargeByItemTilePresenter(
-    BuildContext context, Recharge recharge, GenericPageItem genericPageItem,
-    {Function onTap, bool showBackgroundColours = false}) {
-  var reqItem = RequiredItem(id: recharge.id, quantity: 0);
+  BuildContext context,
+  Recharge recharge,
+  GenericPageItem genericPageItem, {
+  void Function()? onTap,
+  bool showBackgroundColours = false,
+}) {
+  RequiredItem reqItem = RequiredItem(id: recharge.id, quantity: 0);
   return FutureBuilder<ResultWithValue<RequiredItemDetails>>(
       future: requiredItemDetails(context, reqItem),
       builder: (BuildContext context,
           AsyncSnapshot<ResultWithValue<RequiredItemDetails>> snapshot) {
-        Widget errorWidget = asyncSnapshotHandler(
+        Widget? errorWidget = asyncSnapshotHandler(
           context,
           snapshot,
           loader: () => getLoading().smallLoadingTile(context),
@@ -72,7 +86,7 @@ Widget usedToRechargeByItemTilePresenter(
         if (errorWidget != null) return errorWidget;
         return usedToRechargeItemDetailsTilePresenter(
           context,
-          snapshot.data.value,
+          snapshot.data!.value,
           recharge,
           genericPageItem,
           onTap: onTap,
@@ -82,32 +96,36 @@ Widget usedToRechargeByItemTilePresenter(
 }
 
 Widget usedToRechargeItemDetailsTilePresenter(
-    BuildContext context,
-    RequiredItemDetails itemDetails,
-    Recharge recharge,
-    GenericPageItem genericPageItem,
-    {Function onTap,
-    bool showBackgroundColours = false}) {
+  BuildContext context,
+  RequiredItemDetails itemDetails,
+  Recharge recharge,
+  GenericPageItem genericPageItem, {
+  void Function()? onTap,
+  bool showBackgroundColours = false,
+}) {
   String icon = itemDetails.icon;
-  Function navigate;
-  navigate = (context) => GenericPage(itemDetails.id);
 
   var chargeByForCurrentItemValue = recharge.chargeBy
-      .firstWhere((c) => c.id == genericPageItem.id, orElse: () => ChargeBy())
-      .value;
+      .firstWhereOrNull(
+        (c) => c.id == genericPageItem.id,
+      )
+      ?.value;
 
   return genericListTileWithSubtitle(
     context,
     leadingImage: icon,
     name: itemDetails.name,
-    subtitle: Text((recharge.totalChargeAmount / chargeByForCurrentItemValue)
-            .toStringAsFixed(0) +
-        'x ' +
-        genericPageItem.name),
+    subtitle: Text(
+        (recharge.totalChargeAmount / (chargeByForCurrentItemValue ?? 1))
+                .toStringAsFixed(0) +
+            'x ' +
+            genericPageItem.name),
     imageBackgroundColour: showBackgroundColours ? itemDetails.colour : null,
     borderRadius: NMSUIConstants.gameItemBorderRadius,
     onTap: onTap ??
-        () async =>
-            await getNavigation().navigateAsync(context, navigateTo: navigate),
+        () async => await getNavigation().navigateAsync(
+              context,
+              navigateTo: (context) => GenericPage(itemDetails.id),
+            ),
   );
 }

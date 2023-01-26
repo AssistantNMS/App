@@ -10,7 +10,7 @@ import '../helpers/drawerHelper.dart';
 import '../redux/modules/setting/drawerSettingsViewModel.dart';
 
 class AppDrawer extends StatelessWidget {
-  const AppDrawer({Key key}) : super(key: key);
+  const AppDrawer({Key? key}) : super(key: key);
 
   //
   Widget drawerWrapper(BuildContext drawerCtx, List<Widget> widgets) {

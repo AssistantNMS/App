@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 Widget translatorTilePresenter(BuildContext context,
         TranslatorLeaderboardItemViewModel contributor, int index,
-        {void Function() onTap}) =>
+        {void Function()? onTap}) =>
     genericListTileWithNetworkImage(
       context,
       imageUrl: contributor.profileImageUrl,

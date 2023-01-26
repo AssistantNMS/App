@@ -13,7 +13,7 @@ import '../../helpers/searchHelpers.dart';
 import '../../integration/dependencyInjection.dart';
 
 class CommunityLinksPage extends StatefulWidget {
-  CommunityLinksPage({Key key}) : super(key: key) {
+  CommunityLinksPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.communityLinkPage);
   }
 

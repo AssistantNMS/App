@@ -2,12 +2,12 @@ import 'inventorySlot.dart';
 
 class InventorySlotWithGenericPageItem extends InventorySlot {
   String name;
-  String icon;
+  String? icon;
 
   InventorySlotWithGenericPageItem({
-    String id,
-    this.name,
+    required String id,
+    required this.name,
     this.icon,
-    int quantity,
+    required int quantity,
   }) : super(id: id, quantity: quantity);
 }

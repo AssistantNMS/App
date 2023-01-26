@@ -13,32 +13,27 @@ import 'redux/modules/setting/actions.dart';
 import 'redux/modules/setting/selector.dart';
 
 class AssistantNMS extends StatefulWidget {
-  final EnvironmentSettings _env;
-  const AssistantNMS(this._env, {Key key}) : super(key: key);
+  final EnvironmentSettings env;
+  const AssistantNMS(this.env, {Key? key}) : super(key: key);
 
   @override
-  // ignore: no_logic_in_create_state
-  _AssistantNMSState createState() => _AssistantNMSState(_env);
+  createState() => _AssistantNMSState();
 }
 
 class _AssistantNMSState extends State<AssistantNMS> {
-  final EnvironmentSettings _env;
-  Store<AppState> store;
-  TranslationsDelegate _newLocaleDelegate;
-
-  _AssistantNMSState(this._env);
+  Store<AppState>? store;
+  TranslationsDelegate _newLocaleDelegate =
+      const TranslationsDelegate(newLocale: null);
 
   @override
   initState() {
     super.initState();
-    initDependencyInjection(_env);
+    initDependencyInjection(widget.env);
     initReduxState();
 
     if (kReleaseMode) {
       // initFirebaseAdMob();
     }
-
-    _newLocaleDelegate ??= const TranslationsDelegate(newLocale: null);
   }
 
   Future<AppState> initReduxState() async {
@@ -46,13 +41,11 @@ class _AssistantNMSState extends State<AssistantNMS> {
     setState(() {
       store = tempStore;
     });
-    if (tempStore != null && tempStore.state != null) {
-      _newLocaleDelegate = TranslationsDelegate(
-        newLocale: Locale(getSelectedLanguage(tempStore.state)),
-      );
-      return tempStore.state;
-    }
-    return null;
+
+    _newLocaleDelegate = TranslationsDelegate(
+      newLocale: Locale(getSelectedLanguage(tempStore.state)),
+    );
+    return tempStore.state;
   }
 
   // initReduxStateWithFCM() async {
@@ -67,7 +60,7 @@ class _AssistantNMSState extends State<AssistantNMS> {
 
   void _onLocaleChange(Locale locale) {
     if (store == null) return;
-    store.dispatch(ChangeLanguageAction(locale.languageCode));
+    store!.dispatch(ChangeLanguageAction(locale.languageCode));
     setState(() {
       _newLocaleDelegate = TranslationsDelegate(newLocale: locale);
     });
@@ -85,7 +78,7 @@ class _AssistantNMSState extends State<AssistantNMS> {
     }
 
     return StoreProvider(
-      store: store,
+      store: store!,
       child: AppShell(
         newLocaleDelegate: _newLocaleDelegate,
         onLocaleChange: _onLocaleChange,

@@ -5,23 +5,24 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:wiredash/wiredash.dart';
+// import 'package:wiredash/wiredash.dart';
 
 import '../../constants/HomepageItems.dart';
 import '../../constants/Routes.dart';
 import '../../contracts/redux/appState.dart';
 import '../../env/appVersionNum.dart';
-import '../../integration/dependencyInjection.dart';
+// import '../../integration/dependencyInjection.dart';
 import '../../redux/modules/setting/introViewModel.dart';
 import '../../theme/themes.dart';
 
 class AppShell extends StatelessWidget {
   final TranslationsDelegate newLocaleDelegate;
   final void Function(Locale locale) onLocaleChange;
+
   const AppShell({
-    Key key,
-    this.onLocaleChange,
-    this.newLocaleDelegate,
+    Key? key,
+    required this.onLocaleChange,
+    required this.newLocaleDelegate,
   }) : super(key: key);
 
   @override
@@ -67,7 +68,7 @@ class AppShell extends StatelessWidget {
 
   Widget _androidApp(
     BuildContext context,
-    Key key,
+    Key? key,
     ThemeData theme,
     ThemeData darkTheme,
     IntroViewModel introViewModel,
@@ -75,7 +76,7 @@ class AppShell extends StatelessWidget {
     List<LocalizationsDelegate<dynamic>> localizationsDelegates,
     List<Locale> supportedLocales,
   ) {
-    ScrollBehavior scrollBehavior;
+    ScrollBehavior? scrollBehavior;
     if (isDesktop || isWeb) {
       scrollBehavior = const MaterialScrollBehavior().copyWith(
         dragDevices: {

@@ -16,7 +16,7 @@ import '../redux/modules/setting/settingViewModel.dart';
 
 class Settings extends StatelessWidget {
   final void Function(Locale locale) onLocaleChange;
-  Settings(this.onLocaleChange, {Key key}) : super(key: key) {
+  Settings(this.onLocaleChange, {Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.settingsPage);
   }
 
@@ -96,8 +96,7 @@ class Settings extends StatelessWidget {
           )
           .toList(),
       onChange: (String newValue) {
-        if (newValue == null) return;
-        int intValue = int.tryParse(newValue);
+        int? intValue = int.tryParse(newValue);
         if (intValue == null) return;
         viewModel.setPlatformIndex(intValue);
       },
@@ -179,7 +178,7 @@ class Settings extends StatelessWidget {
                 controller,
                 amounts: [0, 1, 2, 3, 4, 5],
                 onSuccess: (BuildContext ctx, String quantity) {
-                  int intQuantity = int.tryParse(quantity);
+                  int? intQuantity = int.tryParse(quantity);
                   if (intQuantity == null) return;
                   if (intQuantity > 10) intQuantity = 10;
                   viewModel.setCustomHomePageColumnCount(intQuantity);

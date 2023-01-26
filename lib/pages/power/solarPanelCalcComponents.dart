@@ -107,15 +107,21 @@ Widget getSummaryTable(BuildContext context, double powerStoredForNight,
 }
 
 Widget headingLocaleKeyWithImage(
-        BuildContext context, IconData icon, LocaleKey locale,
-        {TextAlign textAlign}) =>
+  BuildContext context,
+  IconData icon,
+  LocaleKey locale, {
+  TextAlign? textAlign,
+}) =>
     Row(children: [
       getCorrectlySizedImageFromIcon(context, icon, maxSize: 20),
       headingText(context, locale, textAlign: textAlign),
     ]);
 
-Widget headingText(BuildContext context, LocaleKey locale,
-        {TextAlign textAlign}) =>
+Widget headingText(
+  BuildContext context,
+  LocaleKey locale, {
+  TextAlign? textAlign,
+}) =>
     Padding(
       child: Text(
         getTranslations().fromKey(locale),
@@ -130,7 +136,11 @@ Widget headingText(BuildContext context, LocaleKey locale,
       padding: const EdgeInsets.only(top: 2, bottom: 4, left: 8),
     );
 
-Widget rowText(BuildContext context, String text, {TextAlign textAlign}) =>
+Widget rowText(
+  BuildContext context,
+  String text, {
+  TextAlign? textAlign,
+}) =>
     Padding(
       child: Text(
         text,

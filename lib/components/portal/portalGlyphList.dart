@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 Widget portalGlyphList(
   List<int> currentCodes,
   int numItemsPerLine, {
-  double height,
-  double width,
+  double? height,
+  double? width,
   bool useAltGlyphs = false,
 }) =>
     GridView.builder(
@@ -53,9 +53,9 @@ Widget oneLinePortalGlyphList(List<int> currentCodes,
 
 Widget portalInput(
   BuildContext context, {
-  @required String colour,
-  @required void Function(int) addCode,
-  double width,
+  required String colour,
+  required void Function(int) addCode,
+  double? width,
   bool isDisabled = false,
 }) {
   const double runSpacing = 1;

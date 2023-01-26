@@ -5,7 +5,8 @@ import 'package:flutter/foundation.dart';
 
 class AnalyticsService implements IAnalyticsService {
   final analyticsKey = '[Analytics]:';
-  FirebaseAnalytics analytics;
+  FirebaseAnalytics? analytics;
+
   AnalyticsService() {
     if (isWindows) return;
 
@@ -19,7 +20,7 @@ class AnalyticsService implements IAnalyticsService {
     if (key.isEmpty) return;
     if (kReleaseMode && !isWindows) {
       try {
-        analytics.logEvent(name: key);
+        analytics?.logEvent(name: key);
         getLog().i("$analyticsKey $key");
       } catch (ex) {
         getLog().e("$analyticsKey $key");

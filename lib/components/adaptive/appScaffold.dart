@@ -7,24 +7,24 @@ import '../../redux/modules/setting/settingViewModel.dart';
 
 Widget adaptiveAppScaffold(
   BuildContext context, {
-  @required Widget appBar,
-  Widget body,
-  Widget Function(BuildContext scaffoldContext) builder,
-  Widget drawer,
-  Widget floatingActionButton,
-  FloatingActionButtonLocation floatingActionButtonLocation,
+  required PreferredSizeWidget appBar,
+  Widget? body,
+  Widget Function(BuildContext scaffoldContext)? builder,
+  Widget? drawer,
+  Widget? floatingActionButton,
+  FloatingActionButtonLocation? floatingActionButtonLocation,
 }) =>
     StoreConnector<AppState, SettingViewModel>(
       converter: (store) => SettingViewModel.fromStore(store),
       rebuildOnChange: false,
       builder: (_, viewModel) {
-        Widget customBody = builder != null
+        Widget? customBody = builder != null
             ? Builder(builder: (inner) => builder(inner))
             : body;
         return _androidScaffold(
           context,
           appBar: appBar,
-          body: customBody,
+          body: customBody!,
           drawer: drawer,
           viewModel: viewModel,
           floatingActionButton: floatingActionButton,
@@ -35,17 +35,17 @@ Widget adaptiveAppScaffold(
 
 Widget _androidScaffold(
   BuildContext context, {
-  @required PreferredSizeWidget appBar,
-  Widget body,
-  Widget drawer,
-  SettingViewModel viewModel,
-  Widget floatingActionButton,
-  FloatingActionButtonLocation floatingActionButtonLocation,
+  required PreferredSizeWidget appBar,
+  required Widget body,
+  Widget? drawer,
+  required SettingViewModel viewModel,
+  Widget? floatingActionButton,
+  FloatingActionButtonLocation? floatingActionButtonLocation,
 }) {
-  BackgroundType bgType = BackgroundType.NotSet;
+  BackgroundType bgType = BackgroundType.notSet;
   if (viewModel.showFestiveBackground) {
-    if (isValentinesPeriod()) bgType = BackgroundType.Valentines;
-    if (isChristmasPeriod()) bgType = BackgroundType.Christmas;
+    if (isValentinesPeriod()) bgType = BackgroundType.valentines;
+    if (isChristmasPeriod()) bgType = BackgroundType.christmas;
   }
 
   return WillPopScope(

@@ -1,7 +1,7 @@
-int getMinimumAmountOfSolarPanels(int powerKps) =>
+int getMinimumAmountOfSolarPanels(int? powerKps) =>
     (powerKps != null) ? (powerKps / 25).ceil() : 0;
 
-int getMinimumAmountOfBatteries(int powerKps) =>
+int getMinimumAmountOfBatteries(int? powerKps) =>
     (powerKps != null) ? ((powerKps * 800) / 45000).ceil() : 0;
 
 const double totalPowerConsSunriseMultiplier = 82.5;
@@ -42,7 +42,7 @@ int getRecommendedAmountOfBatteries(int numBatteries, double totalPowerLost) {
   return numBatteries + addBatteries;
 }
 
-double _safeMultiply(double a, double b) {
+double _safeMultiply(double? a, double? b) {
   if (a == null || b == null) return 0;
   return a * b;
 }

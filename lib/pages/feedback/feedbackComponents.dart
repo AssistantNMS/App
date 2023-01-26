@@ -23,7 +23,9 @@ Widget feedbackPlainTextQuestionTilePresenter(BuildContext context,
           defaultText: answer,
         );
 
-        if (value != null && value.isNotEmpty) setAnswer(value);
+        if (value.isNotEmpty) {
+          setAnswer(value);
+        }
       },
     );
 

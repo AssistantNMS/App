@@ -18,7 +18,7 @@ import '../../redux/modules/portal/portalViewModel.dart';
 const double horizontalPadding = 32;
 
 class RandomPortalPage extends StatefulWidget {
-  const RandomPortalPage({Key key}) : super(key: key);
+  const RandomPortalPage({Key? key}) : super(key: key);
 
   @override
   createState() => _RandomPortalPageState();
@@ -275,11 +275,11 @@ class RollSlotWidget extends StatelessWidget {
   final bool useAltGlyphs;
 
   const RollSlotWidget({
-    Key key,
-    @required this.pageSize,
-    @required this.portalList,
-    @required this.rollSlotController,
-    @required this.useAltGlyphs,
+    Key? key,
+    required this.pageSize,
+    required this.portalList,
+    required this.rollSlotController,
+    required this.useAltGlyphs,
   }) : super(key: key);
 
   @override
@@ -311,9 +311,9 @@ class BuildItem extends StatelessWidget {
   final bool useAltGlyphs;
 
   const BuildItem({
-    Key key,
-    @required this.portalCode,
-    @required this.useAltGlyphs,
+    Key? key,
+    required this.portalCode,
+    required this.useAltGlyphs,
   }) : super(key: key);
 
   @override

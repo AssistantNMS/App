@@ -7,7 +7,7 @@ class IsPatreonViewModel {
   final bool isPatron;
 
   IsPatreonViewModel({
-    this.isPatron,
+    required this.isPatron,
   });
 
   static IsPatreonViewModel fromStore(Store<AppState> store) =>

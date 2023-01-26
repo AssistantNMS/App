@@ -8,7 +8,7 @@ import '../../pages/newItemsInUpdate/majorUpdatesDetailPage.dart';
 Widget majorUpdateTilePresenter(
   BuildContext context,
   MajorUpdateItem updateNewItems, {
-  void Function() onTap,
+  void Function()? onTap,
   bool isPatronLocked = false,
 }) {
   Widget backgroundImgSource = Padding(
@@ -89,7 +89,9 @@ Widget majorUpdateTilePresenter(
 }
 
 Widget majorUpdateItemDetailTilePresenter(
-    BuildContext context, MajorUpdateItem updateItem) {
+  BuildContext context,
+  MajorUpdateItem updateItem,
+) {
   return flatCard(
     child: ListTile(
       leading: ClipRRect(
@@ -101,7 +103,9 @@ Widget majorUpdateItemDetailTilePresenter(
       ),
       title: Text(updateItem.title),
       subtitle: Text(simpleDate(updateItem.releaseDate)),
-      trailing: Text(updateItem.emoji, style: const TextStyle(fontSize: 25)),
+      trailing: (updateItem.emoji != null && updateItem.emoji!.isEmpty)
+          ? Text(updateItem.emoji!, style: const TextStyle(fontSize: 25))
+          : null,
       onTap: () => getNavigation().navigateAwayFromHomeAsync(
         context,
         navigateTo: (_) => MajorUpdatesDetailPage(updateNewItems: updateItem),

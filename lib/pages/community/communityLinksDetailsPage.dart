@@ -13,7 +13,7 @@ class CommunityLinksDetailsPage extends StatelessWidget {
   final CommunityLinkViewModel communityLink;
   final List<CommunityLinkChipColourViewModel> chipColours;
   const CommunityLinksDetailsPage(this.communityLink, this.chipColours,
-      {Key key})
+      {Key? key})
       : super(key: key);
 
   @override
@@ -108,6 +108,7 @@ class CommunityLinksDetailsPage extends StatelessWidget {
     return listWithScrollbar(
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

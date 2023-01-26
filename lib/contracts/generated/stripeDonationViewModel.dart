@@ -5,6 +5,8 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class StripeDonationViewModel {
   double amount;
   String currency;
@@ -12,10 +14,10 @@ class StripeDonationViewModel {
   bool isGooglePay;
 
   StripeDonationViewModel({
-    this.amount,
-    this.currency,
-    this.token,
-    this.isGooglePay,
+    required this.amount,
+    required this.currency,
+    required this.token,
+    required this.isGooglePay,
   });
 
   factory StripeDonationViewModel.fromRawJson(String str) =>
@@ -23,12 +25,12 @@ class StripeDonationViewModel {
 
   String toRawJson() => json.encode(toJson());
 
-  factory StripeDonationViewModel.fromJson(Map<String, dynamic> json) =>
+  factory StripeDonationViewModel.fromJson(Map<String, dynamic>? json) =>
       StripeDonationViewModel(
-        amount: json["Amount"].toDouble(),
-        currency: json["Currency"],
-        token: json["Token"],
-        isGooglePay: json["IsGooglePay"],
+        amount: readDoubleSafe(json, 'Amount'),
+        currency: readStringSafe(json, 'Currency'),
+        token: readStringSafe(json, 'Token'),
+        isGooglePay: readBoolSafe(json, 'IsGooglePay'),
       );
 
   Map<String, dynamic> toJson() => {

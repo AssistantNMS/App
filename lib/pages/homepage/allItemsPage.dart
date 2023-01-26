@@ -5,7 +5,7 @@ import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import 'allItemsPageComponent.dart';
 
 class AllItemsPage extends StatelessWidget {
-  const AllItemsPage({Key key}) : super(key: key);
+  const AllItemsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

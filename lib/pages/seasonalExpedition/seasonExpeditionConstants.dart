@@ -22,14 +22,15 @@ String getBackgroundForExpedition(String seasId) {
 // }
 
 Widget expeditionSeasonTile(
-    BuildContext context,
-    String backgroundImage,
-    double backgroundHeight,
-    String imageUrl,
-    String seasonTitle,
-    String name,
-    Function ontap,
-    {bool isLocked = false}) {
+  BuildContext context,
+  String backgroundImage,
+  double backgroundHeight,
+  String imageUrl,
+  String seasonTitle,
+  String name,
+  void Function() ontap, {
+  bool isLocked = false,
+}) {
   Image backgroundImgSource = Image.asset(
     backgroundImage,
     fit: BoxFit.cover,
@@ -46,9 +47,7 @@ Widget expeditionSeasonTile(
           Radius.circular(12),
         ),
         child: Stack(children: [
-          if (backgroundImage != null) ...[
-            backgroundContainer,
-          ],
+          backgroundContainer,
           SizedBox(
             height: backgroundHeight,
             width: double.infinity,
@@ -104,8 +103,8 @@ Widget expeditionSeasonTile(
 }
 
 class CurrentAndPastExpeditions {
-  ExpeditionViewModel current;
-  List<SeasonalExpeditionSeason> past;
+  ExpeditionViewModel? current;
+  List<SeasonalExpeditionSeason>? past;
 
   CurrentAndPastExpeditions({
     this.current,

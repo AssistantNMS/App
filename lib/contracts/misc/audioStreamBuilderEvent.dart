@@ -3,17 +3,13 @@ class AudioStreamBuilderEvent {
   bool isPlaying;
 
   AudioStreamBuilderEvent({
-    this.isLoading,
-    this.isPlaying,
+    required this.isLoading,
+    required this.isPlaying,
   });
 
   AudioStreamBuilderEvent copyWith({
-    String title,
-    String artist,
-    String album,
-    String image,
-    bool isLoading,
-    bool isPlaying,
+    bool? isLoading,
+    bool? isPlaying,
   }) {
     {
       return AudioStreamBuilderEvent(
@@ -27,12 +23,12 @@ class AudioStreamBuilderEvent {
 class AudioStreamOpenUrlModel {
   String title;
   String artist;
-  String image;
-  void Function() customStopAction;
+  String? image;
+  void Function()? customStopAction;
 
   AudioStreamOpenUrlModel({
-    this.title,
-    this.artist,
+    required this.title,
+    required this.artist,
     this.image,
     this.customStopAction,
   });

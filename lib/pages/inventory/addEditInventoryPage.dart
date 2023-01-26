@@ -13,7 +13,7 @@ import '../../helpers/actionHelper.dart';
 class AddEditInventoryPage extends StatefulWidget {
   final bool isEdit;
   final Inventory inventory;
-  const AddEditInventoryPage(this.inventory, this.isEdit, {Key key})
+  const AddEditInventoryPage(this.inventory, this.isEdit, {Key? key})
       : super(key: key);
 
   @override
@@ -22,7 +22,7 @@ class AddEditInventoryPage extends StatefulWidget {
 }
 
 class _AddEditInventoryState extends State<AddEditInventoryPage> {
-  String validationMessage;
+  String? validationMessage;
   int selectedImageIndex = 0;
   bool isEdit;
   Inventory inventory;
@@ -37,14 +37,13 @@ class _AddEditInventoryState extends State<AddEditInventoryPage> {
   Widget build(BuildContext context) {
     return basicGenericPageScaffold(
       context,
-      title: inventory.name ?? getTranslations().fromKey(LocaleKey.newItem),
+      title: inventory.name,
       actions: [
         editNameInAppBarAction(
           context,
           LocaleKey.name,
           nameIfEmpty: LocaleKey.newItem,
-          currentName:
-              inventory.name ?? getTranslations().fromKey(LocaleKey.newItem),
+          currentName: inventory.name,
           onEdit: (String newName) => setState(() {
             inventory.name = newName;
           }),
@@ -56,11 +55,11 @@ class _AddEditInventoryState extends State<AddEditInventoryPage> {
           Navigator.pop(
             context,
             Inventory(
-                name: inventory.name ??
-                    getTranslations().fromKey(LocaleKey.newItem),
-                uuid: inventory.uuid,
-                icon: inventory.icon,
-                slots: inventory.slots ?? List.empty(growable: true)),
+              name: inventory.name,
+              uuid: inventory.uuid,
+              icon: inventory.icon,
+              slots: inventory.slots,
+            ),
           );
         },
         heroTag: 'AddEditInventoryPage',

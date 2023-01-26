@@ -10,7 +10,7 @@ import 'alienPuzzlesListPage.dart';
 const double tileHeight = 145;
 
 class AlienPuzzlesMenuPage extends StatelessWidget {
-  AlienPuzzlesMenuPage({Key key}) : super(key: key) {
+  AlienPuzzlesMenuPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.alienPuzzlesMenuPage);
   }
 

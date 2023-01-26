@@ -19,14 +19,14 @@ class InventoryListViewModel {
   Function(InventoryOrderByType orderByType) setOrderByType;
 
   InventoryListViewModel({
-    this.containers,
-    this.orderByType,
-    this.addInventory,
-    this.editInventory,
-    this.removeInventory,
-    this.setOrderByType,
-    this.mergeInventoryQuantities,
-    this.isPatron,
+    required this.containers,
+    required this.orderByType,
+    required this.addInventory,
+    required this.editInventory,
+    required this.removeInventory,
+    required this.setOrderByType,
+    required this.mergeInventoryQuantities,
+    required this.isPatron,
   });
 
   static InventoryListViewModel fromStore(Store<AppState> store) {

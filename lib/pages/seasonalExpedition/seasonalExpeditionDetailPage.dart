@@ -12,7 +12,7 @@ import '../../redux/modules/expedition/expeditionViewModel.dart';
 
 class SeasonalExpeditionDetailPage extends StatelessWidget {
   final SeasonalExpeditionPhase seasonalExpeditionPhase;
-  const SeasonalExpeditionDetailPage(this.seasonalExpeditionPhase, {Key key})
+  const SeasonalExpeditionDetailPage(this.seasonalExpeditionPhase, {Key? key})
       : super(key: key);
 
   @override
@@ -33,6 +33,8 @@ class SeasonalExpeditionDetailPage extends StatelessWidget {
       SeasonalExpeditionPhase seasonalExpeditionPhase,
       ExpeditionViewModel viewModel) {
     List<Widget> widgets = List.empty(growable: true);
+
+    print(seasonalExpeditionPhase.milestones.length);
 
     for (SeasonalExpeditionMilestone milestone
         in seasonalExpeditionPhase.milestones) {

@@ -29,7 +29,7 @@ final alienPuzzleRaceTypeValues = EnumValues({
   "Exotics": AlienPuzzleRaceType.Exotics,
 });
 
-String getFactionImageFromRaceType(AlienPuzzleRaceType race) {
+String getFactionImageFromRaceType(AlienPuzzleRaceType? race) {
   switch (race) {
     case AlienPuzzleRaceType.Traders:
       return AppImage.gekFaction;
@@ -45,7 +45,7 @@ String getFactionImageFromRaceType(AlienPuzzleRaceType race) {
 }
 
 String getFactionNameFromRaceType(
-    BuildContext context, AlienPuzzleRaceType race) {
+    BuildContext context, AlienPuzzleRaceType? race) {
   switch (race) {
     case AlienPuzzleRaceType.Traders:
       return getTranslations().fromKey(LocaleKey.gek);

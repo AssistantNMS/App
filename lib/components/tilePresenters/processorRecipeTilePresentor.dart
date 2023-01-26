@@ -52,14 +52,14 @@ Widget getNutrientProcessorTile(
     Widget Function(Processor p) navigateTo,
     bool showBackgroundColours,
     AsyncSnapshot<ResultWithValue<List<RequiredItemDetails>>> snapshot) {
-  Widget errorWidget = asyncSnapshotHandler(
+  Widget? errorWidget = asyncSnapshotHandler(
     context,
     snapshot,
     loader: () => getLoading().smallLoadingTile(context),
   );
   if (errorWidget != null) return errorWidget;
 
-  List<RequiredItemDetails> rows = snapshot.data.value;
+  List<RequiredItemDetails> rows = snapshot.data!.value;
   int startIndex = 0;
   String listTileTitle = '';
   for (var rowIndex = startIndex; rowIndex < rows.length; rowIndex++) {
@@ -68,7 +68,7 @@ Widget getNutrientProcessorTile(
   }
 
   // listTileTitle += " - ${processor.operation}";
-  String colour = rows.length == 1 ? rows[0].colour : null;
+  String? colour = rows.length == 1 ? rows[0].colour : null;
   return Card(
     child: genericListTileWithSubtitle(
       context,
@@ -110,16 +110,18 @@ Widget getProcessorWithRecipeTile(
     Widget Function(Processor p) navigateTo,
     bool showBackgroundColours,
     AsyncSnapshot<ResultWithValue<List<RequiredItemDetails>>> snapshot) {
-  Widget errorWidget = asyncSnapshotHandler(
+  Widget? errorWidget = asyncSnapshotHandler(
     context,
     snapshot,
     loader: () => getLoading().smallLoadingTile(context),
   );
   if (errorWidget != null) return errorWidget;
 
-  RequiredItemDetails output = snapshot.data.value[0];
-  List<RequiredItemDetails> rows =
-      snapshot.data.value.skip(1).take(snapshot.data.value.length).toList();
+  RequiredItemDetails output = snapshot.data!.value[0];
+  List<RequiredItemDetails> rows = snapshot.data!.value
+      .skip(1) //
+      .take(snapshot.data!.value.length)
+      .toList();
   int startIndex = 0;
   String listTileTitle = '';
   for (var rowIndex = 0; rowIndex < rows.length; rowIndex++) {

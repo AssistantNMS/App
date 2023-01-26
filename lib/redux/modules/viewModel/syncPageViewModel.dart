@@ -16,11 +16,11 @@ class SyncPageViewModel {
   final Function(InventoryState newState) restoreInventory;
 
   SyncPageViewModel({
-    this.portalState,
-    this.inventoryState,
-    this.restorePortals,
-    this.restoreInventory,
-    this.isPatron,
+    required this.portalState,
+    required this.inventoryState,
+    required this.restorePortals,
+    required this.restoreInventory,
+    required this.isPatron,
   });
 
   static SyncPageViewModel fromStore(Store<AppState> store) {

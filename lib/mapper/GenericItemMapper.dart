@@ -19,7 +19,7 @@ Future<RequiredItemDetails> toRequiredItemDetails(
 
 List<RequiredItemDetails> mapUsedInToRequiredItemsWithDescrip(
         List<GenericPageItem> usedInRecipes) =>
-    (usedInRecipes == null || usedInRecipes.isEmpty)
+    (usedInRecipes.isEmpty)
         ? List.empty(growable: true)
         : usedInRecipes
             .map(
@@ -37,10 +37,12 @@ List<GenericPageItem> mapGenericPageItems(
   List<GenericPageItem> result = List.empty(growable: true);
   for (int baseIndex = 0; baseIndex < details.length; baseIndex++) {
     ItemBaseDetail detail = details[baseIndex];
+    // ignore: unnecessary_null_comparison
     if (detail.id == null) continue;
 
     GenericPageItem newItem = GenericPageItem.fromBaseWithDetails(detail);
-    if ((newItem.name?.length ?? 0) < 1) {
+    // ignore: prefer_is_empty
+    if ((newItem.name.length) < 1) {
       newItem.name = getTranslations().fromKey(LocaleKey.unknown);
     }
     result.add(newItem);
@@ -49,7 +51,7 @@ List<GenericPageItem> mapGenericPageItems(
 }
 
 String getTypeName(context, String id) {
-  LocaleKey key = LocaleKey.unknown;
+  LocaleKey? key = LocaleKey.unknown;
 
   if (id.contains(IdPrefix.building)) {
     key = LocaleKey.buildings;

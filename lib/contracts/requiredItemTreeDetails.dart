@@ -4,22 +4,22 @@ import 'requiredItemDetails.dart';
 class RequiredItemTreeDetails extends RequiredItem {
   String icon;
   String name;
-  String colour;
+  String? colour;
   int cost;
   List<RequiredItemTreeDetails> children;
 
   RequiredItemTreeDetails({
     id,
-    this.icon,
-    this.name,
+    required this.icon,
+    required this.name,
     this.colour,
     quantity,
-    this.cost,
-    this.children,
-  }) {
-    this.id = id;
-    this.quantity = quantity;
-  }
+    required this.cost,
+    required this.children,
+  }) : super(
+          id: id,
+          quantity: quantity,
+        );
 
   factory RequiredItemTreeDetails.fromRequiredItemDetails(
       RequiredItemDetails req, int cost) {

@@ -4,7 +4,7 @@ import '../../../contracts/recharge.dart';
 class IRechargeJsonRepository {
   //
   Future<ResultWithValue<Recharge>> getRechargeById(context, String id) async {
-    return ResultWithValue<Recharge>(false, Recharge(), '');
+    return ResultWithValue<Recharge>(false, Recharge.fromRawJson('{}'), '');
   }
 
   Future<ResultWithValue<List<Recharge>>> getRechargeByChargeById(

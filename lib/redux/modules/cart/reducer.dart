@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:redux/redux.dart';
 
 import '../../../contracts/cart/cartItem.dart';
@@ -29,7 +30,7 @@ CartState _addCraftingToCart(CartState state, AddCraftingToCartAction action) {
   if (!addedNewItem) {
     newItems.add(CartItem(pageItem: action.item, quantity: action.quantity));
   }
-  return state.copyWith(crftingItems: newItems);
+  return state.copyWith(craftingItems: newItems);
 }
 
 CartState _editCraftingItemInCart(
@@ -44,20 +45,20 @@ CartState _editCraftingItemInCart(
     }
     newItems.add(temp);
   }
-  return state.copyWith(crftingItems: newItems);
+  return state.copyWith(craftingItems: newItems);
 }
 
 CartState _removeCraftingFromCart(
     CartState state, RemoveCraftingFromCartAction action) {
-  CartItem oldCardItem =
-      state.craftingItems.firstWhere((ci) => ci.id == action.id);
+  CartItem? oldCardItem =
+      state.craftingItems.firstWhereOrNull((ci) => ci.id == action.id);
   if (oldCardItem == null) return state;
 
   return state.copyWith(
-      crftingItems: List.from(state.craftingItems)..remove(oldCardItem));
+      craftingItems: List.from(state.craftingItems)..remove(oldCardItem));
 }
 
 CartState _removeAllCraftingFromCart(
     CartState state, RemoveAllCraftingFromCartAction action) {
-  return state.copyWith(crftingItems: List.empty(growable: true));
+  return state.copyWith(craftingItems: List.empty(growable: true));
 }

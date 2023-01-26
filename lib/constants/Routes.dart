@@ -2,8 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../pages/homepage/allItemsPage.dart';
-import '../pages/advancedSearch/advancedSearch.dart';
-import '../pages/alienPuzzles/alienPuzzlesListPage.dart';
 import '../pages/alienPuzzles/alienPuzzlesMenuPage.dart';
 import '../pages/cartPage.dart';
 import '../pages/catalogue/cataloguePage.dart';
@@ -12,7 +10,6 @@ import '../pages/community/communitySpotlightPage.dart';
 import '../pages/community/onlineMeetup2020SubmissionsPage.dart';
 import '../pages/contributors/contributorsPage.dart';
 import '../pages/donation.dart';
-import '../pages/exploits/exploitsPage.dart';
 import '../pages/faction/factionListPage.dart';
 import '../pages/faction/journeyMilestone.dart';
 import '../pages/favourite/favouritesPage.dart';
@@ -63,10 +60,8 @@ class Routes {
   static const String donation = '/donation';
   static const String settings = '/settings';
   static const String cart = '/cart';
-  static const String exploits = '/exploits';
   static const String guides = '/guides';
   static const String portals = '/portals';
-  static const String advancedSearch = '/advancedSearch';
   static const String appleMenu = '/appleMenu';
   static const String helloGames = '/helloGames';
   static const String helloGamesReleaseNotes = '/helloGamesReleaseNotes';
@@ -125,7 +120,7 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.intro: (context) => IntroPage(onLocaleChange),
     Routes.about: (context) => AboutPage(
           key: const Key('AboutPage'),
-          appType: AssistantAppType.NMS,
+          appType: AssistantAppType.nms,
           aboutPageWidgetsFunc: (BuildContext ctx) {
             return [
               emptySpace(0.5),
@@ -145,10 +140,8 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.language: (context) => Language(),
     Routes.donation: (context) => const Donation(),
     Routes.cart: (context) => CartPage(),
-    Routes.exploits: (context) => ExploitsPage(),
     Routes.guides: (context) => GuidesPage(),
     Routes.portals: (context) => const PortalsPage(),
-    Routes.advancedSearch: (context) => const AdvancedSearch(),
     Routes.settings: (context) => Settings(onLocaleChange),
     Routes.appleMenu: (context) => AppleMenu(),
     Routes.helloGames: (context) => HelloGamesPage(),
@@ -184,7 +177,6 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.allItemsPage: (context) => const AllItemsPage(),
     Routes.catalogueHome: (context) => const CatalogueHomepage(),
     Routes.titlePage: (context) => TitlePage(),
-    Routes.alienPuzzlesListPage: (context) => AlienPuzzlesListPage(),
     Routes.nmsfmPage: (context) => const NMSFMPage(),
     Routes.newsPage: (context) => NewsShellPage(),
     Routes.seasonalExpeditionPage: (context) =>

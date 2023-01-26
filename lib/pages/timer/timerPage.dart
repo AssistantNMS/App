@@ -12,7 +12,7 @@ import 'addEditTimerPage.dart';
 import 'timerPageView.dart';
 
 class TimersPage extends StatelessWidget {
-  TimersPage({Key key}) : super(key: key) {
+  TimersPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.timerPage);
     if (isApple) {
       getLocalNotification().requestIosPermission();
@@ -27,27 +27,29 @@ class TimersPage extends StatelessWidget {
         context,
         title: getTranslations().fromKey(LocaleKey.timers),
         body: TimersPageView(
-          viewModel.timers ?? [],
+          viewModel.timers,
           viewModel.editTimer,
           viewModel.removeTimer,
           key: Key('numTimers${viewModel.timers.length}'),
         ),
         fab: FloatingActionButton(
           onPressed: () async {
-            TimerItem temp = await getNavigation().navigateAsync<TimerItem>(
+            TimerItem? temp = await getNavigation().navigateAsync<TimerItem>(
               context,
               navigateTo: (context) => AddEditTimerPage(
                 TimerItem.addOrEditDefault(context),
                 false,
               ),
             );
-            if (temp == null || temp is! TimerItem) return;
+            if (temp == null) return;
+            if (temp.name == null) return;
+
             viewModel.addTimer(temp);
             await getLocalNotification().scheduleTimerNotification(
               temp.completionDate,
               temp.notificationId,
               getTranslations().fromKey(LocaleKey.timerComplete),
-              temp.name,
+              temp.name!,
             );
           },
           heroTag: 'addTimer',

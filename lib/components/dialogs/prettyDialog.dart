@@ -7,11 +7,11 @@ void prettyDialog(
   String title,
   String description, {
   bool onlyCancelButton = false,
-  String okButtonText,
-  Color buttonOkColor,
-  String cancelButtonText,
-  void Function(BuildContext) onCancel,
-  void Function(BuildContext) onSuccess,
+  String? okButtonText,
+  Color? buttonOkColor,
+  String? cancelButtonText,
+  void Function(BuildContext)? onCancel,
+  void Function(BuildContext)? onSuccess,
 }) {
   var localCancelButtonText = cancelButtonText;
   localCancelButtonText ??= onlyCancelButton
@@ -47,11 +47,9 @@ void prettyDialog(
       mainAxisSize: MainAxisSize.min,
       children: [
         localImage(appImage),
-        if (title != null) ...[
-          emptySpace1x(),
-          genericItemText(title),
-          emptySpace1x(),
-        ],
+        emptySpace1x(),
+        genericItemText(title),
+        emptySpace1x(),
         genericItemDescription(description),
       ],
     ),

@@ -20,7 +20,7 @@ import 'addPortalPage.dart';
 
 class ViewPortalPage extends StatefulWidget {
   final PortalRecord item;
-  const ViewPortalPage(this.item, {Key key}) : super(key: key);
+  const ViewPortalPage(this.item, {Key? key}) : super(key: key);
 
   @override
   createState() => _ViewPortalPageState(item);
@@ -43,14 +43,18 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
         body: getBody(context, portalViewModel),
         fab: FloatingActionButton(
           onPressed: () async {
-            PortalRecord temp =
+            PortalRecord? temp =
                 await getNavigation().navigateAsync<PortalRecord>(
               context,
               navigateTo: (context) => AddPortalPage(item, isEdit: true),
             );
-            if (temp == null || temp is! PortalRecord) return;
+            if (temp == null) return;
             portalViewModel.editPortal(
-                temp.name, temp.codes, temp.tags, temp.uuid);
+              temp.name ?? '...',
+              temp.codes,
+              temp.tags,
+              temp.uuid,
+            );
             setState(() {
               item = temp;
             });
@@ -95,7 +99,7 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
       ),
     ));
 
-    if (item.tags != null && item.tags.isNotEmpty) {
+    if (item.tags.isNotEmpty) {
       widgets.add(Wrap(
         alignment: WrapAlignment.center,
         children: item.tags.map((tag) => genericChip(context, tag)).toList(),
@@ -140,6 +144,7 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
     return listWithScrollbar(
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

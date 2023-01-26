@@ -10,9 +10,9 @@ Widget genericTileWithBackgroundColourPresenter(
   BuildContext context,
   GenericPageItem genericItem,
   bool isHero, {
-  void Function() onTap,
+  void Function()? onTap,
 }) {
-  String itemIcon = (genericItem.icon == null || genericItem.icon.isEmpty)
+  String itemIcon = (genericItem.icon.isEmpty)
       ? getPath().unknownImagePath
       : genericItem.icon;
   return genericListTile(
@@ -34,8 +34,8 @@ Widget genericTileWithBackgroundColourPresenter(
 
 Widget genericTilePresenter(
     BuildContext context, GenericPageItem genericItem, bool isHero,
-    {void Function() onTap}) {
-  String itemIcon = (genericItem.icon == null || genericItem.icon.isEmpty)
+    {void Function()? onTap}) {
+  String itemIcon = (genericItem.icon.isEmpty)
       ? getPath().unknownImagePath
       : genericItem.icon;
   return genericListTile(
@@ -56,13 +56,11 @@ Widget genericTilePresenter(
 
 Widget genericTileImageWithBackgroundColour(
   String leadingImage,
-  String imageBackgroundColour, {
-  String imageHero,
+  String? imageBackgroundColour, {
+  String? imageHero,
   bool imageGreyScale = false,
-  BorderRadius borderRadius,
+  BorderRadius? borderRadius,
 }) {
-  if (leadingImage == null) return null;
-
   String prefix = '';
   if (!leadingImage.contains(getPath().imageAssetPathPrefix)) {
     prefix = '${getPath().imageAssetPathPrefix}/';

@@ -5,14 +5,14 @@ import 'rowHelper.dart';
 
 Widget prevAndNextPagination(
   BuildContext context, {
-  @required Widget content,
-  @required int currentPosition,
-  @required int maxPositionIndex,
-  @required LocaleKey prevLocaleKey,
-  @required LocaleKey nextLocaleKey,
-  Widget additionalWidget,
-  void Function() onPreviousTap,
-  void Function() onNextTap,
+  required Widget content,
+  required int currentPosition,
+  required int maxPositionIndex,
+  required LocaleKey prevLocaleKey,
+  required LocaleKey nextLocaleKey,
+  Widget? additionalWidget,
+  void Function()? onPreviousTap,
+  void Function()? onNextTap,
 }) {
   Widget buttonWidget = Container();
 

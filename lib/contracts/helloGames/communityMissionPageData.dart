@@ -16,11 +16,20 @@ class CommunityMissionPageData {
   CommunityMission apiData;
 
   CommunityMissionPageData({
-    this.communityMissionMin,
-    this.communityMissionMax,
-    this.qsStore,
-    this.itemDetails,
-    this.requiredItemDetails,
-    this.apiData,
+    required this.communityMissionMin,
+    required this.communityMissionMax,
+    required this.qsStore,
+    required this.itemDetails,
+    required this.requiredItemDetails,
+    required this.apiData,
   });
+
+  factory CommunityMissionPageData.initial() => CommunityMissionPageData(
+        communityMissionMin: 0,
+        communityMissionMax: 0,
+        qsStore: QuicksilverStore.fromRawJson('{}'),
+        requiredItemDetails: [],
+        itemDetails: [],
+        apiData: CommunityMission.fromRawJson('{}'),
+      );
 }

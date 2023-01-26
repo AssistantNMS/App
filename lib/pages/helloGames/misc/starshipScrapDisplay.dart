@@ -8,9 +8,9 @@ class StarshipScrapDisplay extends StatefulWidget {
   final List<StarshipScrapDetailed> starScraps;
   final bool displayGenericItemColour;
   const StarshipScrapDisplay({
-    this.starScraps,
-    this.displayGenericItemColour,
-    Key key,
+    Key? key,
+    required this.starScraps,
+    required this.displayGenericItemColour,
   }) : super(key: key);
 
   @override
@@ -85,6 +85,7 @@ class _StarshipScrapDisplayState extends State<StarshipScrapDisplay> {
       itemCount: listItems.length,
       itemBuilder: (BuildContext context, int index) => listItems[index],
       padding: const EdgeInsets.only(bottom: 64),
+      scrollController: ScrollController(),
     );
   }
 }

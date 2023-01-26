@@ -2,14 +2,14 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class StoredJourneyMilestone {
   StoredJourneyMilestone({
-    this.journeyId,
-    this.journeyStatIndex,
+    required this.journeyId,
+    required this.journeyStatIndex,
   });
 
   String journeyId;
   int journeyStatIndex;
 
-  factory StoredJourneyMilestone.fromJson(Map<String, dynamic> json) =>
+  factory StoredJourneyMilestone.fromJson(Map<String, dynamic>? json) =>
       StoredJourneyMilestone(
         journeyId: readStringSafe(json, 'journeyId'),
         journeyStatIndex: readIntSafe(json, 'journeyStatIndex'),

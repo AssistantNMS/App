@@ -4,19 +4,21 @@ import 'package:intl/intl.dart';
 
 import '../../contracts/timer/timerItem.dart';
 
-Widget timerTilePresenter(BuildContext context, TimerItem timer,
-    Function(TimerItem) onEdit, Function(String) onDelete) {
-  if (timer.startDate == null || timer.completionDate == null) return null;
-
+Widget timerTilePresenter(
+  BuildContext context,
+  TimerItem timer,
+  void Function(TimerItem) onEdit,
+  void Function(String) onDelete,
+) {
   return genericListTileWithSubtitle(
     context,
     leadingImage: timer.icon,
-    name: timer.name,
+    name: timer.name ?? '...',
     subtitle: Padding(
       padding: const EdgeInsets.only(top: 4.0, bottom: 4.0),
       child: getProgressbarFromDates(
         context,
-        timer.startDate,
+        timer.startDate!,
         timer.completionDate,
         animation: false,
       ),
@@ -35,15 +37,15 @@ Widget timerDateTimeTilePresenter(
   LocaleKey localeKey,
   DateTime currentDateTime,
   Function(DateTime) onDateSet, {
-  @required DateTime minDate,
-  @required DateTime maxDate,
-  bool showEditIcon,
-  Widget trailing,
+  required DateTime? minDate,
+  required DateTime? maxDate,
+  required bool showEditIcon,
+  Widget? trailing,
 }) {
   var now = DateTime.now();
   Future Function() onTap;
   onTap = () async {
-    DateTime dayOfTheYear = await showDatePicker(
+    DateTime? dayOfTheYear = await showDatePicker(
       context: context,
       initialDate: currentDateTime,
       firstDate: minDate ?? now.subtract(const Duration(days: 365)),
@@ -51,7 +53,7 @@ Widget timerDateTimeTilePresenter(
     );
     if (dayOfTheYear == null) return;
 
-    TimeOfDay timeOfDay = await showTimePicker(
+    TimeOfDay? timeOfDay = await showTimePicker(
       initialTime: TimeOfDay(
         hour: currentDateTime.hour,
         minute: currentDateTime.minute,
@@ -71,7 +73,7 @@ Widget timerDateTimeTilePresenter(
     leadingImage: null,
     name: getTranslations().fromKey(localeKey),
     subtitle: Text(
-      DateFormat(UIConstants.DateTimeFormat).format(currentDateTime) ?? '...',
+      DateFormat(UIConstants.dateTimeFormat).format(currentDateTime),
     ),
     trailing: showEditIcon
         ? IconButton(icon: const Icon(Icons.edit), onPressed: onTap)

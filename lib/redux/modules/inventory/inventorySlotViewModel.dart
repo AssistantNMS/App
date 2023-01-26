@@ -14,9 +14,9 @@ class InventorySlotViewModel {
       removeInventorySlotFromInventory;
 
   InventorySlotViewModel({
-    this.addInventorySlotToInventory,
-    this.editInventorySlotInInventory,
-    this.removeInventorySlotFromInventory,
+    required this.addInventorySlotToInventory,
+    required this.editInventorySlotInInventory,
+    required this.removeInventorySlotFromInventory,
   });
 
   static InventorySlotViewModel fromStore(Store<AppState> store) {

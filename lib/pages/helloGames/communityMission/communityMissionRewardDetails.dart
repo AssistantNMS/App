@@ -19,7 +19,7 @@ class CommunityMissionRewardDetailsPage extends StatefulWidget {
     this.liveMissionId,
     this.missionMin,
     this.missionMax, {
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

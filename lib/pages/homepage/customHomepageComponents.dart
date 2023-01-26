@@ -11,7 +11,7 @@ import '../../contracts/misc/customMenu.dart';
 class EditingHomepageItem extends StatefulWidget {
   final CustomMenu menuItem;
   final double tileSize;
-  const EditingHomepageItem(this.menuItem, this.tileSize, {Key key})
+  const EditingHomepageItem(this.menuItem, this.tileSize, {Key? key})
       : super(key: key);
 
   @override
@@ -23,7 +23,7 @@ class EditingHomepageItem extends StatefulWidget {
 
 class _EditingHomepageWidget extends State<EditingHomepageItem>
     with SingleTickerProviderStateMixin {
-  AnimationController animationController;
+  late AnimationController animationController;
   final CustomMenu menuItem;
   final double tileSize;
   _EditingHomepageWidget(this.menuItem, this.tileSize);
@@ -136,8 +136,9 @@ Widget customMenuItemGridPresenter(BuildContext context, CustomMenu menuItem) {
         ],
       ),
       onTap: () => customMenuClickHandler(context, menuItem),
-      onLongPress: () =>
-          (menuItem.onLongPress != null) ? menuItem.onLongPress(context) : null,
+      onLongPress: () => (menuItem.onLongPress != null)
+          ? menuItem.onLongPress!(context)
+          : null,
     ),
   );
   if (menuItem.isNew) return wrapInNewBanner(context, LocaleKey.newItem, card);

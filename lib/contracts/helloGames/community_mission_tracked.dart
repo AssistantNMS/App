@@ -11,9 +11,15 @@ class CommunityMissionExtraDataPageData {
   final DateTime endDateRecorded;
 
   CommunityMissionExtraDataPageData({
-    this.startDateRecorded,
-    this.endDateRecorded,
+    required this.startDateRecorded,
+    required this.endDateRecorded,
   });
+
+  factory CommunityMissionExtraDataPageData.initial() =>
+      CommunityMissionExtraDataPageData(
+        startDateRecorded: DateTime.now(),
+        endDateRecorded: DateTime.now(),
+      );
 }
 
 class CommunityMissionTracked {
@@ -24,17 +30,17 @@ class CommunityMissionTracked {
   final int hourSinceEpochInterval;
 
   CommunityMissionTracked({
-    this.missionId,
-    this.tier,
-    this.percentage,
-    this.dateRecorded,
-    this.hourSinceEpochInterval,
+    required this.missionId,
+    required this.tier,
+    required this.percentage,
+    required this.dateRecorded,
+    required this.hourSinceEpochInterval,
   });
 
   factory CommunityMissionTracked.fromRawJson(String str) =>
       CommunityMissionTracked.fromJson(json.decode(str));
 
-  factory CommunityMissionTracked.fromJson(Map<String, dynamic> json) =>
+  factory CommunityMissionTracked.fromJson(Map<String, dynamic>? json) =>
       CommunityMissionTracked(
         missionId: readIntSafe(json, 'missionId'),
         tier: readIntSafe(json, 'tier'),

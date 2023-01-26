@@ -37,12 +37,13 @@ ThemeData darkTheme(String fontFamily) {
 TextTheme _buildAppTextTheme(TextTheme base, String fontFamily) {
   return base
       .copyWith(
-        headlineSmall: base.headlineSmall.copyWith(fontWeight: FontWeight.w900),
-        titleLarge: base.titleLarge.copyWith(
+        headlineSmall:
+            base.headlineSmall?.copyWith(fontWeight: FontWeight.w900),
+        titleLarge: base.titleLarge?.copyWith(
           fontSize: 18.0,
           fontWeight: FontWeight.w500,
         ),
-        bodySmall: base.bodySmall.copyWith(
+        bodySmall: base.bodySmall?.copyWith(
           fontSize: 14.0,
           fontWeight: FontWeight.w500,
         ),

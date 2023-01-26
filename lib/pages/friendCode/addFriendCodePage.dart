@@ -19,18 +19,18 @@ const String xb1 = 'XB';
 const String nsw = 'SW';
 
 class AddFriendCodePage extends StatefulWidget {
-  const AddFriendCodePage({Key key}) : super(key: key);
+  const AddFriendCodePage({Key? key}) : super(key: key);
 
   @override
   _AddFriendCodeState createState() => _AddFriendCodeState();
 }
 
 class _AddFriendCodeState extends State<AddFriendCodePage> {
-  AddFriendCodeViewModel friendCodeVm;
-  TextEditingController _nameController;
-  TextEditingController _emailController;
-  TextEditingController _codeController;
-  Map<String, bool Function()> _validationMap;
+  late AddFriendCodeViewModel friendCodeVm;
+  late TextEditingController _nameController;
+  late TextEditingController _emailController;
+  late TextEditingController _codeController;
+  late Map<String, bool Function()> _validationMap;
   bool _showValidation = false;
   bool _isLoading = false;
 
@@ -44,7 +44,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
   @override
   void initState() {
     super.initState();
-    friendCodeVm = AddFriendCodeViewModel(languageCode: 'en');
+    friendCodeVm = AddFriendCodeViewModel.initial()..languageCode = 'en';
     _nameController = TextEditingController();
     _emailController = TextEditingController();
     _validationMap = {
@@ -61,7 +61,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
 
   setCodeValidator(bool isSwitch) {
     String friendCodeMask = '@@@@-@@@@-@@@@@';
-    String text = _codeController?.text ?? '';
+    String text = _codeController.text;
     // if (isSwitch) {
     //   friendCodeMask = '@@-@@@@-@@@@-@@@@';
     //   _validationMap['code'] = () => switchFriendCodeValidator(text);
@@ -70,8 +70,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
     _validationMap['code'] = () => friendCodeValidator(text);
     // }
 
-    if (_codeController == null ||
-        (_codeController as dynamic).mask != friendCodeMask) {
+    if ((_codeController as dynamic).mask != friendCodeMask) {
       getLog().i(friendCodeMask);
       _codeController = maskedTextController(
         mask: friendCodeMask,
@@ -88,7 +87,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
 
   updateApiObj() {
     setState(() {
-      friendCodeVm = AddFriendCodeViewModel(
+      friendCodeVm = friendCodeVm.copyWith(
         name: _nameController.text,
         code: _codeController.text,
         email: _emailController.text,
@@ -147,7 +146,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
           decoration: getTextFieldDecoration(
             context,
             LocaleKey.name,
-            _validationMap['name'],
+            _validationMap['name']!,
             _showValidation,
           ),
           onChanged: (_) => updateApiObj(),
@@ -163,7 +162,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
               decoration: getTextFieldDecoration(
                 context,
                 LocaleKey.emailAddress,
-                _validationMap['email'],
+                _validationMap['email']!,
                 _showValidation,
               ),
               onChanged: (_) => updateApiObj(),
@@ -194,7 +193,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
           decoration: getTextFieldDecoration(
             context,
             LocaleKey.friendCode,
-            _validationMap['code'],
+            _validationMap['code']!,
             _showValidation,
           ),
           onChanged: (_) => updateApiObj(),
@@ -212,6 +211,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
     return listWithScrollbar(
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 
@@ -279,6 +279,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
   bool _allValidationsPassed() {
     for (var validationKey in _validationMap.keys) {
       var validate = _validationMap[validationKey];
+      if (validate == null) continue;
       var vResult = validate();
       if (vResult == false) return false;
     }

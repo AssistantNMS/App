@@ -23,8 +23,7 @@ Widget factionTilePresenter(BuildContext context, FactionDetail faction) {
         : null,
     maxLines: 1,
     onTap: () {
-      List<String> additionalList = (faction.additional ?? List.empty());
-      if (additionalList.contains('NavigateToJourneyPage')) {
+      if (faction.additional.contains('NavigateToJourneyPage')) {
         getNavigation().navigateAsync(
           context,
           navigateToNamed: Routes.journeyMilestonePage,
@@ -39,8 +38,13 @@ Widget factionTilePresenter(BuildContext context, FactionDetail faction) {
   );
 }
 
-Widget factionMissionTilePresenter(BuildContext context, FactionMission faction,
-    FactionsViewModel viewModel, StoredFactionMission storedFac) {
+Widget factionMissionTilePresenter(
+  BuildContext context,
+  FactionMission faction,
+  FactionsViewModel viewModel,
+  StoredFactionMission? storedFac,
+) {
+  // ignore: unnecessary_null_comparison
   FactionMissionTier currentTier = (storedFac != null)
       ? faction.tiers[storedFac.missionTierIndex]
       : faction.tiers.first;
@@ -70,7 +74,7 @@ Widget factionMissionTilePresenter(BuildContext context, FactionMission faction,
 }
 
 Widget guildMissionTilePresenter(BuildContext context, GuildMission mission) {
-  List<String> titles = mission.titles ?? List.empty();
+  List<String> titles = mission.titles;
   if (titles.isEmpty) {
     titles = mission.subtitles;
   }

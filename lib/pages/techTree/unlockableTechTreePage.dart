@@ -8,7 +8,7 @@ import '../../integration/dependencyInjection.dart';
 import 'unlockableTechTreeComponents.dart';
 
 class UnlockableTechTreePage extends StatelessWidget {
-  UnlockableTechTreePage({Key key}) : super(key: key) {
+  UnlockableTechTreePage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.unlockableTechTreePage);
   }
 
@@ -29,7 +29,7 @@ class UnlockableTechTreePage extends StatelessWidget {
 
   Widget getBody(BuildContext context,
       AsyncSnapshot<ResultWithValue<List<UnlockableTechTree>>> snapshot) {
-    Widget errorWidget = asyncSnapshotHandler(context, snapshot);
+    Widget? errorWidget = asyncSnapshotHandler(context, snapshot);
     if (errorWidget != null) return errorWidget;
 
     // return getTreeWithoutSecondLevel(context, snapshot.data.value);
@@ -37,7 +37,7 @@ class UnlockableTechTreePage extends StatelessWidget {
     return ListView(
       shrinkWrap: true,
       children: [
-        getTree(context, snapshot.data.value),
+        getTree(context, snapshot.data!.value),
       ],
     );
   }

@@ -8,10 +8,10 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class EggTrait {
   EggTrait({
-    this.appId,
-    this.trait,
-    this.traitType,
-    this.isPositiveEffect,
+    required this.appId,
+    required this.trait,
+    required this.traitType,
+    required this.isPositiveEffect,
   });
 
   String appId;
@@ -22,7 +22,7 @@ class EggTrait {
   factory EggTrait.fromRawJson(String str) =>
       EggTrait.fromJson(json.decode(str));
 
-  factory EggTrait.fromJson(Map<String, dynamic> json) => EggTrait(
+  factory EggTrait.fromJson(Map<String, dynamic>? json) => EggTrait(
         appId: readStringSafe(json, "AppId"),
         trait: readStringSafe(json, "Trait"),
         traitType: readStringSafe(json, "TraitType"),

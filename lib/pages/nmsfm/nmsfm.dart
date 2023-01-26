@@ -17,7 +17,7 @@ import '../../services/api/zenoFMApiService.dart';
 import 'nmsfmTrackList.dart';
 
 class NMSFMPage extends StatefulWidget {
-  const NMSFMPage({Key key}) : super(key: key);
+  const NMSFMPage({Key? key}) : super(key: key);
 
   @override
   _NMSFMPageWidget createState() => _NMSFMPageWidget();
@@ -25,7 +25,7 @@ class NMSFMPage extends StatefulWidget {
 
 class _NMSFMPageWidget extends State<NMSFMPage> {
   ConnectivityResult _connectivityStatus = ConnectivityResult.none;
-  StreamSubscription<ConnectivityResult> _connectivitySubscription;
+  late StreamSubscription<ConnectivityResult> _connectivitySubscription;
 
   _isOnline() {
     return _connectivityStatus != ConnectivityResult.none ||
@@ -126,6 +126,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
       itemCount: widgets.length,
       itemBuilder: (BuildContext innerContext, int index) => widgets[index],
       padding: const EdgeInsets.only(bottom: 32),
+      scrollController: ScrollController(),
     );
   }
 
@@ -139,24 +140,24 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
 }
 
 class AudioStreamPresenter extends StatefulWidget {
-  const AudioStreamPresenter({Key key}) : super(key: key);
+  const AudioStreamPresenter({Key? key}) : super(key: key);
 
   @override
   _AudioStreamPresenterWidget createState() => _AudioStreamPresenterWidget();
 }
 
 class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
-  Timer _timer;
+  late Timer _timer;
   String _title = '';
   String _artist = '';
   bool isPlaying = false;
-  AudioStreamBuilderEvent savedMetas;
 
   _AudioStreamPresenterWidget() {
     initTimer();
   }
 
   initTimer() {
+    // ignore: unnecessary_null_comparison
     if (_timer != null && _timer.isActive) _timer.cancel();
     _timer = Timer.periodic(AppDuration.zenoFMRefreshInterval, (Timer t) async {
       if (isPlaying == false) return;
@@ -185,11 +186,11 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
         bool isLoading = event.isLoading;
 
         String title = getTranslations().fromKey(LocaleKey.nmsfm);
-        if (_title.isNotEmpty ?? false) title = _title;
+        if (_title.isNotEmpty) title = _title;
 
         String artist = 'Now Streaming'; // TODO translate
         getLog().i('_artist: ' + _artist);
-        if (_artist.isNotEmpty ?? false) artist = _artist;
+        if (_artist.isNotEmpty) artist = _artist;
 
         Widget playStopWidget = (event.isPlaying)
             ? getCorrectlySizedImageFromIcon(context, Icons.stop)
@@ -232,6 +233,7 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
 
   @override
   void dispose() {
+    // ignore: unnecessary_null_comparison
     if (_timer != null && _timer.isActive) _timer.cancel();
     super.dispose();
   }
@@ -241,7 +243,7 @@ class LocalAudioPresenter extends StatelessWidget {
   final String name;
   final String artist;
   final String localPath;
-  const LocalAudioPresenter(this.name, this.artist, this.localPath, {Key key})
+  const LocalAudioPresenter(this.name, this.artist, this.localPath, {Key? key})
       : super(key: key);
 
   @override

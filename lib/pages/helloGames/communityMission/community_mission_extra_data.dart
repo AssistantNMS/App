@@ -14,24 +14,28 @@ class CommunityMissionExtraData extends StatelessWidget {
   const CommunityMissionExtraData(
     this.missionId,
     this.status, {
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   Future<ResultWithValue<CommunityMissionExtraDataPageData>>
       getExtraCommunityMissionData(int localMissionId) async {
     if (status == CommunityMissionStatus.future) {
       return ResultWithValue<CommunityMissionExtraDataPageData>(
-          false, null, '');
+        false,
+        CommunityMissionExtraDataPageData.initial(),
+        '',
+      );
     }
 
     ResultWithValue<List<CommunityMissionTracked>> apiResult =
         await getCommunityMissionProgressApiService()
             .getProgressByMission(localMissionId);
-    if (apiResult.isSuccess == false ||
-        apiResult.value == null ||
-        apiResult.value.isEmpty) {
+    if (apiResult.isSuccess == false || apiResult.value.isEmpty) {
       return ResultWithValue<CommunityMissionExtraDataPageData>(
-          false, null, '');
+        false,
+        CommunityMissionExtraDataPageData.initial(),
+        '',
+      );
     }
 
     CommunityMissionExtraDataPageData data = CommunityMissionExtraDataPageData(
@@ -45,7 +49,11 @@ class CommunityMissionExtraData extends StatelessWidget {
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: getExtraCommunityMissionData(missionId),
-      builder: (_ctx, _snap) => getBody(_ctx, status, _snap),
+      builder: (
+        BuildContext _ctx,
+        AsyncSnapshot<ResultWithValue<CommunityMissionExtraDataPageData>> _snap,
+      ) =>
+          getBody(_ctx, status, _snap),
     );
   }
 }
@@ -95,13 +103,14 @@ Widget getBody(
   }
 
   if (showLoader == false) {
-    if (snapshot.data.value == null ||
-        snapshot.data.value.startDateRecorded == null ||
-        snapshot.data.value.endDateRecorded == null) {
+    if (snapshot.data == null ||
+        snapshot.data?.value == null ||
+        snapshot.data?.value.startDateRecorded == null ||
+        snapshot.data?.value.endDateRecorded == null) {
       return errorWidgetFunc();
     }
 
-    CommunityMissionExtraDataPageData pageData = snapshot.data.value;
+    CommunityMissionExtraDataPageData pageData = snapshot.data!.value;
 
     widgets.add(ListTile(
       title: Text(getTranslations().fromKey(LocaleKey.startDate)),
@@ -121,7 +130,7 @@ Widget getBody(
     widgets.add(getLoading().smallLoadingTile(bodyContext));
   }
 
-  if (snapshot.data == null || snapshot.data.hasFailed) {
+  if (snapshot.data == null || snapshot.data!.hasFailed) {
     return errorWidgetFunc();
   }
 

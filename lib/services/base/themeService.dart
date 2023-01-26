@@ -12,19 +12,19 @@ class ThemeService implements IThemeService {
 
   @override
   Color getPrimaryColour(BuildContext context) =>
-      getTheme(context)?.primaryColor ?? Colors.indigo[500];
+      getTheme(context).primaryColor;
 
   @override
   Color getSecondaryColour(BuildContext context) =>
-      getTheme(context)?.colorScheme?.secondary ?? Colors.teal[200];
+      getTheme(context).colorScheme.secondary;
 
   @override
   Color getDarkModeSecondaryColour() =>
-      darkTheme(defaultFontFamily).colorScheme?.secondary;
+      darkTheme(defaultFontFamily).colorScheme.secondary;
 
   @override
   bool getIsDark(BuildContext context) =>
-      getTheme(context)?.brightness == Brightness.dark;
+      getTheme(context).brightness == Brightness.dark;
 
   @override
   Color getBackgroundColour(BuildContext context) =>
@@ -45,7 +45,7 @@ class ThemeService implements IThemeService {
   @override
   Color getH1Colour(BuildContext context) {
     var textColour =
-        AdaptiveTheme.of(context).theme.textTheme.displayLarge.color;
+        AdaptiveTheme.of(context).theme.textTheme.displayLarge?.color;
     if (textColour == null) {
       return getIsDark(context) ? Colors.white : Colors.black;
     }
@@ -58,8 +58,9 @@ class ThemeService implements IThemeService {
 
   @override
   void setBrightness(BuildContext context, bool isDark) {
-    AdaptiveTheme.of(context)?.setThemeMode(
-        isDark ? AdaptiveThemeMode.light : AdaptiveThemeMode.dark);
+    AdaptiveTheme.of(context).setThemeMode(
+      isDark ? AdaptiveThemeMode.light : AdaptiveThemeMode.dark,
+    );
   }
 
   @override

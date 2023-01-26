@@ -15,7 +15,7 @@ class EditCustomHomepage extends StatefulWidget {
     this._menuOptions,
     this._numberOfColumns,
     this._setCustomOrder, {
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

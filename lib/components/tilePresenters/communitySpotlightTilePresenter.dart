@@ -8,13 +8,12 @@ import '../../contracts/generated/communitySpotlightViewModel.dart';
 Widget communitySpotlightTilePresenter(
   BuildContext context,
   CommuntySpotlightViewModel communitySpotlight, {
-  void Function() onTap,
+  void Function()? onTap,
 }) {
   Function() localOnTap =
       onTap ?? () => launchExternalURL(communitySpotlight.externalUrl);
   Row userInfoNameAndImageRow = Row(
-    children: (communitySpotlight.userName != null &&
-            communitySpotlight.userName.length > 1)
+    children: (communitySpotlight.userName.length > 1)
         ? [
             ClipOval(
               child: networkImage(communitySpotlight.userImage,
@@ -33,8 +32,7 @@ Widget communitySpotlightTilePresenter(
           ]
         : [],
   );
-  Widget userInfo = (communitySpotlight.externalUrl == null ||
-          communitySpotlight.externalUrl.length < 5)
+  Widget userInfo = (communitySpotlight.externalUrl.length < 5)
       ? userInfoNameAndImageRow
       : Stack(
           children: [
@@ -52,7 +50,7 @@ Widget communitySpotlightTilePresenter(
         );
 
   List<Widget> descripWidgets = List.empty(growable: true);
-  if (communitySpotlight.title != null && communitySpotlight.title.length > 1) {
+  if (communitySpotlight.title.length > 1) {
     descripWidgets.add(Padding(
       child: Text(
         communitySpotlight.title,
@@ -63,8 +61,7 @@ Widget communitySpotlightTilePresenter(
       padding: const EdgeInsets.only(bottom: 4),
     ));
   }
-  if (communitySpotlight.subtitle != null &&
-      communitySpotlight.subtitle.length > 1) {
+  if (communitySpotlight.subtitle.length > 1) {
     descripWidgets.add(Text(
       communitySpotlight.subtitle,
       textAlign: TextAlign.center,
@@ -92,8 +89,7 @@ Widget communitySpotlightTilePresenter(
       clipBehavior: Clip.antiAliasWithSaveLayer,
       child: Column(
         children: [
-          if (communitySpotlight.previewImageUrl != null &&
-              communitySpotlight.previewImageUrl.length > 5) ...[
+          if (communitySpotlight.previewImageUrl.length > 5) ...[
             Container(
               // constraints: const BoxConstraints(maxHeight: 225),
               child: networkImage(

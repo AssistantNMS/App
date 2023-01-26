@@ -13,9 +13,11 @@ import '../../../integration/dependencyInjection.dart';
 class TwitchCampaignDetailPage extends StatelessWidget {
   final int id;
   final bool displayGenericItemColour;
-  const TwitchCampaignDetailPage(
-      {Key key, this.id, this.displayGenericItemColour})
-      : super(key: key);
+  const TwitchCampaignDetailPage({
+    Key? key,
+    required this.id,
+    required this.displayGenericItemColour,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,13 +46,13 @@ class TwitchCampaignDetailPage extends StatelessWidget {
         future: getDataRepo().getTwitchDropById(context, id),
         builder: (BuildContext futureContext,
             AsyncSnapshot<ResultWithValue<TwitchCampaignData>> snapshot) {
-          Widget errorWidget = asyncSnapshotHandler(
+          Widget? errorWidget = asyncSnapshotHandler(
             futureContext,
             snapshot,
           );
           if (errorWidget != null) return errorWidget;
 
-          TwitchCampaignData campaign = snapshot.data.value;
+          TwitchCampaignData campaign = snapshot.data!.value;
           return getBody(context, campaign);
         },
       ),
@@ -84,7 +86,7 @@ class TwitchCampaignDetailPage extends StatelessWidget {
     for (int dayIndex = 0; dayIndex < campaign.days.length; dayIndex++) {
       TwitchCampaignDay day = campaign.days[dayIndex];
 
-      int dayNum = (day.dayNumber ?? 1) - 1;
+      int dayNum = day.dayNumber - 1;
       DateTime actualDate = campaign.startDate.add(Duration(days: dayNum));
 
       List<Widget> rewardWidgets = List.empty(growable: true);

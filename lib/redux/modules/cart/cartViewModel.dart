@@ -17,12 +17,12 @@ class CartViewModel {
   Function removeAllFromCart;
 
   CartViewModel({
-    this.craftingItems,
-    this.displayGenericItemColour,
-    this.addToCart,
-    this.editCartItem,
-    this.removeAllFromCart,
-    this.removeFromCart,
+    required this.craftingItems,
+    required this.displayGenericItemColour,
+    required this.addToCart,
+    required this.editCartItem,
+    required this.removeAllFromCart,
+    required this.removeFromCart,
   });
 
   static CartViewModel fromStore(Store<AppState> store) {

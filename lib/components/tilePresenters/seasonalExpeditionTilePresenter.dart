@@ -51,22 +51,20 @@ Widget seasonalExpeditionDetailTilePresenter(
         ),
         backgroundColour: getTheme().getScaffoldBackgroundColour(context),
       ),
-      if (season.startDate != null && season.endDate != null) ...[
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(getTranslations().fromKey(LocaleKey.startDate) +
-                  ': ' +
-                  simpleDate(season.startDate)),
-              Text(getTranslations().fromKey(LocaleKey.endDate) +
-                  ': ' +
-                  simpleDate(season.endDate)),
-            ],
-          ),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(getTranslations().fromKey(LocaleKey.startDate) +
+                ': ' +
+                simpleDate(season.startDate)),
+            Text(getTranslations().fromKey(LocaleKey.endDate) +
+                ': ' +
+                simpleDate(season.endDate)),
+          ],
         ),
-      ],
+      ),
     ],
   );
 }
@@ -125,12 +123,11 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
     isClaimed = true;
   }
 
-  String description = isClaimed
+  String? description = isClaimed
       ? seasonalExpeditionMilestone.descriptionDone
       : seasonalExpeditionMilestone.description;
 
-  Container Function(String text, {double fontSize}) textWrapper;
-  textWrapper = (String text, {double fontSize}) => Container(
+  textWrapper(String text, {double? fontSize}) => Container(
         child: Text(
           text,
           textAlign: TextAlign.start,
@@ -227,15 +224,15 @@ Widget seasonalExpeditionBase(
   double height,
   String title,
   String imagePath, {
-  bool useMaterial,
-  String topLeftBanner,
-  Color backgroundColour,
+  bool? useMaterial,
+  String? topLeftBanner,
+  Color? backgroundColour,
   int imageFlex = 4,
   int bodyFlex = 9,
   int trailingFlex = 2,
-  Widget Function() bodyDisplayFunc,
-  Widget Function() trailingDisplayFunc,
-  Function() onTap,
+  required Widget Function() bodyDisplayFunc,
+  Widget Function()? trailingDisplayFunc,
+  void Function()? onTap,
 }) {
   InkWell innerChild = InkWell(
     borderRadius: BorderRadius.circular(6.0),
@@ -292,7 +289,9 @@ Widget seasonalExpeditionBase(
 }
 
 Widget expeditionInProgressPresenter(
-    BuildContext context, expedition_api.ExpeditionViewModel expedition) {
+  BuildContext context,
+  expedition_api.ExpeditionViewModel expedition,
+) {
   Widget bodyChild = Container(
     padding: const EdgeInsets.symmetric(horizontal: 8),
     child: Column(
@@ -329,7 +328,7 @@ Widget expeditionInProgressPresenter(
         : InkWell(
             borderRadius: BorderRadius.circular(6.0),
             child: contentChild,
-            onTap: () => launchExternalURL(expedition.link),
+            onTap: () => launchExternalURL(expedition.link!),
           ),
   );
 }

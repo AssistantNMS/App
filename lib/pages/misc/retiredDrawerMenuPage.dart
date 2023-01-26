@@ -10,7 +10,7 @@ import '../../constants/Routes.dart';
 import '../../contracts/customMenuItem.dart';
 
 class RetiredDrawerMenuPage extends StatelessWidget {
-  RetiredDrawerMenuPage({Key key}) : super(key: key) {
+  RetiredDrawerMenuPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.retiredDrawerMenuPage);
   }
 
@@ -44,21 +44,10 @@ class RetiredDrawerMenuPage extends StatelessWidget {
       navigateToNamed: Routes.twitchCampaignPage,
     ));
     menuItems.add(CustomMenuItem(
-      image: getCorrectlySizedImageFromIcon(context, Icons.search,
-          colour: menuIconColour),
-      title: LocaleKey.advancedSearch,
-      navigateToNamed: Routes.advancedSearch,
-    ));
-    menuItems.add(CustomMenuItem(
       image: getCorrectlySizedImageFromIcon(context, Icons.favorite,
           colour: menuIconColour),
       title: LocaleKey.valentines,
       navigateToNamed: Routes.valentinesPage,
-    ));
-    menuItems.add(CustomMenuItem(
-      image: getListTileImage('drawer/exploits.png'),
-      title: LocaleKey.exploits,
-      navigateToNamed: Routes.exploits,
     ));
     menuItems.add(CustomMenuItem(
       image: getCorrectlySizedImageFromIcon(context, Icons.public,

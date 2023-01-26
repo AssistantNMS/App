@@ -8,16 +8,6 @@ import 'alienPuzzleRaceType.dart';
 import 'alienPuzzleType.dart';
 
 class AlienPuzzle {
-  AlienPuzzle({
-    this.id,
-    this.type,
-    this.race,
-    this.isFactory,
-    this.number,
-    this.incomingMessages,
-    this.options,
-  });
-
   String id;
   AlienPuzzleType type;
   AlienPuzzleRaceType race;
@@ -26,10 +16,22 @@ class AlienPuzzle {
   List<String> incomingMessages;
   List<Option> options;
 
-  factory AlienPuzzle.fromJson(Map<String, dynamic> json) => AlienPuzzle(
+  AlienPuzzle({
+    required this.id,
+    required this.type,
+    required this.race,
+    required this.isFactory,
+    required this.number,
+    required this.incomingMessages,
+    required this.options,
+  });
+
+  factory AlienPuzzle.fromJson(Map<String, dynamic>? json) => AlienPuzzle(
         id: readStringSafe(json, 'Id'),
-        type: alienPuzzleTypeValues.map[readStringSafe(json, 'Type')],
-        race: alienPuzzleRaceTypeValues.map[readStringSafe(json, 'Race')],
+        type: alienPuzzleTypeValues.map[readStringSafe(json, 'Type')] ??
+            AlienPuzzleType.Unknown,
+        race: alienPuzzleRaceTypeValues.map[readStringSafe(json, 'Race')] ??
+            AlienPuzzleRaceType.None,
         isFactory: readBoolSafe(json, 'IsFactory'),
         number: readIntSafe(json, 'Number'),
         incomingMessages: readListSafe(
@@ -41,10 +43,10 @@ class AlienPuzzle {
 
 class Option {
   Option({
-    this.name,
-    this.text,
-    this.interactionId,
-    this.rewardIds,
+    required this.name,
+    required this.text,
+    required this.interactionId,
+    required this.rewardIds,
   });
 
   String name;
@@ -52,7 +54,7 @@ class Option {
   String interactionId;
   List<String> rewardIds;
 
-  factory Option.fromJson(Map<String, dynamic> json) => Option(
+  factory Option.fromJson(Map<String, dynamic>? json) => Option(
         name: readStringSafe(json, 'Name'),
         text: readStringSafe(json, 'Text'),
         interactionId: readStringSafe(json, 'InteractionId'),

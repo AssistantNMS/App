@@ -15,7 +15,7 @@ final portalReducer = combineReducers<PortalState>([
 ]);
 
 PortalState _addPortal(PortalState state, AddPortalAction action) {
-  List<PortalRecord> newList = state.portals ?? List.empty(growable: true);
+  List<PortalRecord> newList = state.portals;
   newList.add(action.portalRecord);
   return state.copyWith(portals: newList);
 }
@@ -50,7 +50,7 @@ PortalState _removeAllPortals(
 }
 
 PortalState _addPortalTag(PortalState state, AddPortalTagAction action) {
-  List<String> newList = state.availableTags ?? List.empty(growable: true);
+  List<String> newList = state.availableTags;
   newList.add(action.newTag);
   return state.copyWith(availableTags: newList);
 }

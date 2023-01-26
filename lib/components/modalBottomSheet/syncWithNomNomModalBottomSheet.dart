@@ -20,14 +20,14 @@ import '../../integration/nomNom.dart';
 import '../../redux/modules/viewModel/syncPageViewModel.dart';
 
 class SyncWithNomNomBottomSheet extends StatefulWidget {
-  const SyncWithNomNomBottomSheet({Key key}) : super(key: key);
+  const SyncWithNomNomBottomSheet({Key? key}) : super(key: key);
 
   @override
   createState() => _SyncWithNomNomBottomSheetState();
 }
 
 class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
-  NetworkState networkState = NetworkState.Pending;
+  NetworkState networkState = NetworkState.pending;
 
   Future<void> Function(String) codeInput(
     BuildContext innerContext,
@@ -35,13 +35,13 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
   ) {
     return (String fullCode) async {
       setState(() {
-        networkState = NetworkState.Loading;
+        networkState = NetworkState.loading;
       });
       ResultWithValue<List<NomNomInventoryViewModel>> invResult =
           await getApiRepo().getInventoryFromNomNom(fullCode);
       if (invResult.hasFailed) {
         setState(() {
-          networkState = NetworkState.Error;
+          networkState = NetworkState.error;
         });
         return;
       }
@@ -93,7 +93,7 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
       );
 
       setState(() {
-        networkState = NetworkState.Success;
+        networkState = NetworkState.success;
       });
     };
   }
@@ -126,7 +126,7 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
         ));
         widgets.add(emptySpace2x());
 
-        if (networkState == NetworkState.Error) {
+        if (networkState == NetworkState.error) {
           widgets.add(Center(
             child: genericItemGroup(
               getTranslations().fromKey(LocaleKey.somethingWentWrong),
@@ -134,7 +134,7 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
           ));
         }
 
-        if (networkState == NetworkState.Loading) {
+        if (networkState == NetworkState.loading) {
           widgets.add(Center(child: getLoading().smallLoadingIndicator()));
         } else {
           widgets.add(Padding(
@@ -170,7 +170,7 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
           ));
         }
 
-        // if (networkState == NetworkState.Success) {
+        // if (networkState == NetworkState.success) {
         //   Future.delayed(const Duration(milliseconds: 250)).then(
         //     (value) => getSnackbar().showSnackbar(
         //       context,

@@ -8,6 +8,11 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import '../enum/nmsfmTrackType.dart';
 
 class NmsfmTrackData {
+  String? title;
+  String? artist;
+  NmsfmTrackType? type;
+  int? runtimeInSeconds;
+
   NmsfmTrackData({
     this.title,
     this.artist,
@@ -15,15 +20,10 @@ class NmsfmTrackData {
     this.runtimeInSeconds,
   });
 
-  String title;
-  String artist;
-  NmsfmTrackType type;
-  int runtimeInSeconds;
-
   factory NmsfmTrackData.fromRawJson(String str) =>
       NmsfmTrackData.fromJson(json.decode(str));
 
-  factory NmsfmTrackData.fromJson(Map<String, dynamic> json) => NmsfmTrackData(
+  factory NmsfmTrackData.fromJson(Map<String, dynamic>? json) => NmsfmTrackData(
         title: readStringSafe(json, 'title'),
         artist: readStringSafe(json, 'artist'),
         type: nmsfmTrackTypeValues.map[readIntSafe(json, 'type').toString()],

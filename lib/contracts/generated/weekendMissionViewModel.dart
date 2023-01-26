@@ -1,32 +1,35 @@
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class WeekendMissionViewModel {
   String seasonId;
   int level;
   bool isConfirmedByCaptSteve;
   bool isConfirmedByAssistantNms;
-  String captainSteveVideoUrl;
+  String? captainSteveVideoUrl;
   DateTime activeDate;
 
   WeekendMissionViewModel({
-    this.seasonId,
-    this.level,
-    this.isConfirmedByCaptSteve,
-    this.isConfirmedByAssistantNms,
-    this.captainSteveVideoUrl,
-    this.activeDate,
+    required this.seasonId,
+    required this.level,
+    required this.isConfirmedByCaptSteve,
+    required this.isConfirmedByAssistantNms,
+    required this.captainSteveVideoUrl,
+    required this.activeDate,
   });
 
   factory WeekendMissionViewModel.fromRawJson(String str) =>
       WeekendMissionViewModel.fromJson(json.decode(str));
 
-  factory WeekendMissionViewModel.fromJson(Map<String, dynamic> json) =>
+  factory WeekendMissionViewModel.fromJson(Map<String, dynamic>? json) =>
       WeekendMissionViewModel(
-        seasonId: json["seasonId"],
-        level: json["level"],
-        isConfirmedByCaptSteve: json["isConfirmedByCaptSteve"],
-        isConfirmedByAssistantNms: json["isConfirmedByAssistantNms"],
-        captainSteveVideoUrl: json["captainSteveVideoUrl"],
-        activeDate: DateTime.parse(json["activeDate"]),
+        seasonId: readStringSafe(json, 'seasonId'),
+        level: readIntSafe(json, 'level'),
+        isConfirmedByCaptSteve: readBoolSafe(json, 'isConfirmedByCaptSteve'),
+        isConfirmedByAssistantNms:
+            readBoolSafe(json, 'isConfirmedByAssistantNms'),
+        captainSteveVideoUrl: readStringSafe(json, 'captainSteveVideoUrl'),
+        activeDate: readDateSafe(json, 'activeDate'),
       );
 }

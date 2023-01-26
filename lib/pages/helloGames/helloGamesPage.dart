@@ -12,7 +12,7 @@ import '../../constants/Routes.dart';
 import '../../contracts/customMenuItem.dart';
 
 class HelloGamesPage extends StatelessWidget {
-  HelloGamesPage({Key key}) : super(key: key) {
+  HelloGamesPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.helloGamesPage);
   }
 
@@ -40,7 +40,7 @@ class HelloGamesPage extends StatelessWidget {
     menuItems.add(CustomMenuItem(
       image: getListTileImage('galacticAtlas.png'),
       title: LocaleKey.galacticAtlas,
-      navigateToExternl: NmsExternalUrls.nmsGalacticAtlas,
+      navigateToExternal: NmsExternalUrls.nmsGalacticAtlas,
     ));
     menuItems.add(CustomMenuItem(
       image: getListTileImage(AppImage.communityMission),
@@ -64,7 +64,7 @@ class HelloGamesPage extends StatelessWidget {
         colour: getTheme().getDarkModeSecondaryColour(),
       ),
       title: LocaleKey.nmsWebsite,
-      navigateToExternl: NmsExternalUrls.noMansSkyWebsite,
+      navigateToExternal: NmsExternalUrls.noMansSkyWebsite,
     ));
     return responsiveGrid(context, menuItems, menuItemTilePresenter);
   }
