@@ -1,5 +1,3 @@
-// ignore_for_file: no_logic_in_create_state
-
 import 'dart:math';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
@@ -12,22 +10,20 @@ import '../../contracts/misc/customMenu.dart';
 class EditingHomepageItem extends StatefulWidget {
   final CustomMenu menuItem;
   final double tileSize;
-  const EditingHomepageItem(this.menuItem, this.tileSize, {Key? key})
-      : super(key: key);
+
+  const EditingHomepageItem(
+    this.menuItem,
+    this.tileSize, {
+    Key? key,
+  }) : super(key: key);
 
   @override
-  _EditingHomepageWidget createState() => _EditingHomepageWidget(
-        menuItem,
-        tileSize,
-      );
+  createState() => _EditingHomepageWidget();
 }
 
 class _EditingHomepageWidget extends State<EditingHomepageItem>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
-  final CustomMenu menuItem;
-  final double tileSize;
-  _EditingHomepageWidget(this.menuItem, this.tileSize);
 
   @override
   void initState() {
@@ -50,8 +46,8 @@ class _EditingHomepageWidget extends State<EditingHomepageItem>
   Widget build(BuildContext context) {
     return editCustomMenuItemGridPresenter(
       context,
-      menuItem,
-      tileSize,
+      widget.menuItem,
+      widget.tileSize,
       position: _shake(),
     );
   }
@@ -70,7 +66,8 @@ Widget editCustomMenuItemGridPresenter(
   double position = 0,
   bool isBeingDragged = false,
 }) {
-  var childWidget = Card(
+  Card childWidget = Card(
+    key: Key(menuItem.title.toString()),
     shadowColor: Colors.transparent,
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,

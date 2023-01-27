@@ -60,7 +60,6 @@ class _EditCustomHomeWidget extends State<EditCustomHomepage> {
             .toList();
 
         return ReorderableWrap(
-          // padding: const EdgeInsets.all(8),
           children: _localTiles,
           runSpacing: secretPadding,
           header: [
