@@ -1,13 +1,13 @@
 import 'dart:async';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/integration/dependencyInjection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../constants/AnalyticsEvent.dart';
-import '../integration/firebase.dart';
 
 class Donation extends StatefulWidget {
   const Donation({Key? key}) : super(key: key);
@@ -21,7 +21,8 @@ class _DonationWidget extends State<Donation> {
   bool adHasFailedToLoad = false;
   bool supportsNavtivePay = false;
 
-  final _interstitialAdId = adMobInterstitialDonationPageAdUnitId();
+  final _interstitialAdId =
+      getFirebase().adMobInterstitialDonationPageAdUnitId();
   InterstitialAd? _interstitialAd;
   final int maxFailedLoadAttempts = 3;
   int _numInterstitialLoadAttempts = 0;
