@@ -244,9 +244,8 @@ class CartPage extends StatelessWidget {
           total += currency;
         }
         if (total == 0) return const SizedBox(width: 0, height: 0);
-        return genericChipWidget(
-          context,
-          presenter(context, total.toStringAsFixed(0)),
+        return getBaseWidget().appChip(
+          label: presenter(context, total.toStringAsFixed(0)),
         );
       },
     );

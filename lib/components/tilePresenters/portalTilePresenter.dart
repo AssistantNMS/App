@@ -2,7 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../contracts/portal/portalRecord.dart';
-import '../../helpers/genericHelper.dart';
 import '../portal/portalGlyphList.dart';
 
 Widget portalTilePresenter(
@@ -38,7 +37,10 @@ Widget portalTilePresenter(
           Wrap(
             alignment: WrapAlignment.center,
             children: portalItem.tags
-                .map((g) => genericChip(context, g, color: Colors.transparent))
+                .map((g) => getBaseWidget().appChip(
+                      text: g,
+                      backgroundColor: Colors.transparent,
+                    ))
                 .toList(),
           ),
         ]),

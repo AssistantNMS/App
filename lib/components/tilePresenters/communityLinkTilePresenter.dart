@@ -87,7 +87,7 @@ Widget communityTag(
     String tag, List<CommunityLinkChipColourViewModel> chipColours) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 2),
-    child: Chip(
+    child: getBaseWidget().appChip(
       label: Text(tag, style: const TextStyle(color: Colors.black)),
       labelPadding: const EdgeInsets.symmetric(horizontal: 4),
       elevation: 5,

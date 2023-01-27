@@ -3,9 +3,9 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
 import 'package:assistantnms_app/helpers/themeHelper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+
 import '../../components/common/image.dart';
 import '../../components/modalBottomSheet/devDetailModalBottomSheet.dart';
-
 import '../components/currencyText.dart';
 import '../components/floatingActionButton/cartFloatingActionButton.dart';
 import '../components/floatingActionButton/inventoryFloatingActionButton.dart';
@@ -274,30 +274,6 @@ Widget? getFloatingActionButton(
   );
 }
 
-Widget genericChip(
-  context,
-  String title, {
-  Color? color,
-  void Function()? onTap,
-}) =>
-    genericChipWidget(context, Text(title), color: color, onTap: onTap);
-
-Widget genericChipWidget(
-  context,
-  Widget content, {
-  Color? color,
-  void Function()? onTap,
-}) {
-  var child = Padding(
-    child: Chip(
-      label: content,
-      backgroundColor: color ?? getTheme().getSecondaryColour(context),
-    ),
-    padding: const EdgeInsets.only(left: 4),
-  );
-  return (onTap == null) ? child : GestureDetector(child: child, onTap: onTap);
-}
-
 List<Widget> getConsumableRewards(
   context,
   List<String> consumableRewards,
@@ -348,23 +324,6 @@ Widget Function(BuildContext, GenericPageItem, {void Function()? onTap})
   return (BuildContext ctx, GenericPageItem item, {void Function()? onTap}) =>
       presenterWithIsHero(ctx, item, isHero, onTap: onTap);
 }
-
-// Widget Function(BuildContext, GenericPageItem, int)
-//     getResponsiveListItemDisplayer(
-//         bool genericTileIsCompact, bool displayGenericItemColour,
-//         {void Function() onTap, bool isHero = false}) {
-//   var presenterWithIsHero = displayGenericItemColour
-//       ? genericHomeTileWithRequiredItemsAndBackgroundColourPresenter
-//       : genericHomeTileWithRequiredItemsPresenter;
-
-//   if (genericTileIsCompact) {
-//     presenterWithIsHero = displayGenericItemColour
-//         ? genericTileWithBackgroundColourPresenter
-//         : genericTilePresenter;
-//   }
-//   return (BuildContext ctx, GenericPageItem item, int index) =>
-//       presenterWithIsHero(ctx, item, isHero, onTap: onTap);
-// }
 
 Widget getFavouriteStar(
     String itemIcon,

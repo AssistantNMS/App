@@ -46,7 +46,7 @@ Widget nmsLinkListItem(NmsGuideSectionItem item) {
   Function() onTap = () => launchExternalURL(item.content);
   return flatCard(
     child: GestureDetector(
-      child: Chip(
+      child: getBaseWidget().appChip(
         label: Text(item.name),
         backgroundColor: Colors.transparent,
         deleteIcon: const Icon(Icons.open_in_new),

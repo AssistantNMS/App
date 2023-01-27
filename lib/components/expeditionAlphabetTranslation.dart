@@ -1,3 +1,4 @@
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 
 import 'package:flutter/material.dart';
@@ -9,17 +10,12 @@ class ExpeditionAlphabetTranslation extends StatefulWidget {
   final String text;
   const ExpeditionAlphabetTranslation(this.text, {Key? key}) : super(key: key);
   @override
-  _ExpeditionAlphabetTranslationWidget createState() =>
-      // ignore: no_logic_in_create_state
-      _ExpeditionAlphabetTranslationWidget(text);
+  createState() => _ExpeditionAlphabetTranslationWidget();
 }
 
 class _ExpeditionAlphabetTranslationWidget
     extends State<ExpeditionAlphabetTranslation> with TickerProviderStateMixin {
-  final String text;
   bool _reveal = false;
-
-  _ExpeditionAlphabetTranslationWidget(this.text);
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +29,10 @@ class _ExpeditionAlphabetTranslationWidget
       child: GestureDetector(
         child: AvatarGlow(
           endRadius: 30.0,
-          child: Chip(
+          child: getBaseWidget().appChip(
             key: Key(_reveal.toString()),
-            label: Text(text, style: _reveal ? currentFont : expeditionFont),
+            text: widget.text,
+            style: _reveal ? currentFont : expeditionFont,
             backgroundColor: Colors.white,
           ),
         ),

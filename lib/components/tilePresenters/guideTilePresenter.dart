@@ -2,7 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../contracts/guide/guide.dart';
-import '../../helpers/genericHelper.dart';
 import '../../pages/guide/guidesDetailsPage.dart';
 
 const int numberOfDaysAGuideIsConsideredNew = 31;
@@ -65,7 +64,10 @@ Widget guideTilePresenter(BuildContext context, NmsGuide guideDetails) {
       Wrap(
         alignment: WrapAlignment.center,
         children: guideDetails.tags
-            .map((g) => genericChip(context, g, color: Colors.transparent))
+            .map(
+              (g) => getBaseWidget()
+                  .appChip(text: g, backgroundColor: Colors.transparent),
+            )
             .toList(),
       ),
     ],

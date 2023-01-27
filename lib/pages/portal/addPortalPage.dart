@@ -12,7 +12,6 @@ import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/portal/portalRecord.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/actionHelper.dart';
-import '../../helpers/genericHelper.dart';
 import '../../helpers/hexHelper.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 
@@ -273,18 +272,19 @@ class _PortalPageState extends State<AddPortalPage> {
     ));
 
     List<Widget> tags = List.empty(growable: true);
-    for (var item in this.item.tags) {
-      tags.add(genericChip(bodyCtx, item, onTap: () async {
-        _removeTag(bodyCtx, item);
-      }));
+    for (String item in this.item.tags) {
+      tags.add(getBaseWidget().appChip(
+          text: item,
+          onTap: () async {
+            _removeTag(bodyCtx, item);
+          }));
     }
 
     tags.add(
-      genericChip(
-        bodyCtx,
-        '+' + getTranslations().fromKey(LocaleKey.addTag),
+      getBaseWidget().appChip(
+        text: '+' + getTranslations().fromKey(LocaleKey.addTag),
         onTap: () async {
-          var availableTags = portalViewModel.availableTags
+          List<String> availableTags = portalViewModel.availableTags
               .where((at) => !item.tags.contains(at))
               .toList();
           String? temp = await getNavigation().navigateAsync(

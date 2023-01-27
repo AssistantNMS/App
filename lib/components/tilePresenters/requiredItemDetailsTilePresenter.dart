@@ -207,7 +207,7 @@ Widget requiredItemTreeDetailsRowPresenter(
         Positioned(
           top: 0,
           right: 10,
-          child: genericChipWidget(context, costWidget),
+          child: getBaseWidget().appChip(label: costWidget),
         ),
       ],
     ),

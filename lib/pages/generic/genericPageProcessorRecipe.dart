@@ -73,12 +73,15 @@ class GenericPageProcessorRecipe extends StatelessWidget {
 
     List<Widget> widgets = List.empty(growable: true);
     var output = snapshot.data!.value.outputDetail;
-    GestureDetector Function(Widget child) gestureDetector;
-    gestureDetector = (Widget child) => GestureDetector(
+
+    gestureDetector(Widget child) => GestureDetector(
           child: child,
-          onTap: () async => await getNavigation().navigateAsync(context,
-              navigateTo: (context) => GenericPage(output.id)),
+          onTap: () async => await getNavigation().navigateAsync(
+            context,
+            navigateTo: (context) => GenericPage(output.id),
+          ),
         );
+
     Color iconColour = getOverlayColour(HexColor(output.colour ?? '#000'));
     widgets.add(Stack(
       children: [
@@ -113,11 +116,13 @@ class GenericPageProcessorRecipe extends StatelessWidget {
       alignment: WrapAlignment.center,
       children: [
         gestureDetector(
-          genericChipWidget(
-            context,
-            genericItemTextWithIcon(
-                context, output.name, Icons.chrome_reader_mode,
-                colour: Colors.white),
+          getBaseWidget().appChip(
+            label: genericItemTextWithIcon(
+              context,
+              output.name,
+              Icons.chrome_reader_mode,
+              colour: Colors.white,
+            ),
           ),
         ),
       ],

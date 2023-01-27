@@ -13,7 +13,6 @@ import '../../constants/AnalyticsEvent.dart';
 import '../../constants/NmsExternalUrls.dart';
 import '../../contracts/portal/portalRecord.dart';
 import '../../contracts/redux/appState.dart';
-import '../../helpers/genericHelper.dart';
 import '../../helpers/hexHelper.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 import 'addPortalPage.dart';
@@ -100,10 +99,14 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
     ));
 
     if (item.tags.isNotEmpty) {
-      widgets.add(Wrap(
-        alignment: WrapAlignment.center,
-        children: item.tags.map((tag) => genericChip(context, tag)).toList(),
-      ));
+      widgets.add(
+        Wrap(
+          alignment: WrapAlignment.center,
+          children: item.tags
+              .map((tag) => getBaseWidget().appChip(text: tag))
+              .toList(),
+        ),
+      );
     }
 
     // String dateString = (item.date != null && item.date.length > 10)
@@ -131,8 +134,8 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
     Future Function() onTap;
     onTap = () => launchExternalURL(url);
     widgets.add(GestureDetector(
-      child: Chip(
-        label: const Text('nmsportals.github.io'),
+      child: getBaseWidget().appChip(
+        text: 'nmsportals.github.io',
         deleteIcon: const Icon(Icons.open_in_new),
         onDeleted: onTap,
       ),

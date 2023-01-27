@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'color_scheme.dart';
 
 ThemeData getDynamicTheme(Brightness brightness, String fontFamily) {
-  return darkTheme(fontFamily);
+  return darkThemeM3(fontFamily);
 }
 
 ThemeData darkThemeM3(String fontFamily) {

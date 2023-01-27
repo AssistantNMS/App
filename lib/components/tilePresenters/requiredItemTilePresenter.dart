@@ -1,14 +1,13 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../constants/NmsUIConstants.dart';
-import '../../helpers/heroHelper.dart';
 
 import '../../constants/AppImage.dart';
+import '../../constants/NmsUIConstants.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/processorRequiredItem.dart';
 import '../../contracts/requiredItem.dart';
 import '../../contracts/requiredItemDetails.dart';
-import '../../helpers/genericHelper.dart';
+import '../../helpers/heroHelper.dart';
 import '../../helpers/itemsHelper.dart';
 import '../../pages/generic/genericPage.dart';
 import '../../pages/generic/genericPageProcessorRecipe.dart';
@@ -192,7 +191,7 @@ Widget genericHomeTileWithRequiredItemsBody(
     overflow: TextOverflow.ellipsis,
   ));
   for (RequiredItemDetails req in snapshot.data!) {
-    children.add(genericChip(context, req.toString()));
+    children.add(getBaseWidget().appChip(text: req.toString()));
   }
   return ListTile(
     leading: displayBackgroundColour

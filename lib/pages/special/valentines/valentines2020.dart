@@ -48,7 +48,7 @@ class Valentines2020 extends StatelessWidget {
               margin: const EdgeInsets.all(4.0),
             ),
             GestureDetector(
-              child: Chip(
+              child: getBaseWidget().appChip(
                 label: const Text('NMS_GalacticCorporate'),
                 backgroundColor: Colors.transparent,
                 deleteIcon: const Icon(Icons.open_in_new),

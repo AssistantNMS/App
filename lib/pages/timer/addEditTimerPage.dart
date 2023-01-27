@@ -162,34 +162,29 @@ class _AddEditTimerState extends State<AddEditTimerPage> {
 
   List<Widget> getQuickAccessButtons(BuildContext context) {
     return [
-      genericChip(
-        context,
-        getTranslations().fromKey(LocaleKey.hour).replaceAll('{0}', '1'),
+      getBaseWidget().appChip(
+        text: getTranslations().fromKey(LocaleKey.hour).replaceAll('{0}', '1'),
         onTap: () => setEndDateQuickSelect(const Duration(hours: 1)),
       ),
-      genericChip(
-        context,
-        getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '2'),
+      getBaseWidget().appChip(
+        text: getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '2'),
         onTap: () => setEndDateQuickSelect(const Duration(hours: 2)),
       ),
-      genericChip(
-        context,
-        getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '5'),
+      getBaseWidget().appChip(
+        text: getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '5'),
         onTap: () => setEndDateQuickSelect(const Duration(hours: 5)),
       ),
-      genericChip(
-        context,
-        getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '10'),
+      getBaseWidget().appChip(
+        text:
+            getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '10'),
         onTap: () => setEndDateQuickSelect(const Duration(hours: 10)),
       ),
-      genericChip(
-        context,
-        getTranslations().fromKey(LocaleKey.day).replaceAll('{0}', '1'),
+      getBaseWidget().appChip(
+        text: getTranslations().fromKey(LocaleKey.day).replaceAll('{0}', '1'),
         onTap: () => setEndDateQuickSelect(const Duration(days: 1)),
       ),
-      genericChip(
-        context,
-        getTranslations().fromKey(LocaleKey.days).replaceAll('{0}', '2'),
+      getBaseWidget().appChip(
+        text: getTranslations().fromKey(LocaleKey.days).replaceAll('{0}', '2'),
         onTap: () => setEndDateQuickSelect(const Duration(days: 2)),
       ),
     ];

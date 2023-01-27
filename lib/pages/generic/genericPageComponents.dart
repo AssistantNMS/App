@@ -191,8 +191,8 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
   widgets.add(animateScaleUp(
     child: Wrap(
       alignment: WrapAlignment.center,
-      children: chipList
-          .map((widget) => genericChipWidget(bodyDetailsCtx, widget))
+      children: chipList //
+          .map((widget) => getBaseWidget().appChip(label: widget))
           .toList(),
     ),
   ));

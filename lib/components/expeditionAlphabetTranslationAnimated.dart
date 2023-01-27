@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/Fonts.dart';
@@ -11,20 +12,15 @@ class ExpeditionAlphabetTranslationAnimated extends StatefulWidget {
   const ExpeditionAlphabetTranslationAnimated(this.text, {Key? key})
       : super(key: key);
   @override
-  _ExpeditionAlphabetTranslationAnimatedWidget createState() =>
-      // ignore: no_logic_in_create_state
-      _ExpeditionAlphabetTranslationAnimatedWidget(text);
+  createState() => _ExpeditionAlphabetTranslationAnimatedWidget();
 }
 
 class _ExpeditionAlphabetTranslationAnimatedWidget
     extends State<ExpeditionAlphabetTranslationAnimated>
     with TickerProviderStateMixin {
-  final String text;
   late Timer _timer;
   int _counter = 0;
   final Random _rng = Random();
-
-  _ExpeditionAlphabetTranslationAnimatedWidget(this.text);
 
   @override
   initState() {
@@ -47,7 +43,7 @@ class _ExpeditionAlphabetTranslationAnimatedWidget
 
     TextSpan content = TextSpan(
       style: currentFont,
-      children: text
+      children: widget.text
           .split('')
           .map((char) {
             bool shoExpFont = _rng.nextInt(100) > 25;
@@ -67,7 +63,7 @@ class _ExpeditionAlphabetTranslationAnimatedWidget
     );
 
     return Padding(
-      child: Chip(
+      child: getBaseWidget().appChip(
         label: RichText(
           key: Key(_counter.toString()),
           text: content,
