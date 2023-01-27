@@ -2,8 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../components/starRating.dart';
-
 class DialogService implements IDialogService {
   //
   @override
@@ -216,9 +214,8 @@ class DialogService implements IDialogService {
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            starRating(
-              context,
-              currentRating,
+            StarRating(
+              currentRating: currentRating,
               size: 64,
               onTap: (int value) {
                 if (onSuccess != null) {
