@@ -29,12 +29,11 @@ class SeasonalExpeditionDetailPage extends StatelessWidget {
   }
 
   Widget getBody(
-      BuildContext scaffoldContext,
-      SeasonalExpeditionPhase seasonalExpeditionPhase,
-      ExpeditionViewModel viewModel) {
+    BuildContext scaffoldContext,
+    SeasonalExpeditionPhase seasonalExpeditionPhase,
+    ExpeditionViewModel viewModel,
+  ) {
     List<Widget> widgets = List.empty(growable: true);
-
-    print(seasonalExpeditionPhase.milestones.length);
 
     for (SeasonalExpeditionMilestone milestone
         in seasonalExpeditionPhase.milestones) {

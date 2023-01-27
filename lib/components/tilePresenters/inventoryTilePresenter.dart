@@ -70,49 +70,6 @@ List<Widget> Function(
       return result;
     };
 
-// Widget inventorySlotTilePresenter(
-//   BuildContext context,
-//   String containerName,
-//   InventorySlotWithGenericPageItem invSlot,
-// ) {
-//   ListTile Function(String id, String icon, String name) displayFunc;
-//   displayFunc = (String id, String icon, String name) => //
-//       genericListTileWithSubtitle(
-//         context,
-//         leadingImage: icon,
-//         name: name,
-//         subtitle: Text(
-//           containerName,
-//           maxLines: 1,
-//           overflow: TextOverflow.ellipsis,
-//         ),
-//         onTap: () async => await getNavigation().navigateAwayFromHomeAsync(
-//           context,
-//           navigateTo: (context) => GenericPage(invSlot.id),
-//         ),
-//       );
-
-//   print('inventorySlotTilePresenter items not null');
-//   if (invSlot.id.isNotEmpty &&
-//       invSlot.icon.isNotEmpty &&
-//       invSlot.name.isNotEmpty) {
-//     return displayFunc(invSlot.id, invSlot.icon, invSlot.name);
-//   }
-
-//   print('inventorySlotTilePresenter fetch details');
-//   return genericItemTilePresenterWrapper(
-//     context,
-//     appId: invSlot.id,
-//     builder: (BuildContext innerCtx, RequiredItemDetails details) {
-//       return displayFunc(
-//         details.id,
-//         details.icon,
-//         details.name,
-//       );
-//     },
-//   );
-// }
-
 Widget Function(BuildContext context, InventorySlotWithGenericPageItem invSlot,
     {void Function()? onTap}) inventorySlotInContainerTilePresenter({
   required void Function(InventorySlot) onEdit,

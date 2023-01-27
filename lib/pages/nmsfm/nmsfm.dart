@@ -9,6 +9,7 @@ import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AppAudio.dart';
 import '../../constants/AppDuration.dart';
 import '../../constants/AppImage.dart';
+import '../../constants/NmsUIConstants.dart';
 import '../../constants/Nmsfm.dart';
 import '../../contracts/misc/audioStreamBuilderEvent.dart';
 import '../../contracts/nmsfm/zenoFMNowPlaying.dart';
@@ -56,10 +57,19 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
 
   Widget getBody(BuildContext context) {
     List<Widget> widgets = List.empty(growable: true);
-    widgets.add(localImage(
-      AppImage.nmsfmLogo,
-      padding: const EdgeInsets.symmetric(horizontal: 64),
-    ));
+    widgets.add(emptySpace2x());
+    widgets.add(
+      Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 350, maxHeight: 350),
+          child: localImage(
+            AppImage.nmsfmLogo,
+            borderRadius: NMSUIConstants.generalBorderRadius,
+            padding: const EdgeInsets.symmetric(horizontal: 64),
+          ),
+        ),
+      ),
+    );
     widgets.add(emptySpace1x());
     widgets.add(genericItemName(getTranslations().fromKey(LocaleKey.nmsfm)));
     widgets.add(genericItemDescription(

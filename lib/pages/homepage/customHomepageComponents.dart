@@ -6,6 +6,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import '../../constants/AppDuration.dart';
 
+import '../../constants/NmsUIConstants.dart';
 import '../../contracts/misc/customMenu.dart';
 
 class EditingHomepageItem extends StatefulWidget {
@@ -101,40 +102,42 @@ Widget editCustomMenuItemGridPresenter(
 }
 
 Widget customMenuItemGridPresenter(BuildContext context, CustomMenu menuItem) {
-  Widget card = Card(
-    child: InkWell(
-      child: Stack(
-        alignment: Alignment.center,
+  Stack internalCard = Stack(
+    alignment: Alignment.center,
+    children: [
+      if (menuItem.isLocked) ...[
+        Positioned(
+          top: 5,
+          left: 7,
+          child: Icon(
+            Icons.lock_clock,
+            size: 32,
+            color: getTheme().getDarkModeSecondaryColour(),
+          ),
+        ),
+      ],
+      Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          if (menuItem.isLocked) ...[
-            Positioned(
-              top: 5,
-              left: 7,
-              child: Icon(
-                Icons.lock_clock,
-                size: 32,
-                color: getTheme().getDarkModeSecondaryColour(),
-              ),
+          menuItem.icon,
+          Padding(
+            padding: const EdgeInsets.all(4),
+            child: Text(
+              getTranslations().fromKey(menuItem.title),
+              maxLines: 2,
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              softWrap: false,
             ),
-          ],
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              menuItem.icon,
-              Padding(
-                padding: const EdgeInsets.all(4),
-                child: Text(
-                  getTranslations().fromKey(menuItem.title),
-                  maxLines: 2,
-                  textAlign: TextAlign.center,
-                  overflow: TextOverflow.ellipsis,
-                  softWrap: false,
-                ),
-              ),
-            ],
           ),
         ],
       ),
+    ],
+  );
+  Widget card = Card(
+    child: InkWell(
+      borderRadius: NMSUIConstants.generalBorderRadius,
+      child: internalCard,
       onTap: () => customMenuClickHandler(context, menuItem),
       onLongPress: () => (menuItem.onLongPress != null)
           ? menuItem.onLongPress!(context)

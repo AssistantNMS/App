@@ -8,6 +8,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 // import 'package:wiredash/wiredash.dart';
 
 import '../../constants/HomepageItems.dart';
+import '../../constants/NmsUIConstants.dart';
 import '../../constants/Routes.dart';
 import '../../contracts/redux/appState.dart';
 import '../../env/appVersionNum.dart';
@@ -126,7 +127,7 @@ class AppShell extends StatelessWidget {
       darkTheme: darkTheme,
       debugShowCheckedModeBanner: false,
       home: ClipRRect(
-        borderRadius: BorderRadius.circular(8.0),
+        borderRadius: NMSUIConstants.generalBorderRadius,
         child: Scaffold(
           appBar: WindowTitleBar('Assistant for No Man\'s Sky'),
           body: matApp,
