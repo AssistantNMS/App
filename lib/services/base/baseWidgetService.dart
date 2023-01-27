@@ -69,7 +69,7 @@ class BaseWidgetService implements IBaseWidgetService {
     Icon? deleteIcon,
     void Function()? onDeleted,
     void Function()? onTap,
-    Color backgroundColor = Colors.white,
+    Color? backgroundColor,
   }) =>
       AdaptiveChip(
         key: key,

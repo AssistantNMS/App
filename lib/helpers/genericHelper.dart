@@ -174,7 +174,10 @@ List<Widget> genericItemWithOverflowButton<T>(
   if (itemArray.length > maxNumberOfRowsForRecipeCategory &&
       viewMoreOnPress != null) {
     widgets.add(viewMoreButton(
-        context, (itemArray.length - numRecords), viewMoreOnPress));
+      context,
+      (itemArray.length - numRecords),
+      viewMoreOnPress,
+    ));
   }
   return widgets;
 }
@@ -182,6 +185,7 @@ List<Widget> genericItemWithOverflowButton<T>(
 Widget viewMoreButton(context, int numLeftOver, viewMoreOnPress) {
   String viewMore = getTranslations().fromKey(LocaleKey.viewXMore);
   return Container(
+    margin: const EdgeInsets.symmetric(horizontal: 4.0),
     child: positiveButton(
       context,
       title: viewMore.replaceAll("{0}", numLeftOver.toString()),

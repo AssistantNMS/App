@@ -103,7 +103,7 @@ Widget majorUpdateItemDetailTilePresenter(
       ),
       title: Text(updateItem.title),
       subtitle: Text(simpleDate(updateItem.releaseDate)),
-      trailing: (updateItem.emoji != null && updateItem.emoji!.isEmpty)
+      trailing: (updateItem.emoji != null && updateItem.emoji!.isNotEmpty)
           ? Text(updateItem.emoji!, style: const TextStyle(fontSize: 25))
           : null,
       onTap: () => getNavigation().navigateAwayFromHomeAsync(

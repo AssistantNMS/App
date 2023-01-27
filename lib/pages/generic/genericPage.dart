@@ -35,6 +35,7 @@ import 'genericPageComponents.dart';
 class GenericPage extends StatelessWidget {
   final String itemId;
   final GenericPageItem? itemDetails;
+  final TextEditingController controller = TextEditingController();
 
   GenericPage(
     this.itemId, {
@@ -46,23 +47,22 @@ class GenericPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController controller = TextEditingController();
     String loadingText = getTranslations().fromKey(LocaleKey.loading);
     return StoreConnector<AppState, GenericPageViewModel>(
       converter: (store) => GenericPageViewModel.fromStore(store),
-      builder: (_, viewModel) {
+      builder: (storeCtx, viewModel) {
         return CachedFutureBuilder<ResultWithValue<GenericPageItem>>(
           key: Key('${viewModel.cartItems.length}'),
           future: genericItemFuture(
-            context,
+            storeCtx,
             itemId,
             viewModel.platformIndex,
           ),
           whileLoading: () => basicGenericPageScaffold(
-            context,
+            storeCtx,
             title: loadingText,
             body: getLoadingBody(
-              context,
+              storeCtx,
               loadingText,
               viewModel,
               itemDetails,
@@ -70,43 +70,54 @@ class GenericPage extends StatelessWidget {
             showShortcutLinks: true,
           ),
           whenDoneLoading: (ResultWithValue<GenericPageItem> snapshot) {
-            return genericPageScaffold<ResultWithValue<GenericPageItem>>(
-              context,
-              snapshot.value.typeName,
-              const AsyncSnapshot.nothing(), // unused
-              body: (BuildContext context, unused) =>
-                  getBody(context, viewModel, snapshot),
-              additionalShortcutLinks: [
-                ActionItem(
-                  icon: Icons.share, // Fallback
-                  image: getCorrectlySizedImageFromIcon(
-                    context,
-                    Icons.share,
-                    colour: getTheme().getDarkModeSecondaryColour(),
-                  ),
-                  text: getTranslations().fromKey(LocaleKey.share),
-                  onPressed: () {
-                    adaptiveBottomModalSheet(
-                      context,
-                      hasRoundedCorners: true,
-                      builder: (BuildContext innerContext) => ShareBottomSheet(
-                        itemId: snapshot.value.id,
-                        itemName: snapshot.value.name,
-                      ),
-                    );
-                  },
-                ),
-              ],
-              floatingActionButton: getFloatingActionButton(
-                context,
-                controller,
-                snapshot.value,
-                addToCart: viewModel.addToCart,
-              ),
-            );
+            return doneLoading(storeCtx, viewModel, snapshot);
           },
         );
       },
+    );
+  }
+
+  Widget doneLoading(
+    BuildContext doneLoadingCtx,
+    GenericPageViewModel viewModel,
+    ResultWithValue<GenericPageItem> snapshot,
+  ) {
+    return genericPageScaffold<ResultWithValue<GenericPageItem>>(
+      doneLoadingCtx,
+      snapshot.value.typeName,
+      const AsyncSnapshot.nothing(), // unused
+      body: (BuildContext scaffoldCtx, unused) => getBody(
+        scaffoldCtx,
+        viewModel,
+        snapshot,
+      ),
+      additionalShortcutLinks: [
+        ActionItem(
+          icon: Icons.share, // Fallback
+          image: getCorrectlySizedImageFromIcon(
+            doneLoadingCtx,
+            Icons.share,
+            colour: getTheme().getDarkModeSecondaryColour(),
+          ),
+          text: getTranslations().fromKey(LocaleKey.share),
+          onPressed: () {
+            adaptiveBottomModalSheet(
+              doneLoadingCtx,
+              hasRoundedCorners: true,
+              builder: (BuildContext innerContext) => ShareBottomSheet(
+                itemId: snapshot.value.id,
+                itemName: snapshot.value.name,
+              ),
+            );
+          },
+        ),
+      ],
+      floatingActionButton: getFloatingActionButton(
+        doneLoadingCtx,
+        controller,
+        snapshot.value,
+        addToCart: viewModel.addToCart,
+      ),
     );
   }
 
@@ -155,8 +166,11 @@ class GenericPage extends StatelessWidget {
     );
   }
 
-  Widget getBody(BuildContext context, GenericPageViewModel vm,
-      ResultWithValue<GenericPageItem> snapshot) {
+  Widget getBody(
+    BuildContext context,
+    GenericPageViewModel vm,
+    ResultWithValue<GenericPageItem> snapshot,
+  ) {
     GenericPageItem genericItem = snapshot.value;
 
     if (genericItem.description == null ||
@@ -202,16 +216,17 @@ class GenericPage extends StatelessWidget {
     ));
 
     // ----------------------------- Used to Craft -----------------------------
-    Widget Function(
-        BuildContext context, RequiredItemDetails requiredItemDetails,
-        {void Function()? onTap}) requiredItemDetailsFunction;
-    requiredItemDetailsFunction =
-        (BuildContext context, RequiredItemDetails requiredItemDetails,
-                {void Function()? onTap}) =>
-            requiredItemDetailsWithCraftingRecipeTilePresenter(
-                context, requiredItemDetails,
-                showBackgroundColours: vm.displayGenericItemColour,
-                pageItemId: genericItem.id);
+    requiredItemDetailsFunction(
+      BuildContext context,
+      RequiredItemDetails requiredItemDetails, {
+      void Function()? onTap,
+    }) =>
+        requiredItemDetailsWithCraftingRecipeTilePresenter(
+          context,
+          requiredItemDetails,
+          showBackgroundColours: vm.displayGenericItemColour,
+          pageItemId: genericItem.id,
+        );
     List<RequiredItemDetails> usedToCreateArray =
         mapUsedInToRequiredItemsWithDescrip(
       genericItem.usedInRecipes ?? List.empty(),
@@ -220,10 +235,11 @@ class GenericPage extends StatelessWidget {
         context, genericItem, usedToCreateArray, requiredItemDetailsFunction));
 
     // ------------------------------ Charged by -------------------------------
-    Widget Function(BuildContext context, ChargeBy chargeBy,
-        {void Function()? onTap}) rechargeItemFunction;
-    rechargeItemFunction = (BuildContext context, ChargeBy chargeBy,
-            {void Function()? onTap}) =>
+    rechargeItemFunction(
+      BuildContext context,
+      ChargeBy chargeBy, {
+      void Function()? onTap,
+    }) =>
         chargeByItemTilePresenter(
           context,
           chargeBy,
@@ -240,12 +256,17 @@ class GenericPage extends StatelessWidget {
     ));
 
     // --------------------------- Used to Recharge ----------------------------
-    Widget Function(BuildContext context, Recharge recharge,
-        {void Function()? onTap}) usedToRechargeItemFunction;
-    usedToRechargeItemFunction = (BuildContext context, Recharge recharge,
-            {void Function()? onTap}) =>
-        usedToRechargeByItemTilePresenter(context, recharge, genericItem,
-            showBackgroundColours: vm.displayGenericItemColour);
+    usedToRechargeItemFunction(
+      BuildContext context,
+      Recharge recharge, {
+      void Function()? onTap,
+    }) =>
+        usedToRechargeByItemTilePresenter(
+          context,
+          recharge,
+          genericItem,
+          showBackgroundColours: vm.displayGenericItemColour,
+        );
 
     List<Recharge> usedToRechargedList = genericItem.usedToRecharge!;
     widgets.addAll(getUsedToRecharge(
@@ -323,15 +344,18 @@ class GenericPage extends StatelessWidget {
 
     // --------------------------- Is in Inventories ---------------------------
     widgets.addAll(getInventories(
-        context,
-        genericItem,
-        vm.containers
-            .where((Inventory i) =>
-                i.slots.any((InventorySlot invS) => invS.id == genericItem.id))
-            .toList()));
+      context,
+      genericItem,
+      vm.containers
+          .where(
+            (Inventory i) => i.slots.any(
+              (InventorySlot invS) => invS.id == genericItem.id,
+            ),
+          )
+          .toList(),
+    ));
 
     // ----------------------------- Rewards from ------------------------------
-
     List<StarshipScrap>? starshipScrapItems = genericItem.starshipScrapItems;
     List<CreatureHarvest>? creatureHarvests = genericItem.creatureHarvests;
 

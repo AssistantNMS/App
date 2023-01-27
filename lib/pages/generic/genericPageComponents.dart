@@ -323,9 +323,13 @@ Widget getCookingScore(BuildContext ctx, double cookingValue) {
         step: 0.1,
         defaultStars: (cookingValue * 5),
         justShow: true,
+        starMargin: 0,
       ),
-      trailing:
-          genericItemNanites(ctx, "± $cookingPerc", colour: secondaryColour),
+      trailing: genericItemNanites(
+        ctx,
+        "± $cookingPerc",
+        colour: secondaryColour,
+      ),
     ),
   );
 }
@@ -457,8 +461,11 @@ List<Widget> getProcessorWidgets(
       presenter,
       viewMoreOnPress: () async => await getNavigation().navigateAsync(
         context,
-        navigateTo: (context) =>
-            AllPossibleOutputsPage(processors, genericItem.name, presenter),
+        navigateTo: (context) => AllPossibleOutputsPage(
+          processors,
+          genericItem.name,
+          presenter,
+        ),
       ),
     ));
   }
@@ -474,14 +481,15 @@ List<Widget> getCartItems(BuildContext context, GenericPageViewModel vm,
     cartWidgets.add(genericItemText(getTranslations().fromKey(LocaleKey.cart)));
     cartWidgets.add(flatCard(
       child: requiredItemTilePresenter(
-          context,
-          RequiredItem(
-            id: genericItem.id,
-            quantity: cartItems[0].quantity,
-          ),
-          showBackgroundColours: vm.displayGenericItemColour,
-          onTap: () async => await getNavigation()
-              .navigateAsync(context, navigateToNamed: Routes.cart)),
+        context,
+        RequiredItem(
+          id: genericItem.id,
+          quantity: cartItems[0].quantity,
+        ),
+        showBackgroundColours: vm.displayGenericItemColour,
+        onTap: () async => await getNavigation()
+            .navigateAsync(context, navigateToNamed: Routes.cart),
+      ),
     ));
   }
   return cartWidgets;
