@@ -20,7 +20,7 @@ class ThemeService implements IThemeService {
 
   @override
   Color getDarkModeSecondaryColour() =>
-      darkTheme(defaultFontFamily).colorScheme.secondary;
+      getDynamicTheme(Brightness.dark, defaultFontFamily).colorScheme.secondary;
 
   @override
   bool getIsDark(BuildContext context) =>
@@ -28,17 +28,17 @@ class ThemeService implements IThemeService {
 
   @override
   Color getBackgroundColour(BuildContext context) =>
-      darkTheme(defaultFontFamily).colorScheme.background;
+      getTheme(context).colorScheme.background;
 
   @override
   Color getScaffoldBackgroundColour(BuildContext context) =>
-      darkTheme(defaultFontFamily).scaffoldBackgroundColor;
+      getTheme(context).scaffoldBackgroundColor;
 
   @override
   void setFontFamily(BuildContext context, String fontFamily) {
     AdaptiveTheme.of(context).setTheme(
-      light: darkTheme(fontFamily),
-      dark: darkTheme(fontFamily),
+      light: getDynamicTheme(Brightness.light, defaultFontFamily),
+      dark: getDynamicTheme(Brightness.dark, defaultFontFamily),
     );
   }
 
@@ -74,8 +74,12 @@ class ThemeService implements IThemeService {
       getIsDark(context) ? Colors.white54 : Colors.black54;
 
   @override
-  Color getCardBackgroundColour(BuildContext context) =>
-      darkTheme(defaultFontFamily).colorScheme.background;
+  Color getCardBackgroundColour(BuildContext context) => lighten(
+        getDynamicTheme(Brightness.dark, defaultFontFamily)
+            .colorScheme
+            .background,
+        0.25,
+      );
 
   @override
   bool useWhiteForeground(Color backgroundColor) =>
@@ -89,7 +93,8 @@ class ThemeService implements IThemeService {
   Color fabForegroundColourSelector(BuildContext context) => Colors.white;
 
   @override
-  Color fabColourSelector(BuildContext context) => getPrimaryColour(context);
+  Color fabColourSelector(BuildContext context) =>
+      getTheme(context).colorScheme.primary;
 
   @override
   Color buttonBackgroundColour(BuildContext context) =>

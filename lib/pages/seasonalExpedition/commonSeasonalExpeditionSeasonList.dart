@@ -134,7 +134,12 @@ Widget getExpeditionBodyFromFuture(
     );
   }
 
-  listItems.add(Padding(child: Container(), padding: const EdgeInsets.all(16)));
+  listItems.add(
+    Padding(
+      child: Container(),
+      padding: const EdgeInsets.all(16),
+    ),
+  );
 
   return listWithScrollbar(
     shrinkWrap: true,

@@ -1,18 +1,18 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
+
 import '../../constants/NmsUIConstants.dart';
 import '../../contracts/generated/expeditionViewModel.dart' as expedition_api;
 import '../../contracts/seasonalExpedition/expeditionMilestoneType.dart';
-import '../../integration/dependencyInjection.dart';
-import '../../pages/generic/genericPageDescripHighlightText.dart';
-import '../../pages/seasonalExpedition/seasonalExpeditionPhaseListPage.dart';
-import '../../redux/modules/expedition/expeditionViewModel.dart';
-
 import '../../contracts/seasonalExpedition/seasonalExpeditionMilestone.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionPhase.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
 import '../../helpers/hexHelper.dart';
+import '../../integration/dependencyInjection.dart';
+import '../../pages/generic/genericPageDescripHighlightText.dart';
 import '../../pages/seasonalExpedition/seasonalExpeditionDetailPage.dart';
+import '../../pages/seasonalExpedition/seasonalExpeditionPhaseListPage.dart';
+import '../../redux/modules/expedition/expeditionViewModel.dart';
 import '../modalBottomSheet/expeditionRewardsListModalBottomSheet.dart';
 import '../portal/portalGlyphList.dart';
 

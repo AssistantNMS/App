@@ -29,7 +29,9 @@ Widget _customAndroidAppBar(
     title: title,
     centerTitle: true,
     actions: actions,
+    surfaceTintColor: getTheme().getPrimaryColour(context),
     backgroundColor: getTheme().getPrimaryColour(context),
+    foregroundColor: getTheme().getH1Colour(context),
     bottom: bottom,
   );
 }

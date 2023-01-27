@@ -18,7 +18,7 @@ Widget timerTilePresenter(
       padding: const EdgeInsets.only(top: 4.0, bottom: 4.0),
       child: getProgressbarFromDates(
         context,
-        timer.startDate!,
+        timer.startDate,
         timer.completionDate,
         animation: false,
       ),
