@@ -21,10 +21,9 @@ void prettyDialog(
   List<Widget> buttons = List.empty(growable: true);
   if (onlyCancelButton == false) {
     buttons.add(
-      positiveButton(
-        dialogCtx,
+      PositiveButton(
         title: getTranslations().fromKey(LocaleKey.noticeAccept),
-        onPress: () {
+        onTap: () {
           if (onSuccess != null) onSuccess(dialogCtx);
           getNavigation().pop(dialogCtx);
         },
@@ -33,10 +32,9 @@ void prettyDialog(
   }
 
   buttons.add(
-    positiveButton(
-      dialogCtx,
+    PositiveButton(
       title: localCancelButtonText,
-      onPress: onCancel == null ? null : () => onCancel(dialogCtx),
+      onTap: onCancel == null ? null : () => onCancel(dialogCtx),
     ),
   );
 

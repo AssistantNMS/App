@@ -366,12 +366,11 @@ List<Widget> getCraftedUsing(
 
     if (itemsThatArentRawMaterials.isNotEmpty) {
       craftedUsing.add(
-        positiveButton(
-          context,
+        PositiveButton(
           title: getTranslations().fromKey(
             LocaleKey.viewAllRawMaterialsRequired,
           ),
-          onPress: () async => await getNavigation().navigateAsync(
+          onTap: () async => await getNavigation().navigateAsync(
             context,
             navigateTo: (context) => GenericPageAllRequiredRawMaterials(
               GenericPageAllRequired.fromGenericItem(genericItem),

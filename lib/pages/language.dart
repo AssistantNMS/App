@@ -17,18 +17,16 @@ class Language extends StatelessWidget {
       title: getTranslations().fromKey(LocaleKey.language),
       body: LanguagePageContent(
         additionalButtons: [
-          positiveButton(
-            context,
+          PositiveButton(
             title: getTranslations().fromKey(LocaleKey.useTranslationTool),
-            onPress: () => launchExternalURL(
+            onTap: () => launchExternalURL(
               ExternalUrls.assistantAppsToolSite,
             ),
           ),
-          positiveButton(
-            context,
+          PositiveButton(
             title: getTranslations().fromKey(LocaleKey.github),
             eventString: AnalyticsEvent.externalLinkGitHubGeneral,
-            onPress: () => launchExternalURL(NmsExternalUrls.githubGeneralRepo),
+            onTap: () => launchExternalURL(NmsExternalUrls.githubGeneralRepo),
           ),
         ],
       ),

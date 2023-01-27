@@ -125,19 +125,18 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
             subtitle: singleLineText(model.email),
           ),
           rowWith2Columns(
-            positiveButton(
-              context,
+            PositiveButton(
               title: getTranslations().fromKey(LocaleKey.switchUser),
-              onPress: () async {
+              onTap: () async {
                 signIn();
                 setState(() {
                   rebuildCounter++;
                 });
               },
             ),
-            negativeButton(
+            NegativeButton(
               title: getTranslations().fromKey(LocaleKey.logout),
-              onPress: () async {
+              onTap: () async {
                 await getFirebase().signOutFromGoogle();
                 setState(() {
                   rebuildCounter++;

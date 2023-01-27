@@ -82,16 +82,14 @@ class PatreonModalBottomSheet extends StatelessWidget {
       () => Padding(
         padding: const EdgeInsets.symmetric(horizontal: 4),
         child: rowWith2Columns(
-          positiveButton(
-            context,
+          PositiveButton(
             title: getTranslations().fromKey(LocaleKey.patreon),
             backgroundColour: HexColor(NMSUIConstants.PatreonHex),
-            onPress: () => launchExternalURL(ExternalUrls.patreon),
+            onTap: () => launchExternalURL(ExternalUrls.patreon),
           ),
-          positiveButton(
-            context,
+          PositiveButton(
             title: getTranslations().fromKey(LocaleKey.settings),
-            onPress: () async {
+            onTap: () async {
               if (onSettingsTap == null) return;
 
               await onSettingsTap!(context);

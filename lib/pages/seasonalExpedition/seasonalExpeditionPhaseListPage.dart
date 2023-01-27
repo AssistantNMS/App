@@ -96,10 +96,9 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
     if (season.rewards.isNotEmpty) {
       widgets.add(Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: positiveButton(
-          storeContext,
+        child: PositiveButton(
           title: getTranslations().fromKey(LocaleKey.rewards),
-          onPress: () => adaptiveBottomModalSheet(
+          onTap: () => adaptiveBottomModalSheet(
             storeContext,
             hasRoundedCorners: true,
             builder: (_) => ExpeditionRewardsListModalBottomSheet(

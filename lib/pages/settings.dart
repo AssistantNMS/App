@@ -254,10 +254,9 @@ class Settings extends StatelessWidget {
     widgets.add(legalTilePresenter());
 
     if (viewModel.selectedLanguage == 'en') {
-      widgets.add(positiveButton(
-        context,
+      widgets.add(PositiveButton(
         title: 'Useless button',
-        onPress: () => uselessButtonFunc(
+        onTap: () => uselessButtonFunc(
           context,
           viewModel.uselessButtonTaps,
           viewModel.increaseUselessButtonTaps,

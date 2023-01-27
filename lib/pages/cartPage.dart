@@ -159,32 +159,29 @@ class CartPage extends StatelessWidget {
     ));
 
     if (requiredItems.isNotEmpty) {
-      widgets.add(Container(
-        child: positiveButton(
+      widgets.add(PositiveButton(
+        title: getTranslations().fromKey(
+          LocaleKey.viewAllRawMaterialsRequired,
+        ),
+        onTap: () async => await getNavigation().navigateAsync(
           context,
-          title: getTranslations().fromKey(
-            LocaleKey.viewAllRawMaterialsRequired,
-          ),
-          onPress: () async => await getNavigation().navigateAsync(
-            context,
-            navigateTo: (context) => GenericPageAllRequiredRawMaterials(
-              GenericPageAllRequired(
-                genericItem: GenericPageItem.fromJson(<String, dynamic>{}),
-                id: "",
-                name: "",
-                typeName: getTranslations().fromKey(LocaleKey.cart),
-                requiredItems: requiredItems,
-              ),
-              viewModel.displayGenericItemColour,
+          navigateTo: (context) => GenericPageAllRequiredRawMaterials(
+            GenericPageAllRequired(
+              genericItem: GenericPageItem.fromJson(<String, dynamic>{}),
+              id: "",
+              name: "",
+              typeName: getTranslations().fromKey(LocaleKey.cart),
+              requiredItems: requiredItems,
             ),
+            viewModel.displayGenericItemColour,
           ),
         ),
       ));
 
       widgets.add(Container(
-        child: negativeButton(
+        child: NegativeButton(
           title: getTranslations().fromKey(LocaleKey.deleteAll),
-          onPress: () {
+          onTap: () {
             getDialog().showSimpleDialog(
               context,
               getTranslations().fromKey(LocaleKey.deleteAll),

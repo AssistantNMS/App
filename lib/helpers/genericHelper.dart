@@ -186,10 +186,9 @@ Widget viewMoreButton(context, int numLeftOver, viewMoreOnPress) {
   String viewMore = getTranslations().fromKey(LocaleKey.viewXMore);
   return Container(
     margin: const EdgeInsets.symmetric(horizontal: 4.0),
-    child: positiveButton(
-      context,
+    child: PositiveButton(
       title: viewMore.replaceAll("{0}", numLeftOver.toString()),
-      onPress: () {
+      onTap: () {
         if (viewMoreOnPress == null) return;
         viewMoreOnPress();
       },

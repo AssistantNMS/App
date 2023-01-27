@@ -64,10 +64,9 @@ class EnhancedWhatIsNewPage extends StatelessWidget {
         }
         if (updateNewItemsThatMatchesThisGuid != null) {
           columnWidgets.add(
-            positiveButton(
-              context,
+            PositiveButton(
               title: getTranslations().fromKey(LocaleKey.viewItemsAdded),
-              onPress: () => getNavigation().navigateAsync(
+              onTap: () => getNavigation().navigateAsync(
                 context,
                 navigateTo: (context) =>
                     NewItemsDetailPage(updateNewItemsThatMatchesThisGuid!),

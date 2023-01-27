@@ -33,10 +33,9 @@ class UpdateBottomSheet extends StatelessWidget {
               ),
           () => Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: positiveButton(
-                  context,
+                child: PositiveButton(
                   title: getTranslations().fromKey(LocaleKey.viewItemsAdded),
-                  onPress: () => getNavigation().navigateAsync(
+                  onTap: () => getNavigation().navigateAsync(
                     context,
                     navigateTo: (context) => MajorUpdatesDetailPage(
                       updateNewItems: result.value,

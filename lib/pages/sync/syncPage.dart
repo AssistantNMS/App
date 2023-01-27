@@ -67,10 +67,9 @@ class _SyncWidget extends State<SyncPage> {
               ),
             ),
             rowWith2Columns(
-              positiveButton(
-                authCtx,
+              PositiveButton(
                 title: getTranslations().fromKey(LocaleKey.switchUser),
-                onPress: () async {
+                onTap: () async {
                   await getFirebase().signOutFromGoogle();
                   await getFirebase().signInwithGoogle();
                   setState(() {
@@ -78,9 +77,9 @@ class _SyncWidget extends State<SyncPage> {
                   });
                 },
               ),
-              negativeButton(
+              NegativeButton(
                 title: getTranslations().fromKey(LocaleKey.logout),
-                onPress: () async {
+                onTap: () async {
                   await getFirebase().signOutFromGoogle();
                   setState(() {
                     rebuildCounter++;

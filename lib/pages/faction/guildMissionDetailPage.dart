@@ -46,22 +46,20 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
       );
       widgets.add(
         (_) => rowWith2Columns(
-          positiveButton(
-            context,
+          PositiveButton(
             title: '<',
             padding: const EdgeInsets.symmetric(vertical: 8),
-            onPress: () {
+            onTap: () {
               if (titleIndex < 1) return;
               setState(() {
                 titleIndex--;
               });
             },
           ),
-          positiveButton(
-            context,
+          PositiveButton(
             title: '>',
             padding: const EdgeInsets.symmetric(vertical: 8),
-            onPress: () {
+            onTap: () {
               if (titleIndex >= (titles.length - 1)) {
                 return;
               }
@@ -89,22 +87,20 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
     );
     widgets.add(
       (_) => rowWith2Columns(
-        positiveButton(
-          context,
+        PositiveButton(
           title: '<',
           padding: const EdgeInsets.symmetric(vertical: 8),
-          onPress: () {
+          onTap: () {
             if (descripIndex < 1) return;
             setState(() {
               descripIndex--;
             });
           },
         ),
-        positiveButton(
-          context,
+        PositiveButton(
           title: '>',
           padding: const EdgeInsets.symmetric(vertical: 8),
-          onPress: () {
+          onTap: () {
             if (descripIndex >= (widget.mission.descriptions.length - 1)) {
               return;
             }

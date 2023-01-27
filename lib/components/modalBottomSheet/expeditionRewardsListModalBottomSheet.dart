@@ -94,15 +94,14 @@ class _ExpeditionRewardsListModalBottomSheetWidget
         isClaimed = true;
       }
 
-      Widget button = negativeButton(
+      Widget button = NegativeButton(
         title: getTranslations().fromKey(LocaleKey.markAsNotClaimed),
-        onPress: () => viewModel.removeFromClaimedRewards(widget.milestoneId),
+        onTap: () => viewModel.removeFromClaimedRewards(widget.milestoneId),
       );
       if (!isClaimed) {
-        button = positiveButton(
-          context,
+        button = PositiveButton(
           title: getTranslations().fromKey(LocaleKey.markAsClaimed),
-          onPress: () => viewModel.addToClaimedRewards(widget.milestoneId),
+          onTap: () => viewModel.addToClaimedRewards(widget.milestoneId),
         );
       }
 

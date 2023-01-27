@@ -168,12 +168,10 @@ class CommunityMissionPage extends StatelessWidget {
       return Expanded(
         child: Padding(
           padding: const EdgeInsets.only(left: 4, right: 4, bottom: 8),
-          child: positiveButton(
-            bodyCtx,
+          child: PositiveButton(
             title: getTranslations().fromKey(buttonLocale),
             padding: const EdgeInsets.symmetric(vertical: 8),
-            onPress: () async =>
-                await getNavigation().navigateAwayFromHomeAsync(
+            onTap: () async => await getNavigation().navigateAwayFromHomeAsync(
               bodyCtx,
               navigateTo: (context) => CommunityMissionRewardDetailsPage(
                 missionIdToView,

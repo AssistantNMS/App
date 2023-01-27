@@ -115,16 +115,15 @@ class _OnlineMeetup2020Widget extends State<OnlineMeetup2020Page> {
               _youtubeWidget,
             ],
             emptySpace1x(),
-            positiveButton(
-              context,
+            PositiveButton(
               title: 'Continue',
-              onPress: () async =>
+              onTap: () async =>
                   await getNavigation().navigateHomeAsync(context),
             ),
             if (!forceAdvert) ...[
-              negativeButton(
+              NegativeButton(
                 title: getTranslations().fromKey(LocaleKey.noticeReject),
-                onPress: () async {
+                onTap: () async {
                   // introViewModel.hideOnlineMeetup2020();
                   await getNavigation().navigateHomeAsync(context);
                 },

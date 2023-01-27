@@ -16,11 +16,10 @@ Widget prevAndNextPagination(
 }) {
   Widget buttonWidget = Container();
 
-  Widget prevButton = positiveButton(
-    context,
+  Widget prevButton = PositiveButton(
     title: getTranslations().fromKey(prevLocaleKey),
     padding: const EdgeInsets.symmetric(vertical: 8),
-    onPress: () {
+    onTap: () {
       if (onPreviousTap != null) {
         onPreviousTap();
         return;
@@ -28,11 +27,10 @@ Widget prevAndNextPagination(
     },
   );
 
-  Widget nextButton = positiveButton(
-    context,
+  Widget nextButton = PositiveButton(
     title: getTranslations().fromKey(nextLocaleKey),
     padding: const EdgeInsets.symmetric(vertical: 8),
-    onPress: () {
+    onTap: () {
       if (onNextTap != null) {
         onNextTap();
         return;

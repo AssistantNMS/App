@@ -54,21 +54,20 @@ class Valentines2021 extends StatelessWidget {
               ),
               margin: const EdgeInsets.all(4.0),
             ),
-            positiveButton(
-              context,
+            PositiveButton(
               title: getTranslations().fromKey(LocaleKey.noticeAccept),
               padding: const EdgeInsets.symmetric(vertical: 8),
-              onPress: () async => await getNavigation().navigateAsync(
+              onTap: () async => await getNavigation().navigateAsync(
                 context,
                 navigateToNamed: HomepageItem.getByType(
                   introViewModel.homepageType,
                 ).routeToNamed,
               ),
             ),
-            negativeButton(
+            NegativeButton(
               title: getTranslations().fromKey(LocaleKey.noticeReject),
               padding: const EdgeInsets.symmetric(vertical: 8),
-              onPress: () async {
+              onTap: () async {
                 introViewModel.hideValentines2021Intro();
                 await getNavigation().navigateHomeAsync(
                   context,

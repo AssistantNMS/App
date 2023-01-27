@@ -121,10 +121,10 @@ class _AlienPuzzleModalBottomSheetWidget
 
                         var changeChoiceButton = Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
-                          child: negativeButton(
+                          child: NegativeButton(
                             title: getTranslations()
                                 .fromKey(LocaleKey.changeChoice),
-                            onPress: () async {
+                            onTap: () async {
                               setState(() {
                                 showOptions = true;
                                 localOptions = alienPuzzle.options;
@@ -170,8 +170,7 @@ class _AlienPuzzleModalBottomSheetWidget
                             Padding(
                               padding: const EdgeInsets.only(
                                   top: 8, left: 8, right: 8),
-                              child: positiveButton(
-                                context,
+                              child: PositiveButton(
                                 title: getTranslations()
                                     .fromKey(LocaleKey.viewPossibleRewards)
                                     .replaceAll(
@@ -179,7 +178,7 @@ class _AlienPuzzleModalBottomSheetWidget
                                       alienRewardsResult.value.length
                                           .toString(),
                                     ),
-                                onPress: () async {
+                                onTap: () async {
                                   await getNavigation().navigateAsync(
                                     context,
                                     navigateTo: (context) =>

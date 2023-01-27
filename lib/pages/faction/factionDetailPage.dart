@@ -57,10 +57,9 @@ class FactionDetailPage extends StatelessWidget {
       widgets.add(emptySpace1x());
       widgets.add(Padding(
         padding: NMSUIConstants.buttonPadding,
-        child: positiveButton(
-          storeContext,
+        child: PositiveButton(
           title: getTranslations().fromKey(LocaleKey.viewGuildMissions),
-          onPress: () {
+          onTap: () {
             getNavigation().navigateAwayFromHomeAsync(
               storeContext,
               navigateTo: (_) => GuildMissionsPage(),

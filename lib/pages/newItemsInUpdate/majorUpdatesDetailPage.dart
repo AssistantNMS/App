@@ -98,10 +98,9 @@ class MajorUpdatesDetailPage extends StatelessWidget {
     if (localMajorItem.postUrl != null && localMajorItem.postUrl!.isNotEmpty) {
       listItems.add(Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
-        child: positiveButton(
-          bodyCtx,
+        child: PositiveButton(
           title: getTranslations().fromKey(LocaleKey.viewPostOnline),
-          onPress: () => launchExternalURL(localMajorItem.postUrl!),
+          onTap: () => launchExternalURL(localMajorItem.postUrl!),
         ),
       ));
     }

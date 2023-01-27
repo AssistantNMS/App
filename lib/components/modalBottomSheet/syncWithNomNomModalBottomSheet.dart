@@ -116,10 +116,9 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
         ));
         widgets.add(localImage(AppImage.nomNomHeader));
         widgets.add(emptySpace2x());
-        widgets.add(positiveButton(
-          context,
+        widgets.add(PositiveButton(
           title: getTranslations().fromKey(LocaleKey.instructions),
-          onPress: () => getNavigation().navigateAwayFromHomeAsync(
+          onTap: () => getNavigation().navigateAwayFromHomeAsync(
             context,
             navigateToNamed: Routes.nomNomInventoryTutorial,
           ),

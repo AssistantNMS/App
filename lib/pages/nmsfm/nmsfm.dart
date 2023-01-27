@@ -90,10 +90,9 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
       widgets.add(const AudioStreamPresenter());
       widgets.add(Container(
         padding: const EdgeInsets.symmetric(horizontal: 12),
-        child: positiveButton(
-          context,
+        child: PositiveButton(
           title: getTranslations().fromKey(LocaleKey.viewTrackList),
-          onPress: () => getNavigation().navigateAsync(
+          onTap: () => getNavigation().navigateAsync(
             context,
             navigateTo: (context) => const NMSFMTrackListPage(),
           ),

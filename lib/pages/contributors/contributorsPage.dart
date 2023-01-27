@@ -47,10 +47,9 @@ class _ContributorsWidget extends State<ContributorsPage> {
           minListForSearch: 1000,
           lastListItemWidget: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: positiveButton(
-              context,
+            child: PositiveButton(
               title: getTranslations().fromKey(LocaleKey.useTranslationTool),
-              onPress: () => launchExternalURL(
+              onTap: () => launchExternalURL(
                 ExternalUrls.assistantAppsToolSite,
               ),
             ),
