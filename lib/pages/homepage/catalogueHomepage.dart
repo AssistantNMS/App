@@ -28,7 +28,7 @@ class _CatalogueHomeWidget extends State<CatalogueHomepage>
     return basicGenericPageScaffold(
       context,
       drawer: const AppDrawer(),
-      appBar: homePageAppBar(
+      appBar: HomePageAppBar(
         getTranslations().fromKey(LocaleKey.catalogue),
       ),
       body: getBody(context),

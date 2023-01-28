@@ -1,4 +1,5 @@
-import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
+    hide AdaptiveAppScaffold;
 import 'package:flutter/material.dart';
 
 import '../../components/adaptive/appScaffold.dart';
@@ -15,13 +16,12 @@ class BaseWidgetService implements IBaseWidgetService {
     Widget? floatingActionButton,
     FloatingActionButtonLocation? floatingActionButtonLocation,
   }) =>
-      adaptiveAppScaffold(
-        context,
+      AdaptiveAppScaffold(
         appBar: appBar,
         body: body,
         builder: builder,
         drawer: drawer,
-        // bottomNavigationBar: bottomNavigationBar,
+        bottomNavigationBar: bottomNavigationBar,
         floatingActionButton: floatingActionButton,
         floatingActionButtonLocation: floatingActionButtonLocation,
       );
@@ -50,7 +50,7 @@ class BaseWidgetService implements IBaseWidgetService {
     bool showHomeAction = false,
     bool showBackAction = true,
   }) =>
-      AppBarForSubPage(
+      AdaptiveAppBarForSubPage(
         title,
         actions ?? [],
         showBackAction,
@@ -92,8 +92,8 @@ class BaseWidgetService implements IBaseWidgetService {
   Widget adaptiveCheckbox({
     Key? key,
     required bool value,
-    required Color? activeColor,
     required void Function(bool newValue) onChanged,
+    Color? activeColor,
   }) =>
       AdaptiveCheckbox(
         key: key,

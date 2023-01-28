@@ -6,6 +6,7 @@ import '../../integration/dependencyInjection.dart';
 
 class NotificationService implements INotificationService {
   NotificationService() {
+    if (isWindows) return;
     Firebase.initializeApp().then((_) {
       FirebaseMessaging.instance
           .requestPermission(sound: true, badge: true, alert: true);
@@ -14,6 +15,7 @@ class NotificationService implements INotificationService {
       });
     });
   }
+
   @override
   subscribeToTopics(context, String selectedLanguage) {
     bool isProduction = getEnv().isProduction;

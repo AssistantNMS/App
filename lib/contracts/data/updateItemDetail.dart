@@ -29,11 +29,7 @@ class UpdateItemDetail {
         guid: readStringSafe(json, 'guid'),
         name: readStringSafe(json, 'name'),
         date: readStringSafe(json, 'date'),
-        itemIds: readListSafe<String>(
-          json,
-          'itemIds',
-          (x) => x,
-        ),
+        itemIds: readStringListSafe(json, 'itemIds'),
       );
 
   Map<String, dynamic> toJson() => {

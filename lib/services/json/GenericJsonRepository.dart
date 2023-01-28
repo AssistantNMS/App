@@ -2,9 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../contracts/genericPageItem.dart';
-import '../../contracts/itemBaseDetail.dart';
-
-import '../../mapper/GenericItemMapper.dart';
 
 import 'interface/IGenericRepository.dart';
 
@@ -19,11 +16,11 @@ class GenericJsonRepository extends BaseJsonService
     String detailJson = getTranslations().fromKey(detailsJsonLocale);
     try {
       List responseDetailsJson = await getListfromJson(context, detailJson);
-      List<ItemBaseDetail> detailedItems =
-          responseDetailsJson.map((m) => ItemBaseDetail.fromJson(m)).toList();
+      List<GenericPageItem> detailedItems = responseDetailsJson //
+          .map((m) => GenericPageItem.fromJson(m))
+          .toList();
 
-      return ResultWithValue<List<GenericPageItem>>(
-          true, mapGenericPageItems(context, detailedItems), '');
+      return ResultWithValue<List<GenericPageItem>>(true, detailedItems, '');
     } catch (exception) {
       getLog()
           .e("GenericJsonRepo($detailJson) Exception: ${exception.toString()}");

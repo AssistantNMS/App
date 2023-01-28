@@ -35,22 +35,10 @@ class CommunityLinkViewModel {
         id: readStringSafe(json, 'id'),
         name: readStringSafe(json, 'name'),
         icon: readStringSafe(json, 'icon'),
-        banners: readListSafe<String>(
-          json,
-          'banners',
-          (dynamic json) => json.toString(),
-        ),
+        banners: readStringListSafe(json, 'banners'),
         desc: readStringSafe(json, 'desc'),
         customId: readStringSafe(json, 'customId'),
-        tags: readListSafe<String>(
-          json,
-          'tags',
-          (dynamic json) => json.toString(),
-        ),
-        links: readListSafe<String>(
-          json,
-          'links',
-          (dynamic json) => json.toString(),
-        ),
+        tags: readStringListSafe(json, 'tags'),
+        links: readStringListSafe(json, 'links'),
       );
 }

@@ -100,9 +100,12 @@ Widget genericItemIntCurrency(
         currency,
         textAlign: TextAlign.center,
         overflow: TextOverflow.ellipsis,
-        style: getThemeBodyLarge(context)?.copyWith(color: colour),
+        style: getThemeBodyLarge(context) //
+            ?.copyWith(
+          color: colour ?? Colors.black,
+        ),
       ),
-      LocalImage(imagePath: imageUrl, height: 17),
+      LocalImage(imagePath: imageUrl, height: 20),
     );
 
 Widget genericItemTextWithIcon(

@@ -32,11 +32,7 @@ class TitleState {
     if (json == null) return TitleState.initial();
     try {
       return TitleState(
-          owned: readListSafe<String>(
-            json,
-            'owned',
-            (p) => p.toString(),
-          ).toList(),
+          owned: readStringListSafe(json, 'owned').toList(),
           hideCompleted: readBoolSafe(json, 'hideCompleted'));
     } catch (exception) {
       return TitleState.initial();

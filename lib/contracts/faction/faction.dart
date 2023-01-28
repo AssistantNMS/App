@@ -76,11 +76,7 @@ class FactionDetail {
         icon: readStringSafe(json, 'Icon'),
         name: readStringSafe(json, 'Name'),
         description: readStringSafe(json, 'Description'),
-        additional: readListSafe<String>(
-          json,
-          'Additional',
-          (x) => x.toString(),
-        ),
+        additional: readStringListSafe(json, 'Additional'),
         missions: readListSafe<FactionMission>(
           json,
           'Missions',

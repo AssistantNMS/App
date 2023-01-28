@@ -24,7 +24,7 @@ class _DefaultHomePageState extends State<DefaultHomePage>
   Widget build(BuildContext context) {
     return basicGenericPageScaffold(
       context,
-      appBar: homePageAppBar(getTranslations().fromKey(LocaleKey.title)),
+      appBar: HomePageAppBar(getTranslations().fromKey(LocaleKey.title)),
       drawer: const AppDrawer(),
       body: const AllItemsPageComponent(isHomePage: true),
     );

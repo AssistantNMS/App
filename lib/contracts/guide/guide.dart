@@ -53,10 +53,6 @@ class NmsGuide {
           'sections',
           (dynamic json) => NmsGuideSection.fromJson(json),
         ),
-        tags: readListSafe<String>(
-          json,
-          'tags',
-          (dynamic json) => json.toString(),
-        ),
+        tags: readStringListSafe(json, 'tags'),
       );
 }

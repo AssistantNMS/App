@@ -33,9 +33,9 @@ class _CustomHomeWidget extends State<CustomHomepage>
     return basicGenericPageScaffold(
       context,
       drawer: const AppDrawer(),
-      appBar: homePageAppBar(
+      appBar: HomePageAppBar(
         getTranslations().fromKey(LocaleKey.homepage),
-        customActions: [
+        actions: [
           ActionItem(
             icon: isEdit ? Icons.check : Icons.edit,
             onPressed: () {

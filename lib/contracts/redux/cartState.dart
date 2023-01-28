@@ -38,5 +38,7 @@ class CartState {
     }
   }
 
-  Map<String, dynamic> toJson() => {'craftingItems': craftingItems};
+  Map<String, dynamic> toJson() => {
+        'craftingItems': craftingItems,
+      };
 }

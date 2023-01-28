@@ -6,6 +6,12 @@ enum BlueprintSource {
   manufacturingFacilityOrPolo
 }
 
+// final blueprintSourceTypeValues = EnumValues({
+//   "unknown": BlueprintSource.unknown,
+//   "manufacturingFacility": BlueprintSource.manufacturingFacility,
+//   "manufacturingFacilityOrPolo": BlueprintSource.manufacturingFacilityOrPolo,
+// });
+
 LocaleKey blueprintToLocalKey(BlueprintSource source) {
   if (source == BlueprintSource.manufacturingFacility) {
     return LocaleKey.manufacturingFacility;

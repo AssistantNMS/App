@@ -25,8 +25,7 @@ class ExpeditionState {
     if (json == null) return ExpeditionState.initial();
     try {
       return ExpeditionState(
-        claimedRewards: readListSafe<String>(
-            json, 'claimedRewards', (dynamic json) => json.toString()),
+        claimedRewards: readStringListSafe(json, 'claimedRewards'),
       );
     } catch (exception) {
       return ExpeditionState.initial();

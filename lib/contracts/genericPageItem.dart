@@ -9,7 +9,6 @@ import 'proceduralStatBonus.dart';
 import 'enum/blueprintSource.dart';
 import 'enum/currencyType.dart';
 import 'data/eggTrait.dart';
-import 'itemBaseDetail.dart';
 import 'processor.dart';
 import 'recharge.dart';
 import 'requiredItem.dart';
@@ -95,118 +94,98 @@ class GenericPageItem {
     this.usage,
   });
 
-  factory GenericPageItem.fromBaseWithDetails(ItemBaseDetail baseDetail,
-          {String typeName = ''}) =>
-      GenericPageItem(
-        id: baseDetail.id,
-        icon: baseDetail.icon,
-        power: baseDetail.power,
-        name: baseDetail.name,
-        colour: baseDetail.colour,
-        group: baseDetail.group,
-        symbol: baseDetail.symbol,
-        cdnUrl: baseDetail.cdnUrl,
-        additional: baseDetail.additional,
-        description: baseDetail.description,
-        currencyType: baseDetail.currencyType,
-        cookingValue: baseDetail.cookingValue,
-        maxStackSize: baseDetail.maxStackSize,
-        baseValueUnits: baseDetail.baseValueUnits,
-        blueprintCost: baseDetail.blueprintCost,
-        blueprintCostType: baseDetail.blueprintCostType,
-        blueprintSource: baseDetail.blueprintSource,
-        requiredItems: baseDetail.requiredItems,
-        consumableRewards: baseDetail.consumableRewards,
-        statBonuses: baseDetail.statBonuses,
-        proceduralStatBonuses: baseDetail.proceduralStatBonuses,
-        numStatsMax: baseDetail.numStatsMax,
-        numStatsMin: baseDetail.numStatsMin,
-        usage: baseDetail.usage,
-        typeName: typeName,
-      );
+  factory GenericPageItem.fromJson(Map<String, dynamic>? json) {
+    return GenericPageItem(
+      typeName: readStringSafe(json, 'TypeName'),
+      id: readStringSafe(json, 'Id'),
+      icon: readStringSafe(json, 'Icon'),
+      name: readStringSafe(json, 'Name'),
+      power: readDoubleSafe(json, 'Power'),
+      group: readStringSafe(json, 'Group'),
+      cdnUrl: readStringSafe(json, 'CdnUrl'),
+      colour: readStringSafe(json, 'Colour'),
+      additional: readStringSafe(json, 'Additional'),
+      description: readStringSafe(json, 'Description'),
+      maxStackSize: readDoubleSafe(json, 'MaxStackSize'),
+      cookingValue: readDoubleSafe(json, 'CookingValue'),
+      baseValueUnits: readDoubleSafe(json, 'BaseValueUnits'),
+      currencyType:
+          currencyTypeValues.map[readStringSafe(json, 'CurrencyType')]!,
+      blueprintSource:
+          BlueprintSource.values[readIntSafe(json, 'BlueprintSource')],
+      blueprintCost: readIntSafe(json, 'BlueprintCost'),
+      blueprintCostType:
+          currencyTypeValues.map[readStringSafe(json, 'BlueprintCostType')]!,
+      requiredItems: readListSafe<RequiredItem>(
+        json,
+        'RequiredItems',
+        (dynamic json) => RequiredItem.fromJson(json),
+      ),
+      consumableRewards: readStringListSafe(
+        json,
+        'ConsumableRewardTexts',
+      ),
+      chargedBy: Recharge.fromJson(json?['ChargedBy']),
+      usedToRecharge: readListSafe(
+        json,
+        'UsedToRecharge',
+        (r) => Recharge.fromJson(r),
+      ),
+      statBonuses: readListSafe<StatBonus>(
+        json,
+        'StatBonuses',
+        (dynamic json) => StatBonus.fromJson(json),
+      ),
+      proceduralStatBonuses: readListSafe<ProceduralStatBonus>(
+        json,
+        'ProceduralStatBonuses',
+        (dynamic json) => ProceduralStatBonus.fromJson(json),
+      ),
+      numStatsMax: readIntSafe(json, 'NumStatsMax'),
+      numStatsMin: readIntSafe(json, 'NumStatsMin'),
+      eggTraits: readListSafe<EggTrait>(
+        json,
+        'EggTraits',
+        (dynamic json) => EggTrait.fromJson(json),
+      ),
+      controlMappings: readListSafe<PlatformControlMapping>(
+        json,
+        'ControlMappings',
+        (dynamic json) => PlatformControlMapping.fromJson(json),
+      ),
+      translation: readStringSafe(json, 'Translation'),
+      usage: readListSafe(json, 'Usages', (dynamic json) => json.toString()),
+    );
+  }
 
-  factory GenericPageItem.fromJson(Map<String, dynamic>? json) =>
-      GenericPageItem(
-        typeName: readStringSafe(json, 'typeName'),
-        id: readStringSafe(json, 'id'),
-        icon: readStringSafe(json, 'icon'),
-        name: readStringSafe(json, 'name'),
-        power: readDoubleSafe(json, 'power'),
-        group: readStringSafe(json, 'group'),
-        cdnUrl: readStringSafe(json, 'cdnUrl'),
-        colour: readStringSafe(json, 'colour'),
-        additional: readStringSafe(json, 'additional'),
-        description: readStringSafe(json, 'description'),
-        maxStackSize: readDoubleSafe(json, 'maxStackSize'),
-        cookingValue: readDoubleSafe(json, 'cookingValue'),
-        baseValueUnits: readDoubleSafe(json, 'baseValueUnits'),
-        currencyType:
-            currencyTypeValues.map[readStringSafe(json, 'currencyType')]!,
-        blueprintSource:
-            BlueprintSource.values[readIntSafe(json, 'blueprintSource')],
-        blueprintCost: readIntSafe(json, 'blueprintCost'),
-        blueprintCostType:
-            currencyTypeValues.map[readStringSafe(json, 'blueprintCostType')]!,
-        requiredItems: readListSafe<RequiredItem>(json, 'requiredItems',
-            (dynamic json) => RequiredItem.fromJson(json)),
-        consumableRewards: readListSafe<String>(
-            json, 'consumableRewardTexts', (dynamic json) => json.toString()),
-        chargedBy: Recharge.fromJson(json?["chargedBy"]),
-        usedToRecharge: readListSafe(
-          json,
-          'usedToRecharge',
-          (r) => Recharge.fromJson(r),
-        ),
-        statBonuses: readListSafe<StatBonus>(
-            json, 'statBonuses', (dynamic json) => StatBonus.fromJson(json)),
-        proceduralStatBonuses: readListSafe<ProceduralStatBonus>(
-            json,
-            'proceduralStatBonuses',
-            (dynamic json) => ProceduralStatBonus.fromJson(json)),
-        numStatsMax: readIntSafe(json, 'numStatsMax'),
-        numStatsMin: readIntSafe(json, 'numStatsMin'),
-        eggTraits: readListSafe<EggTrait>(
-          json,
-          'eggTraits',
-          (dynamic json) => EggTrait.fromJson(json),
-        ),
-        controlMappings: readListSafe<PlatformControlMapping>(
-          json,
-          'controlMappings',
-          (dynamic json) => PlatformControlMapping.fromJson(json),
-        ),
-        translation: readStringSafe(json, 'translation'),
-        usage: readListSafe(json, 'usages', (dynamic json) => json.toString()),
-      );
-
-  Map<String, dynamic> toJson() => {
-        'typeName': typeName,
-        'id': id,
-        'icon': icon,
-        'name': name,
-        'group': group,
-        'power': power,
-        'cdnUrl': cdnUrl,
-        'chargedBy': chargedBy,
-        'additional': additional,
-        'description': description,
-        'maxStackSize': maxStackSize,
-        'cookingValue': cookingValue,
-        'currencyType': currencyType,
-        'requiredItems': requiredItems,
-        'baseValueUnits': baseValueUnits,
-        'usedToRecharge': usedToRecharge,
-        'blueprintSource': blueprintSource,
-        'consumableRewardTexts': consumableRewards,
-        'blueprintCost': blueprintCost,
-        'blueprintCostType': blueprintCostType,
-        'statBonuses': statBonuses,
-        'proceduralStatBonuses': proceduralStatBonuses,
-        'numStatsMax': numStatsMax,
-        'numStatsMin': numStatsMin,
-        'eggTraits': eggTraits,
-        'controlMappings': controlMappings,
-        'translation': translation,
-        'usage': usage,
-      };
+  // Map<String, dynamic> toJson() => {
+  //       'typeName': typeName,
+  //       'id': id,
+  //       'icon': icon,
+  //       'name': name,
+  //       'group': group,
+  //       'power': power,
+  //       'cdnUrl': cdnUrl,
+  //       'chargedBy': chargedBy,
+  //       'additional': additional,
+  //       'description': description,
+  //       'maxStackSize': maxStackSize,
+  //       'cookingValue': cookingValue,
+  //       'currencyType': currencyType,
+  //       'requiredItems': requiredItems,
+  //       'baseValueUnits': baseValueUnits,
+  //       'usedToRecharge': usedToRecharge,
+  //       'blueprintSource': blueprintSource,
+  //       'consumableRewardTexts': consumableRewards,
+  //       'blueprintCost': blueprintCost,
+  //       'blueprintCostType': blueprintCostType,
+  //       'statBonuses': statBonuses,
+  //       'proceduralStatBonuses': proceduralStatBonuses,
+  //       'numStatsMax': numStatsMax,
+  //       'numStatsMin': numStatsMin,
+  //       'eggTraits': eggTraits,
+  //       'controlMappings': controlMappings,
+  //       'translation': translation,
+  //       'usage': usage,
+  //     };
 }

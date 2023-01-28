@@ -2,7 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../constants/IdPrefix.dart';
 import '../contracts/genericPageItem.dart';
-import '../contracts/itemBaseDetail.dart';
 import '../contracts/requiredItem.dart';
 import '../contracts/requiredItemDetails.dart';
 
@@ -32,23 +31,23 @@ List<RequiredItemDetails> mapUsedInToRequiredItemsWithDescrip(
             )
             .toList();
 
-List<GenericPageItem> mapGenericPageItems(
-    context, List<ItemBaseDetail> details) {
-  List<GenericPageItem> result = List.empty(growable: true);
-  for (int baseIndex = 0; baseIndex < details.length; baseIndex++) {
-    ItemBaseDetail detail = details[baseIndex];
-    // ignore: unnecessary_null_comparison
-    if (detail.id == null) continue;
+// List<GenericPageItem> mapGenericPageItems(
+//     context, List<ItemBaseDetail> details) {
+//   List<GenericPageItem> result = List.empty(growable: true);
+//   for (int baseIndex = 0; baseIndex < details.length; baseIndex++) {
+//     ItemBaseDetail detail = details[baseIndex];
+//     // ignore: unnecessary_null_comparison
+//     if (detail.id == null) continue;
 
-    GenericPageItem newItem = GenericPageItem.fromBaseWithDetails(detail);
-    // ignore: prefer_is_empty
-    if ((newItem.name.length) < 1) {
-      newItem.name = getTranslations().fromKey(LocaleKey.unknown);
-    }
-    result.add(newItem);
-  }
-  return result;
-}
+//     GenericPageItem newItem = GenericPageItem.fromBaseWithDetails(detail);
+//     // ignore: prefer_is_empty
+//     if ((newItem.name.length) < 1) {
+//       newItem.name = getTranslations().fromKey(LocaleKey.unknown);
+//     }
+//     result.add(newItem);
+//   }
+//   return result;
+// }
 
 String getTypeName(context, String id) {
   LocaleKey? key = LocaleKey.unknown;

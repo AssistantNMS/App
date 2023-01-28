@@ -42,11 +42,7 @@ class PortalState {
           'portals',
           (p) => PortalRecord.fromJson(p),
         ).toList(),
-        availableTags: readListSafe<String>(
-          json,
-          'availableTags',
-          (p) => p.toString(),
-        ).toList(),
+        availableTags: readStringListSafe(json, 'availableTags').toList(),
       );
     } catch (exception) {
       return PortalState.initial();

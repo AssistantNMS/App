@@ -4,7 +4,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../../components/common/actionItem.dart';
 import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../../contracts/redux/appState.dart';
 import '../../../redux/modules/setting/introViewModel.dart';

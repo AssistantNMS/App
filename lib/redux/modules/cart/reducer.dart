@@ -28,7 +28,16 @@ CartState _addCraftingToCart(CartState state, AddCraftingToCartAction action) {
     newItems.add(temp);
   }
   if (!addedNewItem) {
-    newItems.add(CartItem(pageItem: action.item, quantity: action.quantity));
+    newItems.add(
+      CartItem(
+        typeName: action.item.typeName,
+        id: action.item.id,
+        icon: action.item.icon,
+        colour: action.item.colour,
+        quantity: action.quantity,
+        requiredItems: action.item.requiredItems,
+      ),
+    );
   }
   return state.copyWith(craftingItems: newItems);
 }

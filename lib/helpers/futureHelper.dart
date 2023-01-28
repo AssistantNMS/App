@@ -451,7 +451,10 @@ Future<double> getQuickSilverFromId(
     );
 
 Future<double> getNanitesFromId(
-    BuildContext context, String itemId, int multiplier) async {
+  BuildContext context,
+  String itemId,
+  int multiplier,
+) async {
   ResultWithValue<IGenericRepository?> repoResult =
       getRepoFromId(context, itemId);
   if (repoResult.hasFailed) return 0;

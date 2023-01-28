@@ -43,11 +43,7 @@ class MajorUpdateItem {
         updateType:
             updateTypeValues.map[readIntSafe(json, 'updateType').toString()]!,
         postUrl: readStringSafe(json, 'postUrl'),
-        itemIds: readListSafe<String>(
-          json,
-          'itemIds',
-          (dynamic json) => json.toString(),
-        ),
+        itemIds: readStringListSafe(json, 'itemIds'),
       );
 }
 
