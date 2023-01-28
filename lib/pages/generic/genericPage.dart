@@ -127,8 +127,10 @@ class GenericPage extends StatelessWidget {
     GenericPageItem? itemDetailsFromTile,
   ) {
     if (itemDetailsFromTile == null) {
-      return getLoading()
-          .fullPageLoading(loadingBodyContext, loadingText: loadingText);
+      return getLoading().fullPageLoading(
+        loadingBodyContext,
+        loadingText: loadingText,
+      );
     }
 
     List<Widget> widgets = List.empty(growable: true);

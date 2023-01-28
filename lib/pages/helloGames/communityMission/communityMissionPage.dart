@@ -1,6 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/AppImage.dart';
-import 'package:assistantnms_app/constants/NmsExternalUrls.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
