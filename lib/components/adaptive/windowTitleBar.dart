@@ -35,8 +35,8 @@ class WindowTitleBar extends StatelessWidget
           children: [
             Padding(
               padding: const EdgeInsets.all(4),
-              child: localImage(
-                AppImage.assistantNMSWindowIcon,
+              child: LocalImage(
+                imagePath: AppImage.assistantNMSWindowIcon,
                 borderRadius: BorderRadius.circular(4.0),
               ),
             ),
@@ -45,7 +45,7 @@ class WindowTitleBar extends StatelessWidget
                 child: Center(
                   child: Row(
                     children: [
-                      genericItemDescription(title),
+                      GenericItemDescription(title),
                     ],
                   ),
                 ),

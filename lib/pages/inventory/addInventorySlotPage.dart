@@ -70,12 +70,12 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
         (genericItem.symbol != null && genericItem.symbol!.isNotEmpty)
             ? "${genericItem.name} (${genericItem.symbol})"
             : genericItem.name;
-    widgets.add(genericItemName(itemName));
+    widgets.add(GenericItemName(itemName));
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
 
     if (vm.containers.isNotEmpty) {
-      widgets.add(genericItemDescription("Select Container"));
+      widgets.add(const GenericItemDescription("Select Container"));
       widgets.add(
         Padding(
           child: DropdownButton<Inventory>(
@@ -92,8 +92,9 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
                 value: inv,
                 child: Row(
                   children: <Widget>[
-                    localImage(
-                      '${getPath().imageAssetPathPrefix}/inventory/${inv.icon}',
+                    LocalImage(
+                      imagePath:
+                          '${getPath().imageAssetPathPrefix}/inventory/${inv.icon}',
                       height: 25,
                       width: 25,
                     ),
@@ -108,7 +109,7 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
         ),
       );
 
-      widgets.add(emptySpace3x());
+      widgets.add(const EmptySpace3x());
 
       widgets.add(
         Padding(
@@ -126,9 +127,9 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
         ),
       );
 
-      widgets.add(emptySpace3x());
+      widgets.add(const EmptySpace3x());
     } else {
-      widgets.add(genericItemDescription(
+      widgets.add(GenericItemDescription(
           getTranslations().fromKey(LocaleKey.pleaseAddContainer)));
       widgets.add(Container(
         child: StoreConnector<AppState, InventoryListViewModel>(
@@ -155,7 +156,7 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
       ));
     }
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
 
     return listWithScrollbar(
       key: Key('stateCounter: $_counter'),

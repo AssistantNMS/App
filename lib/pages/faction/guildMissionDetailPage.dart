@@ -27,19 +27,19 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
     List<Widget Function(BuildContext t)> widgets = List.empty(growable: true);
 
     widgets.add(
-      (_) => localImage(
-        widget.mission.icon,
+      (_) => LocalImage(
+        imagePath: widget.mission.icon,
         imageHero: widget.mission.icon + widget.mission.id,
         height: 100,
         width: 100,
       ),
     );
-    widgets.add((_) => emptySpace1x());
+    widgets.add((_) => const EmptySpace1x());
 
-    widgets.add((_) => genericItemName(titles[titleIndex]));
+    widgets.add((_) => GenericItemName(titles[titleIndex]));
     if (titles.length > 1) {
       widgets.add(
-        (_) => genericItemDescription(
+        (_) => GenericItemDescription(
           (titleIndex + 1).toString() + " / " + titles.length.toString(),
           maxLines: 20,
         ),
@@ -71,15 +71,15 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
         ),
       );
     }
-    widgets.add((_) => emptySpace1x());
+    widgets.add((_) => const EmptySpace1x());
     widgets.add((_) => customDivider());
-    widgets.add((_) => emptySpace1x());
+    widgets.add((_) => const EmptySpace1x());
 
     widgets.add(
-      (_) => genericItemDescription(widget.mission.descriptions[descripIndex]),
+      (_) => GenericItemDescription(widget.mission.descriptions[descripIndex]),
     );
     widgets.add(
-      (_) => genericItemDescription(
+      (_) => GenericItemDescription(
         (descripIndex + 1).toString() +
             " / " +
             widget.mission.descriptions.length.toString(),
@@ -121,16 +121,16 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
     if (widget.mission.factions.contains('WarriorGuild')) {
       factionImgs.add(AppImage.warFaction);
     }
-    widgets.add((_) => emptySpace1x());
+    widgets.add((_) => const EmptySpace1x());
     widgets.add((_) => customDivider());
-    widgets.add((_) => emptySpace1x());
+    widgets.add((_) => const EmptySpace1x());
     widgets.add(
       (_) => Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: factionImgs
             .map(
-              (img) => localImage(
-                img,
+              (img) => LocalImage(
+                imagePath: img,
                 imageHero: img + widget.mission.id,
                 height: 50,
                 width: 50,
@@ -140,7 +140,7 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
       ),
     );
 
-    widgets.add((_) => emptySpace8x());
+    widgets.add((_) => const EmptySpace8x());
 
     return simpleGenericPageScaffold(
       context,

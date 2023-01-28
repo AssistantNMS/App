@@ -92,9 +92,10 @@ Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release,
 
 Widget newsItemTilePresenter(BuildContext context, NewsItem newsItem,
     {void Function()? onTap}) {
-  Widget image = networkImage(
-    newsItem.image,
-    loading: localImage('${getPath().imageAssetPathPrefix}/defaultNews.jpg'),
+  Widget image = ImageFromNetwork(
+    imageUrl: newsItem.image,
+    loading: LocalImage(
+        imagePath: '${getPath().imageAssetPathPrefix}/defaultNews.jpg'),
   );
   return GestureDetector(
     child: Card(

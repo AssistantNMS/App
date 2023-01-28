@@ -54,8 +54,9 @@ class _TitleDataTileState extends State<TitleDataTile> {
 
     return ListTile(
       leading: (titleData.appIcon.length > 5)
-          ? localImage(
-              '${getPath().imageAssetPathPrefix}/${titleData.appIcon}',
+          ? LocalImage(
+              imagePath:
+                  '${getPath().imageAssetPathPrefix}/${titleData.appIcon}',
             )
           : null,
       title: Text(
@@ -76,7 +77,7 @@ class _TitleDataTileState extends State<TitleDataTile> {
         maxLines: 2,
         overflow: TextOverflow.ellipsis,
       ),
-      trailing: adaptiveCheckbox(
+      trailing: getBaseWidget().adaptiveCheckbox(
         value: titleData.isOwned,
         activeColor: getTheme().getSecondaryColour(context),
         onChanged: (_) => toggleOwned(),

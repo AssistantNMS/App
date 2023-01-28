@@ -10,7 +10,7 @@ class SegmentViewItem {
     required this.builder,
   });
 
-  Widget toSegmentOption() => getSegmentedControlOption(
+  Widget toSegmentOption() => SegmentedControlOption(
         getTranslations().fromKey(title),
       );
 }

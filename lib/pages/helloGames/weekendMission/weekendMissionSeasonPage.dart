@@ -57,9 +57,9 @@ class WeekendMissionSeasonPage extends StatelessWidget {
       actions: [
         ActionItem(
           icon: Icons.more,
-          image: getListTileImage(
-            AppImage.weekendMissionWhite,
-            padding: const EdgeInsets.symmetric(vertical: 16),
+          image: const ListTileImage(
+            partialPath: AppImage.weekendMissionWhite,
+            padding: EdgeInsets.symmetric(vertical: 16),
           ),
           onPressed: navigateToWeekendMissionMenu,
         ),

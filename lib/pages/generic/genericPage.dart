@@ -94,9 +94,8 @@ class GenericPage extends StatelessWidget {
       additionalShortcutLinks: [
         ActionItem(
           icon: Icons.share, // Fallback
-          image: getCorrectlySizedImageFromIcon(
-            doneLoadingCtx,
-            Icons.share,
+          image: CorrectlySizedImageFromIcon(
+            icon: Icons.share,
             colour: getTheme().getDarkModeSecondaryColour(),
           ),
           text: getTranslations().fromKey(LocaleKey.share),
@@ -154,10 +153,10 @@ class GenericPage extends StatelessWidget {
       requiredItemsFunction,
     ));
 
-    widgets.add(emptySpace(2));
-    widgets.add(listTileShimmer());
-    widgets.add(listTileShimmer());
-    widgets.add(emptySpace(10));
+    widgets.add(const EmptySpace(2));
+    widgets.add(const ListTileShimmer());
+    widgets.add(const ListTileShimmer());
+    widgets.add(const EmptySpace(10));
 
     return listWithScrollbar(
       itemCount: widgets.length,
@@ -194,8 +193,8 @@ class GenericPage extends StatelessWidget {
 
     // ----------------------------- Obsolete tech ------------------------------
     if ((genericItem.usage ?? []).contains(UsageKey.isNoLongerObtainable)) {
-      widgets.add(emptySpace1x());
-      widgets.add(flatCard(
+      widgets.add(const EmptySpace1x());
+      widgets.add(FlatCard(
         child: requiredItemTilePresenter(
           context,
           RequiredItem(id: NMSUIConstants.ObsoleteAppId),
@@ -380,7 +379,7 @@ class GenericPage extends StatelessWidget {
       ));
     }
 
-    widgets.add(emptySpace(10));
+    widgets.add(const EmptySpace(10));
 
     return listWithScrollbar(
       itemCount: widgets.length,

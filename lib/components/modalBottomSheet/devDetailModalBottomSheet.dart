@@ -34,20 +34,20 @@ class _DevDetailBottomSheetWidget extends State<DevDetailBottomSheet> {
         if (errorWidget != null) return errorWidget;
 
         Widget Function(String) titleFunc;
-        titleFunc = (String text) => genericItemDescription(
+        titleFunc = (String text) => GenericItemDescription(
               text,
               textStyle:
                   const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             );
         Widget Function(String) bodyFunc;
-        bodyFunc = (String text) => genericItemDescription(
+        bodyFunc = (String text) => GenericItemDescription(
               text,
               textStyle:
                   const TextStyle(fontSize: 16, fontWeight: FontWeight.w100),
             );
 
         List<Widget Function()> widgets = [
-          () => emptySpace3x(),
+          () => const EmptySpace3x(),
           () => titleFunc('AppId'),
           () => bodyFunc(itemId),
           () => customDivider(),
@@ -66,7 +66,7 @@ class _DevDetailBottomSheetWidget extends State<DevDetailBottomSheet> {
             widgets.add(() => customDivider());
           }
         }
-        widgets.add(() => emptySpace8x());
+        widgets.add(() => const EmptySpace8x());
 
         return AnimatedSize(
           duration: AppDuration.modal,

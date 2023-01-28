@@ -113,16 +113,16 @@ class GenericPageProcessorRecipe extends StatelessWidget {
         ),
       );
     } else {
-      widgets.add(commonOnTap(genericItemName(output.name)));
+      widgets.add(commonOnTap(GenericItemName(output.name)));
     }
 
-    widgets.add(commonOnTap(genericItemText(processor.operation)));
+    widgets.add(commonOnTap(GenericItemText(processor.operation)));
     String timeToMake = getTranslations().fromKey(LocaleKey.timeToMake);
     String procInSeconds = getTranslations()
         .fromKey(LocaleKey.seconds)
         .replaceAll('{0}', processor.time);
     widgets.add(commonOnTap(
-      genericItemText("$timeToMake $procInSeconds"),
+      GenericItemText("$timeToMake $procInSeconds"),
     ));
 
     widgets.add(Wrap(
@@ -146,11 +146,11 @@ class GenericPageProcessorRecipe extends StatelessWidget {
     String inputsIngredientsLocale = processor.isRefiner
         ? getTranslations().fromKey(LocaleKey.inputs)
         : getTranslations().fromKey(LocaleKey.ingredients);
-    widgets.add(genericItemText(inputsIngredientsLocale));
+    widgets.add(GenericItemText(inputsIngredientsLocale));
 
     for (RequiredItemDetails input in snapshot.data!.value.inputsDetails) {
       widgets.add(
-        flatCard(
+        FlatCard(
           child: genericListTile(
             bodyCtx,
             leadingImage: input.icon,
@@ -171,7 +171,7 @@ class GenericPageProcessorRecipe extends StatelessWidget {
       widgets.add(Container(
         margin: const EdgeInsets.all(12.0),
       ));
-      widgets.add(genericItemText(
+      widgets.add(GenericItemText(
         getTranslations().fromKey(LocaleKey.similarRefinerRecipes),
       ));
 
@@ -185,7 +185,7 @@ class GenericPageProcessorRecipe extends StatelessWidget {
       ));
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return listWithScrollbar(
       itemCount: widgets.length,

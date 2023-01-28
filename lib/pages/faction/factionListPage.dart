@@ -53,7 +53,7 @@ class FactionPage extends StatelessWidget {
       widgets.add(factionTilePresenter(bodyCtx, detail));
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return simpleGenericPageScaffold(
       bodyCtx,
@@ -67,10 +67,10 @@ class FactionPage extends StatelessWidget {
   }
 
   Widget categoryHeading(String title) {
-    return flatCard(
+    return FlatCard(
       child: Padding(
         padding: const EdgeInsets.all(4),
-        child: genericItemName(title),
+        child: GenericItemName(title),
       ),
     );
   }

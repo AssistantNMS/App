@@ -58,7 +58,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
         String displayLink = fullLink.replaceAll('https://', '');
 
         List<Widget> widgets = List.empty(growable: true);
-        widgets.add(emptySpace2x());
+        widgets.add(const EmptySpace2x());
         widgets.add(Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -72,14 +72,14 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
             ),
           ],
         ));
-        widgets.add(emptySpace1x());
+        widgets.add(const EmptySpace1x());
         widgets.add(
           rowWith2Columns(
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(getTranslations().fromKey(LocaleKey.shareForceLanguage)),
-                adaptiveCheckbox(
+                getBaseWidget().adaptiveCheckbox(
                   value: forceLang,
                   onChanged: (bool newValue) {
                     setState(() {
@@ -93,7 +93,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(getTranslations().fromKey(LocaleKey.shareIncludeName)),
-                adaptiveCheckbox(
+                getBaseWidget().adaptiveCheckbox(
                   value: includeName,
                   onChanged: (bool newValue) {
                     setState(() {
@@ -139,7 +139,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
           ));
         }
 
-        widgets.add(emptySpace8x());
+        widgets.add(const EmptySpace8x());
 
         return AnimatedSize(
           duration: AppDuration.modal,

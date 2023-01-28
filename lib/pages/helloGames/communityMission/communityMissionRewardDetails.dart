@@ -74,7 +74,7 @@ class _CommunityMissionRewardDetailsWidget extends State<StatefulWidget> {
           ),
           customDivider(),
           CommunityMissionRewards(missionId, status),
-          emptySpace(16),
+          const EmptySpace(16),
         ],
       ),
       currentPosition: (missionId - missionMin),

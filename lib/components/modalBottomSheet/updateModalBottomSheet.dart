@@ -26,8 +26,8 @@ class UpdateBottomSheet extends StatelessWidget {
         ResultWithValue<MajorUpdateItem> result = snapshot.data!;
 
         List<Widget Function()> widgets = [
-          () => localImage(
-                result.value.icon,
+          () => LocalImage(
+                imagePath: result.value.icon,
                 padding: const EdgeInsets.all(0),
                 boxfit: BoxFit.fill,
               ),

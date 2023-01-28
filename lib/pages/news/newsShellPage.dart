@@ -103,12 +103,11 @@ class NewsShellPage extends StatelessWidget {
       children: [
         SizedBox(
           width: double.infinity,
-          child: adaptiveSegmentedControl(
-            context,
+          child: AdaptiveSegmentedControl(
             controlItems: options
                 .map((item) => ClipRRect(
                       borderRadius: BorderRadius.circular(4.0),
-                      child: getImageSegmentedControlOption(item),
+                      child: ImageSegmentedControlOption(item),
                     ))
                 .toList(),
             borderRadius: 0,

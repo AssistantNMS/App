@@ -57,27 +57,27 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
 
   Widget getBody(BuildContext context) {
     List<Widget> widgets = List.empty(growable: true);
-    widgets.add(emptySpace2x());
+    widgets.add(const EmptySpace2x());
     widgets.add(
       Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 350, maxHeight: 350),
-          child: localImage(
-            AppImage.nmsfmLogo,
+          child: LocalImage(
+            imagePath: AppImage.nmsfmLogo,
             borderRadius: NMSUIConstants.generalBorderRadius,
             padding: const EdgeInsets.symmetric(horizontal: 64),
           ),
         ),
       ),
     );
-    widgets.add(emptySpace1x());
-    widgets.add(genericItemName(getTranslations().fromKey(LocaleKey.nmsfm)));
-    widgets.add(genericItemDescription(
+    widgets.add(const EmptySpace1x());
+    widgets.add(GenericItemName(getTranslations().fromKey(LocaleKey.nmsfm)));
+    widgets.add(GenericItemDescription(
       getTranslations().fromKey(LocaleKey.nmsfmSubtitle),
     ));
 
-    widgets.add(emptySpace1x());
-    widgets.add(flatCard(
+    widgets.add(const EmptySpace1x());
+    widgets.add(FlatCard(
       child: veritasVelezTile(
         context,
         subtitle: getTranslations().fromKey(LocaleKey.nmsfmCreator),
@@ -202,8 +202,8 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
         if (_artist.isNotEmpty) artist = _artist;
 
         Widget playStopWidget = (event.isPlaying)
-            ? getCorrectlySizedImageFromIcon(context, Icons.stop)
-            : getCorrectlySizedImageFromIcon(context, Icons.play_arrow);
+            ? const CorrectlySizedImageFromIcon(icon: Icons.stop)
+            : const CorrectlySizedImageFromIcon(icon: Icons.play_arrow);
 
         return ListTile(
           title: Text(title, maxLines: 1, overflow: TextOverflow.ellipsis),
@@ -280,8 +280,8 @@ class LocalAudioPresenter extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
           ),
           trailing: isPlaying
-              ? getCorrectlySizedImageFromIcon(context, Icons.stop)
-              : getCorrectlySizedImageFromIcon(context, Icons.play_arrow),
+              ? const CorrectlySizedImageFromIcon(icon: Icons.stop)
+              : const CorrectlySizedImageFromIcon(icon: Icons.play_arrow),
           onTap: () {
             if (isPlaying) {
               getAudioPlayer().stop();

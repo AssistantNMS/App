@@ -80,7 +80,10 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
       getDialog().showSimpleDialog(
         innerContext,
         getTranslations().fromKey(LocaleKey.success) + '!',
-        localImage(AppImage.base + 'inventory/special3.png', height: 100),
+        const LocalImage(
+          imagePath: AppImage.base + 'inventory/special3.png',
+          height: 100,
+        ),
         buttonBuilder: (BuildContext buttonContext) => [
           getDialog().simpleDialogPositiveButton(
             buttonContext,
@@ -107,15 +110,15 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
             StreamController<ErrorAnimationType>();
 
         List<Widget> widgets = List.empty(growable: true);
-        widgets.add(emptySpace2x());
-        widgets.add(genericItemName(
+        widgets.add(const EmptySpace2x());
+        widgets.add(GenericItemName(
           getTranslations().fromKey(LocaleKey.nomNomCollaboration),
         ));
-        widgets.add(genericItemDescription(
+        widgets.add(GenericItemDescription(
           getTranslations().fromKey(LocaleKey.nomNomCollaborationDesc),
         ));
-        widgets.add(localImage(AppImage.nomNomHeader));
-        widgets.add(emptySpace2x());
+        widgets.add(const LocalImage(imagePath: AppImage.nomNomHeader));
+        widgets.add(const EmptySpace2x());
         widgets.add(PositiveButton(
           title: getTranslations().fromKey(LocaleKey.instructions),
           onTap: () => getNavigation().navigateAwayFromHomeAsync(
@@ -123,11 +126,11 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
             navigateToNamed: Routes.nomNomInventoryTutorial,
           ),
         ));
-        widgets.add(emptySpace2x());
+        widgets.add(const EmptySpace2x());
 
         if (networkState == NetworkState.error) {
           widgets.add(Center(
-            child: genericItemGroup(
+            child: GenericItemGroup(
               getTranslations().fromKey(LocaleKey.somethingWentWrong),
             ),
           ));
@@ -182,7 +185,7 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
         //   );
         // }
 
-        widgets.add(emptySpace8x());
+        widgets.add(const EmptySpace8x());
 
         return AnimatedSize(
           duration: AppDuration.modal,

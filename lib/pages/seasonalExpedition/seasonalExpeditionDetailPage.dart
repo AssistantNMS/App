@@ -60,7 +60,7 @@ class SeasonalExpeditionDetailPage extends StatelessWidget {
         ),
       ));
     }
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return Column(
       children: [

@@ -30,7 +30,7 @@ Widget nmsSectionListItem(
       ),
     );
 
-Widget nmsTextListItem(NmsGuideSectionItem item) => flatCard(
+Widget nmsTextListItem(NmsGuideSectionItem item) => FlatCard(
       child: ListTile(
         title: Text(
           item.content,
@@ -44,7 +44,7 @@ Widget nmsTextListItem(NmsGuideSectionItem item) => flatCard(
 Widget nmsLinkListItem(NmsGuideSectionItem item) {
   // ignore: prefer_function_declarations_over_variables
   Function() onTap = () => launchExternalURL(item.content);
-  return flatCard(
+  return FlatCard(
     child: GestureDetector(
       child: getBaseWidget().appChip(
         label: Text(item.name),
@@ -76,9 +76,9 @@ Widget nmsImageListItem(
   }
 
   return GestureDetector(
-    child: flatCard(
+    child: FlatCard(
       child: item.image.isEmpty //
-          ? networkImage(imagePath)
+          ? ImageFromNetwork(imageUrl: imagePath)
           : guideImage(imagePath),
     ),
     onTap: () async {
@@ -95,7 +95,7 @@ Widget nmsImageListItem(
 }
 
 Widget nmsMarkdownListItem(NmsGuideSectionItem item) {
-  return flatCard(
+  return FlatCard(
     child: Padding(
       child: MarkdownBody(data: item.content),
       padding: const EdgeInsets.all(16.0),
@@ -127,7 +127,7 @@ Widget nmsTableListItem(context, NmsGuideSectionItem item) {
     rows.add(TableRow(children: rowChildren));
   }
 
-  return flatCard(
+  return FlatCard(
     child: Padding(
       child: Table(
         children: rows,

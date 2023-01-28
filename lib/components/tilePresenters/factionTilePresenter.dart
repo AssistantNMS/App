@@ -50,7 +50,7 @@ Widget factionMissionTilePresenter(
       : faction.tiers.first;
 
   return ListTile(
-    leading: localImage(currentTier.icon),
+    leading: LocalImage(imagePath: currentTier.icon),
     title: Text(
       faction.name,
       maxLines: 1,
@@ -129,8 +129,8 @@ Widget guildMissionTilePresenter(BuildContext context, GuildMission mission) {
     trailing: Wrap(
       children: factionImgs
           .map(
-            (img) => localImage(
-              img,
+            (img) => LocalImage(
+              imagePath: img,
               imageHero: img + mission.id,
               height: 35,
               width: 35,

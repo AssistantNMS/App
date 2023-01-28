@@ -141,8 +141,8 @@ RichText textWithHighlightTags(
             imagePath = '${AppImage.controls}${lookupResult.icon}';
           }
           nodes.add(WidgetSpan(
-              child: localImage(
-            imagePath,
+              child: LocalImage(
+            imagePath: imagePath,
             height: 18,
             padding: const EdgeInsets.symmetric(horizontal: 4),
           )));
@@ -186,7 +186,7 @@ List<Widget> genericPageDescripHighlightText(
   List<PlatformControlMapping> controlLookup,
 ) {
   List<RichText> paragraphNodes = List.empty(growable: true);
-  if (!text.contains('<>')) return [genericItemDescription(text)];
+  if (!text.contains('<>')) return [GenericItemDescription(text)];
 
   List<String> paragraphs = text.split(RegExp(r'\r?\n|\/'));
   for (int paragraphIndex = 0;

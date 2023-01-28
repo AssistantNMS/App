@@ -74,8 +74,8 @@ class _OnlineMeetup2020Widget extends State<OnlineMeetup2020Page> {
               children: [
                 Container(
                   child: GestureDetector(
-                    child:
-                        localImage(onlineMeetupImage, boxfit: BoxFit.fitWidth),
+                    child: LocalImage(
+                        imagePath: onlineMeetupImage, boxfit: BoxFit.fitWidth),
                     onTap: () => launchExternalURL(
                         NmsExternalUrls.proceduralTravellerYoutube),
                   ),
@@ -114,7 +114,7 @@ class _OnlineMeetup2020Widget extends State<OnlineMeetup2020Page> {
             if (displayVideo) ...[
               _youtubeWidget,
             ],
-            emptySpace1x(),
+            const EmptySpace1x(),
             PositiveButton(
               title: 'Continue',
               onTap: () async =>
@@ -129,7 +129,7 @@ class _OnlineMeetup2020Widget extends State<OnlineMeetup2020Page> {
                 },
               ),
             ],
-            emptySpace3x(),
+            const EmptySpace3x(),
           ];
           return listWithScrollbar(
             shrinkWrap: true,

@@ -53,7 +53,8 @@ class _SyncWidget extends State<SyncPage> {
           children: [
             ListTile(
               leading: ClipOval(
-                child: networkImage(user.photoURL!, height: 50, width: 50),
+                child: ImageFromNetwork(
+                    imageUrl: user.photoURL!, height: 50, width: 50),
               ),
               title: Text(
                 user.displayName!,
@@ -155,11 +156,11 @@ class _SyncWidget extends State<SyncPage> {
       //   ),
       // ));
     } else {
-      widgets.add(emptySpace3x());
+      widgets.add(const EmptySpace3x());
       // widgets.add(
-      //   genericItemText('It is not possible to link with your NMS save'),
+      //   GenericItemText('It is not possible to link with your NMS save'),
       // );
-      // widgets.add(emptySpace1x());
+      // widgets.add(const EmptySpace1x());
       widgets.add(Center(
         child: AuthButton.google(
           onPressed: () async {
@@ -192,7 +193,7 @@ class _SyncWidget extends State<SyncPage> {
       ));
     }
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
     return widgets;
   }
 
@@ -295,20 +296,20 @@ class _SyncWidget extends State<SyncPage> {
       ),
     ));
 
-    widgets.add(flatCard(
+    widgets.add(FlatCard(
       child: nomNomOpenSyncModalTile(context),
     ));
 
-    // widgets.add(genericItemDescription(
+    // widgets.add(GenericItemDescription(
     //     'This sync feature is only intended to allow you to back up your app data to Google Drive.'));
-    // widgets.add(localImage(AppImage.underConstruction, height: 150.0));
-    // widgets.add(emptySpace1x());
-    // widgets.add(genericItemDescription(
+    // widgets.add(LocalImage(imagePath:AppImage.underConstruction, height: 150.0));
+    // widgets.add(const EmptySpace1x());
+    // widgets.add(GenericItemDescription(
     //     'There is currently an issue with the Google Drive integration.'));
-    // widgets.add(genericItemDescription(
+    // widgets.add(GenericItemDescription(
     //     'I am working on an alternative way to back up your app data'));
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
 
     return listWithScrollbar(
       key: Key('counter: ${rebuildCounter.toString()}'),

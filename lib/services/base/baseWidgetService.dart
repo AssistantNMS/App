@@ -1,8 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/adaptive/appBar.dart';
-import '../../components/adaptive/appBarForSubPage.dart';
 import '../../components/adaptive/appScaffold.dart';
 
 class BaseWidgetService implements IBaseWidgetService {
@@ -36,7 +34,12 @@ class BaseWidgetService implements IBaseWidgetService {
     Widget? leading,
     PreferredSizeWidget? bottom,
   }) =>
-      adaptiveAppBar(context, title, actions, leading: leading, bottom: bottom);
+      AdaptiveAppBar(
+        title: title,
+        actions: actions,
+        leading: leading,
+        bottom: bottom,
+      );
 
   @override
   PreferredSizeWidget appBarForSubPage(
@@ -47,13 +50,12 @@ class BaseWidgetService implements IBaseWidgetService {
     bool showHomeAction = false,
     bool showBackAction = true,
   }) =>
-      adaptiveAppBarForSubPageHelper(
-        context,
-        title: title,
-        actions: actions,
-        shortcutActions: shortcutActions,
-        showBackAction: showBackAction,
-        showHomeAction: showHomeAction,
+      AppBarForSubPage(
+        title,
+        actions ?? [],
+        showBackAction,
+        showHomeAction,
+        shortcutActions ?? [],
       );
 
   @override
@@ -84,5 +86,19 @@ class BaseWidgetService implements IBaseWidgetService {
         onDeleted: onDeleted,
         onTap: onTap,
         backgroundColor: backgroundColor,
+      );
+
+  @override
+  Widget adaptiveCheckbox({
+    Key? key,
+    required bool value,
+    required Color? activeColor,
+    required void Function(bool newValue) onChanged,
+  }) =>
+      AdaptiveCheckbox(
+        key: key,
+        value: value,
+        onChanged: onChanged,
+        activeColor: activeColor,
       );
 }

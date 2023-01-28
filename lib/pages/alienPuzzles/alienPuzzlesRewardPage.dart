@@ -197,7 +197,7 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
       );
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return listWithScrollbar(
       itemCount: widgets.length,

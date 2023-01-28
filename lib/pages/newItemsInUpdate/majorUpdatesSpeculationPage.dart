@@ -39,14 +39,14 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
     int daysSinceLastUpdate =
         nowInDaysSinceEpoch - lastestUpdateInDaysSinceEpoch;
     listItems.add(
-      genericItemDescription(
+      GenericItemDescription(
         getTranslations().fromKey(LocaleKey.daysSinceLastUpdate).replaceAll(
               '{0}',
               daysSinceLastUpdate.toString(),
             ),
       ),
     );
-    listItems.add(emptySpace1x());
+    listItems.add(const EmptySpace1x());
 
     DateTime anniversaryDate =
         DateTime.parse(DateTime.now().year.toString() + '-08-09');
@@ -62,14 +62,14 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
     int daysLeft = anniversaryDaysSinceEpoch -
         (DateTime.now().millisecondsSinceEpoch ~/ millisecondsToDaysConversion);
     listItems.add(
-      genericItemDescription(
+      GenericItemDescription(
         getTranslations().fromKey(LocaleKey.daysUntilAnniversary).replaceAll(
               '{0}',
               (daysLeft).toString(),
             ),
       ),
     );
-    listItems.add(emptySpace1x());
+    listItems.add(const EmptySpace1x());
 
     List<int> daysSinceLastUpdateList = List.empty(growable: true);
     for (int updateIndex = 0; updateIndex < items.length; updateIndex++) {
@@ -93,7 +93,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
     double avgDaysPerUpdate = daysSinceLastUpdateList.reduce((a, b) => a + b) /
         daysSinceLastUpdateList.length;
     listItems.add(
-      genericItemDescription(
+      GenericItemDescription(
         getTranslations().fromKey(LocaleKey.daysPerUpdate).replaceAll(
               '{0}',
               avgDaysPerUpdate.toStringAsFixed(2),
@@ -104,7 +104,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
         (lastestUpdateInDaysSinceEpoch + avgDaysPerUpdate.round()) *
             millisecondsToDaysConversion;
     listItems.add(
-      genericItemDescription(
+      GenericItemDescription(
         getTranslations()
             .fromKey(LocaleKey.updateCouldBeOnDateBasedOnAverageDays)
             .replaceAll(
@@ -118,9 +118,9 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
             .replaceAll('{1}', ''),
       ),
     );
-    listItems.add(emptySpace1x());
+    listItems.add(const EmptySpace1x());
     listItems.add(customDivider());
-    listItems.add(emptySpace1x());
+    listItems.add(const EmptySpace1x());
 
     List<int> lastXUpdatesList = [5, 10, 15];
     for (int lastXUpdate in lastXUpdatesList) {
@@ -142,21 +142,21 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
             lastXUpdate.toString(),
           );
       listItems.add(
-        genericItemDescription(
+        GenericItemDescription(
           getTranslations()
               .fromKey(LocaleKey.updateCouldBeOnDateBasedOnAverageDays)
               .replaceAll('{0}', dayString)
               .replaceAll('{1}', '\n($extraInfo)'),
         ),
       );
-      listItems.add(emptySpace1x());
+      listItems.add(const EmptySpace1x());
     }
     listItems.add(customDivider());
-    listItems.add(emptySpace1x());
+    listItems.add(const EmptySpace1x());
 
     listItems.add(Card(child: podcast1616PlaylistTile(bodyCtx)));
 
-    listItems.add(emptySpace1x());
+    listItems.add(const EmptySpace1x());
 
     List<TableRow> rows = [
       TableRow(children: [
@@ -202,9 +202,9 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
     }
     listItems.add(Table(children: rows));
 
-    listItems.add(emptySpace1x());
+    listItems.add(const EmptySpace1x());
     listItems.add(customDivider());
-    listItems.add(emptySpace1x());
+    listItems.add(const EmptySpace1x());
 
     return listWithScrollbar(
       shrinkWrap: true,

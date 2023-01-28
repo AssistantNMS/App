@@ -123,10 +123,10 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
   ) {
     List<Widget> additionalWidgets = List.empty(growable: true);
     if (captainSteveVideoUrl.isNotEmpty) {
-      additionalWidgets.add(emptySpace(2));
+      additionalWidgets.add(const EmptySpace(2));
       additionalWidgets.add(customDivider());
-      additionalWidgets.add(emptySpace1x());
-      additionalWidgets.add(genericItemDescription(
+      additionalWidgets.add(const EmptySpace1x());
+      additionalWidgets.add(GenericItemDescription(
           getTranslations().fromKey(LocaleKey.weekendMissionVideo)));
       additionalWidgets.add(
         Card(
@@ -149,20 +149,20 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
         disableZoom: true,
       ));
     }
-    widgets.add(genericItemDescription(pageItem.stage.npcMessage));
+    widgets.add(GenericItemDescription(pageItem.stage.npcMessage));
 
     if (pageItem.stage.npcMessageFlows != null) {
       widgets.add(messageFlowsButton(context, pageItem.stage.npcMessageFlows!));
     }
 
     if (pageItem.cost != null) {
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
       widgets.add(customDivider());
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
 
-      widgets.add(genericItemDescription(
+      widgets.add(GenericItemDescription(
           getTranslations().fromKey(LocaleKey.requiresTheFollowing)));
-      widgets.add(flatCard(
+      widgets.add(FlatCard(
         child: requiredItemDetailsTilePresenter(
           context,
           RequiredItemDetails.fromGenericPageItem(
@@ -174,26 +174,26 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
     }
 
     if (pageItem.stage.portalMessageFlows != null) {
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
       widgets.add(
         messageFlowsButton(context, pageItem.stage.portalMessageFlows!),
       );
     }
 
     if (isLoadingAdditionalDetails.contains(pageItem.stage.level)) {
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
       widgets.add(customDivider());
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
       widgets.add(Center(child: getLoading().smallLoadingIndicator()));
     } else {
       widgets.addAll(additionalDetails);
     }
 
-    widgets.add(emptySpace1x());
+    widgets.add(const EmptySpace1x());
     widgets.add(customDivider());
-    widgets.add(emptySpace1x());
+    widgets.add(const EmptySpace1x());
 
-    widgets.add(genericItemDescription(
+    widgets.add(GenericItemDescription(
       getTranslations().fromKey(LocaleKey.portalAddress),
     ));
 
@@ -210,14 +210,14 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
         ),
       ));
       widgets.add(
-        flatCard(
+        FlatCard(
           child: cyberpunk2350Tile(context,
               subtitle: 'Portal address information discovered by'),
         ),
       );
     }
 
-    widgets.add(emptySpace(16));
+    widgets.add(const EmptySpace(16));
 
     var pageContent = ListView(
       children: [

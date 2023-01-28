@@ -91,7 +91,7 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
       viewModel.useAltGlyphs,
     ));
 
-    widgets.add(emptySpace1x());
+    widgets.add(const EmptySpace1x());
 
     if (season.rewards.isNotEmpty) {
       widgets.add(Padding(
@@ -113,22 +113,22 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
     }
 
     if (season.gameModeType != 'Normal') {
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
       widgets.add(Card(
         child: ListTile(
-          leading: localImage(
-            AppImage.base + 'special/${season.gameModeType}.png',
+          leading: LocalImage(
+            imagePath: AppImage.base + 'special/${season.gameModeType}.png',
           ),
           title: Text(season.gameMode),
         ),
         margin: const EdgeInsets.symmetric(horizontal: 16),
       ));
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
     }
 
     if (season.captainSteveYoutubePlaylist != null &&
         season.captainSteveYoutubePlaylist!.length > 5) {
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
       String seasNum = seasonId
           .replaceAll('seas-', '') //
           .replaceAll('-redux', '');
@@ -142,7 +142,7 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
         ),
         margin: const EdgeInsets.symmetric(horizontal: 16),
       ));
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
     }
 
     List<SeasonalExpeditionPhase> phases = season.phases;
@@ -154,7 +154,7 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
       ));
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return simpleGenericPageScaffold(
       storeContext,

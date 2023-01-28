@@ -71,11 +71,11 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
     String dateString = simpleDate(details.date.toLocal());
 
     List<Widget> firstSectionWidgets = List.empty(growable: true);
-    firstSectionWidgets.add(genericItemDescription(details.author));
+    firstSectionWidgets.add(GenericItemDescription(details.author));
     if (details.translatedBy != null && details.translatedBy!.isNotEmpty) {
-      firstSectionWidgets.add(genericItemDescription(details.translatedBy!));
+      firstSectionWidgets.add(GenericItemDescription(details.translatedBy!));
     }
-    firstSectionWidgets.add(genericItemDescription(dateString));
+    firstSectionWidgets.add(GenericItemDescription(dateString));
     widgets
         .add(nmsSectionListItem(context, details.title, firstSectionWidgets));
 
@@ -160,7 +160,7 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
 
     List<Widget> metaList = [
       metaWidget,
-      emptySpace8x(),
+      const EmptySpace8x(),
     ];
 
     widgets.add(SliverStickyHeader(
@@ -172,7 +172,7 @@ class _GuidesDetailsWidget extends State<GuidesDetailsPage> {
         ),
       ),
     ));
-    // widgets.add(emptySpace8x());
+    // widgets.add(const EmptySpace8x());
 
     return CustomScrollView(slivers: widgets);
   }

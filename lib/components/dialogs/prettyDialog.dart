@@ -44,11 +44,11 @@ void prettyDialog(
     Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        localImage(appImage),
-        emptySpace1x(),
-        genericItemText(title),
-        emptySpace1x(),
-        genericItemDescription(description),
+        LocalImage(imagePath: appImage),
+        const EmptySpace1x(),
+        GenericItemText(title),
+        const EmptySpace1x(),
+        GenericItemDescription(description),
       ],
     ),
   );

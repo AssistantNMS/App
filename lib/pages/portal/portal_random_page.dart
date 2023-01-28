@@ -160,7 +160,7 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        flatCard(
+        FlatCard(
           child: captainSteveYoutubeVideoTile(
             bodyCtx,
             NmsExternalUrls.captainSteveYoutubeDiceRollPlaylist,

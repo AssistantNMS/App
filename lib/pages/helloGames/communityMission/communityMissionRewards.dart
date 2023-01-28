@@ -88,10 +88,10 @@ class CommunityMissionRewards extends StatelessWidget {
         qsStore.icon.isNotEmpty && qsStore.name.isNotEmpty;
     if (tiersAreValid == false && isSpecialQsMission == false) {
       widgets.add(genericItemImage(internalContext, AppImage.error));
-      widgets.add(genericItemDescription(
+      widgets.add(GenericItemDescription(
         getTranslations().fromKey(LocaleKey.communityMissionMismatchTitle),
       ));
-      widgets.add(genericItemDescription(
+      widgets.add(GenericItemDescription(
         getTranslations().fromKey(LocaleKey.communityMissionMismatchMessage),
       ));
     } else {
@@ -121,7 +121,7 @@ class CommunityMissionRewards extends StatelessWidget {
           ));
         }
       } else {
-        Widget topElement = flatCard(
+        Widget topElement = FlatCard(
           child: genericListTileWithSubtitle(
             internalContext,
             leadingImage: qsStore.icon,
@@ -134,11 +134,11 @@ class CommunityMissionRewards extends StatelessWidget {
         List<Widget> requiredItemsWidgets = List.empty(growable: true);
         List<RequiredItemDetails> reqItemsToDisplay =
             requiredItemDetails ?? List.empty();
-        requiredItemsWidgets.add(emptySpace1x());
+        requiredItemsWidgets.add(const EmptySpace1x());
         if (reqItemsToDisplay.isNotEmpty) {
           requiredItemsWidgets.add(topElement);
-          requiredItemsWidgets.add(emptySpace1x());
-          requiredItemsWidgets.add(genericItemDescription(
+          requiredItemsWidgets.add(const EmptySpace1x());
+          requiredItemsWidgets.add(GenericItemDescription(
             getTranslations().fromKey(LocaleKey.requiresTheFollowing),
           ));
 
@@ -148,7 +148,7 @@ class CommunityMissionRewards extends StatelessWidget {
               itemDetails,
             ));
           }
-          requiredItemsWidgets.add(emptySpace1x());
+          requiredItemsWidgets.add(const EmptySpace1x());
 
           widgets.add(Column(
             children: requiredItemsWidgets,
@@ -162,8 +162,8 @@ class CommunityMissionRewards extends StatelessWidget {
     if (qsStore.items.isEmpty && isSpecialQsMission == false) {
       widgets.addAll(
         [
-          emptySpace3x(),
-          genericItemName(getTranslations().fromKey(LocaleKey.noItems)),
+          const EmptySpace3x(),
+          GenericItemName(getTranslations().fromKey(LocaleKey.noItems)),
         ],
       );
     }

@@ -114,10 +114,10 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
     //     : item.date ?? '';
     // widgets.add(Padding(
     //   padding: const EdgeInsets.only(top: 8, bottom: 12),
-    //   child: genericItemGroup(dateString),
+    //   child: GenericItemGroup(dateString),
     // ));
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
 
     void Function(String gAddress) onCopy;
     onCopy = (String gAddress) {
@@ -142,7 +142,7 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
       onTap: onTap,
     ));
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return listWithScrollbar(
       itemCount: widgets.length,

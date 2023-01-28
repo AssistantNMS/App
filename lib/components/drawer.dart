@@ -51,10 +51,10 @@ class AppDrawer extends StatelessWidget {
               child: ClipOval(
                 child: Container(
                   color: HexColor(AppColour.discord),
-                  child: Padding(
-                    padding: const EdgeInsets.all(4),
-                    child: localImage(
-                      AppImage.discordWhite,
+                  child: const Padding(
+                    padding: EdgeInsets.all(4),
+                    child: LocalImage(
+                      imagePath: AppImage.discordWhite,
                       height: 85,
                       width: 85,
                     ),

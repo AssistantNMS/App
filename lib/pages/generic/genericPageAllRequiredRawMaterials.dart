@@ -45,23 +45,25 @@ class _GenericPageAllRequiredRawMaterialsWidget
   Widget build(BuildContext context) {
     TextEditingController controller = TextEditingController();
     List<Widget> options = [
-      getSegmentedControlWithIconOption(
-        Icons.list,
-        getTranslations().fromKey(LocaleKey.flatList),
+      SegmentedControlWithIconOption(
+        icon: Icons.list,
+        text: getTranslations().fromKey(LocaleKey.flatList),
       ),
-      getSegmentedControlWithIconOption(
-        Icons.call_split,
-        getTranslations().fromKey(LocaleKey.tree),
+      SegmentedControlWithIconOption(
+        icon: Icons.call_split,
+        text: getTranslations().fromKey(LocaleKey.tree),
       )
     ];
     Container segmentedWidget = Container(
-      child: adaptiveSegmentedControl(context,
-          controlItems: options,
-          currentSelection: currentSelection, onSegmentChosen: (index) {
-        setState(() {
-          currentSelection = index;
-        });
-      }),
+      child: AdaptiveSegmentedControl(
+        controlItems: options,
+        currentSelection: currentSelection,
+        onSegmentChosen: (index) {
+          setState(() {
+            currentSelection = index;
+          });
+        },
+      ),
       margin: const EdgeInsets.all(8),
     );
 
@@ -103,7 +105,7 @@ class _GenericPageAllRequiredRawMaterialsWidget
       );
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return widgets;
   }
@@ -150,9 +152,9 @@ class _GenericPageAllRequiredRawMaterialsWidget
   ) {
     List<Widget> widgets = List.empty(growable: true);
     if (item.name.isNotEmpty) {
-      widgets.add(emptySpace1x());
-      widgets.add(genericItemName(item.name));
-      widgets.add(genericItemText(
+      widgets.add(const EmptySpace1x());
+      widgets.add(GenericItemName(item.name));
+      widgets.add(GenericItemText(
         getTranslations().fromKey(LocaleKey.allRawMaterialsRequired),
       ));
     }

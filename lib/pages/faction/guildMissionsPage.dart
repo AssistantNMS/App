@@ -43,7 +43,7 @@ class GuildMissionsPage extends StatelessWidget {
       widgets.add((innerCtx) => guildMissionTilePresenter(bodyCtx, mission));
     }
 
-    widgets.add((_) => emptySpace8x());
+    widgets.add((_) => const EmptySpace8x());
 
     return simpleGenericPageScaffold(
       bodyCtx,

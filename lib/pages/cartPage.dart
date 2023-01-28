@@ -178,8 +178,8 @@ class CartPage extends StatelessWidget {
         ),
       ));
 
-      widgets.add(Container(
-        child: NegativeButton(
+      widgets.add(
+        NegativeButton(
           title: getTranslations().fromKey(LocaleKey.deleteAll),
           onTap: () {
             getDialog().showSimpleDialog(
@@ -200,7 +200,7 @@ class CartPage extends StatelessWidget {
             );
           },
         ),
-      ));
+      );
       widgets.add(customDivider());
     } else {
       widgets.add(

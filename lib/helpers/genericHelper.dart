@@ -34,7 +34,9 @@ Widget genericItemCredits(
         addDecimal: false,
         style: getThemeBodyLarge(context)?.copyWith(color: colour),
       ),
-      localImage('${getPath().imageAssetPathPrefix}/credits.png', height: 17),
+      LocalImage(
+          imagePath: '${getPath().imageAssetPathPrefix}/credits.png',
+          height: 17),
     );
 
 Widget genericItemNanites(
@@ -100,7 +102,7 @@ Widget genericItemIntCurrency(
         overflow: TextOverflow.ellipsis,
         style: getThemeBodyLarge(context)?.copyWith(color: colour),
       ),
-      localImage(imageUrl, height: 17),
+      LocalImage(imagePath: imageUrl, height: 17),
     );
 
 Widget genericItemTextWithIcon(
@@ -167,7 +169,7 @@ List<Widget> genericItemWithOverflowButton<T>(
       : itemArray.length;
   List<Widget> widgets = List.empty(growable: true);
   for (var itemIndex = 0; itemIndex < numRecords; itemIndex++) {
-    widgets.add(flatCard(
+    widgets.add(FlatCard(
       child: presenter(context, itemArray[itemIndex]),
     ));
   }
@@ -285,7 +287,7 @@ List<Widget> getConsumableRewards(
   List<Widget> widgets = List.empty(growable: true);
 
   for (String consReward in consumableRewards) {
-    widgets.add(emptySpace1x());
+    widgets.add(const EmptySpace1x());
     widgets.addAll(
       genericPageDescripHighlightText(
         context,
@@ -298,16 +300,16 @@ List<Widget> getConsumableRewards(
   if (widgets.isEmpty) return widgets;
 
   return [
-    emptySpace1x(),
-    flatCard(
+    const EmptySpace1x(),
+    FlatCard(
       child: Column(
         children: [
           ...widgets,
-          emptySpace1x(),
+          const EmptySpace1x(),
         ],
       ),
     ),
-    emptySpace1x(),
+    const EmptySpace1x(),
   ];
 }
 

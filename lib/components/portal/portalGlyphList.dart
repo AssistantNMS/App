@@ -27,7 +27,7 @@ Widget portalGlyphList(
           String hexNum = currentCodes[index].toRadixString(16);
           return getPortalImage(context, hexNum, useAltGlyphs);
         }
-        return localImage('$basePath/$path');
+        return LocalImage(imagePath: '$basePath/$path');
       },
     );
 
@@ -40,7 +40,7 @@ Widget getPortalImage(
   if (useAltGlyphs) type = 'alt';
   String basePath = getPath().imageAssetPathPrefix;
   String path = 'portals/$type/$portalCode.png';
-  return localImage('$basePath/$path');
+  return LocalImage(imagePath: '$basePath/$path');
 }
 
 Widget twoLinePortalGlyphList(List<int> currentCodes,
@@ -71,8 +71,9 @@ Widget portalInput(
     children: List.generate(16, (index) {
       String hexNum = index.toRadixString(16);
 
-      Widget imgChild = localImage(
-        '${getPath().imageAssetPathPrefix}/portals/$colour/$hexNum.png',
+      Widget imgChild = LocalImage(
+        imagePath:
+            '${getPath().imageAssetPathPrefix}/portals/$colour/$hexNum.png',
         width: w,
         height: w,
       );

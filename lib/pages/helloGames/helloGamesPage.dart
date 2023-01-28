@@ -28,39 +28,38 @@ class HelloGamesPage extends StatelessWidget {
   Widget getBody(BuildContext context) {
     List<CustomMenuItem> menuItems = List.empty(growable: true);
     menuItems.add(CustomMenuItem(
-      image: getListTileImage('announcementsActive.png'),
+      image: const ListTileImage(partialPath: 'announcementsActive.png'),
       title: LocaleKey.news,
       navigateToNamed: Routes.helloGamesNews,
     ));
     menuItems.add(CustomMenuItem(
-      image: getListTileImage('announcementsActive.png'),
+      image: const ListTileImage(partialPath: 'announcementsActive.png'),
       title: LocaleKey.releaseNotes,
       navigateToNamed: Routes.helloGamesReleaseNotes,
     ));
     menuItems.add(CustomMenuItem(
-      image: getListTileImage('galacticAtlas.png'),
+      image: const ListTileImage(partialPath: 'galacticAtlas.png'),
       title: LocaleKey.galacticAtlas,
       navigateToExternal: NmsExternalUrls.nmsGalacticAtlas,
     ));
     menuItems.add(CustomMenuItem(
-      image: getListTileImage(AppImage.communityMission),
+      image: const ListTileImage(partialPath: AppImage.communityMission),
       title: LocaleKey.communityMission,
       navigateToNamed: Routes.helloGamesCommunityMission,
     ));
     menuItems.add(CustomMenuItem(
-      image: getCorrectlySizedImageFromIcon(context, Icons.map_sharp),
+      image: const CorrectlySizedImageFromIcon(icon: Icons.map_sharp),
       title: LocaleKey.seasonalExpeditionSeasons,
       navigateToNamed: Routes.seasonalExpeditionPage,
     ));
     menuItems.add(CustomMenuItem(
-      image: getListTileImage(AppImage.weekendMission),
+      image: const ListTileImage(partialPath: AppImage.weekendMission),
       title: LocaleKey.weekendMission,
       navigateToNamed: Routes.helloGamesWeekendMission,
     ));
     menuItems.add(CustomMenuItem(
-      image: getCorrectlySizedImageFromIcon(
-        context,
-        Icons.home,
+      image: CorrectlySizedImageFromIcon(
+        icon: Icons.home,
         colour: getTheme().getDarkModeSecondaryColour(),
       ),
       title: LocaleKey.nmsWebsite,

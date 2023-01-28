@@ -27,12 +27,12 @@ Widget boolSettingTilePresenter(
     if (onChange != null) onChange();
   };
 
-  return flatCard(
+  return FlatCard(
     child: genericListTile(
       context,
       leadingImage: null,
       name: name,
-      trailing: adaptiveCheckbox(
+      trailing: getBaseWidget().adaptiveCheckbox(
         value: value,
         activeColor: getTheme().getSecondaryColour(context),
         onChanged: (bool unused) => tempOnChange(),
@@ -59,7 +59,7 @@ Widget languageSettingTilePresenter(
   };
   LocalizationMap currentLocal =
       getTranslations().getCurrentLocalizationMap(context, value);
-  return flatCard(
+  return FlatCard(
     child: languageTilePresenter(
       context,
       name,
@@ -88,7 +88,7 @@ Widget listSettingTilePresenter(
     );
   };
 
-  return flatCard(
+  return FlatCard(
     child: genericListTile(
       context,
       leadingImage: null,
@@ -148,12 +148,12 @@ Widget patreonCodeSettingTilePresenter(
     );
   };
 
-  return flatCard(
+  return FlatCard(
     child: genericListTile(
       context,
       leadingImage: null,
       name: name,
-      trailing: adaptiveCheckbox(
+      trailing: getBaseWidget().adaptiveCheckbox(
         value: value,
         activeColor: getTheme().getSecondaryColour(context),
         onChanged: (_) => patreonModalSheet(),

@@ -2,19 +2,19 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 List<Widget> getSunriseHeading(BuildContext context) => [
-      getCorrectlySizedImageFromIcon(context, Icons.brightness_6, maxSize: 20),
+      const CorrectlySizedImageFromIcon(icon: Icons.brightness_6, maxSize: 20),
       headingText(context, LocaleKey.sunrise),
     ];
 List<Widget> getDayHeading(BuildContext context) => [
-      getCorrectlySizedImageFromIcon(context, Icons.brightness_7, maxSize: 20),
+      const CorrectlySizedImageFromIcon(icon: Icons.brightness_7, maxSize: 20),
       headingText(context, LocaleKey.daytime),
     ];
 List<Widget> getSunsetHeading(BuildContext context) => [
-      getCorrectlySizedImageFromIcon(context, Icons.brightness_4, maxSize: 20),
+      const CorrectlySizedImageFromIcon(icon: Icons.brightness_4, maxSize: 20),
       headingText(context, LocaleKey.sunset),
     ];
 List<Widget> getNightHeading(BuildContext context) => [
-      getCorrectlySizedImageFromIcon(context, Icons.brightness_3, maxSize: 20),
+      const CorrectlySizedImageFromIcon(icon: Icons.brightness_3, maxSize: 20),
       headingText(context, LocaleKey.night),
     ];
 
@@ -45,9 +45,13 @@ Widget getPowerTable(BuildContext context, double totalPowerCons,
           rowText(context, night.toStringAsFixed(0)),
         ]),
         // TableRow(children: [customDivider(), customDivider()]),
-        TableRow(children: [emptySpace1x(), emptySpace1x(), customDivider()]),
         TableRow(children: [
-          emptySpace1x(),
+          const EmptySpace1x(),
+          const EmptySpace1x(),
+          customDivider()
+        ]),
+        TableRow(children: [
+          const EmptySpace1x(),
           headingText(context, LocaleKey.total, textAlign: TextAlign.right),
           rowText(
             context,
@@ -72,26 +76,34 @@ Widget getSummaryTable(BuildContext context, double powerStoredForNight,
     child: Table(
       children: [
         TableRow(children: [
-          getCorrectlySizedImageFromIcon(context, Icons.battery_charging_full,
-              maxSize: 20),
+          const CorrectlySizedImageFromIcon(
+            icon: Icons.battery_charging_full,
+            maxSize: 20,
+          ),
           headingText(context, LocaleKey.powerStored),
           rowText(context, powerStoredForNight.toStringAsFixed(0)),
         ]),
         TableRow(children: [
-          getCorrectlySizedImageFromIcon(context, Icons.lightbulb_outline,
-              maxSize: 20),
+          const CorrectlySizedImageFromIcon(
+            icon: Icons.lightbulb_outline,
+            maxSize: 20,
+          ),
           headingText(context, LocaleKey.powerRequired),
           rowText(context, powerRequiredForNight.toStringAsFixed(0)),
         ]),
         TableRow(children: [
-          getCorrectlySizedImageFromIcon(context, Icons.battery_alert,
-              maxSize: 20),
+          const CorrectlySizedImageFromIcon(
+            icon: Icons.battery_alert,
+            maxSize: 20,
+          ),
           headingText(context, LocaleKey.powerUnused),
           rowText(context, powerUnused.toStringAsFixed(0)),
         ]),
         TableRow(children: [
-          getCorrectlySizedImageFromIcon(context, Icons.delete_outline,
-              maxSize: 20),
+          const CorrectlySizedImageFromIcon(
+            icon: Icons.delete_outline,
+            maxSize: 20,
+          ),
           headingText(context, LocaleKey.powerLost),
           rowText(context, powerLost.toStringAsFixed(0)),
         ]),
@@ -113,7 +125,7 @@ Widget headingLocaleKeyWithImage(
   TextAlign? textAlign,
 }) =>
     Row(children: [
-      getCorrectlySizedImageFromIcon(context, icon, maxSize: 20),
+      CorrectlySizedImageFromIcon(icon: icon, maxSize: 20),
       headingText(context, locale, textAlign: textAlign),
     ]);
 
@@ -157,10 +169,10 @@ Widget inGameInfoTable(BuildContext context) {
         Table(
           children: [
             TableRow(children: [
-              emptySpace1x(),
-              emptySpace1x(),
+              const EmptySpace1x(),
+              const EmptySpace1x(),
               rowText(context, getTranslations().fromKey(LocaleKey.inGame)),
-              emptySpace1x(),
+              const EmptySpace1x(),
             ]),
             TableRow(children: [
               ...getSunriseHeading(context),
@@ -200,10 +212,10 @@ Widget realTimeInfoTable(BuildContext context) {
         Table(
           children: [
             TableRow(children: [
-              emptySpace1x(),
-              emptySpace1x(),
+              const EmptySpace1x(),
+              const EmptySpace1x(),
               rowText(context, getTranslations().fromKey(LocaleKey.realTime)),
-              emptySpace1x(),
+              const EmptySpace1x(),
             ]),
             TableRow(children: [
               ...getSunriseHeading(context),

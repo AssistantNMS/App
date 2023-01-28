@@ -136,11 +136,12 @@ Widget inventorySlotTileWithContainersPresenter(
                 (invContainer) => PopupMenuActionItem(
                   text: invContainer.name,
                   icon: Icons.open_in_new,
-                  image: getListTileImage(
-                    // ignore: unnecessary_null_comparison
-                    invContainer.icon != null
-                        ? 'inventory/${invContainer.icon}'
-                        : 'drawer/inventory.png',
+                  image: ListTileImage(
+                    partialPath:
+                        // ignore: unnecessary_null_comparison
+                        invContainer.icon != null
+                            ? 'inventory/${invContainer.icon}'
+                            : 'drawer/inventory.png',
                   ),
                   onPressed: () => trailingOnPress(invContainer.id),
                 ),

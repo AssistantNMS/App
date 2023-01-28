@@ -85,7 +85,9 @@ class Settings extends StatelessWidget {
     widgets.add(listSettingTilePresenter(
       context,
       getTranslations().fromKey(LocaleKey.platform),
-      localImage(SelectedPlatform.getFromValue(viewModel.platformIndex).icon),
+      LocalImage(
+          imagePath:
+              SelectedPlatform.getFromValue(viewModel.platformIndex).icon),
       availablePlatforms
           .map(
             (hp) => DropdownOption(
@@ -159,7 +161,7 @@ class Settings extends StatelessWidget {
 
     if (viewModel.homepageType == HomepageType.custom) {
       widgets.add(
-        flatCard(
+        FlatCard(
           child: genericListTile(
             context,
             leadingImage: null,
@@ -264,7 +266,7 @@ class Settings extends StatelessWidget {
       ));
     }
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
 
     return listWithScrollbar(
       itemCount: widgets.length,

@@ -54,7 +54,7 @@ class JourneyMilestoneBottomSheet extends StatelessWidget {
         ),
       );
     }
-    widgets.add(() => emptySpace8x());
+    widgets.add(() => const EmptySpace8x());
 
     return AnimatedSize(
       duration: AppDuration.modal,

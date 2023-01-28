@@ -54,7 +54,7 @@ List<Widget> getDrawerItems(context, DrawerSettingsViewModel viewModel) {
 
   widgets.add(_drawerItem(
     context,
-    image: getListTileImage(AppImage.assistantApps),
+    image: const ListTileImage(partialPath: AppImage.assistantApps),
     key: LocaleKey.assistantApps,
     onTap: (_) {
       adaptiveBottomModalSheet(
@@ -66,7 +66,7 @@ List<Widget> getDrawerItems(context, DrawerSettingsViewModel viewModel) {
       );
     },
   ));
-  widgets.add(emptySpace3x());
+  widgets.add(const EmptySpace3x());
 
   return widgets;
 }
@@ -114,10 +114,9 @@ Widget _drawerItem(
     },
   );
   if (isNew) {
-    return wrapInNewBanner(
-      context,
-      LocaleKey.newItem,
-      tile,
+    return WrapInNewBanner(
+      message: LocaleKey.newItem,
+      child: tile,
       location: isLocked ? BannerLocation.topStart : BannerLocation.topEnd,
     );
   }

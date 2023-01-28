@@ -27,14 +27,14 @@ class FactionDetailPage extends StatelessWidget {
 
   Widget getBody(BuildContext storeContext, FactionsViewModel viewModel) {
     List<Widget> widgets = List.empty(growable: true);
-    widgets.add(localImage(
-      factionDetail.icon,
+    widgets.add(LocalImage(
+      imagePath: factionDetail.icon,
       imageHero: factionDetail.icon + factionDetail.id,
       height: 100,
     ));
     widgets.add(Padding(
       padding: NMSUIConstants.buttonPadding,
-      child: genericItemDescription(
+      child: GenericItemDescription(
         factionDetail.description,
         maxLines: 20,
       ),
@@ -54,7 +54,7 @@ class FactionDetailPage extends StatelessWidget {
     }
 
     if (factionDetail.additional.contains('ShowGuildMissions')) {
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
       widgets.add(Padding(
         padding: NMSUIConstants.buttonPadding,
         child: PositiveButton(
@@ -69,7 +69,7 @@ class FactionDetailPage extends StatelessWidget {
       ));
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return simpleGenericPageScaffold(
       storeContext,

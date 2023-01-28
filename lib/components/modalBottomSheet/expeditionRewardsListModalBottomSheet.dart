@@ -88,7 +88,7 @@ class _ExpeditionRewardsListModalBottomSheetWidget
         .toList();
 
     if (widget.milestoneId.isNotEmpty) {
-      widgetFuncs.add(() => emptySpace1x());
+      widgetFuncs.add(() => const EmptySpace1x());
       bool isClaimed = false;
       if (viewModel.claimedRewards.any((cla) => cla == widget.milestoneId)) {
         isClaimed = true;

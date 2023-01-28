@@ -18,19 +18,19 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
             .replaceAll('{0}', '1'),
         centerWidget: Column(
           children: [
-            localImage(AppImage.nomNom),
-            emptySpace8x(),
-            genericItemGroup(
+            const LocalImage(imagePath: AppImage.nomNom),
+            const EmptySpace8x(),
+            GenericItemGroup(
               getTranslations().fromKey(LocaleKey.downloadNomNom),
             ),
-            flatCard(
+            FlatCard(
               child: nomNomDownloadTile(
                 context,
                 subtitle: getTranslations() //
                     .fromKey(LocaleKey.downloadFromGithub),
               ),
             ),
-            emptySpace3x(),
+            const EmptySpace3x(),
           ],
         ),
         colorBegin: getTheme().getScaffoldBackgroundColour(context),
@@ -41,7 +41,7 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
             getTranslations().fromKey(LocaleKey.stepNum).replaceAll('{0}', '2'),
         centerWidget: Column(
           children: [
-            genericItemGroup(getTranslations().fromKey(LocaleKey.nomNomStep2)),
+            GenericItemGroup(getTranslations().fromKey(LocaleKey.nomNomStep2)),
             tutorialImage(
               context,
               title: getTranslations()
@@ -49,10 +49,10 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
                   .replaceAll('{0}', '2'),
               icon: AppImage.nomnomIntroStep2,
             ),
-            // genericItemDescription(
+            // GenericItemDescription(
             //   '"Bases & Storage" > "Sync to AssistantNMS" > "Generate code"',
             // ),
-            emptySpace3x(),
+            const EmptySpace3x(),
           ],
         ),
         colorBegin: getTheme().getScaffoldBackgroundColour(context),
@@ -63,13 +63,13 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
             getTranslations().fromKey(LocaleKey.stepNum).replaceAll('{0}', '3'),
         centerWidget: Column(
           children: [
-            genericItemGroup(getTranslations().fromKey(LocaleKey.nomNomStep3)),
+            GenericItemGroup(getTranslations().fromKey(LocaleKey.nomNomStep3)),
             tutorialImage(
               context,
               title: getTranslations().fromKey(LocaleKey.nomNomStep3),
               icon: AppImage.nomnomIntroStep3,
             ),
-            emptySpace3x(),
+            const EmptySpace3x(),
           ],
         ),
         colorBegin: getTheme().getScaffoldBackgroundColour(context),
@@ -80,9 +80,9 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
             getTranslations().fromKey(LocaleKey.stepNum).replaceAll('{0}', '4'),
         centerWidget: Column(
           children: [
-            genericItemGroup(getTranslations().fromKey(LocaleKey.nomNomStep4)),
-            localImage(AppImage.nomnomIntroStep4),
-            emptySpace3x(),
+            GenericItemGroup(getTranslations().fromKey(LocaleKey.nomNomStep4)),
+            const LocalImage(imagePath: AppImage.nomnomIntroStep4),
+            const EmptySpace3x(),
           ],
         ),
         colorBegin: getTheme().getScaffoldBackgroundColour(context),
@@ -110,7 +110,7 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
   }) {
     return GestureDetector(
       child: Container(
-        child: localImage(icon),
+        child: LocalImage(imagePath: icon),
         margin: const EdgeInsets.all(4.0),
       ),
       onTap: () => getNavigation().navigateAsync(

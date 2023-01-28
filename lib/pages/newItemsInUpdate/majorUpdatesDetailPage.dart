@@ -62,18 +62,18 @@ class MajorUpdatesDetailPage extends StatelessWidget {
     List<GenericPageItem> localUpdateNewItems = snapshot.data!.value;
     List<Widget> listItems = List.empty(growable: true);
 
-    listItems.add(emptySpace2x());
+    listItems.add(const EmptySpace2x());
     listItems.add(Center(
       child: ClipRRect(
         borderRadius: const BorderRadius.only(
           bottomRight: Radius.circular(8),
           bottomLeft: Radius.circular(8),
         ),
-        child: localImage(localMajorItem.icon, width: 200),
+        child: LocalImage(imagePath: localMajorItem.icon, width: 200),
       ),
     ));
 
-    listItems.add(emptySpace1x());
+    listItems.add(const EmptySpace1x());
     if (localMajorItem.emoji != null && localMajorItem.emoji!.isNotEmpty) {
       listItems.add(Center(
         child: Text(
@@ -81,19 +81,19 @@ class MajorUpdatesDetailPage extends StatelessWidget {
           style: const TextStyle(fontSize: 30),
         ),
       ));
-      listItems.add(emptySpace1x());
+      listItems.add(const EmptySpace1x());
     }
     listItems.add(Center(
-      child: genericItemName(simpleDate(localMajorItem.releaseDate)),
+      child: GenericItemName(simpleDate(localMajorItem.releaseDate)),
     ));
     if (localUpdateNewItems.isNotEmpty) {
-      listItems.add(emptySpace1x());
+      listItems.add(const EmptySpace1x());
       listItems.add(Center(
         child: Text(getTranslations().fromKey(LocaleKey.newItemsAdded) +
             ': ' +
             localUpdateNewItems.length.toString()),
       ));
-      listItems.add(emptySpace1x());
+      listItems.add(const EmptySpace1x());
     }
     if (localMajorItem.postUrl != null && localMajorItem.postUrl!.isNotEmpty) {
       listItems.add(Padding(
@@ -105,7 +105,7 @@ class MajorUpdatesDetailPage extends StatelessWidget {
       ));
     }
     listItems.add(customDivider());
-    listItems.add(emptySpace1x());
+    listItems.add(const EmptySpace1x());
 
     if (localUpdateNewItems.isNotEmpty) {
       for (GenericPageItem gItem in localUpdateNewItems) {
@@ -113,7 +113,7 @@ class MajorUpdatesDetailPage extends StatelessWidget {
       }
     } else {
       listItems.add(Center(
-        child: genericItemGroup(
+        child: GenericItemGroup(
           getTranslations().fromKey(LocaleKey.noItemsRecorded),
         ),
       ));

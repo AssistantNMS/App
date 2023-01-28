@@ -16,8 +16,10 @@ Widget communitySpotlightTilePresenter(
     children: (communitySpotlight.userName.length > 1)
         ? [
             ClipOval(
-              child: networkImage(communitySpotlight.userImage,
-                  height: 50, width: 50),
+              child: ImageFromNetwork(
+                  imageUrl: communitySpotlight.userImage,
+                  height: 50,
+                  width: 50),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8),
@@ -90,12 +92,9 @@ Widget communitySpotlightTilePresenter(
       child: Column(
         children: [
           if (communitySpotlight.previewImageUrl.length > 5) ...[
-            Container(
-              // constraints: const BoxConstraints(maxHeight: 225),
-              child: networkImage(
-                communitySpotlight.previewImageUrl,
-                boxfit: BoxFit.fitWidth,
-              ),
+            ImageFromNetwork(
+              imageUrl: communitySpotlight.previewImageUrl,
+              boxfit: BoxFit.fitWidth,
             ),
           ],
           Padding(

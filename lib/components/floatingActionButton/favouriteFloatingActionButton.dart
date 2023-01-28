@@ -15,9 +15,8 @@ SpeedDialChild favouriteFloatingActionButton(
       onTap: () => addFavourite(
         FavouriteItem(id: genericItem.id),
       ),
-      child: getCorrectlySizedImageFromIcon(
-        context,
-        Icons.star,
+      child: CorrectlySizedImageFromIcon(
+        icon: Icons.star,
         colour: getTheme().fabForegroundColourSelector(context),
       ),
     );

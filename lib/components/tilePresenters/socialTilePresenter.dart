@@ -6,8 +6,8 @@ import '../../contracts/data/socialItem.dart';
 Widget socialLinkTilePresenter(BuildContext context, SocialItem socialItem,
         {void Function()? onTap}) =>
     ListTile(
-      leading: localImage(
-        '${getPath().imageAssetPathPrefix}/${socialItem.icon}',
+      leading: LocalImage(
+        imagePath: '${getPath().imageAssetPathPrefix}/${socialItem.icon}',
         padding: const EdgeInsets.only(top: 8.0, right: 8.0, bottom: 8.0),
       ),
       title: Text(

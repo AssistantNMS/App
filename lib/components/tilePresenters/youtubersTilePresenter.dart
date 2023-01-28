@@ -30,8 +30,8 @@ Widget proceduralTravellerTile(BuildContext context) => genericListTile(
 Widget captainSteveTile(BuildContext context) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.captainSteve}',
+      leadingImage: LocalImage(
+        imagePath: '${getPath().imageAssetPathPrefix}/${AppImage.captainSteve}',
         padding: const EdgeInsets.all(8),
       ),
       title: 'Captain Steve',
@@ -43,8 +43,8 @@ Widget captainSteveYoutubeVideoTile(BuildContext context, String link,
         {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.captainSteve}',
+      leadingImage: LocalImage(
+        imagePath: '${getPath().imageAssetPathPrefix}/${AppImage.captainSteve}',
         padding: const EdgeInsets.all(8),
       ),
       title: 'Captain Steve',
@@ -56,8 +56,8 @@ Widget captainSteveYoutubeVideoTile(BuildContext context, String link,
 Widget podcast1616PlaylistTile(BuildContext context, {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.podcast1616}',
+      leadingImage: LocalImage(
+        imagePath: '${getPath().imageAssetPathPrefix}/${AppImage.podcast1616}',
         padding: const EdgeInsets.all(8),
       ),
       title: '16 16 Podcast',
@@ -69,8 +69,9 @@ Widget podcast1616PlaylistTile(BuildContext context, {String? subtitle}) =>
 Widget cyberpunk2350Tile(BuildContext context, {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.cyberpunk2350}',
+      leadingImage: LocalImage(
+        imagePath:
+            '${getPath().imageAssetPathPrefix}/${AppImage.cyberpunk2350}',
         padding: const EdgeInsets.all(8),
       ),
       title: 'CyberPunk2350',
@@ -82,8 +83,9 @@ Widget cyberpunk2350Tile(BuildContext context, {String? subtitle}) =>
 Widget assistantNMSTile(BuildContext context) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.assistantNMSIcon}',
+      leadingImage: LocalImage(
+        imagePath:
+            '${getPath().imageAssetPathPrefix}/${AppImage.assistantNMSIcon}',
         padding: const EdgeInsets.all(8),
       ),
       title: 'Kurt AssistantNMS',
@@ -94,8 +96,8 @@ Widget assistantNMSTile(BuildContext context) =>
 Widget steamDatabaseTile(BuildContext context) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.steamdbIcon}',
+      leadingImage: LocalImage(
+        imagePath: '${getPath().imageAssetPathPrefix}/${AppImage.steamdbIcon}',
         padding: const EdgeInsets.all(4),
       ),
       title: 'Steam Database',
@@ -107,8 +109,9 @@ Widget steamDatabaseTile(BuildContext context) =>
 Widget nmsHomeTile(BuildContext context) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.nmsWebsiteFavicon}',
+      leadingImage: LocalImage(
+        imagePath:
+            '${getPath().imageAssetPathPrefix}/${AppImage.nmsWebsiteFavicon}',
         padding: const EdgeInsets.all(4),
       ),
       title: 'No Man\'s Sky Official Website',
@@ -120,8 +123,8 @@ Widget nmsHomeTile(BuildContext context) =>
 Widget veritasVelezTile(BuildContext context, {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.veritasVelez}',
+      leadingImage: LocalImage(
+        imagePath: '${getPath().imageAssetPathPrefix}/${AppImage.veritasVelez}',
         padding: const EdgeInsets.all(8),
       ),
       title: 'VeritasVelez',
@@ -134,9 +137,9 @@ Widget veritasVelezTile(BuildContext context, {String? subtitle}) =>
 Widget nomNomDownloadTile(BuildContext context, {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        AppImage.nomNom,
-        padding: const EdgeInsets.all(8),
+      leadingImage: const LocalImage(
+        imagePath: AppImage.nomNom,
+        padding: EdgeInsets.all(8),
       ),
       title: 'NomNom',
       subtitle: Text(subtitle ?? NmsExternalUrls.nomNomWebsite, maxLines: 1),

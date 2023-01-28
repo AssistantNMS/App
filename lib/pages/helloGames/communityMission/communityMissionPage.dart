@@ -106,20 +106,19 @@ class CommunityMissionPage extends StatelessWidget {
     int communityMissionMax = result.value.communityMissionMax;
     int communityMissionMin = result.value.communityMissionMin;
 
-    widgets.add(emptySpace2x());
-    widgets.add(genericItemGroup(
+    widgets.add(const EmptySpace2x());
+    widgets.add(GenericItemGroup(
       getTranslations().fromKey(LocaleKey.researchProgress),
     ));
 
     if (totalTiers > 1) {
-      widgets.add(genericItemDescription("$currentTier / $totalTiers"));
+      widgets.add(GenericItemDescription("$currentTier / $totalTiers"));
     }
 
     widgets.add(Padding(
       padding: const EdgeInsets.all(15.0),
-      child: horizontalProgressBar(
-        bodyCtx,
-        percentage.toDouble(),
+      child: HorizontalProgressBar(
+        percent: percentage.toDouble(),
         text: Text(
           '${percentage.toStringAsFixed(0)}%',
           style: const TextStyle(color: Colors.black),
@@ -128,12 +127,12 @@ class CommunityMissionPage extends StatelessWidget {
     ));
 
     widgets.add(
-      genericItemDescription(
+      GenericItemDescription(
           getTranslations().fromKey(LocaleKey.communityMissionContent)),
     );
 
-    widgets.add(emptySpace2x());
-    widgets.add(flatCard(
+    widgets.add(const EmptySpace2x());
+    widgets.add(FlatCard(
       child: genericListTileWithSubtitle(
         bodyCtx,
         leadingImage: AppImage.communityMissionProgress,
@@ -147,7 +146,7 @@ class CommunityMissionPage extends StatelessWidget {
             launchExternalURL(NmsExternalUrls.communityMissionProgress),
       ),
     ));
-    widgets.add(emptySpace1x());
+    widgets.add(const EmptySpace1x());
 
     widgets.add(customDivider());
     widgets.add(CommunityMissionRewards(
@@ -186,7 +185,7 @@ class CommunityMissionPage extends StatelessWidget {
       );
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     List<Widget> rowWidgets = List.empty(growable: true);
     rowWidgets.add(viewCommunityMissionsButton(
@@ -201,7 +200,7 @@ class CommunityMissionPage extends StatelessWidget {
     }
     // widgets.add(Row(children: rowWidgets));
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return Stack(
       children: [

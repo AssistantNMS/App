@@ -65,8 +65,8 @@ class _EditCustomHomeWidget extends State<EditCustomHomepage> {
           header: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                genericItemGroup('Tap and hold item to drag and change order')
+              children: const [
+                GenericItemGroup('Tap and hold item to drag and change order')
               ],
             ),
           ],

@@ -53,7 +53,7 @@ Widget expeditionSeasonTile(
             width: double.infinity,
             child: Padding(
               padding: const EdgeInsets.only(top: 4, bottom: 20),
-              child: localImage(imageUrl),
+              child: LocalImage(imagePath: imageUrl),
             ),
           ),
           if (seasonTitle.isNotEmpty) ...[
@@ -62,7 +62,7 @@ Widget expeditionSeasonTile(
               top: 0,
               child: Container(
                 child: Padding(
-                  child: genericItemName(seasonTitle),
+                  child: GenericItemName(seasonTitle),
                   padding: const EdgeInsets.only(left: 4),
                 ),
                 decoration: const BoxDecoration(
@@ -80,7 +80,7 @@ Widget expeditionSeasonTile(
             bottom: -1,
             child: Container(
               color: const Color.fromRGBO(0, 0, 0, 0.65),
-              child: genericItemName(name),
+              child: GenericItemName(name),
             ),
           ),
           if (isLocked) ...[

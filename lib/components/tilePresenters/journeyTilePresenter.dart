@@ -35,11 +35,13 @@ Widget journeyMilestoneTilePresenter(BuildContext context,
     leading: Stack(
       alignment: Alignment.topCenter,
       children: <Widget>[
-        localImage(
-          '${getPath().imageAssetPathPrefix}/journeyMilestones/${milestone.id}.png',
+        LocalImage(
+          imagePath:
+              '${getPath().imageAssetPathPrefix}/journeyMilestones/${milestone.id}.png',
         ),
-        localImage(
-          '${getPath().imageAssetPathPrefix}/journeyMilestones/RANK.STARS$statIndex.png',
+        LocalImage(
+          imagePath:
+              '${getPath().imageAssetPathPrefix}/journeyMilestones/RANK.STARS$statIndex.png',
         ),
       ],
     ),

@@ -66,7 +66,7 @@ Widget getBody(
   bool showLoader = false;
 
   Widget Function() errorWidgetFunc;
-  errorWidgetFunc = () => emptySpace1x();
+  errorWidgetFunc = () => const EmptySpace1x();
 
   switch (snapshot.connectionState) {
     case ConnectionState.none:
@@ -85,8 +85,8 @@ Widget getBody(
   List<Widget> widgets = List.empty(growable: true);
 
   if (status == CommunityMissionStatus.past) {
-    widgets.add(emptySpace2x());
-    widgets.add(flatCard(
+    widgets.add(const EmptySpace2x());
+    widgets.add(FlatCard(
       child: genericListTileWithSubtitle(
         bodyContext,
         leadingImage: AppImage.communityMissionProgress,

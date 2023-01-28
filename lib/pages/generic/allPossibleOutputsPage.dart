@@ -42,7 +42,7 @@ class AllPossibleOutputsPage<T> extends StatelessWidget {
       );
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return listWithScrollbar(
       itemCount: widgets.length,

@@ -12,8 +12,10 @@ List<ActionItem> getShortcutActions(
   List<ActionItem> items = List.empty(growable: true);
   items.add(ActionItem(
     icon: Icons.star,
-    image: getCorrectlySizedImageFromIcon(context, Icons.star,
-        colour: getTheme().getDarkModeSecondaryColour()),
+    image: CorrectlySizedImageFromIcon(
+      icon: Icons.star,
+      colour: getTheme().getDarkModeSecondaryColour(),
+    ),
     text: getTranslations().fromKey(LocaleKey.favourites),
     onPressed: () => getNavigation()
         .navigateHomeAsync(context, navigateToNamed: Routes.favourites),
@@ -21,7 +23,7 @@ List<ActionItem> getShortcutActions(
   if (!hideCart) {
     items.add(ActionItem(
       icon: Icons.shopping_basket, //fallback
-      image: getListTileImage('drawer/cart.png'),
+      image: const ListTileImage(partialPath: 'drawer/cart.png'),
       text: getTranslations().fromKey(LocaleKey.cart),
       onPressed: () => getNavigation()
           .navigateHomeAsync(context, navigateToNamed: Routes.cart),
@@ -31,7 +33,7 @@ List<ActionItem> getShortcutActions(
     items.add(ActionItem(
       icon: Icons.storage, //fallback
       text: getTranslations().fromKey(LocaleKey.inventoryManagement),
-      image: getListTileImage('drawer/inventory.png'),
+      image: const ListTileImage(partialPath: 'drawer/inventory.png'),
       onPressed: () => getNavigation()
           .navigateHomeAsync(context, navigateToNamed: Routes.inventoryList),
     ));

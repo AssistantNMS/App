@@ -25,7 +25,7 @@ class _AsyncSettingTilePresenterWidget
 
   @override
   Widget build(BuildContext context) {
-    return flatCard(
+    return FlatCard(
       child: genericListTile(
         context,
         leadingImage: null,

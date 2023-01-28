@@ -26,7 +26,7 @@ class UnusedPatchImagesPage extends StatelessWidget {
             (BuildContext localContext, String path) {
               return Card(
                 child: GestureDetector(
-                  child: localImage(path),
+                  child: LocalImage(imagePath: path),
                   onTap: () => getNavigation().navigateAsync(
                     context,
                     navigateTo: (context) => ImageViewerPage(

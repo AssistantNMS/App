@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart' show ObstructingPreferredSizeWidget;
 import 'package:flutter/material.dart';
 
 import '../../constants/Routes.dart';
-import 'appBar.dart';
 
 class HomePageAppBar extends StatelessWidget
     implements PreferredSizeWidget, ObstructingPreferredSizeWidget {
@@ -44,10 +43,9 @@ class HomePageAppBar extends StatelessWidget
   ) {
     List<Widget> widgets = List.empty(growable: true);
     widgets.addAll(actionItemToAndroidAction(actions));
-    return adaptiveAppBar(
-      context,
-      title,
-      widgets,
+    return AdaptiveAppBar(
+      title: title,
+      actions: widgets,
       bottom: bottom,
     );
   }

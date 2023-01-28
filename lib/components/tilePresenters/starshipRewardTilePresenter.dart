@@ -42,7 +42,7 @@ Widget rewardFromStarshipScrapTilePresenter(BuildContext context,
     List<StarshipScrap> starshipScrapItems, bool displayBackgroundColour) {
   String subtitle = starshipScrapHeading(starshipScrapItems.first);
 
-  return flatCard(
+  return FlatCard(
     child: genericListTileWithSubtitle(
       context,
       leadingImage: AppImage.starshipScrap,

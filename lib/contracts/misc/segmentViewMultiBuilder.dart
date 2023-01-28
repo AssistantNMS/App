@@ -12,7 +12,7 @@ class SegmentViewMultiBuilder {
     required this.builders,
   });
 
-  Widget toSegmentOption() => getSegmentedControlOption(
+  Widget toSegmentOption() => SegmentedControlOption(
         getTranslations().fromKey(title),
       );
 }

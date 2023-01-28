@@ -84,7 +84,7 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
           widgets.addAll(renderNotLoggedInList());
         }
 
-        widgets.add(emptySpace3x());
+        widgets.add(const EmptySpace3x());
 
         return AnimatedSize(
           duration: AppDuration.modal,
@@ -114,12 +114,13 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
     widgets.add(headingSettingTilePresenter(
       getTranslations().fromKey(LocaleKey.account),
     ));
-    widgets.add(flatCard(
+    widgets.add(FlatCard(
       child: Column(
         children: [
           ListTile(
             leading: ClipOval(
-              child: networkImage(model.profileUrl, height: 50, width: 50),
+              child: ImageFromNetwork(
+                  imageUrl: model.profileUrl, height: 50, width: 50),
             ),
             title: singleLineText(model.username),
             subtitle: singleLineText(model.email),
@@ -153,7 +154,7 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
   List<Widget> renderNotLoggedInList() {
     List<Widget> widgets = List.empty(growable: true);
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
     widgets.add(Center(
       child: AuthButton.google(
         onPressed: () async {

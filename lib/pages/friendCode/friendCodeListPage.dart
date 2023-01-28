@@ -51,8 +51,7 @@ class _FriendCodeListWidget extends State<FriendCodeListPage> {
         keepFirstListItemWidgetVisible: true,
         firstListItemWidget: Column(
           children: [
-            adaptiveCheckboxGroup(
-              context,
+            AdaptiveCheckboxGroup(
               allItemList: allItemList,
               selectedItems: currentSelection,
               disabledItems: disabledItemList,

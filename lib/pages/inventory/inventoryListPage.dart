@@ -103,7 +103,7 @@ class _InventoryListState extends State<InventoryListPage> {
 
   Widget getBody(BuildContext context, InventoryListViewModel viewModel) {
     List<Widget> widgets = [
-      flatCard(
+      FlatCard(
         child: nomNomOpenSyncModalTile(context),
       ),
     ];
@@ -120,7 +120,7 @@ class _InventoryListState extends State<InventoryListPage> {
           margin: const EdgeInsets.only(top: 30),
         ),
       );
-      widgets.add(emptySpace3x());
+      widgets.add(const EmptySpace3x());
     } else {
       widgets.add(Padding(
         child: Card(
@@ -145,7 +145,7 @@ class _InventoryListState extends State<InventoryListPage> {
       widgets.addAll(getContainers(viewModel));
     }
 
-    widgets.add(emptySpace10x());
+    widgets.add(const EmptySpace10x());
 
     return listWithScrollbar(
       key: Key('counter: $_counter'),

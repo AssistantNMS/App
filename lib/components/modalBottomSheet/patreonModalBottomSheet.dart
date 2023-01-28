@@ -48,11 +48,11 @@ class PatreonModalBottomSheet extends StatelessWidget {
     widgets.add(
       () => Container(
         color: HexColor('#424242'),
-        child: Center(
+        child: const Center(
           child: Padding(
-            padding: const EdgeInsets.only(top: 12),
+            padding: EdgeInsets.only(top: 12),
             child: SizedBox(
-              child: localImage(AppImage.patreonFeature),
+              child: LocalImage(imagePath: AppImage.patreonFeature),
               height: 200,
             ),
           ),
@@ -60,9 +60,9 @@ class PatreonModalBottomSheet extends StatelessWidget {
       ),
     );
 
-    widgets.add(() => emptySpace2x());
-    widgets.add(() => genericItemGroup(titleText));
-    widgets.add(() => emptySpace1x());
+    widgets.add(() => const EmptySpace2x());
+    widgets.add(() => GenericItemGroup(titleText));
+    widgets.add(() => const EmptySpace1x());
     widgets.add(
       () => Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -76,7 +76,7 @@ class PatreonModalBottomSheet extends StatelessWidget {
         ),
       ),
     );
-    widgets.add(() => emptySpace2x());
+    widgets.add(() => const EmptySpace2x());
 
     widgets.add(
       () => Padding(
@@ -104,7 +104,7 @@ class PatreonModalBottomSheet extends StatelessWidget {
       ),
     );
 
-    widgets.add(() => emptySpace8x());
+    widgets.add(() => const EmptySpace8x());
 
     return AnimatedSize(
       duration: AppDuration.modal,

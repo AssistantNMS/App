@@ -29,11 +29,11 @@ class TwitchCampaignDetailPage extends StatelessWidget {
       actions: [
         ActionItem(
           icon: Icons.more,
-          image: Padding(
-            padding: const EdgeInsets.only(left: 12, right: 12),
-            child: getListTileImage(
-              AppImage.twitch,
-              padding: const EdgeInsets.symmetric(vertical: 16),
+          image: const Padding(
+            padding: EdgeInsets.only(left: 12, right: 12),
+            child: ListTileImage(
+              partialPath: AppImage.twitch,
+              padding: EdgeInsets.symmetric(vertical: 16),
             ),
           ),
           onPressed: () => getNavigation().navigateAsync(
@@ -63,15 +63,15 @@ class TwitchCampaignDetailPage extends StatelessWidget {
     List<Widget> widgets = List.empty(growable: true);
 
     List<Widget> firstSectionWidgets = List.empty(growable: true);
-    firstSectionWidgets.add(emptySpace1x());
-    firstSectionWidgets.add(genericItemDescription(
+    firstSectionWidgets.add(const EmptySpace1x());
+    firstSectionWidgets.add(GenericItemDescription(
       '${getTranslations().fromKey(LocaleKey.startDate)}: ${simpleDate(campaign.startDate)}',
     ));
-    firstSectionWidgets.add(emptySpace1x());
-    firstSectionWidgets.add(genericItemDescription(
+    firstSectionWidgets.add(const EmptySpace1x());
+    firstSectionWidgets.add(GenericItemDescription(
       '${getTranslations().fromKey(LocaleKey.endDate)}: ${simpleDate(campaign.endDate)}',
     ));
-    firstSectionWidgets.add(emptySpace1x());
+    firstSectionWidgets.add(const EmptySpace1x());
     widgets.add(
       sectionListItem(
         scaffoldContext,
@@ -93,7 +93,7 @@ class TwitchCampaignDetailPage extends StatelessWidget {
       for (TwitchCampaignReward dayReward in day.rewards) {
         rewardWidgets.add(listTilePresenter(scaffoldContext, dayReward));
       }
-      rewardWidgets.add(emptySpace8x());
+      rewardWidgets.add(const EmptySpace8x());
 
       widgets.add(
         sectionListItem(scaffoldContext, simpleDate(actualDate), rewardWidgets),

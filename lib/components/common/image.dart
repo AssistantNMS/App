@@ -140,7 +140,8 @@ Widget genericItemImage(
   return Center(
     child: GestureDetector(
       child: Container(
-        child: localImage(itemIcon, imageHero: imageHero, height: height),
+        child: LocalImage(
+            imagePath: itemIcon, imageHero: imageHero, height: height),
         margin: const EdgeInsets.all(4.0),
       ),
       onTap: onTap ??
@@ -166,8 +167,8 @@ Widget genericItemImageWithBackground(
   return GestureDetector(
     child: Container(
       width: double.infinity,
-      child: localImage(
-        itemIcon,
+      child: LocalImage(
+        imagePath: itemIcon,
         imageHero: gameItemIconHero(item),
         height: 100,
       ),

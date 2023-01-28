@@ -149,7 +149,7 @@ Widget getProcessorWithRecipeTile(
     }
   }
 
-  return flatCard(
+  return FlatCard(
     child: genericListTileWithSubtitleAndImageCount(
       context,
       title: output.name,
@@ -160,7 +160,7 @@ Widget getProcessorWithRecipeTile(
       ),
       leadingImageCount: output.quantity,
       subtitle: subtitle,
-      trailing: localImage(refinerImg),
+      trailing: LocalImage(imagePath: refinerImg),
       onTap: () async => await getNavigation().navigateAsync(
         context,
         navigateTo: (context) => navigateTo(processor),

@@ -128,7 +128,7 @@ Widget menuTile(
           right: 0,
           top: 0,
           child: Container(
-            child: genericItemDescription(userCredit),
+            child: GenericItemDescription(userCredit),
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(10),
@@ -144,7 +144,7 @@ Widget menuTile(
         bottom: 0,
         child: Container(
           color: const Color.fromRGBO(0, 0, 0, 0.75),
-          child: genericItemName(getTranslations().fromKey(title)),
+          child: GenericItemName(getTranslations().fromKey(title)),
         ),
       ),
     ]),

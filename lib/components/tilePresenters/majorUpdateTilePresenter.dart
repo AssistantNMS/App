@@ -37,7 +37,7 @@ Widget majorUpdateTilePresenter(
         child: Container(
           color: const Color.fromRGBO(0, 0, 0, 0.45),
           child: Column(children: [
-            genericItemName(updateNewItems.title),
+            GenericItemName(updateNewItems.title),
           ]),
           width: double.infinity,
         ),
@@ -92,12 +92,12 @@ Widget majorUpdateItemDetailTilePresenter(
   BuildContext context,
   MajorUpdateItem updateItem,
 ) {
-  return flatCard(
+  return FlatCard(
     child: ListTile(
       leading: ClipRRect(
         borderRadius: NMSUIConstants.gameItemBorderRadius,
-        child: localImage(
-          updateItem.icon.replaceAll('.png', '-icon.png'),
+        child: LocalImage(
+          imagePath: updateItem.icon.replaceAll('.png', '-icon.png'),
           boxfit: BoxFit.fill,
         ),
       ),

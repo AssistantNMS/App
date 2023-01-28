@@ -35,10 +35,10 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
   bool _isLoading = false;
 
   List<Widget> options = [
-    getSegmentedControlOption(pc),
-    getSegmentedControlOption(ps4),
-    getSegmentedControlOption(xb1),
-    getSegmentedControlOption(nsw)
+    const SegmentedControlOption(pc),
+    const SegmentedControlOption(ps4),
+    const SegmentedControlOption(xb1),
+    const SegmentedControlOption(nsw)
   ];
 
   @override
@@ -125,8 +125,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
 
     widgets.add(Padding(
       padding: textEditingPadding,
-      child: adaptiveSegmentedControl(
-        context,
+      child: AdaptiveSegmentedControl(
         controlItems: options,
         currentSelection: friendCodeVm.lastPlatformIndex,
         onSegmentChosen: (index) => friendCodeVm.setPlatformIndex(index),
@@ -206,7 +205,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
       ));
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return listWithScrollbar(
       itemCount: widgets.length,

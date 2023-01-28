@@ -123,7 +123,7 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
           appType: AssistantAppType.nms,
           aboutPageWidgetsFunc: (BuildContext ctx) {
             return [
-              emptySpace(0.5),
+              const EmptySpace(0.5),
               Padding(
                 child: Text(
                   getTranslations().fromKey(LocaleKey.aboutContent),

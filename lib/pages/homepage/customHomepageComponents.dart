@@ -141,6 +141,8 @@ Widget customMenuItemGridPresenter(BuildContext context, CustomMenu menuItem) {
           : null,
     ),
   );
-  if (menuItem.isNew) return wrapInNewBanner(context, LocaleKey.newItem, card);
+  if (menuItem.isNew) {
+    return WrapInNewBanner(message: LocaleKey.newItem, child: card);
+  }
   return card;
 }

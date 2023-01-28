@@ -27,17 +27,18 @@ class _StarshipScrapDisplayState extends State<StarshipScrapDisplay> {
     for (StarshipScrapDetailed starScrap in widget.starScraps) {
       String scrapKey = '${starScrap.shipClassType}-${starScrap.shipType}';
       bool isExpanded = expandedItems.contains(scrapKey);
-      listItems.add(flatCard(
+      listItems.add(FlatCard(
         child: ListTile(
           leading: Stack(
             children: [
-              localImage(
-                starshipScrapShipImage(starScrap.shipType),
+              LocalImage(
+                imagePath: starshipScrapShipImage(starScrap.shipType),
                 height: 100,
               ),
               Positioned(
-                child: localImage(
-                  starshipScrapShipClassImage(starScrap.shipClassType),
+                child: LocalImage(
+                  imagePath:
+                      starshipScrapShipClassImage(starScrap.shipClassType),
                   height: 30,
                 ),
                 bottom: -3,

@@ -37,7 +37,7 @@ Widget rewardFromTwitchTilePresenter(
       if (errorWidget != null) return errorWidget;
 
       TwitchCampaignData campaign = snapshot.data!.value;
-      return flatCard(
+      return FlatCard(
         shadowColor: Colors.transparent,
         child: genericListTileWithSubtitle(
           context,
@@ -70,7 +70,7 @@ Widget Function(BuildContext, TwitchCampaignData, {void Function()? onTap})
     TwitchCampaignData campaign, {
     void Function()? onTap,
   }) {
-    return flatCard(
+    return FlatCard(
       child: genericListTileWithSubtitle(
         context,
         leadingImage:
@@ -97,7 +97,7 @@ Widget Function(BuildContext, TwitchCampaignData, {void Function()? onTap})
 Widget Function(BuildContext, TwitchCampaignReward)
     twitchCampaignRewardListTilePresenter(bool displayBackgroundColour) {
   return (BuildContext context, TwitchCampaignReward reward) {
-    return flatCard(
+    return FlatCard(
       child: FutureBuilder<ResultWithValue<RequiredItemDetails>>(
         key: Key(reward.id),
         future: requiredItemDetails(
@@ -141,8 +141,10 @@ Widget Function(BuildContext, TwitchCampaignReward)
             ),
             trailing: Padding(
               padding: const EdgeInsets.all(10),
-              child: localImage(
-                displayBackgroundColour ? AppImage.twitchAlt : AppImage.twitch,
+              child: LocalImage(
+                imagePath: displayBackgroundColour
+                    ? AppImage.twitchAlt
+                    : AppImage.twitch,
                 borderRadius: NMSUIConstants.gameItemBorderRadius,
               ),
             ),

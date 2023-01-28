@@ -75,7 +75,7 @@ Widget guideTilePresenter(BuildContext context, NmsGuide guideDetails) {
   return GestureDetector(
     child: Card(
       child: isGuideNew(guideDetails)
-          ? wrapInNewBanner(context, LocaleKey.newItem, child)
+          ? WrapInNewBanner(message: LocaleKey.newItem, child: child)
           : child,
       margin: const EdgeInsets.all(4),
     ),
@@ -115,7 +115,7 @@ Widget compactGuideTilePresenter(BuildContext context, NmsGuide guideDetails) {
   );
   return Card(
     child: isGuideNew(guideDetails)
-        ? wrapInNewBanner(context, LocaleKey.newItem, child)
+        ? WrapInNewBanner(message: LocaleKey.newItem, child: child)
         : child,
     margin: const EdgeInsets.all(0.0),
   );

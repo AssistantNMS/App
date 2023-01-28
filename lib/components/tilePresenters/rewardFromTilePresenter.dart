@@ -11,7 +11,7 @@ Widget rewardFromQuicksilverMerchantTilePresenter(
   String qsQuantity,
   bool displayBackgroundColour,
 ) {
-  return flatCard(
+  return FlatCard(
     shadowColor: Colors.transparent,
     child: genericListTileWithSubtitle(
       context,

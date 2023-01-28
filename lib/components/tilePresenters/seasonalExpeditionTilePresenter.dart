@@ -84,7 +84,7 @@ Widget seasonalExpeditionPhaseTilePresenter(BuildContext context,
           .replaceAll('0u/', '${numClaimed}u/') //
           .replaceAll('0/', '$numClaimed/');
 
-  return flatCard(
+  return FlatCard(
     shadowColor: Colors.transparent,
     child: seasonalExpeditionBase(
       context,
@@ -95,9 +95,9 @@ Widget seasonalExpeditionPhaseTilePresenter(BuildContext context,
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          genericItemName(seasonalExpedition.title),
-          genericItemDescription(description),
-          emptySpace1x(),
+          GenericItemName(seasonalExpedition.title),
+          GenericItemDescription(description),
+          const EmptySpace1x(),
         ],
       ),
       onTap: () {
@@ -187,7 +187,7 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
             ),
             margin: const EdgeInsets.only(left: 4.0),
           ),
-          emptySpace1x(),
+          const EmptySpace1x(),
         ],
       ),
       trailingFlex: hasRewards ? 4 : 2,
@@ -206,7 +206,7 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
                   ),
                 ),
               ],
-              adaptiveCheckbox(
+              getBaseWidget().adaptiveCheckbox(
                 value: isClaimed,
                 onChanged: checkBoxOnTap,
               ),
@@ -240,7 +240,7 @@ Widget seasonalExpeditionBase(
       Expanded(
         flex: imageFlex,
         child: GestureDetector(
-          child: localImage(imagePath),
+          child: LocalImage(imagePath: imagePath),
           onTap: () => getNavigation().navigateAsync(
             context,
             navigateTo: (context) => ImageViewerPage(
@@ -298,7 +298,7 @@ Widget expeditionInProgressPresenter(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        genericItemName(expedition.name, maxLines: 2),
+        GenericItemName(expedition.name, maxLines: 2),
         Container(
           child: getProgressbarFromDates(
             context,
@@ -315,7 +315,7 @@ Widget expeditionInProgressPresenter(
   Widget contentChild = Container(
     padding: const EdgeInsets.symmetric(horizontal: 8),
     child: Row(children: [
-      Expanded(flex: 3, child: networkImage(expedition.imageUrl)),
+      Expanded(flex: 3, child: ImageFromNetwork(imageUrl: expedition.imageUrl)),
       Expanded(flex: 7, child: bodyChild),
     ]),
   );
@@ -338,7 +338,7 @@ Widget rewardFromSeasonalExpeditionTilePresenter(
   String seasId,
   bool isCustom,
 ) {
-  return flatCard(
+  return FlatCard(
     shadowColor: Colors.transparent,
     child: CachedFutureBuilder(
       future: getSeasonalExpeditionRepo().getById(context, seasId, isCustom),

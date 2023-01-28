@@ -167,7 +167,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
     if (portalViewModel.useAltGlyphs) colour = 'alt';
     List<Widget> inputWidgets = List.empty(growable: true);
     List<Widget> outputWidgets = List.empty(growable: true);
-    Widget galAddrSpace = genericItemName(' : ');
+    Widget galAddrSpace = const GenericItemName(' : ');
 
     Padding hexCodeWidget = Padding(
       padding: NMSUIConstants.buttonPadding,
@@ -200,19 +200,19 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
         title: LocaleKey.hexCoordLabel,
         builders: [
           (innerCtx) => [
-                emptySpace2x(),
+                const EmptySpace2x(),
                 SizedBox(
                   width: maxWidth,
                   child: hexCodeWidget,
                 ),
-                emptySpace2x(),
+                const EmptySpace2x(),
               ],
           (innerCtx) {
             List<Widget> innerBuilder = List.empty(growable: true);
-            innerBuilder.add(emptySpace2x());
+            innerBuilder.add(const EmptySpace2x());
             if (input == PortalAddressType.GalacticCoords) {
               innerBuilder.add(
-                genericItemName(portalCodesFromGalacticAddress(
+                GenericItemName(portalCodesFromGalacticAddress(
                   context,
                   _galAddrPlanetIndexController.text,
                   _galAddrAController.text,
@@ -222,12 +222,12 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                 ).value),
               );
             } else {
-              innerBuilder.add(genericItemName(
+              innerBuilder.add(GenericItemName(
                 allUpperCase(intArrayToHex(codes)),
               ));
             }
 
-            innerBuilder.add(emptySpace2x());
+            innerBuilder.add(const EmptySpace2x());
             return innerBuilder;
           }
         ],
@@ -237,7 +237,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
         title: LocaleKey.portalAddress,
         builders: [
           (innerCtx) => [
-                emptySpace2x(),
+                const EmptySpace2x(),
                 SizedBox(
                   width: maxWidth,
                   child: Row(
@@ -282,7 +282,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                     ],
                   ),
                 ),
-                emptySpace1x(),
+                const EmptySpace1x(),
                 SizedBox(
                   width: maxWidth,
                   child: portalInput(
@@ -293,11 +293,11 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                     isDisabled: codes.length > 11,
                   ),
                 ),
-                emptySpace1x(),
+                const EmptySpace1x(),
               ],
           (innerCtx) {
             List<Widget> innerBuilder = List.empty(growable: true);
-            innerBuilder.add(emptySpace2x());
+            innerBuilder.add(const EmptySpace2x());
 
             if (input == PortalAddressType.GalacticCoords) {
               ResultWithValue<String> convertResult =
@@ -310,7 +310,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                 _galAddrDController.text,
               );
               if (convertResult.hasFailed == true) {
-                innerBuilder.add(genericItemName(convertResult.value));
+                innerBuilder.add(GenericItemName(convertResult.value));
               } else {
                 List<int> intCoords = hexToIntArray(convertResult.value);
                 // ignore: unnecessary_null_comparison
@@ -323,7 +323,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                     ),
                   );
                 } else {
-                  innerBuilder.add(genericItemName(
+                  innerBuilder.add(GenericItemName(
                     getTranslations().fromKey(LocaleKey.galacticAddressInvalid),
                   ));
                 }
@@ -337,7 +337,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
               );
             }
 
-            innerBuilder.add(emptySpace2x());
+            innerBuilder.add(const EmptySpace2x());
             return innerBuilder;
           },
         ],
@@ -347,7 +347,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
         title: LocaleKey.galacticAddress,
         builders: [
           (innerCtx) => [
-                emptySpace2x(),
+                const EmptySpace2x(),
                 SizedBox(
                   width: maxWidth,
                   child: Row(
@@ -364,7 +364,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                     ],
                   ),
                 ),
-                emptySpace2x(),
+                const EmptySpace2x(),
                 SizedBox(
                   width: maxWidth,
                   child: TextField(
@@ -389,24 +389,23 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                     },
                   ),
                 ),
-                emptySpace2x(),
+                const EmptySpace2x(),
               ],
           (innerCtx) => [
-                emptySpace2x(),
+                const EmptySpace2x(),
                 galacticAddress(
                   innerCtx,
                   codes,
                   hideTextHeading: true,
                   onCopy: (String newTxt) => _galAddressCopy(innerCtx, newTxt),
                 ),
-                emptySpace1x(),
+                const EmptySpace1x(),
               ],
         ],
       ),
     ];
-    outputWidgets.add(emptySpace1x());
-    outputWidgets.add(adaptiveSegmentedControl(
-      context,
+    outputWidgets.add(const EmptySpace1x());
+    outputWidgets.add(AdaptiveSegmentedControl(
       controlItems: portalOptions.map((s) => s.toSegmentOption()).toList(),
       currentSelection: input.index,
       onSegmentChosen: (index) {
@@ -427,9 +426,8 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
 
     var outputOptions =
         portalOptions.where((opt) => opt.enumIndex != input.index).toList();
-    outputWidgets.add(emptySpace1x());
-    outputWidgets.add(adaptiveSegmentedControl(
-      context,
+    outputWidgets.add(const EmptySpace1x());
+    outputWidgets.add(AdaptiveSegmentedControl(
       controlItems: outputOptions.map((s) => s.toSegmentOption()).toList(),
       currentSelection: outputIndex,
       onSegmentChosen: (index) {
@@ -445,7 +443,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
       outputWidgets.add(outputBuilderWidget);
     }
 
-    outputWidgets.add(emptySpace8x());
+    outputWidgets.add(const EmptySpace8x());
 
     return ListView(
       children: [

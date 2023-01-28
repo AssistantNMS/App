@@ -127,9 +127,9 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
   Widget build(BuildContext context) {
     List<Widget> widgets = List.empty(growable: true);
 
-    widgets.add(flatCard(child: devilinPixyTile(context)));
-    widgets.add(emptySpace1x());
-    widgets.add(genericItemDescription(
+    widgets.add(FlatCard(child: devilinPixyTile(context)));
+    widgets.add(const EmptySpace1x());
+    widgets.add(GenericItemDescription(
       getTranslations().fromKey(LocaleKey.totalPowerConsumption),
     ));
 
@@ -151,13 +151,13 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
       ),
     );
 
-    widgets.add(emptySpace3x());
-    widgets.add(genericItemGroup(getTranslations().fromKey(LocaleKey.minimum)));
+    widgets.add(const EmptySpace3x());
+    widgets.add(GenericItemGroup(getTranslations().fromKey(LocaleKey.minimum)));
 
     int minSolarPanels = getMinimumAmountOfSolarPanels(_powerKps);
     if (widget.solarPanelDetails != null) {
       widget.solarPanelDetails!.quantity = minSolarPanels;
-      widgets.add(flatCard(
+      widgets.add(FlatCard(
         child: requiredItemDetailsTilePresenter(
             context, widget.solarPanelDetails!),
       ));
@@ -166,7 +166,7 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
     int minBatteries = getMinimumAmountOfBatteries(_powerKps);
     if (widget.batteryDetails != null) {
       widget.batteryDetails!.quantity = minBatteries;
-      widgets.add(flatCard(
+      widgets.add(FlatCard(
         child:
             requiredItemDetailsTilePresenter(context, widget.batteryDetails!),
       ));
@@ -198,15 +198,15 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
     if (totalPowerGenerated > maxPowerThatCanBeStored) {
       totalPowerStored = maxPowerThatCanBeStored;
       totalPowerUnused = totalPowerStored - totalPowerRequired;
-      widgets.add(emptySpace3x());
-      widgets.add(genericItemDescription(
+      widgets.add(const EmptySpace3x());
+      widgets.add(GenericItemDescription(
         getTranslations()
             .fromKey(LocaleKey.solarPanelsProduceMoreThanBatteries)
             .replaceAll('{0}', minSolarPanels.toString())
             .replaceAll('{1}', minBatteries.toString()),
       ));
-      widgets.add(emptySpace1x());
-      widgets.add(genericItemGroup(
+      widgets.add(const EmptySpace1x());
+      widgets.add(GenericItemGroup(
         getTranslations().fromKey(LocaleKey.recommended),
       ));
 
@@ -242,8 +242,8 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
       _toggleShowDetails,
     ));
     if (showDetails) {
-      widgets.add(emptySpace(1));
-      widgets.add(genericItemGroup(
+      widgets.add(const EmptySpace(1));
+      widgets.add(GenericItemGroup(
         getTranslations().fromKey(LocaleKey.totalPowerConsumed),
       ));
       widgets.add(getPowerTable(
@@ -256,7 +256,7 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
         total: tpcTotal,
       ));
 
-      widgets.add(genericItemGroup(
+      widgets.add(GenericItemGroup(
         getTranslations().fromKey(LocaleKey.totalSolarProduced),
       ));
       widgets.add(getPowerTable(
@@ -269,7 +269,7 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
         total: spTotal,
       ));
 
-      widgets.add(genericItemGroup(
+      widgets.add(GenericItemGroup(
         getTranslations().fromKey(LocaleKey.minimumSummary),
       ));
       widgets.add(getSummaryTable(
@@ -281,7 +281,7 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
       ));
 
       if (totalPowerGenerated > maxPowerThatCanBeStored) {
-        widgets.add(genericItemGroup(
+        widgets.add(GenericItemGroup(
           getTranslations().fromKey(LocaleKey.recommendedSummary),
         ));
         widgets.add(getSummaryTable(
@@ -301,18 +301,18 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
       _toggleShowInfo,
     ));
     if (showInfo) {
-      widgets.add(emptySpace1x());
-      widgets.add(genericItemDescription(
+      widgets.add(const EmptySpace1x());
+      widgets.add(GenericItemDescription(
         getTranslations().fromKey(LocaleKey.basedOnWorstCase),
       ));
       widgets.add(inGameInfoTable(context));
       widgets.add(realTimeInfoTable(context));
-      widgets.add(emptySpace1x());
-      widgets.add(genericItemDescription(
+      widgets.add(const EmptySpace1x());
+      widgets.add(GenericItemDescription(
         getTranslations().fromKey(LocaleKey.bestCaseScenarioLocation),
       ));
     }
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return listWithScrollbar(
       itemCount: widgets.length,

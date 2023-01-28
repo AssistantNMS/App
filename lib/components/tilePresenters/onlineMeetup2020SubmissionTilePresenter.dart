@@ -13,7 +13,8 @@ Widget onlineMeetup2020SubmissionTilePresenter(
     children: (submission.userName.length > 1)
         ? [
             ClipOval(
-              child: networkImage(submission.userImage, height: 50, width: 50),
+              child: ImageFromNetwork(
+                  imageUrl: submission.userImage, height: 50, width: 50),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8),
@@ -71,7 +72,8 @@ Widget onlineMeetup2020SubmissionTilePresenter(
       child: Column(
         children: [
           if (submission.imageUrl.length > 5) ...[
-            networkImage(submission.imageUrl, boxfit: BoxFit.fitWidth),
+            ImageFromNetwork(
+                imageUrl: submission.imageUrl, boxfit: BoxFit.fitWidth),
           ],
           Padding(
             padding: const EdgeInsets.all(16),

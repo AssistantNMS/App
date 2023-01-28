@@ -32,7 +32,8 @@ class Valentines2021 extends StatelessWidget {
         builder: (_, introViewModel) {
           var widgets = [
             Container(
-              child: localImage(selectedImage, boxfit: BoxFit.fitWidth),
+              child:
+                  LocalImage(imagePath: selectedImage, boxfit: BoxFit.fitWidth),
               margin: const EdgeInsets.all(0),
             ),
             Container(

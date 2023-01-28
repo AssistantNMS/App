@@ -59,8 +59,8 @@ class _ContributorsWidget extends State<ContributorsPage> {
       ),
       SegmentViewItem(
         title: LocaleKey.donation,
-        builder: (innerCtx) => DonatorsPageComponent(
-          smallLoadMorePageButton(innerCtx),
+        builder: (innerCtx) => const DonatorsPageComponent(
+          SmallLoadMorePageButton(),
         ),
       ),
     ];
@@ -70,16 +70,15 @@ class _ContributorsWidget extends State<ContributorsPage> {
       title: getTranslations().fromKey(LocaleKey.contributors),
       body: Column(
         key: Key('currentSelection: $currentSelection'),
-        children: <Widget>[
-          Container(
-            child: adaptiveSegmentedControl(context,
-                controlItems:
-                    viewOptions.map((s) => s.toSegmentOption()).toList(),
-                currentSelection: currentSelection, onSegmentChosen: (index) {
+        children: [
+          AdaptiveSegmentedControl(
+            controlItems: viewOptions.map((s) => s.toSegmentOption()).toList(),
+            currentSelection: currentSelection,
+            onSegmentChosen: (index) {
               setState(() {
                 currentSelection = index;
               });
-            }),
+            },
           ),
           customDivider(),
           Expanded(

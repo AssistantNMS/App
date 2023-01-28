@@ -40,7 +40,7 @@ class _WeekendMissionDialogWidget extends State<WeekendMissionDialogPage> {
             child: userLeftBubble(context,
                 getTranslations().fromKey(LocaleKey.conversationEnded)),
           ));
-      localChatBubbles.add(() => emptySpace8x());
+      localChatBubbles.add(() => const EmptySpace8x());
     }
 
     if (localOptions.isNotEmpty) {

@@ -194,7 +194,7 @@ class _DonationWidget extends State<Donation> {
         } else {
           paymentOptions.add(ListTile(
             key: const Key('advert'),
-            leading: getListTileImage('ad.png'),
+            leading: const ListTileImage(partialPath: 'ad.png'),
             title: const Text("Advertisement", style: TextStyle(fontSize: 20)),
             onTap: () {
               _showInterstitialAd();

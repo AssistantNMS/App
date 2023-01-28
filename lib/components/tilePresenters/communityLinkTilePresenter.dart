@@ -29,15 +29,15 @@ ListItemDisplayerType<CommunityLinkViewModel> communityLinkTilePresenter(
                       borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(4),
                       ),
-                      child: networkImage(
-                        handleCommunitySearchIcon(item.icon),
+                      child: ImageFromNetwork(
+                        imageUrl: handleCommunitySearchIcon(item.icon),
                         boxfit: BoxFit.cover,
                         height: 50.0,
                         width: 50.0,
                       ),
                     ),
                   ),
-                  emptySpace1x(),
+                  const EmptySpace1x(),
                   Expanded(
                     child: Text(
                       item.name,
@@ -50,16 +50,16 @@ ListItemDisplayerType<CommunityLinkViewModel> communityLinkTilePresenter(
               ),
               if ((item.desc).isNotEmpty) ...[
                 const Divider(height: 2),
-                emptySpace1x(),
+                const EmptySpace1x(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8),
-                  child: genericItemDescription(
+                  child: GenericItemDescription(
                     item.desc,
                     maxLines: 2,
                   ),
                 ),
               ],
-              emptySpace1x(),
+              const EmptySpace1x(),
               const Divider(height: 2),
               Wrap(
                 alignment: WrapAlignment.center,
@@ -67,7 +67,7 @@ ListItemDisplayerType<CommunityLinkViewModel> communityLinkTilePresenter(
                     .map((tag) => communityTag(tag, chipColours))
                     .toList(),
               ),
-              emptySpace(0.25),
+              const EmptySpace(0.25),
             ],
           ),
         ),
