@@ -5,8 +5,12 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../pages/inventory/addInventorySlotPage.dart';
 
-Widget inventoryFloatingActionButton(BuildContext context, String uniqueKey,
-        TextEditingController controller, GenericPageItem genericItem) =>
+Widget inventoryFloatingActionButton(
+  BuildContext context,
+  String uniqueKey,
+  TextEditingController controller,
+  GenericPageItem genericItem,
+) =>
     FloatingActionButton(
       onPressed: () async => await getNavigation().navigateAsync(
         context,

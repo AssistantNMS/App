@@ -34,7 +34,6 @@ Widget boolSettingTilePresenter(
       name: name,
       trailing: getBaseWidget().adaptiveCheckbox(
         value: value,
-        activeColor: getTheme().getSecondaryColour(context),
         onChanged: (bool unused) => tempOnChange(),
       ),
       onTap: tempOnChange,
@@ -155,7 +154,6 @@ Widget patreonCodeSettingTilePresenter(
       name: name,
       trailing: getBaseWidget().adaptiveCheckbox(
         value: value,
-        activeColor: getTheme().getSecondaryColour(context),
         onChanged: (_) => patreonModalSheet(),
       ),
       onTap: patreonModalSheet,

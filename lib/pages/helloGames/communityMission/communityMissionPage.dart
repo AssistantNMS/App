@@ -131,23 +131,7 @@ class CommunityMissionPage extends StatelessWidget {
           getTranslations().fromKey(LocaleKey.communityMissionContent)),
     );
 
-    widgets.add(const EmptySpace2x());
-    widgets.add(FlatCard(
-      child: genericListTileWithSubtitle(
-        bodyCtx,
-        leadingImage: AppImage.communityMissionProgress,
-        name: 'Community Mission Progress Tracker', //TODO translate
-        subtitle: const Text('View progress over time'),
-        trailing: const Padding(
-          padding: EdgeInsets.only(right: 8),
-          child: Icon(Icons.open_in_new_rounded),
-        ),
-        onTap: () =>
-            launchExternalURL(NmsExternalUrls.communityMissionProgress),
-      ),
-    ));
     widgets.add(const EmptySpace1x());
-
     widgets.add(customDivider());
     widgets.add(CommunityMissionRewards(
       missionId,

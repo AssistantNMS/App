@@ -79,7 +79,6 @@ class _TitleDataTileState extends State<TitleDataTile> {
       ),
       trailing: getBaseWidget().adaptiveCheckbox(
         value: titleData.isOwned,
-        activeColor: getTheme().getSecondaryColour(context),
         onChanged: (_) => toggleOwned(),
       ),
       onTap: toggleOwned,

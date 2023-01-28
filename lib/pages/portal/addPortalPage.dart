@@ -246,6 +246,7 @@ class _PortalPageState extends State<AddPortalPage> {
                       fit: FlexFit.loose,
                       child: Switch.adaptive(
                         value: portalViewModel.useAltGlyphs,
+                        activeColor: getTheme().getSecondaryColour(context),
                         activeThumbImage: AssetImage(
                           '${getPath().imageAssetPathPrefix}/portals/alt/0.png',
                         ),

@@ -99,11 +99,17 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
     ));
 
     if (item.tags.isNotEmpty) {
+      TextStyle chipLabelStyle = const TextStyle(color: Colors.black);
       widgets.add(
         Wrap(
+          spacing: 4,
           alignment: WrapAlignment.center,
           children: item.tags
-              .map((tag) => getBaseWidget().appChip(text: tag))
+              .map(
+                (tag) => getBaseWidget().appChip(
+                  label: Text(tag, style: chipLabelStyle),
+                ),
+              )
               .toList(),
         ),
       );
@@ -136,6 +142,7 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
     widgets.add(GestureDetector(
       child: getBaseWidget().appChip(
         text: 'nmsportals.github.io',
+        backgroundColor: getTheme().getCardBackgroundColour(context),
         deleteIcon: const Icon(Icons.open_in_new),
         onDeleted: onTap,
       ),

@@ -144,10 +144,10 @@ class DialogService implements IDialogService {
     }
 
     List<int> localAmounts = (amounts != null) ? amounts : [1, 2, 3, 5, 10, 25];
-    List<InputChip> inputs = List.empty(growable: true);
+    List<Widget> inputs = List.empty(growable: true);
     for (int amount in localAmounts) {
       inputs.add(
-        InputChip(
+        getBaseWidget().appChip(
           label: Text(
             amount.toString(),
             style: TextStyle(
@@ -156,7 +156,7 @@ class DialogService implements IDialogService {
             ),
           ),
           backgroundColor: getTheme().getSecondaryColour(context),
-          onPressed: () => onControllerTextChange(
+          onTap: () => onControllerTextChange(
             controller,
             amount.toString(),
           ),
@@ -181,6 +181,7 @@ class DialogService implements IDialogService {
               FilteringTextInputFormatter.digitsOnly
             ],
           ),
+          const EmptySpace1x(),
           Wrap(alignment: WrapAlignment.spaceEvenly, children: inputs),
         ],
       ),

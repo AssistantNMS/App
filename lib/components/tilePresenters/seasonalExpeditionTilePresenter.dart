@@ -69,8 +69,11 @@ Widget seasonalExpeditionDetailTilePresenter(
   );
 }
 
-Widget seasonalExpeditionPhaseTilePresenter(BuildContext context,
-    SeasonalExpeditionPhase seasonalExpedition, ExpeditionViewModel viewModel) {
+Widget seasonalExpeditionPhaseTilePresenter(
+  BuildContext context,
+  SeasonalExpeditionPhase seasonalExpedition,
+  ExpeditionViewModel viewModel,
+) {
   int numClaimed = 0;
   for (SeasonalExpeditionMilestone milestone in seasonalExpedition.milestones) {
     if (viewModel.claimedRewards.any((claimed) => claimed == milestone.id)) {
@@ -140,8 +143,7 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
 
   bool hasRewards = seasonalExpeditionMilestone.rewards.isNotEmpty;
 
-  void Function(bool) checkBoxOnTap;
-  checkBoxOnTap = (bool newValue) => newValue
+  checkBoxOnTap(bool newValue) => newValue
       ? viewModel.addToClaimedRewards(
           seasonalExpeditionMilestone.id,
         )

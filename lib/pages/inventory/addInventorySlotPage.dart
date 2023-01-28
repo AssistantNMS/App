@@ -18,21 +18,19 @@ import '../../redux/modules/inventory/inventoryListViewModel.dart';
 
 class AddInventorySlotPage extends StatefulWidget {
   final GenericPageItem genericItem;
-  const AddInventorySlotPage(this.genericItem, {Key? key}) : super(key: key);
+
+  AddInventorySlotPage(this.genericItem, {Key? key}) : super(key: key) {
+    getAnalytics().trackEvent(AnalyticsEvent.addInventorySlotPage);
+  }
 
   @override
-  _ViewInventoryListState createState() => _ViewInventoryListState(genericItem);
+  createState() => _ViewInventoryListState();
 }
 
 class _ViewInventoryListState extends State<AddInventorySlotPage> {
-  final GenericPageItem genericItem;
-  late Inventory inventory;
   int _counter = 0;
+  Inventory? inventory;
   TextEditingController quantityController = TextEditingController();
-
-  _ViewInventoryListState(this.genericItem) {
-    getAnalytics().trackEvent(AnalyticsEvent.addInventorySlotPage);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,9 +42,10 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
         body: getBody(context, viewModel),
         fab: FloatingActionButton(
           onPressed: () async {
-            String invUuid = inventory.uuid;
+            if (inventory == null) return;
+            String invUuid = inventory!.uuid;
             InventorySlot invSlot = InventorySlot(
-              id: genericItem.id,
+              id: widget.genericItem.id,
               quantity: int.tryParse(quantityController.text) ?? 0,
             );
             viewModel.addInventorySlotToInventory(invUuid, invSlot);
@@ -64,12 +63,13 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
   Widget getBody(BuildContext context, InventorySlotGenericViewModel vm) {
     List<Widget> widgets = List.empty(growable: true);
     widgets.add(vm.displayGenericItemColour
-        ? genericItemImageWithBackground(context, genericItem)
-        : genericItemImage(context, genericItem.icon));
-    var itemName =
-        (genericItem.symbol != null && genericItem.symbol!.isNotEmpty)
-            ? "${genericItem.name} (${genericItem.symbol})"
-            : genericItem.name;
+        ? genericItemImageWithBackground(context, widget.genericItem)
+        : genericItemImage(context, widget.genericItem.icon));
+    bool genericIsNotNull = (widget.genericItem.symbol != null &&
+        widget.genericItem.symbol!.isNotEmpty);
+    String itemName = genericIsNotNull
+        ? "${widget.genericItem.name} (${widget.genericItem.symbol})"
+        : widget.genericItem.name;
     widgets.add(GenericItemName(itemName));
 
     widgets.add(const EmptySpace3x());

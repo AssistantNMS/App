@@ -36,7 +36,7 @@ class HomePageAppBar extends StatelessWidget
     ));
 
     List<Widget> widgets = List.empty(growable: true);
-    widgets.addAll(actionItemToAndroidAction(localActions));
+    widgets.addAll(actionItemToAndroidAction(context, localActions));
     return AdaptiveAppBar(
       title: Text(title),
       actions: widgets,
