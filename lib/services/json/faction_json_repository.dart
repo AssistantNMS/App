@@ -3,7 +3,7 @@ import 'package:assistantnms_app/contracts/faction/faction.dart';
 import 'package:flutter/material.dart';
 
 import '../../contracts/faction/guild_mission.dart';
-import 'interface/IFactionJsonRepository.dart';
+import 'interface/i_faction_json_repository.dart';
 
 class FactionJsonRepository extends BaseJsonService
     implements IFactionJsonRepository {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../../contracts/journey/journey_milestone.dart';
-import 'interface/IJourneyJsonRepository.dart';
+import 'interface/i_journey_json_repository.dart';
 
 class JourneyJsonRepository extends BaseJsonService
     implements IJourneyJsonRepository {

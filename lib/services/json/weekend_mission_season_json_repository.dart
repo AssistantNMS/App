@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../contracts/weekend_mission.dart';
 
-import 'interface/IWeekendMissionSeasonJsonRepository.dart';
+import 'interface/i_weekend_mission_season_json_repository.dart';
 
 class WeekendMissionSeasonJsonRepository extends BaseJsonService
     implements IWeekendMissionSeasonJsonRepository {

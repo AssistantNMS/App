@@ -3,7 +3,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import '../../contracts/seasonalExpedition/seasonal_expedition_season.dart';
 
-import './interface/ISeasonalExpeditionJsonRepository.dart';
+import './interface/i_seasonal_expedition_json_repository.dart';
 
 class SeasonalExpeditionJsonRepository extends BaseJsonService
     implements ISeasonalExpeditionJsonRepository {

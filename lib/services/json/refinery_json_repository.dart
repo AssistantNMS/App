@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../../contracts/processor.dart';
 
-import 'interface/IRefineryRepository.dart';
+import 'interface/i_refinery_repository.dart';
 
 class RefineryJsonRepository extends BaseJsonService
     implements IRefineryRepository {

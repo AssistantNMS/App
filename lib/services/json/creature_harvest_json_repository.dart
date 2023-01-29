@@ -2,7 +2,7 @@ import 'package:assistantnms_app/contracts/creature/creature_harvest.dart';
 import 'package:flutter/material.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'interface/ICreatureHarvestJsonRepository.dart';
+import 'interface/i_creature_harvest_json_repository.dart';
 
 class CreatureHarvestJsonRepository extends BaseJsonService
     implements ICreatureHarvestJsonRepository {

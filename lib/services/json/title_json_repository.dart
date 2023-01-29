@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../../contracts/title_data.dart';
 
-import 'interface/ITitleJsonRepository.dart';
+import 'interface/i_title_json_repository.dart';
 
 class TitleJsonRepository extends BaseJsonService
     implements ITitleJsonRepository {

@@ -4,7 +4,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:collection/collection.dart';
 
 import '../../contracts/recharge.dart';
-import 'interface/IRechargeJsonRepository.dart';
+import 'interface/i_recharge_json_repository.dart';
 
 class RechargeJsonRepository extends BaseJsonService
     implements IRechargeJsonRepository {

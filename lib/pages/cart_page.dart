@@ -1,5 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/services/json/interface/IGenericRepository.dart';
+import 'package:assistantnms_app/services/json/interface/i_generic_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 

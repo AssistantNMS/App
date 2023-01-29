@@ -24,7 +24,7 @@ import '../contracts/weekend_stage_page_item.dart';
 import '../integration/dependency_injection.dart';
 import '../mapper/generic_item_mapper.dart';
 import '../services/json/weekend_mission_season_json_repository.dart';
-import '../services/json/interface/IGenericRepository.dart';
+import '../services/json/interface/i_generic_repository.dart';
 import 'items_helper.dart';
 
 Future<ResultWithValue<GenericPageItem>> genericItemFuture(

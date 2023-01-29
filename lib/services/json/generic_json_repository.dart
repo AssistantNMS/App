@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../contracts/generic_page_item.dart';
 
-import 'interface/IGenericRepository.dart';
+import 'interface/i_generic_repository.dart';
 
 class GenericJsonRepository extends BaseJsonService
     implements IGenericRepository {

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../contracts/techTree/tech_tree.dart';
 import '../../contracts/techTree/unlockable_tech_tree.dart';
 
-import 'interface/ITechTreeJsonRepository.dart';
+import 'interface/i_tech_tree_json_repository.dart';
 
 class TechTreeJsonRepository extends BaseJsonService
     implements ITechTreeJsonRepository {
