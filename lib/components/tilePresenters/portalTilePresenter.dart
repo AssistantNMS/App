@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../contracts/portal/portalRecord.dart';
-import '../portal/portalGlyphList.dart';
+import '../portal/portal_glyph_list.dart';
 
 Widget portalTilePresenter(
   BuildContext context,

@@ -8,7 +8,7 @@ import 'package:swipe_to/swipe_to.dart';
 
 import '../../../components/common/dot_pagination.dart';
 import '../../../components/common/image.dart';
-import '../../../components/portal/portalGlyphList.dart';
+import '../../../components/portal/portal_glyph_list.dart';
 import '../../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
 import '../../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../../contracts/generated/weekendMissionViewModel.dart';

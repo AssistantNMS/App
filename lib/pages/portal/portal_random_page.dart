@@ -6,7 +6,7 @@ import 'package:roll_slot_machine/roll_slot.dart';
 import 'package:roll_slot_machine/roll_slot_controller.dart';
 
 import '../../components/floatingActionButton/random_portal_floating_action_button.dart';
-import '../../components/portal/portalGlyphList.dart';
+import '../../components/portal/portal_glyph_list.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';

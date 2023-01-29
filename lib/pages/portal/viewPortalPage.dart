@@ -7,8 +7,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 
-import '../../components/portal/galacticAddress.dart';
-import '../../components/portal/portalGlyphList.dart';
+import '../../components/portal/galactic_address.dart';
+import '../../components/portal/portal_glyph_list.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/NmsExternalUrls.dart';
 import '../../contracts/portal/portalRecord.dart';

@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/common/text_formatter.dart';
-import '../../components/portal/portalGlyphList.dart';
+import '../../components/portal/portal_glyph_list.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/portal/portalRecord.dart';

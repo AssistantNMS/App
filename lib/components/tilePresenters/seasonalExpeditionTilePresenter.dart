@@ -14,7 +14,7 @@ import '../../pages/seasonalExpedition/seasonalExpeditionDetailPage.dart';
 import '../../pages/seasonalExpedition/seasonalExpeditionPhaseListPage.dart';
 import '../../redux/modules/expedition/expeditionViewModel.dart';
 import '../modalBottomSheet/expedition_rewards_list_modal_bottom_sheet.dart';
-import '../portal/portalGlyphList.dart';
+import '../portal/portal_glyph_list.dart';
 
 Widget seasonalExpeditionDetailTilePresenter(
   BuildContext context,
