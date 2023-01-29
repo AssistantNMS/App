@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:redux/redux.dart';
 
-import '../../../contracts/redux/titleState.dart';
+import '../../../contracts/redux/title_state.dart';
 import 'actions.dart';
 
 final titleReducer = combineReducers<TitleState>([

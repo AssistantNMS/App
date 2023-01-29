@@ -1,9 +1,9 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../../../constants/Fonts.dart';
-import '../../../contracts/enum/homepageType.dart';
-import '../../../contracts/redux/appState.dart';
-import '../../../helpers/dateHelper.dart';
+import '../../../constants/fonts.dart';
+import '../../../contracts/enum/homepage_type.dart';
+import '../../../contracts/redux/app_state.dart';
+import '../../../helpers/date_helper.dart';
 
 String getSelectedLanguage(AppState state) =>
     state.settingState.selectedLanguage;

@@ -1,4 +1,4 @@
-import '../../../contracts/redux/expeditionState.dart';
+import '../../../contracts/redux/expedition_state.dart';
 import 'package:redux/redux.dart';
 
 import 'actions.dart';

@@ -1,8 +1,8 @@
 import 'package:collection/collection.dart';
 import 'package:redux/redux.dart';
 
-import '../../../contracts/cart/cartItem.dart';
-import '../../../contracts/redux/cartState.dart';
+import '../../../contracts/cart/cart_item.dart';
+import '../../../contracts/redux/cart_state.dart';
 import 'actions.dart';
 
 final cartReducer = combineReducers<CartState>([

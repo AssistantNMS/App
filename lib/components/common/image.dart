@@ -1,10 +1,10 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../constants/AnalyticsEvent.dart';
-import '../../helpers/heroHelper.dart';
+import '../../constants/analytics_event.dart';
+import '../../helpers/hero_helper.dart';
 
-import '../../constants/NmsExternalUrls.dart';
-import '../../contracts/genericPageItem.dart';
+import '../../constants/nms_external_urls.dart';
+import '../../contracts/generic_page_item.dart';
 
 Widget gameItemImage(
   String imagePath, {

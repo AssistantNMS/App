@@ -1,4 +1,4 @@
-import '../base/persistToStorage.dart';
+import '../base/persist_to_storage.dart';
 
 class SetMilestonAction extends PersistToStorage {
   final String journeyId;
