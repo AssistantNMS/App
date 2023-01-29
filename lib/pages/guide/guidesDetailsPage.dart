@@ -7,7 +7,7 @@ import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 import '../../contracts/guide/guideSection.dart';
 import '../../contracts/guide/guideSectionItem.dart';
 
-import '../../components/guide/stickRowPresenters.dart';
+import '../../components/guide/stick_row_presenters.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/generated/guideMetaViewModel.dart';
