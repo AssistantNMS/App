@@ -12,7 +12,7 @@ import '../../contracts/helloGames/news_item.dart';
 import '../../contracts/helloGames/release_note.dart';
 import '../../helpers/search_helpers.dart';
 import '../../integration/dependency_injection.dart';
-import './steamBranches.dart';
+import './steam_branches.dart';
 
 class NewsShellPage extends StatelessWidget {
   final List<String> options = [

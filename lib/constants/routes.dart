@@ -32,7 +32,7 @@ import '../pages/language.dart';
 import '../pages/misc/retired_drawer_menu_page.dart';
 import '../pages/newItemsInUpdate/major_updates_page.dart';
 import '../pages/newItemsInUpdate/new_items_page.dart';
-import '../pages/news/newsShellPage.dart';
+import '../pages/news/news_shell_page.dart';
 import '../pages/nmsfm/nmsfm.dart';
 import '../pages/portal/portalConverterPage.dart';
 import '../pages/portal/portal_random_page.dart';
