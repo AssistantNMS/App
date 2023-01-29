@@ -12,7 +12,7 @@ import '../pages/contributors/contributors_page.dart';
 import '../pages/donation.dart';
 import '../pages/faction/faction_list_page.dart';
 import '../pages/faction/journey_milestone.dart';
-import '../pages/favourite/favouritesPage.dart';
+import '../pages/favourite/favourites_page.dart';
 import '../pages/friendCode/friendCodeListPage.dart';
 import '../pages/guide/assistantAppsGuidesPage.dart';
 import '../pages/guide/guidesPage.dart';
