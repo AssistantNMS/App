@@ -28,7 +28,7 @@ import '../../contracts/required_item_details.dart';
 import '../../contracts/stat_bonus.dart';
 import '../../helpers/future_helper.dart';
 import '../../helpers/generic_helper.dart';
-import '../../mapper/GenericItemMapper.dart';
+import '../../mapper/generic_item_mapper.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 import 'genericPageComponents.dart';
 
