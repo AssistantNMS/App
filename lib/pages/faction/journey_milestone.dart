@@ -8,7 +8,7 @@ import '../../constants/analytics_event.dart';
 import '../../contracts/journey/journey_milestone.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../redux/modules/journeyMilestone/journey_milestone_view_model.dart';
-import '../../services/json/JourneyJsonRepository.dart';
+import '../../services/json/journey_json_repository.dart';
 
 class JourneyMilestonePage extends StatelessWidget {
   JourneyMilestonePage({Key? key}) : super(key: key) {

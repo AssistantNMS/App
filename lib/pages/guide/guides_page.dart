@@ -9,7 +9,7 @@ import '../../contracts/guide/guide.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/search_helpers.dart';
 import '../../redux/modules/setting/setting_view_model.dart';
-import '../../services/json/GuidesJsonRepository.dart';
+import '../../services/json/guides_json_repository.dart';
 
 class GuidesPage extends StatelessWidget {
   GuidesPage({Key? key}) : super(key: key) {
