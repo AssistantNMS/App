@@ -13,8 +13,8 @@ import '../../constants/analytics_event.dart';
 import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
 import '../../helpers/items_helper.dart';
-import 'solarPanelCalcComponents.dart';
-import 'solarPanelCalcHelper.dart';
+import 'solar_panel_calc_components.dart';
+import 'solar_panel_calc_helper.dart';
 
 const String _solarPanelId = 'conTech50';
 const String _batteryId = 'conTech57';

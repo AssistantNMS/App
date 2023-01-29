@@ -37,7 +37,7 @@ import '../pages/nmsfm/nmsfm.dart';
 import '../pages/portal/portal_converter_page.dart';
 import '../pages/portal/portal_random_page.dart';
 import '../pages/portal/portals_page.dart';
-import '../pages/power/solarPanelCalcPage.dart';
+import '../pages/power/solar_panel_calc_page.dart';
 import '../pages/seasonalExpedition/seasonalExpeditionSeasonListPage.dart';
 import '../pages/settings.dart';
 import '../pages/social/socialPage.dart';
