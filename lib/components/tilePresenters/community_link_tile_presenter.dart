@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../contracts/generated/community_link_chip_colour_view_model.dart';
 import '../../contracts/generated/community_link_view_model.dart';
 import '../../helpers/community_link_helper.dart';
-import '../../pages/community/communityLinksDetailsPage.dart';
+import '../../pages/community/community_links_details_page.dart';
 
 ListItemDisplayerType<CommunityLinkViewModel> communityLinkTilePresenter(
   List<CommunityLinkChipColourViewModel> chipColours,
