@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import '../../pages/generic/genericPage.dart';
+import '../../pages/generic/generic_page.dart';
 
 import '../../constants/alien_puzzle.dart';
 import '../../constants/app_image.dart';

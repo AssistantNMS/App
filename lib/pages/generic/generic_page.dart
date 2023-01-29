@@ -30,7 +30,7 @@ import '../../helpers/future_helper.dart';
 import '../../helpers/generic_helper.dart';
 import '../../mapper/generic_item_mapper.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
-import 'genericPageComponents.dart';
+import 'generic_page_components.dart';
 
 class GenericPage extends StatelessWidget {
   final String itemId;

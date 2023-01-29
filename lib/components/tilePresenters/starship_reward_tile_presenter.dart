@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/data/starship_scrap.dart';
 import '../../contracts/helloGames/starship_scrap_detailed.dart';
-import '../../pages/generic/genericPage.dart';
+import '../../pages/generic/generic_page.dart';
 import '../../pages/helloGames/misc/starshipScrapPage.dart';
 
 Widget starshipScrapTilePresenter(BuildContext context,

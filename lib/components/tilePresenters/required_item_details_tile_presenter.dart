@@ -9,8 +9,8 @@ import '../../contracts/required_item_details.dart';
 import '../../helpers/generic_helper.dart';
 import '../../helpers/items_helper.dart';
 import '../../helpers/theme_helper.dart';
-import '../../pages/generic/genericPage.dart';
-import '../../pages/generic/genericPageProcessorRecipe.dart';
+import '../../pages/generic/generic_page.dart';
+import '../../pages/generic/generic_page_processor_recipe.dart';
 import 'processor_recipe_tile_presentor.dart';
 
 const double itemPadding = 16.0;

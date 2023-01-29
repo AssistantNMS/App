@@ -12,7 +12,7 @@ import '../../contracts/required_item_details.dart';
 import '../../contracts/required_item_tree_details.dart';
 import '../../helpers/generic_helper.dart';
 import '../../helpers/items_helper.dart';
-import 'genericPageAllRequiredRawMaterialsTreeComponents.dart';
+import 'generic_page_all_required_raw_materials_tree_components.dart';
 
 class GenericPageAllRequiredRawMaterials extends StatefulWidget {
   final GenericPageAllRequired item;

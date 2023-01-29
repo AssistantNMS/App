@@ -9,7 +9,7 @@ import '../../contracts/recharge.dart';
 import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
 import '../../helpers/items_helper.dart';
-import '../../pages/generic/genericPage.dart';
+import '../../pages/generic/generic_page.dart';
 
 Widget chargeByItemTilePresenter(
   BuildContext context,

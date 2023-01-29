@@ -39,9 +39,9 @@ import '../../helpers/generic_helper.dart';
 import '../../helpers/hero_helper.dart';
 import '../../helpers/theme_helper.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
-import 'allPossibleOutputsPage.dart';
-import 'genericPageAllRequiredRawMaterials.dart';
-import 'genericPageDescripHighlightText.dart';
+import 'all_possible_outputs_page.dart';
+import 'generic_page_all_required_raw_materials.dart';
+import 'generic_page_descrip_highlight_text.dart';
 
 List<Widget> getBodyTopContent(BuildContext context, GenericPageViewModel vm,
     GenericPageItem genericItem) {

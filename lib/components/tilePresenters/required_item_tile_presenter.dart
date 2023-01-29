@@ -9,8 +9,8 @@ import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
 import '../../helpers/hero_helper.dart';
 import '../../helpers/items_helper.dart';
-import '../../pages/generic/genericPage.dart';
-import '../../pages/generic/genericPageProcessorRecipe.dart';
+import '../../pages/generic/generic_page.dart';
+import '../../pages/generic/generic_page_processor_recipe.dart';
 import 'generic_tile_presenter.dart';
 
 Widget Function(BuildContext context, RequiredItem requiredItem,

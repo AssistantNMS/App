@@ -8,7 +8,7 @@ import '../../contracts/alienPuzzle/alien_puzzle_race_type.dart';
 import '../../contracts/required_item_details.dart';
 import '../../contracts/seasonalExpedition/expedition_reward_type.dart';
 import '../../contracts/seasonalExpedition/seasonal_expedition_reward.dart';
-import '../../pages/generic/genericPage.dart';
+import '../../pages/generic/generic_page.dart';
 
 const double itemPadding = 16.0;
 

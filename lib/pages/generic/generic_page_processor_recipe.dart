@@ -19,7 +19,7 @@ import '../../contracts/redux/app_state.dart';
 import '../../helpers/future_helper.dart';
 import '../../helpers/generic_helper.dart';
 import '../../redux/modules/favourite/favouriteViewModel.dart';
-import 'genericPage.dart';
+import 'generic_page.dart';
 
 class GenericPageProcessorRecipe extends StatelessWidget {
   final Processor processor;

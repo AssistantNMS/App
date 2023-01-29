@@ -9,7 +9,7 @@ import '../../contracts/seasonalExpedition/seasonal_expedition_phase.dart';
 import '../../contracts/seasonalExpedition/seasonal_expedition_season.dart';
 import '../../helpers/hex_helper.dart';
 import '../../integration/dependency_injection.dart';
-import '../../pages/generic/genericPageDescripHighlightText.dart';
+import '../../pages/generic/generic_page_descrip_highlight_text.dart';
 import '../../pages/seasonalExpedition/seasonalExpeditionDetailPage.dart';
 import '../../pages/seasonalExpedition/seasonalExpeditionPhaseListPage.dart';
 import '../../redux/modules/expedition/expedition_view_model.dart';

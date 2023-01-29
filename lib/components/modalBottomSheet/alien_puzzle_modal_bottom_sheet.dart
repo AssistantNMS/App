@@ -8,7 +8,7 @@ import '../../contracts/alienPuzzle/alien_puzzle.dart';
 import '../../contracts/alienPuzzle/alien_puzzle_reward.dart';
 import '../../integration/dependency_injection.dart';
 import '../../pages/alienPuzzles/alien_puzzles_reward_page.dart';
-import '../../pages/generic/genericPageDescripHighlightText.dart';
+import '../../pages/generic/generic_page_descrip_highlight_text.dart';
 import '../common/chat_bubble.dart';
 import '../tilePresenters/alien_puzzle_reward_odds_tile_presenter.dart';
 

@@ -15,9 +15,9 @@ import '../contracts/required_item_details.dart';
 import '../helpers/future_helper.dart';
 import '../helpers/generic_helper.dart';
 import '../helpers/items_helper.dart';
-import '../pages/generic/genericPage.dart';
+import '../pages/generic/generic_page.dart';
 import '../redux/modules/cart/cartViewModel.dart';
-import 'generic/genericPageAllRequiredRawMaterials.dart';
+import 'generic/generic_page_all_required_raw_materials.dart';
 
 class CartPage extends StatelessWidget {
   CartPage({Key? key}) : super(key: key) {

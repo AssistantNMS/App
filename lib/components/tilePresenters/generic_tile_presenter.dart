@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../contracts/generic_page_item.dart';
 import '../../helpers/hero_helper.dart';
-import '../../pages/generic/genericPage.dart';
+import '../../pages/generic/generic_page.dart';
 import '../common/image.dart';
 
 Widget genericTileWithBackgroundColourPresenter(

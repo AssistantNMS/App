@@ -16,7 +16,7 @@ import '../../helpers/items_helper.dart';
 import '../../helpers/search_helpers.dart';
 import '../../redux/modules/inventory/inventoryListViewModel.dart';
 import '../../redux/modules/inventory/inventorySlotViewModel.dart';
-import '../generic/selectGenericItemPage.dart';
+import '../generic/select_generic_item_page.dart';
 import 'addEditInventoryPage.dart';
 
 class ViewInventoryListPage extends StatefulWidget {

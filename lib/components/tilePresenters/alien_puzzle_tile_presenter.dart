@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../contracts/alienPuzzle/alien_puzzle.dart';
 import '../../contracts/alienPuzzle/alien_puzzle_race_type.dart';
 import '../../contracts/alienPuzzle/alien_puzzle_type.dart';
-import '../../pages/generic/genericPageDescripHighlightText.dart';
+import '../../pages/generic/generic_page_descrip_highlight_text.dart';
 import '../modalBottomSheet/alien_puzzle_modal_bottom_sheet.dart';
 
 void Function() openModalForAlienPuzzle(
