@@ -3,11 +3,11 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/nms_ui_constants.dart';
-import '../../contracts/chargeBy.dart';
-import '../../contracts/genericPageItem.dart';
+import '../../contracts/charge_by.dart';
+import '../../contracts/generic_page_item.dart';
 import '../../contracts/recharge.dart';
-import '../../contracts/requiredItem.dart';
-import '../../contracts/requiredItemDetails.dart';
+import '../../contracts/required_item.dart';
+import '../../contracts/required_item_details.dart';
 import '../../helpers/itemsHelper.dart';
 import '../../pages/generic/genericPage.dart';
 

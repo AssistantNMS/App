@@ -1,5 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/contracts/requiredItem.dart';
+import 'package:assistantnms_app/contracts/required_item.dart';
 import 'package:assistantnms_app/integration/dependencyInjection.dart';
 import 'package:assistantnms_app/pages/helloGames/misc/starshipScrapDisplay.dart';
 import 'package:collection/collection.dart';
@@ -11,7 +11,7 @@ import '../../../constants/analytics_event.dart';
 import '../../../contracts/data/starshipScrap.dart';
 import '../../../contracts/helloGames/starshipScrapDetailed.dart';
 import '../../../contracts/redux/appState.dart';
-import '../../../contracts/requiredItemDetails.dart';
+import '../../../contracts/required_item_details.dart';
 import '../../../helpers/itemsHelper.dart';
 import '../../../redux/modules/generic/genericItemViewModel.dart';
 

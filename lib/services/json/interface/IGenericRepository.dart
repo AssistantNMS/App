@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../../contracts/genericPageItem.dart';
+import '../../../contracts/generic_page_item.dart';
 
 class IGenericRepository {
   Future<ResultWithValue<List<GenericPageItem>>> getAll(

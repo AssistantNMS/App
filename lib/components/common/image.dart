@@ -4,7 +4,7 @@ import '../../constants/analytics_event.dart';
 import '../../helpers/heroHelper.dart';
 
 import '../../constants/nms_external_urls.dart';
-import '../../contracts/genericPageItem.dart';
+import '../../contracts/generic_page_item.dart';
 
 Widget gameItemImage(
   String imagePath, {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../contracts/customMenuItem.dart';
+import '../contracts/custom_menu_item.dart';
 import '../pages/catalogue/catalogueItemPage.dart';
 
 List<CustomMenuItem> getCatalogueItemData(context) {

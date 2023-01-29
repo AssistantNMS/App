@@ -2,8 +2,8 @@
 //
 //     final weekendMission = weekendMissionFromJson(jsonString);
 
-import 'weekendMission.dart';
-import 'genericPageItem.dart';
+import 'weekend_mission.dart';
+import 'generic_page_item.dart';
 
 class WeekendStagePageItem {
   List<String> titles;

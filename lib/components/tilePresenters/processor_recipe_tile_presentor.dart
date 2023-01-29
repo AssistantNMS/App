@@ -1,11 +1,11 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/constants/app_image.dart';
-import 'package:assistantnms_app/contracts/requiredItem.dart';
+import 'package:assistantnms_app/contracts/required_item.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/processor.dart';
-import '../../contracts/requiredItemDetails.dart';
+import '../../contracts/required_item_details.dart';
 
 import '../../helpers/itemsHelper.dart';
 

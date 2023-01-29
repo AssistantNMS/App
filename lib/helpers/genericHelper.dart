@@ -16,7 +16,7 @@ import '../constants/app_image.dart';
 import '../constants/id_prefix.dart';
 import '../contracts/data/platformControlMapping.dart';
 import '../contracts/favourite/favouriteItem.dart';
-import '../contracts/genericPageItem.dart';
+import '../contracts/generic_page_item.dart';
 import '../pages/generic/genericPageDescripHighlightText.dart';
 
 const int maxNumberOfRowsForRecipeCategory = 3;

@@ -1,6 +1,6 @@
-import 'genericPageItem.dart';
-import 'requiredItem.dart';
-import 'requiredItemTreeDetails.dart';
+import 'generic_page_item.dart';
+import 'required_item.dart';
+import 'required_item_tree_details.dart';
 
 class RequiredItemDetails extends RequiredItem {
   String icon;

@@ -7,7 +7,7 @@ import '../../components/tilePresenters/menu_item_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../constants/app_image.dart';
 import '../../constants/routes.dart';
-import '../../contracts/customMenuItem.dart';
+import '../../contracts/custom_menu_item.dart';
 
 class RetiredDrawerMenuPage extends StatelessWidget {
   RetiredDrawerMenuPage({Key? key}) : super(key: key) {

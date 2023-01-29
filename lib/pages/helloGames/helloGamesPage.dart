@@ -9,7 +9,7 @@ import '../../constants/analytics_event.dart';
 import '../../constants/app_image.dart';
 import '../../constants/nms_external_urls.dart';
 import '../../constants/routes.dart';
-import '../../contracts/customMenuItem.dart';
+import '../../contracts/custom_menu_item.dart';
 
 class HelloGamesPage extends StatelessWidget {
   HelloGamesPage({Key? key}) : super(key: key) {

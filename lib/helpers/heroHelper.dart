@@ -1,6 +1,6 @@
 // ignore_for_file: unnecessary_null_comparison
 
-import '../../contracts/genericPageItem.dart';
+import '../../contracts/generic_page_item.dart';
 
 String? gameItemIconHero(GenericPageItem genericItem) {
   if (genericItem == null || genericItem.id == null) return null;

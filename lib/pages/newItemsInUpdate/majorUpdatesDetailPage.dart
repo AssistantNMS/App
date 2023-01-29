@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../contracts/data/majorUpdateItem.dart';
-import '../../contracts/genericPageItem.dart';
+import '../../contracts/generic_page_item.dart';
 import '../../helpers/futureHelper.dart';
 import '../../helpers/genericHelper.dart';
 import '../../helpers/repositoryHelper.dart';

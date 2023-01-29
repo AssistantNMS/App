@@ -1,6 +1,6 @@
-import '../contracts/processorRequiredItem.dart';
+import '../contracts/processor_required_item.dart';
 import '../contracts/processor.dart';
-import '../contracts/requiredItem.dart';
+import '../contracts/required_item.dart';
 
 List<RequiredItem> mapCookingToRequiredItemsWithDescrip(
     List<Processor> nutrientProcs) {

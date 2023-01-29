@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../constants/app_duration.dart';
 import '../../constants/Modal.dart';
-import '../../contracts/devDetail.dart';
+import '../../contracts/dev_detail.dart';
 import '../../integration/dependencyInjection.dart';
 
 class DevDetailBottomSheet extends StatefulWidget {

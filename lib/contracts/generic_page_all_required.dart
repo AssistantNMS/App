@@ -1,5 +1,5 @@
-import './requiredItem.dart';
-import 'genericPageItem.dart';
+import './required_item.dart';
+import 'generic_page_item.dart';
 
 class GenericPageAllRequired {
   String typeName;

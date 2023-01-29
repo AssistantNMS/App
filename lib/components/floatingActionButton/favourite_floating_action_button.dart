@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 import '../../contracts/favourite/favouriteItem.dart';
-import '../../contracts/genericPageItem.dart';
+import '../../contracts/generic_page_item.dart';
 
 SpeedDialChild favouriteFloatingActionButton(
         BuildContext context,

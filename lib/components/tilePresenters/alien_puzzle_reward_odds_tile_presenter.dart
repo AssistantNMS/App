@@ -8,8 +8,8 @@ import '../../constants/app_image.dart';
 import '../../contracts/alienPuzzle/AlienPuzzleRewardItemType.dart';
 import '../../contracts/alienPuzzle/alienPuzzleRaceType.dart';
 import '../../contracts/alienPuzzle/alienPuzzleReward.dart';
-import '../../contracts/requiredItem.dart';
-import '../../contracts/requiredItemDetails.dart';
+import '../../contracts/required_item.dart';
+import '../../contracts/required_item_details.dart';
 
 import '../../helpers/itemsHelper.dart';
 

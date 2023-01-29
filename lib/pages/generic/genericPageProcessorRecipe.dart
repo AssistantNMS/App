@@ -1,7 +1,7 @@
 // ignore_for_file: unnecessary_null_comparison
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/contracts/requiredItemDetails.dart';
+import 'package:assistantnms_app/contracts/required_item_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -14,7 +14,7 @@ import '../../constants/analytics_event.dart';
 import '../../constants/id_prefix.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/processor.dart';
-import '../../contracts/processorRecipePageData.dart';
+import '../../contracts/processor_recipe_page_data.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/futureHelper.dart';
 import '../../helpers/genericHelper.dart';

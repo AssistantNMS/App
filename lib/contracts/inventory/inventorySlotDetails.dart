@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../genericPageItem.dart';
+import '../generic_page_item.dart';
 
 class InventorySlotDetails {
   String? id;

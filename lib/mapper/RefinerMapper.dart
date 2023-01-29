@@ -1,6 +1,6 @@
 import '../contracts/processor.dart';
-import '../contracts/processorRequiredItem.dart';
-import '../contracts/requiredItem.dart';
+import '../contracts/processor_required_item.dart';
+import '../contracts/required_item.dart';
 
 List<RequiredItem> mapRefinersToRequiredItemsWithDescrip(
     List<Processor> usedInRefiners) {

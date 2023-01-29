@@ -6,7 +6,7 @@ import '../../../constants/app_duration.dart';
 import '../../../constants/Modal.dart';
 
 import '../../../components/common/chat_bubble.dart';
-import '../../../contracts/weekendMission.dart';
+import '../../../contracts/weekend_mission.dart';
 
 class WeekendMissionDialogPage extends StatefulWidget {
   final MessageFlow messageFlow;

@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../contracts/customMenuItem.dart';
+import '../../contracts/custom_menu_item.dart';
 
 Widget menuItemTilePresenter(BuildContext context, CustomMenuItem menuItem) =>
     GestureDetector(

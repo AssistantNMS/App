@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../../contracts/genericPageItem.dart';
+import '../../contracts/generic_page_item.dart';
 import '../../pages/inventory/addInventorySlotPage.dart';
 
 Widget inventoryFloatingActionButton(

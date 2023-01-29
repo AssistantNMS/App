@@ -1,5 +1,5 @@
 import 'processor.dart';
-import 'requiredItemDetails.dart';
+import 'required_item_details.dart';
 
 class ProcessorRecipePageData {
   String procId;

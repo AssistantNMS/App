@@ -8,7 +8,7 @@ import '../../../contracts/enum/community_mission_status.dart';
 import '../../../contracts/helloGames/communityMission.dart';
 import '../../../contracts/helloGames/communityMissionPageData.dart';
 import '../../../contracts/helloGames/quickSilverStoreDetails.dart';
-import '../../../contracts/requiredItemDetails.dart';
+import '../../../contracts/required_item_details.dart';
 import '../../../helpers/futureHelper.dart';
 import '../../../helpers/mathHelper.dart';
 import '../../../integration/dependencyInjection.dart';

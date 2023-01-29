@@ -1,5 +1,5 @@
 import '../contracts/processor.dart';
-import '../contracts/requiredItem.dart';
+import '../contracts/required_item.dart';
 
 class ProcessorRequiredItem extends RequiredItem {
   Processor processor;

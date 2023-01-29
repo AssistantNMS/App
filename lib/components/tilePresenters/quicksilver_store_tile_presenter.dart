@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/common/image.dart';
 import '../../contracts/data/quicksilverStoreItem.dart';
-import '../../contracts/requiredItemDetails.dart';
+import '../../contracts/required_item_details.dart';
 import '../../pages/generic/genericPage.dart';
 
 Widget quicksilverStoreTilePresenter(

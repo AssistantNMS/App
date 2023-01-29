@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import '../../../contracts/weekendMission.dart';
+import '../../../contracts/weekend_mission.dart';
 
 class IWeekendMissionSeasonJsonRepository {
   //

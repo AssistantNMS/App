@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../contracts/enum/currencyType.dart';
 
-import '../../contracts/requiredItemDetails.dart';
+import '../../contracts/required_item_details.dart';
 import '../../contracts/techTree/techTreeNode.dart';
 import 'required_item_details_tile_presenter.dart';
 

@@ -1,16 +1,16 @@
 import '../contracts/alienPuzzle/alienPuzzle.dart';
 import '../contracts/enum/currencyType.dart';
 import '../contracts/generated/communityLinkViewModel.dart';
-import '../contracts/genericPageItem.dart';
+import '../contracts/generic_page_item.dart';
 import '../contracts/guide/guide.dart';
 import '../contracts/helloGames/newsItem.dart';
 import '../contracts/helloGames/releaseNote.dart';
 import '../contracts/inventory/inventorySlotWithGenericPageItem.dart';
 import '../contracts/nmsfm/nmsfmTrackData.dart';
 import '../contracts/portal/portalRecord.dart';
-import '../contracts/requiredItemDetails.dart';
+import '../contracts/required_item_details.dart';
 import '../contracts/seasonalExpedition/seasonalExpeditionPhase.dart';
-import '../contracts/titleDataWithOwned.dart';
+import '../contracts/title_data_with_owned.dart';
 
 bool search(GenericPageItem item, String searchText) =>
     searchGenericPageItem(item, searchText);

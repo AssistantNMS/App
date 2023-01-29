@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
 import '../../constants/nms_ui_constants.dart';
-import '../../contracts/genericPageItem.dart';
-import '../../contracts/processorRequiredItem.dart';
-import '../../contracts/requiredItem.dart';
-import '../../contracts/requiredItemDetails.dart';
+import '../../contracts/generic_page_item.dart';
+import '../../contracts/processor_required_item.dart';
+import '../../contracts/required_item.dart';
+import '../../contracts/required_item_details.dart';
 import '../../helpers/heroHelper.dart';
 import '../../helpers/itemsHelper.dart';
 import '../../pages/generic/genericPage.dart';

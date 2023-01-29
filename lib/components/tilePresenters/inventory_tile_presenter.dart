@@ -5,7 +5,7 @@ import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';
 import '../../contracts/inventory/inventorySlotWithContainerAndGenericPageItem.dart';
 import '../../contracts/inventory/inventorySlotWithGenericPageItem.dart';
-import '../../contracts/requiredItemDetails.dart';
+import '../../contracts/required_item_details.dart';
 import '../../helpers/genericHelper.dart';
 
 import '../../pages/generic/genericPage.dart';

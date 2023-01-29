@@ -3,8 +3,8 @@ import 'package:flutter_simple_treeview/flutter_simple_treeview.dart';
 import '../../contracts/enum/currencyType.dart';
 
 import '../../components/tilePresenters/required_item_details_tile_presenter.dart';
-import '../../contracts/requiredItemDetails.dart';
-import '../../contracts/requiredItemTreeDetails.dart';
+import '../../contracts/required_item_details.dart';
+import '../../contracts/required_item_tree_details.dart';
 import '../../helpers/sortHelper.dart';
 
 TreeView getTree(

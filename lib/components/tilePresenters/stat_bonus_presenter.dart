@@ -2,8 +2,8 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
-import '../../contracts/statBonus.dart';
-import '../../contracts/proceduralStatBonus.dart';
+import '../../contracts/stat_bonus.dart';
+import '../../contracts/procedural_stat_bonus.dart';
 
 Widget statBonusTilePresenter(BuildContext context, StatBonus statBonus) {
   String subTitle = statBonus.value.toString();

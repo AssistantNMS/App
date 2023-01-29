@@ -2,15 +2,15 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/id_prefix.dart';
-import '../contracts/genericPageItem.dart';
+import '../contracts/generic_page_item.dart';
 import '../contracts/inventory/inventory.dart';
 import '../contracts/inventory/inventoryBasicInfo.dart';
 import '../contracts/inventory/inventorySlot.dart';
 import '../contracts/inventory/inventorySlotWithContainerAndGenericPageItem.dart';
 import '../contracts/inventory/inventorySlotWithGenericPageItem.dart';
-import '../contracts/requiredItem.dart';
-import '../contracts/requiredItemDetails.dart';
-import '../contracts/requiredItemTreeDetails.dart';
+import '../contracts/required_item.dart';
+import '../contracts/required_item_details.dart';
+import '../contracts/required_item_tree_details.dart';
 
 import '../contracts/twitch/twitchCampaignData.dart';
 import '../integration/dependencyInjection.dart';

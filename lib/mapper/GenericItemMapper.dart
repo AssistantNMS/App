@@ -1,9 +1,9 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../constants/id_prefix.dart';
-import '../contracts/genericPageItem.dart';
-import '../contracts/requiredItem.dart';
-import '../contracts/requiredItemDetails.dart';
+import '../contracts/generic_page_item.dart';
+import '../contracts/required_item.dart';
+import '../contracts/required_item_details.dart';
 
 Future<RequiredItemDetails> toRequiredItemDetails(
     context, RequiredItem requiredItem, GenericPageItem genericItem) async {

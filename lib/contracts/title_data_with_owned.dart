@@ -2,7 +2,7 @@
 //
 //     final titleData = titleDataFromJson(jsonString);
 
-import '../../contracts/titleData.dart';
+import '../../contracts/title_data.dart';
 
 class TitleDataWithOwned {
   TitleDataWithOwned({

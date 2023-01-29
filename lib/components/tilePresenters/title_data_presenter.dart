@@ -3,7 +3,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../contracts/titleDataWithOwned.dart';
+import '../../contracts/title_data_with_owned.dart';
 import '../../helpers/currencyHelper.dart';
 import '../../redux/modules/titles/titleViewModel.dart';
 

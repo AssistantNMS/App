@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../requiredItem.dart';
+import '../required_item.dart';
 
 class CartItem {
   String typeName;

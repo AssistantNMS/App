@@ -4,14 +4,14 @@ import 'package:assistantnms_app/contracts/data/starshipScrap.dart';
 
 import 'data/majorUpdateItem.dart';
 import 'data/platformControlMapping.dart';
-import 'statBonus.dart';
-import 'proceduralStatBonus.dart';
+import 'stat_bonus.dart';
+import 'procedural_stat_bonus.dart';
 import 'enum/blueprintSource.dart';
 import 'enum/currencyType.dart';
 import 'data/eggTrait.dart';
 import 'processor.dart';
 import 'recharge.dart';
-import 'requiredItem.dart';
+import 'required_item.dart';
 
 class GenericPageItem {
   String typeName;

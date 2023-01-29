@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../contracts/genericPageItem.dart';
+import '../../contracts/generic_page_item.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/futureHelper.dart';
 import '../../helpers/genericHelper.dart';

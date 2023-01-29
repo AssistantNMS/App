@@ -1,4 +1,4 @@
-import '../genericPageItem.dart';
+import '../generic_page_item.dart';
 
 class CartPageItem {
   int quantity;

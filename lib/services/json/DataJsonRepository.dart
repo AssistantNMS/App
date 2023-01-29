@@ -14,7 +14,7 @@ import '../../contracts/data/quicksilverStore.dart';
 import '../../contracts/data/socialItem.dart';
 import '../../contracts/data/starshipScrap.dart';
 import '../../contracts/data/updateItemDetail.dart';
-import '../../contracts/devDetail.dart';
+import '../../contracts/dev_detail.dart';
 import '../../contracts/twitch/twitchCampaignData.dart';
 import 'interface/IDataJsonRepository.dart';
 

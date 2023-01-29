@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
 import '../../constants/nms_ui_constants.dart';
-import '../../contracts/requiredItem.dart';
-import '../../contracts/requiredItemDetails.dart';
+import '../../contracts/required_item.dart';
+import '../../contracts/required_item_details.dart';
 import '../../contracts/twitch/twitchCampaignData.dart';
 import '../../contracts/twitch/twitchCampaignReward.dart';
 import '../../helpers/itemsHelper.dart';
