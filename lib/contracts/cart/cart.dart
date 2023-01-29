@@ -1,4 +1,4 @@
-import 'cartItem.dart';
+import 'cart_item.dart';
 
 class Cart {
   late List<CartItem> cartItems;

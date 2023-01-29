@@ -18,7 +18,7 @@ import '../../constants/app_image.dart';
 import '../../constants/id_prefix.dart';
 import '../../constants/routes.dart';
 import '../../constants/usage_key.dart';
-import '../../contracts/cart/cartItem.dart';
+import '../../contracts/cart/cart_item.dart';
 import '../../contracts/charge_by.dart';
 import '../../contracts/creature/creatureHarvest.dart';
 import '../../contracts/data/eggTrait.dart';

@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:redux/redux.dart';
 
-import '../../../contracts/cart/cartItem.dart';
+import '../../../contracts/cart/cart_item.dart';
 import '../../../contracts/redux/cartState.dart';
 import 'actions.dart';
 

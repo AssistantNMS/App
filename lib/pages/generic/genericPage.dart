@@ -13,7 +13,7 @@ import '../../components/tilePresenters/required_item_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../constants/usage_key.dart';
-import '../../contracts/cart/cartItem.dart';
+import '../../contracts/cart/cart_item.dart';
 import '../../contracts/charge_by.dart';
 import '../../contracts/data/eggTrait.dart';
 import '../../contracts/data/starshipScrap.dart';

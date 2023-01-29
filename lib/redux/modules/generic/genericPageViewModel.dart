@@ -1,6 +1,6 @@
 import 'package:redux/redux.dart';
 
-import '../../../contracts/cart/cartItem.dart';
+import '../../../contracts/cart/cart_item.dart';
 import '../../../contracts/favourite/favouriteItem.dart';
 import '../../../contracts/inventory/inventory.dart';
 import '../../../contracts/generic_page_item.dart';
