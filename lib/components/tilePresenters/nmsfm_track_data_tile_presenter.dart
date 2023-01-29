@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../contracts/nmsfm/nmsfmTrackData.dart';
+import '../../contracts/nmsfm/nmsfm_track_data.dart';
 
 Widget nmsfmTrackTilePresenter(BuildContext context, NmsfmTrackData track,
     {void Function()? onTap}) {
