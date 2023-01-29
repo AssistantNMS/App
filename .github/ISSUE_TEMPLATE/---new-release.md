@@ -12,7 +12,7 @@ assignees: Khaoz-Topsy
 - [ ] Regenerate AssistantApps server data from the AssistantNMS.Data tool
 - [ ] Verify that AssistantNMS.Data audits have all passed
 - [ ] Make sure content of `release_notes.txt` is ready for production
-- [ ] Run the versionNumberScript `dart scripts\versionNumScript.dart`
+- [ ] Run the versionNumberScript `dart scripts\version_num_script.dart`
 - [ ] Create new item in Admin tool
   - [ ] Copy content of `release_notes.txt` to Markdown
   - [ ] Future date release date
