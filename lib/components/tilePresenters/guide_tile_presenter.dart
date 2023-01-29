@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../contracts/guide/guide.dart';
-import '../../pages/guide/guidesDetailsPage.dart';
+import '../../pages/guide/guides_details_page.dart';
 
 const int numberOfDaysAGuideIsConsideredNew = 31;
 
