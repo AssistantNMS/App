@@ -4,11 +4,11 @@ import 'package:get_it/get_it.dart';
 
 import '../../services/base/languageService.dart';
 import '../env/environment_settings.dart';
-import '../services/api/communityApiService.dart';
+import '../services/api/community_api_service.dart';
 import '../services/api/community_mission_progress_api_service.dart';
-import '../services/api/contributorApiService.dart';
-import '../services/api/guideApiService.dart';
-import '../services/api/helloGamesApiService.dart';
+import '../services/api/contributor_api_service.dart';
+import '../services/api/guide_api_service.dart';
+import '../services/api/hello_games_api_service.dart';
 import '../services/base/analyticsService.dart';
 import '../services/base/audioPlayerService.Windows.dart';
 import '../services/base/audioPlayerService.dart';

@@ -15,7 +15,7 @@ import '../../contracts/guide/guide.dart';
 import '../../contracts/guide/guide_type.dart';
 import '../../helpers/generic_helper.dart';
 import '../../integration/dependency_injection.dart';
-import '../../services/api/guideApiService.dart';
+import '../../services/api/guide_api_service.dart';
 
 class GuidesDetailsPage extends StatefulWidget {
   final NmsGuide details;
