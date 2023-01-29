@@ -1,7 +1,7 @@
 import 'package:redux/redux.dart';
 
 import '../../../contracts/redux/favouriteState.dart';
-import '../../../contracts/favourite/favouriteItem.dart';
+import '../../../contracts/favourite/favourite_item.dart';
 import 'actions.dart';
 
 final favouriteReducer = combineReducers<FavouriteState>([

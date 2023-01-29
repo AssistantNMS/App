@@ -1,6 +1,6 @@
 import 'package:redux/redux.dart';
 
-import '../../../contracts/favourite/favouriteItem.dart';
+import '../../../contracts/favourite/favourite_item.dart';
 import '../../../contracts/redux/appState.dart';
 import '../setting/selector.dart';
 import 'actions.dart';

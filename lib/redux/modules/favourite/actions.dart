@@ -1,4 +1,4 @@
-import '../../../contracts/favourite/favouriteItem.dart';
+import '../../../contracts/favourite/favourite_item.dart';
 import '../base/persistToStorage.dart';
 
 class AddFavouriteAction extends PersistToStorage {
