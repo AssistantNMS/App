@@ -10,7 +10,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/generic_page_item.dart';
 import '../../contracts/inventory/inventory.dart';
-import '../../contracts/inventory/inventorySlot.dart';
+import '../../contracts/inventory/inventory_slot.dart';
 import '../../contracts/redux/appState.dart';
 import '../../pages/inventory/addEditInventoryPage.dart';
 import '../../redux/modules/inventory/inventorySlotGenericViewModel.dart';

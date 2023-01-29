@@ -1,7 +1,7 @@
 import 'package:redux/redux.dart';
 
 import '../../../contracts/inventory/inventory.dart';
-// import '../../../contracts/inventory/inventorySlot.dart';
+// import '../../../contracts/inventory/inventory_slot.dart';
 import '../../../contracts/redux/appState.dart';
 import 'actions.dart';
 import 'selector.dart';

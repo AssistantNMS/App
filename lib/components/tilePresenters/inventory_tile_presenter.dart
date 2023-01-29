@@ -2,9 +2,9 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../contracts/inventory/inventory.dart';
-import '../../contracts/inventory/inventorySlot.dart';
-import '../../contracts/inventory/inventorySlotWithContainerAndGenericPageItem.dart';
-import '../../contracts/inventory/inventorySlotWithGenericPageItem.dart';
+import '../../contracts/inventory/inventory_slot.dart';
+import '../../contracts/inventory/inventory_slot_with_container_and_generic_page_item.dart';
+import '../../contracts/inventory/inventory_slot_with_generic_page_item.dart';
 import '../../contracts/required_item_details.dart';
 import '../../helpers/genericHelper.dart';
 

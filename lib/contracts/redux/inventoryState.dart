@@ -3,7 +3,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:meta/meta.dart';
 
 import '../inventory/inventory.dart';
-import '../inventory/inventoryOrderByType.dart';
+import '../inventory/inventory_order_by_type.dart';
 
 @immutable
 class InventoryState {

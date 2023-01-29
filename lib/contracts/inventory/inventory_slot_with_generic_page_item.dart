@@ -1,4 +1,4 @@
-import 'inventorySlot.dart';
+import 'inventory_slot.dart';
 
 class InventorySlotWithGenericPageItem extends InventorySlot {
   String name;

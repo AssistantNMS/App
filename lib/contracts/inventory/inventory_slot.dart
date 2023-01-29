@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import './inventorySlotDetails.dart';
+import './inventory_slot_details.dart';
 
 class InventorySlot {
   String? uuid;

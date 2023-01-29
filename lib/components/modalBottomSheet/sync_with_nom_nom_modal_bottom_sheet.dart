@@ -12,7 +12,7 @@ import '../../constants/routes.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/generated/nom_nom_inventory_view_model.dart';
 import '../../contracts/inventory/inventory.dart';
-import '../../contracts/inventory/inventorySlot.dart';
+import '../../contracts/inventory/inventory_slot.dart';
 import '../../contracts/redux/appState.dart';
 import '../../contracts/redux/inventoryState.dart';
 import '../../integration/dependencyInjection.dart';

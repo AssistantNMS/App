@@ -1,5 +1,5 @@
-import 'inventoryBasicInfo.dart';
-import 'inventorySlotWithGenericPageItem.dart';
+import 'inventory_basic_info.dart';
+import 'inventory_slot_with_generic_page_item.dart';
 
 class InventorySlotWithContainersAndGenericPageItem
     extends InventorySlotWithGenericPageItem {

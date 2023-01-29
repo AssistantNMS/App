@@ -19,7 +19,7 @@ import '../../contracts/data/egg_trait.dart';
 import '../../contracts/data/starship_scrap.dart';
 import '../../contracts/generic_page_item.dart';
 import '../../contracts/inventory/inventory.dart';
-import '../../contracts/inventory/inventorySlot.dart';
+import '../../contracts/inventory/inventory_slot.dart';
 import '../../contracts/procedural_stat_bonus.dart';
 import '../../contracts/recharge.dart';
 import '../../contracts/redux/appState.dart';
