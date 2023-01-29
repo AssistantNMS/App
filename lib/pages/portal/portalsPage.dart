@@ -6,7 +6,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/portal_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../constants/routes.dart';
-import '../../contracts/portal/portalRecord.dart';
+import '../../contracts/portal/portal_record.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/portal/portalViewModel.dart';

@@ -9,7 +9,7 @@ import '../../components/common/text_formatter.dart';
 import '../../components/portal/portal_glyph_list.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
-import '../../contracts/portal/portalRecord.dart';
+import '../../contracts/portal/portal_record.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/actionHelper.dart';
 import '../../helpers/hexHelper.dart';

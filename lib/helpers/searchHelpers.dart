@@ -7,7 +7,7 @@ import '../contracts/helloGames/news_item.dart';
 import '../contracts/helloGames/release_note.dart';
 import '../contracts/inventory/inventory_slot_with_generic_page_item.dart';
 import '../contracts/nmsfm/nmsfm_track_data.dart';
-import '../contracts/portal/portalRecord.dart';
+import '../contracts/portal/portal_record.dart';
 import '../contracts/required_item_details.dart';
 import '../contracts/seasonalExpedition/seasonalExpeditionPhase.dart';
 import '../contracts/title_data_with_owned.dart';

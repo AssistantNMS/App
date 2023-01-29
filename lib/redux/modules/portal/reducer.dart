@@ -1,6 +1,6 @@
 import 'package:redux/redux.dart';
 
-import '../../../contracts/portal/portalRecord.dart';
+import '../../../contracts/portal/portal_record.dart';
 import '../../../contracts/redux/portalState.dart';
 import 'actions.dart';
 

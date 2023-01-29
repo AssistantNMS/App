@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:meta/meta.dart';
 
-import '../portal/portalRecord.dart';
+import '../portal/portal_record.dart';
 
 @immutable
 class PortalState {

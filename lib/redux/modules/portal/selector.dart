@@ -1,4 +1,4 @@
-import '../../../contracts/portal/portalRecord.dart';
+import '../../../contracts/portal/portal_record.dart';
 import '../../../contracts/redux/appState.dart';
 
 List<PortalRecord> getPortals(AppState state) => state.portalState.portals;
