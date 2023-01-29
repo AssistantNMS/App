@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../contracts/nmsfm/nmsfmTrackData.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/nmsfmTrackDataTilePresenter.dart';
+import '../../components/tilePresenters/nmsfm_track_data_tile_presenter.dart';
 import '../../integration/dependencyInjection.dart';
 
 class NMSFMTrackListPage extends StatefulWidget {

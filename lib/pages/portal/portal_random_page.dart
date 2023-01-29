@@ -8,7 +8,7 @@ import 'package:roll_slot_machine/roll_slot_controller.dart';
 import '../../components/floatingActionButton/random_portal_floating_action_button.dart';
 import '../../components/portal/portal_glyph_list.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/youtubersTilePresenter.dart';
+import '../../components/tilePresenters/youtubers_tile_presenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/NmsExternalUrls.dart';
 import '../../constants/Routes.dart';

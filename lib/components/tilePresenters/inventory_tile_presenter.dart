@@ -10,7 +10,7 @@ import '../../helpers/genericHelper.dart';
 
 import '../../pages/generic/genericPage.dart';
 import '../../pages/inventory/viewInventoryPage.dart';
-import 'requiredItemTilePresenter.dart';
+import 'required_item_tile_presenter.dart';
 
 Widget inventoryTilePresenter(
   BuildContext context,

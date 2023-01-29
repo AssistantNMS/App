@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
-import '../../components/tilePresenters/communityLinkTilePresenter.dart';
+import '../../components/tilePresenters/community_link_tile_presenter.dart';
 import '../../contracts/generated/communityLinkChipColourViewModel.dart';
 import '../../contracts/generated/communityLinkViewModel.dart';
 import '../../helpers/communityLinkHelper.dart';

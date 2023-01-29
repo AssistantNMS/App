@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/responsive_grid_view.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/menuItemTilePresenter.dart';
+import '../../components/tilePresenters/menu_item_tile_presenter.dart';
 import '../../helpers/catalogueHelper.dart';
 
 class CataloguePage extends StatelessWidget {

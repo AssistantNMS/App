@@ -5,11 +5,11 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/modalBottomSheet/share_modal_bottom_sheet.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/nutrientProcessorRecipeTilePresenter.dart';
-import '../../components/tilePresenters/rechargeTilePresenter.dart';
-import '../../components/tilePresenters/refinerRecipeTilePresenter.dart';
-import '../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
-import '../../components/tilePresenters/requiredItemTilePresenter.dart';
+import '../../components/tilePresenters/nutrient_processor_recipe_tile_presenter.dart';
+import '../../components/tilePresenters/recharge_tile_presenter.dart';
+import '../../components/tilePresenters/refiner_recipe_tile_presenter.dart';
+import '../../components/tilePresenters/required_item_details_tile_presenter.dart';
+import '../../components/tilePresenters/required_item_tile_presenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/NmsUIConstants.dart';
 import '../../constants/UsageKey.dart';

@@ -3,8 +3,8 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/common/image.dart';
-import '../../../components/tilePresenters/quicksilverStoreTilePresenter.dart';
-import '../../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
+import '../../../components/tilePresenters/quicksilver_store_tile_presenter.dart';
+import '../../../components/tilePresenters/required_item_details_tile_presenter.dart';
 import '../../../constants/AppImage.dart';
 import '../../../contracts/data/quicksilverStore.dart';
 import '../../../contracts/data/quicksilverStoreItem.dart';

@@ -3,7 +3,7 @@ import 'package:assistantnms_app/contracts/twitch/twitchCampaignReward.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../../components/tilePresenters/twitchTilePresenter.dart';
+import '../../../components/tilePresenters/twitch_tile_presenter.dart';
 import '../../../constants/AppImage.dart';
 import '../../../constants/Routes.dart';
 import '../../../contracts/twitch/twitchCampaignData.dart';

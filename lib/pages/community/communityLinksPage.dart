@@ -4,7 +4,7 @@ import 'package:assistantnms_app/constants/NmsExternalUrls.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/communityLinkTilePresenter.dart';
+import '../../components/tilePresenters/community_link_tile_presenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/generated/communityLinkMetaViewModel.dart';
 import '../../contracts/generated/communityLinkViewModel.dart';

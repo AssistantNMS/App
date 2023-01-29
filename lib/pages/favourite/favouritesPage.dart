@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
+import '../../components/tilePresenters/required_item_details_tile_presenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/IdPrefix.dart';
 import '../../contracts/favourite/favouriteItem.dart';

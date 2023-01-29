@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/friendCodeTilePresenter.dart';
+import '../../components/tilePresenters/friend_code_tile_presenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/generated/friendCodeViewModel.dart';
 import '../../integration/dependencyInjection.dart';

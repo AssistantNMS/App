@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_simple_treeview/flutter_simple_treeview.dart';
 import '../../contracts/enum/currencyType.dart';
 
-import '../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
+import '../../components/tilePresenters/required_item_details_tile_presenter.dart';
 import '../../contracts/requiredItemDetails.dart';
 import '../../contracts/requiredItemTreeDetails.dart';
 import '../../helpers/sortHelper.dart';

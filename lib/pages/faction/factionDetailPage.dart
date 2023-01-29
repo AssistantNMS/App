@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/factionTilePresenter.dart';
+import '../../components/tilePresenters/faction_tile_presenter.dart';
 import '../../constants/NmsUIConstants.dart';
 import '../../contracts/faction/faction.dart';
 import '../../contracts/faction/storedFactionMission.dart';

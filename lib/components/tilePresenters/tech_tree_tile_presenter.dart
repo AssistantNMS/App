@@ -3,7 +3,7 @@ import '../../contracts/enum/currencyType.dart';
 
 import '../../contracts/requiredItemDetails.dart';
 import '../../contracts/techTree/techTreeNode.dart';
-import 'requiredItemDetailsTilePresenter.dart';
+import 'required_item_details_tile_presenter.dart';
 
 const double itemPadding = 16.0;
 const Widget itemIcon = Icon(Icons.add_circle, size: 20);

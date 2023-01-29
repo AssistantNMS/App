@@ -2,12 +2,12 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/youtubersTilePresenter.dart';
+import '../../components/tilePresenters/youtubers_tile_presenter.dart';
 import '../../constants/AppImage.dart';
 import '../../contracts/redux/appState.dart';
 import '../../redux/modules/setting/newsPageViewModel.dart';
 
-import '../../components/tilePresenters/helloGamesTilePresenter.dart';
+import '../../components/tilePresenters/hello_games_tile_presenter.dart';
 import '../../contracts/helloGames/newsItem.dart';
 import '../../contracts/helloGames/releaseNote.dart';
 import '../../helpers/searchHelpers.dart';

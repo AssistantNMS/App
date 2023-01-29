@@ -5,7 +5,7 @@ import 'dart:async';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/tilePresenters/timerTilePresenter.dart';
+import '../../components/tilePresenters/timer_tile_presenter.dart';
 import '../../constants/AppDuration.dart';
 import '../../contracts/timer/timerItem.dart';
 import '../../integration/dependencyInjection.dart';

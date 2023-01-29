@@ -4,7 +4,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import '../../constants/Platforms.dart';
 
 import '../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../components/tilePresenters/settingTilePresenter.dart';
+import '../components/tilePresenters/setting_tile_presenter.dart';
 import '../constants/AnalyticsEvent.dart';
 import '../constants/Fonts.dart';
 import '../constants/HomepageItems.dart';

@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
-import '../../components/tilePresenters/youtubersTilePresenter.dart';
+import '../../components/tilePresenters/required_item_details_tile_presenter.dart';
+import '../../components/tilePresenters/youtubers_tile_presenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/requiredItem.dart';
 import '../../contracts/requiredItemDetails.dart';

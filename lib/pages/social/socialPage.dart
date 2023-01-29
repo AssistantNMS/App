@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/socialTilePresenter.dart';
+import '../../components/tilePresenters/social_tile_presenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/data/socialItem.dart';
 import '../../integration/dependencyInjection.dart';

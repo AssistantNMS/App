@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../../components/tilePresenters/starshipRewardTilePresenter.dart';
+import '../../../components/tilePresenters/starship_reward_tile_presenter.dart';
 import '../../../contracts/helloGames/starshipScrapDetailed.dart';
 
 class StarshipScrapDisplay extends StatefulWidget {

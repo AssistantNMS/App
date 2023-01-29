@@ -6,7 +6,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/tilePresenters/titleDataPresenter.dart';
+import '../../components/tilePresenters/title_data_presenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/redux/appState.dart';
 import '../../contracts/titleData.dart';

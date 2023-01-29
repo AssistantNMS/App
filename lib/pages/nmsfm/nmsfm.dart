@@ -5,7 +5,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/youtubersTilePresenter.dart';
+import '../../components/tilePresenters/youtubers_tile_presenter.dart';
 import '../../constants/AppAudio.dart';
 import '../../constants/AppDuration.dart';
 import '../../constants/AppImage.dart';

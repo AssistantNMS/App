@@ -4,7 +4,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
+import '../../components/tilePresenters/required_item_details_tile_presenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/enum/currencyType.dart';
 import '../../contracts/genericPageAllRequired.dart';

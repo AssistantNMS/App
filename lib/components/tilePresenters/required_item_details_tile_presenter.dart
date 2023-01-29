@@ -11,7 +11,7 @@ import '../../helpers/itemsHelper.dart';
 import '../../helpers/themeHelper.dart';
 import '../../pages/generic/genericPage.dart';
 import '../../pages/generic/genericPageProcessorRecipe.dart';
-import 'processorRecipeTilePresentor.dart';
+import 'processor_recipe_tile_presentor.dart';
 
 const double itemPadding = 16.0;
 

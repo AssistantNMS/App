@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:intro_slider/intro_slider.dart';
 
-import '../../components/tilePresenters/youtubersTilePresenter.dart';
+import '../../components/tilePresenters/youtubers_tile_presenter.dart';
 import '../../constants/AppImage.dart';
 
 class NomNomInventorySyncTutorial extends StatelessWidget {

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/responsive_grid_view.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/timerTilePresenter.dart';
+import '../../components/tilePresenters/timer_tile_presenter.dart';
 import '../../constants/UserSelectionIcons.dart';
 import '../../contracts/timer/timerItem.dart';
 import '../../helpers/actionHelper.dart';

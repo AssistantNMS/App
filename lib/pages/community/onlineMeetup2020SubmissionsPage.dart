@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/onlineMeetup2020SubmissionTilePresenter.dart';
+import '../../components/tilePresenters/online_meetup2020_submission_tile_presenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/generated/onlineMeetup2020SubmissionViewModel.dart';
 import '../../integration/dependencyInjection.dart';

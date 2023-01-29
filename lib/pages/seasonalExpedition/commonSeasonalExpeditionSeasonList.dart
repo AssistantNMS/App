@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
 import 'seasonExpeditionConstants.dart';
 
-import '../../components/tilePresenters/seasonalExpeditionTilePresenter.dart';
+import '../../components/tilePresenters/seasonal_expedition_tile_presenter.dart';
 import '../../constants/AppImage.dart';
 import '../../contracts/generated/expeditionViewModel.dart';
 import '../../integration/dependencyInjection.dart';

@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/helloGamesTilePresenter.dart';
+import '../../components/tilePresenters/hello_games_tile_presenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/helloGames/newsItem.dart';
 import '../../helpers/searchHelpers.dart';

@@ -5,9 +5,9 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/common/row_helper.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/asyncSettingTilePresenter.dart';
-import '../../components/tilePresenters/settingTilePresenter.dart';
-import '../../components/tilePresenters/youtubersTilePresenter.dart';
+import '../../components/tilePresenters/async_setting_tile_presenter.dart';
+import '../../components/tilePresenters/setting_tile_presenter.dart';
+import '../../components/tilePresenters/youtubers_tile_presenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/GoogleDrive.dart';
 import '../../contracts/redux/appState.dart';

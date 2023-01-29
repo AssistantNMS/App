@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../contracts/misc/segmentViewItem.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../components/tilePresenters/contributorTilePresenter.dart';
-import '../../components/tilePresenters/translatorTilePresenter.dart';
+import '../../components/tilePresenters/contributor_tile_presenter.dart';
+import '../../components/tilePresenters/translator_tile_presenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/generated/contributorViewModel.dart';
 import '../../integration/dependencyInjection.dart';

@@ -9,7 +9,7 @@ import '../../contracts/requiredItemDetails.dart';
 
 import '../../helpers/itemsHelper.dart';
 
-import 'genericTilePresenter.dart';
+import 'generic_tile_presenter.dart';
 
 // Widget Function(BuildContext context,
 //     Processor processor,

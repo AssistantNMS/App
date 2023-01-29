@@ -10,7 +10,7 @@ import '../../contracts/requiredItemDetails.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionReward.dart';
 import '../../helpers/itemsHelper.dart';
 import '../../redux/modules/expedition/expeditionViewModel.dart';
-import '../tilePresenters/seasonalExpeditionRewardDetailsTilePresenter.dart';
+import '../tilePresenters/seasonal_expedition_reward_details_tile_presenter.dart';
 
 class ExpeditionRewardsListModalBottomSheet extends StatefulWidget {
   final String milestoneId;
