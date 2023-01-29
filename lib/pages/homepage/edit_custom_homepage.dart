@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:reorderables/reorderables.dart';
 
 import '../../contracts/misc/custom_menu.dart';
-import 'customHomepageComponents.dart';
+import 'custom_homepage_components.dart';
 
 class EditCustomHomepage extends StatefulWidget {
   final List<CustomMenu> _menuOptions;

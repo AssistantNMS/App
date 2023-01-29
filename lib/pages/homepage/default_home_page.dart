@@ -6,7 +6,7 @@ import '../../components/adaptive/home_page_app_bar.dart';
 import '../../components/drawer.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../helpers/update_helper.dart';
-import 'allItemsPageComponent.dart';
+import 'all_items_page_component.dart';
 
 class DefaultHomePage extends StatefulWidget {
   const DefaultHomePage({Key? key}) : super(key: key);

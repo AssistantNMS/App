@@ -11,8 +11,8 @@ import '../../contracts/misc/custom_menu.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/update_helper.dart';
 import '../../redux/modules/setting/customMenuViewModel.dart';
-import 'editCustomHomepage.dart';
-import 'viewCustomHomepage.dart';
+import 'edit_custom_homepage.dart';
+import 'view_custom_homepage.dart';
 
 class CustomHomepage extends StatefulWidget {
   CustomHomepage({Key? key}) : super(key: key) {

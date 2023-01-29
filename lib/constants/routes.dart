@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../pages/homepage/allItemsPage.dart';
+import '../../pages/homepage/all_items_page.dart';
 import '../pages/alienPuzzles/alien_puzzles_menu_page.dart';
 import '../pages/cart_page.dart';
 import '../pages/catalogue/catalogue_page.dart';
@@ -23,9 +23,9 @@ import '../pages/helloGames/news_page.dart.dart';
 import '../pages/helloGames/release_notes_page.dart';
 import '../pages/helloGames/twitch/twitch_campaign_page.dart';
 import '../pages/helloGames/weekendMission/weekend_mission_menu_page.dart';
-import '../pages/homepage/catalogueHomepage.dart';
-import '../pages/homepage/customHomepage.dart';
-import '../pages/homepage/defaultHomePage.dart';
+import '../pages/homepage/catalogue_homepage.dart';
+import '../pages/homepage/custom_homepage.dart';
+import '../pages/homepage/default_home_page.dart';
 import '../pages/inventory/inventoryListPage.dart';
 import '../pages/ios/appleMenu.dart';
 import '../pages/language.dart';

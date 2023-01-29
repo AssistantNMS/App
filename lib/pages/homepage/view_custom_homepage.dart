@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/responsive_grid_view.dart';
 import '../../contracts/misc/custom_menu.dart';
-import 'customHomepageComponents.dart';
+import 'custom_homepage_components.dart';
 
 class ViewCustomHomepage extends StatelessWidget {
   final List<CustomMenu> _menuItems;
