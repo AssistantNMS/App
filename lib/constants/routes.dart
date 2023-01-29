@@ -48,8 +48,8 @@ import '../pages/sync/sync_page.dart';
 import '../pages/techTree/unlockable_tech_tree_page.dart';
 import '../pages/timer/timer_page.dart';
 import '../pages/title/title_page.dart';
-import '../pages/tutorial/nomNomInventorySyncTutorial.dart';
-import '../pages/whatIsNew/enhancedWhatIsNewPage.dart';
+import '../pages/tutorial/nom_nom_inventory_sync_tutorial.dart';
+import '../pages/whatIsNew/enhanced_what_is_new_page.dart';
 import 'analytics_event.dart';
 
 class Routes {
