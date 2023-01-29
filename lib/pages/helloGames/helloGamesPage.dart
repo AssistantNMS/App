@@ -3,7 +3,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
 import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 
-import '../../components/responsiveGridView.dart';
+import '../../components/responsive_grid_view.dart';
 import '../../components/tilePresenters/menuItemTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/AppImage.dart';

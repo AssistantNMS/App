@@ -3,7 +3,7 @@ import 'package:ff_stars/ff_stars.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/common/image.dart';
-import '../../components/expeditionAlphabetTranslation.dart';
+import '../../components/expedition_alphabet_translation.dart';
 import '../../components/tilePresenters/creatureHarvestTilePresenter.dart';
 import '../../components/tilePresenters/eggTraitTilePresenter.dart';
 import '../../components/tilePresenters/inventoryTilePresenter.dart';

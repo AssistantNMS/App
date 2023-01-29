@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/adaptive/home_page_app_bar.dart';
 import '../../components/drawer.dart';
-import '../../components/responsiveGridView.dart';
+import '../../components/responsive_grid_view.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/menuItemTilePresenter.dart';
 import '../../helpers/catalogueHelper.dart';

@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import '../../integration/dependencyInjection.dart';
 
-import '../../components/responsiveGridView.dart';
+import '../../components/responsive_grid_view.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 
 class UnusedPatchImagesPage extends StatelessWidget {

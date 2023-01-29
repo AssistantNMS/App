@@ -4,7 +4,7 @@ import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/cupertino.dart' show ObstructingPreferredSizeWidget;
 import 'package:flutter/material.dart';
 
-import '../windowsButtons.dart';
+import '../windows_buttons.dart';
 
 class WindowTitleBar extends StatelessWidget
     implements PreferredSizeWidget, ObstructingPreferredSizeWidget {
