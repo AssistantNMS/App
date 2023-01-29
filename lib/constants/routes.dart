@@ -40,7 +40,7 @@ import '../pages/portal/portals_page.dart';
 import '../pages/power/solar_panel_calc_page.dart';
 import '../pages/seasonalExpedition/seasonal_expedition_season_list_page.dart';
 import '../pages/settings.dart';
-import '../pages/social/socialPage.dart';
+import '../pages/social/social_page.dart';
 import '../pages/special/intro.dart';
 import '../pages/special/onlineMeetup2020.dart';
 import '../pages/special/valentines/valentines2021.dart';
