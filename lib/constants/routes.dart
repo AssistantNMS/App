@@ -45,7 +45,7 @@ import '../pages/special/intro.dart';
 import '../pages/special/online_meetup2020.dart';
 import '../pages/special/valentines/valentines2021.dart';
 import '../pages/sync/sync_page.dart';
-import '../pages/techTree/unlockableTechTreePage.dart';
+import '../pages/techTree/unlockable_tech_tree_page.dart';
 import '../pages/timer/timerPage.dart';
 import '../pages/title/titlePage.dart';
 import '../pages/tutorial/nomNomInventorySyncTutorial.dart';

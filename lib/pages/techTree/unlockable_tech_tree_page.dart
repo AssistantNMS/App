@@ -5,7 +5,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/techTree/unlockable_tech_tree.dart';
 import '../../integration/dependency_injection.dart';
-import 'unlockableTechTreeComponents.dart';
+import 'unlockable_tech_tree_components.dart';
 
 class UnlockableTechTreePage extends StatelessWidget {
   UnlockableTechTreePage({Key? key}) : super(key: key) {
