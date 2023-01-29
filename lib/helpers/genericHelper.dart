@@ -14,7 +14,7 @@ import '../components/tilePresenters/required_item_tile_presenter.dart';
 import '../constants/app_duration.dart';
 import '../constants/app_image.dart';
 import '../constants/id_prefix.dart';
-import '../contracts/data/platformControlMapping.dart';
+import '../contracts/data/platform_control_mapping.dart';
 import '../contracts/favourite/favouriteItem.dart';
 import '../contracts/generic_page_item.dart';
 import '../pages/generic/genericPageDescripHighlightText.dart';

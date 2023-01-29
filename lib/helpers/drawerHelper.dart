@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../contracts/data/generatedMeta.dart';
+import '../contracts/data/generated_meta.dart';
 import '../integration/dependencyInjection.dart';
 
 import '../components/modalBottomSheet/update_modal_bottom_sheet.dart';

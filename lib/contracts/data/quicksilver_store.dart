@@ -7,7 +7,7 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/helpers/jsonHelper.dart';
 
-import './quicksilverStoreItem.dart';
+import './quicksilver_store_item.dart';
 
 class QuicksilverStore {
   int missionId;

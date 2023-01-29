@@ -3,7 +3,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
-import '../../contracts/data/platformControlMapping.dart';
+import '../../contracts/data/platform_control_mapping.dart';
 import '../../helpers/themeHelper.dart';
 
 const String paleYellowColourClass = 'C9D68B';

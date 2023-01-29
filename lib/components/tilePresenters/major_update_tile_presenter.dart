@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/nms_ui_constants.dart';
-import '../../contracts/data/majorUpdateItem.dart';
+import '../../contracts/data/major_update_item.dart';
 import '../../pages/newItemsInUpdate/majorUpdatesDetailPage.dart';
 
 Widget majorUpdateTilePresenter(

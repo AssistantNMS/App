@@ -8,7 +8,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../../constants/analytics_event.dart';
-import '../../../contracts/data/starshipScrap.dart';
+import '../../../contracts/data/starship_scrap.dart';
 import '../../../contracts/helloGames/starshipScrapDetailed.dart';
 import '../../../contracts/redux/appState.dart';
 import '../../../contracts/required_item_details.dart';

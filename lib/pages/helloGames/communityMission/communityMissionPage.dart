@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../../constants/analytics_event.dart';
-import '../../../contracts/data/quicksilverStore.dart';
+import '../../../contracts/data/quicksilver_store.dart';
 import '../../../contracts/enum/community_mission_status.dart';
 import '../../../contracts/helloGames/communityMission.dart';
 import '../../../contracts/helloGames/communityMissionPageData.dart';

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../constants/analytics_event.dart';
-import '../../contracts/data/updateItemDetail.dart';
+import '../../contracts/data/update_item_detail.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/futureHelper.dart';
 import '../../redux/modules/setting/whatIsNewSettingsViewModel.dart';

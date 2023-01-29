@@ -1,4 +1,4 @@
-import '../data/quicksilverStore.dart';
+import '../data/quicksilver_store.dart';
 import '../required_item_details.dart';
 
 class QuicksilverStoreDetails {

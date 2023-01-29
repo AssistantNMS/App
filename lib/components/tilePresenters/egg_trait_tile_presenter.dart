@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
-import '../../contracts/data/eggTrait.dart';
+import '../../contracts/data/egg_trait.dart';
 
 Widget eggTraitTilePresenter(BuildContext context, EggTrait eggTrait) {
   return genericListTileWithSubtitleAndImageCount(

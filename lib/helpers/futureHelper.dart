@@ -1,16 +1,16 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/constants/usage_key.dart';
-import 'package:assistantnms_app/contracts/data/alphabetTranslation.dart';
-import 'package:assistantnms_app/contracts/data/majorUpdateItem.dart';
-import 'package:assistantnms_app/contracts/data/starshipScrap.dart';
+import 'package:assistantnms_app/contracts/data/alphabet_translation.dart';
+import 'package:assistantnms_app/contracts/data/major_update_item.dart';
+import 'package:assistantnms_app/contracts/data/starship_scrap.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/id_prefix.dart';
 import '../contracts/creature/creature_harvest.dart';
-import '../contracts/data/eggTrait.dart';
-import '../contracts/data/platformControlMapping.dart';
-import '../contracts/data/quicksilverStore.dart';
-import '../contracts/data/updateItemDetail.dart';
+import '../contracts/data/egg_trait.dart';
+import '../contracts/data/platform_control_mapping.dart';
+import '../contracts/data/quicksilver_store.dart';
+import '../contracts/data/update_item_detail.dart';
 import '../contracts/enum/currencyType.dart';
 import '../contracts/generic_page_item.dart';
 import '../contracts/helloGames/quickSilverStoreDetails.dart';

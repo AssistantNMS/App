@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/social_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
-import '../../contracts/data/socialItem.dart';
+import '../../contracts/data/social_item.dart';
 import '../../integration/dependencyInjection.dart';
 
 class SocialPage extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../contracts/data/updateItemDetail.dart';
+import '../../contracts/data/update_item_detail.dart';
 
 import '../../pages/newItemsInUpdate/newItemDetailsPage.dart';
 

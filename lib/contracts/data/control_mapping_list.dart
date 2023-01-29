@@ -6,7 +6,7 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/helpers/jsonHelper.dart';
 
-import './platformControlMapping.dart';
+import './platform_control_mapping.dart';
 
 class ControlMappingList {
   ControlMappingList({

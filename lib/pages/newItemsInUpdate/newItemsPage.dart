@@ -5,7 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import '../../components/drawer.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/update_new_items_tile_presenter.dart';
-import '../../contracts/data/updateItemDetail.dart';
+import '../../contracts/data/update_item_detail.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/futureHelper.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';

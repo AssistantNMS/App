@@ -7,7 +7,7 @@ import '../../components/modalBottomSheet/patreon_modal_bottom_sheet.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/major_update_tile_presenter.dart';
 import '../../constants/Patreon.dart';
-import '../../contracts/data/majorUpdateItem.dart';
+import '../../contracts/data/major_update_item.dart';
 import '../../contracts/redux/appState.dart';
 import '../../redux/modules/setting/isPatreonViewModel.dart';
 import 'majorUpdatesSpeculationPage.dart';
