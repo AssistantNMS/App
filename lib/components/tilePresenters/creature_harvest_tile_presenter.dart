@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
 import '../../constants/nms_ui_constants.dart';
-import '../../contracts/creature/creatureHarvest.dart';
+import '../../contracts/creature/creature_harvest.dart';
 
 Widget creatureHarvestTilePresenter(
   BuildContext context,

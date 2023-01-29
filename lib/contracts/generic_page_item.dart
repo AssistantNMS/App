@@ -1,5 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/contracts/creature/creatureHarvest.dart';
+import 'package:assistantnms_app/contracts/creature/creature_harvest.dart';
 import 'package:assistantnms_app/contracts/data/starshipScrap.dart';
 
 import 'data/majorUpdateItem.dart';

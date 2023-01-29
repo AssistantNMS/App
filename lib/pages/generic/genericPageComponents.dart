@@ -20,7 +20,7 @@ import '../../constants/routes.dart';
 import '../../constants/usage_key.dart';
 import '../../contracts/cart/cart_item.dart';
 import '../../contracts/charge_by.dart';
-import '../../contracts/creature/creatureHarvest.dart';
+import '../../contracts/creature/creature_harvest.dart';
 import '../../contracts/data/eggTrait.dart';
 import '../../contracts/data/majorUpdateItem.dart';
 import '../../contracts/data/starshipScrap.dart';

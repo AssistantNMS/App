@@ -6,7 +6,7 @@ import 'package:assistantnms_app/contracts/data/starshipScrap.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/id_prefix.dart';
-import '../contracts/creature/creatureHarvest.dart';
+import '../contracts/creature/creature_harvest.dart';
 import '../contracts/data/eggTrait.dart';
 import '../contracts/data/platformControlMapping.dart';
 import '../contracts/data/quicksilverStore.dart';
