@@ -2,8 +2,8 @@
 //
 //     final communityLinkViewModel = communityLinkViewModelFromMap(jsonString);
 
-import 'communityLinkChipColourViewModel.dart';
-import 'communityLinkViewModel.dart';
+import 'community_link_chip_colour_view_model.dart';
+import 'community_link_view_model.dart';
 
 class CommunityLinkMetaViewModel {
   CommunityLinkMetaViewModel({

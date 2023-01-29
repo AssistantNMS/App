@@ -10,7 +10,7 @@ import '../../constants/app_image.dart';
 import '../../constants/Modal.dart';
 import '../../constants/routes.dart';
 import '../../constants/nms_ui_constants.dart';
-import '../../contracts/generated/nomNomInventoryViewModel.dart';
+import '../../contracts/generated/nom_nom_inventory_view_model.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';
 import '../../contracts/redux/appState.dart';

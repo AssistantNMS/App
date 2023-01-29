@@ -11,7 +11,7 @@ import '../../../components/common/image.dart';
 import '../../../components/portal/portal_glyph_list.dart';
 import '../../../components/tilePresenters/required_item_details_tile_presenter.dart';
 import '../../../components/tilePresenters/youtubers_tile_presenter.dart';
-import '../../../contracts/generated/weekendMissionViewModel.dart';
+import '../../../contracts/generated/weekend_mission_view_model.dart';
 import '../../../contracts/redux/appState.dart';
 import '../../../contracts/required_item_details.dart';
 import '../../../contracts/weekend_mission.dart';

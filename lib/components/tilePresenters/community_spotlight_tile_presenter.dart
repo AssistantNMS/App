@@ -3,7 +3,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../contracts/generated/communitySpotlightViewModel.dart';
+import '../../contracts/generated/community_spotlight_view_model.dart';
 
 Widget communitySpotlightTilePresenter(
   BuildContext context,

@@ -11,7 +11,7 @@ import '../../contracts/redux/appState.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionPhase.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
 import '../../integration/dependencyInjection.dart';
-import '../../redux/modules/expedition/expeditionViewModel.dart';
+import '../../redux/modules/expedition/expedition_view_model.dart';
 
 class SeasonalExpeditionPhaseListPage extends StatelessWidget {
   final String seasonId;

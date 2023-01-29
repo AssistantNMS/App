@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/online_meetup2020_submission_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
-import '../../contracts/generated/onlineMeetup2020SubmissionViewModel.dart';
+import '../../contracts/generated/online_meetup2020_submission_view_model.dart';
 import '../../integration/dependencyInjection.dart';
 
 class OnlineMeetup2020SubmissionsPage extends StatelessWidget {

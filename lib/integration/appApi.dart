@@ -4,10 +4,10 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../constants/api_urls.dart';
 import '../constants/app_config.dart';
-import '../contracts/generated/addFriendCodeViewModel.dart';
-import '../contracts/generated/friendCodeViewModel.dart';
-import '../contracts/generated/nomNomInventoryViewModel.dart';
-import '../contracts/generated/stripeDonationViewModel.dart';
+import '../contracts/generated/add_friend_code_view_model.dart';
+import '../contracts/generated/friend_code_view_model.dart';
+import '../contracts/generated/nom_nom_inventory_view_model.dart';
+import '../contracts/generated/stripe_donation_view_model.dart';
 import '../contracts/nmsfm/nmsfmTrackData.dart';
 import 'dependencyInjection.dart';
 

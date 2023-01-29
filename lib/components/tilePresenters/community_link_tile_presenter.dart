@@ -1,8 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../contracts/generated/communityLinkChipColourViewModel.dart';
-import '../../contracts/generated/communityLinkViewModel.dart';
+import '../../contracts/generated/community_link_chip_colour_view_model.dart';
+import '../../contracts/generated/community_link_view_model.dart';
 import '../../helpers/communityLinkHelper.dart';
 import '../../pages/community/communityLinksDetailsPage.dart';
 

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/community_spotlight_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
-import '../../contracts/generated/communitySpotlightViewModel.dart';
+import '../../contracts/generated/community_spotlight_view_model.dart';
 import '../../integration/dependencyInjection.dart';
 
 class CommunitySpotlightPage extends StatelessWidget {

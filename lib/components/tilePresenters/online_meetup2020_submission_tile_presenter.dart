@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../contracts/generated/onlineMeetup2020SubmissionViewModel.dart';
+import '../../contracts/generated/online_meetup2020_submission_view_model.dart';
 
 Widget onlineMeetup2020SubmissionTilePresenter(
     BuildContext context, OnlineMeetup2020SubmissionViewModel submission,

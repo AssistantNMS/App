@@ -6,7 +6,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/contributor_tile_presenter.dart';
 import '../../components/tilePresenters/translator_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
-import '../../contracts/generated/contributorViewModel.dart';
+import '../../contracts/generated/contributor_view_model.dart';
 import '../../integration/dependencyInjection.dart';
 
 class ContributorsPage extends StatefulWidget {

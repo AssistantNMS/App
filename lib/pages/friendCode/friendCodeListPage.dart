@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/friend_code_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
-import '../../contracts/generated/friendCodeViewModel.dart';
+import '../../contracts/generated/friend_code_view_model.dart';
 import '../../integration/dependencyInjection.dart';
 import 'addFriendCodePage.dart';
 

@@ -4,7 +4,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../contracts/generated/friendCodeViewModel.dart';
+import '../../contracts/generated/friend_code_view_model.dart';
 
 Widget friendCodeTilePresenter(BuildContext context,
     BuildContext scaffoldContext, FriendCodeViewModel friendCode) {

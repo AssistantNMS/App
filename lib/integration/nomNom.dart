@@ -1,4 +1,4 @@
-import '../contracts/generated/nomNomInventoryViewModel.dart';
+import '../contracts/generated/nom_nom_inventory_view_model.dart';
 
 String getInventoryIconsFromNomNomType(NomNomInventoryViewModel apiInv) {
   if (apiInv.type == NomNomInventoryType.exosuit) return 'special0.png';

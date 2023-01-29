@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../../constants/api_urls.dart';
-import '../../contracts/generated/guideMetaViewModel.dart';
+import '../../contracts/generated/guide_meta_view_model.dart';
 import '../../integration/dependencyInjection.dart';
 
 class GuideApiService extends BaseApiService {

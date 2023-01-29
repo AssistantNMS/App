@@ -3,12 +3,12 @@ import 'dart:convert';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../../constants/api_urls.dart';
-import '../../contracts/generated/communityLinkChipColourViewModel.dart';
-import '../../contracts/generated/communityLinkMetaViewModel.dart';
-import '../../contracts/generated/communityLinkViewModel.dart';
-import '../../contracts/generated/communityMissionProgressItemViewModel.dart';
-import '../../contracts/generated/communitySpotlightViewModel.dart';
-import '../../contracts/generated/onlineMeetup2020SubmissionViewModel.dart';
+import '../../contracts/generated/community_link_chip_colour_view_model.dart';
+import '../../contracts/generated/community_link_meta_view_model.dart';
+import '../../contracts/generated/community_link_view_model.dart';
+import '../../contracts/generated/community_mission_progress_item_view_model.dart';
+import '../../contracts/generated/community_spotlight_view_model.dart';
+import '../../contracts/generated/online_meetup2020_submission_view_model.dart';
 import '../../integration/dependencyInjection.dart';
 
 class CommunityApiService extends BaseApiService {

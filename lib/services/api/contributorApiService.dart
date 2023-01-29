@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../../constants/api_urls.dart';
-import '../../contracts/generated/contributorViewModel.dart';
+import '../../contracts/generated/contributor_view_model.dart';
 import '../../integration/dependencyInjection.dart';
 
 class ContributorApiService extends BaseApiService {

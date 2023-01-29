@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../contracts/generated/contributorViewModel.dart';
+import '../../contracts/generated/contributor_view_model.dart';
 
 Widget contributorTilePresenter(
   BuildContext context,

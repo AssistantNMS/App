@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/nms_ui_constants.dart';
-import '../../contracts/generated/expeditionViewModel.dart' as expedition_api;
+import '../../contracts/generated/expedition_view_model.dart' as expedition_api;
 import '../../contracts/seasonalExpedition/expeditionMilestoneType.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionMilestone.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionPhase.dart';
@@ -12,7 +12,7 @@ import '../../integration/dependencyInjection.dart';
 import '../../pages/generic/genericPageDescripHighlightText.dart';
 import '../../pages/seasonalExpedition/seasonalExpeditionDetailPage.dart';
 import '../../pages/seasonalExpedition/seasonalExpeditionPhaseListPage.dart';
-import '../../redux/modules/expedition/expeditionViewModel.dart';
+import '../../redux/modules/expedition/expedition_view_model.dart';
 import '../modalBottomSheet/expedition_rewards_list_modal_bottom_sheet.dart';
 import '../portal/portal_glyph_list.dart';
 

@@ -8,7 +8,7 @@ import '../../components/tilePresenters/seasonal_expedition_tile_presenter.dart'
 import '../../contracts/redux/appState.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionMilestone.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionPhase.dart';
-import '../../redux/modules/expedition/expeditionViewModel.dart';
+import '../../redux/modules/expedition/expedition_view_model.dart';
 
 class SeasonalExpeditionDetailPage extends StatelessWidget {
   final SeasonalExpeditionPhase seasonalExpeditionPhase;

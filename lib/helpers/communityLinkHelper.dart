@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../constants/nms_external_urls.dart';
-import '../contracts/generated/communityLinkChipColourViewModel.dart';
+import '../contracts/generated/community_link_chip_colour_view_model.dart';
 
 String handleCommunitySearchIcon(String icon) {
   String imageUrl = icon;

@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
-import '../../contracts/generated/expeditionViewModel.dart';
+import '../../contracts/generated/expedition_view_model.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
 
 String getBackgroundForExpedition(String seasId) {

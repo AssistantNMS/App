@@ -5,7 +5,7 @@ import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../../constants/analytics_event.dart';
 import '../../../constants/app_image.dart';
 import '../../../constants/routes.dart';
-import '../../../contracts/generated/weekendMissionViewModel.dart';
+import '../../../contracts/generated/weekend_mission_view_model.dart';
 import '../../../contracts/weekend_stage_page_item.dart';
 import '../../../helpers/futureHelper.dart';
 import '../../../integration/dependencyInjection.dart';
