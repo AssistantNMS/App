@@ -1,4 +1,4 @@
-import 'package:assistantapps_flutter_common/integration/dependency_injection.dart';
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 class FabItem {

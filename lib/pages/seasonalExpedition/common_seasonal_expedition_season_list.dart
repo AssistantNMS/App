@@ -1,15 +1,15 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../contracts/seasonalExpedition/seasonal_expedition_season.dart';
-import 'season_expedition_constants.dart';
 
 import '../../components/tilePresenters/seasonal_expedition_tile_presenter.dart';
 import '../../constants/app_image.dart';
 import '../../contracts/generated/expedition_view_model.dart';
+import '../../contracts/seasonalExpedition/seasonal_expedition_season.dart';
 import '../../integration/dependency_injection.dart';
 import '../../redux/modules/setting/is_patreon_view_model.dart';
-import 'unused_patch_images.dart';
+import 'season_expedition_constants.dart';
 import 'seasonal_expedition_phase_list_page.dart';
+import 'unused_patch_images.dart';
 
 const double tileHeight = 175;
 const double smallTileHeight = 150;
