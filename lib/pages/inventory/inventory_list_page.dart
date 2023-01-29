@@ -12,9 +12,9 @@ import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventory_order_by_type.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../redux/modules/inventory/inventoryListViewModel.dart';
-import 'addEditInventoryPage.dart';
-import 'searchAllInventoriesPage.dart';
-import 'viewInventoryPage.dart';
+import 'add_edit_inventory_page.dart';
+import 'search_all_inventories_page.dart';
+import 'view_inventory_page.dart';
 
 class InventoryListPage extends StatefulWidget {
   const InventoryListPage({Key? key}) : super(key: key);

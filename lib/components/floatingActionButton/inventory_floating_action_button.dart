@@ -3,7 +3,7 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../../contracts/generic_page_item.dart';
-import '../../pages/inventory/addInventorySlotPage.dart';
+import '../../pages/inventory/add_inventory_slot_page.dart';
 
 Widget inventoryFloatingActionButton(
   BuildContext context,

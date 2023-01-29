@@ -26,7 +26,7 @@ import '../pages/helloGames/weekendMission/weekend_mission_menu_page.dart';
 import '../pages/homepage/catalogue_homepage.dart';
 import '../pages/homepage/custom_homepage.dart';
 import '../pages/homepage/default_home_page.dart';
-import '../pages/inventory/inventoryListPage.dart';
+import '../pages/inventory/inventory_list_page.dart';
 import '../pages/ios/appleMenu.dart';
 import '../pages/language.dart';
 import '../pages/misc/retiredDrawerMenuPage.dart';
