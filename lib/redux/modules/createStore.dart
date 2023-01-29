@@ -6,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../constants/app_config.dart';
 import '../../contracts/redux/app_state.dart';
-import '../middleware/localStorageMiddleware.dart';
+import '../middleware/local_storage_middleware.dart';
 import 'appReducer.dart';
 
 Future<Store<AppState>> createStore() async {
