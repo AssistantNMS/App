@@ -8,7 +8,7 @@ import '../pages/catalogue/catalogue_page.dart';
 import '../pages/community/community_links_page.dart';
 import '../pages/community/community_spotlight_page.dart';
 import '../pages/community/online_meetup2020_submissions_page.dart';
-import '../pages/contributors/contributorsPage.dart';
+import '../pages/contributors/contributors_page.dart';
 import '../pages/donation.dart';
 import '../pages/faction/factionListPage.dart';
 import '../pages/faction/journey_milestone.dart';
