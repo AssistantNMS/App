@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 import '../../constants/app_duration.dart';
 import '../../constants/Modal.dart';
-import '../../contracts/journey/journeyMilestone.dart';
-import '../../contracts/journey/journeyMilestoneStat.dart';
-import '../../contracts/journey/storedJourneyMilestone.dart';
+import '../../contracts/journey/journey_milestone.dart';
+import '../../contracts/journey/journey_milestone_stat.dart';
+import '../../contracts/journey/stored_journey_milestone.dart';
 import '../../redux/modules/journeyMilestone/journeyMilestoneViewModel.dart';
 
 class JourneyMilestoneBottomSheet extends StatelessWidget {
