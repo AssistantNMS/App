@@ -3,7 +3,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../../components/common/prevAndNextPagination.dart';
+import '../../../components/common/prev_and_next_pagination.dart';
 import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../../contracts/enum/community_mission_status.dart';
 import 'communityMissionRewards.dart';

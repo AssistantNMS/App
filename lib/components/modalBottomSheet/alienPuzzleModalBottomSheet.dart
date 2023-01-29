@@ -9,7 +9,7 @@ import '../../contracts/alienPuzzle/alienPuzzleReward.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../pages/alienPuzzles/alienPuzzlesRewardPage.dart';
 import '../../pages/generic/genericPageDescripHighlightText.dart';
-import '../common/chatBubble.dart';
+import '../common/chat_bubble.dart';
 import '../tilePresenters/alienPuzzleRewardOddsTilePresenter.dart';
 
 class AlienPuzzleModalBottomSheet extends StatefulWidget {

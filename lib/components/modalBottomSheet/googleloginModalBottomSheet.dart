@@ -7,7 +7,7 @@ import '../../constants/Modal.dart';
 import '../../constants/StorageKey.dart';
 import '../../contracts/auth/googleLoginModel.dart';
 import '../../integration/dependencyInjection.dart';
-import '../common/rowHelper.dart';
+import '../common/row_helper.dart';
 import '../tilePresenters/settingTilePresenter.dart';
 
 class GoogleLoginBottomSheet extends StatefulWidget {

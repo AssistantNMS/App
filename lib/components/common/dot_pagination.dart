@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import './prevAndNextPagination.dart';
+import './prev_and_next_pagination.dart';
 
 Widget dotPagination(
   BuildContext context, {

@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import 'rowHelper.dart';
+import 'row_helper.dart';
 
 Widget prevAndNextPagination(
   BuildContext context, {

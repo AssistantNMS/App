@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:swipe_to/swipe_to.dart';
 
-import '../../../components/common/dotPagination.dart';
+import '../../../components/common/dot_pagination.dart';
 import '../../../components/common/image.dart';
 import '../../../components/portal/portalGlyphList.dart';
 import '../../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';

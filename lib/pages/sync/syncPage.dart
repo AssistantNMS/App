@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/common/rowHelper.dart';
+import '../../components/common/row_helper.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/asyncSettingTilePresenter.dart';
 import '../../components/tilePresenters/settingTilePresenter.dart';

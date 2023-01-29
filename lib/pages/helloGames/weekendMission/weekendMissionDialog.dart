@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../../../constants/AppDuration.dart';
 import '../../../constants/Modal.dart';
 
-import '../../../components/common/chatBubble.dart';
+import '../../../components/common/chat_bubble.dart';
 import '../../../contracts/weekendMission.dart';
 
 class WeekendMissionDialogPage extends StatefulWidget {
