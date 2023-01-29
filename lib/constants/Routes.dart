@@ -11,7 +11,7 @@ import '../pages/community/onlineMeetup2020SubmissionsPage.dart';
 import '../pages/contributors/contributorsPage.dart';
 import '../pages/donation.dart';
 import '../pages/faction/factionListPage.dart';
-import '../pages/faction/journey_milestone.dart';
+import '../pages/faction/journeyMilestone.dart';
 import '../pages/favourite/favouritesPage.dart';
 import '../pages/friendCode/friendCodeListPage.dart';
 import '../pages/guide/assistantAppsGuidesPage.dart';

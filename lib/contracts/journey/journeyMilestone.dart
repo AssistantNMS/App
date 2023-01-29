@@ -6,7 +6,7 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'journey_milestone_stat.dart';
+import 'journeyMilestoneStat.dart';
 
 class JourneyMilestone {
   JourneyMilestone({

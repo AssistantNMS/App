@@ -1,6 +1,6 @@
 import 'package:redux/redux.dart';
 
-import '../../../contracts/journey/stored_journey_milestone.dart';
+import '../../../contracts/journey/storedJourneyMilestone.dart';
 import '../../../contracts/redux/appState.dart';
 import 'actions.dart';
 import 'selector.dart';

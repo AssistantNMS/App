@@ -1,6 +1,6 @@
 import 'package:assistantnms_app/contracts/faction/stored_faction_mission.dart';
 
-import '../../../contracts/journey/stored_journey_milestone.dart';
+import '../../../contracts/journey/storedJourneyMilestone.dart';
 import 'package:redux/redux.dart';
 
 import '../../../contracts/redux/journeyMilestoneState.dart';

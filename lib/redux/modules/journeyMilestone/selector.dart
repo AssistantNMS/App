@@ -1,5 +1,5 @@
 import '../../../contracts/faction/stored_faction_mission.dart';
-import '../../../contracts/journey/stored_journey_milestone.dart';
+import '../../../contracts/journey/storedJourneyMilestone.dart';
 import '../../../contracts/redux/appState.dart';
 
 List<StoredJourneyMilestone> getJourneyMilestones(AppState state) =>
