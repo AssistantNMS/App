@@ -19,7 +19,7 @@ import '../../../contracts/weekend_stage_page_item.dart';
 import '../../../helpers/hex_helper.dart';
 import '../../../integration/dependency_injection.dart';
 import '../../../redux/modules/portal/portalGlyphViewModel.dart';
-import 'weekendMissionDialog.dart';
+import 'weekend_mission_dialog.dart';
 
 class WeekendMissionDetail extends StatefulWidget {
   final int weekendMissionLevelMin;

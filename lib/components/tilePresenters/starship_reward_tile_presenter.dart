@@ -6,7 +6,7 @@ import '../../constants/nms_ui_constants.dart';
 import '../../contracts/data/starship_scrap.dart';
 import '../../contracts/helloGames/starship_scrap_detailed.dart';
 import '../../pages/generic/generic_page.dart';
-import '../../pages/helloGames/misc/starshipScrapPage.dart';
+import '../../pages/helloGames/misc/starship_scrap_page.dart';
 
 Widget starshipScrapTilePresenter(BuildContext context,
     StarshipScrapDetailedItemDetail scrapDetail, bool displayBackgroundColour) {

@@ -12,8 +12,8 @@ import '../../../contracts/required_item_details.dart';
 import '../../../helpers/future_helper.dart';
 import '../../../helpers/math_helper.dart';
 import '../../../integration/dependency_injection.dart';
-import 'communityMissionRewardDetails.dart';
-import 'communityMissionRewards.dart';
+import 'community_mission_reward_details.dart';
+import 'community_mission_rewards.dart';
 
 class CommunityMissionPage extends StatelessWidget {
   CommunityMissionPage({Key? key}) : super(key: key) {

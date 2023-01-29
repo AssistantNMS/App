@@ -2,35 +2,37 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
+import '../../../constants/analytics_event.dart';
 import '../../../constants/app_image.dart';
+import '../../../constants/routes.dart';
+import '../../../contracts/generated/weekend_mission_view_model.dart';
 import '../../../contracts/weekend_stage_page_item.dart';
 import '../../../helpers/future_helper.dart';
-import 'weekendMissionDetail.dart';
+import '../../../integration/dependency_injection.dart';
+import 'weekend_mission_detail.dart';
 
-class WeekendMissionSeasonPage extends StatelessWidget {
-  final LocaleKey weekendMissionJson;
-  final String season;
-  final int level;
-  final int maxLevel;
-  final int minLevel;
-  final void Function() navigateToWeekendMissionMenu;
-  const WeekendMissionSeasonPage({
-    Key? key,
-    required this.weekendMissionJson,
-    required this.season,
-    required this.level,
-    required this.minLevel,
-    required this.maxLevel,
-    required this.navigateToWeekendMissionMenu,
-  }) : super(key: key);
-
+class WeekendMissionSeason3Page extends StatelessWidget {
+  WeekendMissionSeason3Page({Key? key}) : super(key: key) {
+    getAnalytics().trackEvent(AnalyticsEvent.weekendMissionSeason3Page);
+  }
   Future<ResultWithValue<WeekendStagePageItem>> getCurrentWeekendMissionData(
       BuildContext context) async {
-    var weekendMissionResult = await getWeekendMissionSeasonData(
+    ResultWithValue<WeekendMissionViewModel> apiResult =
+        await getHelloGamesApiService().getWeekendMission();
+    if (!apiResult.isSuccess) {
+      return ResultWithValue<WeekendStagePageItem>(
+        false,
+        WeekendStagePageItem.initial(),
+        apiResult.errorMessage,
+      );
+    }
+
+    ResultWithValue<WeekendStagePageItem> weekendMissionResult =
+        await getWeekendMissionSeasonData(
       context,
-      weekendMissionJson,
-      season,
-      level,
+      LocaleKey.weekendMissionSeason3Json,
+      apiResult.value.seasonId,
+      apiResult.value.level,
     );
 
     if (!weekendMissionResult.isSuccess) {
@@ -45,6 +47,13 @@ class WeekendMissionSeasonPage extends StatelessWidget {
     weekendMissionValue.titles = weekendMissionResult.value.titles;
     weekendMissionValue.subtitles = weekendMissionResult.value.subtitles;
     weekendMissionValue.descriptions = weekendMissionResult.value.descriptions;
+
+    weekendMissionValue.isConfirmedByAssistantNms =
+        apiResult.value.isConfirmedByAssistantNms;
+    weekendMissionValue.isConfirmedByCaptSteve =
+        apiResult.value.isConfirmedByCaptSteve;
+    weekendMissionValue.captainSteveVideoUrl =
+        apiResult.value.captainSteveVideoUrl;
 
     return ResultWithValue<WeekendStagePageItem>(true, weekendMissionValue, '');
   }
@@ -61,7 +70,10 @@ class WeekendMissionSeasonPage extends StatelessWidget {
             partialPath: AppImage.weekendMissionWhite,
             padding: EdgeInsets.symmetric(vertical: 16),
           ),
-          onPressed: navigateToWeekendMissionMenu,
+          onPressed: () => getNavigation().navigateAsync(
+            context,
+            navigateToNamed: Routes.helloGamesWeekendMissionMenu,
+          ),
         ),
       ],
       body: CachedFutureBuilder<ResultWithValue<WeekendStagePageItem>>(
@@ -75,9 +87,9 @@ class WeekendMissionSeasonPage extends StatelessWidget {
           result.value,
           (BuildContext ctx, String season, int level) =>
               getWeekendMissionSeasonData(
-                  ctx, weekendMissionJson, season, level),
-          minLevel,
-          maxLevel,
+                  ctx, LocaleKey.weekendMissionSeason2Json, season, level),
+          46,
+          66,
         ),
       ),
     );

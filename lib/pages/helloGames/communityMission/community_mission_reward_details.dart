@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import '../../../components/common/prev_and_next_pagination.dart';
 import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../../contracts/enum/community_mission_status.dart';
-import 'communityMissionRewards.dart';
+import 'community_mission_rewards.dart';
 
 class CommunityMissionRewardDetailsPage extends StatefulWidget {
   final int missionId;

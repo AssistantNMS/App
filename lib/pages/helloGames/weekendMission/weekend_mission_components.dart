@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../constants/app_image.dart';
 import '../../../constants/nms_external_urls.dart';
-import 'weekendMissionSeasonPage.dart';
+import 'weekend_mission_season_page.dart';
 
 Widget weekendMissionSeason1(BuildContext context) {
   return weekendMissionSeasonTile(

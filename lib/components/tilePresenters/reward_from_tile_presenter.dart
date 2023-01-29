@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/constants/app_image.dart';
-import 'package:assistantnms_app/pages/helloGames/communityMission/communityMissionPage.dart';
+import 'package:assistantnms_app/pages/helloGames/communityMission/community_mission_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/nms_ui_constants.dart';

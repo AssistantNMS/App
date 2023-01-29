@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/contracts/required_item.dart';
 import 'package:assistantnms_app/integration/dependency_injection.dart';
-import 'package:assistantnms_app/pages/helloGames/misc/starshipScrapDisplay.dart';
+import 'package:assistantnms_app/pages/helloGames/misc/starship_scrap_display.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
