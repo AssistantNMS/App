@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';
 import '../../constants/NmsUIConstants.dart';
-import '../dialogs/prettyDialog.dart';
+import '../dialogs/pretty_dialog.dart';
 
 Widget patronTilePresenter(BuildContext context, PatreonViewModel patron) {
   if (patron.url == ExternalUrls.patreon) {

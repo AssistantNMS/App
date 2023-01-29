@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/dialogs/prettyDialog.dart';
+import '../../components/dialogs/pretty_dialog.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/generated/addFriendCodeViewModel.dart';

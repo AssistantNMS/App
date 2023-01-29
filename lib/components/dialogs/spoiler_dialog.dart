@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';
-import 'prettyDialog.dart';
+import 'pretty_dialog.dart';
 
 void handleSpoilerDialog(
   BuildContext context,
