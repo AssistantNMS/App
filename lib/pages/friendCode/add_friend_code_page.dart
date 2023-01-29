@@ -11,7 +11,7 @@ import '../../contracts/redux/app_state.dart';
 import '../../helpers/validation_helper.dart';
 import '../../integration/dependency_injection.dart';
 import '../../redux/modules/setting/friend_code_settings_view_model.dart';
-import '../../validation/commonValidator.dart';
+import '../../validation/common_validator.dart';
 
 const String pc = 'PC';
 const String ps4 = 'PS';
