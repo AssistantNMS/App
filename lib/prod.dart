@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'app.dart';
 import 'env.dart';
-import 'assistantAppsSettings.dart';
+import 'assistant_apps_settings.dart';
 import 'env/environmentSettings.dart';
 
 Future main() async {
