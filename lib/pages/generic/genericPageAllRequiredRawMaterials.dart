@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/required_item_details_tile_presenter.dart';
-import '../../constants/AnalyticsEvent.dart';
+import '../../constants/analytics_event.dart';
 import '../../contracts/enum/currencyType.dart';
 import '../../contracts/genericPageAllRequired.dart';
 import '../../contracts/requiredItemDetails.dart';

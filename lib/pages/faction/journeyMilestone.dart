@@ -4,7 +4,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/journey_tile_presenter.dart';
-import '../../constants/AnalyticsEvent.dart';
+import '../../constants/analytics_event.dart';
 import '../../contracts/journey/journeyMilestone.dart';
 import '../../contracts/redux/appState.dart';
 import '../../redux/modules/journeyMilestone/journeyMilestoneViewModel.dart';

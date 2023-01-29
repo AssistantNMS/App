@@ -4,7 +4,7 @@ import '../contracts/data/generatedMeta.dart';
 import '../integration/dependencyInjection.dart';
 
 import '../components/modalBottomSheet/update_modal_bottom_sheet.dart';
-import '../constants/AppImage.dart';
+import '../constants/app_image.dart';
 import '../contracts/misc/customMenu.dart';
 import '../redux/modules/setting/drawerSettingsViewModel.dart';
 

@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import '../../contracts/generated/expeditionViewModel.dart';
 
-import '../../constants/ApiUrls.dart';
+import '../../constants/api_urls.dart';
 import '../../contracts/generated/weekendMissionViewModel.dart';
 import '../../contracts/helloGames/communityMission.dart';
 import '../../contracts/helloGames/newsItem.dart';

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../constants/AnalyticsEvent.dart';
+import '../constants/analytics_event.dart';
 
 class Donation extends StatefulWidget {
   const Donation({Key? key}) : super(key: key);

@@ -4,7 +4,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:redux/redux.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../constants/AppConfig.dart';
+import '../../constants/app_config.dart';
 import '../../contracts/redux/appState.dart';
 import '../middleware/localStorageMiddleware.dart';
 import 'appReducer.dart';

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../../constants/ApiUrls.dart';
+import '../../constants/api_urls.dart';
 import '../../contracts/generated/contributorViewModel.dart';
 import '../../integration/dependencyInjection.dart';
 

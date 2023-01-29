@@ -2,8 +2,8 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../constants/AnalyticsEvent.dart';
-import '../../constants/AppImage.dart';
+import '../../constants/analytics_event.dart';
+import '../../constants/app_image.dart';
 import '../../contracts/alienPuzzle/alienPuzzleType.dart';
 import 'alienPuzzlesListPage.dart';
 

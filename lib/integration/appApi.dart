@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../constants/ApiUrls.dart';
-import '../constants/AppConfig.dart';
+import '../constants/api_urls.dart';
+import '../constants/app_config.dart';
 import '../contracts/generated/addFriendCodeViewModel.dart';
 import '../contracts/generated/friendCodeViewModel.dart';
 import '../contracts/generated/nomNomInventoryViewModel.dart';

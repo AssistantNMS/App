@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/NmsUIConstants.dart';
+import '../../constants/nms_ui_constants.dart';
 import '../../contracts/chargeBy.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/recharge.dart';

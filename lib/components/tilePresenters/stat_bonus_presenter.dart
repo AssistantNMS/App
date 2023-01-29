@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/AppImage.dart';
+import '../../constants/app_image.dart';
 import '../../contracts/statBonus.dart';
 import '../../contracts/proceduralStatBonus.dart';
 

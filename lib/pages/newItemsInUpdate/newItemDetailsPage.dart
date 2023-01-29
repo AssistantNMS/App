@@ -4,7 +4,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/drawer.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../constants/AnalyticsEvent.dart';
+import '../../constants/analytics_event.dart';
 import '../../contracts/data/updateItemDetail.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/redux/appState.dart';

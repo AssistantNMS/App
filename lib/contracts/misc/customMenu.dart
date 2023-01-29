@@ -1,8 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/AppImage.dart';
-import '../../constants/Routes.dart';
+import '../../constants/app_image.dart';
+import '../../constants/routes.dart';
 import '../../redux/modules/setting/drawerSettingsViewModel.dart';
 
 class CustomMenu {

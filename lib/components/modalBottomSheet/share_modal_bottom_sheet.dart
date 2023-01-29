@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../constants/AppDuration.dart';
+import '../../constants/app_duration.dart';
 import '../../constants/Modal.dart';
-import '../../constants/NmsUIConstants.dart';
+import '../../constants/nms_ui_constants.dart';
 import '../../contracts/redux/appState.dart';
 import '../../redux/modules/setting/shareViewModel.dart';
 import '../common/row_helper.dart';

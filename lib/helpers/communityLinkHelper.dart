@@ -3,7 +3,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../constants/NmsExternalUrls.dart';
+import '../constants/nms_external_urls.dart';
 import '../contracts/generated/communityLinkChipColourViewModel.dart';
 
 String handleCommunitySearchIcon(String icon) {

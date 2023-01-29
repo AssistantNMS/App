@@ -6,7 +6,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import '../../components/adaptive/home_page_app_bar.dart';
 import '../../components/drawer.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../constants/AnalyticsEvent.dart';
+import '../../constants/analytics_event.dart';
 import '../../contracts/misc/customMenu.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/updateHelper.dart';

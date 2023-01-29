@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../constants/AnalyticsEvent.dart';
+import '../../constants/analytics_event.dart';
 import '../../contracts/data/updateItemDetail.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/futureHelper.dart';

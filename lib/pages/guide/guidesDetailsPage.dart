@@ -9,7 +9,7 @@ import '../../contracts/guide/guideSectionItem.dart';
 
 import '../../components/guide/stick_row_presenters.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../constants/AnalyticsEvent.dart';
+import '../../constants/analytics_event.dart';
 import '../../contracts/generated/guideMetaViewModel.dart';
 import '../../contracts/guide/guide.dart';
 import '../../contracts/guide/guideType.dart';

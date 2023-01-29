@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/tilePresenters/title_data_presenter.dart';
-import '../../constants/AnalyticsEvent.dart';
+import '../../constants/analytics_event.dart';
 import '../../contracts/redux/appState.dart';
 import '../../contracts/titleData.dart';
 import '../../contracts/titleDataWithOwned.dart';

@@ -1,8 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/AlienPuzzle.dart';
-import '../../constants/AppDuration.dart';
+import '../../constants/alien_puzzle.dart';
+import '../../constants/app_duration.dart';
 import '../../constants/Modal.dart';
 import '../../contracts/alienPuzzle/alienPuzzle.dart';
 import '../../contracts/alienPuzzle/alienPuzzleReward.dart';

@@ -2,8 +2,8 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../constants/AnalyticsEvent.dart';
-import '../constants/NmsExternalUrls.dart';
+import '../constants/analytics_event.dart';
+import '../constants/nms_external_urls.dart';
 
 class Language extends StatelessWidget {
   Language({Key? key}) : super(key: key) {

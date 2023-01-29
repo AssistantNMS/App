@@ -50,7 +50,7 @@ import '../pages/timer/timerPage.dart';
 import '../pages/title/titlePage.dart';
 import '../pages/tutorial/nomNomInventorySyncTutorial.dart';
 import '../pages/whatIsNew/enhancedWhatIsNewPage.dart';
-import 'AnalyticsEvent.dart';
+import 'analytics_event.dart';
 
 class Routes {
   static const String home = '/home';

@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import '../../components/responsive_grid_view.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/menu_item_tile_presenter.dart';
-import '../../constants/AnalyticsEvent.dart';
-import '../../constants/AppImage.dart';
-import '../../constants/Routes.dart';
+import '../../constants/analytics_event.dart';
+import '../../constants/app_image.dart';
+import '../../constants/routes.dart';
 import '../../contracts/customMenuItem.dart';
 
 class RetiredDrawerMenuPage extends StatelessWidget {

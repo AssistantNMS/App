@@ -2,9 +2,9 @@ import 'dart:math';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../constants/AppDuration.dart';
+import '../../constants/app_duration.dart';
 
-import '../../constants/NmsUIConstants.dart';
+import '../../constants/nms_ui_constants.dart';
 import '../../contracts/misc/customMenu.dart';
 
 class EditingHomepageItem extends StatefulWidget {

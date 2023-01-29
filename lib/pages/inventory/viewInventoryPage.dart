@@ -6,7 +6,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/inventory_tile_presenter.dart';
-import '../../constants/AnalyticsEvent.dart';
+import '../../constants/analytics_event.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';

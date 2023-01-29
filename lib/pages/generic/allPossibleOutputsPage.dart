@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../constants/AnalyticsEvent.dart';
+import '../../constants/analytics_event.dart';
 
 class AllPossibleOutputsPage<T> extends StatelessWidget {
   final List<T> requiredItems;

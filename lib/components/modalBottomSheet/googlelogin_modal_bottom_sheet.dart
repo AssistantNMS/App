@@ -2,9 +2,9 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/AppDuration.dart';
+import '../../constants/app_duration.dart';
 import '../../constants/Modal.dart';
-import '../../constants/StorageKey.dart';
+import '../../constants/storage_key.dart';
 import '../../contracts/auth/googleLoginModel.dart';
 import '../../integration/dependencyInjection.dart';
 import '../common/row_helper.dart';

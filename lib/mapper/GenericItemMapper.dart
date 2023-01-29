@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../constants/IdPrefix.dart';
+import '../constants/id_prefix.dart';
 import '../contracts/genericPageItem.dart';
 import '../contracts/requiredItem.dart';
 import '../contracts/requiredItemDetails.dart';

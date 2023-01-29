@@ -3,8 +3,8 @@ import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import '../../pages/generic/genericPage.dart';
 
-import '../../constants/AlienPuzzle.dart';
-import '../../constants/AppImage.dart';
+import '../../constants/alien_puzzle.dart';
+import '../../constants/app_image.dart';
 import '../../contracts/alienPuzzle/AlienPuzzleRewardItemType.dart';
 import '../../contracts/alienPuzzle/alienPuzzleRaceType.dart';
 import '../../contracts/alienPuzzle/alienPuzzleReward.dart';

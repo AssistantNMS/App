@@ -1,11 +1,11 @@
 import 'package:after_layout/after_layout.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/NmsExternalUrls.dart';
+import 'package:assistantnms_app/constants/nms_external_urls.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/community_link_tile_presenter.dart';
-import '../../constants/AnalyticsEvent.dart';
+import '../../constants/analytics_event.dart';
 import '../../contracts/generated/communityLinkMetaViewModel.dart';
 import '../../contracts/generated/communityLinkViewModel.dart';
 import '../../helpers/columnHelper.dart';

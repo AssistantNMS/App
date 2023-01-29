@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/youtubers_tile_presenter.dart';
-import '../../constants/AppImage.dart';
+import '../../constants/app_image.dart';
 import '../../contracts/redux/appState.dart';
 import '../../redux/modules/setting/newsPageViewModel.dart';
 

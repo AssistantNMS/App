@@ -9,9 +9,9 @@ import '../../components/floatingActionButton/random_portal_floating_action_butt
 import '../../components/portal/portal_glyph_list.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/youtubers_tile_presenter.dart';
-import '../../constants/AnalyticsEvent.dart';
-import '../../constants/NmsExternalUrls.dart';
-import '../../constants/Routes.dart';
+import '../../constants/analytics_event.dart';
+import '../../constants/nms_external_urls.dart';
+import '../../constants/routes.dart';
 import '../../contracts/redux/appState.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 

@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../constants/AppAvailableLanguages.dart';
+import '../../constants/app_available_languages.dart';
 
 class LanguageService implements ILanguageService {
   @override

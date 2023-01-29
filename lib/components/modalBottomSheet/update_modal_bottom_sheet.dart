@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/AppDuration.dart';
+import '../../constants/app_duration.dart';
 import '../../constants/Modal.dart';
 import '../../contracts/data/majorUpdateItem.dart';
 import '../../integration/dependencyInjection.dart';

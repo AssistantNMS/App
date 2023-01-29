@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../../components/tilePresenters/twitch_tile_presenter.dart';
-import '../../../constants/AppImage.dart';
-import '../../../constants/Routes.dart';
+import '../../../constants/app_image.dart';
+import '../../../constants/routes.dart';
 import '../../../contracts/twitch/twitchCampaignData.dart';
 import '../../../contracts/twitch/twitchCampaignDay.dart';
 import '../../../integration/dependencyInjection.dart';

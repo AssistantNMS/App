@@ -4,7 +4,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../contracts/alienPuzzle/alienPuzzleType.dart';
 
 import '../../components/tilePresenters/alien_puzzle_tile_presenter.dart';
-import '../../constants/AnalyticsEvent.dart';
+import '../../constants/analytics_event.dart';
 import '../../contracts/alienPuzzle/alienPuzzle.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../integration/dependencyInjection.dart';

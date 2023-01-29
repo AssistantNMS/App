@@ -5,10 +5,10 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 
 import '../../components/responsive_grid_view.dart';
 import '../../components/tilePresenters/menu_item_tile_presenter.dart';
-import '../../constants/AnalyticsEvent.dart';
-import '../../constants/AppImage.dart';
-import '../../constants/NmsExternalUrls.dart';
-import '../../constants/Routes.dart';
+import '../../constants/analytics_event.dart';
+import '../../constants/app_image.dart';
+import '../../constants/nms_external_urls.dart';
+import '../../constants/routes.dart';
 import '../../contracts/customMenuItem.dart';
 
 class HelloGamesPage extends StatelessWidget {

@@ -7,9 +7,9 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 // import 'package:wiredash/wiredash.dart';
 
-import '../../constants/HomepageItems.dart';
-import '../../constants/NmsUIConstants.dart';
-import '../../constants/Routes.dart';
+import '../../constants/homepage_items.dart';
+import '../../constants/nms_ui_constants.dart';
+import '../../constants/routes.dart';
 import '../../contracts/redux/appState.dart';
 import '../../env/appVersionNum.dart';
 // import '../../integration/dependencyInjection.dart';

@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/youtubers_tile_presenter.dart';
-import '../../constants/AppAudio.dart';
-import '../../constants/AppDuration.dart';
-import '../../constants/AppImage.dart';
-import '../../constants/NmsUIConstants.dart';
+import '../../constants/app_audio.dart';
+import '../../constants/app_duration.dart';
+import '../../constants/app_image.dart';
+import '../../constants/nms_ui_constants.dart';
 import '../../constants/Nmsfm.dart';
 import '../../contracts/misc/audioStreamBuilderEvent.dart';
 import '../../contracts/nmsfm/zenoFMNowPlaying.dart';

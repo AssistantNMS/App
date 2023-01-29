@@ -5,7 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../../components/tilePresenters/twitch_tile_presenter.dart';
-import '../../../constants/AnalyticsEvent.dart';
+import '../../../constants/analytics_event.dart';
 import '../../../contracts/redux/appState.dart';
 import '../../../contracts/twitch/twitchCampaignData.dart';
 import '../../../redux/modules/generic/genericItemViewModel.dart';

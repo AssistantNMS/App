@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../constants/Routes.dart';
+import '../constants/routes.dart';
 
 List<ActionItem> getShortcutActions(
   BuildContext context, {

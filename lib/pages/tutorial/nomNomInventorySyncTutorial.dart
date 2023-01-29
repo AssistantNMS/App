@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:intro_slider/intro_slider.dart';
 
 import '../../components/tilePresenters/youtubers_tile_presenter.dart';
-import '../../constants/AppImage.dart';
+import '../../constants/app_image.dart';
 
 class NomNomInventorySyncTutorial extends StatelessWidget {
   const NomNomInventorySyncTutorial({Key? key}) : super(key: key);

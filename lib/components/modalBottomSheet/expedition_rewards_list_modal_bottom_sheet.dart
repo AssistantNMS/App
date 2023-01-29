@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../constants/AppDuration.dart';
+import '../../constants/app_duration.dart';
 import '../../constants/Modal.dart';
 import '../../contracts/redux/appState.dart';
 import '../../contracts/requiredItem.dart';

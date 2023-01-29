@@ -1,8 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants/AppImage.dart';
-import '../../../constants/NmsExternalUrls.dart';
+import '../../../constants/app_image.dart';
+import '../../../constants/nms_external_urls.dart';
 import '../../../contracts/enum/community_mission_status.dart';
 import '../../../contracts/helloGames/community_mission_tracked.dart';
 import '../../../integration/dependencyInjection.dart';

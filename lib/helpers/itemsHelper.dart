@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../constants/IdPrefix.dart';
+import '../constants/id_prefix.dart';
 import '../contracts/genericPageItem.dart';
 import '../contracts/inventory/inventory.dart';
 import '../contracts/inventory/inventoryBasicInfo.dart';

@@ -2,9 +2,9 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../../constants/AnalyticsEvent.dart';
-import '../../../constants/AppImage.dart';
-import '../../../constants/Routes.dart';
+import '../../../constants/analytics_event.dart';
+import '../../../constants/app_image.dart';
+import '../../../constants/routes.dart';
 import '../../../contracts/generated/weekendMissionViewModel.dart';
 import '../../../contracts/weekendStagePageItem.dart';
 import '../../../helpers/futureHelper.dart';

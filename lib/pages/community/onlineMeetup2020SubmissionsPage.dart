@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/online_meetup2020_submission_tile_presenter.dart';
-import '../../constants/AnalyticsEvent.dart';
+import '../../constants/analytics_event.dart';
 import '../../contracts/generated/onlineMeetup2020SubmissionViewModel.dart';
 import '../../integration/dependencyInjection.dart';
 

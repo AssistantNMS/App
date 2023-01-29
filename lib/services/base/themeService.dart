@@ -2,7 +2,7 @@ import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/AppColour.dart';
+import '../../constants/app_colour.dart';
 import '../../constants/Fonts.dart';
 import '../../theme/themes.dart';
 

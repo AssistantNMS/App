@@ -4,7 +4,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/faction_tile_presenter.dart';
-import '../../constants/NmsUIConstants.dart';
+import '../../constants/nms_ui_constants.dart';
 import '../../contracts/faction/faction.dart';
 import '../../contracts/faction/storedFactionMission.dart';
 import '../../contracts/redux/appState.dart';

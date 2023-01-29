@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import '../../constants/AppDuration.dart';
-import '../../constants/AppImage.dart';
+import '../../constants/app_duration.dart';
+import '../../constants/app_image.dart';
 import '../../constants/Modal.dart';
-import '../../constants/Routes.dart';
-import '../../constants/NmsUIConstants.dart';
+import '../../constants/routes.dart';
+import '../../constants/nms_ui_constants.dart';
 import '../../contracts/generated/nomNomInventoryViewModel.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';

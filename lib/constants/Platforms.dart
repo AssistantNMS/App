@@ -1,4 +1,4 @@
-import '../../constants/AppImage.dart';
+import '../../constants/app_image.dart';
 
 class SelectedPlatform {
   String title;

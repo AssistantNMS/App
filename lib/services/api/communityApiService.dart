@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../../constants/ApiUrls.dart';
+import '../../constants/api_urls.dart';
 import '../../contracts/generated/communityLinkChipColourViewModel.dart';
 import '../../contracts/generated/communityLinkMetaViewModel.dart';
 import '../../contracts/generated/communityLinkViewModel.dart';

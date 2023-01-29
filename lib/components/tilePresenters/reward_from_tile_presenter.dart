@@ -1,9 +1,9 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/AppImage.dart';
+import 'package:assistantnms_app/constants/app_image.dart';
 import 'package:assistantnms_app/pages/helloGames/communityMission/communityMissionPage.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/NmsUIConstants.dart';
+import '../../constants/nms_ui_constants.dart';
 import '../../helpers/genericHelper.dart';
 
 Widget rewardFromQuicksilverMerchantTilePresenter(

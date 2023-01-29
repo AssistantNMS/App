@@ -2,7 +2,7 @@
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../../constants/AppDuration.dart';
+import '../../../constants/app_duration.dart';
 import '../../../constants/Modal.dart';
 
 import '../../../components/common/chat_bubble.dart';

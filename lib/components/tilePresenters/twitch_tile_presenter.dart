@@ -1,8 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/AppImage.dart';
-import '../../constants/NmsUIConstants.dart';
+import '../../constants/app_image.dart';
+import '../../constants/nms_ui_constants.dart';
 import '../../contracts/requiredItem.dart';
 import '../../contracts/requiredItemDetails.dart';
 import '../../contracts/twitch/twitchCampaignData.dart';

@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../contracts/enum/homepageType.dart';
-import 'Routes.dart';
+import 'routes.dart';
 
 class HomepageItem {
   LocaleKey localeKey;

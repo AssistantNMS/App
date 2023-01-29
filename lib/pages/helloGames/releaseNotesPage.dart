@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/hello_games_tile_presenter.dart';
-import '../../constants/AnalyticsEvent.dart';
+import '../../constants/analytics_event.dart';
 import '../../contracts/helloGames/releaseNote.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../integration/dependencyInjection.dart';

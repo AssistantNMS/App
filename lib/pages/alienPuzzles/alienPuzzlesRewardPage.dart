@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/alien_puzzle_reward_odds_tile_presenter.dart';
-import '../../constants/AlienPuzzle.dart';
-import '../../constants/AnalyticsEvent.dart';
-import '../../constants/AppImage.dart';
+import '../../constants/alien_puzzle.dart';
+import '../../constants/analytics_event.dart';
+import '../../constants/app_image.dart';
 import '../../contracts/alienPuzzle/AlienPuzzleRewardItemType.dart';
 import '../../contracts/alienPuzzle/alienPuzzleReward.dart';
 import '../../contracts/requiredItem.dart';

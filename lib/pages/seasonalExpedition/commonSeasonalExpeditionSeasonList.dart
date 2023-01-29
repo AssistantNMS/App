@@ -4,7 +4,7 @@ import '../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
 import 'seasonExpeditionConstants.dart';
 
 import '../../components/tilePresenters/seasonal_expedition_tile_presenter.dart';
-import '../../constants/AppImage.dart';
+import '../../constants/app_image.dart';
 import '../../contracts/generated/expeditionViewModel.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../redux/modules/setting/isPatreonViewModel.dart';

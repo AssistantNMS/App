@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/NmsUIConstants.dart';
+import '../../constants/nms_ui_constants.dart';
 import '../../contracts/generated/expeditionViewModel.dart' as expedition_api;
 import '../../contracts/seasonalExpedition/expeditionMilestoneType.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionMilestone.dart';

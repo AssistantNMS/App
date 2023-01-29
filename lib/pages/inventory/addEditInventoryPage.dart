@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import '../../components/responsive_grid_view.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/inventory_tile_presenter.dart';
-import '../../constants/UserSelectionIcons.dart';
+import '../../constants/user_selection_icons.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../helpers/actionHelper.dart';
 

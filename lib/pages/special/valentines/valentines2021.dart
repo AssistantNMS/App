@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../../constants/HomepageItems.dart';
+import '../../../constants/homepage_items.dart';
 import '../../../contracts/redux/appState.dart';
 import '../../../redux/modules/setting/introViewModel.dart';
 

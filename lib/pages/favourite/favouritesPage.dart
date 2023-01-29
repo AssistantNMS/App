@@ -4,8 +4,8 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/required_item_details_tile_presenter.dart';
-import '../../constants/AnalyticsEvent.dart';
-import '../../constants/IdPrefix.dart';
+import '../../constants/analytics_event.dart';
+import '../../constants/id_prefix.dart';
 import '../../contracts/favourite/favouriteItem.dart';
 import '../../contracts/processor.dart';
 import '../../contracts/processorRequiredItemDetails.dart';

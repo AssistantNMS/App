@@ -2,8 +2,8 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide ExternalUrls;
 import 'package:flutter/material.dart';
 
-import '../../constants/AppImage.dart';
-import '../../constants/NmsExternalUrls.dart';
+import '../../constants/app_image.dart';
+import '../../constants/nms_external_urls.dart';
 import '../modalBottomSheet/sync_with_nom_nom_modal_bottom_sheet.dart';
 
 Widget devilinPixyTile(BuildContext context) => genericListTileWithSubtitle(
