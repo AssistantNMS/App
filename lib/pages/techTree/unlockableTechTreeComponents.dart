@@ -3,9 +3,9 @@ import 'package:flutter_simple_treeview/flutter_simple_treeview.dart';
 
 import '../../components/tilePresenters/tech_tree_tile_presenter.dart';
 import '../../contracts/enum/currency_type.dart';
-import '../../contracts/techTree/techTree.dart';
-import '../../contracts/techTree/techTreeNode.dart';
-import '../../contracts/techTree/unlockableTechTree.dart';
+import '../../contracts/techTree/tech_tree.dart';
+import '../../contracts/techTree/tech_tree_node.dart';
+import '../../contracts/techTree/unlockable_tech_tree.dart';
 import '../../helpers/sortHelper.dart';
 
 TreeView getTree(context, List<UnlockableTechTree> utt) {

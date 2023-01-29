@@ -1,8 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../contracts/techTree/techTree.dart';
-import '../../contracts/techTree/unlockableTechTree.dart';
+import '../../contracts/techTree/tech_tree.dart';
+import '../../contracts/techTree/unlockable_tech_tree.dart';
 
 import 'interface/ITechTreeJsonRepository.dart';
 

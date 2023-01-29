@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../contracts/enum/currency_type.dart';
 
 import '../../contracts/required_item_details.dart';
-import '../../contracts/techTree/techTreeNode.dart';
+import '../../contracts/techTree/tech_tree_node.dart';
 import 'required_item_details_tile_presenter.dart';
 
 const double itemPadding = 16.0;

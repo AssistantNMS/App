@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
-import '../../contracts/techTree/unlockableTechTree.dart';
+import '../../contracts/techTree/unlockable_tech_tree.dart';
 import '../../integration/dependencyInjection.dart';
 import 'unlockableTechTreeComponents.dart';
 

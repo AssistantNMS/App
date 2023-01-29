@@ -7,7 +7,7 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import './techTreeNode.dart';
+import './tech_tree_node.dart';
 import '../enum/currency_type.dart';
 
 class TechTree {
