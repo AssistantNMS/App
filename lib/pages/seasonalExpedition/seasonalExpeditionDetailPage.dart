@@ -6,8 +6,8 @@ import '../../components/modalBottomSheet/expedition_rewards_list_modal_bottom_s
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/seasonal_expedition_tile_presenter.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../contracts/seasonalExpedition/seasonalExpeditionMilestone.dart';
-import '../../contracts/seasonalExpedition/seasonalExpeditionPhase.dart';
+import '../../contracts/seasonalExpedition/seasonal_expedition_milestone.dart';
+import '../../contracts/seasonalExpedition/seasonal_expedition_phase.dart';
 import '../../redux/modules/expedition/expedition_view_model.dart';
 
 class SeasonalExpeditionDetailPage extends StatelessWidget {

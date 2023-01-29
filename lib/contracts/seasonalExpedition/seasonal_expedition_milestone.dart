@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/helpers/jsonHelper.dart';
 
-import './seasonalExpeditionReward.dart';
-import 'expeditionMilestoneType.dart';
+import './seasonal_expedition_reward.dart';
+import 'expedition_milestone_type.dart';
 
 class SeasonalExpeditionMilestone {
   SeasonalExpeditionMilestone({

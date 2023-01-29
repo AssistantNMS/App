@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/generated/expedition_view_model.dart' as expedition_api;
-import '../../contracts/seasonalExpedition/expeditionMilestoneType.dart';
-import '../../contracts/seasonalExpedition/seasonalExpeditionMilestone.dart';
-import '../../contracts/seasonalExpedition/seasonalExpeditionPhase.dart';
-import '../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
+import '../../contracts/seasonalExpedition/expedition_milestone_type.dart';
+import '../../contracts/seasonalExpedition/seasonal_expedition_milestone.dart';
+import '../../contracts/seasonalExpedition/seasonal_expedition_phase.dart';
+import '../../contracts/seasonalExpedition/seasonal_expedition_season.dart';
 import '../../helpers/hexHelper.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../pages/generic/genericPageDescripHighlightText.dart';

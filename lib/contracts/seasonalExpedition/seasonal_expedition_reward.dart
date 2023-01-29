@@ -2,7 +2,7 @@
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'expeditionRewardType.dart';
+import 'expedition_reward_type.dart';
 
 class SeasonalExpeditionReward {
   SeasonalExpeditionReward({

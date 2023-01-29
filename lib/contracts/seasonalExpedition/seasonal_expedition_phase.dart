@@ -4,9 +4,9 @@
 
 import 'dart:convert';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import '../../contracts/seasonalExpedition/seasonalExpeditionReward.dart';
+import '../../contracts/seasonalExpedition/seasonal_expedition_reward.dart';
 
-import './seasonalExpeditionMilestone.dart';
+import './seasonal_expedition_milestone.dart';
 
 class SeasonalExpeditionPhase {
   SeasonalExpeditionPhase({

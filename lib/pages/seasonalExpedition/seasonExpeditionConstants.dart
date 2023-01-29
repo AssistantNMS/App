@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
 import '../../contracts/generated/expedition_view_model.dart';
-import '../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
+import '../../contracts/seasonalExpedition/seasonal_expedition_season.dart';
 
 String getBackgroundForExpedition(String seasId) {
   String localSeasId = seasId.replaceAll('-redux', '');

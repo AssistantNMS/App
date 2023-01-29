@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import '../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
+import '../../contracts/seasonalExpedition/seasonal_expedition_season.dart';
 
 import './interface/ISeasonalExpeditionJsonRepository.dart';
 

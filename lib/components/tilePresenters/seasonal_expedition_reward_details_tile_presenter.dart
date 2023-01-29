@@ -6,8 +6,8 @@ import '../../constants/app_image.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/alienPuzzle/alien_puzzle_race_type.dart';
 import '../../contracts/required_item_details.dart';
-import '../../contracts/seasonalExpedition/expeditionRewardType.dart';
-import '../../contracts/seasonalExpedition/seasonalExpeditionReward.dart';
+import '../../contracts/seasonalExpedition/expedition_reward_type.dart';
+import '../../contracts/seasonalExpedition/seasonal_expedition_reward.dart';
 import '../../pages/generic/genericPage.dart';
 
 const double itemPadding = 16.0;

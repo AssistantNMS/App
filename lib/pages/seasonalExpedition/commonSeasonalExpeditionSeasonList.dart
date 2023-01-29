@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
+import '../../contracts/seasonalExpedition/seasonal_expedition_season.dart';
 import 'seasonExpeditionConstants.dart';
 
 import '../../components/tilePresenters/seasonal_expedition_tile_presenter.dart';
