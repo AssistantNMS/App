@@ -3,7 +3,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
 import 'package:get_it/get_it.dart';
 
 import '../../services/base/languageService.dart';
-import '../env/environmentSettings.dart';
+import '../env/environment_settings.dart';
 import '../services/api/communityApiService.dart';
 import '../services/api/community_mission_progress_api_service.dart';
 import '../services/api/contributorApiService.dart';

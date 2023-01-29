@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'appVersionNum.dart';
+import 'app_version_num.dart';
 
 class EnvironmentSettings {
   String baseApi;

@@ -38,8 +38,8 @@ Future writeBuildNumFile(
   String latestCommit,
 ) async {
   if (buildNum == null || buildNum.isEmpty) return;
-  print('Writing to appVersionNum.dart');
-  final file = File('./lib/env/appVersionNum.dart');
+  print('Writing to app_version_num.dart');
+  final file = File('./lib/env/app_version_num.dart');
   String contents = 'const appsBuildNum = $buildNum;\n';
   contents += 'const appsBuildName = \'$buildName\';\n';
   contents += 'const appsCommit = \'$latestCommit\';';

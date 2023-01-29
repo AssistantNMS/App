@@ -6,7 +6,7 @@ import 'package:redux/redux.dart';
 
 import 'components/adaptive/app_shell.dart';
 import 'contracts/redux/app_state.dart';
-import 'env/environmentSettings.dart';
+import 'env/environment_settings.dart';
 import 'integration/dependencyInjection.dart';
 import 'redux/modules/createStore.dart';
 import 'redux/modules/setting/actions.dart';
