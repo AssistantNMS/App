@@ -13,7 +13,7 @@ import '../../constants/nms_ui_constants.dart';
 import '../../constants/Nmsfm.dart';
 import '../../contracts/misc/audio_stream_builder_event.dart';
 import '../../contracts/nmsfm/zeno_fm_now_playing.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 import '../../services/api/zenoFMApiService.dart';
 import 'nmsfmTrackList.dart';
 

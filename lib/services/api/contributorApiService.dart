@@ -4,7 +4,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../../constants/api_urls.dart';
 import '../../contracts/generated/contributor_view_model.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 
 class ContributorApiService extends BaseApiService {
   ContributorApiService() : super(getEnv().baseApi);

@@ -6,7 +6,7 @@ import '../../components/tilePresenters/hello_games_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/helloGames/news_item.dart';
 import '../../helpers/search_helpers.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 
 class NewsPage extends StatelessWidget {
   NewsPage({Key? key}) : super(key: key) {

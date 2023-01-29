@@ -15,8 +15,8 @@ import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventory_slot.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../contracts/redux/inventory_state.dart';
-import '../../integration/dependencyInjection.dart';
-import '../../integration/nomNom.dart';
+import '../../integration/dependency_injection.dart';
+import '../../integration/nom_nom.dart';
 import '../../redux/modules/viewModel/syncPageViewModel.dart';
 
 class SyncWithNomNomBottomSheet extends StatefulWidget {

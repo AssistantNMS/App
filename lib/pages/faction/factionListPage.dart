@@ -5,7 +5,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/faction_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/faction/faction.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 
 class FactionPage extends StatelessWidget {
   FactionPage({Key? key}) : super(key: key) {

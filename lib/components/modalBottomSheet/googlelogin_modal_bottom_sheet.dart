@@ -6,7 +6,7 @@ import '../../constants/app_duration.dart';
 import '../../constants/Modal.dart';
 import '../../constants/storage_key.dart';
 import '../../contracts/auth/google_login_model.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 import '../common/row_helper.dart';
 import '../tilePresenters/setting_tile_presenter.dart';
 

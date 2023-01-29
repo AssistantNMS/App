@@ -11,7 +11,7 @@ import '../../components/tilePresenters/hello_games_tile_presenter.dart';
 import '../../contracts/helloGames/news_item.dart';
 import '../../contracts/helloGames/release_note.dart';
 import '../../helpers/search_helpers.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 import './steamBranches.dart';
 
 class NewsShellPage extends StatelessWidget {

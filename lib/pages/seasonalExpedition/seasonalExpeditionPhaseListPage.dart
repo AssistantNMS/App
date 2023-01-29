@@ -10,7 +10,7 @@ import '../../components/tilePresenters/youtubers_tile_presenter.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../contracts/seasonalExpedition/seasonal_expedition_phase.dart';
 import '../../contracts/seasonalExpedition/seasonal_expedition_season.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 import '../../redux/modules/expedition/expedition_view_model.dart';
 
 class SeasonalExpeditionPhaseListPage extends StatelessWidget {

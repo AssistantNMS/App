@@ -11,7 +11,7 @@ import '../../../contracts/helloGames/quick_silver_store_details.dart';
 import '../../../contracts/required_item_details.dart';
 import '../../../helpers/future_helper.dart';
 import '../../../helpers/math_helper.dart';
-import '../../../integration/dependencyInjection.dart';
+import '../../../integration/dependency_injection.dart';
 import 'communityMissionRewardDetails.dart';
 import 'communityMissionRewards.dart';
 

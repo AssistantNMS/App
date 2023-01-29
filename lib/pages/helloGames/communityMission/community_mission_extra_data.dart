@@ -5,7 +5,7 @@ import '../../../constants/app_image.dart';
 import '../../../constants/nms_external_urls.dart';
 import '../../../contracts/enum/community_mission_status.dart';
 import '../../../contracts/helloGames/community_mission_tracked.dart';
-import '../../../integration/dependencyInjection.dart';
+import '../../../integration/dependency_injection.dart';
 
 class CommunityMissionExtraData extends StatelessWidget {
   final int missionId;

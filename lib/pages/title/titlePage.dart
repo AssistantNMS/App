@@ -12,7 +12,7 @@ import '../../contracts/redux/app_state.dart';
 import '../../contracts/title_data.dart';
 import '../../contracts/title_data_with_owned.dart';
 import '../../helpers/search_helpers.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 import '../../redux/modules/titles/titleViewModel.dart';
 
 class TitlePage extends StatefulWidget {

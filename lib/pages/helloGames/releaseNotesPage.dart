@@ -6,7 +6,7 @@ import '../../components/tilePresenters/hello_games_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/helloGames/release_note.dart';
 import '../../helpers/search_helpers.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 
 class ReleaseNotesPage extends StatelessWidget {
   ReleaseNotesPage({Key? key}) : super(key: key) {

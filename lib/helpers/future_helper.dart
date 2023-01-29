@@ -21,7 +21,7 @@ import '../contracts/required_item.dart';
 import '../contracts/required_item_details.dart';
 import '../contracts/weekend_mission.dart';
 import '../contracts/weekend_stage_page_item.dart';
-import '../integration/dependencyInjection.dart';
+import '../integration/dependency_injection.dart';
 import '../mapper/GenericItemMapper.dart';
 import '../services/json/WeekendMissionSeasonJsonRepository.dart';
 import '../services/json/interface/IGenericRepository.dart';

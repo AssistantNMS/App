@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import '../../components/tilePresenters/timer_tile_presenter.dart';
 import '../../constants/app_duration.dart';
 import '../../contracts/timer/timer_item.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 import 'addEditTimerPage.dart';
 
 class TimersPageView extends StatefulWidget {

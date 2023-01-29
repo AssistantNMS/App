@@ -13,7 +13,7 @@ import '../contracts/required_item_details.dart';
 import '../contracts/required_item_tree_details.dart';
 
 import '../contracts/twitch/twitch_campaign_data.dart';
-import '../integration/dependencyInjection.dart';
+import '../integration/dependency_injection.dart';
 import '../services/json/interface/IGenericRepository.dart';
 
 Future<List<RequiredItemDetails>> getAllRequiredItemsForMultiple(

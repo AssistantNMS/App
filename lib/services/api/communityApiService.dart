@@ -9,7 +9,7 @@ import '../../contracts/generated/community_link_view_model.dart';
 import '../../contracts/generated/community_mission_progress_item_view_model.dart';
 import '../../contracts/generated/community_spotlight_view_model.dart';
 import '../../contracts/generated/online_meetup2020_submission_view_model.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 
 class CommunityApiService extends BaseApiService {
   CommunityApiService() : super(getEnv().baseApi);

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/techTree/unlockable_tech_tree.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 import 'unlockableTechTreeComponents.dart';
 
 class UnlockableTechTreePage extends StatelessWidget {

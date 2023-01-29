@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../constants/app_duration.dart';
 import '../../constants/Modal.dart';
 import '../../contracts/data/major_update_item.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 import '../../pages/newItemsInUpdate/majorUpdatesDetailPage.dart';
 
 class UpdateBottomSheet extends StatelessWidget {

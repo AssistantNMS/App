@@ -12,7 +12,7 @@ import '../../constants/nms_ui_constants.dart';
 import '../../constants/routes.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../env/app_version_num.dart';
-// import '../../integration/dependencyInjection.dart';
+// import '../../integration/dependency_injection.dart';
 import '../../redux/modules/setting/introViewModel.dart';
 import '../../theme/themes.dart';
 

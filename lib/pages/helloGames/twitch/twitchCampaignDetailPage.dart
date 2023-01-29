@@ -8,7 +8,7 @@ import '../../../constants/app_image.dart';
 import '../../../constants/routes.dart';
 import '../../../contracts/twitch/twitch_campaign_data.dart';
 import '../../../contracts/twitch/twitch_campaign_day.dart';
-import '../../../integration/dependencyInjection.dart';
+import '../../../integration/dependency_injection.dart';
 
 class TwitchCampaignDetailPage extends StatelessWidget {
   final int id;

@@ -9,7 +9,7 @@ import '../contracts/generated/friend_code_view_model.dart';
 import '../contracts/generated/nom_nom_inventory_view_model.dart';
 import '../contracts/generated/stripe_donation_view_model.dart';
 import '../contracts/nmsfm/nmsfm_track_data.dart';
-import 'dependencyInjection.dart';
+import 'dependency_injection.dart';
 
 class AppApi extends BaseApiService {
   AppApi() : super(getEnv().baseApi);

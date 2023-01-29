@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import '../contracts/data/generated_meta.dart';
-import '../integration/dependencyInjection.dart';
+import '../integration/dependency_injection.dart';
 
 import '../components/modalBottomSheet/update_modal_bottom_sheet.dart';
 import '../constants/app_image.dart';

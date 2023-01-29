@@ -6,7 +6,7 @@ import 'seasonExpeditionConstants.dart';
 import '../../components/tilePresenters/seasonal_expedition_tile_presenter.dart';
 import '../../constants/app_image.dart';
 import '../../contracts/generated/expedition_view_model.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 import '../../redux/modules/setting/isPatreonViewModel.dart';
 import 'UnusedPatchImages.dart';
 import 'seasonalExpeditionPhaseListPage.dart';

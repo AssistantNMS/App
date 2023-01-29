@@ -7,7 +7,7 @@ import '../../components/tilePresenters/contributor_tile_presenter.dart';
 import '../../components/tilePresenters/translator_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/generated/contributor_view_model.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 
 class ContributorsPage extends StatefulWidget {
   const ContributorsPage({Key? key}) : super(key: key);

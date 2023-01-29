@@ -14,7 +14,7 @@ import '../../contracts/generated/guide_meta_view_model.dart';
 import '../../contracts/guide/guide.dart';
 import '../../contracts/guide/guide_type.dart';
 import '../../helpers/generic_helper.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 import '../../services/api/guideApiService.dart';
 
 class GuidesDetailsPage extends StatefulWidget {

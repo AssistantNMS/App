@@ -8,7 +8,7 @@ import '../../contracts/generated/weekend_mission_view_model.dart';
 import '../../contracts/helloGames/community_mission.dart';
 import '../../contracts/helloGames/news_item.dart';
 import '../../contracts/helloGames/release_note.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 
 class HelloGamesApiService extends BaseApiService {
   HelloGamesApiService() : super(getEnv().baseApi);

@@ -4,7 +4,7 @@ import '../../helpers/search_helpers.dart';
 import '../../contracts/nmsfm/nmsfm_track_data.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/nmsfm_track_data_tile_presenter.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 
 class NMSFMTrackListPage extends StatefulWidget {
   const NMSFMTrackListPage({Key? key}) : super(key: key);

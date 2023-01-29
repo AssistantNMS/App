@@ -10,7 +10,7 @@ import '../../contracts/generated/community_link_meta_view_model.dart';
 import '../../contracts/generated/community_link_view_model.dart';
 import '../../helpers/column_helper.dart';
 import '../../helpers/search_helpers.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 
 class CommunityLinksPage extends StatefulWidget {
   CommunityLinksPage({Key? key}) : super(key: key) {

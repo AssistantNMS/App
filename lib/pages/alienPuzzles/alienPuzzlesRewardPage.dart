@@ -15,7 +15,7 @@ import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
 import '../../contracts/techTree/tech_tree.dart';
 import '../../helpers/items_helper.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 import '../techTree/unlockableTechTreeComponents.dart';
 
 class AlienPuzzlesRewardPage extends StatefulWidget {

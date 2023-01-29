@@ -43,7 +43,7 @@ import '../services/json/interface/IRefineryRepository.dart';
 import '../services/json/interface/ISeasonalExpeditionJsonRepository.dart';
 import '../services/json/interface/ITechTreeJsonRepository.dart';
 import '../services/json/interface/ITitleJsonRepository.dart';
-import 'appApi.dart';
+import 'app_api.dart';
 
 final getIt = GetIt.instance;
 

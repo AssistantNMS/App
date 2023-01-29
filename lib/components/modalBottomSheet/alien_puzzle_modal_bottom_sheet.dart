@@ -6,7 +6,7 @@ import '../../constants/app_duration.dart';
 import '../../constants/Modal.dart';
 import '../../contracts/alienPuzzle/alien_puzzle.dart';
 import '../../contracts/alienPuzzle/alien_puzzle_reward.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 import '../../pages/alienPuzzles/alienPuzzlesRewardPage.dart';
 import '../../pages/generic/genericPageDescripHighlightText.dart';
 import '../common/chat_bubble.dart';

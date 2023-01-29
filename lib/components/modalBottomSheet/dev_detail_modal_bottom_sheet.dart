@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../constants/app_duration.dart';
 import '../../constants/Modal.dart';
 import '../../contracts/dev_detail.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 
 class DevDetailBottomSheet extends StatefulWidget {
   final String itemId;

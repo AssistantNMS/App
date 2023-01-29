@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import 'dependencyInjection.dart';
+import 'dependency_injection.dart';
 
 class RemoteConfigs extends BaseApiService {
   String apiKey;
