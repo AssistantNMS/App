@@ -12,9 +12,9 @@ import '../../contracts/processor_required_item_details.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
-import '../../helpers/futureHelper.dart';
-import '../../helpers/itemsHelper.dart';
-import '../../helpers/searchHelpers.dart';
+import '../../helpers/future_helper.dart';
+import '../../helpers/items_helper.dart';
+import '../../helpers/search_helpers.dart';
 import '../../redux/modules/favourite/favouriteViewModel.dart';
 
 class FavouritesPage extends StatelessWidget {

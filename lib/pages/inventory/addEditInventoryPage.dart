@@ -8,7 +8,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/inventory_tile_presenter.dart';
 import '../../constants/user_selection_icons.dart';
 import '../../contracts/inventory/inventory.dart';
-import '../../helpers/actionHelper.dart';
+import '../../helpers/action_helper.dart';
 
 class AddEditInventoryPage extends StatefulWidget {
   final bool isEdit;

@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../helpers/hexHelper.dart';
+import '../../helpers/hex_helper.dart';
 
 Widget galacticAddress(
   BuildContext context,

@@ -5,7 +5,7 @@ import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import '../../components/tilePresenters/community_link_tile_presenter.dart';
 import '../../contracts/generated/community_link_chip_colour_view_model.dart';
 import '../../contracts/generated/community_link_view_model.dart';
-import '../../helpers/communityLinkHelper.dart';
+import '../../helpers/community_link_helper.dart';
 
 const double bannerHeight = 225;
 

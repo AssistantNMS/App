@@ -5,7 +5,7 @@ import '../../contracts/enum/currency_type.dart';
 import '../../components/tilePresenters/required_item_details_tile_presenter.dart';
 import '../../contracts/required_item_details.dart';
 import '../../contracts/required_item_tree_details.dart';
-import '../../helpers/sortHelper.dart';
+import '../../helpers/sort_helper.dart';
 
 TreeView getTree(
     context, List<RequiredItemTreeDetails> node, CurrencyType costType) {

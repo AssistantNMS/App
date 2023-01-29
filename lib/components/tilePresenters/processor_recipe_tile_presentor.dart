@@ -7,7 +7,7 @@ import '../../constants/nms_ui_constants.dart';
 import '../../contracts/processor.dart';
 import '../../contracts/required_item_details.dart';
 
-import '../../helpers/itemsHelper.dart';
+import '../../helpers/items_helper.dart';
 
 import 'generic_tile_presenter.dart';
 

@@ -6,7 +6,7 @@ import '../../contracts/enum/currency_type.dart';
 import '../../contracts/techTree/tech_tree.dart';
 import '../../contracts/techTree/tech_tree_node.dart';
 import '../../contracts/techTree/unlockable_tech_tree.dart';
-import '../../helpers/sortHelper.dart';
+import '../../helpers/sort_helper.dart';
 
 TreeView getTree(context, List<UnlockableTechTree> utt) {
   TreeController controller = TreeController(allNodesExpanded: false);

@@ -13,7 +13,7 @@ import '../../constants/analytics_event.dart';
 import '../../contracts/generated/guide_meta_view_model.dart';
 import '../../contracts/guide/guide.dart';
 import '../../contracts/guide/guide_type.dart';
-import '../../helpers/genericHelper.dart';
+import '../../helpers/generic_helper.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../services/api/guideApiService.dart';
 

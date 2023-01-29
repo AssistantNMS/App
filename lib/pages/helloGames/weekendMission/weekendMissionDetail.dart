@@ -16,7 +16,7 @@ import '../../../contracts/redux/app_state.dart';
 import '../../../contracts/required_item_details.dart';
 import '../../../contracts/weekend_mission.dart';
 import '../../../contracts/weekend_stage_page_item.dart';
-import '../../../helpers/hexHelper.dart';
+import '../../../helpers/hex_helper.dart';
 import '../../../integration/dependencyInjection.dart';
 import '../../../redux/modules/portal/portalGlyphViewModel.dart';
 import 'weekendMissionDialog.dart';

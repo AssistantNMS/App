@@ -10,8 +10,8 @@ import '../constants/Fonts.dart';
 import '../constants/homepage_items.dart';
 import '../contracts/enum/homepage_type.dart';
 import '../contracts/redux/app_state.dart';
-import '../helpers/dateHelper.dart';
-import '../helpers/uselessButtonHelper.dart';
+import '../helpers/date_helper.dart';
+import '../helpers/useless_button_helper.dart';
 import '../redux/modules/setting/settingViewModel.dart';
 
 class Settings extends StatelessWidget {

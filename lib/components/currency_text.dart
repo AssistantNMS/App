@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../helpers/currencyHelper.dart';
+import '../helpers/currency_helper.dart';
 
 class CurrencyText extends StatelessWidget {
   final TextStyle? style;

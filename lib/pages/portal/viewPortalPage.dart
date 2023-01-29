@@ -13,7 +13,7 @@ import '../../constants/analytics_event.dart';
 import '../../constants/nms_external_urls.dart';
 import '../../contracts/portal/portal_record.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../helpers/hexHelper.dart';
+import '../../helpers/hex_helper.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 import 'addPortalPage.dart';
 

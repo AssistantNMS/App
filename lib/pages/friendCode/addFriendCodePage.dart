@@ -8,7 +8,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/generated/add_friend_code_view_model.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../helpers/validationHelper.dart';
+import '../../helpers/validation_helper.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../redux/modules/setting/friendCodeSettingsViewModel.dart';
 import '../../validation/commonValidator.dart';

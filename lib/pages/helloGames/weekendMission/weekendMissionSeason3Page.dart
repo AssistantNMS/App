@@ -7,7 +7,7 @@ import '../../../constants/app_image.dart';
 import '../../../constants/routes.dart';
 import '../../../contracts/generated/weekend_mission_view_model.dart';
 import '../../../contracts/weekend_stage_page_item.dart';
-import '../../../helpers/futureHelper.dart';
+import '../../../helpers/future_helper.dart';
 import '../../../integration/dependencyInjection.dart';
 import 'weekendMissionDetail.dart';
 

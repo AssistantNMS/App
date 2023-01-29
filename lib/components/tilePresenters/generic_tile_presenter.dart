@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../contracts/generic_page_item.dart';
-import '../../helpers/heroHelper.dart';
+import '../../helpers/hero_helper.dart';
 import '../../pages/generic/genericPage.dart';
 import '../common/image.dart';
 

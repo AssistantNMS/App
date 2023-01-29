@@ -15,7 +15,7 @@ import '../../constants/nms_ui_constants.dart';
 import '../../contracts/enum/portal_address_type.dart';
 import '../../contracts/misc/segment_view_multi_builder.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../helpers/hexHelper.dart';
+import '../../helpers/hex_helper.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 
 class PortalConverterPage extends StatefulWidget {

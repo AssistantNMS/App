@@ -6,7 +6,7 @@ import '../../contracts/alienPuzzle/alien_puzzle_type.dart';
 import '../../components/tilePresenters/alien_puzzle_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/alienPuzzle/alien_puzzle.dart';
-import '../../helpers/searchHelpers.dart';
+import '../../helpers/search_helpers.dart';
 import '../../integration/dependencyInjection.dart';
 
 const defaultParamValue = [AlienPuzzleType.Harvester, AlienPuzzleType.Factory];

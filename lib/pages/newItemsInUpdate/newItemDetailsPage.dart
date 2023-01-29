@@ -8,10 +8,10 @@ import '../../constants/analytics_event.dart';
 import '../../contracts/data/update_item_detail.dart';
 import '../../contracts/generic_page_item.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../helpers/futureHelper.dart';
-import '../../helpers/genericHelper.dart';
-import '../../helpers/repositoryHelper.dart';
-import '../../helpers/searchHelpers.dart';
+import '../../helpers/future_helper.dart';
+import '../../helpers/generic_helper.dart';
+import '../../helpers/repository_helper.dart';
+import '../../helpers/search_helpers.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 
 class NewItemsDetailPage extends StatelessWidget {

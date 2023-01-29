@@ -7,7 +7,7 @@ import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
 import '../../contracts/twitch/twitch_campaign_data.dart';
 import '../../contracts/twitch/twitch_campaign_reward.dart';
-import '../../helpers/itemsHelper.dart';
+import '../../helpers/items_helper.dart';
 import '../../pages/generic/genericPage.dart';
 import '../../pages/helloGames/twitch/twitchCampaignDetailPage.dart';
 

@@ -8,8 +8,8 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/timer_tile_presenter.dart';
 import '../../constants/user_selection_icons.dart';
 import '../../contracts/timer/timer_item.dart';
-import '../../helpers/actionHelper.dart';
-import '../../helpers/genericHelper.dart';
+import '../../helpers/action_helper.dart';
+import '../../helpers/generic_helper.dart';
 
 const int millisecondsDrift = 1 * 60 * 1000; // 1 minute in milliseconds
 

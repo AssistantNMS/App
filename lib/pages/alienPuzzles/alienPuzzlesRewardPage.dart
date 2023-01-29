@@ -14,7 +14,7 @@ import '../../contracts/alienPuzzle/alien_puzzle_reward.dart';
 import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
 import '../../contracts/techTree/tech_tree.dart';
-import '../../helpers/itemsHelper.dart';
+import '../../helpers/items_helper.dart';
 import '../../integration/dependencyInjection.dart';
 import '../techTree/unlockableTechTreeComponents.dart';
 

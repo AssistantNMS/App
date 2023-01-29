@@ -5,7 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/data/update_item_detail.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../helpers/futureHelper.dart';
+import '../../helpers/future_helper.dart';
 import '../../redux/modules/setting/whatIsNewSettingsViewModel.dart';
 import '../newItemsInUpdate/newItemDetailsPage.dart';
 

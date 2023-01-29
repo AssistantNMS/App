@@ -10,8 +10,8 @@ import '../../contracts/enum/currency_type.dart';
 import '../../contracts/generic_page_all_required.dart';
 import '../../contracts/required_item_details.dart';
 import '../../contracts/required_item_tree_details.dart';
-import '../../helpers/genericHelper.dart';
-import '../../helpers/itemsHelper.dart';
+import '../../helpers/generic_helper.dart';
+import '../../helpers/items_helper.dart';
 import 'genericPageAllRequiredRawMaterialsTreeComponents.dart';
 
 class GenericPageAllRequiredRawMaterials extends StatefulWidget {

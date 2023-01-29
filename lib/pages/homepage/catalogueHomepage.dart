@@ -7,8 +7,8 @@ import '../../components/drawer.dart';
 import '../../components/responsive_grid_view.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/menu_item_tile_presenter.dart';
-import '../../helpers/catalogueHelper.dart';
-import '../../helpers/updateHelper.dart';
+import '../../helpers/catalogue_helper.dart';
+import '../../helpers/update_helper.dart';
 
 class CatalogueHomepage extends StatefulWidget {
   const CatalogueHomepage({Key? key}) : super(key: key);

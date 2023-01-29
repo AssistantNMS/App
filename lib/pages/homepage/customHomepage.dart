@@ -9,7 +9,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/misc/custom_menu.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../helpers/updateHelper.dart';
+import '../../helpers/update_helper.dart';
 import '../../redux/modules/setting/customMenuViewModel.dart';
 import 'editCustomHomepage.dart';
 import 'viewCustomHomepage.dart';

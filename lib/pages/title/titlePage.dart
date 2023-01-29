@@ -11,7 +11,7 @@ import '../../constants/analytics_event.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../contracts/title_data.dart';
 import '../../contracts/title_data_with_owned.dart';
-import '../../helpers/searchHelpers.dart';
+import '../../helpers/search_helpers.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../redux/modules/titles/titleViewModel.dart';
 

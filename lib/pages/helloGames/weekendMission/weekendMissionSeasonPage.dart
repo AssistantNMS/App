@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../../constants/app_image.dart';
 import '../../../contracts/weekend_stage_page_item.dart';
-import '../../../helpers/futureHelper.dart';
+import '../../../helpers/future_helper.dart';
 import 'weekendMissionDetail.dart';
 
 class WeekendMissionSeasonPage extends StatelessWidget {

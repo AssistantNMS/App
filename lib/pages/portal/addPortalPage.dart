@@ -11,8 +11,8 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/portal/portal_record.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../helpers/actionHelper.dart';
-import '../../helpers/hexHelper.dart';
+import '../../helpers/action_helper.dart';
+import '../../helpers/hex_helper.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 
 class AddPortalPage extends StatefulWidget {

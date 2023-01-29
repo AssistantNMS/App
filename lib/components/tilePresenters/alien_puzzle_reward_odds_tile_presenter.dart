@@ -11,7 +11,7 @@ import '../../contracts/alienPuzzle/alien_puzzle_reward.dart';
 import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
 
-import '../../helpers/itemsHelper.dart';
+import '../../helpers/items_helper.dart';
 
 Widget alienPuzzleRewardOddsTilePresenter(
   BuildContext context,

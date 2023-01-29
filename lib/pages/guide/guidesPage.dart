@@ -7,7 +7,7 @@ import '../../components/tilePresenters/guide_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/guide/guide.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../helpers/searchHelpers.dart';
+import '../../helpers/search_helpers.dart';
 import '../../redux/modules/setting/settingViewModel.dart';
 import '../../services/json/GuidesJsonRepository.dart';
 

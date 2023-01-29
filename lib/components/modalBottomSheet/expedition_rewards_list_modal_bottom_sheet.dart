@@ -8,7 +8,7 @@ import '../../contracts/redux/app_state.dart';
 import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
 import '../../contracts/seasonalExpedition/seasonal_expedition_reward.dart';
-import '../../helpers/itemsHelper.dart';
+import '../../helpers/items_helper.dart';
 import '../../redux/modules/expedition/expedition_view_model.dart';
 import '../tilePresenters/seasonal_expedition_reward_details_tile_presenter.dart';
 

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../components/responsive_grid_view.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/menu_item_tile_presenter.dart';
-import '../../helpers/catalogueHelper.dart';
+import '../../helpers/catalogue_helper.dart';
 
 class CataloguePage extends StatelessWidget {
   const CataloguePage({Key? key}) : super(key: key);

@@ -8,7 +8,7 @@ import '../../contracts/generic_page_item.dart';
 import '../../contracts/recharge.dart';
 import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
-import '../../helpers/itemsHelper.dart';
+import '../../helpers/items_helper.dart';
 import '../../pages/generic/genericPage.dart';
 
 Widget chargeByItemTilePresenter(

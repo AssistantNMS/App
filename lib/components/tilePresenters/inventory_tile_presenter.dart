@@ -6,7 +6,7 @@ import '../../contracts/inventory/inventory_slot.dart';
 import '../../contracts/inventory/inventory_slot_with_container_and_generic_page_item.dart';
 import '../../contracts/inventory/inventory_slot_with_generic_page_item.dart';
 import '../../contracts/required_item_details.dart';
-import '../../helpers/genericHelper.dart';
+import '../../helpers/generic_helper.dart';
 
 import '../../pages/generic/genericPage.dart';
 import '../../pages/inventory/viewInventoryPage.dart';

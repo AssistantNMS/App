@@ -6,7 +6,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../constants/app_colour.dart';
 import '../contracts/redux/app_state.dart';
-import '../helpers/drawerHelper.dart';
+import '../helpers/drawer_helper.dart';
 import '../redux/modules/setting/drawerSettingsViewModel.dart';
 
 class AppDrawer extends StatelessWidget {

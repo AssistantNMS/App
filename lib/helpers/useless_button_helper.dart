@@ -43,6 +43,7 @@ List<String> responses = [
   'This is harassment',
   'I want to speak to your Manager',
   'Drink your milk',
+  'Lenni was here',
   'I\'m not sponsored by Captain Steve',
   'Fun fact: You clicked this button {0} times',
   'Click it 999 times and you will get a reward 😉',

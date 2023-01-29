@@ -5,7 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../helpers/drawerHelper.dart';
+import '../../helpers/drawer_helper.dart';
 import '../../redux/modules/setting/drawerSettingsViewModel.dart';
 
 class AppleMenu extends StatelessWidget {

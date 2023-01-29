@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../contracts/generated/community_link_chip_colour_view_model.dart';
 import '../../contracts/generated/community_link_view_model.dart';
-import '../../helpers/communityLinkHelper.dart';
+import '../../helpers/community_link_helper.dart';
 import '../../pages/community/communityLinksDetailsPage.dart';
 
 ListItemDisplayerType<CommunityLinkViewModel> communityLinkTilePresenter(

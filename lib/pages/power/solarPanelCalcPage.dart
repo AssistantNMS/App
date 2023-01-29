@@ -12,7 +12,7 @@ import '../../components/tilePresenters/youtubers_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
-import '../../helpers/itemsHelper.dart';
+import '../../helpers/items_helper.dart';
 import 'solarPanelCalcComponents.dart';
 import 'solarPanelCalcHelper.dart';
 

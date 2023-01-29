@@ -4,7 +4,7 @@ import 'package:assistantnms_app/pages/helloGames/communityMission/communityMiss
 import 'package:flutter/material.dart';
 
 import '../../constants/nms_ui_constants.dart';
-import '../../helpers/genericHelper.dart';
+import '../../helpers/generic_helper.dart';
 
 Widget rewardFromQuicksilverMerchantTilePresenter(
   BuildContext context,

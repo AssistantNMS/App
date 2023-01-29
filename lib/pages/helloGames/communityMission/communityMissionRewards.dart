@@ -11,7 +11,7 @@ import '../../../contracts/data/quicksilver_store_item.dart';
 import '../../../contracts/enum/community_mission_status.dart';
 import '../../../contracts/helloGames/quick_silver_store_details.dart';
 import '../../../contracts/required_item_details.dart';
-import '../../../helpers/futureHelper.dart';
+import '../../../helpers/future_helper.dart';
 import 'community_mission_extra_data.dart';
 
 class CommunityMissionRewards extends StatelessWidget {

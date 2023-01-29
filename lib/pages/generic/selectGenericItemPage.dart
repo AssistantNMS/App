@@ -6,10 +6,10 @@ import '../../components/drawer.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../contracts/generic_page_item.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../helpers/futureHelper.dart';
-import '../../helpers/genericHelper.dart';
-import '../../helpers/repositoryHelper.dart';
-import '../../helpers/searchHelpers.dart';
+import '../../helpers/future_helper.dart';
+import '../../helpers/generic_helper.dart';
+import '../../helpers/repository_helper.dart';
+import '../../helpers/search_helpers.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 
 class SelectGenericItemPage extends StatelessWidget {

@@ -8,7 +8,7 @@ import '../../constants/analytics_event.dart';
 import '../../constants/routes.dart';
 import '../../contracts/portal/portal_record.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../helpers/searchHelpers.dart';
+import '../../helpers/search_helpers.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 import 'addPortalPage.dart';
 import 'viewPortalPage.dart';

@@ -25,7 +25,7 @@ import '../integration/dependencyInjection.dart';
 import '../mapper/GenericItemMapper.dart';
 import '../services/json/WeekendMissionSeasonJsonRepository.dart';
 import '../services/json/interface/IGenericRepository.dart';
-import 'itemsHelper.dart';
+import 'items_helper.dart';
 
 Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   context,

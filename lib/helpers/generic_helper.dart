@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide ExternalUrls;
-import 'package:assistantnms_app/helpers/themeHelper.dart';
+import 'package:assistantnms_app/helpers/theme_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
