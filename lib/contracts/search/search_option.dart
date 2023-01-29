@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'searchOptionType.dart';
+import 'search_option_type.dart';
 
 class SearchOption {
   LocaleKey title;
