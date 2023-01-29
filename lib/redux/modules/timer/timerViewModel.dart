@@ -13,10 +13,10 @@ class TimerViewModel {
   Function(String timerId) removeTimer;
 
   TimerViewModel({
-    this.timers,
-    this.addTimer,
-    this.editTimer,
-    this.removeTimer,
+    required this.timers,
+    required this.addTimer,
+    required this.editTimer,
+    required this.removeTimer,
   });
 
   static TimerViewModel fromStore(Store<AppState> store) {

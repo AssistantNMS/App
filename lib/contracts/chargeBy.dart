@@ -2,8 +2,8 @@ import 'dart:convert';
 
 class ChargeBy {
   ChargeBy({
-    this.id,
-    this.value,
+    required this.id,
+    required this.value,
   });
 
   String id;
@@ -14,9 +14,9 @@ class ChargeBy {
 
   String toRawJson() => json.encode(toJson());
 
-  factory ChargeBy.fromJson(Map<String, dynamic> json) => ChargeBy(
-        id: json["Id"],
-        value: json["Value"],
+  factory ChargeBy.fromJson(Map<String, dynamic>? json) => ChargeBy(
+        id: json?["Id"],
+        value: json?["Value"],
       );
 
   Map<String, dynamic> toJson() => {

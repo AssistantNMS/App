@@ -5,8 +5,12 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../pages/inventory/addInventorySlotPage.dart';
 
-Widget inventoryFloatingActionButton(BuildContext context, String uniqueKey,
-        TextEditingController controller, GenericPageItem genericItem) =>
+Widget inventoryFloatingActionButton(
+  BuildContext context,
+  String uniqueKey,
+  TextEditingController controller,
+  GenericPageItem genericItem,
+) =>
     FloatingActionButton(
       onPressed: () async => await getNavigation().navigateAsync(
         context,
@@ -14,17 +18,19 @@ Widget inventoryFloatingActionButton(BuildContext context, String uniqueKey,
       ),
       tooltip: getTranslations().fromKey(LocaleKey.inventoryManagement),
       heroTag: 'InventoryManagement-$uniqueKey',
-      child: getListTileImage('fab/inventory.png'),
+      child: const ListTileImage(partialPath: 'fab/inventory.png'),
       foregroundColor: getTheme().fabForegroundColourSelector(context),
       backgroundColor: getTheme().fabColourSelector(context),
     );
 
 SpeedDialChild inventorySpeedDial(
-        BuildContext context, GenericPageItem genericItem) =>
+  BuildContext context,
+  GenericPageItem genericItem,
+) =>
     SpeedDialChild(
-      child: Padding(
-        child: getListTileImage('fab/inventory.png'),
-        padding: const EdgeInsets.all(8),
+      child: const Padding(
+        child: ListTileImage(partialPath: 'fab/inventory.png'),
+        padding: EdgeInsets.all(8),
       ),
       label: isDesktop
           ? getTranslations().fromKey(LocaleKey.inventoryManagement)

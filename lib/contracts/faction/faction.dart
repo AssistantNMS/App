@@ -8,13 +8,13 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class FactionData {
   FactionData({
-    this.milestone,
-    this.category,
-    this.categories,
-    this.lifeform,
-    this.lifeforms,
-    this.guild,
-    this.guilds,
+    required this.milestone,
+    required this.category,
+    required this.categories,
+    required this.lifeform,
+    required this.lifeforms,
+    required this.guild,
+    required this.guilds,
   });
 
   final String milestone;
@@ -28,7 +28,7 @@ class FactionData {
   factory FactionData.fromRawJson(String str) =>
       FactionData.fromJson(json.decode(str));
 
-  factory FactionData.fromJson(Map<String, dynamic> json) => FactionData(
+  factory FactionData.fromJson(Map<String, dynamic>? json) => FactionData(
         milestone: readStringSafe(json, 'Milestone'),
         category: readStringSafe(json, 'Category'),
         categories: readListSafe<FactionDetail>(
@@ -53,12 +53,12 @@ class FactionData {
 
 class FactionDetail {
   FactionDetail({
-    this.id,
-    this.icon,
-    this.name,
-    this.description,
-    this.additional,
-    this.missions,
+    required this.id,
+    required this.icon,
+    required this.name,
+    required this.description,
+    required this.additional,
+    required this.missions,
   });
 
   final String id;
@@ -68,16 +68,15 @@ class FactionDetail {
   final List<String> additional;
   final List<FactionMission> missions;
 
-  factory FactionDetail.fromJson(Map<String, dynamic> json) => FactionDetail(
+  factory FactionDetail.fromRawJson(String str) =>
+      FactionDetail.fromJson(json.decode(str));
+
+  factory FactionDetail.fromJson(Map<String, dynamic>? json) => FactionDetail(
         id: readStringSafe(json, 'Id'),
         icon: readStringSafe(json, 'Icon'),
         name: readStringSafe(json, 'Name'),
         description: readStringSafe(json, 'Description'),
-        additional: readListSafe<String>(
-          json,
-          'Additional',
-          (x) => x.toString(),
-        ),
+        additional: readStringListSafe(json, 'Additional'),
         missions: readListSafe<FactionMission>(
           json,
           'Missions',
@@ -88,16 +87,16 @@ class FactionDetail {
 
 class FactionMission {
   FactionMission({
-    this.id,
-    this.name,
-    this.tiers,
+    required this.id,
+    required this.name,
+    required this.tiers,
   });
 
   final String id;
   final String name;
   final List<FactionMissionTier> tiers;
 
-  factory FactionMission.fromJson(Map<String, dynamic> json) => FactionMission(
+  factory FactionMission.fromJson(Map<String, dynamic>? json) => FactionMission(
         id: readStringSafe(json, 'Id'),
         name: readStringSafe(json, 'Name'),
         tiers: readListSafe<FactionMissionTier>(
@@ -110,16 +109,16 @@ class FactionMission {
 
 class FactionMissionTier {
   FactionMissionTier({
-    this.icon,
-    this.name,
-    this.requiredProgress,
+    required this.icon,
+    required this.name,
+    required this.requiredProgress,
   });
 
   final String icon;
   final String name;
   final int requiredProgress;
 
-  factory FactionMissionTier.fromJson(Map<String, dynamic> json) =>
+  factory FactionMissionTier.fromJson(Map<String, dynamic>? json) =>
       FactionMissionTier(
         icon: readStringSafe(json, 'Icon'),
         name: readStringSafe(json, 'Name'),

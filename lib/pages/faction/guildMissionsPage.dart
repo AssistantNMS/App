@@ -1,7 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/common/cachedFutureBuilder.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/factionTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
@@ -9,7 +8,7 @@ import '../../contracts/faction/guildMission.dart';
 import '../../integration/dependencyInjection.dart';
 
 class GuildMissionsPage extends StatelessWidget {
-  GuildMissionsPage({Key key}) : super(key: key) {
+  GuildMissionsPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.guildMissionsPage);
   }
 
@@ -17,7 +16,7 @@ class GuildMissionsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CachedFutureBuilder(
       future: getFactionRepo().getAllMissions(context),
-      whileLoading: simpleGenericPageScaffold(
+      whileLoading: () => simpleGenericPageScaffold(
         context,
         title: getTranslations().fromKey(LocaleKey.loading),
         body: getLoading().fullPageLoading(context),
@@ -28,8 +27,10 @@ class GuildMissionsPage extends StatelessWidget {
   }
 
   Widget getBody(
-      BuildContext bodyCtx, ResultWithValue<List<GuildMission>> snapshot) {
-    if (snapshot == null || snapshot.isSuccess == false) {
+    BuildContext bodyCtx,
+    ResultWithValue<List<GuildMission>> snapshot,
+  ) {
+    if (snapshot.isSuccess == false) {
       return simpleGenericPageScaffold(
         bodyCtx,
         title: getTranslations().fromKey(LocaleKey.error),
@@ -42,7 +43,7 @@ class GuildMissionsPage extends StatelessWidget {
       widgets.add((innerCtx) => guildMissionTilePresenter(bodyCtx, mission));
     }
 
-    widgets.add((_) => emptySpace8x());
+    widgets.add((_) => const EmptySpace8x());
 
     return simpleGenericPageScaffold(
       bodyCtx,
@@ -50,6 +51,7 @@ class GuildMissionsPage extends StatelessWidget {
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (listCtx, index) => widgets[index](listCtx),
+        scrollController: ScrollController(),
       ),
     );
   }

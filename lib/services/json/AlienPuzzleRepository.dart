@@ -36,7 +36,10 @@ class AlienPuzzleJsonRepository extends BaseJsonService
         await getAll(context, List.empty());
     if (alienPuzzlesResult.hasFailed) {
       return ResultWithValue(
-          false, AlienPuzzle(), alienPuzzlesResult.errorMessage);
+        false,
+        AlienPuzzle.fromJson(<String, dynamic>{}),
+        alienPuzzlesResult.errorMessage,
+      );
     }
     try {
       AlienPuzzle selectedAlienPuzzle =
@@ -46,7 +49,10 @@ class AlienPuzzleJsonRepository extends BaseJsonService
       getLog().e(
           "AlienPuzzleJsonRepository getById ($id) Exception: ${exception.toString()}");
       return ResultWithValue<AlienPuzzle>(
-          false, AlienPuzzle(), exception.toString());
+        false,
+        AlienPuzzle.fromJson(<String, dynamic>{}),
+        exception.toString(),
+      );
     }
   }
 }

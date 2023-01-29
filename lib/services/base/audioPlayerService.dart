@@ -5,12 +5,12 @@ import '../../contracts/misc/audioStreamBuilderEvent.dart';
 import 'interface/IAudioPlayerService.dart';
 
 class AudioPlayerService extends IAudioPlayerService {
-  AssetsAudioPlayer _player;
-  Key uniqueKey;
+  AssetsAudioPlayer? _player;
+  Key? uniqueKey;
 
   AssetsAudioPlayer getPlayer() {
     _player ??= AssetsAudioPlayer.newPlayer();
-    return _player;
+    return _player!;
   }
 
   @override
@@ -30,7 +30,9 @@ class AudioPlayerService extends IAudioPlayerService {
         metas: Metas(
           title: model.title,
           artist: model.artist,
-          image: MetasImage.network(model.image),
+          image: (model.image != null) //
+              ? MetasImage.network(model.image!)
+              : null,
         ),
       ),
       autoStart: true,
@@ -45,7 +47,9 @@ class AudioPlayerService extends IAudioPlayerService {
           } catch (e) {
             // unused
           }
-          model.customStopAction();
+          if (model.customStopAction != null) {
+            model.customStopAction!();
+          }
         },
       ),
     );
@@ -70,9 +74,9 @@ class AudioPlayerService extends IAudioPlayerService {
 
   @override
   Widget audioStreamBuilder({
-    Key uniqueKey,
-    BuildContext playerContext,
-    Widget Function(
+    Key? uniqueKey,
+    required BuildContext playerContext,
+    required Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
     )
@@ -97,9 +101,9 @@ class AudioPlayerService extends IAudioPlayerService {
 
   @override
   Widget audioLocalBuilder({
-    Key uniqueKey,
-    BuildContext playerContext,
-    Widget Function(
+    Key? uniqueKey,
+    required BuildContext playerContext,
+    required Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
     )

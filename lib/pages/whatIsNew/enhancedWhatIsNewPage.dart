@@ -10,7 +10,7 @@ import '../../redux/modules/setting/whatIsNewSettingsViewModel.dart';
 import '../newItemsInUpdate/newItemDetailsPage.dart';
 
 class EnhancedWhatIsNewPage extends StatelessWidget {
-  const EnhancedWhatIsNewPage({Key key}) : super(key: key);
+  const EnhancedWhatIsNewPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,35 +29,47 @@ class EnhancedWhatIsNewPage extends StatelessWidget {
 
   Widget getBody(BuildContext context, WhatIsNewSettingsViewModel viewModel,
       AsyncSnapshot<ResultWithValue<List<UpdateItemDetail>>> snapshot) {
-    Widget errorWidget = asyncSnapshotHandler(context, snapshot,
-        isValidFunction: (ResultWithValue<List<UpdateItemDetail>> result) =>
-            (result.isSuccess &&
-                result.value != null &&
-                result.value.length != null &&
-                result.value.isNotEmpty));
+    Widget? errorWidget = asyncSnapshotHandler(
+      context,
+      snapshot,
+      isValidFunction: (ResultWithValue<List<UpdateItemDetail>>? result) =>
+          ((result?.isSuccess ?? false) &&
+              result?.value != null &&
+              result?.value.length != null),
+    );
     if (errorWidget != null) return errorWidget;
+
+    List<PlatformType> overriddenPlatList = getPlatforms()
+        .map((plat) => (plat == PlatformType.windows)
+                ? PlatformType.githubWindowsInstaller //
+                : plat //
+            )
+        .toList();
+    if (isLinux) {
+      overriddenPlatList.add(PlatformType.githubWindowsInstaller);
+    }
 
     return WhatIsNewPage(
       AnalyticsEvent.whatIsNewDetailPage,
       selectedLanguage: viewModel.selectedLanguage,
+      overriddenPlatforms: overriddenPlatList,
       additionalBuilder: (VersionViewModel version) {
         List<Widget> columnWidgets = List.empty(growable: true);
-        UpdateItemDetail updateNewItemsThatMatchesThisGuid;
+        UpdateItemDetail? updateNewItemsThatMatchesThisGuid;
         try {
-          updateNewItemsThatMatchesThisGuid = snapshot.data.value
+          updateNewItemsThatMatchesThisGuid = snapshot.data!.value
               .firstWhere((item) => item.guid == version.guid);
         } catch (ex) {
           // unused
         }
         if (updateNewItemsThatMatchesThisGuid != null) {
           columnWidgets.add(
-            positiveButton(
-              context,
+            PositiveButton(
               title: getTranslations().fromKey(LocaleKey.viewItemsAdded),
-              onPress: () => getNavigation().navigateAsync(
+              onTap: () => getNavigation().navigateAsync(
                 context,
                 navigateTo: (context) =>
-                    NewItemsDetailPage(updateNewItemsThatMatchesThisGuid),
+                    NewItemsDetailPage(updateNewItemsThatMatchesThisGuid!),
               ),
             ),
           );

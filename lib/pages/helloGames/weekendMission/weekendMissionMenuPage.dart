@@ -5,7 +5,7 @@ import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
 import 'weekendMissionComponents.dart';
 
 class WeekendMissionMenuPage extends StatelessWidget {
-  const WeekendMissionMenuPage({Key key}) : super(key: key);
+  const WeekendMissionMenuPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +21,7 @@ class WeekendMissionMenuPage extends StatelessWidget {
         shrinkWrap: true,
         itemCount: listItems.length,
         itemBuilder: (BuildContext context, int index) => listItems[index],
+        scrollController: ScrollController(),
       ),
     );
   }

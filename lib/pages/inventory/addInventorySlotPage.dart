@@ -13,26 +13,24 @@ import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';
 import '../../contracts/redux/appState.dart';
 import '../../pages/inventory/addEditInventoryPage.dart';
-import '../../redux/modules/inventory/InventorySlotGenericViewModel.dart';
+import '../../redux/modules/inventory/inventorySlotGenericViewModel.dart';
 import '../../redux/modules/inventory/inventoryListViewModel.dart';
 
 class AddInventorySlotPage extends StatefulWidget {
   final GenericPageItem genericItem;
-  const AddInventorySlotPage(this.genericItem, {Key key}) : super(key: key);
+
+  AddInventorySlotPage(this.genericItem, {Key? key}) : super(key: key) {
+    getAnalytics().trackEvent(AnalyticsEvent.addInventorySlotPage);
+  }
 
   @override
-  _ViewInventoryListState createState() => _ViewInventoryListState(genericItem);
+  createState() => _ViewInventoryListState();
 }
 
 class _ViewInventoryListState extends State<AddInventorySlotPage> {
-  final GenericPageItem genericItem;
-  Inventory inventory;
   int _counter = 0;
+  Inventory? inventory;
   TextEditingController quantityController = TextEditingController();
-
-  _ViewInventoryListState(this.genericItem) {
-    getAnalytics().trackEvent(AnalyticsEvent.addInventorySlotPage);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,10 +42,11 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
         body: getBody(context, viewModel),
         fab: FloatingActionButton(
           onPressed: () async {
-            String invUuid = inventory?.uuid ?? viewModel.containers[0].uuid;
+            if (inventory == null) return;
+            String invUuid = inventory!.uuid;
             InventorySlot invSlot = InventorySlot(
-              id: genericItem.id,
-              quantity: int.tryParse(quantityController.text ?? "0") ?? 0,
+              id: widget.genericItem.id,
+              quantity: int.tryParse(quantityController.text) ?? 0,
             );
             viewModel.addInventorySlotToInventory(invUuid, invSlot);
             getNavigation().pop(context);
@@ -64,23 +63,26 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
   Widget getBody(BuildContext context, InventorySlotGenericViewModel vm) {
     List<Widget> widgets = List.empty(growable: true);
     widgets.add(vm.displayGenericItemColour
-        ? genericItemImageWithBackground(context, genericItem)
-        : genericItemImage(context, genericItem.icon));
-    var itemName = (genericItem.symbol != null && genericItem.symbol.isNotEmpty)
-        ? "${genericItem.name} (${genericItem.symbol})"
-        : genericItem.name;
-    widgets.add(genericItemName(itemName));
+        ? genericItemImageWithBackground(context, widget.genericItem)
+        : genericItemImage(context, widget.genericItem.icon));
+    bool genericIsNotNull = (widget.genericItem.symbol != null &&
+        widget.genericItem.symbol!.isNotEmpty);
+    String itemName = genericIsNotNull
+        ? "${widget.genericItem.name} (${widget.genericItem.symbol})"
+        : widget.genericItem.name;
+    widgets.add(GenericItemName(itemName));
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
 
     if (vm.containers.isNotEmpty) {
-      widgets.add(genericItemDescription("Select Container"));
+      widgets.add(const GenericItemDescription("Select Container"));
       widgets.add(
         Padding(
           child: DropdownButton<Inventory>(
             hint: const Text("Select item"),
-            value: inventory ?? vm.containers[0],
-            onChanged: (Inventory value) {
+            value: inventory,
+            onChanged: (Inventory? value) {
+              if (value == null) return;
               setState(() {
                 inventory = value;
               });
@@ -90,8 +92,9 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
                 value: inv,
                 child: Row(
                   children: <Widget>[
-                    localImage(
-                      '${getPath().imageAssetPathPrefix}/inventory/${inv.icon}',
+                    LocalImage(
+                      imagePath:
+                          '${getPath().imageAssetPathPrefix}/inventory/${inv.icon}',
                       height: 25,
                       width: 25,
                     ),
@@ -106,7 +109,7 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
         ),
       );
 
-      widgets.add(emptySpace3x());
+      widgets.add(const EmptySpace3x());
 
       widgets.add(
         Padding(
@@ -124,21 +127,22 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
         ),
       );
 
-      widgets.add(emptySpace3x());
+      widgets.add(const EmptySpace3x());
     } else {
-      widgets.add(genericItemDescription(
+      widgets.add(GenericItemDescription(
           getTranslations().fromKey(LocaleKey.pleaseAddContainer)));
       widgets.add(Container(
         child: StoreConnector<AppState, InventoryListViewModel>(
           converter: (store) => InventoryListViewModel.fromStore(store),
-          builder: (_, viewModel) => positiveButton(
-            context,
+          builder: (_, viewModel) => PositiveButton(
             title: getTranslations().fromKey(LocaleKey.add),
-            onPress: () async {
-              Inventory temp = await getNavigation().navigateAsync<Inventory>(
+            onTap: () async {
+              Inventory? temp = await getNavigation().navigateAsync<Inventory>(
                 context,
-                navigateTo: (context) =>
-                    AddEditInventoryPage(Inventory(), false),
+                navigateTo: (context) => AddEditInventoryPage(
+                  Inventory.initial(),
+                  false,
+                ),
               );
               if (temp == null) return;
               viewModel.addInventory(temp);
@@ -152,12 +156,13 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
       ));
     }
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
 
     return listWithScrollbar(
       key: Key('stateCounter: $_counter'),
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

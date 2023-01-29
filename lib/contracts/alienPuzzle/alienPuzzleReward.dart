@@ -9,16 +9,16 @@ import '../requiredItemDetails.dart';
 
 class AlienPuzzleReward {
   AlienPuzzleReward({
-    this.rewardId,
-    this.type,
-    this.rewards,
+    required this.rewardId,
+    required this.type,
+    required this.rewards,
   });
 
   String rewardId;
   String type;
   List<AlienPuzzleRewardOdds> rewards;
 
-  factory AlienPuzzleReward.fromJson(Map<String, dynamic> json) =>
+  factory AlienPuzzleReward.fromJson(Map<String, dynamic>? json) =>
       AlienPuzzleReward(
         rewardId: readStringSafe(json, 'RewardId'),
         type: readStringSafe(json, 'Type'),
@@ -28,24 +28,25 @@ class AlienPuzzleReward {
 }
 
 class AlienPuzzleRewardOdds {
-  AlienPuzzleRewardOdds({
-    this.id,
-    this.type,
-    this.percentageChance,
-    this.amountMin,
-    this.amountMax,
-  });
-
-  String id;
+  String? id;
   AlienPuzzleRewardItemType type;
   int percentageChance;
   int amountMin;
   int amountMax;
 
-  factory AlienPuzzleRewardOdds.fromJson(Map<String, dynamic> json) =>
+  AlienPuzzleRewardOdds({
+    this.id,
+    required this.type,
+    this.percentageChance = 100,
+    required this.amountMin,
+    required this.amountMax,
+  });
+
+  factory AlienPuzzleRewardOdds.fromJson(Map<String, dynamic>? json) =>
       AlienPuzzleRewardOdds(
         id: readStringSafe(json, 'Id'),
-        type: alienPuzzleRewardItemTypeValues.map[readStringSafe(json, 'Type')],
+        type:
+            alienPuzzleRewardItemTypeValues.map[readStringSafe(json, 'Type')]!,
         percentageChance: readIntSafe(json, 'PercentageChance'),
         amountMin: readIntSafe(json, 'AmountMin'),
         amountMax: readIntSafe(json, 'AmountMax'),
@@ -53,24 +54,29 @@ class AlienPuzzleRewardOdds {
 }
 
 class AlienPuzzleRewardWithAdditional extends AlienPuzzleReward {
-  AlienPuzzleRewardWithAdditional(AlienPuzzleReward orig) {
-    rewardId = orig.rewardId;
-    type = orig.type;
-    rewards = orig.rewards;
+  late List<AlienPuzzleRewardOddsWithAdditional> details;
+
+  AlienPuzzleRewardWithAdditional(AlienPuzzleReward orig)
+      : super(
+          rewardId: orig.rewardId,
+          type: orig.type,
+          rewards: orig.rewards,
+        ) {
     details = List.empty(growable: true);
   }
-  List<AlienPuzzleRewardOddsWithAdditional> details;
 }
 
 class AlienPuzzleRewardOddsWithAdditional extends AlienPuzzleRewardOdds {
-  AlienPuzzleRewardOddsWithAdditional(AlienPuzzleRewardOdds orig) {
-    id = orig.id;
-    type = orig.type;
-    percentageChance = orig.percentageChance;
-    amountMin = orig.amountMin;
-    amountMax = orig.amountMax;
-    details = RequiredItemDetails();
-  }
+  RequiredItemDetails? details;
 
-  RequiredItemDetails details;
+  AlienPuzzleRewardOddsWithAdditional(
+    AlienPuzzleRewardOdds orig,
+    this.details,
+  ) : super(
+          id: orig.id,
+          type: orig.type,
+          percentageChance: orig.percentageChance,
+          amountMin: orig.amountMin,
+          amountMax: orig.amountMax,
+        );
 }

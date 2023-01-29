@@ -5,8 +5,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import '../constants/ApiUrls.dart';
 import '../constants/AppConfig.dart';
 import '../contracts/generated/addFriendCodeViewModel.dart';
-import '../contracts/generated/feedbackAnsweredViewModel.dart';
-import '../contracts/generated/feedbackViewModel.dart';
 import '../contracts/generated/friendCodeViewModel.dart';
 import '../contracts/generated/nomNomInventoryViewModel.dart';
 import '../contracts/generated/stripeDonationViewModel.dart';
@@ -18,7 +16,7 @@ class AppApi extends BaseApiService {
 
   Future<ResultWithValue<String>> stripeCharge(
       String token, double amount) async {
-    StripeDonationViewModel vm = StripeDonationViewModel();
+    StripeDonationViewModel vm = StripeDonationViewModel.fromRawJson('{}');
     vm.amount = amount;
     vm.token = token;
     vm.currency = AppConfig.stripeCurrencyCode;
@@ -32,40 +30,15 @@ class AppApi extends BaseApiService {
     }
   }
 
-  Future<ResultWithValue<FeedbackViewModel>> getLatestFeedbackForm() async {
-    try {
-      final response = await apiGet(ApiUrls.feedback);
-      if (response.hasFailed) {
-        return ResultWithValue<FeedbackViewModel>(
-            false, FeedbackViewModel(), response.errorMessage);
-      }
-      final feedback = json.decode(response.value);
-      FeedbackViewModel feedbackVM = FeedbackViewModel.fromJson(feedback);
-      return ResultWithValue(true, feedbackVM, '');
-    } catch (exception) {
-      getLog()
-          .e("getLatestFeedbackForm Api Exception: ${exception.toString()}");
-      return ResultWithValue<FeedbackViewModel>(
-          false, FeedbackViewModel(), exception.toString());
-    }
-  }
-
-  Future<Result> sendFeedbackForm(FeedbackAnsweredViewModel vm) async {
-    try {
-      final response = await apiPost(ApiUrls.feedback, vm.toRawJson());
-      if (response.hasFailed) {
-        return Result(false, response.errorMessage);
-      }
-      return Result(true, '');
-    } catch (exception) {
-      getLog().e("sendFeedbackForm Api Exception: ${exception.toString()}");
-      return Result(false, exception.toString());
-    }
-  }
-
   Future<ResultWithValue<List<FriendCodeViewModel>>> getFriendCodes(
-      bool showPc, bool showPs4, bool showXb1) async {
-    String queryParams = 'showPc=$showPc&showPs4=$showPs4&showXb1=$showXb1';
+      bool showPc, bool showPs4, bool showXb1, bool showNsw) async {
+    List<String> queryParamsList = [
+      'showPc=$showPc',
+      'showPs4=$showPs4',
+      'showXb1=$showXb1',
+      'showNsw=$showNsw'
+    ];
+    String queryParams = queryParamsList.join('&');
     try {
       final response = await apiGet('${ApiUrls.friendCode}?$queryParams');
       if (response.hasFailed) {

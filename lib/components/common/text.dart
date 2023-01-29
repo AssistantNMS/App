@@ -13,9 +13,10 @@ Widget genericItemNameWithQuantity(context, String name, String quantity) =>
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(fontSize: 20),
             ),
-            Chip(
-                label: Text('x $quantity'),
-                backgroundColor: getTheme().getSecondaryColour(context))
+            getBaseWidget().appChip(
+              text: 'x $quantity',
+              backgroundColor: getTheme().getSecondaryColour(context),
+            )
           ]),
       margin: const EdgeInsets.all(4.0),
     );

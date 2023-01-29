@@ -5,13 +5,15 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class QuicksilverStoreItem {
   int tier;
   String itemId;
 
   QuicksilverStoreItem({
-    this.tier,
-    this.itemId,
+    required this.tier,
+    required this.itemId,
   });
 
   factory QuicksilverStoreItem.fromRawJson(String str) =>
@@ -19,10 +21,10 @@ class QuicksilverStoreItem {
 
   String toRawJson() => json.encode(toJson());
 
-  factory QuicksilverStoreItem.fromJson(Map<String, dynamic> json) =>
+  factory QuicksilverStoreItem.fromJson(Map<String, dynamic>? json) =>
       QuicksilverStoreItem(
-        tier: json["Tier"],
-        itemId: json["ItemId"],
+        tier: readIntSafe(json, 'Tier'),
+        itemId: readStringSafe(json, 'ItemId'),
       );
 
   Map<String, dynamic> toJson() => {

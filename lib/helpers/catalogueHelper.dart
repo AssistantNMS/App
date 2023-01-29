@@ -7,7 +7,7 @@ import '../pages/catalogue/catalogueItemPage.dart';
 List<CustomMenuItem> getCatalogueItemData(context) {
   List<CustomMenuItem> menuItems = List.empty(growable: true);
   menuItems.add(CustomMenuItem(
-    image: getListTileImage('drawer/rawmaterials.png'),
+    image: const ListTileImage(partialPath: 'drawer/rawmaterials.png'),
     title: LocaleKey.rawMaterials,
     navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.rawMaterials,
@@ -15,7 +15,7 @@ List<CustomMenuItem> getCatalogueItemData(context) {
     ),
   ));
   menuItems.add(CustomMenuItem(
-    image: getListTileImage('drawer/crafted.png'),
+    image: const ListTileImage(partialPath: 'drawer/crafted.png'),
     title: LocaleKey.products,
     navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.products,
@@ -23,7 +23,7 @@ List<CustomMenuItem> getCatalogueItemData(context) {
     ),
   ));
   menuItems.add(CustomMenuItem(
-    image: getListTileImage('drawer/equipment.png'),
+    image: const ListTileImage(partialPath: 'drawer/equipment.png'),
     title: LocaleKey.technologies,
     navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.technologies,
@@ -31,7 +31,7 @@ List<CustomMenuItem> getCatalogueItemData(context) {
     ),
   ));
   menuItems.add(CustomMenuItem(
-    image: getListTileImage('drawer/constructedTechnology.png'),
+    image: const ListTileImage(partialPath: 'drawer/constructedTechnology.png'),
     title: LocaleKey.constructedTechnologies,
     navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.constructedTechnologies,
@@ -39,7 +39,7 @@ List<CustomMenuItem> getCatalogueItemData(context) {
     ),
   ));
   menuItems.add(CustomMenuItem(
-    image: getListTileImage('drawer/building.png'),
+    image: const ListTileImage(partialPath: 'drawer/building.png'),
     title: LocaleKey.buildings,
     navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.buildings,
@@ -47,7 +47,7 @@ List<CustomMenuItem> getCatalogueItemData(context) {
     ),
   ));
   menuItems.add(CustomMenuItem(
-    image: getListTileImage('drawer/tradeItems.png'),
+    image: const ListTileImage(partialPath: 'drawer/tradeItems.png'),
     title: LocaleKey.tradeItems,
     navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.tradeItems,
@@ -55,7 +55,7 @@ List<CustomMenuItem> getCatalogueItemData(context) {
     ),
   ));
   menuItems.add(CustomMenuItem(
-    image: getListTileImage('drawer/curiosities.png'),
+    image: const ListTileImage(partialPath: 'drawer/curiosities.png'),
     title: LocaleKey.curiosities,
     navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.curiosities,
@@ -63,7 +63,7 @@ List<CustomMenuItem> getCatalogueItemData(context) {
     ),
   ));
   menuItems.add(CustomMenuItem(
-    image: getListTileImage('drawer/cooking.png'),
+    image: const ListTileImage(partialPath: 'drawer/cooking.png'),
     title: LocaleKey.cooking,
     navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.cooking,
@@ -71,7 +71,7 @@ List<CustomMenuItem> getCatalogueItemData(context) {
     ),
   ));
   menuItems.add(CustomMenuItem(
-    image: getListTileImage('drawer/upgradeModules.png'),
+    image: const ListTileImage(partialPath: 'drawer/upgradeModules.png'),
     title: LocaleKey.upgradeModules,
     navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.upgradeModules,
@@ -80,8 +80,10 @@ List<CustomMenuItem> getCatalogueItemData(context) {
     ),
   ));
   menuItems.add(CustomMenuItem(
-    image: getCorrectlySizedImageFromIcon(context, Icons.dashboard,
-        colour: getTheme().getDarkModeSecondaryColour()),
+    image: CorrectlySizedImageFromIcon(
+      icon: Icons.dashboard,
+      colour: getTheme().getDarkModeSecondaryColour(),
+    ),
     title: LocaleKey.others,
     navigateTo: (context) => const CatalogueItemPage(
       LocaleKey.others,

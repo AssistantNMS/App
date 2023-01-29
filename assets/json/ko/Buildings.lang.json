@@ -5005,7 +5005,7 @@
   },
   {
     "Id": "build273",
-    "Icon": "building/272.png",
+    "Icon": "building/273.png",
     "Name": "청동 블롭 상",
     "Group": "해제 가능한 장식",
     "Description": "청동으로 주조한 독점 기지 장식물입니다.\n이 상은 수많은 초기 탐험가들이 찾아 나섰던 초기 원시 생물체를 묘사하고 있습니다.",
@@ -5727,7 +5727,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5755,7 +5756,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5930,7 +5932,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/303.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6286,7 +6289,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/316.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7686,7 +7690,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7714,7 +7719,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7742,7 +7748,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7877,7 +7884,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7969,7 +7977,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7990,6 +7999,7 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/395.png",
     "Usages": [
       "HasDevProperties",
+      "IsNoLongerObtainable",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 15,
@@ -8472,7 +8482,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
+      "IsTwitchCampaign4Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -9054,7 +9065,7 @@
     "Icon": "building/436.png",
     "Name": "거주지 도표",
     "Group": "전문 행성 도표",
-    "Description": "주변 행성 거주지를 보여주는 지도입니다. <STELLAR>우주정거장의 지도제작자<>에게서 얻었습니다.\n\n지도를 선택하고 경로 구성(<IMG>FE_ALT1<>)을 사용해 엑소슈트 화면에 위치를 지정하세요.",
+    "Description": "주변 행성 거주지를 보여주는 지도입니다. <STELLAR>우주정거장의 지도제작자<>에게서 얻었습니다.\n\n지도를 선택하고 <VAL_ON>경로 구성(<IMG>FE_ALT1<>)<>을 사용해 엑소슈트 화면에 위치를 지정하세요.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -9092,8 +9103,16 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw1",
-        "Quantity": 25
+        "Id": "prod6",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
       }
     ],
     "StatBonuses": [],
@@ -15840,7 +15859,7 @@
   },
   {
     "Id": "build814",
-    "Icon": "building/1.png",
+    "Icon": "building/814.png",
     "Name": "대형 화물선 방 A",
     "Group": "화물선 실내 모듈",
     "Description": "이 확장 모듈은 대형 함선 내부에 거주 가능한 공간을 급속도로 건설할 수 있게 해줍니다.\n\n건설 유닛은 압력 격벽 및 필요한 모든 부착점까지 구비된 완제품으로 제작됩니다.",
@@ -15868,7 +15887,7 @@
   },
   {
     "Id": "build815",
-    "Icon": "building/1.png",
+    "Icon": "building/815.png",
     "Name": "대형 화물선 방 B",
     "Group": "화물선 실내 모듈",
     "Description": "이 확장 모듈은 대형 함선 내부에 거주 가능한 공간을 급속도로 건설할 수 있게 해줍니다.\n\n건설 유닛은 압력 격벽 및 필요한 모든 부착점까지 구비된 완제품으로 제작됩니다.",
@@ -15896,7 +15915,7 @@
   },
   {
     "Id": "build816",
-    "Icon": "building/1.png",
+    "Icon": "building/816.png",
     "Name": "대형 화물선 방 C",
     "Group": "화물선 실내 모듈",
     "Description": "이 확장 모듈은 대형 함선 내부에 거주 가능한 공간을 급속도로 건설할 수 있게 해줍니다.\n\n건설 유닛은 압력 격벽 및 필요한 모든 부착점까지 구비된 완제품으로 제작됩니다.",
@@ -15924,7 +15943,7 @@
   },
   {
     "Id": "build817",
-    "Icon": "building/66.png",
+    "Icon": "building/817.png",
     "Name": "사각 방",
     "Group": "건설 모듈",
     "Description": "사각형 형태의 기지 건설의 중심 모듈로, 확장의 근간이 되는 중앙 구역을 제공합니다.",
@@ -15949,7 +15968,7 @@
   },
   {
     "Id": "build818",
-    "Icon": "building/66.png",
+    "Icon": "building/817.png",
     "Name": "사각 방",
     "Group": "건설 모듈",
     "Description": "사각형 형태의 기지 건설의 중심 모듈로, 확장의 근간이 되는 중앙 구역을 제공합니다.",
@@ -16022,7 +16041,7 @@
   },
   {
     "Id": "build821",
-    "Icon": "building/141.png",
+    "Icon": "building/821.png",
     "Name": "식물 보관소 3",
     "Group": "장식",
     "Description": "자신의 기지를 꾸미는 장식물입니다.",
@@ -16046,7 +16065,7 @@
   },
   {
     "Id": "build822",
-    "Icon": "building/156.png",
+    "Icon": "building/822.png",
     "Name": "둥근 테이블",
     "Group": "가구",
     "Description": "비자성, 부식 저항성 소재로 만든 만능 작업 공간.",
@@ -16071,7 +16090,7 @@
   },
   {
     "Id": "build823",
-    "Icon": "building/156.png",
+    "Icon": "building/823.png",
     "Name": "육각형 테이블",
     "Group": "가구",
     "Description": "비자성, 부식 저항성 소재로 만든 만능 작업 공간.",
@@ -16096,7 +16115,7 @@
   },
   {
     "Id": "build824",
-    "Icon": "building/156.png",
+    "Icon": "building/824.png",
     "Name": "모서리 테이블",
     "Group": "가구",
     "Description": "비자성, 부식 저항성 소재로 만든 만능 작업 공간.",
@@ -16648,7 +16667,7 @@
   },
   {
     "Id": "build848",
-    "Icon": "building/336.png",
+    "Icon": "building/848.png",
     "Name": "사각 입식 조명",
     "Group": "부품",
     "Description": "에너지 소모가 적은 조명으로, 수명이 길고 재활용 가능한 소재입니다.",
@@ -16673,7 +16692,7 @@
   },
   {
     "Id": "build849",
-    "Icon": "building/336.png",
+    "Icon": "building/849.png",
     "Name": "둥근 입식 조명",
     "Group": "부품",
     "Description": "에너지 소모가 적은 조명으로, 수명이 길고 재활용 가능한 소재입니다.",
@@ -16698,7 +16717,7 @@
   },
   {
     "Id": "build850",
-    "Icon": "building/336.png",
+    "Icon": "building/850.png",
     "Name": "갓을 씌운 입식 조명",
     "Group": "부품",
     "Description": "에너지 소모가 적은 조명으로, 수명이 길고 재활용 가능한 소재입니다.",
@@ -16756,7 +16775,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16952,7 +16972,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
+      "IsExpeditionSeason7Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -17282,7 +17303,7 @@
     "Icon": "building/871.png",
     "Name": "함대지휘소",
     "Group": "원정 관리 터미널",
-    "Description": "핵심적인 <TECHNOLOGY>함대 관리 스테이션<>입니다. 이 진보된 홀로그램 교신 스테이션은 자신의 주력함에서 편안하게 함대의 원정을 관리하는 데 중요한 요소입니다. 이 모듈은 <STELLAR>공간 하나를 전부 차지<>하며, 해당 기능을 수행하는 장비가 미리 설치됩니다.\n\n한 번에 하나 이상의 원정 관리를 위해 <STELLAR>다수의 스테이션<>을 설치하기를 권장합니다.",
+    "Description": "핵심적인 <TECHNOLOGY>함대 관리 스테이션<>입니다. 이 진보된 홀로그램 교신 스테이션은 자신의 주력함에서 편안하게 함대의 원정을 관리하는 데 중요한 요소입니다.이 모듈은 <STELLAR>공간 하나를 전부 차지<>하며, 해당 기능을 수행하는 장비가 미리 설치됩니다.\n\n한 번에 하나 이상의 원정 관리를 위해 <STELLAR>다수의 스테이션<>을 설치하기를 권장합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17445,7 +17466,7 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "기술실 (비어있음)",
+    "Name": "기술실 (확장)",
     "Group": "고급 화물선 모듈",
     "Description": "기술적 미관을 고려한 넓은 체임버입니다. 커다란 우주선 내부의 거주 공간을 확장하는 용도로 사용합니다.",
     "BaseValueUnits": 1.0,
@@ -17606,7 +17627,7 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "생물실 (비어있음)",
+    "Name": "생물실 (확장)",
     "Group": "고급 화물선 모듈",
     "Description": "자연스럽게 공기를 여과하고 산소를 공급하며, 화물선의 거주 공간에 식물로 된 작은 안식처를 제공하는 넓은 온실 체임버입니다.",
     "BaseValueUnits": 1.0,
@@ -17703,7 +17724,7 @@
     "Icon": "building/884.png",
     "Name": "엑소크래프트 궤도 물질화 장치",
     "Group": "신속 배치 화물선 모듈",
-    "Description": "고급 통합 화물선 설비입니다. 사용자가 소유하고 있는 엑소크래프트를 화물선과 동일한 성계 어디에서나 소환할 수 있도록 만들어 주는 건축물입니다. 이 모듈은 <STELLAR>공간 하나를 전부 차지<>하며, 해당 기능을 수행하는 장비가 미리 설치됩니다.\n\n편의를 위해 <STELLAR>엑소슈트의 빠른 명령 메뉴<>와 연동되어 있습니다.",
+    "Description": "고급 통합 화물선 설비입니다. 사용자가 소유하고 있는 엑소크래프트를 화물선과 동일한 성계 어디에서나 소환할 수 있도록 만들어 주는 건축물입니다.이 모듈은 <STELLAR>공간 하나를 전부 차지<>하며, 해당 기능을 수행하는 장비가 미리 설치됩니다.\n\n편의를 위해 <STELLAR>엑소슈트의 빠른 명령 메뉴<>와 연동되어 있습니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -17736,7 +17757,7 @@
     "Icon": "building/885.png",
     "Name": "엑소크래프트 전문 연구실",
     "Group": "노동자 터미널",
-    "Description": "통합 화물선 연구 설비입니다. <TECHNOLOGY>엑소크래프트 공학자<>의 요구에 맞춰 제작했으며, 맞춤형 탈것 설계 소프트웨어가 포함됩니다.\n\n이 모듈은 <STELLAR>공간 하나를 전부 차지<>하며, 해당 기능을 수행하는 장비가 미리 설치됩니다.",
+    "Description": "통합 화물선 연구 설비입니다. <TECHNOLOGY>엑소크래프트 기술자<>의 요구에 맞춰 제작했으며, 맞춤형 탈것 설계 소프트웨어가 포함됩니다.\n\n이 모듈은 <STELLAR>공간 하나를 전부 차지<>하며, 해당 기능을 수행하는 장비가 미리 설치됩니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,7 +18111,7 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "산업실 (비어있음)",
+    "Name": "산업실(확장)",
     "Group": "고급 화물선 모듈",
     "Description": "산업적 미관을 고려한 넓은 체임버입니다. 커다란 우주선 내부의 거주 공간을 확장하는 용도로 사용합니다.",
     "BaseValueUnits": 1.0,
@@ -18989,7 +19010,7 @@
     "Icon": "building/932.png",
     "Name": "카페 42 데칼",
     "Group": "장식",
-    "Description": "독점 데칼로, 기지에 멋과 장식을 더할 수 있습니다.\n카페 42와 친구, 즐거움, 기분 좋은 느낌을 나타내는 데칼입니다. 카페에 오신 걸 환영합니다!",
+    "Description": "독점 데칼로, 기지에 멋과 장식을 더할 수 있습니다.\n카페 42와 친구, 즐거움, 기분 좋은 느낌을 나타내는 데칼입니다. 카페에 어서 오세요!",
     "BaseValueUnits": 400.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -19016,7 +19037,7 @@
     "Icon": "building/933.png",
     "Name": "여행자 총 연맹 데칼",
     "Group": "장식",
-    "Description": "독점 데칼로, 기지에 멋과 장식을 더할 수 있습니다.\n여행자 총 연맹을 나타내는 데칼입니다. 기록, 지원, 창조, 소통하십시오.",
+    "Description": "독점 데칼로, 기지에 멋과 장식을 더할 수 있습니다.\n여행자 총 연맹을 나타내는 데칼입니다. 기록, 지원, 창조, 소통하세요.",
     "BaseValueUnits": 400.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -19133,7 +19154,7 @@
   },
   {
     "Id": "build938",
-    "Icon": "building/350.png",
+    "Icon": "building/938.png",
     "Name": "엑소슈트 확장 유닛",
     "Group": "업그레이드 유닛",
     "Description": "첨단 생존 기술 모듈로 사용자의 <STELLAR>엑소슈트 저장 공간<>을 확장해 줍니다.\n\n내장된 나노 확장제가 엑소슈트 내에 안정화된 서브 워프 보이드를 만들어 <STELLAR>인벤토리 용량<>을 늘립니다. 이 증강물은 <STELLAR>우주정거장<>의 엑소슈트 업그레이드 터미널에서 적용할 수 있습니다.",
@@ -19185,7 +19206,7 @@
     "Icon": "building/940.png",
     "Name": "파랑-빨강 아틀라스 폭죽",
     "Group": "소모형 불꽃놀이 장치",
-    "Description": "<COMMODITY>인듐<>과 <TECHNOLOGY>카드뮴<>의 폭발로 만들어지는 아틀라스 인터페이스의 굉장히 아름다운 불꽃놀이의 향연입니다. 점화하여 하늘에 반짝이는 작품을 만들어 보십시오.\n \n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "Description": "<COMMODITY>인듐<>과 <TECHNOLOGY>카드뮴<>의 폭발로 만들어지는 아틀라스 인터페이스의 굉장히 아름다운 불꽃놀이의 향연입니다. 점화하여 하늘에 반짝이는 작품을 만들어보세요.\n \n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
     "BaseValueUnits": 50.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -19208,7 +19229,7 @@
     "Icon": "building/941.png",
     "Name": "금색-파랑 아틀라스 폭죽",
     "Group": "소모형 불꽃놀이 장치",
-    "Description": "<COMMODITY>금<>과 <TECHNOLOGY>인듐<>의 폭발로 만들어지는 아틀라스 인터페이스의 굉장히 아름다운 불꽃놀이의 향연입니다. 점화하여 하늘에 반짝이는 작품을 만들어 보십시오.\n \n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "Description": "<COMMODITY>금<>과 <TECHNOLOGY>인듐<>의 폭발로 만들어지는 아틀라스 인터페이스의 굉장히 아름다운 불꽃놀이의 향연입니다. 점화하여 하늘에 반짝이는 작품을 만들어보세요.\n \n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
     "BaseValueUnits": 50.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -19231,7 +19252,7 @@
     "Icon": "building/942.png",
     "Name": "빨강-금색 아틀라스 폭죽",
     "Group": "소모형 불꽃놀이 장치",
-    "Description": "<COMMODITY>카드뮴<>과 <TECHNOLOGY>금<>의 폭발로 만들어지는 아틀라스 인터페이스의 굉장히 아름다운 불꽃놀이의 향연입니다. 점화하여 하늘에 반짝이는 작품을 만들어 보십시오.\n \n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "Description": "<COMMODITY>카드뮴<>과 <TECHNOLOGY>금<>의 폭발로 만들어지는 아틀라스 인터페이스의 굉장히 아름다운 불꽃놀이의 향연입니다. 점화하여 하늘에 반짝이는 작품을 만들어보세요.\n \n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
     "BaseValueUnits": 50.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -19301,7 +19322,7 @@
   },
   {
     "Id": "build945",
-    "Icon": "other/148.png",
+    "Icon": "building/945.png",
     "Name": "역사 기록 측정기",
     "Group": "개인용 현실 흐름 모니터",
     "Description": "나다는 <TRANS_TRA>겍<>, <TRANS_EXP>코백스<>, <TRANS_WAR>바이-킨<>의 이야기 속에서 나타나는 새로운 패턴을 발견했습니다.\n\n이 측정기는 주요 유물 위치 근처의 <SPECIAL>역사 흐름<> 노출도를 측정합니다. 특이한 역사적 변화 기록은 나다가 신호를 추적할 수 있게 해줄 것입니다.\n\n이 장치로 외계 유물 위치에서 <STELLAR>역사 데이터를 전송<>해 나다와 폴로의 연구를 도와주십시오.",
@@ -19820,7 +19841,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19847,7 +19869,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19874,7 +19897,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20678,9 +20702,9 @@
   {
     "Id": "build996",
     "Icon": "building/996.png",
-    "Name": "유리 화물선 계단",
+    "Name": "화물선 유리 계단",
     "Group": "코어 화물선 모듈",
-    "Description": "이 확장 모듈은 대형 함선 내부에 거주 가능한 공간을 급속도로 건설할 수 있게 해줍니다.\n\n건설 유닛은 압력 격벽 및 필요한 모든 부착점까지 구비된 완제품으로 제작됩니다.",
+    "Description": "화물 데크 사이를 수직으로 가로지르는 인체공학적 경사로 만들어진 견고한 미끄럼 방지 계단입니다.\n\n낮은 열팽창 유리로 제작된 이 계단은 사용자에게 깊은 공간으로의 스릴 넘치는 전망을 제공합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20707,9 +20731,9 @@
   {
     "Id": "build997",
     "Icon": "building/997.png",
-    "Name": "외부 플랫폼 화물선 계단",
+    "Name": "화물선 외부 계단",
     "Group": "코어 화물선 모듈",
-    "Description": "이 확장 모듈은 대형 함선 내부에 거주 가능한 공간을 급속도로 건설할 수 있게 해줍니다.\n\n건설 유닛은 압력 격벽 및 필요한 모든 부착점까지 구비된 완제품으로 제작됩니다.",
+    "Description": "화물 데크 사이를 수직으로 가로지르는 인체공학적 경사로 만들어진 견고한 미끄럼 방지 계단입니다.\n\n이 견고한 계단은 화물선 선체 <STELLAR>외부<>에 부착되어 외부 통로와 플랫폼 사이를 연결할 수 있습니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20734,12 +20758,13 @@
     "Icon": "building/998.png",
     "Name": "화물선 내벽",
     "Group": "코어 화물선 모듈",
-    "Description": "이 확장 모듈은 대형 함선 내부에 거주 가능한 공간을 급속도로 건설할 수 있게 해줍니다.\n\n건설 유닛은 압력 격벽 및 필요한 모든 부착점까지 구비된 완제품으로 제작됩니다.",
+    "Description": "대형 화물선 공간을 세분화하는 내부 벽입니다. 주변 공간의 미학에 맞게 매끄럽게 구성됩니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20756,14 +20781,15 @@
   {
     "Id": "build999",
     "Icon": "building/999.png",
-    "Name": "산업실B (비어있음)",
+    "Name": "확장 공간 변형",
     "Group": "고급 화물선 모듈",
     "Description": "산업적 미관을 고려한 넓은 체임버입니다. 커다란 우주선 내부의 거주 공간을 확장하는 용도로 사용합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20776,6 +20802,168 @@
       {
         "Id": "raw32",
         "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1000",
+    "Icon": "building/1000.png",
+    "Name": "기갑 아네모네",
+    "Group": "유기물 장식",
+    "Description": "육식성 해양 생물입니다. 중앙의 폴립은 기갑 외피가 둘러싸고 있어 따끔한 촉수만 밖으로 드러납니다. 무의식적인 신경 발작으로 이 생물은 항상 굶주린 채 먹이를 찾아다니며 영원히 꿈틀거리게 됩니다.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1001",
+    "Icon": "building/1001.png",
+    "Name": "산호 지구",
+    "Group": "유기물 장식",
+    "Description": "자연스럽게 방향성 없는 공간의 지구 형태를 띤 거대한 칼슘 형성물입니다. 거주 가능 기지 어디라도 신비한 해저 분위기를 더해 줍니다.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1002",
+    "Icon": "building/1002.png",
+    "Name": "해양 군집체",
+    "Group": "유기물 장식",
+    "Description": "생물의 밀도가 높은 해저 바닥에서 가져온 암석 형성물입니다. 부착된 해양 생물은 영양이 풍부한 점액으로 칠해져 지상에서도 먹이 및 습기를 제공할 수 있습니다.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1003",
+    "Icon": "building/1003.png",
+    "Name": "밤혓바닥 꽃",
+    "Group": "유기물 장식",
+    "Description": "어떠한 생물군계, 토양 및 기상 조건에서도 잘 자라도록 유전자 변형을 거친 튼튼한 꽃입니다. 살을 뚫을 정도의 가시가 달린 꽃잎에는 치명적인 독이 있어 잠재적인 포식자로부터 꽃을 보호합니다. 다루는 동안 방호장갑의 사용이 권장됩니다.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1004",
+    "Icon": "building/1004.png",
+    "Name": "성게 꽃",
+    "Group": "유기물 장식",
+    "Description": "어떠한 생물군계, 토양 및 기상 조건에서도 잘 자라도록 유전자 변형을 거친 튼튼한 꽃입니다. 이 특이한 모양의 꽃 안에는 꽃가루가 가득 차 있으며 어지러울 정도로 달콤한 향을 내뿜습니다.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1005",
+    "Icon": "building/1005.png",
+    "Name": "영원의 눈",
+    "Group": "유기물 장식",
+    "Description": "어떠한 생물군계, 토양 및 기상 조건에서도 잘 자라도록 유전자 변형을 거친 튼튼한 꽃입니다. 이 혀처럼 생긴 꽃은 하루 종일 열린 채로 가깝고 먼 곳의 별에서 빛을 흡수합니다.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
       }
     ],
     "StatBonuses": [],

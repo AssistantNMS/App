@@ -244,7 +244,7 @@
         "Name": "Réservoirs du jetpack",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "20"
+        "Value": "25"
       },
       {
         "Name": "Taux de rechargement",
@@ -262,7 +262,7 @@
         "Name": "Accélérer le temps de récupération",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "20"
+        "Value": "40"
       }
     ],
     "ConsumableRewardTexts": []
@@ -946,7 +946,7 @@
         "Value": "15"
       },
       {
-        "Name": "Manœuvrabilité",
+        "Name": "Manœuvrabilité (Vaisseau)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -1032,7 +1032,7 @@
   {
     "Id": "tech27",
     "Icon": "technology/26.png",
-    "Name": "Rechargeur de système de décollage",
+    "Name": "Chargeur automatique de décollage",
     "Group": "Amélioration du système de décollage du vaisseau",
     "Description": "Panneaux photovoltaïques intégrés au vaisseau, les <TECHNOLOGY>propulseurs de décollage<> permettent une charge lente au compte-gouttes lorsque le vaisseau n’est pas en marche.\n\nLa lumière récoltée est utilisée pour faire fusionner le dihydrogène atmosphérique et, au fil du temps, <STELLAR>réalimenter automatiquement les propulseurs de décollage<>.",
     "BaseValueUnits": 1.0,
@@ -1054,7 +1054,7 @@
         "Quantity": 2
       },
       {
-        "Id": "prod115",
+        "Id": "prod116",
         "Quantity": 2
       }
     ],
@@ -2247,9 +2247,9 @@
       },
       {
         "Name": "Récompenses d'analyse de minéraux",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "target",
-        "Value": "1"
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3580,7 +3580,7 @@
   {
     "Id": "tech94",
     "Icon": "technology/94.png",
-    "Name": "Scanner de signaux pour exonef",
+    "Name": "Radar pour exonef",
     "Group": "Équipement de scan pour exonef",
     "Description": "Gros radar de terrain spécialement conçu pour une utilisation dans l'hyperespace.\n\nDu fait de sa consommation importante et son instabilité subatomique, cet outil complexe est réservé aux exonefs.\n\nAppuyez sur <IMG>QUICK_MENU<> pour activer le scanner de signaux.",
     "BaseValueUnits": 1.0,
@@ -3615,9 +3615,9 @@
   {
     "Id": "tech96",
     "Icon": "technology/96.png",
-    "Name": "Amélioration de scanner de signaux pour exonef Tau",
-    "Group": "Amélioration de scanner de signaux pour exonef",
-    "Description": "Permet l'acquisition par le scanner de signaux pour exonef d'autres types de bâtiments.",
+    "Name": "Résonateur d'énergie de radar",
+    "Group": "Amélioration de détection de signaux pour exonef",
+    "Description": "Permet l'acquisition par le radar pour exonef d'autres types de bâtiments.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -3654,7 +3654,7 @@
   {
     "Id": "tech97",
     "Icon": "technology/97.png",
-    "Name": "Module d'accélération pour exonef",
+    "Name": "Améliorateurs pour exonef",
     "Group": "Amélioration de moteur pour exonef",
     "Description": "Puissant injecteur à plasma qui, couplé au moteur, permet de brèves accélérations.",
     "BaseValueUnits": 1.0,
@@ -3750,7 +3750,7 @@
   {
     "Id": "tech99",
     "Icon": "technology/99.png",
-    "Name": "Amélioration de laser d'extraction pour exonef Sigma",
+    "Name": "Laser pour exonef avancé",
     "Group": "Amélioration d'accessoire d'extraction pour exonef",
     "Description": "Augmente la puissance du laser d'extraction pour exonef.",
     "BaseValueUnits": 1.0,
@@ -3791,7 +3791,7 @@
   {
     "Id": "tech100",
     "Icon": "technology/100.png",
-    "Name": "Canon monté pour exonef",
+    "Name": "Canon monté",
     "Group": "Accessoire d'arme pour exonef",
     "Description": "Arme puissante nécessitant beaucoup de puissance et qui ne peut qu'être amorcé depuis un exonef.",
     "BaseValueUnits": 1.0,
@@ -5918,7 +5918,7 @@
   },
   {
     "Id": "tech166",
-    "Icon": "technology/28.png",
+    "Icon": "technology/166.png",
     "Name": "Extraction de matière",
     "Group": "Appareil de téléportation sur cargo",
     "Description": "Un appareil qui module les signaux de communication standard des vaisseaux pour <TECHNOLOGY>permettre le transport de matière<> en plus des données.\n\nLes cargos équipés de tels dispositifs peuvent envoyer et recevoir des produits et des substances vers et depuis l'<STELLAR>exocombinaison<> d'un utilisateur sur une <STELLAR>longue distance<>.",
@@ -6253,9 +6253,9 @@
   {
     "Id": "tech174",
     "Icon": "technology/96.png",
-    "Name": "Scanner de signaux avancé",
-    "Group": "Amélioration de scanner de signaux pour exonef",
-    "Description": "Permet l'acquisition par le scanner de signaux pour exonef d'autres types de bâtiments.",
+    "Name": "Amplificateur de radar",
+    "Group": "Amélioration de détection de signaux pour exonef",
+    "Description": "Permet l'acquisition par le radar pour exonef d'autres types de bâtiments.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -6658,7 +6658,7 @@
     "Icon": "technology/1.png",
     "Name": "Dispositif de contrôle de l'environnement",
     "Group": "Dispositif de protection de l'exonef contre les dangers",
-    "Description": "Un puissant système de neutralisation environnementale est fixé directement dans le pilote Minotaure lorsqu'il prend le contrôle du véhicule. Le système est alimenté par le moteur principal du Minotaure et ne nécessite pas d'autre entrée utilisateur.\n\nRend le pilote Minotaure imperméable à <STELLAR>tous les dangers environnementaux<>.",
+    "Description": "Ce puissant système de neutralisation environnementale est fixé directement dans le pilote lorsqu'il entre dans le cockpit. Le système est alimenté par le moteur principal du Minotaure et ne nécessite pas d'autre intervention. Une légère douleur peut être constatée près de la région de l'insertion.\n\nRend le pilote Minotaure imperméable à <STELLAR>tous les dangers environnementaux<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -6955,7 +6955,7 @@
         "Value": "100"
       },
       {
-        "Name": "Manœuvrabilité",
+        "Name": "Manœuvrabilité (Vaisseau)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "25"
@@ -6965,7 +6965,7 @@
   },
   {
     "Id": "tech189",
-    "Icon": "other/148.png",
+    "Icon": "building/945.png",
     "Name": "Catapulte de décalage",
     "Group": "Générateur de distorsion modifié illégalement",
     "Description": "Ce propulseur expérimental augmente la technologie d'<TECHNOLOGY>hyperpropulsion<> conventionnelle en créant une distorsion dans la géométrie locale à l'emplacement de mise à feu, ce qui augmente la <STELLAR>distance<> et l'<STELLAR>efficacité<> bien au-delà des capacités de propulseurs conventionnels.\n\nIl est conseillé d'accéder aux systèmes d'hyperpropulsion depuis la <STELLAR>carte galactique<>.",
@@ -7091,7 +7091,7 @@
   {
     "Id": "tech192",
     "Icon": "technology/192.png",
-    "Name": "Implant de neutralisation de l'archive",
+    "Name": "Implant de piratage de l'archive",
     "Group": "Circuit d'accès sous-cutané",
     "Description": "Un <TECHNOLOGY>pare-feu biotechnique<>, conçu pour protéger des dangers cognitifs textuels. Il est couvert d'une substance visqueuse, des bulles émergent à sa surface.\n\nIntégré sous la peau, il octroie l'accès administratif aux anciens textes interdits conservés aux <SPECIAL>archives planétaires<>.\n<FUEL>Attention<> : N'ouvrez pas les textes interdits. Une exposition aux textes interdits est extrêmement risquée.",
     "BaseValueUnits": 1.0,
@@ -7430,7 +7430,7 @@
     "Icon": "technology/204.png",
     "Name": "Système de camouflage",
     "Group": "Unité de camouflage actif",
-    "Description": "Lors de l'activation, ce module est alimenté par les systèmes de <VAL_ON>survie de l'exocombinaison<> pour manipuler le champ gravitationnel autour de l'utilisateur, réfracter la lumière et créer un <STELLAR>effet de camouflage actif<>.\n\nCet effet <STELLAR>temporaire<> peut être utilisé pour échapper à la vigilance ennemie. AVERTISSEMENT : le camouflage actif s'nterrompt lors de manœuvres importantes de l'exocombinaison telles que l'activation du jetpack ou des systèmes d'armes du multioutil.",
+    "Description": "Lors de l'activation, ce module est alimenté par les systèmes de <VAL_ON>survie de l'exocombinaison<> pour manipuler le champ gravitationnel autour de l'utilisateur, réfracter la lumière et créer un <STELLAR>effet de camouflage actif<>.\n\nCet effet <STELLAR>temporaire<> peut être utilisé pour échapper à la vigilance ennemie. AVERTISSEMENT : le camouflage actif s'interrompt lors de manœuvres importantes de l'exocombinaison telles que l'activation du jetpack ou des systèmes d'armes du multioutil.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -7832,7 +7832,7 @@
   {
     "Id": "tech212",
     "Icon": "technology/212.png",
-    "Name": "Bras gauche de cuirassé sentinelle",
+    "Name": "Bras gauche de cuirassé",
     "Group": "Membre de remplacement de Minotaure",
     "Description": "Une collection de composants récupérés sur un cuirassé, reconditionnés pour l'exonef lourd hybride du <TECHNOLOGY>Minotaure<>.\n\nLorsqu'il est installé à proximité du <TECHNOLOGY>laser du Minotaure<>, il transforme son laser d'extraction en <STELLAR>puissante amélioration de combat<> pouvant infliger des dégâts importants aux entités <TECHNOLOGY>étourdies<>.",
     "BaseValueUnits": 1.0,
@@ -7896,7 +7896,7 @@
   {
     "Id": "tech213",
     "Icon": "technology/213.png",
-    "Name": "Bras droit de cuirassé sentinelle",
+    "Name": "Bras droit de cuirassé",
     "Group": "Membre de remplacement de Minotaure",
     "Description": "Une collection de composants récupérés sur un cuirassé, reconditionnés pour l'exonef lourd hybride du <TECHNOLOGY>Minotaure<>.\n\nCe membre piraté possède également son propre <STELLAR>système de combat dédié<>. Il déploie des <TECHNOLOGY>projectiles étourdissants<> à haute vitesse et fait une excellente arme de soutien pour le canon principal du Minotaure.\n\nUtilisez <IMG>CYCLEWEAPON<> pour alterner entre les différents modes d'arme.",
     "BaseValueUnits": 1.0,
@@ -7948,7 +7948,7 @@
   {
     "Id": "tech214",
     "Icon": "technology/214.png",
-    "Name": "Jambes de cuirassé sentinelle",
+    "Name": "Jambes de cuirassé",
     "Group": "Membre de remplacement de Minotaure",
     "Description": "Une collection de composants récupérés sur un cuirassé, reconditionnés pour l'exonef lourd hybride du <TECHNOLOGY>Minotaure<>.\n\nAméliore considérablement les systèmes de <TECHNOLOGY>locomotion et de mobilité<> du Minotaure.",
     "BaseValueUnits": 1.0,
@@ -7990,7 +7990,7 @@
   {
     "Id": "tech215",
     "Icon": "technology/215.png",
-    "Name": "Corps de cuirassé sentinelle",
+    "Name": "Corps de cuirassé",
     "Group": "Noyau de remplacement de Minotaure",
     "Description": "Une collection de composants récupérés sur un cuirassé, reconditionnés pour l'exonef lourd hybride du <TECHNOLOGY>Minotaure<>.\n\nFonctionne comme un <TECHNOLOGY>plug-in de pilote artificiel<> semi-autonome. Cette installation permet au Minotaure de <STELLAR>traverser des planètes de manière autonome<> ou d'aider son opérateur principal à <STELLAR>combattre<> ou à <STELLAR>extraire du minerai<>.\n\nLe pilote IA cède toujours le contrôle à l'opérateur principal lorsque ce dernier entre dans le cockpit.",
     "BaseValueUnits": 1.0,
@@ -8138,7 +8138,7 @@
         "Value": "15"
       },
       {
-        "Name": "Manœuvrabilité",
+        "Name": "Manœuvrabilité (Vaisseau)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8216,7 +8216,7 @@
         "Value": "0.6"
       },
       {
-        "Name": "Manœuvrabilité",
+        "Name": "Manœuvrabilité (Vaisseau)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8435,6 +8435,47 @@
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech228",
+    "Icon": "technology/228.png",
+    "Name": "Fusée commerciale",
+    "Group": "Dispositif d'appel de missile mercantile",
+    "Description": "Un appareil en forme de fusée lié directement au <TECHNOLOGY>réseau commercial galactique<>. Cette unité permet à l'utilisateur de charger des marchandises sur un petit vaisseau. Au lancement, les marchandises seront transportées vers le terminus de commerce le plus proche et seront <STELLAR>vendues automatiquement<>.\n\n<STELLAR>Appelez<> la fusée commerciale en utilisant le <IMG>QUICK_MENU<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw7",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Fusée commerciale",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

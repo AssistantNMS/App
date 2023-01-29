@@ -1,13 +1,19 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class PortalRecord {
-  String uuid;
-  String date;
-  String name;
+  late String uuid;
+  late String date;
+  String? name;
   final List<int> codes;
   final List<String> tags;
 
-  PortalRecord({String uuid, this.name, String date, this.codes, this.tags}) {
+  PortalRecord({
+    String? uuid,
+    this.name,
+    String? date,
+    required this.codes,
+    required this.tags,
+  }) {
     this.uuid = uuid ?? getNewGuid();
     this.date = date ?? DateTime.now().toString();
   }
@@ -23,12 +29,13 @@ class PortalRecord {
     return isEqual;
   }
 
-  PortalRecord copyWith(
-      {String uuid,
-      String name,
-      String date,
-      List<int> codes,
-      List<String> tags}) {
+  PortalRecord copyWith({
+    String? uuid,
+    String? name,
+    String? date,
+    List<int>? codes,
+    List<String>? tags,
+  }) {
     return PortalRecord(
       uuid: uuid ?? this.uuid,
       name: name ?? this.name,
@@ -38,7 +45,7 @@ class PortalRecord {
     );
   }
 
-  factory PortalRecord.fromJson(Map<String, dynamic> json) => PortalRecord(
+  factory PortalRecord.fromJson(Map<String, dynamic>? json) => PortalRecord(
         uuid: readStringSafe(json, 'uuid'),
         name: readStringSafe(json, 'name'),
         date: readStringSafe(json, 'date'),

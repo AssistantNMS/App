@@ -14,7 +14,7 @@ import 'addPortalPage.dart';
 import 'viewPortalPage.dart';
 
 class PortalsPage extends StatefulWidget {
-  const PortalsPage({Key key}) : super(key: key);
+  const PortalsPage({Key? key}) : super(key: key);
 
   @override
   createState() => _PortalsPageState();
@@ -43,41 +43,47 @@ class _PortalsPageState extends State<PortalsPage> {
           )
         ],
         body: getBody(context, portalViewModel),
-        fab: FloatingActionButton(
-          onPressed: () async {
-            PortalRecord temp =
-                await getNavigation().navigateAsync<PortalRecord>(
-              context,
-              navigateTo: (context) => AddPortalPage(
-                PortalRecord(
-                    codes: List.empty(growable: true),
-                    tags: List.empty(growable: true)),
-              ),
-            );
-            if (temp == null || temp is! PortalRecord) return;
-            portalViewModel.addPortal(temp.name, temp.codes, temp.tags);
-            setState(() {
-              _counter++;
-            });
-          },
-          heroTag: 'PortalsPage',
-          child: const Icon(Icons.add),
-          foregroundColor: getTheme().fabForegroundColourSelector(context),
-          backgroundColor: getTheme().fabColourSelector(context),
-        ),
+        fab: getFab(context, portalViewModel),
       ),
+    );
+  }
+
+  Widget getFab(BuildContext fabCtx, PortalViewModel portalViewModel) {
+    Color foregroundColor = getTheme().fabForegroundColourSelector(fabCtx);
+    Color backgroundColor = getTheme().fabColourSelector(fabCtx);
+    return FloatingActionButton(
+      onPressed: () async {
+        PortalRecord currentRecord = PortalRecord(
+          codes: List.empty(growable: true),
+          tags: List.empty(growable: true),
+        );
+        PortalRecord? temp = await getNavigation().navigateAsync<PortalRecord>(
+          context,
+          navigateTo: (context) => AddPortalPage(currentRecord),
+        );
+        if (temp == null) return;
+        portalViewModel.addPortal(temp.name ?? '...', temp.codes, temp.tags);
+        setState(() {
+          _counter++;
+        });
+      },
+      heroTag: 'PortalsPage',
+      child: const Icon(Icons.add),
+      foregroundColor: foregroundColor,
+      backgroundColor: backgroundColor,
     );
   }
 
   Widget getBody(BuildContext context, PortalViewModel portalViewModel) {
     return SearchableList<PortalRecord>(
       getSearchListFutureFromList(portalViewModel.portals),
-      listItemDisplayer: (BuildContext context, PortalRecord portal) =>
+      listItemDisplayer: (BuildContext context, PortalRecord portal,
+              {void Function()? onTap}) =>
           portalTilePresenter(
         context,
         portal,
         useAltGlyphs: portalViewModel.useAltGlyphs,
-        onTap: () => onTap(portal),
+        onTap: () => onLocalTap(portal),
         onEdit: () => onEdit(portal, portalViewModel),
         onDelete: () => onDelete(portal, portalViewModel),
       ),
@@ -90,7 +96,7 @@ class _PortalsPageState extends State<PortalsPage> {
     );
   }
 
-  void onTap(PortalRecord portal) async {
+  void onLocalTap(PortalRecord portal) async {
     await getNavigation().navigateAsync(
       context,
       navigateTo: (context) => ViewPortalPage(portal),
@@ -101,13 +107,13 @@ class _PortalsPageState extends State<PortalsPage> {
   }
 
   void onEdit(PortalRecord portal, PortalViewModel portalViewModel) async {
-    PortalRecord temp = await getNavigation().navigateAsync<PortalRecord>(
+    PortalRecord? temp = await getNavigation().navigateAsync<PortalRecord>(
       context,
       navigateTo: (context) => AddPortalPage(portal, isEdit: true),
     );
-    if (temp == null || temp is! PortalRecord) return;
+    if (temp == null) return;
     portalViewModel.editPortal(
-      temp.name,
+      temp.name ?? '...',
       temp.codes,
       temp.tags,
       temp.uuid,

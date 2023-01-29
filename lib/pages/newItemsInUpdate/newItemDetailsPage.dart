@@ -16,7 +16,7 @@ import '../../redux/modules/generic/genericPageViewModel.dart';
 
 class NewItemsDetailPage extends StatelessWidget {
   final UpdateItemDetail details;
-  NewItemsDetailPage(this.details, {Key key}) : super(key: key) {
+  NewItemsDetailPage(this.details, {Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.updateNewItemPage);
   }
 

@@ -11,14 +11,16 @@ class CustomMenuSettingsViewModel {
   final List<LocaleKey> menuOrder;
   final bool dontShowSpoilerAlert;
   final bool showFestiveBackground;
+  final int customColumnCount;
   final void Function(List<LocaleKey>) setCustomMenuOrder;
 
   CustomMenuSettingsViewModel({
-    this.isPatron,
-    this.menuOrder,
-    this.dontShowSpoilerAlert,
-    this.showFestiveBackground,
-    this.setCustomMenuOrder,
+    required this.isPatron,
+    required this.menuOrder,
+    required this.dontShowSpoilerAlert,
+    required this.showFestiveBackground,
+    required this.customColumnCount,
+    required this.setCustomMenuOrder,
   });
 
   static CustomMenuSettingsViewModel fromStore(Store<AppState> store) =>
@@ -26,8 +28,11 @@ class CustomMenuSettingsViewModel {
         isPatron: getIsPatron(store.state),
         menuOrder: getCustomMenuOrder(store.state),
         dontShowSpoilerAlert: getDontShowSpoilerAlert(store.state),
-        setCustomMenuOrder: (List<LocaleKey> newOrder) =>
-            store.dispatch(SetCustomMenuOrder(newOrder)),
+        showFestiveBackground: getShowFestiveBackground(store.state),
+        customColumnCount: getCustomHomePageColumnCount(store.state),
+        setCustomMenuOrder: (List<LocaleKey> newOrder) => store.dispatch(
+          SetCustomMenuOrder(newOrder),
+        ),
       );
 
   DrawerSettingsViewModel toDrawerViewModel() => DrawerSettingsViewModel(

@@ -8,7 +8,7 @@ import '../../contracts/faction/guildMission.dart';
 
 class GuildMissionDetailPage extends StatefulWidget {
   final GuildMission mission;
-  const GuildMissionDetailPage(this.mission, {Key key}) : super(key: key);
+  const GuildMissionDetailPage(this.mission, {Key? key}) : super(key: key);
   @override
   _GuildMissionDetailPageWidget createState() =>
       _GuildMissionDetailPageWidget();
@@ -20,7 +20,6 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
 
   @override
   Widget build(BuildContext context) {
-    if (widget?.mission == null) return getLoading().fullPageLoading(context);
     List<String> titles = widget.mission.titles;
     if (titles.isEmpty) {
       titles = widget.mission.subtitles;
@@ -28,41 +27,39 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
     List<Widget Function(BuildContext t)> widgets = List.empty(growable: true);
 
     widgets.add(
-      (_) => localImage(
-        widget.mission.icon,
+      (_) => LocalImage(
+        imagePath: widget.mission.icon,
         imageHero: widget.mission.icon + widget.mission.id,
         height: 100,
         width: 100,
       ),
     );
-    widgets.add((_) => emptySpace1x());
+    widgets.add((_) => const EmptySpace1x());
 
-    widgets.add((_) => genericItemName(titles[titleIndex]));
+    widgets.add((_) => GenericItemName(titles[titleIndex]));
     if (titles.length > 1) {
       widgets.add(
-        (_) => genericItemDescription(
+        (_) => GenericItemDescription(
           (titleIndex + 1).toString() + " / " + titles.length.toString(),
           maxLines: 20,
         ),
       );
       widgets.add(
         (_) => rowWith2Columns(
-          positiveButton(
-            context,
+          PositiveButton(
             title: '<',
             padding: const EdgeInsets.symmetric(vertical: 8),
-            onPress: () {
+            onTap: () {
               if (titleIndex < 1) return;
               setState(() {
                 titleIndex--;
               });
             },
           ),
-          positiveButton(
-            context,
+          PositiveButton(
             title: '>',
             padding: const EdgeInsets.symmetric(vertical: 8),
-            onPress: () {
+            onTap: () {
               if (titleIndex >= (titles.length - 1)) {
                 return;
               }
@@ -74,15 +71,15 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
         ),
       );
     }
-    widgets.add((_) => emptySpace1x());
+    widgets.add((_) => const EmptySpace1x());
     widgets.add((_) => customDivider());
-    widgets.add((_) => emptySpace1x());
+    widgets.add((_) => const EmptySpace1x());
 
     widgets.add(
-      (_) => genericItemDescription(widget.mission.descriptions[descripIndex]),
+      (_) => GenericItemDescription(widget.mission.descriptions[descripIndex]),
     );
     widgets.add(
-      (_) => genericItemDescription(
+      (_) => GenericItemDescription(
         (descripIndex + 1).toString() +
             " / " +
             widget.mission.descriptions.length.toString(),
@@ -90,22 +87,20 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
     );
     widgets.add(
       (_) => rowWith2Columns(
-        positiveButton(
-          context,
+        PositiveButton(
           title: '<',
           padding: const EdgeInsets.symmetric(vertical: 8),
-          onPress: () {
+          onTap: () {
             if (descripIndex < 1) return;
             setState(() {
               descripIndex--;
             });
           },
         ),
-        positiveButton(
-          context,
+        PositiveButton(
           title: '>',
           padding: const EdgeInsets.symmetric(vertical: 8),
-          onPress: () {
+          onTap: () {
             if (descripIndex >= (widget.mission.descriptions.length - 1)) {
               return;
             }
@@ -126,16 +121,16 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
     if (widget.mission.factions.contains('WarriorGuild')) {
       factionImgs.add(AppImage.warFaction);
     }
-    widgets.add((_) => emptySpace1x());
+    widgets.add((_) => const EmptySpace1x());
     widgets.add((_) => customDivider());
-    widgets.add((_) => emptySpace1x());
+    widgets.add((_) => const EmptySpace1x());
     widgets.add(
       (_) => Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: factionImgs
             .map(
-              (img) => localImage(
-                img,
+              (img) => LocalImage(
+                imagePath: img,
                 imageHero: img + widget.mission.id,
                 height: 50,
                 width: 50,
@@ -145,7 +140,7 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
       ),
     );
 
-    widgets.add((_) => emptySpace8x());
+    widgets.add((_) => const EmptySpace8x());
 
     return simpleGenericPageScaffold(
       context,
@@ -153,6 +148,7 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (listCtx, index) => widgets[index](listCtx),
+        scrollController: ScrollController(),
       ),
     );
   }

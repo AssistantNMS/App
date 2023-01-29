@@ -19,7 +19,7 @@ class GenericPageAllRequiredRawMaterials extends StatefulWidget {
   final bool showBackgroundColours;
   const GenericPageAllRequiredRawMaterials(
       this.item, this.showBackgroundColours,
-      {Key key})
+      {Key? key})
       : super(key: key);
 
   @override
@@ -34,7 +34,9 @@ class _GenericPageAllRequiredRawMaterialsWidget
   int currentSelection = 0;
 
   _GenericPageAllRequiredRawMaterialsWidget(
-      this.item, this.showBackgroundColours) {
+    this.item,
+    this.showBackgroundColours,
+  ) {
     getAnalytics()
         .trackEvent(AnalyticsEvent.genericAllRequiredRawMaterialsPage);
   }
@@ -43,29 +45,31 @@ class _GenericPageAllRequiredRawMaterialsWidget
   Widget build(BuildContext context) {
     TextEditingController controller = TextEditingController();
     List<Widget> options = [
-      getSegmentedControlWithIconOption(
-        Icons.list,
-        getTranslations().fromKey(LocaleKey.flatList),
+      SegmentedControlWithIconOption(
+        icon: Icons.list,
+        text: getTranslations().fromKey(LocaleKey.flatList),
       ),
-      getSegmentedControlWithIconOption(
-        Icons.call_split,
-        getTranslations().fromKey(LocaleKey.tree),
+      SegmentedControlWithIconOption(
+        icon: Icons.call_split,
+        text: getTranslations().fromKey(LocaleKey.tree),
       )
     ];
     Container segmentedWidget = Container(
-      child: adaptiveSegmentedControl(context,
-          controlItems: options,
-          currentSelection: currentSelection, onSegmentChosen: (index) {
-        setState(() {
-          currentSelection = index;
-        });
-      }),
+      child: AdaptiveSegmentedControl(
+        controlItems: options,
+        currentSelection: currentSelection,
+        onSegmentChosen: (index) {
+          setState(() {
+            currentSelection = index;
+          });
+        },
+      ),
       margin: const EdgeInsets.all(8),
     );
 
     return basicGenericPageScaffold(
       context,
-      title: item.typeName ?? getTranslations().fromKey(LocaleKey.loading),
+      title: item.typeName,
       body: getBody(context, currentSelection, segmentedWidget),
       fab: getFloatingActionButton(context, controller, item.genericItem),
     );
@@ -75,7 +79,7 @@ class _GenericPageAllRequiredRawMaterialsWidget
     BuildContext context,
     AsyncSnapshot<List<RequiredItemDetails>> snapshot,
   ) {
-    Widget errorWidget = asyncSnapshotHandler(context, snapshot);
+    Widget? errorWidget = asyncSnapshotHandler(context, snapshot);
     if (errorWidget != null) return [errorWidget];
 
     List<Widget> widgets = List.empty(growable: true);
@@ -83,8 +87,8 @@ class _GenericPageAllRequiredRawMaterialsWidget
     Widget Function(BuildContext context, RequiredItemDetails itemDetails)
         requiredItemDetailsPresenter =
         requiredItemDetailsBackgroundTilePresenter(showBackgroundColours);
-    if (snapshot.data.isNotEmpty) {
-      for (RequiredItemDetails item in snapshot.data) {
+    if (snapshot.data!.isNotEmpty) {
+      for (RequiredItemDetails item in snapshot.data!) {
         widgets.add(requiredItemDetailsPresenter(context, item));
       }
     } else {
@@ -101,7 +105,7 @@ class _GenericPageAllRequiredRawMaterialsWidget
       );
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return widgets;
   }
@@ -110,17 +114,17 @@ class _GenericPageAllRequiredRawMaterialsWidget
     BuildContext context,
     AsyncSnapshot<List<RequiredItemTreeDetails>> snapshot,
   ) {
-    Widget errorWidget = asyncSnapshotHandler(context, snapshot);
+    Widget? errorWidget = asyncSnapshotHandler(context, snapshot);
     if (errorWidget != null) return [errorWidget];
 
     List<Widget> widgets = List.empty(growable: true);
 
-    if (snapshot.data.isNotEmpty) {
+    if (snapshot.data!.isNotEmpty) {
       widgets.add(Expanded(
         child: ListView(
           shrinkWrap: true,
           children: [
-            getTree(context, snapshot.data, CurrencyType.NONE),
+            getTree(context, snapshot.data!, CurrencyType.NONE),
           ],
         ),
       ));
@@ -148,9 +152,9 @@ class _GenericPageAllRequiredRawMaterialsWidget
   ) {
     List<Widget> widgets = List.empty(growable: true);
     if (item.name.isNotEmpty) {
-      widgets.add(emptySpace1x());
-      widgets.add(genericItemName(item.name));
-      widgets.add(genericItemText(
+      widgets.add(const EmptySpace1x());
+      widgets.add(GenericItemName(item.name));
+      widgets.add(GenericItemText(
         getTranslations().fromKey(LocaleKey.allRawMaterialsRequired),
       ));
     }
@@ -166,16 +170,10 @@ class _GenericPageAllRequiredRawMaterialsWidget
             ...widgets,
             ...getFlatListBody(builderContext, snapshot)
           ];
-          return Column(
-            children: [
-              Expanded(
-                child: listWithScrollbar(
-                  itemCount: listSpecificWidgets.length,
-                  itemBuilder: (builderContext, index) =>
-                      listSpecificWidgets[index],
-                ),
-              ),
-            ],
+          return listWithScrollbar(
+            itemCount: listSpecificWidgets.length,
+            itemBuilder: (builderContext, index) => listSpecificWidgets[index],
+            scrollController: ScrollController(),
           );
         },
       );

@@ -20,7 +20,7 @@ import '../techTree/unlockableTechTreeComponents.dart';
 
 class AlienPuzzlesRewardPage extends StatefulWidget {
   final List<AlienPuzzleReward> rewards;
-  AlienPuzzlesRewardPage(this.rewards, {Key key}) : super(key: key) {
+  AlienPuzzlesRewardPage(this.rewards, {Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.alienPuzzlesRewardDetailPage);
   }
 
@@ -57,11 +57,14 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
             baseReward.rewardId == 'USEFUL_PROD' ||
             baseReward.rewardId == 'FACT_PROD') {
           AlienPuzzleRewardOddsWithAdditional rewardWithInfo =
-              AlienPuzzleRewardOddsWithAdditional(AlienPuzzleRewardOdds(
-            type: AlienPuzzleRewardItemType.Product,
-            amountMin: 1,
-            amountMax: 1,
-          ));
+              AlienPuzzleRewardOddsWithAdditional(
+            AlienPuzzleRewardOdds(
+              type: AlienPuzzleRewardItemType.Product,
+              amountMin: 1,
+              amountMax: 1,
+            ),
+            null,
+          );
 
           ResultWithValue<RequiredItemDetails> details =
               await requiredItemDetails(
@@ -73,7 +76,7 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
           );
           if (details.isSuccess) {
             rewardWithInfo.details = details.value;
-            rewardWithInfo.details.icon = AppImage.factoryOverride;
+            rewardWithInfo.details?.icon = AppImage.factoryOverride;
           }
 
           var subTreeId = '';
@@ -96,7 +99,7 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
         } else {
           for (AlienPuzzleRewardOdds reward in newItem.rewards) {
             AlienPuzzleRewardOddsWithAdditional newRewardItem =
-                AlienPuzzleRewardOddsWithAdditional(reward);
+                AlienPuzzleRewardOddsWithAdditional(reward, null);
 
             if (alienPuzzleRewardItemRequiresAdditionalData
                 .contains(reward.type)) {
@@ -104,7 +107,7 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
                   await requiredItemDetails(
                 context,
                 RequiredItem(
-                  id: reward.id,
+                  id: reward.id!,
                   quantity: 1,
                 ),
               );
@@ -194,17 +197,12 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
       );
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
-    return Column(
-      children: [
-        Expanded(
-          child: listWithScrollbar(
-            itemCount: widgets.length,
-            itemBuilder: (context, index) => widgets[index],
-          ),
-        ),
-      ],
+    return listWithScrollbar(
+      itemCount: widgets.length,
+      itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

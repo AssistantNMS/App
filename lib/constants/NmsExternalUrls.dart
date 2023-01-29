@@ -40,11 +40,9 @@ class NmsExternalUrls {
   static const String communityMissionProgress =
       'https://nmscd.github.io/CommunityMission-Progress-Viewer/';
   static const String communitySearchHomepage = 'https://community.nmscd.com';
-  static const String communitySearchList =
-      'https://raw.githubusercontent.com/NMSCD/Community-Search/main/src/assets/data/communityList.json';
-  static const String communitySearchChipColours =
-      'https://raw.githubusercontent.com/NMSCD/Community-Search/main/src/assets/data/chipColours.json';
   static const String communitySearchAddLinkForm =
       'https://airtable.com/shrhZOQrrp9a9zoJk';
   static const String nomNomWebsite = 'https://cengelha.github.io/NomNom/';
+  static const String captainSteveYoutubeDiceRollPlaylist =
+      'https://www.youtube.com/playlist?list=PLFVRR5wqxfgy3LKw29OG3OTekvQdayz4s';
 }

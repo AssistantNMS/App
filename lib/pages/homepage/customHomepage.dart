@@ -15,7 +15,7 @@ import 'editCustomHomepage.dart';
 import 'viewCustomHomepage.dart';
 
 class CustomHomepage extends StatefulWidget {
-  CustomHomepage({Key key}) : super(key: key) {
+  CustomHomepage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.customHomepage);
   }
   @override
@@ -33,9 +33,9 @@ class _CustomHomeWidget extends State<CustomHomepage>
     return basicGenericPageScaffold(
       context,
       drawer: const AppDrawer(),
-      appBar: homePageAppBar(
+      appBar: HomePageAppBar(
         getTranslations().fromKey(LocaleKey.homepage),
-        customActions: [
+        actions: [
           ActionItem(
             icon: isEdit ? Icons.check : Icons.edit,
             onPressed: () {
@@ -57,8 +57,11 @@ class _CustomHomeWidget extends State<CustomHomepage>
     );
   }
 
-  Widget getBody(bool isEdit, List<CustomMenu> menuItemOptions,
-      CustomMenuSettingsViewModel viewModel) {
+  Widget getBody(
+    bool isEdit,
+    List<CustomMenu> menuItemOptions,
+    CustomMenuSettingsViewModel viewModel,
+  ) {
     List<CustomMenu> orderedMenuItems = List.empty(growable: true);
     for (LocaleKey custMenu in viewModel.menuOrder) {
       for (CustomMenu opt in menuItemOptions) {
@@ -79,8 +82,13 @@ class _CustomHomeWidget extends State<CustomHomepage>
       orderedMenuItems.add(opt);
     }
 
-    return isEdit
-        ? EditCustomHomepage(orderedMenuItems, viewModel.setCustomMenuOrder)
-        : ViewCustomHomepage(orderedMenuItems);
+    if (isEdit) {
+      return EditCustomHomepage(
+        orderedMenuItems,
+        viewModel.customColumnCount,
+        viewModel.setCustomMenuOrder,
+      );
+    }
+    return ViewCustomHomepage(orderedMenuItems, viewModel.customColumnCount);
   }
 }

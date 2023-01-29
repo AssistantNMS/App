@@ -7,6 +7,7 @@ import '../../components/common/rowHelper.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/asyncSettingTilePresenter.dart';
 import '../../components/tilePresenters/settingTilePresenter.dart';
+import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/GoogleDrive.dart';
 import '../../contracts/redux/appState.dart';
@@ -17,7 +18,7 @@ import '../../redux/modules/viewModel/syncPageViewModel.dart';
 import '../../services/base/fileService.dart';
 
 class SyncPage extends StatefulWidget {
-  const SyncPage({Key key}) : super(key: key);
+  const SyncPage({Key? key}) : super(key: key);
 
   @override
   _SyncWidget createState() => _SyncWidget();
@@ -42,7 +43,7 @@ class _SyncWidget extends State<SyncPage> {
 
   List<Widget> getGoogleDriveWidgets(BuildContext authCtx) {
     List<Widget> widgets = List.empty(growable: true);
-    User user = getFirebase().getCurrentUser();
+    User? user = getFirebase().getCurrentUser();
     if (user != null) {
       widgets.add(headingSettingTilePresenter(
         getTranslations().fromKey(LocaleKey.account),
@@ -52,24 +53,24 @@ class _SyncWidget extends State<SyncPage> {
           children: [
             ListTile(
               leading: ClipOval(
-                child: networkImage(user.photoURL, height: 50, width: 50),
+                child: ImageFromNetwork(
+                    imageUrl: user.photoURL!, height: 50, width: 50),
               ),
               title: Text(
-                user.displayName,
+                user.displayName!,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
               subtitle: Text(
-                user.email,
+                user.email!,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
             ),
             rowWith2Columns(
-              positiveButton(
-                authCtx,
+              PositiveButton(
                 title: getTranslations().fromKey(LocaleKey.switchUser),
-                onPress: () async {
+                onTap: () async {
                   await getFirebase().signOutFromGoogle();
                   await getFirebase().signInwithGoogle();
                   setState(() {
@@ -77,9 +78,9 @@ class _SyncWidget extends State<SyncPage> {
                   });
                 },
               ),
-              negativeButton(
+              NegativeButton(
                 title: getTranslations().fromKey(LocaleKey.logout),
-                onPress: () async {
+                onTap: () async {
                   await getFirebase().signOutFromGoogle();
                   setState(() {
                     rebuildCounter++;
@@ -155,11 +156,11 @@ class _SyncWidget extends State<SyncPage> {
       //   ),
       // ));
     } else {
-      widgets.add(emptySpace3x());
+      widgets.add(const EmptySpace3x());
       // widgets.add(
-      //   genericItemText('It is not possible to link with your NMS save'),
+      //   GenericItemText('It is not possible to link with your NMS save'),
       // );
-      // widgets.add(emptySpace1x());
+      // widgets.add(const EmptySpace1x());
       widgets.add(Center(
         child: AuthButton.google(
           onPressed: () async {
@@ -192,7 +193,7 @@ class _SyncWidget extends State<SyncPage> {
       ));
     }
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
     return widgets;
   }
 
@@ -295,29 +296,26 @@ class _SyncWidget extends State<SyncPage> {
       ),
     ));
 
-// TODO NomNom feature
-    // widgets.add(flatCard(
-    //   child: nomNomOpenSyncModalTile(
-    //     context,
-    //     viewModel.isPatron,
-    //   ),
-    // ));
+    widgets.add(FlatCard(
+      child: nomNomOpenSyncModalTile(context),
+    ));
 
-    // widgets.add(genericItemDescription(
+    // widgets.add(GenericItemDescription(
     //     'This sync feature is only intended to allow you to back up your app data to Google Drive.'));
-    // widgets.add(localImage(AppImage.underConstruction, height: 150.0));
-    // widgets.add(emptySpace1x());
-    // widgets.add(genericItemDescription(
+    // widgets.add(LocalImage(imagePath:AppImage.underConstruction, height: 150.0));
+    // widgets.add(const EmptySpace1x());
+    // widgets.add(GenericItemDescription(
     //     'There is currently an issue with the Google Drive integration.'));
-    // widgets.add(genericItemDescription(
+    // widgets.add(GenericItemDescription(
     //     'I am working on an alternative way to back up your app data'));
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
 
     return listWithScrollbar(
       key: Key('counter: ${rebuildCounter.toString()}'),
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

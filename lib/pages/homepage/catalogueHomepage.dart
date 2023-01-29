@@ -11,10 +11,10 @@ import '../../helpers/catalogueHelper.dart';
 import '../../helpers/updateHelper.dart';
 
 class CatalogueHomepage extends StatefulWidget {
-  const CatalogueHomepage({Key key}) : super(key: key);
+  const CatalogueHomepage({Key? key}) : super(key: key);
 
   @override
-  _CatalogueHomeWidget createState() => _CatalogueHomeWidget();
+  createState() => _CatalogueHomeWidget();
 }
 
 class _CatalogueHomeWidget extends State<CatalogueHomepage>
@@ -28,12 +28,23 @@ class _CatalogueHomeWidget extends State<CatalogueHomepage>
     return basicGenericPageScaffold(
       context,
       drawer: const AppDrawer(),
-      appBar: homePageAppBar(getTranslations().fromKey(LocaleKey.catalogue)),
-      body: responsiveGrid(
-        context,
-        getCatalogueItemData(context),
-        menuItemTilePresenter,
+      appBar: HomePageAppBar(
+        getTranslations().fromKey(LocaleKey.catalogue),
       ),
+      body: getBody(context),
+    );
+  }
+
+  Widget getBody(BuildContext bodyContext) {
+    Widget Function(BuildContext gridCtx) renderBody;
+    renderBody = (BuildContext gridCtx) => responsiveGrid(
+          gridCtx,
+          getCatalogueItemData(gridCtx),
+          menuItemTilePresenter,
+        );
+
+    return AppNoticesWrapper(
+      child: renderBody(bodyContext),
     );
   }
 }

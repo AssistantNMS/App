@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../../constants/ApiUrls.dart';
-import '../../constants/NmsExternalUrls.dart';
 import '../../contracts/generated/communityLinkChipColourViewModel.dart';
 import '../../contracts/generated/communityLinkMetaViewModel.dart';
 import '../../contracts/generated/communityLinkViewModel.dart';
@@ -19,7 +18,7 @@ class CommunityApiService extends BaseApiService {
       getAllCommunityLinks() async {
     CommunityLinkMetaViewModel result = CommunityLinkMetaViewModel.empty();
     try {
-      final response = await webGet(NmsExternalUrls.communitySearchList);
+      final response = await apiGet(ApiUrls.communitySearch);
       if (response.hasFailed) {
         return ResultWithValue<CommunityLinkMetaViewModel>(
           false,
@@ -37,7 +36,7 @@ class CommunityApiService extends BaseApiService {
     }
 
     try {
-      final response = await webGet(NmsExternalUrls.communitySearchChipColours);
+      final response = await apiGet(ApiUrls.communitySearchChips);
       if (response.isSuccess) {
         final List newsList = json.decode(response.value);
         result.chipColours = newsList

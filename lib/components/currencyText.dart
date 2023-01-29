@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 import '../helpers/currencyHelper.dart';
 
 class CurrencyText extends StatelessWidget {
-  final TextStyle style;
+  final TextStyle? style;
   final String numberString;
-  final TextAlign textAlign;
-  final TextOverflow overflow;
+  final TextAlign? textAlign;
+  final TextOverflow? overflow;
   final bool addDecimal;
 
   const CurrencyText(
     this.numberString, {
-    Key key,
+    Key? key,
     this.style,
     this.textAlign,
     this.overflow,
-    this.addDecimal,
+    this.addDecimal = true,
   }) : super(key: key);
 
   @override

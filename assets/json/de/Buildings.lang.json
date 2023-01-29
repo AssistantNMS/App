@@ -5005,7 +5005,7 @@
   },
   {
     "Id": "build273",
-    "Icon": "building/272.png",
+    "Icon": "building/273.png",
     "Name": "Bronzene Kreatur-Statue",
     "Group": "Freischaltbare Dekoration",
     "Description": "Ein exklusives, herstellbares Basis-Ornament aus Bronze.\nDiese Statue stellt eine primitive, uralte Kreatur dar, die viele frühe Entdecker gesucht haben.",
@@ -5727,7 +5727,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5755,7 +5756,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5930,7 +5932,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/303.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6286,7 +6289,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/316.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7686,7 +7690,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7714,7 +7719,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7742,7 +7748,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7877,7 +7884,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7969,7 +7977,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7990,6 +7999,7 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/395.png",
     "Usages": [
       "HasDevProperties",
+      "IsNoLongerObtainable",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 15,
@@ -8472,7 +8482,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
+      "IsTwitchCampaign4Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -9054,7 +9065,7 @@
     "Icon": "building/436.png",
     "Name": "Siedlungskarte",
     "Group": "Spezialisierte Planetenkarte",
-    "Description": "Eine Karte von einer planetarischen Siedlung in der Nähe, die beim <STELLAR>Raumstation-Kartografen<> gekauft wurde.\n\nWähle die Karte aus und nutze „Route planen“ (<IMG>FE_ALT1<>), um den Ort in der Anzeige deines Exo-Anzugs einzustellen.",
+    "Description": "Eine Karte von einer planetarischen Siedlung in der Nähe, die beim <STELLAR>Raumstation-Kartografen<> gekauft wurde.\n\nWähle die Karte aus und nutze <VAL_ON>„Route planen“ (<IMG>FE_ALT1<>)<>, um den Ort in der Anzeige deines Exo-Anzugs einzustellen.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -9092,8 +9103,16 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw1",
-        "Quantity": 25
+        "Id": "prod6",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
       }
     ],
     "StatBonuses": [],
@@ -15840,7 +15859,7 @@
   },
   {
     "Id": "build814",
-    "Icon": "building/1.png",
+    "Icon": "building/814.png",
     "Name": "Großer Frachterraum A",
     "Group": "Frachter-Innenmodul",
     "Description": "Dank diesem Erweiterungsmodul können in großen Raumschiffen schnell bewohnbare Räume gebaut werden.\n\nDie Baueinheit wird mit Druckschotten und allen nötigen Aufsatzpunkten gefertigt.",
@@ -15868,7 +15887,7 @@
   },
   {
     "Id": "build815",
-    "Icon": "building/1.png",
+    "Icon": "building/815.png",
     "Name": "Großer Frachterraum B",
     "Group": "Frachter-Innenmodul",
     "Description": "Dank diesem Erweiterungsmodul können in großen Raumschiffen schnell bewohnbare Räume gebaut werden.\n\nDie Baueinheit wird mit Druckschotten und allen nötigen Aufsatzpunkten gefertigt.",
@@ -15896,7 +15915,7 @@
   },
   {
     "Id": "build816",
-    "Icon": "building/1.png",
+    "Icon": "building/816.png",
     "Name": "Großer Frachterraum C",
     "Group": "Frachter-Innenmodul",
     "Description": "Dank diesem Erweiterungsmodul können in großen Raumschiffen schnell bewohnbare Räume gebaut werden.\n\nDie Baueinheit wird mit Druckschotten und allen nötigen Aufsatzpunkten gefertigt.",
@@ -15924,7 +15943,7 @@
   },
   {
     "Id": "build817",
-    "Icon": "building/66.png",
+    "Icon": "building/817.png",
     "Name": "Quadratischer Raum",
     "Group": "Konstruktionsmodul",
     "Description": "Eine quadratische Alternative des Kernmoduls für die Basiskonstruktion. Bietet einen großzügigen zentralen Raum, der erweitert werden kann.",
@@ -15949,7 +15968,7 @@
   },
   {
     "Id": "build818",
-    "Icon": "building/66.png",
+    "Icon": "building/817.png",
     "Name": "Quadratischer Raum",
     "Group": "Konstruktionsmodul",
     "Description": "Eine quadratische Alternative des Kernmoduls für die Basiskonstruktion. Bietet einen großzügigen zentralen Raum, der erweitert werden kann.",
@@ -16022,7 +16041,7 @@
   },
   {
     "Id": "build821",
-    "Icon": "building/141.png",
+    "Icon": "building/821.png",
     "Name": "Flora-Behälter 3",
     "Group": "Dekoration",
     "Description": "Herstellbares Ornament zur Verschönerung deiner Basis.",
@@ -16046,7 +16065,7 @@
   },
   {
     "Id": "build822",
-    "Icon": "building/156.png",
+    "Icon": "building/822.png",
     "Name": "Runder Tisch",
     "Group": "Möbel",
     "Description": "Eine Allzweckarbeitsfläche, hergestellt aus nichtmagnetischen, korrosionsbeständigen Materialien.",
@@ -16071,7 +16090,7 @@
   },
   {
     "Id": "build823",
-    "Icon": "building/156.png",
+    "Icon": "building/823.png",
     "Name": "Sechseckiger Tisch",
     "Group": "Möbel",
     "Description": "Eine Allzweckarbeitsfläche, hergestellt aus nichtmagnetischen, korrosionsbeständigen Materialien.",
@@ -16096,7 +16115,7 @@
   },
   {
     "Id": "build824",
-    "Icon": "building/156.png",
+    "Icon": "building/824.png",
     "Name": "Ecktisch",
     "Group": "Möbel",
     "Description": "Eine Allzweckarbeitsfläche, hergestellt aus nichtmagnetischen, korrosionsbeständigen Materialien.",
@@ -16121,7 +16140,7 @@
   {
     "Id": "build825",
     "Icon": "building/825.png",
-    "Name": "Weißes Gestaltungsmotiv",
+    "Name": "Weisses Gestaltungsmotiv",
     "Group": "Dekoration",
     "Description": "Platzierbare, dekorative Motive.",
     "BaseValueUnits": 1.0,
@@ -16145,7 +16164,7 @@
   {
     "Id": "build826",
     "Icon": "building/826.png",
-    "Name": "Weißes Randmotiv",
+    "Name": "Weises Randmotiv",
     "Group": "Dekoration",
     "Description": "Platzierbare, dekorative Motive.",
     "BaseValueUnits": 1.0,
@@ -16648,7 +16667,7 @@
   },
   {
     "Id": "build848",
-    "Icon": "building/336.png",
+    "Icon": "building/848.png",
     "Name": "Eckige Stehlampe",
     "Group": "Einbauteil",
     "Description": "Licht mit geringem Energieverbrauch, verlängerter Lebensdauer und voll recycelbaren Komponenten.",
@@ -16673,7 +16692,7 @@
   },
   {
     "Id": "build849",
-    "Icon": "building/336.png",
+    "Icon": "building/849.png",
     "Name": "Runde Stehlampe",
     "Group": "Einbauteil",
     "Description": "Licht mit geringem Energieverbrauch, verlängerter Lebensdauer und voll recycelbaren Komponenten.",
@@ -16698,7 +16717,7 @@
   },
   {
     "Id": "build850",
-    "Icon": "building/336.png",
+    "Icon": "building/850.png",
     "Name": "Stehlampe mit Schirm",
     "Group": "Einbauteil",
     "Description": "Licht mit geringem Energieverbrauch, verlängerter Lebensdauer und voll recycelbaren Komponenten.",
@@ -16756,7 +16775,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16952,7 +16972,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
+      "IsExpeditionSeason7Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -17445,7 +17466,7 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "Technikraum (leer)",
+    "Name": "Technikraum (Erweiterung)",
     "Group": "Fortgeschrittenes Frachtermodul",
     "Description": "Eine geräumige Kammer mit technischem Charme zur Erweiterung der bewohnbaren Räume in großen Raumschiffen.",
     "BaseValueUnits": 1.0,
@@ -17606,7 +17627,7 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "Biologischer Raum (leer)",
+    "Name": "Biologischer Raum (Erweiterung)",
     "Group": "Fortgeschrittenes Frachtermodul",
     "Description": "Dieses geräumige Treibhaus filtert auf natürliche Weise die Luft und reichert sie mit Sauerstoff an. Eine kleine grüne Oase in deinem Frachter.",
     "BaseValueUnits": 1.0,
@@ -17736,7 +17757,7 @@
     "Icon": "building/885.png",
     "Name": "Exo-Fahrzeug-Spezialisten-Raum",
     "Group": "Arbeiter-Terminal",
-    "Description": "Integrierte, auf die Bedürfnisse von <TECHNOLOGY>Exo-Fahrzeug-Mechanikern<> zugeschnittene Frachter-Forschungsausrüstung. Ausgestattet mit maßgeschneiderter Software für die Fahrzeugkonstruktion.\n\nDieses Modul wird als <STELLAR>ganzer Raum<> platziert und kommt mit vorinstallierten Funktionseinheiten.",
+    "Description": "Integrierte, auf die Bedürfnisse von <TECHNOLOGY>Exo-Fahrzeug-Technikern<> zugeschnittene Frachter-Forschungsausrüstung. Ausgestattet mit maßgeschneiderter Software für die Fahrzeugkonstruktion.\n\nDieses Modul wird als <STELLAR>ganzer Raum<> platziert und kommt mit vorinstallierten Funktionseinheiten.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,7 +18111,7 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "Industrieraum (leer)",
+    "Name": "Industrieraum (Erweiterung)",
     "Group": "Fortgeschrittenes Frachtermodul",
     "Description": "Eine geräumige Kammer mit industriellem Charme zur Erweiterung der bewohnbaren Räume in großen Raumschiffen.",
     "BaseValueUnits": 1.0,
@@ -19133,7 +19154,7 @@
   },
   {
     "Id": "build938",
-    "Icon": "building/350.png",
+    "Icon": "building/938.png",
     "Name": "Exo-Anzug-Erweiterungseinheit",
     "Group": "Upgrade-Einheit",
     "Description": "Ein fortgeschrittenes Überlebenstechnologiemodul, das die Erweiterung des <STELLAR>Exo-Anzug-Lagers<> ermöglicht.\n\nVorinstallierte Nano-Aufweiter schaffen stabile Sub-Warp-Kammern innerhalb des Exo-Anzugs und erhöhen so seine <STELLAR>Inventarkapazität<>. Wende diese Erweiterung am Exo-Anzug-Upgrade-Terminal einer <STELLAR>Raumstation<> an.",
@@ -19301,7 +19322,7 @@
   },
   {
     "Id": "build945",
-    "Icon": "other/148.png",
+    "Icon": "building/945.png",
     "Name": "Historiographisches Dosimeter",
     "Group": "Persönlicher Realitätsfluss-Monitor",
     "Description": "Nada hat ein neues Muster in den Geschichten der <TRANS_TRA>Gek<>, <TRANS_EXP>Korvax<> und <TRANS_WAR>Vy‘Keen<> entdeckt.\n\nDas Dosimeter misst die Exposition gegenüber dem <SPECIAL>historiographischem Fluss<> rund um wichtige Artefaktstätten. Die Aufzeichnungen ungewöhnlicher historischer Verschiebungen werden es Nada ermöglichen, das Signal zurückzuverfolgen.\n\nHilf Nada und Polo bei ihrer Forschung, indem du dieses Gerät verwendest, um <STELLAR>historische Daten von außerirdischen Artefaktstätten zu übertragen<>.",
@@ -19820,7 +19841,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19847,7 +19869,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19874,7 +19897,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20678,9 +20702,9 @@
   {
     "Id": "build996",
     "Icon": "building/996.png",
-    "Name": "Glas Frachtertreppe",
+    "Name": "Frachter-Glasstufen",
     "Group": "Kern-Frachtermodul",
-    "Description": "Dank diesem Erweiterungsmodul können in großen Raumschiffen schnell bewohnbare Räume gebaut werden.\n\nDie Baueinheit wird mit Druckschotten und allen nötigen Aufsatzpunkten gefertigt.",
+    "Description": "Eine robuste, rutschfeste Treppe mit einer ergonomischen Neigung für den vertikalen Übergang zwischen den Decks von Frachtschiffen.\n\nDiese Treppe ist aus Glas mit geringer Wärmeausdehnung gefertigt und bietet dem Benutzer einen aufregenden Blick in die Tiefe des Weltraums.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20707,9 +20731,9 @@
   {
     "Id": "build997",
     "Icon": "building/997.png",
-    "Name": "Außenplattform Frachtertreppe",
+    "Name": "Frachtschiff-Außentreppe",
     "Group": "Kern-Frachtermodul",
-    "Description": "Dank diesem Erweiterungsmodul können in großen Raumschiffen schnell bewohnbare Räume gebaut werden.\n\nDie Baueinheit wird mit Druckschotten und allen nötigen Aufsatzpunkten gefertigt.",
+    "Description": "Eine robuste, rutschfeste Treppe mit ergonomischer Neigung für den vertikalen Übergang zwischen den Decks von Frachtern.\n\nDiese robuste Treppe kann <STELLAR>außerhalb<> des Frachterrumpfes angebracht werden, um Verbindungen zwischen Außenlaufstegen und Plattformen zu schaffen.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20734,12 +20758,13 @@
     "Icon": "building/998.png",
     "Name": "Innere Frachterwand",
     "Group": "Kern-Frachtermodul",
-    "Description": "Dank diesem Erweiterungsmodul können in großen Raumschiffen schnell bewohnbare Räume gebaut werden.\n\nDie Baueinheit wird mit Druckschotten und allen nötigen Aufsatzpunkten gefertigt.",
+    "Description": "Eine Innenwand zur Unterteilung großer Frachtraumflächen. Passt sich nahtlos an die Ästhetik des umgebenden Raums an.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20756,14 +20781,15 @@
   {
     "Id": "build999",
     "Icon": "building/999.png",
-    "Name": "Industrieraum B (leer)",
+    "Name": "Erweiterungsraum-Variante",
     "Group": "Fortgeschrittenes Frachtermodul",
     "Description": "Eine geräumige Kammer mit industriellem Charme zur Erweiterung der bewohnbaren Räume in großen Raumschiffen.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20776,6 +20802,168 @@
       {
         "Id": "raw32",
         "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1000",
+    "Icon": "building/1000.png",
+    "Name": "Panzeranemone",
+    "Group": "Organische Dekoration",
+    "Description": "Ein fleischfressender Meeresorganismus. Eine gepanzerte Schale umschließt den Kernpolypen, sodass nur die stechenden Tentakel sichtbar sind. Unwillkürliche Nervenkrämpfe veranlassen die Kreatur, sich unaufhörlich zu winden: immer auf der Suche, immer hungrig.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1001",
+    "Icon": "building/1001.png",
+    "Name": "Streifenkoralle",
+    "Group": "Organische Dekoration",
+    "Description": "Eine riesige Kalziumformation, die auf natürliche Weise zu einem Streifen nicht ausrichtbaren Raums geformt ist. Verleiht jeder bewohnbaren Basis einen geheimnisvollen Tiefseecharakter.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1002",
+    "Icon": "building/1002.png",
+    "Name": "Aquatische Kolonie",
+    "Group": "Organische Dekoration",
+    "Description": "Eine Felsformation, die vom Grund eines Ozeans reich an Flora und Fauna gezogen wurde. Das anhaftende Meeresleben ist mit einem nährstoffreichen Schleim überzogen, der es auch an Land ernährt und feucht hält.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1003",
+    "Icon": "building/1003.png",
+    "Name": "Nachtzungenblumen",
+    "Group": "Organische Dekoration",
+    "Description": "Ein widerstandsfähiges Gewächs, das gentechnisch so verändert wurde, dass es in allen Biomen, Bodenarten und unter allen Wetterbedingungen gedeiht. Die mit Widerhaken versehenen Blütenblätter schützen die Blumen vor potenziellen Fressfeinden, indem sie die Haut durchdringen und ihr tödliches Gift wirken lassen. Für die Handhabung werden Gefahrgut-Schutzhandschuhe empfohlen.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1004",
+    "Icon": "building/1004.png",
+    "Name": "Seeigelblumen",
+    "Group": "Organische Dekoration",
+    "Description": "Ein widerstandsfähiges Gewächs, das gentechnisch so verändert wurde, dass es in allen Biomen, Bodenarten und Wetterbedingungen gedeiht. Diese ungewöhnlich geformten Blumen sind voll mit Pollen und verströmen einen betäubend süßen Duft.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1005",
+    "Icon": "building/1005.png",
+    "Name": "Ewigstarrende Blumen",
+    "Group": "Organische Dekoration",
+    "Description": "Ein widerstandsfähiges Gewächs, das genetisch so verändert wurde, dass es in allen Biomen, Bodenarten und Wetterbedingungen gedeiht. Die Strahlenblüten dieser Blume bleiben Tag und Nacht geöffnet und absorbieren das Licht von nahen wie fernen Sternen.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
       }
     ],
     "StatBonuses": [],

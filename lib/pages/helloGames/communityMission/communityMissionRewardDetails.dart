@@ -5,73 +5,75 @@ import 'package:flutter/material.dart';
 
 import '../../../components/common/prevAndNextPagination.dart';
 import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../../contracts/enum/community_mission_status.dart';
 import 'communityMissionRewards.dart';
 
 class CommunityMissionRewardDetailsPage extends StatefulWidget {
   final int missionId;
+  final int liveMissionId;
   final int missionMin;
   final int missionMax;
+  final bool hideProgressTrackerBanner;
+
   const CommunityMissionRewardDetailsPage(
-      this.missionId, this.missionMin, this.missionMax,
-      {Key key})
-      : super(key: key);
+    this.missionId,
+    this.liveMissionId,
+    this.missionMin,
+    this.missionMax, {
+    Key? key,
+    this.hideProgressTrackerBanner = false,
+  }) : super(key: key);
 
   @override
-  _CommunityMissionRewardDetailsWidget createState() =>
-      _CommunityMissionRewardDetailsWidget(
-        missionId,
-        missionMin,
-        missionMax,
-      );
+  createState() => _CommunityMissionRewardDetailsWidget(missionId);
 }
 
-class _CommunityMissionRewardDetailsWidget extends State<StatefulWidget> {
+class _CommunityMissionRewardDetailsWidget
+    extends State<CommunityMissionRewardDetailsPage> {
   int missionId;
-  final int missionMin;
-  final int missionMax;
+
   _CommunityMissionRewardDetailsWidget(
     this.missionId,
-    this.missionMin,
-    this.missionMax,
   );
 
   @override
   Widget build(BuildContext context) {
+    int diff = missionId - widget.liveMissionId;
+    CommunityMissionStatus status = CommunityMissionStatus.current;
+    if (diff >= 1) status = CommunityMissionStatus.future;
+    if (diff <= -1) status = CommunityMissionStatus.past;
+
     return simpleGenericPageScaffold(
       context,
       title: getTranslations().fromKey(LocaleKey.communityMission),
-      body: getBody(context),
-    );
-  }
-
-  Widget getBody(BuildContext context) {
-    return prevAndNextPagination(
-      context,
-      content: ListView(
-        children: [
-          Padding(
-            child: Text(
-              missionId.toString(),
-              style: const TextStyle(fontSize: 20),
-              textAlign: TextAlign.center,
+      body: prevAndNextPagination(
+        context,
+        content: ListView(
+          children: [
+            Padding(
+              child: Text(
+                missionId.toString(),
+                style: const TextStyle(fontSize: 20),
+                textAlign: TextAlign.center,
+              ),
+              padding: const EdgeInsets.only(top: 12),
             ),
-            padding: const EdgeInsets.only(top: 12),
-          ),
-          customDivider(),
-          CommunityMissionRewards(missionId),
-          emptySpace(16),
-        ],
+            customDivider(),
+            CommunityMissionRewards(missionId, status),
+            const EmptySpace(16),
+          ],
+        ),
+        currentPosition: (missionId - widget.missionMin),
+        maxPositionIndex: (widget.missionMax - widget.missionMin) + 1,
+        nextLocaleKey: LocaleKey.nextCommunityMission,
+        prevLocaleKey: LocaleKey.prevCommunityMission,
+        onPreviousTap: () => setState(() {
+          missionId = missionId - 1;
+        }),
+        onNextTap: () => setState(() {
+          missionId = missionId + 1;
+        }),
       ),
-      currentPosition: (missionId - missionMin),
-      maxPositionIndex: (missionMax - missionMin) + 1,
-      nextLocaleKey: LocaleKey.nextCommunityMission,
-      prevLocaleKey: LocaleKey.prevCommunityMission,
-      onPreviousTap: () => setState(() {
-        missionId = missionId - 1;
-      }),
-      onNextTap: () => setState(() {
-        missionId = missionId + 1;
-      }),
     );
   }
 }

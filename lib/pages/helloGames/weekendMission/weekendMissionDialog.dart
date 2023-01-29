@@ -10,7 +10,8 @@ import '../../../contracts/weekendMission.dart';
 
 class WeekendMissionDialogPage extends StatefulWidget {
   final MessageFlow messageFlow;
-  const WeekendMissionDialogPage(this.messageFlow, {Key key}) : super(key: key);
+  const WeekendMissionDialogPage(this.messageFlow, {Key? key})
+      : super(key: key);
 
   @override
   _WeekendMissionDialogWidget createState() =>
@@ -32,14 +33,14 @@ class _WeekendMissionDialogWidget extends State<WeekendMissionDialogPage> {
     List<Widget Function()> localChatBubbles = List.empty(growable: true);
     localChatBubbles.addAll(chatBubbles);
 
-    var localOptions = messageFlow?.options ?? List.empty(growable: true);
+    var localOptions = messageFlow.options ?? List.empty(growable: true);
     if (localOptions.isEmpty) {
       localChatBubbles.add(() => Padding(
             padding: const EdgeInsets.only(top: 12, left: 6),
             child: userLeftBubble(context,
                 getTranslations().fromKey(LocaleKey.conversationEnded)),
           ));
-      localChatBubbles.add(() => emptySpace8x());
+      localChatBubbles.add(() => const EmptySpace8x());
     }
 
     if (localOptions.isNotEmpty) {

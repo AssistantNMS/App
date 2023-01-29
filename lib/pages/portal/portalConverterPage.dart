@@ -19,7 +19,7 @@ import '../../helpers/hexHelper.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 
 class PortalConverterPage extends StatefulWidget {
-  const PortalConverterPage({Key key}) : super(key: key);
+  const PortalConverterPage({Key? key}) : super(key: key);
 
   @override
   createState() => _PortalConverterPageState();
@@ -31,13 +31,17 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
   List<int> codes = List.empty(growable: true);
   bool disableEditBtns = false;
   int counter = 0;
-  String _hexString;
-  TextEditingController _hexCoordController;
-  TextEditingController _galAddrAController;
-  TextEditingController _galAddrBController;
-  TextEditingController _galAddrCController;
-  TextEditingController _galAddrDController;
-  TextEditingController _galAddrPlanetIndexController;
+  String? _hexString;
+  late TextEditingController _hexCoordController;
+  late TextEditingController _galAddrAController;
+  late TextEditingController _galAddrBController;
+  late TextEditingController _galAddrCController;
+  late TextEditingController _galAddrDController;
+  late TextEditingController _galAddrPlanetIndexController;
+
+  _PortalConverterPageState() {
+    getAnalytics().trackEvent(AnalyticsEvent.portalConverterPage);
+  }
 
   @override
   void initState() {
@@ -51,10 +55,6 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
     _galAddrPlanetIndexController = TextEditingController(text: '0');
   }
 
-  _PortalConverterPageState() {
-    getAnalytics().trackEvent(AnalyticsEvent.portalConverterPage);
-  }
-
   _addCode(int code) {
     if (codes.length >= 12) return;
     setState(() {
@@ -66,7 +66,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
   }
 
   _setCode(List<int> newCodes) {
-    if (newCodes.length > 12) newCodes = newCodes.take(12);
+    if (newCodes.length > 12) newCodes = newCodes.take(12).toList();
     setState(() {
       codes = newCodes;
       if (newCodes.isNotEmpty) disableEditBtns = false;
@@ -149,7 +149,11 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
       title: getTranslations().fromKey(LocaleKey.portalLibrary),
       body: StoreConnector<AppState, PortalViewModel>(
         converter: (store) => PortalViewModel.fromStore(store),
-        builder: (_, viewModel) => getBody(context, viewModel),
+        builder: (_, viewModel) => LayoutBuilder(
+          builder: (layoutCtx, BoxConstraints constraints) {
+            return getBody(layoutCtx, viewModel, constraints);
+          },
+        ),
       ),
     );
   }
@@ -157,12 +161,13 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
   Widget getBody(
     BuildContext scaffoldContext,
     PortalViewModel portalViewModel,
+    BoxConstraints constraints,
   ) {
     String colour = getTheme().getIsDark(context) ? 'white' : 'black';
     if (portalViewModel.useAltGlyphs) colour = 'alt';
     List<Widget> inputWidgets = List.empty(growable: true);
     List<Widget> outputWidgets = List.empty(growable: true);
-    Widget galAddrSpace = genericItemName(' : ');
+    Widget galAddrSpace = const GenericItemName(' : ');
 
     Padding hexCodeWidget = Padding(
       padding: NMSUIConstants.buttonPadding,
@@ -186,7 +191,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
       ),
     );
 
-    double screenWidth = MediaQuery.of(context).size.width;
+    double screenWidth = constraints.maxWidth;
     bool screenIsSmol = screenWidth < 500;
     double maxWidth = screenIsSmol ? screenWidth : (screenWidth * 0.7);
     List<SegmentViewMultiBuilder> portalOptions = [
@@ -195,19 +200,19 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
         title: LocaleKey.hexCoordLabel,
         builders: [
           (innerCtx) => [
-                emptySpace2x(),
+                const EmptySpace2x(),
                 SizedBox(
                   width: maxWidth,
                   child: hexCodeWidget,
                 ),
-                emptySpace2x(),
+                const EmptySpace2x(),
               ],
           (innerCtx) {
             List<Widget> innerBuilder = List.empty(growable: true);
-            innerBuilder.add(emptySpace2x());
+            innerBuilder.add(const EmptySpace2x());
             if (input == PortalAddressType.GalacticCoords) {
               innerBuilder.add(
-                genericItemName(portalCodesFromGalacticAddress(
+                GenericItemName(portalCodesFromGalacticAddress(
                   context,
                   _galAddrPlanetIndexController.text,
                   _galAddrAController.text,
@@ -217,12 +222,12 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                 ).value),
               );
             } else {
-              innerBuilder.add(genericItemName(
+              innerBuilder.add(GenericItemName(
                 allUpperCase(intArrayToHex(codes)),
               ));
             }
 
-            innerBuilder.add(emptySpace2x());
+            innerBuilder.add(const EmptySpace2x());
             return innerBuilder;
           }
         ],
@@ -232,7 +237,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
         title: LocaleKey.portalAddress,
         builders: [
           (innerCtx) => [
-                emptySpace2x(),
+                const EmptySpace2x(),
                 SizedBox(
                   width: maxWidth,
                   child: Row(
@@ -243,8 +248,8 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                       const SizedBox(width: 10),
                       ElevatedButton(
                         style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all<Color>(Colors.red[400]),
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              Colors.red[400]!),
                         ),
                         onPressed: disableEditBtns
                             ? null
@@ -260,8 +265,8 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                       const SizedBox(width: 5),
                       ElevatedButton(
                         style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all<Color>(Colors.red[800]),
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              Colors.red[800]!),
                         ),
                         onPressed: disableEditBtns
                             ? null
@@ -277,7 +282,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                     ],
                   ),
                 ),
-                emptySpace1x(),
+                const EmptySpace1x(),
                 SizedBox(
                   width: maxWidth,
                   child: portalInput(
@@ -288,11 +293,11 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                     isDisabled: codes.length > 11,
                   ),
                 ),
-                emptySpace1x(),
+                const EmptySpace1x(),
               ],
           (innerCtx) {
             List<Widget> innerBuilder = List.empty(growable: true);
-            innerBuilder.add(emptySpace2x());
+            innerBuilder.add(const EmptySpace2x());
 
             if (input == PortalAddressType.GalacticCoords) {
               ResultWithValue<String> convertResult =
@@ -305,9 +310,10 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                 _galAddrDController.text,
               );
               if (convertResult.hasFailed == true) {
-                innerBuilder.add(genericItemName(convertResult.value));
+                innerBuilder.add(GenericItemName(convertResult.value));
               } else {
                 List<int> intCoords = hexToIntArray(convertResult.value);
+                // ignore: unnecessary_null_comparison
                 bool anyAreNull = intCoords.any((coord) => coord == null);
                 if (anyAreNull == false && intCoords.length == 12) {
                   innerBuilder.add(
@@ -317,7 +323,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                     ),
                   );
                 } else {
-                  innerBuilder.add(genericItemName(
+                  innerBuilder.add(GenericItemName(
                     getTranslations().fromKey(LocaleKey.galacticAddressInvalid),
                   ));
                 }
@@ -331,7 +337,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
               );
             }
 
-            innerBuilder.add(emptySpace2x());
+            innerBuilder.add(const EmptySpace2x());
             return innerBuilder;
           },
         ],
@@ -341,7 +347,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
         title: LocaleKey.galacticAddress,
         builders: [
           (innerCtx) => [
-                emptySpace2x(),
+                const EmptySpace2x(),
                 SizedBox(
                   width: maxWidth,
                   child: Row(
@@ -358,7 +364,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                     ],
                   ),
                 ),
-                emptySpace2x(),
+                const EmptySpace2x(),
                 SizedBox(
                   width: maxWidth,
                   child: TextField(
@@ -383,29 +389,30 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                     },
                   ),
                 ),
-                emptySpace2x(),
+                const EmptySpace2x(),
               ],
           (innerCtx) => [
-                emptySpace2x(),
+                const EmptySpace2x(),
                 galacticAddress(
                   innerCtx,
                   codes,
                   hideTextHeading: true,
                   onCopy: (String newTxt) => _galAddressCopy(innerCtx, newTxt),
                 ),
-                emptySpace1x(),
+                const EmptySpace1x(),
               ],
         ],
       ),
     ];
-    outputWidgets.add(emptySpace1x());
-    outputWidgets.add(adaptiveSegmentedControl(
-      context,
+    outputWidgets.add(const EmptySpace1x());
+    outputWidgets.add(AdaptiveSegmentedControl(
       controlItems: portalOptions.map((s) => s.toSegmentOption()).toList(),
       currentSelection: input.index,
       onSegmentChosen: (index) {
+        var portalAddrType = portalAddressTypeValues.map[index.toString()];
+        if (portalAddrType == null) return;
         setState(() {
-          input = portalAddressTypeValues.map[index.toString()];
+          input = portalAddrType;
         });
       },
     ));
@@ -419,9 +426,8 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
 
     var outputOptions =
         portalOptions.where((opt) => opt.enumIndex != input.index).toList();
-    outputWidgets.add(emptySpace1x());
-    outputWidgets.add(adaptiveSegmentedControl(
-      context,
+    outputWidgets.add(const EmptySpace1x());
+    outputWidgets.add(AdaptiveSegmentedControl(
       controlItems: outputOptions.map((s) => s.toSegmentOption()).toList(),
       currentSelection: outputIndex,
       onSegmentChosen: (index) {
@@ -437,7 +443,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
       outputWidgets.add(outputBuilderWidget);
     }
 
-    outputWidgets.add(emptySpace8x());
+    outputWidgets.add(const EmptySpace8x());
 
     return ListView(
       children: [

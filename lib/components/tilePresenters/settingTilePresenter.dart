@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import '../../constants/AnalyticsEvent.dart';
 
-import '../../constants/Patreon.dart';
+import '../../env.dart';
 
 Widget headingSettingTilePresenter(String name) {
   return ListTile(
@@ -15,22 +15,25 @@ Widget headingSettingTilePresenter(String name) {
   );
 }
 
-Widget boolSettingTilePresenter(BuildContext context, String name, bool value,
-    {Function() onChange}) {
+Widget boolSettingTilePresenter(
+  BuildContext context,
+  String name,
+  bool value, {
+  void Function()? onChange,
+}) {
   //
   void Function() tempOnChange;
   tempOnChange = () {
     if (onChange != null) onChange();
   };
 
-  return flatCard(
+  return FlatCard(
     child: genericListTile(
       context,
       leadingImage: null,
       name: name,
-      trailing: adaptiveCheckbox(
+      trailing: getBaseWidget().adaptiveCheckbox(
         value: value,
-        activeColor: getTheme().getSecondaryColour(context),
         onChanged: (bool unused) => tempOnChange(),
       ),
       onTap: tempOnChange,
@@ -39,20 +42,23 @@ Widget boolSettingTilePresenter(BuildContext context, String name, bool value,
 }
 
 Widget languageSettingTilePresenter(
-    BuildContext context, String name, String value,
-    {Function(Locale locale) onChange}) {
+  BuildContext context,
+  String name,
+  String value, {
+  void Function(Locale locale)? onChange,
+}) {
   //
   void Function() tempOnChange;
   tempOnChange = () async {
     if (onChange == null) return;
 
-    String temp = await getTranslations().langaugeSelectionPage(context);
+    String? temp = await getTranslations().langaugeSelectionPage(context);
     // if null, no language selected
     if (temp != null) onChange(getTranslations().getLocaleFromKey(temp));
   };
   LocalizationMap currentLocal =
       getTranslations().getCurrentLocalizationMap(context, value);
-  return flatCard(
+  return FlatCard(
     child: languageTilePresenter(
       context,
       name,
@@ -63,40 +69,41 @@ Widget languageSettingTilePresenter(
   );
 }
 
-Widget listSettingTilePresenter(BuildContext context, String name, String value,
-    List<DropdownOption> options,
-    {Function(String) onChange}) {
+Widget listSettingTilePresenter(
+  BuildContext context,
+  String name,
+  Widget trailing,
+  List<DropdownOption> options, {
+  void Function(String)? onChange,
+}) {
   void Function() tempOnChange;
   tempOnChange = () {
+    if (onChange == null) return;
     getDialog().showOptionsDialog(
       context,
       name,
-      options
-          .map(
-            (opt) => DropdownOption(
-              opt.title,
-              value: opt.value,
-            ),
-          )
-          .toList(),
+      options,
       onSuccess: (ctx, value) => onChange(value),
     );
   };
 
-  return flatCard(
+  return FlatCard(
     child: genericListTile(
       context,
       leadingImage: null,
       name: name,
       onTap: tempOnChange,
-      trailing: Text(value),
+      trailing: trailing,
     ),
   );
 }
 
 Widget patreonCodeSettingTilePresenter(
-    BuildContext context, String name, bool value,
-    {Function(bool) onChange}) {
+  BuildContext context,
+  String name,
+  bool value, {
+  void Function(bool)? onChange,
+}) {
   //
   void Function() baseOnChange;
   baseOnChange = () async {
@@ -111,7 +118,7 @@ Widget patreonCodeSettingTilePresenter(
     baseOnChange();
 
     String code = await getDialog().asyncInputDialog(context, name);
-    String newName = (code == null || code.isEmpty) ? '' : code;
+    String newName = (code.isEmpty) ? '' : code;
     bool codeIsCorrect = Patreon.codes.any(
       (code) => code == newName.toUpperCase(),
     );
@@ -131,7 +138,7 @@ Widget patreonCodeSettingTilePresenter(
         AnalyticsEvent.patreonOAuthLogin,
         (Result loginResult) {
           if (loginResult.isSuccess) {
-            onChange(true);
+            if (onChange != null) onChange(true);
           } else {
             getLog().d('patreonOAuthLogin message ' + loginResult.errorMessage);
           }
@@ -140,14 +147,13 @@ Widget patreonCodeSettingTilePresenter(
     );
   };
 
-  return flatCard(
+  return FlatCard(
     child: genericListTile(
       context,
       leadingImage: null,
       name: name,
-      trailing: adaptiveCheckbox(
+      trailing: getBaseWidget().adaptiveCheckbox(
         value: value,
-        activeColor: getTheme().getSecondaryColour(context),
         onChanged: (_) => patreonModalSheet(),
       ),
       onTap: patreonModalSheet,

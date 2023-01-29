@@ -7,7 +7,10 @@ import 'weekendMissionSeasonPage.dart';
 
 Widget weekendMissionSeason1(BuildContext context) {
   return weekendMissionSeasonTile(
-    localImage(AppImage.weekendMissionSeason1, boxfit: BoxFit.fitWidth),
+    const LocalImage(
+      imagePath: AppImage.weekendMissionSeason1,
+      boxfit: BoxFit.fitWidth,
+    ),
     'Season 1',
     'screenshot guy',
     () async => await getNavigation().navigateAsync(
@@ -26,7 +29,10 @@ Widget weekendMissionSeason1(BuildContext context) {
 
 Widget weekendMissionSeason2(BuildContext context) {
   return weekendMissionSeasonTile(
-    localImage(AppImage.weekendMissionSeason2, boxfit: BoxFit.fitWidth),
+    const LocalImage(
+      imagePath: AppImage.weekendMissionSeason2,
+      boxfit: BoxFit.fitWidth,
+    ),
     'Season 2',
     'stoz0r',
     () async => await getNavigation().navigateAsync(
@@ -45,7 +51,10 @@ Widget weekendMissionSeason2(BuildContext context) {
 
 Widget weekendMissionSeason3(BuildContext context) {
   return weekendMissionSeasonTile(
-    localImage(AppImage.weekendMissionSeason3, boxfit: BoxFit.fitWidth),
+    const LocalImage(
+      imagePath: AppImage.weekendMissionSeason3,
+      boxfit: BoxFit.fitWidth,
+    ),
     'Season 3',
     'screenshot guy',
     () async => await getNavigation().navigateAsync(
@@ -64,7 +73,10 @@ Widget weekendMissionSeason3(BuildContext context) {
 
 Widget weekendMissionWiki(BuildContext context) {
   return weekendMissionSeasonTile(
-    localImage(AppImage.weekendMissionWiki, boxfit: BoxFit.fitWidth),
+    const LocalImage(
+      imagePath: AppImage.weekendMissionWiki,
+      boxfit: BoxFit.fitWidth,
+    ),
     'NMS Wiki',
     'cyberpunk2350',
     () async => await launchExternalURL(NmsExternalUrls.nmsWeekendMissionWiki),
@@ -72,7 +84,11 @@ Widget weekendMissionWiki(BuildContext context) {
 }
 
 Widget weekendMissionSeasonTile(
-    Widget imageWidget, String message, String author, Function ontap) {
+  Widget imageWidget,
+  String message,
+  String author,
+  void Function() ontap,
+) {
   return InkWell(
     child: Stack(children: [
       SizedBox(
@@ -83,7 +99,7 @@ Widget weekendMissionSeasonTile(
       Positioned(
         right: 0,
         top: 0,
-        child: genericItemDescription(author),
+        child: GenericItemDescription(author),
       ),
       Positioned(
         left: 0,
@@ -91,7 +107,7 @@ Widget weekendMissionSeasonTile(
         bottom: 0,
         child: Container(
           color: const Color.fromRGBO(0, 0, 0, 0.65),
-          child: genericItemName(message),
+          child: GenericItemName(message),
         ),
       ),
     ]),

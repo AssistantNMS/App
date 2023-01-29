@@ -5,6 +5,8 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class WhatIsNewViewModel {
   String guid;
   String title;
@@ -16,28 +18,28 @@ class WhatIsNewViewModel {
   DateTime activeDate;
 
   WhatIsNewViewModel({
-    this.guid,
-    this.title,
-    this.description,
-    this.isAndroid,
-    this.isIos,
-    this.isWebApp,
-    this.isWeb,
-    this.activeDate,
+    required this.guid,
+    required this.title,
+    required this.description,
+    required this.isAndroid,
+    required this.isIos,
+    required this.isWebApp,
+    required this.isWeb,
+    required this.activeDate,
   });
 
   factory WhatIsNewViewModel.fromRawJson(String str) =>
       WhatIsNewViewModel.fromJson(json.decode(str));
 
-  factory WhatIsNewViewModel.fromJson(Map<String, dynamic> json) =>
+  factory WhatIsNewViewModel.fromJson(Map<String, dynamic>? json) =>
       WhatIsNewViewModel(
-        guid: json["guid"],
-        title: json["title"],
-        description: json["description"],
-        isAndroid: json["isAndroid"],
-        isIos: json["isIos"],
-        isWebApp: json["isWebApp"],
-        isWeb: json["isWeb"],
-        activeDate: DateTime.parse(json["activeDate"]),
+        guid: readStringSafe(json, 'guid'),
+        title: readStringSafe(json, 'title'),
+        description: readStringSafe(json, 'description'),
+        isAndroid: readBoolSafe(json, 'isAndroid'),
+        isIos: readBoolSafe(json, 'isIos'),
+        isWebApp: readBoolSafe(json, 'isWebApp'),
+        isWeb: readBoolSafe(json, 'isWeb'),
+        activeDate: readDateSafe(json, 'activeDate'),
       );
 }

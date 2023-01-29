@@ -12,10 +12,11 @@ SpeedDialChild favouriteFloatingActionButton(
     SpeedDialChild(
       backgroundColor: getTheme().fabColourSelector(context),
       foregroundColor: getTheme().fabForegroundColourSelector(context),
-      onTap: () => addFavourite(FavouriteItem(id: genericItem.id)),
-      child: getCorrectlySizedImageFromIcon(
-        context,
-        Icons.star,
+      onTap: () => addFavourite(
+        FavouriteItem(id: genericItem.id),
+      ),
+      child: CorrectlySizedImageFromIcon(
+        icon: Icons.star,
         colour: getTheme().fabForegroundColourSelector(context),
       ),
     );

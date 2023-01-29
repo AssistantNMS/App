@@ -4,15 +4,17 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class FriendCodeViewModel {
   FriendCodeViewModel({
-    this.name,
-    this.emailHash,
-    this.platformType,
-    this.code,
-    this.dateSubmitted,
-    this.dateVerified,
-    this.sortRank,
+    required this.name,
+    required this.emailHash,
+    required this.platformType,
+    required this.code,
+    required this.dateSubmitted,
+    required this.dateVerified,
+    required this.sortRank,
   });
 
   String name;
@@ -25,16 +27,19 @@ class FriendCodeViewModel {
 
   List<FriendCodeViewModel> friendCodeViewModelFromJson(String str) =>
       List<FriendCodeViewModel>.from(
-          json.decode(str).map((x) => FriendCodeViewModel.fromJson(x)));
+        json.decode(str).map(
+              (x) => FriendCodeViewModel.fromJson(x),
+            ),
+      );
 
-  factory FriendCodeViewModel.fromJson(Map<String, dynamic> json) =>
+  factory FriendCodeViewModel.fromJson(Map<String, dynamic>? json) =>
       FriendCodeViewModel(
-        name: json["name"],
-        emailHash: json["emailHash"],
-        platformType: json["platformType"],
-        code: json["code"],
-        dateSubmitted: DateTime.parse(json["dateSubmitted"]),
-        dateVerified: DateTime.parse(json["dateVerified"]),
-        sortRank: json["sortRank"],
+        name: readStringSafe(json, 'name'),
+        emailHash: readStringSafe(json, 'emailHash'),
+        platformType: readIntSafe(json, 'platformType'),
+        code: readStringSafe(json, 'code'),
+        dateSubmitted: readDateSafe(json, 'dateSubmitted'),
+        dateVerified: readDateSafe(json, 'dateVerified'),
+        sortRank: readIntSafe(json, 'sortRank'),
       );
 }

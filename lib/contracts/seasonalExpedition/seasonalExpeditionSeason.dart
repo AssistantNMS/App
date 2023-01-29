@@ -11,18 +11,18 @@ import './seasonalExpeditionPhase.dart';
 
 class SeasonalExpeditionSeason {
   SeasonalExpeditionSeason({
-    this.id,
-    this.icon,
-    this.title,
-    this.isRedux,
-    this.startDate,
-    this.endDate,
+    required this.id,
+    required this.icon,
+    required this.title,
+    required this.isRedux,
+    required this.startDate,
+    required this.endDate,
     this.portalCode,
-    this.gameMode,
-    this.gameModeType,
+    required this.gameMode,
+    required this.gameModeType,
     this.captainSteveYoutubePlaylist,
-    this.phases,
-    this.rewards,
+    required this.phases,
+    required this.rewards,
   });
 
   String id;
@@ -31,17 +31,17 @@ class SeasonalExpeditionSeason {
   bool isRedux;
   DateTime startDate;
   DateTime endDate;
-  String portalCode;
+  String? portalCode;
   String gameMode;
   String gameModeType;
-  String captainSteveYoutubePlaylist;
+  String? captainSteveYoutubePlaylist;
   List<SeasonalExpeditionPhase> phases;
   List<SeasonalExpeditionReward> rewards;
 
   factory SeasonalExpeditionSeason.fromRawJson(String str) =>
       SeasonalExpeditionSeason.fromJson(json.decode(str));
 
-  factory SeasonalExpeditionSeason.fromJson(Map<String, dynamic> json) =>
+  factory SeasonalExpeditionSeason.fromJson(Map<String, dynamic>? json) =>
       SeasonalExpeditionSeason(
         id: readStringSafe(json, 'Id'),
         icon: readStringSafe(json, 'Icon'),

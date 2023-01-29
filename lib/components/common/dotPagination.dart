@@ -5,14 +5,14 @@ import './prevAndNextPagination.dart';
 
 Widget dotPagination(
   BuildContext context, {
-  @required Widget content,
-  @required int numberOfDots,
-  @required int currentPosition,
-  @required LocaleKey prevLocaleKey,
-  @required LocaleKey nextLocaleKey,
-  void Function() onPreviousTap,
-  void Function() onNextTap,
-  void Function(int) onDotTap,
+  required Widget content,
+  required int numberOfDots,
+  required int currentPosition,
+  required LocaleKey prevLocaleKey,
+  required LocaleKey nextLocaleKey,
+  void Function()? onPreviousTap,
+  void Function()? onNextTap,
+  void Function(int)? onDotTap,
 }) {
   return prevAndNextPagination(
     context,
@@ -25,13 +25,16 @@ Widget dotPagination(
       Expanded(
         child: Center(
           child: DotsIndicator(
-            dotsCount: numberOfDots,
-            position: currentPosition.toDouble(),
-            decorator: DotsDecorator(
-              activeColor: getTheme().getSecondaryColour(context),
-            ),
-            onTap: (double dotIndex) => onDotTap(dotIndex.toInt()),
-          ),
+              dotsCount: numberOfDots,
+              position: currentPosition.toDouble(),
+              decorator: DotsDecorator(
+                activeColor: getTheme().getSecondaryColour(context),
+              ),
+              onTap: (double dotIndex) {
+                if (onDotTap != null) {
+                  onDotTap(dotIndex.toInt());
+                }
+              }),
         ),
       )
     ]),

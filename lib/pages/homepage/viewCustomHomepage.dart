@@ -1,3 +1,4 @@
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/responsiveGridView.dart';
@@ -6,13 +7,23 @@ import 'customHomepageComponents.dart';
 
 class ViewCustomHomepage extends StatelessWidget {
   final List<CustomMenu> _menuItems;
-  const ViewCustomHomepage(this._menuItems, {Key key}) : super(key: key);
+  final int _numberOfColumns;
+
+  const ViewCustomHomepage(this._menuItems, this._numberOfColumns, {Key? key})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return responsiveGrid(
-      context,
-      _menuItems,
-      customMenuItemGridPresenter,
+    Widget Function(BuildContext gridCtx) renderGrid;
+    renderGrid = (BuildContext gridCtx) => responsiveGrid(
+          gridCtx,
+          _menuItems,
+          customMenuItemGridPresenter,
+          numberOfColumns: _numberOfColumns,
+        );
+
+    return AppNoticesWrapper(
+      child: renderGrid(context),
     );
   }
 }

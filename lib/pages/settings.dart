@@ -10,12 +10,13 @@ import '../constants/Fonts.dart';
 import '../constants/HomepageItems.dart';
 import '../contracts/enum/homepageType.dart';
 import '../contracts/redux/appState.dart';
+import '../helpers/dateHelper.dart';
 import '../helpers/uselessButtonHelper.dart';
 import '../redux/modules/setting/settingViewModel.dart';
 
 class Settings extends StatelessWidget {
   final void Function(Locale locale) onLocaleChange;
-  Settings(this.onLocaleChange, {Key key}) : super(key: key) {
+  Settings(this.onLocaleChange, {Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.settingsPage);
   }
 
@@ -53,7 +54,7 @@ class Settings extends StatelessWidget {
 
     widgets.add(boolSettingTilePresenter(
       context,
-      getTranslations().fromKey(LocaleKey.homeUseCompactTiles),
+      getTranslations().fromKey(LocaleKey.allItemsListUseCompactTiles),
       viewModel.genericTileIsCompact,
       onChange: viewModel.toggleGenericTileIsCompact,
     ));
@@ -84,16 +85,20 @@ class Settings extends StatelessWidget {
     widgets.add(listSettingTilePresenter(
       context,
       getTranslations().fromKey(LocaleKey.platform),
-      SelectedPlatform.getFromValue(viewModel.platformIndex).title,
+      LocalImage(
+          imagePath:
+              SelectedPlatform.getFromValue(viewModel.platformIndex).icon),
       availablePlatforms
-          .map((hp) => DropdownOption(
-                hp.title,
-                value: hp.index.toString(),
-              ))
+          .map(
+            (hp) => DropdownOption(
+              hp.title,
+              value: hp.index.toString(),
+              icon: SelectedPlatform.getFromValue(hp.index).icon,
+            ),
+          )
           .toList(),
       onChange: (String newValue) {
-        if (newValue == null) return;
-        int intValue = int.tryParse(newValue);
+        int? intValue = int.tryParse(newValue);
         if (intValue == null) return;
         viewModel.setPlatformIndex(intValue);
       },
@@ -102,8 +107,10 @@ class Settings extends StatelessWidget {
     widgets.add(listSettingTilePresenter(
       context,
       getTranslations().fromKey(LocaleKey.settingsFont),
-      getTranslations().fromKey(
-        SelectedFont.getFromFontFamily(viewModel.fontFamily).localeKey,
+      Text(
+        getTranslations().fromKey(
+          SelectedFont.getFromFontFamily(viewModel.fontFamily).localeKey,
+        ),
       ),
       availableFonts
           .map((hp) => DropdownOption(
@@ -120,8 +127,10 @@ class Settings extends StatelessWidget {
     widgets.add(listSettingTilePresenter(
       context,
       getTranslations().fromKey(LocaleKey.homepage),
-      getTranslations().fromKey(
-        getLocaleFromHomepageType(viewModel.homepageType),
+      Text(
+        getTranslations().fromKey(
+          getLocaleFromHomepageType(viewModel.homepageType),
+        ),
       ),
       homepageItems
           .map((hp) => DropdownOption(
@@ -150,6 +159,39 @@ class Settings extends StatelessWidget {
       },
     ));
 
+    if (viewModel.homepageType == HomepageType.custom) {
+      widgets.add(
+        FlatCard(
+          child: genericListTile(
+            context,
+            leadingImage: null,
+            name: getTranslations().fromKey(LocaleKey.forceNumberOfColumns),
+            trailing: viewModel.customHomePageColumnCount == 0
+                ? const Icon(Icons.do_not_disturb_alt_outlined, size: 32)
+                : Text(viewModel.customHomePageColumnCount.toString()),
+            onTap: () {
+              TextEditingController controller = TextEditingController(
+                text: (viewModel.customHomePageColumnCount < 1)
+                    ? ''
+                    : viewModel.customHomePageColumnCount.toString(),
+              );
+              getDialog().showQuantityDialog(
+                context,
+                controller,
+                amounts: [0, 1, 2, 3, 4, 5],
+                onSuccess: (BuildContext ctx, String quantity) {
+                  int? intQuantity = int.tryParse(quantity);
+                  if (intQuantity == null) return;
+                  if (intQuantity > 10) intQuantity = 10;
+                  viewModel.setCustomHomePageColumnCount(intQuantity);
+                },
+              );
+            },
+          ),
+        ),
+      );
+    }
+
     widgets.add(boolSettingTilePresenter(
       context,
       getTranslations().fromKey(LocaleKey.hideSpoilerWarnings),
@@ -164,14 +206,12 @@ class Settings extends StatelessWidget {
       onChange: viewModel.toggleMergeInventoryQuantities,
     ));
 
-    if (isValentinesPeriod()) {
+    if (isInFestivePeriod()) {
       widgets.add(boolSettingTilePresenter(
         context,
         getTranslations().fromKey(LocaleKey.displaySeasonalBackground),
         viewModel.showFestiveBackground,
-        onChange: () => viewModel.setShowFestiveBackground(
-          !viewModel.showFestiveBackground,
-        ),
+        onChange: () => viewModel.toggleShowFestiveBackground(),
       ));
     }
 
@@ -216,10 +256,9 @@ class Settings extends StatelessWidget {
     widgets.add(legalTilePresenter());
 
     if (viewModel.selectedLanguage == 'en') {
-      widgets.add(positiveButton(
-        context,
+      widgets.add(PositiveButton(
         title: 'Useless button',
-        onPress: () => uselessButtonFunc(
+        onTap: () => uselessButtonFunc(
           context,
           viewModel.uselessButtonTaps,
           viewModel.increaseUselessButtonTaps,
@@ -227,11 +266,12 @@ class Settings extends StatelessWidget {
       ));
     }
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
 
     return listWithScrollbar(
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

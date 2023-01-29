@@ -2,6 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/contracts/requiredItem.dart';
 import 'package:assistantnms_app/integration/dependencyInjection.dart';
 import 'package:assistantnms_app/pages/helloGames/misc/starshipScrapDisplay.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -15,7 +16,7 @@ import '../../../helpers/itemsHelper.dart';
 import '../../../redux/modules/generic/genericItemViewModel.dart';
 
 class StarshipScrapPage extends StatelessWidget {
-  StarshipScrapPage({Key key}) : super(key: key) {
+  StarshipScrapPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.starshipScrapPagePage);
   }
 
@@ -45,33 +46,33 @@ class StarshipScrapPage extends StatelessWidget {
       }
     }
 
-    List<StarshipScrapDetailed> result = baseData.value
-        .map((baseData) => StarshipScrapDetailed(
-              shipType: baseData.shipType,
-              shipClassType: baseData.shipClassType,
-              itemDetails: baseData.itemDetails
-                  .map((itemDetails) {
-                    RequiredItemDetails reqItem = requiredItems.firstWhere(
-                      (req) => req.id == itemDetails.id,
-                      orElse: () => null,
-                    );
+    List<StarshipScrapDetailed> result = baseData.value.map((baseData) {
+      List<StarshipScrapDetailedItemDetail> itemDetailsList =
+          List.empty(growable: true);
+      for (var itemDetails in baseData.itemDetails) {
+        RequiredItemDetails? reqItem = requiredItems.firstWhereOrNull(
+          (req) => req.id == itemDetails.id,
+        );
 
-                    if (reqItem == null) return null;
+        if (reqItem == null) continue;
 
-                    return StarshipScrapDetailedItemDetail(
-                      id: itemDetails.id,
-                      icon: reqItem.icon,
-                      name: reqItem.name,
-                      colour: reqItem.colour,
-                      percentageChance: itemDetails.percentageChance,
-                      amountMin: itemDetails.amountMin,
-                      amountMax: itemDetails.amountMax,
-                    );
-                  })
-                  .where((item) => item != null)
-                  .toList(),
-            ))
-        .toList();
+        itemDetailsList.add(StarshipScrapDetailedItemDetail(
+          id: itemDetails.id,
+          icon: reqItem.icon,
+          name: reqItem.name,
+          colour: reqItem.colour,
+          percentageChance: itemDetails.percentageChance,
+          amountMin: itemDetails.amountMin,
+          amountMax: itemDetails.amountMax,
+        ));
+      }
+      return StarshipScrapDetailed(
+        shipType: baseData.shipType,
+        shipClassType: baseData.shipClassType,
+        itemDetails: itemDetailsList,
+      );
+    }).toList();
+
     return ResultWithValue<List<StarshipScrapDetailed>>(true, result, '');
   }
 
@@ -83,10 +84,13 @@ class StarshipScrapPage extends StatelessWidget {
         return simpleGenericPageScaffold(
           context,
           title: getTranslations().fromKey(LocaleKey.starshipScrap),
-          body: FutureBuilder(
+          body: FutureBuilder<ResultWithValue<List<StarshipScrapDetailed>>>(
             future: allScrapFuture(context),
-            builder: (bodyCtx, asyncSnapshot) =>
-                getBodyFromFuture(bodyCtx, asyncSnapshot, viewModel),
+            builder: (bodyCtx, asyncSnapshot) => getBodyFromFuture(
+              bodyCtx,
+              asyncSnapshot,
+              viewModel,
+            ),
           ),
         );
       },
@@ -98,21 +102,21 @@ class StarshipScrapPage extends StatelessWidget {
     AsyncSnapshot<ResultWithValue<List<StarshipScrapDetailed>>> snapshot,
     GenericItemViewModel reduxViewModel,
   ) {
-    Widget errorWidget = asyncSnapshotHandler(
+    Widget? errorWidget = asyncSnapshotHandler(
       bodyCtx,
       snapshot,
       loader: () => getLoading().fullPageLoading(bodyCtx),
       isValidFunction:
-          (ResultWithValue<List<StarshipScrapDetailed>> expResult) {
-        if (expResult.hasFailed) return false;
-        if (expResult.value == null) return false;
+          (ResultWithValue<List<StarshipScrapDetailed>>? expResult) {
+        if (expResult?.hasFailed ?? true) return false;
+        if (expResult?.value == null) return false;
         return true;
       },
     );
     if (errorWidget != null) return errorWidget;
 
     return StarshipScrapDisplay(
-      starScraps: snapshot.data.value,
+      starScraps: snapshot.data!.value,
       displayGenericItemColour: reduxViewModel.displayGenericItemColour,
     );
   }

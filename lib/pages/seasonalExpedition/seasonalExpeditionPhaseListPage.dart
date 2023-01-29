@@ -15,22 +15,22 @@ import '../../redux/modules/expedition/expeditionViewModel.dart';
 
 class SeasonalExpeditionPhaseListPage extends StatelessWidget {
   final String seasonId;
-  final DateTime startDate;
-  final DateTime endDate;
   final bool isCustomExp;
+
   const SeasonalExpeditionPhaseListPage(
     this.seasonId, {
-    Key key,
-    this.startDate,
-    this.endDate,
+    Key? key,
     this.isCustomExp = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future:
-          getSeasonalExpeditionRepo().getById(context, seasonId, isCustomExp),
+    return FutureBuilder<ResultWithValue<SeasonalExpeditionSeason>>(
+      future: getSeasonalExpeditionRepo().getById(
+        context,
+        seasonId,
+        isCustomExp,
+      ),
       builder: (BuildContext futureContext, snapshot) =>
           StoreConnector<AppState, ExpeditionViewModel>(
         converter: (store) => ExpeditionViewModel.fromStore(store),
@@ -42,15 +42,16 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
   }
 
   Widget getBody(
-      BuildContext storeContext,
-      AsyncSnapshot<ResultWithValue<SeasonalExpeditionSeason>> snapshot,
-      ExpeditionViewModel viewModel) {
-    Widget errorWidget = asyncSnapshotHandler(
+    BuildContext storeContext,
+    AsyncSnapshot<ResultWithValue<SeasonalExpeditionSeason>> snapshot,
+    ExpeditionViewModel viewModel,
+  ) {
+    Widget? errorWidget = asyncSnapshotHandler(
       storeContext,
       snapshot,
-      isValidFunction: (ResultWithValue<SeasonalExpeditionSeason> expResult) {
-        if (expResult.hasFailed) return false;
-        if (expResult.value == null) return false;
+      isValidFunction: (ResultWithValue<SeasonalExpeditionSeason>? expResult) {
+        if (expResult?.hasFailed ?? false) return false;
+        if (expResult?.value == null) return false;
         return true;
       },
     );
@@ -62,13 +63,10 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
       );
     }
 
-    SeasonalExpeditionSeason season = snapshot.data.value;
-    if (startDate != null) season.startDate = startDate;
-    if (endDate != null) season.endDate = endDate;
-
     List<Widget> widgets = List.empty(growable: true);
 
-    bool infoNotComplete = (season?.rewards?.length ?? 0) < 1;
+    SeasonalExpeditionSeason season = snapshot.data!.value;
+    bool infoNotComplete = season.rewards.isEmpty;
     if (infoNotComplete) {
       const mesg =
           'This data is incomplete and we are working on getting accurate information!';
@@ -93,15 +91,14 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
       viewModel.useAltGlyphs,
     ));
 
-    widgets.add(emptySpace1x());
+    widgets.add(const EmptySpace1x());
 
     if (season.rewards.isNotEmpty) {
       widgets.add(Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: positiveButton(
-          storeContext,
+        child: PositiveButton(
           title: getTranslations().fromKey(LocaleKey.rewards),
-          onPress: () => adaptiveBottomModalSheet(
+          onTap: () => adaptiveBottomModalSheet(
             storeContext,
             hasRoundedCorners: true,
             builder: (_) => ExpeditionRewardsListModalBottomSheet(
@@ -115,40 +112,40 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
       widgets.add(customDivider());
     }
 
-    if (season.gameModeType != null && season.gameModeType != 'Normal') {
-      widgets.add(emptySpace1x());
+    if (season.gameModeType != 'Normal') {
+      widgets.add(const EmptySpace1x());
       widgets.add(Card(
         child: ListTile(
-          leading: localImage(
-            AppImage.base + 'special/${season.gameModeType}.png',
+          leading: LocalImage(
+            imagePath: AppImage.base + 'special/${season.gameModeType}.png',
           ),
           title: Text(season.gameMode),
         ),
         margin: const EdgeInsets.symmetric(horizontal: 16),
       ));
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
     }
 
     if (season.captainSteveYoutubePlaylist != null &&
-        season.captainSteveYoutubePlaylist.length > 5) {
-      widgets.add(emptySpace1x());
+        season.captainSteveYoutubePlaylist!.length > 5) {
+      widgets.add(const EmptySpace1x());
       String seasNum = seasonId
           .replaceAll('seas-', '') //
           .replaceAll('-redux', '');
       widgets.add(Card(
         child: captainSteveYoutubeVideoTile(
           storeContext,
-          season.captainSteveYoutubePlaylist,
+          season.captainSteveYoutubePlaylist!,
           subtitle: getTranslations()
               .fromKey(LocaleKey.walkthroughPlaylistExpeditionsSeasonNum)
               .replaceAll('{0}', seasNum),
         ),
         margin: const EdgeInsets.symmetric(horizontal: 16),
       ));
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
     }
 
-    List<SeasonalExpeditionPhase> phases = snapshot.data.value.phases;
+    List<SeasonalExpeditionPhase> phases = season.phases;
     for (SeasonalExpeditionPhase phase in phases) {
       widgets.add(seasonalExpeditionPhaseTilePresenter(
         storeContext,
@@ -157,14 +154,15 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
       ));
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return simpleGenericPageScaffold(
       storeContext,
-      title: season?.title ?? getTranslations().fromKey(LocaleKey.unknown),
+      title: season.title,
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (context, index) => widgets[index],
+        scrollController: ScrollController(),
       ),
     );
   }

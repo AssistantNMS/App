@@ -8,7 +8,7 @@ import '../../integration/dependencyInjection.dart';
 
 class DevDetailBottomSheet extends StatefulWidget {
   final String itemId;
-  const DevDetailBottomSheet(this.itemId, {Key key}) : super(key: key);
+  const DevDetailBottomSheet(this.itemId, {Key? key}) : super(key: key);
 
   @override
   _DevDetailBottomSheetWidget createState() =>
@@ -27,43 +27,46 @@ class _DevDetailBottomSheetWidget extends State<DevDetailBottomSheet> {
       future: getDataRepo().getDevDetails(context, itemId),
       builder: (BuildContext futureContext,
           AsyncSnapshot<ResultWithValue<DevDetail>> snapshot) {
-        Widget errorWidget = asyncSnapshotHandler(
+        Widget? errorWidget = asyncSnapshotHandler(
           futureContext,
           snapshot,
         );
         if (errorWidget != null) return errorWidget;
 
         Widget Function(String) titleFunc;
-        titleFunc = (String text) => genericItemDescription(
+        titleFunc = (String text) => GenericItemDescription(
               text,
               textStyle:
                   const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             );
         Widget Function(String) bodyFunc;
-        bodyFunc = (String text) => genericItemDescription(
+        bodyFunc = (String text) => GenericItemDescription(
               text,
               textStyle:
                   const TextStyle(fontSize: 16, fontWeight: FontWeight.w100),
             );
 
         List<Widget Function()> widgets = [
-          () => emptySpace3x(),
+          () => const EmptySpace3x(),
           () => titleFunc('AppId'),
           () => bodyFunc(itemId),
           () => customDivider(),
         ];
 
-        for (DevProperty prop in snapshot.data.value.properties) {
-          if (prop.value == null || prop.value.isEmpty) continue;
-          widgets.add(() => titleFunc(prop.name));
-          widgets.add(() => bodyFunc(prop.value));
-          // widgets.addAll([
-          //   () => titleFunc(prop.name),
-          //   () => bodyFunc(prop.value),
-          // ]);
-          widgets.add(() => customDivider());
+        ResultWithValue<DevDetail>? detail = snapshot.data;
+        if (detail != null) {
+          for (DevProperty prop in detail.value.properties) {
+            if (prop.value.isEmpty) continue;
+            widgets.add(() => titleFunc(prop.name));
+            widgets.add(() => bodyFunc(prop.value));
+            // widgets.addAll([
+            //   () => titleFunc(prop.name),
+            //   () => bodyFunc(prop.value),
+            // ]);
+            widgets.add(() => customDivider());
+          }
         }
-        widgets.add(() => emptySpace8x());
+        widgets.add(() => const EmptySpace8x());
 
         return AnimatedSize(
           duration: AppDuration.modal,

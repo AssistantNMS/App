@@ -17,7 +17,7 @@ class CatalogueItemPage extends StatelessWidget {
   final List<LocaleKey> repoJsonLocaleKeys;
 
   const CatalogueItemPage(this.titleLocaleKey, this.repoJsonLocaleKeys,
-      {Key key})
+      {Key? key})
       : super(key: key);
 
   @override

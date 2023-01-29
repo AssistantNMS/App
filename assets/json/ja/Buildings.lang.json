@@ -5005,7 +5005,7 @@
   },
   {
     "Id": "build273",
-    "Icon": "building/272.png",
+    "Icon": "building/273.png",
     "Name": "青銅の球体像",
     "Group": "アンロック可能なデコレーション",
     "Description": "建設可能な基地装飾品で、\n青銅の特製鋳造品。\n古代の原子生物を模した像。\n多くの初期の探検家はこの生物を\n追い求めて旅をしていた。",
@@ -5727,7 +5727,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5755,7 +5756,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5930,7 +5932,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/303.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6286,7 +6289,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/316.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7686,7 +7690,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7714,7 +7719,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7742,7 +7748,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7877,7 +7884,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7969,7 +7977,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7990,6 +7999,7 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/395.png",
     "Usages": [
       "HasDevProperties",
+      "IsNoLongerObtainable",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 15,
@@ -8472,7 +8482,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
+      "IsTwitchCampaign4Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -9054,7 +9065,7 @@
     "Icon": "building/436.png",
     "Name": "開拓地チャート",
     "Group": "スペシャリスト星系図",
-    "Description": "近くの惑星開拓地の場所を示す地図。<STELLAR>宇宙ステーションの地図製作者<>から入手。\n\n地図を選んで「ルート設定」（<IMG>FE_ALT1<>）を行うと、エクソスーツのディスプレイに場所がピン留めされる。",
+    "Description": "<STELLAR>宇宙ステーションの地図製作者<>から入手した近くの惑星開拓地の場所を示す地図。\n\n地図を選んで<VAL_ON>ルート設定（<IMG>FE_ALT1<>）<>を行うと、エクソスーツのディスプレイに場所がブックマークされる。",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -9092,8 +9103,16 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw1",
-        "Quantity": 25
+        "Id": "prod6",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
       }
     ],
     "StatBonuses": [],
@@ -15840,7 +15859,7 @@
   },
   {
     "Id": "build814",
-    "Icon": "building/1.png",
+    "Icon": "building/814.png",
     "Name": "大型の貨物船室A",
     "Group": "貨物船内装モジュール",
     "Description": "この拡張モジュールを使用すると、\n大型の宇宙船内部に居住空間を\n素早く建設できる。\n \n建設用ユニットはあらかじめ\n組み立ててあり、圧力隔壁と必要な\n接続用ポイントも付属している。",
@@ -15868,7 +15887,7 @@
   },
   {
     "Id": "build815",
-    "Icon": "building/1.png",
+    "Icon": "building/815.png",
     "Name": "大型の貨物船室B",
     "Group": "貨物船内装モジュール",
     "Description": "この拡張モジュールを使用すると、\n大型の宇宙船内部に居住空間を\n素早く建設できる。\n \n建設用ユニットはあらかじめ\n組み立ててあり、圧力隔壁と必要な\n接続用ポイントも付属している。",
@@ -15896,7 +15915,7 @@
   },
   {
     "Id": "build816",
-    "Icon": "building/1.png",
+    "Icon": "building/816.png",
     "Name": "大型の貨物船室C",
     "Group": "貨物船内装モジュール",
     "Description": "この拡張モジュールを使用すると、\n大型の宇宙船内部に居住空間を\n素早く建設できる。\n \n建設用ユニットはあらかじめ\n組み立ててあり、圧力隔壁と必要な\n接続用ポイントも付属している。",
@@ -15924,7 +15943,7 @@
   },
   {
     "Id": "build817",
-    "Icon": "building/66.png",
+    "Icon": "building/817.png",
     "Name": "四角い部屋",
     "Group": "建設モジュール",
     "Description": "基礎建築のコアモジュールの四角い版。広い中心スペースは拡張可能。",
@@ -15949,7 +15968,7 @@
   },
   {
     "Id": "build818",
-    "Icon": "building/66.png",
+    "Icon": "building/817.png",
     "Name": "四角い部屋",
     "Group": "建設モジュール",
     "Description": "基礎建築のコアモジュールの四角い版。広い中心スペースは拡張可能。",
@@ -16022,7 +16041,7 @@
   },
   {
     "Id": "build821",
-    "Icon": "building/141.png",
+    "Icon": "building/821.png",
     "Name": "植物格納容器3",
     "Group": "デコレーション",
     "Description": "基地を美しくするための建築用の装飾品。",
@@ -16046,7 +16065,7 @@
   },
   {
     "Id": "build822",
-    "Icon": "building/156.png",
+    "Icon": "building/822.png",
     "Name": "円卓",
     "Group": "家具",
     "Description": "非磁性で耐食の素材で作られた多目的の作業用テーブル。",
@@ -16071,7 +16090,7 @@
   },
   {
     "Id": "build823",
-    "Icon": "building/156.png",
+    "Icon": "building/823.png",
     "Name": "六角形のテーブル",
     "Group": "家具",
     "Description": "非磁性で耐食の素材で作られた多目的の作業用テーブル。",
@@ -16096,7 +16115,7 @@
   },
   {
     "Id": "build824",
-    "Icon": "building/156.png",
+    "Icon": "building/824.png",
     "Name": "コーナーテーブル",
     "Group": "家具",
     "Description": "非磁性で耐食の素材で作られた多目的の作業用テーブル。",
@@ -16648,7 +16667,7 @@
   },
   {
     "Id": "build848",
-    "Icon": "building/336.png",
+    "Icon": "building/848.png",
     "Name": "四角形のフロアライト",
     "Group": "取り付け家具",
     "Description": "寿命が改良され、フルリサイクル可能な部品でできた低エネルギー消費の照明。",
@@ -16673,7 +16692,7 @@
   },
   {
     "Id": "build849",
-    "Icon": "building/336.png",
+    "Icon": "building/849.png",
     "Name": "丸形のフロアライト",
     "Group": "取り付け家具",
     "Description": "寿命が改良され、フルリサイクル可能な部品でできた低エネルギー消費の照明。",
@@ -16698,7 +16717,7 @@
   },
   {
     "Id": "build850",
-    "Icon": "building/336.png",
+    "Icon": "building/850.png",
     "Name": "キャップ付きのフロアライト",
     "Group": "取り付け家具",
     "Description": "寿命が改良され、フルリサイクル可能な部品でできた低エネルギー消費の照明。",
@@ -16756,7 +16775,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16952,7 +16972,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
+      "IsExpeditionSeason7Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -17313,7 +17334,7 @@
   {
     "Id": "build872",
     "Icon": "building/872.png",
-    "Name": "テレポート室",
+    "Name": "テレポートチャンバー",
     "Group": "長距離物質転送装置",
     "Description": "貨物船に重要な統合設備。<TECHNOLOGY>個人用のテレポート装置<>で、ネットワークに接続された自分の基地と宇宙ステーションのターミナル間を素早く移動できる。分離することのできない物質を挿入する場合は、使用前にネットワークの整合性を検証すること。\n\nこのモジュールの配置には、<STELLAR>1部屋<>全体を要する。機能ユニットは既にインストールされている。",
     "BaseValueUnits": 1.0,
@@ -17445,7 +17466,7 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "テクノロジー室（空）",
+    "Name": "テクノロジー室 （拡張）",
     "Group": "高性能貨物船モジュール",
     "Description": "技術的な意味で美しい、広々とした部屋。大型宇宙船内の居住可能な空間を広げるために使用する。",
     "BaseValueUnits": 1.0,
@@ -17606,7 +17627,7 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "生物学室（空）",
+    "Name": "生物学室 （拡張）",
     "Group": "高性能貨物船モジュール",
     "Description": "広々としたこの温室は、自然に空気を濾過し、酸素を生成する。さらに、貨物船内のささやかな緑の憩いの場となる。",
     "BaseValueUnits": 1.0,
@@ -17736,7 +17757,7 @@
     "Icon": "building/885.png",
     "Name": "エクソクラフト専門家の部屋",
     "Group": "労働者ターミナル",
-    "Description": "<TECHNOLOGY>エクソクラフトメカニック<>のニーズに合わせた貨物船用統合研究設備。特注の車両デザインソフトウェアの設備が整っている。\n\nこのモジュールの配置には、<STELLAR>1部屋<>全体を要する。機能ユニットは既にインストールされている。",
+    "Description": "<TECHNOLOGY>エクソクラフトエンジニア<>のニーズに合わせた貨物船用統合研究設備。特注の車両デザインソフトウェアの設備が整っている。\n\nこのモジュールの配置には、<STELLAR>1部屋<>全体を要する。機能ユニットは既にインストールされている。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,7 +18111,7 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "工業室（空）",
+    "Name": "工業室 （拡張）",
     "Group": "高性能貨物船モジュール",
     "Description": "工業的な意味で美しい、広々とした部屋。大型宇宙船内の居住可能な空間を広げるために使用する。",
     "BaseValueUnits": 1.0,
@@ -18771,7 +18792,7 @@
     "Icon": "building/923.png",
     "Name": "ハダルの貨物船排気煙",
     "Group": "貨物船のエンジンフレアオーバーライド",
-    "Description": "特別な<STELLAR>貨物船のエンジンフレア変更モジュール<>。\n\n貨物船の排気色を有機的に変更するこのエンジン改造部品は、深海生物の生体発光を利用して、鮮やかなターコイズ色を生み出す。\n\n<VAL_ON>艦橋<>にある<TECHNOLOGY>アップグレードコントロールターミナル<>で貨物船の外見を変更できる。",
+    "Description": "特別製の<STELLAR>貨物船のエンジンフレア変更モジュール<>。\n\n貨物船の排気色を有機的に変更するこのエンジン改造部品は、深海生物の生体発光を利用して、\n鮮やかなターコイズ色を生み出す。\n\n<VAL_ON>艦橋<>にある<TECHNOLOGY>アップグレードコントロールターミナル<>で貨物船の外見を変更できる。",
     "BaseValueUnits": 800.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -19133,7 +19154,7 @@
   },
   {
     "Id": "build938",
-    "Icon": "building/350.png",
+    "Icon": "building/938.png",
     "Name": "エクソスーツ拡張ユニット",
     "Group": "アップグレードユニット",
     "Description": "<STELLAR>エクソスーツの保管容量<>を拡張できる高度なサバイバルテクノロジーモジュール。\n\nあらかじめパックされたナノ拡張剤がエクソスーツの中に安定した空間を作製し、<STELLAR>アイテムケースの容量<>が増加する。<STELLAR>宇宙ステーション<>にあるエクソスーツのアップグレードターミナルで拡張を適用できる。",
@@ -19301,7 +19322,7 @@
   },
   {
     "Id": "build945",
-    "Icon": "other/148.png",
+    "Icon": "building/945.png",
     "Name": "ヒストログラフィー測定器",
     "Group": "個人用歴史変遷モニター",
     "Description": "ナーダが<TRANS_TRA>ゲック<>、<TRANS_EXP>コーバックス<>、<TRANS_WAR>ヴァイキーン<>の話から出現する新たなパターンを検知した。\n\n測定器で重要な遺物のある現場の周辺を測定すると、<SPECIAL>歴史の変遷<>が明らかになる。際立った歴史的変化の記録があれば、ナーダが信号を追跡できるようになる。\n\nナーこのデバイスを使って異星人の遺物のある場所から<STELLAR>歴史データを送信<>して、ナーダとポーロの研究を手伝ってあげよう。",
@@ -19820,7 +19841,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19847,7 +19869,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19874,7 +19897,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20678,9 +20702,9 @@
   {
     "Id": "build996",
     "Icon": "building/996.png",
-    "Name": "ガラス 貨物船用階段",
+    "Name": "貨物船用ガラス階段",
     "Group": "コア貨物船モジュール",
-    "Description": "この拡張モジュールを使用すると、\n大型の宇宙船内部に居住空間を\n素早く建設できる。\n \n建設用ユニットはあらかじめ\n組み立ててあり、圧力隔壁と必要な\n接続用ポイントも付属している。",
+    "Description": "人工工学に基づいた傾斜を備えた頑丈で、\n滑り止め付きの階段。貨物船のデッキ間を垂直方向に移動できる。\n\n低熱膨張ガラスで構成されている。利用者は深宇宙を覗き見るスリルを味わうことができる。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20707,9 +20731,9 @@
   {
     "Id": "build997",
     "Icon": "building/997.png",
-    "Name": "外部プラットフォーム 貨物船用階段",
+    "Name": "貨物船外階段",
     "Group": "コア貨物船モジュール",
-    "Description": "この拡張モジュールを使用すると、\n大型の宇宙船内部に居住空間を\n素早く建設できる。\n \n建設用ユニットはあらかじめ\n組み立ててあり、圧力隔壁と必要な\n接続用ポイントも付属している。",
+    "Description": "人工工学に基づいた傾斜を備えた頑丈で、\n滑り止め付きの階段。貨物船のデッキ間を垂直方向に移動できる。\n\nこの頑丈な階段は貨物船の船体<STELLAR>外部<>に取り付けることができる。外部のキャットウォークとプラットフォームを接続する。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20734,12 +20758,13 @@
     "Icon": "building/998.png",
     "Name": "貨物船内用壁",
     "Group": "コア貨物船モジュール",
-    "Description": "この拡張モジュールを使用すると、\n大型の宇宙船内部に居住空間を\n素早く建設できる。\n \n建設用ユニットはあらかじめ\n組み立ててあり、圧力隔壁と必要な\n接続用ポイントも付属している。",
+    "Description": "貨物船内の広いスペースを分割する壁。接合部をシームレスに配置することができ、部屋の美観を損なわない。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20756,14 +20781,15 @@
   {
     "Id": "build999",
     "Icon": "building/999.png",
-    "Name": "工業室B（空）",
+    "Name": "拡張ルームのバリエーション",
     "Group": "高性能貨物船モジュール",
     "Description": "工業的な意味で美しい、広々とした部屋。大型宇宙船内の居住可能な空間を広げるために使用する。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20776,6 +20802,168 @@
       {
         "Id": "raw32",
         "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1000",
+    "Icon": "building/1000.png",
+    "Name": "装甲イソギンチャク",
+    "Group": "有機物デコレーション",
+    "Description": "肉食性の海洋生物。頑丈な殻が核となるポリプを包み込み、刺胞を持つ触手だけが露出している。この生物は不随意のけいれんにより、身をよじらせ続けている。満たされない飢えを抱え、常に獲物を探し続けながら...",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1001",
+    "Icon": "building/1001.png",
+    "Name": "ストリップコーラル",
+    "Group": "有機物デコレーション",
+    "Description": "巨大なカルシウム化合物の構造体で、自然にねじれた空間を形作る。居住可能な基地に、神秘的な深海の景色をもたらす。",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1002",
+    "Icon": "building/1002.png",
+    "Name": "水生コロニー",
+    "Group": "有機物デコレーション",
+    "Description": "生物密度の高い海底から引き揚げられた岩の塊。付着した海洋生物は、餌を取り、水分を保つために栄養の豊富な粘液で覆われている。",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1003",
+    "Icon": "building/1003.png",
+    "Name": "ナイトタンフラワー",
+    "Group": "有機物デコレーション",
+    "Description": "遺伝子組み換えされ、土壌や環境を問わずあらゆるバイオームで生育できるようになった頑強な花々。棘のある花弁が捕食しようとする者から花を守り、相手の肉を刺して猛毒で侵す。取り扱う際には、危険物用手袋の装着が推奨される。",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1004",
+    "Icon": "building/1004.png",
+    "Name": "アーチンフラワー",
+    "Group": "有機物デコレーション",
+    "Description": "遺伝子組み換えされ、土壌や環境を問わずあらゆるバイオームで生育できるようになった頑強な花々。この珍しい形の花は、花粉が詰まっていて、目まいを起こすほどの甘い香りを放つ。",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1005",
+    "Icon": "building/1005.png",
+    "Name": "エターナルアイフラワー",
+    "Group": "有機物デコレーション",
+    "Description": "遺伝子組み換えされ、土壌や環境を問わずあらゆるバイオームで生育できるようになった頑強な花々。この舌状花は昼も夜も咲き続けて、昼の太陽と夜の星々のどちらの光も吸収する。",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
       }
     ],
     "StatBonuses": [],

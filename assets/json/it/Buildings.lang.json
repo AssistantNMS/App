@@ -5005,7 +5005,7 @@
   },
   {
     "Id": "build273",
-    "Icon": "building/272.png",
+    "Icon": "building/273.png",
     "Name": "Statua di ammasso in bronzo",
     "Group": "Decorazione sbloccabile",
     "Description": "Una decorazione costruibile esclusiva in bronzo per la base.\nQuesta statua raffigura un'antica creatura primitiva, cercata da molti pionieri dell'esplorazione.",
@@ -5727,7 +5727,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5755,7 +5756,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5930,7 +5932,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/303.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6286,7 +6289,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/316.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7686,7 +7690,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7714,7 +7719,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7742,7 +7748,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7877,7 +7884,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7969,7 +7977,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7990,6 +7999,7 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/395.png",
     "Usages": [
       "HasDevProperties",
+      "IsNoLongerObtainable",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 15,
@@ -8472,7 +8482,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
+      "IsTwitchCampaign4Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -9054,7 +9065,7 @@
     "Icon": "building/436.png",
     "Name": "Mappa insediamento",
     "Group": "Mappa planetaria specialista",
-    "Description": "Una mappa che mostra la posizione di un insediamento planetario vicino, ottenuta da un <STELLAR>cartografo di una stazione spaziale<>.\n\nSeleziona la mappa e usa Traccia rotta (<IMG>FE_ALT1<>) per mettere in evidenza la posizione sul display dell'exotuta.",
+    "Description": "Una mappa che mostra la posizione di un insediamento planetario vicino, ottenuta da un <STELLAR>cartografo di una stazione spaziale<>.\n\nSeleziona la mappa e usa <VAL_ON>Traccia rotta (<IMG>FE_ALT1<>)<> per mettere in evidenza la posizione sul display dell'exotuta.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -9092,8 +9103,16 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw1",
-        "Quantity": 25
+        "Id": "prod6",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
       }
     ],
     "StatBonuses": [],
@@ -15840,7 +15859,7 @@
   },
   {
     "Id": "build814",
-    "Icon": "building/1.png",
+    "Icon": "building/814.png",
     "Name": "Stanza grande mercantile A",
     "Group": "Modulo interno mercantile",
     "Description": "Questo modulo d'espansione permette di costruire rapidamente spazi abitabili all'interno di grandi astronavi.\n\nL'unità di costruzione è completa di compartimenti espandibili e di tutte le giunture necessarie.",
@@ -15868,7 +15887,7 @@
   },
   {
     "Id": "build815",
-    "Icon": "building/1.png",
+    "Icon": "building/815.png",
     "Name": "Stanza grande mercantile B",
     "Group": "Modulo interno mercantile",
     "Description": "Questo modulo d'espansione permette di costruire rapidamente spazi abitabili all'interno di grandi astronavi.\n\nL'unità di costruzione è completa di compartimenti espandibili e di tutte le giunture necessarie.",
@@ -15896,7 +15915,7 @@
   },
   {
     "Id": "build816",
-    "Icon": "building/1.png",
+    "Icon": "building/816.png",
     "Name": "Stanza grande mercantile C",
     "Group": "Modulo interno mercantile",
     "Description": "Questo modulo d'espansione permette di costruire rapidamente spazi abitabili all'interno di grandi astronavi.\n\nL'unità di costruzione è completa di compartimenti espandibili e di tutte le giunture necessarie.",
@@ -15924,7 +15943,7 @@
   },
   {
     "Id": "build817",
-    "Icon": "building/66.png",
+    "Icon": "building/817.png",
     "Name": "Stanza quadrata",
     "Group": "Modulo costruttivo",
     "Description": "Un'alternativa quadrata al modulo centrale per la costruzione della base. Fornisce un ampio spazio centrale dal quale partire per espandersi.",
@@ -15949,7 +15968,7 @@
   },
   {
     "Id": "build818",
-    "Icon": "building/66.png",
+    "Icon": "building/817.png",
     "Name": "Stanza quadrata",
     "Group": "Modulo costruttivo",
     "Description": "Un'alternativa quadrata al modulo centrale per la costruzione della base. Fornisce un ampio spazio centrale dal quale partire per espandersi.",
@@ -16022,7 +16041,7 @@
   },
   {
     "Id": "build821",
-    "Icon": "building/141.png",
+    "Icon": "building/821.png",
     "Name": "Modulo di contenimento flora 3",
     "Group": "Decorazione",
     "Description": "Decorazione costruibile per abbellire la tua base.",
@@ -16046,7 +16065,7 @@
   },
   {
     "Id": "build822",
-    "Icon": "building/156.png",
+    "Icon": "building/822.png",
     "Name": "Tavolo rotondo",
     "Group": "Mobile",
     "Description": "Una superficie di lavoro multiuso, realizzata con materiali non magnetici e resistenti alla corrosione.",
@@ -16071,7 +16090,7 @@
   },
   {
     "Id": "build823",
-    "Icon": "building/156.png",
+    "Icon": "building/823.png",
     "Name": "Tavolo esagonale",
     "Group": "Mobile",
     "Description": "Una superficie di lavoro multiuso, realizzata con materiali non magnetici e resistenti alla corrosione.",
@@ -16096,7 +16115,7 @@
   },
   {
     "Id": "build824",
-    "Icon": "building/156.png",
+    "Icon": "building/824.png",
     "Name": "Tavolo angolare",
     "Group": "Mobile",
     "Description": "Una superficie di lavoro multiuso, realizzata con materiali non magnetici e resistenti alla corrosione.",
@@ -16648,7 +16667,7 @@
   },
   {
     "Id": "build848",
-    "Icon": "building/336.png",
+    "Icon": "building/848.png",
     "Name": "Lampada da terra quadrata",
     "Group": "Impianto",
     "Description": "Una lampada a basso consumo energetico, con durata utile ottimizzata e componenti riciclabili.",
@@ -16673,7 +16692,7 @@
   },
   {
     "Id": "build849",
-    "Icon": "building/336.png",
+    "Icon": "building/849.png",
     "Name": "Lampada da terra rotonda",
     "Group": "Impianto",
     "Description": "Una lampada a basso consumo energetico, con durata utile ottimizzata e componenti riciclabili.",
@@ -16698,7 +16717,7 @@
   },
   {
     "Id": "build850",
-    "Icon": "building/336.png",
+    "Icon": "building/850.png",
     "Name": "Lampada da terra ricoperta",
     "Group": "Impianto",
     "Description": "Una lampada a basso consumo energetico, con durata utile ottimizzata e componenti riciclabili.",
@@ -16756,7 +16775,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16952,7 +16972,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
+      "IsExpeditionSeason7Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -17445,7 +17466,7 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "Sala tecnologica (vuota)",
+    "Name": "Sala tecnologica (espansione)",
     "Group": "Modulo mercantile avanzato",
     "Description": "Una camera spaziosa dall'aspetto tecnico per ampliare gli spazi abitabili all'interno di grandi astronavi.",
     "BaseValueUnits": 1.0,
@@ -17606,7 +17627,7 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "Stanza biologica (vuota)",
+    "Name": "Stanza biologica (espansione)",
     "Group": "Modulo mercantile avanzato",
     "Description": "Questa spaziosa camera a serra filtra e ossigena l'aria in modo naturale e offre un piccolo rifugio verde all'interno del mercantile.",
     "BaseValueUnits": 1.0,
@@ -17736,7 +17757,7 @@
     "Icon": "building/885.png",
     "Name": "Stanza dello specialista di exoscafi",
     "Group": "Terminale di lavoro",
-    "Description": "Equipaggiamento mercantile di ricerca integrato pensato per le esigenze dei <TECHNOLOGY>meccanici di exoscafi<> e dotato di software di progettazione veicolare su misura.\n\nQuesto modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.",
+    "Description": "Equipaggiamento mercantile di ricerca integrato pensato per le esigenze dei <TECHNOLOGY>tecnici di exoscafi<> e dotato di software di progettazione veicolare su misura.\n\nQuesto modulo è collocato come una <STELLAR>stanza intera<> e include in dotazione unità funzionali preinstallate.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,7 +18111,7 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "Sala industriale (vuota)",
+    "Name": "Sala industriale (espansione)",
     "Group": "Modulo mercantile avanzato",
     "Description": "Una camera spaziosa dall'aspetto industriale per ampliare gli spazi abitabili all'interno di grandi astronavi.",
     "BaseValueUnits": 1.0,
@@ -19133,7 +19154,7 @@
   },
   {
     "Id": "build938",
-    "Icon": "building/350.png",
+    "Icon": "building/938.png",
     "Name": "Unità di espansione per exotuta",
     "Group": "Unità di potenziamento",
     "Description": "Un modulo di tecnologia di sopravvivenza avanzato che permette di espandere la <STELLAR>capienza dell'exotuta<>.\n\nIl modulo contiene nano-espansori che creano delle cavità stabilizzate nella subcurvatura della exotuta, migliorandone la <STELLAR>capienza dell'inventario<>. Applica questo potenziamento presso il terminale di miglioramento dell'exotuta a bordo delle <STELLAR>stazioni spaziali<>.",
@@ -19301,7 +19322,7 @@
   },
   {
     "Id": "build945",
-    "Icon": "other/148.png",
+    "Icon": "building/945.png",
     "Name": "Dosimetro storiografico",
     "Group": "Rilevatore di flusso di realtà personale",
     "Description": "Nada ha rilevato la presenza di uno schema ripetuto nelle storie dei <TRANS_TRA>Gek<>, <TRANS_EXP>Korvax<> e <TRANS_WAR>Vy'keen<>.\n\nIl dosimetro misura il tasso di esposizione al <SPECIAL>flusso storiografico<> presso i luoghi in cui si trovano manufatti alieni. Le rilevazioni di slittamenti storici insoliti permetteranno a Nada di tracciare il segnale.\n\nAssisti Nada e Polo nella loro ricerca utilizzando il dispositivo per <STELLAR>trasmettere dati storici<> dalle posizioni di manufatti alieni.",
@@ -19820,7 +19841,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19847,7 +19869,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19874,7 +19897,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20678,9 +20702,9 @@
   {
     "Id": "build996",
     "Icon": "building/996.png",
-    "Name": "Vetro Scale Mercantile",
+    "Name": "Scala mercantile in vetro",
     "Group": "Modulo mercantile principale",
-    "Description": "Questo modulo d'espansione permette di costruire rapidamente spazi abitabili all'interno di grandi astronavi.\n\nL'unità di costruzione è completa di compartimenti espandibili e di tutte le giunture necessarie.",
+    "Description": "Una scala robusta, antiscivolo con inclinazione ergonomica, per il passaggio verticale tra i ponti mercantili.\n\nCostruita in vetro a bassa dilatazione termica, questa scala offre all'utente una vista emozionante sullo spazio profondo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20707,9 +20731,9 @@
   {
     "Id": "build997",
     "Icon": "building/997.png",
-    "Name": "Piattaforma Esterna Scale Mercantile",
+    "Name": "Scale esterne mercantile",
     "Group": "Modulo mercantile principale",
-    "Description": "Questo modulo d'espansione permette di costruire rapidamente spazi abitabili all'interno di grandi astronavi.\n\nL'unità di costruzione è completa di compartimenti espandibili e di tutte le giunture necessarie.",
+    "Description": "Una scala robusta, antiscivolo con inclinazione ergonomica, per il passaggio verticale tra i ponti mercantili.\n\nQuesta scala robusta può essere fissata <STELLAR>all'esterno<> dello scafo del mercantile, creando collegamenti tra passerelle e piattaforme esterne.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20734,12 +20758,13 @@
     "Icon": "building/998.png",
     "Name": "Parete interna mercantile",
     "Group": "Modulo mercantile principale",
-    "Description": "Questo modulo d'espansione permette di costruire rapidamente spazi abitabili all'interno di grandi astronavi.\n\nL'unità di costruzione è completa di compartimenti espandibili e di tutte le giunture necessarie.",
+    "Description": "Una parete interna per suddividere i grandi spazi del mercantile. Si adatta perfettamente all'arredamento della stanza circostante.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20756,14 +20781,15 @@
   {
     "Id": "build999",
     "Icon": "building/999.png",
-    "Name": "Sala industriale B (vuota)",
+    "Name": "Variante camera di espansione",
     "Group": "Modulo mercantile avanzato",
     "Description": "Una camera spaziosa dall'aspetto industriale per ampliare gli spazi abitabili all'interno di grandi astronavi.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20776,6 +20802,168 @@
       {
         "Id": "raw32",
         "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1000",
+    "Icon": "building/1000.png",
+    "Name": "Anemone corazzato",
+    "Group": "Decorazione organica",
+    "Description": "Un organismo marino carnivoro, con un guscio corazzato che racchiude il polipo centrale, esponendo solo i tentacoli urticanti. Gli spasmi nervosi involontari fanno sì che la creatura si contorca in continuazione, sempre alla ricerca di qualcosa, sempre affamata.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1001",
+    "Icon": "building/1001.png",
+    "Name": "Striscia di corallo",
+    "Group": "Decorazione organica",
+    "Description": "Una gigantesca formazione calcarea, strutturata per natura in una striscia di spazio non orientabile. Aggiunge una misteriosa qualità abissale a qualsiasi base abitabile.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1002",
+    "Icon": "building/1002.png",
+    "Name": "Colonia acquatica",
+    "Group": "Decorazione organica",
+    "Description": "Una formazione rocciosa estratta dalle profondità di un oceano densamente popolato. La vita marina che aderisce a questa superficie è ricoperta da un muco ricco di sostanze nutritive, che la sfama e la mantiene umida in condizioni terrestri.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1003",
+    "Icon": "building/1003.png",
+    "Name": "Fiori di linguabuia",
+    "Group": "Decorazione organica",
+    "Description": "Una pianta floreale resistente, modificata geneticamente per prosperare in ogni bioma, tipo di terreno e condizione climatica. I petali spinati proteggono i fiori da eventuali predatori, perforando la carne e iniettando una tossina letale. Si raccomanda l'uso di guanti hazmat durante l'uso.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1004",
+    "Icon": "building/1004.png",
+    "Name": "Fiori riccio",
+    "Group": "Decorazione organica",
+    "Description": "Una pianta floreale resistente, modificata geneticamente per prosperare in ogni bioma, tipo di terreno e condizione climatica. Questi fiori dalla forma insolita sono pieni di polline e rilasciano un profumo dolcissimo e stordente.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1005",
+    "Icon": "building/1005.png",
+    "Name": "Fiori dell'occhio eterno",
+    "Group": "Decorazione organica",
+    "Description": "Una pianta floreale resistente, modificata geneticamente per prosperare in ogni bioma, tipo di terreno e condizione climatica. Questi fiori ligulati rimangono aperti giorno e notte, assorbendo la luce di stelle vicine e lontane.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
       }
     ],
     "StatBonuses": [],

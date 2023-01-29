@@ -34,12 +34,10 @@ class CreatureHarvestJsonRepository extends BaseJsonService
       return ResultWithValue(false, List.empty(), allItemsResult.errorMessage);
     }
     try {
-      List<CreatureHarvest> validItems = allItemsResult.value
-          .where(
-            (r) => r.itemId == itemId,
-          )
+      List<CreatureHarvest> validItems = allItemsResult.value //
+          .where((r) => r.itemId == itemId)
           .toList();
-      if (validItems == null || validItems.isEmpty) {
+      if (validItems.isEmpty) {
         throw Exception('Creature harvests not found');
       }
       return ResultWithValue<List<CreatureHarvest>>(true, validItems, '');

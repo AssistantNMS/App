@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 Widget portalGlyphList(
   List<int> currentCodes,
   int numItemsPerLine, {
-  double height,
-  double width,
+  double? height,
+  double? width,
   bool useAltGlyphs = false,
 }) =>
     GridView.builder(
@@ -25,11 +25,23 @@ Widget portalGlyphList(
         String path = 'portals/$type/dot.png';
         if (index < currentCodes.length) {
           String hexNum = currentCodes[index].toRadixString(16);
-          path = 'portals/$type/$hexNum.png';
+          return getPortalImage(context, hexNum, useAltGlyphs);
         }
-        return localImage('$basePath/$path');
+        return LocalImage(imagePath: '$basePath/$path');
       },
     );
+
+Widget getPortalImage(
+  BuildContext context,
+  String portalCode,
+  bool useAltGlyphs,
+) {
+  String type = getTheme().getIsDark(context) ? 'white' : 'black';
+  if (useAltGlyphs) type = 'alt';
+  String basePath = getPath().imageAssetPathPrefix;
+  String path = 'portals/$type/$portalCode.png';
+  return LocalImage(imagePath: '$basePath/$path');
+}
 
 Widget twoLinePortalGlyphList(List<int> currentCodes,
         {bool useAltGlyphs = false}) =>
@@ -41,9 +53,9 @@ Widget oneLinePortalGlyphList(List<int> currentCodes,
 
 Widget portalInput(
   BuildContext context, {
-  @required String colour,
-  @required void Function(int) addCode,
-  double width,
+  required String colour,
+  required void Function(int) addCode,
+  double? width,
   bool isDisabled = false,
 }) {
   const double runSpacing = 1;
@@ -59,8 +71,9 @@ Widget portalInput(
     children: List.generate(16, (index) {
       String hexNum = index.toRadixString(16);
 
-      Widget imgChild = localImage(
-        '${getPath().imageAssetPathPrefix}/portals/$colour/$hexNum.png',
+      Widget imgChild = LocalImage(
+        imagePath:
+            '${getPath().imageAssetPathPrefix}/portals/$colour/$hexNum.png',
         width: w,
         height: w,
       );

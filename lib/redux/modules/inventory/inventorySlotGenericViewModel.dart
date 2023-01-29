@@ -15,9 +15,9 @@ class InventorySlotGenericViewModel {
       addInventorySlotToInventory;
 
   InventorySlotGenericViewModel({
-    this.containers,
-    this.displayGenericItemColour,
-    this.addInventorySlotToInventory,
+    required this.containers,
+    required this.displayGenericItemColour,
+    required this.addInventorySlotToInventory,
   });
 
   static InventorySlotGenericViewModel fromStore(Store<AppState> store) {

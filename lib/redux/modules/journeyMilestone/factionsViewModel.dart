@@ -11,8 +11,8 @@ class FactionsViewModel {
   Function(String missionId, int missionTierIndex) setFaction;
 
   FactionsViewModel({
-    this.storedFactions,
-    this.setFaction,
+    required this.storedFactions,
+    required this.setFaction,
   });
 
   static FactionsViewModel fromStore(Store<AppState> store) {

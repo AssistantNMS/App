@@ -3,13 +3,13 @@ import 'inventorySlotWithGenericPageItem.dart';
 
 class InventorySlotWithContainersAndGenericPageItem
     extends InventorySlotWithGenericPageItem {
-  List<InventoryBasicInfo> containers;
+  late List<InventoryBasicInfo> containers;
 
   InventorySlotWithContainersAndGenericPageItem({
-    String id,
-    InventoryBasicInfo container,
-    String name,
-    int quantity,
+    required String id,
+    required InventoryBasicInfo container,
+    required String name,
+    required int quantity,
   }) : super(id: id, name: name, quantity: quantity) {
     containers = List.empty(growable: true);
     containers.add(container);

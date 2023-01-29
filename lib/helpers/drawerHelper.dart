@@ -1,6 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../components/common/cachedFutureBuilder.dart';
 import '../contracts/data/generatedMeta.dart';
 import '../integration/dependencyInjection.dart';
 
@@ -36,10 +35,10 @@ List<Widget> getDrawerItems(context, DrawerSettingsViewModel viewModel) {
 
   widgets.add(CachedFutureBuilder<ResultWithValue<GeneratedMeta>>(
     future: getDataRepo().getGeneratedMeta(context),
-    whileLoading: getLoading().smallLoadingTile(context),
+    whileLoading: () => getLoading().smallLoadingTile(context),
     whenDoneLoading: (ResultWithValue<GeneratedMeta> metaResult) {
       return packageVersionTile(
-        metaResult.isSuccess ? metaResult?.value?.gameVersion : 'Unknown',
+        metaResult.isSuccess ? metaResult.value.gameVersion : 'Unknown',
         onTap: () {
           adaptiveBottomModalSheet(
             context,
@@ -55,35 +54,35 @@ List<Widget> getDrawerItems(context, DrawerSettingsViewModel viewModel) {
 
   widgets.add(_drawerItem(
     context,
-    image: getListTileImage(AppImage.assistantApps),
+    image: const ListTileImage(partialPath: AppImage.assistantApps),
     key: LocaleKey.assistantApps,
     onTap: (_) {
       adaptiveBottomModalSheet(
         context,
         hasRoundedCorners: true,
-        builder: (BuildContext innerC) => AssistantAppsModalBottomSheet(
-          appType: AssistantAppType.NMS,
+        builder: (BuildContext innerC) => const AssistantAppsModalBottomSheet(
+          appType: AssistantAppType.nms,
         ),
       );
     },
   ));
-  widgets.add(emptySpace3x());
+  widgets.add(const EmptySpace3x());
 
   return widgets;
 }
 
 Widget _drawerItem(
   BuildContext context, {
-  @required Widget image,
-  @required LocaleKey key,
-  String navigateToNamed,
-  String navigateToExternal,
+  required Widget image,
+  required LocaleKey key,
+  String? navigateToNamed,
+  String? navigateToExternal,
   bool isLocked = false,
   bool isNew = false,
-  Function(BuildContext) onTap,
-  Function(BuildContext) onLongPress,
+  Function(BuildContext)? onTap,
+  Function(BuildContext)? onLongPress,
 }) {
-  Widget isLockedWidget;
+  Widget? isLockedWidget;
   if (isLocked) {
     isLockedWidget = Icon(
       Icons.lock_clock,
@@ -115,10 +114,9 @@ Widget _drawerItem(
     },
   );
   if (isNew) {
-    return wrapInNewBanner(
-      context,
-      LocaleKey.newItem,
-      tile,
+    return WrapInNewBanner(
+      message: LocaleKey.newItem,
+      child: tile,
       location: isLocked ? BannerLocation.topStart : BannerLocation.topEnd,
     );
   }

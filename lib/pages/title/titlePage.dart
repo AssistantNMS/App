@@ -6,7 +6,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/common/actionItem.dart';
 import '../../components/tilePresenters/titleDataPresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/redux/appState.dart';
@@ -17,7 +16,7 @@ import '../../integration/dependencyInjection.dart';
 import '../../redux/modules/titles/titleViewModel.dart';
 
 class TitlePage extends StatefulWidget {
-  TitlePage({Key key}) : super(key: key) {
+  TitlePage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.titlePage);
   }
 
@@ -26,39 +25,42 @@ class TitlePage extends StatefulWidget {
 }
 
 class _TitlePageState extends State<TitlePage> {
-  List<String> selection;
+  List<String> selection = List.empty();
 
   @override
   Widget build(BuildContext context) {
     return StoreConnector<AppState, TitleViewModel>(
-        converter: (store) => TitleViewModel.fromStore(store),
-        rebuildOnChange: false,
-        builder: (_, viewModel) {
-          String extraKey = '';
-          if (viewModel.hideCompleted) {
-            extraKey = viewModel.owned.length.toString();
-          }
-          return TitlePageView(
-            viewModel,
-            selection,
-            (itemList) => setState(() {
-              selection = itemList;
-            }),
-            key: Key(
-                'Title-View-${viewModel.playerTitle}-${(selection ?? []).length}-$extraKey'),
-          );
-        });
+      converter: (store) => TitleViewModel.fromStore(store),
+      rebuildOnChange: false,
+      builder: (_, viewModel) {
+        String extraKey = '';
+        if (viewModel.hideCompleted) {
+          extraKey = viewModel.owned.length.toString();
+        }
+        return TitlePageView(
+          viewModel,
+          selection,
+          (itemList) => setState(() {
+            selection = itemList;
+          }),
+          key: Key(
+              'Title-View-${viewModel.playerTitle}-${selection.length}-$extraKey'),
+        );
+      },
+    );
   }
 }
 
 Future<void> setPlayerName(
-    BuildContext context, TitleViewModel viewModel) async {
+  BuildContext context,
+  TitleViewModel viewModel,
+) async {
   String playerNameResult = await getDialog().asyncInputDialog(
     context,
     getTranslations().fromKey(LocaleKey.playerName),
     defaultText: viewModel.playerTitle ?? '',
   );
-  if ((playerNameResult != null && playerNameResult.isNotEmpty)) {
+  if ((playerNameResult.isNotEmpty)) {
     Future.delayed(const Duration(milliseconds: 250), () {
       // Really bad - I sorry
       viewModel.setPlayerName(playerNameResult);
@@ -71,7 +73,7 @@ class TitlePageView extends StatefulWidget {
   final List<String> selection;
   final void Function(List<String>) setSelection;
   const TitlePageView(this.viewModel, this.selection, this.setSelection,
-      {Key key})
+      {Key? key})
       : super(key: key);
 
   @override
@@ -99,16 +101,14 @@ class _TitlePageViewState extends State<TitlePageView>
 
   @override
   void afterFirstLayout(BuildContext context) {
-    if (viewModel == null) return;
-
     getFiltered(
       context,
-      (selection ?? List.empty()),
-      (viewModel.owned ?? List.empty()),
-      viewModel.hideCompleted ?? false,
+      selection,
+      viewModel.owned,
+      viewModel.hideCompleted,
     );
 
-    if (viewModel.playerTitle == null || viewModel.playerTitle.isEmpty) {
+    if (viewModel.playerTitle == null || viewModel.playerTitle!.isEmpty) {
       setPlayerName(context, viewModel);
     }
   }
@@ -139,7 +139,7 @@ class _TitlePageViewState extends State<TitlePageView>
         )
         .toList();
 
-    if (selection == null || selection.isEmpty) {
+    if (selection.isEmpty) {
       setState(() {
         isLoading = false;
         titleDataWithOwned = allItemsWithOwned;
@@ -172,7 +172,7 @@ class _TitlePageViewState extends State<TitlePageView>
   @override
   Widget build(BuildContext context) {
     String title = getTranslations().fromKey(LocaleKey.titles);
-    int ownedItems = (viewModel?.owned?.length ?? 0);
+    int ownedItems = viewModel.owned.length;
     String owned = ownedItems > 0 ? ownedItems.toString() : '...';
     String numTiles = titleDataWithOwned.isNotEmpty
         ? titleDataWithOwned.length.toString()

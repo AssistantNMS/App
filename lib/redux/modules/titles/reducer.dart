@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:redux/redux.dart';
 
 import '../../../contracts/redux/titleState.dart';
@@ -20,8 +21,7 @@ TitleState _addTitle(TitleState state, AddTitleAction action) {
 }
 
 TitleState _removeTitle(TitleState state, RemoveTitleAction action) {
-  var itemToDelete =
-      state.owned.firstWhere((ci) => ci == action.itemId, orElse: () => null);
+  var itemToDelete = state.owned.firstWhereOrNull((ci) => ci == action.itemId);
   if (itemToDelete == null) {
     return state;
   }

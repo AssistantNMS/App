@@ -17,7 +17,8 @@ void Function() openModalForAlienPuzzle(
       );
 }
 
-Widget alienPuzzleTilePresenter(BuildContext context, AlienPuzzle alienPuzzle) {
+Widget alienPuzzleTilePresenter(BuildContext context, AlienPuzzle alienPuzzle,
+    {void Function()? onTap}) {
   if (alienPuzzle.type == AlienPuzzleType.Factory ||
       alienPuzzle.type == AlienPuzzleType.Harvester) {
     return manufacturingFacilityTilePresenter(context, alienPuzzle);

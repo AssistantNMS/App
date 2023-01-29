@@ -22,14 +22,15 @@ String getBackgroundForExpedition(String seasId) {
 // }
 
 Widget expeditionSeasonTile(
-    BuildContext context,
-    String backgroundImage,
-    double backgroundHeight,
-    String imageUrl,
-    String seasonTitle,
-    String name,
-    Function ontap,
-    {bool isLocked = false}) {
+  BuildContext context,
+  String backgroundImage,
+  double backgroundHeight,
+  String imageUrl,
+  String seasonTitle,
+  String name,
+  void Function() ontap, {
+  bool isLocked = false,
+}) {
   Image backgroundImgSource = Image.asset(
     backgroundImage,
     fit: BoxFit.cover,
@@ -46,15 +47,13 @@ Widget expeditionSeasonTile(
           Radius.circular(12),
         ),
         child: Stack(children: [
-          if (backgroundImage != null) ...[
-            backgroundContainer,
-          ],
+          backgroundContainer,
           SizedBox(
             height: backgroundHeight,
             width: double.infinity,
             child: Padding(
               padding: const EdgeInsets.only(top: 4, bottom: 20),
-              child: localImage(imageUrl),
+              child: LocalImage(imagePath: imageUrl),
             ),
           ),
           if (seasonTitle.isNotEmpty) ...[
@@ -63,7 +62,7 @@ Widget expeditionSeasonTile(
               top: 0,
               child: Container(
                 child: Padding(
-                  child: genericItemName(seasonTitle),
+                  child: GenericItemName(seasonTitle),
                   padding: const EdgeInsets.only(left: 4),
                 ),
                 decoration: const BoxDecoration(
@@ -81,7 +80,7 @@ Widget expeditionSeasonTile(
             bottom: -1,
             child: Container(
               color: const Color.fromRGBO(0, 0, 0, 0.65),
-              child: genericItemName(name),
+              child: GenericItemName(name),
             ),
           ),
           if (isLocked) ...[
@@ -104,8 +103,8 @@ Widget expeditionSeasonTile(
 }
 
 class CurrentAndPastExpeditions {
-  ExpeditionViewModel current;
-  List<SeasonalExpeditionSeason> past;
+  ExpeditionViewModel? current;
+  List<SeasonalExpeditionSeason>? past;
 
   CurrentAndPastExpeditions({
     this.current,

@@ -4,24 +4,45 @@ import 'package:flutter/material.dart';
 import '../../constants/NmsUIConstants.dart';
 import '../../contracts/helloGames/newsItem.dart';
 import '../../contracts/helloGames/releaseNote.dart';
-import '../../helpers/genericHelper.dart';
 
-Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release) {
+Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release,
+    {void Function()? onTap}) {
   List<Widget> platformChips = List.empty(growable: true);
   if (release.isPc) {
-    platformChips.add(genericChip(context, "PC", color: Colors.red));
+    platformChips.add(getBaseWidget().appChip(
+      text: 'PC',
+      backgroundColor: Colors.red[400]!,
+    ));
   }
   if (release.isPs4) {
-    platformChips.add(genericChip(context, "PS4", color: Colors.blue));
+    platformChips.add(getBaseWidget().appChip(
+      text: 'PS4',
+      backgroundColor: Colors.blue,
+    ));
   }
   if (release.isPs5) {
-    platformChips.add(genericChip(context, "PS5", color: Colors.blue));
+    platformChips.add(getBaseWidget().appChip(
+      text: 'PS5',
+      backgroundColor: Colors.blue,
+    ));
   }
   if (release.isXb1) {
-    platformChips.add(genericChip(context, "XB1", color: Colors.green));
+    platformChips.add(getBaseWidget().appChip(
+      text: 'XB1',
+      backgroundColor: Colors.green,
+    ));
   }
   if (release.isXbsx) {
-    platformChips.add(genericChip(context, "X/S", color: Colors.green));
+    platformChips.add(getBaseWidget().appChip(
+      text: 'X/S',
+      backgroundColor: Colors.green,
+    ));
+  }
+  if (release.isNsw) {
+    platformChips.add(getBaseWidget().appChip(
+      text: 'Nintendo Switch',
+      backgroundColor: Colors.red[900]!,
+    ));
   }
   /*
   return genericListTileWithSubtitle(
@@ -69,10 +90,12 @@ Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release) {
   );
 }
 
-Widget newsItemTilePresenter(BuildContext context, NewsItem newsItem) {
-  Widget image = networkImage(
-    newsItem.image,
-    loading: localImage('${getPath().imageAssetPathPrefix}/defaultNews.jpg'),
+Widget newsItemTilePresenter(BuildContext context, NewsItem newsItem,
+    {void Function()? onTap}) {
+  Widget image = ImageFromNetwork(
+    imageUrl: newsItem.image,
+    loading: LocalImage(
+        imagePath: '${getPath().imageAssetPathPrefix}/defaultNews.jpg'),
   );
   return GestureDetector(
     child: Card(

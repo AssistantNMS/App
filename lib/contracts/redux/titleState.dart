@@ -7,8 +7,8 @@ class TitleState {
   final bool hideCompleted;
 
   const TitleState({
-    this.owned,
-    this.hideCompleted,
+    required this.owned,
+    required this.hideCompleted,
   });
 
   factory TitleState.initial() {
@@ -19,8 +19,8 @@ class TitleState {
   }
 
   TitleState copyWith({
-    List<String> owned,
-    bool hideCompleted,
+    List<String>? owned,
+    bool? hideCompleted,
   }) {
     return TitleState(
       owned: owned ?? this.owned,
@@ -28,15 +28,11 @@ class TitleState {
     );
   }
 
-  factory TitleState.fromJson(Map<String, dynamic> json) {
+  factory TitleState.fromJson(Map<String, dynamic>? json) {
     if (json == null) return TitleState.initial();
     try {
       return TitleState(
-          owned: readListSafe<String>(
-            json,
-            'owned',
-            (p) => p.toString(),
-          ).toList(),
+          owned: readStringListSafe(json, 'owned').toList(),
           hideCompleted: readBoolSafe(json, 'hideCompleted'));
     } catch (exception) {
       return TitleState.initial();

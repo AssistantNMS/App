@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 
 import '../../constants/AppImage.dart';
 import '../../constants/NmsExternalUrls.dart';
-import '../../constants/Patreon.dart';
-import '../modalBottomSheet/patreonModalBottomSheet.dart';
 import '../modalBottomSheet/syncWithNomNomModalBottomSheet.dart';
 
 Widget devilinPixyTile(BuildContext context) => genericListTileWithSubtitle(
@@ -32,8 +30,8 @@ Widget proceduralTravellerTile(BuildContext context) => genericListTile(
 Widget captainSteveTile(BuildContext context) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.captainSteve}',
+      leadingImage: LocalImage(
+        imagePath: '${getPath().imageAssetPathPrefix}/${AppImage.captainSteve}',
         padding: const EdgeInsets.all(8),
       ),
       title: 'Captain Steve',
@@ -42,11 +40,11 @@ Widget captainSteveTile(BuildContext context) =>
     );
 
 Widget captainSteveYoutubeVideoTile(BuildContext context, String link,
-        {String subtitle}) =>
+        {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.captainSteve}',
+      leadingImage: LocalImage(
+        imagePath: '${getPath().imageAssetPathPrefix}/${AppImage.captainSteve}',
         padding: const EdgeInsets.all(8),
       ),
       title: 'Captain Steve',
@@ -55,11 +53,11 @@ Widget captainSteveYoutubeVideoTile(BuildContext context, String link,
       onTap: () => launchExternalURL(link),
     );
 
-Widget podcast1616PlaylistTile(BuildContext context, {String subtitle}) =>
+Widget podcast1616PlaylistTile(BuildContext context, {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.podcast1616}',
+      leadingImage: LocalImage(
+        imagePath: '${getPath().imageAssetPathPrefix}/${AppImage.podcast1616}',
         padding: const EdgeInsets.all(8),
       ),
       title: '16 16 Podcast',
@@ -68,11 +66,12 @@ Widget podcast1616PlaylistTile(BuildContext context, {String subtitle}) =>
       onTap: () => launchExternalURL(NmsExternalUrls.podacst1616Youtube),
     );
 
-Widget cyberpunk2350Tile(BuildContext context, {String subtitle}) =>
+Widget cyberpunk2350Tile(BuildContext context, {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.cyberpunk2350}',
+      leadingImage: LocalImage(
+        imagePath:
+            '${getPath().imageAssetPathPrefix}/${AppImage.cyberpunk2350}',
         padding: const EdgeInsets.all(8),
       ),
       title: 'CyberPunk2350',
@@ -84,8 +83,9 @@ Widget cyberpunk2350Tile(BuildContext context, {String subtitle}) =>
 Widget assistantNMSTile(BuildContext context) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.assistantNMSIcon}',
+      leadingImage: LocalImage(
+        imagePath:
+            '${getPath().imageAssetPathPrefix}/${AppImage.assistantNMSIcon}',
         padding: const EdgeInsets.all(8),
       ),
       title: 'Kurt AssistantNMS',
@@ -96,8 +96,8 @@ Widget assistantNMSTile(BuildContext context) =>
 Widget steamDatabaseTile(BuildContext context) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.steamdbIcon}',
+      leadingImage: LocalImage(
+        imagePath: '${getPath().imageAssetPathPrefix}/${AppImage.steamdbIcon}',
         padding: const EdgeInsets.all(4),
       ),
       title: 'Steam Database',
@@ -109,8 +109,9 @@ Widget steamDatabaseTile(BuildContext context) =>
 Widget nmsHomeTile(BuildContext context) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.nmsWebsiteFavicon}',
+      leadingImage: LocalImage(
+        imagePath:
+            '${getPath().imageAssetPathPrefix}/${AppImage.nmsWebsiteFavicon}',
         padding: const EdgeInsets.all(4),
       ),
       title: 'No Man\'s Sky Official Website',
@@ -119,11 +120,11 @@ Widget nmsHomeTile(BuildContext context) =>
       onTap: () => launchExternalURL(NmsExternalUrls.noMansSkyWebsite),
     );
 
-Widget veritasVelezTile(BuildContext context, {String subtitle}) =>
+Widget veritasVelezTile(BuildContext context, {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        '${getPath().imageAssetPathPrefix}/${AppImage.veritasVelez}',
+      leadingImage: LocalImage(
+        imagePath: '${getPath().imageAssetPathPrefix}/${AppImage.veritasVelez}',
         padding: const EdgeInsets.all(8),
       ),
       title: 'VeritasVelez',
@@ -133,12 +134,12 @@ Widget veritasVelezTile(BuildContext context, {String subtitle}) =>
       onTap: () => launchExternalURL(NmsExternalUrls.veritasVelezTwitter),
     );
 
-Widget nomNomDownloadTile(BuildContext context, {String subtitle}) =>
+Widget nomNomDownloadTile(BuildContext context, {String? subtitle}) =>
     genericListTileWithSubtitleAndImageCount(
       context,
-      leadingImage: localImage(
-        AppImage.nomNom,
-        padding: const EdgeInsets.all(8),
+      leadingImage: const LocalImage(
+        imagePath: AppImage.nomNom,
+        padding: EdgeInsets.all(8),
       ),
       title: 'NomNom',
       subtitle: Text(subtitle ?? NmsExternalUrls.nomNomWebsite, maxLines: 1),
@@ -147,37 +148,21 @@ Widget nomNomDownloadTile(BuildContext context, {String subtitle}) =>
     );
 
 Widget nomNomOpenSyncModalTile(
-  BuildContext context,
-  bool isPatron, {
-  String subtitle,
+  BuildContext context, {
+  String? subtitle,
 }) {
-  bool isLocked = isPatreonFeatureLocked(
-    PatreonEarlyAccessFeature.syncInventoryPage,
-    isPatron,
-  );
   return genericListTileWithSubtitle(
     context,
     leadingImage: AppImage.nomNom,
-    name: 'Sync with NomNom save editor', // TODO translate
-    subtitle: const Text('Transfer your in game inventory'),
-    trailing: isLocked ? const Icon(Icons.lock) : null,
+    name: getTranslations().fromKey(LocaleKey.syncWithNomNom),
+    subtitle: Text(getTranslations().fromKey(LocaleKey.syncWithNomNomDesc)),
+    trailing: const Icon(Icons.navigate_next_rounded),
     onTap: () {
-      handlePatreonBottomModalSheetWhenTapped(
+      adaptiveBottomModalSheet(
         context,
-        isPatron,
-        unlockDate: PatreonEarlyAccessFeature.syncInventoryPage,
-        onSettingsTap: (BuildContext dialogCtx) async {
-          getNavigation().pop(dialogCtx);
-          await Future.delayed(const Duration(milliseconds: 250));
-        },
-        onTap: (dialogCtx) {
-          adaptiveBottomModalSheet(
-            context,
-            hasRoundedCorners: true,
-            builder: (BuildContext innerContext) =>
-                const SyncWithNomNomBottomSheet(),
-          );
-        },
+        hasRoundedCorners: true,
+        builder: (BuildContext innerContext) =>
+            const SyncWithNomNomBottomSheet(),
       );
     },
   );

@@ -2,14 +2,34 @@ import 'package:flutter/cupertino.dart'
     show CupertinoThemeData, CupertinoTextThemeData;
 import 'package:flutter/material.dart';
 
+import 'color_scheme.dart';
+
 ThemeData getDynamicTheme(Brightness brightness, String fontFamily) {
-  return darkTheme(fontFamily);
+  return darkThemeM3(fontFamily);
+}
+
+ThemeData darkThemeM3(String fontFamily) {
+  final base = ThemeData(
+    useMaterial3: true,
+    colorScheme: darkColorScheme,
+  );
+
+  return base.copyWith(
+    brightness: Brightness.dark,
+    primaryColor: darkColorScheme.primary,
+    textTheme: base.textTheme.apply(fontFamily: fontFamily),
+    primaryTextTheme: base.primaryTextTheme.apply(fontFamily: fontFamily),
+    pageTransitionsTheme: const PageTransitionsTheme(builders: {
+      TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+      TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+    }),
+  );
 }
 
 ThemeData darkTheme(String fontFamily) {
   final base = ThemeData.dark();
-  final primary = Colors.indigo[300];
-  final secondary = Colors.teal[200];
+  final primary = Colors.indigo[300]; //7986CB
+  final secondary = Colors.teal[200]; //80CBC4
   return base.copyWith(
     primaryColor: primary,
     // accentColor: secondary, //DEPRECATED
@@ -37,12 +57,13 @@ ThemeData darkTheme(String fontFamily) {
 TextTheme _buildAppTextTheme(TextTheme base, String fontFamily) {
   return base
       .copyWith(
-        headline5: base.headline5.copyWith(fontWeight: FontWeight.w900),
-        headline6: base.headline6.copyWith(
+        headlineSmall:
+            base.headlineSmall?.copyWith(fontWeight: FontWeight.w900),
+        titleLarge: base.titleLarge?.copyWith(
           fontSize: 18.0,
           fontWeight: FontWeight.w500,
         ),
-        caption: base.caption.copyWith(
+        bodySmall: base.bodySmall?.copyWith(
           fontSize: 14.0,
           fontWeight: FontWeight.w500,
         ),

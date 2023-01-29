@@ -7,20 +7,21 @@ import '../../contracts/titleDataWithOwned.dart';
 import '../../helpers/currencyHelper.dart';
 import '../../redux/modules/titles/titleViewModel.dart';
 
-Widget Function(BuildContext, TitleDataWithOwned) titleDataTilePresenter(
-        TitleViewModel viewModel) =>
-    (BuildContext context, TitleDataWithOwned titleData) {
-      return TitleDataTile(
-        viewModel,
-        titleData,
-        key: Key(titleData.id),
-      );
-    };
+Widget Function(BuildContext, TitleDataWithOwned, {void Function()? onTap})
+    titleDataTilePresenter(TitleViewModel viewModel) =>
+        (BuildContext context, TitleDataWithOwned titleData,
+            {void Function()? onTap}) {
+          return TitleDataTile(
+            viewModel,
+            titleData,
+            key: Key(titleData.id),
+          );
+        };
 
 class TitleDataTile extends StatefulWidget {
   final TitleViewModel viewModel;
   final TitleDataWithOwned titleData;
-  const TitleDataTile(this.viewModel, this.titleData, {Key key})
+  const TitleDataTile(this.viewModel, this.titleData, {Key? key})
       : super(key: key);
 
   @override
@@ -52,11 +53,12 @@ class _TitleDataTileState extends State<TitleDataTile> {
     toggleOwned = () => setOwned(!titleData.isOwned, viewModelFunc);
 
     return ListTile(
-      leading: (titleData.appIcon == null || titleData.appIcon.length < 5)
-          ? null
-          : localImage(
-              '${getPath().imageAssetPathPrefix}/${titleData.appIcon}',
-            ),
+      leading: (titleData.appIcon.length > 5)
+          ? LocalImage(
+              imagePath:
+                  '${getPath().imageAssetPathPrefix}/${titleData.appIcon}',
+            )
+          : null,
       title: Text(
         titleData.title.replaceAll(
           "{0}",
@@ -75,9 +77,8 @@ class _TitleDataTileState extends State<TitleDataTile> {
         maxLines: 2,
         overflow: TextOverflow.ellipsis,
       ),
-      trailing: adaptiveCheckbox(
+      trailing: getBaseWidget().adaptiveCheckbox(
         value: titleData.isOwned,
-        activeColor: getTheme().getSecondaryColour(context),
         onChanged: (_) => toggleOwned(),
       ),
       onTap: toggleOwned,

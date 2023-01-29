@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 class CustomMenuItem {
   Widget image;
   LocaleKey title;
-  Function navigateTo;
-  String navigateToNamed;
-  String navigateToExternl;
+  Widget Function(BuildContext context)? navigateTo;
+  String? navigateToNamed;
+  String? navigateToExternal;
 
   CustomMenuItem({
-    this.image,
-    this.title,
+    required this.image,
+    required this.title,
     this.navigateTo,
     this.navigateToNamed,
-    this.navigateToExternl,
+    this.navigateToExternal,
   });
 }

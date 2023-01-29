@@ -13,7 +13,7 @@ import '../../helpers/searchHelpers.dart';
 import '../../integration/dependencyInjection.dart';
 
 class CommunityLinksPage extends StatefulWidget {
-  CommunityLinksPage({Key key}) : super(key: key) {
+  CommunityLinksPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.communityLinkPage);
   }
 
@@ -53,7 +53,7 @@ class _CommunityLinksPageWidget extends State<CommunityLinksPage>
 
   @override
   Widget build(BuildContext context) {
-    Widget Function(BuildContext, CommunityLinkViewModel) tilePresenter =
+    ListItemDisplayerType<CommunityLinkViewModel> tilePresenter =
         communityLinkTilePresenter(meta.chipColours);
 
     if (isLoading) {

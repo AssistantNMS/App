@@ -7,10 +7,10 @@ Widget galacticAddress(
   BuildContext context,
   List<int> currentCodes, {
   bool hideTextHeading = false,
-  void Function(String) onCopy,
+  void Function(String)? onCopy,
 }) {
   List<Widget> widgets = List.empty(growable: true);
-  Function() onTap;
+  void Function() onTap = () {};
   const textStyle = TextStyle(fontSize: 20);
   if (currentCodes.length == 12) {
     List<String> hexCodes = intArrayToHexArray(currentCodes);
@@ -19,7 +19,7 @@ Widget galacticAddress(
     String section3Code = getCodeForSection(hexCodes, 3, 2047, 4096);
     String section4Code = padBy4String(getHexForSection(hexCodes, 4));
 
-    if (int.tryParse(section4Code, radix: 16) > 767) {
+    if ((int.tryParse(section4Code, radix: 16) ?? 0) > 767) {
       widgets.add(Text(
         getTranslations().fromKey(LocaleKey.galacticAddressInvalid),
         style: textStyle,
@@ -56,7 +56,7 @@ Widget galacticAddress(
 
 String getCodeForSection(List<String> hexCodes, int section, int add, int mod) {
   String sectionHex = getHexForSection(hexCodes, section);
-  int intFromHex = int.tryParse(sectionHex, radix: 16);
+  int intFromHex = int.tryParse(sectionHex, radix: 16) ?? 0;
   String modifiedHex = intCodeToHexString(intFromHex, add, mod);
   String padded = padBy4String(modifiedHex);
   return padded;

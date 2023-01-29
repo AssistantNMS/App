@@ -7,21 +7,37 @@ import '../../../contracts/faction/guildMission.dart';
 class IFactionJsonRepository {
   //
   Future<ResultWithValue<FactionData>> getAll(BuildContext context) async {
-    return ResultWithValue<FactionData>(false, FactionData(), '');
+    return ResultWithValue<FactionData>(
+      false,
+      FactionData.fromRawJson('{}'),
+      '',
+    );
   }
 
   Future<ResultWithValue<FactionDetail>> getById(
       BuildContext context, String id) async {
-    return ResultWithValue<FactionDetail>(false, FactionDetail(), '');
+    return ResultWithValue<FactionDetail>(
+      false,
+      FactionDetail.fromRawJson('{}'),
+      '',
+    );
   }
 
   Future<ResultWithValue<List<GuildMission>>> getAllMissions(
       BuildContext context) async {
-    return ResultWithValue<List<GuildMission>>(false, List.empty(), '');
+    return ResultWithValue<List<GuildMission>>(
+      false,
+      List.empty(),
+      '',
+    );
   }
 
   Future<ResultWithValue<GuildMission>> getMissionId(
       BuildContext context, String id) async {
-    return ResultWithValue<GuildMission>(false, GuildMission(), '');
+    return ResultWithValue<GuildMission>(
+      false,
+      GuildMission.fromRawJson('{}'),
+      '',
+    );
   }
 }

@@ -8,7 +8,7 @@ import '../../contracts/generated/communitySpotlightViewModel.dart';
 import '../../integration/dependencyInjection.dart';
 
 class CommunitySpotlightPage extends StatelessWidget {
-  CommunitySpotlightPage({Key key}) : super(key: key) {
+  CommunitySpotlightPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.communitySpotlightPage);
   }
 

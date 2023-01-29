@@ -2,8 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../pages/homepage/allItemsPage.dart';
-import '../pages/advancedSearch/advancedSearch.dart';
-import '../pages/alienPuzzles/alienPuzzlesListPage.dart';
 import '../pages/alienPuzzles/alienPuzzlesMenuPage.dart';
 import '../pages/cartPage.dart';
 import '../pages/catalogue/cataloguePage.dart';
@@ -12,10 +10,9 @@ import '../pages/community/communitySpotlightPage.dart';
 import '../pages/community/onlineMeetup2020SubmissionsPage.dart';
 import '../pages/contributors/contributorsPage.dart';
 import '../pages/donation.dart';
-import '../pages/exploits/exploitsPage.dart';
 import '../pages/faction/factionListPage.dart';
+import '../pages/faction/journeyMilestone.dart';
 import '../pages/favourite/favouritesPage.dart';
-import '../pages/feedback/feedbackPage.dart';
 import '../pages/friendCode/friendCodeListPage.dart';
 import '../pages/guide/assistantAppsGuidesPage.dart';
 import '../pages/guide/guidesPage.dart';
@@ -26,12 +23,11 @@ import '../pages/helloGames/newsPage.dart.dart';
 import '../pages/helloGames/releaseNotesPage.dart';
 import '../pages/helloGames/twitch/twitchCampaignPage.dart';
 import '../pages/helloGames/weekendMission/weekendMissionMenuPage.dart';
-import '../pages/homepage/CatalogueHomepage.dart';
+import '../pages/homepage/catalogueHomepage.dart';
 import '../pages/homepage/customHomepage.dart';
 import '../pages/homepage/defaultHomePage.dart';
 import '../pages/inventory/inventoryListPage.dart';
 import '../pages/ios/appleMenu.dart';
-import '../pages/faction/journeyMilestone.dart';
 import '../pages/language.dart';
 import '../pages/misc/retiredDrawerMenuPage.dart';
 import '../pages/newItemsInUpdate/majorUpdatesPage.dart';
@@ -39,6 +35,7 @@ import '../pages/newItemsInUpdate/newItemsPage.dart';
 import '../pages/news/newsShellPage.dart';
 import '../pages/nmsfm/nmsfm.dart';
 import '../pages/portal/portalConverterPage.dart';
+import '../pages/portal/portal_random_page.dart';
 import '../pages/portal/portalsPage.dart';
 import '../pages/power/solarPanelCalcPage.dart';
 import '../pages/seasonalExpedition/seasonalExpeditionSeasonListPage.dart';
@@ -51,7 +48,7 @@ import '../pages/sync/syncPage.dart';
 import '../pages/techTree/unlockableTechTreePage.dart';
 import '../pages/timer/timerPage.dart';
 import '../pages/title/titlePage.dart';
-import '../pages/tutuorial/nomNomInventorySyncTutorial.dart';
+import '../pages/tutorial/nomNomInventorySyncTutorial.dart';
 import '../pages/whatIsNew/enhancedWhatIsNewPage.dart';
 import 'AnalyticsEvent.dart';
 
@@ -63,10 +60,8 @@ class Routes {
   static const String donation = '/donation';
   static const String settings = '/settings';
   static const String cart = '/cart';
-  static const String exploits = '/exploits';
   static const String guides = '/guides';
   static const String portals = '/portals';
-  static const String advancedSearch = '/advancedSearch';
   static const String appleMenu = '/appleMenu';
   static const String helloGames = '/helloGames';
   static const String helloGamesReleaseNotes = '/helloGamesReleaseNotes';
@@ -113,6 +108,7 @@ class Routes {
   static const String starshipScrap = '/starshipScrap';
   static const String portalConverter = '/portalConverter';
   static const String nomNomInventoryTutorial = '/nomNomInventoryTutorial';
+  static const String randomPortal = '/randomPortal';
 }
 
 Map<String, Widget Function(BuildContext)> initNamedRoutes(
@@ -124,10 +120,10 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.intro: (context) => IntroPage(onLocaleChange),
     Routes.about: (context) => AboutPage(
           key: const Key('AboutPage'),
-          appType: AssistantAppType.NMS,
+          appType: AssistantAppType.nms,
           aboutPageWidgetsFunc: (BuildContext ctx) {
             return [
-              emptySpace(0.5),
+              const EmptySpace(0.5),
               Padding(
                 child: Text(
                   getTranslations().fromKey(LocaleKey.aboutContent),
@@ -144,10 +140,8 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.language: (context) => Language(),
     Routes.donation: (context) => const Donation(),
     Routes.cart: (context) => CartPage(),
-    Routes.exploits: (context) => ExploitsPage(),
     Routes.guides: (context) => GuidesPage(),
     Routes.portals: (context) => const PortalsPage(),
-    Routes.advancedSearch: (context) => const AdvancedSearch(),
     Routes.settings: (context) => Settings(onLocaleChange),
     Routes.appleMenu: (context) => AppleMenu(),
     Routes.helloGames: (context) => HelloGamesPage(),
@@ -159,7 +153,6 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.whatIsNew: (context) => const EnhancedWhatIsNewPage(),
     Routes.communityLinks: (context) => CommunityLinksPage(),
     Routes.socialLinks: (context) => SocialPage(),
-    Routes.feedback: (context) => FeedbackPage(),
     Routes.newItems: (context) => const NewItemsPage(),
     Routes.techTree: (context) => UnlockableTechTreePage(),
     Routes.inventoryList: (context) => const InventoryListPage(),
@@ -184,7 +177,6 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.allItemsPage: (context) => const AllItemsPage(),
     Routes.catalogueHome: (context) => const CatalogueHomepage(),
     Routes.titlePage: (context) => TitlePage(),
-    Routes.alienPuzzlesListPage: (context) => AlienPuzzlesListPage(),
     Routes.nmsfmPage: (context) => const NMSFMPage(),
     Routes.newsPage: (context) => NewsShellPage(),
     Routes.seasonalExpeditionPage: (context) =>
@@ -199,6 +191,7 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.portalConverter: (context) => const PortalConverterPage(),
     Routes.nomNomInventoryTutorial: (context) =>
         const NomNomInventorySyncTutorial(),
+    Routes.randomPortal: (context) => const RandomPortalPage(),
   });
   return routes;
 }

@@ -9,7 +9,7 @@ import '../../helpers/drawerHelper.dart';
 import '../../redux/modules/setting/drawerSettingsViewModel.dart';
 
 class AppleMenu extends StatelessWidget {
-  AppleMenu({Key key}) : super(key: key) {
+  AppleMenu({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.appleMenuPage);
   }
 
@@ -33,6 +33,7 @@ class AppleMenu extends StatelessWidget {
           padding: EdgeInsets.zero,
           itemCount: widgets.length,
           itemBuilder: (context, index) => widgets[index],
+          scrollController: ScrollController(),
         );
       },
     );

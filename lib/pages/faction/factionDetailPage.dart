@@ -13,7 +13,7 @@ import 'guildMissionsPage.dart';
 
 class FactionDetailPage extends StatelessWidget {
   final FactionDetail factionDetail;
-  const FactionDetailPage(this.factionDetail, {Key key}) : super(key: key);
+  const FactionDetailPage(this.factionDetail, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,23 +26,15 @@ class FactionDetailPage extends StatelessWidget {
   }
 
   Widget getBody(BuildContext storeContext, FactionsViewModel viewModel) {
-    if (factionDetail == null) {
-      return simpleGenericPageScaffold(
-        storeContext,
-        title: getTranslations().fromKey(LocaleKey.loading),
-        body: getLoading().customErrorWidget(storeContext),
-      );
-    }
-
     List<Widget> widgets = List.empty(growable: true);
-    widgets.add(localImage(
-      factionDetail.icon,
+    widgets.add(LocalImage(
+      imagePath: factionDetail.icon,
       imageHero: factionDetail.icon + factionDetail.id,
       height: 100,
     ));
     widgets.add(Padding(
       padding: NMSUIConstants.buttonPadding,
-      child: genericItemDescription(
+      child: GenericItemDescription(
         factionDetail.description,
         maxLines: 20,
       ),
@@ -54,7 +46,7 @@ class FactionDetailPage extends StatelessWidget {
           .indexWhere((fac) => fac.missionId == mission.id);
       bool isValidIndex = storedFacIndex > -1 &&
           storedFacIndex < viewModel.storedFactions.length;
-      StoredFactionMission reduxMdl =
+      StoredFactionMission? reduxMdl =
           isValidIndex ? viewModel.storedFactions[storedFacIndex] : null;
       widgets.add(
         factionMissionTilePresenter(storeContext, mission, viewModel, reduxMdl),
@@ -62,13 +54,12 @@ class FactionDetailPage extends StatelessWidget {
     }
 
     if (factionDetail.additional.contains('ShowGuildMissions')) {
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
       widgets.add(Padding(
         padding: NMSUIConstants.buttonPadding,
-        child: positiveButton(
-          storeContext,
+        child: PositiveButton(
           title: getTranslations().fromKey(LocaleKey.viewGuildMissions),
-          onPress: () {
+          onTap: () {
             getNavigation().navigateAwayFromHomeAsync(
               storeContext,
               navigateTo: (_) => GuildMissionsPage(),
@@ -78,7 +69,7 @@ class FactionDetailPage extends StatelessWidget {
       ));
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return simpleGenericPageScaffold(
       storeContext,
@@ -86,6 +77,7 @@ class FactionDetailPage extends StatelessWidget {
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (context, index) => widgets[index],
+        scrollController: ScrollController(),
       ),
     );
   }

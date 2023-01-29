@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/common/image.dart';
@@ -7,22 +8,26 @@ import '../../../components/tilePresenters/requiredItemDetailsTilePresenter.dart
 import '../../../constants/AppImage.dart';
 import '../../../contracts/data/quicksilverStore.dart';
 import '../../../contracts/data/quicksilverStoreItem.dart';
+import '../../../contracts/enum/community_mission_status.dart';
 import '../../../contracts/helloGames/quickSilverStoreDetails.dart';
 import '../../../contracts/requiredItemDetails.dart';
 import '../../../helpers/futureHelper.dart';
+import 'community_mission_extra_data.dart';
 
 class CommunityMissionRewards extends StatelessWidget {
   final int missionId;
   final int totalTiers;
   final int currentTier;
   final int currentTierPercentage;
-  final QuicksilverStore qsStore;
-  final List<RequiredItemDetails> itemDetails;
-  final List<RequiredItemDetails> requiredItemDetails;
+  final QuicksilverStore? qsStore;
+  final CommunityMissionStatus status;
+  final List<RequiredItemDetails>? itemDetails;
+  final List<RequiredItemDetails>? requiredItemDetails;
 
   const CommunityMissionRewards(
-    this.missionId, {
-    Key key,
+    this.missionId,
+    this.status, {
+    Key? key,
     this.totalTiers = 0,
     this.currentTier =
         100, // So that all items displayed in Community mission pages have colour unless it is the current mission
@@ -40,16 +45,24 @@ class CommunityMissionRewards extends StatelessWidget {
         builder: getBody,
       );
     }
-    return getBodyInternal(context, qsStore, itemDetails, requiredItemDetails);
+    return getBodyInternal(
+      context,
+      qsStore!,
+      itemDetails!,
+      requiredItemDetails,
+    );
   }
 
-  Widget getBody(BuildContext bodyContext,
-      AsyncSnapshot<ResultWithValue<QuicksilverStoreDetails>> snapshot) {
-    Widget errorWidget = asyncSnapshotHandler(bodyContext, snapshot,
-        isValidFunction: (ResultWithValue<QuicksilverStoreDetails> data) {
-      if (snapshot.data.value == null ||
-          snapshot.data.value.items == null ||
-          snapshot.data.value.store.missionId == null) {
+  Widget getBody(
+    BuildContext bodyContext,
+    AsyncSnapshot<ResultWithValue<QuicksilverStoreDetails>> snapshot,
+  ) {
+    Widget? errorWidget = asyncSnapshotHandler(bodyContext, snapshot,
+        isValidFunction: (ResultWithValue<QuicksilverStoreDetails>? data) {
+      if (snapshot.data == null ||
+          snapshot.data?.value == null ||
+          snapshot.data?.value.items == null ||
+          snapshot.data?.value.store.missionId == null) {
         return false;
       }
       return true;
@@ -57,9 +70,9 @@ class CommunityMissionRewards extends StatelessWidget {
     if (errorWidget != null) return errorWidget;
     return getBodyInternal(
       bodyContext,
-      snapshot.data.value.store,
-      snapshot.data.value.items,
-      snapshot.data.value.itemsRequired,
+      snapshot.data!.value.store,
+      snapshot.data!.value.items,
+      snapshot.data!.value.itemsRequired,
     );
   }
 
@@ -67,7 +80,7 @@ class CommunityMissionRewards extends StatelessWidget {
     BuildContext internalContext,
     QuicksilverStore qsStore,
     List<RequiredItemDetails> itemDetails,
-    List<RequiredItemDetails> requiredItemDetails,
+    List<RequiredItemDetails>? requiredItemDetails,
   ) {
     List<Widget> widgets = List.empty(growable: true);
     bool tiersAreValid = totalTiers <= 0 || totalTiers == qsStore.items.length;
@@ -75,10 +88,10 @@ class CommunityMissionRewards extends StatelessWidget {
         qsStore.icon.isNotEmpty && qsStore.name.isNotEmpty;
     if (tiersAreValid == false && isSpecialQsMission == false) {
       widgets.add(genericItemImage(internalContext, AppImage.error));
-      widgets.add(genericItemDescription(
+      widgets.add(GenericItemDescription(
         getTranslations().fromKey(LocaleKey.communityMissionMismatchTitle),
       ));
-      widgets.add(genericItemDescription(
+      widgets.add(GenericItemDescription(
         getTranslations().fromKey(LocaleKey.communityMissionMismatchMessage),
       ));
     } else {
@@ -93,10 +106,9 @@ class CommunityMissionRewards extends StatelessWidget {
           }
         }
 
-        for (RequiredItemDetails itemDetails in itemDetails ?? List.empty()) {
-          QuicksilverStoreItem itemFound = qsStore.items.firstWhere(
+        for (RequiredItemDetails itemDetails in itemDetails) {
+          QuicksilverStoreItem? itemFound = qsStore.items.firstWhereOrNull(
             (item) => item.itemId == itemDetails.id,
-            orElse: () => null,
           );
           if (itemFound == null) continue;
 
@@ -109,7 +121,7 @@ class CommunityMissionRewards extends StatelessWidget {
           ));
         }
       } else {
-        Widget topElement = flatCard(
+        Widget topElement = FlatCard(
           child: genericListTileWithSubtitle(
             internalContext,
             leadingImage: qsStore.icon,
@@ -122,11 +134,11 @@ class CommunityMissionRewards extends StatelessWidget {
         List<Widget> requiredItemsWidgets = List.empty(growable: true);
         List<RequiredItemDetails> reqItemsToDisplay =
             requiredItemDetails ?? List.empty();
-        requiredItemsWidgets.add(emptySpace1x());
+        requiredItemsWidgets.add(const EmptySpace1x());
         if (reqItemsToDisplay.isNotEmpty) {
           requiredItemsWidgets.add(topElement);
-          requiredItemsWidgets.add(emptySpace1x());
-          requiredItemsWidgets.add(genericItemDescription(
+          requiredItemsWidgets.add(const EmptySpace1x());
+          requiredItemsWidgets.add(GenericItemDescription(
             getTranslations().fromKey(LocaleKey.requiresTheFollowing),
           ));
 
@@ -136,7 +148,7 @@ class CommunityMissionRewards extends StatelessWidget {
               itemDetails,
             ));
           }
-          requiredItemsWidgets.add(emptySpace1x());
+          requiredItemsWidgets.add(const EmptySpace1x());
 
           widgets.add(Column(
             children: requiredItemsWidgets,
@@ -146,6 +158,17 @@ class CommunityMissionRewards extends StatelessWidget {
         }
       }
     }
+
+    if (qsStore.items.isEmpty && isSpecialQsMission == false) {
+      widgets.addAll(
+        [
+          const EmptySpace3x(),
+          GenericItemName(getTranslations().fromKey(LocaleKey.noItems)),
+        ],
+      );
+    }
+
+    widgets.add(CommunityMissionExtraData(missionId, status));
 
     return animateWidgetIn(
       child: Column(children: widgets),

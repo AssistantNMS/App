@@ -4,8 +4,8 @@ import 'package:assistantapps_flutter_common/helpers/jsonHelper.dart';
 
 class GeneratedMeta {
   GeneratedMeta({
-    this.gameVersion,
-    this.generatedDate,
+    required this.gameVersion,
+    required this.generatedDate,
   });
 
   String gameVersion;
@@ -14,8 +14,12 @@ class GeneratedMeta {
   factory GeneratedMeta.fromRawJson(String str) =>
       GeneratedMeta.fromJson(json.decode(str));
 
-  factory GeneratedMeta.fromJson(Map<String, dynamic> json) => GeneratedMeta(
-        gameVersion: readStringSafe(json, "GameVersion"),
-        generatedDate: readDateSafe(json, "GeneratedDate"),
+  factory GeneratedMeta.fromJson(Map<String, dynamic>? json) => GeneratedMeta(
+        gameVersion: readStringSafe(json, 'GameVersion'),
+        generatedDate: readDateSafe(
+          json,
+          'GeneratedDate',
+          format: 'yyyy-MM-dd',
+        ),
       );
 }

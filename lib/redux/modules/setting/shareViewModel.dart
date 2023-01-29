@@ -7,7 +7,7 @@ class ShareViewModel {
   final String selectedLanguage;
 
   ShareViewModel({
-    this.selectedLanguage,
+    required this.selectedLanguage,
     //
   });
 

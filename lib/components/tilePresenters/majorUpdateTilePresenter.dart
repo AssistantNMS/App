@@ -8,7 +8,7 @@ import '../../pages/newItemsInUpdate/majorUpdatesDetailPage.dart';
 Widget majorUpdateTilePresenter(
   BuildContext context,
   MajorUpdateItem updateNewItems, {
-  void Function() onTap,
+  void Function()? onTap,
   bool isPatronLocked = false,
 }) {
   Widget backgroundImgSource = Padding(
@@ -37,7 +37,7 @@ Widget majorUpdateTilePresenter(
         child: Container(
           color: const Color.fromRGBO(0, 0, 0, 0.45),
           child: Column(children: [
-            genericItemName(updateNewItems.title),
+            GenericItemName(updateNewItems.title),
           ]),
           width: double.infinity,
         ),
@@ -89,19 +89,23 @@ Widget majorUpdateTilePresenter(
 }
 
 Widget majorUpdateItemDetailTilePresenter(
-    BuildContext context, MajorUpdateItem updateItem) {
-  return flatCard(
+  BuildContext context,
+  MajorUpdateItem updateItem,
+) {
+  return FlatCard(
     child: ListTile(
       leading: ClipRRect(
         borderRadius: NMSUIConstants.gameItemBorderRadius,
-        child: localImage(
-          updateItem.icon.replaceAll('.png', '-icon.png'),
+        child: LocalImage(
+          imagePath: updateItem.icon.replaceAll('.png', '-icon.png'),
           boxfit: BoxFit.fill,
         ),
       ),
       title: Text(updateItem.title),
       subtitle: Text(simpleDate(updateItem.releaseDate)),
-      trailing: Text(updateItem.emoji, style: const TextStyle(fontSize: 25)),
+      trailing: (updateItem.emoji != null && updateItem.emoji!.isNotEmpty)
+          ? Text(updateItem.emoji!, style: const TextStyle(fontSize: 25))
+          : null,
       onTap: () => getNavigation().navigateAwayFromHomeAsync(
         context,
         navigateTo: (_) => MajorUpdatesDetailPage(updateNewItems: updateItem),

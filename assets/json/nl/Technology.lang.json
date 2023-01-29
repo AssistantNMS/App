@@ -244,7 +244,7 @@
         "Name": "Jetpacktanks",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "20"
+        "Value": "25"
       },
       {
         "Name": "Herlaadsnelheid",
@@ -262,7 +262,7 @@
         "Name": "Hersteltijd na sprinten",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "20"
+        "Value": "40"
       }
     ],
     "ConsumableRewardTexts": []
@@ -784,7 +784,7 @@
     "Icon": "curiosities/65.png",
     "Name": "Geavanceerde vertaler",
     "Group": "Automatische taalverwerker",
-    "Description": "Een automatisch vertaalapparaat. Het neemt conversaties in de buurt op en gebruikt vervolgens een contextueel leersysteem om de betekenis te achterhalen.\n\nDoor de grote geheugenkaart en overbelaste taalprocessors kunnen behoorlijk grote spraakbestanden in realtime worden vertaald.",
+    "Description": "Een automatisch vertaalapparaat. Het neemt conversaties in de buurt op en gebruikt vervolgens een contextueel leersysteem om de betekenis te achterhalen.\n\nDoor de grote geheugenkaart en overklokte taalprocessors kunnen behoorlijk grote spraakbestanden in realtime worden vertaald.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -946,7 +946,7 @@
         "Value": "15"
       },
       {
-        "Name": "Manoeuvreerbaarheid",
+        "Name": "Manoeuvreerbaarheid (Ruimteschip)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -1032,7 +1032,7 @@
   {
     "Id": "tech27",
     "Icon": "technology/26.png",
-    "Name": "Lanceersysteem-oplader",
+    "Name": "Automatische oplader stuwrakketten",
     "Group": "Upgrade lanceersystemen",
     "Description": "De fotovoltaïsche panelen die op de <TECHNOLOGY>stuwraketten<> van het ruimteschip zijn gemonteerd, zorgen ervoor dat de stuwraketten langzaam worden opgeladen als het schip niet in gebruik is.\n\nHet geoogste licht wordt gebruikt om diwaterstof uit de atmosfeer te halen. Daardoor worden na verloop van tijd de <STELLAR>stuwraketten automatisch opgeladen<>.",
     "BaseValueUnits": 1.0,
@@ -1054,7 +1054,7 @@
         "Quantity": 2
       },
       {
-        "Id": "prod115",
+        "Id": "prod116",
         "Quantity": 2
       }
     ],
@@ -2247,9 +2247,9 @@
       },
       {
         "Name": "Beloningen mineraalanalyse",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "target",
-        "Value": "1"
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -2300,7 +2300,7 @@
     "Icon": "technology/65.png",
     "Name": "Detector",
     "Group": "Analysevizier-upgrade",
-    "Description": "Een op zichzelf staande upgrade van de elektronica van het <TECHNOLOGY>analysevizier<> waarmee realtime analyse van het terrein mogelijk is.\n\nSchakel tussen de vizierstanden met <IMG>SURVEYFILTERL<>/<IMG>SURVEYFILTERR<>. Gebruik de <STELLAR>landmeterstand<> om verborgen grondstoffen in het terrein te ontdekken.",
+    "Description": "Een op zichzelf staande upgrade van de elektronica van het <TECHNOLOGY>analysevizier<> waarmee realtime analyse van het terrein mogelijk is.\n\nSchakel tussen de vizierstanden met <IMG>SURVEYFILTERL<>/<IMG>SURVEYFILTERR<>. Gebruik de <STELLAR>detector<> om verborgen grondstoffen in het terrein te ontdekken.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -2955,7 +2955,7 @@
     "Icon": "technology/79.png",
     "Name": "Massaversneller",
     "Group": "Vuurspeer-upgrade",
-    "Description": "Verlengt de vuurkamer van de <TECHNOLOGY>vuurspeer<>, zodat de interne deeltjesversnellers meer massa en meer snelheid krijgen.\n\nVerbetert de <STELLAR>schade<> die het wapen aanricht aanzienlijk.",
+    "Description": "Verlengt de vuurkamer van de <TECHNOLOGY>vuurspeer<>, zodat de interne deeltjesversnellers meer massa en meer snelheid genereren.\n\nVerbetert de <STELLAR>schade<> die het wapen aanricht aanzienlijk.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -3580,7 +3580,7 @@
   {
     "Id": "tech94",
     "Icon": "technology/94.png",
-    "Name": "Exocraft-signaalversterker",
+    "Name": "Exocraft-radar",
     "Group": "Scanuitrusting voor de exocraft",
     "Description": "Een grote en complexe subruimteradar voor in het veld.\n\nDoor het hoge energieverbruik en de subatomische instabiliteit kan hij alleenworden gemonteerd op een exocraft.\n\nDruk op <IMG>QUICK_MENU<> om de signaalversterker te activeren.",
     "BaseValueUnits": 1.0,
@@ -3615,9 +3615,9 @@
   {
     "Id": "tech96",
     "Icon": "technology/96.png",
-    "Name": "Upgrade Tau voor exocraft-signaalversterker",
-    "Group": "Upgrade voor de exocraft-signaalversterker",
-    "Description": "Hiermee kunnen meer constructietypen worden herkend door de exocraft-signaalversterker.",
+    "Name": "Resonator radarsignalen",
+    "Group": "Upgrade voor de exocraft-signaaldetectie",
+    "Description": "Hiermee kunnen meer constructietypen worden herkend door de exocraft-radar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -3654,7 +3654,7 @@
   {
     "Id": "tech97",
     "Icon": "technology/97.png",
-    "Name": "Exocraft-acceleratiemodule",
+    "Name": "Exocraft-boosters",
     "Group": "Upgrade voor de exocraft-motor",
     "Description": "Een efficiënt plasma-injectiesysteem voor de motor die korte snelheidsboosts mogelijk maakt.",
     "BaseValueUnits": 1.0,
@@ -3750,7 +3750,7 @@
   {
     "Id": "tech99",
     "Icon": "technology/99.png",
-    "Name": "Upgrade Sigma voor exocraft-mijnlaser",
+    "Name": "Geavanceerde exocraft-laser",
     "Group": "Mijn-upgrade voor de exocraft",
     "Description": "Vergroot het vermogen van de exocraft-mijnlaser.",
     "BaseValueUnits": 1.0,
@@ -3791,7 +3791,7 @@
   {
     "Id": "tech100",
     "Icon": "technology/100.png",
-    "Name": "Exocraft-kanon",
+    "Name": "Kanon",
     "Group": "Wapenuitbreiding voor de exocraft",
     "Description": "Dit krachtige wapen heeft veel energie nodig en moet daarom op een exocraft worden gemonteerd.",
     "BaseValueUnits": 1.0,
@@ -5918,7 +5918,7 @@
   },
   {
     "Id": "tech166",
-    "Icon": "technology/28.png",
+    "Icon": "technology/166.png",
     "Name": "Materielaser",
     "Group": "Op vrachtschip gemonteerd teleporteerapparaat",
     "Description": "Een apparaat dat de standaard communicatiesignalen van een vrachtschip moduleert om naast gegevens ook <TECHNOLOGY>interplanetair materie te kunnen transporteren<>.\n\nVrachtschepen met een dergelijk apparaat kunnen over een <STELLAR>grote afstand<> producten en substanties van en naar een <STELLAR>exopak<> verzenden en ontvangen.",
@@ -6253,9 +6253,9 @@
   {
     "Id": "tech174",
     "Icon": "technology/96.png",
-    "Name": "Geavanceerde signaalversterker",
-    "Group": "Upgrade voor de exocraft-signaalversterker",
-    "Description": "Hiermee kunnen meer constructietypen worden herkend door de exocraft-signaalversterker.",
+    "Name": "Radarversterker",
+    "Group": "Upgrade voor de exocraft-signaaldetectie",
+    "Description": "Hiermee kunnen meer constructietypen worden herkend door de exocraft-radar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -6531,7 +6531,7 @@
     "Icon": "technology/99.png",
     "Name": "Minotaur-precisielaser",
     "Group": "Geavanceerde Minotaur-mijnlaser",
-    "Description": "Een upgrade voor het lasersysteem van de <STELLAR>zware Minotaur-exopakhybride<>.\n\nVergroot de kracht van de mijnlaser, zodat je er sneller mee delft en ook lastiger te verkrijgen ruwe materialen mee verzamelt.",
+    "Description": "Een upgrade voor het lasersysteem van de <STELLAR>zware Minotaur-exopakhybride<>.\n\nVergroot de kracht van de mijnlaser, zodat je er sneller mee delft en er ook lastiger te verkrijgen ruwe materialen mee verzamelt.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -6658,7 +6658,7 @@
     "Icon": "technology/1.png",
     "Name": "Omgevingscontrole-unit",
     "Group": "Beschermingsunit exocraft",
-    "Description": "Zodra de Minotaur-piloot plaatsneemt in het voertuig, wordt hij aangesloten op een krachtig systeem dat schadelijke invloeden uit de omgeving neutraliseert. Het systeem wordt aangedreven door de hoofdmotor van de Minotaur en hoeft niet te worden bediend. Rondom de aansluitingsplek kan enige pijn worden ervaren.\n\nZorgt ervoor dat de Minotaur-piloot ongevoelig is voor <STELLAR>alle omgevingsgevaren<>.",
+    "Description": "Wanneer de piloot plaatsneemt in de cockpit, wordt hij aangesloten op dit krachtige systeem dat schadelijke invloeden uit de omgeving neutraliseert. Het systeem wordt aangedreven door de hoofdmotor van de Minotaur en hoeft niet te worden bediend. Rondom de aansluitingsplek kan enige pijn worden ervaren.\n\nZorgt ervoor dat de Minotaur-piloot ongevoelig is voor <STELLAR>alle omgevingsgevaren<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -6955,7 +6955,7 @@
         "Value": "100"
       },
       {
-        "Name": "Manoeuvreerbaarheid",
+        "Name": "Manoeuvreerbaarheid (Ruimteschip)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "25"
@@ -6965,7 +6965,7 @@
   },
   {
     "Id": "tech189",
-    "Icon": "other/148.png",
+    "Icon": "building/945.png",
     "Name": "Frameshift-katapult",
     "Group": "Illegaal aangepaste warpmotor",
     "Description": "Deze experimentele motor verbetert de conventionele <TECHNOLOGY>hyperdrive<>-technologie door de lokale geometrie te vervormen bij de warp-initialisatie. Dit zorgt voor een veel groter <STELLAR>bereik<> en veel meer <STELLAR>efficiëntie<> dan met normale motoren.\n\nHet is aan te raden om hyperdrive-systemen te gebruiken via de <STELLAR>galactische kaart<>.",
@@ -7832,7 +7832,7 @@
   {
     "Id": "tech212",
     "Icon": "technology/212.png",
-    "Name": "Linkerarm Sentinel-hardframe",
+    "Name": "Hardframe-linkerarm",
     "Group": "Vervangend lichaamsdeel Minotaur",
     "Description": "Een verzameling geborgen onderdelen van een Sentinel-hardframe, aangepast voor de zware <TECHNOLOGY>Minotaur-<>exocrafthybride.\n\nAls deze wordt geïnstalleerd naast een <TECHNOLOGY>Minotaur-laser<>, verandert de mijnlaser in een <STELLAR>krachtige gevechtsupgrade<> die veel schade kan aanrichten bij <TECHNOLOGY>verdoofde<> entiteiten.",
     "BaseValueUnits": 1.0,
@@ -7896,7 +7896,7 @@
   {
     "Id": "tech213",
     "Icon": "technology/213.png",
-    "Name": "Rechterarm Sentinel-Hardframe",
+    "Name": "Hardframe-rechterarm",
     "Group": "Vervangend lichaamsdeel Minotaur",
     "Description": "Een verzameling geborgen onderdelen van een Sentinel-hardframe, aangepast voor de zware <TECHNOLOGY>Minotaur-<>exocrafthybride.\n\nDit vervangende lichaamsdeel fungeert ook als een <STELLAR>zelfstandig gevechtssysteem<>. Het vuurt met grote snelheid <TECHNOLOGY>verdovingsprojectielen<> af en is een uitstekend ondersteuningswapen voor het primaire kanon van de Minotaur.\n\nGebruik <IMG>CYCLEWEAPON<> om de beschikbare wapenstanden te bekijken.",
     "BaseValueUnits": 1.0,
@@ -7948,7 +7948,7 @@
   {
     "Id": "tech214",
     "Icon": "technology/214.png",
-    "Name": "Benen Sentinel-hardframe",
+    "Name": "Hardframe-benen",
     "Group": "Vervangend lichaamsdeel Minotaur",
     "Description": "Een verzameling geborgen onderdelen van een Sentinel-hardframe, aangepast voor de zware <TECHNOLOGY>Minotaur-<>exocrafthybride.\n\nNa installatie zijn de <TECHNOLOGY>motor- en mobiliteit<>systemen van de Minotaur aanzienlijk verbeterd.",
     "BaseValueUnits": 1.0,
@@ -7990,7 +7990,7 @@
   {
     "Id": "tech215",
     "Icon": "technology/215.png",
-    "Name": "Romp Sentinel-hardframe",
+    "Name": "Hardframe-lichaam",
     "Group": "Vervanging Minotaur-kern",
     "Description": "Een verzameling geborgen onderdelen van een Sentinel-hardframe, aangepast voor de zware <TECHNOLOGY>Minotaur-<>exocrafthybride.\n\nFunctioneert als een semi-autonome <TECHNOLOGY>kunstmatige piloot-plugin<>. Na installatie kan de Minotaur <STELLAR>zelfstandig naar planeten reizen<> en de primaire operator ondersteunen met <STELLAR>gevechts-<> of <STELLAR>mijnbouw<>activiteiten.\n\nDe automatische piloot draagt de controle over aan de primaire operator zodra deze de cockpit betreedt.",
     "BaseValueUnits": 1.0,
@@ -8138,7 +8138,7 @@
         "Value": "15"
       },
       {
-        "Name": "Manoeuvreerbaarheid",
+        "Name": "Manoeuvreerbaarheid (Ruimteschip)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8216,7 +8216,7 @@
         "Value": "0.6"
       },
       {
-        "Name": "Manoeuvreerbaarheid",
+        "Name": "Manoeuvreerbaarheid (Ruimteschip)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8435,6 +8435,47 @@
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech228",
+    "Icon": "technology/228.png",
+    "Name": "Handelsraket",
+    "Group": "Oproepapparaat handelsraket",
+    "Description": "Een persoonlijke raket met een directe link naar het <TECHNOLOGY>galactische handelsnetwerk<>. Met dit apparaat kan de gebruiker een klein ruimteschip met goederen laden. Bij de lancering worden de goederen naar het dichtstbijzijnde handelspunt getransporteerd en <STELLAR>automatisch verkocht<>.\n\nJe kunt de handelsraket <STELLAR>oproepen<> met behulp van het <IMG>QUICK_MENU<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw7",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Handelsraket",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

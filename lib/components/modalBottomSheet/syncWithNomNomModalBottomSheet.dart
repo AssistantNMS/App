@@ -10,24 +10,96 @@ import '../../constants/AppImage.dart';
 import '../../constants/Modal.dart';
 import '../../constants/Routes.dart';
 import '../../constants/NmsUIConstants.dart';
-import '../../constants/UserSelectionIcons.dart';
 import '../../contracts/generated/nomNomInventoryViewModel.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventorySlot.dart';
 import '../../contracts/redux/appState.dart';
 import '../../contracts/redux/inventoryState.dart';
 import '../../integration/dependencyInjection.dart';
+import '../../integration/nomNom.dart';
 import '../../redux/modules/viewModel/syncPageViewModel.dart';
 
 class SyncWithNomNomBottomSheet extends StatefulWidget {
-  const SyncWithNomNomBottomSheet({Key key}) : super(key: key);
+  const SyncWithNomNomBottomSheet({Key? key}) : super(key: key);
 
   @override
   createState() => _SyncWithNomNomBottomSheetState();
 }
 
 class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
-  NetworkState networkState = NetworkState.Pending;
+  NetworkState networkState = NetworkState.pending;
+
+  Future<void> Function(String) codeInput(
+    BuildContext innerContext,
+    SyncPageViewModel viewModel,
+  ) {
+    return (String fullCode) async {
+      setState(() {
+        networkState = NetworkState.loading;
+      });
+      ResultWithValue<List<NomNomInventoryViewModel>> invResult =
+          await getApiRepo().getInventoryFromNomNom(fullCode);
+      if (invResult.hasFailed) {
+        setState(() {
+          networkState = NetworkState.error;
+        });
+        return;
+      }
+
+      try {
+        List<Inventory> invs = List.empty(growable: true);
+        for (NomNomInventoryViewModel apiInv in invResult.value) {
+          List<InventorySlot> newSlots = List.empty(growable: true);
+          for (NomNomInventorySlotViewModel apiSlots in apiInv.slots) {
+            newSlots.add(InventorySlot(
+              uuid: getNewGuid(),
+              quantity: apiSlots.quantity,
+              id: apiSlots.appId,
+            ));
+          }
+          invs.add(Inventory(
+            icon: getInventoryIconsFromNomNomType(apiInv),
+            name: apiInv.name,
+            slots: newSlots,
+          ));
+        }
+        viewModel.restoreInventory(InventoryState(
+          containers: invs,
+          orderByType: viewModel.inventoryState.orderByType,
+        ));
+      } catch (exception) {
+        getLog().e(exception.toString());
+
+        getDialog().showSimpleDialog(
+          innerContext,
+          "Something went wrong",
+          Text(exception.toString()),
+        );
+      }
+
+      getDialog().showSimpleDialog(
+        innerContext,
+        getTranslations().fromKey(LocaleKey.success) + '!',
+        const LocalImage(
+          imagePath: AppImage.base + 'inventory/special3.png',
+          height: 100,
+        ),
+        buttonBuilder: (BuildContext buttonContext) => [
+          getDialog().simpleDialogPositiveButton(
+            buttonContext,
+            title: LocaleKey.close,
+            onTap: () => getNavigation().pop(buttonContext).then(
+                  (value) => getNavigation().pop(innerContext),
+                ),
+          )
+        ],
+      );
+
+      setState(() {
+        networkState = NetworkState.success;
+      });
+    };
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,31 +110,33 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
             StreamController<ErrorAnimationType>();
 
         List<Widget> widgets = List.empty(growable: true);
-        widgets.add(emptySpace2x());
-        widgets.add(genericItemName('NomNom collaboration'));
-        widgets.add(genericItemDescription(
-            'Sync your in game inventory with the app through the NomNom save editor!\nOnly available for PC'));
-        widgets.add(localImage(AppImage.nomNomHeader));
-        widgets.add(emptySpace2x());
-        widgets.add(positiveButton(
-          context,
-          title: 'Instructions',
-          onPress: () => getNavigation().navigateAwayFromHomeAsync(
+        widgets.add(const EmptySpace2x());
+        widgets.add(GenericItemName(
+          getTranslations().fromKey(LocaleKey.nomNomCollaboration),
+        ));
+        widgets.add(GenericItemDescription(
+          getTranslations().fromKey(LocaleKey.nomNomCollaborationDesc),
+        ));
+        widgets.add(const LocalImage(imagePath: AppImage.nomNomHeader));
+        widgets.add(const EmptySpace2x());
+        widgets.add(PositiveButton(
+          title: getTranslations().fromKey(LocaleKey.instructions),
+          onTap: () => getNavigation().navigateAwayFromHomeAsync(
             context,
             navigateToNamed: Routes.nomNomInventoryTutorial,
           ),
         ));
-        widgets.add(emptySpace2x());
+        widgets.add(const EmptySpace2x());
 
-        if (networkState == NetworkState.Error) {
+        if (networkState == NetworkState.error) {
           widgets.add(Center(
-            child: genericItemGroup(
+            child: GenericItemGroup(
               getTranslations().fromKey(LocaleKey.somethingWentWrong),
             ),
           ));
         }
 
-        if (networkState == NetworkState.Loading) {
+        if (networkState == NetworkState.loading) {
           widgets.add(Center(child: getLoading().smallLoadingIndicator()));
         } else {
           widgets.add(Padding(
@@ -72,6 +146,7 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
               obscureText: false,
               appContext: context,
               animationType: AnimationType.fade,
+              keyboardType: TextInputType.number,
               pinTheme: PinTheme(
                 shape: PinCodeFieldShape.box,
                 borderRadius: BorderRadius.circular(5),
@@ -91,62 +166,13 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
               textStyle: const TextStyle(color: Colors.black),
               errorAnimationController: errorController,
               controller: TextEditingController(),
-              onCompleted: (String fullCode) async {
-                setState(() {
-                  networkState = NetworkState.Loading;
-                });
-                ResultWithValue<List<NomNomInventoryViewModel>> invResult =
-                    await getApiRepo().getInventoryFromNomNom(fullCode);
-                if (invResult.hasFailed) {
-                  setState(() {
-                    networkState = NetworkState.Error;
-                  });
-                  return;
-                }
-
-                List<Inventory> invs = List.empty(growable: true);
-                for (NomNomInventoryViewModel apiInv in invResult.value) {
-                  List<InventorySlot> newSlots = List.empty(growable: true);
-                  for (NomNomInventorySlotViewModel apiSlots in apiInv.slots) {
-                    newSlots.add(InventorySlot(
-                      uuid: getNewGuid(),
-                      quantity: apiSlots.quantity,
-                      id: apiSlots.appId,
-                    ));
-                  }
-                  invs.add(Inventory(
-                    icon: UserSelectionIcons
-                        .nomNomInventoryTypeIcons[apiInv.type],
-                    name: apiInv.name,
-                    slots: newSlots,
-                  ));
-                }
-                viewModel.restoreInventory(InventoryState(
-                  containers: invs,
-                  orderByType: viewModel.inventoryState.orderByType,
-                ));
-
-                // setState(() {
-                //   networkState = NetworkState.Success;
-                // });
-
-                await getNavigation().popUntil(
-                  context,
-                  [
-                    Routes.inventoryList,
-                    Routes.syncPage,
-                    Routes.catalogueHome,
-                    Routes.customHome,
-                    Routes.home,
-                  ],
-                );
-              },
+              onCompleted: codeInput(context, viewModel),
               onChanged: (value) {},
             ),
           ));
         }
 
-        // if (networkState == NetworkState.Success) {
+        // if (networkState == NetworkState.success) {
         //   Future.delayed(const Duration(milliseconds: 250)).then(
         //     (value) => getSnackbar().showSnackbar(
         //       context,
@@ -159,7 +185,7 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
         //   );
         // }
 
-        widgets.add(emptySpace8x());
+        widgets.add(const EmptySpace8x());
 
         return AnimatedSize(
           duration: AppDuration.modal,

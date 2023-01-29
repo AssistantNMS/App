@@ -24,7 +24,10 @@ class WeekendMissionSeasonJsonRepository extends BaseJsonService
       getLog().e(
           "WeekendMissionJsonRepository getAll Exception: ${exception.toString()}");
       return ResultWithValue<List<WeekendMission>>(
-          false, List.empty(growable: true), exception.toString());
+        false,
+        List.empty(),
+        exception.toString(),
+      );
     }
   }
 
@@ -35,7 +38,10 @@ class WeekendMissionSeasonJsonRepository extends BaseJsonService
         await getAll(context);
     if (allGenericItemsResult.hasFailed) {
       return ResultWithValue(
-          false, WeekendMission(), allGenericItemsResult.errorMessage);
+        false,
+        WeekendMission.fromRawJson('{}'),
+        allGenericItemsResult.errorMessage,
+      );
     }
     try {
       WeekendMission selectedGeneric =
@@ -45,7 +51,10 @@ class WeekendMissionSeasonJsonRepository extends BaseJsonService
       getLog().e(
           "WeekendMissionJsonRepository getMissionById Exception: ${exception.toString()}");
       return ResultWithValue<WeekendMission>(
-          false, WeekendMission(), exception.toString());
+        false,
+        WeekendMission.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
@@ -55,7 +64,11 @@ class WeekendMissionSeasonJsonRepository extends BaseJsonService
     ResultWithValue<WeekendMission> missionResult =
         await getMissionById(context, seasonId);
     if (missionResult.hasFailed) {
-      return ResultWithValue(false, WeekendStage(), missionResult.errorMessage);
+      return ResultWithValue(
+        false,
+        WeekendStage.fromRawJson('{}'),
+        missionResult.errorMessage,
+      );
     }
     try {
       WeekendStage selectedStage =
@@ -65,7 +78,10 @@ class WeekendMissionSeasonJsonRepository extends BaseJsonService
       getLog().e(
           "WeekendMissionJsonRepository getStageById Exception: ${exception.toString()}");
       return ResultWithValue<WeekendStage>(
-          false, WeekendStage(), exception.toString());
+        false,
+        WeekendStage.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 }

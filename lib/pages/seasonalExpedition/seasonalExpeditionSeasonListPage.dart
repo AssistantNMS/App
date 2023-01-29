@@ -10,7 +10,7 @@ import 'commonSeasonalExpeditionSeasonList.dart';
 import 'seasonExpeditionConstants.dart';
 
 class SeasonalExpeditionSeasonListPage extends StatelessWidget {
-  SeasonalExpeditionSeasonListPage({Key key}) : super(key: key) {
+  SeasonalExpeditionSeasonListPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.seasonalExpeditionListPage);
   }
 

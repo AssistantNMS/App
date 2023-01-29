@@ -1,19 +1,18 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/components/common/cachedFutureBuilder.dart';
 import 'package:flutter/material.dart';
+
 import '../../constants/NmsUIConstants.dart';
 import '../../contracts/generated/expeditionViewModel.dart' as expedition_api;
 import '../../contracts/seasonalExpedition/expeditionMilestoneType.dart';
-import '../../integration/dependencyInjection.dart';
-import '../../pages/generic/genericPageDescripHighlightText.dart';
-import '../../pages/seasonalExpedition/seasonalExpeditionPhaseListPage.dart';
-import '../../redux/modules/expedition/expeditionViewModel.dart';
-
 import '../../contracts/seasonalExpedition/seasonalExpeditionMilestone.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionPhase.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
 import '../../helpers/hexHelper.dart';
+import '../../integration/dependencyInjection.dart';
+import '../../pages/generic/genericPageDescripHighlightText.dart';
 import '../../pages/seasonalExpedition/seasonalExpeditionDetailPage.dart';
+import '../../pages/seasonalExpedition/seasonalExpeditionPhaseListPage.dart';
+import '../../redux/modules/expedition/expeditionViewModel.dart';
 import '../modalBottomSheet/expeditionRewardsListModalBottomSheet.dart';
 import '../portal/portalGlyphList.dart';
 
@@ -52,28 +51,29 @@ Widget seasonalExpeditionDetailTilePresenter(
         ),
         backgroundColour: getTheme().getScaffoldBackgroundColour(context),
       ),
-      if (season.startDate != null && season.endDate != null) ...[
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(getTranslations().fromKey(LocaleKey.startDate) +
-                  ': ' +
-                  simpleDate(season.startDate)),
-              Text(getTranslations().fromKey(LocaleKey.endDate) +
-                  ': ' +
-                  simpleDate(season.endDate)),
-            ],
-          ),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(getTranslations().fromKey(LocaleKey.startDate) +
+                ': ' +
+                simpleDate(season.startDate)),
+            Text(getTranslations().fromKey(LocaleKey.endDate) +
+                ': ' +
+                simpleDate(season.endDate)),
+          ],
         ),
-      ],
+      ),
     ],
   );
 }
 
-Widget seasonalExpeditionPhaseTilePresenter(BuildContext context,
-    SeasonalExpeditionPhase seasonalExpedition, ExpeditionViewModel viewModel) {
+Widget seasonalExpeditionPhaseTilePresenter(
+  BuildContext context,
+  SeasonalExpeditionPhase seasonalExpedition,
+  ExpeditionViewModel viewModel,
+) {
   int numClaimed = 0;
   for (SeasonalExpeditionMilestone milestone in seasonalExpedition.milestones) {
     if (viewModel.claimedRewards.any((claimed) => claimed == milestone.id)) {
@@ -87,7 +87,7 @@ Widget seasonalExpeditionPhaseTilePresenter(BuildContext context,
           .replaceAll('0u/', '${numClaimed}u/') //
           .replaceAll('0/', '$numClaimed/');
 
-  return flatCard(
+  return FlatCard(
     shadowColor: Colors.transparent,
     child: seasonalExpeditionBase(
       context,
@@ -98,9 +98,9 @@ Widget seasonalExpeditionPhaseTilePresenter(BuildContext context,
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          genericItemName(seasonalExpedition.title),
-          genericItemDescription(description),
-          emptySpace1x(),
+          GenericItemName(seasonalExpedition.title),
+          GenericItemDescription(description),
+          const EmptySpace1x(),
         ],
       ),
       onTap: () {
@@ -126,12 +126,11 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
     isClaimed = true;
   }
 
-  String description = isClaimed
+  String? description = isClaimed
       ? seasonalExpeditionMilestone.descriptionDone
       : seasonalExpeditionMilestone.description;
 
-  Container Function(String text, {double fontSize}) textWrapper;
-  textWrapper = (String text, {double fontSize}) => Container(
+  textWrapper(String text, {double? fontSize}) => Container(
         child: Text(
           text,
           textAlign: TextAlign.start,
@@ -144,8 +143,7 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
 
   bool hasRewards = seasonalExpeditionMilestone.rewards.isNotEmpty;
 
-  void Function(bool) checkBoxOnTap;
-  checkBoxOnTap = (bool newValue) => newValue
+  checkBoxOnTap(bool newValue) => newValue
       ? viewModel.addToClaimedRewards(
           seasonalExpeditionMilestone.id,
         )
@@ -191,7 +189,7 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
             ),
             margin: const EdgeInsets.only(left: 4.0),
           ),
-          emptySpace1x(),
+          const EmptySpace1x(),
         ],
       ),
       trailingFlex: hasRewards ? 4 : 2,
@@ -210,7 +208,7 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
                   ),
                 ),
               ],
-              adaptiveCheckbox(
+              getBaseWidget().adaptiveCheckbox(
                 value: isClaimed,
                 onChanged: checkBoxOnTap,
               ),
@@ -228,15 +226,15 @@ Widget seasonalExpeditionBase(
   double height,
   String title,
   String imagePath, {
-  bool useMaterial,
-  String topLeftBanner,
-  Color backgroundColour,
+  bool? useMaterial,
+  String? topLeftBanner,
+  Color? backgroundColour,
   int imageFlex = 4,
   int bodyFlex = 9,
   int trailingFlex = 2,
-  Widget Function() bodyDisplayFunc,
-  Widget Function() trailingDisplayFunc,
-  Function() onTap,
+  required Widget Function() bodyDisplayFunc,
+  Widget Function()? trailingDisplayFunc,
+  void Function()? onTap,
 }) {
   InkWell innerChild = InkWell(
     borderRadius: BorderRadius.circular(6.0),
@@ -244,7 +242,7 @@ Widget seasonalExpeditionBase(
       Expanded(
         flex: imageFlex,
         child: GestureDetector(
-          child: localImage(imagePath),
+          child: LocalImage(imagePath: imagePath),
           onTap: () => getNavigation().navigateAsync(
             context,
             navigateTo: (context) => ImageViewerPage(
@@ -293,14 +291,16 @@ Widget seasonalExpeditionBase(
 }
 
 Widget expeditionInProgressPresenter(
-    BuildContext context, expedition_api.ExpeditionViewModel expedition) {
+  BuildContext context,
+  expedition_api.ExpeditionViewModel expedition,
+) {
   Widget bodyChild = Container(
     padding: const EdgeInsets.symmetric(horizontal: 8),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        genericItemName(expedition.name, maxLines: 2),
+        GenericItemName(expedition.name, maxLines: 2),
         Container(
           child: getProgressbarFromDates(
             context,
@@ -317,7 +317,7 @@ Widget expeditionInProgressPresenter(
   Widget contentChild = Container(
     padding: const EdgeInsets.symmetric(horizontal: 8),
     child: Row(children: [
-      Expanded(flex: 3, child: networkImage(expedition.imageUrl)),
+      Expanded(flex: 3, child: ImageFromNetwork(imageUrl: expedition.imageUrl)),
       Expanded(flex: 7, child: bodyChild),
     ]),
   );
@@ -330,7 +330,7 @@ Widget expeditionInProgressPresenter(
         : InkWell(
             borderRadius: BorderRadius.circular(6.0),
             child: contentChild,
-            onTap: () => launchExternalURL(expedition.link),
+            onTap: () => launchExternalURL(expedition.link!),
           ),
   );
 }
@@ -340,11 +340,11 @@ Widget rewardFromSeasonalExpeditionTilePresenter(
   String seasId,
   bool isCustom,
 ) {
-  return flatCard(
+  return FlatCard(
     shadowColor: Colors.transparent,
     child: CachedFutureBuilder(
       future: getSeasonalExpeditionRepo().getById(context, seasId, isCustom),
-      whileLoading: getLoading().smallLoadingTile(context),
+      whileLoading: () => getLoading().smallLoadingTile(context),
       whenDoneLoading: (ResultWithValue<SeasonalExpeditionSeason> snapshot) {
         SeasonalExpeditionSeason item = snapshot.value;
         return genericListTileWithSubtitle(

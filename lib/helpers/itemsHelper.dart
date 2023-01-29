@@ -2,8 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/IdPrefix.dart';
-import '../contracts/exploit.dart';
-import '../contracts/exploitDetailTileItem.dart';
 import '../contracts/genericPageItem.dart';
 import '../contracts/inventory/inventory.dart';
 import '../contracts/inventory/inventoryBasicInfo.dart';
@@ -14,6 +12,7 @@ import '../contracts/requiredItem.dart';
 import '../contracts/requiredItemDetails.dart';
 import '../contracts/requiredItemTreeDetails.dart';
 
+import '../contracts/twitch/twitchCampaignData.dart';
 import '../integration/dependencyInjection.dart';
 import '../services/json/interface/IGenericRepository.dart';
 
@@ -74,26 +73,24 @@ Future<List<RequiredItemDetails>> getRequiredItems(
   RequiredItemDetails requiredItemDetails;
   List<RequiredItem> tempRawMaterials = List.empty(growable: true);
 
-  ResultWithValue<IGenericRepository> genRepo =
+  ResultWithValue<IGenericRepository?> genRepo =
       getRepoFromId(context, requiredItem.id);
   if (genRepo.hasFailed) return List.empty(growable: true);
   ResultWithValue<GenericPageItem> genericResult =
-      await genRepo.value.getById(context, requiredItem.id);
+      await genRepo.value!.getById(context, requiredItem.id);
 
   if (genericResult.hasFailed) {
     getLog().e("genericItemResult hasFailed: ${genericResult.errorMessage}");
     return List.empty(growable: true);
   }
 
-  tempRawMaterials = genericResult.value.requiredItems;
+  tempRawMaterials = genericResult.value.requiredItems ?? List.empty();
   requiredItemDetails =
       toRequiredItemDetails(requiredItem, genericResult.value);
 
   List<RequiredItemDetails> rawMaterialsResult = List.empty(growable: true);
 
-  if (tempRawMaterials != null &&
-      tempRawMaterials.isEmpty &&
-      requiredItemDetails != null) {
+  if (tempRawMaterials.isEmpty) {
     rawMaterialsResult.add(requiredItemDetails);
     return rawMaterialsResult;
   }
@@ -102,7 +99,7 @@ Future<List<RequiredItemDetails>> getRequiredItems(
       requiredIndex < tempRawMaterials.length;
       requiredIndex++) {
     RequiredItem rawMaterial = tempRawMaterials[requiredIndex];
-    rawMaterial.quantity *= (requiredItem.quantity ?? 1);
+    rawMaterial.quantity *= requiredItem.quantity;
 
     if (rawMaterial.id == requiredItem.id) {
       // Handle infinite loop
@@ -120,22 +117,23 @@ Future<List<RequiredItemDetails>> getRequiredItemsSurfaceLevel(
     BuildContext context, String genericItemId) async {
   List<RequiredItemDetails> tempRequiredItems = List.empty(growable: true);
 
-  ResultWithValue<IGenericRepository> genRepo =
+  ResultWithValue<IGenericRepository?> genRepo =
       getRepoFromId(context, genericItemId);
   if (genRepo.hasFailed) return List.empty(growable: true);
   ResultWithValue<GenericPageItem> genericResult =
-      await genRepo.value.getById(context, genericItemId);
+      await genRepo.value!.getById(context, genericItemId);
   if (genericResult.hasFailed) {
     getLog().e("genericItemResult hasFailed: ${genericResult.errorMessage}");
     return List.empty(growable: true);
   }
 
-  for (RequiredItem requiredItem in genericResult.value.requiredItems) {
-    ResultWithValue<IGenericRepository> reqRepo =
+  var requiredItems = genericResult.value.requiredItems ?? List.empty();
+  for (RequiredItem requiredItem in requiredItems) {
+    ResultWithValue<IGenericRepository?> reqRepo =
         getRepoFromId(context, requiredItem.id);
     if (reqRepo.hasFailed) continue;
     ResultWithValue<GenericPageItem> reqResult =
-        await reqRepo.value.getById(context, requiredItem.id);
+        await reqRepo.value!.getById(context, requiredItem.id);
     if (reqResult.hasFailed) continue;
     tempRequiredItems.add(toRequiredItemDetails(requiredItem, reqResult.value));
   }
@@ -146,21 +144,27 @@ Future<List<RequiredItemDetails>> getRequiredItemsSurfaceLevel(
 Future<ResultWithValue<RequiredItemDetails>> requiredItemDetails(
     BuildContext context, RequiredItem requiredItem) async {
   //
-  ResultWithValue<IGenericRepository> genRepo =
+  ResultWithValue<IGenericRepository?> genRepo =
       getRepoFromId(context, requiredItem.id);
   if (genRepo.hasFailed) {
     return ResultWithValue<RequiredItemDetails>(
-        false, RequiredItemDetails(), genRepo.errorMessage);
+      false,
+      RequiredItemDetails.initial(),
+      genRepo.errorMessage,
+    );
   }
   ResultWithValue<GenericPageItem> genericResult =
-      await genRepo.value.getById(context, requiredItem.id);
+      await genRepo.value!.getById(context, requiredItem.id);
   if (genericResult.isSuccess) {
     return ResultWithValue<RequiredItemDetails>(
         true, toRequiredItemDetails(requiredItem, genericResult.value), '');
   }
 
-  return ResultWithValue<RequiredItemDetails>(false, RequiredItemDetails(),
-      'requiredItemDetails - unknown type of item: ${requiredItem.id}');
+  return ResultWithValue<RequiredItemDetails>(
+    false,
+    RequiredItemDetails.initial(),
+    'requiredItemDetails - unknown type of item: ${requiredItem.id}',
+  );
 }
 
 RequiredItemDetails toRequiredItemDetails(
@@ -170,7 +174,7 @@ RequiredItemDetails toRequiredItemDetails(
       icon: genericItem.icon,
       name: genericItem.name,
       colour: genericItem.colour,
-      quantity: requiredItem.quantity ?? 0,
+      quantity: requiredItem.quantity,
     );
 
 Future<ResultWithValue<List<RequiredItemDetails>>>
@@ -182,17 +186,19 @@ Future<ResultWithValue<List<RequiredItemDetails>>>
   for (int reqItemIndex = 0; reqItemIndex < inputs.length; reqItemIndex++) {
     RequiredItem requiredItem = inputs[reqItemIndex];
 
-    ResultWithValue<IGenericRepository> genRepo =
+    ResultWithValue<IGenericRepository?> genRepo =
         getRepoFromId(context, requiredItem.id);
     if (genRepo.hasFailed) {
       return ResultWithValue<List<RequiredItemDetails>>(
           false, List.empty(), genRepo.errorMessage);
     }
     ResultWithValue<GenericPageItem> itemResult =
-        await genRepo.value.getById(context, requiredItem.id);
+        await genRepo.value!.getById(context, requiredItem.id);
     if (itemResult.hasFailed) {
       if (failOnItemNotFound == true) continue;
-      details.add(RequiredItemDetails(id: requiredItem.id));
+      RequiredItemDetails temp = RequiredItemDetails.initial();
+      temp.id = requiredItem.id;
+      details.add(temp);
     } else {
       details.add(toRequiredItemDetails(requiredItem, itemResult.value));
     }
@@ -238,83 +244,59 @@ Future<List<RequiredItemTreeDetails>> getAllRequiredItemdetailsForTree(context,
   return rawMaterials;
 }
 
-Future<ExploitDetailTileItem> exploitDetails(context, Exploit exploit) async {
-  //
-
-  List<RequiredItemDetails> inputDetails = List.empty(growable: true);
-  for (RequiredItem input in exploit.inputs) {
-    ResultWithValue<RequiredItemDetails> inputDetail =
-        await requiredItemDetails(context, input);
-    if (inputDetail.hasFailed) continue;
-    inputDetails.add(inputDetail.value);
-  }
-
-  List<RequiredItemDetails> outputDetails = List.empty(growable: true);
-  for (RequiredItem output in exploit.outputs) {
-    ResultWithValue<RequiredItemDetails> outputDetail =
-        await requiredItemDetails(context, output);
-    if (outputDetail.hasFailed) continue;
-    outputDetails.add(outputDetail.value);
-  }
-
-  return ExploitDetailTileItem(
-      exploit: exploit,
-      inputDetails: inputDetails,
-      outputDetails: outputDetails);
-}
-
-ResultWithValue<IGenericRepository> getRepoFromId(context, String id) {
+ResultWithValue<IGenericRepository?> getRepoFromId(context, String id) {
   if (id.contains(IdPrefix.building)) {
-    return ResultWithValue<IGenericRepository>(
+    return ResultWithValue<IGenericRepository?>(
         true, getGenericRepo(LocaleKey.buildingsJson), '');
   }
   if (id.contains(IdPrefix.cooking)) {
-    return ResultWithValue<IGenericRepository>(
+    return ResultWithValue<IGenericRepository?>(
         true, getGenericRepo(LocaleKey.cookingJson), '');
   }
   if (id.contains(IdPrefix.curiosity)) {
-    return ResultWithValue<IGenericRepository>(
+    return ResultWithValue<IGenericRepository?>(
         true, getGenericRepo(LocaleKey.curiosityJson), '');
   }
   if (id.contains(IdPrefix.other)) {
-    return ResultWithValue<IGenericRepository>(
+    return ResultWithValue<IGenericRepository?>(
         true, getGenericRepo(LocaleKey.otherItemsJson), '');
   }
   if (id.contains(IdPrefix.procProd)) {
-    return ResultWithValue<IGenericRepository>(
+    return ResultWithValue<IGenericRepository?>(
         true, getGenericRepo(LocaleKey.proceduralProductsJson), '');
   }
   if (id.contains(IdPrefix.product)) {
-    return ResultWithValue<IGenericRepository>(
+    return ResultWithValue<IGenericRepository?>(
         true, getGenericRepo(LocaleKey.productsJson), '');
   }
   if (id.contains(IdPrefix.rawMaterial)) {
-    return ResultWithValue<IGenericRepository>(
+    return ResultWithValue<IGenericRepository?>(
         true, getGenericRepo(LocaleKey.rawMaterialsJson), '');
   }
   if (id.contains(IdPrefix.conTech)) // Keep this before Tech
   {
-    return ResultWithValue<IGenericRepository>(
+    return ResultWithValue<IGenericRepository?>(
         true, getGenericRepo(LocaleKey.constructedTechnologyJson), '');
   }
   if (id.contains(IdPrefix.technology)) {
-    return ResultWithValue<IGenericRepository>(
+    return ResultWithValue<IGenericRepository?>(
         true, getGenericRepo(LocaleKey.technologiesJson), '');
   }
   if (id.contains(IdPrefix.trade)) {
-    return ResultWithValue<IGenericRepository>(
+    return ResultWithValue<IGenericRepository?>(
         true, getGenericRepo(LocaleKey.tradeItemsJson), '');
   }
-  // if (id.contains(IdPrefix.upgrade))
-  //   return ResultWithValue<IGenericRepository>(
-  //       true, getGenericRepo(LocaleKey.upgradeModulesJson), '');
+  if (id.contains(IdPrefix.upgrade)) {
+    return ResultWithValue<IGenericRepository?>(
+        true, getGenericRepo(LocaleKey.upgradeModulesJson), '');
+  }
   if (id.contains(IdPrefix.techMod)) {
-    return ResultWithValue<IGenericRepository>(
+    return ResultWithValue<IGenericRepository?>(
         true, getGenericRepo(LocaleKey.technologyModulesJson), '');
   }
 
   getLog().e('getRepo - unknown type of item: $id');
-  return ResultWithValue<IGenericRepository>(
+  return ResultWithValue<IGenericRepository?>(
       false, null, 'getRepo - unknown type of item: $id');
 }
 
@@ -340,17 +322,17 @@ Future<ResultWithValue<List<InventorySlotWithGenericPageItem>>>
         BuildContext context, List<InventorySlot> slots) async {
   List<InventorySlotWithGenericPageItem> results = List.empty(growable: true);
   for (InventorySlot slot in slots) {
-    ResultWithValue<IGenericRepository> repoResult =
+    ResultWithValue<IGenericRepository?> repoResult =
         getRepoFromId(context, slot.id);
     if (!repoResult.isSuccess) continue;
 
     ResultWithValue<GenericPageItem> getByIdResult =
-        await repoResult.value.getById(context, slot.id);
+        await repoResult.value!.getById(context, slot.id);
     if (!getByIdResult.isSuccess) continue;
 
     results.add(InventorySlotWithGenericPageItem(
-      id: getByIdResult.value?.id ?? '',
-      name: getByIdResult.value?.name ?? '',
+      id: getByIdResult.value.id,
+      name: getByIdResult.value.name,
       quantity: slot.quantity,
     ));
   }
@@ -380,12 +362,12 @@ Future<ResultWithValue<List<InventorySlotWithContainersAndGenericPageItem>>>
           },
         );
       } else {
-        ResultWithValue<IGenericRepository> repoResult =
+        ResultWithValue<IGenericRepository?> repoResult =
             getRepoFromId(context, slot.id);
         if (!repoResult.isSuccess) continue;
 
         ResultWithValue<GenericPageItem> getByIdResult =
-            await repoResult.value.getById(context, slot.id);
+            await repoResult.value!.getById(context, slot.id);
 
         if (!getByIdResult.isSuccess) continue;
         invSlotMap.putIfAbsent(
@@ -405,4 +387,31 @@ Future<ResultWithValue<List<InventorySlotWithContainersAndGenericPageItem>>>
       invSlotMap.values.toList();
   results.sort((a, b) => a.name.compareTo(b.name));
   return ResultWithValue(results.isNotEmpty, results, '');
+}
+
+Future<ResultWithValue<TwitchCampaignData>> twitchCampaignDetails(
+    BuildContext twCxt, String campaignId) async {
+  ResultWithValue<List<TwitchCampaignData>> allItems =
+      await getDataRepo().getTwitchDrops(twCxt);
+  if (allItems.hasFailed) {
+    return ResultWithValue(
+      false,
+      TwitchCampaignData.fromRawJson('{}'),
+      allItems.errorMessage,
+    );
+  }
+
+  try {
+    int campaignIdInt = int.parse(campaignId);
+    TwitchCampaignData selectedGeneric =
+        allItems.value.firstWhere((r) => r.id == campaignIdInt);
+    return ResultWithValue<TwitchCampaignData>(true, selectedGeneric, '');
+  } catch (exception) {
+    getLog().e("TwitchCampaignDetails Exception: ${exception.toString()}");
+    return ResultWithValue<TwitchCampaignData>(
+      false,
+      TwitchCampaignData.fromRawJson('{}'),
+      exception.toString(),
+    );
+  }
 }

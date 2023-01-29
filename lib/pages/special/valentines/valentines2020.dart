@@ -4,13 +4,12 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../../components/common/actionItem.dart';
 import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../../contracts/redux/appState.dart';
 import '../../../redux/modules/setting/introViewModel.dart';
 
 class Valentines2020 extends StatelessWidget {
-  const Valentines2020({Key key}) : super(key: key);
+  const Valentines2020({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +34,8 @@ class Valentines2020 extends StatelessWidget {
         builder: (_, introViewModel) {
           var widgets = [
             Container(
-              child: localImage(selectedImage, boxfit: BoxFit.fitWidth),
+              child:
+                  LocalImage(imagePath: selectedImage, boxfit: BoxFit.fitWidth),
               margin: const EdgeInsets.all(0),
             ),
             Container(
@@ -48,7 +48,7 @@ class Valentines2020 extends StatelessWidget {
               margin: const EdgeInsets.all(4.0),
             ),
             GestureDetector(
-              child: Chip(
+              child: getBaseWidget().appChip(
                 label: const Text('NMS_GalacticCorporate'),
                 backgroundColor: Colors.transparent,
                 deleteIcon: const Icon(Icons.open_in_new),
@@ -72,6 +72,7 @@ class Valentines2020 extends StatelessWidget {
             padding: const EdgeInsets.all(12),
             itemCount: widgets.length,
             itemBuilder: (BuildContext context, int index) => widgets[index],
+            scrollController: ScrollController(),
           );
         },
       ),

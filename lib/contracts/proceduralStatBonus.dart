@@ -8,12 +8,12 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class ProceduralStatBonus {
   ProceduralStatBonus({
-    this.alwaysChoose,
-    this.name,
-    this.localeKeyTemplate,
-    this.image,
-    this.minValue,
-    this.maxValue,
+    required this.alwaysChoose,
+    required this.name,
+    required this.localeKeyTemplate,
+    required this.image,
+    required this.minValue,
+    required this.maxValue,
   });
 
   bool alwaysChoose;
@@ -26,7 +26,7 @@ class ProceduralStatBonus {
   factory ProceduralStatBonus.fromRawJson(String str) =>
       ProceduralStatBonus.fromJson(json.decode(str));
 
-  factory ProceduralStatBonus.fromJson(Map<String, dynamic> json) =>
+  factory ProceduralStatBonus.fromJson(Map<String, dynamic>? json) =>
       ProceduralStatBonus(
         alwaysChoose: readBoolSafe(json, 'AlwaysChoose'),
         name: readStringSafe(json, 'Name'),

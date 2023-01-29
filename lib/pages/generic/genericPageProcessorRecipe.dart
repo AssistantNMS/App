@@ -1,4 +1,7 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/contracts/requiredItemDetails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -21,38 +24,43 @@ import 'genericPage.dart';
 class GenericPageProcessorRecipe extends StatelessWidget {
   final Processor processor;
 
-  GenericPageProcessorRecipe(this.processor, {Key key}) : super(key: key) {
+  GenericPageProcessorRecipe(this.processor, {Key? key}) : super(key: key) {
     String key = '${AnalyticsEvent.processorRecipePage}: ${processor.id}';
     getAnalytics().trackEvent(key);
   }
 
   @override
   Widget build(BuildContext context) {
+    String title = processor.isRefiner
+        ? getTranslations().fromKey(LocaleKey.refinedUsing)
+        : getTranslations().fromKey(LocaleKey.cooking);
     return FutureBuilder<ResultWithValue<ProcessorRecipePageData>>(
       future: processorPageDetails(context, processor),
-      builder: (BuildContext context,
-          AsyncSnapshot<ResultWithValue<ProcessorRecipePageData>> snapshot) {
+      builder: (processFutureCtx, snapshot) {
         return genericPageScaffold<ResultWithValue<ProcessorRecipePageData>>(
-            context,
-            processor.isRefiner
-                ? getTranslations().fromKey(LocaleKey.refinedUsing)
-                : getTranslations().fromKey(LocaleKey.cooking),
-            snapshot,
-            body: (BuildContext context,
-                    AsyncSnapshot<ResultWithValue<ProcessorRecipePageData>>
-                        snapshot) =>
-                StoreConnector<AppState, FavouriteViewModel>(
-                    converter: (store) => FavouriteViewModel.fromStore(store),
-                    builder: (_, viewModel) =>
-                        getBody(context, viewModel, snapshot)));
+          processFutureCtx,
+          title,
+          snapshot,
+          body: (bodyCtx, _) => StoreConnector<AppState, FavouriteViewModel>(
+            converter: (store) => FavouriteViewModel.fromStore(store),
+            builder: (buildCtx, viewModel) => getBody(
+              buildCtx,
+              viewModel,
+              snapshot,
+            ),
+          ),
+        );
       },
     );
   }
 
-  Widget getBody(BuildContext context, FavouriteViewModel vm,
-      AsyncSnapshot<ResultWithValue<ProcessorRecipePageData>> snapshot) {
-    Widget errorWidget = asyncSnapshotHandler(context, snapshot,
-        isValidFunction: (ResultWithValue<ProcessorRecipePageData> data) {
+  Widget getBody(
+    BuildContext bodyCtx,
+    FavouriteViewModel vm,
+    AsyncSnapshot<ResultWithValue<ProcessorRecipePageData>> snapshot,
+  ) {
+    Widget? errorWidget = asyncSnapshotHandler(bodyCtx, snapshot,
+        isValidFunction: (ResultWithValue<ProcessorRecipePageData>? data) {
       if (data == null ||
           data.value == null ||
           data.value.inputsDetails == null ||
@@ -70,108 +78,119 @@ class GenericPageProcessorRecipe extends StatelessWidget {
     if (errorWidget != null) return errorWidget;
 
     List<Widget> widgets = List.empty(growable: true);
-    var output = snapshot.data.value.outputDetail;
-    GestureDetector Function(Widget child) gestureDetector;
-    gestureDetector = (Widget child) => GestureDetector(
+    var output = snapshot.data!.value.outputDetail;
+
+    commonOnTap(Widget child) => GestureDetector(
           child: child,
-          onTap: () async => await getNavigation().navigateAsync(context,
-              navigateTo: (context) => GenericPage(output.id)),
+          onTap: () async => await getNavigation().navigateAsync(
+            bodyCtx,
+            navigateTo: (navCtx) => GenericPage(output.id),
+          ),
         );
-    Color iconColour = getOverlayColour(HexColor(output.colour));
+
+    Color iconColour = getOverlayColour(HexColor(output.colour ?? '#000'));
     widgets.add(Stack(
       children: [
-        genericItemImage(context, output.icon, hdAvailable: true),
-        getFavouriteStar(output.icon, snapshot.data.value.procId, vm.favourites,
-            iconColour, vm.addFavourite, vm.removeFavourite)
+        genericItemImage(bodyCtx, output.icon, hdAvailable: true),
+        getFavouriteStar(
+          output.icon,
+          snapshot.data!.value.procId,
+          vm.favourites,
+          iconColour,
+          vm.addFavourite,
+          vm.removeFavourite,
+        )
       ],
     ));
     if (output.quantity > 1) {
-      widgets.add(gestureDetector(genericItemNameWithQuantity(
-          context, output.name, output.quantity.toString())));
+      widgets.add(
+        commonOnTap(
+          genericItemNameWithQuantity(
+            bodyCtx,
+            output.name,
+            output.quantity.toString(),
+          ),
+        ),
+      );
     } else {
-      widgets.add(gestureDetector(genericItemName(output.name)));
+      widgets.add(commonOnTap(GenericItemName(output.name)));
     }
 
-    widgets.add(gestureDetector(genericItemText(processor.operation)));
+    widgets.add(commonOnTap(GenericItemText(processor.operation)));
     String timeToMake = getTranslations().fromKey(LocaleKey.timeToMake);
     String procInSeconds = getTranslations()
         .fromKey(LocaleKey.seconds)
         .replaceAll('{0}', processor.time);
-    widgets.add(gestureDetector(
-      genericItemText("$timeToMake $procInSeconds"),
+    widgets.add(commonOnTap(
+      GenericItemText("$timeToMake $procInSeconds"),
     ));
 
     widgets.add(Wrap(
       alignment: WrapAlignment.center,
       children: [
-        gestureDetector(
-          genericChipWidget(
-            context,
-            genericItemTextWithIcon(
-                context, output.name, Icons.chrome_reader_mode,
-                colour: Colors.white),
+        commonOnTap(
+          getBaseWidget().appChip(
+            label: genericItemTextWithIcon(
+              bodyCtx,
+              output.name,
+              Icons.chrome_reader_mode,
+              colour: Colors.white,
+            ),
           ),
         ),
       ],
     ));
 
-    widgets.add(Container(
-      margin: const EdgeInsets.all(12.0),
-    ));
+    widgets.add(Container(margin: const EdgeInsets.all(12.0)));
 
-    var inputsIngredientsLocale = processor.isRefiner
+    String inputsIngredientsLocale = processor.isRefiner
         ? getTranslations().fromKey(LocaleKey.inputs)
         : getTranslations().fromKey(LocaleKey.ingredients);
-    widgets.add(genericItemText(inputsIngredientsLocale));
+    widgets.add(GenericItemText(inputsIngredientsLocale));
 
-    for (var input in snapshot.data.value.inputsDetails) {
+    for (RequiredItemDetails input in snapshot.data!.value.inputsDetails) {
       widgets.add(
-        Card(
+        FlatCard(
           child: genericListTile(
-            context,
+            bodyCtx,
             leadingImage: input.icon,
             name: input.name,
             quantity: input.quantity,
             borderRadius: NMSUIConstants.gameItemBorderRadius,
-            onTap: () async => await getNavigation().navigateAsync(context,
-                navigateTo: (context) => GenericPage(input.id)),
+            onTap: () async => await getNavigation().navigateAsync(bodyCtx,
+                navigateTo: (navCtx) => GenericPage(input.id)),
           ),
-          margin: const EdgeInsets.all(0.0),
         ),
       );
     }
 
-    var otherRefinersArray = snapshot.data.value.similarRefiners
+    List<Processor> otherRefinersArray = snapshot.data!.value.similarRefiners
         .where((sf) => sf.id != processor.id)
         .toList();
     if (otherRefinersArray.isNotEmpty) {
       widgets.add(Container(
         margin: const EdgeInsets.all(12.0),
       ));
-      widgets.add(genericItemText(
-          getTranslations().fromKey(LocaleKey.similarRefinerRecipes)));
+      widgets.add(GenericItemText(
+        getTranslations().fromKey(LocaleKey.similarRefinerRecipes),
+      ));
 
       var presenter = output.id.contains(IdPrefix.nutrient)
           ? nutrientProcessorRecipeWithInputsTilePresentor
           : refinerRecipeTilePresenter;
       widgets.addAll(genericItemWithOverflowButton(
-        context,
+        bodyCtx,
         otherRefinersArray,
         presenter,
       ));
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
-    return Column(
-      children: [
-        Expanded(
-          child: listWithScrollbar(
-            itemCount: widgets.length,
-            itemBuilder: (context, index) => widgets[index],
-          ),
-        ),
-      ],
+    return listWithScrollbar(
+      itemCount: widgets.length,
+      itemBuilder: (listCtx, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

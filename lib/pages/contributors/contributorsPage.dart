@@ -10,7 +10,7 @@ import '../../contracts/generated/contributorViewModel.dart';
 import '../../integration/dependencyInjection.dart';
 
 class ContributorsPage extends StatefulWidget {
-  const ContributorsPage({Key key}) : super(key: key);
+  const ContributorsPage({Key? key}) : super(key: key);
 
   @override
   _ContributorsWidget createState() => _ContributorsWidget();
@@ -47,10 +47,9 @@ class _ContributorsWidget extends State<ContributorsPage> {
           minListForSearch: 1000,
           lastListItemWidget: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: positiveButton(
-              context,
+            child: PositiveButton(
               title: getTranslations().fromKey(LocaleKey.useTranslationTool),
-              onPress: () => launchExternalURL(
+              onTap: () => launchExternalURL(
                 ExternalUrls.assistantAppsToolSite,
               ),
             ),
@@ -60,8 +59,8 @@ class _ContributorsWidget extends State<ContributorsPage> {
       ),
       SegmentViewItem(
         title: LocaleKey.donation,
-        builder: (innerCtx) => DonatorsPageComponent(
-          smallLoadMorePageButton(innerCtx),
+        builder: (innerCtx) => const DonatorsPageComponent(
+          SmallLoadMorePageButton(),
         ),
       ),
     ];
@@ -71,16 +70,15 @@ class _ContributorsWidget extends State<ContributorsPage> {
       title: getTranslations().fromKey(LocaleKey.contributors),
       body: Column(
         key: Key('currentSelection: $currentSelection'),
-        children: <Widget>[
-          Container(
-            child: adaptiveSegmentedControl(context,
-                controlItems:
-                    viewOptions.map((s) => s.toSegmentOption()).toList(),
-                currentSelection: currentSelection, onSegmentChosen: (index) {
+        children: [
+          AdaptiveSegmentedControl(
+            controlItems: viewOptions.map((s) => s.toSegmentOption()).toList(),
+            currentSelection: currentSelection,
+            onSegmentChosen: (index) {
               setState(() {
                 currentSelection = index;
               });
-            }),
+            },
           ),
           customDivider(),
           Expanded(

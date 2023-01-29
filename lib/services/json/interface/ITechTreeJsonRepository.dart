@@ -13,7 +13,7 @@ class ITechTreeJsonRepository {
 
   Future<ResultWithValue<TechTree>> getSubTree(
       BuildContext context, String subTreeId) async {
-    return ResultWithValue<TechTree>(false, TechTree(), '');
+    return ResultWithValue<TechTree>(false, TechTree.fromRawJson('{}'), '');
   }
 
   // Future<ResultWithValue<UnlockableTechTree>> getById(

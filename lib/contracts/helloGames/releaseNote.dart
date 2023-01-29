@@ -4,6 +4,8 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class ReleaseNote {
   String name;
   String description;
@@ -13,42 +15,32 @@ class ReleaseNote {
   bool isPs5;
   bool isXb1;
   bool isXbsx;
+  bool isNsw;
 
   ReleaseNote({
-    this.name,
-    this.description,
-    this.link,
-    this.isPc,
-    this.isPs4,
-    this.isPs5,
-    this.isXb1,
-    this.isXbsx,
+    required this.name,
+    required this.description,
+    required this.link,
+    required this.isPc,
+    required this.isPs4,
+    required this.isPs5,
+    required this.isXb1,
+    required this.isXbsx,
+    required this.isNsw,
   });
 
   factory ReleaseNote.fromRawJson(String str) =>
       ReleaseNote.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
-
-  factory ReleaseNote.fromJson(Map<String, dynamic> json) => ReleaseNote(
-        name: json["name"],
-        description: json["description"],
-        link: json["link"],
-        isPc: json["isPc"],
-        isPs4: json["isPs4"],
-        isPs5: json["isPs5"],
-        isXb1: json["isXb1"],
-        isXbsx: json["isXbsx"],
+  factory ReleaseNote.fromJson(Map<String, dynamic>? json) => ReleaseNote(
+        name: readStringSafe(json, 'name'),
+        description: readStringSafe(json, 'description'),
+        link: readStringSafe(json, 'link'),
+        isPc: readBoolSafe(json, 'isPc'),
+        isPs4: readBoolSafe(json, 'isPs4'),
+        isPs5: readBoolSafe(json, 'isPs5'),
+        isXb1: readBoolSafe(json, 'isXb1'),
+        isXbsx: readBoolSafe(json, 'isXbsx'),
+        isNsw: readBoolSafe(json, 'isNsw'),
       );
-
-  Map<String, dynamic> toJson() => {
-        "name": name,
-        "description": description,
-        "link": link,
-        "isPc": isPc,
-        "isPs4": isPs4,
-        "isPs5": isPs5,
-        "isXb1": isXb1,
-        "isXbsx": isXbsx,
-      };
 }

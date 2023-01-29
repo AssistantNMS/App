@@ -10,8 +10,8 @@ import '../../pages/helloGames/misc/starshipScrapPage.dart';
 
 Widget starshipScrapTilePresenter(BuildContext context,
     StarshipScrapDetailedItemDetail scrapDetail, bool displayBackgroundColour) {
-  String subtitle;
-  Widget trailing;
+  String? subtitle;
+  Widget? trailing;
   if (scrapDetail.amountMin != scrapDetail.amountMax &&
       scrapDetail.amountMax != 0) {
     subtitle = '${scrapDetail.amountMin} => ${scrapDetail.amountMax}';
@@ -42,7 +42,7 @@ Widget rewardFromStarshipScrapTilePresenter(BuildContext context,
     List<StarshipScrap> starshipScrapItems, bool displayBackgroundColour) {
   String subtitle = starshipScrapHeading(starshipScrapItems.first);
 
-  return flatCard(
+  return FlatCard(
     child: genericListTileWithSubtitle(
       context,
       leadingImage: AppImage.starshipScrap,
@@ -59,19 +59,17 @@ Widget rewardFromStarshipScrapTilePresenter(BuildContext context,
 
 String starshipScrapHeading(StarshipScrap starshipScrap) {
   String subtitle = getTranslations().fromKey(LocaleKey.unknown);
-  if (starshipScrap?.shipClassType != null && starshipScrap?.shipType != null) {
-    if (starshipScrap.shipType == 'Any') {
-      subtitle = getTranslations().fromKey(LocaleKey.starshipScrapAny);
-    } else {
-      String type = starshipScrapShipType(starshipScrap.shipType);
-      String classType = starshipScrapShipType(starshipScrap.shipClassType);
-      subtitle = '$type - $classType';
-    }
+  if (starshipScrap.shipType == 'Any') {
+    subtitle = getTranslations().fromKey(LocaleKey.starshipScrapAny);
+  } else {
+    String type = starshipScrapShipType(starshipScrap.shipType);
+    String classType = starshipScrapShipType(starshipScrap.shipClassType);
+    subtitle = '$type - $classType';
   }
   return subtitle;
 }
 
-String starshipScrapShipType(String shipType) {
+String starshipScrapShipType(String? shipType) {
   String subtitle = '';
   if (shipType != null) {
     subtitle = shipType;
@@ -83,7 +81,7 @@ String starshipScrapShipType(String shipType) {
   return subtitle;
 }
 
-String starshipScrapClassType(String shipClassType) {
+String starshipScrapClassType(String? shipClassType) {
   String subtitle = '';
   if (shipClassType != null) {
     subtitle = shipClassType;
@@ -94,7 +92,7 @@ String starshipScrapClassType(String shipClassType) {
   return subtitle;
 }
 
-String starshipScrapShipImage(String shipType) {
+String starshipScrapShipImage(String? shipType) {
   String icon = AppImage.starshipScrap;
   if (shipType != null) {
     if (shipType == 'Fighter') icon = 'other/162.png';
@@ -105,7 +103,7 @@ String starshipScrapShipImage(String shipType) {
   return icon;
 }
 
-String starshipScrapShipClassImage(String shipClassType) {
+String starshipScrapShipClassImage(String? shipClassType) {
   String icon = AppImage.unknown;
   if (shipClassType != null) {
     if (shipClassType == 'S') icon = AppImage.sclass;

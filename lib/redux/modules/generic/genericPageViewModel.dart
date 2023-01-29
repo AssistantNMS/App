@@ -20,23 +20,25 @@ class GenericPageViewModel {
   final List<FavouriteItem> favourites;
   final bool isPatron;
   final int platformIndex;
+  final String selectedLanguage;
 
   Function(String itemId) removeFavourite;
   Function(FavouriteItem newItem) addFavourite;
   Function(GenericPageItem item, int quantity) addToCart;
 
   GenericPageViewModel({
-    this.genericTileIsCompact,
-    this.displayGenericItemColour,
-    this.cartItems,
-    this.containers,
-    this.favourites,
-    this.isPatron,
-    this.platformIndex,
+    required this.genericTileIsCompact,
+    required this.displayGenericItemColour,
+    required this.cartItems,
+    required this.containers,
+    required this.favourites,
+    required this.isPatron,
+    required this.platformIndex,
+    required this.selectedLanguage,
     //
-    this.addToCart,
-    this.addFavourite,
-    this.removeFavourite,
+    required this.addToCart,
+    required this.addFavourite,
+    required this.removeFavourite,
   });
 
   static GenericPageViewModel fromStore(Store<AppState> store) {
@@ -48,6 +50,8 @@ class GenericPageViewModel {
       favourites: getFavourites(store.state),
       isPatron: getIsPatron(store.state),
       platformIndex: getLastPlatformIndex(store.state),
+      selectedLanguage: getSelectedLanguage(store.state),
+      //
       addFavourite: (FavouriteItem newItem) =>
           store.dispatch(AddFavouriteAction(newItem)),
       addToCart: (GenericPageItem item, int quantity) =>

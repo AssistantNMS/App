@@ -18,7 +18,7 @@ import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/favourite/favouriteViewModel.dart';
 
 class FavouritesPage extends StatelessWidget {
-  FavouritesPage({Key key}) : super(key: key) {
+  FavouritesPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.favouritesPage);
   }
 
@@ -76,10 +76,10 @@ class FavouritesPage extends StatelessWidget {
 
   Widget getRealBody(BuildContext context, FavouriteViewModel viewModel,
       AsyncSnapshot<List<RequiredItemDetails>> snapshot) {
-    Widget errorWidget = asyncSnapshotHandler(context, snapshot);
+    Widget? errorWidget = asyncSnapshotHandler(context, snapshot);
     if (errorWidget != null) return errorWidget;
 
-    if (snapshot.data.isEmpty) {
+    if (snapshot.data!.isEmpty) {
       return listWithScrollbar(
         itemCount: 1,
         itemBuilder: (context, index) => Container(
@@ -91,15 +91,17 @@ class FavouritesPage extends StatelessWidget {
           ),
           margin: const EdgeInsets.only(top: 30),
         ),
+        scrollController: ScrollController(),
       );
     }
 
     return SearchableList<RequiredItemDetails>(
       getSearchListFutureFromList(
-        snapshot.data,
+        snapshot.data!,
         compare: (a, b) => a.name.compareTo(b.name),
       ),
-      listItemDisplayer: (BuildContext _, RequiredItemDetails reqItems) {
+      listItemDisplayer: (BuildContext _, RequiredItemDetails reqItems,
+          {void Function()? onTap}) {
         var favouritesBackgroundPresenter =
             requiredItemDetailsBackgroundTilePresenter(
           viewModel.displayGenericItemColour,
@@ -108,7 +110,7 @@ class FavouritesPage extends StatelessWidget {
         return favouritesBackgroundPresenter(context, reqItems);
       },
       listItemSearch: searchFavourite,
-      key: Key('numFavourites${snapshot.data.length}'),
+      key: Key('numFavourites${snapshot.data!.length}'),
     );
   }
 }

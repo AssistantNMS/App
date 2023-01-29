@@ -5,8 +5,8 @@ import '../../helpers/shortcutHelper.dart';
 
 Widget simpleGenericPageScaffold<T>(
   context, {
-  String title,
-  Widget body,
+  required String title,
+  Widget? body,
 }) {
   return getBaseWidget().appScaffold(
     context,
@@ -21,25 +21,29 @@ Widget simpleGenericPageScaffold<T>(
 
 Widget basicGenericPageScaffold<T>(
   context, {
-  String title,
-  Widget drawer,
-  Widget appBar,
+  String? title,
+  Widget? drawer,
+  PreferredSizeWidget? appBar,
   bool showHomeAction = true,
   bool showBackAction = true,
-  List<ActionItem> actions,
-  Widget body,
-  Widget fab,
-  FloatingActionButtonLocation fabLocation,
+  bool showShortcutLinks = false,
+  List<ActionItem>? actions,
+  Widget? body,
+  Widget? fab,
+  FloatingActionButtonLocation? fabLocation,
 }) {
   return getBaseWidget().appScaffold(
     context,
     appBar: appBar ??
         getBaseWidget().appBarForSubPage(
           context,
-          title: Text(title),
+          title: Text(title ?? getTranslations().fromKey(LocaleKey.unknown)),
           actions: actions,
           showHomeAction: showHomeAction,
           showBackAction: showBackAction,
+          shortcutActions: (showShortcutLinks) //
+              ? getShortcutActions(context)
+              : null,
         ),
     drawer: drawer,
     body: body,
@@ -51,12 +55,14 @@ Widget basicGenericPageScaffold<T>(
 Widget genericPageScaffold<T>(
   context,
   String title,
-  snapshot, {
-  Widget Function(BuildContext context, AsyncSnapshot<T> snapshot) body,
+  AsyncSnapshot<T> snapshot, {
+  required Widget Function(BuildContext context, AsyncSnapshot<T> snapshot)
+      body,
   bool showShortcutLinks = false,
-  List<ActionItem> additionalShortcutLinks,
-  floatingActionButton,
+  List<ActionItem>? additionalShortcutLinks,
+  Widget? floatingActionButton,
 }) {
+  List<ActionItem> localAdditionalShortcuts = (additionalShortcutLinks ?? []);
   return getBaseWidget().appScaffold(
     context,
     appBar: getBaseWidget().appBarForSubPage(
@@ -64,9 +70,11 @@ Widget genericPageScaffold<T>(
       title: Text(title),
       showHomeAction: true,
       shortcutActions:
-          (showShortcutLinks || (additionalShortcutLinks ?? []).isNotEmpty)
-              ? getShortcutActions(context,
-                  additionalShortcutLinks: additionalShortcutLinks)
+          (showShortcutLinks || localAdditionalShortcuts.isNotEmpty)
+              ? getShortcutActions(
+                  context,
+                  additionalShortcutLinks: localAdditionalShortcuts,
+                )
               : null,
     ),
     body: body(context, snapshot),

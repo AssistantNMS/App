@@ -2,20 +2,21 @@ import 'dart:math';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class TimerItem {
-  int notificationId;
-  String uuid;
-  String name;
-  String icon;
+  late int notificationId;
+  late String uuid;
+  String? name;
+  String? icon;
   DateTime startDate;
   DateTime completionDate;
 
-  TimerItem(
-      {this.name,
-      this.icon,
-      uuid,
-      notificationId,
-      this.startDate,
-      this.completionDate}) {
+  TimerItem({
+    this.name,
+    this.icon,
+    String? uuid,
+    int? notificationId,
+    required this.startDate,
+    required this.completionDate,
+  }) {
     this.uuid = uuid ?? getNewGuid();
     this.notificationId = notificationId ?? Random().nextInt(10000);
   }
@@ -27,12 +28,12 @@ class TimerItem {
       );
 
   TimerItem copyWith({
-    int notificationId,
-    String uuid,
-    String name,
-    String icon,
-    DateTime startDate,
-    DateTime completionDate,
+    int? notificationId,
+    String? uuid,
+    String? name,
+    String? icon,
+    DateTime? startDate,
+    DateTime? completionDate,
   }) {
     return TimerItem(
       notificationId: notificationId ?? this.notificationId,
@@ -44,7 +45,7 @@ class TimerItem {
     );
   }
 
-  factory TimerItem.fromJson(Map<String, dynamic> json) => TimerItem(
+  factory TimerItem.fromJson(Map<String, dynamic>? json) => TimerItem(
         notificationId: readIntSafe(json, 'notificationId'),
         uuid: readStringSafe(json, 'uuid'),
         name: readStringSafe(json, 'name'),

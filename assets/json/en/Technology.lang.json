@@ -244,7 +244,7 @@
         "Name": "Jetpack Tanks",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "20"
+        "Value": "25"
       },
       {
         "Name": "Recharge Rate",
@@ -262,7 +262,7 @@
         "Name": "Sprint Recovery Time",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "20"
+        "Value": "40"
       }
     ],
     "ConsumableRewardTexts": []
@@ -946,7 +946,7 @@
         "Value": "15"
       },
       {
-        "Name": "Maneuverability",
+        "Name": "Maneuverability (Starship)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -1032,7 +1032,7 @@
   {
     "Id": "tech27",
     "Icon": "technology/26.png",
-    "Name": "Launch System Recharger",
+    "Name": "Launch Auto-Charger",
     "Group": "Starship Launch System Upgrade",
     "Description": "Photovoltaic panels fitted to the starship <TECHNOLOGY>Launch Thrusters<> allow for a slow trickle charge while the ship is not in operation.\n\nHarvested light is used to fuse di-hydrogen from the atmosphere and over time will <STELLAR>refuel the Launch Thrusters automatically<>.",
     "BaseValueUnits": 1.0,
@@ -1054,7 +1054,7 @@
         "Quantity": 2
       },
       {
-        "Id": "prod115",
+        "Id": "prod116",
         "Quantity": 2
       }
     ],
@@ -2247,9 +2247,9 @@
       },
       {
         "Name": "Mineral Analysis Rewards",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "target",
-        "Value": "1"
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3581,7 +3581,7 @@
   {
     "Id": "tech94",
     "Icon": "technology/94.png",
-    "Name": "Exocraft Signal Booster",
+    "Name": "Exocraft Radar",
     "Group": "Exocraft Scan Equipment",
     "Description": "A large and complex field-based subspace radar.\n\nDue to their large power consumption and inherent subatomic instability, they are found only installed on Exocraft.\n\nPress <IMG>QUICK_MENU<> to activate the Signal Booster.",
     "BaseValueUnits": 1.0,
@@ -3616,9 +3616,9 @@
   {
     "Id": "tech96",
     "Icon": "technology/96.png",
-    "Name": "Exocraft Signal Booster Upgrade Tau",
-    "Group": "Exocraft Signal Booster Upgrade",
-    "Description": "Allows for additional building types to be acquired by the Exocraft Signal Booster.",
+    "Name": "Radar Power Resonator",
+    "Group": "Exocraft Signal Detection Upgrade",
+    "Description": "Allows for additional building types to be acquired by the Exocraft Radar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -3655,7 +3655,7 @@
   {
     "Id": "tech97",
     "Icon": "technology/97.png",
-    "Name": "Exocraft Acceleration Module",
+    "Name": "Exocraft Boosters",
     "Group": "Exocraft Engine Upgrade",
     "Description": "An efficient plasma injector coupled to the engine that allows short bursts of speed.",
     "BaseValueUnits": 1.0,
@@ -3751,7 +3751,7 @@
   {
     "Id": "tech99",
     "Icon": "technology/99.png",
-    "Name": "Exocraft Mining Laser Upgrade Sigma",
+    "Name": "Advanced Exocraft Laser",
     "Group": "Exocraft Mining Upgrade",
     "Description": "Increases power of the Exocraft Mining Laser.",
     "BaseValueUnits": 1.0,
@@ -3792,7 +3792,7 @@
   {
     "Id": "tech100",
     "Icon": "technology/100.png",
-    "Name": "Exocraft Mounted Cannon",
+    "Name": "Mounted Cannon",
     "Group": "Exocraft Weapon Attachment",
     "Description": "Due to the energy requirements of this powerful weapon, they can only be fired from an Exocraft mount.",
     "BaseValueUnits": 1.0,
@@ -5919,7 +5919,7 @@
   },
   {
     "Id": "tech166",
-    "Icon": "technology/28.png",
+    "Icon": "technology/166.png",
     "Name": "Matter Beam",
     "Group": "Freighter-Mounted Teleportation Device",
     "Description": "A device that modulates standard freighter communication signals to enable the <TECHNOLOGY>interplanetary transport of matter<> as well as data.\n\nFreighters fitted with such a device can send and receive products and substances to a user's <STELLAR>Exosuit<> over a <STELLAR>long distance<>.",
@@ -6254,9 +6254,9 @@
   {
     "Id": "tech174",
     "Icon": "technology/96.png",
-    "Name": "Advanced Signal Booster",
-    "Group": "Exocraft Signal Booster Upgrade",
-    "Description": "Allows for additional building types to be acquired by the Exocraft Signal Booster.",
+    "Name": "Radar Amplifier",
+    "Group": "Exocraft Signal Detection Upgrade",
+    "Description": "Allows for additional building types to be acquired by the Exocraft Radar.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -6659,7 +6659,7 @@
     "Icon": "technology/1.png",
     "Name": "Environment Control Unit",
     "Group": "Exocraft Hazard Protection Unit",
-    "Description": "A powerful environmental neutralising system is plugged directly into the Minotaur pilot when they take control of the vehicle. The system is powered via the Minotaur's main engine unit and requires no additional user inputs. Some minor pain may be noticed around the insertion site.\n\nRenders the Minotaur pilot impervious to <STELLAR>all environmental hazards<>.",
+    "Description": "This powerful environmental neutralising system is plugged directly into the pilot as they enter the cockpit. The system is powered via the Minotaur's main engine and requires no additional input. Some minor pain may be noticed around the insertion site.\n\nRenders the Minotaur pilot impervious to <STELLAR>all environmental hazards<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -6956,7 +6956,7 @@
         "Value": "100"
       },
       {
-        "Name": "Maneuverability",
+        "Name": "Maneuverability (Starship)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "25"
@@ -6966,7 +6966,7 @@
   },
   {
     "Id": "tech189",
-    "Icon": "other/148.png",
+    "Icon": "building/945.png",
     "Name": "Frameshift Catapult",
     "Group": "Illegally Modified Warp Drive",
     "Description": "This experimental drive augments conventional <TECHNOLOGY>hyperdrive<> technology by distorting local geometry at the point of warp initialisation, boosting <STELLAR>range<> and <STELLAR>efficiency<> far beyond standard drives.\n\nUser is advised to access Hyperdrive systems through the <STELLAR>Galactic Map<>.",
@@ -7092,7 +7092,7 @@
   {
     "Id": "tech192",
     "Icon": "technology/192.png",
-    "Name": "Archive Override Implant",
+    "Name": "Archive Bypass Implant",
     "Group": "Subcutaneous Access Circuit",
     "Description": "A <TECHNOLOGY>biotechnical firewall<>, developed as a safeguard against textual cognitohazards. It is coated in something slippery, and has started to bubble along the surface.\n\nEmbedded beneath the skin, this grants administrative access to ancient forbidden texts bound at a <SPECIAL>Planetary Archive<>.\n<FUEL>Warning<>: Do not unbind the forbidden texts. Exposure to forbidden texts carries extreme risk.",
     "BaseValueUnits": 1.0,
@@ -7833,7 +7833,7 @@
   {
     "Id": "tech212",
     "Icon": "technology/212.png",
-    "Name": "Sentinel Hardframe Left Arm",
+    "Name": "Hardframe Left Arm",
     "Group": "Minotaur Limb Replacement",
     "Description": "A collection of salvaged components from a Sentinel Hardframe, reconditioned to fit the <TECHNOLOGY>Minotaur<> Heavy Exocraft Hybrid.\n\nWhen installed alongside a <TECHNOLOGY>Minotaur Laser<>, it transforms the mining laser into a <STELLAR>powerful combat upgrade<> with the ability to deal heavy damaged to <TECHNOLOGY>stunned<> entities.",
     "BaseValueUnits": 1.0,
@@ -7897,7 +7897,7 @@
   {
     "Id": "tech213",
     "Icon": "technology/213.png",
-    "Name": "Sentinel Hardframe Right Arm",
+    "Name": "Hardframe Right Arm",
     "Group": "Minotaur Limb Replacement",
     "Description": "A collection of salvaged components from a Sentinel Hardframe, reconditioned to fit the <TECHNOLOGY>Minotaur<> Heavy Exocraft Hybrid.\n\nThis limb override also functions as its own <STELLAR>dedicated combat system<>. It deploys high-velocity <TECHNOLOGY>stun projectiles<> and serves as an excellent support weapon to the Minotaur's primary cannon.\n\nUse <IMG>CYCLEWEAPON<> to cycle available weapon modes.",
     "BaseValueUnits": 1.0,
@@ -7949,7 +7949,7 @@
   {
     "Id": "tech214",
     "Icon": "technology/214.png",
-    "Name": "Sentinel Hardframe Legs",
+    "Name": "Hardframe Legs",
     "Group": "Minotaur Limb Replacement",
     "Description": "A collection of salvaged components from a Sentinel Hardframe, reconditioned to fit the <TECHNOLOGY>Minotaur<> Heavy Exocraft Hybrid.\n\nInstallation will significantly improve the Minotaur's <TECHNOLOGY>engine and mobility<> systems.",
     "BaseValueUnits": 1.0,
@@ -7991,7 +7991,7 @@
   {
     "Id": "tech215",
     "Icon": "technology/215.png",
-    "Name": "Sentinel Hardframe Body",
+    "Name": "Hardframe Body",
     "Group": "Minotaur Core Replacement",
     "Description": "A collection of salvaged components from a Sentinel Hardframe, reconditioned to fit the <TECHNOLOGY>Minotaur<> Heavy Exocraft Hybrid.\n\nWill function as a semi-autonomous <TECHNOLOGY>artificial pilot plugin<>. Installation allows the Minotaur to <STELLAR>traverse planets itself<> and engage in <STELLAR>combat<> or <STELLAR>mining<> activities to support its primary operator.\n\nThe AI pilot will always cede control to the primary operator when they enter the cockpit.",
     "BaseValueUnits": 1.0,
@@ -8139,7 +8139,7 @@
         "Value": "15"
       },
       {
-        "Name": "Maneuverability",
+        "Name": "Maneuverability (Starship)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8217,7 +8217,7 @@
         "Value": "0.6"
       },
       {
-        "Name": "Maneuverability",
+        "Name": "Maneuverability (Starship)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8436,6 +8436,47 @@
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech228",
+    "Icon": "technology/228.png",
+    "Name": "Trade Rocket",
+    "Group": "Mercantile Missile Summoning Device",
+    "Description": "A personal rocketry device with a direct link to the <TECHNOLOGY>Galactic Trade Network<>. This unit allows the user to load a small spacecraft with goods. Upon launch, the goods will be transported to the nearest trade terminus and <STELLAR>automatically sold<>.\n\n<STELLAR>Summon<> the Trade Rocket using the <IMG>QUICK_MENU<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw7",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Trade Rocket",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

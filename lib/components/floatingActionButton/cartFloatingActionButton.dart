@@ -10,9 +10,9 @@ SpeedDialChild cartFloatingActionButton(
         GenericPageItem genericItem,
         Function(GenericPageItem item, int quantity) addToCart) =>
     SpeedDialChild(
-      child: Padding(
-        child: getListTileImage('fab/cart.png'),
-        padding: const EdgeInsets.all(8),
+      child: const Padding(
+        child: ListTileImage(partialPath: 'fab/cart.png'),
+        padding: EdgeInsets.all(8),
       ),
       label: isDesktop ? getTranslations().fromKey(LocaleKey.cart) : null,
       foregroundColor: getTheme().fabForegroundColourSelector(context),
@@ -21,7 +21,7 @@ SpeedDialChild cartFloatingActionButton(
         context,
         controller,
         onSuccess: (BuildContext ctx, String quantity) {
-          int intQuantity = int.tryParse(quantity);
+          int? intQuantity = int.tryParse(quantity);
           if (intQuantity == null) return;
           addToCart(genericItem, intQuantity);
         },

@@ -10,7 +10,7 @@ class AllPossibleOutputsPage<T> extends StatelessWidget {
   final Widget Function(BuildContext context, T p) presenter;
 
   AllPossibleOutputsPage(this.requiredItems, this.title, this.presenter,
-      {Key key})
+      {Key? key})
       : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.allPossibleOutputsPage);
   }
@@ -42,17 +42,12 @@ class AllPossibleOutputsPage<T> extends StatelessWidget {
       );
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
-    return Column(
-      children: [
-        Expanded(
-          child: listWithScrollbar(
-            itemCount: widgets.length,
-            itemBuilder: (context, index) => widgets[index],
-          ),
-        ),
-      ],
+    return listWithScrollbar(
+      itemCount: widgets.length,
+      itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

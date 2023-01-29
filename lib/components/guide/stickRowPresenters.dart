@@ -30,7 +30,7 @@ Widget nmsSectionListItem(
       ),
     );
 
-Widget nmsTextListItem(NmsGuideSectionItem item) => flatCard(
+Widget nmsTextListItem(NmsGuideSectionItem item) => FlatCard(
       child: ListTile(
         title: Text(
           item.content,
@@ -44,9 +44,9 @@ Widget nmsTextListItem(NmsGuideSectionItem item) => flatCard(
 Widget nmsLinkListItem(NmsGuideSectionItem item) {
   // ignore: prefer_function_declarations_over_variables
   Function() onTap = () => launchExternalURL(item.content);
-  return flatCard(
+  return FlatCard(
     child: GestureDetector(
-      child: Chip(
+      child: getBaseWidget().appChip(
         label: Text(item.name),
         backgroundColor: Colors.transparent,
         deleteIcon: const Icon(Icons.open_in_new),
@@ -57,8 +57,12 @@ Widget nmsLinkListItem(NmsGuideSectionItem item) {
   );
 }
 
-Widget nmsImageListItem(context, NmsGuideSectionItem item, String folder) {
-  bool isNetworkImage = (item.image == null || item.image.isEmpty);
+Widget nmsImageListItem(
+  context,
+  NmsGuideSectionItem item,
+  String folder,
+) {
+  bool isNetworkImage = (item.image.isEmpty);
 
   String imagePath = 'guide.png';
   if (isNetworkImage) {
@@ -72,9 +76,9 @@ Widget nmsImageListItem(context, NmsGuideSectionItem item, String folder) {
   }
 
   return GestureDetector(
-    child: flatCard(
-      child: (item.image == null || item.image.isEmpty)
-          ? networkImage(imagePath)
+    child: FlatCard(
+      child: item.image.isEmpty //
+          ? ImageFromNetwork(imageUrl: imagePath)
           : guideImage(imagePath),
     ),
     onTap: () async {
@@ -91,7 +95,7 @@ Widget nmsImageListItem(context, NmsGuideSectionItem item, String folder) {
 }
 
 Widget nmsMarkdownListItem(NmsGuideSectionItem item) {
-  return flatCard(
+  return FlatCard(
     child: Padding(
       child: MarkdownBody(data: item.content),
       padding: const EdgeInsets.all(16.0),
@@ -123,7 +127,7 @@ Widget nmsTableListItem(context, NmsGuideSectionItem item) {
     rows.add(TableRow(children: rowChildren));
   }
 
-  return flatCard(
+  return FlatCard(
     child: Padding(
       child: Table(
         children: rows,

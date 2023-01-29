@@ -4,7 +4,7 @@
     "Icon": "other/1.png",
     "Name": "Planetary Chart",
     "Group": "Cartographic Data",
-    "Description": "A map of a nearby planet. The coordinates of a <TECHNOLOGY>distress signal<> have been marked.\n\nSelect the map and use Plot Route (<IMG>FE_ALT1<>) to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
+    "Description": "A map of a nearby planet. The coordinates of a <TECHNOLOGY>distress signal<> have been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -27,7 +27,7 @@
     "Icon": "other/1.png",
     "Name": "Planetary Chart",
     "Group": "Cartographic Data",
-    "Description": "A map of a nearby location, retrieved from the <STELLAR>Local Information Repository<> at a Planetary Archive building.\n\nAn <SPECIAL>ancient ruined site<> has been marked. Excavating this site is likely to yield valuable treasures.\n\nSelect the map and use Plot Route (<IMG>FE_ALT1<>) to pin the location in your Exosuit display.",
+    "Description": "A map of a nearby location, retrieved from the <STELLAR>Local Information Repository<> at a Planetary Archive building.\n\nAn <SPECIAL>ancient ruined site<> has been marked. Excavating this site is likely to yield valuable treasures.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "Additional": "",
@@ -387,7 +387,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsExpeditionSeason2Reward"
+      "IsExpeditionSeason2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -410,7 +411,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsExpeditionSeason2Reward"
+      "IsExpeditionSeason2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -432,7 +434,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/23.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -455,7 +458,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsExpeditionSeason2Reward"
+      "IsExpeditionSeason2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -477,7 +481,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/other/25.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -773,7 +778,6 @@
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
-      "IsRewardFromShipScrap",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -789,14 +793,13 @@
     "Name": "Tank of Coolant",
     "Group": "Starship Subcomponent",
     "Description": "A valuable piece of broken down starship, created by a <TECHNOLOGY>Starship Outfitting Terminal<> at a <TRADEABLE>Space Station<>.\n\nComponent is useful only as scrap to be sold at a <VAL_ON>Trade Terminal<>.",
-    "BaseValueUnits": 200000.0,
+    "BaseValueUnits": 10000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 25.0,
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
       "IsEggIngredient",
-      "IsRewardFromShipScrap",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -808,13 +811,13 @@
   },
   {
     "Id": "other41",
-    "Icon": "tradeItems/23.png",
+    "Icon": "other/41.png",
     "Name": "Spool of Nano-Cables",
     "Group": "Starship Subcomponent",
     "Description": "A valuable piece of broken down starship, created by a <TECHNOLOGY>Starship Outfitting Terminal<> at a <TRADEABLE>Space Station<>.\n\nComponent is useful only as scrap to be sold at a <VAL_ON>Trade Terminal<>.",
-    "BaseValueUnits": 400000.0,
+    "BaseValueUnits": 12000.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 20.0,
+    "MaxStackSize": 25.0,
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
@@ -830,13 +833,13 @@
   },
   {
     "Id": "other42",
-    "Icon": "tradeItems/21.png",
+    "Icon": "tradeItems/5.png",
     "Name": "Recycled Circuitry",
     "Group": "Starship Subcomponent",
     "Description": "A valuable piece of broken down starship, created by a <TECHNOLOGY>Starship Outfitting Terminal<> at a <TRADEABLE>Space Station<>.\n\nComponent is useful only as scrap to be sold at a <VAL_ON>Trade Terminal<>.",
-    "BaseValueUnits": 600000.0,
+    "BaseValueUnits": 520000.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 15.0,
+    "MaxStackSize": 25.0,
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
@@ -852,13 +855,13 @@
   },
   {
     "Id": "other43",
-    "Icon": "tradeItems/22.png",
+    "Icon": "tradeItems/27.png",
     "Name": "Subatomic Regulators",
     "Group": "Starship Subcomponent",
     "Description": "A valuable piece of broken down starship, created by a <TECHNOLOGY>Starship Outfitting Terminal<> at a <TRADEABLE>Space Station<>.\n\nComponent is useful only as scrap to be sold at a <VAL_ON>Trade Terminal<>.",
-    "BaseValueUnits": 800000.0,
+    "BaseValueUnits": 940000.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 10.0,
+    "MaxStackSize": 25.0,
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
@@ -874,13 +877,13 @@
   },
   {
     "Id": "other44",
-    "Icon": "tradeItems/23.png",
+    "Icon": "tradeItems/8.png",
     "Name": "Compressed Indium Scraps",
     "Group": "Starship Subcomponent",
     "Description": "A valuable piece of broken down starship, created by a <TECHNOLOGY>Starship Outfitting Terminal<> at a <TRADEABLE>Space Station<>.\n\nComponent is useful only as scrap to be sold at a <VAL_ON>Trade Terminal<>.",
-    "BaseValueUnits": 3000000.0,
+    "BaseValueUnits": 3100000.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
+    "MaxStackSize": 25.0,
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
@@ -896,13 +899,13 @@
   },
   {
     "Id": "other45",
-    "Icon": "tradeItems/23.png",
+    "Icon": "tradeItems/15.png",
     "Name": "Starship AI Valves",
     "Group": "Starship Subcomponent",
     "Description": "A valuable piece of broken down starship, created by a <TECHNOLOGY>Starship Outfitting Terminal<> at a <TRADEABLE>Space Station<>.\n\nComponent is useful only as scrap to be sold at a <VAL_ON>Trade Terminal<>.",
-    "BaseValueUnits": 50000000.0,
+    "BaseValueUnits": 12000000.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
+    "MaxStackSize": 25.0,
     "Colour": "CCCCCC",
     "Usages": [
       "HasDevProperties",
@@ -1118,7 +1121,7 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Maneuverability",
+        "Name": "Maneuverability (Starship)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "5"
@@ -2678,7 +2681,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason3Reward"
+      "IsExpeditionSeason3Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3153,13 +3157,12 @@
   },
   {
     "Id": "other200",
-    "Icon": "other/187.png",
+    "Icon": "other/200.png",
     "Name": "Wormskin Folio: 1",
     "Group": "Fleshy Scroll",
     "Description": "Ancient words are carved into this <STELLAR>living document<>. They read:\n\n'The worm lord towers above the dusty earth; its flesh becomes the sky.\nOur pathetic shells cannot follow, cannot reach its height, cannot reach its depths.\nWe offer ourselves to the ground.\nWe beg our sacrifice accepted.'",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
@@ -3175,13 +3178,12 @@
   },
   {
     "Id": "other201",
-    "Icon": "other/187.png",
+    "Icon": "other/200.png",
     "Name": "Wormskin Folio: 2",
     "Group": "Fleshy Scroll",
     "Description": "Ancient words are carved into this <STELLAR>living document<>. They read:\n\n'The dust was choking. \nOur eyes reddened and watered. \nBut the truth was inescapable.\nThe veins of the Atlas had surfaced.'",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
@@ -3197,13 +3199,12 @@
   },
   {
     "Id": "other202",
-    "Icon": "other/187.png",
+    "Icon": "other/200.png",
     "Name": "Wormskin Folio: 3",
     "Group": "Fleshy Scroll",
     "Description": "Ancient words are carved into this <STELLAR>living document<>. They read:\n\n'Now with every storm we beg to be chosen;\nArms to the sky, faces to the dirt, calling out with all we have!\nWhen heavy raindrops hit the earth, the veins of Atlas answer.\nThe rapture of our consumption is beyond words.'",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
@@ -3219,13 +3220,12 @@
   },
   {
     "Id": "other203",
-    "Icon": "other/187.png",
+    "Icon": "other/200.png",
     "Name": "Wormskin Folio: 4",
     "Group": "Fleshy Scroll",
     "Description": "Ancient words are carved into this <STELLAR>living document<>. They read:\n\n'We tumble as it swallows, but grip the slick walls as best we can - \nOh! - to reach the gizzard still awake. \nBreathe it deeply! How our lungs gurgle!\nThe slime clogs our noses and stings our eyes, \nthough in this warm darkness, we are already blind.'",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
@@ -3241,13 +3241,12 @@
   },
   {
     "Id": "other204",
-    "Icon": "other/187.png",
+    "Icon": "other/200.png",
     "Name": "Wormskin Folio: 5",
     "Group": "Fleshy Scroll",
     "Description": "Ancient words are carved into this <STELLAR>living document<>. They read:\n\n'Curse the agony of regurgitation, \nCurse this this feeble flesh that still confines me!\nMy brethren were reborn, rising from the blessed dust as fresh tendrils. \nGlistening capillaries to the great veins, slithering away into the sand.\nI will be patient. Until the next storm.'",
     "BaseValueUnits": 1616.0,
     "CurrencyType": "Credits",
-    "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
@@ -3266,7 +3265,7 @@
     "Icon": "other/205.png",
     "Name": "Planetary Chart",
     "Group": "Secret Cartographic Data",
-    "Description": "A map of a nearby planet. A <FUEL>secure site of interest<> has been marked. Such sites often hold <TECHNOLOGY>blueprints<> for <STELLAR>new products<>.\n\nSelect the map and use Plot Route (<IMG>FE_ALT1<>) to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
+    "Description": "A map of a nearby planet. A <FUEL>secure site of interest<> has been marked. Such sites often hold blueprints for <STELLAR>new products<>.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3289,7 +3288,7 @@
     "Icon": "other/206.png",
     "Name": "Planetary Chart",
     "Group": "Emergency Cartographic Data",
-    "Description": "A map of a nearby planet. The coordinates of a <TECHNOLOGY>distress signal<> have been marked.\n\nSelect the map and use Plot Route (<IMG>FE_ALT1<>) to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
+    "Description": "A map of a nearby planet. The coordinates of a <TECHNOLOGY>distress signal<> have been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3312,7 +3311,7 @@
     "Icon": "other/207.png",
     "Name": "Planetary Chart",
     "Group": "Commercial Cartographic Data",
-    "Description": "A map of a nearby planet. An <COMMODITY>inhabited outpost<> of some kind has been marked.\n\nSelect the map and use Plot Route (<IMG>FE_ALT1<>) to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
+    "Description": "A map of a nearby planet. An <COMMODITY>inhabited outpost<> of some kind has been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3335,7 +3334,7 @@
     "Icon": "other/208.png",
     "Name": "Planetary Chart",
     "Group": "Alien Cartographic Data",
-    "Description": "A map of a nearby planet. An <SPECIAL>ancient artifact site<> has been marked.\n\nSelect the map and use Plot Route (<IMG>FE_ALT1<>) to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
+    "Description": "A map of a nearby planet. An <SPECIAL>ancient artifact site<> has been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3358,7 +3357,7 @@
     "Icon": "other/1.png",
     "Name": "Planetary Chart",
     "Group": "Cartographic Data",
-    "Description": "A map of a nearby planet. An <SPECIAL>ancient artifact site<> has been marked.\n\nSelect the map and use Plot Route (<IMG>FE_ALT1<>) to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
+    "Description": "A map of a nearby planet. An <SPECIAL>ancient artifact site<> has been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -4048,7 +4047,7 @@
   },
   {
     "Id": "other269",
-    "Icon": "other/269.png",
+    "Icon": "constructedTechnology/104.png",
     "Name": "Memory Fragment",
     "Group": "Rogue Technology Echo",
     "Description": "The shattered remnants of a <STELLAR>previous existence<>. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an <TECHNOLOGY>important technology upgrade<> to aid you in this iteration. <STELLAR>Absorb<> this memory with <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>DEATH IS NOT THE END<> <IMG>SLASH<> <STELLAR>THE LOOP CONTINUES<>",
@@ -4073,7 +4072,7 @@
   },
   {
     "Id": "other270",
-    "Icon": "other/270.png",
+    "Icon": "constructedTechnology/105.png",
     "Name": "Memory Fragment (Inventory)",
     "Group": "Rogue Technology Echo",
     "Description": "The shattered remnants of a <STELLAR>previous existence<>. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an <TECHNOLOGY>inventory expansion<> to aid you in this iteration. <STELLAR>Absorb<> this memory with <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>DEATH IS NOT THE END<> <IMG>SLASH<> <STELLAR>THE LOOP CONTINUES<>",
@@ -4273,7 +4272,7 @@
   },
   {
     "Id": "other278",
-    "Icon": "other/278.png",
+    "Icon": "curiosities/78.png",
     "Name": "Memory Resonator",
     "Group": "Loop Manifestation Technology",
     "Description": "A highly familar, entirely novel, piece of technology, designed by Specialist Polo as part of their <TECHNOLOGY>loop research<> efforts. It synchronises its vibrations with the underlying song of the universe, allowing it to reveal <STELLAR>memory hotspots<> within the loop.\n\nBegin the <TECHNOLOGY>resonance alignment<> process with <IMG>FE_ALT1<>.",
@@ -4310,7 +4309,7 @@
   },
   {
     "Id": "other279",
-    "Icon": "other/269.png",
+    "Icon": "constructedTechnology/104.png",
     "Name": "Memory Fragment",
     "Group": "Rogue Technology Echo",
     "Description": "The shattered remnants of a <STELLAR>previous existence<>. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an <TECHNOLOGY>important technology upgrade<> to aid you in this iteration. <STELLAR>Absorb<> this memory with <VAL_ON><IMG>FE_ALT1<><>.\n\n<SPECIAL>DEATH IS NOT THE END<> <IMG>SLASH<> <STELLAR>THE LOOP CONTINUES<>",
@@ -4941,6 +4940,443 @@
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
       "IsTwitchCampaign4Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other312",
+    "Icon": "other/312.png",
+    "Name": "Horizon Vector NX",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>. This compact fighter craft boasts superior manoeuvrability, giving it an edge in space combat.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "FFFFFF",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other313",
+    "Icon": "other/313.png",
+    "Name": "Infinite Neon Mark XXII",
+    "Group": "Exclusive Multifunction Survival Device",
+    "Description": "An exclusive <STELLAR>Multi-Tool<>. This brightly-coloured rifle offers the user cutting-edge defensive capabilities in ground combat situations.\n\n<STELLAR>Take<> this Multi-Tool to add it to your collection, or <STELLAR>Exchange<> it with your current Multi-Tool. Swap between active Multi-Tools from the Utilities section of the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "FFFFFF",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other314",
+    "Icon": "other/314.png",
+    "Name": "Hiwamiha of Destiny",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>. This smuggler's craft is shielded by superheated <TECHNOLOGY>ablative armour<>, and equipped with <TECHNOLOGY>scan deflector<> technology to disguise contraband cargo from system authorities.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other315",
+    "Icon": "other/315.png",
+    "Name": "Inzakita's Folly PY9",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>. This fighter craft is armed with a powerful <TECHNOLOGY>Positron Ejector<> for rapid destruction of hostile ships.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other316",
+    "Icon": "other/316.png",
+    "Name": "The Son of the Sun",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>. This exploration vessel is configured with <TECHNOLOGY>Economy<> and <TECHNOLOGY>Conflict Scanners<>, for remotely probing system data.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other317",
+    "Icon": "other/317.png",
+    "Name": "Habika BF3",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>. The Habiki BF3 is a hauler specialised in economic take-off, with <TECHNOLOGY>Efficient Thrusters<> and a <TECHNOLOGY>Launch Auto-Charger<> minimising launch fuel consumption.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other318",
+    "Icon": "other/318.png",
+    "Name": "Final Ashes PL4",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>. This intimidating fighter craft is exceptionally manoeuvrable, its <TECHNOLOGY>Flight Assist Override<> technology enabling it to deftly drift between celestial bodies.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other319",
+    "Icon": "other/319.png",
+    "Name": "Z. Speltwireum Egg",
+    "Group": "Exclusive Companion Egg",
+    "Description": "A living, fertile egg, <TRADEABLE>ready to hatch!<>\n\nThe many-legged embryo chitters within its shell.\n\nScans indicate the being within has the genetic potential for a <STELLAR>cooperative<> personality.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other320",
+    "Icon": "other/320.png",
+    "Name": "O. Crabubireus Egg",
+    "Group": "Exclusive Companion Egg",
+    "Description": "A living, fertile egg, <TRADEABLE>ready to hatch!<>\n\nThe creature inside wobbles its blob-like body back and forth, yearning to be hatched.\n\nScans indicate the being within has the genetic potential for an <TECHNOLOGY>autonomous<> personality.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other321",
+    "Icon": "other/321.png",
+    "Name": "Yauza's Quantum Tuner",
+    "Group": "Exclusive Multifunction Survival Device",
+    "Description": "An exclusive <STELLAR>Multi-Tool<>. This alien weapon is fitted with an upgraded <TECHNOLOGY>Pulse Spitter<>, the fuel-injected projectiles capable of <STELLAR>igniting<> targets after impact.\n\n<STELLAR>Take<> this Multi-Tool to add it to your collection, or <STELLAR>Exchange<> it with your current Multi-Tool. Swap between active Multi-Tools from the Utilities section of the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other322",
+    "Icon": "other/322.png",
+    "Name": "Whispers of the Abyss 4-F33-QP4",
+    "Group": "Exclusive Multifunction Survival Device",
+    "Description": "An exclusive <STELLAR>Multi-Tool<>. This rifle's <TECHNOLOGY>Blaze Javelin<> delivers precise, powerful beams of energy to long-range targets, both <STELLAR>damaging<> and <STELLAR>stunning<> them.\n\n<STELLAR>Take<> this Multi-Tool to add it to your collection, or <STELLAR>Exchange<> it with your current Multi-Tool. Swap between active Multi-Tools from the Utilities section of the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other323",
+    "Icon": "other/323.png",
+    "Name": "Assorted Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of assorted fireworks, containing <COMMODITY>luxury<>, <FUEL>Atlas<> and <TRADEABLE>fleshy<> variations. Ignite to create fascinating displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other324",
+    "Icon": "other/323.png",
+    "Name": "Assorted Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of assorted fireworks, containing <COMMODITY>luxury<>, <FUEL>Atlas<> and <TRADEABLE>fleshy<> variations. Ignite to create fascinating displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other325",
+    "Icon": "other/323.png",
+    "Name": "Assorted Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of assorted fireworks, containing <COMMODITY>luxury<>, <FUEL>Atlas<> and <TRADEABLE>fleshy<> variations. Ignite to create fascinating displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other326",
+    "Icon": "other/323.png",
+    "Name": "Assorted Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of assorted fireworks, containing <COMMODITY>luxury<>, <FUEL>Atlas<> and <TRADEABLE>fleshy<> variations. Ignite to create fascinating displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other327",
+    "Icon": "other/323.png",
+    "Name": "Assorted Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of assorted fireworks, containing <COMMODITY>luxury<>, <FUEL>Atlas<> and <TRADEABLE>fleshy<> variations. Ignite to create fascinating displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other328",
+    "Icon": "other/328.png",
+    "Name": "Solar Helmet",
+    "Group": "Unlockable Helmet",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nAdorned with a mesh of genuine Vesper sail, this adventurer's helm crackles with the frequency of solar winds.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other329",
+    "Icon": "other/329.png",
+    "Name": "Tentacled Cape",
+    "Group": "Unlockable Cape",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nFlow across the galaxy with this cape's lattice of fluttering tentacles, woven from regenerated cellulose fibres.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other330",
+    "Icon": "other/330.png",
+    "Name": "Cosmic Megafauna Cape",
+    "Group": "Unlockable Cape",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nIn the furthest reaches of space swim <SPECIAL>cosmic megafauna<>, aligning their paths with Travellers, dreaming of possible realities.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other331",
+    "Icon": "other/331.png",
+    "Name": "Titan Worm Cape",
+    "Group": "Unlockable Cape",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\n\"The worm lord towers above the dusty earth; its flesh becomes the sky.\"\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "008951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

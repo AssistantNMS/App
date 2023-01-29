@@ -4,8 +4,8 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class TwitchCampaignReward {
   TwitchCampaignReward({
-    this.id,
-    this.watchTimeInMin,
+    required this.id,
+    required this.watchTimeInMin,
   });
 
   final String id;
@@ -14,7 +14,7 @@ class TwitchCampaignReward {
   factory TwitchCampaignReward.fromRawJson(String str) =>
       TwitchCampaignReward.fromJson(json.decode(str));
 
-  factory TwitchCampaignReward.fromJson(Map<String, dynamic> json) =>
+  factory TwitchCampaignReward.fromJson(Map<String, dynamic>? json) =>
       TwitchCampaignReward(
         id: readStringSafe(json, 'Id'),
         watchTimeInMin: readIntSafe(json, 'WatchTimeInMin'),

@@ -244,7 +244,7 @@
         "Name": "Jetpacktanks",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "20"
+        "Value": "25"
       },
       {
         "Name": "Wiederaufladerate",
@@ -262,7 +262,7 @@
         "Name": "Sprint-Erholungszeit",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "20"
+        "Value": "40"
       }
     ],
     "ConsumableRewardTexts": []
@@ -714,7 +714,7 @@
     "Icon": "curiosities/65.png",
     "Name": "Einfacher Übersetzer",
     "Group": "Automatischer Sprachenanalysator",
-    "Description": "Eine automatische Übersetzungsvorrichtung. Sie zeichnet Gespräche in der Nähe auf und analysiert sie, ehe sie die Daten durch ein kontextuelles Lernsystem schickt, um die beabsichtigte Bedeutung zu bestimmen.\n\nDieses Einstiegsmodell verfügt über eine geringe Speicherkapazität, was die Übersetzungseffektivität limitiert.",
+    "Description": "Ein automatisches Übersetzungsgerät. Es zeichnet Gespräche in der Nähe auf und analysiert sie, ehe es die Daten durch ein kontextuelles Lernsystem schickt, um die beabsichtigte Bedeutung zu bestimmen.\n\nDieses Einstiegsmodell verfügt über eine geringe Speicherkapazität, was die Übersetzungseffektivität limitiert.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -745,7 +745,7 @@
     "Icon": "curiosities/65.png",
     "Name": "Verbesserter Übersetzer",
     "Group": "Automatischer Sprachenanalysator",
-    "Description": "Eine automatische Übersetzungsvorrichtung. Sie zeichnet Gespräche in der Nähe auf und analysiert sie, ehe sie die Daten durch ein kontextuelles Lernsystem schickt, um die beabsichtigte Bedeutung zu bestimmen.\n\nParallele Sprachprozessoren ermöglichen es, einen größeren Umfang an aufgezeichneten Sprachteilen zu übersetzen.",
+    "Description": "Ein automatisches Übersetzungsgerät. Es zeichnet Gespräche in der Nähe auf und analysiert sie, ehe es die Daten durch ein kontextuelles Lernsystem schickt, um die beabsichtigte Bedeutung zu bestimmen.\n\nParallele Sprachprozessoren ermöglichen es, einen größeren Umfang an aufgezeichneten Sprachteilen zu übersetzen.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -784,7 +784,7 @@
     "Icon": "curiosities/65.png",
     "Name": "Perfektionierter Übersetzer",
     "Group": "Automatischer Sprachenanalysator",
-    "Description": "Eine automatische Übersetzungsvorrichtung. Sie zeichnet Gespräche in der Nähe auf und analysiert sie, ehe sie die Daten durch ein kontextuelles Lernsystem schickt, um die beabsichtigte Bedeutung zu bestimmen.\n\nEin großes Speicherspektrum und übertaktete Sprachprozessoren ermöglichen Übersetzungen von großen Sprachteilen in Echtzeit.",
+    "Description": "Ein automatisches Übersetzungsgerät. Es zeichnet Gespräche in der Nähe auf und analysiert sie, ehe es die Daten durch ein kontextuelles Lernsystem schickt, um die beabsichtigte Bedeutung zu bestimmen.\n\nEin großes Speicherspektrum und übertaktete Sprachprozessoren ermöglichen Übersetzungen von großen Sprachteilen in Echtzeit.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -823,7 +823,7 @@
     "Icon": "technology/22.png",
     "Name": "Artemis‘ Übersetzer",
     "Group": "Automatischer Sprachenanalysator",
-    "Description": "Eine automatische Übersetzungsvorrichtung. Dieses Gerät muss kalibriert werden, indem es vorab mit existierenden Übersetzungsdaten gespeist wird. Für den Betrieb muss eine <STELLAR>Netzwerkverbindung zu Artemis<> hergestellt sein.\n\nOhne Zugriff auf den Host-Übersetzungsdienst ermöglicht der Schaltkreis an Bord eine limitierte Übersetzung kleiner Wortmengen in Echtzeit.",
+    "Description": "Ein automatisches Übersetzungsgerät. Dieses Gerät muss kalibriert werden, indem es vorab mit existierenden Übersetzungsdaten gespeist wird. Für den Betrieb muss eine <STELLAR>Netzwerkverbindung zu Artemis<> hergestellt sein.\n\nOhne Zugriff auf den Host-Übersetzungsdienst ermöglicht der Schaltkreis an Bord eine limitierte Übersetzung kleiner Wortmengen in Echtzeit.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -946,7 +946,7 @@
         "Value": "15"
       },
       {
-        "Name": "Manövrierfähigkeit",
+        "Name": "Manövrierfähigkeit (Raumschiff)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -1032,7 +1032,7 @@
   {
     "Id": "tech27",
     "Icon": "technology/26.png",
-    "Name": "Startsystemladegerät",
+    "Name": "Automatisches Startladesystem",
     "Group": "Raumschiff-Startsystem-Upgrade",
     "Description": "Photovoltaikmodule, die an den <TECHNOLOGY>Startschubdüsen<> von Raumschiffen angebracht werden. Dadurch werden die Schubdüsen aufgeladen, wenn das Schiff nicht in Betrieb ist.\n\nGesammeltes Licht wird verwendet, um Diwasserstoff aus der Atmosphäre zu gewinnen. Damit können die <STELLAR>Startschubdüsen automatisch wiederaufgeladen werden<>.",
     "BaseValueUnits": 1.0,
@@ -1054,7 +1054,7 @@
         "Quantity": 2
       },
       {
-        "Id": "prod115",
+        "Id": "prod116",
         "Quantity": 2
       }
     ],
@@ -2247,9 +2247,9 @@
       },
       {
         "Name": "Mineral-Analyse-Bel.",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "target",
-        "Value": "1"
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3580,7 +3580,7 @@
   {
     "Id": "tech94",
     "Icon": "technology/94.png",
-    "Name": "Exo-Fahrzeug-Signalbooster",
+    "Name": "Exo-Fahrzeug-Radar",
     "Group": "Exo-Fahrzeug-Scanausrüstung",
     "Description": "Ein großer und komplexer Subraum-Radar für den Feldeinsatz.\n\nAufgrund ihres hohen Energiekonsums und der zugehörigen subatomaren Instabilität sind sie nur in Exo-Fahrzeugen zu finden.\n\nDrücke <IMG>QUICK_MENU<> um den Signalbooster zu aktivieren.",
     "BaseValueUnits": 1.0,
@@ -3615,9 +3615,9 @@
   {
     "Id": "tech96",
     "Icon": "technology/96.png",
-    "Name": "Exo-Fahrzeug-Signalbooster-Upgrade Tau",
-    "Group": "Exo-Fahrzeug-Signalbooster-Upgrade",
-    "Description": "Ermöglicht zusätzliche Gebäudetypen, die vom Exo-Fahrzeug-Signalbooster erfasst werden können.",
+    "Name": "Radar-Leistungsresonator",
+    "Group": "Exo-Fahrzeug-Signalaufspürung-Upgrade",
+    "Description": "Ermöglicht zusätzliche Gebäudetypen, die vom Exo-Fahrzeug-Radar erfasst werden können.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -3654,7 +3654,7 @@
   {
     "Id": "tech97",
     "Icon": "technology/97.png",
-    "Name": "Exo-Fahrzeug-Beschleunigungsmodul",
+    "Name": "Exo-Fahrzeug-Booster",
     "Group": "Exo-Fahrzeug-Antriebs-Upgrade",
     "Description": "Ein effizienter Plasmainjektor, der an den Antrieb gekoppelt ist und kurze Geschwindigkeitsschübe ermöglicht.",
     "BaseValueUnits": 1.0,
@@ -3750,7 +3750,7 @@
   {
     "Id": "tech99",
     "Icon": "technology/99.png",
-    "Name": "Exo-Fahrzeug-Minenlaser-Upgrade Sigma",
+    "Name": "Fortgeschrittener Exo-Fahrzeug-Laser",
     "Group": "Exo-Fahrzeug-Bergbau-Upgrade",
     "Description": "Erhöht die Energie des Exo-Fahrzeug-Minenlasers.",
     "BaseValueUnits": 1.0,
@@ -3791,7 +3791,7 @@
   {
     "Id": "tech100",
     "Icon": "technology/100.png",
-    "Name": "Exo-Fahrzeug-Bordkanone",
+    "Name": "Bordkanone",
     "Group": "Exo-Fahrzeug-Waffenaufsatz",
     "Description": "Durch den hohen Energiebedarf dieser mächtigen Waffe muss sie zum Abfeuern an einem Exo-Fahrzeug montiert sein.",
     "BaseValueUnits": 1.0,
@@ -5918,7 +5918,7 @@
   },
   {
     "Id": "tech166",
-    "Icon": "technology/28.png",
+    "Icon": "technology/166.png",
     "Name": "Materiestrahl",
     "Group": "Frachterteleportationsgerät",
     "Description": "Ein Gerät, das Standard-Kommunikationssignale eines Frachters umwandelt, um den <TECHNOLOGY>interplanetaren Transport von Materie<> und Daten zu ermöglichen.\n\nFrachter, die mit einem solchen Gerät ausgestattet sind, können in Verbindung mit einem <STELLAR>Exo-Anzug<> Produkte und Substanzen über <STELLAR>weite Distanzen<> schicken und erhalten.",
@@ -6253,9 +6253,9 @@
   {
     "Id": "tech174",
     "Icon": "technology/96.png",
-    "Name": "Fortgeschrittener Signalbooster",
-    "Group": "Exo-Fahrzeug-Signalbooster-Upgrade",
-    "Description": "Ermöglicht zusätzliche Gebäudetypen, die vom Exo-Fahrzeug-Signalbooster erfasst werden können.",
+    "Name": "Radarverstärker",
+    "Group": "Exo-Fahrzeug-Signalaufspürung-Upgrade",
+    "Description": "Ermöglicht zusätzliche Gebäudetypen, die vom Exo-Fahrzeug-Radar erfasst werden können.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -6658,7 +6658,7 @@
     "Icon": "technology/1.png",
     "Name": "Umweltkontrolleinheit",
     "Group": "Exo-Fahrzeug-Gefahrenschutz-Einheit",
-    "Description": "Ein leistungsstarkes Umwelt-Neutralisierungssystem verbindet sich direkt mit dem Piloten des Minotaurus, wenn dieser die Kontrolle über das Fahrzeug übernimmt. Das System wird von der Hauptantriebseinheit des Minotaurus versorgt und erfordert keine weiteren Eingaben durch den Benutzer. Um die Verbindungsstelle herum kann es zu leichten Schmerzen kommen.\n\nSchützt den Piloten des Minotaurus effektiv vor <STELLAR>allen Umweltgefahren<>.",
+    "Description": "Dieses leistungsstarke Umwelt-Neutralisierungssystem verbindet sich direkt beim Betreten des Cockpits mit dem Piloten. Das System wird vom Hauptantrieb des Minotaurus versorgt und erfordert keine weiteren Eingaben. Um die Verbindungsstelle herum kann es zu leichten Schmerzen kommen.\n\nSchützt den Piloten des Minotaurus effektiv vor <STELLAR>allen Umweltgefahren<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -6955,7 +6955,7 @@
         "Value": "100"
       },
       {
-        "Name": "Manövrierfähigkeit",
+        "Name": "Manövrierfähigkeit (Raumschiff)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "25"
@@ -6965,7 +6965,7 @@
   },
   {
     "Id": "tech189",
-    "Icon": "other/148.png",
+    "Icon": "building/945.png",
     "Name": "Rasterverschiebungskatapult",
     "Group": "Illegal modifizierter Warpantrieb",
     "Description": "Dieser experimentelle Antrieb erweitert die konventionelle <TECHNOLOGY>Hyperantrieb<>-Technologie, indem die lokale Geometrie zum Zeitpunkt der Warp-Initialisierung verzerrt wird und so die <STELLAR>Reichweite<> und <STELLAR>Effizienz<> weit über Standardantriebe hinaus steigert.\n\nEs wird empfohlen, über die <STELLAR>Galaktische Karte<> auf die Hyperantriebssysteme zuzugreifen.",
@@ -7091,7 +7091,7 @@
   {
     "Id": "tech192",
     "Icon": "technology/192.png",
-    "Name": "Archivüberschreibungs-Implantat",
+    "Name": "Archivumgehungs-Implantat",
     "Group": "Subkutaner Zugangsschaltkreis",
     "Description": "Eine <TECHNOLOGY>biotechnische Firewall<>, entwickelt als Schutzvorrichtung vor textlichen Erkenntnisgefahren. Es ist mit etwas Glitschigem überzogen und hat angefangen, an der Oberfläche zu brodeln.\n\nUnter die Haut eingelassen gewährleistet es administrativen Zugang zu uralten verbotenen Texten, die in ein <SPECIAL>planetares Archiv<> eingebunden sind.\n<FUEL>Warnung<>: Löse die verbotenen Texte nicht ab. Der Umgang mit verbotenen Texten birgt extreme Risiken!",
     "BaseValueUnits": 1.0,
@@ -7832,7 +7832,7 @@
   {
     "Id": "tech212",
     "Icon": "technology/212.png",
-    "Name": "Linker Wächter-Hartgestellarm",
+    "Name": "Hartgestell-Arm Links",
     "Group": "Minotaurus-Gliedmaßenersatz",
     "Description": "Eine Sammlung geborgener Komponenten eines Wächter-Hartgestells, die für den <TECHNOLOGY>Minotaurus<>-Exo-Fahrzeug-Hybrid umgebaut wurden.\n\nWerden sie zusammen mit einem <TECHNOLOGY>Minotaurus-Laser<> verbaut, wandelt dies den Minenlaser in ein <STELLAR>mächtiges Kampf-Upgrade<> um, das <TECHNOLOGY>betäubten<> Einheiten schweren Schaden zufügen kann.",
     "BaseValueUnits": 1.0,
@@ -7896,7 +7896,7 @@
   {
     "Id": "tech213",
     "Icon": "technology/213.png",
-    "Name": "Rechter Wächter-Hartgestellarm",
+    "Name": "Hartgestell-Arm Rechts",
     "Group": "Minotaurus-Gliedmaßenersatz",
     "Description": "Eine Sammlung geborgener Komponenten eines Wächter-Hartgestells, die für den <TECHNOLOGY>Minotaurus<>-Exo-Fahrzeug-Hybrid umgebaut wurden.\n\nDiese Gliedmaßenüberbrückung fungiert als <STELLAR>eigenständiges Kampfsystem<>. Es verschießt Hochgeschwindigkeits-<TECHNOLOGY>Betäubungsprojektile<> und dient als hervorragende Unterstützungswaffe für die primäre Kanone des Minotaurus.\n\nWechsle mit <IMG>CYCLEWEAPON<> die verfügbaren Waffenmodi.",
     "BaseValueUnits": 1.0,
@@ -7948,7 +7948,7 @@
   {
     "Id": "tech214",
     "Icon": "technology/214.png",
-    "Name": "Wächter-Hartgestellbeine",
+    "Name": "Hartgestell-Beine",
     "Group": "Minotaurus-Gliedmaßenersatz",
     "Description": "Eine Sammlung geborgener Komponenten eines Wächter-Hartgestells, die für den <TECHNOLOGY>Minotaurus<>-Exo-Fahrzeug-Hybrid umgebaut wurden.\n\nDie Installation wird den <TECHNOLOGY>Antrieb und die Mobilitäts<>systeme des Minotaurus erheblich verbessern.",
     "BaseValueUnits": 1.0,
@@ -7990,7 +7990,7 @@
   {
     "Id": "tech215",
     "Icon": "technology/215.png",
-    "Name": "Wächter-Hartgestellkörper",
+    "Name": "Hartgestell-Rumpf",
     "Group": "Minotaurus-Kernersatz",
     "Description": "Eine Sammlung geborgener Komponenten eines Wächter-Hartgestells, die für den <TECHNOLOGY>Minotaurus<>-Exo-Fahrzeug-Hybrid umgebaut wurden.\n\nFunktioniert als halbautonomes, <TECHNOLOGY>künstliches Piloten-Plugin<>. Die Installation ermöglicht es dem Minotaurus, <STELLAR>selbständig Planeten zu bereisen<> und sich an <STELLAR>Kampfhandlungen<> oder <STELLAR>Bergbauaktivitäten<> zu beteiligen, um seinen primären Anwender zu unterstützen.\n\nDer KI-Pilot gibt die Kontrolle immer an den primären Anwender ab, wenn dieser das Cockpit betritt.",
     "BaseValueUnits": 1.0,
@@ -8138,7 +8138,7 @@
         "Value": "15"
       },
       {
-        "Name": "Manövrierfähigkeit",
+        "Name": "Manövrierfähigkeit (Raumschiff)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8216,7 +8216,7 @@
         "Value": "0.6"
       },
       {
-        "Name": "Manövrierfähigkeit",
+        "Name": "Manövrierfähigkeit (Raumschiff)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8435,6 +8435,47 @@
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech228",
+    "Icon": "technology/228.png",
+    "Name": "Handelsrakete",
+    "Group": "Rufvorrichtung für Handelsraketen",
+    "Description": "Ein persönliches Raketengerät mit direkter Verbindung zum <TECHNOLOGY>galaktischen Handelsnetzwerk<>. Mit dieser Einheit kann der Benutzer ein kleines Raumschiff mit Gütern beladen. Nach dem Start werden die Güter zum nächsten Handelsterminus transportiert und <STELLAR>automatisch verkauft<>.\n\n<STELLAR>Rufe<> die Handelsrakete mit <IMG>QUICK_MENU<> herbei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw7",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Handelsrakete",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

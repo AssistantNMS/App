@@ -5,6 +5,7 @@ import 'package:get_it/get_it.dart';
 import '../../services/base/languageService.dart';
 import '../env/environmentSettings.dart';
 import '../services/api/communityApiService.dart';
+import '../services/api/community_mission_progress_api_service.dart';
 import '../services/api/contributorApiService.dart';
 import '../services/api/guideApiService.dart';
 import '../services/api/helloGamesApiService.dart';
@@ -24,7 +25,6 @@ import '../services/json/AlienPuzzleRepository.dart';
 import '../services/json/AlienPuzzleRewardsJsonRepository.dart';
 import '../services/json/CreatureHarvestJsonRepository.dart';
 import '../services/json/DataJsonRepository.dart';
-import '../services/json/ExploitJsonRepository.dart';
 import '../services/json/FactionJsonRepository.dart';
 import '../services/json/GenericJsonRepository.dart';
 import '../services/json/RechargeJsonRepository.dart';
@@ -36,7 +36,6 @@ import '../services/json/interface/IAlienPuzzleJsonRepository.dart';
 import '../services/json/interface/IAlienPuzzleRewardsJsonRepository.dart';
 import '../services/json/interface/ICreatureHarvestJsonRepository.dart';
 import '../services/json/interface/IDataJsonRepository.dart';
-import '../services/json/interface/IExploitRepository.dart';
 import '../services/json/interface/IFactionJsonRepository.dart';
 import '../services/json/interface/IGenericRepository.dart';
 import '../services/json/interface/IRechargeJsonRepository.dart';
@@ -71,7 +70,6 @@ void initDependencyInjection(EnvironmentSettings _env) {
   getIt.registerFactoryParam<IRefineryRepository, LocaleKey, bool>(
     (LocaleKey key, bool isRefiner) => RefineryJsonRepository(key, isRefiner),
   );
-  getIt.registerSingleton<IExploitRepository>(ExploitJsonRepository());
   getIt.registerSingleton<IDataJsonRepository>(DataJsonRepository());
   getIt.registerSingleton<ITechTreeJsonRepository>(TechTreeJsonRepository());
   getIt.registerSingleton<IRechargeJsonRepository>(RechargeJsonRepository());
@@ -97,11 +95,13 @@ void initDependencyInjection(EnvironmentSettings _env) {
   getIt.registerSingleton<CommunityApiService>(CommunityApiService());
   getIt.registerSingleton<HelloGamesApiService>(HelloGamesApiService());
   getIt.registerSingleton<ContributorApiService>(ContributorApiService());
+  getIt.registerSingleton<CommunityMissionProgressApiService>(
+      CommunityMissionProgressApiService());
 }
 
 EnvironmentSettings getEnv() => getIt<EnvironmentSettings>();
 
-IGenericRepository getGenericRepo(LocaleKey key) =>
+IGenericRepository getGenericRepo(LocaleKey? key) =>
     getIt<IGenericRepository>(param1: key, param2: 'di');
 
 IRefineryRepository getProcessorRepo(bool isRefiner) =>
@@ -111,7 +111,6 @@ IRefineryRepository getRefinerRepo() =>
 IRefineryRepository getNutrientRepo() => getIt<IRefineryRepository>(
     param1: LocaleKey.nutrientProcessorJson, param2: false);
 
-IExploitRepository getExploitRepo() => getIt<IExploitRepository>();
 IDataJsonRepository getDataRepo() => getIt<IDataJsonRepository>();
 ITechTreeJsonRepository getTechTreeRepo() => getIt<ITechTreeJsonRepository>();
 IRechargeJsonRepository getRechargeRepo() => getIt<IRechargeJsonRepository>();
@@ -137,3 +136,5 @@ CommunityApiService getCommunityApiService() => getIt<CommunityApiService>();
 HelloGamesApiService getHelloGamesApiService() => getIt<HelloGamesApiService>();
 ContributorApiService getContributorApiService() =>
     getIt<ContributorApiService>();
+CommunityMissionProgressApiService getCommunityMissionProgressApiService() =>
+    getIt<CommunityMissionProgressApiService>();

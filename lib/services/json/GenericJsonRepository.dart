@@ -1,9 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:flutter/material.dart';
 
 import '../../contracts/genericPageItem.dart';
-import '../../contracts/itemBaseDetail.dart';
-
-import '../../mapper/GenericItemMapper.dart';
 
 import 'interface/IGenericRepository.dart';
 
@@ -13,30 +11,40 @@ class GenericJsonRepository extends BaseJsonService
   GenericJsonRepository(this.detailsJsonLocale);
   //
   @override
-  Future<ResultWithValue<List<GenericPageItem>>> getAll(context) async {
+  Future<ResultWithValue<List<GenericPageItem>>> getAll(
+      BuildContext context) async {
     String detailJson = getTranslations().fromKey(detailsJsonLocale);
     try {
       List responseDetailsJson = await getListfromJson(context, detailJson);
-      List<ItemBaseDetail> detailedItems =
-          responseDetailsJson.map((m) => ItemBaseDetail.fromJson(m)).toList();
+      List<GenericPageItem> detailedItems = responseDetailsJson //
+          .map((m) => GenericPageItem.fromJson(m))
+          .toList();
 
-      return ResultWithValue<List<GenericPageItem>>(
-          true, mapGenericPageItems(context, detailedItems), '');
+      return ResultWithValue<List<GenericPageItem>>(true, detailedItems, '');
     } catch (exception) {
       getLog()
           .e("GenericJsonRepo($detailJson) Exception: ${exception.toString()}");
       return ResultWithValue<List<GenericPageItem>>(
-          false, List.empty(growable: true), exception.toString());
+        false,
+        List.empty(),
+        exception.toString(),
+      );
     }
   }
 
   @override
-  Future<ResultWithValue<GenericPageItem>> getById(context, String id) async {
+  Future<ResultWithValue<GenericPageItem>> getById(
+    BuildContext context,
+    String id,
+  ) async {
     ResultWithValue<List<GenericPageItem>> allGenericItemsResult =
         await getAll(context);
     if (allGenericItemsResult.hasFailed) {
-      return ResultWithValue(
-          false, GenericPageItem(), allGenericItemsResult.errorMessage);
+      return ResultWithValue<GenericPageItem>(
+        false,
+        GenericPageItem.fromJson(<String, dynamic>{}),
+        allGenericItemsResult.errorMessage,
+      );
     }
     try {
       GenericPageItem selectedGeneric =
@@ -47,13 +55,18 @@ class GenericJsonRepository extends BaseJsonService
       getLog().e(
           "GenericJsonRepo($detailsJsonLocale) - getById - $id - Exception: ${exception.toString()}");
       return ResultWithValue<GenericPageItem>(
-          false, GenericPageItem(), exception.toString());
+        false,
+        GenericPageItem.fromJson(<String, dynamic>{}),
+        exception.toString(),
+      );
     }
   }
 
   @override
   Future<ResultWithValue<List<GenericPageItem>>> getByInputsId(
-      context, String id) async {
+    BuildContext context,
+    String id,
+  ) async {
     ResultWithValue<List<GenericPageItem>> allGenericItemsResult =
         await getAll(context);
     if (allGenericItemsResult.hasFailed) {
@@ -62,14 +75,19 @@ class GenericJsonRepository extends BaseJsonService
     }
     try {
       var craftableItems = allGenericItemsResult.value
-          .where((r) => r.requiredItems.any((ri) => ri.id == id))
+          .where((r) => (r.requiredItems ?? List.empty()) //
+                  .any((ri) => ri.id == id) //
+              )
           .toList();
       return ResultWithValue<List<GenericPageItem>>(true, craftableItems, '');
     } catch (exception) {
       getLog().e(
           "GenericJsonRepo($detailsJsonLocale) - getByInputsId - $id - Exception: ${exception.toString()}");
       return ResultWithValue<List<GenericPageItem>>(
-          false, List.empty(growable: true), exception.toString());
+        false,
+        List.empty(growable: true),
+        exception.toString(),
+      );
     }
   }
 }

@@ -1,6 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../genericPageItem.dart';
 import '../requiredItem.dart';
 
 class CartItem {
@@ -8,29 +7,37 @@ class CartItem {
   String id;
   String icon;
   String colour;
-  List<RequiredItem> requiredItems;
   int quantity;
+  List<RequiredItem>? requiredItems;
 
-  CartItem({GenericPageItem pageItem, this.quantity}) {
-    typeName = pageItem.typeName;
-    id = pageItem.id;
-    icon = pageItem.icon;
-    colour = pageItem.colour;
-    requiredItems = pageItem.requiredItems;
-  }
+  CartItem({
+    required this.typeName,
+    required this.id,
+    required this.icon,
+    required this.colour,
+    required this.quantity,
+    required this.requiredItems,
+  });
 
-  factory CartItem.fromJson(Map<String, dynamic> json) => CartItem(
-      pageItem: GenericPageItem.fromJson(json["pageItem"]),
-      quantity: readIntSafe(json, 'quantity'));
+  factory CartItem.fromJson(Map<String, dynamic>? json) => CartItem(
+        typeName: readStringSafe(json, 'typeName'),
+        id: readStringSafe(json, 'id'),
+        icon: readStringSafe(json, 'icon'),
+        colour: readStringSafe(json, 'colour'),
+        quantity: readIntSafe(json, 'quantity'),
+        requiredItems: readListSafe(
+          json,
+          'requiredItems',
+          (x) => RequiredItem.fromJson(x),
+        ),
+      );
 
   Map<String, dynamic> toJson() => {
-        'pageItem': GenericPageItem(
-          typeName: typeName,
-          id: id,
-          icon: icon,
-          colour: colour,
-          requiredItems: requiredItems,
-        ).toJson(),
-        'quantity': quantity
+        'typeName': typeName,
+        'id': id,
+        'icon': icon,
+        'colour': colour,
+        'quantity': quantity,
+        'requiredItems': requiredItems,
       };
 }

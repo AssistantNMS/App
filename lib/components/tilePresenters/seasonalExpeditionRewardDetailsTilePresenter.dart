@@ -1,5 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
+import 'package:collection/collection.dart';
 
 import '../../constants/AppImage.dart';
 import '../../constants/NmsUIConstants.dart';
@@ -17,17 +18,10 @@ Widget seasonalExpeditionRewardDetailTilePresenter(
   List<RequiredItemDetails> rewardLookups, {
   bool showBackgroundColours = true,
 }) {
-  RequiredItemDetails reward = rewardLookups.firstWhere(
+  RequiredItemDetails? reward = rewardLookups.firstWhereOrNull(
     (r) => r.id == expReward.id,
-    orElse: () => null,
   );
-  String rewardIcon = reward.icon;
-  String rewardName = reward.name;
 
-  if (expReward.type == ExpeditionRewardType.JetpackBoost) {
-    rewardIcon = '${AppImage.base}technology/5.png';
-    rewardName = getTranslations().fromKey(LocaleKey.jetpackBoost);
-  }
   if (reward == null) {
     return genericListTile(
       context,
@@ -36,7 +30,15 @@ Widget seasonalExpeditionRewardDetailTilePresenter(
     );
   }
 
-  String subtitleText = '${expReward.amountMin} => ${expReward.amountMax}';
+  String rewardIcon = reward.icon;
+  String rewardName = reward.name;
+
+  if (expReward.type == ExpeditionRewardType.JetpackBoost) {
+    rewardIcon = '${AppImage.base}technology/5.png';
+    rewardName = getTranslations().fromKey(LocaleKey.jetpackBoost);
+  }
+
+  String? subtitleText = '${expReward.amountMin} => ${expReward.amountMax}';
   if (expReward.amountMin == expReward.amountMax) {
     subtitleText =
         "${getTranslations().fromKey(LocaleKey.quantity)}: ${expReward.amountMin.toString()}";
@@ -70,8 +72,9 @@ Widget seasonalExpeditionRewardDetailTilePresenter(
   ListTile tile = genericListTileWithSubtitle(
     context,
     leadingImage: rewardIcon,
-    name: rewardName ?? getTranslations().fromKey(LocaleKey.unknown),
+    name: rewardName,
     borderRadius: NMSUIConstants.gameItemBorderRadius,
+    // ignore: dead_null_aware_expression
     subtitle: addPadding ? null : Text(subtitleText ?? ''),
     imageBackgroundColour: showBackgroundColours ? reward.colour : null,
     onTap: () async {

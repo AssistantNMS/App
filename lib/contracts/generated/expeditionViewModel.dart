@@ -8,17 +8,17 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class ExpeditionViewModel {
   ExpeditionViewModel({
-    this.guid,
-    this.name,
-    this.link,
-    this.imageUrl,
-    this.startDate,
-    this.endDate,
+    required this.guid,
+    required this.name,
+    required this.link,
+    required this.imageUrl,
+    required this.startDate,
+    required this.endDate,
   });
 
   String guid;
   String name;
-  String link;
+  String? link;
   String imageUrl;
   DateTime startDate;
   DateTime endDate;
@@ -26,7 +26,7 @@ class ExpeditionViewModel {
   factory ExpeditionViewModel.fromRawJson(String str) =>
       ExpeditionViewModel.fromJson(json.decode(str));
 
-  factory ExpeditionViewModel.fromJson(Map<String, dynamic> json) =>
+  factory ExpeditionViewModel.fromJson(Map<String, dynamic>? json) =>
       ExpeditionViewModel(
         guid: readStringSafe(json, 'guid'),
         name: readStringSafe(json, 'name'),

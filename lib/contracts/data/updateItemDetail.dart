@@ -4,6 +4,8 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class UpdateItemDetail {
   String guid;
   String name;
@@ -11,10 +13,10 @@ class UpdateItemDetail {
   List<String> itemIds;
 
   UpdateItemDetail({
-    this.guid,
-    this.name,
-    this.date,
-    this.itemIds,
+    required this.guid,
+    required this.name,
+    required this.date,
+    required this.itemIds,
   });
 
   factory UpdateItemDetail.fromRawJson(String str) =>
@@ -22,12 +24,12 @@ class UpdateItemDetail {
 
   String toRawJson() => json.encode(toJson());
 
-  factory UpdateItemDetail.fromJson(Map<String, dynamic> json) =>
+  factory UpdateItemDetail.fromJson(Map<String, dynamic>? json) =>
       UpdateItemDetail(
-        guid: json["guid"],
-        name: json["name"],
-        date: json["date"],
-        itemIds: List<String>.from(json["itemIds"].map((x) => x)),
+        guid: readStringSafe(json, 'guid'),
+        name: readStringSafe(json, 'name'),
+        date: readStringSafe(json, 'date'),
+        itemIds: readStringListSafe(json, 'itemIds'),
       );
 
   Map<String, dynamic> toJson() => {

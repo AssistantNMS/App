@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 enum HomepageType { allItemsList, custom, catalogue }
 
-HomepageType getHomepageTypeFomrInt(int value) {
+HomepageType getHomepageTypeFomrInt(int? value) {
   if (value == null) return HomepageType.allItemsList;
 
   switch (value) {
@@ -17,7 +17,7 @@ HomepageType getHomepageTypeFomrInt(int value) {
   }
 }
 
-LocaleKey getLocaleFromHomepageType(HomepageType type) {
+LocaleKey getLocaleFromHomepageType(HomepageType? type) {
   if (type == null) return LocaleKey.unknown;
 
   switch (type) {

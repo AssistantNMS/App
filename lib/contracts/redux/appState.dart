@@ -23,36 +23,28 @@ class AppState {
   final JourneyMilestoneState journeyMilestoneState;
 
   const AppState({
-    this.cartState,
-    this.portalState,
-    this.settingState,
-    this.inventoryState,
-    this.favouriteState,
-    this.timerState,
-    this.titleState,
-    this.expeditionState,
-    this.journeyMilestoneState,
+    required this.cartState,
+    required this.portalState,
+    required this.settingState,
+    required this.inventoryState,
+    required this.favouriteState,
+    required this.timerState,
+    required this.titleState,
+    required this.expeditionState,
+    required this.journeyMilestoneState,
   });
 
-  factory AppState.fromJson(Map<String, dynamic> json) {
-    CartState cartState = //
-        CartState.fromJson(json['cartState']);
-    PortalState portalState = //
-        PortalState.fromJson(json['portalState']);
-    SettingState settingState = //
-        SettingState.fromJson(json['settingState']);
-    InventoryState inventoryState = //
-        InventoryState.fromJson(json['inventoryState']);
-    FavouriteState favouriteState = //
-        FavouriteState.fromJson(json['favouriteState']);
-    TimerState timerState = //
-        TimerState.fromJson(json['timerState']);
-    TitleState titleState = //
-        TitleState.fromJson(json['titleState']);
-    ExpeditionState expeditionState = //
-        ExpeditionState.fromJson(json['expeditionState']);
-    JourneyMilestoneState jmState = //
-        JourneyMilestoneState.fromJson(json['journeyMilestoneState']);
+  factory AppState.fromJson(Map<String, dynamic>? json) {
+    var cartState = CartState.fromJson(json?['cartState']);
+    var portalState = PortalState.fromJson(json?['portalState']);
+    var settingState = SettingState.fromJson(json?['settingState']);
+    var inventoryState = InventoryState.fromJson(json?['inventoryState']);
+    var favouriteState = FavouriteState.fromJson(json?['favouriteState']);
+    var timerState = TimerState.fromJson(json?['timerState']);
+    var titleState = TitleState.fromJson(json?['titleState']);
+    var expeditionState = ExpeditionState.fromJson(json?['expeditionState']);
+    var jmState =
+        JourneyMilestoneState.fromJson(json?['journeyMilestoneState']);
 
     return AppState(
       cartState: cartState,
@@ -82,26 +74,27 @@ class AppState {
   }
 
   AppState copyWith({
-    CartState cartState,
-    PortalState portalState,
-    SettingState settingState,
-    InventoryState inventoryState,
-    FavouriteState favouriteState,
-    TimerState timerState,
-    TitleState titleState,
-    ExpeditionState expeditionState,
-    JourneyMilestoneState journeyMState,
+    CartState? cartState,
+    PortalState? portalState,
+    SettingState? settingState,
+    InventoryState? inventoryState,
+    FavouriteState? favouriteState,
+    TimerState? timerState,
+    TitleState? titleState,
+    ExpeditionState? expeditionState,
+    JourneyMilestoneState? journeyMilestoneState,
   }) {
     return AppState(
-      cartState: cartState ?? cartState,
-      portalState: portalState ?? portalState,
-      settingState: settingState ?? settingState,
-      inventoryState: inventoryState ?? inventoryState,
-      favouriteState: favouriteState ?? favouriteState,
-      timerState: timerState ?? timerState,
-      titleState: titleState ?? titleState,
-      expeditionState: expeditionState ?? expeditionState,
-      journeyMilestoneState: journeyMState ?? journeyMilestoneState,
+      cartState: cartState ?? this.cartState,
+      portalState: portalState ?? this.portalState,
+      settingState: settingState ?? this.settingState,
+      inventoryState: inventoryState ?? this.inventoryState,
+      favouriteState: favouriteState ?? this.favouriteState,
+      timerState: timerState ?? this.timerState,
+      titleState: titleState ?? this.titleState,
+      expeditionState: expeditionState ?? this.expeditionState,
+      journeyMilestoneState:
+          journeyMilestoneState ?? this.journeyMilestoneState,
     );
   }
 

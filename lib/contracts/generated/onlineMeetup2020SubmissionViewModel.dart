@@ -4,15 +4,17 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class OnlineMeetup2020SubmissionViewModel {
   OnlineMeetup2020SubmissionViewModel({
-    this.guid,
-    this.userName,
-    this.userImage,
-    this.text,
-    this.imageUrl,
-    this.externalUrl,
-    this.sortRank,
+    required this.guid,
+    required this.userName,
+    required this.userImage,
+    required this.text,
+    required this.imageUrl,
+    required this.externalUrl,
+    required this.sortRank,
   });
 
   String guid;
@@ -27,14 +29,14 @@ class OnlineMeetup2020SubmissionViewModel {
       OnlineMeetup2020SubmissionViewModel.fromJson(json.decode(str));
 
   factory OnlineMeetup2020SubmissionViewModel.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic>? json) =>
       OnlineMeetup2020SubmissionViewModel(
-        guid: json["guid"],
-        userName: json["userName"],
-        userImage: json["userImage"],
-        text: json["text"],
-        imageUrl: json["imageUrl"],
-        externalUrl: json["externalUrl"],
-        sortRank: json["sortRank"],
+        guid: readStringSafe(json, 'guid'),
+        userName: readStringSafe(json, 'userName'),
+        userImage: readStringSafe(json, 'userImage'),
+        text: readStringSafe(json, 'text'),
+        imageUrl: readStringSafe(json, 'imageUrl'),
+        externalUrl: readStringSafe(json, 'externalUrl'),
+        sortRank: readIntSafe(json, 'sortRank'),
       );
 }

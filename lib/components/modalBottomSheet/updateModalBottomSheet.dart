@@ -8,7 +8,7 @@ import '../../integration/dependencyInjection.dart';
 import '../../pages/newItemsInUpdate/majorUpdatesDetailPage.dart';
 
 class UpdateBottomSheet extends StatelessWidget {
-  const UpdateBottomSheet({Key key}) : super(key: key);
+  const UpdateBottomSheet({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,28 +16,29 @@ class UpdateBottomSheet extends StatelessWidget {
       future: getDataRepo().getLatestMajorUpdate(context),
       builder: (BuildContext context,
           AsyncSnapshot<ResultWithValue<MajorUpdateItem>> snapshot) {
-        Widget errorWidget = asyncSnapshotHandler(
+        Widget? errorWidget = asyncSnapshotHandler(
           context,
           snapshot,
           loader: getLoading().loadingIndicator,
         );
         if (errorWidget != null) return errorWidget;
 
+        ResultWithValue<MajorUpdateItem> result = snapshot.data!;
+
         List<Widget Function()> widgets = [
-          () => localImage(
-                snapshot.data.value.icon,
+          () => LocalImage(
+                imagePath: result.value.icon,
                 padding: const EdgeInsets.all(0),
                 boxfit: BoxFit.fill,
               ),
           () => Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: positiveButton(
-                  context,
+                child: PositiveButton(
                   title: getTranslations().fromKey(LocaleKey.viewItemsAdded),
-                  onPress: () => getNavigation().navigateAsync(
+                  onTap: () => getNavigation().navigateAsync(
                     context,
                     navigateTo: (context) => MajorUpdatesDetailPage(
-                      updateNewItems: snapshot.data.value,
+                      updateNewItems: result.value,
                     ),
                   ),
                 ),

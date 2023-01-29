@@ -6,6 +6,9 @@ class RefinerRecipePageData {
   List<RequiredItemDetails> inputsDetails;
   List<Processor> similarRefiners;
 
-  RefinerRecipePageData(
-      {this.outputDetail, this.inputsDetails, this.similarRefiners});
+  RefinerRecipePageData({
+    required this.outputDetail,
+    required this.inputsDetails,
+    required this.similarRefiners,
+  });
 }

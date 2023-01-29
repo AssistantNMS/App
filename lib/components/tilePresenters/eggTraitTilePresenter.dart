@@ -10,8 +10,10 @@ Widget eggTraitTilePresenter(BuildContext context, EggTrait eggTrait) {
     leadingImage: genericTileImage('other/93.png'),
     title: getTranslations().fromString(eggTrait.traitType),
     subtitle: Text(getTranslations().fromString(eggTrait.trait)),
-    trailing: localImage(
-      eggTrait.isPositiveEffect ? AppImage.companionInc : AppImage.companionDec,
+    trailing: LocalImage(
+      imagePath: eggTrait.isPositiveEffect
+          ? AppImage.companionInc
+          : AppImage.companionDec,
       width: 36,
       height: 36,
     ),

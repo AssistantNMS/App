@@ -22,4 +22,8 @@ class ApiUrls {
   static const String nmsfm = "nmsfm";
   static const String communityMissionProgress = "CommunityMissionProgress";
   static const String nomNomInv = "NomNom/inventory";
+  static const String communitySearch = "CommunityLink/NMSCD";
+  static const String communitySearchChips = "CommunityLink/NMSCD-Chips";
+  static const String communityMissionProgressByMission =
+      "CommunityMissionProgress/progressByMission/";
 }

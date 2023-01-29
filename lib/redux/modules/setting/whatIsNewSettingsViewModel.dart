@@ -7,7 +7,7 @@ class WhatIsNewSettingsViewModel {
   final String selectedLanguage;
 
   WhatIsNewSettingsViewModel({
-    this.selectedLanguage,
+    required this.selectedLanguage,
   });
 
   static WhatIsNewSettingsViewModel fromStore(Store<AppState> store) =>

@@ -33,7 +33,7 @@ if (releaseKeystorePropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -99,9 +99,6 @@ dependencies {
     
     // Android 12 bugfix
     implementation "androidx.work:work-runtime-ktx:2.8.0-alpha01"
-    
-    //android support? 🤷‍
-    compile 'com.android.support:support-annotations:28.0.0'
     
     // firebase
     implementation 'com.google.firebase:firebase-analytics:17.4.1'

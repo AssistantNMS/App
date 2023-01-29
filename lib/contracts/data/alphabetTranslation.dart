@@ -8,8 +8,8 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class AlphabetTranslation {
   AlphabetTranslation({
-    this.appId,
-    this.text,
+    required this.appId,
+    required this.text,
   });
 
   String appId;
@@ -18,7 +18,7 @@ class AlphabetTranslation {
   factory AlphabetTranslation.fromRawJson(String str) =>
       AlphabetTranslation.fromJson(json.decode(str));
 
-  factory AlphabetTranslation.fromJson(Map<String, dynamic> json) =>
+  factory AlphabetTranslation.fromJson(Map<String, dynamic>? json) =>
       AlphabetTranslation(
         appId: readStringSafe(json, "AppId"),
         text: readStringSafe(json, "Text"),

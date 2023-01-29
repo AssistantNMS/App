@@ -6,7 +6,8 @@ import '../../contracts/data/updateItemDetail.dart';
 import '../../pages/newItemsInUpdate/newItemDetailsPage.dart';
 
 Widget updateNewItemsTilePresenter(
-    BuildContext context, UpdateItemDetail updateNewItems) {
+    BuildContext context, UpdateItemDetail updateNewItems,
+    {void Function()? onTap}) {
   return genericListTileWithSubtitle(
     context,
     leadingImage: null,

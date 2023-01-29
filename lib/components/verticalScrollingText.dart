@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class VerticalScrollingText extends StatefulWidget {
   final Duration duration;
-  final TextStyle textItemStyle;
+  final TextStyle? textItemStyle;
   final List<String> textItems;
-  final Widget Function(String) textDisplayer;
+  final Widget Function(String)? textDisplayer;
   const VerticalScrollingText(
     this.textItems, {
-    Key key,
+    Key? key,
     this.duration = const Duration(seconds: 2),
     this.textDisplayer,
     this.textItemStyle,
@@ -18,7 +18,7 @@ class VerticalScrollingText extends StatefulWidget {
 
 class _VerticalScrollingTextWidget extends State<VerticalScrollingText>
     with TickerProviderStateMixin {
-  AnimationController _animationController;
+  late AnimationController _animationController;
   final Curve _animationCurve = const Interval(
     0.3,
     0.7,
@@ -60,7 +60,7 @@ class _VerticalScrollingTextWidget extends State<VerticalScrollingText>
       child: Stack(
         children: [
           for (int textItemIndex = 0;
-              textItemIndex < (widget.textItems ?? []).length;
+              textItemIndex < widget.textItems.length;
               textItemIndex++)
             FractionalTranslation(
               translation: Offset(

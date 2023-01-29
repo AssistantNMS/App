@@ -9,7 +9,7 @@ import '../../helpers/updateHelper.dart';
 import 'allItemsPageComponent.dart';
 
 class DefaultHomePage extends StatefulWidget {
-  const DefaultHomePage({Key key}) : super(key: key);
+  const DefaultHomePage({Key? key}) : super(key: key);
 
   @override
   _DefaultHomePageState createState() => _DefaultHomePageState();
@@ -24,9 +24,9 @@ class _DefaultHomePageState extends State<DefaultHomePage>
   Widget build(BuildContext context) {
     return basicGenericPageScaffold(
       context,
-      appBar: homePageAppBar(getTranslations().fromKey(LocaleKey.title)),
+      appBar: HomePageAppBar(getTranslations().fromKey(LocaleKey.title)),
       drawer: const AppDrawer(),
-      body: const AllItemsPageComponent(),
+      body: const AllItemsPageComponent(isHomePage: true),
     );
   }
 }

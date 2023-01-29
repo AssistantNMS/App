@@ -14,8 +14,6 @@ class ToggleIsGenericTileCompact extends PersistToStorage {}
 
 class ToggleShowMaterialTheme extends PersistToStorage {}
 
-class HideRelease118Intro extends PersistToStorage {}
-
 class ToggleDisplayGenericItemColour extends PersistToStorage {}
 
 class HideValentines2020Intro extends PersistToStorage {}
@@ -66,9 +64,8 @@ class SetIsPatron extends PersistToStorage {
   SetIsPatron(this.newIsPatron);
 }
 
-class ShowFestiveBackground extends PersistToStorage {
-  final bool show;
-  ShowFestiveBackground(this.show);
+class ToggleShowFestiveBackground extends PersistToStorage {
+  ToggleShowFestiveBackground();
 }
 
 class SetNewsPage extends PersistToStorage {
@@ -78,4 +75,9 @@ class SetNewsPage extends PersistToStorage {
 
 class ToggleMergeInventoryQuantities extends PersistToStorage {
   ToggleMergeInventoryQuantities();
+}
+
+class SetCustomHomePageColumnCount extends PersistToStorage {
+  final int columnCount;
+  SetCustomHomePageColumnCount(this.columnCount);
 }

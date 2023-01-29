@@ -13,7 +13,7 @@ class FileService {
     try {
       final stream = Stream.fromIterable(jsonContent.codeUnits);
 
-      String outputFile = defaultFileName;
+      String? outputFile = defaultFileName;
       if (isWindows) {
         outputFile = await FilePicker.platform.saveFile(
           dialogTitle: title,
@@ -25,8 +25,9 @@ class FileService {
           return Result(false, 'Operation cancelled');
         }
       } else {
-        String selectedDirectory = await FilePicker.platform.getDirectoryPath();
-        outputFile = selectedDirectory + '/' + defaultFileName;
+        String? selectedDirectory =
+            await FilePicker.platform.getDirectoryPath();
+        outputFile = (selectedDirectory ?? '') + '/' + defaultFileName;
       }
 
       getLog().d('save file to: ' + outputFile);
@@ -42,24 +43,27 @@ class FileService {
     }
   }
 
-  Future<ResultWithValue<T>> readFileFromLocal<T>(
+  Future<ResultWithValue<T?>> readFileFromLocal<T>(
     T Function(String jsonContent) readFileFunc,
   ) async {
     try {
-      FilePickerResult result = await FilePicker.platform.pickFiles();
+      FilePickerResult? result = await FilePicker.platform.pickFiles();
 
       if (result != null) {
-        getLog().d('read file from: ' + result.files.single.path);
-        File file = File(result.files.single.path);
+        String? selectedFilePath = result.files.first.path;
+        if (selectedFilePath == null) throw Exception('Invalid file selected');
+
+        getLog().d('read file from: ' + selectedFilePath);
+        File file = File(selectedFilePath);
         String fileContents = await file.readAsString();
         T obj = readFileFunc(fileContents);
-        return ResultWithValue<T>(true, obj, '');
+        return ResultWithValue<T?>(true, obj, '');
       } else {
         // User canceled the picker
-        return ResultWithValue<T>(false, null, 'Operation cancelled');
+        return ResultWithValue<T?>(false, null, 'Operation cancelled');
       }
     } catch (ex) {
-      return ResultWithValue<T>(false, null, ex.toString());
+      return ResultWithValue<T?>(false, null, ex.toString());
     }
   }
 }

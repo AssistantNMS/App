@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 import '../../contracts/generated/contributorViewModel.dart';
 
 Widget contributorTilePresenter(
-        BuildContext context, ContributorViewModel contributor) =>
+  BuildContext context,
+  ContributorViewModel contributor, {
+  void Function()? onTap,
+}) =>
     genericListTileWithNetworkImage(
       context,
       imageUrl: contributor.imageUrl,

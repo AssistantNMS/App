@@ -50,7 +50,7 @@ Widget patronFeatureTilePresenter(BuildContext context, String featureName,
       return;
     }
 
-    prettyDialogAsync(
+    prettyDialog(
       context,
       AppImage.patreonFeature,
       getTranslations().fromKey(LocaleKey.featureNotAvailable),
@@ -60,7 +60,7 @@ Widget patronFeatureTilePresenter(BuildContext context, String featureName,
       onSuccess: (_) => launchExternalURL(ExternalUrls.patreon),
     );
   };
-  return flatCard(
+  return FlatCard(
     child: ListTile(
       leading: DonationImage.patreon(),
       title: Text(

@@ -4,16 +4,16 @@ import 'package:assistantapps_flutter_common/helpers/jsonHelper.dart';
 
 class GuildMission {
   GuildMission({
-    this.id,
-    this.objective,
-    this.titles,
-    this.subtitles,
-    this.descriptions,
-    this.type,
-    this.difficulty,
-    this.minRank,
-    this.factions,
-    this.icon,
+    required this.id,
+    required this.objective,
+    required this.titles,
+    required this.subtitles,
+    required this.descriptions,
+    required this.type,
+    required this.difficulty,
+    required this.minRank,
+    required this.factions,
+    required this.icon,
   });
 
   String id;
@@ -30,7 +30,7 @@ class GuildMission {
   factory GuildMission.fromRawJson(String str) =>
       GuildMission.fromJson(json.decode(str));
 
-  factory GuildMission.fromJson(Map<String, dynamic> json) => //
+  factory GuildMission.fromJson(Map<String, dynamic>? json) => //
       GuildMission(
         id: readStringSafe(json, 'Id'),
         objective: readStringSafe(json, 'Objective'),

@@ -13,8 +13,10 @@ import '../../contracts/requiredItemDetails.dart';
 
 import '../../helpers/itemsHelper.dart';
 
-Widget alienPuzzleRewardOddsTilePresenter(BuildContext context,
-    AlienPuzzleRewardOddsWithAdditional alienPuzzleRewardOdds) {
+Widget alienPuzzleRewardOddsTilePresenter(
+  BuildContext context,
+  AlienPuzzleRewardOdds alienPuzzleRewardOdds,
+) {
   List<AlienPuzzleRewardItemType> standingDisplayList = [
     AlienPuzzleRewardItemType.Standing,
   ];
@@ -66,24 +68,34 @@ Widget alienPuzzleRewardOddsTilePresenter(BuildContext context,
 }
 
 Widget alienPuzzleRewardOddsNormalItemTilePresenter(
-    BuildContext context, AlienPuzzleRewardOddsWithAdditional rewardItem) {
-  return alienPuzzleRewardOddsNormalItemBody(context, rewardItem);
+  BuildContext context,
+  AlienPuzzleRewardOdds rewardItem,
+) {
+  return alienPuzzleRewardOddsNormalItemBody(
+    context,
+    AlienPuzzleRewardOddsWithAdditional(rewardItem, null),
+  );
 }
 
 Widget alienPuzzleRewardOddsNormalItemNoQuantityTilePresenter(
-    BuildContext context, AlienPuzzleRewardOddsWithAdditional rewardItem) {
+  BuildContext context,
+  AlienPuzzleRewardOdds rewardItem,
+) {
   rewardItem.amountMin = 1;
   rewardItem.amountMax = 1;
-  return alienPuzzleRewardOddsNormalItemBody(context, rewardItem);
+  return alienPuzzleRewardOddsNormalItemBody(
+    context,
+    AlienPuzzleRewardOddsWithAdditional(rewardItem, null),
+  );
 }
 
 Widget alienPuzzleRewardOddsGetDetailsItemTilePresenter(
-    BuildContext context, AlienPuzzleRewardOddsWithAdditional rewardItem) {
+    BuildContext context, AlienPuzzleRewardOdds rewardItem) {
   return FutureBuilder<ResultWithValue<RequiredItemDetails>>(
     future: requiredItemDetails(
         context,
         RequiredItem(
-          id: rewardItem.id,
+          id: rewardItem.id!,
           quantity: 1,
         )),
     builder: (BuildContext context,
@@ -99,26 +111,30 @@ Widget alienPuzzleRewardOddsGetDetailsItemTilePresenter(
 
 Widget alienPuzzleRewardOddsNormalItemBodyFromSnapshot(
     BuildContext context,
-    AlienPuzzleRewardOddsWithAdditional rewardItem,
+    AlienPuzzleRewardOdds rewardItem,
     AsyncSnapshot<ResultWithValue<RequiredItemDetails>> snapshot) {
-  Widget errorWidget = asyncSnapshotHandler(context, snapshot,
+  Widget? errorWidget = asyncSnapshotHandler(context, snapshot,
       loader: getLoading().loadingIndicator,
-      isValidFunction: (ResultWithValue<RequiredItemDetails> result) {
-    if (snapshot.data.value == null ||
-        snapshot.data.value.icon == null ||
-        snapshot.data.value.name == null ||
-        snapshot.data.value.quantity == null) {
+      isValidFunction: (ResultWithValue<RequiredItemDetails>? result) {
+    if (snapshot.data == null ||
+        snapshot.data?.value == null ||
+        snapshot.data?.value.icon == null ||
+        snapshot.data?.value.name == null ||
+        snapshot.data?.value.quantity == null) {
       return false;
     }
     return true;
   });
   if (errorWidget != null) return errorWidget;
 
-  rewardItem.details = snapshot.data.value;
+  var rewardItemWithExtra = AlienPuzzleRewardOddsWithAdditional(
+    rewardItem,
+    snapshot.data!.value,
+  );
 
   return alienPuzzleRewardOddsNormalItemBody(
     context,
-    rewardItem,
+    rewardItemWithExtra,
   );
 }
 
@@ -143,18 +159,21 @@ Widget alienPuzzleRewardOddsNormalItemBody(
 
   return genericListTileWithSubtitle(
     context,
-    leadingImage: rewardItem.details.icon,
-    name: rewardItem.details.name,
+    leadingImage: rewardItem.details?.icon,
+    name: rewardItem.details?.name ??
+        getTranslations().fromKey(LocaleKey.unknown),
     subtitle: Text(amountString),
-    onTap: () async => await getNavigation().navigateAwayFromHomeAsync(
-      context,
-      navigateTo: (context) => GenericPage(rewardItem.details.id),
-    ),
+    onTap: rewardItem.details == null
+        ? () {}
+        : () async => await getNavigation().navigateAwayFromHomeAsync(
+              context,
+              navigateTo: (context) => GenericPage(rewardItem.details!.id),
+            ),
   );
 }
 
 Widget alienPuzzleRewardStandingItemTilePresenter(
-    BuildContext context, AlienPuzzleRewardOddsWithAdditional rewardItem) {
+    BuildContext context, AlienPuzzleRewardOdds rewardItem) {
   var raceType = alienPuzzleRaceTypeValues.map[rewardItem.id];
   String standingAmountString = rewardItem.amountMin.toString();
   if (rewardItem.amountMin > 0) {
@@ -172,7 +191,7 @@ Widget alienPuzzleRewardStandingItemTilePresenter(
 }
 
 Widget alienPuzzleRewardNewWordItemTilePresenter(
-    BuildContext context, AlienPuzzleRewardOddsWithAdditional rewardItem) {
+    BuildContext context, AlienPuzzleRewardOdds rewardItem) {
   var raceType = alienPuzzleRaceTypeValues.map[rewardItem.id];
   return genericListTileWithSubtitle(
     context,
@@ -183,7 +202,7 @@ Widget alienPuzzleRewardNewWordItemTilePresenter(
 }
 
 Widget alienPuzzleRewardPlayerHealItemTilePresenter(
-    BuildContext context, AlienPuzzleRewardOddsWithAdditional rewardItem) {
+    BuildContext context, AlienPuzzleRewardOdds rewardItem) {
   return genericListTileWithSubtitle(
     context,
     leadingImage: AppImage.health,
@@ -199,7 +218,7 @@ Widget alienPuzzleRewardPlayerHealItemTilePresenter(
 
 Widget genericAlienPuzzleRewardTilePresenter(
     BuildContext context, String imgPath, LocaleKey name,
-    {LocaleKey subtitle}) {
+    {LocaleKey? subtitle}) {
   return genericListTileWithSubtitle(
     context,
     leadingImage: imgPath,

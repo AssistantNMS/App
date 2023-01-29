@@ -9,8 +9,8 @@ class NewsPageViewModel {
   final Function(int) setSelectedNewsPage;
 
   NewsPageViewModel({
-    this.selectedNewsPage,
-    this.setSelectedNewsPage,
+    required this.selectedNewsPage,
+    required this.setSelectedNewsPage,
   });
 
   static NewsPageViewModel fromStore(Store<AppState> store) =>

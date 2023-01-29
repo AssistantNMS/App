@@ -23,8 +23,7 @@ Widget factionTilePresenter(BuildContext context, FactionDetail faction) {
         : null,
     maxLines: 1,
     onTap: () {
-      List<String> additionalList = (faction.additional ?? List.empty());
-      if (additionalList.contains('NavigateToJourneyPage')) {
+      if (faction.additional.contains('NavigateToJourneyPage')) {
         getNavigation().navigateAsync(
           context,
           navigateToNamed: Routes.journeyMilestonePage,
@@ -39,30 +38,19 @@ Widget factionTilePresenter(BuildContext context, FactionDetail faction) {
   );
 }
 
-Widget factionMissionTilePresenter(BuildContext context, FactionMission faction,
-    FactionsViewModel viewModel, StoredFactionMission storedFac) {
+Widget factionMissionTilePresenter(
+  BuildContext context,
+  FactionMission faction,
+  FactionsViewModel viewModel,
+  StoredFactionMission? storedFac,
+) {
+  // ignore: unnecessary_null_comparison
   FactionMissionTier currentTier = (storedFac != null)
       ? faction.tiers[storedFac.missionTierIndex]
       : faction.tiers.first;
 
   return ListTile(
-    leading: SizedBox(
-      height: 50,
-      width: 50,
-      child: Stack(
-        alignment: Alignment.center,
-        clipBehavior: Clip.hardEdge,
-        children: [
-          Positioned(
-            height: 100,
-            width: 100,
-            left: -25,
-            top: -25,
-            child: localImage(currentTier.icon),
-          ),
-        ],
-      ),
-    ),
+    leading: LocalImage(imagePath: currentTier.icon),
     title: Text(
       faction.name,
       maxLines: 1,
@@ -86,7 +74,7 @@ Widget factionMissionTilePresenter(BuildContext context, FactionMission faction,
 }
 
 Widget guildMissionTilePresenter(BuildContext context, GuildMission mission) {
-  List<String> titles = mission.titles ?? List.empty();
+  List<String> titles = mission.titles;
   if (titles.isEmpty) {
     titles = mission.subtitles;
   }
@@ -141,8 +129,8 @@ Widget guildMissionTilePresenter(BuildContext context, GuildMission mission) {
     trailing: Wrap(
       children: factionImgs
           .map(
-            (img) => localImage(
-              img,
+            (img) => LocalImage(
+              imagePath: img,
               imageHero: img + mission.id,
               height: 35,
               width: 35,

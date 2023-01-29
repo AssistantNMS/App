@@ -4,23 +4,36 @@ import '../../../contracts/processor.dart';
 class IRefineryRepository {
   //
   Future<ResultWithValue<Processor>> getById(context, String procId) async {
-    return ResultWithValue<Processor>(false, Processor(), '');
+    return ResultWithValue<Processor>(
+      false,
+      Processor.fromRawJson('{}', false),
+      '',
+    );
   }
 
   Future<ResultWithValue<List<Processor>>> getAll(context) async {
     return ResultWithValue<List<Processor>>(
-        false, List.empty(growable: true), '');
+      false,
+      List.empty(growable: true),
+      '',
+    );
   }
 
   Future<ResultWithValue<List<Processor>>> getByOutput(
       context, String id) async {
     return ResultWithValue<List<Processor>>(
-        false, List.empty(growable: true), '');
+      false,
+      List.empty(growable: true),
+      '',
+    );
   }
 
   Future<ResultWithValue<List<Processor>>> getByInput(
       context, String id) async {
     return ResultWithValue<List<Processor>>(
-        false, List.empty(growable: true), '');
+      false,
+      List.empty(growable: true),
+      '',
+    );
   }
 }

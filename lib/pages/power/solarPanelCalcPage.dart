@@ -2,10 +2,10 @@
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide ExternalUrls;
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../components/common/cachedFutureBuilder.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
 import '../../components/tilePresenters/youtubersTilePresenter.dart';
@@ -20,7 +20,7 @@ const String _solarPanelId = 'conTech50';
 const String _batteryId = 'conTech57';
 
 class SolarPanelCalcPage extends StatefulWidget {
-  const SolarPanelCalcPage({Key key}) : super(key: key);
+  const SolarPanelCalcPage({Key? key}) : super(key: key);
 
   @override
   _SolarPanelCalcWidget createState() => _SolarPanelCalcWidget();
@@ -55,7 +55,7 @@ class _SolarPanelCalcWidget extends State<SolarPanelCalcPage> {
       title: getTranslations().fromKey(LocaleKey.solarPanelBatteryCalculator),
       body: CachedFutureBuilder<List<RequiredItemDetails>>(
         future: requiredItemDetailsFuture(context),
-        whileLoading:
+        whileLoading: () =>
             getLoading().fullPageLoading(context, loadingText: loading),
         whenDoneLoading: (List<RequiredItemDetails> snapshot) {
           return SolarPanelInnerPage(
@@ -67,43 +67,36 @@ class _SolarPanelCalcWidget extends State<SolarPanelCalcPage> {
     );
   }
 
-  RequiredItemDetails getItemFromArray(
-    List<RequiredItemDetails> array,
+  RequiredItemDetails? getItemFromArray(
+    List<RequiredItemDetails>? array,
     String id,
   ) {
     if (array == null || array.isEmpty) return null;
     if (array.length == 1) return array[0];
 
-    return array.firstWhere((item) => item.id == id, orElse: () => null);
+    return array.firstWhereOrNull((item) => item.id == id);
   }
 }
 
 class SolarPanelInnerPage extends StatefulWidget {
-  final RequiredItemDetails solarPanelDetails;
-  final RequiredItemDetails batteryDetails;
+  final RequiredItemDetails? solarPanelDetails;
+  final RequiredItemDetails? batteryDetails;
 
   const SolarPanelInnerPage({
-    Key key,
+    Key? key,
     this.solarPanelDetails,
     this.batteryDetails,
   }) : super(key: key);
 
   @override
-  _SolarPanelInnerWidget createState() => _SolarPanelInnerWidget(
-        solarPanelDetails,
-        batteryDetails,
-      );
+  createState() => _SolarPanelInnerWidget();
 }
 
 class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
-  int _powerKps;
-  final RequiredItemDetails solarPanelDetails;
-  final RequiredItemDetails batteryDetails;
+  int? _powerKps;
   bool showDetails = false;
   bool showInfo = false;
   final TextEditingController _editing = TextEditingController();
-
-  _SolarPanelInnerWidget(this.solarPanelDetails, this.batteryDetails);
 
   _setPowerKps(int powerKps) {
     setState(() {
@@ -134,9 +127,9 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
   Widget build(BuildContext context) {
     List<Widget> widgets = List.empty(growable: true);
 
-    widgets.add(flatCard(child: devilinPixyTile(context)));
-    widgets.add(emptySpace1x());
-    widgets.add(genericItemDescription(
+    widgets.add(FlatCard(child: devilinPixyTile(context)));
+    widgets.add(const EmptySpace1x());
+    widgets.add(GenericItemDescription(
       getTranslations().fromKey(LocaleKey.totalPowerConsumption),
     ));
 
@@ -158,22 +151,24 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
       ),
     );
 
-    widgets.add(emptySpace3x());
-    widgets.add(genericItemGroup(getTranslations().fromKey(LocaleKey.minimum)));
+    widgets.add(const EmptySpace3x());
+    widgets.add(GenericItemGroup(getTranslations().fromKey(LocaleKey.minimum)));
 
     int minSolarPanels = getMinimumAmountOfSolarPanels(_powerKps);
-    if (solarPanelDetails != null) {
-      solarPanelDetails.quantity = minSolarPanels;
-      widgets.add(flatCard(
-        child: requiredItemDetailsTilePresenter(context, solarPanelDetails),
+    if (widget.solarPanelDetails != null) {
+      widget.solarPanelDetails!.quantity = minSolarPanels;
+      widgets.add(FlatCard(
+        child: requiredItemDetailsTilePresenter(
+            context, widget.solarPanelDetails!),
       ));
     }
 
     int minBatteries = getMinimumAmountOfBatteries(_powerKps);
-    if (batteryDetails != null) {
-      batteryDetails.quantity = minBatteries;
-      widgets.add(flatCard(
-        child: requiredItemDetailsTilePresenter(context, batteryDetails),
+    if (widget.batteryDetails != null) {
+      widget.batteryDetails!.quantity = minBatteries;
+      widgets.add(FlatCard(
+        child:
+            requiredItemDetailsTilePresenter(context, widget.batteryDetails!),
       ));
     }
 
@@ -203,32 +198,38 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
     if (totalPowerGenerated > maxPowerThatCanBeStored) {
       totalPowerStored = maxPowerThatCanBeStored;
       totalPowerUnused = totalPowerStored - totalPowerRequired;
-      widgets.add(emptySpace3x());
-      widgets.add(genericItemDescription(
+      widgets.add(const EmptySpace3x());
+      widgets.add(GenericItemDescription(
         getTranslations()
             .fromKey(LocaleKey.solarPanelsProduceMoreThanBatteries)
             .replaceAll('{0}', minSolarPanels.toString())
             .replaceAll('{1}', minBatteries.toString()),
       ));
-      widgets.add(emptySpace1x());
-      widgets.add(genericItemGroup(
+      widgets.add(const EmptySpace1x());
+      widgets.add(GenericItemGroup(
         getTranslations().fromKey(LocaleKey.recommended),
       ));
 
-      if (solarPanelDetails != null) {
-        solarPanelDetails.quantity = minSolarPanels;
+      if (widget.solarPanelDetails != null) {
+        widget.solarPanelDetails!.quantity = minSolarPanels;
         widgets.add(Card(
-          child: requiredItemDetailsTilePresenter(context, solarPanelDetails),
+          child: requiredItemDetailsTilePresenter(
+            context,
+            widget.solarPanelDetails!,
+          ),
           margin: EdgeInsets.zero,
         ));
       }
-      if (batteryDetails != null) {
-        batteryDetails.quantity = getRecommendedAmountOfBatteries(
+      if (widget.batteryDetails != null) {
+        widget.batteryDetails!.quantity = getRecommendedAmountOfBatteries(
           minBatteries,
           totalPowerLost,
         );
         widgets.add(Card(
-          child: requiredItemDetailsTilePresenter(context, batteryDetails),
+          child: requiredItemDetailsTilePresenter(
+            context,
+            widget.batteryDetails!,
+          ),
           margin: EdgeInsets.zero,
         ));
       }
@@ -241,8 +242,8 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
       _toggleShowDetails,
     ));
     if (showDetails) {
-      widgets.add(emptySpace(1));
-      widgets.add(genericItemGroup(
+      widgets.add(const EmptySpace(1));
+      widgets.add(GenericItemGroup(
         getTranslations().fromKey(LocaleKey.totalPowerConsumed),
       ));
       widgets.add(getPowerTable(
@@ -255,7 +256,7 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
         total: tpcTotal,
       ));
 
-      widgets.add(genericItemGroup(
+      widgets.add(GenericItemGroup(
         getTranslations().fromKey(LocaleKey.totalSolarProduced),
       ));
       widgets.add(getPowerTable(
@@ -268,7 +269,7 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
         total: spTotal,
       ));
 
-      widgets.add(genericItemGroup(
+      widgets.add(GenericItemGroup(
         getTranslations().fromKey(LocaleKey.minimumSummary),
       ));
       widgets.add(getSummaryTable(
@@ -280,7 +281,7 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
       ));
 
       if (totalPowerGenerated > maxPowerThatCanBeStored) {
-        widgets.add(genericItemGroup(
+        widgets.add(GenericItemGroup(
           getTranslations().fromKey(LocaleKey.recommendedSummary),
         ));
         widgets.add(getSummaryTable(
@@ -300,27 +301,32 @@ class _SolarPanelInnerWidget extends State<SolarPanelInnerPage> {
       _toggleShowInfo,
     ));
     if (showInfo) {
-      widgets.add(emptySpace1x());
-      widgets.add(genericItemDescription(
+      widgets.add(const EmptySpace1x());
+      widgets.add(GenericItemDescription(
         getTranslations().fromKey(LocaleKey.basedOnWorstCase),
       ));
       widgets.add(inGameInfoTable(context));
       widgets.add(realTimeInfoTable(context));
-      widgets.add(emptySpace1x());
-      widgets.add(genericItemDescription(
+      widgets.add(const EmptySpace1x());
+      widgets.add(GenericItemDescription(
         getTranslations().fromKey(LocaleKey.bestCaseScenarioLocation),
       ));
     }
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return listWithScrollbar(
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 
   Widget _cardButton(
-      BuildContext context, String title, bool isOpen, Function onTap) {
+    BuildContext context,
+    String title,
+    bool isOpen,
+    void Function() onTap,
+  ) {
     return GestureDetector(
       child: Padding(
         child: Stack(

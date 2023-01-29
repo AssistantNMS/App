@@ -244,7 +244,7 @@
         "Name": "Tanques do Jetpack",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "20"
+        "Value": "25"
       },
       {
         "Name": "Ritmo de Recarregamento",
@@ -262,7 +262,7 @@
         "Name": "Tempo de Recuperação de Corrida",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "20"
+        "Value": "40"
       }
     ],
     "ConsumableRewardTexts": []
@@ -714,7 +714,7 @@
     "Icon": "curiosities/65.png",
     "Name": "Tradutor Simples",
     "Group": "Analisador Automático de Línguas",
-    "Description": "Um dispositivo de tradução automática. Grava e analisa conversas próximas antes de trabalhar os dados por meio de um sistema de aprendizagem contextual para determinar o significado pretendido.\n\nA pouca capacidade de memória neste modelo ideal para principiantes limita a capacidade de tradução.",
+    "Description": "Um dispositivo de tradução automática. Grava e analisa conversas próximas antes de processar os dados por meio de um sistema de aprendizagem contextual para determinar o significado pretendido.\n\nA pouca capacidade de memória neste modelo ideal para principiantes limita a capacidade de tradução.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -745,7 +745,7 @@
     "Icon": "curiosities/65.png",
     "Name": "Tradutor Superior",
     "Group": "Analisador Automático de Línguas",
-    "Description": "Um dispositivo de tradução automática. Grava e analisa conversas próximas antes de trabalhar os dados por meio de um sistema de aprendizagem contextual para determinar o significado pretendido.\n\nOs processadores de idioma paralelos permitem que uma proporção maior de fala gravada seja traduzida.",
+    "Description": "Um dispositivo de tradução automática. Grava e analisa conversas próximas antes de processar os dados por meio de um sistema de aprendizagem contextual para determinar o significado pretendido.\n\nOs processadores de idioma paralelos permitem que uma proporção maior de fala gravada seja traduzida.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -784,7 +784,7 @@
     "Icon": "curiosities/65.png",
     "Name": "Tradutor Avançado",
     "Group": "Analisador Automático de Línguas",
-    "Description": "Um dispositivo de tradução automática. Grava e analisa conversas próximas antes de trabalhar os dados por meio de um sistema de aprendizagem contextual para determinar o significado pretendido.\n\nUma grande capacidade de memória e processadores de linguagem sobrepostos permite a tradução em tempo real de partes consideráveis de texto.",
+    "Description": "Um dispositivo de tradução automática. Grava e analisa conversas próximas antes de processar os dados por meio de um sistema de aprendizagem contextual para determinar o significado pretendido.\n\nUma grande capacidade de memória e processadores de linguagem sobrepostos permite a tradução em tempo real de partes consideráveis de texto.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -946,7 +946,7 @@
         "Value": "15"
       },
       {
-        "Name": "Manobrabilidade",
+        "Name": "Manobrabilidade (Nave espacial)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -1032,7 +1032,7 @@
   {
     "Id": "tech27",
     "Icon": "technology/26.png",
-    "Name": "Recarregador de sistemas de lançamento",
+    "Name": "Carregador Automático de Lançamento",
     "Group": "Atualização sistema de lançamento da nave",
     "Description": "Painéis fotovoltaicos instalados nos <TECHNOLOGY>Propulsores de Lançamento<> da nave espacial permitem uma carga lenta enquanto a nave não está em operação.\n\nA luz recolhida é usada para fundir o di-hidrogénio da atmosfera e, com o tempo, <STELLAR>reabastecer os Propulsores de Lançamento automaticamente<>.",
     "BaseValueUnits": 1.0,
@@ -1054,7 +1054,7 @@
         "Quantity": 2
       },
       {
-        "Id": "prod115",
+        "Id": "prod116",
         "Quantity": 2
       }
     ],
@@ -1916,7 +1916,7 @@
     "Icon": "technology/48.png",
     "Name": "Bomba de Dyson",
     "Group": "Atualização do Ciclotron da Nave",
-    "Description": "Substitui o dissipador térmico da <TECHNOLOGY>Catapulta Ciclotron<> ao envolver a unidade com uma mega-estrutura de absorção de calor. A saída de calor é reciclada para melhorar a eficácia em combate.\n\nAumenta significativamente o <STELLAR>desempenho de calor<>.",
+    "Description": "Substitui o dissipador térmico da <TECHNOLOGY>Catapulta Ciclotron<> ao envolver a unidade com uma megaestrutura de absorção de calor. A saída de calor é reciclada para melhorar a eficácia em combate.\n\nAumenta significativamente o <STELLAR>desempenho de calor<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -2247,9 +2247,9 @@
       },
       {
         "Name": "Recompensas de Análise Mineral",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "target",
-        "Value": "1"
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3580,7 +3580,7 @@
   {
     "Id": "tech94",
     "Icon": "technology/94.png",
-    "Name": "Impulsionador de Sinal da Exonave",
+    "Name": "Radar da Exonave",
     "Group": "Equipamento de deteção da Exonave",
     "Description": "Um radar grande e complexo baseado em campo subespacial.\n\nDevido ao seu grande consumo de energia e inerente instabilidade subatómica, apenas se encontram instalados na Exonave.\n\nPrime <IMG>QUICK_MENU<> para ativar o Impulsionador de sinal.",
     "BaseValueUnits": 1.0,
@@ -3615,9 +3615,9 @@
   {
     "Id": "tech96",
     "Icon": "technology/96.png",
-    "Name": "Atualização Tau do Impulsionador de Sinal da Exonave",
-    "Group": "Atualização do Impulsionador de Sinal da Exonave",
-    "Description": "Permite que tipos de construção adicionais sejam adquiridos pelo Impulsionador de Sinal da Exonave.",
+    "Name": "Ressoador de Energia do Radar",
+    "Group": "Atualização da Deteção de Sinal da Exonave",
+    "Description": "Permite que tipos de construção adicionais sejam adquiridos pelo Radar da Exonave.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -3654,7 +3654,7 @@
   {
     "Id": "tech97",
     "Icon": "technology/97.png",
-    "Name": "Módulo de aceleração da Exonave",
+    "Name": "Impulsionadores da Exonave",
     "Group": "Atualização do motor da Exonave",
     "Description": "Um injetor de plasma eficiente acoplado ao motor que permite rajadas curtas de velocidade.",
     "BaseValueUnits": 1.0,
@@ -3750,7 +3750,7 @@
   {
     "Id": "tech99",
     "Icon": "technology/99.png",
-    "Name": "Atualização Sigma do Laser de Mineração da Exonave",
+    "Name": "Laser da Exonave Avançado",
     "Group": "Atualização do Laser de Mineração ",
     "Description": "Aumenta o poder do Laser de Mineração da Exonave.",
     "BaseValueUnits": 1.0,
@@ -3791,7 +3791,7 @@
   {
     "Id": "tech100",
     "Icon": "technology/100.png",
-    "Name": "Canhão montado na Exonave",
+    "Name": "Canhão montado",
     "Group": "Arma anexada à Exonave",
     "Description": "Devido aos requisitos de energia que uma arma tão poderosa exige, apenas poderá ser disparada montada numa Exonave.",
     "BaseValueUnits": 1.0,
@@ -5918,7 +5918,7 @@
   },
   {
     "Id": "tech166",
-    "Icon": "technology/28.png",
+    "Icon": "technology/166.png",
     "Name": "Laser de Matéria",
     "Group": "Dispositivo de Teletransporte no Cargueiro",
     "Description": "Um dispositivo que modula os sinais padrão de comunicação de um cargueiro para permitir o <TECHNOLOGY>transporte interplanetário de matéria<> e de dados.\n\nOs cargueiros equipados com um destes dispositivos podem enviar e receber produtos e substâncias para o <STELLAR>Exofato<> de um utilizador através de <STELLAR>longas distâncias<>.",
@@ -6253,9 +6253,9 @@
   {
     "Id": "tech174",
     "Icon": "technology/96.png",
-    "Name": "Impulsionador Sigma Avançado",
-    "Group": "Atualização do Impulsionador de Sinal da Exonave",
-    "Description": "Permite que tipos de construção adicionais sejam adquiridos pelo Impulsionador de Sinal da Exonave.",
+    "Name": "Amplificador de Radar",
+    "Group": "Atualização da Deteção de Sinal da Exonave",
+    "Description": "Permite que tipos de construção adicionais sejam adquiridos pelo Radar da Exonave.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -6658,7 +6658,7 @@
     "Icon": "technology/1.png",
     "Name": "Unidade de controlo ambiente",
     "Group": "Unidade de proteção contra perigos da exonave",
-    "Description": "Um poderoso sistema de neutralização ambiental é ligado diretamente ao piloto do Minotauro ao ser assumido o controlo do veículo. O sistema é alimentado através da unidade do motor principal do Minotauro e não requer informações adicionais do utilizador. Algumas pequenas dores podem ser notadas ao redor do local de inserção.\n\nTorna o piloto do Minotauro imune a <STELLAR>todos os riscos ambientais<>.",
+    "Description": "Este poderoso sistema de neutralização ambiental é ligado diretamente ao piloto quando este entra na cabine. O sistema é alimentado através do motor principal do Minotauro e não requer ações adicionais do utilizador. Algumas pequenas dores podem ser notadas ao redor do local de inserção.\n\nTorna o piloto do Minotauro imune a <STELLAR>todos os riscos ambientais<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -6955,7 +6955,7 @@
         "Value": "100"
       },
       {
-        "Name": "Manobrabilidade",
+        "Name": "Manobrabilidade (Nave espacial)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "25"
@@ -6965,7 +6965,7 @@
   },
   {
     "Id": "tech189",
-    "Icon": "other/148.png",
+    "Icon": "building/945.png",
     "Name": "Catapulta de Matriz",
     "Group": "Propulsor Warp Ilegalmente Modificado",
     "Description": "Este propulsor experimental aumenta a tecnologia <TECHNOLOGY>hiperdrive<> ao distorcer a geometria local no ponto de inicialização warp, aumentando o <STELLAR>alcance<> e a <STELLAR>eficiência<> muito para além dos propulsores normais.\n\nO utilizador deve aceder aos sistemas Hiperdrive através do <STELLAR>Mapa Galáctico<>.",
@@ -7091,7 +7091,7 @@
   {
     "Id": "tech192",
     "Icon": "technology/192.png",
-    "Name": "Implante de Anulação de Arquivo",
+    "Name": "Implante de Bypass de Arquivo",
     "Group": "Circuito do Acesso Subcutâneo",
     "Description": "Uma <TECHNOLOGY>firewall biotécnica<>, concebida como salvaguarda contra perigos de reconhecimento textual. Está revestida com algo escorregadio e começou a borbulhar ao longo da superfície.\n\nÉ inserida sob a pele e oferece acesso administrativo ao textos proibidos antigos e interditos num <SPECIAL>Arquivo Planetário<>.\n<FUEL>Aviso<>: não libertar os textos proibidos. A exposição aos textos proibidos acarreta um risco extremo.",
     "BaseValueUnits": 1.0,
@@ -8138,7 +8138,7 @@
         "Value": "15"
       },
       {
-        "Name": "Manobrabilidade",
+        "Name": "Manobrabilidade (Nave espacial)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8216,7 +8216,7 @@
         "Value": "0.6"
       },
       {
-        "Name": "Manobrabilidade",
+        "Name": "Manobrabilidade (Nave espacial)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8435,6 +8435,47 @@
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech228",
+    "Icon": "technology/228.png",
+    "Name": "Foguetão de Comércio",
+    "Group": "Dispositivo de convocação de mísseis mercantis",
+    "Description": "Um dispositivo de foguetão pessoal com uma ligação direta à <TECHNOLOGY>Rede de Comércio Galáctico<>. Esta unidade permite ao utilizador carregar mercadorias numa pequena nave. Após o lançamento, as mercadorias são transportadas para o terminal de comércio mais próximo e <STELLAR>vendidas automaticamente<>.\n\n<STELLAR>Chama<> o Foguetão de Comércio com o <IMG>QUICK_MENU<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw7",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Foguetão de Comércio",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

@@ -244,7 +244,7 @@
         "Name": "제트팩 탱크",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "20"
+        "Value": "25"
       },
       {
         "Name": "재충전률",
@@ -262,7 +262,7 @@
         "Name": "달리기 회복 시간",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "20"
+        "Value": "40"
       }
     ],
     "ConsumableRewardTexts": []
@@ -946,7 +946,7 @@
         "Value": "15"
       },
       {
-        "Name": "기동성",
+        "Name": "기동성 (함선)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -1032,7 +1032,7 @@
   {
     "Id": "tech27",
     "Icon": "technology/26.png",
-    "Name": "발진 시스템 재충전기",
+    "Name": "자동 차저 실행",
     "Group": "함선 발진 시스템 업그레이드",
     "Description": "함선의 <TECHNOLOGY>발진 추진기<>에 광발전 패널을 붙여 함선이 운항 중이지 않을 때 천천히 충전되게 만들어 줍니다.\n\n채취된 빛을 대기의 이수소와 융합시켜 시간의 지남에 따라 <STELLAR>자동으로 발진 추진기에 연료를 공급<>합니다.",
     "BaseValueUnits": 1.0,
@@ -1054,7 +1054,7 @@
         "Quantity": 2
       },
       {
-        "Id": "prod115",
+        "Id": "prod116",
         "Quantity": 2
       }
     ],
@@ -2247,9 +2247,9 @@
       },
       {
         "Name": "광물 분석 보상",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "target",
-        "Value": "1"
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3580,7 +3580,7 @@
   {
     "Id": "tech94",
     "Icon": "technology/94.png",
-    "Name": "엑소크래프트 신호증폭기",
+    "Name": "엑소크래프트 레이더",
     "Group": "엑소크래프트 스캔 장비",
     "Description": "크고 복잡한 야전 기반 부공간 레이더입니다.\n\n대량의 동력 소모와 고질적인 아원자 불안정성으로 인해 엑소크래프트에만 설치됩니다.\n\n<IMG>QUICK_MENU<>를 눌러 신호부스터를 작동합니다.",
     "BaseValueUnits": 1.0,
@@ -3615,9 +3615,9 @@
   {
     "Id": "tech96",
     "Icon": "technology/96.png",
-    "Name": "엑소크래프트 신호증폭기 업그레이드 타우",
-    "Group": "엑소크래프트 신호증폭기 업그레이드",
-    "Description": "엑소크래프트 신호증폭기로 추가적인 유형의 건물을 포착할 수 있게 해줍니다.",
+    "Name": "레이더 동력 공명기",
+    "Group": "엑소크래프트 신호 탐지 업그레이드",
+    "Description": "엑소크래프트 레이더로 추가적인 유형의 건물을 포착할 수 있게 해줍니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -3654,7 +3654,7 @@
   {
     "Id": "tech97",
     "Icon": "technology/97.png",
-    "Name": "엑소크래프트 가속 모듈",
+    "Name": "엑소크래프트 부스터",
     "Group": "엑소크래프트 엔진 업그레이드",
     "Description": "엔진에 연결되어 짧은 시간 동안 급가속을 할 수 있게 해주는 효율적인 플라스마 분사 장치입니다.",
     "BaseValueUnits": 1.0,
@@ -3750,7 +3750,7 @@
   {
     "Id": "tech99",
     "Icon": "technology/99.png",
-    "Name": "엑소크래프트 마이닝 레이저 업그레이드 시그마",
+    "Name": "첨단 엑소크래프트 레이저",
     "Group": "엑소크래프트 채광 업그레이드",
     "Description": "엑소크래프트 마이닝 레이저의 위력을 향상시켜 줍니다.",
     "BaseValueUnits": 1.0,
@@ -3791,7 +3791,7 @@
   {
     "Id": "tech100",
     "Icon": "technology/100.png",
-    "Name": "엑소크래프트 탑재 캐논",
+    "Name": "탑재 캐논",
     "Group": "엑소크래프트 무기 부착물",
     "Description": "이 강력한 무기는 에너지 소비가 크기 때문에 엑소크래프트에 장착해야만 사용할 수 있습니다.",
     "BaseValueUnits": 1.0,
@@ -5199,7 +5199,7 @@
     "Icon": "technology/146.png",
     "Name": "비상 워프 유닛",
     "Group": "하이퍼드라이브 증강물",
-    "Description": "<WARNING>함선 전투<>로 인해 통상적인 시스템의 사용이 불가할 경우에도 <STELLAR>즉각적인 워프<>를 할 수 있게 해주는 <TECHNOLOGY>하이퍼드라이브<>의 상당 수준의 업그레이드입니다. 비상 워프 시스템은 <STELLAR>빠른 메뉴<>를 통해 사용할 수 있습니다.\n\n<FUEL>경고:<> 긴급 발진 시스템인 관계로 목적지를 설정할 수는 없습니다. 무계획적인 광속 이동이 발생할 경우 유닛이 파손될 수 있으며, <STELLAR>잦은 수리<>가 필요합니다.",
+    "Description": "<WARNING>함선 전투<>로 인해 통상적인 시스템의 사용이 불가할 경우에도 <STELLAR>즉각적인 워프<>를 할 수 있게 해주는 <TECHNOLOGY>하이퍼드라이브<>에 대한 상당 수준의 업그레이드입니다. 비상 워프 시스템은 <STELLAR>빠른 메뉴<>를 통해 사용할 수 있습니다.\n\n<FUEL>경고:<> 긴급 발진 시스템인 관계로 목적지를 설정할 수는 없습니다. 무계획적인 광속 이동이 발생할 경우 유닛이 파손될 수 있으며, <STELLAR>잦은 수리<>가 필요합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -5918,7 +5918,7 @@
   },
   {
     "Id": "tech166",
-    "Icon": "technology/28.png",
+    "Icon": "technology/166.png",
     "Name": "물질 광선",
     "Group": "화물선 장착 순간이동 장치",
     "Description": "화물선의 표준 통신 신호를 변조시켜 데이터에 더해 <TECHNOLOGY>행성 간 물질 수송<>까지도 가능하게 만들어 주는 장치입니다.\n\n이 장치가 장착된 화물선은 <STELLAR>장거리<>에서 제품 및 물질을 사용자의 <STELLAR>엑소슈트<>로 송/수신할 수 있습니다.",
@@ -6253,9 +6253,9 @@
   {
     "Id": "tech174",
     "Icon": "technology/96.png",
-    "Name": "개량형 신호증폭기",
-    "Group": "엑소크래프트 신호증폭기 업그레이드",
-    "Description": "엑소크래프트 신호증폭기로 추가적인 유형의 건물을 포착할 수 있게 해줍니다.",
+    "Name": "레이더 증폭기",
+    "Group": "엑소크래프트 신호 탐지 업그레이드",
+    "Description": "엑소크래프트 레이더로 추가적인 유형의 건물을 포착할 수 있게 해줍니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -6658,7 +6658,7 @@
     "Icon": "technology/1.png",
     "Name": "환경 조절 유닛",
     "Group": "엑소크래프트 유해 요소 방호 유닛",
-    "Description": "미노타우로스의 파일럿이 차량의 제어를 시작할 때, 강력한 환경 중화 시스템을 파일럿에게 직접 연결합니다. 이 시스템은 미노타우로스의 주 엔진 유닛에서 만들어진 동력을 공급받으며, 사용자의 추가적인 조작이 필요하지 않습니다. 삽입 위치 근처에서 약간의 통증이 느껴질 수도 있습니다.\n\n미노타우로스의 파일럿이 <STELLAR>모든 환경적 유해 요소<>에 영향을 받지 않게 만들어 줍니다.",
+    "Description": "파일럿이 조종석에 들어가면 이 강력한 환경 중화 시스템이 파일럿에게 직접 연결됩니다. 이 시스템은 미노타우로스의 주 엔진에서 만들어진 동력을 공급받으며, 추가적인 조작이 필요하지 않습니다. 삽입 위치 근처에서 약간의 통증이 느껴질 수도 있습니다.\n\n미노타우로스의 파일럿이 <STELLAR>모든 환경적 유해 요소<>에 영향을 받지 않게 만들어 줍니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -6955,7 +6955,7 @@
         "Value": "100"
       },
       {
-        "Name": "기동성",
+        "Name": "기동성 (함선)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "25"
@@ -6965,7 +6965,7 @@
   },
   {
     "Id": "tech189",
-    "Icon": "other/148.png",
+    "Icon": "building/945.png",
     "Name": "프레임시프트 발사기",
     "Group": "불법 개조된 워프 드라이브",
     "Description": "시험용 드라이브 개조품으로 일반적인 <TECHNOLOGY>하이퍼드라이브<> 기술에 적용할 수 있으며, 워프를 시행할 때 주변 기하구조를 일그러뜨려 표준 드라이브에 비해 <STELLAR>범위<>와 <STELLAR>효율<>을 상당히 높일 수 있습니다.\n\n하이퍼드라이브 시스템은 <STELLAR>은하계 지도<>에서 사용하시길 바랍니다.",
@@ -7091,7 +7091,7 @@
   {
     "Id": "tech192",
     "Icon": "technology/192.png",
-    "Name": "기록 보관소 오버라이드 임플란트",
+    "Name": "기록 보관소 우회 임플란트",
     "Group": "피하 접근 회로",
     "Description": "텍스트 인식 유해 요소에 대한 안전장치로 개발된 <TECHNOLOGY>생체공학적 방화벽<>입니다. 무언가 미끈거리는 재질로 코팅되어 있으며, 표면이 부글거리기 시작합니다.\n\n피부 아래에 삽입된 임플란트는 <SPECIAL>행성 기록 보관소<>에 봉인된 고대의 금지된 텍스트에 접근할 수 있게 해줍니다.\n<FUEL>경고<>: 금지된 텍스트의 봉인을 풀지 마십시오. 금지된 텍스트에 노출되는 행위는 극도로 위험합니다.",
     "BaseValueUnits": 1.0,
@@ -7832,7 +7832,7 @@
   {
     "Id": "tech212",
     "Icon": "technology/212.png",
-    "Name": "센티널 하드프레임 왼팔",
+    "Name": "하드프레임 왼팔",
     "Group": "미노타우로스 수족 교체",
     "Description": "센티널 하드프레임에서 노획한 부품으로, <TECHNOLOGY>미노타우로스<> 중장갑 엑소크래프트 하이브리드에 맞게 재구성되었습니다.\n\n<TECHNOLOGY>미노타우로스 레이저<>와 함께 설치하면, 마이닝 레이저가 <STELLAR>강력한 전투 업그레이드<>로 변경되어 <TECHNOLOGY>기절<>한 엔티티에 강력한 피해를 가합니다.",
     "BaseValueUnits": 1.0,
@@ -7896,7 +7896,7 @@
   {
     "Id": "tech213",
     "Icon": "technology/213.png",
-    "Name": "센티널 하드프레임 오른팔",
+    "Name": "하드프레임 오른팔",
     "Group": "미노타우로스 수족 교체",
     "Description": "센티널 하드프레임에서 인양한 부품으로, <TECHNOLOGY>미노타우로스<> 중장갑 엑소크래프트 하이브리드에 맞게 재구성되었습니다.\n\n이 사지 오버라이드는 <STELLAR>전용 전투 시스템<>을 갖추고 있습니다. 고속 <TECHNOLOGY>기절 탄환<>을 발사하고 미노타우로스의 주 캐논을 훌륭하게 보조할 수 있습니다.\n\n<IMG>CYCLEWEAPON<>으로 무기 모드를 변경할 수 있습니다.",
     "BaseValueUnits": 1.0,
@@ -7948,7 +7948,7 @@
   {
     "Id": "tech214",
     "Icon": "technology/214.png",
-    "Name": "센티널 하드프레임 다리",
+    "Name": "하드프레임 다리",
     "Group": "미노타우로스 수족 교체",
     "Description": "센티널 하드프레임에서 인양한 부품으로, <TECHNOLOGY>미노타우로스<> 중장갑 엑소크래프트 하이브리드에 맞게 재구성되었습니다.\n\n설치 시 미노타우로스의 <TECHNOLOGY>엔진과 기동<> 시스템이 극도로 개선됩니다.",
     "BaseValueUnits": 1.0,
@@ -7990,7 +7990,7 @@
   {
     "Id": "tech215",
     "Icon": "technology/215.png",
-    "Name": "센티널 하드프레임 본체",
+    "Name": "하드프레임 본체",
     "Group": "미노타우로스 코어 교체품",
     "Description": "센티널 하드프레임에서 인양한 부품으로, <TECHNOLOGY>미노타우로스<> 중장갑 엑소크래프트 하이브리드에 맞게 재구성되었습니다.\n\n반자동 <TECHNOLOGY>인공 파일럿 플러그인<>으로 기능합니다. 설치 시 미노타우로스가 <STELLAR>스스로 행성을 횡단<>하고 <STELLAR>전투<>나 <STELLAR>채광<>을 진행하여 주 운전자를 지원합니다.\n\nAI 파일럿은 조종석에 들어갈 때 항상 주 운전자에게 제어권을 양도합니다.",
     "BaseValueUnits": 1.0,
@@ -8138,7 +8138,7 @@
         "Value": "15"
       },
       {
-        "Name": "기동성",
+        "Name": "기동성 (함선)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8216,7 +8216,7 @@
         "Value": "0.6"
       },
       {
-        "Name": "기동성",
+        "Name": "기동성 (함선)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8262,7 +8262,7 @@
     "Icon": "technology/222.png",
     "Name": "특이점 엔진",
     "Group": "웜홀 추진 드라이브",
-    "Description": "불안정하고 실험적인 성격이 강한 <TECHNOLOGY>화물선 하이퍼드라이브 기술<>입니다. 화물선의 노심 깊숙한 내부에 <SPECIAL>웜홀<>을 생성하는 극중력 장치로, 함선 전체를 반전시키고 우주 너머로 전송합니다.\n\n<STELLAR>화물선 사령관<>과 대화해 드라이브를 시작하십시오. <FUEL>경고<>: 목적지는 제어할 수 없습니다.",
+    "Description": "불안정하고 실험적인 성격이 강한 <TECHNOLOGY>화물선 하이퍼드라이브 기술<>입니다. 화물선의 노심 깊숙한 내부에 <SPECIAL>웜홀<>을 생성하는 극중력 장치로, 함선 전체를 반전시키고 우주 너머로 전송합니다.\n\n<STELLAR>화물선 사령관<>과 대화해 드라이브를 시작하세요. <FUEL>경고<>: 목적지는 제어할 수 없습니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -8435,6 +8435,47 @@
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech228",
+    "Icon": "technology/228.png",
+    "Name": "로켓 거래",
+    "Group": "상업용 미사일 소환 장치",
+    "Description": "<TECHNOLOGY>은하계 무역망<>에 직접 연결된 개인용 로켓공학 장치. 이 장치를 사용하면 사용자가 작은 우주선에 상품을 실을 수 있습니다. 출시되면 상품은 가장 가까운 무역 터미널로 운송되어 <STELLAR>자동으로 판매<>됩니다.\n\n<IMG>QUICK_MENU<>를 사용하여 무역 로켓을 <STELLAR>소환<>하십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw7",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "로켓 거래",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

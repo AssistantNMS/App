@@ -15,20 +15,20 @@ import '../../redux/modules/generic/genericPageViewModel.dart';
 class SelectGenericItemPage extends StatelessWidget {
   final String title;
 
-  const SelectGenericItemPage(this.title, {Key key}) : super(key: key);
+  const SelectGenericItemPage(this.title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var hintText = getTranslations().fromKey(LocaleKey.searchItems);
     return basicGenericPageScaffold(
       context,
-      title: title ?? 'Unknown',
+      title: title,
       drawer: const AppDrawer(),
       body: StoreConnector<AppState, GenericPageViewModel>(
           converter: (store) => GenericPageViewModel.fromStore(store),
           builder: (_, viewModel) {
-            Null Function(GenericPageItem genericPageItem) onTap;
-            onTap = (GenericPageItem genericPageItem) {
+            Null Function(GenericPageItem genericPageItem) localOnTap;
+            localOnTap = (GenericPageItem genericPageItem) {
               Navigator.pop(context, genericPageItem);
             };
             var presenter = getListItemDisplayer(
@@ -38,9 +38,10 @@ class SelectGenericItemPage extends StatelessWidget {
             return SearchableList<GenericPageItem>(
               () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),
               listItemDisplayer:
-                  (BuildContext context, GenericPageItem genericPageItem) =>
+                  (BuildContext context, GenericPageItem genericPageItem,
+                          {void Function()? onTap}) =>
                       presenter(context, genericPageItem,
-                          onTap: () => onTap(genericPageItem)),
+                          onTap: () => localOnTap(genericPageItem)),
               listItemSearch: search,
               key: Key(
                   '${getTranslations().currentLanguage} ${viewModel.genericTileIsCompact} - ${viewModel.displayGenericItemColour}'),

@@ -6,14 +6,14 @@ import 'expeditionRewardType.dart';
 
 class SeasonalExpeditionReward {
   SeasonalExpeditionReward({
-    this.id,
-    this.type,
-    this.amountMin,
-    this.amountMax,
-    this.currency,
-    this.procTechQuality,
+    required this.id,
+    required this.type,
+    required this.amountMin,
+    required this.amountMax,
+    required this.currency,
+    required this.procTechQuality,
+    required this.procTechGroup,
     this.multiItemRewardType,
-    this.procTechGroup,
     this.procProdType,
     this.procProdRarity,
   });
@@ -25,30 +25,31 @@ class SeasonalExpeditionReward {
   int currency;
   int procTechQuality;
   String procTechGroup;
-  MultiItemRewardType multiItemRewardType;
-  ProcProdType procProdType;
-  ProcProdRarity procProdRarity;
+  MultiItemRewardType? multiItemRewardType;
+  ProcProdType? procProdType;
+  ProcProdRarity? procProdRarity;
 
-  factory SeasonalExpeditionReward.fromJson(Map<String, dynamic> json) =>
-      SeasonalExpeditionReward(
-        id: readStringSafe(json, 'Id'),
-        type: expeditionRewardTypeValues
-            .map[readIntSafe(json, 'Type').toString()],
-        amountMin: readIntSafe(json, 'AmountMin'),
-        amountMax: readIntSafe(json, 'AmountMax'),
-        currency: readIntSafe(json, 'Currency'),
-        procTechQuality: readIntSafe(json, 'ProcTechQuality'),
-        procTechGroup: readStringSafe(json, 'ProcTechGroup'),
-        multiItemRewardType: json["MultiItemRewardType"] == null
-            ? null
-            : multiItemRewardTypeValues.map[json["MultiItemRewardType"]],
-        procProdType: json["ProcProdType"] == null
-            ? null
-            : procProdTypeValues.map[json["ProcProdType"]],
-        procProdRarity: json["ProcProdRarity"] == null
-            ? null
-            : procProdRarityValues.map[json["ProcProdRarity"]],
-      );
+  factory SeasonalExpeditionReward.fromJson(Map<String, dynamic>? json) {
+    return SeasonalExpeditionReward(
+      id: readStringSafe(json, 'Id'),
+      type:
+          expeditionRewardTypeValues.map[readIntSafe(json, 'Type').toString()]!,
+      amountMin: readIntSafe(json, 'AmountMin'),
+      amountMax: readIntSafe(json, 'AmountMax'),
+      currency: readIntSafe(json, 'Currency'),
+      procTechQuality: readIntSafe(json, 'ProcTechQuality'),
+      procTechGroup: readStringSafe(json, 'ProcTechGroup'),
+      // multiItemRewardType: json?["MultiItemRewardType"] == null
+      //     ? null
+      //     : multiItemRewardTypeValues.map[json?["MultiItemRewardType"]],
+      // procProdType: json?["ProcProdType"] == null
+      //     ? null
+      //     : procProdTypeValues.map[json?["ProcProdType"]],
+      // procProdRarity: json?["ProcProdRarity"] == null
+      //     ? null
+      //     : procProdRarityValues.map[json?["ProcProdRarity"]],
+    );
+  }
 }
 
 enum MultiItemRewardType { PRODUCT, SUBSTANCE, RARE, S }

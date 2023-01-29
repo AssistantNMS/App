@@ -10,10 +10,10 @@ import 'twitchCampaignDay.dart';
 
 class TwitchCampaignData {
   TwitchCampaignData({
-    this.id,
-    this.startDate,
-    this.endDate,
-    this.days,
+    required this.id,
+    required this.startDate,
+    required this.endDate,
+    required this.days,
   });
 
   final int id;
@@ -24,7 +24,7 @@ class TwitchCampaignData {
   factory TwitchCampaignData.fromRawJson(String str) =>
       TwitchCampaignData.fromJson(json.decode(str));
 
-  factory TwitchCampaignData.fromJson(Map<String, dynamic> json) =>
+  factory TwitchCampaignData.fromJson(Map<String, dynamic>? json) =>
       TwitchCampaignData(
         id: readIntSafe(json, 'Id'),
         startDate: readDateSafe(json, 'StartDate'),

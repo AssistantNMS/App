@@ -7,14 +7,14 @@ class SearchOption {
   String image;
   SearchOptionType type;
   bool hidden;
-  String value;
+  String? value;
   dynamic actualValue;
 
   SearchOption({
-    this.title,
-    this.image,
-    this.type,
-    this.hidden,
+    required this.title,
+    required this.image,
+    required this.type,
+    this.hidden = false,
     this.value = '',
     this.actualValue,
   });

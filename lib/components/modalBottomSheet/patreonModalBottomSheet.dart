@@ -8,14 +8,16 @@ import '../../constants/Patreon.dart';
 import '../../constants/AppImage.dart';
 import '../../constants/NmsUIConstants.dart';
 import '../../constants/Routes.dart';
+import '../../helpers/themeHelper.dart';
 
 class PatreonModalBottomSheet extends StatelessWidget {
   final DateTime unlockDate;
-  final void Function(BuildContext dialogCtx) onTap;
-  final Future<void> Function(BuildContext dialogCtx) onSettingsTap;
+  final void Function(BuildContext dialogCtx)? onTap;
+  final Future<void> Function(BuildContext dialogCtx)? onSettingsTap;
+
   const PatreonModalBottomSheet({
-    Key key,
-    this.unlockDate,
+    Key? key,
+    required this.unlockDate,
     this.onTap,
     this.onSettingsTap,
   }) : super(key: key);
@@ -46,11 +48,11 @@ class PatreonModalBottomSheet extends StatelessWidget {
     widgets.add(
       () => Container(
         color: HexColor('#424242'),
-        child: Center(
+        child: const Center(
           child: Padding(
-            padding: const EdgeInsets.only(top: 12),
+            padding: EdgeInsets.only(top: 12),
             child: SizedBox(
-              child: localImage(AppImage.patreonFeature),
+              child: LocalImage(imagePath: AppImage.patreonFeature),
               height: 200,
             ),
           ),
@@ -58,15 +60,15 @@ class PatreonModalBottomSheet extends StatelessWidget {
       ),
     );
 
-    widgets.add(() => emptySpace2x());
-    widgets.add(() => genericItemGroup(titleText));
-    widgets.add(() => emptySpace1x());
+    widgets.add(() => const EmptySpace2x());
+    widgets.add(() => GenericItemGroup(titleText));
+    widgets.add(() => const EmptySpace1x());
     widgets.add(
       () => Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: RichText(
           text: TextSpan(
-            style: Theme.of(context).textTheme.subtitle1,
+            style: getThemeSubtitle(context),
             children: nodes,
           ),
           textAlign: TextAlign.center,
@@ -74,25 +76,24 @@ class PatreonModalBottomSheet extends StatelessWidget {
         ),
       ),
     );
-    widgets.add(() => emptySpace2x());
+    widgets.add(() => const EmptySpace2x());
 
     widgets.add(
       () => Padding(
         padding: const EdgeInsets.symmetric(horizontal: 4),
         child: rowWith2Columns(
-          positiveButton(
-            context,
+          PositiveButton(
             title: getTranslations().fromKey(LocaleKey.patreon),
             backgroundColour: HexColor(NMSUIConstants.PatreonHex),
-            onPress: () => launchExternalURL(ExternalUrls.patreon),
+            onTap: () => launchExternalURL(ExternalUrls.patreon),
           ),
-          positiveButton(
-            context,
+          PositiveButton(
             title: getTranslations().fromKey(LocaleKey.settings),
-            onPress: () async {
-              if (onSettingsTap != null) {
-                await onSettingsTap(context);
-              }
+            onTap: () async {
+              if (onSettingsTap == null) return;
+
+              await onSettingsTap!(context);
+
               await getNavigation().navigateAwayFromHomeAsync(
                 context,
                 navigateToNamed: Routes.settings,
@@ -103,7 +104,7 @@ class PatreonModalBottomSheet extends StatelessWidget {
       ),
     );
 
-    widgets.add(() => emptySpace8x());
+    widgets.add(() => const EmptySpace8x());
 
     return AnimatedSize(
       duration: AppDuration.modal,
@@ -129,9 +130,9 @@ class PatreonModalBottomSheet extends StatelessWidget {
 void handlePatreonBottomModalSheetWhenTapped(
   BuildContext navContext,
   bool isPatron, {
-  @required DateTime unlockDate,
-  @required void Function(BuildContext dialogCtx) onTap,
-  Future<void> Function(BuildContext dialogCtx) onSettingsTap,
+  required DateTime unlockDate,
+  required void Function(BuildContext dialogCtx) onTap,
+  Future<void> Function(BuildContext dialogCtx)? onSettingsTap,
 }) {
   bool isLocked = isPatreonFeatureLocked(unlockDate, isPatron);
   if (isLocked == false) {

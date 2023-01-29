@@ -13,14 +13,13 @@ import '../../constants/AnalyticsEvent.dart';
 import '../../constants/NmsExternalUrls.dart';
 import '../../contracts/portal/portalRecord.dart';
 import '../../contracts/redux/appState.dart';
-import '../../helpers/genericHelper.dart';
 import '../../helpers/hexHelper.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 import 'addPortalPage.dart';
 
 class ViewPortalPage extends StatefulWidget {
   final PortalRecord item;
-  const ViewPortalPage(this.item, {Key key}) : super(key: key);
+  const ViewPortalPage(this.item, {Key? key}) : super(key: key);
 
   @override
   createState() => _ViewPortalPageState(item);
@@ -43,14 +42,18 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
         body: getBody(context, portalViewModel),
         fab: FloatingActionButton(
           onPressed: () async {
-            PortalRecord temp =
+            PortalRecord? temp =
                 await getNavigation().navigateAsync<PortalRecord>(
               context,
               navigateTo: (context) => AddPortalPage(item, isEdit: true),
             );
-            if (temp == null || temp is! PortalRecord) return;
+            if (temp == null) return;
             portalViewModel.editPortal(
-                temp.name, temp.codes, temp.tags, temp.uuid);
+              temp.name ?? '...',
+              temp.codes,
+              temp.tags,
+              temp.uuid,
+            );
             setState(() {
               item = temp;
             });
@@ -65,10 +68,14 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
   }
 
   Widget getBody(
-      BuildContext scaffoldContext, PortalViewModel portalViewModel) {
+    BuildContext scaffoldContext,
+    PortalViewModel portalViewModel,
+  ) {
     List<Widget> widgets = List.empty(growable: true);
-    widgets.add(twoLinePortalGlyphList(item.codes,
-        useAltGlyphs: portalViewModel.useAltGlyphs));
+    widgets.add(twoLinePortalGlyphList(
+      item.codes,
+      useAltGlyphs: portalViewModel.useAltGlyphs,
+    ));
 
     String hexString = allUpperCase(intArrayToHex(item.codes));
     widgets.add(GestureDetector(
@@ -91,11 +98,21 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
       ),
     ));
 
-    if (item.tags != null && item.tags.isNotEmpty) {
-      widgets.add(Wrap(
-        alignment: WrapAlignment.center,
-        children: item.tags.map((tag) => genericChip(context, tag)).toList(),
-      ));
+    if (item.tags.isNotEmpty) {
+      TextStyle chipLabelStyle = const TextStyle(color: Colors.black);
+      widgets.add(
+        Wrap(
+          spacing: 4,
+          alignment: WrapAlignment.center,
+          children: item.tags
+              .map(
+                (tag) => getBaseWidget().appChip(
+                  label: Text(tag, style: chipLabelStyle),
+                ),
+              )
+              .toList(),
+        ),
+      );
     }
 
     // String dateString = (item.date != null && item.date.length > 10)
@@ -103,10 +120,10 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
     //     : item.date ?? '';
     // widgets.add(Padding(
     //   padding: const EdgeInsets.only(top: 8, bottom: 12),
-    //   child: genericItemGroup(dateString),
+    //   child: GenericItemGroup(dateString),
     // ));
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
 
     void Function(String gAddress) onCopy;
     onCopy = (String gAddress) {
@@ -123,19 +140,21 @@ class _ViewPortalPageState extends State<ViewPortalPage> {
     Future Function() onTap;
     onTap = () => launchExternalURL(url);
     widgets.add(GestureDetector(
-      child: Chip(
-        label: const Text('nmsportals.github.io'),
+      child: getBaseWidget().appChip(
+        text: 'nmsportals.github.io',
+        backgroundColor: getTheme().getCardBackgroundColour(context),
         deleteIcon: const Icon(Icons.open_in_new),
         onDeleted: onTap,
       ),
       onTap: onTap,
     ));
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return listWithScrollbar(
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

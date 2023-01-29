@@ -13,9 +13,11 @@ import '../../../integration/dependencyInjection.dart';
 class TwitchCampaignDetailPage extends StatelessWidget {
   final int id;
   final bool displayGenericItemColour;
-  const TwitchCampaignDetailPage(
-      {Key key, this.id, this.displayGenericItemColour})
-      : super(key: key);
+  const TwitchCampaignDetailPage({
+    Key? key,
+    required this.id,
+    required this.displayGenericItemColour,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +29,11 @@ class TwitchCampaignDetailPage extends StatelessWidget {
       actions: [
         ActionItem(
           icon: Icons.more,
-          image: Padding(
-            padding: const EdgeInsets.only(left: 12, right: 12),
-            child: getListTileImage(
-              AppImage.twitch,
-              padding: const EdgeInsets.symmetric(vertical: 16),
+          image: const Padding(
+            padding: EdgeInsets.only(left: 12, right: 12),
+            child: ListTileImage(
+              partialPath: AppImage.twitch,
+              padding: EdgeInsets.symmetric(vertical: 16),
             ),
           ),
           onPressed: () => getNavigation().navigateAsync(
@@ -44,13 +46,13 @@ class TwitchCampaignDetailPage extends StatelessWidget {
         future: getDataRepo().getTwitchDropById(context, id),
         builder: (BuildContext futureContext,
             AsyncSnapshot<ResultWithValue<TwitchCampaignData>> snapshot) {
-          Widget errorWidget = asyncSnapshotHandler(
+          Widget? errorWidget = asyncSnapshotHandler(
             futureContext,
             snapshot,
           );
           if (errorWidget != null) return errorWidget;
 
-          TwitchCampaignData campaign = snapshot.data.value;
+          TwitchCampaignData campaign = snapshot.data!.value;
           return getBody(context, campaign);
         },
       ),
@@ -61,15 +63,15 @@ class TwitchCampaignDetailPage extends StatelessWidget {
     List<Widget> widgets = List.empty(growable: true);
 
     List<Widget> firstSectionWidgets = List.empty(growable: true);
-    firstSectionWidgets.add(emptySpace1x());
-    firstSectionWidgets.add(genericItemDescription(
+    firstSectionWidgets.add(const EmptySpace1x());
+    firstSectionWidgets.add(GenericItemDescription(
       '${getTranslations().fromKey(LocaleKey.startDate)}: ${simpleDate(campaign.startDate)}',
     ));
-    firstSectionWidgets.add(emptySpace1x());
-    firstSectionWidgets.add(genericItemDescription(
+    firstSectionWidgets.add(const EmptySpace1x());
+    firstSectionWidgets.add(GenericItemDescription(
       '${getTranslations().fromKey(LocaleKey.endDate)}: ${simpleDate(campaign.endDate)}',
     ));
-    firstSectionWidgets.add(emptySpace1x());
+    firstSectionWidgets.add(const EmptySpace1x());
     widgets.add(
       sectionListItem(
         scaffoldContext,
@@ -84,14 +86,14 @@ class TwitchCampaignDetailPage extends StatelessWidget {
     for (int dayIndex = 0; dayIndex < campaign.days.length; dayIndex++) {
       TwitchCampaignDay day = campaign.days[dayIndex];
 
-      int dayNum = (day.dayNumber ?? 1) - 1;
+      int dayNum = day.dayNumber - 1;
       DateTime actualDate = campaign.startDate.add(Duration(days: dayNum));
 
       List<Widget> rewardWidgets = List.empty(growable: true);
       for (TwitchCampaignReward dayReward in day.rewards) {
         rewardWidgets.add(listTilePresenter(scaffoldContext, dayReward));
       }
-      rewardWidgets.add(emptySpace8x());
+      rewardWidgets.add(const EmptySpace8x());
 
       widgets.add(
         sectionListItem(scaffoldContext, simpleDate(actualDate), rewardWidgets),

@@ -1,15 +1,17 @@
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class FavouriteItem {
   String id;
-  String icon;
+  String? icon;
 
   FavouriteItem({
-    this.id,
+    required this.id,
     this.icon,
   });
 
-  factory FavouriteItem.fromJson(Map<String, dynamic> json) => FavouriteItem(
-        id: json["id"] as String,
-        icon: json["icon"] as String,
+  factory FavouriteItem.fromJson(Map<String, dynamic>? json) => FavouriteItem(
+        id: readStringSafe(json, 'id'),
+        icon: readStringSafe(json, 'icon'),
       );
 
   Map<String, dynamic> toJson() => {

@@ -5,41 +5,35 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class GuideMetaViewModel {
   String guid;
   int likes;
   int views;
 
   GuideMetaViewModel({
-    this.guid,
-    this.likes,
-    this.views,
+    required this.guid,
+    required this.likes,
+    required this.views,
   });
 
   factory GuideMetaViewModel.fromRawJson(String str) =>
       GuideMetaViewModel.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
-
-  factory GuideMetaViewModel.fromJson(Map<String, dynamic> json) {
+  factory GuideMetaViewModel.fromJson(Map<String, dynamic>? json) {
     try {
       return GuideMetaViewModel(
-        guid: json["guid"],
-        likes: json["likes"],
-        views: json["views"],
+        guid: readStringSafe(json, 'guid'),
+        likes: readIntSafe(json, 'likes'),
+        views: readIntSafe(json, 'views'),
       );
     } catch (exception) {
       return GuideMetaViewModel(
-        guid: json["guid"],
-        likes: int.tryParse(json["likes"]),
-        views: int.tryParse(json["views"]),
+        guid: '',
+        likes: 0,
+        views: 0,
       );
     }
   }
-
-  Map<String, dynamic> toJson() => {
-        "guid": guid,
-        "likes": likes,
-        "views": views,
-      };
 }

@@ -1,7 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../../components/common/cachedFutureBuilder.dart';
 import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../../constants/AnalyticsEvent.dart';
 import '../../../constants/AppImage.dart';
@@ -13,7 +12,7 @@ import '../../../integration/dependencyInjection.dart';
 import 'weekendMissionDetail.dart';
 
 class WeekendMissionSeason3Page extends StatelessWidget {
-  WeekendMissionSeason3Page({Key key}) : super(key: key) {
+  WeekendMissionSeason3Page({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.weekendMissionSeason3Page);
   }
   Future<ResultWithValue<WeekendStagePageItem>> getCurrentWeekendMissionData(
@@ -22,7 +21,10 @@ class WeekendMissionSeason3Page extends StatelessWidget {
         await getHelloGamesApiService().getWeekendMission();
     if (!apiResult.isSuccess) {
       return ResultWithValue<WeekendStagePageItem>(
-          false, null, apiResult.errorMessage);
+        false,
+        WeekendStagePageItem.initial(),
+        apiResult.errorMessage,
+      );
     }
 
     ResultWithValue<WeekendStagePageItem> weekendMissionResult =
@@ -35,10 +37,13 @@ class WeekendMissionSeason3Page extends StatelessWidget {
 
     if (!weekendMissionResult.isSuccess) {
       return ResultWithValue<WeekendStagePageItem>(
-          false, null, 'Something went wrong');
+        false,
+        WeekendStagePageItem.initial(),
+        'Something went wrong',
+      );
     }
 
-    var weekendMissionValue = weekendMissionResult.value;
+    WeekendStagePageItem weekendMissionValue = weekendMissionResult.value;
     weekendMissionValue.titles = weekendMissionResult.value.titles;
     weekendMissionValue.subtitles = weekendMissionResult.value.subtitles;
     weekendMissionValue.descriptions = weekendMissionResult.value.descriptions;
@@ -61,9 +66,9 @@ class WeekendMissionSeason3Page extends StatelessWidget {
       actions: [
         ActionItem(
           icon: Icons.more,
-          image: getListTileImage(
-            AppImage.weekendMissionWhite,
-            padding: const EdgeInsets.symmetric(vertical: 16),
+          image: const ListTileImage(
+            partialPath: AppImage.weekendMissionWhite,
+            padding: EdgeInsets.symmetric(vertical: 16),
           ),
           onPressed: () => getNavigation().navigateAsync(
             context,
@@ -73,7 +78,7 @@ class WeekendMissionSeason3Page extends StatelessWidget {
       ],
       body: CachedFutureBuilder<ResultWithValue<WeekendStagePageItem>>(
         future: getCurrentWeekendMissionData(context),
-        whileLoading: getLoading().fullPageLoading(
+        whileLoading: () => getLoading().fullPageLoading(
           context,
           loadingText: getTranslations().fromKey(LocaleKey.loading),
         ),

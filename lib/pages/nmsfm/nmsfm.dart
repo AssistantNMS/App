@@ -9,6 +9,7 @@ import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AppAudio.dart';
 import '../../constants/AppDuration.dart';
 import '../../constants/AppImage.dart';
+import '../../constants/NmsUIConstants.dart';
 import '../../constants/Nmsfm.dart';
 import '../../contracts/misc/audioStreamBuilderEvent.dart';
 import '../../contracts/nmsfm/zenoFMNowPlaying.dart';
@@ -17,7 +18,7 @@ import '../../services/api/zenoFMApiService.dart';
 import 'nmsfmTrackList.dart';
 
 class NMSFMPage extends StatefulWidget {
-  const NMSFMPage({Key key}) : super(key: key);
+  const NMSFMPage({Key? key}) : super(key: key);
 
   @override
   _NMSFMPageWidget createState() => _NMSFMPageWidget();
@@ -25,7 +26,7 @@ class NMSFMPage extends StatefulWidget {
 
 class _NMSFMPageWidget extends State<NMSFMPage> {
   ConnectivityResult _connectivityStatus = ConnectivityResult.none;
-  StreamSubscription<ConnectivityResult> _connectivitySubscription;
+  late StreamSubscription<ConnectivityResult> _connectivitySubscription;
 
   _isOnline() {
     return _connectivityStatus != ConnectivityResult.none ||
@@ -56,18 +57,27 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
 
   Widget getBody(BuildContext context) {
     List<Widget> widgets = List.empty(growable: true);
-    widgets.add(localImage(
-      AppImage.nmsfmLogo,
-      padding: const EdgeInsets.symmetric(horizontal: 64),
-    ));
-    widgets.add(emptySpace1x());
-    widgets.add(genericItemName(getTranslations().fromKey(LocaleKey.nmsfm)));
-    widgets.add(genericItemDescription(
+    widgets.add(const EmptySpace2x());
+    widgets.add(
+      Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 350, maxHeight: 350),
+          child: LocalImage(
+            imagePath: AppImage.nmsfmLogo,
+            borderRadius: NMSUIConstants.generalBorderRadius,
+            padding: const EdgeInsets.symmetric(horizontal: 64),
+          ),
+        ),
+      ),
+    );
+    widgets.add(const EmptySpace1x());
+    widgets.add(GenericItemName(getTranslations().fromKey(LocaleKey.nmsfm)));
+    widgets.add(GenericItemDescription(
       getTranslations().fromKey(LocaleKey.nmsfmSubtitle),
     ));
 
-    widgets.add(emptySpace1x());
-    widgets.add(flatCard(
+    widgets.add(const EmptySpace1x());
+    widgets.add(FlatCard(
       child: veritasVelezTile(
         context,
         subtitle: getTranslations().fromKey(LocaleKey.nmsfmCreator),
@@ -80,10 +90,9 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
       widgets.add(const AudioStreamPresenter());
       widgets.add(Container(
         padding: const EdgeInsets.symmetric(horizontal: 12),
-        child: positiveButton(
-          context,
+        child: PositiveButton(
           title: getTranslations().fromKey(LocaleKey.viewTrackList),
-          onPress: () => getNavigation().navigateAsync(
+          onTap: () => getNavigation().navigateAsync(
             context,
             navigateTo: (context) => const NMSFMTrackListPage(),
           ),
@@ -126,6 +135,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
       itemCount: widgets.length,
       itemBuilder: (BuildContext innerContext, int index) => widgets[index],
       padding: const EdgeInsets.only(bottom: 32),
+      scrollController: ScrollController(),
     );
   }
 
@@ -139,24 +149,24 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
 }
 
 class AudioStreamPresenter extends StatefulWidget {
-  const AudioStreamPresenter({Key key}) : super(key: key);
+  const AudioStreamPresenter({Key? key}) : super(key: key);
 
   @override
   _AudioStreamPresenterWidget createState() => _AudioStreamPresenterWidget();
 }
 
 class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
-  Timer _timer;
+  late Timer _timer;
   String _title = '';
   String _artist = '';
   bool isPlaying = false;
-  AudioStreamBuilderEvent savedMetas;
 
   _AudioStreamPresenterWidget() {
     initTimer();
   }
 
   initTimer() {
+    // ignore: unnecessary_null_comparison
     if (_timer != null && _timer.isActive) _timer.cancel();
     _timer = Timer.periodic(AppDuration.zenoFMRefreshInterval, (Timer t) async {
       if (isPlaying == false) return;
@@ -185,15 +195,15 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
         bool isLoading = event.isLoading;
 
         String title = getTranslations().fromKey(LocaleKey.nmsfm);
-        if (_title.isNotEmpty ?? false) title = _title;
+        if (_title.isNotEmpty) title = _title;
 
         String artist = 'Now Streaming'; // TODO translate
         getLog().i('_artist: ' + _artist);
-        if (_artist.isNotEmpty ?? false) artist = _artist;
+        if (_artist.isNotEmpty) artist = _artist;
 
         Widget playStopWidget = (event.isPlaying)
-            ? getCorrectlySizedImageFromIcon(context, Icons.stop)
-            : getCorrectlySizedImageFromIcon(context, Icons.play_arrow);
+            ? const CorrectlySizedImageFromIcon(icon: Icons.stop)
+            : const CorrectlySizedImageFromIcon(icon: Icons.play_arrow);
 
         return ListTile(
           title: Text(title, maxLines: 1, overflow: TextOverflow.ellipsis),
@@ -232,6 +242,7 @@ class _AudioStreamPresenterWidget extends State<AudioStreamPresenter> {
 
   @override
   void dispose() {
+    // ignore: unnecessary_null_comparison
     if (_timer != null && _timer.isActive) _timer.cancel();
     super.dispose();
   }
@@ -241,7 +252,7 @@ class LocalAudioPresenter extends StatelessWidget {
   final String name;
   final String artist;
   final String localPath;
-  const LocalAudioPresenter(this.name, this.artist, this.localPath, {Key key})
+  const LocalAudioPresenter(this.name, this.artist, this.localPath, {Key? key})
       : super(key: key);
 
   @override
@@ -269,8 +280,8 @@ class LocalAudioPresenter extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
           ),
           trailing: isPlaying
-              ? getCorrectlySizedImageFromIcon(context, Icons.stop)
-              : getCorrectlySizedImageFromIcon(context, Icons.play_arrow),
+              ? const CorrectlySizedImageFromIcon(icon: Icons.stop)
+              : const CorrectlySizedImageFromIcon(icon: Icons.play_arrow),
           onTap: () {
             if (isPlaying) {
               getAudioPlayer().stop();

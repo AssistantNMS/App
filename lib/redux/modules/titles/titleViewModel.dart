@@ -7,7 +7,7 @@ import 'actions.dart';
 import 'selector.dart';
 
 class TitleViewModel {
-  String playerTitle;
+  String? playerTitle;
   List<String> owned;
   bool hideCompleted;
 
@@ -18,14 +18,14 @@ class TitleViewModel {
   Function(bool hideCompleted) setHideCompleted;
 
   TitleViewModel({
-    this.playerTitle,
-    this.owned,
-    this.hideCompleted,
-    this.addToOwned,
-    this.removeFromOwned,
-    this.removeAll,
-    this.setPlayerName,
-    this.setHideCompleted,
+    required this.playerTitle,
+    required this.owned,
+    required this.hideCompleted,
+    required this.addToOwned,
+    required this.removeFromOwned,
+    required this.removeAll,
+    required this.setPlayerName,
+    required this.setHideCompleted,
   });
 
   static TitleViewModel fromStore(Store<AppState> store) {

@@ -1,12 +1,10 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/AppImage.dart';
-import 'package:assistantnms_app/constants/NmsExternalUrls.dart';
 import 'package:flutter/material.dart';
 
-import '../../../components/common/cachedFutureBuilder.dart';
 import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../../constants/AnalyticsEvent.dart';
 import '../../../contracts/data/quicksilverStore.dart';
+import '../../../contracts/enum/community_mission_status.dart';
 import '../../../contracts/helloGames/communityMission.dart';
 import '../../../contracts/helloGames/communityMissionPageData.dart';
 import '../../../contracts/helloGames/quickSilverStoreDetails.dart';
@@ -18,7 +16,7 @@ import 'communityMissionRewardDetails.dart';
 import 'communityMissionRewards.dart';
 
 class CommunityMissionPage extends StatelessWidget {
-  CommunityMissionPage({Key key}) : super(key: key) {
+  CommunityMissionPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.communityMissionPage);
   }
 
@@ -30,19 +28,31 @@ class CommunityMissionPage extends StatelessWidget {
     ResultWithValue<CommunityMission> apiResult =
         await getHelloGamesApiService().getCommunityMission();
     if (apiResult.isSuccess == false) {
-      return ResultWithValue<CommunityMissionPageData>(false, null, '');
+      return ResultWithValue<CommunityMissionPageData>(
+        false,
+        CommunityMissionPageData.initial(),
+        '',
+      );
     }
 
     int missionId = apiResult.value.missionId;
     ResultWithValue<QuicksilverStoreDetails> qsDataResult =
         await quickSilverItemDetailsFuture(context, missionId);
     if (qsDataResult.isSuccess == false) {
-      return ResultWithValue<CommunityMissionPageData>(false, null, '');
+      return ResultWithValue<CommunityMissionPageData>(
+        false,
+        CommunityMissionPageData.initial(),
+        '',
+      );
     }
 
     ResultWithValue<List<QuicksilverStore>> qsItemResult = await allQsItemsTask;
     if (qsItemResult.isSuccess == false) {
-      return ResultWithValue<CommunityMissionPageData>(false, null, '');
+      return ResultWithValue<CommunityMissionPageData>(
+        false,
+        CommunityMissionPageData.initial(),
+        '',
+      );
     }
 
     int communityMissionMax = maxFromArr<QuicksilverStore>(
@@ -69,7 +79,7 @@ class CommunityMissionPage extends StatelessWidget {
         future: getLocalCommunityMissionDataAndResultFromApi(context),
         whenDoneLoading: (ResultWithValue<CommunityMissionPageData> snapshot) =>
             getBody(context, snapshot),
-        whileLoading: getLoading().fullPageLoading(
+        whileLoading: () => getLoading().fullPageLoading(
           context,
           loadingText: getTranslations().fromKey(LocaleKey.loading),
         ),
@@ -77,44 +87,36 @@ class CommunityMissionPage extends StatelessWidget {
     );
   }
 
-  Widget getBody(BuildContext bodyCtx,
-      ResultWithValue<CommunityMissionPageData> snapshot) {
-    if (snapshot.value == null ||
-        snapshot.value.apiData.currentTier == null ||
-        snapshot.value.apiData.totalTiers == null ||
-        snapshot.value.apiData.percentage == null ||
-        snapshot.value.apiData.missionId == null) {
-      return getLoading().customErrorWidget(bodyCtx);
-    }
-
+  Widget getBody(
+    BuildContext bodyCtx,
+    ResultWithValue<CommunityMissionPageData> result,
+  ) {
     List<Widget> widgets = List.empty(growable: true);
 
-    int missionId = snapshot.value.apiData.missionId;
-    int percentage = snapshot.value.apiData.percentage;
-    int totalTiers = snapshot.value.apiData.totalTiers;
-    int currentTier = snapshot.value.apiData.currentTier;
-    QuicksilverStore qsStore = snapshot.value.qsStore;
-    List<RequiredItemDetails> itemDetails = snapshot.value.itemDetails;
-    List<RequiredItemDetails> reqItemDetails =
-        snapshot.value.requiredItemDetails;
+    int missionId = result.value.apiData.missionId;
+    int percentage = result.value.apiData.percentage;
+    int totalTiers = result.value.apiData.totalTiers;
+    int currentTier = result.value.apiData.currentTier;
+    QuicksilverStore qsStore = result.value.qsStore;
+    List<RequiredItemDetails> itemDetails = result.value.itemDetails;
+    List<RequiredItemDetails> reqItemDetails = result.value.requiredItemDetails;
 
-    int communityMissionMax = snapshot.value.communityMissionMax;
-    int communityMissionMin = snapshot.value.communityMissionMin;
+    int communityMissionMax = result.value.communityMissionMax;
+    int communityMissionMin = result.value.communityMissionMin;
 
-    widgets.add(emptySpace2x());
-    widgets.add(genericItemGroup(
+    widgets.add(const EmptySpace2x());
+    widgets.add(GenericItemGroup(
       getTranslations().fromKey(LocaleKey.researchProgress),
     ));
 
     if (totalTiers > 1) {
-      widgets.add(genericItemDescription("$currentTier / $totalTiers"));
+      widgets.add(GenericItemDescription("$currentTier / $totalTiers"));
     }
 
     widgets.add(Padding(
       padding: const EdgeInsets.all(15.0),
-      child: horizontalProgressBar(
-        bodyCtx,
-        percentage.toDouble(),
+      child: HorizontalProgressBar(
+        percent: percentage.toDouble(),
         text: Text(
           '${percentage.toStringAsFixed(0)}%',
           style: const TextStyle(color: Colors.black),
@@ -123,30 +125,15 @@ class CommunityMissionPage extends StatelessWidget {
     ));
 
     widgets.add(
-      genericItemDescription(
+      GenericItemDescription(
           getTranslations().fromKey(LocaleKey.communityMissionContent)),
     );
 
-    widgets.add(emptySpace2x());
-    widgets.add(flatCard(
-      child: genericListTileWithSubtitle(
-        bodyCtx,
-        leadingImage: AppImage.communityMissionProgress,
-        name: 'Community Mission Progress Tracker',
-        subtitle: const Text('View progress over time'),
-        trailing: const Padding(
-          padding: EdgeInsets.only(right: 8),
-          child: Icon(Icons.open_in_new_rounded),
-        ),
-        onTap: () =>
-            launchExternalURL(NmsExternalUrls.communityMissionProgress),
-      ),
-    ));
-    widgets.add(emptySpace1x());
-
+    widgets.add(const EmptySpace1x());
     widgets.add(customDivider());
     widgets.add(CommunityMissionRewards(
       missionId,
+      CommunityMissionStatus.current,
       currentTier: currentTier,
       currentTierPercentage: percentage,
       totalTiers: totalTiers,
@@ -156,19 +143,20 @@ class CommunityMissionPage extends StatelessWidget {
     ));
 
     Widget viewCommunityMissionsButton(
-        LocaleKey buttonLocale, int missionIdToView) {
+      LocaleKey buttonLocale,
+      int missionIdToView,
+    ) {
       return Expanded(
         child: Padding(
           padding: const EdgeInsets.only(left: 4, right: 4, bottom: 8),
-          child: positiveButton(
-            bodyCtx,
+          child: PositiveButton(
             title: getTranslations().fromKey(buttonLocale),
             padding: const EdgeInsets.symmetric(vertical: 8),
-            onPress: () async =>
-                await getNavigation().navigateAwayFromHomeAsync(
+            onTap: () async => await getNavigation().navigateAwayFromHomeAsync(
               bodyCtx,
               navigateTo: (context) => CommunityMissionRewardDetailsPage(
                 missionIdToView,
+                missionId,
                 communityMissionMin,
                 communityMissionMax,
               ),
@@ -179,7 +167,7 @@ class CommunityMissionPage extends StatelessWidget {
       );
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     List<Widget> rowWidgets = List.empty(growable: true);
     rowWidgets.add(viewCommunityMissionsButton(
@@ -194,18 +182,19 @@ class CommunityMissionPage extends StatelessWidget {
     }
     // widgets.add(Row(children: rowWidgets));
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return Stack(
       children: [
         listWithScrollbar(
           itemCount: widgets.length,
           itemBuilder: (context, index) => widgets[index],
+          scrollController: ScrollController(),
         ),
         Positioned(
           left: 0,
           right: 0,
-          bottom: 0,
+          bottom: 2,
           child: Container(
             child: Padding(
               padding: const EdgeInsets.only(left: 4, right: 4),

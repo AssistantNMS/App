@@ -24,7 +24,7 @@ final inventoryReducer = combineReducers<InventoryState>([
 
 InventoryState _addInventoryAction(
     InventoryState state, AddInventoryAction action) {
-  List<Inventory> containers = state.containers ?? List.empty(growable: true);
+  List<Inventory> containers = state.containers;
   containers.add(action.inventory);
   return state.copyWith(containers: containers);
 }
@@ -182,7 +182,7 @@ InventoryState _removeInventorySlotToInventoryAction(
 InventoryState _removeInventorySlotFromInventoryByUuidAction(
   InventoryState state,
   String inventoryUuid,
-  String slotUuid,
+  String? slotUuid,
 ) {
   List<Inventory> newItems = List.empty(growable: true);
   for (int inventoryIndex = 0;

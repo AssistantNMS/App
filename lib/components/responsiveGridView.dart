@@ -1,58 +1,87 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-Widget responsiveGrid<T>(BuildContext context, List<T> items,
-    Widget Function(BuildContext context, T item) gridItemPresenter) {
-  double deviceWidth = MediaQuery.of(context).size.width;
-  int numberOfColumns = 8;
-  if (deviceWidth < 1400.0) numberOfColumns = 7;
-  if (deviceWidth < 1200.0) numberOfColumns = 6;
-  if (deviceWidth < 1000.0) numberOfColumns = 5;
-  if (deviceWidth < 800.0) numberOfColumns = 4;
-  if (deviceWidth < 600.0) numberOfColumns = 3;
-  if (deviceWidth < 400.0) numberOfColumns = 2;
+Widget responsiveGrid<T>(
+  BuildContext context,
+  List<T> items,
+  Widget Function(BuildContext context, T item) gridItemPresenter, {
+  int numberOfColumns = 0,
+}) {
+  return LayoutBuilder(
+    builder: (layoutCtx, BoxConstraints constraints) {
+      int numberOfColumnsLocal = 8;
 
-  return GridView.builder(
-    primary: false,
-    shrinkWrap: true,
-    padding: const EdgeInsets.all(8),
-    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 10,
-      crossAxisCount: numberOfColumns,
-    ),
-    itemCount: items.length,
-    itemBuilder: (BuildContext context, int index) =>
-        gridItemPresenter(context, items[index]),
+      if (numberOfColumns < 1) {
+        double deviceWidth = constraints.maxWidth;
+        if (deviceWidth < 1400.0) numberOfColumnsLocal = 7;
+        if (deviceWidth < 1200.0) numberOfColumnsLocal = 6;
+        if (deviceWidth < 1000.0) numberOfColumnsLocal = 5;
+        if (deviceWidth < 800.0) numberOfColumnsLocal = 4;
+        if (deviceWidth < 600.0) numberOfColumnsLocal = 3;
+        if (deviceWidth < 400.0) numberOfColumnsLocal = 2;
+      } else {
+        numberOfColumnsLocal = numberOfColumns;
+      }
+
+      return GridView.builder(
+        primary: false,
+        shrinkWrap: true,
+        padding: const EdgeInsets.all(8),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+          crossAxisCount: numberOfColumnsLocal,
+        ),
+        itemCount: items.length,
+        itemBuilder: (BuildContext context, int index) => gridItemPresenter(
+          context,
+          items[index],
+        ),
+      );
+    },
   );
 }
 
 Widget responsiveSelectorGrid<T>(
-    BuildContext context,
-    List<T> items,
-    int selectedIndex,
-    Widget Function(BuildContext context, T item) gridItemPresenter) {
-  double deviceWidth = MediaQuery.of(context).size.width;
-  int numberOfColumns = 8;
-  if (deviceWidth < 800) numberOfColumns = 8;
-  if (deviceWidth < 600) numberOfColumns = 6;
-  if (deviceWidth < 400) numberOfColumns = 4;
+  BuildContext context,
+  List<T> items,
+  int selectedIndex,
+  Widget Function(BuildContext context, T item) gridItemPresenter, {
+  int numberOfColumns = 0,
+}) {
+  return LayoutBuilder(
+    builder: (layoutCtx, BoxConstraints constraints) {
+      int numberOfColumnsLocal = 8;
 
-  return GridView.builder(
-    primary: false,
-    shrinkWrap: true,
-    padding: const EdgeInsets.all(8),
-    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 10,
-      crossAxisCount: numberOfColumns,
-    ),
-    itemCount: items.length,
-    itemBuilder: (BuildContext context, int index) => Container(
-      child: gridItemPresenter(context, items[index]),
-      color: index == selectedIndex
-          ? getTheme().getSecondaryColour(context)
-          : null,
-    ),
+      if (numberOfColumns < 1) {
+        double deviceWidth = constraints.maxWidth;
+        if (deviceWidth < 1400.0) numberOfColumnsLocal = 7;
+        if (deviceWidth < 1200.0) numberOfColumnsLocal = 6;
+        if (deviceWidth < 1000.0) numberOfColumnsLocal = 5;
+        if (deviceWidth < 800.0) numberOfColumnsLocal = 4;
+        if (deviceWidth < 600.0) numberOfColumnsLocal = 3;
+        if (deviceWidth < 400.0) numberOfColumnsLocal = 2;
+      } else {
+        numberOfColumnsLocal = numberOfColumns;
+      }
+
+      return GridView.builder(
+        primary: false,
+        shrinkWrap: true,
+        padding: const EdgeInsets.all(8),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+          crossAxisCount: numberOfColumnsLocal,
+        ),
+        itemCount: items.length,
+        itemBuilder: (BuildContext context, int index) => Container(
+          child: gridItemPresenter(context, items[index]),
+          color: index == selectedIndex
+              ? getTheme().getSecondaryColour(context)
+              : null,
+        ),
+      );
+    },
   );
 }

@@ -14,7 +14,7 @@ import '../tilePresenters/alienPuzzleRewardOddsTilePresenter.dart';
 
 class AlienPuzzleModalBottomSheet extends StatefulWidget {
   final AlienPuzzle alienPuzzle;
-  const AlienPuzzleModalBottomSheet(this.alienPuzzle, {Key key})
+  const AlienPuzzleModalBottomSheet(this.alienPuzzle, {Key? key})
       : super(key: key);
 
   @override
@@ -53,16 +53,16 @@ class _AlienPuzzleModalBottomSheetWidget
     List<Widget Function()> localChatBubbles = List.empty(growable: true);
     localChatBubbles.addAll(chatBubbles);
 
-    if (localOptions == null || localOptions.isEmpty) {
+    if (localOptions.isEmpty) {
       localChatBubbles.add(() => Padding(
             padding: const EdgeInsets.only(top: 12, left: 6),
             child: userLeftBubble(context,
                 getTranslations().fromKey(LocaleKey.conversationEnded)),
           ));
-      localChatBubbles.add(() => emptySpace8x());
+      localChatBubbles.add(() => const EmptySpace8x());
     }
 
-    if (localOptions != null && localOptions.isNotEmpty && showOptions) {
+    if (localOptions.isNotEmpty && showOptions) {
       localChatBubbles.add(
         () => Padding(
           padding: const EdgeInsets.only(top: 12),
@@ -72,9 +72,8 @@ class _AlienPuzzleModalBottomSheetWidget
                 .map((opt) => GestureDetector(
                       child: currentUserBubbleOption(context, opt.name),
                       onTap: () async {
-                        var isTextEmpty = opt.text == null || opt.text.isEmpty;
-                        var isRewardsListEmpty =
-                            opt.rewardIds == null || opt.rewardIds.isEmpty;
+                        var isTextEmpty = opt.text.isEmpty;
+                        var isRewardsListEmpty = opt.rewardIds.isEmpty;
                         if (isTextEmpty && isRewardsListEmpty) {
                           getNavigation().pop(context);
                           return;
@@ -94,7 +93,7 @@ class _AlienPuzzleModalBottomSheetWidget
                               ),
                             ),
                           );
-                          if (opt.text != null && opt.text.isNotEmpty) {
+                          if (opt.text.isNotEmpty) {
                             chatBubbles.add(
                               () => alienPuzzleBubble(
                                 textWithHighlightTags(
@@ -122,14 +121,13 @@ class _AlienPuzzleModalBottomSheetWidget
 
                         var changeChoiceButton = Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
-                          child: negativeButton(
+                          child: NegativeButton(
                             title: getTranslations()
                                 .fromKey(LocaleKey.changeChoice),
-                            onPress: () async {
+                            onTap: () async {
                               setState(() {
                                 showOptions = true;
-                                localOptions =
-                                    alienPuzzle?.options ?? List.empty();
+                                localOptions = alienPuzzle.options;
                                 rewardBubbles = List.empty(growable: true);
                               });
                             },
@@ -152,9 +150,8 @@ class _AlienPuzzleModalBottomSheetWidget
                           var needToEnrich =
                               alienPuzzleRewardItemRequiresAdditionalData
                                   .contains(rewardToDisplay.type);
-                          var detailItem = AlienPuzzleRewardOddsWithAdditional(
-                            alienRewardsResult.value[0].rewards[0],
-                          );
+                          var detailItem =
+                              alienRewardsResult.value[0].rewards[0];
                           var childWidget = (needToEnrich)
                               ? alienPuzzleRewardOddsGetDetailsItemTilePresenter(
                                   context, detailItem)
@@ -173,8 +170,7 @@ class _AlienPuzzleModalBottomSheetWidget
                             Padding(
                               padding: const EdgeInsets.only(
                                   top: 8, left: 8, right: 8),
-                              child: positiveButton(
-                                context,
+                              child: PositiveButton(
                                 title: getTranslations()
                                     .fromKey(LocaleKey.viewPossibleRewards)
                                     .replaceAll(
@@ -182,7 +178,7 @@ class _AlienPuzzleModalBottomSheetWidget
                                       alienRewardsResult.value.length
                                           .toString(),
                                     ),
-                                onPress: () async {
+                                onTap: () async {
                                   await getNavigation().navigateAsync(
                                     context,
                                     navigateTo: (context) =>
@@ -198,8 +194,7 @@ class _AlienPuzzleModalBottomSheetWidget
                         }
 
 // // Handle advanced flow
-                        if (opt.interactionId != null &&
-                            opt.interactionId.isNotEmpty) {
+                        if (opt.interactionId.isNotEmpty) {
                           var nextAlienPuzzleResult = await getAlienPuzzleRepo()
                               .getById(context, opt.interactionId);
                           if (nextAlienPuzzleResult.hasFailed) {

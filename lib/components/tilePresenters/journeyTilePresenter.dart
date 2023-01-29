@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import '../../contracts/journey/storedJourneyMilestone.dart';
 
@@ -7,35 +8,40 @@ import '../../contracts/journey/journeyMilestoneStat.dart';
 import '../../redux/modules/journeyMilestone/journeyMilestoneViewModel.dart';
 import '../modalBottomSheet/journeyMilestoneModalBottomSheet.dart';
 
-Widget Function(BuildContext context, JourneyMilestone milestone)
-    journeyMilestoneCurriedTilePresenter(JourneyMilestoneViewModel vm) {
-  return (BuildContext context, JourneyMilestone milestone) =>
+ListItemDisplayerType<JourneyMilestone> journeyMilestoneCurriedTilePresenter(
+    JourneyMilestoneViewModel vm) {
+  return (
+    BuildContext context,
+    JourneyMilestone milestone, {
+    void Function()? onTap,
+  }) =>
       journeyMilestoneTilePresenter(context, milestone, vm);
 }
 
 Widget journeyMilestoneTilePresenter(BuildContext context,
     JourneyMilestone milestone, JourneyMilestoneViewModel vm) {
-  StoredJourneyMilestone storedMilestone = vm.storedMilestones.firstWhere(
-    (storedM) => storedM.journeyId == milestone.id,
-    orElse: () => null,
-  );
+  StoredJourneyMilestone? storedMilestone = vm.storedMilestones //
+      .firstWhereOrNull((storedM) => storedM.journeyId == milestone.id);
+
   int statIndex = storedMilestone?.journeyStatIndex ?? 0;
   JourneyMilestoneStat chosenStat = milestone.stats[statIndex];
   String heading =
       milestone.title.length > 1 ? milestone.title : milestone.message;
-  heading = heading.replaceAll('%STAT%', chosenStat?.value?.toString() ?? '');
-  String subHeading = milestone.message
-      .replaceAll('%STAT%', chosenStat?.value?.toString() ?? '');
+  heading = heading.replaceAll('%STAT%', chosenStat.value.toString());
+  String subHeading =
+      milestone.message.replaceAll('%STAT%', chosenStat.value.toString());
 
   return ListTile(
     leading: Stack(
       alignment: Alignment.topCenter,
       children: <Widget>[
-        localImage(
-          '${getPath().imageAssetPathPrefix}/journeyMilestones/${milestone.id}.png',
+        LocalImage(
+          imagePath:
+              '${getPath().imageAssetPathPrefix}/journeyMilestones/${milestone.id}.png',
         ),
-        localImage(
-          '${getPath().imageAssetPathPrefix}/journeyMilestones/RANK.STARS$statIndex.png',
+        LocalImage(
+          imagePath:
+              '${getPath().imageAssetPathPrefix}/journeyMilestones/RANK.STARS$statIndex.png',
         ),
       ],
     ),

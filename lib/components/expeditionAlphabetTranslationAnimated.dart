@@ -1,29 +1,26 @@
 import 'dart:async';
 import 'dart:math';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/Fonts.dart';
+import '../helpers/themeHelper.dart';
 
 class ExpeditionAlphabetTranslationAnimated extends StatefulWidget {
   final String text;
-  const ExpeditionAlphabetTranslationAnimated(this.text, {Key key})
+  const ExpeditionAlphabetTranslationAnimated(this.text, {Key? key})
       : super(key: key);
   @override
-  _ExpeditionAlphabetTranslationAnimatedWidget createState() =>
-      // ignore: no_logic_in_create_state
-      _ExpeditionAlphabetTranslationAnimatedWidget(text);
+  createState() => _ExpeditionAlphabetTranslationAnimatedWidget();
 }
 
 class _ExpeditionAlphabetTranslationAnimatedWidget
     extends State<ExpeditionAlphabetTranslationAnimated>
     with TickerProviderStateMixin {
-  final String text;
-  Timer _timer;
+  late Timer _timer;
   int _counter = 0;
   final Random _rng = Random();
-
-  _ExpeditionAlphabetTranslationAnimatedWidget(this.text);
 
   @override
   initState() {
@@ -39,18 +36,18 @@ class _ExpeditionAlphabetTranslationAnimatedWidget
 
   @override
   Widget build(BuildContext context) {
-    TextStyle currentFont =
-        Theme.of(context).textTheme.subtitle1.copyWith(color: Colors.black);
-    TextStyle expeditionFont =
-        currentFont.copyWith(fontFamily: nmsExpeditionFontFamily);
+    TextStyle? currentFont =
+        getThemeSubtitle(context)?.copyWith(color: Colors.black);
+    TextStyle? expeditionFont =
+        currentFont?.copyWith(fontFamily: nmsExpeditionFontFamily);
 
     TextSpan content = TextSpan(
       style: currentFont,
-      children: text
+      children: widget.text
           .split('')
           .map((char) {
             bool shoExpFont = _rng.nextInt(100) > 25;
-            TextStyle styleToUse = shoExpFont ? expeditionFont : currentFont;
+            TextStyle? styleToUse = shoExpFont ? expeditionFont : currentFont;
             return Text(char, style: styleToUse);
           })
           .toList()
@@ -66,7 +63,7 @@ class _ExpeditionAlphabetTranslationAnimatedWidget
     );
 
     return Padding(
-      child: Chip(
+      child: getBaseWidget().appChip(
         label: RichText(
           key: Key(_counter.toString()),
           text: content,
@@ -80,7 +77,7 @@ class _ExpeditionAlphabetTranslationAnimatedWidget
 
   @override
   void dispose() {
-    if (_timer != null && _timer.isActive) _timer.cancel();
+    if (_timer.isActive) _timer.cancel();
     super.dispose();
   }
 }

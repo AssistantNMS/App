@@ -2,7 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../contracts/guide/guide.dart';
-import '../../helpers/genericHelper.dart';
 import '../../pages/guide/guidesDetailsPage.dart';
 
 const int numberOfDaysAGuideIsConsideredNew = 31;
@@ -16,11 +15,11 @@ Widget guideTilePresenter(BuildContext context, NmsGuide guideDetails) {
     Row(
       children: [
         const Icon(Icons.person),
-        Text(guideDetails.author ?? '???'),
+        Text(guideDetails.author),
       ],
     )
   ];
-  if ((guideDetails.minutes ?? 0) > 0) {
+  if ((guideDetails.minutes) > 0) {
     firstRow.add(Row(
       children: [
         const Icon(Icons.timer),
@@ -31,11 +30,11 @@ Widget guideTilePresenter(BuildContext context, NmsGuide guideDetails) {
     ));
   }
   if (guideDetails.translatedBy != null &&
-      guideDetails.translatedBy.isNotEmpty) {
+      guideDetails.translatedBy!.isNotEmpty) {
     firstRow.add(Row(
       children: [
         const Icon(Icons.translate),
-        Text(guideDetails.translatedBy),
+        Text(guideDetails.translatedBy!),
       ],
     ));
   }
@@ -65,7 +64,10 @@ Widget guideTilePresenter(BuildContext context, NmsGuide guideDetails) {
       Wrap(
         alignment: WrapAlignment.center,
         children: guideDetails.tags
-            .map((g) => genericChip(context, g, color: Colors.transparent))
+            .map(
+              (g) => getBaseWidget()
+                  .appChip(text: g, backgroundColor: Colors.transparent),
+            )
             .toList(),
       ),
     ],
@@ -73,7 +75,7 @@ Widget guideTilePresenter(BuildContext context, NmsGuide guideDetails) {
   return GestureDetector(
     child: Card(
       child: isGuideNew(guideDetails)
-          ? wrapInNewBanner(context, LocaleKey.newItem, child)
+          ? WrapInNewBanner(message: LocaleKey.newItem, child: child)
           : child,
       margin: const EdgeInsets.all(4),
     ),
@@ -85,12 +87,12 @@ Widget guideTilePresenter(BuildContext context, NmsGuide guideDetails) {
 }
 
 Widget compactGuideTilePresenter(BuildContext context, NmsGuide guideDetails) {
-  String subTitle = (guideDetails.author ?? '???');
+  String subTitle = (guideDetails.author);
   if (guideDetails.translatedBy != null &&
-      guideDetails.translatedBy.isNotEmpty) {
-    subTitle += ' - ' + guideDetails.translatedBy;
+      guideDetails.translatedBy!.isNotEmpty) {
+    subTitle += ' - ' + guideDetails.translatedBy!;
   }
-  if ((guideDetails.minutes ?? 0) > 0) {
+  if (guideDetails.minutes > 0) {
     subTitle += ' - ' +
         getTranslations()
             .fromKey(LocaleKey.minutes)
@@ -113,7 +115,7 @@ Widget compactGuideTilePresenter(BuildContext context, NmsGuide guideDetails) {
   );
   return Card(
     child: isGuideNew(guideDetails)
-        ? wrapInNewBanner(context, LocaleKey.newItem, child)
+        ? WrapInNewBanner(message: LocaleKey.newItem, child: child)
         : child,
     margin: const EdgeInsets.all(0.0),
   );

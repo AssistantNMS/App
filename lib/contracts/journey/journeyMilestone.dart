@@ -10,11 +10,11 @@ import 'journeyMilestoneStat.dart';
 
 class JourneyMilestone {
   JourneyMilestone({
-    this.id,
-    this.title,
-    this.message,
-    this.singularMessage,
-    this.stats,
+    required this.id,
+    required this.title,
+    required this.message,
+    required this.singularMessage,
+    required this.stats,
   });
 
   String id;
@@ -26,7 +26,7 @@ class JourneyMilestone {
   factory JourneyMilestone.fromRawJson(String str) =>
       JourneyMilestone.fromJson(json.decode(str));
 
-  factory JourneyMilestone.fromJson(Map<String, dynamic> json) =>
+  factory JourneyMilestone.fromJson(Map<String, dynamic>? json) =>
       JourneyMilestone(
         id: readStringSafe(json, 'Id'),
         title: readStringSafe(json, 'Title'),

@@ -8,7 +8,7 @@ import '../../contracts/data/socialItem.dart';
 import '../../integration/dependencyInjection.dart';
 
 class SocialPage extends StatelessWidget {
-  SocialPage({Key key}) : super(key: key) {
+  SocialPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.socialPage);
   }
 

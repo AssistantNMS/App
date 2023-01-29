@@ -10,8 +10,8 @@ class CommunityMissionSettingViewModel {
   final Function(int) setPlatformIndex;
 
   CommunityMissionSettingViewModel({
-    this.lastPlatformIndex,
-    this.setPlatformIndex,
+    required this.lastPlatformIndex,
+    required this.setPlatformIndex,
   });
 
   static CommunityMissionSettingViewModel fromStore(Store<AppState> store) =>

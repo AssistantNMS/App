@@ -13,7 +13,7 @@ class CommunityLinksDetailsPage extends StatelessWidget {
   final CommunityLinkViewModel communityLink;
   final List<CommunityLinkChipColourViewModel> chipColours;
   const CommunityLinksDetailsPage(this.communityLink, this.chipColours,
-      {Key key})
+      {Key? key})
       : super(key: key);
 
   @override
@@ -37,22 +37,22 @@ class CommunityLinksDetailsPage extends StatelessWidget {
       Widget linkIcon = Hero(
         key: Key(communityLink.id),
         tag: communityLink.id,
-        child: networkImage(
-          handleCommunitySearchIcon(communityLink.icon),
+        child: ImageFromNetwork(
+          imageUrl: handleCommunitySearchIcon(communityLink.icon),
           boxfit: BoxFit.cover,
           width: 50,
         ),
       );
 
-      widgets.add(emptySpace1x());
+      widgets.add(const EmptySpace1x());
       widgets.add(Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [linkIcon],
       ));
     } else if (communityLink.banners.length < 2) {
       widgets.add(
-        networkImage(
-          handleCommunitySearchIcon(communityLink.banners[0]),
+        ImageFromNetwork(
+          imageUrl: handleCommunitySearchIcon(communityLink.banners[0]),
           boxfit: BoxFit.fitWidth,
           width: double.infinity,
         ),
@@ -68,8 +68,8 @@ class CommunityLinksDetailsPage extends StatelessWidget {
               getTheme().getScaffoldBackgroundColour(bodyCtx),
           children: communityLink.banners
               .map(
-                (banner) => networkImage(
-                  handleCommunitySearchIcon(banner),
+                (banner) => ImageFromNetwork(
+                  imageUrl: handleCommunitySearchIcon(banner),
                   boxfit: BoxFit.fitWidth,
                   width: double.infinity,
                 ),
@@ -80,9 +80,9 @@ class CommunityLinksDetailsPage extends StatelessWidget {
       );
     }
 
-    widgets.add(emptySpace1x());
-    widgets.add(genericItemDescription(communityLink.desc));
-    widgets.add(emptySpace1x());
+    widgets.add(const EmptySpace1x());
+    widgets.add(GenericItemDescription(communityLink.desc));
+    widgets.add(const EmptySpace1x());
 
     List<Widget> linkChildren = List.empty(growable: true);
     for (String link in communityLink.links) {
@@ -95,7 +95,7 @@ class CommunityLinksDetailsPage extends StatelessWidget {
         children: linkChildren,
       ),
     ));
-    widgets.add(emptySpace1x());
+    widgets.add(const EmptySpace1x());
 
     List<Widget> wrapChildren = List.empty(growable: true);
     for (String tag in communityLink.tags) {
@@ -103,11 +103,12 @@ class CommunityLinksDetailsPage extends StatelessWidget {
     }
 
     widgets.add(Wrap(alignment: WrapAlignment.center, children: wrapChildren));
-    widgets.add(emptySpace(10));
+    widgets.add(const EmptySpace(10));
 
     return listWithScrollbar(
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 }

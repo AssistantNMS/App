@@ -244,7 +244,7 @@
         "Name": "Tanques do jetpack",
         "LocaleKeyTemplate": "percentage",
         "Image": "jetpack",
-        "Value": "20"
+        "Value": "25"
       },
       {
         "Name": "Velocidade de recarregamento",
@@ -262,7 +262,7 @@
         "Name": "Tempo de recuperação de corrida",
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
-        "Value": "20"
+        "Value": "40"
       }
     ],
     "ConsumableRewardTexts": []
@@ -784,7 +784,7 @@
     "Icon": "curiosities/65.png",
     "Name": "Tradutor avançado",
     "Group": "Analisador automático de linguagem",
-    "Description": "Um dispositivo de tradução automática. Ele registra e analisa gramaticalmente as conversas próximas. Em seguida, faz os dados passarem por um sistema de aprendizado contextual para determinar o significado.\n\nA matriz de memória grande e os processadores de linguagem acelerados permitem a tradução em tempo real de porções de fala significativas.",
+    "Description": "Um dispositivo de tradução automática. Ele registra e analisa gramaticalmente as conversas próximas. Em seguida, faz os dados passarem por um sistema de aprendizado contextual para determinar o significado.\n\nA matriz de memória grande e os processadores de linguagem acelerados permitem a tradução em tempo real de porções significativas de fala.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -823,7 +823,7 @@
     "Icon": "technology/22.png",
     "Name": "Tradutor de Ártemis",
     "Group": "Analisador automático de linguagem",
-    "Description": "Um dispositivo de tradução automática. Ele deve ser calibrado por meio do pré-carregamento de dados de tradução existentes. Além disso, ele deve ter uma <STELLAR>conexão de rede com Ártemis<> para funcionar.\n\nSem acesso ao serviço de tradução host, o circuito interno permite a tradução em tempo real limitada de um número pequeno de palavras.",
+    "Description": "Um dispositivo de tradução automática. Ele deve ser calibrado por meio do pré-carregamento de dados de tradução existentes. Além disso, ele deve ter uma <STELLAR>conexão de rede com Ártemis<> para funcionar.\n\nSem acesso ao serviço de tradução de hospedagem, o circuito interno permite a tradução em tempo real limitada de um número pequeno de palavras.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -946,7 +946,7 @@
         "Value": "15"
       },
       {
-        "Name": "Mobilidade",
+        "Name": "Mobilidade (Nave)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -1032,7 +1032,7 @@
   {
     "Id": "tech27",
     "Icon": "technology/26.png",
-    "Name": "Recarregador de sistema de decolagem",
+    "Name": "Autocarregador de decolagem",
     "Group": "Atualização do sistema de decolagem da nave",
     "Description": "Os painéis fotovoltaicos nos <TECHNOLOGY>impulsionadores de decolagem<> da nave permitem uma carga lenta enquanto a nave não está sendo usada.\n\nA luz coletada é usada para fundir o di-hidrogênio da atmosfera e, com o tempo, <STELLAR>reabastecerá os impulsionadores de decolagem automaticamente<>.",
     "BaseValueUnits": 1.0,
@@ -1054,7 +1054,7 @@
         "Quantity": 2
       },
       {
-        "Id": "prod115",
+        "Id": "prod116",
         "Quantity": 2
       }
     ],
@@ -1916,7 +1916,7 @@
     "Icon": "technology/48.png",
     "Name": "Bomba Dyson",
     "Group": "Atualização do cíclotron da nave",
-    "Description": "Substitui o dissipador térmico da <TECHNOLOGY>balista de cíclotron <> ao envolver a unidade inteira com uma megaestrutura absorvedora de calor. A saída de calor é reformada para aumentar a eficiência em combate.\n\nMelhora significativamente o <STELLAR>desempenho térmico<>.",
+    "Description": "Substitui o dissipador térmico da <TECHNOLOGY>balista ciclotrônica<> ao envolver a unidade inteira com uma megaestrutura absorvedora de calor. A saída de calor é reformada para aumentar a eficiência em combate.\n\nMelhora significativamente o <STELLAR>desempenho térmico<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -2247,9 +2247,9 @@
       },
       {
         "Name": "Recompensas de análise de minerais",
-        "LocaleKeyTemplate": "defaultTemplate",
-        "Image": "target",
-        "Value": "1"
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
       }
     ],
     "ConsumableRewardTexts": []
@@ -3580,7 +3580,7 @@
   {
     "Id": "tech94",
     "Icon": "technology/94.png",
-    "Name": "Incremento de sinal do exoveículo",
+    "Name": "Radar do exoveículo",
     "Group": "Equipamento de verificação do exoveículo",
     "Description": "Um grande e complexo radar subespacial de campo.\n\nDevido ao grande consumo de energia e sua instabilidade subatômica inerente, esse equipamento só é instalado em exoveículos.\n\nPressione <IMG>QUICK_MENU<> para ativar o Incremento de sinal.",
     "BaseValueUnits": 1.0,
@@ -3615,9 +3615,9 @@
   {
     "Id": "tech96",
     "Icon": "technology/96.png",
-    "Name": "Atualização tau do incremento de sinal do exoveículo",
-    "Group": "Atualização do incremento de sinal do exoveículo",
-    "Description": "Permite que tipos adicionais de construções sejam localizados pelo incremento de sinal do exoveículo.",
+    "Name": "Ressonador de potência de radar",
+    "Group": "Atualização da detecção de sinal do exoveículo",
+    "Description": "Permite que tipos adicionais de construções sejam localizados pelo radar do exoveículo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -3654,7 +3654,7 @@
   {
     "Id": "tech97",
     "Icon": "technology/97.png",
-    "Name": "Módulo de aceleração do exoveículo",
+    "Name": "Incrementos do exoveículo",
     "Group": "Atualização de motor do exoveículo",
     "Description": "Um eficiente injetor de plasma acoplado ao motor que permite breves pulsos de velocidade.",
     "BaseValueUnits": 1.0,
@@ -3750,7 +3750,7 @@
   {
     "Id": "tech99",
     "Icon": "technology/99.png",
-    "Name": "Atualização sigma do laser minerador do exoveículo",
+    "Name": "Laser avançado do exoveículo",
     "Group": "Atualização de mineração do exoveículo",
     "Description": "Aumenta a potência do laser minerador do exoveículo.",
     "BaseValueUnits": 1.0,
@@ -3791,7 +3791,7 @@
   {
     "Id": "tech100",
     "Icon": "technology/100.png",
-    "Name": "Canhão do exoveículo",
+    "Name": "Canhão montado",
     "Group": "Acessório de combate do exoveículo",
     "Description": "Devido aos requisitos de energia dessa arma poderosa, ela só pode ser disparada quando estiver montada em um exoveículo.",
     "BaseValueUnits": 1.0,
@@ -5918,7 +5918,7 @@
   },
   {
     "Id": "tech166",
-    "Icon": "technology/28.png",
+    "Icon": "technology/166.png",
     "Name": "Feixe de matéria",
     "Group": "Disp. de teletransporte na nave cargueira",
     "Description": "Um dispositivo que modula os sinais de comunicação padrão de naves cargueiras para permitir o <TECHNOLOGY>transporte interplanetário de matéria<> e dados.\n\nAs naves cargueiras que o possuem podem enviar produtos e substâncias para o <STELLAR>exotraje<> de um usuário, bem como recebê-los a <STELLAR>longas distâncias<>.",
@@ -6253,9 +6253,9 @@
   {
     "Id": "tech174",
     "Icon": "technology/96.png",
-    "Name": "Incremento de sinal avançado",
-    "Group": "Atualização do incremento de sinal do exoveículo",
-    "Description": "Permite que tipos adicionais de construções sejam localizados pelo incremento de sinal do exoveículo.",
+    "Name": "Amplificador de radar",
+    "Group": "Atualização da detecção de sinal do exoveículo",
+    "Description": "Permite que tipos adicionais de construções sejam localizados pelo radar do exoveículo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -6658,7 +6658,7 @@
     "Icon": "technology/1.png",
     "Name": "Unidade de controle do ambiente",
     "Group": "Unidade de proteção antirrisco do exoveículo",
-    "Description": "Um sistema potente de neutralização do ambiente é conectado diretamente ao piloto do Minotauro quando ele assume o controle do veículo. O sistema é alimentado pela unidade de motor principal do Minotauro e não requer comandos adicionais do usuário. Uma pequena dor pode ser notada no local da inserção.\n\nDeixa o piloto do Minotauro imune a <STELLAR>todos os riscos ambientais<>.",
+    "Description": "Este sistema potente de neutralização do ambiente é conectado diretamente ao piloto quando ele entra no cockpit. O sistema é alimentado pelo motor principal do Minotauro e não requer comandos adicionais. Uma pequena dor pode ser notada no local da inserção.\n\nDeixa o piloto do Minotauro imune a <STELLAR>todos os riscos ambientais<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -6955,7 +6955,7 @@
         "Value": "100"
       },
       {
-        "Name": "Mobilidade",
+        "Name": "Mobilidade (Nave)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "25"
@@ -6965,7 +6965,7 @@
   },
   {
     "Id": "tech189",
-    "Icon": "other/148.png",
+    "Icon": "building/945.png",
     "Name": "Catapulta mutável",
     "Group": "Propulsor de dobra modificado ilegalmente",
     "Description": "Esse propulsor experimental aprimora a tecnologia do <TECHNOLOGY>hiperpropulsor<> convencional ao distorcer a geometria local no momento da inicialização de dobra, incrementando a <STELLAR>distância<> e a <STELLAR>eficiência<> de modo muito mais extenso que os propulsores comuns.\n\nRecomendado acessar os sistemas de hiperpropulsor por meio de <STELLAR>mapa galáctico<>.",
@@ -7091,7 +7091,7 @@
   {
     "Id": "tech192",
     "Icon": "technology/192.png",
-    "Name": "Implante de anulação de arquivo",
+    "Name": "Implante de acesso a arquivo",
     "Group": "Circuito subcutâneo de acesso",
     "Description": "Um <TECHNOLOGY>firewall biotécnico<> desenvolvido como uma proteção contra perigos textuais conhecidos. Ele está revestido por algo escorregadio, que começou a borbulhar pela superfície.\n\nQuando inserido na pele, concede acesso administrativo a textos antigos proibidos encadernados em um <SPECIAL>arquivo planetário<>.\n<FUEL>Atenção<>: não desencaderne os textos proibidos. A exposição a eles é extremamente perigosa.",
     "BaseValueUnits": 1.0,
@@ -8138,7 +8138,7 @@
         "Value": "15"
       },
       {
-        "Name": "Mobilidade",
+        "Name": "Mobilidade (Nave)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8216,7 +8216,7 @@
         "Value": "0.6"
       },
       {
-        "Name": "Mobilidade",
+        "Name": "Mobilidade (Nave)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8435,6 +8435,47 @@
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech228",
+    "Icon": "technology/228.png",
+    "Name": "Foguete comercial",
+    "Group": "Dispositivo para chamar o míssil mercantil",
+    "Description": "Um dispositivo pessoal com uma ligação direta com a <TECHNOLOGY>Rede Comercial Galáctica<>. Esta unidade permite que o usuário encha uma pequena nave com itens. Após o lançamento, esses itens serão transportados até o ponto comercial mais próximo e <STELLAR>vendidos automaticamente<>.\n\n<STELLAR>Chame<> o foguete comercial com <IMG>QUICK_MENU<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw7",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Foguete comercial",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

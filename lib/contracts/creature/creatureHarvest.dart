@@ -8,11 +8,11 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class CreatureHarvest {
   CreatureHarvest({
-    this.harvestType,
-    this.itemId,
-    this.creatureType,
-    this.description,
-    this.wikiLink,
+    required this.harvestType,
+    required this.itemId,
+    required this.creatureType,
+    required this.description,
+    required this.wikiLink,
   });
 
   final int harvestType;
@@ -24,7 +24,7 @@ class CreatureHarvest {
   factory CreatureHarvest.fromRawJson(String str) =>
       CreatureHarvest.fromJson(json.decode(str));
 
-  factory CreatureHarvest.fromJson(Map<String, dynamic> json) =>
+  factory CreatureHarvest.fromJson(Map<String, dynamic>? json) =>
       CreatureHarvest(
         harvestType: readIntSafe(json, 'HarvestType'),
         itemId: readStringSafe(json, 'ItemId'),

@@ -16,28 +16,27 @@ const int millisecondsDrift = 1 * 60 * 1000; // 1 minute in milliseconds
 class AddEditTimerPage extends StatefulWidget {
   final bool isEdit;
   final TimerItem timer;
-  const AddEditTimerPage(this.timer, this.isEdit, {Key key}) : super(key: key);
+  const AddEditTimerPage(this.timer, this.isEdit, {Key? key}) : super(key: key);
 
   @override
   _AddEditTimerState createState() => _AddEditTimerState(timer, isEdit);
 }
 
 class _AddEditTimerState extends State<AddEditTimerPage> {
-  String validationMessage;
+  String? validationMessage;
   int selectedImageIndex = 0;
   bool isEdit;
   TimerItem timer;
   DateTime now = DateTime.now();
 
   _AddEditTimerState(this.timer, this.isEdit) {
-    int selectedIndex = UserSelectionIcons.timer.indexOf(timer.icon);
+    int selectedIndex = UserSelectionIcons.timer.indexOf(timer.icon!);
     selectedImageIndex = selectedIndex >= 0 ? selectedIndex : 0;
     timer.icon = UserSelectionIcons.timer[selectedImageIndex];
 
-    if (timer.startDate != null &&
-        (now.millisecondsSinceEpoch - timer.startDate.millisecondsSinceEpoch)
-                .abs() <
-            millisecondsDrift) {
+    var diff =
+        now.millisecondsSinceEpoch - timer.startDate.millisecondsSinceEpoch;
+    if (diff.abs() < millisecondsDrift) {
       // If startDate is set to now-ish
       timer.startDate = now;
     }
@@ -53,7 +52,7 @@ class _AddEditTimerState extends State<AddEditTimerPage> {
           context,
           LocaleKey.name,
           nameIfEmpty: LocaleKey.newTimer,
-          currentName: timer.name,
+          currentName: timer.name ?? '...',
           onEdit: (String newName) => setState(() {
             timer.name = newName;
           }),
@@ -103,7 +102,7 @@ class _AddEditTimerState extends State<AddEditTimerPage> {
       child: timerDateTimeTilePresenter(
         context,
         LocaleKey.startDate,
-        timer.startDate ?? now,
+        timer.startDate,
         (DateTime newDate) => setState(() {
           timer.startDate = newDate;
         }),
@@ -121,7 +120,7 @@ class _AddEditTimerState extends State<AddEditTimerPage> {
       child: timerDateTimeTilePresenter(
         context,
         LocaleKey.endDate,
-        timer.completionDate ?? now,
+        timer.completionDate,
         (DateTime newDate) => setState(() {
           timer.completionDate = newDate;
         }),
@@ -153,6 +152,7 @@ class _AddEditTimerState extends State<AddEditTimerPage> {
     return listWithScrollbar(
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 
@@ -162,34 +162,29 @@ class _AddEditTimerState extends State<AddEditTimerPage> {
 
   List<Widget> getQuickAccessButtons(BuildContext context) {
     return [
-      genericChip(
-        context,
-        getTranslations().fromKey(LocaleKey.hour).replaceAll('{0}', '1'),
+      getBaseWidget().appChip(
+        text: getTranslations().fromKey(LocaleKey.hour).replaceAll('{0}', '1'),
         onTap: () => setEndDateQuickSelect(const Duration(hours: 1)),
       ),
-      genericChip(
-        context,
-        getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '2'),
+      getBaseWidget().appChip(
+        text: getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '2'),
         onTap: () => setEndDateQuickSelect(const Duration(hours: 2)),
       ),
-      genericChip(
-        context,
-        getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '5'),
+      getBaseWidget().appChip(
+        text: getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '5'),
         onTap: () => setEndDateQuickSelect(const Duration(hours: 5)),
       ),
-      genericChip(
-        context,
-        getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '10'),
+      getBaseWidget().appChip(
+        text:
+            getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '10'),
         onTap: () => setEndDateQuickSelect(const Duration(hours: 10)),
       ),
-      genericChip(
-        context,
-        getTranslations().fromKey(LocaleKey.day).replaceAll('{0}', '1'),
+      getBaseWidget().appChip(
+        text: getTranslations().fromKey(LocaleKey.day).replaceAll('{0}', '1'),
         onTap: () => setEndDateQuickSelect(const Duration(days: 1)),
       ),
-      genericChip(
-        context,
-        getTranslations().fromKey(LocaleKey.days).replaceAll('{0}', '2'),
+      getBaseWidget().appChip(
+        text: getTranslations().fromKey(LocaleKey.days).replaceAll('{0}', '2'),
         onTap: () => setEndDateQuickSelect(const Duration(days: 2)),
       ),
     ];

@@ -7,9 +7,9 @@ class PathService implements IPathService {
   @override
   String get imageAssetPathPrefix => 'assets/images';
   @override
-  Widget get steamNewsDefaultImage => localImage(
-        '$imageAssetPathPrefix/defaultSteamNews.jpg',
-        imagePackage: UIConstants.CommonPackage,
+  Widget get steamNewsDefaultImage => LocalImage(
+        imagePath: '$imageAssetPathPrefix/defaultSteamNews.jpg',
+        imagePackage: UIConstants.commonPackage,
       );
   @override
   String get defaultProfilePic => '';

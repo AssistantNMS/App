@@ -9,7 +9,6 @@
 import 'package:assets_audio_player_web/web/assets_audio_player_web.dart';
 import 'package:connectivity_plus_web/connectivity_plus_web.dart';
 import 'package:file_picker/_internal/file_picker_web.dart';
-import 'package:file_selector_web/file_selector_web.dart';
 import 'package:firebase_analytics_web/firebase_analytics_web.dart';
 import 'package:firebase_auth_web/firebase_auth_web.dart';
 import 'package:firebase_core_web/firebase_core_web.dart';
@@ -31,7 +30,6 @@ void registerPlugins(Registrar registrar) {
   AssetsAudioPlayerWebPlugin.registerWith(registrar);
   ConnectivityPlusPlugin.registerWith(registrar);
   FilePickerWeb.registerWith(registrar);
-  FileSelectorWeb.registerWith(registrar);
   FirebaseAnalyticsWeb.registerWith(registrar);
   FirebaseAuthWeb.registerWith(registrar);
   FirebaseCoreWeb.registerWith(registrar);

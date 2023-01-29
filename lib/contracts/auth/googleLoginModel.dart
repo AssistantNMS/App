@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class GoogleLoginModel {
   String aaAccessToken;
   String profileUrl;
@@ -7,9 +5,9 @@ class GoogleLoginModel {
   String email;
 
   GoogleLoginModel({
-    @required this.aaAccessToken,
-    @required this.profileUrl,
-    @required this.username,
-    @required this.email,
+    required this.aaAccessToken,
+    required this.profileUrl,
+    required this.username,
+    required this.email,
   });
 }

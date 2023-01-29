@@ -12,7 +12,7 @@ import '../../redux/modules/expedition/expeditionViewModel.dart';
 
 class SeasonalExpeditionDetailPage extends StatelessWidget {
   final SeasonalExpeditionPhase seasonalExpeditionPhase;
-  const SeasonalExpeditionDetailPage(this.seasonalExpeditionPhase, {Key key})
+  const SeasonalExpeditionDetailPage(this.seasonalExpeditionPhase, {Key? key})
       : super(key: key);
 
   @override
@@ -29,9 +29,10 @@ class SeasonalExpeditionDetailPage extends StatelessWidget {
   }
 
   Widget getBody(
-      BuildContext scaffoldContext,
-      SeasonalExpeditionPhase seasonalExpeditionPhase,
-      ExpeditionViewModel viewModel) {
+    BuildContext scaffoldContext,
+    SeasonalExpeditionPhase seasonalExpeditionPhase,
+    ExpeditionViewModel viewModel,
+  ) {
     List<Widget> widgets = List.empty(growable: true);
 
     for (SeasonalExpeditionMilestone milestone
@@ -46,10 +47,9 @@ class SeasonalExpeditionDetailPage extends StatelessWidget {
     if (seasonalExpeditionPhase.rewards.isNotEmpty) {
       widgets.add(Padding(
         padding: const EdgeInsets.symmetric(horizontal: 4),
-        child: positiveButton(
-          scaffoldContext,
+        child: PositiveButton(
           title: getTranslations().fromKey(LocaleKey.rewards),
-          onPress: () => adaptiveBottomModalSheet(
+          onTap: () => adaptiveBottomModalSheet(
             scaffoldContext,
             hasRoundedCorners: true,
             builder: (_) => ExpeditionRewardsListModalBottomSheet(
@@ -60,7 +60,7 @@ class SeasonalExpeditionDetailPage extends StatelessWidget {
         ),
       ));
     }
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return Column(
       children: [
@@ -68,6 +68,7 @@ class SeasonalExpeditionDetailPage extends StatelessWidget {
           child: listWithScrollbar(
             itemCount: widgets.length,
             itemBuilder: (context, index) => widgets[index],
+            scrollController: ScrollController(),
           ),
         ),
       ],

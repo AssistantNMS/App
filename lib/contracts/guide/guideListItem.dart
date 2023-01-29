@@ -4,13 +4,15 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class NmsGuideListItem {
   String folder;
   String file;
 
   NmsGuideListItem({
-    this.folder,
-    this.file,
+    required this.folder,
+    required this.file,
   });
 
   factory NmsGuideListItem.fromRawJson(String str) =>
@@ -18,10 +20,10 @@ class NmsGuideListItem {
 
   String toRawJson() => json.encode(toJson());
 
-  factory NmsGuideListItem.fromJson(Map<String, dynamic> json) =>
+  factory NmsGuideListItem.fromJson(Map<String, dynamic>? json) =>
       NmsGuideListItem(
-        folder: json["folder"],
-        file: json["file"],
+        folder: readStringSafe(json, 'folder'),
+        file: readStringSafe(json, 'file'),
       );
 
   Map<String, dynamic> toJson() => {

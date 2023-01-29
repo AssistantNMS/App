@@ -11,7 +11,7 @@ final timerReducer = combineReducers<TimerState>([
 ]);
 
 TimerState _addTimerAction(TimerState state, AddTimerAction action) {
-  List<TimerItem> timers = state.timers ?? List.empty(growable: true);
+  List<TimerItem> timers = state.timers;
   timers.add(action.timerItem);
   return state.copyWith(timers: timers);
 }

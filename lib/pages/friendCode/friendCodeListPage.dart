@@ -14,16 +14,16 @@ const String xb1 = 'XB';
 const String nsw = 'SW';
 
 class FriendCodeListPage extends StatefulWidget {
-  const FriendCodeListPage({Key key}) : super(key: key);
+  const FriendCodeListPage({Key? key}) : super(key: key);
 
   @override
   _FriendCodeListWidget createState() => _FriendCodeListWidget();
 }
 
 class _FriendCodeListWidget extends State<FriendCodeListPage> {
-  List<String> currentSelection = [pc, ps4, xb1];
+  List<String> currentSelection = [pc, ps4, xb1, nsw];
   List<String> allItemList = [pc, ps4, xb1, nsw];
-  List<String> disabledItemList = [nsw];
+  List<String> disabledItemList = [];
 
   _FriendCodeListWidget() {
     getAnalytics().trackEvent(AnalyticsEvent.friendCodeListPage);
@@ -34,13 +34,15 @@ class _FriendCodeListWidget extends State<FriendCodeListPage> {
     bool showPC = currentSelection.contains(pc);
     bool showPS4 = currentSelection.contains(ps4);
     bool showXb1 = currentSelection.contains(xb1);
+    bool showNsw = currentSelection.contains(nsw);
     return basicGenericPageScaffold<dynamic>(
       context,
       title: getTranslations().fromKey(LocaleKey.friendCodes),
       body: SearchableList<FriendCodeViewModel>(
-        () => getApiRepo().getFriendCodes(showPC, showPS4, showXb1),
+        () => getApiRepo().getFriendCodes(showPC, showPS4, showXb1, showNsw),
         listItemDisplayer:
-            (BuildContext context, FriendCodeViewModel friendCode) =>
+            (BuildContext context, FriendCodeViewModel friendCode,
+                    {void Function()? onTap}) =>
                 friendCodeTilePresenter(context, context, friendCode),
         listItemSearch: (FriendCodeViewModel option, String search) =>
             option.name.toLowerCase().contains(search.toLowerCase()),
@@ -49,8 +51,7 @@ class _FriendCodeListWidget extends State<FriendCodeListPage> {
         keepFirstListItemWidgetVisible: true,
         firstListItemWidget: Column(
           children: [
-            adaptiveCheckboxGroup(
-              context,
+            AdaptiveCheckboxGroup(
               allItemList: allItemList,
               selectedItems: currentSelection,
               disabledItems: disabledItemList,

@@ -13,14 +13,20 @@ class GuideApiService extends BaseApiService {
       final response = await apiGet('${ApiUrls.guideMeta}/$guid');
       if (response.hasFailed) {
         return ResultWithValue<GuideMetaViewModel>(
-            false, GuideMetaViewModel(), response.errorMessage);
+          false,
+          GuideMetaViewModel.fromRawJson('{}'),
+          response.errorMessage,
+        );
       }
       var guideMeta = GuideMetaViewModel.fromRawJson(response.value);
       return ResultWithValue(true, guideMeta, '');
     } catch (exception) {
       getLog().e("getGuideMetaData Api Exception: ${exception.toString()}");
       return ResultWithValue<GuideMetaViewModel>(
-          false, GuideMetaViewModel(), exception.toString());
+        false,
+        GuideMetaViewModel.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
@@ -30,14 +36,20 @@ class GuideApiService extends BaseApiService {
       final response = await apiGet('${ApiUrls.guideMeta}/$guid/$language');
       if (response.hasFailed) {
         return ResultWithValue<GuideMetaViewModel>(
-            false, GuideMetaViewModel(), response.errorMessage);
+          false,
+          GuideMetaViewModel.fromRawJson('{}'),
+          response.errorMessage,
+        );
       }
       var guideMeta = GuideMetaViewModel.fromRawJson(response.value);
       return ResultWithValue(true, guideMeta, '');
     } catch (exception) {
       getLog().e("getGuideDetails Api Exception: ${exception.toString()}");
       return ResultWithValue<GuideMetaViewModel>(
-          false, GuideMetaViewModel(), exception.toString());
+        false,
+        GuideMetaViewModel.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 

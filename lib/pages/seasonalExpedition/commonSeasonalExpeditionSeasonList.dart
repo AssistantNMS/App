@@ -19,13 +19,21 @@ Future<ResultWithValue<CurrentAndPastExpeditions>> currentAndPastExpeditions(
   bool isCustom = false,
 }) async {
   Future<ResultWithValue<ExpeditionViewModel>> apiTask = isCustom
-      ? Future.value(ResultWithValue<ExpeditionViewModel>(false, null, ''))
+      ? Future.value(ResultWithValue<ExpeditionViewModel>(
+          false,
+          ExpeditionViewModel.fromRawJson('{}'),
+          '',
+        ))
       : getHelloGamesApiService().getExpeditionStatus();
   ResultWithValue<List<SeasonalExpeditionSeason>> allExpeditionsResult =
       await getSeasonalExpeditionRepo().getAll(futureContext, isCustom);
 
   if (allExpeditionsResult.hasFailed) {
-    return ResultWithValue(false, null, allExpeditionsResult.errorMessage);
+    return ResultWithValue<CurrentAndPastExpeditions>(
+      false,
+      CurrentAndPastExpeditions(),
+      allExpeditionsResult.errorMessage,
+    );
   }
 
   CurrentAndPastExpeditions result = CurrentAndPastExpeditions(
@@ -50,21 +58,21 @@ Widget getExpeditionBodyFromFuture(
 }) {
   List<Widget> listItems = List.empty(growable: true);
 
-  Widget errorWidget = asyncSnapshotHandler(
+  Widget? errorWidget = asyncSnapshotHandler(
     context,
     snapshot,
     loader: () => getLoading().fullPageLoading(context),
-    isValidFunction: (ResultWithValue<CurrentAndPastExpeditions> expResult) {
-      if (expResult.hasFailed) return false;
-      if (expResult.value == null) return false;
+    isValidFunction: (ResultWithValue<CurrentAndPastExpeditions>? expResult) {
+      if (expResult?.hasFailed ?? false) return false;
+      if (expResult?.value == null) return false;
       return true;
     },
   );
   if (errorWidget != null) return errorWidget;
 
-  if (snapshot.data.value.current != null) {
-    ExpeditionViewModel current = snapshot.data.value.current;
-    Widget innerChild = expeditionInProgressPresenter(context, current);
+  if (snapshot.data!.value.current != null) {
+    ExpeditionViewModel? current = snapshot.data?.value.current;
+    Widget innerChild = expeditionInProgressPresenter(context, current!);
 
     listItems.add(
       Padding(
@@ -74,12 +82,8 @@ Widget getExpeditionBodyFromFuture(
     );
   }
 
-  // int milliSinceEpoch = DateTime.now().millisecondsSinceEpoch;
-  List<SeasonalExpeditionSeason> pastSeasons = snapshot.data.value.past
-      // .where(
-      //   (seas) => seas.startDate.millisecondsSinceEpoch < milliSinceEpoch,
-      // )
-      .toList();
+  List<SeasonalExpeditionSeason> pastSeasons =
+      snapshot.data!.value.past ?? List.empty();
   pastSeasons.sort((a, b) =>
       (a.startDate.millisecondsSinceEpoch > b.startDate.millisecondsSinceEpoch)
           ? -1
@@ -130,11 +134,17 @@ Widget getExpeditionBodyFromFuture(
     );
   }
 
-  listItems.add(Padding(child: Container(), padding: const EdgeInsets.all(16)));
+  listItems.add(
+    Padding(
+      child: Container(),
+      padding: const EdgeInsets.all(16),
+    ),
+  );
 
   return listWithScrollbar(
     shrinkWrap: true,
     itemCount: listItems.length,
     itemBuilder: (BuildContext context, int index) => listItems[index],
+    scrollController: ScrollController(),
   );
 }

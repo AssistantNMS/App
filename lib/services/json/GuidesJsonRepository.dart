@@ -22,6 +22,7 @@ class GuidesJsonRepository extends BaseJsonService
             context, guideListItem.folder, guideListItem.file);
         NmsGuide guideContent =
             NmsGuide.fromJson(guideDynamic, guideListItem.folder);
+        // ignore: unnecessary_null_comparison
         if (guideContent != null) {
           guides.add(guideContent);
         }

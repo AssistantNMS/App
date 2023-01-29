@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/components/common/cachedFutureBuilder.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +11,7 @@ import '../common/rowHelper.dart';
 import '../tilePresenters/settingTilePresenter.dart';
 
 class GoogleLoginBottomSheet extends StatefulWidget {
-  const GoogleLoginBottomSheet({Key key}) : super(key: key);
+  const GoogleLoginBottomSheet({Key? key}) : super(key: key);
 
   @override
   _GoogleLoginBottomSheetWidget createState() =>
@@ -38,7 +37,7 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
         );
       }
 
-      User user = getFirebase().getCurrentUser();
+      User? user = getFirebase().getCurrentUser();
       if (user == null) {
         throw Exception(
           'User is not logged in via Google: ' + authTokenResult.errorMessage,
@@ -46,9 +45,9 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
       }
 
       model.aaAccessToken = authTokenResult.value;
-      model.username = user.displayName;
-      model.profileUrl = user.photoURL;
-      model.email = user.email;
+      model.username = user.displayName ?? '';
+      model.profileUrl = user.photoURL ?? '';
+      model.email = user.email ?? '';
       return ResultWithValue(true, model, '');
     } catch (exception) {
       return ResultWithValue(false, model, exception.toString());
@@ -75,7 +74,7 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
   Widget build(BuildContext context) {
     return CachedFutureBuilder(
       future: getCurrentLoggedInUser(),
-      whileLoading: getLoading().loadingIndicator(),
+      whileLoading: () => getLoading().loadingIndicator(),
       whenDoneLoading: (ResultWithValue<GoogleLoginModel> modelResult) {
         List<Widget> widgets = List.empty(growable: true);
 
@@ -85,7 +84,7 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
           widgets.addAll(renderNotLoggedInList());
         }
 
-        widgets.add(emptySpace3x());
+        widgets.add(const EmptySpace3x());
 
         return AnimatedSize(
           duration: AppDuration.modal,
@@ -115,30 +114,30 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
     widgets.add(headingSettingTilePresenter(
       getTranslations().fromKey(LocaleKey.account),
     ));
-    widgets.add(flatCard(
+    widgets.add(FlatCard(
       child: Column(
         children: [
           ListTile(
             leading: ClipOval(
-              child: networkImage(model.profileUrl, height: 50, width: 50),
+              child: ImageFromNetwork(
+                  imageUrl: model.profileUrl, height: 50, width: 50),
             ),
             title: singleLineText(model.username),
             subtitle: singleLineText(model.email),
           ),
           rowWith2Columns(
-            positiveButton(
-              context,
+            PositiveButton(
               title: getTranslations().fromKey(LocaleKey.switchUser),
-              onPress: () async {
+              onTap: () async {
                 signIn();
                 setState(() {
                   rebuildCounter++;
                 });
               },
             ),
-            negativeButton(
+            NegativeButton(
               title: getTranslations().fromKey(LocaleKey.logout),
-              onPress: () async {
+              onTap: () async {
                 await getFirebase().signOutFromGoogle();
                 setState(() {
                   rebuildCounter++;
@@ -155,7 +154,7 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
   List<Widget> renderNotLoggedInList() {
     List<Widget> widgets = List.empty(growable: true);
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
     widgets.add(Center(
       child: AuthButton.google(
         onPressed: () async {

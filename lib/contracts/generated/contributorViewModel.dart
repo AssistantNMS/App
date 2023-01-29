@@ -5,6 +5,8 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class ContributorViewModel {
   String name;
   String link;
@@ -13,32 +15,22 @@ class ContributorViewModel {
   String imageUrl;
 
   ContributorViewModel({
-    this.name,
-    this.link,
-    this.description,
-    this.sortRank,
-    this.imageUrl,
+    required this.name,
+    required this.link,
+    required this.description,
+    required this.sortRank,
+    required this.imageUrl,
   });
 
   factory ContributorViewModel.fromRawJson(String str) =>
       ContributorViewModel.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
-
-  factory ContributorViewModel.fromJson(Map<String, dynamic> json) =>
+  factory ContributorViewModel.fromJson(Map<String, dynamic>? json) =>
       ContributorViewModel(
-        name: json["name"],
-        link: json["link"],
-        description: json["description"],
-        sortRank: json["sortRank"],
-        imageUrl: json["imageUrl"],
+        name: readStringSafe(json, 'name'),
+        link: readStringSafe(json, 'link'),
+        description: readStringSafe(json, 'description'),
+        sortRank: readIntSafe(json, 'sortRank'),
+        imageUrl: readStringSafe(json, 'imageUrl'),
       );
-
-  Map<String, dynamic> toJson() => {
-        "name": name,
-        "link": link,
-        "description": description,
-        "sortRank": sortRank,
-        "imageUrl": imageUrl,
-      };
 }

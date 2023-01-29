@@ -8,6 +8,7 @@ import '../../contracts/processorRequiredItemDetails.dart';
 import '../../contracts/requiredItemDetails.dart';
 import '../../helpers/genericHelper.dart';
 import '../../helpers/itemsHelper.dart';
+import '../../helpers/themeHelper.dart';
 import '../../pages/generic/genericPage.dart';
 import '../../pages/generic/genericPageProcessorRecipe.dart';
 import 'processorRecipeTilePresentor.dart';
@@ -15,8 +16,11 @@ import 'processorRecipeTilePresentor.dart';
 const double itemPadding = 16.0;
 
 Widget Function(BuildContext context, RequiredItemDetails itemDetails)
-    requiredItemDetailsBackgroundTilePresenter(bool showBackgroundColours,
-            {Function onTap, Function onDelete}) =>
+    requiredItemDetailsBackgroundTilePresenter(
+  bool showBackgroundColours, {
+  void Function()? onTap,
+  void Function()? onDelete,
+}) =>
         (BuildContext context, RequiredItemDetails itemDetails) =>
             requiredItemDetailsTilePresenter(context, itemDetails,
                 showBackgroundColours: showBackgroundColours,
@@ -24,13 +28,15 @@ Widget Function(BuildContext context, RequiredItemDetails itemDetails)
                 onDelete: onDelete);
 
 Widget requiredItemDetailsTilePresenter(
-    BuildContext context, RequiredItemDetails itemDetails,
-    {Function onTap,
-    Function onEdit,
-    Function onDelete,
-    bool showBackgroundColours = false}) {
+  BuildContext context,
+  RequiredItemDetails itemDetails, {
+  void Function()? onTap,
+  void Function()? onEdit,
+  void Function()? onDelete,
+  bool showBackgroundColours = false,
+}) {
   String icon;
-  Function navigate;
+  Widget Function(BuildContext)? navigate;
 
   if (itemDetails is ProcessorRequiredItemDetails) {
     icon = (itemDetails.processor.id.contains('nut'))
@@ -50,31 +56,35 @@ Widget requiredItemDetailsTilePresenter(
     imageBackgroundColour: showBackgroundColours ? itemDetails.colour : null,
     borderRadius: NMSUIConstants.gameItemBorderRadius,
     onTap: onTap ??
-        () async =>
-            await getNavigation().navigateAsync(context, navigateTo: navigate),
+        () async => await getNavigation().navigateAsync(
+              context,
+              navigateTo: navigate,
+            ),
     trailing: popupMenu(context, onEdit: onEdit, onDelete: onDelete),
   );
 }
 
 Widget requiredItemDetailsWithCraftingRecipeTilePresenter(
-    BuildContext context, RequiredItemDetails itemDetails,
-    {Function onTap,
-    Function onEdit,
-    Function onDelete,
-    String pageItemId,
-    bool showBackgroundColours = false}) {
+  BuildContext context,
+  RequiredItemDetails itemDetails, {
+  void Function()? onTap,
+  void Function()? onEdit,
+  void Function()? onDelete,
+  String? pageItemId,
+  bool showBackgroundColours = false,
+}) {
   return FutureBuilder<List<RequiredItemDetails>>(
     future: getRequiredItemsSurfaceLevel(context, itemDetails.id),
     builder: (BuildContext context,
         AsyncSnapshot<List<RequiredItemDetails>> snapshot) {
-      Widget errorWidget = asyncSnapshotHandler(
+      Widget? errorWidget = asyncSnapshotHandler(
         context,
         snapshot,
         loader: () => getLoading().smallLoadingTile(context),
       );
       if (errorWidget != null) return errorWidget;
       String icon;
-      Function navigate;
+      Widget Function(BuildContext) navigate;
 
       if (itemDetails is ProcessorRequiredItemDetails) {
         icon = (itemDetails.processor.id.contains('nut'))
@@ -88,18 +98,18 @@ Widget requiredItemDetailsWithCraftingRecipeTilePresenter(
       }
 
       String listTileTitle = '';
-      if (snapshot.data != null && snapshot.data.isNotEmpty) {
-        var rows = snapshot.data.toList();
+      if (snapshot.data != null && snapshot.data!.isNotEmpty) {
+        List<RequiredItemDetails> rows = snapshot.data!.toList();
         rows.sort((RequiredItemDetails a, RequiredItemDetails b) =>
             (b.id == pageItemId) ? 1 : -1);
         int startIndex = 0;
-        for (var rowIndex = 0; rowIndex < rows.length; rowIndex++) {
+        for (int rowIndex = 0; rowIndex < rows.length; rowIndex++) {
           listTileTitle +=
               processorInputsToString(rowIndex, startIndex, rows[rowIndex]);
         }
       }
 
-      var subtitle = Text(
+      Text subtitle = Text(
         listTileTitle,
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
@@ -122,17 +132,19 @@ Widget requiredItemDetailsWithCraftingRecipeTilePresenter(
   );
 }
 
-Widget requiredItemTreeDetailsRowPresenter(BuildContext context,
-    RequiredItemDetails itemDetails, CurrencyType costType, int cost) {
-  var rowWidget = Row(
+Widget requiredItemTreeDetailsRowPresenter(
+  BuildContext context,
+  RequiredItemDetails itemDetails,
+  CurrencyType costType,
+  int cost,
+) {
+  Row rowWidget = Row(
     children: [
-      if (itemDetails.icon != null) ...[
-        SizedBox(
-          child: genericTileImage(itemDetails.icon),
-          height: 50,
-          width: 50,
-        ),
-      ],
+      SizedBox(
+        child: genericTileImage(itemDetails.icon),
+        height: 50,
+        width: 50,
+      ),
       Padding(
         padding: const EdgeInsets.only(left: 8),
         child: Column(
@@ -140,12 +152,10 @@ Widget requiredItemTreeDetailsRowPresenter(BuildContext context,
           children: [
             Text(itemDetails.name, maxLines: 2),
             Container(height: 4),
-            if (itemDetails.quantity != null && itemDetails.quantity > 0) ...[
+            if (itemDetails.quantity > 0) ...[
               Text(
                 "${getTranslations().fromKey(LocaleKey.quantity)}: ${itemDetails.quantity.toString()}",
-                style: _subtitleTextStyle(getTheme().getTheme(context)),
-                // style: getTheme(context).textTheme.bodyText2,
-                // style: const TextStyle(color: getTheme(context).textTheme.caption.color),
+                style: _subtitleTextStyle(context),
               ),
             ],
           ],
@@ -153,7 +163,7 @@ Widget requiredItemTreeDetailsRowPresenter(BuildContext context,
       ),
     ],
   );
-  if (itemDetails.id == null) return rowWidget;
+
   Future Function() onTapFunc;
   onTapFunc = () async => await getNavigation().navigateAsync(
         context,
@@ -167,7 +177,7 @@ Widget requiredItemTreeDetailsRowPresenter(BuildContext context,
     );
   }
 
-  if (costType == null || costType == CurrencyType.NONE || cost <= 0) {
+  if (costType == CurrencyType.NONE || cost <= 0) {
     return GestureDetector(
       child: rowWidget,
       onTap: onTapFunc,
@@ -197,7 +207,7 @@ Widget requiredItemTreeDetailsRowPresenter(BuildContext context,
         Positioned(
           top: 0,
           right: 10,
-          child: genericChipWidget(context, costWidget),
+          child: getBaseWidget().appChip(label: costWidget),
         ),
       ],
     ),
@@ -205,8 +215,9 @@ Widget requiredItemTreeDetailsRowPresenter(BuildContext context,
   );
 }
 
-TextStyle _subtitleTextStyle(ThemeData theme) {
-  final TextStyle style = theme.textTheme.bodyText2;
-  final Color color = theme.textTheme.caption.color;
-  return style.copyWith(color: color);
+TextStyle? _subtitleTextStyle(BuildContext ctx) {
+  final TextStyle? style = getThemeBodyMedium(ctx);
+  final Color? colour = getThemeBodySmall(ctx)?.color;
+  if (colour == null) return style;
+  return style?.copyWith(color: colour);
 }

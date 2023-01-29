@@ -7,9 +7,10 @@ class ProcessorRecipePageData {
   List<RequiredItemDetails> inputsDetails;
   List<Processor> similarRefiners;
 
-  ProcessorRecipePageData(
-      {this.procId,
-      this.outputDetail,
-      this.inputsDetails,
-      this.similarRefiners});
+  ProcessorRecipePageData({
+    required this.procId,
+    required this.outputDetail,
+    required this.inputsDetails,
+    required this.similarRefiners,
+  });
 }

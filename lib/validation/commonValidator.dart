@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 bool nameValidator(String name, {int minLength = 1}) {
-  if (name == null || name.length < minLength) {
+  if (name.length < minLength) {
     getLog().v('nameValidator: $name failed');
     return false;
   }
@@ -18,6 +18,15 @@ bool emailValidator(String email) {
 
 bool friendCodeValidator(String friendCode) {
   String regexPattern = r"^[A-z0-9]{4}\-[A-z0-9]{4}\-[A-z0-9]{5}";
+  var friendCodeValid = RegExp(regexPattern).hasMatch(friendCode);
+  if (friendCodeValid == false) {
+    getLog().v('friendCodeValidator: $friendCode failed');
+  }
+  return friendCodeValid;
+}
+
+bool switchFriendCodeValidator(String friendCode) {
+  String regexPattern = r"^SW\-[A-z0-9]{4}\-[A-z0-9]{4}\-[A-z0-9]{4}";
   var friendCodeValid = RegExp(regexPattern).hasMatch(friendCode);
   if (friendCodeValid == false) {
     getLog().v('friendCodeValidator: $friendCode failed');

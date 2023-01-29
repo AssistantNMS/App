@@ -7,20 +7,20 @@ import '../../redux/modules/setting/drawerSettingsViewModel.dart';
 
 class CustomMenu {
   Widget icon;
-  Widget drawerIcon;
+  Widget? drawerIcon;
   LocaleKey title;
-  String navigateToNamed;
-  String navigateToExternal;
+  String? navigateToNamed;
+  String? navigateToExternal;
   bool isLocked;
   bool isNew;
   bool hideInCustom;
   bool hideInDrawer;
-  void Function(BuildContext) onTap;
-  void Function(BuildContext) onLongPress;
+  void Function(BuildContext)? onTap;
+  void Function(BuildContext)? onLongPress;
   CustomMenu({
-    this.icon,
-    this.drawerIcon,
-    this.title,
+    required this.icon,
+    required this.drawerIcon,
+    required this.title,
     this.navigateToNamed,
     this.navigateToExternal,
     this.isLocked = false,
@@ -37,29 +37,37 @@ const double imageSize = 52;
 List<CustomMenu> getMenuOptionsSection1(
     BuildContext context, DrawerSettingsViewModel vm, Color drawerIconColour) {
   //
-  Widget localGetFromIcon(IconData icon) =>
-      getCorrectlySizedImageFromIcon(context, icon,
-          colour: drawerIconColour, maxSize: imageSize);
+  Widget localGetFromIcon(IconData icon) => CorrectlySizedImageFromIcon(
+      icon: icon, colour: drawerIconColour, maxSize: imageSize);
   Widget localGetDrawerFromIcon(IconData icon) =>
-      getCorrectlySizedImageFromIcon(context, icon, colour: drawerIconColour);
+      CorrectlySizedImageFromIcon(icon: icon, colour: drawerIconColour);
 
   return [
     CustomMenu(
-      icon: getListTileImage(AppImage.whatIsNew, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.whatIsNew),
+      icon: const ListTileImage(
+        partialPath: AppImage.whatIsNew,
+        size: imageSize,
+      ),
+      drawerIcon: const ListTileImage(partialPath: AppImage.whatIsNew),
       title: LocaleKey.whatIsNew,
       navigateToNamed: Routes.whatIsNew,
     ),
     CustomMenu(
-      icon: getListTileImage(AppImage.language, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.language),
+      icon: const ListTileImage(
+        partialPath: AppImage.language,
+        size: imageSize,
+      ),
+      drawerIcon: const ListTileImage(partialPath: AppImage.language),
       title: LocaleKey.language,
       navigateToNamed: Routes.language,
       hideInCustom: true,
     ),
     CustomMenu(
-      icon: getListTileImage(AppImage.contributors, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.contributors),
+      icon: const ListTileImage(
+        partialPath: AppImage.contributors,
+        size: imageSize,
+      ),
+      drawerIcon: const ListTileImage(partialPath: AppImage.contributors),
       title: LocaleKey.contributors,
       navigateToNamed: Routes.contributors,
     ),
@@ -81,8 +89,8 @@ List<CustomMenu> getMenuOptionsSection1(
       ),
     ],
     // : CustomMenu(
-    //     icon: getListTileImage(AppImage.donation, size: imageSize),
-    //     drawerIcon: getListTileImage(AppImage.donation),
+    //     icon: const ListTileImage(partialPath:AppImage.donation, size: imageSize),
+    //     drawerIcon: const ListTileImage(partialPath:AppImage.donation),
     //     title: LocaleKey.donation,
     //     hideInCustom: true,
     //     navigateToNamed: Routes.donation,
@@ -93,11 +101,10 @@ List<CustomMenu> getMenuOptionsSection1(
 List<CustomMenu> getMenuOptionsSection2(
     BuildContext context, DrawerSettingsViewModel vm, Color drawerIconColour) {
   //
-  Widget localGetFromIcon(IconData icon) =>
-      getCorrectlySizedImageFromIcon(context, icon,
-          colour: drawerIconColour, maxSize: imageSize);
+  Widget localGetFromIcon(IconData icon) => CorrectlySizedImageFromIcon(
+      icon: icon, colour: drawerIconColour, maxSize: imageSize);
   Widget localGetDrawerFromIcon(IconData icon) =>
-      getCorrectlySizedImageFromIcon(context, icon, colour: drawerIconColour);
+      CorrectlySizedImageFromIcon(icon: icon, colour: drawerIconColour);
 
   return [
     CustomMenu(
@@ -107,15 +114,21 @@ List<CustomMenu> getMenuOptionsSection2(
       navigateToNamed: Routes.favourites,
     ),
     CustomMenu(
-      icon: getListTileImage(AppImage.catalogue, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.catalogue),
+      icon: const ListTileImage(
+        partialPath: AppImage.catalogue,
+        size: imageSize,
+      ),
+      drawerIcon: const ListTileImage(partialPath: AppImage.catalogue),
       title: LocaleKey.catalogue,
       navigateToNamed: Routes.cataloguePage,
       hideInDrawer: true,
     ),
     CustomMenu(
-      icon: getListTileImage('drawer/crafted.png', size: imageSize),
-      drawerIcon: getListTileImage('drawer/crafted.png'),
+      icon: const ListTileImage(
+        partialPath: 'drawer/crafted.png',
+        size: imageSize,
+      ),
+      drawerIcon: const ListTileImage(partialPath: 'drawer/crafted.png'),
       title: LocaleKey.allItems,
       navigateToNamed: Routes.allItemsPage,
       hideInDrawer: true,
@@ -138,24 +151,26 @@ List<CustomMenu> getMenuOptionsSection2(
 }
 
 List<CustomMenu> getMenuOptionsSection3(
-    BuildContext context, DrawerSettingsViewModel vm, Color drawerIconColour) {
+  BuildContext context,
+  DrawerSettingsViewModel vm,
+  Color drawerIconColour,
+) {
   //
-  Widget localGetFromIcon(IconData icon) =>
-      getCorrectlySizedImageFromIcon(context, icon,
-          colour: drawerIconColour, maxSize: imageSize);
+  Widget localGetFromIcon(IconData icon) => CorrectlySizedImageFromIcon(
+      icon: icon, colour: drawerIconColour, maxSize: imageSize);
   Widget localGetDrawerFromIcon(IconData icon) =>
-      getCorrectlySizedImageFromIcon(context, icon, colour: drawerIconColour);
+      CorrectlySizedImageFromIcon(icon: icon, colour: drawerIconColour);
 
   return [
     CustomMenu(
-      icon: getListTileImage(AppImage.cart, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.cart),
+      icon: const ListTileImage(partialPath: AppImage.cart, size: imageSize),
+      drawerIcon: const ListTileImage(partialPath: AppImage.cart),
       title: LocaleKey.cart,
       navigateToNamed: Routes.cart,
     ),
     CustomMenu(
-      icon: getListTileImage(AppImage.guide, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.guide),
+      icon: const ListTileImage(partialPath: AppImage.guide, size: imageSize),
+      drawerIcon: const ListTileImage(partialPath: AppImage.guide),
       title: LocaleKey.guides,
       navigateToNamed: Routes.guides,
       onLongPress: (ctx) {
@@ -166,26 +181,38 @@ List<CustomMenu> getMenuOptionsSection3(
       },
     ),
     CustomMenu(
-      icon: getListTileImage(AppImage.portal, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.portal),
+      icon: const ListTileImage(partialPath: AppImage.portal, size: imageSize),
+      drawerIcon: const ListTileImage(partialPath: AppImage.portal),
       title: LocaleKey.portalLibrary,
       navigateToNamed: Routes.portals,
     ),
     CustomMenu(
-      icon: getListTileImage(AppImage.inventory, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.inventory),
+      icon: randomPortalIcon(context, imageSize),
+      drawerIcon: randomPortalIcon(context, (imageSize * 0.75)),
+      title: LocaleKey.randomPortal,
+      navigateToNamed: Routes.randomPortal,
+    ),
+    CustomMenu(
+      icon: const ListTileImage(
+        partialPath: AppImage.inventory,
+        size: imageSize,
+      ),
+      drawerIcon: const ListTileImage(partialPath: AppImage.inventory),
       title: LocaleKey.inventoryManagement,
       navigateToNamed: Routes.inventoryList,
     ),
     CustomMenu(
-      icon: getListTileImage(AppImage.communityMission, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.communityMission),
+      icon: const ListTileImage(
+        partialPath: AppImage.communityMission,
+        size: imageSize,
+      ),
+      drawerIcon: const ListTileImage(partialPath: AppImage.communityMission),
       title: LocaleKey.communityMission,
       navigateToNamed: Routes.helloGamesCommunityMission,
     ),
     // CustomMenu(
-    //   icon: getListTileImage(AppImage.weekendMission, size: imageSize),
-    //   drawerIcon: getListTileImage(AppImage.weekendMission),
+    //   icon: const ListTileImage(partialPath:AppImage.weekendMission, size: imageSize),
+    //   drawerIcon: const ListTileImage(partialPath:AppImage.weekendMission),
     //   title: LocaleKey.weekendMission,
     //   navigateToNamed: Routes.helloGamesWeekendMission,
     // ),
@@ -220,8 +247,8 @@ List<CustomMenu> getMenuOptionsSection3(
       navigateToNamed: Routes.factionPage,
     ),
     CustomMenu(
-      icon: getListTileImage(AppImage.timer, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.timer),
+      icon: const ListTileImage(partialPath: AppImage.timer, size: imageSize),
+      drawerIcon: const ListTileImage(partialPath: AppImage.timer),
       title: LocaleKey.timers,
       navigateToNamed: Routes.timerPage,
     ),
@@ -250,20 +277,26 @@ List<CustomMenu> getMenuOptionsSection3(
       navigateToNamed: Routes.solarPanelBatteryCalculator,
     ),
     CustomMenu(
-      icon: getListTileImage(AppImage.communityLinks, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.communityLinks),
+      icon: const ListTileImage(
+        partialPath: AppImage.communityLinks,
+        size: imageSize,
+      ),
+      drawerIcon: const ListTileImage(partialPath: AppImage.communityLinks),
       title: LocaleKey.communityLinks,
       navigateToNamed: Routes.communityLinks,
     ),
     CustomMenu(
-      icon: getListTileImage(AppImage.techTree, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.techTree),
+      icon: const ListTileImage(
+        partialPath: AppImage.techTree,
+        size: imageSize,
+      ),
+      drawerIcon: const ListTileImage(partialPath: AppImage.techTree),
       title: LocaleKey.techTree,
       navigateToNamed: Routes.techTree,
     ),
     // CustomMenu(
-    //   icon: getListTileImage(AppImage.techTree, size: imageSize),
-    //   drawerIcon: getListTileImage(AppImage.techTree),
+    //   icon: const ListTileImage(partialPath:AppImage.techTree, size: imageSize),
+    //   drawerIcon: const ListTileImage(partialPath:AppImage.techTree),
     //   title: LocaleKey.twitchDrop,
     //   navigateToNamed: Routes.twitchCampaignPage,
     // ),
@@ -279,11 +312,10 @@ List<CustomMenu> getMenuOptionsSection3(
 List<CustomMenu> getMenuOptionsSection4(
     BuildContext context, DrawerSettingsViewModel vm, Color drawerIconColour) {
   //
-  Widget localGetFromIcon(IconData icon) =>
-      getCorrectlySizedImageFromIcon(context, icon,
-          colour: drawerIconColour, maxSize: imageSize);
+  Widget localGetFromIcon(IconData icon) => CorrectlySizedImageFromIcon(
+      icon: icon, colour: drawerIconColour, maxSize: imageSize);
   Widget localGetDrawerFromIcon(IconData icon) =>
-      getCorrectlySizedImageFromIcon(context, icon, colour: drawerIconColour);
+      CorrectlySizedImageFromIcon(icon: icon, colour: drawerIconColour);
 
   return [
     CustomMenu(
@@ -296,7 +328,9 @@ List<CustomMenu> getMenuOptionsSection4(
       icon: localGetFromIcon(Icons.feedback),
       drawerIcon: localGetDrawerFromIcon(Icons.feedback),
       title: LocaleKey.feedback,
-      navigateToNamed: Routes.feedback,
+      onTap: (tapCtx) {
+        FeedbackWrapper.of(tapCtx).show();
+      },
     ),
     // if (!isApple) ...[
     //   CustomMenu(
@@ -315,12 +349,41 @@ List<CustomMenu> getMenuOptionsSection4(
       navigateToNamed: Routes.about,
     ),
     CustomMenu(
-      icon: getListTileImage(AppImage.twitter, size: imageSize),
-      drawerIcon: getListTileImage(AppImage.twitter),
+      icon: const ListTileImage(partialPath: AppImage.twitter, size: imageSize),
+      drawerIcon: const ListTileImage(partialPath: AppImage.twitter),
       title: LocaleKey.social,
       navigateToNamed: Routes.socialLinks,
     ),
   ];
+}
+
+Widget randomPortalIcon(BuildContext context, double imageSize) {
+  return SizedBox(
+    width: imageSize,
+    height: imageSize,
+    child: Stack(
+      fit: StackFit.expand,
+      children: [
+        Positioned(
+          child: ListTileImage(
+            partialPath: AppImage.portal,
+            size: imageSize * 0.66,
+          ),
+          left: 0,
+          bottom: 0,
+        ),
+        Positioned(
+          child: CorrectlySizedImageFromIcon(
+            icon: Icons.casino_outlined,
+            colour: getTheme().getSecondaryColour(context),
+            maxSize: imageSize * 0.66,
+          ),
+          top: 0,
+          right: 0,
+        ),
+      ],
+    ),
+  );
 }
 
 List<CustomMenu> getMenuOptions(
@@ -336,12 +399,12 @@ List<CustomMenu> getMenuOptions(
 
 void customMenuClickHandler(BuildContext context, CustomMenu menuItem) async {
   if (menuItem.onTap != null) {
-    menuItem.onTap(context);
+    menuItem.onTap!(context);
     return;
   }
 
   if (menuItem.navigateToExternal != null) {
-    launchExternalURL(menuItem.navigateToExternal);
+    launchExternalURL(menuItem.navigateToExternal!);
     return;
   }
 

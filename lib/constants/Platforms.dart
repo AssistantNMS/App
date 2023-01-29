@@ -6,7 +6,7 @@ class SelectedPlatform {
   int index;
   SelectedPlatform(this.title, this.icon, this.index);
 
-  static SelectedPlatform defaultFont() => SelectedPlatform(
+  static SelectedPlatform defaultPlatform() => SelectedPlatform(
         'PC',
         AppImage.platformPC,
         0,
@@ -19,16 +19,17 @@ class SelectedPlatform {
           return item;
         }
       }
-      return SelectedPlatform.defaultFont();
+      return SelectedPlatform.defaultPlatform();
     } catch (ex) {
       //
     }
-    return SelectedPlatform.defaultFont();
+    return SelectedPlatform.defaultPlatform();
   }
 }
 
 List<SelectedPlatform> availablePlatforms = [
-  SelectedPlatform.defaultFont(),
-  SelectedPlatform('PS', AppImage.platformPS, 1),
-  SelectedPlatform('XB', AppImage.platformXB, 2),
+  SelectedPlatform.defaultPlatform(),
+  SelectedPlatform('Playstation', AppImage.platformPS, 1),
+  SelectedPlatform('Xbox', AppImage.platformXB, 2),
+  SelectedPlatform('Nintendo Switch', AppImage.platformSW, 3),
 ];

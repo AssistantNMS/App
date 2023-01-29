@@ -16,7 +16,7 @@ class ExpeditionRewardsListModalBottomSheet extends StatefulWidget {
   final String milestoneId;
   final List<SeasonalExpeditionReward> rewards;
   const ExpeditionRewardsListModalBottomSheet(this.milestoneId, this.rewards,
-      {Key key})
+      {Key? key})
       : super(key: key);
 
   @override
@@ -57,12 +57,13 @@ class _ExpeditionRewardsListModalBottomSheetWidget
     return StoreConnector<AppState, ExpeditionViewModel>(
       converter: (store) => ExpeditionViewModel.fromStore(store),
       builder: (BuildContext storeContext, ExpeditionViewModel viewModel) {
-        Widget errorWidget = asyncSnapshotHandler(
+        Widget? errorWidget = asyncSnapshotHandler(
           futureContext,
           snapshot,
           loader: getLoading().loadingIndicator,
-          isValidFunction: (ResultWithValue<List<RequiredItemDetails>> result) {
-            return result.isSuccess;
+          isValidFunction:
+              (ResultWithValue<List<RequiredItemDetails>>? result) {
+            return result?.isSuccess ?? false;
           },
         );
         if (errorWidget != null) return errorWidget;
@@ -75,33 +76,32 @@ class _ExpeditionRewardsListModalBottomSheetWidget
   Widget modalBody(
     BuildContext futureContext,
     ExpeditionViewModel viewModel,
-    ResultWithValue<List<RequiredItemDetails>> snapshot,
+    ResultWithValue<List<RequiredItemDetails>>? snapshot,
   ) {
-    List<RequiredItemDetails> rewardLookups = snapshot.value;
+    List<RequiredItemDetails>? rewardLookups = snapshot?.value;
     List<Widget Function()> widgetFuncs = widget.rewards
         .map((reward) => () => seasonalExpeditionRewardDetailTilePresenter(
               futureContext,
               reward,
-              rewardLookups,
+              rewardLookups ?? List.empty(),
             ))
         .toList();
 
-    if (widget.milestoneId != null && widget.milestoneId.isNotEmpty) {
-      widgetFuncs.add(() => emptySpace1x());
+    if (widget.milestoneId.isNotEmpty) {
+      widgetFuncs.add(() => const EmptySpace1x());
       bool isClaimed = false;
       if (viewModel.claimedRewards.any((cla) => cla == widget.milestoneId)) {
         isClaimed = true;
       }
 
-      Widget button = negativeButton(
+      Widget button = NegativeButton(
         title: getTranslations().fromKey(LocaleKey.markAsNotClaimed),
-        onPress: () => viewModel.removeFromClaimedRewards(widget.milestoneId),
+        onTap: () => viewModel.removeFromClaimedRewards(widget.milestoneId),
       );
       if (!isClaimed) {
-        button = positiveButton(
-          context,
+        button = PositiveButton(
           title: getTranslations().fromKey(LocaleKey.markAsClaimed),
-          onPress: () => viewModel.addToClaimedRewards(widget.milestoneId),
+          onTap: () => viewModel.addToClaimedRewards(widget.milestoneId),
         );
       }
 

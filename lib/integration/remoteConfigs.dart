@@ -7,13 +7,15 @@ import 'dependencyInjection.dart';
 
 class RemoteConfigs extends BaseApiService {
   String apiKey;
-  String _configurationsUrl;
+  late String _configurationsUrl;
   String remoteConfigsUrl = 'https://api.remoteconfigs.com/';
 
   final String _configurationsEndpoint = 'Configurations';
   final String _headerKey = 'apikey';
 
-  RemoteConfigs({this.apiKey}) : super(getEnv().baseApi) {
+  RemoteConfigs({
+    required this.apiKey,
+  }) : super(getEnv().baseApi) {
     _configurationsUrl = "$remoteConfigsUrl$_configurationsEndpoint";
   }
 
@@ -45,7 +47,7 @@ class RemoteConfigs extends BaseApiService {
 
     if (response.hasFailed) {
       return ResultWithValue<Configuration>(
-          false, Configuration(), response.errorMessage);
+          false, Configuration.fromRawJson('{}'), response.errorMessage);
     }
 
     try {
@@ -54,20 +56,24 @@ class RemoteConfigs extends BaseApiService {
     } catch (exception) {
       getLog().e("RemoteConfigs Api Exception: ${exception.toString()}");
       return ResultWithValue<Configuration>(
-          false, Configuration(), exception.toString());
+          false, Configuration.fromRawJson('{}'), exception.toString());
     }
   }
 
   Future<ResultWithValue<ConfigurationObject<T>>> getConfigurationObject<T>(
-      BuildContext context,
-      String configId,
-      T Function(String) settingsFromJson) async {
+    BuildContext context,
+    String configId,
+    T Function(String) settingsFromJson,
+  ) async {
     var url = "$_configurationsUrl/$configId/Object";
     var response = await webGet(url, headers: {_headerKey: apiKey});
 
     if (response.hasFailed) {
       return ResultWithValue<ConfigurationObject<T>>(
-          false, ConfigurationObject<T>(), response.errorMessage);
+        false,
+        ConfigurationObject.fromRawJson('{}', settingsFromJson),
+        response.errorMessage,
+      );
     }
 
     try {
@@ -78,7 +84,10 @@ class RemoteConfigs extends BaseApiService {
     } catch (exception) {
       getLog().e("RemoteConfigs Api Exception: ${exception.toString()}");
       return ResultWithValue<ConfigurationObject<T>>(
-          false, ConfigurationObject<T>(), exception.toString());
+        false,
+        ConfigurationObject.fromRawJson('{}', settingsFromJson),
+        exception.toString(),
+      );
     }
   }
 
@@ -98,25 +107,27 @@ class Configuration {
   List<ConfigurationSettings> settings;
 
   Configuration({
-    this.uniqueID,
-    this.name,
-    this.description,
-    this.createDate,
-    this.lastModifiedOn,
-    this.settings,
+    required this.uniqueID,
+    required this.name,
+    required this.description,
+    required this.createDate,
+    required this.lastModifiedOn,
+    required this.settings,
   });
 
   factory Configuration.fromRawJson(String str) =>
       Configuration.fromJson(json.decode(str));
 
-  factory Configuration.fromJson(Map<String, dynamic> json) => Configuration(
-        uniqueID: json["uniqueID"],
-        name: json["name"],
-        description: json["description"],
-        createDate: json["createDate"],
-        lastModifiedOn: json["lastModifiedOn"],
-        settings: List<ConfigurationSettings>.from(
-          json["settings"].map((x) => ConfigurationSettings.fromJson(x)),
+  factory Configuration.fromJson(Map<String, dynamic>? json) => Configuration(
+        uniqueID: readStringSafe(json, 'uniqueID'),
+        name: readStringSafe(json, 'name'),
+        description: readStringSafe(json, 'description'),
+        createDate: readStringSafe(json, 'createDate'),
+        lastModifiedOn: readStringSafe(json, 'lastModifiedOn'),
+        settings: readListSafe(
+          json,
+          'settings',
+          (x) => ConfigurationSettings.fromJson(x),
         ),
       );
 }
@@ -126,17 +137,17 @@ class ConfigurationSettings {
   String value;
 
   ConfigurationSettings({
-    this.key,
-    this.value,
+    required this.key,
+    required this.value,
   });
 
   factory ConfigurationSettings.fromRawJson(String str) =>
       ConfigurationSettings.fromJson(json.decode(str));
 
-  factory ConfigurationSettings.fromJson(Map<String, dynamic> json) =>
+  factory ConfigurationSettings.fromJson(Map<String, dynamic>? json) =>
       ConfigurationSettings(
-        key: json["key"],
-        value: json["value"],
+        key: readStringSafe(json, 'key'),
+        value: readStringSafe(json, 'value'),
       );
 }
 
@@ -146,9 +157,9 @@ class ConfigurationObject<T> {
   T settings;
 
   ConfigurationObject({
-    this.name,
-    this.description,
-    this.settings,
+    required this.name,
+    required this.description,
+    required this.settings,
   });
 
   factory ConfigurationObject.fromRawJson(
@@ -156,10 +167,10 @@ class ConfigurationObject<T> {
       ConfigurationObject.fromJson(json.decode(str), settingsFromJson);
 
   factory ConfigurationObject.fromJson(
-          Map<String, dynamic> json, T Function(String) settingsFromJson) =>
+          Map<String, dynamic>? json, T Function(String) settingsFromJson) =>
       ConfigurationObject(
-        name: json["name"],
-        description: json["description"],
-        settings: settingsFromJson(json["settings"]),
+        name: readStringSafe(json, 'name'),
+        description: readStringSafe(json, 'description'),
+        settings: settingsFromJson(json?["settings"]),
       );
 }

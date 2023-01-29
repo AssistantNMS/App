@@ -1,7 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/common/cachedFutureBuilder.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/factionTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
@@ -9,7 +8,7 @@ import '../../contracts/faction/faction.dart';
 import '../../integration/dependencyInjection.dart';
 
 class FactionPage extends StatelessWidget {
-  FactionPage({Key key}) : super(key: key) {
+  FactionPage({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.factionPage);
   }
 
@@ -17,7 +16,7 @@ class FactionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CachedFutureBuilder(
       future: getFactionRepo().getAll(context),
-      whileLoading: simpleGenericPageScaffold(
+      whileLoading: () => simpleGenericPageScaffold(
         context,
         title: getTranslations().fromKey(LocaleKey.loading),
         body: getLoading().fullPageLoading(context),
@@ -27,8 +26,11 @@ class FactionPage extends StatelessWidget {
     );
   }
 
-  Widget getBody(BuildContext bodyCtx, ResultWithValue<FactionData> snapshot) {
-    if (snapshot == null || snapshot.isSuccess == false) {
+  Widget getBody(
+    BuildContext bodyCtx,
+    ResultWithValue<FactionData> snapshot,
+  ) {
+    if (snapshot.isSuccess == false) {
       return simpleGenericPageScaffold(
         bodyCtx,
         title: getTranslations().fromKey(LocaleKey.error),
@@ -51,7 +53,7 @@ class FactionPage extends StatelessWidget {
       widgets.add(factionTilePresenter(bodyCtx, detail));
     }
 
-    widgets.add(emptySpace8x());
+    widgets.add(const EmptySpace8x());
 
     return simpleGenericPageScaffold(
       bodyCtx,
@@ -59,15 +61,16 @@ class FactionPage extends StatelessWidget {
       body: listWithScrollbar(
         itemCount: widgets.length,
         itemBuilder: (context, index) => widgets[index],
+        scrollController: ScrollController(),
       ),
     );
   }
 
   Widget categoryHeading(String title) {
-    return flatCard(
+    return FlatCard(
       child: Padding(
         padding: const EdgeInsets.all(4),
-        child: genericItemName(title),
+        child: GenericItemName(title),
       ),
     );
   }

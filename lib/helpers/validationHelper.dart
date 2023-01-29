@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 OutlineInputBorder getTextFieldValidationBorderColour(
-    BuildContext context, bool Function() validator, bool showValidation) {
+  BuildContext context,
+  bool Function()? validator,
+  bool showValidation,
+) {
   bool isValid = true;
   if (showValidation && validator != null) {
     isValid = validator();
@@ -14,8 +17,12 @@ OutlineInputBorder getTextFieldValidationBorderColour(
   );
 }
 
-InputDecoration getTextFieldDecoration(BuildContext context, LocaleKey locale,
-    bool Function() validator, bool showValidation) {
+InputDecoration getTextFieldDecoration(
+  BuildContext context,
+  LocaleKey locale,
+  bool Function() validator,
+  bool showValidation,
+) {
   return InputDecoration(
     border: const OutlineInputBorder(),
     enabledBorder: getTextFieldValidationBorderColour(

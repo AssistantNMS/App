@@ -10,8 +10,10 @@ import '../../helpers/repositoryHelper.dart';
 
 class MajorUpdatesDetailPage extends StatelessWidget {
   final MajorUpdateItem updateNewItems;
-  const MajorUpdatesDetailPage({Key key, this.updateNewItems})
-      : super(key: key);
+  const MajorUpdatesDetailPage({
+    Key? key,
+    required this.updateNewItems,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -38,73 +40,72 @@ class MajorUpdatesDetailPage extends StatelessWidget {
     AsyncSnapshot<ResultWithValue<List<GenericPageItem>>> snapshot,
     MajorUpdateItem localMajorItem,
   ) {
-    Widget Function(BuildContext, GenericPageItem, {void Function() onTap})
+    Widget Function(BuildContext, GenericPageItem, {void Function()? onTap})
         presenter = getListItemDisplayer(
       true,
       true,
       isHero: true,
     );
 
-    Widget errorWidget = asyncSnapshotHandler(
+    Widget? errorWidget = asyncSnapshotHandler(
       bodyCtx,
       snapshot,
       loader: () => getLoading().fullPageLoading(bodyCtx),
-      isValidFunction: (ResultWithValue<List<GenericPageItem>> expResult) {
-        if (expResult.hasFailed) return false;
-        if (expResult.value == null) return false;
+      isValidFunction: (ResultWithValue<List<GenericPageItem>>? expResult) {
+        if (expResult?.hasFailed ?? false) return false;
+        if (expResult?.value == null) return false;
         return true;
       },
     );
     if (errorWidget != null) return errorWidget;
 
-    List<GenericPageItem> localUpdateNewItems = snapshot.data.value;
+    List<GenericPageItem> localUpdateNewItems = snapshot.data!.value;
     List<Widget> listItems = List.empty(growable: true);
 
-    listItems.add(emptySpace2x());
+    listItems.add(const EmptySpace2x());
     listItems.add(Center(
       child: ClipRRect(
         borderRadius: const BorderRadius.only(
           bottomRight: Radius.circular(8),
           bottomLeft: Radius.circular(8),
         ),
-        child: localImage(localMajorItem.icon, width: 200),
+        child: LocalImage(imagePath: localMajorItem.icon, width: 200),
       ),
     ));
 
-    listItems.add(emptySpace1x());
-    if (localMajorItem.emoji.isNotEmpty) {
+    listItems.add(const EmptySpace1x());
+    if (localMajorItem.emoji != null && localMajorItem.emoji!.isNotEmpty) {
       listItems.add(Center(
         child: Text(
-          localMajorItem.emoji,
+          localMajorItem.emoji!,
           style: const TextStyle(fontSize: 30),
         ),
       ));
-      listItems.add(emptySpace1x());
+      listItems.add(const EmptySpace1x());
     }
     listItems.add(Center(
-      child: genericItemName(simpleDate(localMajorItem.releaseDate)),
+      child: GenericItemName(simpleDate(localMajorItem.releaseDate)),
     ));
     if (localUpdateNewItems.isNotEmpty) {
-      listItems.add(emptySpace1x());
+      listItems.add(const EmptySpace1x());
       listItems.add(Center(
         child: Text(getTranslations().fromKey(LocaleKey.newItemsAdded) +
             ': ' +
             localUpdateNewItems.length.toString()),
       ));
-      listItems.add(emptySpace1x());
+      listItems.add(const EmptySpace1x());
     }
-    if (localMajorItem.postUrl.isNotEmpty) {
+    if (localMajorItem.postUrl != null && localMajorItem.postUrl!.isNotEmpty) {
       listItems.add(Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
-        child: positiveButton(
-          bodyCtx,
+        child: PositiveButton(
           title: getTranslations().fromKey(LocaleKey.viewPostOnline),
-          onPress: () => launchExternalURL(localMajorItem.postUrl),
+          onTap: () => launchExternalURL(localMajorItem.postUrl!),
         ),
       ));
     }
     listItems.add(customDivider());
-    listItems.add(emptySpace1x());
+    listItems.add(const EmptySpace1x());
 
     if (localUpdateNewItems.isNotEmpty) {
       for (GenericPageItem gItem in localUpdateNewItems) {
@@ -112,7 +113,7 @@ class MajorUpdatesDetailPage extends StatelessWidget {
       }
     } else {
       listItems.add(Center(
-        child: genericItemGroup(
+        child: GenericItemGroup(
           getTranslations().fromKey(LocaleKey.noItemsRecorded),
         ),
       ));
@@ -123,6 +124,7 @@ class MajorUpdatesDetailPage extends StatelessWidget {
       itemCount: listItems.length,
       itemBuilder: (BuildContext context, int index) => listItems[index],
       padding: const EdgeInsets.only(bottom: 64),
+      scrollController: ScrollController(),
     );
   }
 }

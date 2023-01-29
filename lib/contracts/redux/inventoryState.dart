@@ -10,7 +10,10 @@ class InventoryState {
   final List<Inventory> containers;
   final InventoryOrderByType orderByType;
 
-  const InventoryState({this.containers, this.orderByType});
+  const InventoryState({
+    required this.containers,
+    required this.orderByType,
+  });
 
   factory InventoryState.initial() {
     return InventoryState(
@@ -20,8 +23,8 @@ class InventoryState {
   }
 
   InventoryState copyWith({
-    List<Inventory> containers,
-    InventoryOrderByType orderByType,
+    List<Inventory>? containers,
+    InventoryOrderByType? orderByType,
   }) {
     return InventoryState(
       containers: containers ?? this.containers,
@@ -32,7 +35,7 @@ class InventoryState {
   factory InventoryState.fromGoogleJson(String json) =>
       InventoryState.fromJson(jsonDecode(json));
 
-  factory InventoryState.fromJson(Map<String, dynamic> json) {
+  factory InventoryState.fromJson(Map<String, dynamic>? json) {
     if (json == null) return InventoryState.initial();
     try {
       return InventoryState(

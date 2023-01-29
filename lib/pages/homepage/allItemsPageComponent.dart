@@ -11,41 +11,50 @@ import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 
 class AllItemsPageComponent extends StatelessWidget {
-  const AllItemsPageComponent({Key key}) : super(key: key);
+  final bool isHomePage;
+
+  const AllItemsPageComponent({
+    Key? key,
+    required this.isHomePage,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var hintText = getTranslations().fromKey(LocaleKey.searchItems);
     return StoreConnector<AppState, GenericPageViewModel>(
       converter: (store) => GenericPageViewModel.fromStore(store),
-      builder: (_, viewModel) => //
-          SearchableList<GenericPageItem>(
-        () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),
-        listItemDisplayer: getListItemDisplayer(
-          viewModel.genericTileIsCompact,
-          viewModel.displayGenericItemColour,
-          isHero: true,
-        ),
-        listItemSearch: search,
-        key: Key(
-            '${getTranslations().currentLanguage} ${viewModel.genericTileIsCompact} - ${viewModel.displayGenericItemColour}'),
-        hintText: hintText,
-        addFabPadding: true,
+      builder: (storeCtx, viewModel) {
+        if (isHomePage) {
+          return AppNoticesWrapper(
+            child: renderSearchList(storeCtx, viewModel),
+          );
+        }
+        return renderSearchList(storeCtx, viewModel);
+      },
+    );
+  }
+
+  Widget renderSearchList(
+    BuildContext storeCtx,
+    GenericPageViewModel viewModel,
+  ) {
+    String hintText = getTranslations().fromKey(LocaleKey.searchItems);
+    String renderKey = [
+      getTranslations().currentLanguage.toString(),
+      viewModel.genericTileIsCompact.toString(),
+      viewModel.displayGenericItemColour.toString()
+    ].join('-');
+
+    return SearchableList<GenericPageItem>(
+      () => getAllFromLocaleKeys(storeCtx, getAllItemsLocaleKeys),
+      listItemDisplayer: getListItemDisplayer(
+        viewModel.genericTileIsCompact,
+        viewModel.displayGenericItemColour,
+        isHero: true,
       ),
-      // ResponsiveListDetailView<GenericPageItem>(
-      //   () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),
-      //   getResponsiveListItemDisplayer(
-      //     viewModel.genericTileIsCompact,
-      //     viewModel.displayGenericItemColour,
-      //     isHero: true,
-      //   ),
-      //   search,
-      //   listItemMobileOnTap:
-      //       (BuildContext context, GenericPageItem gameItem) {},
-      //   listItemDesktopOnTap: (BuildContext context, GenericPageItem recipe,
-      //       void Function(Widget) updateDetailView) {},
-      //   key: Key(getTranslations().currentLanguage),
-      // ),
+      listItemSearch: search,
+      key: Key(renderKey),
+      hintText: hintText,
+      addFabPadding: true,
     );
   }
 }

@@ -17,17 +17,17 @@ class QuicksilverStore {
   List<QuicksilverStoreItem> items;
 
   QuicksilverStore({
-    this.missionId,
-    this.items,
-    this.icon,
-    this.name,
-    this.itemsRequired,
+    required this.missionId,
+    required this.items,
+    required this.icon,
+    required this.name,
+    required this.itemsRequired,
   });
 
   factory QuicksilverStore.fromRawJson(String str) =>
       QuicksilverStore.fromJson(json.decode(str));
 
-  factory QuicksilverStore.fromJson(Map<String, dynamic> json) =>
+  factory QuicksilverStore.fromJson(Map<String, dynamic>? json) =>
       QuicksilverStore(
         missionId: readIntSafe(json, 'MissionId'),
         items: readListSafe(

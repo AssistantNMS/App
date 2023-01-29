@@ -10,9 +10,9 @@ import 'chargeBy.dart';
 
 class Recharge {
   Recharge({
-    this.id,
-    this.totalChargeAmount,
-    this.chargeBy,
+    required this.id,
+    required this.totalChargeAmount,
+    required this.chargeBy,
   });
 
   String id;
@@ -30,7 +30,7 @@ class Recharge {
 
   String toRawJson() => json.encode(toJson());
 
-  factory Recharge.fromJson(Map<String, dynamic> json) => Recharge(
+  factory Recharge.fromJson(Map<String, dynamic>? json) => Recharge(
         id: readStringSafe(json, 'Id'),
         totalChargeAmount: readIntSafe(json, 'TotalChargeAmount'),
         chargeBy: readListSafe(json, 'ChargeBy', (x) => ChargeBy.fromJson(x)),

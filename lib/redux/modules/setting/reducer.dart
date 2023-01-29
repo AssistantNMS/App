@@ -9,7 +9,6 @@ final settingReducer = combineReducers<SettingState>([
   TypedReducer<SettingState, ToggleIsGenericTileCompact>(
       _toggleIsGenericTileCompact),
   TypedReducer<SettingState, ToggleShowMaterialTheme>(_toggleShowMaterialTheme),
-  TypedReducer<SettingState, HideRelease118Intro>(_hideRelease118Intro),
   TypedReducer<SettingState, ToggleDisplayGenericItemColour>(
       _toggleDisplayGenericItemColour),
   TypedReducer<SettingState, HideValentines2020Intro>(_hideValentines2020Intro),
@@ -26,9 +25,12 @@ final settingReducer = combineReducers<SettingState>([
   TypedReducer<SettingState, UselessButtonTap>(_uselessButtonTap),
   TypedReducer<SettingState, SetIsPatron>(_setIsPatron),
   TypedReducer<SettingState, SetNewsPage>(_setNewsPage),
-  TypedReducer<SettingState, ShowFestiveBackground>(_showFestiveBackground),
+  TypedReducer<SettingState, ToggleShowFestiveBackground>(
+      _toggleShowFestiveBackground),
   TypedReducer<SettingState, ToggleMergeInventoryQuantities>(
       _toggleMergeInventoryQuantities),
+  TypedReducer<SettingState, SetCustomHomePageColumnCount>(
+      _setCustomHomePageColumnCount),
 ]);
 
 SettingState _editLanguage(SettingState state, ChangeLanguageAction action) {
@@ -41,8 +43,6 @@ SettingState _toggleIsGenericTileCompact(SettingState state, _) =>
     state.copyWith(genericTileIsCompact: !state.genericTileIsCompact);
 SettingState _toggleShowMaterialTheme(SettingState state, _) =>
     state.copyWith(showMaterialTheme: !state.showMaterialTheme);
-SettingState _hideRelease118Intro(SettingState state, _) =>
-    state.copyWith(isRelease118IntroHidden: true);
 SettingState _toggleDisplayGenericItemColour(SettingState state, _) =>
     state.copyWith(displayGenericItemColour: !state.displayGenericItemColour);
 SettingState _hideValentines2020Intro(SettingState state, _) =>
@@ -77,14 +77,17 @@ SettingState _dontShowSpoilerAlert(
 SettingState _setPlayerName(SettingState state, SetPlayerName action) =>
     state.copyWith(playerName: action.playerName);
 SettingState _uselessButtonTap(SettingState state, UselessButtonTap action) =>
-    state.copyWith(uselessButtonTaps: (state.uselessButtonTaps ?? 0) + 1);
+    state.copyWith(uselessButtonTaps: state.uselessButtonTaps + 1);
 SettingState _setIsPatron(SettingState state, SetIsPatron action) =>
     state.copyWith(isPatron: action.newIsPatron);
 SettingState _setNewsPage(SettingState state, SetNewsPage action) =>
     state.copyWith(lastNewsPageIndex: action.newsSelection);
-SettingState _showFestiveBackground(
-        SettingState state, ShowFestiveBackground action) =>
-    state.copyWith(showFestiveBackground: action.show);
+SettingState _toggleShowFestiveBackground(
+        SettingState state, ToggleShowFestiveBackground action) =>
+    state.copyWith(showFestiveBackground: !state.showFestiveBackground);
 SettingState _toggleMergeInventoryQuantities(
         SettingState state, ToggleMergeInventoryQuantities action) =>
     state.copyWith(mergeInventoryQuantities: !state.mergeInventoryQuantities);
+SettingState _setCustomHomePageColumnCount(
+        SettingState state, SetCustomHomePageColumnCount action) =>
+    state.copyWith(customHomePageColumnCount: action.columnCount);

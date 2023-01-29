@@ -11,7 +11,7 @@ import '../../helpers/futureHelper.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 
 class NewItemsPage extends StatelessWidget {
-  const NewItemsPage({Key key}) : super(key: key);
+  const NewItemsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

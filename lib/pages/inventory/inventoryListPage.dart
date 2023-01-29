@@ -5,6 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/inventoryTilePresenter.dart';
+import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../constants/UserSelectionIcons.dart';
 import '../../contracts/inventory/inventory.dart';
@@ -16,7 +17,7 @@ import 'searchAllInventoriesPage.dart';
 import 'viewInventoryPage.dart';
 
 class InventoryListPage extends StatefulWidget {
-  const InventoryListPage({Key key}) : super(key: key);
+  const InventoryListPage({Key? key}) : super(key: key);
 
   @override
   _InventoryListState createState() => _InventoryListState();
@@ -36,8 +37,7 @@ class _InventoryListState extends State<InventoryListPage> {
 
   @override
   Widget build(BuildContext context) {
-    PreferredSizeWidget Function(InventoryListViewModel vm) appBar;
-    appBar = (InventoryListViewModel vm) => getBaseWidget().appBarForSubPage(
+    appBar(InventoryListViewModel vm) => getBaseWidget().appBarForSubPage(
           context,
           showHomeAction: true,
           title: Text(getTranslations().fromKey(LocaleKey.inventoryManagement)),
@@ -59,19 +59,22 @@ class _InventoryListState extends State<InventoryListPage> {
                       EnumToString.convertToString(InventoryOrderByType.icons),
                 ));
 
-                String temp = await getNavigation().navigateAsync(
+                String? temp = await getNavigation().navigateAsync(
                   context,
                   navigateTo: (context) => OptionsListPageDialog(
                       getTranslations().fromKey(LocaleKey.orderBy), options),
                 );
-                var result = (temp == null || temp.isEmpty) ? '' : temp;
-                InventoryOrderByType orderByType = EnumToString.fromString(
+                String result = (temp == null || temp.isEmpty) ? '' : temp;
+                InventoryOrderByType? orderByType = EnumToString.fromString(
                     InventoryOrderByType.values, result);
-                vm.setOrderByType(orderByType);
+                if (orderByType != null) {
+                  vm.setOrderByType(orderByType);
+                }
               },
             )
           ],
         );
+
     return StoreConnector<AppState, InventoryListViewModel>(
       converter: (store) => InventoryListViewModel.fromStore(store),
       builder: (_, viewModel) => basicGenericPageScaffold(
@@ -80,9 +83,10 @@ class _InventoryListState extends State<InventoryListPage> {
         body: getBody(context, viewModel),
         fab: FloatingActionButton(
           onPressed: () async {
-            Inventory temp = await getNavigation().navigateAsync<Inventory>(
+            Inventory? temp = await getNavigation().navigateAsync<Inventory>(
               context,
-              navigateTo: (context) => AddEditInventoryPage(Inventory(), false),
+              navigateTo: (context) =>
+                  AddEditInventoryPage(Inventory.initial(), false),
             );
             if (temp == null) return;
             viewModel.addInventory(temp);
@@ -98,7 +102,11 @@ class _InventoryListState extends State<InventoryListPage> {
   }
 
   Widget getBody(BuildContext context, InventoryListViewModel viewModel) {
-    List<Widget> widgets = List.empty(growable: true);
+    List<Widget> widgets = [
+      FlatCard(
+        child: nomNomOpenSyncModalTile(context),
+      ),
+    ];
 
     if (viewModel.containers.isEmpty) {
       widgets.add(
@@ -112,10 +120,11 @@ class _InventoryListState extends State<InventoryListPage> {
           margin: const EdgeInsets.only(top: 30),
         ),
       );
+      widgets.add(const EmptySpace3x());
     } else {
-      widgets.add(GestureDetector(
-        child: Padding(
-          child: Card(
+      widgets.add(Padding(
+        child: Card(
+          child: InkWell(
             child: Padding(
               child: Center(
                 child: Icon(
@@ -125,31 +134,24 @@ class _InventoryListState extends State<InventoryListPage> {
               ),
               padding: const EdgeInsets.all(12),
             ),
+            onTap: () async => await getNavigation().navigateAsync<Inventory>(
+              context,
+              navigateTo: (context) => SearchAllInventoriesPage(),
+            ),
           ),
-          padding: const EdgeInsets.only(top: 4, bottom: 0),
         ),
-        onTap: () async => await getNavigation().navigateAsync<Inventory>(
-          context,
-          navigateTo: (context) => SearchAllInventoriesPage(),
-        ),
+        padding: const EdgeInsets.only(top: 4, bottom: 0),
       ));
       widgets.addAll(getContainers(viewModel));
-
-// TODO NomNom feature
-      // widgets.add(Card(
-      //   child: nomNomOpenSyncModalTile(
-      //     context,
-      //     viewModel.isPatron,
-      //   ),
-      // ));
-
-      widgets.add(emptySpace10x());
     }
+
+    widgets.add(const EmptySpace10x());
 
     return listWithScrollbar(
       key: Key('counter: $_counter'),
       itemCount: widgets.length,
       itemBuilder: (context, index) => widgets[index],
+      scrollController: ScrollController(),
     );
   }
 
@@ -177,7 +179,7 @@ class _InventoryListState extends State<InventoryListPage> {
         onTap: () => getNavigation().navigateAsync(context,
             navigateTo: (context) => ViewInventoryListPage(container.uuid)),
         onEdit: () async {
-          Inventory temp = await getNavigation().navigateAsync<Inventory>(
+          Inventory? temp = await getNavigation().navigateAsync<Inventory>(
             context,
             navigateTo: (context) => AddEditInventoryPage(container, true),
           );

@@ -8,8 +8,8 @@ class GenericItemViewModel {
   final bool displayGenericItemColour;
 
   GenericItemViewModel({
-    this.genericTileIsCompact,
-    this.displayGenericItemColour,
+    required this.genericTileIsCompact,
+    required this.displayGenericItemColour,
   });
 
   static GenericItemViewModel fromStore(Store<AppState> store) {

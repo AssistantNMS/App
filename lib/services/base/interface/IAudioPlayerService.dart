@@ -14,9 +14,9 @@ abstract class IAudioPlayerService {
   );
 
   Widget audioStreamBuilder({
-    Key uniqueKey,
-    BuildContext playerContext,
-    Widget Function(
+    Key? uniqueKey,
+    required BuildContext playerContext,
+    required Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
     )
@@ -24,9 +24,9 @@ abstract class IAudioPlayerService {
   });
 
   Widget audioLocalBuilder({
-    Key uniqueKey,
-    BuildContext playerContext,
-    Widget Function(
+    Key? uniqueKey,
+    required BuildContext playerContext,
+    required Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
     )

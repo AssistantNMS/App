@@ -7,8 +7,14 @@ class QuicksilverStoreDetails {
   List<RequiredItemDetails> items;
 
   QuicksilverStoreDetails({
-    this.store,
-    this.items,
-    this.itemsRequired,
+    required this.store,
+    required this.items,
+    required this.itemsRequired,
   });
+
+  factory QuicksilverStoreDetails.initial() => QuicksilverStoreDetails(
+        store: QuicksilverStore.fromRawJson('{}'),
+        items: List.empty(),
+        itemsRequired: List.empty(),
+      );
 }

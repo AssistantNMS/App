@@ -5005,7 +5005,7 @@
   },
   {
     "Id": "build273",
-    "Icon": "building/272.png",
+    "Icon": "building/273.png",
     "Name": "Estátua de bolota de bronze",
     "Group": "Decoração desbloqueável",
     "Description": "Um ornamento de base construível, exclusivo e moldado em bronze.\nEssa estátua representa uma criatura primitiva que já foi procurada por muitos exploradores.",
@@ -5727,7 +5727,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5755,7 +5756,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5930,7 +5932,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/303.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6286,7 +6289,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/316.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7686,7 +7690,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7714,7 +7719,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7742,7 +7748,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7877,7 +7884,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7969,7 +7977,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7990,6 +7999,7 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/395.png",
     "Usages": [
       "HasDevProperties",
+      "IsNoLongerObtainable",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 15,
@@ -8472,7 +8482,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
+      "IsTwitchCampaign4Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -9054,7 +9065,7 @@
     "Icon": "building/436.png",
     "Name": "Mapa do Povoado",
     "Group": "Mapa Planetário Especialista",
-    "Description": "Um mapa que mostra a localização de um povoado planetário próximo, adquirido do <STELLAR>Cartógrafo da Estação Espacial<>.\n\nSelecione o mapa e use Planejar rota (<IMG>FE_ALT1<>) para fixar a localização na tela do seu exotraje.",
+    "Description": "Um mapa que mostra a localização de um povoado planetário próximo, adquirido do <STELLAR>cartógrafo da estação espacial<>.\n\nSelecione o mapa e use <VAL_ON>Planejar rota (<IMG>FE_ALT1<>)<> para fixar a localização na tela do seu exotraje.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -9092,8 +9103,16 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw1",
-        "Quantity": 25
+        "Id": "prod6",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
       }
     ],
     "StatBonuses": [],
@@ -15840,7 +15859,7 @@
   },
   {
     "Id": "build814",
-    "Icon": "building/1.png",
+    "Icon": "building/814.png",
     "Name": "Cômodo grande de nave cargueira A",
     "Group": "Módulo interno de nave cargueira",
     "Description": "Este módulo de expansão permite a construção rápida de espaços habitáveis dentro de naves grandes.\n\nA unidade de construção já é fabricada com parede interna de pressão e todos os pontos de fixação necessários.",
@@ -15868,7 +15887,7 @@
   },
   {
     "Id": "build815",
-    "Icon": "building/1.png",
+    "Icon": "building/815.png",
     "Name": "Cômodo grande de nave cargueira B",
     "Group": "Módulo interno de nave cargueira",
     "Description": "Este módulo de expansão permite a construção rápida de espaços habitáveis dentro de naves grandes.\n\nA unidade de construção já é fabricada com parede interna de pressão e todos os pontos de fixação necessários.",
@@ -15896,7 +15915,7 @@
   },
   {
     "Id": "build816",
-    "Icon": "building/1.png",
+    "Icon": "building/816.png",
     "Name": "Cômodo grande de nave cargueira C",
     "Group": "Módulo interno de nave cargueira",
     "Description": "Este módulo de expansão permite a construção rápida de espaços habitáveis dentro de naves grandes.\n\nA unidade de construção já é fabricada com parede interna de pressão e todos os pontos de fixação necessários.",
@@ -15924,7 +15943,7 @@
   },
   {
     "Id": "build817",
-    "Icon": "building/66.png",
+    "Icon": "building/817.png",
     "Name": "Cômodo quadrado",
     "Group": "Módulo de construção",
     "Description": "Uma alternativa quadrada ao módulo principal da construção de bases, que fornece um espaço central generoso a partir do qual se pode fazer expansões.",
@@ -15949,7 +15968,7 @@
   },
   {
     "Id": "build818",
-    "Icon": "building/66.png",
+    "Icon": "building/817.png",
     "Name": "Cômodo quadrado",
     "Group": "Módulo de construção",
     "Description": "Uma alternativa quadrada ao módulo principal da construção de bases, que fornece um espaço central generoso a partir do qual se pode fazer expansões.",
@@ -16022,7 +16041,7 @@
   },
   {
     "Id": "build821",
-    "Icon": "building/141.png",
+    "Icon": "building/821.png",
     "Name": "Recipiente de flora 3",
     "Group": "Decoração",
     "Description": "Ornamento que pode ser construído para embelezar sua base.",
@@ -16046,7 +16065,7 @@
   },
   {
     "Id": "build822",
-    "Icon": "building/156.png",
+    "Icon": "building/822.png",
     "Name": "Mesa Redonda",
     "Group": "Mobília",
     "Description": "Uma superfície multifuncional para trabalhar feita com materiais não magnéticos e resistentes a corrosão.",
@@ -16071,7 +16090,7 @@
   },
   {
     "Id": "build823",
-    "Icon": "building/156.png",
+    "Icon": "building/823.png",
     "Name": "Mesa Hexagonal",
     "Group": "Mobília",
     "Description": "Uma superfície multifuncional para trabalhar feita com materiais não magnéticos e resistentes a corrosão.",
@@ -16096,7 +16115,7 @@
   },
   {
     "Id": "build824",
-    "Icon": "building/156.png",
+    "Icon": "building/824.png",
     "Name": "Mesa de Canto",
     "Group": "Mobília",
     "Description": "Uma superfície multifuncional para trabalhar feita com materiais não magnéticos e resistentes a corrosão.",
@@ -16648,7 +16667,7 @@
   },
   {
     "Id": "build848",
-    "Icon": "building/336.png",
+    "Icon": "building/848.png",
     "Name": "Luz de Base Quadrada",
     "Group": "Instalação",
     "Description": "Uma luz com baixo consumo de energia, vida útil estendida e componentes totalmente recicláveis.",
@@ -16673,7 +16692,7 @@
   },
   {
     "Id": "build849",
-    "Icon": "building/336.png",
+    "Icon": "building/849.png",
     "Name": "Luz de Base Redonda",
     "Group": "Instalação",
     "Description": "Uma luz com baixo consumo de energia, vida útil estendida e componentes totalmente recicláveis.",
@@ -16698,7 +16717,7 @@
   },
   {
     "Id": "build850",
-    "Icon": "building/336.png",
+    "Icon": "building/850.png",
     "Name": "Luz de Base Coberta",
     "Group": "Instalação",
     "Description": "Uma luz com baixo consumo de energia, vida útil estendida e componentes totalmente recicláveis.",
@@ -16756,7 +16775,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16952,7 +16972,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
+      "IsExpeditionSeason7Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -17081,7 +17102,7 @@
   {
     "Id": "build864",
     "Icon": "building/864.png",
-    "Name": "Junção em T",
+    "Name": "JUNÇÃO EM T",
     "Group": "Módulo central de nave cargueira",
     "Description": "Este corredor pressurizado junta-se de forma inteligente às salas de naves cargueiras já existentes, conectando espaços habitáveis dentro de grandes naves.\n\nEsta peça de corredor flexível expande e contrai <STELLAR>automaticamente<> para <STELLAR>formar curvas ou junções<> quando colocada.",
     "BaseValueUnits": 1.0,
@@ -17445,7 +17466,7 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "Sala tecnológica (vazia)",
+    "Name": "Sala tecnológica (expansão)",
     "Group": "Módulo avançado de nave cargueira",
     "Description": "Uma câmara espaçosa com uma estética técnica para expandir espaços habitáveis dentro de naves grandes.",
     "BaseValueUnits": 1.0,
@@ -17606,7 +17627,7 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "Sala biológica (vazia)",
+    "Name": "Sala biológica (expansão)",
     "Group": "Módulo avançado de nave cargueira",
     "Description": "Esta câmara espaçosa de estufa filtra e oxigena naturalmente o fornecimento de ar e oferece um pequeno santuário ecológico em naves cargueiras.",
     "BaseValueUnits": 1.0,
@@ -17736,7 +17757,7 @@
     "Icon": "building/885.png",
     "Name": "Sala do especialista em exoveículos",
     "Group": "Terminal do trabalhador",
-    "Description": "Equipamento integrado de pesquisa de naves cargueiras projetado para as demandas de <TECHNOLOGY>mecânicos de exoveículos<> e equipado com software de design veicular.\n\nEste módulo é colocado como uma <STELLAR>sala inteira<> e acompanha unidades funcionais pré-instaladas.",
+    "Description": "Equipamento integrado de pesquisa de naves cargueiras projetado para as demandas de <TECHNOLOGY>técnicos de exoveículos<> e equipado com software de design veicular.\n\nEste módulo é colocado como uma <STELLAR>sala inteira<> e acompanha unidades funcionais pré-instaladas.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,7 +18111,7 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "Sala industrial (vazia)",
+    "Name": "Sala industrial (expansão)",
     "Group": "Módulo avançado de nave cargueira",
     "Description": "Uma câmara espaçosa com estética industrial para expandir espaços habitáveis dentro de naves grandes.",
     "BaseValueUnits": 1.0,
@@ -19133,7 +19154,7 @@
   },
   {
     "Id": "build938",
-    "Icon": "building/350.png",
+    "Icon": "building/938.png",
     "Name": "Unidade de expansão do exotraje",
     "Group": "Unidade de atualização",
     "Description": "Um módulo de tecnologia de sobrevivência avançado que permite expandir o <STELLAR>armazenamento do exotraje<> do usuário.\n\nNanoexpansores pré-acondicionados criam vazios subdobra dentro do traje, aumentando a <STELLAR>capacidade do inventário<> dela. Aplique este aprimoramento no terminal de atualização do exotraje em uma <STELLAR>estação espacial<>.",
@@ -19301,7 +19322,7 @@
   },
   {
     "Id": "build945",
-    "Icon": "other/148.png",
+    "Icon": "building/945.png",
     "Name": "Dosímetro historiográfico",
     "Group": "Monitor de fluxo de realidade pessoal",
     "Description": "Nada detectou um novo padrão que aparece nas histórias de <TRANS_TRA>Geks<>, <TRANS_EXP>Korvax<> e <TRANS_WAR>Vy'keens<>.\n\nO dosímetro mede a exposição ao <SPECIAL>fluxo historiográfico<> nos arredores dos principais locais de artefatos. Registros de mudanças históricas incomuns permitirão que Nada rastreie o sinal.\n\nAjude Nada e Polo em sua pesquisa utilizando este dispositivo para <STELLAR>transmitir dados históricos<> de locais de artefatos alienígenas.",
@@ -19820,7 +19841,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19847,7 +19869,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19874,7 +19897,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20678,9 +20702,9 @@
   {
     "Id": "build996",
     "Icon": "building/996.png",
-    "Name": "Vidro Escada De Nave Cargueira",
+    "Name": "Escada de vidro de nave cargueira",
     "Group": "Módulo central de nave cargueira",
-    "Description": "Este módulo de expansão permite a construção rápida de espaços habitáveis dentro de naves grandes.\n\nA unidade de construção já é fabricada com parede interna de pressão e todos os pontos de fixação necessários.",
+    "Description": "Uma escada resistente e antiderrapante com uma inclinação ergonômica. Serve para passar verticalmente entre os conveses da nave cargueira.\n\nConstruída com vidro expansível, térmico e baixo, ela oferece uma visão incrível do espaço.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20707,9 +20731,9 @@
   {
     "Id": "build997",
     "Icon": "building/997.png",
-    "Name": "Plataforma Externa Escada De Nave Cargueira",
+    "Name": "Escada exterior de nave cargueira",
     "Group": "Módulo central de nave cargueira",
-    "Description": "Este módulo de expansão permite a construção rápida de espaços habitáveis dentro de naves grandes.\n\nA unidade de construção já é fabricada com parede interna de pressão e todos os pontos de fixação necessários.",
+    "Description": "Uma escada resistente e antiderrapante com uma inclinação ergonômica. Serve para passar verticalmente entre os conveses da nave cargueira.\n\nEla pode ser fixada no <STELLAR>lado de fora<> da fuselagem da nave cargueira, criando conexões entre as passarelas e plataformas externas.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20734,12 +20758,13 @@
     "Icon": "building/998.png",
     "Name": "Parede interna de nave cargueira",
     "Group": "Módulo central de nave cargueira",
-    "Description": "Este módulo de expansão permite a construção rápida de espaços habitáveis dentro de naves grandes.\n\nA unidade de construção já é fabricada com parede interna de pressão e todos os pontos de fixação necessários.",
+    "Description": "Uma parede interna para dividir espaços grandes da nave cargueira. Adapta-se perfeitamente à estética do recinto.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20756,14 +20781,15 @@
   {
     "Id": "build999",
     "Icon": "building/999.png",
-    "Name": "Sala industrial B (vazia)",
+    "Name": "Variante da sala de expansão",
     "Group": "Módulo avançado de nave cargueira",
     "Description": "Uma câmara espaçosa com estética industrial para expandir espaços habitáveis dentro de naves grandes.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20776,6 +20802,168 @@
       {
         "Id": "raw32",
         "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1000",
+    "Icon": "building/1000.png",
+    "Name": "Anêmona blindada",
+    "Group": "Decoração orgânica",
+    "Description": "Um organismo marinho carnívoro. Uma concha blindada envolve o pólipo central, expondo apenas os tentáculos urticantes. Espasmos nervosos involuntários fazem com que a criatura se contorça perpetuamente: sempre procurando, sempre faminta.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1001",
+    "Icon": "building/1001.png",
+    "Name": "Faixa de coral",
+    "Group": "Decoração orgânica",
+    "Description": "Uma gigantesca formação de cálcio, naturalmente configurada em uma faixa de espaço não orientável. Adiciona um quê de fundo do mar a qualquer base habitável.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1002",
+    "Icon": "building/1002.png",
+    "Name": "Colônia aquática",
+    "Group": "Decoração orgânica",
+    "Description": "Uma formação rochosa retirada do fundo de um oceano repleto de vida. A vida marinha afixada está envolvida em uma camada de muco rico em nutrientes, para mantê-la alimentada e umidificada em condições terrestres.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1003",
+    "Icon": "building/1003.png",
+    "Name": "Língua-noturna",
+    "Group": "Decoração orgânica",
+    "Description": "Flores resistentes, geneticamente modificadas para prosperar em todos os biomas, tipos de solo e condições climáticas. Pétalas farpadas as protegem de possíveis predadores, perfurando sua carne com uma toxina mortal. Manoplas protetoras são recomendadas durante o manuseio.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1004",
+    "Icon": "building/1004.png",
+    "Name": "Ouriceiras",
+    "Group": "Decoração orgânica",
+    "Description": "Flores resistentes, geneticamente modificadas para prosperar em todos os biomas, tipos de solo e condições climáticas. Essas flores de formato incomum são repletas de pólen e liberam um perfume incrivelmente doce.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1005",
+    "Icon": "building/1005.png",
+    "Name": "Olhos-eternos",
+    "Group": "Decoração orgânica",
+    "Description": "Flores resistentes, geneticamente modificadas para prosperar em todos os biomas, tipos de solo e condições climáticas. Essas flores liguladas permanecem abertas dia e noite, absorvendo a luz de estrelas locais e distantes.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
       }
     ],
     "StatBonuses": [],

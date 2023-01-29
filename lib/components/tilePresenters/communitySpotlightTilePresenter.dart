@@ -6,15 +6,20 @@ import 'package:flutter/material.dart';
 import '../../contracts/generated/communitySpotlightViewModel.dart';
 
 Widget communitySpotlightTilePresenter(
-    BuildContext context, CommuntySpotlightViewModel communitySpotlight) {
-  Function() onTap = () => launchExternalURL(communitySpotlight.externalUrl);
+  BuildContext context,
+  CommuntySpotlightViewModel communitySpotlight, {
+  void Function()? onTap,
+}) {
+  Function() localOnTap =
+      onTap ?? () => launchExternalURL(communitySpotlight.externalUrl);
   Row userInfoNameAndImageRow = Row(
-    children: (communitySpotlight.userName != null &&
-            communitySpotlight.userName.length > 1)
+    children: (communitySpotlight.userName.length > 1)
         ? [
             ClipOval(
-              child: networkImage(communitySpotlight.userImage,
-                  height: 50, width: 50),
+              child: ImageFromNetwork(
+                  imageUrl: communitySpotlight.userImage,
+                  height: 50,
+                  width: 50),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8),
@@ -29,8 +34,7 @@ Widget communitySpotlightTilePresenter(
           ]
         : [],
   );
-  Widget userInfo = (communitySpotlight.externalUrl == null ||
-          communitySpotlight.externalUrl.length < 5)
+  Widget userInfo = (communitySpotlight.externalUrl.length < 5)
       ? userInfoNameAndImageRow
       : Stack(
           children: [
@@ -38,7 +42,7 @@ Widget communitySpotlightTilePresenter(
             Positioned(
               child: IconButton(
                 icon: const Icon(Icons.open_in_new, size: 32),
-                onPressed: onTap,
+                onPressed: localOnTap,
               ),
               top: 0,
               right: 8,
@@ -48,7 +52,7 @@ Widget communitySpotlightTilePresenter(
         );
 
   List<Widget> descripWidgets = List.empty(growable: true);
-  if (communitySpotlight.title != null && communitySpotlight.title.length > 1) {
+  if (communitySpotlight.title.length > 1) {
     descripWidgets.add(Padding(
       child: Text(
         communitySpotlight.title,
@@ -59,8 +63,7 @@ Widget communitySpotlightTilePresenter(
       padding: const EdgeInsets.only(bottom: 4),
     ));
   }
-  if (communitySpotlight.subtitle != null &&
-      communitySpotlight.subtitle.length > 1) {
+  if (communitySpotlight.subtitle.length > 1) {
     descripWidgets.add(Text(
       communitySpotlight.subtitle,
       textAlign: TextAlign.center,
@@ -88,14 +91,10 @@ Widget communitySpotlightTilePresenter(
       clipBehavior: Clip.antiAliasWithSaveLayer,
       child: Column(
         children: [
-          if (communitySpotlight.previewImageUrl != null &&
-              communitySpotlight.previewImageUrl.length > 5) ...[
-            Container(
-              // constraints: const BoxConstraints(maxHeight: 225),
-              child: networkImage(
-                communitySpotlight.previewImageUrl,
-                boxfit: BoxFit.fitWidth,
-              ),
+          if (communitySpotlight.previewImageUrl.length > 5) ...[
+            ImageFromNetwork(
+              imageUrl: communitySpotlight.previewImageUrl,
+              boxfit: BoxFit.fitWidth,
             ),
           ],
           Padding(
@@ -112,7 +111,7 @@ Widget communitySpotlightTilePresenter(
       elevation: 5,
       margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
     ),
-    onTap: onTap,
+    onTap: localOnTap,
   );
   // return genericListTileWithNetworkImage(
   //     context,

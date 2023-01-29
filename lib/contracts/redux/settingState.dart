@@ -12,7 +12,6 @@ class SettingState {
   final bool guidesIsCompact;
   final bool genericTileIsCompact;
   final bool showMaterialTheme;
-  final bool isRelease118IntroHidden;
   final bool displayGenericItemColour;
   final bool isValentines2020IntroHidden;
   final bool isValentines2021IntroHidden;
@@ -31,32 +30,33 @@ class SettingState {
   final bool showFestiveBackground;
   final int lastNewsPageIndex;
   final bool mergeInventoryQuantities;
+  final int customHomePageColumnCount;
 
   const SettingState({
-    this.persistCart,
-    this.selectedLanguage,
-    this.guidesIsCompact,
-    this.genericTileIsCompact,
-    this.showMaterialTheme,
-    this.isRelease118IntroHidden,
-    this.displayGenericItemColour,
-    this.isValentines2020IntroHidden,
-    this.isValentines2021IntroHidden,
-    this.useNMSFont,
-    this.fontFamily,
-    this.useAltGlyphs,
-    this.lastPlatformIndex,
-    this.introComplete,
-    this.onlineMeetup2020,
-    this.dontShowSpoilerAlert,
-    this.homepageType,
-    this.customMenuOrder,
-    this.playerName,
-    this.uselessButtonTaps,
-    this.isPatron,
-    this.showFestiveBackground,
-    this.lastNewsPageIndex,
-    this.mergeInventoryQuantities,
+    required this.persistCart,
+    required this.selectedLanguage,
+    required this.guidesIsCompact,
+    required this.genericTileIsCompact,
+    required this.showMaterialTheme,
+    required this.displayGenericItemColour,
+    required this.isValentines2020IntroHidden,
+    required this.isValentines2021IntroHidden,
+    required this.useNMSFont,
+    required this.fontFamily,
+    required this.useAltGlyphs,
+    required this.lastPlatformIndex,
+    required this.introComplete,
+    required this.onlineMeetup2020,
+    required this.dontShowSpoilerAlert,
+    required this.homepageType,
+    required this.customMenuOrder,
+    required this.playerName,
+    required this.uselessButtonTaps,
+    required this.isPatron,
+    required this.showFestiveBackground,
+    required this.lastNewsPageIndex,
+    required this.mergeInventoryQuantities,
+    required this.customHomePageColumnCount,
   });
 
   factory SettingState.initial() {
@@ -66,7 +66,6 @@ class SettingState {
       guidesIsCompact: false,
       genericTileIsCompact: true,
       showMaterialTheme: true,
-      isRelease118IntroHidden: false,
       displayGenericItemColour: true,
       isValentines2020IntroHidden: false,
       isValentines2021IntroHidden: false,
@@ -79,40 +78,41 @@ class SettingState {
       dontShowSpoilerAlert: false,
       homepageType: HomepageType.custom,
       customMenuOrder: List.empty(growable: true),
-      playerName: null,
+      playerName: '',
       uselessButtonTaps: 0,
       isPatron: false,
       showFestiveBackground: true,
       lastNewsPageIndex: 0,
       mergeInventoryQuantities: true,
+      customHomePageColumnCount: 0,
     );
   }
 
   SettingState copyWith({
-    bool persistCart,
-    String selectedLanguage,
-    bool guidesIsCompact,
-    bool genericTileIsCompact,
-    bool showMaterialTheme,
-    bool isRelease118IntroHidden,
-    bool displayGenericItemColour,
-    bool isValentines2020IntroHidden,
-    bool isValentines2021IntroHidden,
-    bool useNMSFont,
-    String fontFamily,
-    bool useAltGlyphs,
-    int lastPlatformIndex,
-    bool introComplete,
-    bool onlineMeetup2020,
-    bool dontShowSpoilerAlert,
-    HomepageType homepageType,
-    List<LocaleKey> customMenuOrder,
-    String playerName,
-    int uselessButtonTaps,
-    bool isPatron,
-    bool showFestiveBackground,
-    int lastNewsPageIndex,
-    bool mergeInventoryQuantities,
+    bool? persistCart,
+    String? selectedLanguage,
+    bool? guidesIsCompact,
+    bool? genericTileIsCompact,
+    bool? showMaterialTheme,
+    bool? displayGenericItemColour,
+    bool? isValentines2020IntroHidden,
+    bool? isValentines2021IntroHidden,
+    bool? useNMSFont,
+    String? fontFamily,
+    bool? useAltGlyphs,
+    int? lastPlatformIndex,
+    bool? introComplete,
+    bool? onlineMeetup2020,
+    bool? dontShowSpoilerAlert,
+    HomepageType? homepageType,
+    List<LocaleKey>? customMenuOrder,
+    String? playerName,
+    int? uselessButtonTaps,
+    bool? isPatron,
+    bool? showFestiveBackground,
+    int? lastNewsPageIndex,
+    bool? mergeInventoryQuantities,
+    int? customHomePageColumnCount,
   }) {
     return SettingState(
       persistCart: persistCart ?? this.persistCart,
@@ -120,8 +120,6 @@ class SettingState {
       selectedLanguage: selectedLanguage ?? this.selectedLanguage,
       genericTileIsCompact: genericTileIsCompact ?? this.genericTileIsCompact,
       showMaterialTheme: showMaterialTheme ?? this.showMaterialTheme,
-      isRelease118IntroHidden:
-          isRelease118IntroHidden ?? this.isRelease118IntroHidden,
       displayGenericItemColour:
           displayGenericItemColour ?? this.displayGenericItemColour,
       isValentines2020IntroHidden:
@@ -145,10 +143,12 @@ class SettingState {
       lastNewsPageIndex: lastNewsPageIndex ?? this.lastNewsPageIndex,
       mergeInventoryQuantities:
           mergeInventoryQuantities ?? this.mergeInventoryQuantities,
+      customHomePageColumnCount:
+          customHomePageColumnCount ?? this.customHomePageColumnCount,
     );
   }
 
-  factory SettingState.fromJson(Map<String, dynamic> json) {
+  factory SettingState.fromJson(Map<String, dynamic>? json) {
     if (json == null) return SettingState.initial();
     try {
       return SettingState(
@@ -157,7 +157,6 @@ class SettingState {
         guidesIsCompact: readBoolSafe(json, 'guidesIsCompact'),
         genericTileIsCompact: readBoolSafe(json, 'genericTileIsCompact'),
         showMaterialTheme: readBoolSafe(json, 'showMaterialTheme'),
-        isRelease118IntroHidden: readBoolSafe(json, 'isRelease118IntroHidden'),
         displayGenericItemColour:
             readBoolSafe(json, 'displayGenericItemColour'),
         isValentines2020IntroHidden:
@@ -172,8 +171,12 @@ class SettingState {
         onlineMeetup2020: readBoolSafe(json, 'onlineMeetup2020'),
         dontShowSpoilerAlert: readBoolSafe(json, 'dontShowSpoilerAlert'),
         homepageType: getHomepageTypeFomrInt(readIntSafe(json, 'homepageType')),
-        customMenuOrder: readListSafe(json, 'customMenuOrder',
-            (p) => EnumToString.fromString(LocaleKey.values, p)).toList(),
+        customMenuOrder: readListSafe(
+          json,
+          'customMenuOrder',
+          (p) => (EnumToString.fromString(LocaleKey.values, p) ??
+              LocaleKey.unknown),
+        ).toList(),
         playerName: readStringSafe(json, 'playerName'),
         uselessButtonTaps: readIntSafe(json, 'uselessButtonTaps'),
         isPatron: readBoolSafe(json, 'isPatron'),
@@ -181,6 +184,8 @@ class SettingState {
         lastNewsPageIndex: readIntSafe(json, 'lastNewsPageIndex'),
         mergeInventoryQuantities:
             readBoolSafe(json, 'mergeInventoryQuantities'),
+        customHomePageColumnCount:
+            readIntSafe(json, 'customHomePageColumnCount'),
       );
     } catch (exception) {
       return SettingState.initial();
@@ -193,7 +198,6 @@ class SettingState {
         'guidesIsCompact': guidesIsCompact,
         'genericTileIsCompact': genericTileIsCompact,
         'showMaterialTheme': showMaterialTheme,
-        'isRelease118IntroHidden': isRelease118IntroHidden,
         'displayGenericItemColour': displayGenericItemColour,
         'isValentines2020IntroHidden': isValentines2020IntroHidden,
         'isValentines2021IntroHidden': isValentines2021IntroHidden,
@@ -213,5 +217,6 @@ class SettingState {
         'showFestiveBackground': showFestiveBackground,
         'lastNewsPageIndex': lastNewsPageIndex,
         'mergeInventoryQuantities': mergeInventoryQuantities,
+        'customHomePageColumnCount': customHomePageColumnCount,
       };
 }

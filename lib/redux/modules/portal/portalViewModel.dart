@@ -22,16 +22,16 @@ class PortalViewModel {
   Function() toggleAltGlyphs;
 
   PortalViewModel({
-    this.portals,
-    this.addPortal,
-    this.editPortal,
-    this.removePortal,
-    this.availableTags,
-    this.removeAllPortals,
-    this.useAltGlyphs,
-    this.addTag,
-    this.removeTag,
-    this.toggleAltGlyphs,
+    required this.portals,
+    required this.addPortal,
+    required this.editPortal,
+    required this.removePortal,
+    required this.availableTags,
+    required this.removeAllPortals,
+    required this.useAltGlyphs,
+    required this.addTag,
+    required this.removeTag,
+    required this.toggleAltGlyphs,
   });
 
   static PortalViewModel fromStore(Store<AppState> store) {

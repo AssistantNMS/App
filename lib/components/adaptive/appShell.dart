@@ -1,24 +1,29 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
-import 'package:assistantnms_app/components/adaptive/windowsTitleBar.dart';
+import 'package:assistantnms_app/components/adaptive/windowTitleBar.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+// import 'package:wiredash/wiredash.dart';
 
 import '../../constants/HomepageItems.dart';
+import '../../constants/NmsUIConstants.dart';
 import '../../constants/Routes.dart';
 import '../../contracts/redux/appState.dart';
+import '../../env/appVersionNum.dart';
+// import '../../integration/dependencyInjection.dart';
 import '../../redux/modules/setting/introViewModel.dart';
 import '../../theme/themes.dart';
 
 class AppShell extends StatelessWidget {
   final TranslationsDelegate newLocaleDelegate;
   final void Function(Locale locale) onLocaleChange;
+
   const AppShell({
-    Key key,
-    this.onLocaleChange,
-    this.newLocaleDelegate,
+    Key? key,
+    required this.onLocaleChange,
+    required this.newLocaleDelegate,
   }) : super(key: key);
 
   @override
@@ -35,15 +40,6 @@ class AppShell extends StatelessWidget {
     return StoreConnector<AppState, IntroViewModel>(
       converter: (store) => IntroViewModel.fromStore(store),
       builder: (_, introViewModel) {
-        String initialRoute = HomepageItem.defaultHomepageItem().routeToNamed;
-        try {
-          initialRoute = HomepageItem.getByType(
-            introViewModel.homepageType,
-          ).routeToNamed;
-        } catch (ex) {
-          initialRoute = HomepageItem.defaultHomepageItem().routeToNamed;
-        }
-
         return AdaptiveTheme(
           initial: AdaptiveThemeMode.dark,
           light: getDynamicTheme(
@@ -60,7 +56,7 @@ class AppShell extends StatelessWidget {
               Key('android-${introViewModel.currentLanguage}'),
               theme,
               darkTheme,
-              initialRoute,
+              introViewModel,
               routes,
               localizationsDelegates,
               getLanguage().supportedLocales(),
@@ -73,16 +69,16 @@ class AppShell extends StatelessWidget {
 
   Widget _androidApp(
     BuildContext context,
-    Key key,
+    Key? key,
     ThemeData theme,
     ThemeData darkTheme,
-    String initialRoute,
+    IntroViewModel introViewModel,
     Map<String, Widget Function(BuildContext)> routes,
     List<LocalizationsDelegate<dynamic>> localizationsDelegates,
     List<Locale> supportedLocales,
   ) {
-    ScrollBehavior scrollBehavior;
-    if (isWindows) {
+    ScrollBehavior? scrollBehavior;
+    if (isDesktop || isWeb) {
       scrollBehavior = const MaterialScrollBehavior().copyWith(
         dragDevices: {
           PointerDeviceKind.mouse,
@@ -93,27 +89,49 @@ class AppShell extends StatelessWidget {
       );
     }
 
-    MaterialApp matApp = MaterialApp(
-      key: key,
-      title: 'Assistant for No Man\'s Sky',
-      theme: theme,
-      darkTheme: darkTheme,
-      initialRoute: initialRoute,
-      routes: routes,
-      scrollBehavior: scrollBehavior,
-      localizationsDelegates: localizationsDelegates,
-      supportedLocales: supportedLocales,
+    String initialRoute = HomepageItem.defaultHomepageItem().routeToNamed;
+    try {
+      initialRoute = HomepageItem.getByType(
+        introViewModel.homepageType,
+      ).routeToNamed;
+    } catch (ex) {
+      initialRoute = HomepageItem.defaultHomepageItem().routeToNamed;
+    }
+
+    Widget matApp = FeedbackWrapper(
+      options: FeedbackOptions(
+        buildNumber: appsBuildNum.toString(),
+        buildVersion: appsBuildName,
+        buildCommit: appsCommit,
+        currentLang: introViewModel.currentLanguage,
+        isPatron: introViewModel.isPatron,
+      ),
+      child: MaterialApp(
+        key: key,
+        title: 'Assistant for No Man\'s Sky',
+        theme: theme,
+        darkTheme: darkTheme,
+        initialRoute: initialRoute,
+        routes: routes,
+        scrollBehavior: scrollBehavior,
+        localizationsDelegates: localizationsDelegates,
+        supportedLocales: supportedLocales,
+        // debugShowCheckedModeBanner: false,
+      ),
     );
 
-    if (!isWindows) return matApp;
+    if (!isDesktop) return matApp;
 
     return MaterialApp(
       theme: theme,
       darkTheme: darkTheme,
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: WindowsTitleBar('Assistant for No Man\'s Sky'),
-        body: matApp,
+      home: ClipRRect(
+        borderRadius: NMSUIConstants.generalBorderRadius,
+        child: Scaffold(
+          appBar: WindowTitleBar('Assistant for No Man\'s Sky'),
+          body: matApp,
+        ),
       ),
     );
   }

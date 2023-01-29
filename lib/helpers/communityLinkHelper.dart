@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -20,9 +21,9 @@ Color handleTagColour(
   String text,
   List<CommunityLinkChipColourViewModel> chipColours,
 ) {
-  CommunityLinkChipColourViewModel foundItem = chipColours.firstWhere(
-      (cc) => cc.name.toLowerCase() == text.toLowerCase(),
-      orElse: () => null);
+  CommunityLinkChipColourViewModel? foundItem = chipColours.firstWhereOrNull(
+    (cc) => cc.name.toLowerCase() == text.toLowerCase(),
+  );
 
   if (foundItem == null) return HexColor('#e5e5e5');
   return HexColor(foundItem.colour);
@@ -30,15 +31,13 @@ Color handleTagColour(
 
 Widget renderSingleLink(BuildContext linkContext, String link) {
   String localLink = link;
-  String cleanLink = 'Unsupported link';
+  String? cleanLink;
   String linkComment = '';
 
   RegExp markdownLinkRegex = RegExp(r'^\[(.+)\]\((.+)\)');
   List<RegExpMatch> markdownRegexArr =
       markdownLinkRegex.allMatches(link).toList();
-  if (markdownRegexArr != null &&
-      markdownRegexArr.isNotEmpty &&
-      markdownRegexArr[0].groupCount > 1) {
+  if (markdownRegexArr.isNotEmpty && markdownRegexArr[0].groupCount > 1) {
     linkComment = '(${markdownRegexArr[0].group(1).toString()})';
     localLink = markdownRegexArr[0].group(2).toString();
   }
@@ -52,8 +51,7 @@ Widget renderSingleLink(BuildContext linkContext, String link) {
       .replaceAll('/index.html', '')
       .replaceAll('.html', '');
   List<RegExpMatch> regexArr = linkRegex.allMatches(preCleanLink).toList();
-  cleanLink =
-      ((regexArr?.length ?? 0) > 0) ? regexArr[0].group(0) : preCleanLink;
+  cleanLink = (regexArr.isNotEmpty) ? regexArr[0].group(0) : preCleanLink;
 
   double fontSize = 18;
   return GestureDetector(
@@ -63,7 +61,7 @@ Widget renderSingleLink(BuildContext linkContext, String link) {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            cleanLink,
+            cleanLink ?? getTranslations().fromKey(LocaleKey.unknown),
             style: TextStyle(
               color: getTheme().getSecondaryColour(linkContext),
               fontSize: fontSize,

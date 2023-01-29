@@ -4,13 +4,15 @@
 
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class WeekendMission {
   WeekendMission({
-    this.id,
-    this.titles,
-    this.subtitles,
-    this.descriptions,
-    this.stages,
+    required this.id,
+    required this.titles,
+    required this.subtitles,
+    required this.descriptions,
+    required this.stages,
   });
 
   String id;
@@ -22,32 +24,29 @@ class WeekendMission {
   factory WeekendMission.fromRawJson(String str) =>
       WeekendMission.fromJson(json.decode(str));
 
-  factory WeekendMission.fromJson(Map<String, dynamic> json) => WeekendMission(
-        id: json["Id"],
-        stages: List<WeekendStage>.from(
-            json["Stages"].map((x) => WeekendStage.fromJson(x))),
-        titles: json["Titles"] == null
-            ? List.empty(growable: true)
-            : List<String>.from(json["Titles"].map((x) => x)),
-        subtitles: json["Subtitles"] == null
-            ? List.empty(growable: true)
-            : List<String>.from(json["Subtitles"].map((x) => x)),
-        descriptions: json["Descriptions"] == null
-            ? List.empty(growable: true)
-            : List<String>.from(json["Descriptions"].map((x) => x)),
+  factory WeekendMission.fromJson(Map<String, dynamic>? json) => WeekendMission(
+        id: readStringSafe(json, 'Id'),
+        stages: readListSafe(
+          json,
+          'Stages',
+          (x) => WeekendStage.fromJson(x),
+        ),
+        titles: readListSafe(json, 'Titles', (x) => x.toString()),
+        subtitles: readListSafe(json, 'Subtitles', (x) => x.toString()),
+        descriptions: readListSafe(json, 'Descriptions', (x) => x.toString()),
       );
 }
 
 class WeekendStage {
   WeekendStage({
-    this.level,
-    this.npcMessage,
-    this.appId,
-    this.iterationAppId,
-    this.quantity,
-    this.portalAddress,
-    this.npcMessageFlows,
-    this.portalMessageFlows,
+    required this.level,
+    required this.npcMessage,
+    required this.appId,
+    required this.iterationAppId,
+    required this.quantity,
+    required this.portalAddress,
+    required this.npcMessageFlows,
+    required this.portalMessageFlows,
   });
 
   int level;
@@ -55,29 +54,29 @@ class WeekendStage {
   String appId;
   String iterationAppId;
   int quantity;
-  String portalAddress;
-  MessageFlow npcMessageFlows;
-  MessageFlow portalMessageFlows;
+  String? portalAddress;
+  MessageFlow? npcMessageFlows;
+  MessageFlow? portalMessageFlows;
 
   factory WeekendStage.fromRawJson(String str) =>
       WeekendStage.fromJson(json.decode(str));
 
-  factory WeekendStage.fromJson(Map<String, dynamic> json) => WeekendStage(
-        level: json["Level"],
-        npcMessage: json["NpcMessage"],
-        appId: json["AppId"],
-        iterationAppId: json["IterationAppId"],
-        quantity: json["Quantity"],
-        portalAddress: json["PortalAddress"],
-        npcMessageFlows: MessageFlow.fromJson(json["NpcMessageFlows"]),
-        portalMessageFlows: MessageFlow.fromJson(json["PortalMessageFlows"]),
+  factory WeekendStage.fromJson(Map<String, dynamic>? json) => WeekendStage(
+        level: readIntSafe(json, 'Level'),
+        npcMessage: readStringSafe(json, 'NpcMessage'),
+        appId: readStringSafe(json, 'AppId'),
+        iterationAppId: readStringSafe(json, 'IterationAppId'),
+        quantity: readIntSafe(json, 'Quantity'),
+        portalAddress: readStringSafe(json, 'PortalAddress'),
+        npcMessageFlows: MessageFlow.fromJson(json?["NpcMessageFlows"]),
+        portalMessageFlows: MessageFlow.fromJson(json?["PortalMessageFlows"]),
       );
 }
 
 class Option {
   Option({
-    this.name,
-    this.ifSelected,
+    required this.name,
+    required this.ifSelected,
   });
 
   String name;
@@ -85,28 +84,34 @@ class Option {
 
   factory Option.fromRawJson(String str) => Option.fromJson(json.decode(str));
 
-  factory Option.fromJson(Map<String, dynamic> json) => Option(
-        name: json["Name"],
-        ifSelected: MessageFlow.fromJson(json["IfSelected"]),
+  factory Option.fromJson(Map<String, dynamic>? json) => Option(
+        name: readStringSafe(json, 'Name'),
+        ifSelected: MessageFlow.fromJson(json?["IfSelected"]),
       );
 }
 
 class MessageFlow {
   MessageFlow({
-    this.incomingMessages,
-    this.options,
+    required this.incomingMessages,
+    required this.options,
   });
 
   List<String> incomingMessages;
-  List<Option> options;
+  List<Option>? options;
 
   factory MessageFlow.fromRawJson(String str) =>
       MessageFlow.fromJson(json.decode(str));
 
-  factory MessageFlow.fromJson(Map<String, dynamic> json) => MessageFlow(
-        incomingMessages:
-            List<String>.from(json["IncomingMessages"].map((x) => x)),
-        options:
-            List<Option>.from(json["Options"].map((x) => Option.fromJson(x))),
+  factory MessageFlow.fromJson(Map<String, dynamic>? json) => MessageFlow(
+        incomingMessages: readListSafe(
+          json,
+          'IncomingMessages',
+          (x) => x.toString(),
+        ),
+        options: readListSafe(
+          json,
+          'Options',
+          (x) => Option.fromJson(x),
+        ),
       );
 }

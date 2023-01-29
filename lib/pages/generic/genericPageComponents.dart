@@ -37,6 +37,7 @@ import '../../contracts/requiredItemDetails.dart';
 import '../../contracts/statBonus.dart';
 import '../../helpers/genericHelper.dart';
 import '../../helpers/heroHelper.dart';
+import '../../helpers/themeHelper.dart';
 import '../../redux/modules/generic/genericPageViewModel.dart';
 import 'allPossibleOutputsPage.dart';
 import 'genericPageAllRequiredRawMaterials.dart';
@@ -46,7 +47,7 @@ List<Widget> getBodyTopContent(BuildContext context, GenericPageViewModel vm,
     GenericPageItem genericItem) {
   List<Widget> stackWidgets = List.empty(growable: true);
   bool hdAvailable = genericItem.cdnUrl != null && //
-      genericItem.cdnUrl.isNotEmpty;
+      genericItem.cdnUrl!.isNotEmpty;
   Color iconColour = getOverlayColour(HexColor(genericItem.colour));
 
   if (vm.displayGenericItemColour) {
@@ -82,7 +83,7 @@ List<Widget> getBodyTopContent(BuildContext context, GenericPageViewModel vm,
     ),
   );
 
-  if ((genericItem?.usage ?? []).contains(UsageKey.hasDevProperties)) {
+  if ((genericItem.usage ?? []).contains(UsageKey.hasDevProperties)) {
     stackWidgets.add(
       getDevSheet(
         context,
@@ -94,7 +95,10 @@ List<Widget> getBodyTopContent(BuildContext context, GenericPageViewModel vm,
   }
 
   return [
-    Stack(key: Key('${genericItem.id}-bg-stack'), children: stackWidgets),
+    Stack(
+      key: Key('${genericItem.id}-bg-stack'),
+      children: stackWidgets,
+    ),
   ];
 }
 
@@ -102,28 +106,38 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
     GenericPageViewModel vm, GenericPageItem genericItem) {
   List<Widget> widgets = List.empty(growable: true);
 
-  bool hasSymbol = ((genericItem?.symbol?.length ?? 0) > 0);
+  bool hasSymbol = ((genericItem.symbol?.length ?? 0) > 0);
   String itemName = hasSymbol
       ? "${genericItem.name} (${genericItem.symbol})"
       : genericItem.name;
-  if ((itemName?.length ?? 0) < 1) {
+  if (itemName.isEmpty) {
     itemName = getTranslations().fromKey(LocaleKey.unknown);
   }
-  widgets.add(Hero(
-    key: Key('${genericItem.id}-item-name'),
-    tag: gameItemNameHero(genericItem),
-    child: genericItemName(itemName),
-  ));
+  String? heroTagString = gameItemNameHero(genericItem);
+  widgets.add(
+    heroTagString == null
+        ? GenericItemName(itemName)
+        : Hero(
+            key: Key('${genericItem.id}-item-name'),
+            tag: heroTagString,
+            child: GenericItemName(itemName),
+          ),
+  );
 
-  if (genericItem.group != null && genericItem.group.isNotEmpty) {
+  if (genericItem.group.isNotEmpty) {
     if (genericItem.group.contains('%NAME%')) {
       genericItem.group = genericItem.group.replaceAll('%NAME%', itemName);
     }
 
-    widgets.add(genericItemGroup(
-      genericItem.group,
-      key: Key('${genericItem.id}-item-group'),
-    ));
+    widgets.add(
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: GenericItemGroup(
+          genericItem.group,
+          key: Key('${genericItem.id}-item-group'),
+        ),
+      ),
+    );
   }
 
   widgets.addAll(getConsumableRewards(
@@ -132,24 +146,31 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
     genericItem.controlMappings ?? List.empty(),
   ));
 
-  if (genericItem.description != null && genericItem.description.isNotEmpty) {
-    widgets.add(emptySpace(0.5));
+  if (genericItem.description != null && genericItem.description!.isNotEmpty) {
+    widgets.add(const EmptySpace(0.5));
+    List<Widget> descriptWidgets = genericPageDescripHighlightText(
+      bodyDetailsCtx,
+      genericItem.description!,
+      genericItem.controlMappings ?? List.empty(),
+    );
     widgets.addAll(
-      genericPageDescripHighlightText(
-        bodyDetailsCtx,
-        genericItem.description,
-        genericItem.controlMappings ?? List.empty(),
-      ),
+      descriptWidgets
+          .map(
+            (highlightWidget) => Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: highlightWidget,
+            ),
+          )
+          .toList(),
     );
   }
 
-  if (genericItem.blueprintSource != null &&
-      genericItem.blueprintSource != BlueprintSource.unknown) {
+  if (genericItem.blueprintSource != BlueprintSource.unknown) {
     String blueprintFromLang =
         getTranslations().fromKey(LocaleKey.blueprintFrom);
-    widgets.add(emptySpace1x());
+    widgets.add(const EmptySpace1x());
     widgets.add(
-      genericItemDescription(
+      GenericItemDescription(
         blueprintFromLang +
             " " +
             getTranslations().fromKey(
@@ -162,27 +183,28 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
     );
   }
 
-  if (genericItem.additional != null && genericItem.additional != '') {
-    widgets.add(genericItemDescription(genericItem.additional));
+  if (genericItem.additional != '') {
+    widgets.add(GenericItemDescription(genericItem.additional));
   }
 
   List<Widget> chipList = getChipList(bodyDetailsCtx, genericItem);
   widgets.add(animateScaleUp(
     child: Wrap(
+      spacing: 4,
       alignment: WrapAlignment.center,
-      children: chipList
-          .map((widget) => genericChipWidget(bodyDetailsCtx, widget))
+      children: chipList //
+          .map((widget) => getBaseWidget().appChip(label: widget))
           .toList(),
     ),
   ));
 
-  if (genericItem.translation != null && genericItem.translation.length > 1) {
-    widgets.add(ExpeditionAlphabetTranslation(genericItem.translation));
+  if (genericItem.translation != null && genericItem.translation!.length > 1) {
+    widgets.add(ExpeditionAlphabetTranslation(genericItem.translation!));
   }
 
-  double cookValue = genericItem.cookingValue;
-  if (cookValue != null && cookValue > 0.0) {
-    widgets.add(emptySpace1x());
+  double cookValue = genericItem.cookingValue ?? 0.0;
+  if (cookValue > 0.0) {
+    widgets.add(const EmptySpace1x());
     widgets.add(animateSlideInFromLeft(
       child: getCookingScore(bodyDetailsCtx, cookValue),
     ));
@@ -195,18 +217,13 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
   Color chipColour = getTheme().buttonForegroundColour(context);
   List<Widget> chipList = List.empty(growable: true);
 
-  if (genericItem.maxStackSize != null &&
-      genericItem.maxStackSize > 0.0 &&
+  if (genericItem.maxStackSize > 0.0 &&
       !genericItem.id.contains(IdPrefix.building)) {
     String maxStackLang = getTranslations().fromKey(LocaleKey.maxStackSize);
     String maxStack = genericItem.maxStackSize.toStringAsFixed(0);
-    chipList.add(genericItemDescription(
+    chipList.add(GenericItemDescription(
       "$maxStackLang: $maxStack",
-      textStyle: getTheme()
-          .getTheme(context)
-          .primaryTextTheme
-          .bodyText1
-          .copyWith(color: chipColour),
+      textStyle: getThemeBodyLarge(context)?.copyWith(color: chipColour),
     ));
   }
 
@@ -215,14 +232,18 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
       case CurrencyType.CREDITS:
         chipList.add(
           genericItemCredits(
-              context, genericItem.baseValueUnits.toStringAsFixed(0),
-              colour: chipColour),
+            context,
+            genericItem.baseValueUnits.toStringAsFixed(0),
+            colour: chipColour,
+          ),
         );
         break;
       case CurrencyType.QUICKSILVER:
         chipList.add(genericItemQuicksilver(
-            context, genericItem.baseValueUnits.toStringAsFixed(0),
-            colour: chipColour));
+          context,
+          genericItem.baseValueUnits.toStringAsFixed(0),
+          colour: chipColour,
+        ));
         break;
       case CurrencyType.NONE:
       default:
@@ -276,7 +297,7 @@ List<Widget> getChipList(BuildContext context, GenericPageItem genericItem) {
   //       colour: chipColour));
   // }
 
-  if (genericItem.power != null && genericItem.power != 0) {
+  if (genericItem.power != 0) {
     chipList.add(
       genericItemTextWithIcon(
           context, genericItem.power.toString(), Icons.flash_on,
@@ -291,7 +312,7 @@ Widget getCookingScore(BuildContext ctx, double cookingValue) {
   Color secondaryColour = getTheme().getSecondaryColour(ctx);
   String cookingPerc =
       ((cookingValue + 1) * cookingValue * 47).toStringAsFixed(0);
-  return flatCard(
+  return FlatCard(
     child: genericListTileWithSubtitle(
       ctx,
       leadingImage: AppImage.cronus,
@@ -302,9 +323,13 @@ Widget getCookingScore(BuildContext ctx, double cookingValue) {
         step: 0.1,
         defaultStars: (cookingValue * 5),
         justShow: true,
+        starMargin: 0,
       ),
-      trailing:
-          genericItemNanites(ctx, "± $cookingPerc", colour: secondaryColour),
+      trailing: genericItemNanites(
+        ctx,
+        "± $cookingPerc",
+        colour: secondaryColour,
+      ),
     ),
   );
 }
@@ -314,13 +339,16 @@ List<Widget> getCraftedUsing(
     GenericPageViewModel vm,
     GenericPageItem genericItem,
     List<RequiredItem> resArray,
-    Widget Function(BuildContext context, RequiredItem requiredItem,
-            {Function onTap})
+    Widget Function(
+  BuildContext context,
+  RequiredItem requiredItem, {
+  void Function()? onTap,
+})
         requiredItemsPresenter) {
   List<Widget> craftedUsing = List.empty(growable: true);
   if (resArray.isNotEmpty) {
-    craftedUsing.add(emptySpace3x());
-    craftedUsing.add(genericItemText(
+    craftedUsing.add(const EmptySpace3x());
+    craftedUsing.add(GenericItemText(
       genericItem.group.contains('Damaged')
           ? getTranslations().fromKey(LocaleKey.repairedUsing)
           : getTranslations().fromKey(LocaleKey.craftedUsing),
@@ -338,12 +366,11 @@ List<Widget> getCraftedUsing(
 
     if (itemsThatArentRawMaterials.isNotEmpty) {
       craftedUsing.add(
-        positiveButton(
-          context,
+        PositiveButton(
           title: getTranslations().fromKey(
             LocaleKey.viewAllRawMaterialsRequired,
           ),
-          onPress: () async => await getNavigation().navigateAsync(
+          onTap: () async => await getNavigation().navigateAsync(
             context,
             navigateTo: (context) => GenericPageAllRequiredRawMaterials(
               GenericPageAllRequired.fromGenericItem(genericItem),
@@ -362,13 +389,15 @@ List<Widget> getUsedToCreate(
     GenericPageItem genericItem,
     List<RequiredItemDetails> usedToCreateArray,
     Widget Function(
-            BuildContext context, RequiredItemDetails requiredItemDetails,
-            {Function onTap})
+  BuildContext context,
+  RequiredItemDetails requiredItemDetails, {
+  void Function()? onTap,
+})
         requiredItemDetailsPresenter) {
   List<Widget> usedToCreate = List.empty(growable: true);
   if (usedToCreateArray.isNotEmpty) {
-    usedToCreate.add(emptySpace3x());
-    usedToCreate.add(genericItemText(
+    usedToCreate.add(const EmptySpace3x());
+    usedToCreate.add(GenericItemText(
       getTranslations().fromKey(LocaleKey.usedToCreate),
     ));
     usedToCreate.addAll(genericItemWithOverflowButton(
@@ -388,13 +417,16 @@ List<Widget> getRequiredItemWidgets(
     GenericPageItem genericItem,
     String title,
     List<RequiredItem> reqArray,
-    Widget Function(BuildContext context, RequiredItem requiredItem,
-            {Function onTap})
+    Widget Function(
+  BuildContext context,
+  RequiredItem requiredItem, {
+  void Function()? onTap,
+})
         requiredItemsPresenter) {
   List<Widget> refineToCreate = List.empty(growable: true);
   if (reqArray.isNotEmpty) {
-    refineToCreate.add(emptySpace3x());
-    refineToCreate.add(genericItemText(title));
+    refineToCreate.add(const EmptySpace3x());
+    refineToCreate.add(GenericItemText(title));
     refineToCreate.addAll(genericItemWithOverflowButton(
       context,
       reqArray,
@@ -420,16 +452,19 @@ List<Widget> getProcessorWidgets(
         presenter) {
   List<Widget> procWidgets = List.empty(growable: true);
   if (processors.isNotEmpty) {
-    procWidgets.add(emptySpace3x());
-    procWidgets.add(genericItemText(title));
+    procWidgets.add(const EmptySpace3x());
+    procWidgets.add(GenericItemText(title));
     procWidgets.addAll(genericItemWithOverflowButton(
       context,
       processors,
       presenter,
       viewMoreOnPress: () async => await getNavigation().navigateAsync(
         context,
-        navigateTo: (context) =>
-            AllPossibleOutputsPage(processors, genericItem.name, presenter),
+        navigateTo: (context) => AllPossibleOutputsPage(
+          processors,
+          genericItem.name,
+          presenter,
+        ),
       ),
     ));
   }
@@ -440,19 +475,20 @@ List<Widget> getCartItems(BuildContext context, GenericPageViewModel vm,
     GenericPageItem genericItem, List<CartItem> cartItems) {
   List<Widget> cartWidgets = List.empty(growable: true);
 
-  if (cartItems != null && cartItems.isNotEmpty) {
-    cartWidgets.add(emptySpace3x());
-    cartWidgets.add(genericItemText(getTranslations().fromKey(LocaleKey.cart)));
-    cartWidgets.add(flatCard(
+  if (cartItems.isNotEmpty) {
+    cartWidgets.add(const EmptySpace3x());
+    cartWidgets.add(GenericItemText(getTranslations().fromKey(LocaleKey.cart)));
+    cartWidgets.add(FlatCard(
       child: requiredItemTilePresenter(
-          context,
-          RequiredItem(
-            id: genericItem.id,
-            quantity: cartItems[0].quantity,
-          ),
-          showBackgroundColours: vm.displayGenericItemColour,
-          onTap: () async => await getNavigation()
-              .navigateAsync(context, navigateToNamed: Routes.cart)),
+        context,
+        RequiredItem(
+          id: genericItem.id,
+          quantity: cartItems[0].quantity,
+        ),
+        showBackgroundColours: vm.displayGenericItemColour,
+        onTap: () async => await getNavigation()
+            .navigateAsync(context, navigateToNamed: Routes.cart),
+      ),
     ));
   }
   return cartWidgets;
@@ -461,10 +497,9 @@ List<Widget> getCartItems(BuildContext context, GenericPageViewModel vm,
 List<Widget> getInventories(BuildContext context, GenericPageItem genericItem,
     List<Inventory> inventoriesThatContainItem) {
   List<Widget> invWidgets = List.empty(growable: true);
-  if (inventoriesThatContainItem != null &&
-      inventoriesThatContainItem.isNotEmpty) {
-    invWidgets.add(emptySpace3x());
-    invWidgets.add(genericItemText(
+  if (inventoriesThatContainItem.isNotEmpty) {
+    invWidgets.add(const EmptySpace3x());
+    invWidgets.add(GenericItemText(
         getTranslations().fromKey(LocaleKey.inventoryManagement)));
 
     List<Widget> Function(BuildContext context, Inventory inventory)
@@ -474,7 +509,7 @@ List<Widget> getInventories(BuildContext context, GenericPageItem genericItem,
     for (Inventory inv in inventoriesThatContainItem) {
       List<Widget> localInvWidgets = displayFunc(context, inv);
       for (Widget invWidget in localInvWidgets) {
-        invWidgets.add(flatCard(child: invWidget));
+        invWidgets.add(FlatCard(child: invWidget));
       }
     }
     // invWidgets.addAll(genericItemWithOverflowButton(
@@ -489,13 +524,16 @@ List<Widget> getRechargeWith(
     BuildContext context,
     GenericPageItem genericItem,
     List<ChargeBy> rechargeItems,
-    Widget Function(BuildContext context, ChargeBy chargeByItem,
-            {Function onTap})
+    Widget Function(
+  BuildContext context,
+  ChargeBy chargeByItem, {
+  void Function()? onTap,
+})
         chargeByItemPresenter) {
   List<Widget> rechargeWidgets = List.empty(growable: true);
   if (rechargeItems.isNotEmpty) {
-    rechargeWidgets.add(emptySpace3x());
-    rechargeWidgets.add(genericItemText(
+    rechargeWidgets.add(const EmptySpace3x());
+    rechargeWidgets.add(GenericItemText(
       getTranslations().fromKey(LocaleKey.rechargeThisUsing),
     ));
     rechargeWidgets.addAll(genericItemWithOverflowButton(
@@ -514,13 +552,16 @@ List<Widget> getUsedToRecharge(
     BuildContext context,
     GenericPageItem genericItem,
     List<Recharge> rechargeItems,
-    Widget Function(BuildContext context, Recharge rechargeItem,
-            {Function onTap})
+    Widget Function(
+  BuildContext context,
+  Recharge rechargeItem, {
+  void Function()? onTap,
+})
         usedToRechargeItemPresenter) {
   List<Widget> rechargeWidgets = List.empty(growable: true);
   if (rechargeItems.isNotEmpty) {
-    rechargeWidgets.add(emptySpace3x());
-    rechargeWidgets.add(genericItemText(
+    rechargeWidgets.add(const EmptySpace3x());
+    rechargeWidgets.add(GenericItemText(
       getTranslations()
           .fromKey(LocaleKey.useXToRecharge)
           .replaceAll("{0}", genericItem.name),
@@ -543,9 +584,9 @@ List<Widget> getStatBonuses(
 ) {
   List<Widget> statBonusWidgets = List.empty(growable: true);
   if (statBonuses.isNotEmpty) {
-    statBonusWidgets.add(emptySpace3x());
+    statBonusWidgets.add(const EmptySpace3x());
     String title = getTranslations().fromKey(LocaleKey.stats);
-    statBonusWidgets.add(genericItemText(title));
+    statBonusWidgets.add(GenericItemText(title));
     statBonusWidgets.addAll(genericItemWithOverflowButton(
       context,
       statBonuses,
@@ -566,12 +607,12 @@ List<Widget> getProceduralStatBonuses(
 ) {
   List<Widget> statBonusWidgets = List.empty(growable: true);
   if (statBonuses.isNotEmpty) {
-    statBonusWidgets.add(emptySpace3x());
+    statBonusWidgets.add(const EmptySpace3x());
     String title = getTranslations()
         .fromKey(LocaleKey.proceduralStats)
         .replaceAll('{0}', numStatsMin.toString())
         .replaceAll('{1}', numStatsMax.toString());
-    statBonusWidgets.add(genericItemText(title));
+    statBonusWidgets.add(GenericItemText(title));
     statBonusWidgets.addAll(genericItemWithOverflowButton(
       context,
       statBonuses,
@@ -592,9 +633,9 @@ List<Widget> getEggTraits(
 ) {
   List<Widget> eggTraitWidgets = List.empty(growable: true);
   if (eggTraits.isNotEmpty) {
-    eggTraitWidgets.add(emptySpace3x());
+    eggTraitWidgets.add(const EmptySpace3x());
     String title = getTranslations().fromKey(LocaleKey.eggModification);
-    eggTraitWidgets.add(genericItemText(title));
+    eggTraitWidgets.add(GenericItemText(title));
     eggTraitWidgets.addAll(genericItemWithOverflowButton(
       context,
       eggTraits,
@@ -613,11 +654,11 @@ List<Widget> getRewardFrom(
   BuildContext context,
   GenericPageItem genericItem,
   bool displayGenericItemColour, {
-  List<StarshipScrap> starshipScrapItems,
-  List<CreatureHarvest> creatureHarvests,
+  List<StarshipScrap>? starshipScrapItems,
+  List<CreatureHarvest>? creatureHarvests,
 }) {
   List<Widget> rewardsFromWidgets = List.empty(growable: true);
-  List<String> usages = genericItem?.usage ?? [];
+  List<String> usages = genericItem.usage ?? [];
 
   if (usages.any((u) => u.contains(UsageKey.isQuicksilver))) {
     if (genericItem.baseValueUnits > 0 &&
@@ -660,14 +701,15 @@ List<Widget> getRewardFrom(
   if (usages.any((u) => u.contains(UsageKey.isRewardFromShipScrap))) {
     rewardsFromWidgets.add(rewardFromStarshipScrapTilePresenter(
       context,
-      starshipScrapItems,
+      starshipScrapItems ?? List.empty(),
       displayGenericItemColour,
     ));
   }
 
   if (usages.any((u) => u.contains(UsageKey.hasCreatureHarvest))) {
-    if (creatureHarvests != null && creatureHarvests.isNotEmpty) {
-      for (CreatureHarvest creatureHarvest in creatureHarvests) {
+    var localCreatureHarvs = creatureHarvests ?? List.empty();
+    if (localCreatureHarvs.isNotEmpty) {
+      for (CreatureHarvest creatureHarvest in localCreatureHarvs) {
         rewardsFromWidgets.add(creatureHarvestTilePresenter(
           context,
           creatureHarvest,
@@ -682,8 +724,8 @@ List<Widget> getRewardFrom(
   }
 
   return [
-    emptySpace3x(),
-    genericItemText(getTranslations().fromKey(LocaleKey.rewardFrom)),
+    const EmptySpace3x(),
+    GenericItemText(getTranslations().fromKey(LocaleKey.rewardFrom)),
     ...rewardsFromWidgets,
   ];
 }
@@ -693,9 +735,9 @@ List<Widget> getFromUpdate(
   MajorUpdateItem addedInUpdate,
 ) {
   List<Widget> updateWidgets = List.empty(growable: true);
-  updateWidgets.add(emptySpace3x());
+  updateWidgets.add(const EmptySpace3x());
   String title = getTranslations().fromKey(LocaleKey.addedInUpdate);
-  updateWidgets.add(genericItemText(title));
+  updateWidgets.add(GenericItemText(title));
   updateWidgets.add(majorUpdateItemDetailTilePresenter(context, addedInUpdate));
 
   return updateWidgets;

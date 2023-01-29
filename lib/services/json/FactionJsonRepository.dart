@@ -20,16 +20,25 @@ class FactionJsonRepository extends BaseJsonService
     } catch (exception) {
       getLog().e("FactionJsonRepository Exception: ${exception.toString()}");
       return ResultWithValue<FactionData>(
-          false, FactionData(), exception.toString());
+        false,
+        FactionData.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
   @override
   Future<ResultWithValue<FactionDetail>> getById(
-      BuildContext context, String id) async {
+    BuildContext context,
+    String id,
+  ) async {
     ResultWithValue<FactionData> itemsResult = await getAll(context);
     if (itemsResult.hasFailed) {
-      return ResultWithValue(false, FactionDetail(), itemsResult.errorMessage);
+      return ResultWithValue(
+        false,
+        FactionDetail.fromRawJson('{}'),
+        itemsResult.errorMessage,
+      );
     }
     List<FactionDetail> details = List.empty(growable: true);
     details.addAll(itemsResult.value.categories);
@@ -42,14 +51,18 @@ class FactionJsonRepository extends BaseJsonService
       getLog().e(
           "FactionJsonRepository getById ($id) Exception: ${exception.toString()}");
       return ResultWithValue<FactionDetail>(
-          false, FactionDetail(), exception.toString());
+        false,
+        FactionDetail.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 
   //
   @override
   Future<ResultWithValue<List<GuildMission>>> getAllMissions(
-      BuildContext context) async {
+    BuildContext context,
+  ) async {
     String jsonFileName = getTranslations().fromKey(LocaleKey.guildMissionJson);
     try {
       List responseDetailsJson = await getListfromJson(context, jsonFileName);
@@ -61,18 +74,24 @@ class FactionJsonRepository extends BaseJsonService
       getLog().e(
           "FactionJsonRepository getAllMissions Exception: ${exception.toString()}");
       return ResultWithValue<List<GuildMission>>(
-          false, List.empty(), exception.toString());
+        false,
+        List.empty(),
+        exception.toString(),
+      );
     }
   }
 
   //
   @override
   Future<ResultWithValue<GuildMission>> getMissionId(
-      BuildContext context, String id) async {
+    BuildContext context,
+    String id,
+  ) async {
     ResultWithValue<List<GuildMission>> itemsResult =
         await getAllMissions(context);
     if (itemsResult.hasFailed) {
-      return ResultWithValue(false, GuildMission(), itemsResult.errorMessage);
+      return ResultWithValue(
+          false, GuildMission.fromRawJson('{}'), itemsResult.errorMessage);
     }
     try {
       GuildMission selectedItem =
@@ -82,7 +101,10 @@ class FactionJsonRepository extends BaseJsonService
       getLog().e(
           "FactionJsonRepository getMissionId ($id) Exception: ${exception.toString()}");
       return ResultWithValue<GuildMission>(
-          false, GuildMission(), exception.toString());
+        false,
+        GuildMission.fromRawJson('{}'),
+        exception.toString(),
+      );
     }
   }
 }

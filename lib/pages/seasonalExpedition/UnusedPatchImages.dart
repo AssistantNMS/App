@@ -6,37 +6,39 @@ import '../../components/responsiveGridView.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 
 class UnusedPatchImagesPage extends StatelessWidget {
-  const UnusedPatchImagesPage({Key key}) : super(key: key);
+  const UnusedPatchImagesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return simpleGenericPageScaffold(
       context,
       title: getTranslations().fromKey(LocaleKey.unusedMilestonePatches),
-      body: FutureBuilder(
+      body: FutureBuilder<ResultWithValue<List<String>>>(
         future: getDataRepo().getUnusedMileStonePatchImages(context),
-        builder: (BuildContext futureContext,
-            AsyncSnapshot<ResultWithValue<List<String>>> snapshot) {
-          Widget errorWidget = asyncSnapshotHandler(futureContext, snapshot);
+        builder: (BuildContext futureContext, snapshot) {
+          Widget? errorWidget = asyncSnapshotHandler(futureContext, snapshot);
           if (errorWidget != null) {
             return errorWidget;
           }
-          return responsiveGrid(context, snapshot.data.value,
-              (BuildContext localContext, String path) {
-            return Card(
-              child: GestureDetector(
-                child: localImage(path),
-                onTap: () => getNavigation().navigateAsync(
-                  context,
-                  navigateTo: (context) => ImageViewerPage(
-                    path.replaceAll('milestonePatches/', ''),
-                    path,
-                    analyticsKey: '',
+          return responsiveGrid(
+            context,
+            snapshot.data!.value,
+            (BuildContext localContext, String path) {
+              return Card(
+                child: GestureDetector(
+                  child: LocalImage(imagePath: path),
+                  onTap: () => getNavigation().navigateAsync(
+                    context,
+                    navigateTo: (context) => ImageViewerPage(
+                      path.replaceAll('milestonePatches/', ''),
+                      path,
+                      analyticsKey: '',
+                    ),
                   ),
                 ),
-              ),
-            );
-          });
+              );
+            },
+          );
         },
       ),
     );

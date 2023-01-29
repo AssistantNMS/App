@@ -6,41 +6,37 @@ import 'package:flutter/material.dart';
 class AsyncSettingTilePresenter extends StatefulWidget {
   final String title;
   final IconData icon;
-  final Future Function() futureFunc;
+  final Future<void> Function()? futureFunc;
+
   const AsyncSettingTilePresenter(
-      {Key key,
-      @required this.title,
-      @required this.icon,
-      @required this.futureFunc})
+      {Key? key,
+      required this.title,
+      required this.icon,
+      required this.futureFunc})
       : super(key: key);
 
   @override
-  _AsyncSettingTilePresenterWidget createState() =>
-      _AsyncSettingTilePresenterWidget(title, icon, futureFunc);
+  createState() => _AsyncSettingTilePresenterWidget();
 }
 
 class _AsyncSettingTilePresenterWidget
     extends State<AsyncSettingTilePresenter> {
-  final String title;
-  final IconData icon;
-  final Future Function() futureFunc;
   bool isLoading = false;
-  _AsyncSettingTilePresenterWidget(this.title, this.icon, this.futureFunc);
 
   @override
   Widget build(BuildContext context) {
-    return flatCard(
+    return FlatCard(
       child: genericListTile(
         context,
         leadingImage: null,
-        name: title,
+        name: widget.title,
         onTap: () async {
-          if (futureFunc != null) {
+          if (widget.futureFunc != null) {
             setState(() {
               isLoading = true;
             });
             try {
-              await futureFunc();
+              await widget.futureFunc!();
             } catch (exception) {
               // unused
             } finally {
@@ -50,7 +46,9 @@ class _AsyncSettingTilePresenterWidget
             }
           }
         },
-        trailing: isLoading ? getLoading().smallLoadingIndicator() : Icon(icon),
+        trailing: isLoading
+            ? getLoading().smallLoadingIndicator()
+            : Icon(widget.icon),
       ),
     );
   }
@@ -58,11 +56,11 @@ class _AsyncSettingTilePresenterWidget
 
 Future<dynamic> asyncSettingTileWithSuccessFunc<T>(
     BuildContext context,
-    Future<ResultWithValue<T>> Function() asyncFunc,
+    Future<ResultWithValue<T?>> Function() asyncFunc,
     LocaleKey errorMessage,
     Function(T) successFunc,
     LocaleKey successMessage) async {
-  ResultWithValue<T> readResult = await asyncFunc();
+  ResultWithValue<T?> readResult = await asyncFunc();
   if (readResult.hasFailed) {
     getDialog().showSimpleDialog(
       context,
@@ -73,7 +71,7 @@ Future<dynamic> asyncSettingTileWithSuccessFunc<T>(
       ],
     );
   } else {
-    successFunc(readResult.value);
+    successFunc(readResult.value!);
     getDialog().showSimpleDialog(
       context,
       getTranslations().fromKey(LocaleKey.success),

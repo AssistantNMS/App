@@ -18,7 +18,7 @@ Widget creatureHarvestTilePresenter(
     description = getTranslations().fromKey(localeKey);
   }
 
-  return flatCard(
+  return FlatCard(
     child: genericListTileWithSubtitle(
       context,
       leadingImage: (creatureHarvest.harvestType == 0)

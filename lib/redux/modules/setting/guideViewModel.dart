@@ -7,7 +7,7 @@ class GuideViewModel {
   final String selectedLanguage;
 
   GuideViewModel({
-    this.selectedLanguage,
+    required this.selectedLanguage,
     //
   });
 

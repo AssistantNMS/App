@@ -2,9 +2,11 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import '../../contracts/nmsfm/nmsfmTrackData.dart';
 
-Widget nmsfmTrackTilePresenter(BuildContext context, NmsfmTrackData track) {
-  bool hasArtist = track.artist != null && track.artist.isNotEmpty;
-  bool hasTime = track.runtimeInSeconds != null && track.runtimeInSeconds > 0;
+Widget nmsfmTrackTilePresenter(BuildContext context, NmsfmTrackData track,
+    {void Function()? onTap}) {
+  bool hasArtist = track.artist != null && track.artist!.isNotEmpty;
+  bool hasTime = track.runtimeInSeconds != null && //
+      (track.runtimeInSeconds ?? 0) > 0;
 
   return ListTile(
     title: Text(
@@ -14,14 +16,14 @@ Widget nmsfmTrackTilePresenter(BuildContext context, NmsfmTrackData track) {
     ),
     subtitle: hasArtist
         ? Text(
-            track.artist,
+            track.artist!,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           )
         : null,
     trailing: hasTime
         ? Text(
-            getTrackTime(track.runtimeInSeconds),
+            getTrackTime(track.runtimeInSeconds ?? 0),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           )
@@ -30,7 +32,7 @@ Widget nmsfmTrackTilePresenter(BuildContext context, NmsfmTrackData track) {
 }
 
 String getTrackTime(int seconds) {
-  if (seconds == null || seconds == 0) return '';
+  if (seconds == 0) return '';
 
   var min = (seconds / 60).truncate();
   var sec = seconds % 60;

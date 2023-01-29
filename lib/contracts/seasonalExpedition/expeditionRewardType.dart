@@ -19,6 +19,7 @@ enum ExpeditionRewardType {
   PetEgg,
   TeachWord,
   JetpackBoost,
+  ShipSlot,
 }
 
 final expeditionRewardTypeValues = EnumValues({
@@ -38,4 +39,5 @@ final expeditionRewardTypeValues = EnumValues({
   '13': ExpeditionRewardType.PetEgg,
   '14': ExpeditionRewardType.TeachWord,
   '15': ExpeditionRewardType.JetpackBoost,
+  '16': ExpeditionRewardType.ShipSlot,
 });

@@ -5005,7 +5005,7 @@
   },
   {
     "Id": "build273",
-    "Icon": "building/272.png",
+    "Icon": "building/273.png",
     "Name": "Statue de blob en bronze",
     "Group": "Décoration à débloquer",
     "Description": "Une décoration exclusive, moulée dans le bronze, à construire sur votre base.\nCette statue représente une créature primitive ancienne, recherchée par de nombreux explorateurs de la première heure.",
@@ -5727,7 +5727,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5755,7 +5756,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5930,7 +5932,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/303.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6286,7 +6289,8 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/316.png",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver"
+      "IsQuicksilver",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7686,7 +7690,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7714,7 +7719,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7742,7 +7748,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7877,7 +7884,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7969,7 +7977,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -7990,6 +7999,7 @@
     "CdnUrl": "https://cdn.nmsassistant.com/building/395.png",
     "Usages": [
       "HasDevProperties",
+      "IsNoLongerObtainable",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 15,
@@ -8472,7 +8482,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign4Reward"
+      "IsTwitchCampaign4Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -9054,7 +9065,7 @@
     "Icon": "building/436.png",
     "Name": "Diagramme de colonie",
     "Group": "Diagramme planétaire de spécialiste",
-    "Description": "Une carte montrant l'emplacement d'une colonie planétaire proche, acquise auprès d'un <STELLAR>cartographe de station spatiale<>.\n\nSélectionnez la carte et utilisez l'option Calculer un itinéraire (<IMG>FE_ALT1<>) pour marquer l'emplacement sur l'affichage de votre exocombinaison.",
+    "Description": "Une carte montrant l'emplacement d'une colonie planétaire proche, acquise auprès d'un <STELLAR>cartographe de station spatiale<>.\n\nSélectionnez la carte et utilisez l'option <VAL_ON>Calculer un itinéraire (<IMG>FE_ALT1<>)<> pour marquer l'emplacement sur l'affichage de votre exocombinaison.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "None",
     "MaxStackSize": 20.0,
@@ -9092,8 +9103,16 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw1",
-        "Quantity": 25
+        "Id": "prod6",
+        "Quantity": 10
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
       }
     ],
     "StatBonuses": [],
@@ -15840,7 +15859,7 @@
   },
   {
     "Id": "build814",
-    "Icon": "building/1.png",
+    "Icon": "building/814.png",
     "Name": "Grande salle de cargo A",
     "Group": "Module intérieur de cargo",
     "Description": "Ce module d'extension permet une construction d'espaces habitables rapide à l'intérieur des vaisseaux de grande taille.\n\nL'unité de construction préfabriquée comprend une cloison de pressurisation ainsi que tous les points d'ancrage nécessaires.",
@@ -15868,7 +15887,7 @@
   },
   {
     "Id": "build815",
-    "Icon": "building/1.png",
+    "Icon": "building/815.png",
     "Name": "Grande salle de cargo B",
     "Group": "Module intérieur de cargo",
     "Description": "Ce module d'extension permet une construction d'espaces habitables rapide à l'intérieur des vaisseaux de grande taille.\n\nL'unité de construction préfabriquée comprend une cloison de pressurisation ainsi que tous les points d'ancrage nécessaires.",
@@ -15896,7 +15915,7 @@
   },
   {
     "Id": "build816",
-    "Icon": "building/1.png",
+    "Icon": "building/816.png",
     "Name": "Grande salle de cargo C",
     "Group": "Module intérieur de cargo",
     "Description": "Ce module d'extension permet une construction d'espaces habitables rapide à l'intérieur des vaisseaux de grande taille.\n\nL'unité de construction préfabriquée comprend une cloison de pressurisation ainsi que tous les points d'ancrage nécessaires.",
@@ -15924,7 +15943,7 @@
   },
   {
     "Id": "build817",
-    "Icon": "building/66.png",
+    "Icon": "building/817.png",
     "Name": "Pièce carrée",
     "Group": "Module de construction",
     "Description": "Forme alternative pour le module principal d'une base, offrant un grand espace central qu'il est possible d'agrandir.",
@@ -15949,7 +15968,7 @@
   },
   {
     "Id": "build818",
-    "Icon": "building/66.png",
+    "Icon": "building/817.png",
     "Name": "Pièce carrée",
     "Group": "Module de construction",
     "Description": "Forme alternative pour le module principal d'une base, offrant un grand espace central qu'il est possible d'agrandir.",
@@ -16022,7 +16041,7 @@
   },
   {
     "Id": "build821",
-    "Icon": "building/141.png",
+    "Icon": "building/821.png",
     "Name": "Confinement de la flore 3",
     "Group": "Décoration",
     "Description": "Ornement constructible pour embellir votre base.",
@@ -16046,7 +16065,7 @@
   },
   {
     "Id": "build822",
-    "Icon": "building/156.png",
+    "Icon": "building/822.png",
     "Name": "Table ronde",
     "Group": "Meuble",
     "Description": "Surface de travail multi-usage faite de matériaux non magnétiques et résistants à la corrosion.",
@@ -16071,7 +16090,7 @@
   },
   {
     "Id": "build823",
-    "Icon": "building/156.png",
+    "Icon": "building/823.png",
     "Name": "Table hexagonale",
     "Group": "Meuble",
     "Description": "Surface de travail multi-usage faite de matériaux non magnétiques et résistants à la corrosion.",
@@ -16096,7 +16115,7 @@
   },
   {
     "Id": "build824",
-    "Icon": "building/156.png",
+    "Icon": "building/824.png",
     "Name": "Table de coin",
     "Group": "Meuble",
     "Description": "Surface de travail multi-usage faite de matériaux non magnétiques et résistants à la corrosion.",
@@ -16648,7 +16667,7 @@
   },
   {
     "Id": "build848",
-    "Icon": "building/336.png",
+    "Icon": "building/848.png",
     "Name": "Lampe sur pied carrée",
     "Group": "Luminaire",
     "Description": "Lampe à faible consommation d'énergie et durée de vie améliorée, faite de matériaux entièrement recyclables.",
@@ -16673,7 +16692,7 @@
   },
   {
     "Id": "build849",
-    "Icon": "building/336.png",
+    "Icon": "building/849.png",
     "Name": "Lampe sur pied ronde",
     "Group": "Luminaire",
     "Description": "Lampe à faible consommation d'énergie et durée de vie améliorée, faite de matériaux entièrement recyclables.",
@@ -16698,7 +16717,7 @@
   },
   {
     "Id": "build850",
-    "Icon": "building/336.png",
+    "Icon": "building/850.png",
     "Name": "Lampe sur pied couverte",
     "Group": "Luminaire",
     "Description": "Lampe à faible consommation d'énergie et durée de vie améliorée, faite de matériaux entièrement recyclables.",
@@ -16756,7 +16775,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -16952,7 +16972,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason7Reward"
+      "IsExpeditionSeason7Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -17445,7 +17466,7 @@
   {
     "Id": "build876",
     "Icon": "building/876.png",
-    "Name": "Pièce technologique (vide)",
+    "Name": "Pièce technologique (Extension)",
     "Group": "Module de cargo avancé",
     "Description": "Une chambre spacieuse avec une esthétique technique, pour agrandir les espaces habitables à l'intérieur des grands vaisseaux.",
     "BaseValueUnits": 1.0,
@@ -17606,7 +17627,7 @@
   {
     "Id": "build881",
     "Icon": "building/881.png",
-    "Name": "Pièce biologique (vide)",
+    "Name": "Pièce biologique (Extension)",
     "Group": "Module de cargo avancé",
     "Description": "Cette serre spacieuse filtre et oxygène naturellement l'air, et constitue un petit havre de verdure dans le cargo.",
     "BaseValueUnits": 1.0,
@@ -17736,7 +17757,7 @@
     "Icon": "building/885.png",
     "Name": "Pièce du spécialiste de l'exonef",
     "Group": "Terminal de travailleurs",
-    "Description": "Équipement de recherche de cargo intégré conçu pour les <TECHNOLOGY>mécaniciens d'exonef<> et équipé d'un logiciel spécialisé dans la conception de véhicules.\n\nCe module est placé sous forme de <STELLAR>pièce entière<> et est fourni avec ses unités fonctionnelles déjà installées.",
+    "Description": "Équipement de recherche de cargo intégré conçu pour les <TECHNOLOGY>techniciens d'exonef<> et équipé d'un logiciel spécialisé dans la conception de véhicules.\n\nCe module est placé sous forme de <STELLAR>pièce entière<> et est fourni avec ses unités fonctionnelles déjà installées.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -18090,7 +18111,7 @@
   {
     "Id": "build897",
     "Icon": "building/897.png",
-    "Name": "Pièce industrielle (vide)",
+    "Name": "Pièce industrielle (Extension)",
     "Group": "Module de cargo avancé",
     "Description": "Une chambre spacieuse avec une esthétique industrielle, pour agrandir les espaces habitables à l'intérieur des grands vaisseaux.",
     "BaseValueUnits": 1.0,
@@ -18380,7 +18401,7 @@
   {
     "Id": "build908",
     "Icon": "building/908.png",
-    "Name": "Affiche Étoile polaire",
+    "Name": "AFFICHE Étoile polaire",
     "Group": "Décoration",
     "Description": "Une œuvre d'art mural exclusive, adhésive et infroissable.\n\nCette affiche est dédiée aux explorateurs et aux aventuriers audacieux en quête de nouveaux horizons.",
     "BaseValueUnits": 400.0,
@@ -19133,7 +19154,7 @@
   },
   {
     "Id": "build938",
-    "Icon": "building/350.png",
+    "Icon": "building/938.png",
     "Name": "Unité d'extension d'exocombinaison",
     "Group": "Unité d'amélioration",
     "Description": "Un module technologique de survie avancé qui permet d'agrandir la <STELLAR>capacité de stockage de l'exocombinaison<>.\n\nDes nano-dispositifs d'expansion pré-emballés créent des poches de vide à l'intérieur de l'exocombinaison, augmentant sa <STELLAR>capacité d'inventaire<>. Appliquez cette amélioration au terminal d'améliorations d'exocombinaison à bord d'une <STELLAR>station spatiale<>.",
@@ -19301,7 +19322,7 @@
   },
   {
     "Id": "build945",
-    "Icon": "other/148.png",
+    "Icon": "building/945.png",
     "Name": "Dosimètre historiographique",
     "Group": "Moniteur personnel de fluctuations de la réalité",
     "Description": "Nada a détecté un nouveau schéma se répétant dans les histoires des <TRANS_TRA>Gek<>, des <TRANS_EXP>Korvax<> et des <TRANS_WAR>Vy'keen<>.\n\nLe dosimètre mesure l'exposition aux <SPECIAL>fluctuations historiographiques<> autour des principaux sites d'artefacts. Tout enregistrement d'événements historiques singuliers permettra à Nada de remonter la piste du signal.\n\nAidez Nada et Polo dans leurs recherches en vous servant de cet appareil pour <STELLAR>transmettre des données historiques<> de sites d'artefacts extraterrestres.",
@@ -19820,7 +19841,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19847,7 +19869,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -19874,7 +19897,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign5Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20678,9 +20702,9 @@
   {
     "Id": "build996",
     "Icon": "building/996.png",
-    "Name": "Verre Escaliers De Cargo",
+    "Name": "Escalier en verre pour cargo",
     "Group": "Module de cargo principal",
-    "Description": "Ce module d'extension permet une construction d'espaces habitables rapide à l'intérieur des vaisseaux de grande taille.\n\nL'unité de construction préfabriquée comprend une cloison de pressurisation ainsi que tous les points d'ancrage nécessaires.",
+    "Description": "Un escalier robuste et antidérapant avec une inclinaison ergonomique pour circuler verticalement entre les ponts de cargo.\n\nConstruits à partir de verre à faible dilatation thermique, ces escaliers offrent à l'utilisateur une vue passionnante sur l'espace lointain.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20707,9 +20731,9 @@
   {
     "Id": "build997",
     "Icon": "building/997.png",
-    "Name": "Plateforme Extérieure Escaliers De Cargo",
+    "Name": "Escalier d'extérieur pour cargo",
     "Group": "Module de cargo principal",
-    "Description": "Ce module d'extension permet une construction d'espaces habitables rapide à l'intérieur des vaisseaux de grande taille.\n\nL'unité de construction préfabriquée comprend une cloison de pressurisation ainsi que tous les points d'ancrage nécessaires.",
+    "Description": "Un escalier robuste et antidérapant avec une inclinaison ergonomique pour circuler verticalement entre les ponts de cargo.\n\nCes escaliers robustes peuvent être fixés à <STELLAR>l'extérieur<> de la coque du cargo, créant des connexions entre les passerelles extérieures et les plates-formes.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
@@ -20734,12 +20758,13 @@
     "Icon": "building/998.png",
     "Name": "Mur interne de cargo",
     "Group": "Module de cargo principal",
-    "Description": "Ce module d'extension permet une construction d'espaces habitables rapide à l'intérieur des vaisseaux de grande taille.\n\nL'unité de construction préfabriquée comprend une cloison de pressurisation ainsi que tous les points d'ancrage nécessaires.",
+    "Description": "Un mur intérieur pour subdiviser les grands espaces du cargo. S'adapte de façon fluide à l'esthétique de la pièce environnante.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20756,14 +20781,15 @@
   {
     "Id": "build999",
     "Icon": "building/999.png",
-    "Name": "Pièce industrielle B (vide)",
+    "Name": "Variante de pièce d'extension",
     "Group": "Module de cargo avancé",
     "Description": "Une chambre spacieuse avec une esthétique industrielle, pour agrandir les espaces habitables à l'intérieur des grands vaisseaux.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2C7C9F",
     "Usages": [
-      "HasDevProperties"
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -20776,6 +20802,168 @@
       {
         "Id": "raw32",
         "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1000",
+    "Icon": "building/1000.png",
+    "Name": "Anémone blindée",
+    "Group": "Décoration organique",
+    "Description": "Organisme marin carnivore. Sa coque blindée renferme un polype central, exposant uniquement les tentacules urticants. Sujette à des spasmes nerveux involontaires, la créature se tord perpétuellement : toujours en chasse, toujours affamée.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1001",
+    "Icon": "building/1001.png",
+    "Name": "Récif corallien",
+    "Group": "Décoration organique",
+    "Description": "Une formation calcaire géante, naturellement façonnée sans orientation définissable. Confère le mystère des fonds marins à toute base habitable.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1002",
+    "Icon": "building/1002.png",
+    "Name": "Colonie aquatique",
+    "Group": "Décoration organique",
+    "Description": "Une formation rocheuse tirée du fond d'un océan densément peuplé. La vie marine qui s'y attache est plongée dans un mucus riche en nutriments qui la nourrit et en préserve l'humidité dans l'atmosphère terrestre.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw18",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1003",
+    "Icon": "building/1003.png",
+    "Name": "Fleurs noctilingues",
+    "Group": "Décoration organique",
+    "Description": "Ce massif floral robuste a été génétiquement modifié pour prospérer dans tous les biomes, types de sols et conditions météorologiques. Les pétales barbelés protègent les fleurs des prédateurs potentiels, perçant la chair avec une toxine mortelle. Gants de protection recommandés lors de la manipulation.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1004",
+    "Icon": "building/1004.png",
+    "Name": "Fleurs d'oursin",
+    "Group": "Décoration organique",
+    "Description": "Ce massif floral robuste a été génétiquement modifié pour prospérer dans tous les biomes, types de sols et conditions météorologiques. Ces fleurs aux formes inhabituelles sont remplies de pollen et dégagent un parfum capiteux.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1005",
+    "Icon": "building/1005.png",
+    "Name": "Œillets éternels",
+    "Group": "Décoration organique",
+    "Description": "Ce massif floral robuste a été génétiquement modifié pour prospérer dans tous les biomes, types de sols et conditions météorologiques. Ces fleurs ligulées restent ouvertes jour et nuit, absorbant la lumière des étoiles locales et lointaines.",
+    "BaseValueUnits": 500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 40
       }
     ],
     "StatBonuses": [],
