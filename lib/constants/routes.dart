@@ -10,7 +10,7 @@ import '../pages/community/community_spotlight_page.dart';
 import '../pages/community/online_meetup2020_submissions_page.dart';
 import '../pages/contributors/contributors_page.dart';
 import '../pages/donation.dart';
-import '../pages/faction/factionListPage.dart';
+import '../pages/faction/faction_list_page.dart';
 import '../pages/faction/journey_milestone.dart';
 import '../pages/favourite/favouritesPage.dart';
 import '../pages/friendCode/friendCodeListPage.dart';

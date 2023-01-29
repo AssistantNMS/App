@@ -9,7 +9,7 @@ import '../../contracts/faction/faction.dart';
 import '../../contracts/faction/stored_faction_mission.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../redux/modules/journeyMilestone/factionsViewModel.dart';
-import 'guildMissionsPage.dart';
+import 'guild_missions_page.dart';
 
 class FactionDetailPage extends StatelessWidget {
   final FactionDetail factionDetail;
