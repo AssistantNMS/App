@@ -6,7 +6,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/guide_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/guide/guide.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/setting/settingViewModel.dart';
 import '../../services/json/GuidesJsonRepository.dart';

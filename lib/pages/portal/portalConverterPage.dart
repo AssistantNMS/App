@@ -14,7 +14,7 @@ import '../../constants/analytics_event.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/enum/portal_address_type.dart';
 import '../../contracts/misc/segment_view_multi_builder.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../helpers/hexHelper.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 

@@ -11,7 +11,7 @@ import '../../contracts/generic_page_item.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventory_slot.dart';
 import '../../contracts/inventory/inventory_slot_with_generic_page_item.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../helpers/itemsHelper.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/inventory/inventoryListViewModel.dart';

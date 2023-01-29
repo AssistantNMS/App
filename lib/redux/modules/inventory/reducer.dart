@@ -2,7 +2,7 @@ import 'package:redux/redux.dart';
 
 import '../../../contracts/inventory/inventory.dart';
 import '../../../contracts/inventory/inventory_slot.dart';
-import '../../../contracts/redux/inventoryState.dart';
+import '../../../contracts/redux/inventory_state.dart';
 import 'actions.dart';
 
 final inventoryReducer = combineReducers<InventoryState>([

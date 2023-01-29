@@ -10,7 +10,7 @@ import '../contracts/cart/cart_item.dart';
 import '../contracts/cart/cart_page_item.dart';
 import '../contracts/generic_page_all_required.dart';
 import '../contracts/generic_page_item.dart';
-import '../contracts/redux/appState.dart';
+import '../contracts/redux/app_state.dart';
 import '../contracts/required_item_details.dart';
 import '../helpers/futureHelper.dart';
 import '../helpers/genericHelper.dart';

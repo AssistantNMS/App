@@ -12,7 +12,7 @@ import '../../components/tilePresenters/youtubers_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../constants/nms_external_urls.dart';
 import '../../constants/routes.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 
 const double horizontalPadding = 32;

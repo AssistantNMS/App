@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:redux/redux.dart';
 
-import '../../../contracts/redux/appState.dart';
+import '../../../contracts/redux/app_state.dart';
 import 'actions.dart';
 import 'drawerSettingsViewModel.dart';
 import 'selector.dart';

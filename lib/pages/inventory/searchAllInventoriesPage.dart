@@ -6,7 +6,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/inventory_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/inventory/inventory_slot_with_container_and_generic_page_item.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../helpers/itemsHelper.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/inventory/inventoryListViewModel.dart';

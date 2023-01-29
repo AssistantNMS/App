@@ -12,7 +12,7 @@ import '../../components/portal/portal_glyph_list.dart';
 import '../../constants/analytics_event.dart';
 import '../../constants/nms_external_urls.dart';
 import '../../contracts/portal/portal_record.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../helpers/hexHelper.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 import 'addPortalPage.dart';

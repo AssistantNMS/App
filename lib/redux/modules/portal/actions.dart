@@ -1,4 +1,4 @@
-import '../../../contracts/redux/portalState.dart';
+import '../../../contracts/redux/portal_state.dart';
 
 import '../../../contracts/portal/portal_record.dart';
 import '../base/persistToStorage.dart';

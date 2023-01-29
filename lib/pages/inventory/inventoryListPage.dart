@@ -10,7 +10,7 @@ import '../../constants/analytics_event.dart';
 import '../../constants/user_selection_icons.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventory_order_by_type.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../redux/modules/inventory/inventoryListViewModel.dart';
 import 'addEditInventoryPage.dart';
 import 'searchAllInventoriesPage.dart';

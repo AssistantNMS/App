@@ -2,7 +2,7 @@ import 'package:redux/redux.dart';
 
 import '../../../contracts/cart/cart_item.dart';
 import '../../../contracts/generic_page_item.dart';
-import '../../../contracts/redux/appState.dart';
+import '../../../contracts/redux/app_state.dart';
 import '../setting/selector.dart';
 import 'actions.dart';
 import 'selector.dart';

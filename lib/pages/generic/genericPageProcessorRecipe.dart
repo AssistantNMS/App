@@ -15,7 +15,7 @@ import '../../constants/id_prefix.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/processor.dart';
 import '../../contracts/processor_recipe_page_data.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../helpers/futureHelper.dart';
 import '../../helpers/genericHelper.dart';
 import '../../redux/modules/favourite/favouriteViewModel.dart';

@@ -8,7 +8,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/tilePresenters/title_data_presenter.dart';
 import '../../constants/analytics_event.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../contracts/title_data.dart';
 import '../../contracts/title_data_with_owned.dart';
 import '../../helpers/searchHelpers.dart';

@@ -4,7 +4,7 @@ import '../../../contracts/cart/cart_item.dart';
 import '../../../contracts/favourite/favourite_item.dart';
 import '../../../contracts/inventory/inventory.dart';
 import '../../../contracts/generic_page_item.dart';
-import '../../../contracts/redux/appState.dart';
+import '../../../contracts/redux/app_state.dart';
 import '../cart/actions.dart';
 import '../cart/selector.dart';
 import '../favourite/actions.dart';

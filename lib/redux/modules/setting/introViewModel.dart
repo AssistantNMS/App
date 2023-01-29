@@ -2,7 +2,7 @@ import '../../../constants/Fonts.dart';
 import 'package:redux/redux.dart';
 
 import '../../../contracts/enum/homepage_type.dart';
-import '../../../contracts/redux/appState.dart';
+import '../../../contracts/redux/app_state.dart';
 import 'actions.dart';
 import 'selector.dart';
 

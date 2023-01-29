@@ -1,7 +1,7 @@
 import 'package:redux/redux.dart';
 
 import '../../../contracts/faction/stored_faction_mission.dart';
-import '../../../contracts/redux/appState.dart';
+import '../../../contracts/redux/app_state.dart';
 import 'actions.dart';
 import 'selector.dart';
 

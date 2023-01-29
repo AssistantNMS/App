@@ -22,7 +22,7 @@ import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventory_slot.dart';
 import '../../contracts/procedural_stat_bonus.dart';
 import '../../contracts/recharge.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
 import '../../contracts/stat_bonus.dart';

@@ -5,7 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import '../../components/modalBottomSheet/expedition_rewards_list_modal_bottom_sheet.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/seasonal_expedition_tile_presenter.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionMilestone.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionPhase.dart';
 import '../../redux/modules/expedition/expedition_view_model.dart';

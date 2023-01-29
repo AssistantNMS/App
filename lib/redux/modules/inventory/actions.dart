@@ -1,7 +1,7 @@
 import '../../../contracts/inventory/inventory.dart';
 import '../../../contracts/inventory/inventory_order_by_type.dart';
 import '../../../contracts/inventory/inventory_slot.dart';
-import '../../../contracts/redux/inventoryState.dart';
+import '../../../contracts/redux/inventory_state.dart';
 import '../base/persistToStorage.dart';
 
 class AddInventoryAction extends PersistToStorage {

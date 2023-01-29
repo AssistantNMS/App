@@ -5,7 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
 import 'components/adaptive/app_shell.dart';
-import 'contracts/redux/appState.dart';
+import 'contracts/redux/app_state.dart';
 import 'env/environmentSettings.dart';
 import 'integration/dependencyInjection.dart';
 import 'redux/modules/createStore.dart';

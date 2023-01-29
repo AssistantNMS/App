@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../../contracts/redux/appState.dart';
+import '../../../contracts/redux/app_state.dart';
 import '../../../redux/modules/setting/introViewModel.dart';
 
 class Valentines2020 extends StatelessWidget {

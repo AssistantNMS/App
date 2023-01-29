@@ -9,7 +9,7 @@ import '../constants/analytics_event.dart';
 import '../constants/Fonts.dart';
 import '../constants/homepage_items.dart';
 import '../contracts/enum/homepage_type.dart';
-import '../contracts/redux/appState.dart';
+import '../contracts/redux/app_state.dart';
 import '../helpers/dateHelper.dart';
 import '../helpers/uselessButtonHelper.dart';
 import '../redux/modules/setting/settingViewModel.dart';

@@ -7,7 +7,7 @@ import '../../components/tilePresenters/faction_tile_presenter.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/faction/faction.dart';
 import '../../contracts/faction/stored_faction_mission.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../redux/modules/journeyMilestone/factionsViewModel.dart';
 import 'guildMissionsPage.dart';
 

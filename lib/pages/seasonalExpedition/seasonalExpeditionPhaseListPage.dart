@@ -7,7 +7,7 @@ import '../../components/modalBottomSheet/expedition_rewards_list_modal_bottom_s
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/seasonal_expedition_tile_presenter.dart';
 import '../../components/tilePresenters/youtubers_tile_presenter.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionPhase.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionSeason.dart';
 import '../../integration/dependencyInjection.dart';

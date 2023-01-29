@@ -9,7 +9,7 @@ import '../../constants/id_prefix.dart';
 import '../../contracts/favourite/favourite_item.dart';
 import '../../contracts/processor.dart';
 import '../../contracts/processor_required_item_details.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
 import '../../helpers/futureHelper.dart';

@@ -1,6 +1,6 @@
 import 'package:redux/redux.dart';
 
-import '../../../contracts/redux/settingState.dart';
+import '../../../contracts/redux/setting_state.dart';
 import 'actions.dart';
 
 final settingReducer = combineReducers<SettingState>([

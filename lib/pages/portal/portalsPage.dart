@@ -7,7 +7,7 @@ import '../../components/tilePresenters/portal_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../constants/routes.dart';
 import '../../contracts/portal/portal_record.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
 import 'addPortalPage.dart';

@@ -1,6 +1,6 @@
 import 'package:redux/redux.dart';
 
-import '../../../contracts/redux/appState.dart';
+import '../../../contracts/redux/app_state.dart';
 import '../setting/selector.dart';
 
 class GenericItemViewModel {

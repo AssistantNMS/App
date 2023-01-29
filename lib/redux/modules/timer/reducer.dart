@@ -1,7 +1,7 @@
 import '../../../contracts/timer/timerItem.dart';
 import 'package:redux/redux.dart';
 
-import '../../../contracts/redux/timerState.dart';
+import '../../../contracts/redux/timer_state.dart';
 import 'actions.dart';
 
 final timerReducer = combineReducers<TimerState>([

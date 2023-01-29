@@ -1,8 +1,8 @@
 import 'package:redux/redux.dart';
 
-import '../../../contracts/redux/appState.dart';
-import '../../../contracts/redux/inventoryState.dart';
-import '../../../contracts/redux/portalState.dart';
+import '../../../contracts/redux/app_state.dart';
+import '../../../contracts/redux/inventory_state.dart';
+import '../../../contracts/redux/portal_state.dart';
 import '../inventory/actions.dart';
 import '../portal/actions.dart';
 import '../setting/selector.dart';

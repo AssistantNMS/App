@@ -5,7 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/app_image.dart';
 import '../../constants/nms_external_urls.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../redux/modules/setting/introViewModel.dart';
 
 class OnlineMeetup2020Page extends StatefulWidget {

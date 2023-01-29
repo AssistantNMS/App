@@ -6,7 +6,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/journey_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/journey/journey_milestone.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../../redux/modules/journeyMilestone/journeyMilestoneViewModel.dart';
 import '../../services/json/JourneyJsonRepository.dart';
 

@@ -1,4 +1,4 @@
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import 'cart/reducer.dart';
 import 'expedition/reducer.dart';
 import 'favourite/reducer.dart';

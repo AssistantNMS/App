@@ -5,7 +5,7 @@ import 'package:redux/redux.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../constants/app_config.dart';
-import '../../contracts/redux/appState.dart';
+import '../../contracts/redux/app_state.dart';
 import '../middleware/localStorageMiddleware.dart';
 import 'appReducer.dart';
 

@@ -1,14 +1,14 @@
 import 'package:meta/meta.dart';
 
-import 'cartState.dart';
-import 'expeditionState.dart';
-import 'favouriteState.dart';
-import 'inventoryState.dart';
-import 'journeyMilestoneState.dart';
-import 'portalState.dart';
-import 'settingState.dart';
-import 'timerState.dart';
-import 'titleState.dart';
+import 'cart_state.dart';
+import 'expedition_state.dart';
+import 'favourite_state.dart';
+import 'inventory_state.dart';
+import 'journey_milestone_state.dart';
+import 'portal_state.dart';
+import 'setting_state.dart';
+import 'timer_state.dart';
+import 'title_state.dart';
 
 @immutable
 class AppState {
