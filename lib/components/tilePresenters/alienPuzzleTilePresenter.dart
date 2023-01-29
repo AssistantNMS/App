@@ -5,7 +5,7 @@ import '../../contracts/alienPuzzle/alienPuzzle.dart';
 import '../../contracts/alienPuzzle/alienPuzzleRaceType.dart';
 import '../../contracts/alienPuzzle/alienPuzzleType.dart';
 import '../../pages/generic/genericPageDescripHighlightText.dart';
-import '../modalBottomSheet/alienPuzzleModalBottomSheet.dart';
+import '../modalBottomSheet/alien_puzzle_modal_bottom_sheet.dart';
 
 void Function() openModalForAlienPuzzle(
     BuildContext context, AlienPuzzle alienPuzzle) {

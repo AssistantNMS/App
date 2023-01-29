@@ -13,7 +13,7 @@ import '../../pages/generic/genericPageDescripHighlightText.dart';
 import '../../pages/seasonalExpedition/seasonalExpeditionDetailPage.dart';
 import '../../pages/seasonalExpedition/seasonalExpeditionPhaseListPage.dart';
 import '../../redux/modules/expedition/expeditionViewModel.dart';
-import '../modalBottomSheet/expeditionRewardsListModalBottomSheet.dart';
+import '../modalBottomSheet/expedition_rewards_list_modal_bottom_sheet.dart';
 import '../portal/portalGlyphList.dart';
 
 Widget seasonalExpeditionDetailTilePresenter(

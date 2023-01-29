@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 import '../../components/common/image.dart';
-import '../../components/modalBottomSheet/devDetailModalBottomSheet.dart';
+import '../../components/modalBottomSheet/dev_detail_modal_bottom_sheet.dart';
 import '../components/currency_text.dart';
 import '../components/floatingActionButton/cart_floating_action_button.dart';
 import '../components/floatingActionButton/inventory_floating_action_button.dart';

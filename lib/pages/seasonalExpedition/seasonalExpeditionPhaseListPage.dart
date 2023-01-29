@@ -3,7 +3,7 @@ import 'package:assistantnms_app/constants/AppImage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/modalBottomSheet/expeditionRewardsListModalBottomSheet.dart';
+import '../../components/modalBottomSheet/expedition_rewards_list_modal_bottom_sheet.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/seasonalExpeditionTilePresenter.dart';
 import '../../components/tilePresenters/youtubersTilePresenter.dart';

@@ -10,7 +10,7 @@ import '../../contracts/faction/storedFactionMission.dart';
 import '../../pages/faction/factionDetailPage.dart';
 import '../../pages/faction/guildMissionDetailPage.dart';
 import '../../redux/modules/journeyMilestone/factionsViewModel.dart';
-import '../modalBottomSheet/factionMilestoneModalBottomSheet.dart';
+import '../modalBottomSheet/faction_milestone_modal_bottom_sheet.dart';
 
 Widget factionTilePresenter(BuildContext context, FactionDetail faction) {
   return genericListTileWithSubtitle(

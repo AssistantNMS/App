@@ -3,7 +3,7 @@ import 'package:assistantnms_app/integration/dependencyInjection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/modalBottomSheet/patreonModalBottomSheet.dart';
+import '../../components/modalBottomSheet/patreon_modal_bottom_sheet.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../components/tilePresenters/majorUpdateTilePresenter.dart';
 import '../../constants/Patreon.dart';
