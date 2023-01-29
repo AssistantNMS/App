@@ -15,7 +15,7 @@ import '../services/base/audioPlayerService.dart';
 import '../services/base/baseWidgetService.dart';
 import '../services/base/dialogService.dart';
 import '../services/base/firebaseService.dart';
-import '../services/base/interface/IAudioPlayerService.dart';
+import '../services/base/interface/i_audio_player_service.dart';
 import '../services/base/loadingWidgetService.dart';
 import '../services/base/localNotificationService.dart';
 import '../services/base/notificationService.dart';
