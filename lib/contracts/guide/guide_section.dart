@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'guideSectionItem.dart';
+import 'guide_section_item.dart';
 
 class NmsGuideSection {
   List<NmsGuideSectionItem> items;

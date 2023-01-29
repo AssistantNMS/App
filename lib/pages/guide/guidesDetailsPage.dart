@@ -4,15 +4,15 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide GuideApiService;
 import 'package:flutter/material.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
-import '../../contracts/guide/guideSection.dart';
-import '../../contracts/guide/guideSectionItem.dart';
+import '../../contracts/guide/guide_section.dart';
+import '../../contracts/guide/guide_section_item.dart';
 
 import '../../components/guide/stick_row_presenters.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/generated/guide_meta_view_model.dart';
 import '../../contracts/guide/guide.dart';
-import '../../contracts/guide/guideType.dart';
+import '../../contracts/guide/guide_type.dart';
 import '../../helpers/genericHelper.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../services/api/guideApiService.dart';

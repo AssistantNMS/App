@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'guideType.dart';
+import 'guide_type.dart';
 
 class NmsGuideSectionItem {
   NmsGuideType type;

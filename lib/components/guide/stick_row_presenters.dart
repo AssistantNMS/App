@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 
-import '../../contracts/guide/guideSectionItem.dart';
+import '../../contracts/guide/guide_section_item.dart';
 import '../common/image.dart';
 
 Widget nmsSectionListItem(

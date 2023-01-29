@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../../contracts/guide/guide.dart';
-import '../../contracts/guide/guideListItem.dart';
+import '../../contracts/guide/guide_list_item.dart';
 
 import 'interface/IGuidesRepository.dart';
 
