@@ -38,7 +38,7 @@ import '../pages/portal/portal_converter_page.dart';
 import '../pages/portal/portal_random_page.dart';
 import '../pages/portal/portals_page.dart';
 import '../pages/power/solar_panel_calc_page.dart';
-import '../pages/seasonalExpedition/seasonalExpeditionSeasonListPage.dart';
+import '../pages/seasonalExpedition/seasonal_expedition_season_list_page.dart';
 import '../pages/settings.dart';
 import '../pages/social/socialPage.dart';
 import '../pages/special/intro.dart';
