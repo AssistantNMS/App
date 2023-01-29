@@ -5,7 +5,7 @@ import '../../contracts/journey/stored_journey_milestone.dart';
 
 import '../../contracts/journey/journey_milestone.dart';
 import '../../contracts/journey/journey_milestone_stat.dart';
-import '../../redux/modules/journeyMilestone/journeyMilestoneViewModel.dart';
+import '../../redux/modules/journeyMilestone/journey_milestone_view_model.dart';
 import '../modalBottomSheet/journey_milestone_modal_bottom_sheet.dart';
 
 ListItemDisplayerType<JourneyMilestone> journeyMilestoneCurriedTilePresenter(

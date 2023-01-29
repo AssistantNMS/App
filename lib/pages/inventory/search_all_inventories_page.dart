@@ -9,7 +9,7 @@ import '../../contracts/inventory/inventory_slot_with_container_and_generic_page
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/items_helper.dart';
 import '../../helpers/search_helpers.dart';
-import '../../redux/modules/inventory/inventoryListViewModel.dart';
+import '../../redux/modules/inventory/inventory_list_view_model.dart';
 
 class SearchAllInventoriesPage extends StatelessWidget {
   SearchAllInventoriesPage({Key? key}) : super(key: key) {

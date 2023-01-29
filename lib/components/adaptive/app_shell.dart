@@ -13,7 +13,7 @@ import '../../constants/routes.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../env/app_version_num.dart';
 // import '../../integration/dependency_injection.dart';
-import '../../redux/modules/setting/introViewModel.dart';
+import '../../redux/modules/setting/intro_view_model.dart';
 import '../../theme/themes.dart';
 
 class AppShell extends StatelessWidget {

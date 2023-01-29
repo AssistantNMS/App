@@ -7,7 +7,7 @@ import '../../components/tilePresenters/seasonal_expedition_tile_presenter.dart'
 import '../../constants/app_image.dart';
 import '../../contracts/generated/expedition_view_model.dart';
 import '../../integration/dependency_injection.dart';
-import '../../redux/modules/setting/isPatreonViewModel.dart';
+import '../../redux/modules/setting/is_patreon_view_model.dart';
 import 'unused_patch_images.dart';
 import 'seasonal_expedition_phase_list_page.dart';
 

@@ -8,7 +8,7 @@ import '../../../components/tilePresenters/twitch_tile_presenter.dart';
 import '../../../constants/analytics_event.dart';
 import '../../../contracts/redux/app_state.dart';
 import '../../../contracts/twitch/twitch_campaign_data.dart';
-import '../../../redux/modules/generic/genericItemViewModel.dart';
+import '../../../redux/modules/generic/generic_item_view_model.dart';
 
 class TwitchCampaignPage extends StatelessWidget {
   TwitchCampaignPage({Key? key}) : super(key: key) {

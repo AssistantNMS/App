@@ -13,7 +13,7 @@ import '../../constants/analytics_event.dart';
 import '../../constants/nms_external_urls.dart';
 import '../../constants/routes.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../redux/modules/portal/portalViewModel.dart';
+import '../../redux/modules/portal/portal_view_model.dart';
 
 const double horizontalPadding = 32;
 

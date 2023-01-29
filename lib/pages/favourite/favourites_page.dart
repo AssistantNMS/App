@@ -15,7 +15,7 @@ import '../../contracts/required_item_details.dart';
 import '../../helpers/future_helper.dart';
 import '../../helpers/items_helper.dart';
 import '../../helpers/search_helpers.dart';
-import '../../redux/modules/favourite/favouriteViewModel.dart';
+import '../../redux/modules/favourite/favourite_view_model.dart';
 
 class FavouritesPage extends StatelessWidget {
   FavouritesPage({Key? key}) : super(key: key) {

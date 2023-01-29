@@ -10,7 +10,7 @@ import '../../contracts/generated/add_friend_code_view_model.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/validation_helper.dart';
 import '../../integration/dependency_injection.dart';
-import '../../redux/modules/setting/friendCodeSettingsViewModel.dart';
+import '../../redux/modules/setting/friend_code_settings_view_model.dart';
 import '../../validation/commonValidator.dart';
 
 const String pc = 'PC';

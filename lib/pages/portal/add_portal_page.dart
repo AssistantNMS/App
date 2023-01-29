@@ -13,7 +13,7 @@ import '../../contracts/portal/portal_record.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/action_helper.dart';
 import '../../helpers/hex_helper.dart';
-import '../../redux/modules/portal/portalViewModel.dart';
+import '../../redux/modules/portal/portal_view_model.dart';
 
 class AddPortalPage extends StatefulWidget {
   final bool isEdit;

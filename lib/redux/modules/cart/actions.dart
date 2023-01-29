@@ -1,5 +1,5 @@
 import '../../../contracts/generic_page_item.dart';
-import '../base/persistToStorage.dart';
+import '../base/persist_to_storage.dart';
 
 class AddCraftingToCartAction extends PersistToStorage {
   final GenericPageItem item;

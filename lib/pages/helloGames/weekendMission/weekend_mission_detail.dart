@@ -18,7 +18,7 @@ import '../../../contracts/weekend_mission.dart';
 import '../../../contracts/weekend_stage_page_item.dart';
 import '../../../helpers/hex_helper.dart';
 import '../../../integration/dependency_injection.dart';
-import '../../../redux/modules/portal/portalGlyphViewModel.dart';
+import '../../../redux/modules/portal/portal_glyph_view_model.dart';
 import 'weekend_mission_dialog.dart';
 
 class WeekendMissionDetail extends StatefulWidget {

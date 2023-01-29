@@ -16,7 +16,7 @@ import '../helpers/future_helper.dart';
 import '../helpers/generic_helper.dart';
 import '../helpers/items_helper.dart';
 import '../pages/generic/generic_page.dart';
-import '../redux/modules/cart/cartViewModel.dart';
+import '../redux/modules/cart/cart_view_model.dart';
 import 'generic/generic_page_all_required_raw_materials.dart';
 
 class CartPage extends StatelessWidget {

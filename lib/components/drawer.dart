@@ -7,7 +7,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import '../constants/app_colour.dart';
 import '../contracts/redux/app_state.dart';
 import '../helpers/drawer_helper.dart';
-import '../redux/modules/setting/drawerSettingsViewModel.dart';
+import '../redux/modules/setting/drawer_settings_view_model.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({Key? key}) : super(key: key);

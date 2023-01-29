@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../../contracts/title_data_with_owned.dart';
 import '../../helpers/currency_helper.dart';
-import '../../redux/modules/titles/titleViewModel.dart';
+import '../../redux/modules/titles/title_view_model.dart';
 
 Widget Function(BuildContext, TitleDataWithOwned, {void Function()? onTap})
     titleDataTilePresenter(TitleViewModel viewModel) =>

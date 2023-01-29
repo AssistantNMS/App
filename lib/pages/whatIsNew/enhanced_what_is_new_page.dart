@@ -6,7 +6,7 @@ import '../../constants/analytics_event.dart';
 import '../../contracts/data/update_item_detail.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/future_helper.dart';
-import '../../redux/modules/setting/whatIsNewSettingsViewModel.dart';
+import '../../redux/modules/setting/what_is_new_settings_view_model.dart';
 import '../newItemsInUpdate/new_item_details_page.dart';
 
 class EnhancedWhatIsNewPage extends StatelessWidget {

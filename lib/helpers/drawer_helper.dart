@@ -6,7 +6,7 @@ import '../integration/dependency_injection.dart';
 import '../components/modalBottomSheet/update_modal_bottom_sheet.dart';
 import '../constants/app_image.dart';
 import '../contracts/misc/custom_menu.dart';
-import '../redux/modules/setting/drawerSettingsViewModel.dart';
+import '../redux/modules/setting/drawer_settings_view_model.dart';
 
 List<Widget> getDrawerItems(context, DrawerSettingsViewModel viewModel) {
   List<Widget> widgets = List.empty(growable: true);

@@ -10,7 +10,7 @@ import '../../constants/analytics_event.dart';
 import '../../contracts/misc/custom_menu.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/update_helper.dart';
-import '../../redux/modules/setting/customMenuViewModel.dart';
+import '../../redux/modules/setting/custom_menu_view_model.dart';
 import 'edit_custom_homepage.dart';
 import 'view_custom_homepage.dart';
 

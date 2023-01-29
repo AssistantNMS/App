@@ -7,7 +7,7 @@ import '../../constants/analytics_event.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../contracts/timer/timer_item.dart';
 import '../../integration/dependency_injection.dart';
-import '../../redux/modules/timer/timerViewModel.dart';
+import '../../redux/modules/timer/timer_view_model.dart';
 import 'add_edit_timer_page.dart';
 import 'timer_page_view.dart';
 

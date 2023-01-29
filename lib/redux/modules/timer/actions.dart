@@ -1,5 +1,5 @@
 import '../../../contracts/timer/timer_item.dart';
-import '../base/persistToStorage.dart';
+import '../base/persist_to_storage.dart';
 
 class AddTimerAction extends PersistToStorage {
   final TimerItem timerItem;

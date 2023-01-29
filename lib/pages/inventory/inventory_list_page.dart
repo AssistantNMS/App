@@ -11,7 +11,7 @@ import '../../constants/user_selection_icons.dart';
 import '../../contracts/inventory/inventory.dart';
 import '../../contracts/inventory/inventory_order_by_type.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../redux/modules/inventory/inventoryListViewModel.dart';
+import '../../redux/modules/inventory/inventory_list_view_model.dart';
 import 'add_edit_inventory_page.dart';
 import 'search_all_inventories_page.dart';
 import 'view_inventory_page.dart';

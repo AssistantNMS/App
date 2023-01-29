@@ -17,7 +17,7 @@ import '../../contracts/redux/app_state.dart';
 import '../../contracts/redux/inventory_state.dart';
 import '../../integration/dependency_injection.dart';
 import '../../integration/nom_nom.dart';
-import '../../redux/modules/viewModel/syncPageViewModel.dart';
+import '../../redux/modules/viewModel/sync_page_view_model.dart';
 
 class SyncWithNomNomBottomSheet extends StatefulWidget {
   const SyncWithNomNomBottomSheet({Key? key}) : super(key: key);

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
 import '../../constants/routes.dart';
-import '../../redux/modules/setting/drawerSettingsViewModel.dart';
+import '../../redux/modules/setting/drawer_settings_view_model.dart';
 
 class CustomMenu {
   Widget icon;

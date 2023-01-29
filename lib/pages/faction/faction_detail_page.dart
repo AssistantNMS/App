@@ -8,7 +8,7 @@ import '../../constants/nms_ui_constants.dart';
 import '../../contracts/faction/faction.dart';
 import '../../contracts/faction/stored_faction_mission.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../redux/modules/journeyMilestone/factionsViewModel.dart';
+import '../../redux/modules/journeyMilestone/factions_view_model.dart';
 import 'guild_missions_page.dart';
 
 class FactionDetailPage extends StatelessWidget {

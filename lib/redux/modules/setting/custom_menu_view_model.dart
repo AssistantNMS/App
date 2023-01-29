@@ -3,7 +3,7 @@ import 'package:redux/redux.dart';
 
 import '../../../contracts/redux/app_state.dart';
 import 'actions.dart';
-import 'drawerSettingsViewModel.dart';
+import 'drawer_settings_view_model.dart';
 import 'selector.dart';
 
 class CustomMenuSettingsViewModel {

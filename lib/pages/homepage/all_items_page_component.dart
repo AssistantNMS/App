@@ -8,7 +8,7 @@ import '../../helpers/future_helper.dart';
 import '../../helpers/generic_helper.dart';
 import '../../helpers/repository_helper.dart';
 import '../../helpers/search_helpers.dart';
-import '../../redux/modules/generic/genericPageViewModel.dart';
+import '../../redux/modules/generic/generic_page_view_model.dart';
 
 class AllItemsPageComponent extends StatelessWidget {
   final bool isHomePage;

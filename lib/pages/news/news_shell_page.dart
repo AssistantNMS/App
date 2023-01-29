@@ -5,7 +5,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/youtubers_tile_presenter.dart';
 import '../../constants/app_image.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../redux/modules/setting/newsPageViewModel.dart';
+import '../../redux/modules/setting/news_page_view_model.dart';
 
 import '../../components/tilePresenters/hello_games_tile_presenter.dart';
 import '../../contracts/helloGames/news_item.dart';

@@ -6,7 +6,7 @@ import '../../constants/modal.dart';
 import '../../contracts/faction/faction.dart';
 import '../../contracts/faction/stored_faction_mission.dart';
 import '../../helpers/currency_helper.dart';
-import '../../redux/modules/journeyMilestone/factionsViewModel.dart';
+import '../../redux/modules/journeyMilestone/factions_view_model.dart';
 
 class FactionTierBottomSheet extends StatelessWidget {
   final FactionMission mission;

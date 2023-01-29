@@ -7,7 +7,7 @@ import '../../constants/app_duration.dart';
 import '../../constants/modal.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../redux/modules/setting/shareViewModel.dart';
+import '../../redux/modules/setting/share_view_model.dart';
 import '../common/row_helper.dart';
 
 const shareableAppLink = 'https://app.nmsassistant.com/link{0}/{1}.html';

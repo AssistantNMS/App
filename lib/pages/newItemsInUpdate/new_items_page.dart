@@ -8,7 +8,7 @@ import '../../components/tilePresenters/update_new_items_tile_presenter.dart';
 import '../../contracts/data/update_item_detail.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/future_helper.dart';
-import '../../redux/modules/generic/genericPageViewModel.dart';
+import '../../redux/modules/generic/generic_page_view_model.dart';
 
 class NewItemsPage extends StatelessWidget {
   const NewItemsPage({Key? key}) : super(key: key);

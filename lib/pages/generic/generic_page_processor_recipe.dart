@@ -18,7 +18,7 @@ import '../../contracts/processor_recipe_page_data.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/future_helper.dart';
 import '../../helpers/generic_helper.dart';
-import '../../redux/modules/favourite/favouriteViewModel.dart';
+import '../../redux/modules/favourite/favourite_view_model.dart';
 import 'generic_page.dart';
 
 class GenericPageProcessorRecipe extends StatelessWidget {

@@ -13,7 +13,7 @@ import '../../../contracts/helloGames/starship_scrap_detailed.dart';
 import '../../../contracts/redux/app_state.dart';
 import '../../../contracts/required_item_details.dart';
 import '../../../helpers/items_helper.dart';
-import '../../../redux/modules/generic/genericItemViewModel.dart';
+import '../../../redux/modules/generic/generic_item_view_model.dart';
 
 class StarshipScrapPage extends StatelessWidget {
   StarshipScrapPage({Key? key}) : super(key: key) {

@@ -6,7 +6,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/drawer_helper.dart';
-import '../../redux/modules/setting/drawerSettingsViewModel.dart';
+import '../../redux/modules/setting/drawer_settings_view_model.dart';
 
 class AppleMenu extends StatelessWidget {
   AppleMenu({Key? key}) : super(key: key) {

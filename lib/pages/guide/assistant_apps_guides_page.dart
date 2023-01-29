@@ -5,7 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import '../../components/modalBottomSheet/googlelogin_modal_bottom_sheet.dart';
 import '../../constants/storage_key.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../redux/modules/setting/guideViewModel.dart';
+import '../../redux/modules/setting/guide_view_model.dart';
 
 class AssistantAppsGuidesPage extends StatelessWidget {
   const AssistantAppsGuidesPage({Key? key}) : super(key: key);

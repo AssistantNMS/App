@@ -6,7 +6,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/app_image.dart';
 import '../../constants/nms_external_urls.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../redux/modules/setting/introViewModel.dart';
+import '../../redux/modules/setting/intro_view_model.dart';
 
 class OnlineMeetup2020Page extends StatefulWidget {
   const OnlineMeetup2020Page({Key? key}) : super(key: key);

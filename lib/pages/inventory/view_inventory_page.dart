@@ -14,8 +14,8 @@ import '../../contracts/inventory/inventory_slot_with_generic_page_item.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/items_helper.dart';
 import '../../helpers/search_helpers.dart';
-import '../../redux/modules/inventory/inventoryListViewModel.dart';
-import '../../redux/modules/inventory/inventorySlotViewModel.dart';
+import '../../redux/modules/inventory/inventory_list_view_model.dart';
+import '../../redux/modules/inventory/inventory_slot_view_model.dart';
 import '../generic/select_generic_item_page.dart';
 import 'add_edit_inventory_page.dart';
 

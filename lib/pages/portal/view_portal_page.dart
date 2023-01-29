@@ -14,7 +14,7 @@ import '../../constants/nms_external_urls.dart';
 import '../../contracts/portal/portal_record.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/hex_helper.dart';
-import '../../redux/modules/portal/portalViewModel.dart';
+import '../../redux/modules/portal/portal_view_model.dart';
 import 'add_portal_page.dart';
 
 class ViewPortalPage extends StatefulWidget {

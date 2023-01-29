@@ -8,7 +8,7 @@ import '../../constants/analytics_event.dart';
 import '../../contracts/guide/guide.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/search_helpers.dart';
-import '../../redux/modules/setting/settingViewModel.dart';
+import '../../redux/modules/setting/setting_view_model.dart';
 import '../../services/json/GuidesJsonRepository.dart';
 
 class GuidesPage extends StatelessWidget {

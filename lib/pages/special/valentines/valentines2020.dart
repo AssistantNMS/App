@@ -6,7 +6,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../../contracts/redux/app_state.dart';
-import '../../../redux/modules/setting/introViewModel.dart';
+import '../../../redux/modules/setting/intro_view_model.dart';
 
 class Valentines2020 extends StatelessWidget {
   const Valentines2020({Key? key}) : super(key: key);

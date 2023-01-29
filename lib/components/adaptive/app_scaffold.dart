@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../contracts/redux/app_state.dart';
-import '../../redux/modules/setting/settingViewModel.dart';
+import '../../redux/modules/setting/setting_view_model.dart';
 
 class AdaptiveAppScaffold extends StatelessWidget {
   final PreferredSizeWidget? appBar;

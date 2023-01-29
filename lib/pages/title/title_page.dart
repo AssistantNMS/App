@@ -13,7 +13,7 @@ import '../../contracts/title_data.dart';
 import '../../contracts/title_data_with_owned.dart';
 import '../../helpers/search_helpers.dart';
 import '../../integration/dependency_injection.dart';
-import '../../redux/modules/titles/titleViewModel.dart';
+import '../../redux/modules/titles/title_view_model.dart';
 
 class TitlePage extends StatefulWidget {
   TitlePage({Key? key}) : super(key: key) {

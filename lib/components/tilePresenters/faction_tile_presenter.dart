@@ -9,7 +9,7 @@ import '../../contracts/faction/guild_mission.dart';
 import '../../contracts/faction/stored_faction_mission.dart';
 import '../../pages/faction/faction_detail_page.dart';
 import '../../pages/faction/guild_mission_detail_page.dart';
-import '../../redux/modules/journeyMilestone/factionsViewModel.dart';
+import '../../redux/modules/journeyMilestone/factions_view_model.dart';
 import '../modalBottomSheet/faction_milestone_modal_bottom_sheet.dart';
 
 Widget factionTilePresenter(BuildContext context, FactionDetail faction) {

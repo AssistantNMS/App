@@ -29,7 +29,7 @@ import '../../contracts/stat_bonus.dart';
 import '../../helpers/future_helper.dart';
 import '../../helpers/generic_helper.dart';
 import '../../mapper/generic_item_mapper.dart';
-import '../../redux/modules/generic/genericPageViewModel.dart';
+import '../../redux/modules/generic/generic_page_view_model.dart';
 import 'generic_page_components.dart';
 
 class GenericPage extends StatelessWidget {
