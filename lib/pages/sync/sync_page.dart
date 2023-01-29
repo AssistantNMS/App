@@ -15,7 +15,7 @@ import '../../contracts/redux/inventory_state.dart';
 import '../../contracts/redux/portal_state.dart';
 import '../../integration/dependency_injection.dart';
 import '../../redux/modules/viewModel/sync_page_view_model.dart';
-import '../../services/base/fileService.dart';
+import '../../services/base/file_service.dart';
 
 class SyncPage extends StatefulWidget {
   const SyncPage({Key? key}) : super(key: key);
