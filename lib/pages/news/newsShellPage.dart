@@ -8,8 +8,8 @@ import '../../contracts/redux/appState.dart';
 import '../../redux/modules/setting/newsPageViewModel.dart';
 
 import '../../components/tilePresenters/hello_games_tile_presenter.dart';
-import '../../contracts/helloGames/newsItem.dart';
-import '../../contracts/helloGames/releaseNote.dart';
+import '../../contracts/helloGames/news_item.dart';
+import '../../contracts/helloGames/release_note.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../integration/dependencyInjection.dart';
 import './steamBranches.dart';

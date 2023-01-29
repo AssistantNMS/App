@@ -5,9 +5,9 @@ import '../../contracts/generated/expedition_view_model.dart';
 
 import '../../constants/api_urls.dart';
 import '../../contracts/generated/weekend_mission_view_model.dart';
-import '../../contracts/helloGames/communityMission.dart';
-import '../../contracts/helloGames/newsItem.dart';
-import '../../contracts/helloGames/releaseNote.dart';
+import '../../contracts/helloGames/community_mission.dart';
+import '../../contracts/helloGames/news_item.dart';
+import '../../contracts/helloGames/release_note.dart';
 import '../../integration/dependencyInjection.dart';
 
 class HelloGamesApiService extends BaseApiService {

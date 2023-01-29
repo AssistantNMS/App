@@ -13,7 +13,7 @@ import '../contracts/data/quicksilver_store.dart';
 import '../contracts/data/update_item_detail.dart';
 import '../contracts/enum/currency_type.dart';
 import '../contracts/generic_page_item.dart';
-import '../contracts/helloGames/quickSilverStoreDetails.dart';
+import '../contracts/helloGames/quick_silver_store_details.dart';
 import '../contracts/processor.dart';
 import '../contracts/processor_recipe_page_data.dart';
 import '../contracts/recharge.dart';

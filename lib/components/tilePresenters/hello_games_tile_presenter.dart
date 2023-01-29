@@ -2,8 +2,8 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/nms_ui_constants.dart';
-import '../../contracts/helloGames/newsItem.dart';
-import '../../contracts/helloGames/releaseNote.dart';
+import '../../contracts/helloGames/news_item.dart';
+import '../../contracts/helloGames/release_note.dart';
 
 Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release,
     {void Function()? onTap}) {

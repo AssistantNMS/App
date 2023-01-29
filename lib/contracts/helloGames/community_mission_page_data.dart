@@ -5,7 +5,7 @@
 import '../../contracts/data/quicksilver_store.dart';
 
 import '../required_item_details.dart';
-import 'communityMission.dart';
+import 'community_mission.dart';
 
 class CommunityMissionPageData {
   int communityMissionMin;

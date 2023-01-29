@@ -9,7 +9,7 @@ import '../../../constants/app_image.dart';
 import '../../../contracts/data/quicksilver_store.dart';
 import '../../../contracts/data/quicksilver_store_item.dart';
 import '../../../contracts/enum/community_mission_status.dart';
-import '../../../contracts/helloGames/quickSilverStoreDetails.dart';
+import '../../../contracts/helloGames/quick_silver_store_details.dart';
 import '../../../contracts/required_item_details.dart';
 import '../../../helpers/futureHelper.dart';
 import 'community_mission_extra_data.dart';

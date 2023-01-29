@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/hello_games_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
-import '../../contracts/helloGames/newsItem.dart';
+import '../../contracts/helloGames/news_item.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../integration/dependencyInjection.dart';
 
