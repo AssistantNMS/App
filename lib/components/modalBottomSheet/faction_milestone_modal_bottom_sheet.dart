@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_duration.dart';
-import '../../constants/Modal.dart';
+import '../../constants/modal.dart';
 import '../../contracts/faction/faction.dart';
 import '../../contracts/faction/stored_faction_mission.dart';
 import '../../helpers/currency_helper.dart';

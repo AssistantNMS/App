@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../../constants/Nmsfm.dart';
+import '../../constants/nmsfm.dart';
 import '../../contracts/nmsfm/zeno_fm_now_playing.dart';
 
 class ZenoFMApiService extends BaseApiService {

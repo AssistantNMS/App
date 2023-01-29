@@ -2,8 +2,8 @@ import 'package:assistantnms_app/components/common/row_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import '../../constants/app_duration.dart';
-import '../../constants/Modal.dart';
-import '../../constants/Patreon.dart';
+import '../../constants/modal.dart';
+import '../../constants/patreon.dart';
 
 import '../../constants/app_image.dart';
 import '../../constants/nms_ui_constants.dart';

@@ -7,7 +7,7 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../constants/app_duration.dart';
 import '../../constants/app_image.dart';
-import '../../constants/Modal.dart';
+import '../../constants/modal.dart';
 import '../../constants/routes.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/generated/nom_nom_inventory_view_model.dart';

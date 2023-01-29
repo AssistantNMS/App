@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../constants/Fonts.dart';
+import '../constants/fonts.dart';
 import '../helpers/theme_helper.dart';
 
 class ExpeditionAlphabetTranslationAnimated extends StatefulWidget {

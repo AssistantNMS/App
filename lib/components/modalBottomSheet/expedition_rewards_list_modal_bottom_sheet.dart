@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../constants/app_duration.dart';
-import '../../constants/Modal.dart';
+import '../../constants/modal.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';

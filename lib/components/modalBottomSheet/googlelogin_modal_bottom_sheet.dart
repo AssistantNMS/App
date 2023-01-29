@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_duration.dart';
-import '../../constants/Modal.dart';
+import '../../constants/modal.dart';
 import '../../constants/storage_key.dart';
 import '../../contracts/auth/google_login_model.dart';
 import '../../integration/dependency_injection.dart';

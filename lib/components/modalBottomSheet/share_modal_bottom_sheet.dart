@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../constants/app_duration.dart';
-import '../../constants/Modal.dart';
+import '../../constants/modal.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../redux/modules/setting/shareViewModel.dart';

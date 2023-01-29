@@ -10,7 +10,7 @@ import '../../constants/app_audio.dart';
 import '../../constants/app_duration.dart';
 import '../../constants/app_image.dart';
 import '../../constants/nms_ui_constants.dart';
-import '../../constants/Nmsfm.dart';
+import '../../constants/nmsfm.dart';
 import '../../contracts/misc/audio_stream_builder_event.dart';
 import '../../contracts/nmsfm/zeno_fm_now_playing.dart';
 import '../../integration/dependency_injection.dart';

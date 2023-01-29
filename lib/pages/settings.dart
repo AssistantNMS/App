@@ -6,7 +6,7 @@ import '../../constants/platforms.dart';
 import '../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../components/tilePresenters/setting_tile_presenter.dart';
 import '../constants/analytics_event.dart';
-import '../constants/Fonts.dart';
+import '../constants/fonts.dart';
 import '../constants/homepage_items.dart';
 import '../contracts/enum/homepage_type.dart';
 import '../contracts/redux/app_state.dart';

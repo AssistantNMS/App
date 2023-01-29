@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../constants/alien_puzzle.dart';
 import '../../constants/app_duration.dart';
-import '../../constants/Modal.dart';
+import '../../constants/modal.dart';
 import '../../contracts/alienPuzzle/alien_puzzle.dart';
 import '../../contracts/alienPuzzle/alien_puzzle_reward.dart';
 import '../../integration/dependency_injection.dart';

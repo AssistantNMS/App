@@ -1,4 +1,4 @@
-import '../../../constants/Fonts.dart';
+import '../../../constants/fonts.dart';
 import 'package:redux/redux.dart';
 
 import '../../../contracts/enum/homepage_type.dart';

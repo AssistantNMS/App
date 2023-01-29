@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:enum_to_string/enum_to_string.dart';
 import 'package:meta/meta.dart';
 
-import '../../constants/Fonts.dart';
+import '../../constants/fonts.dart';
 import '../enum/homepage_type.dart';
 
 @immutable

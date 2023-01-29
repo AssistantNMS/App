@@ -6,7 +6,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import '../../components/modalBottomSheet/patreon_modal_bottom_sheet.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/major_update_tile_presenter.dart';
-import '../../constants/Patreon.dart';
+import '../../constants/patreon.dart';
 import '../../contracts/data/major_update_item.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../redux/modules/setting/isPatreonViewModel.dart';
