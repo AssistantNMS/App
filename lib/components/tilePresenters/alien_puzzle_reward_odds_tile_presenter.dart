@@ -5,9 +5,9 @@ import '../../pages/generic/genericPage.dart';
 
 import '../../constants/alien_puzzle.dart';
 import '../../constants/app_image.dart';
-import '../../contracts/alienPuzzle/AlienPuzzleRewardItemType.dart';
-import '../../contracts/alienPuzzle/alienPuzzleRaceType.dart';
-import '../../contracts/alienPuzzle/alienPuzzleReward.dart';
+import '../../contracts/alienPuzzle/alien_puzzle_reward_item_type.dart';
+import '../../contracts/alienPuzzle/alien_puzzle_race_type.dart';
+import '../../contracts/alienPuzzle/alien_puzzle_reward.dart';
 import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
 

@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../../contracts/alienPuzzle/alienPuzzle.dart';
-import '../../contracts/alienPuzzle/alienPuzzleType.dart';
+import '../../contracts/alienPuzzle/alien_puzzle.dart';
+import '../../contracts/alienPuzzle/alien_puzzle_type.dart';
 import 'interface/IAlienPuzzleJsonRepository.dart';
 
 class AlienPuzzleJsonRepository extends BaseJsonService

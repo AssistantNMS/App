@@ -1,4 +1,4 @@
-import '../../contracts/alienPuzzle/AlienPuzzleRewardItemType.dart';
+import '../../contracts/alienPuzzle/alien_puzzle_reward_item_type.dart';
 
 List<AlienPuzzleRewardItemType> alienPuzzleRewardItemRequiresAdditionalData = [
   AlienPuzzleRewardItemType.Product,

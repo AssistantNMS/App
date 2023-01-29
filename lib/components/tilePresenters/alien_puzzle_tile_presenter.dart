@@ -1,9 +1,9 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../contracts/alienPuzzle/alienPuzzle.dart';
-import '../../contracts/alienPuzzle/alienPuzzleRaceType.dart';
-import '../../contracts/alienPuzzle/alienPuzzleType.dart';
+import '../../contracts/alienPuzzle/alien_puzzle.dart';
+import '../../contracts/alienPuzzle/alien_puzzle_race_type.dart';
+import '../../contracts/alienPuzzle/alien_puzzle_type.dart';
 import '../../pages/generic/genericPageDescripHighlightText.dart';
 import '../modalBottomSheet/alien_puzzle_modal_bottom_sheet.dart';
 

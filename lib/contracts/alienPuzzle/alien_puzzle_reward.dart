@@ -4,7 +4,7 @@
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'AlienPuzzleRewardItemType.dart';
+import 'alien_puzzle_reward_item_type.dart';
 import '../required_item_details.dart';
 
 class AlienPuzzleReward {

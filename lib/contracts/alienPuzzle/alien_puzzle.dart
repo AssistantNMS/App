@@ -4,8 +4,8 @@
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'alienPuzzleRaceType.dart';
-import 'alienPuzzleType.dart';
+import 'alien_puzzle_race_type.dart';
+import 'alien_puzzle_type.dart';
 
 class AlienPuzzle {
   String id;

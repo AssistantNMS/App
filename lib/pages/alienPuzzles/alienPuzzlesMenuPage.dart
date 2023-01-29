@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
 import '../../constants/app_image.dart';
-import '../../contracts/alienPuzzle/alienPuzzleType.dart';
+import '../../contracts/alienPuzzle/alien_puzzle_type.dart';
 import 'alienPuzzlesListPage.dart';
 
 const double tileHeight = 145;

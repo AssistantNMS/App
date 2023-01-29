@@ -4,7 +4,7 @@ import 'package:collection/collection.dart';
 
 import '../../constants/app_image.dart';
 import '../../constants/nms_ui_constants.dart';
-import '../../contracts/alienPuzzle/alienPuzzleRaceType.dart';
+import '../../contracts/alienPuzzle/alien_puzzle_race_type.dart';
 import '../../contracts/required_item_details.dart';
 import '../../contracts/seasonalExpedition/expeditionRewardType.dart';
 import '../../contracts/seasonalExpedition/seasonalExpeditionReward.dart';

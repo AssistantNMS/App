@@ -1,11 +1,11 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
-import '../../contracts/alienPuzzle/alienPuzzleType.dart';
+import '../../contracts/alienPuzzle/alien_puzzle_type.dart';
 
 import '../../components/tilePresenters/alien_puzzle_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
-import '../../contracts/alienPuzzle/alienPuzzle.dart';
+import '../../contracts/alienPuzzle/alien_puzzle.dart';
 import '../../helpers/searchHelpers.dart';
 import '../../integration/dependencyInjection.dart';
 

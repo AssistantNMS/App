@@ -1,4 +1,4 @@
-import '../contracts/alienPuzzle/alienPuzzle.dart';
+import '../contracts/alienPuzzle/alien_puzzle.dart';
 import '../contracts/enum/currencyType.dart';
 import '../contracts/generated/communityLinkViewModel.dart';
 import '../contracts/generic_page_item.dart';

@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../../contracts/alienPuzzle/alienPuzzleReward.dart';
+import '../../contracts/alienPuzzle/alien_puzzle_reward.dart';
 
 import 'interface/IAlienPuzzleRewardsJsonRepository.dart';
 

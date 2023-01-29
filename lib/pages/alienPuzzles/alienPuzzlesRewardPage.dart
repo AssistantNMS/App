@@ -9,8 +9,8 @@ import '../../components/tilePresenters/alien_puzzle_reward_odds_tile_presenter.
 import '../../constants/alien_puzzle.dart';
 import '../../constants/analytics_event.dart';
 import '../../constants/app_image.dart';
-import '../../contracts/alienPuzzle/AlienPuzzleRewardItemType.dart';
-import '../../contracts/alienPuzzle/alienPuzzleReward.dart';
+import '../../contracts/alienPuzzle/alien_puzzle_reward_item_type.dart';
+import '../../contracts/alienPuzzle/alien_puzzle_reward.dart';
 import '../../contracts/required_item.dart';
 import '../../contracts/required_item_details.dart';
 import '../../contracts/techTree/techTree.dart';
