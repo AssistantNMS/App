@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../pages/homepage/allItemsPage.dart';
 import '../pages/alienPuzzles/alien_puzzles_menu_page.dart';
 import '../pages/cart_page.dart';
-import '../pages/catalogue/cataloguePage.dart';
+import '../pages/catalogue/catalogue_page.dart';
 import '../pages/community/communityLinksPage.dart';
 import '../pages/community/communitySpotlightPage.dart';
 import '../pages/community/onlineMeetup2020SubmissionsPage.dart';

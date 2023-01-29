@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../contracts/custom_menu_item.dart';
-import '../pages/catalogue/catalogueItemPage.dart';
+import '../pages/catalogue/catalogue_item_page.dart';
 
 List<CustomMenuItem> getCatalogueItemData(context) {
   List<CustomMenuItem> menuItems = List.empty(growable: true);
