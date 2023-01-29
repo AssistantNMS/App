@@ -29,7 +29,7 @@ import '../pages/homepage/default_home_page.dart';
 import '../pages/inventory/inventory_list_page.dart';
 import '../pages/ios/apple_menu.dart';
 import '../pages/language.dart';
-import '../pages/misc/retiredDrawerMenuPage.dart';
+import '../pages/misc/retired_drawer_menu_page.dart';
 import '../pages/newItemsInUpdate/majorUpdatesPage.dart';
 import '../pages/newItemsInUpdate/newItemsPage.dart';
 import '../pages/news/newsShellPage.dart';
