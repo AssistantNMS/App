@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
 import '../../constants/nms_ui_constants.dart';
-import '../../contracts/enum/currencyType.dart';
+import '../../contracts/enum/currency_type.dart';
 import '../../contracts/processor_required_item_details.dart';
 import '../../contracts/required_item_details.dart';
 import '../../helpers/genericHelper.dart';

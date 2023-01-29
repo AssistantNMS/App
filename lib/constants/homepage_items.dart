@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../contracts/enum/homepageType.dart';
+import '../contracts/enum/homepage_type.dart';
 import 'routes.dart';
 
 class HomepageItem {

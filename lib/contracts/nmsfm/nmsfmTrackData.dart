@@ -5,7 +5,7 @@
 import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import '../enum/nmsfmTrackType.dart';
+import '../enum/nmsfm_track_type.dart';
 
 class NmsfmTrackData {
   String? title;

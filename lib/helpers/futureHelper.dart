@@ -11,7 +11,7 @@ import '../contracts/data/egg_trait.dart';
 import '../contracts/data/platform_control_mapping.dart';
 import '../contracts/data/quicksilver_store.dart';
 import '../contracts/data/update_item_detail.dart';
-import '../contracts/enum/currencyType.dart';
+import '../contracts/enum/currency_type.dart';
 import '../contracts/generic_page_item.dart';
 import '../contracts/helloGames/quickSilverStoreDetails.dart';
 import '../contracts/processor.dart';

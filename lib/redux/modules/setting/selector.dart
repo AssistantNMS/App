@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../../../constants/Fonts.dart';
-import '../../../contracts/enum/homepageType.dart';
+import '../../../contracts/enum/homepage_type.dart';
 import '../../../contracts/redux/appState.dart';
 import '../../../helpers/dateHelper.dart';
 

@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/required_item_details_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
-import '../../contracts/enum/currencyType.dart';
+import '../../contracts/enum/currency_type.dart';
 import '../../contracts/generic_page_all_required.dart';
 import '../../contracts/required_item_details.dart';
 import '../../contracts/required_item_tree_details.dart';

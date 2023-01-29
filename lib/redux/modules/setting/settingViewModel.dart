@@ -1,4 +1,4 @@
-import '../../../contracts/enum/homepageType.dart';
+import '../../../contracts/enum/homepage_type.dart';
 import 'package:redux/redux.dart';
 
 import '../../../contracts/redux/appState.dart';

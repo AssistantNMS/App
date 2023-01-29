@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_simple_treeview/flutter_simple_treeview.dart';
 
 import '../../components/tilePresenters/tech_tree_tile_presenter.dart';
-import '../../contracts/enum/currencyType.dart';
+import '../../contracts/enum/currency_type.dart';
 import '../../contracts/techTree/techTree.dart';
 import '../../contracts/techTree/techTreeNode.dart';
 import '../../contracts/techTree/unlockableTechTree.dart';

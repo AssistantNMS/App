@@ -3,7 +3,7 @@ import 'package:enum_to_string/enum_to_string.dart';
 import 'package:meta/meta.dart';
 
 import '../../constants/Fonts.dart';
-import '../enum/homepageType.dart';
+import '../enum/homepage_type.dart';
 
 @immutable
 class SettingState {

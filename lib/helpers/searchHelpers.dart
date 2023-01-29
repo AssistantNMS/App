@@ -1,5 +1,5 @@
 import '../contracts/alienPuzzle/alien_puzzle.dart';
-import '../contracts/enum/currencyType.dart';
+import '../contracts/enum/currency_type.dart';
 import '../contracts/generated/communityLinkViewModel.dart';
 import '../contracts/generic_page_item.dart';
 import '../contracts/guide/guide.dart';

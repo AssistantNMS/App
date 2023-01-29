@@ -8,7 +8,7 @@ import '../components/tilePresenters/setting_tile_presenter.dart';
 import '../constants/analytics_event.dart';
 import '../constants/Fonts.dart';
 import '../constants/homepage_items.dart';
-import '../contracts/enum/homepageType.dart';
+import '../contracts/enum/homepage_type.dart';
 import '../contracts/redux/appState.dart';
 import '../helpers/dateHelper.dart';
 import '../helpers/uselessButtonHelper.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_simple_treeview/flutter_simple_treeview.dart';
-import '../../contracts/enum/currencyType.dart';
+import '../../contracts/enum/currency_type.dart';
 
 import '../../components/tilePresenters/required_item_details_tile_presenter.dart';
 import '../../contracts/required_item_details.dart';
