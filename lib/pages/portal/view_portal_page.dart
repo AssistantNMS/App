@@ -15,7 +15,7 @@ import '../../contracts/portal/portal_record.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/hex_helper.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
-import 'addPortalPage.dart';
+import 'add_portal_page.dart';
 
 class ViewPortalPage extends StatefulWidget {
   final PortalRecord item;

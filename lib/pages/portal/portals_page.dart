@@ -10,8 +10,8 @@ import '../../contracts/portal/portal_record.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/search_helpers.dart';
 import '../../redux/modules/portal/portalViewModel.dart';
-import 'addPortalPage.dart';
-import 'viewPortalPage.dart';
+import 'add_portal_page.dart';
+import 'view_portal_page.dart';
 
 class PortalsPage extends StatefulWidget {
   const PortalsPage({Key? key}) : super(key: key);
