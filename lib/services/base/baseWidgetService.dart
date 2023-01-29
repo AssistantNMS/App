@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
     hide AdaptiveAppScaffold;
 import 'package:flutter/material.dart';
 
-import '../../components/adaptive/appScaffold.dart';
+import '../../components/adaptive/app_scaffold.dart';
 
 class BaseWidgetService implements IBaseWidgetService {
   @override

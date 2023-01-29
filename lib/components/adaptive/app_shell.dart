@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
-import 'package:assistantnms_app/components/adaptive/windowTitleBar.dart';
+import 'package:assistantnms_app/components/adaptive/window_title_bar.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';

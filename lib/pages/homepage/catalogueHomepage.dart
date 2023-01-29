@@ -2,7 +2,7 @@ import 'package:after_layout/after_layout.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/adaptive/homePageAppBar.dart';
+import '../../components/adaptive/home_page_app_bar.dart';
 import '../../components/drawer.dart';
 import '../../components/responsiveGridView.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';

@@ -3,7 +3,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/adaptive/homePageAppBar.dart';
+import '../../components/adaptive/home_page_app_bar.dart';
 import '../../components/drawer.dart';
 import '../../components/scaffoldTemplates/genericPageScaffold.dart';
 import '../../constants/AnalyticsEvent.dart';

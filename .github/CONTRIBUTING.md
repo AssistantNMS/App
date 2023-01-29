@@ -31,7 +31,7 @@ The project has gone through multiple major refactorings and still needs to go t
 This project was started long before Dart 2 and null safety was added. There are a lot of files that are not compliant with best practices due to this. They will slowly be fixed, over time 😅
 
 #### File naming
-Unfortunately almost all of the files in the project are pascal case `appShell.dart` instead of what Dart recommends `app_shell.dart`. There are just too many files to change along with their corresponding imports, so we will just continue naming the files in pascal case until someone can come up with an easy solution that doesn't break everything 😅
+Dart recommends snake_case for filenames: `app_shell.dart`. We follow this closely so the linter is happy. We only live to make the linter feel good. Bow before the linter! Worship it, dedicate your whole life to it! It is the only true god!
 
 <br />
 

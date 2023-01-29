@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
-import 'components/adaptive/appShell.dart';
+import 'components/adaptive/app_shell.dart';
 import 'contracts/redux/appState.dart';
 import 'env/environmentSettings.dart';
 import 'integration/dependencyInjection.dart';
