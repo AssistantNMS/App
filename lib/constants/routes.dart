@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../pages/homepage/allItemsPage.dart';
-import '../pages/alienPuzzles/alienPuzzlesMenuPage.dart';
+import '../pages/alienPuzzles/alien_puzzles_menu_page.dart';
 import '../pages/cart_page.dart';
 import '../pages/catalogue/cataloguePage.dart';
 import '../pages/community/communityLinksPage.dart';

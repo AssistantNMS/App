@@ -7,7 +7,7 @@ import '../../constants/modal.dart';
 import '../../contracts/alienPuzzle/alien_puzzle.dart';
 import '../../contracts/alienPuzzle/alien_puzzle_reward.dart';
 import '../../integration/dependency_injection.dart';
-import '../../pages/alienPuzzles/alienPuzzlesRewardPage.dart';
+import '../../pages/alienPuzzles/alien_puzzles_reward_page.dart';
 import '../../pages/generic/genericPageDescripHighlightText.dart';
 import '../common/chat_bubble.dart';
 import '../tilePresenters/alien_puzzle_reward_odds_tile_presenter.dart';
