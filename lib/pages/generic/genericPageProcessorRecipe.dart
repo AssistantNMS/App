@@ -7,7 +7,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/common/image.dart';
 import '../../components/common/text.dart';
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/nutrientProcessorRecipeTilePresenter.dart';
 import '../../components/tilePresenters/refinerRecipeTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';

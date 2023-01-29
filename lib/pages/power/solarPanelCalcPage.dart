@@ -6,7 +6,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
 import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';

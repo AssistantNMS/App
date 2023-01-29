@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import '../../contracts/misc/segmentViewItem.dart';
 
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/contributorTilePresenter.dart';
 import '../../components/tilePresenters/translatorTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';

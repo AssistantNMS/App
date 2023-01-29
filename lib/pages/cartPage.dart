@@ -3,7 +3,7 @@ import 'package:assistantnms_app/services/json/interface/IGenericRepository.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../components/tilePresenters/requiredItemDetailsTilePresenter.dart';
 import '../constants/AnalyticsEvent.dart';
 import '../contracts/cart/cartItem.dart';

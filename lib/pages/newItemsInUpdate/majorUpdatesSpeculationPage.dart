@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/components/tilePresenters/youtubersTilePresenter.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../contracts/data/majorUpdateItem.dart';
 
 const millisecondsToDaysConversion = 86400000;

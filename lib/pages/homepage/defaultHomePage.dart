@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/adaptive/home_page_app_bar.dart';
 import '../../components/drawer.dart';
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../helpers/updateHelper.dart';
 import 'allItemsPageComponent.dart';
 

@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import 'weekendMissionComponents.dart';
 
 class WeekendMissionMenuPage extends StatelessWidget {

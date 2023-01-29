@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/factionTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/faction/guildMission.dart';

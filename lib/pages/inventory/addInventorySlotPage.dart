@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/common/image.dart';
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/genericPageItem.dart';
 import '../../contracts/inventory/inventory.dart';

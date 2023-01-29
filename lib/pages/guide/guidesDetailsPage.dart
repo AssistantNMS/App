@@ -8,7 +8,7 @@ import '../../contracts/guide/guideSection.dart';
 import '../../contracts/guide/guideSectionItem.dart';
 
 import '../../components/guide/stick_row_presenters.dart';
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/generated/guideMetaViewModel.dart';
 import '../../contracts/guide/guide.dart';

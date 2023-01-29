@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/drawer.dart';
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/data/updateItemDetail.dart';
 import '../../contracts/genericPageItem.dart';

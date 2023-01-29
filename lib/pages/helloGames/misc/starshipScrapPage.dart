@@ -6,7 +6,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../../constants/AnalyticsEvent.dart';
 import '../../../contracts/data/starshipScrap.dart';
 import '../../../contracts/helloGames/starshipScrapDetailed.dart';

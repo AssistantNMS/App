@@ -3,7 +3,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/constants/NmsExternalUrls.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/communityLinkTilePresenter.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/generated/communityLinkMetaViewModel.dart';

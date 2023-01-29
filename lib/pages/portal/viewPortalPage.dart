@@ -5,7 +5,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 
 import '../../components/portal/galactic_address.dart';
 import '../../components/portal/portal_glyph_list.dart';

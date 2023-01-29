@@ -7,7 +7,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/common/text_formatter.dart';
 import '../../components/portal/portal_glyph_list.dart';
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/AnalyticsEvent.dart';
 import '../../contracts/portal/portalRecord.dart';
 import '../../contracts/redux/appState.dart';

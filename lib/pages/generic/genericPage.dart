@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/modalBottomSheet/share_modal_bottom_sheet.dart';
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/nutrientProcessorRecipeTilePresenter.dart';
 import '../../components/tilePresenters/rechargeTilePresenter.dart';
 import '../../components/tilePresenters/refinerRecipeTilePresenter.dart';

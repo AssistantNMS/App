@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/modalBottomSheet/patreon_modal_bottom_sheet.dart';
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/majorUpdateTilePresenter.dart';
 import '../../constants/Patreon.dart';
 import '../../contracts/data/majorUpdateItem.dart';

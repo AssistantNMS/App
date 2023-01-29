@@ -4,7 +4,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/youtubersTilePresenter.dart';
 import '../../constants/AppAudio.dart';
 import '../../constants/AppDuration.dart';
