@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../contracts/misc/audioStreamBuilderEvent.dart';
+import '../../contracts/misc/audio_stream_builder_event.dart';
 import 'interface/IAudioPlayerService.dart';
 
 class WindowsAudioPlayerService extends IAudioPlayerService {
@@ -57,7 +57,7 @@ class WindowsAudioPlayerService extends IAudioPlayerService {
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-import '../../contracts/misc/audioStreamBuilderEvent.dart';
+import '../../contracts/misc/audio_stream_builder_event.dart';
 import 'interface/IAudioPlayerService.dart';
 
 class WindowsAudioPlayerService extends IAudioPlayerService {

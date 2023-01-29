@@ -4,7 +4,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:reorderables/reorderables.dart';
 
-import '../../contracts/misc/customMenu.dart';
+import '../../contracts/misc/custom_menu.dart';
 import 'customHomepageComponents.dart';
 
 class EditCustomHomepage extends StatefulWidget {

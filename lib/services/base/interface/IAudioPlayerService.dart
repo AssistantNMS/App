@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../contracts/misc/audioStreamBuilderEvent.dart';
+import '../../../contracts/misc/audio_stream_builder_event.dart';
 
 abstract class IAudioPlayerService {
   Stream<bool> isPlaying();

@@ -5,7 +5,7 @@ import '../integration/dependencyInjection.dart';
 
 import '../components/modalBottomSheet/update_modal_bottom_sheet.dart';
 import '../constants/app_image.dart';
-import '../contracts/misc/customMenu.dart';
+import '../contracts/misc/custom_menu.dart';
 import '../redux/modules/setting/drawerSettingsViewModel.dart';
 
 List<Widget> getDrawerItems(context, DrawerSettingsViewModel viewModel) {

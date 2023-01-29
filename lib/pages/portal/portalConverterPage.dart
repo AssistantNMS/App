@@ -13,7 +13,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/enum/portal_address_type.dart';
-import '../../contracts/misc/segmentViewMultiBuilder.dart';
+import '../../contracts/misc/segment_view_multi_builder.dart';
 import '../../contracts/redux/appState.dart';
 import '../../helpers/hexHelper.dart';
 import '../../redux/modules/portal/portalViewModel.dart';

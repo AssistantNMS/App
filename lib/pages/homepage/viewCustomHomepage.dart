@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/responsive_grid_view.dart';
-import '../../contracts/misc/customMenu.dart';
+import '../../contracts/misc/custom_menu.dart';
 import 'customHomepageComponents.dart';
 
 class ViewCustomHomepage extends StatelessWidget {

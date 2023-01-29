@@ -11,7 +11,7 @@ import '../../constants/app_duration.dart';
 import '../../constants/app_image.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../constants/Nmsfm.dart';
-import '../../contracts/misc/audioStreamBuilderEvent.dart';
+import '../../contracts/misc/audio_stream_builder_event.dart';
 import '../../contracts/nmsfm/zenoFMNowPlaying.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../services/api/zenoFMApiService.dart';

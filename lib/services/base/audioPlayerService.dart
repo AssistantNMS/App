@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 
-import '../../contracts/misc/audioStreamBuilderEvent.dart';
+import '../../contracts/misc/audio_stream_builder_event.dart';
 import 'interface/IAudioPlayerService.dart';
 
 class AudioPlayerService extends IAudioPlayerService {
