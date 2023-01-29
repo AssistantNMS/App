@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../pages/homepage/allItemsPage.dart';
 import '../pages/alienPuzzles/alienPuzzlesMenuPage.dart';
-import '../pages/cartPage.dart';
+import '../pages/cart_page.dart';
 import '../pages/catalogue/cataloguePage.dart';
 import '../pages/community/communityLinksPage.dart';
 import '../pages/community/communitySpotlightPage.dart';
