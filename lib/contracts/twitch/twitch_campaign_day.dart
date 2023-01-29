@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/helpers/jsonHelper.dart';
 
-import 'twitchCampaignReward.dart';
+import 'twitch_campaign_reward.dart';
 
 class TwitchCampaignDay {
   TwitchCampaignDay({

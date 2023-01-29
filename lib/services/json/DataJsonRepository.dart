@@ -15,7 +15,7 @@ import '../../contracts/data/social_item.dart';
 import '../../contracts/data/starship_scrap.dart';
 import '../../contracts/data/update_item_detail.dart';
 import '../../contracts/dev_detail.dart';
-import '../../contracts/twitch/twitchCampaignData.dart';
+import '../../contracts/twitch/twitch_campaign_data.dart';
 import 'interface/IDataJsonRepository.dart';
 
 class DataJsonRepository extends BaseJsonService

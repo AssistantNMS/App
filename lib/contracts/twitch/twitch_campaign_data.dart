@@ -6,7 +6,7 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'twitchCampaignDay.dart';
+import 'twitch_campaign_day.dart';
 
 class TwitchCampaignData {
   TwitchCampaignData({
