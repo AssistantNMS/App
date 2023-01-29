@@ -13,7 +13,7 @@ import '../pages/donation.dart';
 import '../pages/faction/faction_list_page.dart';
 import '../pages/faction/journey_milestone.dart';
 import '../pages/favourite/favourites_page.dart';
-import '../pages/friendCode/friendCodeListPage.dart';
+import '../pages/friendCode/friend_code_list_page.dart';
 import '../pages/guide/assistantAppsGuidesPage.dart';
 import '../pages/guide/guidesPage.dart';
 import '../pages/helloGames/communityMission/communityMissionPage.dart';

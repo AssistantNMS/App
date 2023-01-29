@@ -6,7 +6,7 @@ import '../../components/tilePresenters/friend_code_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/generated/friend_code_view_model.dart';
 import '../../integration/dependency_injection.dart';
-import 'addFriendCodePage.dart';
+import 'add_friend_code_page.dart';
 
 const String pc = 'PC';
 const String ps4 = 'PS';
