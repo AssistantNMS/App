@@ -1,4 +1,4 @@
-import 'package:assistantnms_app/contracts/faction/storedFactionMission.dart';
+import 'package:assistantnms_app/contracts/faction/stored_faction_mission.dart';
 
 import '../../../contracts/journey/storedJourneyMilestone.dart';
 import 'package:redux/redux.dart';

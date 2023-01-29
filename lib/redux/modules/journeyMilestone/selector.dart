@@ -1,4 +1,4 @@
-import '../../../contracts/faction/storedFactionMission.dart';
+import '../../../contracts/faction/stored_faction_mission.dart';
 import '../../../contracts/journey/storedJourneyMilestone.dart';
 import '../../../contracts/redux/appState.dart';
 

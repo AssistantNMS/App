@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../faction/storedFactionMission.dart';
+import '../faction/stored_faction_mission.dart';
 import '../journey/storedJourneyMilestone.dart';
 
 @immutable

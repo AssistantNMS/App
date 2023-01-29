@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/contracts/faction/faction.dart';
 import 'package:flutter/material.dart';
 
-import '../../../contracts/faction/guildMission.dart';
+import '../../../contracts/faction/guild_mission.dart';
 
 class IFactionJsonRepository {
   //

@@ -5,8 +5,8 @@ import 'package:marquee_vertical/marquee_vertical.dart';
 
 import '../../constants/routes.dart';
 import '../../contracts/faction/faction.dart';
-import '../../contracts/faction/guildMission.dart';
-import '../../contracts/faction/storedFactionMission.dart';
+import '../../contracts/faction/guild_mission.dart';
+import '../../contracts/faction/stored_faction_mission.dart';
 import '../../pages/faction/factionDetailPage.dart';
 import '../../pages/faction/guildMissionDetailPage.dart';
 import '../../redux/modules/journeyMilestone/factionsViewModel.dart';

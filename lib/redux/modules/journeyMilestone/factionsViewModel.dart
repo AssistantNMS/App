@@ -1,6 +1,6 @@
 import 'package:redux/redux.dart';
 
-import '../../../contracts/faction/storedFactionMission.dart';
+import '../../../contracts/faction/stored_faction_mission.dart';
 import '../../../contracts/redux/appState.dart';
 import 'actions.dart';
 import 'selector.dart';

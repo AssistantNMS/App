@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/faction_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
-import '../../contracts/faction/guildMission.dart';
+import '../../contracts/faction/guild_mission.dart';
 import '../../integration/dependencyInjection.dart';
 
 class GuildMissionsPage extends StatelessWidget {

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/app_image.dart';
-import '../../contracts/faction/guildMission.dart';
+import '../../contracts/faction/guild_mission.dart';
 
 class GuildMissionDetailPage extends StatefulWidget {
   final GuildMission mission;
