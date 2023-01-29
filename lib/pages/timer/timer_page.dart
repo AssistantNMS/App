@@ -8,8 +8,8 @@ import '../../contracts/redux/app_state.dart';
 import '../../contracts/timer/timer_item.dart';
 import '../../integration/dependency_injection.dart';
 import '../../redux/modules/timer/timerViewModel.dart';
-import 'addEditTimerPage.dart';
-import 'timerPageView.dart';
+import 'add_edit_timer_page.dart';
+import 'timer_page_view.dart';
 
 class TimersPage extends StatelessWidget {
   TimersPage({Key? key}) : super(key: key) {

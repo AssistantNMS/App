@@ -9,7 +9,7 @@ import '../../components/tilePresenters/timer_tile_presenter.dart';
 import '../../constants/app_duration.dart';
 import '../../contracts/timer/timer_item.dart';
 import '../../integration/dependency_injection.dart';
-import 'addEditTimerPage.dart';
+import 'add_edit_timer_page.dart';
 
 class TimersPageView extends StatefulWidget {
   final List<TimerItem> timers;
