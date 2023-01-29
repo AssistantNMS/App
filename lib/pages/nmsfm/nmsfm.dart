@@ -15,7 +15,7 @@ import '../../contracts/misc/audio_stream_builder_event.dart';
 import '../../contracts/nmsfm/zeno_fm_now_playing.dart';
 import '../../integration/dependency_injection.dart';
 import '../../services/api/zenoFMApiService.dart';
-import 'nmsfmTrackList.dart';
+import 'nmsfm_track_list.dart';
 
 class NMSFMPage extends StatefulWidget {
   const NMSFMPage({Key? key}) : super(key: key);
