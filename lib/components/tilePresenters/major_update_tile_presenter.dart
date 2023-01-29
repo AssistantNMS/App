@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/data/major_update_item.dart';
-import '../../pages/newItemsInUpdate/majorUpdatesDetailPage.dart';
+import '../../pages/newItemsInUpdate/major_updates_detail_page.dart';
 
 Widget majorUpdateTilePresenter(
   BuildContext context,

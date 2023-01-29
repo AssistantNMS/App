@@ -5,7 +5,7 @@ import '../../constants/app_duration.dart';
 import '../../constants/modal.dart';
 import '../../contracts/data/major_update_item.dart';
 import '../../integration/dependency_injection.dart';
-import '../../pages/newItemsInUpdate/majorUpdatesDetailPage.dart';
+import '../../pages/newItemsInUpdate/major_updates_detail_page.dart';
 
 class UpdateBottomSheet extends StatelessWidget {
   const UpdateBottomSheet({Key? key}) : super(key: key);

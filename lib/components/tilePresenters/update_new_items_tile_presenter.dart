@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../contracts/data/update_item_detail.dart';
 
-import '../../pages/newItemsInUpdate/newItemDetailsPage.dart';
+import '../../pages/newItemsInUpdate/new_item_details_page.dart';
 
 Widget updateNewItemsTilePresenter(
     BuildContext context, UpdateItemDetail updateNewItems,

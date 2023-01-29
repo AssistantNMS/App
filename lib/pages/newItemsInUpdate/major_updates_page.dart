@@ -10,7 +10,7 @@ import '../../constants/patreon.dart';
 import '../../contracts/data/major_update_item.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../redux/modules/setting/isPatreonViewModel.dart';
-import 'majorUpdatesSpeculationPage.dart';
+import 'major_updates_speculation_page.dart';
 
 class MajorUpdatesPage extends StatelessWidget {
   const MajorUpdatesPage({Key? key}) : super(key: key);
