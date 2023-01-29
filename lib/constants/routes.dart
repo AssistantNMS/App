@@ -42,7 +42,7 @@ import '../pages/seasonalExpedition/seasonal_expedition_season_list_page.dart';
 import '../pages/settings.dart';
 import '../pages/social/social_page.dart';
 import '../pages/special/intro.dart';
-import '../pages/special/onlineMeetup2020.dart';
+import '../pages/special/online_meetup2020.dart';
 import '../pages/special/valentines/valentines2021.dart';
 import '../pages/sync/syncPage.dart';
 import '../pages/techTree/unlockableTechTreePage.dart';
