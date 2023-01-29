@@ -1,4 +1,4 @@
-import '../../../contracts/timer/timerItem.dart';
+import '../../../contracts/timer/timer_item.dart';
 import 'package:redux/redux.dart';
 
 import '../../../contracts/redux/timer_state.dart';

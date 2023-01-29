@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:meta/meta.dart';
 
-import '../timer/timerItem.dart';
+import '../timer/timer_item.dart';
 
 @immutable
 class TimerState {

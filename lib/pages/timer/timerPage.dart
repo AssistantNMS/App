@@ -5,7 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/analytics_event.dart';
 import '../../contracts/redux/app_state.dart';
-import '../../contracts/timer/timerItem.dart';
+import '../../contracts/timer/timer_item.dart';
 import '../../integration/dependencyInjection.dart';
 import '../../redux/modules/timer/timerViewModel.dart';
 import 'addEditTimerPage.dart';

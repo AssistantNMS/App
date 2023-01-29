@@ -7,7 +7,7 @@ import '../../components/responsive_grid_view.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/timer_tile_presenter.dart';
 import '../../constants/user_selection_icons.dart';
-import '../../contracts/timer/timerItem.dart';
+import '../../contracts/timer/timer_item.dart';
 import '../../helpers/actionHelper.dart';
 import '../../helpers/genericHelper.dart';
 

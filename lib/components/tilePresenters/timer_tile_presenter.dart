@@ -2,7 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../../contracts/timer/timerItem.dart';
+import '../../contracts/timer/timer_item.dart';
 
 Widget timerTilePresenter(
   BuildContext context,

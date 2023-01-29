@@ -1,7 +1,7 @@
 import 'package:redux/redux.dart';
 
 import '../../../contracts/redux/app_state.dart';
-import '../../../contracts/timer/timerItem.dart';
+import '../../../contracts/timer/timer_item.dart';
 import 'actions.dart';
 import 'selector.dart';
 
