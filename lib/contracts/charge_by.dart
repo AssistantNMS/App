@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+
 class ChargeBy {
   ChargeBy({
     required this.id,
@@ -15,8 +17,8 @@ class ChargeBy {
   String toRawJson() => json.encode(toJson());
 
   factory ChargeBy.fromJson(Map<String, dynamic>? json) => ChargeBy(
-        id: json?["Id"],
-        value: json?["Value"],
+        id: readStringSafe(json, 'Id'),
+        value: readIntSafe(json, 'Value'),
       );
 
   Map<String, dynamic> toJson() => {

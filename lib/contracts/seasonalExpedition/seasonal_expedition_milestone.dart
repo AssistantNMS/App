@@ -56,7 +56,8 @@ class SeasonalExpeditionMilestoneEncryption {
   String icon;
 
   factory SeasonalExpeditionMilestoneEncryption.fromJson(
-          Map<String, dynamic>? json) =>
+    Map<String, dynamic>? json,
+  ) =>
       SeasonalExpeditionMilestoneEncryption(
         title: readStringSafe(json, 'Title'),
         description: readStringSafe(json, 'Description'),
