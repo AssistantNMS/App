@@ -114,26 +114,33 @@ class AppShell extends StatelessWidget {
         scrollBehavior: scrollBehavior,
         localizationsDelegates: localizationsDelegates,
         supportedLocales: supportedLocales,
-        // debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false,
       ),
     );
 
-    if (!isDesktop) return matApp;
+    if (isDesktop) {
+      return MaterialApp(
+        theme: theme,
+        darkTheme: darkTheme,
+        debugShowCheckedModeBanner: false,
+        home: ClipRRect(
+          borderRadius: NMSUIConstants.generalBorderRadius,
+          child: Scaffold(
+            appBar: WindowTitleBar(
+              title: 'Assistant for No Man\'s Sky',
+              iconPath: AppImage.assistantNMSWindowIcon,
+            ),
+            body: matApp,
+          ),
+        ),
+      );
+    }
 
     return MaterialApp(
       theme: theme,
       darkTheme: darkTheme,
       debugShowCheckedModeBanner: false,
-      home: ClipRRect(
-        borderRadius: NMSUIConstants.generalBorderRadius,
-        child: Scaffold(
-          appBar: WindowTitleBar(
-            title: 'Assistant for No Man\'s Sky',
-            iconPath: AppImage.assistantNMSWindowIcon,
-          ),
-          body: matApp,
-        ),
-      ),
+      home: Scaffold(body: matApp),
     );
   }
 }
