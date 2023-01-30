@@ -45,4 +45,6 @@ class NmsExternalUrls {
   static const String nomNomWebsite = 'https://cengelha.github.io/NomNom/';
   static const String captainSteveYoutubeDiceRollPlaylist =
       'https://www.youtube.com/playlist?list=PLFVRR5wqxfgy3LKw29OG3OTekvQdayz4s';
+  static const String githubViewAppRepoAtCommit =
+      'https://github.com/AssistantNMS/App/tree/';
 }
