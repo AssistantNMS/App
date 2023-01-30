@@ -233,7 +233,11 @@ class GenericPage extends StatelessWidget {
       genericItem.usedInRecipes ?? List.empty(),
     );
     widgets.addAll(getUsedToCreate(
-        context, genericItem, usedToCreateArray, requiredItemDetailsFunction));
+      context,
+      genericItem,
+      usedToCreateArray,
+      requiredItemDetailsFunction,
+    ));
 
     // ------------------------------ Charged by -------------------------------
     rechargeItemFunction(

@@ -404,9 +404,14 @@ List<Widget> getUsedToCreate(
       context,
       usedToCreateArray,
       requiredItemDetailsPresenter,
-      viewMoreOnPress: () async => await getNavigation().navigateAsync(context,
-          navigateTo: (context) => AllPossibleOutputsPage(usedToCreateArray,
-              genericItem.name, requiredItemDetailsPresenter)),
+      viewMoreOnPress: () async => await getNavigation().navigateAsync(
+        context,
+        navigateTo: (context) => AllPossibleOutputsPage(
+          usedToCreateArray,
+          genericItem.name,
+          requiredItemDetailsPresenter,
+        ),
+      ),
     ));
   }
   return usedToCreate;
