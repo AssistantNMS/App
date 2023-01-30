@@ -5,14 +5,12 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-// import 'package:wiredash/wiredash.dart';
 
 import '../../constants/homepage_items.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../constants/routes.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../env/app_version_num.dart';
-// import '../../integration/dependency_injection.dart';
 import '../../redux/modules/setting/intro_view_model.dart';
 import '../../theme/themes.dart';
 

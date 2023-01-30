@@ -12,8 +12,6 @@ class EnvironmentSettings {
   bool isProduction;
   String currentWhatIsNewGuid;
   String patreonOAuthClientId;
-  String wiredashProjectId;
-  String wiredashSecret;
 
   EnvironmentSettings({
     required this.baseApi,
@@ -25,8 +23,6 @@ class EnvironmentSettings {
     required this.isProduction,
     required this.currentWhatIsNewGuid,
     required this.patreonOAuthClientId,
-    required this.wiredashProjectId,
-    required this.wiredashSecret,
   });
 
   AssistantAppsEnvironmentSettings toAssistantApps() =>
