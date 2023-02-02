@@ -72,7 +72,7 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
       );
     }
     widgets.add((_) => const EmptySpace1x());
-    widgets.add((_) => customDivider());
+    widgets.add((_) => getBaseWidget().customDivider());
     widgets.add((_) => const EmptySpace1x());
 
     widgets.add(
@@ -122,7 +122,7 @@ class _GuildMissionDetailPageWidget extends State<GuildMissionDetailPage> {
       factionImgs.add(AppImage.warFaction);
     }
     widgets.add((_) => const EmptySpace1x());
-    widgets.add((_) => customDivider());
+    widgets.add((_) => getBaseWidget().customDivider());
     widgets.add((_) => const EmptySpace1x());
     widgets.add(
       (_) => Row(

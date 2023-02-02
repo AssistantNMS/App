@@ -130,7 +130,7 @@ class CommunityMissionPage extends StatelessWidget {
     );
 
     widgets.add(const EmptySpace1x());
-    widgets.add(customDivider());
+    widgets.add(getBaseWidget().customDivider());
     widgets.add(CommunityMissionRewards(
       missionId,
       CommunityMissionStatus.current,

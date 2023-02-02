@@ -22,6 +22,7 @@ class SocialPage extends StatelessWidget {
         listItemDisplayer: socialLinkTilePresenter,
         listItemSearch: (SocialItem _, String __) => false,
         minListForSearch: 100,
+        firstListItemWidget: const EmptySpace1x(),
       ),
       fab: FloatingActionButton(
         onPressed: () => shareText(LocaleKey.shareContent),

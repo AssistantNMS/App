@@ -119,7 +119,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
       ),
     );
     listItems.add(const EmptySpace1x());
-    listItems.add(customDivider());
+    listItems.add(getBaseWidget().customDivider());
     listItems.add(const EmptySpace1x());
 
     List<int> lastXUpdatesList = [5, 10, 15];
@@ -151,7 +151,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
       );
       listItems.add(const EmptySpace1x());
     }
-    listItems.add(customDivider());
+    listItems.add(getBaseWidget().customDivider());
     listItems.add(const EmptySpace1x());
 
     listItems.add(Card(child: podcast1616PlaylistTile(bodyCtx)));
@@ -203,7 +203,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
     listItems.add(Table(children: rows));
 
     listItems.add(const EmptySpace1x());
-    listItems.add(customDivider());
+    listItems.add(getBaseWidget().customDivider());
     listItems.add(const EmptySpace1x());
 
     return listWithScrollbar(

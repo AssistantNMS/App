@@ -16,22 +16,22 @@ List<Widget> getDrawerItems(context, DrawerSettingsViewModel viewModel) {
     context,
     getMenuOptionsSection1(context, viewModel, drawerIconColour),
   ));
-  widgets.add(customDivider());
+  widgets.add(getBaseWidget().customDivider());
   widgets.addAll(_mapToDrawerItem(
     context,
     getMenuOptionsSection2(context, viewModel, drawerIconColour),
   ));
-  widgets.add(customDivider());
+  widgets.add(getBaseWidget().customDivider());
   widgets.addAll(_mapToDrawerItem(
     context,
     getMenuOptionsSection3(context, viewModel, drawerIconColour),
   ));
-  widgets.add(customDivider());
+  widgets.add(getBaseWidget().customDivider());
   widgets.addAll(_mapToDrawerItem(
     context,
     getMenuOptionsSection4(context, viewModel, drawerIconColour),
   ));
-  widgets.add(customDivider());
+  widgets.add(getBaseWidget().customDivider());
 
   widgets.add(CachedFutureBuilder<ResultWithValue<GeneratedMeta>>(
     future: getDataRepo().getGeneratedMeta(context),

@@ -201,7 +201,7 @@ class CartPage extends StatelessWidget {
           },
         ),
       );
-      widgets.add(customDivider());
+      widgets.add(getBaseWidget().customDivider());
     } else {
       widgets.add(
         Container(

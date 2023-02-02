@@ -59,7 +59,7 @@ class _FriendCodeListWidget extends State<FriendCodeListPage> {
                 currentSelection = itemList;
               }),
             ),
-            customDivider(),
+            getBaseWidget().customDivider(),
           ],
         ),
         key: Key('firendCodes-${currentSelection.length}'),

@@ -44,11 +44,11 @@ Widget getPowerTable(BuildContext context, double totalPowerCons,
           ...getNightHeading(context),
           rowText(context, night.toStringAsFixed(0)),
         ]),
-        // TableRow(children: [customDivider(), customDivider()]),
+        // TableRow(children: [getBaseWidget().customDivider(), getBaseWidget().customDivider()]),
         TableRow(children: [
           const EmptySpace1x(),
           const EmptySpace1x(),
-          customDivider()
+          getBaseWidget().customDivider()
         ]),
         TableRow(children: [
           const EmptySpace1x(),
@@ -58,7 +58,11 @@ Widget getPowerTable(BuildContext context, double totalPowerCons,
             total.toStringAsFixed(0),
           ),
         ]),
-        TableRow(children: [customDivider(), customDivider(), customDivider()]),
+        TableRow(children: [
+          getBaseWidget().customDivider(),
+          getBaseWidget().customDivider(),
+          getBaseWidget().customDivider()
+        ]),
       ],
       columnWidths: const {
         0: FractionColumnWidth(.05),
@@ -107,7 +111,11 @@ Widget getSummaryTable(BuildContext context, double powerStoredForNight,
           headingText(context, LocaleKey.powerLost),
           rowText(context, powerLost.toStringAsFixed(0)),
         ]),
-        TableRow(children: [customDivider(), customDivider(), customDivider()]),
+        TableRow(children: [
+          getBaseWidget().customDivider(),
+          getBaseWidget().customDivider(),
+          getBaseWidget().customDivider()
+        ]),
       ],
       columnWidths: const {
         0: FractionColumnWidth(.05),

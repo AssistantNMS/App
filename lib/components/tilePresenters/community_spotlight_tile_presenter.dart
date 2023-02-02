@@ -74,7 +74,7 @@ Widget communitySpotlightTilePresenter(
   List<Widget> columnWidgets = List.empty(growable: true);
   columnWidgets.add(userInfo);
   if (descripWidgets.isNotEmpty) {
-    columnWidgets.add(customDivider());
+    columnWidgets.add(getBaseWidget().customDivider());
     columnWidgets.add(
       Padding(
         padding: const EdgeInsets.only(top: 8),

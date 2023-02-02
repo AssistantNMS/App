@@ -58,7 +58,7 @@ class _CommunityMissionRewardDetailsWidget
               ),
               padding: const EdgeInsets.only(top: 12),
             ),
-            customDivider(),
+            getBaseWidget().customDivider(),
             CommunityMissionRewards(missionId, status),
             const EmptySpace(16),
           ],

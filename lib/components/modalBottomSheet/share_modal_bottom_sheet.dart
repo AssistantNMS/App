@@ -105,7 +105,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
             ),
           ),
         );
-        widgets.add(customDivider());
+        widgets.add(getBaseWidget().customDivider());
         widgets.add(ListTile(
           leading: const Icon(Icons.share),
           title: Text(getTranslations().fromKey(LocaleKey.copyToClipboard)),

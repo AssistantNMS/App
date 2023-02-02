@@ -109,7 +109,7 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
         ),
       ));
     } else {
-      widgets.add(customDivider());
+      widgets.add(getBaseWidget().customDivider());
     }
 
     if (season.gameModeType != 'Normal') {

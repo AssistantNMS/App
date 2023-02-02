@@ -168,11 +168,11 @@ class _AlienPuzzlesRewardWidget<T> extends State<AlienPuzzlesRewardPage>
         widgets.addAll(orderedRewardDetails
             .map((p) => alienPuzzleRewardOddsTilePresenter(context, p))
             .toList());
-        // widgets.add(customDivider());
+        // widgets.add(getBaseWidget().customDivider());
       }
     }
     if (widgets.isNotEmpty) {
-      widgets.add(customDivider());
+      widgets.add(getBaseWidget().customDivider());
     }
     for (var techTree in _techTree) {
       widgets.add(getSubTree(

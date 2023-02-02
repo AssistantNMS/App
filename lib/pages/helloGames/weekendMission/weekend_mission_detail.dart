@@ -124,7 +124,7 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
     List<Widget> additionalWidgets = List.empty(growable: true);
     if (captainSteveVideoUrl.isNotEmpty) {
       additionalWidgets.add(const EmptySpace(2));
-      additionalWidgets.add(customDivider());
+      additionalWidgets.add(getBaseWidget().customDivider());
       additionalWidgets.add(const EmptySpace1x());
       additionalWidgets.add(GenericItemDescription(
           getTranslations().fromKey(LocaleKey.weekendMissionVideo)));
@@ -157,7 +157,7 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
 
     if (pageItem.cost != null) {
       widgets.add(const EmptySpace1x());
-      widgets.add(customDivider());
+      widgets.add(getBaseWidget().customDivider());
       widgets.add(const EmptySpace1x());
 
       widgets.add(GenericItemDescription(
@@ -182,7 +182,7 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
 
     if (isLoadingAdditionalDetails.contains(pageItem.stage.level)) {
       widgets.add(const EmptySpace1x());
-      widgets.add(customDivider());
+      widgets.add(getBaseWidget().customDivider());
       widgets.add(const EmptySpace1x());
       widgets.add(Center(child: getLoading().smallLoadingIndicator()));
     } else {
@@ -190,7 +190,7 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
     }
 
     widgets.add(const EmptySpace1x());
-    widgets.add(customDivider());
+    widgets.add(getBaseWidget().customDivider());
     widgets.add(const EmptySpace1x());
 
     widgets.add(GenericItemDescription(

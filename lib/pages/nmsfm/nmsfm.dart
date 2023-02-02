@@ -98,7 +98,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
           ),
         ),
       ));
-      widgets.add(customDivider());
+      widgets.add(getBaseWidget().customDivider());
     }
 
     widgets.add(
@@ -106,7 +106,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
     );
 
     if (!isOnline) {
-      widgets.add(customDivider());
+      widgets.add(getBaseWidget().customDivider());
       widgets.add(
         const LocalAudioPresenter(
           'Cactus Jelly Sunrise',

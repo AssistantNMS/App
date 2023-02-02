@@ -104,7 +104,7 @@ class MajorUpdatesDetailPage extends StatelessWidget {
         ),
       ));
     }
-    listItems.add(customDivider());
+    listItems.add(getBaseWidget().customDivider());
     listItems.add(const EmptySpace1x());
 
     if (localUpdateNewItems.isNotEmpty) {

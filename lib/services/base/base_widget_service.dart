@@ -101,4 +101,9 @@ class BaseWidgetService implements IBaseWidgetService {
         onChanged: onChanged,
         activeColor: activeColor,
       );
+
+  @override
+  Widget customDivider() => isWeb
+      ? Divider(thickness: .5, color: Colors.grey[800])
+      : Divider(color: Colors.grey[800]);
 }

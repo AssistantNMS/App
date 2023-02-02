@@ -49,7 +49,7 @@ Widget onlineMeetup2020SubmissionTilePresenter(
   List<Widget> columnWidgets = List.empty(growable: true);
   columnWidgets.add(userInfo);
   if (submission.text.length > 1) {
-    columnWidgets.add(customDivider());
+    columnWidgets.add(getBaseWidget().customDivider());
     columnWidgets.add(Padding(
       padding: const EdgeInsets.only(top: 8),
       child: Column(

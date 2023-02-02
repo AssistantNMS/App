@@ -422,7 +422,7 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
     for (Widget inputBuilderWidget in inputBuilderWidgets) {
       outputWidgets.add(inputBuilderWidget);
     }
-    outputWidgets.add(customDivider());
+    outputWidgets.add(getBaseWidget().customDivider());
 
     var outputOptions =
         portalOptions.where((opt) => opt.enumIndex != input.index).toList();

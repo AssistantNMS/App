@@ -80,7 +80,7 @@ class _ContributorsWidget extends State<ContributorsPage> {
               });
             },
           ),
-          customDivider(),
+          getBaseWidget().customDivider(),
           Expanded(
             key: Key('currentSelection body: $currentSelection'),
             child: viewOptions[currentSelection].builder(context),

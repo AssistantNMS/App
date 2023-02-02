@@ -50,7 +50,7 @@ class _DevDetailBottomSheetWidget extends State<DevDetailBottomSheet> {
           () => const EmptySpace3x(),
           () => titleFunc('AppId'),
           () => bodyFunc(itemId),
-          () => customDivider(),
+          () => getBaseWidget().customDivider(),
         ];
 
         ResultWithValue<DevDetail>? detail = snapshot.data;
@@ -63,7 +63,7 @@ class _DevDetailBottomSheetWidget extends State<DevDetailBottomSheet> {
             //   () => titleFunc(prop.name),
             //   () => bodyFunc(prop.value),
             // ]);
-            widgets.add(() => customDivider());
+            widgets.add(() => getBaseWidget().customDivider());
           }
         }
         widgets.add(() => const EmptySpace8x());

@@ -39,7 +39,7 @@ class FactionDetailPage extends StatelessWidget {
         maxLines: 20,
       ),
     ));
-    widgets.add(customDivider());
+    widgets.add(getBaseWidget().customDivider());
 
     for (FactionMission mission in factionDetail.missions) {
       int storedFacIndex = viewModel.storedFactions
