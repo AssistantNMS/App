@@ -58,6 +58,8 @@ Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\run
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\nmstest.lib"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\platform_device_id_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\url_launcher_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\flutter_localization_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\share_plus_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
