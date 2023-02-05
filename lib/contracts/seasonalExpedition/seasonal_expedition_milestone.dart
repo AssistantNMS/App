@@ -1,4 +1,4 @@
-import 'package:assistantapps_flutter_common/helpers/jsonHelper.dart';
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import './seasonal_expedition_reward.dart';
 import 'expedition_milestone_type.dart';

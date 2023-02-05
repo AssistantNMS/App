@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:assistantapps_flutter_common/helpers/jsonHelper.dart';
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 class GuildMission {
   GuildMission({
