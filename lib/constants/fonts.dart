@@ -1,4 +1,4 @@
-import 'package:assistantapps_flutter_common/contracts/enum/localeKey.dart';
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 const String defaultFontFamily = 'Roboto';
 const String nmsFontFamily = 'nms';
