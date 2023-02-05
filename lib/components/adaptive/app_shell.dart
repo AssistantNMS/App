@@ -123,15 +123,12 @@ class AppShell extends StatelessWidget {
         theme: theme,
         darkTheme: darkTheme,
         debugShowCheckedModeBanner: false,
-        home: ClipRRect(
-          borderRadius: NMSUIConstants.generalBorderRadius,
-          child: Scaffold(
-            appBar: WindowTitleBar(
-              title: 'Assistant for No Man\'s Sky',
-              iconPath: AppImage.assistantNMSWindowIcon,
-            ),
-            body: matApp,
+        home: Scaffold(
+          appBar: WindowTitleBar(
+            title: 'Assistant for No Man\'s Sky',
+            iconPath: AppImage.assistantNMSWindowIcon,
           ),
+          body: matApp,
         ),
       );
     }
