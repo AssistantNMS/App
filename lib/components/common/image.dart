@@ -1,17 +1,17 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
-import '../../constants/AnalyticsEvent.dart';
-import '../../helpers/heroHelper.dart';
+import '../../constants/analytics_event.dart';
+import '../../helpers/hero_helper.dart';
 
-import '../../constants/NmsExternalUrls.dart';
-import '../../contracts/genericPageItem.dart';
+import '../../constants/nms_external_urls.dart';
+import '../../contracts/generic_page_item.dart';
 
 Widget gameItemImage(
   String imagePath, {
-  String imageHero,
-  BoxFit boxfit,
-  double height,
-  double width,
+  String? imageHero,
+  BoxFit? boxfit,
+  double? height,
+  double? width,
   bool imageGreyScale = false,
   EdgeInsetsGeometry padding = EdgeInsets.zero,
 }) {
@@ -62,11 +62,11 @@ Widget imageInGreyScale(Widget image) {
 
 Widget guideImage(
   String imagePath, {
-  String imageHero,
-  String imagePackage,
-  BoxFit boxfit,
-  double height,
-  double width,
+  String? imageHero,
+  String? imagePackage,
+  BoxFit? boxfit,
+  double? height,
+  double? width,
   EdgeInsetsGeometry padding = EdgeInsets.zero,
 }) {
   Image image = Image.asset(
@@ -87,23 +87,25 @@ Widget guideImage(
   );
 }
 
-ListTile gameItemListTileWithSubtitle(context,
-    {@required String leadingImage,
-    String imageHero,
-    String imageBackgroundColour,
-    bool imageGreyScale = false,
-    String imagePackage,
-    @required String name,
-    String description,
-    Widget subtitle,
-    int maxLines = 1,
-    Widget trailing,
-    Function onTap,
-    Function onLongPress}) {
+ListTile gameItemListTileWithSubtitle(
+  context, {
+  required String leadingImage,
+  String? imageHero,
+  String? imageBackgroundColour,
+  bool imageGreyScale = false,
+  String? imagePackage,
+  required String name,
+  String? description,
+  Widget? subtitle,
+  int maxLines = 1,
+  Widget? trailing,
+  void Function()? onTap,
+  void Function()? onLongPress,
+}) {
   String title = description != null //
       ? name + ' - ' + description
       : name;
-  if (title == null || title.isEmpty) title = ' ';
+  if (title.isEmpty) title = ' ';
 
   return ListTile(
     leading: gameItemImage(
@@ -119,7 +121,7 @@ ListTile gameItemListTileWithSubtitle(context,
     subtitle: subtitle,
     trailing: trailing,
     // dense: true,
-    onTap: (onTap != null) ? onTap : null,
+    onTap: onTap,
     onLongPress: (onLongPress != null) ? onLongPress : null,
   );
 }
@@ -128,18 +130,18 @@ Widget genericItemImage(
   context,
   String icon, {
   bool disableZoom = false,
-  String imageHero,
+  String? imageHero,
   String name = 'Zoom',
   bool hdAvailable = false,
   double height = 100,
-  Function onTap,
+  void Function()? onTap,
 }) {
-  String itemIcon =
-      (icon == null || icon.isEmpty) ? getPath().unknownImagePath : icon;
+  String itemIcon = (icon.isEmpty) ? getPath().unknownImagePath : icon;
   return Center(
     child: GestureDetector(
       child: Container(
-        child: localImage(itemIcon, imageHero: imageHero, height: height),
+        child: LocalImage(
+            imagePath: itemIcon, imageHero: imageHero, height: height),
         margin: const EdgeInsets.all(4.0),
       ),
       onTap: onTap ??
@@ -154,16 +156,19 @@ Widget genericItemImage(
   );
 }
 
-Widget genericItemImageWithBackground(context, GenericPageItem item,
-    {bool disableZoom = false, bool hdAvailable = false}) {
-  String itemIcon = (item.icon == null || item.icon.isEmpty)
-      ? getPath().unknownImagePath
-      : item.icon;
+Widget genericItemImageWithBackground(
+  context,
+  GenericPageItem item, {
+  bool disableZoom = false,
+  bool hdAvailable = false,
+}) {
+  String itemIcon =
+      (item.icon.isEmpty) ? getPath().unknownImagePath : item.icon;
   return GestureDetector(
     child: Container(
       width: double.infinity,
-      child: localImage(
-        itemIcon,
+      child: LocalImage(
+        imagePath: itemIcon,
         imageHero: gameItemIconHero(item),
         height: 100,
       ),
@@ -180,7 +185,7 @@ Widget genericItemImageWithBackground(context, GenericPageItem item,
   );
 }
 
-Function genericItemImageOnTap(
+void Function() genericItemImageOnTap(
   BuildContext context,
   String icon,
   bool disableZoom,
@@ -191,7 +196,7 @@ Function genericItemImageOnTap(
       if (disableZoom) return;
 
       String url = getImagePath(icon);
-      String helpContent;
+      String? helpContent;
       if (hdAvailable) {
         url = "${NmsExternalUrls.assistantNMSCDN}/$icon";
         helpContent = getTranslations()

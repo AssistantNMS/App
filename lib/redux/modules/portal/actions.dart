@@ -1,7 +1,7 @@
-import '../../../contracts/redux/portalState.dart';
+import '../../../contracts/redux/portal_state.dart';
 
-import '../../../contracts/portal/portalRecord.dart';
-import '../base/persistToStorage.dart';
+import '../../../contracts/portal/portal_record.dart';
+import '../base/persist_to_storage.dart';
 
 class AddPortalAction extends PersistToStorage {
   final PortalRecord portalRecord;

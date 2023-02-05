@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../../constants/ApiUrls.dart';
+import '../../constants/api_urls.dart';
 import '../../contracts/helloGames/community_mission_tracked.dart';
-import '../../integration/dependencyInjection.dart';
+import '../../integration/dependency_injection.dart';
 
 class CommunityMissionProgressApiService extends BaseApiService {
   CommunityMissionProgressApiService() : super(getEnv().baseApi);

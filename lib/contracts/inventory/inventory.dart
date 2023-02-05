@@ -1,22 +1,27 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'inventorySlot.dart';
+import 'inventory_slot.dart';
 
 class Inventory {
-  String uuid;
+  late String uuid;
   String name;
   String icon;
   List<InventorySlot> slots;
 
-  Inventory({this.name, this.slots, this.icon, uuid}) {
+  Inventory({
+    required this.name,
+    required this.slots,
+    required this.icon,
+    String? uuid,
+  }) {
     this.uuid = uuid ?? getNewGuid();
   }
 
   Inventory copyWith({
-    String uuid,
-    String name,
-    String icon,
-    List<InventorySlot> slots,
+    String? uuid,
+    String? name,
+    String? icon,
+    List<InventorySlot>? slots,
   }) {
     return Inventory(
       uuid: uuid ?? this.uuid,
@@ -26,13 +31,22 @@ class Inventory {
     );
   }
 
-  factory Inventory.fromJson(Map<String, dynamic> json) => Inventory(
-        uuid: json["uuid"],
-        name: json["name"],
-        icon: json["icon"],
-        slots: (json["slots"] as List)
-            .map((i) => InventorySlot.fromJson(i as Map<String, dynamic>))
-            .toList(),
+  factory Inventory.initial() => Inventory(
+        uuid: '',
+        name: '',
+        icon: '',
+        slots: [],
+      );
+
+  factory Inventory.fromJson(Map<String, dynamic>? json) => Inventory(
+        uuid: readStringSafe(json, 'uuid'),
+        name: readStringSafe(json, 'name'),
+        icon: readStringSafe(json, 'icon'),
+        slots: readListSafe(
+          json,
+          'slots',
+          (i) => InventorySlot.fromJson(i),
+        ),
       );
 
   Map<String, dynamic> toJson() => {

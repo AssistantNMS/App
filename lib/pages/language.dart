@@ -1,12 +1,12 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../components/scaffoldTemplates/genericPageScaffold.dart';
-import '../constants/AnalyticsEvent.dart';
-import '../constants/NmsExternalUrls.dart';
+import '../components/scaffoldTemplates/generic_page_scaffold.dart';
+import '../constants/analytics_event.dart';
+import '../constants/nms_external_urls.dart';
 
 class Language extends StatelessWidget {
-  Language({Key key}) : super(key: key) {
+  Language({Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.languageHelpPage);
   }
 
@@ -17,18 +17,16 @@ class Language extends StatelessWidget {
       title: getTranslations().fromKey(LocaleKey.language),
       body: LanguagePageContent(
         additionalButtons: [
-          positiveButton(
-            context,
+          PositiveButton(
             title: getTranslations().fromKey(LocaleKey.useTranslationTool),
-            onPress: () => launchExternalURL(
+            onTap: () => launchExternalURL(
               ExternalUrls.assistantAppsToolSite,
             ),
           ),
-          positiveButton(
-            context,
+          PositiveButton(
             title: getTranslations().fromKey(LocaleKey.github),
             eventString: AnalyticsEvent.externalLinkGitHubGeneral,
-            onPress: () => launchExternalURL(NmsExternalUrls.githubGeneralRepo),
+            onTap: () => launchExternalURL(NmsExternalUrls.githubGeneralRepo),
           ),
         ],
       ),

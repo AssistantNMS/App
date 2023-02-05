@@ -1,8 +1,8 @@
 import 'package:redux/redux.dart';
 
 import '../../../contracts/inventory/inventory.dart';
-import '../../../contracts/inventory/inventorySlot.dart';
-import '../../../contracts/redux/inventoryState.dart';
+import '../../../contracts/inventory/inventory_slot.dart';
+import '../../../contracts/redux/inventory_state.dart';
 import 'actions.dart';
 
 final inventoryReducer = combineReducers<InventoryState>([
@@ -24,7 +24,7 @@ final inventoryReducer = combineReducers<InventoryState>([
 
 InventoryState _addInventoryAction(
     InventoryState state, AddInventoryAction action) {
-  List<Inventory> containers = state.containers ?? List.empty(growable: true);
+  List<Inventory> containers = state.containers;
   containers.add(action.inventory);
   return state.copyWith(containers: containers);
 }
@@ -182,7 +182,7 @@ InventoryState _removeInventorySlotToInventoryAction(
 InventoryState _removeInventorySlotFromInventoryByUuidAction(
   InventoryState state,
   String inventoryUuid,
-  String slotUuid,
+  String? slotUuid,
 ) {
   List<Inventory> newItems = List.empty(growable: true);
   for (int inventoryIndex = 0;

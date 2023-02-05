@@ -1,7 +1,8 @@
+import 'package:collection/collection.dart';
 import 'package:redux/redux.dart';
 
-import '../../../contracts/cart/cartItem.dart';
-import '../../../contracts/redux/cartState.dart';
+import '../../../contracts/cart/cart_item.dart';
+import '../../../contracts/redux/cart_state.dart';
 import 'actions.dart';
 
 final cartReducer = combineReducers<CartState>([
@@ -27,9 +28,18 @@ CartState _addCraftingToCart(CartState state, AddCraftingToCartAction action) {
     newItems.add(temp);
   }
   if (!addedNewItem) {
-    newItems.add(CartItem(pageItem: action.item, quantity: action.quantity));
+    newItems.add(
+      CartItem(
+        typeName: action.item.typeName,
+        id: action.item.id,
+        icon: action.item.icon,
+        colour: action.item.colour,
+        quantity: action.quantity,
+        requiredItems: action.item.requiredItems,
+      ),
+    );
   }
-  return state.copyWith(crftingItems: newItems);
+  return state.copyWith(craftingItems: newItems);
 }
 
 CartState _editCraftingItemInCart(
@@ -44,20 +54,20 @@ CartState _editCraftingItemInCart(
     }
     newItems.add(temp);
   }
-  return state.copyWith(crftingItems: newItems);
+  return state.copyWith(craftingItems: newItems);
 }
 
 CartState _removeCraftingFromCart(
     CartState state, RemoveCraftingFromCartAction action) {
-  CartItem oldCardItem =
-      state.craftingItems.firstWhere((ci) => ci.id == action.id);
+  CartItem? oldCardItem =
+      state.craftingItems.firstWhereOrNull((ci) => ci.id == action.id);
   if (oldCardItem == null) return state;
 
   return state.copyWith(
-      crftingItems: List.from(state.craftingItems)..remove(oldCardItem));
+      craftingItems: List.from(state.craftingItems)..remove(oldCardItem));
 }
 
 CartState _removeAllCraftingFromCart(
     CartState state, RemoveAllCraftingFromCartAction action) {
-  return state.copyWith(crftingItems: List.empty(growable: true));
+  return state.copyWith(craftingItems: List.empty(growable: true));
 }

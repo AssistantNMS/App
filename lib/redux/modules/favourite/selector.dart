@@ -1,8 +1,5 @@
-import '../../../contracts/redux/favouriteState.dart';
-
-import '../../../contracts/redux/appState.dart';
-import '../../../contracts/favourite/favouriteItem.dart';
+import '../../../contracts/favourite/favourite_item.dart';
+import '../../../contracts/redux/app_state.dart';
 
 List<FavouriteItem> getFavourites(AppState state) =>
-    state.favouriteState?.favouriteItems ??
-    FavouriteState.initial().favouriteItems;
+    state.favouriteState.favouriteItems;

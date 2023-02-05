@@ -1,4 +1,4 @@
-import '../../../contracts/redux/appState.dart';
+import '../../../contracts/redux/app_state.dart';
 
 List<String> getClaimedRewards(AppState state) =>
-    state?.expeditionState?.claimedRewards ?? List.empty(growable: false);
+    state.expeditionState.claimedRewards;

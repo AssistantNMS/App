@@ -2,18 +2,16 @@ name: assistantnms_app
 description: Assistant for No Man's Sky
 homepage: https://nmsassistant.com
 # author: Kurt Lourens
-version: 2.7.0+303 # dart scripts\versionNumScript.dart
+version: 2.8.0+305 # dart scripts\version_num_script.dart
 publish_to: 'none'
 
 environment:
-  sdk: '>=2.7.0 <3.0.0'
+  sdk: '>=2.15.1 <3.0.0'
+  flutter: '>=1.17.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter
-  # flutter_cupertino_localizations: ^1.0.1
   cupertino_icons: 1.0.4
 
   # AssistantApps
@@ -22,14 +20,14 @@ dependencies:
     # path: 'C:\Development\Projects\AssistantApps\assistantapps_flutter_common'
 
   # Google & Firebase
-  firebase_core: 2.1.1
-  firebase_analytics: 10.0.4
+  firebase_core: 2.4.1
+  firebase_analytics: 10.1.0
   # firebase_analytics_web: 0.1.1
-  firebase_messaging: 14.0.4
-  firebase_auth: 4.1.1
+  firebase_messaging: 14.2.1
+  firebase_auth: 4.2.5
   # firebase_auth_web: ^0.3.2+6
-  google_sign_in: 5.4.2
-  google_mobile_ads: 2.2.0
+  google_sign_in: 5.4.3
+  google_mobile_ads: 2.3.0
 
   # Base
   get_it: 7.2.0
@@ -44,24 +42,24 @@ dependencies:
   assets_audio_player: 3.0.4+3
   bitsdojo_window: 0.1.5
   bubble: 1.2.1
+  collection: 1.17.0
   dots_indicator: 2.1.0
   download: 0.0.1+1
   expandable: 5.0.1
   ff_stars: 1.2.5
-  file_picker: 5.2.0+1
+  file_picker: 5.2.5
   flutter_image_slideshow: 0.1.4
   flutter_local_notifications: 11.0.1
+  flutter_localization: 0.1.10
   flutter_simple_treeview: 3.0.1
   flutter_speed_dial: 6.0.0
-  flutter_sticky_header: 0.6.4
+  flutter_sticky_header: 0.6.5
   intro_slider: 4.2.0
   marquee_vertical: 1.0.0
   pin_code_fields: 7.4.0
   rflutter_alert: 2.0.4
   reorderables: 0.5.0
-  roll_slot_machine: ^1.0.0
   swipe_to: 1.0.2
-  wiredash: 1.5.0
 
   # Misc
   timezone: 0.9.0
@@ -69,15 +67,23 @@ dependencies:
   enum_to_string: 2.0.1
   after_layout: 1.2.0
 
+  roll_slot_machine:
+    git:
+      url: https://github.com/AssistantApps/roll_slot_machine.git
+      ref: master
+
 dev_dependencies:
   flutter_launcher_icons: 0.10.0
   msix: 3.6.3
   pubspec_parse: 1.2.1
-  path: 1.8.2
+  path: 1.8.3
   git: 2.0.0
 
 dependency_overrides:
-  win32: 3.0.0
+  win32: 4.1.0
+  intl: 0.18.0
+  collection: 1.17.0
+  path: 1.8.3
 
 flutter_icons: ## flutter pub run flutter_launcher_icons:main
   ios: true
@@ -91,7 +97,7 @@ flutter_icons: ## flutter pub run flutter_launcher_icons:main
 msix_config: # https://pub.dev/documentation/msix/latest/
   display_name: Assistant for No Man's Sky
   publisher_display_name: AssistantApps
-  msix_version: 2.7.0.0
+  msix_version: 2.8.0.0
   identity_name: notSureIfSecret
   publisher: notSureIfSecret
   logo_path: './assets/images/fullSizeIcon.png'

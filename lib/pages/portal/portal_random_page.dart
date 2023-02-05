@@ -5,20 +5,20 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:roll_slot_machine/roll_slot.dart';
 import 'package:roll_slot_machine/roll_slot_controller.dart';
 
-import '../../components/floatingActionButton/randomPortalFloatingActionButton.dart';
-import '../../components/portal/portalGlyphList.dart';
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
-import '../../components/tilePresenters/youtubersTilePresenter.dart';
-import '../../constants/AnalyticsEvent.dart';
-import '../../constants/NmsExternalUrls.dart';
-import '../../constants/Routes.dart';
-import '../../contracts/redux/appState.dart';
-import '../../redux/modules/portal/portalViewModel.dart';
+import '../../components/floatingActionButton/random_portal_floating_action_button.dart';
+import '../../components/portal/portal_glyph_list.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
+import '../../components/tilePresenters/youtubers_tile_presenter.dart';
+import '../../constants/analytics_event.dart';
+import '../../constants/nms_external_urls.dart';
+import '../../constants/routes.dart';
+import '../../contracts/redux/app_state.dart';
+import '../../redux/modules/portal/portal_view_model.dart';
 
 const double horizontalPadding = 32;
 
 class RandomPortalPage extends StatefulWidget {
-  const RandomPortalPage({Key key}) : super(key: key);
+  const RandomPortalPage({Key? key}) : super(key: key);
 
   @override
   createState() => _RandomPortalPageState();
@@ -128,7 +128,11 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
             ),
           )
         ],
-        body: getBody(context, viewModel),
+        body: LayoutBuilder(
+          builder: (layoutCtx, BoxConstraints constraints) {
+            return getBody(layoutCtx, viewModel, constraints);
+          },
+        ),
         fab: randomPortalFAB(
           context,
           isDisabled: fabIsDisabled || currentCode.isEmpty,
@@ -139,9 +143,13 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
     );
   }
 
-  Widget getBody(BuildContext bodyCtx, PortalViewModel portalViewModel) {
+  Widget getBody(
+    BuildContext bodyCtx,
+    PortalViewModel portalViewModel,
+    BoxConstraints constraints,
+  ) {
     bool useAltGlyphs = portalViewModel.useAltGlyphs;
-    final size = MediaQuery.of(context).size;
+    final size = Size(constraints.maxWidth, constraints.maxHeight);
     List<String> portalList = List.generate(
       16,
       (index) => index.toRadixString(16),
@@ -152,7 +160,7 @@ class _RandomPortalPageState extends State<RandomPortalPage> {
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        flatCard(
+        FlatCard(
           child: captainSteveYoutubeVideoTile(
             bodyCtx,
             NmsExternalUrls.captainSteveYoutubeDiceRollPlaylist,
@@ -267,11 +275,11 @@ class RollSlotWidget extends StatelessWidget {
   final bool useAltGlyphs;
 
   const RollSlotWidget({
-    Key key,
-    @required this.pageSize,
-    @required this.portalList,
-    @required this.rollSlotController,
-    @required this.useAltGlyphs,
+    Key? key,
+    required this.pageSize,
+    required this.portalList,
+    required this.rollSlotController,
+    required this.useAltGlyphs,
   }) : super(key: key);
 
   @override
@@ -303,9 +311,9 @@ class BuildItem extends StatelessWidget {
   final bool useAltGlyphs;
 
   const BuildItem({
-    Key key,
-    @required this.portalCode,
-    @required this.useAltGlyphs,
+    Key? key,
+    required this.portalCode,
+    required this.useAltGlyphs,
   }) : super(key: key);
 
   @override

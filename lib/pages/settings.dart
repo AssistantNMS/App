@@ -1,22 +1,24 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import '../../constants/Platforms.dart';
+import '../../constants/platforms.dart';
 
-import '../components/scaffoldTemplates/genericPageScaffold.dart';
-import '../components/tilePresenters/settingTilePresenter.dart';
-import '../constants/AnalyticsEvent.dart';
-import '../constants/Fonts.dart';
-import '../constants/HomepageItems.dart';
-import '../contracts/enum/homepageType.dart';
-import '../contracts/redux/appState.dart';
-import '../helpers/dateHelper.dart';
-import '../helpers/uselessButtonHelper.dart';
-import '../redux/modules/setting/settingViewModel.dart';
+import '../components/scaffoldTemplates/generic_page_scaffold.dart';
+import '../components/tilePresenters/setting_tile_presenter.dart';
+import '../constants/analytics_event.dart';
+import '../constants/fonts.dart';
+import '../constants/homepage_items.dart';
+import '../constants/nms_external_urls.dart';
+import '../contracts/enum/homepage_type.dart';
+import '../contracts/redux/app_state.dart';
+import '../env/app_version_num.dart';
+import '../helpers/date_helper.dart';
+import '../helpers/useless_button_helper.dart';
+import '../redux/modules/setting/setting_view_model.dart';
 
 class Settings extends StatelessWidget {
   final void Function(Locale locale) onLocaleChange;
-  Settings(this.onLocaleChange, {Key key}) : super(key: key) {
+  Settings(this.onLocaleChange, {Key? key}) : super(key: key) {
     getAnalytics().trackEvent(AnalyticsEvent.settingsPage);
   }
 
@@ -85,7 +87,9 @@ class Settings extends StatelessWidget {
     widgets.add(listSettingTilePresenter(
       context,
       getTranslations().fromKey(LocaleKey.platform),
-      localImage(SelectedPlatform.getFromValue(viewModel.platformIndex).icon),
+      LocalImage(
+          imagePath:
+              SelectedPlatform.getFromValue(viewModel.platformIndex).icon),
       availablePlatforms
           .map(
             (hp) => DropdownOption(
@@ -96,8 +100,7 @@ class Settings extends StatelessWidget {
           )
           .toList(),
       onChange: (String newValue) {
-        if (newValue == null) return;
-        int intValue = int.tryParse(newValue);
+        int? intValue = int.tryParse(newValue);
         if (intValue == null) return;
         viewModel.setPlatformIndex(intValue);
       },
@@ -160,7 +163,7 @@ class Settings extends StatelessWidget {
 
     if (viewModel.homepageType == HomepageType.custom) {
       widgets.add(
-        flatCard(
+        FlatCard(
           child: genericListTile(
             context,
             leadingImage: null,
@@ -179,7 +182,7 @@ class Settings extends StatelessWidget {
                 controller,
                 amounts: [0, 1, 2, 3, 4, 5],
                 onSuccess: (BuildContext ctx, String quantity) {
-                  int intQuantity = int.tryParse(quantity);
+                  int? intQuantity = int.tryParse(quantity);
                   if (intQuantity == null) return;
                   if (intQuantity > 10) intQuantity = 10;
                   viewModel.setCustomHomePageColumnCount(intQuantity);
@@ -255,10 +258,9 @@ class Settings extends StatelessWidget {
     widgets.add(legalTilePresenter());
 
     if (viewModel.selectedLanguage == 'en') {
-      widgets.add(positiveButton(
-        context,
+      widgets.add(PositiveButton(
         title: 'Useless button',
-        onPress: () => uselessButtonFunc(
+        onTap: () => uselessButtonFunc(
           context,
           viewModel.uselessButtonTaps,
           viewModel.increaseUselessButtonTaps,
@@ -266,7 +268,20 @@ class Settings extends StatelessWidget {
       ));
     }
 
-    widgets.add(emptySpace3x());
+    widgets.add(const EmptySpace3x());
+
+    widgets.add(const Center(child: Text('BuildName: $appsBuildName')));
+    widgets.add(const Center(child: Text('BuildNumber: $appsBuildNum')));
+    widgets.add(Center(
+      child: GestureDetector(
+        child: const Text(appsCommit, maxLines: 1),
+        onTap: () => launchExternalURL(
+          NmsExternalUrls.githubViewAppRepoAtCommit + appsCommit,
+        ),
+      ),
+    ));
+
+    widgets.add(const EmptySpace8x());
 
     return listWithScrollbar(
       itemCount: widgets.length,

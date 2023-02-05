@@ -5,7 +5,7 @@
 import 'dart:convert';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'guideSection.dart';
+import 'guide_section.dart';
 
 class NmsGuide {
   String guid;
@@ -16,28 +16,28 @@ class NmsGuide {
   String folder;
   DateTime date;
   int minutes;
-  String translatedBy;
+  String? translatedBy;
   List<String> tags;
   List<NmsGuideSection> sections;
 
   NmsGuide({
-    this.guid,
-    this.title,
-    this.shortTitle,
-    this.image,
-    this.author,
-    this.folder,
-    this.date,
-    this.sections,
+    required this.guid,
+    required this.title,
+    required this.shortTitle,
+    required this.image,
+    required this.author,
+    required this.folder,
+    required this.date,
+    required this.sections,
     this.translatedBy,
-    this.tags,
-    this.minutes,
+    required this.tags,
+    required this.minutes,
   });
 
   factory NmsGuide.fromRawJson(String str, String folder) =>
       NmsGuide.fromJson(json.decode(str), folder);
 
-  factory NmsGuide.fromJson(Map<String, dynamic> json, String folder) =>
+  factory NmsGuide.fromJson(Map<String, dynamic>? json, String folder) =>
       NmsGuide(
         guid: readStringSafe(json, 'guid'),
         title: readStringSafe(json, 'title'),
@@ -53,10 +53,6 @@ class NmsGuide {
           'sections',
           (dynamic json) => NmsGuideSection.fromJson(json),
         ),
-        tags: readListSafe<String>(
-          json,
-          'tags',
-          (dynamic json) => json.toString(),
-        ),
+        tags: readStringListSafe(json, 'tags'),
       );
 }

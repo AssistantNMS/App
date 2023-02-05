@@ -1,16 +1,16 @@
 import 'dart:async';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/integration/dependency_injection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-import '../components/scaffoldTemplates/genericPageScaffold.dart';
-import '../constants/AnalyticsEvent.dart';
-import '../integration/firebase.dart';
+import '../components/scaffoldTemplates/generic_page_scaffold.dart';
+import '../constants/analytics_event.dart';
 
 class Donation extends StatefulWidget {
-  const Donation({Key key}) : super(key: key);
+  const Donation({Key? key}) : super(key: key);
 
   @override
   _DonationWidget createState() => _DonationWidget();
@@ -21,11 +21,12 @@ class _DonationWidget extends State<Donation> {
   bool adHasFailedToLoad = false;
   bool supportsNavtivePay = false;
 
-  final _interstitialAdId = adMobInterstitialDonationPageAdUnitId();
-  InterstitialAd _interstitialAd;
+  final _interstitialAdId =
+      getFirebase().adMobInterstitialDonationPageAdUnitId();
+  InterstitialAd? _interstitialAd;
   final int maxFailedLoadAttempts = 3;
   int _numInterstitialLoadAttempts = 0;
-  StreamSubscription _interstitialAdSubscription;
+  StreamSubscription? _interstitialAdSubscription;
 
   static const AdRequest request = AdRequest(
     keywords: ['gaming', 'space'],
@@ -47,10 +48,10 @@ class _DonationWidget extends State<Donation> {
 
   void _createInterstitialAd() {
     if (_interstitialAd != null) {
-      _interstitialAd.dispose();
+      _interstitialAd!.dispose();
     }
     if (_interstitialAdSubscription != null) {
-      _interstitialAdSubscription.cancel();
+      _interstitialAdSubscription!.cancel();
     }
 
     InterstitialAd.load(
@@ -80,7 +81,7 @@ class _DonationWidget extends State<Donation> {
       getLog().d('Warning: attempt to show interstitial before loaded.');
       return;
     }
-    _interstitialAd.fullScreenContentCallback =
+    _interstitialAd!.fullScreenContentCallback =
         FullScreenContentCallback(onAdShowedFullScreenContent: (ad) {
       getLog().d('onAdShowedFullScreenContent.');
       setState(() {
@@ -103,14 +104,16 @@ class _DonationWidget extends State<Donation> {
       getLog().d('Ad clicked!');
       getAnalytics().trackEvent(AnalyticsEvent.addMobDonationPageClick);
     });
-    _interstitialAd.show();
+    _interstitialAd!.show();
     _interstitialAd = null;
   }
 
   void handleAdDismiss() {
     setState(() {
       adIsLoading = true;
-      _interstitialAd.dispose();
+      if (_interstitialAd != null) {
+        _interstitialAd!.dispose();
+      }
       _createInterstitialAd();
     });
   }
@@ -191,7 +194,7 @@ class _DonationWidget extends State<Donation> {
         } else {
           paymentOptions.add(ListTile(
             key: const Key('advert'),
-            leading: getListTileImage('ad.png'),
+            leading: const ListTileImage(partialPath: 'ad.png'),
             title: const Text("Advertisement", style: TextStyle(fontSize: 20)),
             onTap: () {
               _showInterstitialAd();
@@ -219,6 +222,7 @@ class _DonationWidget extends State<Donation> {
         itemCount: items.length,
         padding: const EdgeInsets.all(12),
         itemBuilder: (context, index) => items[index],
+        scrollController: ScrollController(),
       ),
     );
   }
@@ -226,10 +230,10 @@ class _DonationWidget extends State<Donation> {
   @override
   void dispose() {
     if (_interstitialAdSubscription != null) {
-      _interstitialAdSubscription.cancel();
+      _interstitialAdSubscription!.cancel();
     }
     if (_interstitialAd != null) {
-      _interstitialAd.dispose();
+      _interstitialAd!.dispose();
     }
     super.dispose();
   }

@@ -1,6 +1,6 @@
 import 'package:redux/redux.dart';
 
-import '../../../contracts/redux/settingState.dart';
+import '../../../contracts/redux/setting_state.dart';
 import 'actions.dart';
 
 final settingReducer = combineReducers<SettingState>([
@@ -77,7 +77,7 @@ SettingState _dontShowSpoilerAlert(
 SettingState _setPlayerName(SettingState state, SetPlayerName action) =>
     state.copyWith(playerName: action.playerName);
 SettingState _uselessButtonTap(SettingState state, UselessButtonTap action) =>
-    state.copyWith(uselessButtonTaps: (state.uselessButtonTaps ?? 0) + 1);
+    state.copyWith(uselessButtonTaps: state.uselessButtonTaps + 1);
 SettingState _setIsPatron(SettingState state, SetIsPatron action) =>
     state.copyWith(isPatron: action.newIsPatron);
 SettingState _setNewsPage(SettingState state, SetNewsPage action) =>

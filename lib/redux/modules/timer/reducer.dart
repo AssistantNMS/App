@@ -1,7 +1,7 @@
-import '../../../contracts/timer/timerItem.dart';
+import '../../../contracts/timer/timer_item.dart';
 import 'package:redux/redux.dart';
 
-import '../../../contracts/redux/timerState.dart';
+import '../../../contracts/redux/timer_state.dart';
 import 'actions.dart';
 
 final timerReducer = combineReducers<TimerState>([
@@ -11,7 +11,7 @@ final timerReducer = combineReducers<TimerState>([
 ]);
 
 TimerState _addTimerAction(TimerState state, AddTimerAction action) {
-  List<TimerItem> timers = state.timers ?? List.empty(growable: true);
+  List<TimerItem> timers = state.timers;
   timers.add(action.timerItem);
   return state.copyWith(timers: timers);
 }

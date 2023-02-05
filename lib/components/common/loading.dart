@@ -11,7 +11,7 @@ class CustomSpinner extends StatefulWidget {
   final double width;
   final Duration spinDuration;
   const CustomSpinner({
-    Key key,
+    Key? key,
     this.height = 100.0,
     this.width = 100.0,
     this.spinDuration = const Duration(milliseconds: 1000),
@@ -23,7 +23,7 @@ class CustomSpinner extends StatefulWidget {
 
 class _CustomSpinnerWidget extends State<CustomSpinner>
     with TickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {

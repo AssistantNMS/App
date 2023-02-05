@@ -1,7 +1,4 @@
-import '../../../contracts/redux/cartState.dart';
+import '../../../contracts/redux/app_state.dart';
+import '../../../contracts/cart/cart_item.dart';
 
-import '../../../contracts/redux/appState.dart';
-import '../../../contracts/cart/cartItem.dart';
-
-List<CartItem> getCartItems(AppState state) =>
-    state?.cartState?.craftingItems ?? CartState.initial().craftingItems;
+List<CartItem> getCartItems(AppState state) => state.cartState.craftingItems;

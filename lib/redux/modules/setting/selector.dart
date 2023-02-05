@@ -1,80 +1,78 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import '../../../constants/Fonts.dart';
-import '../../../contracts/enum/homepageType.dart';
-import '../../../contracts/redux/appState.dart';
-import '../../../helpers/dateHelper.dart';
+import '../../../constants/fonts.dart';
+import '../../../contracts/enum/homepage_type.dart';
+import '../../../contracts/redux/app_state.dart';
+import '../../../helpers/date_helper.dart';
 
 String getSelectedLanguage(AppState state) =>
-    state?.settingState?.selectedLanguage ?? 'en';
+    state.settingState.selectedLanguage;
 
-bool getGuidesIsCompact(AppState state) =>
-    state?.settingState?.guidesIsCompact ?? false;
+bool getGuidesIsCompact(AppState state) => state.settingState.guidesIsCompact;
 
 bool getGenericTileIsCompact(AppState state) =>
-    state?.settingState?.genericTileIsCompact ?? false;
+    state.settingState.genericTileIsCompact;
 
 bool getShowMaterialTheme(AppState state) =>
-    state?.settingState?.showMaterialTheme ?? false;
+    state.settingState.showMaterialTheme;
 
 bool getDisplayGenericItemColour(AppState state) =>
-    state?.settingState?.displayGenericItemColour ?? false;
+    state.settingState.displayGenericItemColour;
 
 bool getIsValentines2020IntroHidden(AppState state) =>
-    state?.settingState?.isValentines2020IntroHidden ?? false;
+    state.settingState.isValentines2020IntroHidden;
 bool getIsValentines2021IntroHidden(AppState state) =>
-    state?.settingState?.isValentines2021IntroHidden ?? false;
+    state.settingState.isValentines2021IntroHidden;
 
 String getFontFamily(AppState state) {
-  if ((state?.settingState?.useNMSFont ?? false) == true) return nmsFontFamily;
+  if (state.settingState.useNMSFont == true) return nmsFontFamily;
 
-  return (state?.settingState?.fontFamily ?? defaultFontFamily);
+  return state.settingState.fontFamily;
 }
 
-bool getUseAltGlyphs(AppState state) =>
-    state?.settingState?.useAltGlyphs ?? true;
+bool getUseAltGlyphs(AppState state) => state.settingState.useAltGlyphs;
 
 int getLastPlatformIndex(AppState state) =>
-    state?.settingState?.lastPlatformIndex ?? 0;
+    state.settingState.lastPlatformIndex;
 
-bool getIntroComplete(AppState state) =>
-    state?.settingState?.introComplete ?? false;
+bool getIntroComplete(AppState state) => state.settingState.introComplete;
 
-bool getOnlineMeetup2020(AppState state) =>
-    state?.settingState?.onlineMeetup2020 ?? false;
+bool getOnlineMeetup2020(AppState state) => state.settingState.onlineMeetup2020;
 
-HomepageType getHomepageType(AppState state) =>
-    state?.settingState?.homepageType ?? HomepageType.custom;
+HomepageType getHomepageType(AppState state) => state.settingState.homepageType;
 
 List<LocaleKey> getCustomMenuOrder(AppState state) =>
-    state?.settingState?.customMenuOrder ?? List.empty(growable: true);
+    state.settingState.customMenuOrder;
 
 bool getDontShowSpoilerAlert(AppState state) =>
-    state?.settingState?.dontShowSpoilerAlert ?? false;
+    state.settingState.dontShowSpoilerAlert;
+
+bool getShowFestiveBackground(AppState state) =>
+    state.settingState.showFestiveBackground;
 
 int getCustomHomePageColumnCount(AppState state) {
-  int safeValue = (state?.settingState?.customHomePageColumnCount ?? 0);
+  int safeValue = state.settingState.customHomePageColumnCount;
   if (safeValue < 1) return 0;
   return safeValue;
 }
 
-String getPlayerName(AppState state) => state?.settingState?.playerName;
+String getPlayerName(AppState state) => state.settingState.playerName;
 
 int getUselessButtonTaps(AppState state) =>
-    state?.settingState?.uselessButtonTaps;
+    state.settingState.uselessButtonTaps;
 
-bool getIsPatron(AppState state) => state?.settingState?.isPatron;
+bool getIsPatron(AppState state) => state.settingState.isPatron;
 
-bool getShowFestiveBackground(AppState state) {
+bool showFestiveBackground(AppState state) {
   if (!isInFestivePeriod()) return false;
 
-  return state?.settingState?.showFestiveBackground ?? true;
+  return state.settingState.showFestiveBackground;
 }
 
 int getSelectedNewsPage(AppState state) {
-  return state?.settingState?.lastNewsPageIndex;
+  return state.settingState.lastNewsPageIndex;
 }
 
 bool getMergeInventoryQuantities(AppState state) {
-  return state?.settingState?.mergeInventoryQuantities ?? true;
+  return state.settingState.mergeInventoryQuantities;
 }

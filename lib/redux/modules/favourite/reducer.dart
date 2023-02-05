@@ -1,7 +1,7 @@
 import 'package:redux/redux.dart';
 
-import '../../../contracts/redux/favouriteState.dart';
-import '../../../contracts/favourite/favouriteItem.dart';
+import '../../../contracts/redux/favourite_state.dart';
+import '../../../contracts/favourite/favourite_item.dart';
 import 'actions.dart';
 
 final favouriteReducer = combineReducers<FavouriteState>([
@@ -10,15 +10,14 @@ final favouriteReducer = combineReducers<FavouriteState>([
 ]);
 
 FavouriteState _addFavourite(FavouriteState state, AddFavouriteAction action) {
-  List<FavouriteItem> newList =
-      state.favouriteItems ?? List.empty(growable: true);
+  List<FavouriteItem> newList = state.favouriteItems;
   newList.add(action.newItem);
   return state.copyWith(favouriteItems: newList);
 }
 
 FavouriteState _removeFavourite(
     FavouriteState state, RemoveFavouriteAction action) {
-  var items = state.favouriteItems ?? List.empty(growable: true);
+  var items = state.favouriteItems;
   List<FavouriteItem> newList = List.empty(growable: true);
   for (var fav in items) {
     if (fav.id == action.itemId) continue;

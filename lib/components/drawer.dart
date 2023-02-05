@@ -1,16 +1,16 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/AppImage.dart';
-import 'package:assistantnms_app/constants/NmsExternalUrls.dart';
+import 'package:assistantnms_app/constants/app_image.dart';
+import 'package:assistantnms_app/constants/nms_external_urls.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../constants/AppColour.dart';
-import '../contracts/redux/appState.dart';
-import '../helpers/drawerHelper.dart';
-import '../redux/modules/setting/drawerSettingsViewModel.dart';
+import '../constants/app_colour.dart';
+import '../contracts/redux/app_state.dart';
+import '../helpers/drawer_helper.dart';
+import '../redux/modules/setting/drawer_settings_view_model.dart';
 
 class AppDrawer extends StatelessWidget {
-  const AppDrawer({Key key}) : super(key: key);
+  const AppDrawer({Key? key}) : super(key: key);
 
   //
   Widget drawerWrapper(BuildContext drawerCtx, List<Widget> widgets) {
@@ -51,10 +51,10 @@ class AppDrawer extends StatelessWidget {
               child: ClipOval(
                 child: Container(
                   color: HexColor(AppColour.discord),
-                  child: Padding(
-                    padding: const EdgeInsets.all(4),
-                    child: localImage(
-                      AppImage.discordWhite,
+                  child: const Padding(
+                    padding: EdgeInsets.all(4),
+                    child: LocalImage(
+                      imagePath: AppImage.discordWhite,
                       height: 85,
                       width: 85,
                     ),
