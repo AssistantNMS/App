@@ -55,6 +55,7 @@ class AdaptiveAppScaffold extends StatelessWidget {
             drawer: drawer,
             floatingActionButton: floatingActionButton,
             floatingActionButtonLocation: floatingActionButtonLocation,
+            resizeToAvoidBottomInset: false,
           ),
         );
       },
