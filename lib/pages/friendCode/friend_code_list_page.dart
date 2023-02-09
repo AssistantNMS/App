@@ -35,34 +35,46 @@ class _FriendCodeListWidget extends State<FriendCodeListPage> {
     bool showPS4 = currentSelection.contains(ps4);
     bool showXb1 = currentSelection.contains(xb1);
     bool showNsw = currentSelection.contains(nsw);
+
+    KeyedSubtree topSectionWidget = KeyedSubtree(
+      key: const Key('topSection'),
+      child: Column(
+        children: [
+          const EmptySpace(0.75),
+          AdaptiveCheckboxGroup(
+            allItemList: allItemList,
+            selectedItems: currentSelection,
+            disabledItems: disabledItemList,
+            onChanged: (itemList) => setState(() {
+              currentSelection = itemList;
+            }),
+          ),
+          getBaseWidget().customDivider(),
+        ],
+      ),
+    );
+
     return basicGenericPageScaffold<dynamic>(
       context,
       title: getTranslations().fromKey(LocaleKey.friendCodes),
-      body: SearchableList<FriendCodeViewModel>(
-        () => getApiRepo().getFriendCodes(showPC, showPS4, showXb1, showNsw),
-        listItemDisplayer:
-            (BuildContext context, FriendCodeViewModel friendCode,
-                    {void Function()? onTap}) =>
-                friendCodeTilePresenter(context, context, friendCode),
-        listItemSearch: (FriendCodeViewModel option, String search) =>
-            option.name.toLowerCase().contains(search.toLowerCase()),
-        minListForSearch: 0,
-        addFabPadding: true,
-        keepFirstListItemWidgetVisible: true,
-        firstListItemWidget: Column(
-          children: [
-            AdaptiveCheckboxGroup(
-              allItemList: allItemList,
-              selectedItems: currentSelection,
-              disabledItems: disabledItemList,
-              onChanged: (itemList) => setState(() {
-                currentSelection = itemList;
-              }),
-            ),
-            getBaseWidget().customDivider(),
-          ],
+      body: animateWidgetIn(
+        key: const Key('firendCodesSearch'),
+        child: SearchableList<FriendCodeViewModel>(
+          () => getApiRepo().getFriendCodes(showPC, showPS4, showXb1, showNsw),
+          listItemDisplayer: (
+            BuildContext presenterCtx,
+            FriendCodeViewModel friendCode, {
+            void Function()? onTap,
+          }) =>
+              friendCodeTilePresenter(presenterCtx, friendCode),
+          listItemSearch: (FriendCodeViewModel option, String search) =>
+              option.name.toLowerCase().contains(search.toLowerCase()),
+          minListForSearch: 0,
+          addFabPadding: true,
+          keepFirstListItemWidgetVisible: true,
+          firstListItemWidget: topSectionWidget,
+          key: Key('firendCodes-${currentSelection.length}'),
         ),
-        key: Key('firendCodes-${currentSelection.length}'),
       ),
       fab: FloatingActionButton(
         onPressed: () => getNavigation().navigateAsync(
