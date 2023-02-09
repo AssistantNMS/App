@@ -6,6 +6,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import '../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../components/tilePresenters/required_item_details_tile_presenter.dart';
 import '../constants/analytics_event.dart';
+import '../constants/nms_ui_constants.dart';
 import '../contracts/cart/cart_item.dart';
 import '../contracts/cart/cart_page_item.dart';
 import '../contracts/generic_page_all_required.dart';
@@ -94,7 +95,9 @@ class CartPage extends StatelessWidget {
 
     for (CartPageItem cartDetail in snapshot.data!) {
       RequiredItemDetails req = RequiredItemDetails.fromGenericPageItem(
-          cartDetail.details, cartDetail.quantity);
+        cartDetail.details,
+        cartDetail.quantity,
+      );
       widgets.add(requiredItemDetailsTilePresenter(
         context,
         req,
@@ -148,6 +151,7 @@ class CartPage extends StatelessWidget {
     }
 
     widgets.add(Wrap(
+      spacing: 1,
       alignment: WrapAlignment.center,
       children: [
         currencyDisplay(creditTasks, genericItemCredits),
@@ -158,28 +162,33 @@ class CartPage extends StatelessWidget {
       ],
     ));
 
+    widgets.add(const EmptySpace1x());
+
     if (requiredItems.isNotEmpty) {
-      widgets.add(PositiveButton(
-        title: getTranslations().fromKey(
-          LocaleKey.viewAllRawMaterialsRequired,
-        ),
-        onTap: () async => await getNavigation().navigateAsync(
-          context,
-          navigateTo: (context) => GenericPageAllRequiredRawMaterials(
-            GenericPageAllRequired(
-              genericItem: GenericPageItem.fromJson(<String, dynamic>{}),
-              id: "",
-              name: "",
-              typeName: getTranslations().fromKey(LocaleKey.cart),
-              requiredItems: requiredItems,
+      widgets.add(Padding(
+        padding: NMSUIConstants.buttonPadding,
+        child: PositiveButton(
+          title: getTranslations().fromKey(
+            LocaleKey.viewAllRawMaterialsRequired,
+          ),
+          onTap: () async => await getNavigation().navigateAsync(
+            context,
+            navigateTo: (context) => GenericPageAllRequiredRawMaterials(
+              GenericPageAllRequired(
+                id: "",
+                name: "",
+                typeName: getTranslations().fromKey(LocaleKey.cart),
+                requiredItems: requiredItems,
+              ),
+              viewModel.displayGenericItemColour,
             ),
-            viewModel.displayGenericItemColour,
           ),
         ),
       ));
 
-      widgets.add(
-        NegativeButton(
+      widgets.add(Padding(
+        padding: NMSUIConstants.buttonPadding,
+        child: NegativeButton(
           title: getTranslations().fromKey(LocaleKey.deleteAll),
           onTap: () {
             getDialog().showSimpleDialog(
@@ -200,7 +209,7 @@ class CartPage extends StatelessWidget {
             );
           },
         ),
-      );
+      ));
       widgets.add(getBaseWidget().customDivider());
     } else {
       widgets.add(

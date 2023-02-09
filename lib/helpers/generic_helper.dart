@@ -32,11 +32,11 @@ Widget genericItemCredits(
         textAlign: TextAlign.center,
         overflow: TextOverflow.ellipsis,
         addDecimal: false,
-        style: getThemeBodyLarge(context)?.copyWith(color: colour),
       ),
       LocalImage(
-          imagePath: '${getPath().imageAssetPathPrefix}/credits.png',
-          height: 17),
+        imagePath: '${getPath().imageAssetPathPrefix}/credits.png',
+        height: 17,
+      ),
     );
 
 Widget genericItemNanites(

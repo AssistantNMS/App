@@ -5,14 +5,12 @@ class GenericPageAllRequired {
   String typeName;
   String id;
   String name;
-  GenericPageItem genericItem;
   List<RequiredItem> requiredItems;
 
   GenericPageAllRequired({
     required this.typeName,
     required this.id,
     required this.name,
-    required this.genericItem,
     required this.requiredItems,
   });
 
@@ -23,7 +21,6 @@ class GenericPageAllRequired {
       typeName: item.typeName,
       id: item.id,
       name: item.name,
-      genericItem: item,
       requiredItems: temp,
     );
   }
