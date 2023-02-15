@@ -22,35 +22,43 @@ Widget genericTileWithBackgroundColourPresenter(
     imageBackgroundColour: genericItem.colour,
     name: genericItem.name,
     onTap: onTap ??
-        () async => await getNavigation().navigateAwayFromHomeAsync(
-              context,
-              navigateTo: (context) => GenericPage(
-                genericItem.id,
-                itemDetails: genericItem,
-              ),
+        () {
+          getNavigation().navigateAwayFromHomeAsync(
+            context,
+            navigateTo: (context) => GenericPage(
+              genericItem.id,
+              itemDetails: genericItem,
             ),
+          );
+        },
   );
 }
 
 Widget genericTilePresenter(
-    BuildContext context, GenericPageItem genericItem, bool isHero,
-    {void Function()? onTap}) {
+  BuildContext context,
+  GenericPageItem genericItem,
+  bool isHero, {
+  void Function()? onTap,
+}) {
   String itemIcon = (genericItem.icon.isEmpty)
       ? getPath().unknownImagePath
       : genericItem.icon;
+
   return genericListTile(
     context,
     leadingImage: itemIcon,
     leadingImageHero: isHero ? gameItemIconHero(genericItem) : null,
     name: genericItem.name,
     onTap: onTap ??
-        () async => await getNavigation().navigateAwayFromHomeAsync(
-              context,
-              navigateTo: (context) => GenericPage(
-                genericItem.id,
-                itemDetails: genericItem,
-              ),
+        () {
+          getNavigation().navigateAwayFromHomeAsync(
+            context,
+            navigateTo: (context) => GenericPage(
+              genericItem.id,
+              itemDetails: genericItem,
             ),
+          );
+        },
   );
 }
 
