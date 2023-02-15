@@ -41,7 +41,7 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
     );
   }
 
-  //await Future.delayed(Duration(seconds: 5));
+  // await Future.delayed(const Duration(milliseconds: 500));
 
   ResultWithValue<GenericPageItem> itemResult =
       await genRepo.value!.getById(context, itemId);

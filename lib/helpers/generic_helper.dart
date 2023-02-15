@@ -202,9 +202,11 @@ Widget viewMoreButton(context, int numLeftOver, viewMoreOnPress) {
 }
 
 Widget? getFloatingActionButtonFromSnapshot(
-    BuildContext context,
-    TextEditingController controller,
-    AsyncSnapshot<ResultWithValue<GenericPageItem>> snapshot) {
+  BuildContext context,
+  TextEditingController controller,
+  AsyncSnapshot<ResultWithValue<GenericPageItem>> snapshot, {
+  void Function(GenericPageItem item, int quantity)? addToCart,
+}) {
   switch (snapshot.connectionState) {
     case ConnectionState.none:
     case ConnectionState.active:
@@ -228,7 +230,12 @@ Widget? getFloatingActionButtonFromSnapshot(
     return null;
   }
 
-  return getFloatingActionButton(context, controller, snapshot.data!.value);
+  return getFloatingActionButton(
+    context,
+    controller,
+    snapshot.data!.value,
+    addToCart: addToCart,
+  );
 }
 
 Widget? getFloatingActionButton(
@@ -333,12 +340,13 @@ Widget Function(BuildContext, GenericPageItem, {void Function()? onTap})
 }
 
 Widget getFavouriteStar(
-    String itemIcon,
-    String itemId,
-    List<FavouriteItem> favourites,
-    Color iconColour,
-    Function addFavourite,
-    Function removeFavourite) {
+  String itemIcon,
+  String itemId,
+  List<FavouriteItem> favourites,
+  Color iconColour,
+  Function addFavourite,
+  Function removeFavourite,
+) {
   bool isFavourited = favourites.any((f) => f.id == itemId);
   IconButton favouriteStar = IconButton(
     icon: Icon(
