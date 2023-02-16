@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../helpers/currency_helper.dart';
+import '../helpers/theme_helper.dart';
 
 class CurrencyText extends StatelessWidget {
   final TextStyle? style;
@@ -23,7 +24,10 @@ class CurrencyText extends StatelessWidget {
     return Text(
       currencyFormat(numberString, addDecimal: addDecimal),
       textAlign: textAlign,
-      style: style,
+      style: style ??
+          getThemeBodyLarge(context)?.copyWith(
+            color: Colors.black,
+          ),
       overflow: overflow,
     );
   }

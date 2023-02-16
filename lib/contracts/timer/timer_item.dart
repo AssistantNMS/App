@@ -59,7 +59,7 @@ class TimerItem {
         'uuid': uuid,
         'name': name,
         'icon': icon,
-        'startDate': startDate.toString(),
-        'completionDate': completionDate.toString(),
+        'startDate': startDate.toIso8601String(),
+        'completionDate': completionDate.toIso8601String(),
       };
 }

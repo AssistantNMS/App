@@ -30,11 +30,11 @@ class _AddEditTimerState extends State<AddEditTimerPage> {
   DateTime now = DateTime.now();
 
   _AddEditTimerState(this.timer, this.isEdit) {
-    int selectedIndex = UserSelectionIcons.timer.indexOf(timer.icon!);
+    int selectedIndex = UserSelectionIcons.timer.indexOf(timer.icon ?? '');
     selectedImageIndex = selectedIndex >= 0 ? selectedIndex : 0;
     timer.icon = UserSelectionIcons.timer[selectedImageIndex];
 
-    var diff =
+    int diff =
         now.millisecondsSinceEpoch - timer.startDate.millisecondsSinceEpoch;
     if (diff.abs() < millisecondsDrift) {
       // If startDate is set to now-ish
@@ -131,6 +131,7 @@ class _AddEditTimerState extends State<AddEditTimerPage> {
     ));
 
     widgets.add(Wrap(
+      spacing: 4,
       alignment: WrapAlignment.center,
       children: getQuickAccessButtons(context),
     ));

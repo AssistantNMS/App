@@ -31,6 +31,7 @@ import '../../helpers/generic_helper.dart';
 import '../../mapper/generic_item_mapper.dart';
 import '../../redux/modules/generic/generic_page_view_model.dart';
 import 'generic_page_components.dart';
+import 'generic_top_content.dart';
 
 class GenericPage extends StatelessWidget {
   final String itemId;
@@ -47,50 +48,56 @@ class GenericPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String loadingText = getTranslations().fromKey(LocaleKey.loading);
+    Widget? itemTopContent;
+    if (itemDetails != null) {
+      itemTopContent = GenericTopContent(genericItem: itemDetails!);
+    }
     return StoreConnector<AppState, GenericPageViewModel>(
       converter: (store) => GenericPageViewModel.fromStore(store),
       builder: (storeCtx, viewModel) {
-        return CachedFutureBuilder<ResultWithValue<GenericPageItem>>(
+        return FutureBuilder<ResultWithValue<GenericPageItem>>(
           key: Key('${viewModel.cartItems.length}'),
           future: genericItemFuture(
             storeCtx,
             itemId,
             viewModel.platformIndex,
           ),
-          whileLoading: () => basicGenericPageScaffold(
-            storeCtx,
-            title: loadingText,
-            body: getLoadingBody(
-              storeCtx,
-              loadingText,
-              viewModel,
-              itemDetails,
-            ),
-            showShortcutLinks: true,
+          builder: (buildCtx, snapshot) => doneLoadingBuilder(
+            buildCtx,
+            itemTopContent,
+            viewModel,
+            snapshot,
           ),
-          whenDoneLoading: (ResultWithValue<GenericPageItem> snapshot) {
-            return doneLoading(storeCtx, viewModel, snapshot);
-          },
         );
       },
     );
   }
 
-  Widget doneLoading(
+  Widget doneLoadingBuilder(
     BuildContext doneLoadingCtx,
+    Widget? itemTopContent,
     GenericPageViewModel viewModel,
-    ResultWithValue<GenericPageItem> snapshot,
+    AsyncSnapshot<ResultWithValue<GenericPageItem>> snapshot,
   ) {
+    String loadingText = getTranslations().fromKey(LocaleKey.loading);
     return genericPageScaffold<ResultWithValue<GenericPageItem>>(
       doneLoadingCtx,
-      snapshot.value.typeName,
+      snapshot.data?.value.typeName ?? loadingText,
       const AsyncSnapshot.nothing(), // unused
-      body: (BuildContext scaffoldCtx, unused) => getBody(
-        scaffoldCtx,
-        viewModel,
-        snapshot,
-      ),
+      body: (BuildContext scaffoldCtx, unused) {
+        List<Widget> widgets = getBody(
+          scaffoldCtx,
+          itemTopContent,
+          viewModel,
+          snapshot,
+        );
+
+        return listWithScrollbar(
+          itemCount: widgets.length,
+          itemBuilder: (context, index) => widgets[index],
+          scrollController: ScrollController(),
+        );
+      },
       additionalShortcutLinks: [
         ActionItem(
           icon: Icons.share, // Fallback
@@ -100,97 +107,72 @@ class GenericPage extends StatelessWidget {
           ),
           text: getTranslations().fromKey(LocaleKey.share),
           onPressed: () {
+            if (snapshot.data?.value == null) return;
+            GenericPageItem genericItem = snapshot.data!.value;
             adaptiveBottomModalSheet(
               doneLoadingCtx,
               hasRoundedCorners: true,
               builder: (BuildContext innerContext) => ShareBottomSheet(
-                itemId: snapshot.value.id,
-                itemName: snapshot.value.name,
+                itemId: genericItem.id,
+                itemName: genericItem.name,
               ),
             );
           },
         ),
       ],
-      floatingActionButton: getFloatingActionButton(
+      floatingActionButton: getFloatingActionButtonFromSnapshot(
         doneLoadingCtx,
         controller,
-        snapshot.value,
+        snapshot,
         addToCart: viewModel.addToCart,
       ),
     );
   }
 
-  Widget getLoadingBody(
-    BuildContext loadingBodyContext,
-    String loadingText,
+  List<Widget> getBody(
+    BuildContext bodyCtx,
+    Widget? itemTopContent,
     GenericPageViewModel vm,
-    GenericPageItem? itemDetailsFromTile,
+    AsyncSnapshot<ResultWithValue<GenericPageItem>> snapshot,
   ) {
-    if (itemDetailsFromTile == null) {
-      return getLoading().fullPageLoading(
-        loadingBodyContext,
-        loadingText: loadingText,
-      );
+    errorWidget() => getLoading().customErrorWidget(bodyCtx);
+    switch (snapshot.connectionState) {
+      case ConnectionState.none:
+        return [errorWidget()];
+      case ConnectionState.done:
+        GenericPageItem? tempGenericItem = snapshot.data?.value;
+        if (snapshot.hasError ||
+            tempGenericItem?.description == null ||
+            tempGenericItem?.requiredItems == null ||
+            tempGenericItem?.usedInRecipes == null ||
+            tempGenericItem?.refiners == null ||
+            tempGenericItem?.usedInRefiners == null ||
+            tempGenericItem?.cooking == null ||
+            tempGenericItem?.usedInCooking == null) {
+          getLog().e(snapshot.data?.errorMessage ?? 'no error message found');
+          return [errorWidget()];
+        }
+        break;
+      default:
+        return [
+          if (itemTopContent != null) ...[itemTopContent],
+          getLoading().fullPageLoading(
+            bodyCtx,
+            loadingText: getTranslations().fromKey(LocaleKey.loading),
+          )
+        ];
     }
 
+    GenericPageItem genericItem = snapshot.data!.value;
+
     List<Widget> widgets = List.empty(growable: true);
-    widgets.addAll(
-      getBodyTopContent(loadingBodyContext, vm, itemDetailsFromTile),
-    );
-    widgets.addAll(
-      getBodyItemDetailsContent(loadingBodyContext, vm, itemDetailsFromTile),
-    );
-
-    Widget Function(
-      BuildContext context,
-      RequiredItem requiredItem, {
-      void Function()? onTap,
-    }) requiredItemsFunction =
-        requiredItemBackgroundTilePresenter(vm.displayGenericItemColour);
-    widgets.addAll(getCraftedUsing(
-      loadingBodyContext,
-      vm,
-      itemDetailsFromTile,
-      itemDetailsFromTile.requiredItems ?? List.empty(),
-      requiredItemsFunction,
-    ));
-
-    widgets.add(const EmptySpace(2));
-    widgets.add(const ListTileShimmer());
-    widgets.add(const ListTileShimmer());
-    widgets.add(const EmptySpace(10));
-
-    return listWithScrollbar(
-      itemCount: widgets.length,
-      itemBuilder: (context, index) => widgets[index],
-      scrollController: ScrollController(),
-    );
-  }
-
-  Widget getBody(
-    BuildContext context,
-    GenericPageViewModel vm,
-    ResultWithValue<GenericPageItem> snapshot,
-  ) {
-    GenericPageItem genericItem = snapshot.value;
-
-    if (genericItem.description == null ||
-        genericItem.requiredItems == null ||
-        genericItem.usedInRecipes == null ||
-        genericItem.refiners == null ||
-        genericItem.usedInRefiners == null ||
-        genericItem.cooking == null ||
-        genericItem.usedInCooking == null) {
-      getLog().e(snapshot.errorMessage);
-      return const Text('An Error has occurred');
+    if (itemTopContent != null) {
+      widgets.add(itemTopContent);
+    } else {
+      widgets.add(GenericTopContent(genericItem: genericItem));
     }
-
-    List<Widget> widgets = List.empty(growable: true);
     widgets.addAll(
-      getBodyTopContent(context, vm, genericItem),
-    );
-    widgets.addAll(
-      getBodyItemDetailsContent(context, vm, genericItem),
+      getBodyItemDetailsContent(bodyCtx, vm, genericItem),
     );
 
     // ----------------------------- Obsolete tech ------------------------------
@@ -198,7 +180,7 @@ class GenericPage extends StatelessWidget {
       widgets.add(const EmptySpace1x());
       widgets.add(FlatCard(
         child: requiredItemTilePresenter(
-          context,
+          bodyCtx,
           RequiredItem(id: NMSUIConstants.ObsoleteAppId),
         ),
       ));
@@ -209,7 +191,7 @@ class GenericPage extends StatelessWidget {
             {void Function()? onTap}) requiredItemsFunction =
         requiredItemBackgroundTilePresenter(vm.displayGenericItemColour);
     widgets.addAll(getCraftedUsing(
-      context,
+      bodyCtx,
       vm,
       genericItem,
       genericItem.requiredItems ?? List.empty(),
@@ -233,7 +215,7 @@ class GenericPage extends StatelessWidget {
       genericItem.usedInRecipes ?? List.empty(),
     );
     widgets.addAll(getUsedToCreate(
-      context,
+      bodyCtx,
       genericItem,
       usedToCreateArray,
       requiredItemDetailsFunction,
@@ -254,7 +236,7 @@ class GenericPage extends StatelessWidget {
 
     List<ChargeBy> rechargedByList = genericItem.chargedBy!.chargeBy;
     widgets.addAll(getRechargeWith(
-      context,
+      bodyCtx,
       genericItem,
       rechargedByList,
       rechargeItemFunction,
@@ -275,7 +257,7 @@ class GenericPage extends StatelessWidget {
 
     List<Recharge> usedToRechargedList = genericItem.usedToRecharge!;
     widgets.addAll(getUsedToRecharge(
-      context,
+      bodyCtx,
       genericItem,
       usedToRechargedList,
       usedToRechargeItemFunction,
@@ -283,7 +265,7 @@ class GenericPage extends StatelessWidget {
 
     // ----------------------------- Refined Using -----------------------------
     widgets.addAll(getProcessorWidgets(
-      context,
+      bodyCtx,
       genericItem,
       getTranslations().fromKey(LocaleKey.refinedUsing),
       genericItem.refiners ?? List.empty(),
@@ -296,7 +278,7 @@ class GenericPage extends StatelessWidget {
     String refineToCreateText =
         refineToCreateLang.replaceAll("{0}", genericItem.name);
     widgets.addAll(getProcessorWidgets(
-      context,
+      bodyCtx,
       genericItem,
       refineToCreateText,
       genericItem.usedInRefiners ?? List.empty(),
@@ -305,7 +287,7 @@ class GenericPage extends StatelessWidget {
 
     // ------------------------------ Cook Using -------------------------------
     widgets.addAll(getProcessorWidgets(
-      context,
+      bodyCtx,
       genericItem,
       getTranslations().fromKey(LocaleKey.cookingRecipe),
       genericItem.cooking ?? List.empty(),
@@ -317,7 +299,7 @@ class GenericPage extends StatelessWidget {
     String cookToCreateText =
         cookToCreateLang.replaceAll("{0}", genericItem.name);
     widgets.addAll(getProcessorWidgets(
-      context,
+      bodyCtx,
       genericItem,
       cookToCreateText,
       genericItem.usedInCooking ?? List.empty(),
@@ -329,9 +311,9 @@ class GenericPage extends StatelessWidget {
     List<ProceduralStatBonus> proceduralStatBonuses =
         genericItem.proceduralStatBonuses ?? List.empty();
 
-    widgets.addAll(getStatBonuses(context, statBonuses));
+    widgets.addAll(getStatBonuses(bodyCtx, statBonuses));
     widgets.addAll(getProceduralStatBonuses(
-      context,
+      bodyCtx,
       proceduralStatBonuses,
       genericItem.numStatsMin ?? 0,
       genericItem.numStatsMax ?? 0,
@@ -341,7 +323,7 @@ class GenericPage extends StatelessWidget {
     List<CartItem> cartItems =
         vm.cartItems.where((CartItem ci) => ci.id == genericItem.id).toList();
     widgets.addAll(getCartItems(
-      context,
+      bodyCtx,
       vm,
       genericItem,
       cartItems,
@@ -349,7 +331,7 @@ class GenericPage extends StatelessWidget {
 
     // --------------------------- Is in Inventories ---------------------------
     widgets.addAll(getInventories(
-      context,
+      bodyCtx,
       genericItem,
       vm.containers
           .where(
@@ -365,7 +347,7 @@ class GenericPage extends StatelessWidget {
     List<CreatureHarvest>? creatureHarvests = genericItem.creatureHarvests;
 
     widgets.addAll(getRewardFrom(
-      context,
+      bodyCtx,
       genericItem,
       vm.displayGenericItemColour,
       starshipScrapItems: starshipScrapItems,
@@ -375,22 +357,18 @@ class GenericPage extends StatelessWidget {
     // ------------------------------ Egg Traits -------------------------------
     List<EggTrait> eggTraits =
         genericItem.eggTraits ?? List.empty(growable: true);
-    widgets.addAll(getEggTraits(context, eggTraits));
+    widgets.addAll(getEggTraits(bodyCtx, eggTraits));
 
     // ----------------------------- From Update -------------------------------
     if (genericItem.addedInUpdate != null) {
       widgets.addAll(getFromUpdate(
-        context,
+        bodyCtx,
         genericItem.addedInUpdate!,
       ));
     }
 
     widgets.add(const EmptySpace(10));
 
-    return listWithScrollbar(
-      itemCount: widgets.length,
-      itemBuilder: (context, index) => widgets[index],
-      scrollController: ScrollController(),
-    );
+    return widgets;
   }
 }

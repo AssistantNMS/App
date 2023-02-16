@@ -6,21 +6,23 @@ import 'package:flutter/services.dart';
 
 import '../../contracts/generated/friend_code_view_model.dart';
 
-Widget friendCodeTilePresenter(BuildContext context,
-    BuildContext scaffoldContext, FriendCodeViewModel friendCode) {
+Widget friendCodeTilePresenter(
+  BuildContext context,
+  FriendCodeViewModel friendCode,
+) {
   String imagePath = 'link.png';
   if (friendCode.platformType == 1) imagePath = 'platformPc.png';
   if (friendCode.platformType == 2) imagePath = 'platformPs4.png';
   if (friendCode.platformType == 3) imagePath = 'platformXb1.png';
 
-  var onTap = () {
+  onTap() {
     Clipboard.setData(ClipboardData(text: friendCode.code));
     getSnackbar().showSnackbar(
-      scaffoldContext,
+      context,
       LocaleKey.friendCodeCopied,
       description: friendCode.code,
     );
-  };
+  }
 
   return genericListTileWithSubtitle(
     context,
@@ -32,7 +34,7 @@ Widget friendCodeTilePresenter(BuildContext context,
       overflow: TextOverflow.ellipsis,
     ),
     trailing: IconButton(
-      icon: const Icon(Icons.copy),
+      icon: Icon(Icons.copy, color: getTheme().getSecondaryColour(context)),
       onPressed: onTap,
     ),
     onTap: onTap,

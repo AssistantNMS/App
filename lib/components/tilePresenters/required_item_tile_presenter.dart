@@ -145,8 +145,12 @@ Widget genericHomeTileWithRequiredItemsAndBackgroundColourPresenter(
     builder: (BuildContext context,
         AsyncSnapshot<List<RequiredItemDetails>> snapshot) {
       return genericHomeTileWithRequiredItemsBody(
-          context, genericItem, isHero, snapshot,
-          displayBackgroundColour: true);
+        context,
+        genericItem,
+        isHero,
+        snapshot,
+        displayBackgroundColour: true,
+      );
     },
   );
 }

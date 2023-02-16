@@ -31,7 +31,11 @@ class AppApi extends BaseApiService {
   }
 
   Future<ResultWithValue<List<FriendCodeViewModel>>> getFriendCodes(
-      bool showPc, bool showPs4, bool showXb1, bool showNsw) async {
+    bool showPc,
+    bool showPs4,
+    bool showXb1,
+    bool showNsw,
+  ) async {
     List<String> queryParamsList = [
       'showPc=$showPc',
       'showPs4=$showPs4',

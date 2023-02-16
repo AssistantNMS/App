@@ -43,65 +43,6 @@ import 'all_possible_outputs_page.dart';
 import 'generic_page_all_required_raw_materials.dart';
 import 'generic_page_descrip_highlight_text.dart';
 
-List<Widget> getBodyTopContent(BuildContext context, GenericPageViewModel vm,
-    GenericPageItem genericItem) {
-  List<Widget> stackWidgets = List.empty(growable: true);
-  bool hdAvailable = genericItem.cdnUrl != null && //
-      genericItem.cdnUrl!.isNotEmpty;
-  Color iconColour = getOverlayColour(HexColor(genericItem.colour));
-
-  if (vm.displayGenericItemColour) {
-    stackWidgets.add(genericItemImageWithBackground(
-      context,
-      genericItem,
-      hdAvailable: hdAvailable,
-    ));
-  } else {
-    stackWidgets.add(genericItemImage(
-      context,
-      genericItem.icon,
-      imageHero: gameItemIconHero(genericItem),
-      name: genericItem.name,
-      hdAvailable: hdAvailable,
-    ));
-  }
-
-  if (hdAvailable) {
-    stackWidgets.add(
-      getHdImage(context, genericItem.icon, genericItem.name, iconColour),
-    );
-  }
-
-  stackWidgets.add(
-    getFavouriteStar(
-      genericItem.icon,
-      genericItem.id,
-      vm.favourites,
-      iconColour,
-      vm.addFavourite,
-      vm.removeFavourite,
-    ),
-  );
-
-  if ((genericItem.usage ?? []).contains(UsageKey.hasDevProperties)) {
-    stackWidgets.add(
-      getDevSheet(
-        context,
-        genericItem.id,
-        iconColour,
-        hdAvailable,
-      ),
-    );
-  }
-
-  return [
-    Stack(
-      key: Key('${genericItem.id}-bg-stack'),
-      children: stackWidgets,
-    ),
-  ];
-}
-
 List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
     GenericPageViewModel vm, GenericPageItem genericItem) {
   List<Widget> widgets = List.empty(growable: true);

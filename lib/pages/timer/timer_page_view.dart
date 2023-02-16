@@ -94,7 +94,11 @@ class _TimersPageViewState extends State<TimersPageView> {
       void Function()? onTap,
     }) =>
         timerTilePresenter(
-            presenterContext, timer, onEdit, (String id) => deleteTimer(id));
+          presenterContext,
+          timer,
+          onEdit,
+          (String id) => deleteTimer(id),
+        );
 
     return SearchableList<TimerItem>(
       getSearchListFutureFromList(

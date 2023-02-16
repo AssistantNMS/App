@@ -1,16 +1,15 @@
-// ignore_for_file: no_logic_in_create_state
-
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/contracts/required_item.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/required_item_details_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
+import '../../constants/nms_ui_constants.dart';
 import '../../contracts/enum/currency_type.dart';
 import '../../contracts/generic_page_all_required.dart';
 import '../../contracts/required_item_details.dart';
 import '../../contracts/required_item_tree_details.dart';
-import '../../helpers/generic_helper.dart';
 import '../../helpers/items_helper.dart';
 import 'generic_page_all_required_raw_materials_tree_components.dart';
 
@@ -18,32 +17,26 @@ class GenericPageAllRequiredRawMaterials extends StatefulWidget {
   final GenericPageAllRequired item;
   final bool showBackgroundColours;
   const GenericPageAllRequiredRawMaterials(
-      this.item, this.showBackgroundColours,
-      {Key? key})
-      : super(key: key);
+    this.item,
+    this.showBackgroundColours, {
+    Key? key,
+  }) : super(key: key);
 
   @override
-  _GenericPageAllRequiredRawMaterialsWidget createState() =>
-      _GenericPageAllRequiredRawMaterialsWidget(item, showBackgroundColours);
+  createState() => _GenericPageAllRequiredRawMaterialsWidget();
 }
 
 class _GenericPageAllRequiredRawMaterialsWidget
     extends State<GenericPageAllRequiredRawMaterials> {
-  final GenericPageAllRequired item;
-  final bool showBackgroundColours;
   int currentSelection = 0;
 
-  _GenericPageAllRequiredRawMaterialsWidget(
-    this.item,
-    this.showBackgroundColours,
-  ) {
+  _GenericPageAllRequiredRawMaterialsWidget() {
     getAnalytics()
         .trackEvent(AnalyticsEvent.genericAllRequiredRawMaterialsPage);
   }
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController controller = TextEditingController();
     List<Widget> options = [
       SegmentedControlWithIconOption(
         icon: Icons.list,
@@ -69,9 +62,9 @@ class _GenericPageAllRequiredRawMaterialsWidget
 
     return basicGenericPageScaffold(
       context,
-      title: item.typeName,
+      title: widget.item.typeName,
       body: getBody(context, currentSelection, segmentedWidget),
-      fab: getFloatingActionButton(context, controller, item.genericItem),
+      // fab: getFloatingActionButton(context, controller, item.genericItem),
     );
   }
 
@@ -86,7 +79,9 @@ class _GenericPageAllRequiredRawMaterialsWidget
 
     Widget Function(BuildContext context, RequiredItemDetails itemDetails)
         requiredItemDetailsPresenter =
-        requiredItemDetailsBackgroundTilePresenter(showBackgroundColours);
+        requiredItemDetailsBackgroundTilePresenter(
+      widget.showBackgroundColours,
+    );
     if (snapshot.data!.isNotEmpty) {
       for (RequiredItemDetails item in snapshot.data!) {
         widgets.add(requiredItemDetailsPresenter(context, item));
@@ -151,19 +146,24 @@ class _GenericPageAllRequiredRawMaterialsWidget
     Widget segmentedWidget,
   ) {
     List<Widget> widgets = List.empty(growable: true);
-    if (item.name.isNotEmpty) {
+    if (widget.item.name.isNotEmpty) {
       widgets.add(const EmptySpace1x());
-      widgets.add(GenericItemName(item.name));
+      widgets.add(GenericItemName(widget.item.name));
       widgets.add(GenericItemText(
         getTranslations().fromKey(LocaleKey.allRawMaterialsRequired),
       ));
     }
 
-    widgets.add(segmentedWidget);
+    widgets.add(Padding(
+      padding: NMSUIConstants.buttonPadding,
+      child: segmentedWidget,
+    ));
+
+    List<RequiredItem> requiredItems = widget.item.requiredItems;
 
     if (currentSelection == 0) {
       return FutureBuilder<List<RequiredItemDetails>>(
-        future: getAllRequiredItemsForMultiple(context, item.requiredItems),
+        future: getAllRequiredItemsForMultiple(context, requiredItems),
         builder: (BuildContext builderContext,
             AsyncSnapshot<List<RequiredItemDetails>> snapshot) {
           List<Widget> listSpecificWidgets = [
@@ -179,7 +179,7 @@ class _GenericPageAllRequiredRawMaterialsWidget
       );
     } else {
       return FutureBuilder<List<RequiredItemTreeDetails>>(
-        future: getAllRequiredItemsForTree(context, item.requiredItems),
+        future: getAllRequiredItemsForTree(context, requiredItems),
         builder: (BuildContext builderContext,
             AsyncSnapshot<List<RequiredItemTreeDetails>> snapshot) {
           var treeSpecificWidgets = [

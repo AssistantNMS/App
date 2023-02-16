@@ -32,11 +32,11 @@ Widget genericItemCredits(
         textAlign: TextAlign.center,
         overflow: TextOverflow.ellipsis,
         addDecimal: false,
-        style: getThemeBodyLarge(context)?.copyWith(color: colour),
       ),
       LocalImage(
-          imagePath: '${getPath().imageAssetPathPrefix}/credits.png',
-          height: 17),
+        imagePath: '${getPath().imageAssetPathPrefix}/credits.png',
+        height: 17,
+      ),
     );
 
 Widget genericItemNanites(
@@ -202,9 +202,11 @@ Widget viewMoreButton(context, int numLeftOver, viewMoreOnPress) {
 }
 
 Widget? getFloatingActionButtonFromSnapshot(
-    BuildContext context,
-    TextEditingController controller,
-    AsyncSnapshot<ResultWithValue<GenericPageItem>> snapshot) {
+  BuildContext context,
+  TextEditingController controller,
+  AsyncSnapshot<ResultWithValue<GenericPageItem>> snapshot, {
+  void Function(GenericPageItem item, int quantity)? addToCart,
+}) {
   switch (snapshot.connectionState) {
     case ConnectionState.none:
     case ConnectionState.active:
@@ -228,7 +230,12 @@ Widget? getFloatingActionButtonFromSnapshot(
     return null;
   }
 
-  return getFloatingActionButton(context, controller, snapshot.data!.value);
+  return getFloatingActionButton(
+    context,
+    controller,
+    snapshot.data!.value,
+    addToCart: addToCart,
+  );
 }
 
 Widget? getFloatingActionButton(
@@ -267,7 +274,7 @@ Widget? getFloatingActionButton(
 
   Color colourStart = getTheme().fabColourSelector(context);
   return SpeedDial(
-    animatedIcon: AnimatedIcons.menu_close,
+    icon: Icons.add,
     animatedIconTheme: const IconThemeData(size: 24.0),
     closeManually: false,
     curve: Curves.bounceIn,
@@ -333,12 +340,13 @@ Widget Function(BuildContext, GenericPageItem, {void Function()? onTap})
 }
 
 Widget getFavouriteStar(
-    String itemIcon,
-    String itemId,
-    List<FavouriteItem> favourites,
-    Color iconColour,
-    Function addFavourite,
-    Function removeFavourite) {
+  String itemIcon,
+  String itemId,
+  List<FavouriteItem> favourites,
+  Color iconColour,
+  Function addFavourite,
+  Function removeFavourite,
+) {
   bool isFavourited = favourites.any((f) => f.id == itemId);
   IconButton favouriteStar = IconButton(
     icon: Icon(
