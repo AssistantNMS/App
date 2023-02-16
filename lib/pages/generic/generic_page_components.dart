@@ -277,7 +277,7 @@ Widget getCookingScore(BuildContext ctx, double cookingValue) {
 
 List<Widget> getCraftedUsing(
     BuildContext context,
-    GenericPageViewModel vm,
+    bool displayGenericItemColour,
     GenericPageItem genericItem,
     List<RequiredItem> resArray,
     Widget Function(
@@ -315,7 +315,7 @@ List<Widget> getCraftedUsing(
             context,
             navigateTo: (context) => GenericPageAllRequiredRawMaterials(
               GenericPageAllRequired.fromGenericItem(genericItem),
-              vm.displayGenericItemColour,
+              displayGenericItemColour,
             ),
           ),
         ),

@@ -38,18 +38,18 @@ Widget requiredItemTilePresenter(
   void Function()? onDelete,
   bool showBackgroundColours = false,
 }) {
-  return FutureBuilder<ResultWithValue<RequiredItemDetails>>(
+  return CachedFutureBuilder<ResultWithValue<RequiredItemDetails>>(
     key: Key(requiredItem.id),
     future: requiredItemDetails(context, requiredItem),
-    builder: (BuildContext context,
-        AsyncSnapshot<ResultWithValue<RequiredItemDetails>> snapshot) {
+    whileLoading: () => getLoading().smallLoadingTile(context),
+    whenDoneLoading: (data) {
       return requiredItemBody(
         context,
         requiredItem,
         showBackgroundColours,
         onEdit,
         onDelete,
-        snapshot,
+        data,
         onTap,
       );
     },
@@ -62,30 +62,13 @@ Widget requiredItemBody(
   bool showBackgroundColours,
   void Function()? onEdit,
   void Function()? onDelete,
-  AsyncSnapshot<ResultWithValue<RequiredItemDetails>> snapshot,
+  ResultWithValue<RequiredItemDetails> snapshot,
   void Function()? onTap,
 ) {
-  Widget? errorWidget = asyncSnapshotHandler(
-    context,
-    snapshot,
-    loader: () => getLoading().smallLoadingTile(context),
-    isValidFunction: (ResultWithValue<RequiredItemDetails>? result) {
-      if (snapshot.data == null ||
-          snapshot.data?.value == null ||
-          snapshot.data?.value.icon == null ||
-          snapshot.data?.value.name == null ||
-          snapshot.data?.value.quantity == null) {
-        return false;
-      }
-      return true;
-    },
-  );
-  if (errorWidget != null) return errorWidget;
-
   String icon;
   Widget Function(BuildContext) navigate;
   String? tileDescrip;
-  RequiredItemDetails details = snapshot.data!.value;
+  RequiredItemDetails details = snapshot.value;
 
   if (requiredItem is ProcessorRequiredItem) {
     icon = (requiredItem.processor.id.contains('nut'))
@@ -124,12 +107,16 @@ Widget genericHomeTileWithRequiredItemsPresenter(
   bool isHero, {
   void Function()? onTap,
 }) {
-  return FutureBuilder<List<RequiredItemDetails>>(
+  return CachedFutureBuilder<List<RequiredItemDetails>>(
     future: getRequiredItemsSurfaceLevel(context, genericItem.id),
-    builder: (BuildContext context,
-        AsyncSnapshot<List<RequiredItemDetails>> snapshot) {
+    whileLoading: () => getLoading().smallLoadingTile(context),
+    whenDoneLoading: (data) {
       return genericHomeTileWithRequiredItemsBody(
-          context, genericItem, isHero, snapshot);
+        context,
+        genericItem,
+        isHero,
+        data,
+      );
     },
   );
 }
@@ -140,15 +127,15 @@ Widget genericHomeTileWithRequiredItemsAndBackgroundColourPresenter(
   bool isHero, {
   void Function()? onTap,
 }) {
-  return FutureBuilder<List<RequiredItemDetails>>(
+  return CachedFutureBuilder<List<RequiredItemDetails>>(
     future: getRequiredItemsSurfaceLevel(context, genericItem.id),
-    builder: (BuildContext context,
-        AsyncSnapshot<List<RequiredItemDetails>> snapshot) {
+    whileLoading: () => getLoading().smallLoadingTile(context),
+    whenDoneLoading: (data) {
       return genericHomeTileWithRequiredItemsBody(
         context,
         genericItem,
         isHero,
-        snapshot,
+        data,
         displayBackgroundColour: true,
       );
     },
@@ -159,18 +146,11 @@ Widget genericHomeTileWithRequiredItemsBody(
   BuildContext context,
   GenericPageItem genericItem,
   bool isHero,
-  AsyncSnapshot<List<RequiredItemDetails>> snapshot, {
+  List<RequiredItemDetails> snapshot, {
   bool displayBackgroundColour = false,
   void Function()? onTap,
 }) {
-  Widget? errorWidget = asyncSnapshotHandler(
-    context,
-    snapshot,
-    loader: () => getLoading().smallLoadingTile(context),
-  );
-  if (errorWidget != null) return errorWidget;
-
-  if (snapshot.data!.isEmpty) {
+  if (snapshot.isEmpty) {
     if (displayBackgroundColour) {
       return genericTileWithBackgroundColourPresenter(
         context,
@@ -194,8 +174,13 @@ Widget genericHomeTileWithRequiredItemsBody(
     maxLines: 1,
     overflow: TextOverflow.ellipsis,
   ));
-  for (RequiredItemDetails req in snapshot.data!) {
-    children.add(getBaseWidget().appChip(text: req.toString()));
+  for (RequiredItemDetails req in snapshot) {
+    children.add(getBaseWidget().appChip(
+      label: Text(
+        req.toString(),
+        style: const TextStyle(color: Colors.black),
+      ),
+    ));
   }
   return ListTile(
     leading: displayBackgroundColour

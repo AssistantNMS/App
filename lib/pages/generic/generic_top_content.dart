@@ -8,7 +8,7 @@ import '../../contracts/generic_page_item.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../helpers/generic_helper.dart';
 import '../../helpers/hero_helper.dart';
-import '../../redux/modules/generic/generic_page_view_model.dart';
+import '../../redux/modules/generic/generic_page_fav_view_model.dart';
 
 class GenericTopContent extends StatelessWidget {
   final GenericPageItem genericItem;
@@ -23,8 +23,8 @@ class GenericTopContent extends StatelessWidget {
         genericItem.cdnUrl!.isNotEmpty;
     Color iconColour = getOverlayColour(HexColor(genericItem.colour));
 
-    return StoreConnector<AppState, GenericPageViewModel>(
-      converter: (store) => GenericPageViewModel.fromStore(store),
+    return StoreConnector<AppState, GenericPageFavViewModel>(
+      converter: (store) => GenericPageFavViewModel.fromStore(store),
       builder: (storeCtx, viewModel) {
         List<Widget> stackWidgets = List.empty(growable: true);
 

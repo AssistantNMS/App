@@ -55,18 +55,21 @@ class GenericPage extends StatelessWidget {
     return StoreConnector<AppState, GenericPageViewModel>(
       converter: (store) => GenericPageViewModel.fromStore(store),
       builder: (storeCtx, viewModel) {
-        return FutureBuilder<ResultWithValue<GenericPageItem>>(
+        return CachedFutureBuilder<ResultWithValue<GenericPageItem>>(
           key: Key('${viewModel.cartItems.length}'),
           future: genericItemFuture(
             storeCtx,
             itemId,
             viewModel.platformIndex,
           ),
-          builder: (buildCtx, snapshot) => doneLoadingBuilder(
-            buildCtx,
+          whileLoading: () => (itemTopContent != null) //
+              ? itemTopContent
+              : Container(),
+          whenDoneLoading: (data) => doneLoadingBuilder(
+            context,
             itemTopContent,
             viewModel,
-            snapshot,
+            data,
           ),
         );
       },
@@ -77,12 +80,11 @@ class GenericPage extends StatelessWidget {
     BuildContext doneLoadingCtx,
     Widget? itemTopContent,
     GenericPageViewModel viewModel,
-    AsyncSnapshot<ResultWithValue<GenericPageItem>> snapshot,
+    ResultWithValue<GenericPageItem> snapshot,
   ) {
-    String loadingText = getTranslations().fromKey(LocaleKey.loading);
     return genericPageScaffold<ResultWithValue<GenericPageItem>>(
       doneLoadingCtx,
-      snapshot.data?.value.typeName ?? loadingText,
+      snapshot.value.typeName,
       const AsyncSnapshot.nothing(), // unused
       body: (BuildContext scaffoldCtx, unused) {
         List<Widget> widgets = getBody(
@@ -107,8 +109,7 @@ class GenericPage extends StatelessWidget {
           ),
           text: getTranslations().fromKey(LocaleKey.share),
           onPressed: () {
-            if (snapshot.data?.value == null) return;
-            GenericPageItem genericItem = snapshot.data!.value;
+            GenericPageItem genericItem = snapshot.value;
             adaptiveBottomModalSheet(
               doneLoadingCtx,
               hasRoundedCorners: true,
@@ -120,10 +121,10 @@ class GenericPage extends StatelessWidget {
           },
         ),
       ],
-      floatingActionButton: getFloatingActionButtonFromSnapshot(
+      floatingActionButton: getFloatingActionButton(
         doneLoadingCtx,
         controller,
-        snapshot,
+        snapshot.value,
         addToCart: viewModel.addToCart,
       ),
     );
@@ -133,37 +134,9 @@ class GenericPage extends StatelessWidget {
     BuildContext bodyCtx,
     Widget? itemTopContent,
     GenericPageViewModel vm,
-    AsyncSnapshot<ResultWithValue<GenericPageItem>> snapshot,
+    ResultWithValue<GenericPageItem> snapshot,
   ) {
-    errorWidget() => getLoading().customErrorWidget(bodyCtx);
-    switch (snapshot.connectionState) {
-      case ConnectionState.none:
-        return [errorWidget()];
-      case ConnectionState.done:
-        GenericPageItem? tempGenericItem = snapshot.data?.value;
-        if (snapshot.hasError ||
-            tempGenericItem?.description == null ||
-            tempGenericItem?.requiredItems == null ||
-            tempGenericItem?.usedInRecipes == null ||
-            tempGenericItem?.refiners == null ||
-            tempGenericItem?.usedInRefiners == null ||
-            tempGenericItem?.cooking == null ||
-            tempGenericItem?.usedInCooking == null) {
-          getLog().e(snapshot.data?.errorMessage ?? 'no error message found');
-          return [errorWidget()];
-        }
-        break;
-      default:
-        return [
-          if (itemTopContent != null) ...[itemTopContent],
-          getLoading().fullPageLoading(
-            bodyCtx,
-            loadingText: getTranslations().fromKey(LocaleKey.loading),
-          )
-        ];
-    }
-
-    GenericPageItem genericItem = snapshot.data!.value;
+    GenericPageItem genericItem = snapshot.value;
 
     List<Widget> widgets = List.empty(growable: true);
     if (itemTopContent != null) {
@@ -192,7 +165,7 @@ class GenericPage extends StatelessWidget {
         requiredItemBackgroundTilePresenter(vm.displayGenericItemColour);
     widgets.addAll(getCraftedUsing(
       bodyCtx,
-      vm,
+      vm.displayGenericItemColour,
       genericItem,
       genericItem.requiredItems ?? List.empty(),
       requiredItemsFunction,

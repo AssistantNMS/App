@@ -133,8 +133,8 @@ class GenericPageProcessorRecipe extends StatelessWidget {
             label: genericItemTextWithIcon(
               bodyCtx,
               output.name,
-              Icons.chrome_reader_mode,
-              colour: Colors.white,
+              Icons.info,
+              colour: Colors.black,
             ),
           ),
         ),

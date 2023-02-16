@@ -73,16 +73,10 @@ Widget requiredItemDetailsWithCraftingRecipeTilePresenter(
   String? pageItemId,
   bool showBackgroundColours = false,
 }) {
-  return FutureBuilder<List<RequiredItemDetails>>(
+  return CachedFutureBuilder<List<RequiredItemDetails>>(
     future: getRequiredItemsSurfaceLevel(context, itemDetails.id),
-    builder: (BuildContext context,
-        AsyncSnapshot<List<RequiredItemDetails>> snapshot) {
-      Widget? errorWidget = asyncSnapshotHandler(
-        context,
-        snapshot,
-        loader: () => getLoading().smallLoadingTile(context),
-      );
-      if (errorWidget != null) return errorWidget;
+    whileLoading: () => getLoading().smallLoadingTile(context),
+    whenDoneLoading: (data) {
       String icon;
       Widget Function(BuildContext) navigate;
 
@@ -98,8 +92,8 @@ Widget requiredItemDetailsWithCraftingRecipeTilePresenter(
       }
 
       String listTileTitle = '';
-      if (snapshot.data != null && snapshot.data!.isNotEmpty) {
-        List<RequiredItemDetails> rows = snapshot.data!.toList();
+      if (data.isNotEmpty) {
+        List<RequiredItemDetails> rows = data.toList();
         rows.sort((RequiredItemDetails a, RequiredItemDetails b) =>
             (b.id == pageItemId) ? 1 : -1);
         int startIndex = 0;
