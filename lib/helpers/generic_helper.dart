@@ -274,7 +274,7 @@ Widget? getFloatingActionButton(
 
   Color colourStart = getTheme().fabColourSelector(context);
   return SpeedDial(
-    animatedIcon: AnimatedIcons.menu_close,
+    icon: Icons.add,
     animatedIconTheme: const IconThemeData(size: 24.0),
     closeManually: false,
     curve: Curves.bounceIn,

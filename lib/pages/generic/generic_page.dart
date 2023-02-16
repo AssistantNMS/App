@@ -124,6 +124,7 @@ class GenericPage extends StatelessWidget {
         doneLoadingCtx,
         controller,
         snapshot,
+        addToCart: viewModel.addToCart,
       ),
     );
   }
