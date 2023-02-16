@@ -10,6 +10,25 @@ Widget timerTilePresenter(
   void Function(TimerItem) onEdit,
   void Function(String) onDelete,
 ) {
+  DateTime tweakedStart = (DateTime(
+    timer.startDate.year,
+    timer.startDate.month,
+    timer.startDate.day,
+    timer.startDate.hour,
+    timer.startDate.minute,
+    timer.startDate.second,
+    timer.startDate.millisecond,
+  ));
+  DateTime tweakedEnd = (DateTime(
+    timer.completionDate.year,
+    timer.completionDate.month,
+    timer.completionDate.day,
+    timer.completionDate.hour,
+    timer.completionDate.minute,
+    timer.completionDate.second,
+    timer.completionDate.millisecond,
+  ));
+
   return genericListTileWithSubtitle(
     context,
     leadingImage: timer.icon,
@@ -18,8 +37,8 @@ Widget timerTilePresenter(
       padding: const EdgeInsets.only(top: 4.0, bottom: 4.0),
       child: getProgressbarFromDates(
         context,
-        timer.startDate,
-        timer.completionDate,
+        tweakedStart,
+        tweakedEnd,
         animation: false,
       ),
     ),
