@@ -1,7 +1,7 @@
 import 'package:redux/redux.dart';
 
-import '../../../contracts/portal/portalRecord.dart';
-import '../../../contracts/redux/portalState.dart';
+import '../../../contracts/portal/portal_record.dart';
+import '../../../contracts/redux/portal_state.dart';
 import 'actions.dart';
 
 final portalReducer = combineReducers<PortalState>([

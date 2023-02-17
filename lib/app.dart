@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
-import 'components/adaptive/appShell.dart';
-import 'contracts/redux/appState.dart';
-import 'env/environmentSettings.dart';
-import 'integration/dependencyInjection.dart';
-import 'redux/modules/createStore.dart';
+import 'components/adaptive/app_shell.dart';
+import 'contracts/redux/app_state.dart';
+import 'env/environment_settings.dart';
+import 'integration/dependency_injection.dart';
+import 'redux/modules/create_store.dart';
 import 'redux/modules/setting/actions.dart';
 import 'redux/modules/setting/selector.dart';
 

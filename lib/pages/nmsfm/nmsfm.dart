@@ -4,18 +4,18 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/scaffoldTemplates/genericPageScaffold.dart';
-import '../../components/tilePresenters/youtubersTilePresenter.dart';
-import '../../constants/AppAudio.dart';
-import '../../constants/AppDuration.dart';
-import '../../constants/AppImage.dart';
-import '../../constants/NmsUIConstants.dart';
-import '../../constants/Nmsfm.dart';
-import '../../contracts/misc/audioStreamBuilderEvent.dart';
-import '../../contracts/nmsfm/zenoFMNowPlaying.dart';
-import '../../integration/dependencyInjection.dart';
-import '../../services/api/zenoFMApiService.dart';
-import 'nmsfmTrackList.dart';
+import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
+import '../../components/tilePresenters/youtubers_tile_presenter.dart';
+import '../../constants/app_audio.dart';
+import '../../constants/app_duration.dart';
+import '../../constants/app_image.dart';
+import '../../constants/nms_ui_constants.dart';
+import '../../constants/nmsfm.dart';
+import '../../contracts/misc/audio_stream_builder_event.dart';
+import '../../contracts/nmsfm/zeno_fm_now_playing.dart';
+import '../../integration/dependency_injection.dart';
+import '../../services/api/zeno_fm_api_service.dart';
+import 'nmsfm_track_list.dart';
 
 class NMSFMPage extends StatefulWidget {
   const NMSFMPage({Key? key}) : super(key: key);
@@ -98,7 +98,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
           ),
         ),
       ));
-      widgets.add(customDivider());
+      widgets.add(getBaseWidget().customDivider());
     }
 
     widgets.add(
@@ -106,7 +106,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
     );
 
     if (!isOnline) {
-      widgets.add(customDivider());
+      widgets.add(getBaseWidget().customDivider());
       widgets.add(
         const LocalAudioPresenter(
           'Cactus Jelly Sunrise',

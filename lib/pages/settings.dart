@@ -1,18 +1,20 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import '../../constants/Platforms.dart';
+import '../../constants/platforms.dart';
 
-import '../components/scaffoldTemplates/genericPageScaffold.dart';
-import '../components/tilePresenters/settingTilePresenter.dart';
-import '../constants/AnalyticsEvent.dart';
-import '../constants/Fonts.dart';
-import '../constants/HomepageItems.dart';
-import '../contracts/enum/homepageType.dart';
-import '../contracts/redux/appState.dart';
-import '../helpers/dateHelper.dart';
-import '../helpers/uselessButtonHelper.dart';
-import '../redux/modules/setting/settingViewModel.dart';
+import '../components/scaffoldTemplates/generic_page_scaffold.dart';
+import '../components/tilePresenters/setting_tile_presenter.dart';
+import '../constants/analytics_event.dart';
+import '../constants/fonts.dart';
+import '../constants/homepage_items.dart';
+import '../constants/nms_external_urls.dart';
+import '../contracts/enum/homepage_type.dart';
+import '../contracts/redux/app_state.dart';
+import '../env/app_version_num.dart';
+import '../helpers/date_helper.dart';
+import '../helpers/useless_button_helper.dart';
+import '../redux/modules/setting/setting_view_model.dart';
 
 class Settings extends StatelessWidget {
   final void Function(Locale locale) onLocaleChange;
@@ -267,6 +269,19 @@ class Settings extends StatelessWidget {
     }
 
     widgets.add(const EmptySpace3x());
+
+    widgets.add(const Center(child: Text('BuildName: $appsBuildName')));
+    widgets.add(const Center(child: Text('BuildNumber: $appsBuildNum')));
+    widgets.add(Center(
+      child: GestureDetector(
+        child: const Text(appsCommit, maxLines: 1),
+        onTap: () => launchExternalURL(
+          NmsExternalUrls.githubViewAppRepoAtCommit + appsCommit,
+        ),
+      ),
+    ));
+
+    widgets.add(const EmptySpace8x());
 
     return listWithScrollbar(
       itemCount: widgets.length,

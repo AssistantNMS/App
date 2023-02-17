@@ -2,10 +2,10 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Assistant for No Man's Sky"
-#define MyAppVersion "2.7.0"
+#define MyAppVersion "2.9.0"
 #define MyAppPublisher "AssistantApps"
 #define MyAppURL "https://nmsassistant.com/"
-#define MyAppExeName "nmstest.exe"
+#define MyAppExeName "assistantnms_app.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -54,10 +54,12 @@ Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\run
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\dynamic_color_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\flutter_secure_storage_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\nmstest.exp"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\nmstest.lib"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\assistantnms_app.exp"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\assistantnms_app.lib"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\platform_device_id_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\url_launcher_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\flutter_localization_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\share_plus_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

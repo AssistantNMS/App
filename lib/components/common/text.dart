@@ -14,7 +14,10 @@ Widget genericItemNameWithQuantity(context, String name, String quantity) =>
               style: const TextStyle(fontSize: 20),
             ),
             getBaseWidget().appChip(
-              text: 'x $quantity',
+              label: Text(
+                'x $quantity',
+                style: const TextStyle(color: Colors.black),
+              ),
               backgroundColor: getTheme().getSecondaryColour(context),
             )
           ]),

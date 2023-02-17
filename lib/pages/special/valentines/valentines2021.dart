@@ -4,10 +4,10 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../../components/scaffoldTemplates/genericPageScaffold.dart';
-import '../../../constants/HomepageItems.dart';
-import '../../../contracts/redux/appState.dart';
-import '../../../redux/modules/setting/introViewModel.dart';
+import '../../../components/scaffoldTemplates/generic_page_scaffold.dart';
+import '../../../constants/homepage_items.dart';
+import '../../../contracts/redux/app_state.dart';
+import '../../../redux/modules/setting/intro_view_model.dart';
 
 class Valentines2021 extends StatelessWidget {
   const Valentines2021({Key? key}) : super(key: key);

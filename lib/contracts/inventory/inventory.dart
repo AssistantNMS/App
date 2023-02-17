@@ -1,6 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'inventorySlot.dart';
+import 'inventory_slot.dart';
 
 class Inventory {
   late String uuid;

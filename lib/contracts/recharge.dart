@@ -6,7 +6,7 @@ import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'chargeBy.dart';
+import 'charge_by.dart';
 
 class Recharge {
   Recharge({

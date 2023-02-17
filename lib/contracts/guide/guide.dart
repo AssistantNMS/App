@@ -5,7 +5,7 @@
 import 'dart:convert';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-import 'guideSection.dart';
+import 'guide_section.dart';
 
 class NmsGuide {
   String guid;

@@ -1,11 +1,12 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants/AppImage.dart';
-import '../../../constants/NmsExternalUrls.dart';
+import '../../../constants/app_image.dart';
+import '../../../constants/nms_external_urls.dart';
 import '../../../contracts/enum/community_mission_status.dart';
 import '../../../contracts/helloGames/community_mission_tracked.dart';
-import '../../../integration/dependencyInjection.dart';
+import '../../../helpers/date_helper.dart';
+import '../../../integration/dependency_injection.dart';
 
 class CommunityMissionExtraData extends StatelessWidget {
   final int missionId;
@@ -86,8 +87,9 @@ class CommunityMissionExtraData extends StatelessWidget {
               padding: EdgeInsets.only(right: 8),
               child: Icon(Icons.open_in_new_rounded),
             ),
-            onTap: () =>
-                launchExternalURL(NmsExternalUrls.communityMissionProgress),
+            onTap: () => launchExternalURL(
+              NmsExternalUrls.communityMissionProgress,
+            ),
           ),
         ));
 
@@ -112,8 +114,28 @@ class CommunityMissionExtraData extends StatelessWidget {
             widgets.add(ListTile(
               title: Text(getTranslations().fromKey(LocaleKey.endDate)),
               subtitle: Text(_getDateTimeString(pageData.endDateRecorded)),
-              onTap: () =>
-                  launchExternalURL(NmsExternalUrls.communityMissionProgress),
+              onTap: () => launchExternalURL(
+                NmsExternalUrls.communityMissionProgress,
+              ),
+            ));
+
+            String diffInDays =
+                numDayDiff(pageData.startDateRecorded, pageData.endDateRecorded)
+                    .toStringAsFixed(1);
+            String diffInDaysStr = getTranslations()
+                .fromKey(LocaleKey.days)
+                .replaceAll('{0}', diffInDays)
+                .replaceAll('.0', '');
+            widgets.add(ListTile(
+              title: Text(
+                getTranslations()
+                    .fromKey(LocaleKey.duration)
+                    .replaceAll(':', ''),
+              ),
+              subtitle: Text(diffInDaysStr),
+              onTap: () => launchExternalURL(
+                NmsExternalUrls.communityMissionProgress,
+              ),
             ));
           }
         } else {
