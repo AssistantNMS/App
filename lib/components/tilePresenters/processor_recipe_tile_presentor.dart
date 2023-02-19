@@ -86,21 +86,17 @@ Widget processorRecipeWithInputsTilePresentor(BuildContext context,
     Processor processor, Widget Function(Processor p) navigateTo,
     {bool showBackgroundColours = false}) {
   List<RequiredItem> items = [processor.output, ...processor.inputs];
-  return FutureBuilder<ResultWithValue<List<RequiredItemDetails>>>(
+  return CachedFutureBuilder<ResultWithValue<List<RequiredItemDetails>>>(
     key: Key(processor.id),
     future: requiredItemDetailsFromInputs(context, items),
-    builder: (
-      BuildContext context,
-      AsyncSnapshot<ResultWithValue<List<RequiredItemDetails>>> snapshot,
-    ) {
-      return getProcessorWithRecipeTile(
-        context,
-        processor,
-        navigateTo,
-        showBackgroundColours,
-        snapshot,
-      );
-    },
+    whileLoading: () => getLoading().smallLoadingTile(context),
+    whenDoneLoading: (data) => getProcessorWithRecipeTile(
+      context,
+      processor,
+      navigateTo,
+      showBackgroundColours,
+      data,
+    ),
   );
 }
 
@@ -109,18 +105,11 @@ Widget getProcessorWithRecipeTile(
     Processor processor,
     Widget Function(Processor p) navigateTo,
     bool showBackgroundColours,
-    AsyncSnapshot<ResultWithValue<List<RequiredItemDetails>>> snapshot) {
-  Widget? errorWidget = asyncSnapshotHandler(
-    context,
-    snapshot,
-    loader: () => getLoading().smallLoadingTile(context),
-  );
-  if (errorWidget != null) return errorWidget;
-
-  RequiredItemDetails output = snapshot.data!.value[0];
-  List<RequiredItemDetails> rows = snapshot.data!.value
+    ResultWithValue<List<RequiredItemDetails>> result) {
+  RequiredItemDetails output = result.value[0];
+  List<RequiredItemDetails> rows = result.value
       .skip(1) //
-      .take(snapshot.data!.value.length)
+      .take(result.value.length)
       .toList();
   int startIndex = 0;
   String listTileTitle = '';

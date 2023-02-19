@@ -19,25 +19,19 @@ Widget chargeByItemTilePresenter(
   bool showBackgroundColours = false,
 }) {
   var reqItem = RequiredItem(id: recharge.id, quantity: 0);
-  return FutureBuilder<ResultWithValue<RequiredItemDetails>>(
-      future: requiredItemDetails(context, reqItem),
-      builder: (BuildContext context,
-          AsyncSnapshot<ResultWithValue<RequiredItemDetails>> snapshot) {
-        Widget? errorWidget = asyncSnapshotHandler(
-          context,
-          snapshot,
-          loader: () => getLoading().smallLoadingTile(context),
-        );
-        if (errorWidget != null) return errorWidget;
-        return chargeByItemDetailsTilePresenter(
-          context,
-          snapshot.data!.value,
-          recharge,
-          totalRequired,
-          onTap: onTap,
-          showBackgroundColours: showBackgroundColours,
-        );
-      });
+  return CachedFutureBuilder<ResultWithValue<RequiredItemDetails>>(
+    key: Key(recharge.id),
+    future: requiredItemDetails(context, reqItem),
+    whileLoading: () => getLoading().smallLoadingTile(context),
+    whenDoneLoading: (data) => chargeByItemDetailsTilePresenter(
+      context,
+      data.value,
+      recharge,
+      totalRequired,
+      onTap: onTap,
+      showBackgroundColours: showBackgroundColours,
+    ),
+  );
 }
 
 Widget chargeByItemDetailsTilePresenter(
@@ -74,25 +68,19 @@ Widget usedToRechargeByItemTilePresenter(
   bool showBackgroundColours = false,
 }) {
   RequiredItem reqItem = RequiredItem(id: recharge.id, quantity: 0);
-  return FutureBuilder<ResultWithValue<RequiredItemDetails>>(
-      future: requiredItemDetails(context, reqItem),
-      builder: (BuildContext context,
-          AsyncSnapshot<ResultWithValue<RequiredItemDetails>> snapshot) {
-        Widget? errorWidget = asyncSnapshotHandler(
-          context,
-          snapshot,
-          loader: () => getLoading().smallLoadingTile(context),
-        );
-        if (errorWidget != null) return errorWidget;
-        return usedToRechargeItemDetailsTilePresenter(
-          context,
-          snapshot.data!.value,
-          recharge,
-          genericPageItem,
-          onTap: onTap,
-          showBackgroundColours: showBackgroundColours,
-        );
-      });
+  return CachedFutureBuilder<ResultWithValue<RequiredItemDetails>>(
+    key: Key(recharge.id),
+    future: requiredItemDetails(context, reqItem),
+    whileLoading: () => getLoading().smallLoadingTile(context),
+    whenDoneLoading: (data) => usedToRechargeItemDetailsTilePresenter(
+      context,
+      data.value,
+      recharge,
+      genericPageItem,
+      onTap: onTap,
+      showBackgroundColours: showBackgroundColours,
+    ),
+  );
 }
 
 Widget usedToRechargeItemDetailsTilePresenter(
