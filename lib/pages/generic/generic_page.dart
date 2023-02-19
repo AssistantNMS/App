@@ -28,6 +28,7 @@ import '../../contracts/required_item_details.dart';
 import '../../contracts/stat_bonus.dart';
 import '../../helpers/future_helper.dart';
 import '../../helpers/generic_helper.dart';
+import '../../integration/dependency_injection.dart';
 import '../../mapper/generic_item_mapper.dart';
 import '../../redux/modules/generic/generic_page_view_model.dart';
 import 'generic_page_components.dart';
@@ -183,14 +184,11 @@ class GenericPage extends StatelessWidget {
           showBackgroundColours: vm.displayGenericItemColour,
           pageItemId: genericItem.id,
         );
-    List<RequiredItemDetails> usedToCreateArray =
-        mapUsedInToRequiredItemsWithDescrip(
-      genericItem.usedInRecipes ?? List.empty(),
-    );
+
     widgets.addAll(getUsedToCreate(
       bodyCtx,
       genericItem,
-      usedToCreateArray,
+      () => getAllPossibleOutputsFromInput(bodyCtx, itemId),
       requiredItemDetailsFunction,
     ));
 
@@ -207,11 +205,15 @@ class GenericPage extends StatelessWidget {
           showBackgroundColours: vm.displayGenericItemColour,
         );
 
-    List<ChargeBy> rechargedByList = genericItem.chargedBy!.chargeBy;
+    List<ChargeBy> rechargedByList =
+        genericItem.chargedBy?.chargeBy ?? List.empty();
     widgets.addAll(getRechargeWith(
       bodyCtx,
       genericItem,
       rechargedByList,
+      () => getRechargeRepo()
+          .getRechargeById(bodyCtx, itemId)
+          .then((result) => result.value.chargeBy),
       rechargeItemFunction,
     ));
 
@@ -228,11 +230,13 @@ class GenericPage extends StatelessWidget {
           showBackgroundColours: vm.displayGenericItemColour,
         );
 
-    List<Recharge> usedToRechargedList = genericItem.usedToRecharge!;
+    List<Recharge> usedToRechargedList =
+        genericItem.usedToRecharge ?? List.empty();
     widgets.addAll(getUsedToRecharge(
       bodyCtx,
       genericItem,
       usedToRechargedList,
+      () => usedToRechargeFuture(bodyCtx, itemId),
       usedToRechargeItemFunction,
     ));
 
@@ -242,6 +246,7 @@ class GenericPage extends StatelessWidget {
       genericItem,
       getTranslations().fromKey(LocaleKey.refinedUsing),
       genericItem.refiners ?? List.empty(),
+      () => refinerRecipesByOutputFuture(bodyCtx, itemId),
       refinerRecipeTilePresenter,
     ));
 
@@ -255,6 +260,7 @@ class GenericPage extends StatelessWidget {
       genericItem,
       refineToCreateText,
       genericItem.usedInRefiners ?? List.empty(),
+      () => refinerRecipesByInputFuture(bodyCtx, itemId),
       nutrientProcessorRecipeWithInputsTilePresentor,
     ));
 
@@ -264,6 +270,7 @@ class GenericPage extends StatelessWidget {
       genericItem,
       getTranslations().fromKey(LocaleKey.cookingRecipe),
       genericItem.cooking ?? List.empty(),
+      () => nutrientProcessorRecipesByOutputFuture(bodyCtx, itemId),
       nutrientProcessorRecipeWithInputsTilePresentor,
     ));
 
@@ -276,6 +283,7 @@ class GenericPage extends StatelessWidget {
       genericItem,
       cookToCreateText,
       genericItem.usedInCooking ?? List.empty(),
+      () => nutrientProcessorRecipesByInputFuture(bodyCtx, itemId),
       nutrientProcessorRecipeWithInputsTilePresentor,
     ));
 

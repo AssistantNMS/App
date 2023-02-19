@@ -122,7 +122,10 @@ Widget genericItemTextWithIcon(
         overflow: TextOverflow.ellipsis,
         style: getThemeBodyLarge(context)?.copyWith(color: colour),
       ),
-      Icon(icon, size: 17, color: colour),
+      Container(
+        child: Icon(icon, size: 18, color: colour),
+        margin: const EdgeInsets.only(top: 1),
+      ),
       addSpace: addSpace,
     );
 

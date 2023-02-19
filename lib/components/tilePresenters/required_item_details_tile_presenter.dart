@@ -22,10 +22,13 @@ Widget Function(BuildContext context, RequiredItemDetails itemDetails)
   void Function()? onDelete,
 }) =>
         (BuildContext context, RequiredItemDetails itemDetails) =>
-            requiredItemDetailsTilePresenter(context, itemDetails,
-                showBackgroundColours: showBackgroundColours,
-                onTap: onTap,
-                onDelete: onDelete);
+            requiredItemDetailsTilePresenter(
+              context,
+              itemDetails,
+              showBackgroundColours: showBackgroundColours,
+              onTap: onTap,
+              onDelete: onDelete,
+            );
 
 Widget requiredItemDetailsTilePresenter(
   BuildContext context,

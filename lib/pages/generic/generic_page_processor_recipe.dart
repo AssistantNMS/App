@@ -34,51 +34,33 @@ class GenericPageProcessorRecipe extends StatelessWidget {
     String title = processor.isRefiner
         ? getTranslations().fromKey(LocaleKey.refinedUsing)
         : getTranslations().fromKey(LocaleKey.cooking);
-    return FutureBuilder<ResultWithValue<ProcessorRecipePageData>>(
+    return CachedFutureBuilder<ResultWithValue<ProcessorRecipePageData>>(
       future: processorPageDetails(context, processor),
-      builder: (processFutureCtx, snapshot) {
-        return genericPageScaffold<ResultWithValue<ProcessorRecipePageData>>(
-          processFutureCtx,
-          title,
-          snapshot,
-          body: (bodyCtx, _) => StoreConnector<AppState, FavouriteViewModel>(
-            converter: (store) => FavouriteViewModel.fromStore(store),
-            builder: (buildCtx, viewModel) => getBody(
-              buildCtx,
-              viewModel,
-              snapshot,
-            ),
+      whileLoading: () => getLoading().fullPageLoading(context),
+      whenDoneLoading: (data) =>
+          genericPageScaffold<ResultWithValue<ProcessorRecipePageData>>(
+        context,
+        title,
+        const AsyncSnapshot.nothing(), // unused
+        body: (bodyCtx, _) => StoreConnector<AppState, FavouriteViewModel>(
+          converter: (store) => FavouriteViewModel.fromStore(store),
+          builder: (buildCtx, viewModel) => getBody(
+            buildCtx,
+            viewModel,
+            data,
           ),
-        );
-      },
+        ),
+      ),
     );
   }
 
   Widget getBody(
     BuildContext bodyCtx,
     FavouriteViewModel vm,
-    AsyncSnapshot<ResultWithValue<ProcessorRecipePageData>> snapshot,
+    ResultWithValue<ProcessorRecipePageData> snapshot,
   ) {
-    Widget? errorWidget = asyncSnapshotHandler(bodyCtx, snapshot,
-        isValidFunction: (ResultWithValue<ProcessorRecipePageData>? data) {
-      if (data == null ||
-          data.value == null ||
-          data.value.inputsDetails == null ||
-          data.value.outputDetail == null ||
-          data.value.outputDetail.id == null ||
-          data.value.outputDetail.name == null ||
-          data.value.outputDetail.icon == null ||
-          data.value.similarRefiners == null ||
-          processor.time == null ||
-          processor.operation == null) {
-        return false;
-      }
-      return true;
-    });
-    if (errorWidget != null) return errorWidget;
-
     List<Widget> widgets = List.empty(growable: true);
-    var output = snapshot.data!.value.outputDetail;
+    var output = snapshot.value.outputDetail;
 
     commonOnTap(Widget child) => GestureDetector(
           child: child,
@@ -94,7 +76,7 @@ class GenericPageProcessorRecipe extends StatelessWidget {
         genericItemImage(bodyCtx, output.icon, hdAvailable: true),
         getFavouriteStar(
           output.icon,
-          snapshot.data!.value.procId,
+          snapshot.value.procId,
           vm.favourites,
           iconColour,
           vm.addFavourite,
@@ -148,7 +130,7 @@ class GenericPageProcessorRecipe extends StatelessWidget {
         : getTranslations().fromKey(LocaleKey.ingredients);
     widgets.add(GenericItemText(inputsIngredientsLocale));
 
-    for (RequiredItemDetails input in snapshot.data!.value.inputsDetails) {
+    for (RequiredItemDetails input in snapshot.value.inputsDetails) {
       widgets.add(
         FlatCard(
           child: genericListTile(
@@ -164,7 +146,7 @@ class GenericPageProcessorRecipe extends StatelessWidget {
       );
     }
 
-    List<Processor> otherRefinersArray = snapshot.data!.value.similarRefiners
+    List<Processor> otherRefinersArray = snapshot.value.similarRefiners
         .where((sf) => sf.id != processor.id)
         .toList();
     if (otherRefinersArray.isNotEmpty) {
