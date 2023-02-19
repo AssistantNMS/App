@@ -22,6 +22,7 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
             const EmptySpace8x(),
             GenericItemGroup(
               getTranslations().fromKey(LocaleKey.downloadNomNom),
+              maxLines: 20,
             ),
             FlatCard(
               child: nomNomDownloadTile(
@@ -37,11 +38,15 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
         colorEnd: getTheme().getScaffoldBackgroundColour(context),
       ),
       ContentConfig(
-        title:
-            getTranslations().fromKey(LocaleKey.stepNum).replaceAll('{0}', '2'),
+        title: getTranslations() //
+            .fromKey(LocaleKey.stepNum)
+            .replaceAll('{0}', '2'),
         centerWidget: Column(
           children: [
-            GenericItemGroup(getTranslations().fromKey(LocaleKey.nomNomStep2)),
+            GenericItemGroup(
+              getTranslations().fromKey(LocaleKey.nomNomStep2),
+              maxLines: 20,
+            ),
             tutorialImage(
               context,
               title: getTranslations()
@@ -59,11 +64,15 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
         colorEnd: getTheme().getScaffoldBackgroundColour(context),
       ),
       ContentConfig(
-        title:
-            getTranslations().fromKey(LocaleKey.stepNum).replaceAll('{0}', '3'),
+        title: getTranslations() //
+            .fromKey(LocaleKey.stepNum)
+            .replaceAll('{0}', '3'),
         centerWidget: Column(
           children: [
-            GenericItemGroup(getTranslations().fromKey(LocaleKey.nomNomStep3)),
+            GenericItemGroup(
+              getTranslations().fromKey(LocaleKey.nomNomStep3),
+              maxLines: 20,
+            ),
             tutorialImage(
               context,
               title: getTranslations().fromKey(LocaleKey.nomNomStep3),
@@ -80,7 +89,10 @@ class NomNomInventorySyncTutorial extends StatelessWidget {
             getTranslations().fromKey(LocaleKey.stepNum).replaceAll('{0}', '4'),
         centerWidget: Column(
           children: [
-            GenericItemGroup(getTranslations().fromKey(LocaleKey.nomNomStep4)),
+            GenericItemGroup(
+              getTranslations().fromKey(LocaleKey.nomNomStep4),
+              maxLines: 20,
+            ),
             const LocalImage(imagePath: AppImage.nomnomIntroStep4),
             const EmptySpace3x(),
           ],
