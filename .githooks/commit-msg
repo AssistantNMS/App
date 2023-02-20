@@ -29,6 +29,5 @@ if [[ $hasEmoji == 1 ]]; then
 	printf "\e[32;1m%s\e[0m\n" 'Thank you for using an emoji in your commit message 🥳.'
 fi
 
-printf "\e[33;1m%s\e[0m\n" 'Running the Flutter formatter'
-dart format .
-printf "\e[33;1m%s\e[0m\n" 'Finished running the Flutter formatter ✔️'
+printf "\e[33;1m%s\e[0m\n" 'If you have dart in your path, please consider running the Flutter formatter using:'
+printf "\e[33;1m%s\e[0m\n" 'dart format .'
