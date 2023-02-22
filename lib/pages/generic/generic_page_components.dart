@@ -2,7 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:ff_stars/ff_stars.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/common/image.dart';
 import '../../components/expedition_alphabet_translation.dart';
 import '../../components/tilePresenters/creature_harvest_tile_presenter.dart';
 import '../../components/tilePresenters/egg_trait_tile_presenter.dart';
@@ -40,8 +39,8 @@ import '../../helpers/hero_helper.dart';
 import '../../helpers/theme_helper.dart';
 import '../../mapper/generic_item_mapper.dart';
 import '../../redux/modules/generic/generic_page_view_model.dart';
-import 'all_possible_outputs_page.dart';
 import 'all_possible_outputs_future_page.dart';
+import 'all_possible_outputs_page.dart';
 import 'generic_page_all_required_raw_materials.dart';
 import 'generic_page_descrip_highlight_text.dart';
 
