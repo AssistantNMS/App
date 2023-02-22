@@ -499,6 +499,7 @@
     "Usages": [
       "HasUsedToCraft",
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -898,6 +899,7 @@
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -1506,9 +1508,12 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
+    "CookingValue": 0.0,
     "Usages": [
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
+      "IsEggIngredient",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -1773,6 +1778,295 @@
       "HasDevProperties",
       "IsConsumable",
       "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur84",
+    "Icon": "other/207.png",
+    "Name": "Planetenkarte",
+    "Group": "Kartografische Handelsdaten",
+    "Description": "Eine Karte von einem Planeten in der Nähe. Ein <COMMODITY>bewohnter Außenposten<> wurde markiert.\n\nWähle die Karte aus und nutze <VAL_ON>„Route planen“ (<IMG>FE_ALT1<>)<>, um den Ort in der Anzeige deines Exo-Anzugs einzustellen.\n\nNeue Karten erhält man, indem man <COMMODITY>Navigationsdaten<> mit einem Raumstation-Kartografen austauscht.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Daten in Exo-Anzug-Navigationsmarkierung umwandeln."
+    ]
+  },
+  {
+    "Id": "cur85",
+    "Icon": "other/3.png",
+    "Name": "Uralter Schlüssel",
+    "Group": "Zeitloses Artefakt",
+    "Description": "Ein schwerer Schlüssel aus altem Schmiedeeisen, der in ein Schloss in der Nähe passen muss ...",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur86",
+    "Icon": "other/4.png",
+    "Name": "Dreizackschlüssel",
+    "Group": "Wasserrelikt",
+    "Description": "Ein seltsamer, gezackter Schlüssel, der in einem ultravioletten Licht leuchtet.\n\nTrotz seines primitiven Aussehens offenbaren die Scansysteme des Exo-Anzugs auf seinen Zacken Spuren von Nanit-Schaum.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur87",
+    "Icon": "products/156.png",
+    "Name": "Wächter-Signalfackel",
+    "Group": "Wächterkommunikator",
+    "Description": "Ein durch Iteration: Tethys geschaffenes Spezialgerät, dessen Hauptfunktion im Rufen deiner <TECHNOLOGY>rekonstruierten Wächterdrohne<> besteht.\n\nWähle das Gerät aus und verwende Signal deaktivieren (<IMG>FE_ALT1<>), um [ der Wache ] nicht länger ein Signal zu geben.\n\nSolange diese Fackel in deinem <STELLAR>Exo-Anzug-Inventar<> aktiv ist, bleibt die Drohne an deiner Seite, wenn du dich auf dem Planeten befindest.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Signal deaktivieren und [ die Wache ] freigeben"
+    ]
+  },
+  {
+    "Id": "cur88",
+    "Icon": "curiosities/88.png",
+    "Name": "Utopia-Nachschublieferung Beta",
+    "Group": "Vorratslager der Utopia Foundation",
+    "Description": "Um die Arbeiter zu unterstützen, die tapfer die lavagefüllten Wüsten des Planeten Pehaelump terraformen, stellen die Utopia-Aufseher mit Freude diesen Vorrat an lebenswichtigen Gütern zur Verfügung.\n\nWähle die Nachschublieferung aus und benutze <VAL_ON>Paket öffnen<> (<IMG>FE_ALT1<>), um deine Vorräte der Utopia Foundation sowie Details zu deinem <STELLAR>nächsten Auftrag<> zu erhalten.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Lieferungen der Utopia Foundation erhalten"
+    ]
+  },
+  {
+    "Id": "cur89",
+    "Icon": "curiosities/88.png",
+    "Name": "Utopia-Nachschublieferung Gamma",
+    "Group": "Vorratslager der Utopia Foundation",
+    "Description": "Um die Arbeiter zu unterstützen, die sich tapfer in den steilen, exponierten Bergen des Planeten New Sesto abmühen, stellen die Utopia-Aufseher mit Freude diesen Vorrat an lebenswichtigen Gütern zur Verfügung.\n\nWähle die Nachschublieferung aus und benutze <VAL_ON>Paket öffnen<> (<IMG>FE_ALT1<>), um deine Vorräte der Utopia Foundation sowie Details zu deinem <STELLAR>nächsten Auftrag<> zu erhalten.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Lieferungen der Utopia Foundation erhalten"
+    ]
+  },
+  {
+    "Id": "cur90",
+    "Icon": "curiosities/88.png",
+    "Name": "Utopia-Nachschublieferung Delta",
+    "Group": "Vorratslager der Utopia Foundation",
+    "Description": "Um die überlebenden Arbeiter zu unterstützen, die nun mit den [<SPECIAL>ZENSIERT<>] des Planeten Idalth XIV konfrontiert sind, stellen die Utopia-Aufseher mit Freude diesen Vorrat an lebenswichtigen Gütern zur Verfügung.\n\nWähle die Nachschublieferung aus und benutze <VAL_ON>Paket öffnen<> (<IMG>FE_ALT1<>), um deine Vorräte der Utopia Foundation sowie Details zu deinem <STELLAR>nächsten Auftrag<> zu erhalten.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Lieferungen der Utopia Foundation erhalten"
+    ]
+  },
+  {
+    "Id": "cur91",
+    "Icon": "curiosities/88.png",
+    "Name": "Utopia-Nachschublieferung Epsilon",
+    "Group": "Vorratslager der Utopia Foundation",
+    "Description": "Um die Arbeiter zu unterstützen, die so edel im Sumpf des Planeten Endil A8 am Wiederaufbau arbeiten, stellen die Utopia-Aufseher mit Freude diesen Vorrat an lebenswichtigen Gütern zur Verfügung.\n\nWähle die Nachschublieferung aus und benutze <VAL_ON>Paket öffnen<> (<IMG>FE_ALT1<>), um deine Vorräte der Utopia Foundation sowie Details zu deinem <STELLAR>nächsten Auftrag<> zu erhalten.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Lieferungen der Utopia Foundation erhalten"
+    ]
+  },
+  {
+    "Id": "cur92",
+    "Icon": "curiosities/92.png",
+    "Name": "Siedlungskoordinaten Beta",
+    "Group": "Siedlungsplan der Utopia Foundation",
+    "Description": "Eine Karte der Utopia Foundation mit <STELLAR>personalisierten Koordinaten<> für deine Zielbaustelle.\n\nWähle die Karte aus und verwende <VAL_ON>Route planen<> (<IMG>FE_ALT1<>), um den Ort in der Anzeige deines Exo-Anzugs einzustellen.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Baukoordinaten der Utopia Foundation erhalten"
+    ]
+  },
+  {
+    "Id": "cur93",
+    "Icon": "curiosities/92.png",
+    "Name": "Siedlungskoordinaten Gamma",
+    "Group": "Siedlungsplan der Utopia Foundation",
+    "Description": "Eine Karte der Utopia Foundation mit <STELLAR>personalisierten Koordinaten<> für deine Zielbaustelle.\n\nWähle die Karte aus und verwende <VAL_ON>Route planen<> (<IMG>FE_ALT1<>), um den Ort in der Anzeige deines Exo-Anzugs einzustellen.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Baukoordinaten der Utopia Foundation erhalten"
+    ]
+  },
+  {
+    "Id": "cur94",
+    "Icon": "curiosities/92.png",
+    "Name": "Siedlungskoordinaten Delta",
+    "Group": "Siedlungsplan der Utopia Foundation",
+    "Description": "Eine Karte der Utopia Foundation mit <STELLAR>personalisierten Koordinaten<> für deine Zielbaustelle.\n\nWähle die Karte aus und verwende <VAL_ON>Route planen<> (<IMG>FE_ALT1<>), um den Ort in der Anzeige deines Exo-Anzugs einzustellen.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Baukoordinaten der Utopia Foundation erhalten"
+    ]
+  },
+  {
+    "Id": "cur95",
+    "Icon": "curiosities/92.png",
+    "Name": "Siedlungskoordinaten Epsilon",
+    "Group": "Siedlungsplan der Utopia Foundation",
+    "Description": "Eine Karte der Utopia Foundation mit <STELLAR>personalisierten Koordinaten<> für deine Zielbaustelle.\n\nWähle die Karte aus und verwende <VAL_ON>Route planen<> (<IMG>FE_ALT1<>), um den Ort in der Anzeige deines Exo-Anzugs einzustellen.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Baukoordinaten der Utopia Foundation erhalten"
+    ]
+  },
+  {
+    "Id": "cur96",
+    "Icon": "curiosities/33.png",
+    "Name": "Baugeschichte",
+    "Group": "Geheimdossier",
+    "Description": "Dieser Bericht zeichnet die Geschichte einer planetaren Einrichtung auf, die Teil des <EXPED>Utopia-Projekts<> ist. Einige Abschnitte fehlen seltsamerweise.\n\nDS 2368 :: <STELLAR>Einrichtung <><TRADEABLE>gegründet<><STELLAR>. Plasma-Tiefbohranlage in Betrieb.<>\nDS 2384 :: <STELLAR>Ertragswachstum konstant bei 1 %.<>\nDS 2400 :: <STELLAR>Aufseher beanstanden Wachstumsrate.<>\nDS 2416 :: <STELLAR>Orbitaler Ausb. genehmigt. Stationshandel boomt.<>\nDS 2432 :: <SPECIAL>[Zensiert]<> <STELLAR>Gefahr entdeckt.<>\nDS 2448 :: <SPECIAL>[Zensiert]<>\nDS 2464 :: <STELLAR>Utopia-Projekt gestartet.<>\nDS 2464 :: <STELLAR>Einrichtung <><TRADEABLE>wiederhergestellt<><STELLAR>. Plasma-Tiefbohranlage betriebsbereit. Handelsrouten abermals geöffnet.<>\nDS 2480 :: <SPECIAL>[Zensiert]<>\nDS 2496 :: <STELLAR>Einrichtung <><TRADEABLE>wiederhergestellt<><STELLAR>. Plasma-Tiefbohranlage betriebsbereit. Handelsrouten abermals geöffnet.<>\nDS 2512 :: <SPECIAL>[Zensiert]<>\n\nDie letzten beiden Einträge wiederholen sich immer wieder, über Hunderte von Seiten hinweg.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

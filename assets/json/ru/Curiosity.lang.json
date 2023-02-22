@@ -499,6 +499,7 @@
     "Usages": [
       "HasUsedToCraft",
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -898,6 +899,7 @@
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -1506,9 +1508,12 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
+    "CookingValue": 0.0,
     "Usages": [
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
+      "IsEggIngredient",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -1773,6 +1778,295 @@
       "HasDevProperties",
       "IsConsumable",
       "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur84",
+    "Icon": "other/207.png",
+    "Name": "Планетарная карта",
+    "Group": "Коммерческие картографические данные",
+    "Description": "Карта близлежащей планеты. На ней отмечен какой-то <COMMODITY>обитаемый аванпост<>.\n\nВыберите карту и <VAL_ON>проложите маршрут (<IMG>FE_ALT1<>)<>, чтобы закрепить точку на экране экзокостюма.\n\nДобыть новые карты можно, обмениваясь <COMMODITY>навигационными данными<> с картографом на космической станции.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Преобразовать данные в навигационную метку экзокостюма"
+    ]
+  },
+  {
+    "Id": "cur85",
+    "Icon": "other/3.png",
+    "Name": "Древний ключ",
+    "Group": "Вечный артефакт",
+    "Description": "Тяжелый ключ из кованого железа. Вероятно, подходит к какому-то замку поблизости...",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur86",
+    "Icon": "other/4.png",
+    "Name": "Ключ-трезубец",
+    "Group": "Водяная реликвия",
+    "Description": "Необычный зубчатый ключ с ультрафиолетовым свечением.\n\nНесмотря на примитивную форму ключа, сканер экзокостюма обнаружил на его зубцах следы нанитной пены.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur87",
+    "Icon": "products/156.png",
+    "Name": "Факел стража",
+    "Group": "Коммуникатор стража",
+    "Description": "Специальное устройство, созданное итерацией Тефида. Его основная функция заключается в призыве вашего <TECHNOLOGY>восстановленного дрона стражей<>.\n\nВыберите устройство и отключите передачу (<IMG>FE_ALT1<>), чтобы прекратить подавать сигнал [ Дозорному ].\n\nЕсли этот факел активен в <STELLAR>инвентаре экзокостюма<>, дрон будет находиться рядом с вами, пока вы находитесь на поверхности планеты.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Прервать сигнал и отпустить [ Дозорного ]"
+    ]
+  },
+  {
+    "Id": "cur88",
+    "Icon": "curiosities/88.png",
+    "Name": "Груз «Бета» с припасами «Утопии»",
+    "Group": "Тайник с припасами фонда «Утопия»",
+    "Description": "Чтобы поддержать отважных рабочих, занимающихся терраформированием покрытых лавой пустошей планеты Пехаеламп, кураторы «Утопии» с радостью предоставляют вам этот груз с предметами первой необходимости.\n\nВыберите ящик с припасами и нажмите <VAL_ON>«Открыть груз»<> (<IMG>FE_ALT1<>), чтобы получить припасы фонда «Утопия» и ваши <STELLAR>следующие указания<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Получите припасы фонда «Утопия»"
+    ]
+  },
+  {
+    "Id": "cur89",
+    "Icon": "curiosities/88.png",
+    "Name": "Груз «Гамма» с припасами «Утопии»",
+    "Group": "Тайник с припасами фонда «Утопия»",
+    "Description": "Чтобы поддержать храбрых рабочих, трудящихся на крутых и открытых всем ветрам склонах гор планеты Новая Сесто, кураторы «Утопии» с радостью предоставляют вам этот груз с предметами первой необходимости.\n\nВыберите ящик с припасами и нажмите <VAL_ON>«Открыть груз»<> (<IMG>FE_ALT1<>), чтобы получить припасы фонда «Утопия» и ваши <STELLAR>следующие указания<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Получите припасы фонда «Утопия»"
+    ]
+  },
+  {
+    "Id": "cur90",
+    "Icon": "curiosities/88.png",
+    "Name": "Груз «Дельта» с припасами «Утопии»",
+    "Group": "Тайник с припасами фонда «Утопия»",
+    "Description": "Чтобы поддержать рабочих, выживающих и сражающихся с [ <SPECIAL>ВЫРЕЗАНО<> ] планеты Идалт XIV, кураторы «Утопии» с радостью предоставляют вам этот груз с предметами первой необходимости.\n\nВыберите ящик с припасами и нажмите <VAL_ON>«Открыть груз»<> (<IMG>FE_ALT1<>), чтобы получить припасы фонда «Утопия» и ваши <STELLAR>следующие указания<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Получите припасы фонда «Утопия»"
+    ]
+  },
+  {
+    "Id": "cur91",
+    "Icon": "curiosities/88.png",
+    "Name": "Груз «Эпсилон» с припасами «Утопии»",
+    "Group": "Тайник с припасами фонда «Утопия»",
+    "Description": "Чтобы поддержать благородных рабочих, трудящихся среди зыбучих песков планеты Эндиль А8, кураторы «Утопии» с радостью предоставляют вам этот груз с предметами первой необходимости.\n\nВыберите ящик с припасами и нажмите <VAL_ON>«Открыть груз»<> (<IMG>FE_ALT1<>), чтобы получить припасы фонда «Утопия» и ваши <STELLAR>следующие указания<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Получите припасы фонда «Утопия»"
+    ]
+  },
+  {
+    "Id": "cur92",
+    "Icon": "curiosities/92.png",
+    "Name": "Координаты поселения Бета",
+    "Group": "Карта поселения фонда «Утопия»",
+    "Description": "Карта, полученная от фонда «Утопия», на которой приведены <STELLAR>личные координаты<> назначенной вам стройплощадки.\n\nВыберите карту и нажмите <VAL_ON>«Проложить маршрут»<> (<IMG>FE_ALT1<>), чтобы закрепить пункт назначения на экране экзокостюма.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Получите координаты стройплощадки фонда «Утопия»"
+    ]
+  },
+  {
+    "Id": "cur93",
+    "Icon": "curiosities/92.png",
+    "Name": "Координаты поселения Гамма",
+    "Group": "Карта поселения фонда «Утопия»",
+    "Description": "Карта, полученная от фонда «Утопия», на которой приведены <STELLAR>личные координаты<> назначенной вам стройплощадки.\n\nВыберите карту и нажмите <VAL_ON>«Проложить маршрут»<> (<IMG>FE_ALT1<>), чтобы закрепить пункт назначения на экране экзокостюма.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Получите координаты стройплощадки фонда «Утопия»"
+    ]
+  },
+  {
+    "Id": "cur94",
+    "Icon": "curiosities/92.png",
+    "Name": "Координаты поселения Дельта",
+    "Group": "Карта поселения фонда «Утопия»",
+    "Description": "Карта, полученная от фонда «Утопия», на которой приведены <STELLAR>личные координаты<> назначенной вам стройплощадки.\n\nВыберите карту и нажмите <VAL_ON>«Проложить маршрут»<> (<IMG>FE_ALT1<>), чтобы закрепить пункт назначения на экране экзокостюма.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Получите координаты стройплощадки фонда «Утопия»"
+    ]
+  },
+  {
+    "Id": "cur95",
+    "Icon": "curiosities/92.png",
+    "Name": "Координаты поселения Эпсилон",
+    "Group": "Карта поселения фонда «Утопия»",
+    "Description": "Карта, полученная от фонда «Утопия», на которой приведены <STELLAR>личные координаты<> назначенной вам стройплощадки.\n\nВыберите карту и нажмите <VAL_ON>«Проложить маршрут»<> (<IMG>FE_ALT1<>), чтобы закрепить пункт назначения на экране экзокостюма.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Получите координаты стройплощадки фонда «Утопия»"
+    ]
+  },
+  {
+    "Id": "cur96",
+    "Icon": "curiosities/33.png",
+    "Name": "История строительства",
+    "Group": "Секретное досье",
+    "Description": "В этом отчете описывается история <EXPED>проекта «Утопия»<> в части, касающейся строительства планетарных комплексов.\n\nDS 2368 :: <STELLAR>Комплекс <><TRADEABLE>заложен<><STELLAR>. Установка плазменного бурения введена в эксплуатацию.<>\nDS 2384 :: <STELLAR>Прибыль стабильно растет на 1%.<>\nDS 2400 :: <STELLAR>Кураторы сомневаются в темпах роста.<>\nDS 2416 :: <STELLAR>Расширение на орбиту разрешено. Торговля на станции процветает.<>\nDS 2432 :: Столкновение с <SPECIAL>[Вырезано]<> <STELLAR>угрозой.<>\nDS 2448 :: <SPECIAL>[Вырезано]<>\nDS 2464 :: <STELLAR>Запуск проекта «Утопия».<>\nDS 2464 :: <STELLAR>Комплекс <><TRADEABLE>восстановлен<><STELLAR>. Установка плазменного бурения введена в эксплуатацию. Торговые пути вновь открыты.<>\nDS 2480 :: <SPECIAL>[Вырезано]<>\nDS 2496 :: <STELLAR>Комплекс <><TRADEABLE>восстановлен<><STELLAR>. Установка плазменного бурения введена в эксплуатацию Торговые пути вновь открыты.<>\nDS 2512 :: <SPECIAL>[Вырезано]<>\n\nПоследние две записи повторяются раз за разом на сотнях страниц.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

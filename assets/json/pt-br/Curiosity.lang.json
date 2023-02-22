@@ -499,6 +499,7 @@
     "Usages": [
       "HasUsedToCraft",
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -898,6 +899,7 @@
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -1506,9 +1508,12 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
+    "CookingValue": 0.0,
     "Usages": [
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
+      "IsEggIngredient",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -1773,6 +1778,295 @@
       "HasDevProperties",
       "IsConsumable",
       "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur84",
+    "Icon": "other/207.png",
+    "Name": "Mapa planetário",
+    "Group": "Dados cartográficos comerciais",
+    "Description": "Um mapa de um planeta próximo. Uma espécie de <COMMODITY>posto avançado habitado<> foi marcado.\n\nSelecione o mapa e use <VAL_ON>Planejar rota (<IMG>FE_ALT1<>)<> para fixar o local na tela do seu exotraje.\n\nÉ possível obter novos mapas ao trocar <COMMODITY>dados de navegação<> com o cartógrafo de uma estação espacial.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Converta dados para o marcador de navegação do exotraje"
+    ]
+  },
+  {
+    "Id": "cur85",
+    "Icon": "other/3.png",
+    "Name": "Chave antiga",
+    "Group": "Artefato atemporal",
+    "Description": "Uma chave com certo peso, esta peça antiga de ferro forjado deve pertencer a uma fechadura próxima...",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur86",
+    "Icon": "other/4.png",
+    "Name": "Chave-tridente",
+    "Group": "Relíquia aquática",
+    "Description": "Uma chave estranha de três pontas que brilha com uma luz ultravioleta.\n\nApesar da aparência primitiva, os sistemas de verificação do exotraje revelam traços de espuma de nanito nos dentes.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur87",
+    "Icon": "products/156.png",
+    "Name": "Sinalizador de sentinela",
+    "Group": "Comunicador sentinela",
+    "Description": "Um dispositivo especial criado pela iteração Tétis. A principal função dele é atrair o seu <TECHNOLOGY>drone sentinela reconstruído<>.\n\nSelecione o dispositivo e use Desativar transmissão (<IMG>FE_ALT1<>) para parar de enviar um sinal para [ O Vigia ].\n\nEnquanto este sinalizador estiver ativo no <STELLAR>inventário do seu exotraje<>, o drone ficará ao seu lado durante o tempo em que você estiver no planeta.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Desativar sinal e dispensar [ O Vigia ]"
+    ]
+  },
+  {
+    "Id": "cur88",
+    "Icon": "curiosities/88.png",
+    "Name": "Entrega de suprimentos da Utopia Beta",
+    "Group": "Esconderijo de suprimentos da Fundação Utopia",
+    "Description": "Para apoiar os trabalhadores que corajosamente terraformam os resíduos cheios de lava do planeta Pehaelump, os supervisores da Utopia têm o prazer de fornecer este estoque de bens vitais.\n\nSelecione o pacote de suprimentos e use <VAL_ON>abrir pacote<> (<IMG>FE_ALT1<>) para coletar seus suprimentos da Fundação Utopia, além de detalhes da sua <STELLAR>próxima tarefa<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receba suprimentos da Fundação Utopia"
+    ]
+  },
+  {
+    "Id": "cur89",
+    "Icon": "curiosities/88.png",
+    "Name": "Entrega de suprimentos da Utopia Gama",
+    "Group": "Esconderijo de suprimentos da Fundação Utopia",
+    "Description": "Para apoiar aqueles que trabalham bravamente nas montanhas íngremes e expostas do planeta Novo Sesto, os supervisores da Utopia têm o prazer de fornecer este estoque de bens vitais.\n\nSelecione o pacote de suprimentos e use <VAL_ON>abrir pacote<> (<IMG>FE_ALT1<>) para coletar seus suprimentos da Fundação Utopia, além de detalhes da sua <STELLAR>próxima tarefa<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receba suprimentos da Fundação Utopia"
+    ]
+  },
+  {
+    "Id": "cur90",
+    "Icon": "curiosities/88.png",
+    "Name": "Entrega de suprimentos da Utopia Delta",
+    "Group": "Esconderijo de suprimentos da Fundação Utopia",
+    "Description": "Para apoiar os trabalhadores sobreviventes que agora enfrentam os [ <SPECIAL>REDACTED<> ] do planeta Idalth XIV, os supervisores da Utopia têm o prazer de fornecer este estoque de bens vitais.\n\nSelecione o pacote de suprimentos e use <VAL_ON>abrir pacote<> (<IMG>FE_ALT1<>) para coletar seus suprimentos da Fundação Utopia, além de detalhes da sua <STELLAR>próxima tarefa<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receba suprimentos da Fundação Utopia"
+    ]
+  },
+  {
+    "Id": "cur91",
+    "Icon": "curiosities/88.png",
+    "Name": "Entrega de suprimentos da Utopia Épsilon",
+    "Group": "Esconderijo de suprimentos da Fundação Utopia",
+    "Description": "Para apoiar os trabalhadores que tão nobremente restabelecem nos lamaçais do planeta Endil A8, os supervisores da Utopia têm o prazer de fornecer este estoque de bens vitais.\n\nSelecione o pacote de suprimentos e use <VAL_ON>abrir pacote<> (<IMG>FE_ALT1<>) para coletar seus suprimentos da Fundação Utopia, além de detalhes da sua <STELLAR>próxima tarefa<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receba suprimentos da Fundação Utopia"
+    ]
+  },
+  {
+    "Id": "cur92",
+    "Icon": "curiosities/92.png",
+    "Name": "Coordenadas do povoado Beta",
+    "Group": "Mapa do povoado da Fundação Utopia",
+    "Description": "Um mapa da Fundação Utopia mostrando <STELLAR>coordenadas personalizadas<> até o local de construção alvo.\n\nSelecione o mapa e use <VAL_ON>planejar rota<> (<IMG>FE_ALT1<>) para fixar a localização na tela do seu exotraje.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receba as coordenadas de construção da Fundação Utopia"
+    ]
+  },
+  {
+    "Id": "cur93",
+    "Icon": "curiosities/92.png",
+    "Name": "Coordenadas do povoado Gama",
+    "Group": "Mapa do povoado da Fundação Utopia",
+    "Description": "Um mapa da Fundação Utopia mostrando <STELLAR>coordenadas personalizadas<> até o local de construção alvo.\n\nSelecione o mapa e use <VAL_ON>planejar rota<> (<IMG>FE_ALT1<>) para fixar a localização na tela do seu exotraje.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receba as coordenadas de construção da Fundação Utopia"
+    ]
+  },
+  {
+    "Id": "cur94",
+    "Icon": "curiosities/92.png",
+    "Name": "Coordenadas do povoado Delta",
+    "Group": "Mapa do povoado da Fundação Utopia",
+    "Description": "Um mapa da Fundação Utopia mostrando <STELLAR>coordenadas personalizadas<> até o local de construção alvo.\n\nSelecione o mapa e use <VAL_ON>planejar rota<> (<IMG>FE_ALT1<>) para fixar a localização na tela do seu exotraje.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receba as coordenadas de construção da Fundação Utopia"
+    ]
+  },
+  {
+    "Id": "cur95",
+    "Icon": "curiosities/92.png",
+    "Name": "Coordenadas do povoado Épsilon",
+    "Group": "Mapa do povoado da Fundação Utopia",
+    "Description": "Um mapa da Fundação Utopia mostrando <STELLAR>coordenadas personalizadas<> até o local de construção alvo.\n\nSelecione o mapa e use <VAL_ON>planejar rota<> (<IMG>FE_ALT1<>) para fixar a localização na tela do seu exotraje.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receba as coordenadas de construção da Fundação Utopia"
+    ]
+  },
+  {
+    "Id": "cur96",
+    "Icon": "curiosities/33.png",
+    "Name": "Histórico de construção",
+    "Group": "Dossiê confidencial",
+    "Description": "Este relatório registra o histórico de uma instalação planetária parte do <EXPED>Projeto Utopia<>. Diversas sessões estão curiosamente ausentes.\n\nES 2368 :: <STELLAR>Instalação <><TRADEABLE>fundada<><STELLAR>. Equipamento de perfuração de plasma operacional.<>\nES 2384 :: <STELLAR>Crescimento de retorno estável em 1%.<>\nES 2400 :: <STELLAR>Taxa de crescimento de questionamento dos supervisores.<>\nES 2416 :: <STELLAR>Exp. orbital aprovada. Comércio na estação crescendo.<>\nES 2432 :: <SPECIAL>[Editado]<> <STELLAR>risco encontrado.<>\nES 2448 :: <SPECIAL>[Editado]<>\nES 2464 :: <STELLAR>Projeto Utopia iniciado.<>\nES 2464 :: <STELLAR>Instalação <><TRADEABLE>restaurada<><STELLAR>. Equipamento de perfuração de plasma operacional. Rotas comerciais reabertas.<>\nES 2480 :: <SPECIAL>[Editado]<>\nES 2496 :: <STELLAR>Instalação <><TRADEABLE>restaurada<><STELLAR>. Equipamento de perfuração de plasma operacional. Rotas comerciais reabertas.<>\nES 2512 :: <SPECIAL>[Editado]<>\n\nAs duas últimas entradas são repetidas diversas vezes em centenas de páginas.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

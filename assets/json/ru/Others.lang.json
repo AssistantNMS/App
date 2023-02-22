@@ -49,11 +49,12 @@
   {
     "Id": "other3",
     "Icon": "other/3.png",
-    "Name": "Древний ключ",
-    "Group": "Вечный артефакт",
-    "Description": "Тяжелый ключ из кованого железа. Вероятно, подходит к какому-то замку поблизости...",
+    "Name": "Ancient Key",
+    "Group": "Timeless Artifact",
+    "Description": "A key of some weight, this aged piece of wrought iron must belong in a nearby lock...",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
+    "Additional": "",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/other/3.png",
@@ -72,11 +73,12 @@
   {
     "Id": "other4",
     "Icon": "other/4.png",
-    "Name": "Ключ-трезубец",
-    "Group": "Водяная реликвия",
-    "Description": "Необычный зубчатый ключ с ультрафиолетовым свечением.\n\nНесмотря на примитивную форму ключа, сканер экзокостюма обнаружил на его зубцах следы нанитной пены.",
+    "Name": "Trident Key",
+    "Group": "Aquatic Relic",
+    "Description": "A strange forked key, glowing with an ultraviolet light.\n\nDespite its primitive appearance, Exosuit scanning systems reveal traces of nanite foam upon its teeth.",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
+    "Additional": "",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/other/4.png",
@@ -1998,7 +2000,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3098,7 +3101,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
+      "IsExpeditionSeason4Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3120,7 +3124,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
+      "IsExpeditionSeason4Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3283,9 +3288,9 @@
   {
     "Id": "other207",
     "Icon": "other/207.png",
-    "Name": "Планетарная карта",
-    "Group": "Коммерческие картографические данные",
-    "Description": "Карта близлежащей планеты. На ней отмечен какой-то <COMMODITY>обитаемый аванпост<>.\n\nВыберите карту и <VAL_ON>проложите маршрут (<IMG>FE_ALT1<>)<>, чтобы закрепить точку на экране экзокостюма.\n\nДобыть новые карты можно, обмениваясь <COMMODITY>навигационными данными<> с картографом на космической станции.",
+    "Name": "Planetary Chart",
+    "Group": "Commercial Cartographic Data",
+    "Description": "A map of a nearby planet. An <COMMODITY>inhabited outpost<> of some kind has been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3300,7 +3305,7 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": [
-      "Преобразовать данные в навигационную метку экзокостюма"
+      "Convert data to Exosuit navigation marker"
     ]
   },
   {
@@ -3362,7 +3367,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3614,7 +3620,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4536,7 +4543,7 @@
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
-    "Colour": "008951",
+    "Colour": "007951",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
@@ -4558,7 +4565,7 @@
     "BaseValueUnits": 800.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
-    "Colour": "008951",
+    "Colour": "007951",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
@@ -5350,6 +5357,555 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other332",
+    "Icon": "other/332.png",
+    "Name": "Устрашающий визор",
+    "Group": "Шлем (открываемый)",
+    "Description": "Эксклюзивное <STELLAR>изменение внешнего вида экзокостюма<>.\n\nВселяйте ужас с сердца врагов с помощью этого закаленного оксидом шлема.\n\nВнешний вид экзокостюма можно изменить в <TECHNOLOGY>модификаторе внешности<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other333",
+    "Icon": "other/333.png",
+    "Name": "спидер «Утопии»",
+    "Group": "Эксклюзивный космический корабль",
+    "Description": "Уникальный и эксклюзивный <STELLAR>звездолет<>, созданный в честь завершения экспедиции <STELLAR>«Утопия»<> и вклада в проект совместного поселения фонда «Утопия».\n\nЭто универсальное судно покрыто защищающей от радиации броней, а его аэродинамические показатели обеспечивают высокую маневренность во время сражений в атмосфере.\n\n<STELLAR>Получите<> этот корабль, чтобы добавить его в свою коллекцию или использовать <STELLAR>вместо<> своего текущего корабля. Находясь на планете, вы можете призвать корабли с помощью быстрого меню (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other334",
+    "Icon": "other/52.png",
+    "Name": "Звание: «Сановник Утопии»",
+    "Group": "Личный идентификатор",
+    "Description": "Эксклюзивное <STELLAR>звание путешественника<>, выдаваемое в память о завершении экспедиции <STELLAR>«Утопия»<> и вкладе в проект совместного поселения фонда «Утопия».\n\nДобавьте это звание на свой баннер в <TECHNOLOGY>модификаторе внешности<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other335",
+    "Icon": "other/335.png",
+    "Name": "Баннер экспедиции Утопия",
+    "Group": "Личный идентификатор",
+    "Description": "Используйте это эксклюзивное <STELLAR>личное украшение<> в память об экспедиции <STELLAR>«Утопия»<> и вкладе в проект совместного поселения фонда «Утопия».\n\nДобавьте этот баннер в свой профиль в <TECHNOLOGY>модификаторе внешности<>.",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other336",
+    "Icon": "other/336.png",
+    "Name": "Яйцо робо-стража",
+    "Group": "Капсула создания робота",
+    "Description": "Металлическая капсула-яйцо, <TRADEABLE>готовое к вылуплению!<>\n\nВнутри регулярно раздается электронный писк, тихий и успокаивающий.\n\nСканирование показывает, что это существо можно запрограммировать на <SPECIAL>педантичность<> и <SPECIAL>надежность<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2987",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other337",
+    "Icon": "other/337.png",
+    "Name": "Эксклюзивный звездолет",
+    "Group": "Эксклюзивный космический корабль",
+    "Description": "Эксклюзивный <STELLAR>звездолет<>.\n\n<STELLAR>Получите<> этот корабль, чтобы добавить его в коллекцию или использовать <STELLAR>вместо<> своего текущего корабля. Находясь на планете, вы можете призвать корабли с помощью быстрого меню (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other338",
+    "Icon": "other/338.png",
+    "Name": "Эксклюзивный звездолет",
+    "Group": "Эксклюзивный космический корабль",
+    "Description": "Эксклюзивный <STELLAR>звездолет<>.\n\n<STELLAR>Получите<> этот корабль, чтобы добавить его в коллекцию или использовать <STELLAR>вместо<> своего текущего корабля. Находясь на планете, вы можете призвать корабли с помощью быстрого меню (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other339",
+    "Icon": "other/339.png",
+    "Name": "Эксклюзивный звездолет",
+    "Group": "Эксклюзивный космический корабль",
+    "Description": "Эксклюзивный <STELLAR>звездолет<>.\n\n<STELLAR>Получите<> этот корабль, чтобы добавить его в коллекцию или использовать <STELLAR>вместо<> своего текущего корабля. Находясь на планете, вы можете призвать корабли с помощью быстрого меню (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other340",
+    "Icon": "other/340.png",
+    "Name": "Эксклюзивный звездолет",
+    "Group": "Эксклюзивный космический корабль",
+    "Description": "Эксклюзивный <STELLAR>звездолет<>.\n\n<STELLAR>Получите<> этот корабль, чтобы добавить его в коллекцию или использовать <STELLAR>вместо<> своего текущего корабля. Находясь на планете, вы можете призвать корабли с помощью быстрого меню (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other341",
+    "Icon": "other/341.png",
+    "Name": "Эксклюзивный звездолет",
+    "Group": "Эксклюзивный космический корабль",
+    "Description": "Эксклюзивный <STELLAR>звездолет<>.\n\n<STELLAR>Получите<> этот корабль, чтобы добавить его в коллекцию или использовать <STELLAR>вместо<> своего текущего корабля. Находясь на планете, вы можете призвать корабли с помощью быстрого меню (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other342",
+    "Icon": "other/342.png",
+    "Name": "Яйцо питомца",
+    "Group": "Эксклюзивное яйцо питомца",
+    "Description": "Живое оплодотворенное яйцо, <TRADEABLE>готовое к вылуплению!<>",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other343",
+    "Icon": "other/343.png",
+    "Name": "Яйцо питомца",
+    "Group": "Эксклюзивное яйцо питомца",
+    "Description": "Живое оплодотворенное яйцо, <TRADEABLE>готовое к вылуплению!<>",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other344",
+    "Icon": "other/344.png",
+    "Name": "Эксклюзивный мультитул",
+    "Group": "Особое многофункциональное устройство для выживания",
+    "Description": "Эксклюзивный <STELLAR>мультитул<>.\n\n<STELLAR>Получите<> этот мультитул, чтобы добавить его в коллекцию или использовать <STELLAR>вместо<> своего текущего мультитула. Выберите активный мультитул в разделе «Инструменты» в быстром меню (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other345",
+    "Icon": "other/345.png",
+    "Name": "Эксклюзивный мультитул",
+    "Group": "Особое многофункциональное устройство для выживания",
+    "Description": "Эксклюзивный <STELLAR>мультитул<>.\n\n<STELLAR>Получите<> этот мультитул, чтобы добавить его в коллекцию или использовать <STELLAR>вместо<> своего текущего мультитула. Выберите активный мультитул в разделе «Инструменты» в быстром меню (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other346",
+    "Icon": "other/346.png",
+    "Name": "Перемешанный набор фейерверков",
+    "Group": "Мультинабор пиротехники",
+    "Description": "Набор из трех различных фейерверков, в том числе <SPECIAL>хроматический<>, <FUEL>Атласа<> и <COMMODITY>с узором<>. Запустите фейерверки, чтобы озарить небо сверкающими огнями.\n\nПоставьте пусковую трубку с помощью <VAL_ON>меню созидания<> (<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other347",
+    "Icon": "other/346.png",
+    "Name": "Перемешанный набор фейерверков",
+    "Group": "Мультинабор пиротехники",
+    "Description": "Набор из трех различных фейерверков, в том числе <SPECIAL>хроматический<>, <FUEL>Атласа<> и <COMMODITY>с узором<>. Запустите фейерверки, чтобы озарить небо сверкающими огнями.\n\nПоставьте пусковую трубку с помощью <VAL_ON>меню созидания<> (<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other348",
+    "Icon": "other/346.png",
+    "Name": "Перемешанный набор фейерверков",
+    "Group": "Мультинабор пиротехники",
+    "Description": "Набор из трех различных фейерверков, в том числе <SPECIAL>хроматический<>, <FUEL>Атласа<> и <COMMODITY>с узором<>. Запустите фейерверки, чтобы озарить небо сверкающими огнями.\n\nПоставьте пусковую трубку с помощью <VAL_ON>меню созидания<> (<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other349",
+    "Icon": "other/346.png",
+    "Name": "Перемешанный набор фейерверков",
+    "Group": "Мультинабор пиротехники",
+    "Description": "Набор из трех различных фейерверков, в том числе <SPECIAL>хроматический<>, <FUEL>Атласа<> и <COMMODITY>с узором<>. Запустите фейерверки, чтобы озарить небо сверкающими огнями.\n\nПоставьте пусковую трубку с помощью <VAL_ON>меню созидания<> (<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other350",
+    "Icon": "other/346.png",
+    "Name": "Перемешанный набор фейерверков",
+    "Group": "Мультинабор пиротехники",
+    "Description": "Набор из трех различных фейерверков, в том числе <SPECIAL>хроматический<>, <FUEL>Атласа<> и <COMMODITY>с узором<>. Запустите фейерверки, чтобы озарить небо сверкающими огнями.\n\nПоставьте пусковую трубку с помощью <VAL_ON>меню созидания<> (<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other351",
+    "Icon": "other/351.png",
+    "Name": "Голограмма: пузырь",
+    "Group": "Жест (открываемый)",
+    "Description": "Эксклюзивный жест.\n\nЕго можно выбрать в <VAL_ON>быстром меню<>, чтобы создать миниатюрную голограмму милого существа-пузыря.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other352",
+    "Icon": "other/352.png",
+    "Name": "Голограмма: фрегат",
+    "Group": "Жест (открываемый)",
+    "Description": "Эксклюзивный жест.\n\nЕго можно выбрать в <VAL_ON>быстром меню<>, чтобы создать небольшую голограмму изящного и мощного фрегата.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other353",
+    "Icon": "other/353.png",
+    "Name": "Голограмма: звездолет",
+    "Group": "Жест (открываемый)",
+    "Description": "Эксклюзивный жест.\n\nЕго можно выбрать в <VAL_ON>быстром меню<>, чтобы создать небольшую голограмму классического боевого звездолета.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other354",
+    "Icon": "other/354.png",
+    "Name": "Голограмма: мультитул",
+    "Group": "Жест (открываемый)",
+    "Description": "Эксклюзивный жест.\n\nЕго можно выбрать в <VAL_ON>быстром меню<>, чтобы создать небольшую голограмму пистолета-мультитула.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other355",
+    "Icon": "other/355.png",
+    "Name": "Голограмма: система",
+    "Group": "Жест (открываемый)",
+    "Description": "Эксклюзивный жест.\n\nЕго можно выбрать в <VAL_ON>быстром меню<>, чтобы создать небольшую голограмму солнечной системы.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other356",
+    "Icon": "curiosities/46.png",
+    "Name": "Яйцо пустоты",
+    "Group": "Живая диковинка",
+    "Description": "Аномальное яйцо. Крепкая кожистая скорлупа начинает дрожать, если к ней прикоснуться.\n\nИзнутри доносится едва различимый стук. Время от времени оно, кажется, поет.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

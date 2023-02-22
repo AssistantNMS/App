@@ -499,6 +499,7 @@
     "Usages": [
       "HasUsedToCraft",
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -898,6 +899,7 @@
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -1506,9 +1508,12 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
+    "CookingValue": 0.0,
     "Usages": [
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
+      "IsEggIngredient",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -1773,6 +1778,295 @@
       "HasDevProperties",
       "IsConsumable",
       "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur84",
+    "Icon": "other/207.png",
+    "Name": "Mapa Planetário",
+    "Group": "Dados Cartográficos Comerciais",
+    "Description": "Um mapa de um planeta próximo. Um <COMMODITY>posto avançado não habitado<> foi marcado.\n\nSeleciona o mapa e usa <VAL_ON>Traçar Rota (<IMG>FE_ALT1<>)<> para fixar a localização no visor do Exofato.\n\nNovos mapas podem ser obtidos ao trocar <COMMODITY>Dados de Navegação<> por um Cartógrafo da Estação Espacial.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Converter dados para o marcador de navegação do Exofato"
+    ]
+  },
+  {
+    "Id": "cur85",
+    "Icon": "other/3.png",
+    "Name": "Chave Anciã",
+    "Group": "Artefacto Intemporal",
+    "Description": "Este pedaço envelhecido de ferro forjado, uma chave com algum peso, deve pertencer a uma fechadura próxima...",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur86",
+    "Icon": "other/4.png",
+    "Name": "Chave Tridente",
+    "Group": "Relíquia Aquática",
+    "Description": "Uma estranha chave bifurcada, brilha com uma luz ultravioleta.\n\nApesar de sua aparência primitiva, os sistemas de deteção do Exofato revelam traços de espuma de nanite nos seus dentes.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur87",
+    "Icon": "products/156.png",
+    "Name": "Sinalizador de Sentinela",
+    "Group": "Comunicador de Sentinela",
+    "Description": "Um dispositivo especializado, criado pela Iteração Tétis. A sua função principal é contactar o teu <TECHNOLOGY>drone Sentinela reconstruído<>.\n\nSeleciona o dispositivo e utiliza Desativar Transmissão (<IMG>FE_ALT1<>) para parar de sinalizar [ O Vigia ].\n\nSe este sinalizador estiver ativo no <STELLAR>Inventário do Exofato<>, o drone ficará ao teu lado enquanto estiveres num planeta.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Desativar o sinal e dispensar [ O Vigia ]"
+    ]
+  },
+  {
+    "Id": "cur88",
+    "Icon": "curiosities/88.png",
+    "Name": "Fornecimento de Materiais Beta de Utopia",
+    "Group": "Cache de Fornecimentos da Fundação de Utopia",
+    "Description": "Para apoiar os trabalhadores que, corajosamente, estão a terraformar os espaços vazios repletos de lava do planeta Pehaelump, os Supervisores de Utopia têm o prazer de fornecer este cache de bens vitais.\n\nSeleciona o pacote de fornecimentos e usa <VAL_ON>Abrir Pacote<> (<IMG>FE_ALT1<>) para recolher os materiais da Fundação de Utopia, bem como os detalhes da tua <STELLAR>próxima tarefa<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receber materiais da Fundação de Utopia"
+    ]
+  },
+  {
+    "Id": "cur89",
+    "Icon": "curiosities/88.png",
+    "Name": "Fornecimento de Materiais Gama de Utopia",
+    "Group": "Cache de Fornecimentos da Fundação de Utopia",
+    "Description": "Para apoiar os trabalhadores que, de forma valente, trabalham nas montanhas inclinadas e expostas do planeta New Sesto, os Supervisores de Utopia têm o prazer de fornecer este cache de bens vitais.\n\nSeleciona o pacote de fornecimentos e usa <VAL_ON>Abrir Pacote<> (<IMG>FE_ALT1<>) para recolher os materiais da Fundação de Utopia, bem como os detalhes da tua <STELLAR>próxima tarefa<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receber materiais da Fundação de Utopia"
+    ]
+  },
+  {
+    "Id": "cur90",
+    "Icon": "curiosities/88.png",
+    "Name": "Fornecimento de Materiais Delta de Utopia",
+    "Group": "Cache de Fornecimentos da Fundação de Utopia",
+    "Description": "Para apoiar os trabalhadores sobreviventes que agora confrontam [ <SPECIAL>CENSURADO<> ] do planeta Idalth XIV, os Supervisores de Utopia têm o prazer de fornecer este cache de bens vitais.\n\nSeleciona o pacote de fornecimentos e usa <VAL_ON>Abrir Pacote<> (<IMG>FE_ALT1<>) para recolher os materiais da Fundação de Utopia, bem como os detalhes da tua <STELLAR>próxima tarefa<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receber materiais da Fundação de Utopia"
+    ]
+  },
+  {
+    "Id": "cur91",
+    "Icon": "curiosities/88.png",
+    "Name": "Fornecimento de Materiais Épsilon de Utopia",
+    "Group": "Cache de Fornecimentos da Fundação de Utopia",
+    "Description": "Para apoiar os trabalhadores que, de forma tão nobre, reconstruíram os pântanos aspirantes do planeta Endil A8, os Supervisores de Utopia têm o prazer de fornecer este cache de bens vitais.\n\nSeleciona o pacote de fornecimentos e usa <VAL_ON>Abrir Pacote<> (<IMG>FE_ALT1<>) para recolher os materiais da Fundação de Utopia, bem como os detalhes da tua <STELLAR>próxima tarefa<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receber materiais da Fundação de Utopia"
+    ]
+  },
+  {
+    "Id": "cur92",
+    "Icon": "curiosities/92.png",
+    "Name": "Coordenadas Beta do Povoamento",
+    "Group": "Mapa do Povoamento da Fundação de Utopia",
+    "Description": "Um mapa da Fundação de Utopia onde é possível ver <STELLAR>coordenadas personalizadas<> do teu local de construção.\n\nSeleciona o mapa e usa <VAL_ON>Traçar Rota<> (<IMG>FE_ALT1<>) para assinalar a localização no visor do Exofato.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receber as coordenadas de construção da Fundação de Utopia"
+    ]
+  },
+  {
+    "Id": "cur93",
+    "Icon": "curiosities/92.png",
+    "Name": "Coordenadas Gama do Povoamento",
+    "Group": "Mapa do Povoamento da Fundação de Utopia",
+    "Description": "Um mapa da Fundação de Utopia onde é possível ver <STELLAR>coordenadas personalizadas<> do teu local de construção.\n\nSeleciona o mapa e usa <VAL_ON>Traçar Rota<> (<IMG>FE_ALT1<>) para assinalar a localização no visor do Exofato.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receber as coordenadas de construção da Fundação de Utopia"
+    ]
+  },
+  {
+    "Id": "cur94",
+    "Icon": "curiosities/92.png",
+    "Name": "Coordenadas Delta do Povoamento",
+    "Group": "Mapa do Povoamento da Fundação de Utopia",
+    "Description": "Um mapa da Fundação de Utopia onde é possível ver <STELLAR>coordenadas personalizadas<> do teu local de construção.\n\nSeleciona o mapa e usa <VAL_ON>Traçar Rota<> (<IMG>FE_ALT1<>) para assinalar a localização no visor do Exofato.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receber as coordenadas de construção da Fundação de Utopia"
+    ]
+  },
+  {
+    "Id": "cur95",
+    "Icon": "curiosities/92.png",
+    "Name": "Coordenadas Épsilon do Povoamento",
+    "Group": "Mapa do Povoamento da Fundação de Utopia",
+    "Description": "Um mapa da Fundação de Utopia onde é possível ver <STELLAR>coordenadas personalizadas<> do teu local de construção.\n\nSeleciona o mapa e usa <VAL_ON>Traçar Rota<> (<IMG>FE_ALT1<>) para assinalar a localização no visor do Exofato.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receber as coordenadas de construção da Fundação de Utopia"
+    ]
+  },
+  {
+    "Id": "cur96",
+    "Icon": "curiosities/33.png",
+    "Name": "Histórico de Construção",
+    "Group": "Arquivo Confidencial",
+    "Description": "Este relatório regista a história de uma instalação planetária que faz parte do <EXPED>Projeto Utopia<>. Curiosamente, várias secções estão ausentes.\n\nDS 2368 :: <STELLAR>Instalação <><TRADEABLE>fundada<><STELLAR>. Perfuradora profunda a plasma operacional.<>\nDS 2384 :: <STELLAR>Crescimento do retorno estável em 1%.<>\nDS 2400 :: <STELLAR>Supervisores a consultar a taxa de crescimento.<>\nDS 2416 :: <STELLAR>Exp. orbital aprovada. Comércio da estação em crescimento.<>\nDS 2432 :: <SPECIAL>[Censurado]<> <STELLAR>perigo encontrado.<>\nDS 2448 :: <SPECIAL>[Censurado]<>\nDS 2464 :: <STELLAR>Projeto Utopia iniciado.<>\nDS 2464 :: <STELLAR>Instalação <><TRADEABLE>restaurada<><STELLAR>. Perfuradora profunda a plasma operacional. Rotas comerciais reabertas.<>\nDS 2480 :: <SPECIAL>[Censurado]<>\nDS 2496 :: <STELLAR>Instalação <><TRADEABLE>restaurada<><STELLAR>. Perfuradora profunda a plasma operacional. Rotas comerciais reabertas.<>\nDS 2512 :: <SPECIAL>[Censurado]<>\n\nA duas últimas entradas são repetidas ao longo de centenas de páginas.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

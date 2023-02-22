@@ -499,6 +499,7 @@
     "Usages": [
       "HasUsedToCraft",
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -898,6 +899,7 @@
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -1506,9 +1508,12 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
+    "CookingValue": 0.0,
     "Usages": [
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
+      "IsEggIngredient",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -1773,6 +1778,295 @@
       "HasDevProperties",
       "IsConsumable",
       "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur84",
+    "Icon": "other/207.png",
+    "Name": "행성 도표",
+    "Group": "상업용 지도 데이터",
+    "Description": "인근 행성의 지도입니다. <COMMODITY>거주자 존재 전초기지<> 위치가 표시되어 있습니다.\n\n지도를 선택하고 <VAL_ON>경로 구성(<IMG>FE_ALT1<>)<>을 사용해 엑소슈트 화면에 위치를 지정하세요.\n\n우주정거장의 지도제작자와 <COMMODITY>항법 데이터<>를 교환해 새로운 지도를 획득할 수 있습니다.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "데이터를 엑소슈트 항법 마커로 변환"
+    ]
+  },
+  {
+    "Id": "cur85",
+    "Icon": "other/3.png",
+    "Name": "고대 열쇠",
+    "Group": "변치 않는 유물",
+    "Description": "무게가 좀 나가는 열쇠입니다. 이 오래된 철 조각은 분명히 근처에 있는 자물쇠에 들어맞을 것입니다...",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur86",
+    "Icon": "other/4.png",
+    "Name": "삼지창 열쇠",
+    "Group": "해양 유물",
+    "Description": "자외선을 발하는 특이한 갈퀴 모양의 열쇠입니다.\n\n원시적인 형태에도 불구하고 엑소슈트 스캔 시스템으로 조사한 결과, 이빨 부분에서 나노로봇 거품의 흔적이 발견됐습니다.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur87",
+    "Icon": "products/156.png",
+    "Name": "센티널 조명탄",
+    "Group": "센티널 교신기",
+    "Description": "반복 테티스가 만든 특수 장치. 주요 기능은 <TECHNOLOGY>재구성된 센티널 드론<>을 맞이하는 것입니다.\n\n장치를 선택하고 신호 비활성화(<IMG>FE_ALT1<>)를 사용해 [ 초병 ]에 보내는 신호를 중단하십시오.\n\n조명탄을 <STELLAR>엑소슈트 인벤토리<>에서 사용 중인 경우, 행성 표면에 있을 때 드론이 곁에 머물 것입니다.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "신호 비활성화 및 [ 초병 ] 해산"
+    ]
+  },
+  {
+    "Id": "cur88",
+    "Icon": "curiosities/88.png",
+    "Name": "유토피아 보급용 드롭 베타",
+    "Group": "유토피아 파운데이션 보급품 은닉처",
+    "Description": "페할럼프(Pehaelump) 행성의 용암으로 가득한 황무지를 용감하게 테라포밍하는 일꾼들을 지원하기 위해 유토피아 감독관이 은닉처의 이 중요한 물품을 기꺼이 공급합니다.\n\n공급품 팩을 선택하고 <VAL_ON>패키지 열기<>(<IMG>FE_ALT1<>)를 사용하여 유토피아 파운데이션 보급품을 수집하십시오. <STELLAR>다음 임무<>에 대한 세부 정보도 포함되어 있습니다.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "유토피아 파운데이션 보급품 받기"
+    ]
+  },
+  {
+    "Id": "cur89",
+    "Icon": "curiosities/88.png",
+    "Name": "유토피아 보급용 드롭 감마",
+    "Group": "유토피아 파운데이션 보급품 은닉처",
+    "Description": "뉴 세스토(New Sesto) 행성의 가파르고 황량한 산악지대에서 힘들게 일하는 일꾼들을 지원하기 위해 유토피아 감독관이 은닉처의 이 중요한 물품을 기꺼이 공급합니다.\n\n공급품 팩을 선택하고 <VAL_ON>패키지 열기<>(<IMG>FE_ALT1<>)를 사용하여 유토피아 파운데이션 보급품을 수집하십시오. <STELLAR>다음 임무<>에 대한 세부 정보도 포함되어 있습니다.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "유토피아 파운데이션 보급품 받기"
+    ]
+  },
+  {
+    "Id": "cur90",
+    "Icon": "curiosities/88.png",
+    "Name": "유토피아 보급용 드롭 델타",
+    "Group": "유토피아 파운데이션 보급품 은닉처",
+    "Description": "지금 아이달스(Idalth) XIV 행성의 [ <SPECIAL>내용 삭제<> ]에 맞서 살아남은 일꾼들을 지원하기 위해 유토피아 감독관이 은닉처의 이 중요한 물품을 기꺼이 공급합니다.\n\n공급품 팩을 선택하고 <VAL_ON>패키지 열기<>(<IMG>FE_ALT1<>)를 사용하여 유토피아 파운데이션 보급품을 수집하십시오. <STELLAR>다음 임무<>에 대한 세부 정보도 포함되어 있습니다.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "유토피아 파운데이션 보급품 받기"
+    ]
+  },
+  {
+    "Id": "cur91",
+    "Icon": "curiosities/88.png",
+    "Name": "유토피아 보급용 드롭 엡실론",
+    "Group": "유토피아 파운데이션 보급품 은닉처",
+    "Description": "엔딜(Endil) A8 행성의 찐득거리는 수렁 속에서도 고귀한 재건 활동을 수행하는 일꾼들을 지원하기 위해 유토피아 감독관이 은닉처의 이 중요한 물품을 기꺼이 공급합니다.\n\n공급품 팩을 선택하고 <VAL_ON>패키지 열기<>(<IMG>FE_ALT1<>)를 사용하여 유토피아 파운데이션 보급품을 수집하세요. <STELLAR>다음 임무<>에 대한 세부 정보도 포함되어 있습니다.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "유토피아 파운데이션 보급품 받기"
+    ]
+  },
+  {
+    "Id": "cur92",
+    "Icon": "curiosities/92.png",
+    "Name": "거주지 좌표 베타",
+    "Group": "유토피아 파운데이션 거주지 차트",
+    "Description": "유토피아 파운데이션의 지도로, 목표 건설 현장의 <STELLAR>맞춤 좌표<>를 보여줍니다.\n\n지도를 선택하고 <VAL_ON>경로 구성<>(<IMG>FE_ALT1<>)를 사용하여 엑소슈트 디스플레이에 해당 위치를 고정할 수 있습니다.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "유토피아 파운데이션 건설 좌표 받기"
+    ]
+  },
+  {
+    "Id": "cur93",
+    "Icon": "curiosities/92.png",
+    "Name": "거주지 좌표 감마",
+    "Group": "유토피아 파운데이션 거주지 차트",
+    "Description": "유토피아 파운데이션의 지도로, 목표 건설 현장의 <STELLAR>맞춤 좌표<>를 보여줍니다.\n\n지도를 선택하고 <VAL_ON>경로 구성<>(<IMG>FE_ALT1<>)를 사용하여 엑소슈트 디스플레이에 해당 위치를 고정할 수 있습니다.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "유토피아 파운데이션 건설 좌표 받기"
+    ]
+  },
+  {
+    "Id": "cur94",
+    "Icon": "curiosities/92.png",
+    "Name": "거주지 좌표 델타",
+    "Group": "유토피아 파운데이션 거주지 차트",
+    "Description": "유토피아 파운데이션의 지도로, 목표 건설 현장의 <STELLAR>맞춤 좌표<>를 보여줍니다.\n\n지도를 선택하고 <VAL_ON>경로 구성<>(<IMG>FE_ALT1<>)를 사용하여 엑소슈트 디스플레이에 해당 위치를 고정할 수 있습니다.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "유토피아 파운데이션 건설 좌표 받기"
+    ]
+  },
+  {
+    "Id": "cur95",
+    "Icon": "curiosities/92.png",
+    "Name": "거주지 좌표 엡실론",
+    "Group": "유토피아 파운데이션 거주지 차트",
+    "Description": "유토피아 파운데이션의 지도로, 목표 건설 현장의 <STELLAR>맞춤 좌표<>를 보여줍니다.\n\n지도를 선택하고 <VAL_ON>경로 구성<>(<IMG>FE_ALT1<>)를 사용하여 엑소슈트 디스플레이에 해당 위치를 고정할 수 있습니다.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "유토피아 파운데이션 건설 좌표 받기"
+    ]
+  },
+  {
+    "Id": "cur96",
+    "Icon": "curiosities/33.png",
+    "Name": "건설 내역",
+    "Group": "기밀 서류",
+    "Description": "해당 보고서에는 <EXPED>유토피아 프로젝트<>의 일부였던 행성 표면에 위치한 시설의 역사가 기록되어 있습니다. 의문스럽게도 일부 부분이 생략되어 있습니다.\n\nDS 2368 :: <STELLAR>시설 <><TRADEABLE>건립<><STELLAR>. 플라스마 심층 굴착기 가동 중.<>\nDS 2384 :: <STELLAR>성장률 꾸준히 1% 유지 중.<>\nDS 2400 :: <STELLAR>감독관이 성장률에 대해 의문을 표함.<>\nDS 2416 :: <STELLAR>궤도 확장 승인됨. 정거장 무역 크게 호황 중.<>\nDS 2432 :: <SPECIAL>[내용 삭제]<> <STELLAR>위협과 조우함.<>\nDS 2448 :: <SPECIAL>[내용 삭제]<>\nDS 2464 :: <STELLAR>유토피아 프로젝트 시작됨.<>\nDS 2464 :: <STELLAR>시설 <><TRADEABLE>복구됨<><STELLAR>. 플라스마 심층 굴착기 가동 중. 무역로 다시 개방.<>\nDS 2480 :: <SPECIAL>[내용 삭제]<>\nDS 2496 :: <STELLAR>시설 <><TRADEABLE>복구됨<><STELLAR>. 플라스마 심층 굴착기 가동 중. 무역로 다시 개방.<>\nDS 2512 :: <SPECIAL>[내용 삭제]<>\n\n맨 마지막 두 항목은 몇백 페이지에 걸쳐 계속 반복되고 있습니다.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

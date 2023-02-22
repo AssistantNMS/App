@@ -499,6 +499,7 @@
     "Usages": [
       "HasUsedToCraft",
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -898,6 +899,7 @@
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -1506,9 +1508,12 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
+    "CookingValue": 0.0,
     "Usages": [
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
+      "IsEggIngredient",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -1773,6 +1778,295 @@
       "HasDevProperties",
       "IsConsumable",
       "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur84",
+    "Icon": "other/207.png",
+    "Name": "星系図",
+    "Group": "商用地図データ",
+    "Description": "近くの惑星の地図。何らかの<COMMODITY>居住者のいるアウトポスト<>がマークされている。\n\n地図を選択して<VAL_ON>ルート設定（<IMG>FE_ALT1<>）<>を使うと、エクソスーツの画面に位置をブックマークできる。\n\n新しい地図は、宇宙ステーションの地図製作者と<COMMODITY>ナビゲーションデータ<>を交換すると手に入る。",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "データをエクソスーツ誘導マーカーに変換"
+    ]
+  },
+  {
+    "Id": "cur85",
+    "Icon": "other/3.png",
+    "Name": "古代の鍵",
+    "Group": "時を超越する遺物",
+    "Description": "鍛鉄でできた重みのある鍵。近くに錠があるはずだが...",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur86",
+    "Icon": "other/4.png",
+    "Name": "三又鉾の鍵",
+    "Group": "水中遺跡",
+    "Description": "三又鉾があしらわれた鍵。 紫色に光っている。\n\nかなり古いもののように見えるが、エクソスーツのスキャンシステムによると歯の部分にナノマシンが使用されているのが分かる。",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur87",
+    "Icon": "products/156.png",
+    "Name": "センチネルフレア",
+    "Group": "センチネルコミュニケーター",
+    "Description": "イテレーションテティスによって作られた専門家用デバイス。その主な機能は、<TECHNOLOGY>修復されたセンチネルドローン<>を呼ぶことにある。\n\nデバイスを選択し、送信停止（<IMG>FE_ALT1<>）を使うと、[ セントリー ]への信号を止められる。\n\nフレアが<STELLAR>エクソスーツのアイテムケース<>で有効になっている間、このドローンは惑星上であなたの味方であり続ける。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "信号を止めて[ セントリー ]を遠ざける"
+    ]
+  },
+  {
+    "Id": "cur88",
+    "Icon": "curiosities/88.png",
+    "Name": "ユートピア補給物資「ベータ」",
+    "Group": "ユートピア財団の資源貯蔵庫",
+    "Description": "溶岩だらけの惑星ペハエランプの荒れ地を勇敢にもテラフォーミングする労働者たちを支援するため、ユートピアの監督官らは、この貴重な品々を喜んで提供してくれる。\n\n補給パックを選択して<VAL_ON>パッケージを開ける<>（<IMG>FE_ALT1<>）を選ぶと、ユートピア財団の物資と<STELLAR>次の依頼<>の詳細を入手できる。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "ユートピア財団の物資を受け取る"
+    ]
+  },
+  {
+    "Id": "cur89",
+    "Icon": "curiosities/88.png",
+    "Name": "ユートピア補給物資「ガンマ」",
+    "Group": "ユートピア財団の資源貯蔵庫",
+    "Description": "惑星ニューセストの険しく岩肌のむき出しになった山々で立派に働いている労働者たちを支援するために、ユートピア監督官らは喜んでこの貴重な品物を供給している。\n\n補給パックを選択して<VAL_ON>パッケージを開ける<>（<IMG>FE_ALT1<>）を選ぶと、ユートピア財団の物資と<STELLAR>次の依頼<>の詳細を入手できる。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "ユートピア財団の物資を受け取る"
+    ]
+  },
+  {
+    "Id": "cur90",
+    "Icon": "curiosities/88.png",
+    "Name": "ユートピア補給物資「デルタ」",
+    "Group": "ユートピア財団の資源貯蔵庫",
+    "Description": "惑星イダルスXIVの[<SPECIAL>編集済み<>]に立ち向かっている労働者たちを支援するために、ユートピア監督官らは喜んでこの貴重な品々を提供してくれる。\n\n補給パックを選択して<VAL_ON>パッケージを開ける<>（<IMG>FE_ALT1<>）を選ぶと、ユートピア財団の物資と<STELLAR>次の依頼<>の詳細を入手できる。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "ユートピア財団の物資を受け取る"
+    ]
+  },
+  {
+    "Id": "cur91",
+    "Icon": "curiosities/88.png",
+    "Name": "ユートピア補給物資「イプシロン」",
+    "Group": "ユートピア財団の資源貯蔵庫",
+    "Description": "惑星エンディルA8の最悪の泥沼で気高く再建を進める労働者たちを支援するために、ユートピア監視員は喜んでこの貴重な品々を供給してくれる。\n\n補給パックを選択して<VAL_ON>パッケージを開ける<>（<IMG>FE_ALT1<>）を選ぶと、ユートピア財団の物資と<STELLAR>次の依頼<>の詳細を入手できる。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "ユートピア財団の物資を受け取る"
+    ]
+  },
+  {
+    "Id": "cur92",
+    "Icon": "curiosities/92.png",
+    "Name": "開拓地座標「ベータ」",
+    "Group": "ユートピア財団開拓地チャート",
+    "Description": "ユートピア財団の地図には、あなたが指定された建設サイトの<STELLAR>個別の座標<>が示されています。\n\n地図を選んで<VAL_ON>ルート設定<>（<IMG>FE_ALT1<>）を使うと、エクソスーツのディスプレイに場所がブックマークされます。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "ユートピア財団の建設座標を受け取る"
+    ]
+  },
+  {
+    "Id": "cur93",
+    "Icon": "curiosities/92.png",
+    "Name": "開拓地座標「ガンマ」",
+    "Group": "ユートピア財団開拓地チャート",
+    "Description": "ユートピア財団の地図には、あなたが指定された建設サイトの<STELLAR>個別の座標<>が示されています。\n\n地図を選んで<VAL_ON>ルート設定<>（<IMG>FE_ALT1<>）を使うと、エクソスーツのディスプレイに場所がブックマークされます。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "ユートピア財団の建設座標を受け取る"
+    ]
+  },
+  {
+    "Id": "cur94",
+    "Icon": "curiosities/92.png",
+    "Name": "開拓地座標「デルタ」",
+    "Group": "ユートピア財団開拓地チャート",
+    "Description": "ユートピア財団の地図には、あなたが指定された建設サイトの<STELLAR>個別の座標<>が示されています。\n\n地図を選んで<VAL_ON>ルート設定<>（<IMG>FE_ALT1<>）を使うと、エクソスーツのディスプレイに場所がブックマークされます。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "ユートピア財団の建設座標を受け取る"
+    ]
+  },
+  {
+    "Id": "cur95",
+    "Icon": "curiosities/92.png",
+    "Name": "開拓地座標「イプシロン」",
+    "Group": "ユートピア財団開拓地チャート",
+    "Description": "ユートピア財団の地図には、あなたが指定された建設サイトの<STELLAR>個別の座標<>が示されています。\n\n地図を選んで<VAL_ON>ルート設定<>（<IMG>FE_ALT1<>）を使うと、エクソスーツのディスプレイに場所がブックマークされます。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "ユートピア財団の建設座標を受け取る"
+    ]
+  },
+  {
+    "Id": "cur96",
+    "Icon": "curiosities/33.png",
+    "Name": "建設履歴",
+    "Group": "極秘書類",
+    "Description": "このレポートには<EXPED>ユートピアプロジェクト<>の一部を構成する惑星の施設のことが記録されている。興味深いことに抜けている部分がある。\n\nDS 2368：：<STELLAR>施設<>を<TRADEABLE>設立。<><STELLAR>プラズマ採掘装置稼働中。<>\nDS 2384：：<STELLAR>利益の安定成長率1%。<>\nDS 2400：：<STELLAR>監督官が成長率について疑念を抱いている。<>\nDS 2416：：<STELLAR>軌道の延長が承認された。ステーションの交易が急成長している。<>\nDS 2432：：<SPECIAL>[編集済み]<><STELLAR>異星人による危機に遭遇。<>\nDS 2448：：<SPECIAL>[編集済み]<>\nDS 2464：：<STELLAR>ユートピアプロジェクトを開始。<>\nDS 2464：：<STELLAR>施設<>を<TRADEABLE>修復。<><STELLAR>プラズマ採掘装置稼働中。交易ルート再開。<>\nDS 2480：：<SPECIAL>[編集済み]<>\nDS 2496：：<STELLAR>施設<>を<TRADEABLE>修復。<><STELLAR>プラズマ採掘装置稼働中。<>\nDS 2512：：<SPECIAL>[編集済み]<>\n\n最後の2つのエントリーは同じ内容が数百ページにもわたって何度も繰り返されている。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

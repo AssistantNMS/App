@@ -499,6 +499,7 @@
     "Usages": [
       "HasUsedToCraft",
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -898,6 +899,7 @@
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -1506,9 +1508,12 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
+    "CookingValue": 0.0,
     "Usages": [
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
+      "IsEggIngredient",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -1773,6 +1778,295 @@
       "HasDevProperties",
       "IsConsumable",
       "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur84",
+    "Icon": "other/207.png",
+    "Name": "星图",
+    "Group": "商业制图资料",
+    "Description": "一张附近行星的地图，标有一个<COMMODITY>外星前哨基站<>。\n\n选择地图并使用<VAL_ON>规划路线（<IMG>FE_ALT1<>）<>以在你的套装屏幕中标记该地点。\n\n新地图可以通过与空间站制图师交换<COMMODITY>导航数据<>获取。",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "将数据转换为套装导航标记"
+    ]
+  },
+  {
+    "Id": "cur85",
+    "Icon": "other/3.png",
+    "Name": "古代的钥匙",
+    "Group": "永恒的遗物",
+    "Description": "一把有些分量的钥匙，这块经过锻造的铁块一定能用来打开附近的某把锁......",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur86",
+    "Icon": "other/4.png",
+    "Name": "三叉戟钥匙",
+    "Group": "水中遗物",
+    "Description": "一把奇怪的叉状钥匙，散发出一种紫外光。\n\n尽管它看上去很原始，套装扫描系统却在其尖端发现了纳米泡沫的痕迹。",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur87",
+    "Icon": "products/156.png",
+    "Name": "护卫信号器",
+    "Group": "护卫通讯器",
+    "Description": "迭代：特提斯创造的特殊设备。主要用于呼叫你的<TECHNOLOGY>重构护卫无人机<>。\n\n选择设备并使用关闭广播（<IMG>FE_ALT1<>）以停止向[哨兵]发送信号。\n\n在<STELLAR>套装库存<>中激活信号器后，无人机将会在行星表面陪伴你。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "关闭信号器并解散[哨兵]"
+    ]
+  },
+  {
+    "Id": "cur88",
+    "Icon": "curiosities/88.png",
+    "Name": "乌托邦补给投送：贝塔",
+    "Group": "乌托邦基金会物资贮存箱",
+    "Description": "为支援肩负改造被熔岩废土覆盖的贝黒伦普星任务的勇敢建造者，乌托邦监督者很荣幸能够提供这份包含必要物资的贮存箱。\n\n选择补给包并使用<VAL_ON>打开包裹（<>FE_ALT1<IMG>）<>收集你的乌托邦基金会补给，以及有关<STELLAR>下一步任务<>的细节信息。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "获取乌托邦基金会补给"
+    ]
+  },
+  {
+    "Id": "cur89",
+    "Icon": "curiosities/88.png",
+    "Name": "乌托邦补给投送：伽玛",
+    "Group": "乌托邦基金会物资贮存箱",
+    "Description": "为支援肩负改造被突兀陡峭的群山覆盖的新塞斯托星任务的勤劳建造者，乌托邦监督者很荣幸能够提供这份包含必要物资的贮存箱。\n\n选择补给包并使用<VAL_ON>打开包裹（<>FE_ALT1<IMG>）<>收集你的乌托邦基金会补给，以及有关<STELLAR>下一步任务<>的细节信息。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "获取乌托邦基金会补给"
+    ]
+  },
+  {
+    "Id": "cur90",
+    "Icon": "curiosities/88.png",
+    "Name": "乌托邦补给投送：德尔塔",
+    "Group": "乌托邦基金会物资贮存箱",
+    "Description": "为支援正在艾达斯十四星的[ <SPECIAL>已修订<> ]中艰难求生的建造者，乌托邦监督者很荣幸能够提供这份包含必要物资的贮存箱。\n\n选择补给包并使用<VAL_ON>打开包裹（<>FE_ALT1<IMG>）<>收集你的乌托邦基金会补给，以及有关<STELLAR>下一步任务<>的细节信息。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "获取乌托邦基金会补给"
+    ]
+  },
+  {
+    "Id": "cur91",
+    "Icon": "curiosities/88.png",
+    "Name": "乌托邦补给投送：艾普西龙",
+    "Group": "乌托邦基金会物资贮存箱",
+    "Description": "为支援在恩迪尔A8星中寸步难行的沼泽中英勇重建的建造者们，乌托邦监督者很荣幸能够提供这份包含必要物资的贮存箱。\n\n选择补给包并使用<VAL_ON>打开包裹（<>FE_ALT1<IMG>）<>收集你的乌托邦基金会补给，以及有关<STELLAR>下一步任务<>的细节信息。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "获取乌托邦基金会补给"
+    ]
+  },
+  {
+    "Id": "cur92",
+    "Icon": "curiosities/92.png",
+    "Name": "定居点坐标：贝塔",
+    "Group": "乌托邦基金会定居点图标",
+    "Description": "乌托邦基金会提供的地图，上面显示着你的目标建造地点的<STELLAR>专属坐标<>。\n\n选择地图并使用<VAL_ON>规划路线（<>FE_ALT1<IMG>）<>在你的套装界面标记位置。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "获取乌托邦基金会建造坐标"
+    ]
+  },
+  {
+    "Id": "cur93",
+    "Icon": "curiosities/92.png",
+    "Name": "定居点坐标：伽玛",
+    "Group": "乌托邦基金会定居点图标",
+    "Description": "乌托邦基金会提供的地图，上面显示着你的目标建造地点的<STELLAR>专属坐标<>。\n\n选择地图并使用<VAL_ON>规划路线（<>FE_ALT1<IMG>）<>在你的套装界面标记位置。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "获取乌托邦基金会建造坐标"
+    ]
+  },
+  {
+    "Id": "cur94",
+    "Icon": "curiosities/92.png",
+    "Name": "定居点坐标：德尔塔",
+    "Group": "乌托邦基金会定居点图标",
+    "Description": "乌托邦基金会提供的地图，上面显示着你的目标建造地点的<STELLAR>专属坐标<>。\n\n选择地图并使用<VAL_ON>规划路线（<>FE_ALT1<IMG>）<>在你的套装界面标记位置。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "获取乌托邦基金会建造坐标"
+    ]
+  },
+  {
+    "Id": "cur95",
+    "Icon": "curiosities/92.png",
+    "Name": "定居点坐标：艾普西龙",
+    "Group": "乌托邦基金会定居点图标",
+    "Description": "乌托邦基金会提供的地图，上面显示着你的目标建造地点的<STELLAR>专属坐标<>。\n\n选择地图并使用<VAL_ON>规划路线（<>FE_ALT1<IMG>）<>在你的套装界面标记位置。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "获取乌托邦基金会建造坐标"
+    ]
+  },
+  {
+    "Id": "cur96",
+    "Icon": "curiosities/33.png",
+    "Name": "建造历史",
+    "Group": "机密文件",
+    "Description": "这份报告记录了作为<EXPED>乌托邦项目<>一部分的一处行星设施的历史。令人好奇的是，记录中缺失了多个部分。\n\nDS 2368 :: <STELLAR>设施<><TRADEABLE>建立<><STELLAR>。等离子深层钻井运作正常。<>\nDS 2384 :: <STELLAR>回归增长率稳定在1%。<>\nDS 2400 :: <STELLAR>监督者们对增长率进行了问询。<>\nDS 2416 :: <STELLAR>轨道层扩建已得到批准。空间站贸易如火如荼。<>\nDS 2432 :: 遭遇<SPECIAL>[已修订]<><STELLAR>危害<>\nDS 2448 :: <SPECIAL>[已修订]<>\nDS 2464 :: <STELLAR>启动乌托邦项目。<>\nDS 2464 :: <STELLAR>设施<><TRADEABLE>修复<><STELLAR>。等离子深层钻井运作正常。贸易路线重启开启。<>\nDS 2480 :: <SPECIAL>[已修订]<>\nDS 2496 :: <STELLAR>设施<><TRADEABLE>修复<><STELLAR>。等离子深层钻井运作正常。贸易路线重新开启。<>\nDS 2512 :: <SPECIAL>[已修订]<>\n\n接下来长达数百页的内容都在反复重复日志中的最后两行条目。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
