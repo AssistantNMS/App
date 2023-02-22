@@ -10,11 +10,13 @@ import '../../../integration/dependency_injection.dart';
 
 class CommunityMissionExtraData extends StatelessWidget {
   final int missionId;
+  final int percentage;
   final CommunityMissionStatus status;
 
-  const CommunityMissionExtraData(
-    this.missionId,
-    this.status, {
+  const CommunityMissionExtraData({
+    required this.missionId,
+    required this.percentage,
+    required this.status,
     Key? key,
   }) : super(key: key);
 
@@ -110,7 +112,9 @@ class CommunityMissionExtraData extends StatelessWidget {
                 launchExternalURL(NmsExternalUrls.communityMissionProgress),
           ));
 
-          if (status == CommunityMissionStatus.past) {
+          bool isCurrentlyComplete =
+              (status == CommunityMissionStatus.current && percentage > 99);
+          if (status == CommunityMissionStatus.past || isCurrentlyComplete) {
             widgets.add(ListTile(
               title: Text(getTranslations().fromKey(LocaleKey.endDate)),
               subtitle: Text(_getDateTimeString(pageData.endDateRecorded)),
