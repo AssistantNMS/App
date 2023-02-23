@@ -138,39 +138,40 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
 
         if (networkState == NetworkState.loading) {
           widgets.add(Center(child: getLoading().smallLoadingIndicator()));
-        } else {
-          widgets.add(Padding(
-            padding: const EdgeInsets.all(32),
-            child: PinCodeTextField(
-              length: 5,
-              obscureText: false,
-              appContext: context,
-              animationType: AnimationType.fade,
-              keyboardType: TextInputType.number,
-              pinTheme: PinTheme(
-                shape: PinCodeFieldShape.box,
-                borderRadius: BorderRadius.circular(5),
-                fieldHeight: 50,
-                fieldWidth: 40,
-                activeFillColor: getTheme().getSecondaryColour(context),
-                activeColor: Colors.black,
-                selectedColor: getTheme().getSecondaryColour(context),
-                selectedFillColor: getTheme().getSecondaryColour(context),
-                inactiveFillColor:
-                    getTheme().getScaffoldBackgroundColour(context),
-                inactiveColor: getTheme().getBackgroundColour(context),
-              ),
-              animationDuration: const Duration(milliseconds: 300),
-              enableActiveFill: true,
-              cursorColor: Colors.black,
-              textStyle: const TextStyle(color: Colors.black),
-              errorAnimationController: errorController,
-              controller: TextEditingController(),
-              onCompleted: codeInput(context, viewModel),
-              onChanged: (value) {},
+        } else {}
+
+        widgets.add(Padding(
+          padding: const EdgeInsets.all(32),
+          child: PinCodeTextField(
+            length: 5,
+            obscureText: false,
+            appContext: context,
+            autoFocus: true,
+            animationType: AnimationType.fade,
+            keyboardType: TextInputType.number,
+            pinTheme: PinTheme(
+              shape: PinCodeFieldShape.box,
+              borderRadius: BorderRadius.circular(5),
+              fieldHeight: 50,
+              fieldWidth: 40,
+              activeFillColor: getTheme().getSecondaryColour(context),
+              activeColor: Colors.black,
+              selectedColor: getTheme().getSecondaryColour(context),
+              selectedFillColor: getTheme().getSecondaryColour(context),
+              inactiveFillColor:
+                  getTheme().getScaffoldBackgroundColour(context),
+              inactiveColor: getTheme().getSecondaryColour(context),
             ),
-          ));
-        }
+            animationDuration: const Duration(milliseconds: 300),
+            enableActiveFill: true,
+            cursorColor: Colors.black,
+            textStyle: const TextStyle(color: Colors.black),
+            errorAnimationController: errorController,
+            controller: TextEditingController(),
+            onCompleted: codeInput(context, viewModel),
+            onChanged: (value) {},
+          ),
+        ));
 
         // if (networkState == NetworkState.success) {
         //   Future.delayed(const Duration(milliseconds: 250)).then(

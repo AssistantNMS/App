@@ -49,11 +49,12 @@
   {
     "Id": "other3",
     "Icon": "other/3.png",
-    "Name": "古老鑰匙",
-    "Group": "歷久彌新的器物",
-    "Description": "頗有重量的鑰匙。鍛鐵製成的老舊鑰匙，肯定能打開附近的鎖......",
+    "Name": "Ancient Key",
+    "Group": "Timeless Artifact",
+    "Description": "A key of some weight, this aged piece of wrought iron must belong in a nearby lock...",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
+    "Additional": "",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/other/3.png",
@@ -72,11 +73,12 @@
   {
     "Id": "other4",
     "Icon": "other/4.png",
-    "Name": "三叉鑰匙",
-    "Group": "水中遺物",
-    "Description": "分叉的古怪鑰匙，閃耀著紫外線。\n\n外型看起來古拙，不過強化套裝的掃瞄系統發現齒孔上有微量的奈米泡沫。",
+    "Name": "Trident Key",
+    "Group": "Aquatic Relic",
+    "Description": "A strange forked key, glowing with an ultraviolet light.\n\nDespite its primitive appearance, Exosuit scanning systems reveal traces of nanite foam upon its teeth.",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
+    "Additional": "",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/other/4.png",
@@ -1998,7 +2000,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3098,7 +3101,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
+      "IsExpeditionSeason4Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3120,7 +3124,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
+      "IsExpeditionSeason4Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3283,9 +3288,9 @@
   {
     "Id": "other207",
     "Icon": "other/207.png",
-    "Name": "星系圖",
-    "Group": "商業地圖資料",
-    "Description": "附近行星的地圖，已標記一處<COMMODITY>有居民居住的基地<>。\n\n選取地圖後，使用<VAL_ON>規劃路線功能 (<IMG>FE_ALT1<>)<> 即可在你的強化套裝顯示器中釘選該地點。\n\n與太空站中的地圖學家交換<COMMODITY>導航資料<>，即可獲得新星系圖。",
+    "Name": "Planetary Chart",
+    "Group": "Commercial Cartographic Data",
+    "Description": "A map of a nearby planet. An <COMMODITY>inhabited outpost<> of some kind has been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3300,7 +3305,7 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": [
-      "將資料轉換成強化套裝導航記號"
+      "Convert data to Exosuit navigation marker"
     ]
   },
   {
@@ -3362,7 +3367,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3614,7 +3620,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4536,7 +4543,7 @@
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
-    "Colour": "008951",
+    "Colour": "007951",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
@@ -4558,7 +4565,7 @@
     "BaseValueUnits": 800.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
-    "Colour": "008951",
+    "Colour": "007951",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
@@ -5350,6 +5357,555 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other332",
+    "Icon": "other/332.png",
+    "Name": "測試分析護目鏡",
+    "Group": "可解鎖的頭盔",
+    "Description": "特殊的<STELLAR>強化套裝外觀覆寫<>。\n\n用這款氧化物強化頭盔，將恐懼傳達到敵人的內心深處。\n\n在<TECHNOLOGY>外觀改造器<>改變你的強化套裝外觀。",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other333",
+    "Icon": "other/333.png",
+    "Name": "烏托邦快速艇",
+    "Group": "特殊太空船",
+    "Description": "一艘獨一無二的<STELLAR>太空船<>，用以紀念<STELLAR>烏托邦<>探險的完成，以及對烏托邦基金會公共居住計畫的貢獻。\n\n這艘多用途太空船鍍有抗輻射裝甲，並採用空氣動力學外形設計，可在大氣層飛行時保持敏捷。\n\n<STELLAR>認領<>這艘船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other334",
+    "Icon": "other/52.png",
+    "Name": "頭銜：「烏托邦權貴」",
+    "Group": "量身訂製個人識別",
+    "Description": "特殊<STELLAR>探險家頭銜<>，紀念<STELLAR>烏托邦<>探險的完成，以及對烏托邦基金會公共居住計畫的貢獻。\n\n在<TECHNOLOGY>外觀改造器<>中將此頭銜套用至旗幟上。",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other335",
+    "Icon": "other/335.png",
+    "Name": "烏托邦探險旗幟",
+    "Group": "量身訂製個人識別",
+    "Description": "備這款獨家的<STELLAR>個人造型<>以紀念<STELLAR>烏托邦<>探險，以及對烏托邦基金會公共居住計畫的貢獻。\n\n請在<TECHNOLOGY>外觀改造器<>將此旗幟套用到你的檔案。",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other336",
+    "Icon": "other/336.png",
+    "Name": "機器守望者蛋",
+    "Group": "機器孵化膠囊",
+    "Description": "一個金屬「蛋」膠囊，<TRADEABLE>即將孵化！<>\n\n可以從蛋裡面聽到規律的電子嗶嗶聲，柔和且奇妙地令人感到安心。\n\n掃描結果顯示，該生物經程序設計，具有以下形容地大小及特徵：<SPECIAL>細心<>且<SPECIAL>值得信賴<>。",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2987",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other337",
+    "Icon": "other/337.png",
+    "Name": "特殊太空船",
+    "Group": "特殊太空船",
+    "Description": "一艘特殊<STELLAR>太空船<>。\n\n<STELLAR>認領<>這艘船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other338",
+    "Icon": "other/338.png",
+    "Name": "特殊太空船",
+    "Group": "特殊太空船",
+    "Description": "一艘特殊<STELLAR>太空船<>。\n\n<STELLAR>認領<>這艘船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other339",
+    "Icon": "other/339.png",
+    "Name": "特殊太空船",
+    "Group": "特殊太空船",
+    "Description": "一艘特殊<STELLAR>太空船<>。\n\n<STELLAR>認領<>這艘船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other340",
+    "Icon": "other/340.png",
+    "Name": "特殊太空船",
+    "Group": "特殊太空船",
+    "Description": "一艘特殊<STELLAR>太空船<>。\n\n<STELLAR>認領<>這艘船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other341",
+    "Icon": "other/341.png",
+    "Name": "特殊太空船",
+    "Group": "特殊太空船",
+    "Description": "一艘特殊<STELLAR>太空船<>。\n\n<STELLAR>認領<>這艘船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other342",
+    "Icon": "other/342.png",
+    "Name": "同伴蛋",
+    "Group": "特殊同伴蛋",
+    "Description": "有生命、可孵化的蛋，<TRADEABLE>準備孵化！<>",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other343",
+    "Icon": "other/343.png",
+    "Name": "同伴蛋",
+    "Group": "特殊同伴蛋",
+    "Description": "有生命、可孵化的蛋，<TRADEABLE>準備孵化！<>",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other344",
+    "Icon": "other/344.png",
+    "Name": "特殊工具組",
+    "Group": "特殊多功能求生裝置",
+    "Description": "一個特殊<STELLAR>工具組<>。\n\n<STELLAR>取走<>這個工具組加入你的收藏，或是與目前工具組<STELLAR>交換<>。在星球上時，利用快捷選單（<IMG>QUICK_MENU<>）中的機能頁面切換使用中的工具組。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other345",
+    "Icon": "other/345.png",
+    "Name": "特殊工具組",
+    "Group": "特殊多功能求生裝置",
+    "Description": "一個特殊<STELLAR>工具組<>。\n\n<STELLAR>取走<>這個工具組加入你的收藏，或是與目前工具組<STELLAR>交換<>。在星球上時，利用快捷選單（<IMG>QUICK_MENU<>）中的機能頁面切換使用中的工具組。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other346",
+    "Icon": "other/346.png",
+    "Name": "混合煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種綜合煙火的組合包，包含<SPECIAL>有色<>、<FUEL>寰宇<>與<COMMODITY>圖案<>煙火。點燃即可在天空中創造出光彩奪目的效果。\n\n可從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other347",
+    "Icon": "other/346.png",
+    "Name": "混合煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種綜合煙火的組合包，包含<SPECIAL>有色<>、<FUEL>寰宇<>與<COMMODITY>圖案<>煙火。點燃即可在天空中創造出光彩奪目的效果。\n\n可從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other348",
+    "Icon": "other/346.png",
+    "Name": "混合煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種綜合煙火的組合包，包含<SPECIAL>有色<>、<FUEL>寰宇<>與<COMMODITY>圖案<>煙火。點燃即可在天空中創造出光彩奪目的效果。\n\n可從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other349",
+    "Icon": "other/346.png",
+    "Name": "混合煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種綜合煙火的組合包，包含<SPECIAL>有色<>、<FUEL>寰宇<>與<COMMODITY>圖案<>煙火。點燃即可在天空中創造出光彩奪目的效果。\n\n可從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other350",
+    "Icon": "other/346.png",
+    "Name": "混合煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種綜合煙火的組合包，包含<SPECIAL>有色<>、<FUEL>寰宇<>與<COMMODITY>圖案<>煙火。點燃即可在天空中創造出光彩奪目的效果。\n\n可從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other351",
+    "Icon": "other/351.png",
+    "Name": "全像圖：黏液",
+    "Group": "可解鎖的手勢",
+    "Description": "特殊的手勢。\n\n可以在<VAL_ON>快捷選單<>中選擇這個手勢，產生一個可愛小型黏液生物的手持全像圖。",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other352",
+    "Icon": "other/352.png",
+    "Name": "全像圖：巡防艦",
+    "Group": "可解鎖的手勢",
+    "Description": "特殊的手勢。\n\n可以在<VAL_ON>快捷選單<>中選擇這個手勢，產生一個優美、強大巡防艦的手持全像圖。",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other353",
+    "Icon": "other/353.png",
+    "Name": "全像圖：太空船",
+    "Group": "可解鎖的手勢",
+    "Description": "特殊的手勢。\n\n可以在<VAL_ON>快捷選單<>中選擇這個手勢，產生一個經典戰鬥太空船的手持全像圖。",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other354",
+    "Icon": "other/354.png",
+    "Name": "全像圖：工具組",
+    "Group": "可解鎖的手勢",
+    "Description": "特殊的手勢。\n\n可以在<VAL_ON>快捷選單<>中選擇這個手勢，產生一個工具組手槍的手持全像圖。",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other355",
+    "Icon": "other/355.png",
+    "Name": "全像圖：星系",
+    "Group": "可解鎖的手勢",
+    "Description": "特殊的手勢。\n\n可以在<VAL_ON>快捷選單<>中選擇這個手勢，產生一個微型太陽系的手持全像圖。",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other356",
+    "Icon": "curiosities/46.png",
+    "Name": "虛空蛋",
+    "Group": "珍奇生物",
+    "Description": "一種異常的蛋，其外殼為堅硬的皮革，觸摸時會顫動。\n\n可以聽到從內部傳來的輕拍聲，有時就像在唱歌。",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

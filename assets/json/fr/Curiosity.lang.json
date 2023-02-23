@@ -499,6 +499,7 @@
     "Usages": [
       "HasUsedToCraft",
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -898,6 +899,7 @@
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -1506,9 +1508,12 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
+    "CookingValue": 0.0,
     "Usages": [
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
+      "IsEggIngredient",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -1773,6 +1778,295 @@
       "HasDevProperties",
       "IsConsumable",
       "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur84",
+    "Icon": "other/207.png",
+    "Name": "Diagramme planétaire",
+    "Group": "Données cartographiques commerciales",
+    "Description": "Une carte représentant une planète proche. Une sorte d'<COMMODITY>avant-poste habité<> a été indiqué.\n\nSélectionnez la carte et utilisez l'option <VAL_ON>Calculer un itinéraire (<IMG>FE_ALT1<>)<> pour marquer l'emplacement sur l'affichage de votre exocombinaison.\n\nVous pouvez obtenir de nouvelles cartes en échangeant des <COMMODITY>données de navigation<> avec un cartographe de station spatiale.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Convertir les données en marqueur de navigation pour l'exocombinaison"
+    ]
+  },
+  {
+    "Id": "cur85",
+    "Icon": "other/3.png",
+    "Name": "Clé ancienne",
+    "Group": "Artefact intemporel",
+    "Description": "Cette clé en fer forgé, lourde et usée, doit correspondre à une serrure proche...",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur86",
+    "Icon": "other/4.png",
+    "Name": "Clé en trident",
+    "Group": "Relique aquatique",
+    "Description": "Étrange clé en forme de fourche qui brille d'une lueur ultraviolette.\n\nMalgré son apparence primitive, les systèmes de scanographie de l'exocombinaison ont détecté des traces de mousse de nanite sur ses dents.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur87",
+    "Icon": "products/156.png",
+    "Name": "Fusée sentinelle",
+    "Group": "Communicateur sentinelle",
+    "Description": "Un appareil de spécialiste créé par l'itération Téthys. Sa fonction première est d'appeler votre <TECHNOLOGY>drone sentinelle reconstruit<>.\n\nSélectionnez l'appareil et utilisez Désactiver la diffusion (<IMG>FE_ALT1<>) pour arrêter de contacter [ le Factionnaire ].\n\nTant que cette fusée est activée dans l'<STELLAR>inventaire de votre exocombinaison<> et que vous vous trouvez sur une planète, le drone restera à vos côtés.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Désactiver le signal et renvoyer [ le Factionnaire ]"
+    ]
+  },
+  {
+    "Id": "cur88",
+    "Icon": "curiosities/88.png",
+    "Name": "Ravitaillement Utopie Bêta",
+    "Group": "Cache de matériel de la Fondation Utopie",
+    "Description": "Pour soutenir les travailleurs qui terraforment courageusement le désert de lave de la planète Pehaelump, les superviseurs d'Utopie sont heureux de fournir cette cache de marchandises essentielles.\n\nSélectionnez le colis de ravitaillement et utilisez <VAL_ON>Ouvrir le colis<> (<IMG>FE_ALT1<>) pour obtenir les provisions de la Fondation Utopie, ainsi que les détails de votre <STELLAR>prochaine tâche<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Recevoir des provisions de la Fondation Utopie"
+    ]
+  },
+  {
+    "Id": "cur89",
+    "Icon": "curiosities/88.png",
+    "Name": "Ravitaillement Utopie Gamma",
+    "Group": "Cache de matériel de la Fondation Utopie",
+    "Description": "Pour soutenir les travailleurs qui suent sang et eau sur les montagnes escarpées de la planète Néo Sesto, les superviseurs d'Utopie sont heureux de fournir cette cache de marchandises essentielles.\n\nSélectionnez le colis de ravitaillement et utilisez <VAL_ON>Ouvrir le colis<> (<IMG>FE_ALT1<>) pour obtenir les provisions de la Fondation Utopie, ainsi que les détails de votre <STELLAR>prochaine tâche<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Recevoir des provisions de la Fondation Utopie"
+    ]
+  },
+  {
+    "Id": "cur90",
+    "Icon": "curiosities/88.png",
+    "Name": "Ravitaillement Utopie Delta",
+    "Group": "Cache de matériel de la Fondation Utopie",
+    "Description": "Pour soutenir les travailleurs encore en vie qui affrontent à présent le [ <SPECIAL>CENSURÉ<> ] de la planète Idalth XIV, les superviseurs d'Utopie sont heureux de fournir cette cache de marchandises essentielles.\n\nSélectionnez le colis de ravitaillement et utilisez <VAL_ON>Ouvrir le colis<> (<IMG>FE_ALT1<>) pour obtenir les provisions de la Fondation Utopie, ainsi que les détails de votre <STELLAR>prochaine tâche<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Recevoir des provisions de la Fondation Utopie"
+    ]
+  },
+  {
+    "Id": "cur91",
+    "Icon": "curiosities/88.png",
+    "Name": "Ravitaillement Utopie Epsilon",
+    "Group": "Cache de matériel de la Fondation Utopie",
+    "Description": "Pour soutenir les travailleurs qui, dans leur grandeur d'âme, rebâtissent au beau milieu des bourbiers infects de la planète Endil A8, les superviseurs d'Utopie sont heureux de fournir cette cache de marchandises essentielles.\n\nSélectionnez le colis de ravitaillement et utilisez <VAL_ON>Ouvrir le colis<> (<IMG>FE_ALT1<>) pour obtenir les provisions de la Fondation Utopie, ainsi que les détails de votre <STELLAR>prochaine tâche<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Recevoir des provisions de la Fondation Utopie"
+    ]
+  },
+  {
+    "Id": "cur92",
+    "Icon": "curiosities/92.png",
+    "Name": "Coordonnées de colonie Bêta",
+    "Group": "Diagramme de colonie de la Fondation Utopie",
+    "Description": "Une carte de la Fondation Utopie montrant les <STELLAR>coordonnées personnalisées<> de votre site de construction.\n\nSélectionnez la carte et utilisez l'option <VAL_ON>Calculer un itinéraire<> (<IMG>FE_ALT1<>) pour marquer l'emplacement sur l'affichage de votre exocombinaison.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Recevoir les coordonnées de construction de la Fondation Utopie"
+    ]
+  },
+  {
+    "Id": "cur93",
+    "Icon": "curiosities/92.png",
+    "Name": "Coordonnées de colonie Gamma",
+    "Group": "Diagramme de colonie de la Fondation Utopie",
+    "Description": "Une carte de la Fondation Utopie montrant les <STELLAR>coordonnées personnalisées<> de votre site de construction.\n\nSélectionnez la carte et utilisez l'option <VAL_ON>Calculer un itinéraire<> (<IMG>FE_ALT1<>) pour marquer l'emplacement sur l'affichage de votre exocombinaison.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Recevoir les coordonnées de construction de la Fondation Utopie"
+    ]
+  },
+  {
+    "Id": "cur94",
+    "Icon": "curiosities/92.png",
+    "Name": "Coordonnées de colonie Delta",
+    "Group": "Diagramme de colonie de la Fondation Utopie",
+    "Description": "Une carte de la Fondation Utopie montrant les <STELLAR>coordonnées personnalisées<> de votre site de construction.\n\nSélectionnez la carte et utilisez l'option <VAL_ON>Calculer un itinéraire<> (<IMG>FE_ALT1<>) pour marquer l'emplacement sur l'affichage de votre exocombinaison.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Recevoir les coordonnées de construction de la Fondation Utopie"
+    ]
+  },
+  {
+    "Id": "cur95",
+    "Icon": "curiosities/92.png",
+    "Name": "Coordonnées de colonie Epsilon",
+    "Group": "Diagramme de colonie de la Fondation Utopie",
+    "Description": "Une carte de la Fondation Utopie montrant les <STELLAR>coordonnées personnalisées<> de votre site de construction.\n\nSélectionnez la carte et utilisez l'option <VAL_ON>Calculer un itinéraire<> (<IMG>FE_ALT1<>) pour marquer l'emplacement sur l'affichage de votre exocombinaison.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Recevoir les coordonnées de construction de la Fondation Utopie"
+    ]
+  },
+  {
+    "Id": "cur96",
+    "Icon": "curiosities/33.png",
+    "Name": "Histoire de la construction",
+    "Group": "Dossier classé",
+    "Description": "Ce rapport évoque l'histoire d'une installation planétaire appartenant au <EXPED>projet Utopie<>. Étrangement, il manque plusieurs parties.\n\nDS 2368 :: <STELLAR>Installation <><TRADEABLE>fondée<><STELLAR>. Foreuse à plasma opérationnelle.<>\nDS 2384 :: <STELLAR>Croissance de retour stable à 1 %.<>\nDS 2400 :: <STELLAR>Taux de croissance demandée par les superviseurs.<>\nDS 2416 :: <STELLAR>Exp. orbitale approuvée. Commerce de la station en plein essor.<>\nDS 2432 :: <STELLAR>danger <SPECIAL>[censuré]<> rencontré.<>\nDS 2448 :: <SPECIAL>[Censuré]<>\nDS 2464 :: <STELLAR>Projet Utopie lancé.<>\nDS 2464 :: <STELLAR>Installation <><TRADEABLE>restaurée<><STELLAR>. Foreuse à plasma opérationnelle. Réouverture des routes commerciales.<>\nDS 2480 :: <SPECIAL>[Censuré]<>\nDS 2496 :: <STELLAR>Installation <><TRADEABLE>restaurée<><STELLAR>. Foreuse à plasma opérationnelle. Réouverture des routes commerciales.<>\nDS 2512 :: <SPECIAL>[Censuré]<>\n\nLes deux dernières entrées se répètent indéfiniment sur des centaines de pages.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

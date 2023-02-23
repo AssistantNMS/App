@@ -499,6 +499,7 @@
     "Usages": [
       "HasUsedToCraft",
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -898,6 +899,7 @@
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -1506,9 +1508,12 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
+    "CookingValue": 0.0,
     "Usages": [
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
+      "IsEggIngredient",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -1773,6 +1778,295 @@
       "HasDevProperties",
       "IsConsumable",
       "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur84",
+    "Icon": "other/207.png",
+    "Name": "Mapa planet",
+    "Group": "Komercyjne dane kartograficzne",
+    "Description": "Mapa pobliskiej planety. Zaznaczono na niej <COMMODITY>zamieszkany posterunek<>.\n\nWybierz mapę i użyj <VAL_ON>wytyczania trasy (<IMG>FE_ALT1<>)<>, by przypiąć lokalizację na wyświetlaczu egzokombinezonu.\n\nNowe mapy można zdobyć, wymieniając <COMMODITY>dane nawigacyjne<> z kartografem na stacji kosmicznej.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Przekonwertuj dane na znacznik nawigacyjny egzokombinezonu"
+    ]
+  },
+  {
+    "Id": "cur85",
+    "Icon": "other/3.png",
+    "Name": "Starożytny klucz",
+    "Group": "Ponadczasowy artefakt",
+    "Description": "Ciężki klucz - ten stary kawałek kutego żelaza musi pasować do pobliskiego zamka...",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur86",
+    "Icon": "other/4.png",
+    "Name": "Trójzębny klucz",
+    "Group": "Wodny artefakt",
+    "Description": "Dziwny klucz w kształcie trójzęba. Lśni światłem ultrafioletowym.\n\nMimo prymitywnego kształtu, systemy skanujące egzokombinezonu ujawniają na zębach ślady pianki nanitowej.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur87",
+    "Icon": "products/156.png",
+    "Name": "Flara Strażnika",
+    "Group": "Komunikator Strażnika",
+    "Description": "Specjalistyczne urządzenie utworzone przez iterację: Tethys. Jego głównym przeznaczeniem jest wezwanie <TECHNOLOGY>zrekonstruowanego drona Strażników<>.\n\nWybierz urządzenie i użyj wyłączenia sygnału (<IMG>FE_ALT1<>), by przestać nadawać sygnał [ Wartownikowi ].\n\nDron pozostanie przy tobie na powierzchni planety, póki flara jest aktywna w <STELLAR>ekwipunku egzokombinezonu<>.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Wyłącz sygnał i odwołaj: [ Wartownik ]"
+    ]
+  },
+  {
+    "Id": "cur88",
+    "Icon": "curiosities/88.png",
+    "Name": "Zrzut zaopatrzenia Utopii Beta",
+    "Group": "Skrzynia z zaopatrzeniem Fundacji Utopia",
+    "Description": "Aby wesprzeć dzielnie terraformujących wypełnione lawą pustkowia planety Pehaelump, Nadzorcy Utopii z przyjemnością dostarczają ten zestaw niezbędnych materiałów.\n\nWybierz pakiet zaopatrzenia i <VAL_ON>otwórz pakiet<> (<IMG>FE_ALT1<>), aby odebrać zapasy Fundacji Utopia, a także szczegóły <STELLAR>następnego zlecenia<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Otrzymaj zapasy Fundacji Utopia"
+    ]
+  },
+  {
+    "Id": "cur89",
+    "Icon": "curiosities/88.png",
+    "Name": "Zrzut zaopatrzenia Utopii Gamma",
+    "Group": "Skrzynia z zaopatrzeniem Fundacji Utopia",
+    "Description": "Aby wesprzeć ochoczo trudzących się na stromych i nagich zboczach gór planety New Sesto, Nadzorcy Utopii z przyjemnością dostarczają ten zestaw niezbędnych materiałów.\n\nWybierz pakiet zaopatrzenia i <VAL_ON>otwórz pakiet<> (<IMG>FE_ALT1<>), aby odebrać zapasy Fundacji Utopia, a także szczegóły <STELLAR>następnego zlecenia<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Otrzymaj zapasy Fundacji Utopia"
+    ]
+  },
+  {
+    "Id": "cur90",
+    "Icon": "curiosities/88.png",
+    "Name": "Zrzut zaopatrzenia Utopii Delta",
+    "Group": "Skrzynia z zaopatrzeniem Fundacji Utopia",
+    "Description": "Aby wesprzeć ocalałych, którzy teraz mierzą się z [<SPECIAL>ZREDAGOWANO<>] planety Idalth XIV, Nadzorcy Utopii z przyjemnością dostarczają ten zestaw niezbędnych materiałów.\n\nWybierz pakiet zaopatrzenia i <VAL_ON>otwórz pakiet<> (<IMG>FE_ALT1<>), aby odebrać zapasy Fundacji Utopia, a także szczegóły <STELLAR>następnego zlecenia<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Otrzymaj zapasy Fundacji Utopia"
+    ]
+  },
+  {
+    "Id": "cur91",
+    "Icon": "curiosities/88.png",
+    "Name": "Zrzut zaopatrzenia Utopii Epsilon",
+    "Group": "Skrzynia z zaopatrzeniem Fundacji Utopia",
+    "Description": "Aby wesprzeć szlachetnie odbudowujących na wsysających bagnach planety Endil A8, Nadzorcy Utopii z przyjemnością dostarczają ten zestaw niezbędnych materiałów.\n\nWybierz pakiet zaopatrzenia i <VAL_ON>otwórz pakiet<> (<IMG>FE_ALT1<>), aby odebrać zapasy Fundacji Utopia, a także szczegóły <STELLAR>następnego zlecenia<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Otrzymaj zapasy Fundacji Utopia"
+    ]
+  },
+  {
+    "Id": "cur92",
+    "Icon": "curiosities/92.png",
+    "Name": "Współrzędne osady Beta",
+    "Group": "Mapa zasiedlenia Fundacji Utopia",
+    "Description": "Mapa Fundacji Utopia przedstawiająca <STELLAR>spersonalizowane współrzędne<> docelowego miejsca budowy.\n\nWybierz mapę i <VAL_ON>wytycz trasę<> (<IMG>FE_ALT1<>), aby przypiąć lokalizację na wyświetlaczu egzokombinezonu.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Odbierz współrzędne budowy Fundacji Utopia"
+    ]
+  },
+  {
+    "Id": "cur93",
+    "Icon": "curiosities/92.png",
+    "Name": "Współrzędne osady Gamma",
+    "Group": "Mapa zasiedlenia Fundacji Utopia",
+    "Description": "Mapa Fundacji Utopia przedstawiająca <STELLAR>spersonalizowane współrzędne<> docelowego miejsca budowy.\n\nWybierz mapę i <VAL_ON>wytycz trasę<> (<IMG>FE_ALT1<>), aby przypiąć lokalizację na wyświetlaczu egzokombinezonu.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Odbierz współrzędne budowy Fundacji Utopia"
+    ]
+  },
+  {
+    "Id": "cur94",
+    "Icon": "curiosities/92.png",
+    "Name": "Współrzędne osady Delta",
+    "Group": "Mapa zasiedlenia Fundacji Utopia",
+    "Description": "Mapa Fundacji Utopia przedstawiająca <STELLAR>spersonalizowane współrzędne<> docelowego miejsca budowy.\n\nWybierz mapę i <VAL_ON>wytycz trasę<> (<IMG>FE_ALT1<>), aby przypiąć lokalizację na wyświetlaczu egzokombinezonu.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Odbierz współrzędne budowy Fundacji Utopia"
+    ]
+  },
+  {
+    "Id": "cur95",
+    "Icon": "curiosities/92.png",
+    "Name": "Współrzędne osady Epsilon",
+    "Group": "Mapa zasiedlenia Fundacji Utopia",
+    "Description": "Mapa Fundacji Utopia przedstawiająca <STELLAR>spersonalizowane współrzędne<> docelowego miejsca budowy.\n\nWybierz mapę i <VAL_ON>wytycz trasę<> (<IMG>FE_ALT1<>), aby przypiąć lokalizację na wyświetlaczu egzokombinezonu.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Odbierz współrzędne budowy Fundacji Utopia"
+    ]
+  },
+  {
+    "Id": "cur96",
+    "Icon": "curiosities/33.png",
+    "Name": "Historia budowy",
+    "Group": "Tajne dossier",
+    "Description": "Ten raport jest zapisem historii planetarnego obiektu stanowiącego część <EXPED>projektu Utopia<>. Nie wiedzieć czemu, brakuje kilku jego części.\n\nDS 2368 :: <STELLAR>Obiekt został <><TRADEABLE>założony<><STELLAR>. Uruchomienie platformy głębokich odwiertów plazmą.<>\nDS 2384 :: <STELLAR>Stopień rozwoju na stałym poziomie 1%.<>\nDS 2400 :: <STELLAR>Nadzorcy sprawdzają stopień rozwoju.<>\nDS 2416 :: <STELLAR>Zaakceptowano rozsz. orbitalne. Handel na stacji kwitnie.<>\nDS 2432 :: <SPECIAL>[Usunięto]<> <STELLAR>zagrożenie.<>\nDS 2448 :: <SPECIAL>[Usunięto]<>\nDS 2464 :: <STELLAR>Początek projektu Utopia.<>\nDS 2464 :: <STELLAR>Obiekt został <><TRADEABLE>odtworzony<><STELLAR>. Uruchomienie platformy głębokich odwiertów plazmą. Ponowne otwarcie szlaków handlowych.<>\nDS 2480 :: <SPECIAL>[Usunięto]<>\nDS 2496 :: <STELLAR>Obiekt został <><TRADEABLE>odtworzony<><STELLAR>. Uruchomienie platformy głębokich odwiertów plazmą. Ponowne otwarcie szlaków handlowych.<>\nDS 2512 :: <SPECIAL>[Usunięto]<>\n\nOstatnie dwa wpisy powtarzają się bez końca, na setkach stron.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

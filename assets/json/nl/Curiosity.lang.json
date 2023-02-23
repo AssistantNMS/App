@@ -499,6 +499,7 @@
     "Usages": [
       "HasUsedToCraft",
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -898,6 +899,7 @@
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -1506,9 +1508,12 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
+    "CookingValue": 0.0,
     "Usages": [
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
+      "IsEggIngredient",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -1773,6 +1778,295 @@
       "HasDevProperties",
       "IsConsumable",
       "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur84",
+    "Icon": "other/207.png",
+    "Name": "Planetaire kaart",
+    "Group": "Commerciële cartografische gegevens",
+    "Description": "Een kaart van een planeet in de buurt. Er is een <COMMODITY>bewoonde buitenpost<> gemarkeerd.\n\nSelecteer de kaart en gebruik <VAL_ON>Route bepalen (<IMG>FE_ALT1<>)<> om de locatie weer te geven op het display van je exopak.\n\nJe kunt nieuwe kaarten verkrijgen door <COMMODITY>navigatiegegevens<> uit te wisselen met een cartograaf in een ruimtestation.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Gegevens converteren naar navigatiemarkering exopak"
+    ]
+  },
+  {
+    "Id": "cur85",
+    "Icon": "other/3.png",
+    "Name": "Oude sleutel",
+    "Group": "Tijdloos artefact",
+    "Description": "Een vrij zware, verwrongen sleutel van ijzer uit lang vervlogen tijden. Er moet hier ergens een slot zijn...",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur86",
+    "Icon": "other/4.png",
+    "Name": "Drietandsleutel",
+    "Group": "Aquatisch relikwie",
+    "Description": "Een vreemde, gevorkte sleutel die ultraviolet licht afgeeft.\n\nZiet er primitief uit, maar de scanners van het exopak geven aan dat er sporen van naniethoudend schuim op de tanden zitten.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur87",
+    "Icon": "products/156.png",
+    "Name": "Sentinel-fakkel",
+    "Group": "Sentinel-communicator",
+    "Description": "Een specialistisch apparaat, gemaakt door iteratie Tethys. De belangrijkste functie ervan is het oproepen van jouw <TECHNOLOGY>gereconstrueerde Sentinel-drone<>.\n\nSelecteer het apparaat en gebruik 'Uitzending stoppen' (<IMG>FE_ALT1<>) om niet langer een signaal te geven aan [ de wachter ].\n\nAls deze fakkel actief is in de <STELLAR>inventaris van je exopak<> blijft de drone bij je in de buurt zo lang je op de planeet bent.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Deactiveer het signaal en stuur [ de wachter ] weg"
+    ]
+  },
+  {
+    "Id": "cur88",
+    "Icon": "curiosities/88.png",
+    "Name": "Utopie-bevoorrading Beta",
+    "Group": "Bevoorrading van Utopie-stichting",
+    "Description": "De Utopie-opzichters verstrekken graag deze levering met essentiële goederen aan de arbeiders die op dappere wijze werken aan de terravorming van de met lava gevulde woestenijen van de planeet Pehaelump.\n\nSelecteer het bevoorradingspakket en gebruik <VAL_ON>Pakket openen<> (<IMG>FE_ALT1<>) om de bevoorrading van de Utopie-stichting en details van je <STELLAR>volgende opdracht<> te ontvangen.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Ontvang bevoorrading van de Utopie-stichting"
+    ]
+  },
+  {
+    "Id": "cur89",
+    "Icon": "curiosities/88.png",
+    "Name": "Utopie-bevoorrading Gamma",
+    "Group": "Bevoorrading van Utopie-stichting",
+    "Description": "De Utopie-opzichters verstrekken graag deze levering met essentiële goederen aan de arbeiders die op heldhaftige wijze zwoegen op de steile, blootgestelde bergen van de planeet New Sesto.\n\nSelecteer het bevoorradingspakket en gebruik <VAL_ON>Pakket openen<> (<IMG>FE_ALT1<>) om de bevoorrading van de Utopie-stichting en details van je <STELLAR>volgende opdracht<> te ontvangen.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Ontvang bevoorrading van de Utopie-stichting"
+    ]
+  },
+  {
+    "Id": "cur90",
+    "Icon": "curiosities/88.png",
+    "Name": "Utopie-bevoorrading Delta",
+    "Group": "Bevoorrading van Utopie-stichting",
+    "Description": "De Utopie-opzichters verstrekken graag deze levering met essentiële goederen aan de overlevende arbeiders die vechten tegen de [ <SPECIAL>GECENSUREERD<> ] op de planeet Idalth XIV.\n\nSelecteer het bevoorradingspakket en gebruik <VAL_ON>Pakket openen<> (<IMG>FE_ALT1<>) om de bevoorrading van de Utopie-stichting en details van je <STELLAR>volgende opdracht<> te ontvangen.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Ontvang bevoorrading van de Utopie-stichting"
+    ]
+  },
+  {
+    "Id": "cur91",
+    "Icon": "curiosities/88.png",
+    "Name": "Utopie-bevoorrading Epsilon",
+    "Group": "Bevoorrading van Utopie-stichting",
+    "Description": "De Utopie-opzichters verstrekken graag deze levering met essentiële goederen aan de arbeiders die op nobele wijze werken aan de wederopbouw in de zompige moerassen van de planeet Endil A8.\n\nSelecteer het bevoorradingspakket en gebruik <VAL_ON>Pakket openen<> (<IMG>FE_ALT1<>) om de bevoorrading van de Utopie-stichting en details van je <STELLAR>volgende opdracht<> te ontvangen.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Ontvang bevoorrading van de Utopie-stichting"
+    ]
+  },
+  {
+    "Id": "cur92",
+    "Icon": "curiosities/92.png",
+    "Name": "Coördinaten van nederzetting Beta",
+    "Group": "Kaart van nederzetting van de Utopie-stichting",
+    "Description": "Een kaart van de Utopie-stichting met de locatie van <STELLAR>persoonlijke coördinaten<> voor je toegewezen constructielocatie.\n\nSelecteer de kaart en gebruik <VAL_ON>Route bepalen<> (<IMG>FE_ALT1<>) om de locatie weer te geven op het display van je exopak.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Ontvang de bouwcoördinaten van de Utopie-stichting"
+    ]
+  },
+  {
+    "Id": "cur93",
+    "Icon": "curiosities/92.png",
+    "Name": "Coördinaten van nederzetting Gamma",
+    "Group": "Kaart van nederzetting van de Utopie-stichting",
+    "Description": "Een kaart van de Utopie-stichting met de locatie van <STELLAR>persoonlijke coördinaten<> voor je toegewezen constructielocatie.\n\nSelecteer de kaart en gebruik <VAL_ON>Route bepalen<> (<IMG>FE_ALT1<>) om de locatie weer te geven op het display van je exopak.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Ontvang de bouwcoördinaten van de Utopie-stichting"
+    ]
+  },
+  {
+    "Id": "cur94",
+    "Icon": "curiosities/92.png",
+    "Name": "Coördinaten van nederzetting Delta",
+    "Group": "Kaart van nederzetting van de Utopie-stichting",
+    "Description": "Een kaart van de Utopie-stichting met de locatie van <STELLAR>persoonlijke coördinaten<> voor je toegewezen constructielocatie.\n\nSelecteer de kaart en gebruik <VAL_ON>Route bepalen<> (<IMG>FE_ALT1<>) om de locatie weer te geven op het display van je exopak.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Ontvang de bouwcoördinaten van de Utopie-stichting"
+    ]
+  },
+  {
+    "Id": "cur95",
+    "Icon": "curiosities/92.png",
+    "Name": "Coördinaten van nederzetting Epsilon",
+    "Group": "Kaart van nederzetting van de Utopie-stichting",
+    "Description": "Een kaart van de Utopie-stichting met de locatie van <STELLAR>persoonlijke coördinaten<> voor je toegewezen constructielocatie.\n\nSelecteer de kaart en gebruik <VAL_ON>Route bepalen<> (<IMG>FE_ALT1<>) om de locatie weer te geven op het display van je exopak.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Ontvang de bouwcoördinaten van de Utopie-stichting"
+    ]
+  },
+  {
+    "Id": "cur96",
+    "Icon": "curiosities/33.png",
+    "Name": "Constructiegeschiedenis",
+    "Group": "Vertrouwelijk dossier",
+    "Description": "Dit rapport vermeldt de geschiedenis van een planetaire faciliteit die onderdeel wordt van het <EXPED>Utopie-project<>. Verschillende gedeelten zijn merkwaardig genoeg afwezig.\n\nDS 2368 :: <STELLAR>Faciliteit <><TRADEABLE>gevonden<><STELLAR>. Plasmaboorinstallatie operationeel.<>\nDS 2384 :: <STELLAR>Winstgevende groei stabiel met 1%.<>\nDS 2400 :: <STELLAR>Opzichters stellen vragen over groeipercentage.<>\nDS 2416 :: <STELLAR>Ruimte-uitbreiding goedgekeurd. Bloeiende handel op station.<>\nDS 2432 :: <SPECIAL>[Gecensureerd]<> <STELLAR>gevaar tegengekomen.<>\nDS 2448 :: <SPECIAL>[Gecensureerd]<>\nDS 2464 :: <STELLAR>Utopie-project gelanceerd.<>\nDS 2464 :: <STELLAR>Faciliteit <><TRADEABLE>hersteld<><STELLAR>. Plasmaboorinstallatie operationeel. Handelsroutes heropend.<>\nDS 2480 :: <SPECIAL>[Gecensureerd]<>\nDS 2496 :: <STELLAR>Faciliteit <><TRADEABLE>hersteld<><STELLAR>. Plasmaboorinstallatie operationeel. Handelsroutes heropend.<>\nDS 2512 :: <SPECIAL>[Redacted]<>\n\nDe laatste twee berichten worden telkens opnieuw herhaald op honderden pagina's.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

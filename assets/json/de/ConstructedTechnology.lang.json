@@ -497,7 +497,7 @@
     "Id": "conTech17",
     "Icon": "constructedTechnology/17.png",
     "Name": "Nährstoffprozessor",
-    "Group": "Tragbare Versorgungseinheit",
+    "Group": "U8UI and U8Options.Tragbare Verpflegungseinheit",
     "Description": "Ein tragbarer <TECHNOLOGY>Nährstoff-Extraktor<>, der gesammelte Zutaten zu essbaren Produkten verarbeiten und veredelt kann.\n\nDer Benutzer ist sich bewusst, dass er die erzeugten Produkte auf eigene Gefahr konsumiert.",
     "BaseValueUnits": 10.0,
     "CurrencyType": "None",
@@ -2685,7 +2685,6 @@
     "CurrencyType": "None",
     "Colour": "0063B7",
     "Usages": [
-      "HasUsedToCraft",
       "HasDevProperties"
     ],
     "BlueprintCost": 1,
@@ -3008,6 +3007,173 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech108",
+    "Icon": "constructedTechnology/108.png",
+    "Name": "Exo-Anzug-Erweiterungseinheit",
+    "Group": "Upgrade-Einheit",
+    "Description": "Ein fortgeschrittenes Überlebenstechnologiemodul, das die Erweiterung des <STELLAR>Exo-Anzug-Lagers<> ermöglicht.\n\nVorinstallierte Nano-Aufweiter schaffen stabile Sub-Warp-Kammern innerhalb des Exo-Anzugs und erhöhen so seine <STELLAR>Inventarkapazität<>. Wende diese Erweiterung am Exo-Anzug-Upgrade-Terminal einer <STELLAR>Raumstation<> an.",
+    "BaseValueUnits": 155000.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech109",
+    "Icon": "constructedTechnology/109.png",
+    "Name": "Utopia-Exo-Anzug-Station",
+    "Group": "Tragbare Exo-Anzug-Forschungsstation",
+    "Description": "Die Utopia-Aufseher wünschen sich, dass ihre tapferen Siedler <STELLAR>stark<> und <STELLAR>gut ausgerüstet<> sind!\n\nDiese offiziell lizenzierte <TECHNOLOGY>tragbare Forschungsstation<> ermöglicht den Zugang zu einer großzügigen Auswahl an <TECHNOLOGY>Technologie-Upgrades<>, die einfach mit der entsprechenden Währung erworben werden können!\n\nBaue und besuche noch heute deine eigene <STELLAR>Utopia-Exo-Anzug-Station<>!",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 15,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech110",
+    "Icon": "constructedTechnology/110.png",
+    "Name": "Utopia-Multiwerkzeug-Station",
+    "Group": "Tragbare Multiwerkzeug-Forschungsstation",
+    "Description": "Die Utopia-Aufseher wünschen sich, dass ihre tapferen Siedler <STELLAR>stark<> und <STELLAR>gut ausgerüstet<> sind!\n\nDiese offiziell lizenzierte <TECHNOLOGY>tragbare Forschungsstation<> ermöglicht den Zugang zu einer großzügigen Auswahl an <TECHNOLOGY>Technologie-Upgrades<>, die einfach mit der entsprechenden Währung erworben werden können!\n\nBaue und besuche noch heute deine eigene <STELLAR>Utopia-Multiwerkzeug-Station<>!",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 15,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw11",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech111",
+    "Icon": "constructedTechnology/111.png",
+    "Name": "Tragbare Exo-Fahrzeug-Forschungsstation",
+    "Group": "Tragbare Exo-Fahrzeug-Forschungsstation",
+    "Description": "Die Utopia-Aufseher wünschen sich, dass ihre tapferen Siedler <STELLAR>stark<> und <STELLAR>gut ausgerüstet<> sind!\n\nDiese offiziell lizenzierte <TECHNOLOGY>tragbare Forschungsstation<> ermöglicht den Zugang zu einer großzügigen Auswahl an <TECHNOLOGY>Technologie-Upgrades<>, die einfach mit der entsprechenden Währung erworben werden können!\n\nBaue und besuche noch heute deine eigene <STELLAR>Utopia-Exo-Fahrzeug-Station<>!",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 15,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech112",
+    "Icon": "constructedTechnology/112.png",
+    "Name": "Utopia-Schiffstation",
+    "Group": "Tragbare Raumschiff-Forschungsstation",
+    "Description": "Die Utopia-Aufseher wünschen sich, dass ihre tapferen Siedler <STELLAR>stark<> und <STELLAR>gut ausgerüstet<> sind!\n\nDiese offiziell lizenzierte <TECHNOLOGY>tragbare Forschungsstation<> ermöglicht den Zugang zu einer großzügigen Auswahl an <TECHNOLOGY>Technologie-Upgrades<>, die einfach mit der entsprechenden Währung erworben werden können!\n\nBaue und besuche noch heute deine eigene <STELLAR>Utopia-Raumschiffstation<>!",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 15,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech113",
+    "Icon": "constructedTechnology/113.png",
+    "Name": "Utopia-Baustation",
+    "Group": "Portalkonstruktions-Bauplanterminal",
+    "Description": "Die Utopia-Aufseher wünschen sich, dass ihre tapferen Siedler <STELLAR>beschützt<> und <STELLAR>glücklich<> sind! Gemeinsam werden wir Bakkin wunderschön machen!\n\nDiese offiziell lizenzierte <TECHNOLOGY>tragbare Forschungsstation<> ermöglicht den Zugang zu einer großen Auswahl an <TECHNOLOGY>Konstruktionsbauplänen<>, die einfach mit der entsprechenden Währung erworben werden können!\n\nBaue und besuche noch heute deine eigene <STELLAR>Utopia-Baustation<>!",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 15,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 40
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   }

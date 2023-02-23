@@ -168,7 +168,11 @@ class CommunityMissionRewards extends StatelessWidget {
       );
     }
 
-    widgets.add(CommunityMissionExtraData(missionId, status));
+    widgets.add(CommunityMissionExtraData(
+      missionId: missionId,
+      percentage: currentTierPercentage,
+      status: status,
+    ));
 
     return animateWidgetIn(
       child: Column(children: widgets),

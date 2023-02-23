@@ -49,11 +49,12 @@
   {
     "Id": "other3",
     "Icon": "other/3.png",
-    "Name": "고대 열쇠",
-    "Group": "변치 않는 유물",
-    "Description": "무게가 좀 나가는 열쇠입니다. 이 오래된 철 조각은 분명히 근처에 있는 자물쇠에 들어맞을 것입니다...",
+    "Name": "Ancient Key",
+    "Group": "Timeless Artifact",
+    "Description": "A key of some weight, this aged piece of wrought iron must belong in a nearby lock...",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
+    "Additional": "",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/other/3.png",
@@ -72,11 +73,12 @@
   {
     "Id": "other4",
     "Icon": "other/4.png",
-    "Name": "삼지창 열쇠",
-    "Group": "해양 유물",
-    "Description": "자외선을 발하는 특이한 갈퀴 모양의 열쇠입니다.\n\n원시적인 형태에도 불구하고 엑소슈트 스캔 시스템으로 조사한 결과, 이빨 부분에서 나노로봇 거품의 흔적이 발견됐습니다.",
+    "Name": "Trident Key",
+    "Group": "Aquatic Relic",
+    "Description": "A strange forked key, glowing with an ultraviolet light.\n\nDespite its primitive appearance, Exosuit scanning systems reveal traces of nanite foam upon its teeth.",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
+    "Additional": "",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/other/4.png",
@@ -1998,7 +2000,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3098,7 +3101,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
+      "IsExpeditionSeason4Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3120,7 +3124,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
+      "IsExpeditionSeason4Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3283,9 +3288,9 @@
   {
     "Id": "other207",
     "Icon": "other/207.png",
-    "Name": "행성 도표",
-    "Group": "상업용 지도 데이터",
-    "Description": "인근 행성의 지도입니다. <COMMODITY>거주자 존재 전초기지<> 위치가 표시되어 있습니다.\n\n지도를 선택하고 <VAL_ON>경로 구성(<IMG>FE_ALT1<>)<>을 사용해 엑소슈트 화면에 위치를 지정하세요.\n\n우주정거장의 지도제작자와 <COMMODITY>항법 데이터<>를 교환해 새로운 지도를 획득할 수 있습니다.",
+    "Name": "Planetary Chart",
+    "Group": "Commercial Cartographic Data",
+    "Description": "A map of a nearby planet. An <COMMODITY>inhabited outpost<> of some kind has been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3300,7 +3305,7 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": [
-      "데이터를 엑소슈트 항법 마커로 변환"
+      "Convert data to Exosuit navigation marker"
     ]
   },
   {
@@ -3362,7 +3367,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3614,7 +3620,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4536,7 +4543,7 @@
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
-    "Colour": "008951",
+    "Colour": "007951",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
@@ -4558,7 +4565,7 @@
     "BaseValueUnits": 800.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
-    "Colour": "008951",
+    "Colour": "007951",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
@@ -5350,6 +5357,555 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other332",
+    "Icon": "other/332.png",
+    "Name": "무시무시한 바이저",
+    "Group": "해제 가능한 헬멧",
+    "Description": "독점 <STELLAR>엑소슈트 외관 오버라이드<>입니다.\n\n산화물로 강화한 이 헬멧으로 적의 마음에 공포를 불러일으키십시오.\n\n<TECHNOLOGY>외모 수정기<>에서 엑소슈트의 외관을 변형합니다.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other333",
+    "Icon": "other/333.png",
+    "Name": "유토피아 고속주행선로",
+    "Group": "독점 함선",
+    "Description": "<STELLAR>유토피아<> 원정을 완료하고 유토피아 파운데이션 공동 거주지 프로젝트에 기여했음을 기념하는 독특하고 독점적인 <STELLAR>함선<>입니다.\n\n이 다용도 함선은 방사선 저항 장갑으로 도금되어 있으며 공기 역학적 프로필로 설계되어 대기 중 비행에서 민첩성을 발휘합니다. \n\n<STELLAR>이 함선을 취득하여<> 컬렉션에 추가하거나 현재 함선과 <STELLAR>교환<>하세요. 행성에 있는 동안에는 빠른 메뉴(<IMG>QUICK_MENU<>)에서 함선을 소환합니다.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other334",
+    "Icon": "other/52.png",
+    "Name": "칭호: '유토피아 고위 관리'",
+    "Group": "맞춤형 개인 식별자",
+    "Description": "<STELLAR>유토피아 <>원정을 완료하고 유토피아 파운데이션 공동 거주지 프로젝트에 기여했음을 기념하는 독점 <STELLAR>탐험가 칭호<>입니다.\n\n<TECHNOLOGY>외모 수정기<>에서 이 칭호를 배너에 적용시킬 수 있습니다.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other335",
+    "Icon": "other/335.png",
+    "Name": "유토피아 원정 배너",
+    "Group": "맞춤형 개인 식별자",
+    "Description": "이 특별한 <STELLAR>개인 장식<>을 장비하여 <STELLAR>유토피아<> 원정과 유토피아 파운데이션 공동 거주지 프로젝트에 기여했음을 기념하십시오.\n\n<TECHNOLOGY>외모 수정기<>에서 이 배너를 프로필에 적용할 수 있습니다.",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other336",
+    "Icon": "other/336.png",
+    "Name": "로봇 파수꾼 알",
+    "Group": "로봇 알 캡슐",
+    "Description": "금속 '알' 캡슐, <TRADEABLE>곧 부화합니다!<>\n\n알 안에서 왠지 안심이 되는 부드러운 전자음이 주기적으로 들립니다.\n\n스캔 결과 내부 생명체는 <SPECIAL>꼼꼼하고<> <SPECIAL>믿음직한<> 성격으로 프로그램된 것 같습니다.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2987",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other337",
+    "Icon": "other/337.png",
+    "Name": "독점 함선",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>입니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other338",
+    "Icon": "other/338.png",
+    "Name": "독점 함선",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>입니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other339",
+    "Icon": "other/339.png",
+    "Name": "독점 함선",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>입니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other340",
+    "Icon": "other/340.png",
+    "Name": "독점 함선",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>입니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other341",
+    "Icon": "other/341.png",
+    "Name": "독점 함선",
+    "Group": "독점 함선",
+    "Description": "독점 <STELLAR>함선<>입니다.\n\n함선을 <STELLAR>획득<>하여 수집품에 추가하거나, 소지한 함선과 <STELLAR>교환<>하십시오. 행성에 있을 때 빠른 메뉴(<IMG>QUICK_MENU<>)를 통해 함선을 소환하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other342",
+    "Icon": "other/342.png",
+    "Name": "반려동물의 알",
+    "Group": "독점 반려동물의 알",
+    "Description": "살아있는 수정란. <TRADEABLE>부화 준비 완료!<>",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other343",
+    "Icon": "other/343.png",
+    "Name": "반려동물의 알",
+    "Group": "독점 반려동물의 알",
+    "Description": "살아있는 수정란. <TRADEABLE>부화 준비 완료!<>",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other344",
+    "Icon": "other/344.png",
+    "Name": "독점 멀티툴",
+    "Group": "독점 다기능 생존 장치",
+    "Description": "독점 <STELLAR>멀티툴<>입니다.\n\n멀티툴을 <STELLAR>챙겨<> 수집품에 추가하거나,\n소지한 멀티툴과 <STELLAR>교환<>하십시오. 빠른 메뉴(<IMG>QUICK_MENU<>)의 유틸리티에서 활성화된 멀티툴을 교체하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other345",
+    "Icon": "other/345.png",
+    "Name": "독점 멀티툴",
+    "Group": "독점 다기능 생존 장치",
+    "Description": "독점 <STELLAR>멀티툴<>입니다.\n\n멀티툴을 <STELLAR>챙겨<> 수집품에 추가하거나,\n소지한 멀티툴과 <STELLAR>교환<>하십시오. 빠른 메뉴(<IMG>QUICK_MENU<>)의 유틸리티에서 활성화된 멀티툴을 교체하십시오.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other346",
+    "Icon": "other/346.png",
+    "Name": "리믹스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "다양한 세 종류의 폭죽이 들어있는 팩입니다. <SPECIAL>크로마틱 폭죽<>, <FUEL>아틀라스 폭죽<> 및 <COMMODITY>패턴 폭죽<>이 들어 있습니다. 점화시키면 하늘을 눈부시게 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other347",
+    "Icon": "other/346.png",
+    "Name": "리믹스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "다양한 세 종류의 폭죽이 들어있는 팩입니다. <SPECIAL>크로마틱 폭죽<>, <FUEL>아틀라스 폭죽<> 및 <COMMODITY>패턴 폭죽<>이 들어 있습니다. 점화시키면 하늘을 눈부시게 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other348",
+    "Icon": "other/346.png",
+    "Name": "리믹스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "다양한 세 종류의 폭죽이 들어있는 팩입니다. <SPECIAL>크로마틱 폭죽<>, <FUEL>아틀라스 폭죽<> 및 <COMMODITY>패턴 폭죽<>이 들어 있습니다. 점화시키면 하늘을 눈부시게 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other349",
+    "Icon": "other/346.png",
+    "Name": "리믹스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "다양한 세 종류의 폭죽이 들어있는 팩입니다. <SPECIAL>크로마틱 폭죽<>, <FUEL>아틀라스 폭죽<> 및 <COMMODITY>패턴 폭죽<>이 들어 있습니다. 점화시키면 하늘을 눈부시게 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other350",
+    "Icon": "other/346.png",
+    "Name": "리믹스 폭죽 팩",
+    "Group": "불꽃놀이 멀티팩",
+    "Description": "다양한 세 종류의 폭죽이 들어있는 팩입니다. <SPECIAL>크로마틱 폭죽<>, <FUEL>아틀라스 폭죽<> 및 <COMMODITY>패턴 폭죽<>이 들어 있습니다. 점화시키면 하늘을 눈부시게 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other351",
+    "Icon": "other/351.png",
+    "Name": "홀로그램: 블롭",
+    "Group": "해제 가능한 제스쳐",
+    "Description": "독점 제스처입니다.\n\n<VAL_ON>빠른 메뉴<>에서 선택하여 한 손에 들어오는 크기의 작고 사랑스러운 블롭 생물의 홀로그램을 만들 수 있습니다.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other352",
+    "Icon": "other/352.png",
+    "Name": "홀로그램: 호위함",
+    "Group": "해제 가능한 제스쳐",
+    "Description": "독점 제스처입니다.\n\n<VAL_ON>빠른 메뉴<>에서 선택하여 한 손에 들어오는 크기의 날렵하고 강력한 호위함의 홀로그램을 만들 수 있습니다.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other353",
+    "Icon": "other/353.png",
+    "Name": "홀로그램: 함선",
+    "Group": "해제 가능한 제스쳐",
+    "Description": "독점 제스처입니다.\n\n<VAL_ON>빠른 메뉴<>에서 선택하여 한 손에 들어오는 크기의 고전적인 전투용 함선의 홀로그램을 만들 수 있습니다.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other354",
+    "Icon": "other/354.png",
+    "Name": "홀로그램: 멀티툴",
+    "Group": "해제 가능한 제스쳐",
+    "Description": "독점 제스처입니다.\n\n<VAL_ON>빠른 메뉴<>에서 선택하여 한 손에 들어오는 크기의 멀티툴 권총의 홀로그램을 만들 수 있습니다.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other355",
+    "Icon": "other/355.png",
+    "Name": "홀로그램: 태양계",
+    "Group": "해제 가능한 제스쳐",
+    "Description": "독점 제스처입니다.\n\n<VAL_ON>빠른 메뉴<>에서 선택하여 한 손에 들어오는 크기의 소형 태양계의 홀로그램을 만들 수 있습니다.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other356",
+    "Icon": "curiosities/46.png",
+    "Name": "공허 알",
+    "Group": "살아있는 진귀품",
+    "Description": "특이한 알입니다. 가죽 같은 단단한 껍질을 지니고 있으며, 만지면 꿈틀거립니다.\n\n그리고 내부에서 희미하게 껍질을 두드리는 소리가 들립니다. 가끔씩은 노래를 부르는 것처럼 들리기도 합니다.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

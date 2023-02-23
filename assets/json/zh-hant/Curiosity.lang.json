@@ -499,6 +499,7 @@
     "Usages": [
       "HasUsedToCraft",
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -898,6 +899,7 @@
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -1506,9 +1508,12 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
+    "CookingValue": 0.0,
     "Usages": [
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
+      "IsEggIngredient",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -1773,6 +1778,295 @@
       "HasDevProperties",
       "IsConsumable",
       "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur84",
+    "Icon": "other/207.png",
+    "Name": "星系圖",
+    "Group": "商業地圖資料",
+    "Description": "附近行星的地圖，已標記一處<COMMODITY>有居民居住的基地<>。\n\n選取地圖後，使用<VAL_ON>規劃路線功能 (<IMG>FE_ALT1<>)<> 即可在你的強化套裝顯示器中釘選該地點。\n\n與太空站中的地圖學家交換<COMMODITY>導航資料<>，即可獲得新星系圖。",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "將資料轉換成強化套裝導航記號"
+    ]
+  },
+  {
+    "Id": "cur85",
+    "Icon": "other/3.png",
+    "Name": "古老鑰匙",
+    "Group": "歷久彌新的器物",
+    "Description": "頗有重量的鑰匙。鍛鐵製成的老舊鑰匙，肯定能打開附近的鎖......",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur86",
+    "Icon": "other/4.png",
+    "Name": "三叉鑰匙",
+    "Group": "水中遺物",
+    "Description": "分叉的古怪鑰匙，閃耀著紫外線。\n\n外型看起來古拙，不過強化套裝的掃瞄系統發現齒孔上有微量的奈米泡沫。",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur87",
+    "Icon": "products/156.png",
+    "Name": "巡警照明彈",
+    "Group": "巡警通訊器",
+    "Description": "由迭代：忒堤斯製作的專家裝置。主要功能是呼喚<TECHNOLOGY>重建的巡警無人機<>。\n\n選擇裝置並關閉廣播 (<IMG>FE_ALT1<>)，停止對 [哨兵] 發出訊號。\n\n在你的<STELLAR>強化套裝道具欄<>中開啟這個照明彈後，無人機就會在星球空間內伴隨著你。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "停用信號並遣走 [哨兵]"
+    ]
+  },
+  {
+    "Id": "cur88",
+    "Icon": "curiosities/88.png",
+    "Name": "烏托邦補給空投 Beta",
+    "Group": "烏托邦基金會補給儲物箱",
+    "Description": "為了支持工人們勇敢地對費海倫星球充滿熔岩的荒地進行地球化改造，烏托邦監督者十分樂意提供容納關鍵物品的儲物箱。\n\n選擇補給包並使用<VAL_ON>打開包裹<> (<IMG>FE_ALT1<>) 即可領取烏托邦基金會補給，以及<STELLAR>下個任務<>的詳細資訊。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "領取烏托邦基金會補給品"
+    ]
+  },
+  {
+    "Id": "cur89",
+    "Icon": "curiosities/88.png",
+    "Name": "烏托邦補給空投 Gamma",
+    "Group": "烏托邦基金會補給儲物箱",
+    "Description": "為了支持在新塞斯托星球陡峭裸露的山脈上勇敢苦幹的工人們，烏托邦監督者十分樂意提供容納關鍵物品的儲物箱。\n\n選擇補給包並使用<VAL_ON>打開包裹<> (<IMG>FE_ALT1<>) 即可領取烏托邦基金會補給，以及<STELLAR>下個任務<>的詳細資訊。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "領取烏托邦基金會補給品"
+    ]
+  },
+  {
+    "Id": "cur90",
+    "Icon": "curiosities/88.png",
+    "Name": "烏托邦補給空投 Delta",
+    "Group": "烏托邦基金會補給儲物箱",
+    "Description": "為了支持對抗義達夫 XIV 星球 [<SPECIAL>已刪改<>] 的倖存工人們，烏托邦監督者十分樂意提供容納關鍵物品的儲物箱。\n\n選擇補給包並使用<VAL_ON>打開包裹<> (<IMG>FE_ALT1<>) 即可領取烏托邦基金會補給，以及<STELLAR>下個任務<>的詳細資訊。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "領取烏托邦基金會補給品"
+    ]
+  },
+  {
+    "Id": "cur91",
+    "Icon": "curiosities/88.png",
+    "Name": "烏托邦補給空投 EPSILON",
+    "Group": "烏托邦基金會補給儲物箱",
+    "Description": "為了支持工人們在恩迪爾 A8 星球的噬人沼澤中勇敢地進行重建，烏托邦監督者十分樂意提供容納關鍵物品的儲物箱。\n\n選擇補給包並使用<VAL_ON>打開包裹<> (<IMG>FE_ALT1<>) 即可領取烏托邦基金會補給，以及<STELLAR>下個任務<>的詳細資訊。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "領取烏托邦基金會補給品"
+    ]
+  },
+  {
+    "Id": "cur92",
+    "Icon": "curiosities/92.png",
+    "Name": "聚居地座標 Beta",
+    "Group": "烏托邦基金會聚居地圖",
+    "Description": "來自烏托邦基金會的地圖，標示了目標建設區域的<STELLAR>個人化座標<>。\n\n選擇地圖並使用<VAL_ON>規劃路線<> (<IMG>FE_ALT1<>) 即可在強化套裝顯示器中釘選該地點。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "收到烏托邦基金會建設座標"
+    ]
+  },
+  {
+    "Id": "cur93",
+    "Icon": "curiosities/92.png",
+    "Name": "聚居地座標 Gamma",
+    "Group": "烏托邦基金會聚居地圖",
+    "Description": "來自烏托邦基金會的地圖，標示了目標建設區域的<STELLAR>個人化座標<>。\n\n選擇地圖並使用<VAL_ON>規劃路線<> (<IMG>FE_ALT1<>) 即可在強化套裝顯示器中釘選該地點。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "收到烏托邦基金會建設座標"
+    ]
+  },
+  {
+    "Id": "cur94",
+    "Icon": "curiosities/92.png",
+    "Name": "聚居地座標 Delta",
+    "Group": "烏托邦基金會聚居地圖",
+    "Description": "來自烏托邦基金會的地圖，標示了目標建設區域的<STELLAR>個人化座標<>。\n\n選擇地圖並使用<VAL_ON>規劃路線<> (<IMG>FE_ALT1<>) 即可在強化套裝顯示器中釘選該地點。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "收到烏托邦基金會建設座標"
+    ]
+  },
+  {
+    "Id": "cur95",
+    "Icon": "curiosities/92.png",
+    "Name": "聚居地座標 EPSILON",
+    "Group": "烏托邦基金會聚居地圖",
+    "Description": "來自烏托邦基金會的地圖，標示了目標建設區域的<STELLAR>個人化座標<>。\n\n選擇地圖並使用<VAL_ON>規劃路線<> (<IMG>FE_ALT1<>) 即可在強化套裝顯示器中釘選該地點。",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "收到烏托邦基金會建設座標"
+    ]
+  },
+  {
+    "Id": "cur96",
+    "Icon": "curiosities/33.png",
+    "Name": "建築歷史",
+    "Group": "機密檔案",
+    "Description": "此報告記錄著<EXPED>烏托邦計畫<>下，一座星球設施的歷史。數個篇章有異常缺失現象。\n\nDS 2368 :: <STELLAR>設施<><TRADEABLE>成立<><STELLAR>。電漿深層鑽探設備可正常運行。<>\nDS 2384 :: <STELLAR>回報成長率穩定維持在 1%。<>\nDS 2400 :: <STELLAR>監督者詢問成長率狀況。<>\nDS 2416 :: <STELLAR>已批准軌道擴張，太空站貿易蓬勃發展。<>\nDS 2432 :: <SPECIAL>[已刪改]<><STELLAR>遭遇風險。<>\nDS 2448 :: <SPECIAL>[已刪改]<>\nDS 2464 :: <STELLAR>烏托邦計畫啟動。<>\nDS 2464 :: <STELLAR>設施<><TRADEABLE>已修復<><STELLAR>。電漿深層鑽探設備可正常運行。貿易路線已重新開啟。<>\nDS 2480 :: <SPECIAL>[已刪改]<>\nDS 2496 :: <STELLAR>設施<><TRADEABLE>已修復<><STELLAR>。電漿深層探鑽設備可正常運行。貿易路線已重新開啟。<>\nDS 2512 :: <SPECIAL>[已刪改]<>\n\n最後兩項紀錄一再重複，佔據了幾百頁的空間。",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

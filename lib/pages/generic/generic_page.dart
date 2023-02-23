@@ -28,7 +28,7 @@ import '../../contracts/required_item_details.dart';
 import '../../contracts/stat_bonus.dart';
 import '../../helpers/future_helper.dart';
 import '../../helpers/generic_helper.dart';
-import '../../mapper/generic_item_mapper.dart';
+import '../../integration/dependency_injection.dart';
 import '../../redux/modules/generic/generic_page_view_model.dart';
 import 'generic_page_components.dart';
 import 'generic_top_content.dart';
@@ -55,18 +55,21 @@ class GenericPage extends StatelessWidget {
     return StoreConnector<AppState, GenericPageViewModel>(
       converter: (store) => GenericPageViewModel.fromStore(store),
       builder: (storeCtx, viewModel) {
-        return FutureBuilder<ResultWithValue<GenericPageItem>>(
+        return CachedFutureBuilder<ResultWithValue<GenericPageItem>>(
           key: Key('${viewModel.cartItems.length}'),
           future: genericItemFuture(
             storeCtx,
             itemId,
             viewModel.platformIndex,
           ),
-          builder: (buildCtx, snapshot) => doneLoadingBuilder(
-            buildCtx,
+          whileLoading: () => (itemTopContent != null) //
+              ? itemTopContent
+              : Container(),
+          whenDoneLoading: (data) => doneLoadingBuilder(
+            context,
             itemTopContent,
             viewModel,
-            snapshot,
+            data,
           ),
         );
       },
@@ -77,12 +80,11 @@ class GenericPage extends StatelessWidget {
     BuildContext doneLoadingCtx,
     Widget? itemTopContent,
     GenericPageViewModel viewModel,
-    AsyncSnapshot<ResultWithValue<GenericPageItem>> snapshot,
+    ResultWithValue<GenericPageItem> snapshot,
   ) {
-    String loadingText = getTranslations().fromKey(LocaleKey.loading);
     return genericPageScaffold<ResultWithValue<GenericPageItem>>(
       doneLoadingCtx,
-      snapshot.data?.value.typeName ?? loadingText,
+      snapshot.value.typeName,
       const AsyncSnapshot.nothing(), // unused
       body: (BuildContext scaffoldCtx, unused) {
         List<Widget> widgets = getBody(
@@ -107,8 +109,7 @@ class GenericPage extends StatelessWidget {
           ),
           text: getTranslations().fromKey(LocaleKey.share),
           onPressed: () {
-            if (snapshot.data?.value == null) return;
-            GenericPageItem genericItem = snapshot.data!.value;
+            GenericPageItem genericItem = snapshot.value;
             adaptiveBottomModalSheet(
               doneLoadingCtx,
               hasRoundedCorners: true,
@@ -120,10 +121,10 @@ class GenericPage extends StatelessWidget {
           },
         ),
       ],
-      floatingActionButton: getFloatingActionButtonFromSnapshot(
+      floatingActionButton: getFloatingActionButton(
         doneLoadingCtx,
         controller,
-        snapshot,
+        snapshot.value,
         addToCart: viewModel.addToCart,
       ),
     );
@@ -133,37 +134,9 @@ class GenericPage extends StatelessWidget {
     BuildContext bodyCtx,
     Widget? itemTopContent,
     GenericPageViewModel vm,
-    AsyncSnapshot<ResultWithValue<GenericPageItem>> snapshot,
+    ResultWithValue<GenericPageItem> snapshot,
   ) {
-    errorWidget() => getLoading().customErrorWidget(bodyCtx);
-    switch (snapshot.connectionState) {
-      case ConnectionState.none:
-        return [errorWidget()];
-      case ConnectionState.done:
-        GenericPageItem? tempGenericItem = snapshot.data?.value;
-        if (snapshot.hasError ||
-            tempGenericItem?.description == null ||
-            tempGenericItem?.requiredItems == null ||
-            tempGenericItem?.usedInRecipes == null ||
-            tempGenericItem?.refiners == null ||
-            tempGenericItem?.usedInRefiners == null ||
-            tempGenericItem?.cooking == null ||
-            tempGenericItem?.usedInCooking == null) {
-          getLog().e(snapshot.data?.errorMessage ?? 'no error message found');
-          return [errorWidget()];
-        }
-        break;
-      default:
-        return [
-          if (itemTopContent != null) ...[itemTopContent],
-          getLoading().fullPageLoading(
-            bodyCtx,
-            loadingText: getTranslations().fromKey(LocaleKey.loading),
-          )
-        ];
-    }
-
-    GenericPageItem genericItem = snapshot.data!.value;
+    GenericPageItem genericItem = snapshot.value;
 
     List<Widget> widgets = List.empty(growable: true);
     if (itemTopContent != null) {
@@ -192,7 +165,7 @@ class GenericPage extends StatelessWidget {
         requiredItemBackgroundTilePresenter(vm.displayGenericItemColour);
     widgets.addAll(getCraftedUsing(
       bodyCtx,
-      vm,
+      vm.displayGenericItemColour,
       genericItem,
       genericItem.requiredItems ?? List.empty(),
       requiredItemsFunction,
@@ -210,14 +183,11 @@ class GenericPage extends StatelessWidget {
           showBackgroundColours: vm.displayGenericItemColour,
           pageItemId: genericItem.id,
         );
-    List<RequiredItemDetails> usedToCreateArray =
-        mapUsedInToRequiredItemsWithDescrip(
-      genericItem.usedInRecipes ?? List.empty(),
-    );
+
     widgets.addAll(getUsedToCreate(
       bodyCtx,
       genericItem,
-      usedToCreateArray,
+      () => getAllPossibleOutputsFromInput(bodyCtx, itemId),
       requiredItemDetailsFunction,
     ));
 
@@ -234,11 +204,15 @@ class GenericPage extends StatelessWidget {
           showBackgroundColours: vm.displayGenericItemColour,
         );
 
-    List<ChargeBy> rechargedByList = genericItem.chargedBy!.chargeBy;
+    List<ChargeBy> rechargedByList =
+        genericItem.chargedBy?.chargeBy ?? List.empty();
     widgets.addAll(getRechargeWith(
       bodyCtx,
       genericItem,
       rechargedByList,
+      () => getRechargeRepo()
+          .getRechargeById(bodyCtx, itemId)
+          .then((result) => result.value.chargeBy),
       rechargeItemFunction,
     ));
 
@@ -255,11 +229,13 @@ class GenericPage extends StatelessWidget {
           showBackgroundColours: vm.displayGenericItemColour,
         );
 
-    List<Recharge> usedToRechargedList = genericItem.usedToRecharge!;
+    List<Recharge> usedToRechargedList =
+        genericItem.usedToRecharge ?? List.empty();
     widgets.addAll(getUsedToRecharge(
       bodyCtx,
       genericItem,
       usedToRechargedList,
+      () => usedToRechargeFuture(bodyCtx, itemId),
       usedToRechargeItemFunction,
     ));
 
@@ -269,6 +245,7 @@ class GenericPage extends StatelessWidget {
       genericItem,
       getTranslations().fromKey(LocaleKey.refinedUsing),
       genericItem.refiners ?? List.empty(),
+      () => refinerRecipesByOutputFuture(bodyCtx, itemId),
       refinerRecipeTilePresenter,
     ));
 
@@ -282,6 +259,7 @@ class GenericPage extends StatelessWidget {
       genericItem,
       refineToCreateText,
       genericItem.usedInRefiners ?? List.empty(),
+      () => refinerRecipesByInputFuture(bodyCtx, itemId),
       nutrientProcessorRecipeWithInputsTilePresentor,
     ));
 
@@ -291,6 +269,7 @@ class GenericPage extends StatelessWidget {
       genericItem,
       getTranslations().fromKey(LocaleKey.cookingRecipe),
       genericItem.cooking ?? List.empty(),
+      () => nutrientProcessorRecipesByOutputFuture(bodyCtx, itemId),
       nutrientProcessorRecipeWithInputsTilePresentor,
     ));
 
@@ -303,6 +282,7 @@ class GenericPage extends StatelessWidget {
       genericItem,
       cookToCreateText,
       genericItem.usedInCooking ?? List.empty(),
+      () => nutrientProcessorRecipesByInputFuture(bodyCtx, itemId),
       nutrientProcessorRecipeWithInputsTilePresentor,
     ));
 

@@ -212,3 +212,18 @@ void Function() genericItemImageOnTap(
         ),
       );
     };
+
+Widget imageBlackAndWhite(Widget image) {
+  const ColorFilter greyscale = ColorFilter.matrix(<double>[
+    0, 0, 0, 0, //
+    0, 0, 0, 0, //
+    0, 0, 0, 0, //
+    0, 0, 0, 0, //
+    0, 0, 1, 0, //
+  ]);
+
+  return ColorFiltered(
+    colorFilter: greyscale,
+    child: image,
+  );
+}

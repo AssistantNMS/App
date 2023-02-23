@@ -497,7 +497,7 @@
     "Id": "conTech17",
     "Icon": "constructedTechnology/17.png",
     "Name": "Przetwarzacz składników odżywczych",
-    "Group": "Przenośna jednostka podtrzymująca",
+    "Group": "Przenośna jednostka pożywienia",
     "Description": "Przenośny <TECHNOLOGY>ekstraktor składników odżywczych<>, zdolny do przetwarzania i wzbogacania zebranych składników oraz tworzenia z nich jadalnych produktów żywnościowych.\n\nUżytkownik powinien zwrócić uwagę, że spożywa wygenerowane produkty wyłącznie na własną odpowiedzialność.",
     "BaseValueUnits": 10.0,
     "CurrencyType": "None",
@@ -2685,7 +2685,6 @@
     "CurrencyType": "None",
     "Colour": "0063B7",
     "Usages": [
-      "HasUsedToCraft",
       "HasDevProperties"
     ],
     "BlueprintCost": 1,
@@ -3008,6 +3007,173 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech108",
+    "Icon": "constructedTechnology/108.png",
+    "Name": "Moduł rozszerzający do egzokombinezonu",
+    "Group": "Jednostka ulepszająca",
+    "Description": "Zaawansowany moduł technologii przetrwania, który umożliwia zwiększenie <STELLAR>pojemności egzokombinezonu<>.\n\nJest wypełniony nanoekspanderami, które tworzą w egzokombinezonie stabilne subwarpowe strefy próżniowe, tym samym zwiększając <STELLAR>miejsce na ekwipunek<>. Zastosuj tę modyfikację, używając terminalu ulepszeń egzokombinezonu na <STELLAR>stacji kosmicznej<>.",
+    "BaseValueUnits": 155000.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 15.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech109",
+    "Icon": "constructedTechnology/109.png",
+    "Name": "Stacja egzokombinezonu Utopii",
+    "Group": "Przenośna stacja badań egzokombinezonu",
+    "Description": "Nadzorcy Utopii chcą, aby ich dzielni osadnicy byli <STELLAR>silni<> i <STELLAR>dobrze wyposażeni<>!\n\nTa oficjalnie licencjonowana <TECHNOLOGY>przenośna stacja badań<> daje dostęp do szerokiego zakresu <TECHNOLOGY>ulepszeń technologii<>, które można łatwo kupić za odpowiednią walutę!\n\nSkonstruuj i odwiedź własną <STELLAR>stację egzokombinezonu Utopia<> już dziś!",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 15,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech110",
+    "Icon": "constructedTechnology/110.png",
+    "Name": "Stacja multinarzędzia Utopii",
+    "Group": "Przenośna stacja badań multinarzędzia",
+    "Description": "Nadzorcy Utopii chcą, aby ich dzielni osadnicy byli <STELLAR>silni<> i <STELLAR>dobrze wyposażeni<>!\n\nTa oficjalnie licencjonowana <TECHNOLOGY>przenośna stacja badań<> daje dostęp do szerokiego zakresu <TECHNOLOGY>ulepszeń technologii<>, które można łatwo kupić za odpowiednią walutę!\n\nSkonstruuj i odwiedź własną <STELLAR>stację multinarzędzia Utopii<> już dziś!",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 15,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw11",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech111",
+    "Icon": "constructedTechnology/111.png",
+    "Name": "Przenośna stacja badań egzopojazdu",
+    "Group": "Przenośna stacja badań egzopojazdu",
+    "Description": "Nadzorcy Utopii chcą, aby ich dzielni osadnicy byli <STELLAR>silni<> i <STELLAR>dobrze wyposażeni<>!\n\nTa oficjalnie licencjonowana <TECHNOLOGY>przenośna stacja badań<> daje dostęp do szerokiego zakresu <TECHNOLOGY>ulepszeń technologii<>, które można łatwo kupić za odpowiednią walutę!\n\nSkonstruuj i odwiedź własną <STELLAR>stację egzopojazdu Utopii<> już dziś!",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 15,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech112",
+    "Icon": "constructedTechnology/112.png",
+    "Name": "Stacja statku Utopii",
+    "Group": "Przenośna stacja badań statku",
+    "Description": "Nadzorcy Utopii chcą, aby ich dzielni osadnicy byli <STELLAR>silni<> i <STELLAR>dobrze wyposażeni<>!\n\nTa oficjalnie licencjonowana <TECHNOLOGY>przenośna stacja badań<> daje dostęp do szerokiego zakresu <TECHNOLOGY>ulepszeń technologii<>, które można łatwo kupić za odpowiednią walutę!\n\nSkonstruuj i odwiedź własną <STELLAR>stację statku Utopii<> już dziś!",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 15,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech113",
+    "Icon": "constructedTechnology/113.png",
+    "Name": "Stacja budowy Utopii",
+    "Group": "Terminal schematu budowlanego portalu",
+    "Description": "Nadzorcy Utopii chcą, aby ich dzielni osadnicy mieli <STELLAR>schronienie<> i <STELLAR>byli szczęśliwi<>! Wspólnie uczynimy Bakkin pięknym!\n\nTa oficjalnie licencjonowana <TECHNOLOGY>przenośna stacja badań<> daje dostęp do szerokiego zakresu <TECHNOLOGY>schematów budowlanych<>, które można łatwo kupić za odpowiednią walutę!\n\nSkonstruuj i odwiedź własną <STELLAR>stację budowy Utopii<> już dziś!",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 15,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 40
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   }

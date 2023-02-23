@@ -161,33 +161,27 @@ class _AddEditTimerState extends State<AddEditTimerPage> {
         timer.completionDate = timer.startDate.add(dur);
       });
 
+  Widget wrapInChip(LocaleKey lKey, int quantity, Duration dur) {
+    return getBaseWidget().appChip(
+      label: Text(
+        getTranslations().fromKey(lKey).replaceAll(
+              '{0}',
+              quantity.toString(),
+            ),
+        style: const TextStyle(color: Colors.black),
+      ),
+      onTap: () => setEndDateQuickSelect(dur),
+    );
+  }
+
   List<Widget> getQuickAccessButtons(BuildContext context) {
     return [
-      getBaseWidget().appChip(
-        text: getTranslations().fromKey(LocaleKey.hour).replaceAll('{0}', '1'),
-        onTap: () => setEndDateQuickSelect(const Duration(hours: 1)),
-      ),
-      getBaseWidget().appChip(
-        text: getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '2'),
-        onTap: () => setEndDateQuickSelect(const Duration(hours: 2)),
-      ),
-      getBaseWidget().appChip(
-        text: getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '5'),
-        onTap: () => setEndDateQuickSelect(const Duration(hours: 5)),
-      ),
-      getBaseWidget().appChip(
-        text:
-            getTranslations().fromKey(LocaleKey.hours).replaceAll('{0}', '10'),
-        onTap: () => setEndDateQuickSelect(const Duration(hours: 10)),
-      ),
-      getBaseWidget().appChip(
-        text: getTranslations().fromKey(LocaleKey.day).replaceAll('{0}', '1'),
-        onTap: () => setEndDateQuickSelect(const Duration(days: 1)),
-      ),
-      getBaseWidget().appChip(
-        text: getTranslations().fromKey(LocaleKey.days).replaceAll('{0}', '2'),
-        onTap: () => setEndDateQuickSelect(const Duration(days: 2)),
-      ),
+      wrapInChip(LocaleKey.hour, 1, const Duration(hours: 1)),
+      wrapInChip(LocaleKey.hours, 2, const Duration(hours: 2)),
+      wrapInChip(LocaleKey.hours, 5, const Duration(hours: 5)),
+      wrapInChip(LocaleKey.hours, 10, const Duration(hours: 10)),
+      wrapInChip(LocaleKey.day, 1, const Duration(days: 1)),
+      wrapInChip(LocaleKey.days, 2, const Duration(days: 2)),
     ];
   }
 }

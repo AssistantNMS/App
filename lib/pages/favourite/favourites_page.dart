@@ -24,13 +24,15 @@ class FavouritesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return simpleGenericPageScaffold(context,
-        title: getTranslations().fromKey(LocaleKey.favourites),
-        body: StoreConnector<AppState, FavouriteViewModel>(
-          converter: (store) => FavouriteViewModel.fromStore(store),
-          builder: (_, viewModel) => getBody(context, viewModel),
-          // builder: (_, viewModel) => getRealBody(context, viewModel),
-        ));
+    return simpleGenericPageScaffold(
+      context,
+      title: getTranslations().fromKey(LocaleKey.favourites),
+      body: StoreConnector<AppState, FavouriteViewModel>(
+        converter: (store) => FavouriteViewModel.fromStore(store),
+        builder: (_, viewModel) => getBody(context, viewModel),
+        // builder: (_, viewModel) => getRealBody(context, viewModel),
+      ),
+    );
   }
 
   Widget getBody(BuildContext context, FavouriteViewModel viewModel) =>

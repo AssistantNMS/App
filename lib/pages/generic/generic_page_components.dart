@@ -2,7 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:ff_stars/ff_stars.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/common/image.dart';
 import '../../components/expedition_alphabet_translation.dart';
 import '../../components/tilePresenters/creature_harvest_tile_presenter.dart';
 import '../../components/tilePresenters/egg_trait_tile_presenter.dart';
@@ -38,7 +37,9 @@ import '../../contracts/stat_bonus.dart';
 import '../../helpers/generic_helper.dart';
 import '../../helpers/hero_helper.dart';
 import '../../helpers/theme_helper.dart';
+import '../../mapper/generic_item_mapper.dart';
 import '../../redux/modules/generic/generic_page_view_model.dart';
+import 'all_possible_outputs_future_page.dart';
 import 'all_possible_outputs_page.dart';
 import 'generic_page_all_required_raw_materials.dart';
 import 'generic_page_descrip_highlight_text.dart';
@@ -277,7 +278,7 @@ Widget getCookingScore(BuildContext ctx, double cookingValue) {
 
 List<Widget> getCraftedUsing(
     BuildContext context,
-    GenericPageViewModel vm,
+    bool displayGenericItemColour,
     GenericPageItem genericItem,
     List<RequiredItem> resArray,
     Widget Function(
@@ -315,7 +316,7 @@ List<Widget> getCraftedUsing(
             context,
             navigateTo: (context) => GenericPageAllRequiredRawMaterials(
               GenericPageAllRequired.fromGenericItem(genericItem),
-              vm.displayGenericItemColour,
+              displayGenericItemColour,
             ),
           ),
         ),
@@ -328,7 +329,7 @@ List<Widget> getCraftedUsing(
 List<Widget> getUsedToCreate(
     BuildContext context,
     GenericPageItem genericItem,
-    List<RequiredItemDetails> usedToCreateArray,
+    Future<List<GenericPageItem>> Function() usedToCreateArrayFuture,
     Widget Function(
   BuildContext context,
   RequiredItemDetails requiredItemDetails, {
@@ -336,19 +337,27 @@ List<Widget> getUsedToCreate(
 })
         requiredItemDetailsPresenter) {
   List<Widget> usedToCreate = List.empty(growable: true);
-  if (usedToCreateArray.isNotEmpty) {
+
+  List<GenericPageItem> usedToCreateArray =
+      genericItem.usedInRecipes ?? List.empty();
+  List<RequiredItemDetails> usedToCreateReqArray =
+      mapUsedInToRequiredItemsWithDescrip(usedToCreateArray);
+
+  if (usedToCreateReqArray.isNotEmpty) {
     usedToCreate.add(const EmptySpace3x());
     usedToCreate.add(GenericItemText(
       getTranslations().fromKey(LocaleKey.usedToCreate),
     ));
     usedToCreate.addAll(genericItemWithOverflowButton(
       context,
-      usedToCreateArray,
+      usedToCreateReqArray,
       requiredItemDetailsPresenter,
       viewMoreOnPress: () async => await getNavigation().navigateAsync(
         context,
-        navigateTo: (context) => AllPossibleOutputsPage(
-          usedToCreateArray,
+        navigateTo: (context) => AllPossibleOutputsFromFuturePage(
+          () => usedToCreateArrayFuture().then(
+            mapUsedInToRequiredItemsWithDescrip,
+          ),
           genericItem.name,
           requiredItemDetailsPresenter,
         ),
@@ -358,41 +367,12 @@ List<Widget> getUsedToCreate(
   return usedToCreate;
 }
 
-List<Widget> getRequiredItemWidgets(
-    BuildContext context,
-    GenericPageItem genericItem,
-    String title,
-    List<RequiredItem> reqArray,
-    Widget Function(
-  BuildContext context,
-  RequiredItem requiredItem, {
-  void Function()? onTap,
-})
-        requiredItemsPresenter) {
-  List<Widget> refineToCreate = List.empty(growable: true);
-  if (reqArray.isNotEmpty) {
-    refineToCreate.add(const EmptySpace3x());
-    refineToCreate.add(GenericItemText(title));
-    refineToCreate.addAll(genericItemWithOverflowButton(
-      context,
-      reqArray,
-      requiredItemsPresenter,
-      viewMoreOnPress: () async => await getNavigation().navigateAsync(context,
-          navigateTo: (context) => AllPossibleOutputsPage(
-                reqArray,
-                title,
-                requiredItemsPresenter,
-              )),
-    ));
-  }
-  return refineToCreate;
-}
-
 List<Widget> getProcessorWidgets(
     BuildContext context,
     GenericPageItem genericItem,
     String title,
     List<Processor> processors,
+    Future<List<Processor>> Function() processorsFuture,
     Widget Function(BuildContext context, Processor processor,
             {bool showBackgroundColours})
         presenter) {
@@ -406,8 +386,8 @@ List<Widget> getProcessorWidgets(
       presenter,
       viewMoreOnPress: () async => await getNavigation().navigateAsync(
         context,
-        navigateTo: (context) => AllPossibleOutputsPage(
-          processors,
+        navigateTo: (context) => AllPossibleOutputsFromFuturePage(
+          processorsFuture,
           genericItem.name,
           presenter,
         ),
@@ -470,6 +450,7 @@ List<Widget> getRechargeWith(
     BuildContext context,
     GenericPageItem genericItem,
     List<ChargeBy> rechargeItems,
+    Future<List<ChargeBy>> Function() rechargeItemsFuture,
     Widget Function(
   BuildContext context,
   ChargeBy chargeByItem, {
@@ -486,9 +467,14 @@ List<Widget> getRechargeWith(
       context,
       rechargeItems,
       chargeByItemPresenter,
-      viewMoreOnPress: () async => await getNavigation().navigateAsync(context,
-          navigateTo: (context) => AllPossibleOutputsPage(
-              rechargeItems, genericItem.name, chargeByItemPresenter)),
+      viewMoreOnPress: () async => await getNavigation().navigateAsync(
+        context,
+        navigateTo: (context) => AllPossibleOutputsFromFuturePage(
+          rechargeItemsFuture,
+          genericItem.name,
+          chargeByItemPresenter,
+        ),
+      ),
     ));
   }
   return rechargeWidgets;
@@ -498,6 +484,7 @@ List<Widget> getUsedToRecharge(
     BuildContext context,
     GenericPageItem genericItem,
     List<Recharge> rechargeItems,
+    Future<List<Recharge>> Function() rechargeItemsFuture,
     Widget Function(
   BuildContext context,
   Recharge rechargeItem, {
@@ -516,9 +503,14 @@ List<Widget> getUsedToRecharge(
       context,
       rechargeItems,
       usedToRechargeItemPresenter,
-      viewMoreOnPress: () async => await getNavigation().navigateAsync(context,
-          navigateTo: (context) => AllPossibleOutputsPage(
-              rechargeItems, genericItem.name, usedToRechargeItemPresenter)),
+      viewMoreOnPress: () async => await getNavigation().navigateAsync(
+        context,
+        navigateTo: (context) => AllPossibleOutputsFromFuturePage(
+          rechargeItemsFuture,
+          genericItem.name,
+          usedToRechargeItemPresenter,
+        ),
+      ),
     ));
   }
   return rechargeWidgets;
@@ -537,9 +529,14 @@ List<Widget> getStatBonuses(
       context,
       statBonuses,
       statBonusTilePresenter,
-      viewMoreOnPress: () async => await getNavigation().navigateAsync(context,
-          navigateTo: (context) => AllPossibleOutputsPage(
-              statBonuses, title, statBonusTilePresenter)),
+      viewMoreOnPress: () async => await getNavigation().navigateAsync(
+        context,
+        navigateTo: (context) => AllPossibleOutputsPage(
+          statBonuses,
+          title,
+          statBonusTilePresenter,
+        ),
+      ),
     ));
   }
   return statBonusWidgets;
@@ -566,7 +563,10 @@ List<Widget> getProceduralStatBonuses(
       viewMoreOnPress: () async => await getNavigation().navigateAsync(
         context,
         navigateTo: (context) => AllPossibleOutputsPage(
-            statBonuses, title, proceduralStatBonusTilePresenter),
+          statBonuses,
+          title,
+          proceduralStatBonusTilePresenter,
+        ),
       ),
     ));
   }
@@ -588,8 +588,11 @@ List<Widget> getEggTraits(
       eggTraitTilePresenter,
       viewMoreOnPress: () async => await getNavigation().navigateAsync(
         context,
-        navigateTo: (context) =>
-            AllPossibleOutputsPage(eggTraits, title, eggTraitTilePresenter),
+        navigateTo: (context) => AllPossibleOutputsPage(
+          eggTraits,
+          title,
+          eggTraitTilePresenter,
+        ),
       ),
     ));
   }

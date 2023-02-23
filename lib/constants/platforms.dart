@@ -29,7 +29,7 @@ class SelectedPlatform {
 
 List<SelectedPlatform> availablePlatforms = [
   SelectedPlatform.defaultPlatform(),
-  SelectedPlatform('Playstation', AppImage.platformPS, 1),
+  SelectedPlatform('PlayStation', AppImage.platformPS, 1),
   SelectedPlatform('Xbox', AppImage.platformXB, 2),
   SelectedPlatform('Nintendo Switch', AppImage.platformSW, 3),
 ];

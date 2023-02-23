@@ -49,11 +49,12 @@
   {
     "Id": "other3",
     "Icon": "other/3.png",
-    "Name": "Chiave Antica",
-    "Group": "Manufatto senza tempo",
-    "Description": "Una pesante chiave in ferro battuto. Deve aprire una serratura nei dintorni...",
+    "Name": "Ancient Key",
+    "Group": "Timeless Artifact",
+    "Description": "A key of some weight, this aged piece of wrought iron must belong in a nearby lock...",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
+    "Additional": "",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/other/3.png",
@@ -72,11 +73,12 @@
   {
     "Id": "other4",
     "Icon": "other/4.png",
-    "Name": "Chiave a tridente",
-    "Group": "Reliquia acquatica",
-    "Description": "Una strana chiave, che brilla di luce ultravioletta.\n\nHa un aspetto primitivo, ma i sistemi di scansione dell'exotuta rilevano tracce di schiuma di naniti sulla dentellatura.",
+    "Name": "Trident Key",
+    "Group": "Aquatic Relic",
+    "Description": "A strange forked key, glowing with an ultraviolet light.\n\nDespite its primitive appearance, Exosuit scanning systems reveal traces of nanite foam upon its teeth.",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
+    "Additional": "",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/other/4.png",
@@ -1998,7 +2000,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3098,7 +3101,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
+      "IsExpeditionSeason4Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3120,7 +3124,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
+      "IsExpeditionSeason4Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3283,9 +3288,9 @@
   {
     "Id": "other207",
     "Icon": "other/207.png",
-    "Name": "Mappa planetaria",
-    "Group": "Dati cartografici commerciali",
-    "Description": "Una mappa di un pianeta vicino. Vi è stato contrassegnato un <COMMODITY>avamposto abitato<> di qualche tipo.\n\nSeleziona la mappa e <VAL_ON>Traccia rotta (<IMG>FE_ALT1<>)<> per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
+    "Name": "Planetary Chart",
+    "Group": "Commercial Cartographic Data",
+    "Description": "A map of a nearby planet. An <COMMODITY>inhabited outpost<> of some kind has been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3300,7 +3305,7 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": [
-      "Converti dati nell'indicatore di navigazione dell'exotuta"
+      "Convert data to Exosuit navigation marker"
     ]
   },
   {
@@ -3362,7 +3367,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3614,7 +3620,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4536,7 +4543,7 @@
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
-    "Colour": "008951",
+    "Colour": "007951",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
@@ -4558,7 +4565,7 @@
     "BaseValueUnits": 800.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
-    "Colour": "008951",
+    "Colour": "007951",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
@@ -5350,6 +5357,555 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other332",
+    "Icon": "other/332.png",
+    "Name": "Visore spaventoso",
+    "Group": "Casco sbloccabile",
+    "Description": "Un esclusivo <STELLAR>override aspetto dell'exotuta<>.\n\nColpisci il cuore dei nemici con questo casco rinforzato di ossido.\n\nTrasforma l'aspetto dell'exotuta presso un <TECHNOLOGY>modificatore aspetto<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other333",
+    "Icon": "other/333.png",
+    "Name": "Velocizzatore Utopia",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> unica ed esclusiva, per commemorare il completamento della spedizione <STELLAR>Utopia<> e i contributi al progetto abitazione comune della Fondazione Utopia.\n\nQuesta creazione versatile è placcata con un rivestimento resistente alle radiazioni e costruita con un profilo aerodinamico per una maggiore agilità durante il volo atmosferico.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other334",
+    "Icon": "other/52.png",
+    "Name": "Titolo: 'Funzionario Utopia'",
+    "Group": "Identificazione personalizzata",
+    "Description": "Un <STELLAR>titolo da esploratore<> esclusivo, che commemora il completamento della spedizione <STELLAR>Utopia<> e i contributi al progetto abitazione comune della Fondazione Utopia.\n\nApplica questo titolo al tuo striscione presso un <TECHNOLOGY>modificatore aspetto<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other335",
+    "Icon": "other/335.png",
+    "Name": "Striscione spedizione Utopia",
+    "Group": "Identificazione personalizzata",
+    "Description": "Equipaggia quest'esclusivo <STELLAR>tocco personale<> per commemorare il completamento della spedizione <STELLAR>Utopia<>, e i contributi al progetto abitazione comune della Fondazione Utopia.\n\nApplica questo striscione al tuo profilo in un <TECHNOLOGY>modificatore aspetto<>.",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other336",
+    "Icon": "other/336.png",
+    "Name": "Uovo di guardiano robot",
+    "Group": "Capsula progenie robotica",
+    "Description": "Una capsula metallica a 'uovo', <TRADEABLE>pronta a schiudersi!<>\n\nSi sente provenire un bip elettronico regolare, tenue e in qualche modo rassicurante, dall'interno dell'uovo.\n\nLa scansione indica che l'essere all'interno è programmato per essere <SPECIAL>meticoloso<> e <SPECIAL>affidabile<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2987",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other337",
+    "Icon": "other/337.png",
+    "Name": "Astronave esclusiva",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other338",
+    "Icon": "other/338.png",
+    "Name": "Astronave esclusiva",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other339",
+    "Icon": "other/339.png",
+    "Name": "Astronave esclusiva",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other340",
+    "Icon": "other/340.png",
+    "Name": "Astronave esclusiva",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other341",
+    "Icon": "other/341.png",
+    "Name": "Astronave esclusiva",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other342",
+    "Icon": "other/342.png",
+    "Name": "Uovo di compagno",
+    "Group": "Uovo di compagno esclusivo",
+    "Description": "Un uovo fertilizzato, <TRADEABLE>pronto a schiudersi!<>",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other343",
+    "Icon": "other/343.png",
+    "Name": "Uovo di compagno",
+    "Group": "Uovo di compagno esclusivo",
+    "Description": "Un uovo fertilizzato, <TRADEABLE>pronto a schiudersi!<>",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other344",
+    "Icon": "other/344.png",
+    "Name": "Multi-tool esclusivo",
+    "Group": "Dispositivo di sopravvivenza multifunzione esclusivo",
+    "Description": "Un <STELLAR>multi-tool<> esclusivo.\n\n<STELLAR>Prendi<> questo multi-tool per aggiungerlo alla tua collezione o <STELLAR>scambialo<> con il tuo multi-tool attuale. Cambia il multi-tool attivo dalla sezione Strumenti del menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other345",
+    "Icon": "other/345.png",
+    "Name": "Multi-tool esclusivo",
+    "Group": "Dispositivo di sopravvivenza multifunzione esclusivo",
+    "Description": "Un <STELLAR>multi-tool<> esclusivo.\n\n<STELLAR>Prendi<> questo multi-tool per aggiungerlo alla tua collezione o <STELLAR>scambialo<> con il tuo multi-tool attuale. Cambia il multi-tool attivo dalla sezione Strumenti del menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other346",
+    "Icon": "other/346.png",
+    "Name": "Pacchetto fuochi d'artificio rinnovati",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio assortiti, contenente fuochi d'artificio di tipo <SPECIAL>cromatico<>, <FUEL>Atlante<> e <COMMODITY>a motivi<>. Accendili per creare spettacoli luminosi nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Nota bene<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other347",
+    "Icon": "other/346.png",
+    "Name": "Pacchetto fuochi d'artificio rinnovati",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio assortiti, contenente fuochi d'artificio di tipo <SPECIAL>cromatico<>, <FUEL>Atlante<> e <COMMODITY>a motivi<>. Accendili per creare spettacoli luminosi nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Nota bene<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other348",
+    "Icon": "other/346.png",
+    "Name": "Pacchetto fuochi d'artificio rinnovati",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio assortiti, contenente fuochi d'artificio di tipo <SPECIAL>cromatico<>, <FUEL>Atlante<> e <COMMODITY>a motivi<>. Accendili per creare spettacoli luminosi nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Nota bene<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other349",
+    "Icon": "other/346.png",
+    "Name": "Pacchetto fuochi d'artificio rinnovati",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio assortiti, contenente fuochi d'artificio di tipo <SPECIAL>cromatico<>, <FUEL>Atlante<> e <COMMODITY>a motivi<>. Accendili per creare spettacoli luminosi nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Nota bene<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other350",
+    "Icon": "other/346.png",
+    "Name": "Pacchetto fuochi d'artificio rinnovati",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio assortiti, contenente fuochi d'artificio di tipo <SPECIAL>cromatico<>, <FUEL>Atlante<> e <COMMODITY>a motivi<>. Accendili per creare spettacoli luminosi nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Nota bene<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other351",
+    "Icon": "other/351.png",
+    "Name": "Ologramma: ammasso informe",
+    "Group": "Gesto sbloccabile",
+    "Description": "Un gesto esclusivo.\n\nPuoi selezionarlo dal <VAL_ON>Menu rapido<> per generare un ologramma portatile di un'adorabile creatura minuscola e informe.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other352",
+    "Icon": "other/352.png",
+    "Name": "Ologramma: fregata",
+    "Group": "Gesto sbloccabile",
+    "Description": "Un gesto esclusivo.\n\nPuoi selezionarlo dal <VAL_ON>Menu rapido<> per generare un ologramma portatile di una fregata elegante e potente.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other353",
+    "Icon": "other/353.png",
+    "Name": "Ologramma: astronave",
+    "Group": "Gesto sbloccabile",
+    "Description": "Un gesto esclusivo.\n\nPuoi selezionarlo dal <VAL_ON>Menu rapido<> per generare un ologramma portatile di una classica astronave da battaglia.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other354",
+    "Icon": "other/354.png",
+    "Name": "Ologramma: multi-tool",
+    "Group": "Gesto sbloccabile",
+    "Description": "Un gesto esclusivo.\n\nPuoi selezionarlo dal <VAL_ON>Menu rapido<> per generare un ologramma portatile di una pistola multi-tool.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other355",
+    "Icon": "other/355.png",
+    "Name": "Ologramma: sistema",
+    "Group": "Gesto sbloccabile",
+    "Description": "Un gesto esclusivo.\n\nPuoi selezionarlo dal <VAL_ON>Menu rapido<> per generare un ologramma portatile di un sistema solare in miniatura.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other356",
+    "Icon": "curiosities/46.png",
+    "Name": "Uovo del vuoto",
+    "Group": "Oggetto bizzarro vivente",
+    "Description": "Un uovo anomalo. Il guscio è coriaceo e carnoso e si contorce al tocco.\n\nDal suo interno proviene il suono di tenui colpetti. Di tanto in tanto sembra cantare.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

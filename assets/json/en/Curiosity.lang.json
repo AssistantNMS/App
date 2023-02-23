@@ -499,6 +499,7 @@
     "Usages": [
       "HasUsedToCraft",
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -902,6 +903,7 @@
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties",
       "IsEggIngredient"
     ],
@@ -1514,9 +1516,12 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
+    "CookingValue": 0.0,
     "Usages": [
       "HasRefinedToCreate",
+      "HasCookToCreate",
       "HasDevProperties",
+      "IsEggIngredient",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -1781,6 +1786,295 @@
       "HasDevProperties",
       "IsConsumable",
       "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur84",
+    "Icon": "other/207.png",
+    "Name": "Planetary Chart",
+    "Group": "Commercial Cartographic Data",
+    "Description": "A map of a nearby planet. An <COMMODITY>inhabited outpost<> of some kind has been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 20.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Convert data to Exosuit navigation marker"
+    ]
+  },
+  {
+    "Id": "cur85",
+    "Icon": "other/3.png",
+    "Name": "Ancient Key",
+    "Group": "Timeless Artifact",
+    "Description": "A key of some weight, this aged piece of wrought iron must belong in a nearby lock...",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur86",
+    "Icon": "other/4.png",
+    "Name": "Trident Key",
+    "Group": "Aquatic Relic",
+    "Description": "A strange forked key, glowing with an ultraviolet light.\n\nDespite its primitive appearance, Exosuit scanning systems reveal traces of nanite foam upon its teeth.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur87",
+    "Icon": "products/156.png",
+    "Name": "Sentinel Flare",
+    "Group": "Sentinel Communicator",
+    "Description": "A specialist device, created by Iteration Tethys. Its primary function is to hail your <TECHNOLOGY>reconstructed Sentinel drone<>.\n\nSelect the device and use Deactivate Broadcast (<IMG>FE_ALT1<>) to stop signalling [ The Sentry ].\n\nWhile this flare is active in your <STELLAR>Exosuit inventory<>, the drone will stay by your side while planetside.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Deactivate signal and dismiss [ The Sentry ]"
+    ]
+  },
+  {
+    "Id": "cur88",
+    "Icon": "curiosities/88.png",
+    "Name": "Utopia Supply Drop Beta",
+    "Group": "Utopia Foundation Supply Cache",
+    "Description": "To support the workers bravely terraforming the lava-filled wastes of planet Pehaelump, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use <VAL_ON>Open Package<> (<IMG>FE_ALT1<>) to collect your Utopia Foundation supplies, as well as details of your <STELLAR>next assignment<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receive Utopia Foundation supplies"
+    ]
+  },
+  {
+    "Id": "cur89",
+    "Icon": "curiosities/88.png",
+    "Name": "Utopia Supply Drop Gamma",
+    "Group": "Utopia Foundation Supply Cache",
+    "Description": "To support the workers valiantly toiling on the steep, exposed mountains of planet New Sesto, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use <VAL_ON>Open Package<> (<IMG>FE_ALT1<>) to collect your Utopia Foundation supplies, as well as details of your <STELLAR>next assignment<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receive Utopia Foundation supplies"
+    ]
+  },
+  {
+    "Id": "cur90",
+    "Icon": "curiosities/88.png",
+    "Name": "Utopia Supply Drop Delta",
+    "Group": "Utopia Foundation Supply Cache",
+    "Description": "To support the surviving workers who now confront the [ <SPECIAL>REDACTED<> ] of planet Idalth XIV, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use <VAL_ON>Open Package<> (<IMG>FE_ALT1<>) to collect your Utopia Foundation supplies, as well as details of your <STELLAR>next assignment<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receive Utopia Foundation supplies"
+    ]
+  },
+  {
+    "Id": "cur91",
+    "Icon": "curiosities/88.png",
+    "Name": "Utopia Supply Drop Epsilon",
+    "Group": "Utopia Foundation Supply Cache",
+    "Description": "To support the workers who so nobly rebuild in the sucking quagmires of planet Endil A8, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use <VAL_ON>Open Package<> (<IMG>FE_ALT1<>) to collect your Utopia Foundation supplies, as well as details of your <STELLAR>next assignment<>.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "311A49",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receive Utopia Foundation supplies"
+    ]
+  },
+  {
+    "Id": "cur92",
+    "Icon": "curiosities/92.png",
+    "Name": "Settlement Coordinates Beta",
+    "Group": "Utopia Foundation Settlement Chart",
+    "Description": "A map from the Utopia Foundation, showing <STELLAR>personalised coordinates<> for your target construction site.\n\nSelect the map and use <VAL_ON>Plot Route<> (<IMG>FE_ALT1<>) to pin the location in your Exosuit display.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receive Utopia Foundation construction coordinates"
+    ]
+  },
+  {
+    "Id": "cur93",
+    "Icon": "curiosities/92.png",
+    "Name": "Settlement Coordinates Gamma",
+    "Group": "Utopia Foundation Settlement Chart",
+    "Description": "A map from the Utopia Foundation, showing <STELLAR>personalised coordinates<> for your target construction site.\n\nSelect the map and use <VAL_ON>Plot Route<> (<IMG>FE_ALT1<>) to pin the location in your Exosuit display.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receive Utopia Foundation construction coordinates"
+    ]
+  },
+  {
+    "Id": "cur94",
+    "Icon": "curiosities/92.png",
+    "Name": "Settlement Coordinates Delta",
+    "Group": "Utopia Foundation Settlement Chart",
+    "Description": "A map from the Utopia Foundation, showing <STELLAR>personalised coordinates<> for your target construction site.\n\nSelect the map and use <VAL_ON>Plot Route<> (<IMG>FE_ALT1<>) to pin the location in your Exosuit display.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receive Utopia Foundation construction coordinates"
+    ]
+  },
+  {
+    "Id": "cur95",
+    "Icon": "curiosities/92.png",
+    "Name": "Settlement Coordinates Epsilon",
+    "Group": "Utopia Foundation Settlement Chart",
+    "Description": "A map from the Utopia Foundation, showing <STELLAR>personalised coordinates<> for your target construction site.\n\nSelect the map and use <VAL_ON>Plot Route<> (<IMG>FE_ALT1<>) to pin the location in your Exosuit display.",
+    "BaseValueUnits": 2613.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Receive Utopia Foundation construction coordinates"
+    ]
+  },
+  {
+    "Id": "cur96",
+    "Icon": "curiosities/33.png",
+    "Name": "Construction History",
+    "Group": "Classified Dossier",
+    "Description": "This report records the history of a planetary facility forming part of the <EXPED>Utopia Project<>. Several sections are curiously absent.\n\nDS 2368 :: <STELLAR>Facility <><TRADEABLE>founded<><STELLAR>. Plasma deep drill rig operational.<>\nDS 2384 :: <STELLAR>Return growth steady at 1%.<>\nDS 2400 :: <STELLAR>Overseers querying growth rate.<>\nDS 2416 :: <STELLAR>Orbital exp. approved. Station trade booming.<>\nDS 2432 :: <SPECIAL>[Redacted]<> <STELLAR>hazard encountered.<>\nDS 2448 :: <SPECIAL>[Redacted]<>\nDS 2464 :: <STELLAR>Utopia Project launched.<>\nDS 2464 :: <STELLAR>Facility <><TRADEABLE>restored<><STELLAR>. Plasma deep drill rig operational. Trade routes re-opened.<>\nDS 2480 :: <SPECIAL>[Redacted]<>\nDS 2496 :: <STELLAR>Facility <><TRADEABLE>restored<><STELLAR>. Plasma deep drill rig operational. Trade routes re-opened.<>\nDS 2512 :: <SPECIAL>[Redacted]<>\n\nThe last two entries are repeated over and over, across hundreds of pages.",
+    "BaseValueUnits": 16.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

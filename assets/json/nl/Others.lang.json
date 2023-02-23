@@ -49,11 +49,12 @@
   {
     "Id": "other3",
     "Icon": "other/3.png",
-    "Name": "Oude sleutel",
-    "Group": "Tijdloos artefact",
-    "Description": "Een vrij zware, verwrongen sleutel van ijzer uit lang vervlogen tijden. Er moet hier ergens een slot zijn...",
+    "Name": "Ancient Key",
+    "Group": "Timeless Artifact",
+    "Description": "A key of some weight, this aged piece of wrought iron must belong in a nearby lock...",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
+    "Additional": "",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/other/3.png",
@@ -72,11 +73,12 @@
   {
     "Id": "other4",
     "Icon": "other/4.png",
-    "Name": "Drietandsleutel",
-    "Group": "Aquatisch relikwie",
-    "Description": "Een vreemde, gevorkte sleutel die ultraviolet licht afgeeft.\n\nZiet er primitief uit, maar de scanners van het exopak geven aan dat er sporen van naniethoudend schuim op de tanden zitten.",
+    "Name": "Trident Key",
+    "Group": "Aquatic Relic",
+    "Description": "A strange forked key, glowing with an ultraviolet light.\n\nDespite its primitive appearance, Exosuit scanning systems reveal traces of nanite foam upon its teeth.",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
+    "Additional": "",
     "MaxStackSize": 5.0,
     "Colour": "4D2957",
     "CdnUrl": "https://cdn.nmsassistant.com/other/4.png",
@@ -1771,7 +1773,7 @@
     "Icon": "other/93.png",
     "Name": "Ei van gezelschapsdier",
     "Group": "Genetisch materiaal van %NAME%",
-    "Description": "Een levend, bevrucht ei, %READY%\n\n%MODIFIED%\n\nScans geven aan dat het wezen binnenin het genetisch potentieel heeft om %SIZE% en %TRAIT% te worden.",
+    "Description": "Een levend, bevrucht ei, %READY%%EXTRA%\n\n%MODIFIED%\n\nScans geven aan dat het wezen binnenin het genetisch potentieel heeft om %SIZE% en %TRAIT% te worden.",
     "BaseValueUnits": 0.0,
     "CurrencyType": "Credits",
     "Colour": "311A49",
@@ -1998,7 +2000,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3098,7 +3101,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
+      "IsExpeditionSeason4Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3120,7 +3124,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason4Reward"
+      "IsExpeditionSeason4Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3283,9 +3288,9 @@
   {
     "Id": "other207",
     "Icon": "other/207.png",
-    "Name": "Planetaire kaart",
-    "Group": "Commerciële cartografische gegevens",
-    "Description": "Een kaart van een planeet in de buurt. Er is een <COMMODITY>bewoonde buitenpost<> gemarkeerd.\n\nSelecteer de kaart en gebruik <VAL_ON>Route bepalen (<IMG>FE_ALT1<>)<> om de locatie weer te geven op het display van je exopak.\n\nJe kunt nieuwe kaarten verkrijgen door <COMMODITY>navigatiegegevens<> uit te wisselen met een cartograaf in een ruimtestation.",
+    "Name": "Planetary Chart",
+    "Group": "Commercial Cartographic Data",
+    "Description": "A map of a nearby planet. An <COMMODITY>inhabited outpost<> of some kind has been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3300,7 +3305,7 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": [
-      "Gegevens converteren naar navigatiemarkering exopak"
+      "Convert data to Exosuit navigation marker"
     ]
   },
   {
@@ -3362,7 +3367,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason5Reward"
+      "IsExpeditionSeason5Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3614,7 +3620,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsExpeditionSeason6Reward"
+      "IsExpeditionSeason6Reward",
+      "IsTwitchCampaign6Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -4536,7 +4543,7 @@
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
-    "Colour": "008951",
+    "Colour": "007951",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
@@ -4558,7 +4565,7 @@
     "BaseValueUnits": 800.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
-    "Colour": "008951",
+    "Colour": "007951",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
@@ -5350,6 +5357,555 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other332",
+    "Icon": "other/332.png",
+    "Name": "Angstaanjagend vizier",
+    "Group": "Ontgrendelbare helm",
+    "Description": "Een exclusieve <STELLAR>uiterlijke aanpassing van het exopak<>.\n\nJaag je vijanden angst aan met deze met zuurstof versterkte helm.\n\nVerander het uiterlijk van je exopak bij een <TECHNOLOGY>gedaantemodulator<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other333",
+    "Icon": "other/333.png",
+    "Name": "Utopie-speeder",
+    "Group": "Exclusief ruimteschip",
+    "Description": "Een uniek en exclusief <STELLAR>ruimteschip<> ter ere van de voltooiing van de expeditie <STELLAR>Utopie<> te hebben bijgedragen aan het project voor gemeenschappelijk woongebied van de Utopie-stichting.\n\nDit veelzijdige ruimteschip is voorzien van stralingsbestendige bepantsering en ontworpen met een aerodynamisch profiel voor behendigheid tijdens atmosferische vluchten.\n\n<STELLAR>Claim<> dit schip om het toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige schip er voor in. Op een planeet kun je schepen oproepen via het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other334",
+    "Icon": "other/52.png",
+    "Name": "Titel: 'Utopie-hoogwaardigheidsbekleder'",
+    "Group": "Unieke persoonlijke identificatie",
+    "Description": "Een exclusieve <STELLAR>verkennerstitel<> ter ere van de voltooiing van de expeditie <STELLAR>Utopie<> en door te hebben bijgedragen aan het project voor gemeenschappelijk woongebied van de Utopie-stichting.\n\nZet deze titel op je vaandel bij een <TECHNOLOGY>gedaantemodulator<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other335",
+    "Icon": "other/335.png",
+    "Name": "Expeditievaandel Utopie",
+    "Group": "Unieke persoonlijke identificatie",
+    "Description": "Rust jezelf uit met deze exclusieve <STELLAR>persoonlijke versiering<> ter ere van de expeditie <STELLAR>Utopie<> en door te hebben bijgedragen aan het project voor gemeenschappelijk woongebied van de Utopie-stichting.\n\nVoeg dit vaandel toe aan je profiel bij een <TECHNOLOGY>gedaantemodulator<>.",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other336",
+    "Icon": "other/336.png",
+    "Name": "Ei van robo-bewaker",
+    "Group": "Robotachtige geboortecapsule",
+    "Description": "Een metalen 'ei'-capsule, <TRADEABLE>klaar om uit te komen!<>\n\nUit het ei klinkt een regelmatig zacht elektronisch gepiep, dat op de een of andere manier geruststellend is.\n\nUit scans blijkt dat het wezen dat erin zit geprogrammeerd is om <SPECIAL>precies<> en <SPECIAL>betrouwbaar<> te zijn.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2987",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason9Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other337",
+    "Icon": "other/337.png",
+    "Name": "Exclusief ruimteschip",
+    "Group": "Exclusief ruimteschip",
+    "Description": "Een exclusief <STELLAR>ruimteschip<>.\n\n<STELLAR>Claim<> dit schip om het toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige schip er voor in. Op een planeet kun je schepen oproepen via het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other338",
+    "Icon": "other/338.png",
+    "Name": "Exclusief ruimteschip",
+    "Group": "Exclusief ruimteschip",
+    "Description": "Een exclusief <STELLAR>ruimteschip<>.\n\n<STELLAR>Claim<> dit schip om het toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige schip er voor in. Op een planeet kun je schepen oproepen via het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other339",
+    "Icon": "other/339.png",
+    "Name": "Exclusief ruimteschip",
+    "Group": "Exclusief ruimteschip",
+    "Description": "Een exclusief <STELLAR>ruimteschip<>.\n\n<STELLAR>Claim<> dit schip om het toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige schip er voor in. Op een planeet kun je schepen oproepen via het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other340",
+    "Icon": "other/340.png",
+    "Name": "Exclusief ruimteschip",
+    "Group": "Exclusief ruimteschip",
+    "Description": "Een exclusief <STELLAR>ruimteschip<>.\n\n<STELLAR>Claim<> dit schip om het toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige schip er voor in. Op een planeet kun je schepen oproepen via het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other341",
+    "Icon": "other/341.png",
+    "Name": "Exclusief ruimteschip",
+    "Group": "Exclusief ruimteschip",
+    "Description": "Een exclusief <STELLAR>ruimteschip<>.\n\n<STELLAR>Claim<> dit schip om het toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige schip er voor in. Op een planeet kun je schepen oproepen via het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other342",
+    "Icon": "other/342.png",
+    "Name": "Ei van gezelschapsdier",
+    "Group": "Exclusief ei van gezelschapsdier",
+    "Description": "Een levend, bevrucht ei, <TRADEABLE>klaar om uit te komen!<>",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other343",
+    "Icon": "other/343.png",
+    "Name": "Ei van gezelschapsdier",
+    "Group": "Exclusief ei van gezelschapsdier",
+    "Description": "Een levend, bevrucht ei, <TRADEABLE>klaar om uit te komen!<>",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other344",
+    "Icon": "other/344.png",
+    "Name": "Exclusieve multitool",
+    "Group": "Exclusief multifunctioneel overlevingsapparaat",
+    "Description": "Een exclusieve <STELLAR>multitool<>.\n\n<STELLAR>Pak<> deze multitool om 'm toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige multitool er voor in. Wissel tussen actieve multitools via het gedeelte Functies van het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other345",
+    "Icon": "other/345.png",
+    "Name": "Exclusieve multitool",
+    "Group": "Exclusief multifunctioneel overlevingsapparaat",
+    "Description": "Een exclusieve <STELLAR>multitool<>.\n\n<STELLAR>Pak<> deze multitool om 'm toe te voegen aan je verzameling of <STELLAR>ruil<> je huidige multitool er voor in. Wissel tussen actieve multitools via het gedeelte Functies van het snelmenu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other346",
+    "Icon": "other/346.png",
+    "Name": "Geremixt vuurwerkpakket",
+    "Group": "Vuurwerkpakket",
+    "Description": "Een pakket met drie soorten vuurwerk: <SPECIAL>chromatisch vuurwerk<>, <FUEL>Atlas-vuurwerk<> en <COMMODITY>vuurwerk met patronen<>. Ontsteek het en geniet van het glitterende spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other347",
+    "Icon": "other/346.png",
+    "Name": "Geremixt vuurwerkpakket",
+    "Group": "Vuurwerkpakket",
+    "Description": "Een pakket met drie soorten vuurwerk: <SPECIAL>chromatisch vuurwerk<>, <FUEL>Atlas-vuurwerk<> en <COMMODITY>vuurwerk met patronen<>. Ontsteek het en geniet van het glitterende spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other348",
+    "Icon": "other/346.png",
+    "Name": "Geremixt vuurwerkpakket",
+    "Group": "Vuurwerkpakket",
+    "Description": "Een pakket met drie soorten vuurwerk: <SPECIAL>chromatisch vuurwerk<>, <FUEL>Atlas-vuurwerk<> en <COMMODITY>vuurwerk met patronen<>. Ontsteek het en geniet van het glitterende spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other349",
+    "Icon": "other/346.png",
+    "Name": "Geremixt vuurwerkpakket",
+    "Group": "Vuurwerkpakket",
+    "Description": "Een pakket met drie soorten vuurwerk: <SPECIAL>chromatisch vuurwerk<>, <FUEL>Atlas-vuurwerk<> en <COMMODITY>vuurwerk met patronen<>. Ontsteek het en geniet van het glitterende spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other350",
+    "Icon": "other/346.png",
+    "Name": "Geremixt vuurwerkpakket",
+    "Group": "Vuurwerkpakket",
+    "Description": "Een pakket met drie soorten vuurwerk: <SPECIAL>chromatisch vuurwerk<>, <FUEL>Atlas-vuurwerk<> en <COMMODITY>vuurwerk met patronen<>. Ontsteek het en geniet van het glitterende spektakel in de lucht.\n\nPlaats de lanceerbuis via het <VAL_ON>bouwmenu<> (<IMG>BUILD_MENU<>). <FUEL>Waarschuwing<>: niet richten op levende wezens. Niet geschikt voor gebruik binnenshuis.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign6Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other351",
+    "Icon": "other/351.png",
+    "Name": "Hologram: Klodder",
+    "Group": "Ontgrendelbaar gebaar",
+    "Description": "Een exclusief gebaar.\n\nSelecteer het in het <VAL_ON>snelmenu<> om een draagbaar hologram van Een schattig piepklein klodderwezen te genereren.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other352",
+    "Icon": "other/352.png",
+    "Name": "Hologram: Fregat",
+    "Group": "Ontgrendelbaar gebaar",
+    "Description": "Een exclusief gebaar.\n\nSelecteer het in het <VAL_ON>snelmenu<> om een draagbaar hologram van een gestroomlijnd en krachtig fregat te genereren.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other353",
+    "Icon": "other/353.png",
+    "Name": "Hologram: Ruimteschip",
+    "Group": "Ontgrendelbaar gebaar",
+    "Description": "Een exclusief gebaar.\n\nSelecteer het in het <VAL_ON>snelmenu<> om een draagbaar hologram van een klassiek gevechtsruimteschip te genereren.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other354",
+    "Icon": "other/354.png",
+    "Name": "Hologram: Multitool",
+    "Group": "Ontgrendelbaar gebaar",
+    "Description": "Een exclusief gebaar.\n\nSelecteer het in het <VAL_ON>snelmenu<> om een draagbaar hologram van een multitoolpistool te genereren.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other355",
+    "Icon": "other/355.png",
+    "Name": "Hologram: Systeem",
+    "Group": "Ontgrendelbaar gebaar",
+    "Description": "Een exclusief gebaar.\n\nSelecteer het in het <VAL_ON>snelmenu<> om een draagbaar hologram van een zonnestelsel in miniatuurvorm te genereren.",
+    "BaseValueUnits": 1500.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other356",
+    "Icon": "curiosities/46.png",
+    "Name": "Ruimte-ei",
+    "Group": "Levende curiositeit",
+    "Description": "Een anomalie-ei. De taaie, leerachtige schil trilt als je hem aanraakt.\n\nVan binnen weerklinkt een vaag getik. Af en toe lijkt het net alsof hij zingt.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
