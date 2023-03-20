@@ -117,6 +117,12 @@ class BaseWidgetService implements IBaseWidgetService {
       );
 
   @override
+  int tabletBreakpoint() => 800;
+
+  @override
+  int desktopBreakpoint() => 1440;
+
+  @override
   Widget customDivider() => isWeb
       ? Divider(thickness: .5, color: Colors.grey[800])
       : Divider(color: Colors.grey[800]);

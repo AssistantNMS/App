@@ -4,7 +4,6 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/fonts.dart';
-import '../helpers/theme_helper.dart';
 
 class ExpeditionAlphabetTranslation extends StatefulWidget {
   final String text;

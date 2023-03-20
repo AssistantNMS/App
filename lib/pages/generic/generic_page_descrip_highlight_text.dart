@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
 import '../../contracts/data/platform_control_mapping.dart';
-import '../../helpers/theme_helper.dart';
 
 const String paleYellowColourClass = 'C9D68B';
 const String goldColourClass = 'B09857';

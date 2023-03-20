@@ -36,7 +36,6 @@ import '../../contracts/required_item_details.dart';
 import '../../contracts/stat_bonus.dart';
 import '../../helpers/generic_helper.dart';
 import '../../helpers/hero_helper.dart';
-import '../../helpers/theme_helper.dart';
 import '../../mapper/generic_item_mapper.dart';
 import '../../redux/modules/generic/generic_page_view_model.dart';
 import 'all_possible_outputs_future_page.dart';

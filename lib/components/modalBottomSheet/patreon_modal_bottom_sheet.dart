@@ -8,7 +8,6 @@ import '../../constants/patreon.dart';
 import '../../constants/app_image.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../constants/routes.dart';
-import '../../helpers/theme_helper.dart';
 
 class PatreonModalBottomSheet extends StatelessWidget {
   final DateTime unlockDate;
