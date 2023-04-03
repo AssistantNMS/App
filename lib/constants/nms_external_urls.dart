@@ -47,4 +47,8 @@ class NmsExternalUrls {
       'https://www.youtube.com/playlist?list=PLFVRR5wqxfgy3LKw29OG3OTekvQdayz4s';
   static const String githubViewAppRepoAtCommit =
       'https://github.com/AssistantNMS/App/tree/';
+  static const String deepSpaceTravelNet =
+      'https://www.deep-space-travel-network.com';
+  static const String deepSpaceTravelNetMissionGen =
+      deepSpaceTravelNet + '/missiongenerator';
 }
