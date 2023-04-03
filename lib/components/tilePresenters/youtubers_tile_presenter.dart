@@ -167,3 +167,19 @@ Widget nomNomOpenSyncModalTile(
     },
   );
 }
+
+Widget kanajuTile(
+  BuildContext context, {
+  String? subtitle,
+}) {
+  return genericListTileWithSubtitle(
+    context,
+    leadingImage: AppImage.kanaju,
+    name: 'Kanaju',
+    subtitle: Text(subtitle ?? 'Procedural Mission Generator', maxLines: 1),
+    trailing: const Icon(Icons.navigate_next_rounded),
+    onTap: () => launchExternalURL(
+      NmsExternalUrls.deepSpaceTravelNetMissionGen,
+    ),
+  );
+}

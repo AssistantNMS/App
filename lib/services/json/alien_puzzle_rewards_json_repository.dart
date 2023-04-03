@@ -11,7 +11,9 @@ class AlienPuzzleRewardsJsonRepository extends BaseJsonService
   Future<ResultWithValue<List<AlienPuzzleReward>>> getAll(context) async {
     try {
       List responseDetailsJson = await getListfromJson(
-          context, getTranslations().fromKey(LocaleKey.alienPuzzleRewardsJson));
+          context,
+          getTranslations().fromKey(LocaleKey.alienPuzzleRewardsJson) +
+              '.json');
       List<AlienPuzzleReward> alienPuzzles = responseDetailsJson
           .map((m) => AlienPuzzleReward.fromJson(m))
           .toList();

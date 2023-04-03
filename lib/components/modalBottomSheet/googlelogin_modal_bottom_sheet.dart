@@ -155,36 +155,36 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
     List<Widget> widgets = List.empty(growable: true);
 
     widgets.add(const EmptySpace3x());
-    widgets.add(Center(
-      child: AuthButton.google(
-        onPressed: () async {
-          try {
-            signIn();
-            setState(() {
-              rebuildCounter++;
-            });
-            // getNavigation().pop(context);
-          } catch (exception) {
-            getLog().e('signInWithGoogle exception' + exception.toString());
+    // widgets.add(Center(
+    //   child: AuthButton.google(
+    //     onPressed: () async {
+    //       try {
+    //         signIn();
+    //         setState(() {
+    //           rebuildCounter++;
+    //         });
+    //         // getNavigation().pop(context);
+    //       } catch (exception) {
+    //         getLog().e('signInWithGoogle exception' + exception.toString());
 
-            getDialog().showSimpleDialog(
-              context,
-              getTranslations().fromKey(LocaleKey.error),
-              Text(getTranslations()
-                  .fromKey(LocaleKey.unableToLogInToGoogleAccount)),
-              buttonBuilder: (BuildContext ctx) => [
-                getDialog().simpleDialogCloseButton(
-                  ctx,
-                  onTap: () {
-                    // Old signIn
-                  },
-                )
-              ],
-            );
-          }
-        },
-      ),
-    ));
+    //         getDialog().showSimpleDialog(
+    //           context,
+    //           getTranslations().fromKey(LocaleKey.error),
+    //           Text(getTranslations()
+    //               .fromKey(LocaleKey.unableToLogInToGoogleAccount)),
+    //           buttonBuilder: (BuildContext ctx) => [
+    //             getDialog().simpleDialogCloseButton(
+    //               ctx,
+    //               onTap: () {
+    //                 // Old signIn
+    //               },
+    //             )
+    //           ],
+    //         );
+    //       }
+    //     },
+    //   ),
+    // ));
     return widgets;
   }
 }

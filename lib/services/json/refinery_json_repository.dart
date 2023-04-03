@@ -14,7 +14,7 @@ class RefineryJsonRepository extends BaseJsonService
   Future<ResultWithValue<List<Processor>>> getAll(context) async {
     //getAnalytics().trackEvent(AnalyticsEvent.loadRefineryJson);
 
-    String detailJson = getTranslations().fromKey(detailsJsonLocale);
+    String detailJson = getTranslations().fromKey(detailsJsonLocale) + '.json';
     try {
       List responseDetailsJson = await getListfromJson(context, detailJson);
       List<Processor> refinerDetails = responseDetailsJson

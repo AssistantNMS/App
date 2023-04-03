@@ -12,14 +12,14 @@ class GuidesJsonRepository extends BaseJsonService
   Future<ResultWithValue<List<NmsGuide>>> getAll(context) async {
     try {
       List availableGuidesJson = await getListfromJson(
-          context, getTranslations().fromKey(LocaleKey.guidesJson));
+          context, getTranslations().fromKey(LocaleKey.guidesJson) + '.json');
 
       List<NmsGuide> guides = List.empty(growable: true);
       for (var guideItemDynamic in availableGuidesJson) {
         NmsGuideListItem guideListItem =
             NmsGuideListItem.fromJson(guideItemDynamic);
         var guideDynamic = await getJsonGuide(
-            context, guideListItem.folder, guideListItem.file);
+            context, guideListItem.folder, guideListItem.file + '.json');
         NmsGuide guideContent =
             NmsGuide.fromJson(guideDynamic, guideListItem.folder);
         // ignore: unnecessary_null_comparison
@@ -30,7 +30,7 @@ class GuidesJsonRepository extends BaseJsonService
       }
       return ResultWithValue<List<NmsGuide>>(true, guides, '');
     } catch (exception) {
-      getLog().e('GuideJsonService Exception');
+      getLog().e('GuideJsonService Exception ' + exception.toString());
       return ResultWithValue<List<NmsGuide>>(
           false, List.empty(growable: true), exception.toString());
     }
