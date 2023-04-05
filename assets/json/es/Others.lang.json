@@ -48,20 +48,17 @@
   },
   {
     "Id": "other3",
-    "Icon": "other/3.png",
-    "Name": "Ancient Key",
-    "Group": "Timeless Artifact",
-    "Description": "A key of some weight, this aged piece of wrought iron must belong in a nearby lock...",
+    "Icon": "building/272.png",
+    "Name": "X.O. Suit",
+    "Group": "",
+    "Description": "",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
-    "Additional": "",
     "MaxStackSize": 5.0,
-    "Colour": "4D2957",
+    "Colour": "262626",
     "CdnUrl": "https://cdn.nmsassistant.com/other/3.png",
     "Usages": [
-      "HasUsedToCraft",
-      "HasDevProperties",
-      "IsConsumable"
+      "HasDevProperties"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -73,24 +70,25 @@
   {
     "Id": "other4",
     "Icon": "other/4.png",
-    "Name": "Trident Key",
-    "Group": "Aquatic Relic",
-    "Description": "A strange forked key, glowing with an ultraviolet light.\n\nDespite its primitive appearance, Exosuit scanning systems reveal traces of nanite foam upon its teeth.",
-    "BaseValueUnits": 1000.0,
+    "Name": "Módulo de torre",
+    "Group": "Módulo de construcción",
+    "Description": "Módulo de torre alto y apilable, con los lados rígidos y reforzados, y resistencia adicional al agua para contrarrestar la exposición a los elementos.",
+    "BaseValueUnits": 2.0,
     "CurrencyType": "Credits",
-    "Additional": "",
-    "MaxStackSize": 5.0,
-    "Colour": "4D2957",
+    "Colour": "2C7C9F",
     "CdnUrl": "https://cdn.nmsassistant.com/other/4.png",
     "Usages": [
-      "HasUsedToCraft",
-      "HasDevProperties",
-      "IsConsumable"
+      "HasDevProperties"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 2,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
-    "RequiredItems": [],
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 40
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -5391,7 +5389,7 @@
   {
     "Id": "other333",
     "Icon": "other/333.png",
-    "Name": "Speeder de Utopía",
+    "Name": "Speeder de utopía",
     "Group": "Astronave exclusiva",
     "Description": "Una <STELLAR>nave<> en conmemoración de la finalización de la expedición <STELLAR>Utopía<> y las contribuciones al proyecto de hábitat comunal de la Fundación Utopía.\n\nEsta nave versátil cuenta con armadura resistente a la radiación y se ha diseñado con un perfil aerodinámico para que sea ágil en los vuelos atmosféricos.\n\n<STELLAR>Consigue<> esta nave para añadirla a tu colección o <STELLAR>intercámbiala<> por tu nave actual. Cuando estés en un planeta, llama a tus naves desde el menú rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5479,7 +5477,7 @@
   {
     "Id": "other337",
     "Icon": "other/337.png",
-    "Name": "Nave exclusiva",
+    "Name": "Derrota de Ikawaji",
     "Group": "Astronave exclusiva",
     "Description": "Una <STELLAR>nave<> exclusiva.\n\n<STELLAR>Consigue<> esta nave para añadirla a tu colección o <STELLAR>intercámbiala<> por tu nave actual. Cuando estés en un planeta, llama a tus naves desde el menú rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5501,7 +5499,7 @@
   {
     "Id": "other338",
     "Icon": "other/338.png",
-    "Name": "Nave exclusiva",
+    "Name": "Las cenizas de la devastación",
     "Group": "Astronave exclusiva",
     "Description": "Una <STELLAR>nave<> exclusiva.\n\n<STELLAR>Consigue<> esta nave para añadirla a tu colección o <STELLAR>intercámbiala<> por tu nave actual. Cuando estés en un planeta, llama a tus naves desde el menú rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5523,7 +5521,7 @@
   {
     "Id": "other339",
     "Icon": "other/339.png",
-    "Name": "Nave exclusiva",
+    "Name": "Mano definitiva de Morozawa",
     "Group": "Astronave exclusiva",
     "Description": "Una <STELLAR>nave<> exclusiva.\n\n<STELLAR>Consigue<> esta nave para añadirla a tu colección o <STELLAR>intercámbiala<> por tu nave actual. Cuando estés en un planeta, llama a tus naves desde el menú rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5545,7 +5543,7 @@
   {
     "Id": "other340",
     "Icon": "other/340.png",
-    "Name": "Nave exclusiva",
+    "Name": "Aebashi TV2",
     "Group": "Astronave exclusiva",
     "Description": "Una <STELLAR>nave<> exclusiva.\n\n<STELLAR>Consigue<> esta nave para añadirla a tu colección o <STELLAR>intercámbiala<> por tu nave actual. Cuando estés en un planeta, llama a tus naves desde el menú rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5567,7 +5565,7 @@
   {
     "Id": "other341",
     "Icon": "other/341.png",
-    "Name": "Nave exclusiva",
+    "Name": "Arrepentimiento ilimitado de Tahama",
     "Group": "Astronave exclusiva",
     "Description": "Una <STELLAR>nave<> exclusiva.\n\n<STELLAR>Consigue<> esta nave para añadirla a tu colección o <STELLAR>intercámbiala<> por tu nave actual. Cuando estés en un planeta, llama a tus naves desde el menú rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5589,9 +5587,9 @@
   {
     "Id": "other342",
     "Icon": "other/342.png",
-    "Name": "Huevo de compañero",
+    "Name": "Huevo de E. Pantheibea",
     "Group": "Huevo de compañero exclusivo",
-    "Description": "Un huevo vivo y fértil, <TRADEABLE>¡listo para eclosionar!<>",
+    "Description": "Un huevo vivo y fértil, <TRADEABLE>¡listo para eclosionar!<>\n\nLa voluminosa bestia de su interior hace chocar sus extremidades cristalinas contra el huevo.\n\nLos escaneos indican que el ser en su interior tiene el potencial genético de tener una naturaleza <TRADEABLE>plácida<>; una criatura amable a pesar de su imponente apariencia.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -5611,9 +5609,9 @@
   {
     "Id": "other343",
     "Icon": "other/343.png",
-    "Name": "Huevo de compañero",
+    "Name": "Huevo de I. Bearicatea",
     "Group": "Huevo de compañero exclusivo",
-    "Description": "Un huevo vivo y fértil, <TRADEABLE>¡listo para eclosionar!<>",
+    "Description": "Un huevo vivo y fértil, <TRADEABLE>¡listo para eclosionar!<>\n\nLa delicada criatura de su interior aletea sus alas superpuestas a la espera de ser libre.\n\nLos escaneos indican que el ser en su interior tiene el potencial genético de ser un compañero <TRADEABLE>fiel<> que será feliz volando cerca de su dueño.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -5633,7 +5631,7 @@
   {
     "Id": "other344",
     "Icon": "other/344.png",
-    "Name": "Multiherramienta exclusiva",
+    "Name": "Condensador ligero artesanal",
     "Group": "Dispositivo de supervivencia multifunción exclusivo",
     "Description": "Una <STELLAR>multiherramienta<> exclusiva.\n\n<STELLAR>Consigue<> esta multiherramienta para añadirla a tu colección o <STELLAR>intercámbiala<> por tu multiherramienta actual. Cambia de multiherramienta activa desde la sección Utilidades del menú rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5655,7 +5653,7 @@
   {
     "Id": "other345",
     "Icon": "other/345.png",
-    "Name": "Multiherramienta exclusiva",
+    "Name": "Toque del silencio 8-T",
     "Group": "Dispositivo de supervivencia multifunción exclusivo",
     "Description": "Una <STELLAR>multiherramienta<> exclusiva.\n\n<STELLAR>Consigue<> esta multiherramienta para añadirla a tu colección o <STELLAR>intercámbiala<> por tu multiherramienta actual. Cambia de multiherramienta activa desde la sección Utilidades del menú rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5791,12 +5789,11 @@
     "Group": "Gesto desbloqueable",
     "Description": "Un gesto exclusivo.\n\nEsto se puede seleccionar desde el <VAL_ON>Menú rápido<> para generar un holograma portátil de una adorable criatura amorfa en miniatura.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5813,12 +5810,11 @@
     "Group": "Gesto desbloqueable",
     "Description": "Un gesto exclusivo.\n\nEsto se puede seleccionar desde el <VAL_ON>Menú rápido<> para generar un holograma portátil de una elegante y potente fragata.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5835,12 +5831,11 @@
     "Group": "Gesto desbloqueable",
     "Description": "Un gesto exclusivo.\n\nEsto se puede seleccionar desde el <VAL_ON>Menú rápido<> para generar un holograma portátil de una nave estelar de combate clásica.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5857,12 +5852,11 @@
     "Group": "Gesto desbloqueable",
     "Description": "Un gesto exclusivo.\n\nEsto se puede seleccionar desde el <VAL_ON>Menú rápido<> para generar un holograma portátil de una pistola multiherramienta.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5879,12 +5873,11 @@
     "Group": "Gesto desbloqueable",
     "Description": "Un gesto exclusivo.\n\nEsto se puede seleccionar desde el <VAL_ON>Menú rápido<> para generar un holograma portátil de un sistema solar en miniatura.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5906,6 +5899,94 @@
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other358",
+    "Icon": "other/358.png",
+    "Name": "Cerebro armónico",
+    "Group": "Conciencia controlada",
+    "Description": "Unidad de procesado central de una nave Interceptor Centinela. Los circuitos parecen estables, su pulso se asemeja a un latido eléctrico constante. Ya no reacciona violentamente a mi presencia.\n\nEstado: <TRADEABLE>DÓCIL<>\n\nInstala esta unidad den una nave Centinela para desbloquear la cabina vestigial y habilitar el <STELLAR>pilotaje manual<>.",
+    "BaseValueUnits": 480016.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other359",
+    "Icon": "other/359.png",
+    "Name": "Turbojet Aeron",
+    "Group": "Mejora visual de exotraje",
+    "Description": "Una exclusiva <STELLAR>manipulación de apariencia de exotraje<>.\n\nUn pack de vuelo de titanio construido a partir de tecnología robada a la horda Centinela. Los motores se preenfrían mediante un flujo constante de púgneo y nitrógeno, lo que garantiza la eficiencia de consumo de combustible y un silencio letal en su uso.\n\n<FUEL>Advertencia<>: no desprecintar la cámara de contención de púgneo sin llevar equipo de protección.\n\nTransforma la apariencia del exotraje en un <TECHNOLOGY>modificador de apariencia<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other360",
+    "Icon": "other/360.png",
+    "Name": "Capa geométrica",
+    "Group": "Capa desbloqueable",
+    "Description": "Una <STELLAR>manipulación de apariencia de exotraje<> exclusiva.\n\nUna prenda retro tejida con una mezcla de seda estelar, presenta un diseño geométrico clásico.\n\nTransforma la apariencia de tu exotraje en un <TECHNOLOGY>modificador de apariencia<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other361",
+    "Icon": "other/361.png",
+    "Name": "Capucha de desove",
+    "Group": "Capucha desbloqueable",
+    "Description": "Los altos rangos de los Gek llevan esta capucha en eventos y convenciones para distinguir al Señor del comercio distinguido de los simples mercenarios.\n\nTransforma la apariencia del exotraje con esta <STELLAR>manipulación de apariencia<> en un <TECHNOLOGY>modificador de apariencia<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

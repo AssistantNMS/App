@@ -8497,5 +8497,470 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech231",
+    "Icon": "technology/231.png",
+    "Name": "Antischwerkraft-Brunnen",
+    "Group": "Aeron-Suborbitalantrieb",
+    "Description": "Löst das Raumschiff sanft von den Schwerefeldern und hebt es zu den Sternen empor.\n\nDer Brunnen hungert nach <SPECIAL>Pugneum<> oder <SPECIAL>strahlenden Splittern<> und muss vor dem Start ausreichend mit Treibstoff versorgt werden.\n \n<IMG>THRUST<> gedrückt halten, um vom Planeten abzuheben.\n<IMG>BOOST<> gedrückt halten, um einen Geschwindigkeitsschub während des Fluges einzuleiten.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 170
+      },
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Startkosten",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      },
+      {
+        "Name": "Automatische Wiederaufladung",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech232",
+    "Icon": "technology/232.png",
+    "Name": "Leuchtkraftantrieb",
+    "Group": "Wiederverwendeter Unterlichtantrieb",
+    "Description": "Die elektromagnetischen Emissionen des Schiffes werden auf die <FUEL>A T L A S<>-Wellen abgestimmt, wodurch ein Hauptantrieb sowie die Fähigkeit zum Impulssprung ermöglicht werden.\n \nDer Unterlichtantrieb hungert nach <EXOTIC>Tritium<> oder <SPECIAL>strahlenden Splittern<>.\n\n<IMG>PULSEJUMP<> gedrückt halten, um den Impulssprung zu aktivieren.\n<IMG>BOOST<> gedrückt halten, um einen Geschwindigkeitsschub während des Fluges zu initiieren.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur80",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 210
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Treibstoffeffizienz von Impulsantrieb",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "11,900"
+      },
+      {
+        "Name": "Impulsantriebsenergie",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "110"
+      },
+      {
+        "Name": "Manövrierfähigkeit (Raumschiff)",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "50"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech233",
+    "Icon": "technology/233.png",
+    "Name": "Blutroter Kern",
+    "Group": "Interstellarer Atlas-Antrieb",
+    "Description": "Ein rohes optisches Organ, das nicht blinzelt. Es hängt über den Triebwerken des Schiffes und starrt auf Tunnel in der Raumzeit, die Reisen zwischen Sternensystemen mit Hyperlichtgeschwindigkeit ermöglichen.\n\nLenke die Aufmerksamkeit des Kerns mittels der Galaktischen Karte auf entfernte Zielorte.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur81",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Hyperantrieb-Reichweite",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "600"
+      },
+      {
+        "Name": "Warp-Zellen-Effizienz",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "200"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech234",
+    "Icon": "technology/234.png",
+    "Name": "Aeron-Schild",
+    "Group": "Strahlende Schutzbarriere",
+    "Description": "Ein blutroter Schutzkokon, der die physische Gestalt des Schiffes verschleiert und Schutz vor Kollisionen und Laserfeuer bietet.\n\nDer Kern heilt sich mit der Zeit selbst, kann aber auch schnell mit <CATALYST>katalytischen Elementen<> oder <SPECIAL>strahlenden Splittern<> aufgefüllt werden.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 4
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Schildstärke",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "0.65"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech235",
+    "Icon": "technology/235.png",
+    "Name": "Wächterkanone",
+    "Group": "Wächter-Schiffskanone",
+    "Description": "Waffensystem der Wächterklasse, einzig und allein dafür entwickelt, abtrünnige Schiffe zu vernichten, die gegen die Systemvorschriften verstoßen.\n\n<IMG>SHIPFIRE<> drücken, um tödliche Kräfte zu entfesseln.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw31",
+        "Quantity": 90
+      },
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Feuerrate",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "11"
+      },
+      {
+        "Name": "Präzision",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "Gesamtzahl Kanonen",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "1"
+      },
+      {
+        "Name": "Hitzeverteilung",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "12"
+      },
+      {
+        "Name": "Schaden",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "220"
+      },
+      {
+        "Name": "Reichweite",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "1,500"
+      },
+      {
+        "Name": "Wärmerückgewinnung",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech236",
+    "Icon": "technology/236.png",
+    "Name": "Piloten-Schnittstelle",
+    "Group": "Glas-/Grenz-Terminal",
+    "Description": "Mit diesem Gerät kann das Gehirn eines Piloten mit dem des Wächter-Abfangjägers per <SPECIAL>Schnittstelle<> verbunden werden, wodurch der Pilot Zugang zu den Kontrollsystemen des Schiffes und den externen Sensoren erhält.\n\nDie Vernetzung des Pilotengeistes mit dem des Schiffes ist notwendig, um zu verhindern, dass der Pilot von dem rudimentären Cockpit des Schiffes <FUEL>zurückgewiesen<>/<SPECIAL>aufgenommen<> wird.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 6
+      },
+      {
+        "Id": "other358",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Interne Lebenserhaltung aktiviert",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech237",
+    "Icon": "technology/235.png",
+    "Name": "Kurzer Schaltkreis",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech238",
+    "Icon": "technology/232.png",
+    "Name": "Durchgebrannter Transistor",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech239",
+    "Icon": "technology/234.png",
+    "Name": "Beschädigte Verkabelung",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 35
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech240",
+    "Icon": "technology/231.png",
+    "Name": "Verrosteter Energiekern",
+    "Group": "Beschädigte Multiwerkzeug-Komponente",
+    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech241",
+    "Icon": "technology/241.png",
+    "Name": "Gekaperter Laser",
+    "Group": "Zweckentfremdeter Hochenergiestrahl",
+    "Description": "Dieses Multiwerkzeug wird mit Materialien und Methoden hergestellt, die kein herkömmlicher Hersteller kennt. Sein Kern ist eine unergründliche Ansammlung von unmöglichen Optiken und glasartigem Schaum. Nichtsdestotrotz gibt es eine Schicht mit vertrauterer Technologie. Es gibt Anzeichen, dass ein unbekannter Handwerker daran <STELLAR>herumhantiert<> und die Scanneranlage zu einem <TECHNOLOGY>leistungsstarken Minenlaser<>umfunktioniert hat.\n\nDieser wird von <FUEL>kohlenstoffbasierten Elementen<> angetrieben. Feuere den Strahl mit <IMG>ATTACK<> ab.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Geschwindigkeit",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "Hitzeverteilung",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "8"
+      },
+      {
+        "Name": "Schaden",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Überhitzungs-Ausfallzeit",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "0.6"
+      },
+      {
+        "Name": "Treibstoffeffizienz",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "120"
+      },
+      {
+        "Name": "Ressourcen abgebaut",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "miningLaser",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
   }
 ]

@@ -8497,5 +8497,470 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech231",
+    "Icon": "technology/231.png",
+    "Name": "반중력 우물",
+    "Group": "에어론 궤도 내 엔진",
+    "Description": "함선을 중력장에서 조심스럽게 떼어 놓아 우주를 향해 띄웁니다.\n \n우물은 <SPECIAL>퍼그늄<> 또는 <SPECIAL>빛나는 파편<>에 굶주려 있으며, 발사 전 충분히 연료를 채워야 합니다.\n \n<IMG>THRUST<>를 길게 누르면 행성에서 이륙합니다.\n<IMG>BOOST<>를 길게 눌러 비행 시 속도 부스트를 사용합니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 170
+      },
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "발진 가격",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      },
+      {
+        "Name": "자동 재충전 중",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech232",
+    "Icon": "technology/232.png",
+    "Name": "루미넌스 엔진",
+    "Group": "용도 변경된 아광속 드라이브",
+    "Description": "함선의 전자기 방출을 <FUEL>A T L A S<> 파동에 맞춰 정렬하여, 기본적인 추진 및 펄스 점프 기능을 제공합니다.\n \n아광속 드라이브는 <EXOTIC>삼중 수소<> 또는 <SPECIAL>빛나는 파편<>에 굶주려 있습니다.\n\n<IMG>PULSEJUMP<>를 길게 눌러 펄스 점프를 개시합니다.\n<IMG>BOOST<>를 길게 눌러 비행 시 속도 부스트를 사용합니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur80",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 210
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "펄스드라이브 연료 효율",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "부스트",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "11,900"
+      },
+      {
+        "Name": "펄스 드라이브 동력",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "110"
+      },
+      {
+        "Name": "기동성 (함선)",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "50"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech233",
+    "Icon": "technology/233.png",
+    "Name": "진홍빛 코어",
+    "Group": "성간 아틀라스 추진",
+    "Description": "붉은색의 살아있는 광학 기관입니다. 함선의 엔진 위에 매달려, 깜빡이는 일 없이 시공간의 터널을 주시하며 성계 간 FTL을 가능하게 만들어 줍니다.\n\n은하계 지도를 통해 멀리 떨어진 대상으로 코어의 주의를 끄십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur81",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "하이퍼드라이브 거리",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "600"
+      },
+      {
+        "Name": "워프 셀 효율",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "200"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech234",
+    "Icon": "technology/234.png",
+    "Name": "에어론 방어막",
+    "Group": "빛나는 방어막",
+    "Description": "방어 용도의 진홍빛 고치입니다. 함선의 물리적 형태를 가리는 동시에 충돌과 레이저로부터 함선을 보호합니다.\n\n코어는 시간이 지나면 스스로 수복하지만, <CATALYST>촉매 원소<> 또는 <SPECIAL>빛나는 파편<>으로 빠르게 복구할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 4
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "방어막 강도",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "0.65"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech235",
+    "Icon": "technology/235.png",
+    "Name": "센티널 캐논",
+    "Group": "센티널 함포",
+    "Description": "시스템 규제를 위반한 변절 함선의 전멸이라는 유일한 목적을 달성하기 위해 만들어진 센티널급 무기 시스템입니다.\n\n<IMG>SHIPFIRE<>를 눌러 가공할 위력을 선사하십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw31",
+        "Quantity": 90
+      },
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "발사 속도",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "11"
+      },
+      {
+        "Name": "정확도",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "총 캐논 수",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "1"
+      },
+      {
+        "Name": "열 확산",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "12"
+      },
+      {
+        "Name": "위력",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "220"
+      },
+      {
+        "Name": "사정거리",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "1,500"
+      },
+      {
+        "Name": "열회수",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech236",
+    "Icon": "technology/236.png",
+    "Name": "파일럿 인터페이스",
+    "Group": "유리/경계 터미널",
+    "Description": "이 장치는 파일럿의 두뇌가 센티널 요격함의 사고체에 <SPECIAL>접속<>할 수 있게 하여, 파일럿에게 요격함의 조종 시스템과 외부 센서 사용 권한을 부여합니다.\n\n파일럿과 함선의 정신을 하나로 엮어야 함선의 잔존 기관 조종석이 파일럿에 <FUEL>거부<>/<SPECIAL>섭취<> 반응을 보이지 않게 됩니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 6
+      },
+      {
+        "Id": "other358",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "내부 생명 유지 장치 사용 가능",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech237",
+    "Icon": "technology/235.png",
+    "Name": "짧은 회로",
+    "Group": "파손된 멀티툴 부품",
+    "Description": "멀티툴 서브시스템에 <FUEL>치명적인 손상<>이 발생했습니다.\n\n피해를 수리할 때까지 슬롯을 사용할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech238",
+    "Icon": "technology/232.png",
+    "Name": "폭발한 트랜지스터",
+    "Group": "파손된 멀티툴 부품",
+    "Description": "멀티툴 서브시스템에 <FUEL>치명적인 손상<>이 발생했습니다.\n\n피해를 수리할 때까지 슬롯을 사용할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech239",
+    "Icon": "technology/234.png",
+    "Name": "파손된 배선",
+    "Group": "파손된 멀티툴 부품",
+    "Description": "멀티툴 서브시스템에 <FUEL>치명적인 손상<>이 발생했습니다.\n\n피해를 수리할 때까지 슬롯을 사용할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 35
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech240",
+    "Icon": "technology/231.png",
+    "Name": "녹슨 동력 코어",
+    "Group": "파손된 멀티툴 부품",
+    "Description": "멀티툴 서브시스템에 <FUEL>치명적인 손상<>이 발생했습니다.\n\n피해를 수리할 때까지 슬롯을 사용할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech241",
+    "Icon": "technology/241.png",
+    "Name": "마개조된 레이저",
+    "Group": "용도 변경한 고에너지 빔",
+    "Description": "난해한 광학 장비와 유리질 거품이 복잡하게 배열된 이 멀티툴은 일반적인 제작사에게는 전혀 알려지지 않은 소재와 수단을 사용해 만들어졌습니다. 그러나 단 하나 알아볼 수 있는 기술이 존재합니다. 정체불명의 장인에 의해 <STELLAR>개조된<> 흔적이 있는데, 그는 스캐너 집합체를 <TECHNOLOGY>고에너지 마이닝 레이저<>로 바꾸어 놓았습니다.\n\n<FUEL>탄소 기반 원소<>를 동력으로 삼습니다. <IMG>ATTACK<>으로 빔을 발사하십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "채광 속도",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "열 확산",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "8"
+      },
+      {
+        "Name": "위력",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "과열로 인한 작동 불가능 시간",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "0.6"
+      },
+      {
+        "Name": "연료 효율",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "120"
+      },
+      {
+        "Name": "채광한 자원",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "miningLaser",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
   }
 ]
