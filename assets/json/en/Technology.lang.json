@@ -6914,7 +6914,7 @@
     "Icon": "products/79.png",
     "Name": "Waveform Engine",
     "Group": "Highly Customised Starship Engine",
-    "Description": "A highly-tuned version of the conventional starship <TECHNOLOGY>Pulse Engine<>. Wavefront occupancy has been pushed to the limit, creating a pulse experience that is both <STELLAR>efficient<> and <STELLAR>highly responsive<>.\n\nUser is advised that <EXOTIC>Tritium<> is required to charge the drive. Tritium is abundant in <COMMODITY>near-space asteroid fields<>. Scan (<IMG>SCAN<>) to search for <TECHNOLOGY>tritium-rich asteroids<>.\n\nHold <IMG>PULSEJUMP<> to engage Pulse Jump. Hold <IMG>BOOST<> to initiate in-flight speed boost.",
+    "Description": "A highly-tuned version of the conventional starship <TECHNOLOGY>Pulse Engine<>. Wavefront occupancy has been pushed to the limit, creating a pulse experience that is both <STELLAR>efficient<> and <STELLAR>highly responsive<>.\n\nUser is advised that <EXOTIC>Tritium<> is required to charge the drive. Tritium is abundant in <COMMODITY>near-space asteroid fields<>. Scan (<IMG>SHIPSCAN<>) to search for <TECHNOLOGY>tritium-rich asteroids<>.\n\nHold <IMG>PULSEJUMP<> to engage Pulse Jump. Hold <IMG>BOOST<> to initiate in-flight speed boost.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -8497,6 +8497,471 @@
     "BlueprintSource": 0,
     "RequiredItems": [],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech231",
+    "Icon": "technology/231.png",
+    "Name": "Anti-Gravity Well",
+    "Group": "Aeron Sub-Orbital Engine",
+    "Description": "Gently detaches the starship from gravitational fields, lifting it toward the stars.\n \nThe well hungers for <SPECIAL>pugneum<> or <SPECIAL>radiant shards<>, and must be sufficiently fueled before launch.\n \nHold <IMG>THRUST<> to take off from planet.\nHold <IMG>BOOST<> to initiate in-flight speed boost.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 170
+      },
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Launch Cost",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      },
+      {
+        "Name": "Automatic Recharging",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech232",
+    "Icon": "technology/232.png",
+    "Name": "Luminance Engine",
+    "Group": "Repurposed Sub-Light Drive",
+    "Description": "Aligns the ship's electromagnetic emissions with <FUEL>A T L A S<> waves, providing basic propulsion and Pulse Jump capability.\n \nThe sub-light drive hungers for <EXOTIC>tritium<> or <SPECIAL>radiant shards<>.\n\nHold <IMG>PULSEJUMP<> to engage Pulse Jump.\nHold <IMG>BOOST<> to initiate in-flight speed boost.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur80",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 210
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Pulse Drive Fuel Efficiency",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "Boost",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "11,900"
+      },
+      {
+        "Name": "Pulse Drive Power",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "110"
+      },
+      {
+        "Name": "Maneuverability (Starship)",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "50"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech233",
+    "Icon": "technology/233.png",
+    "Name": "Crimson Core",
+    "Group": "Interstellar Atlas Propulsion",
+    "Description": "A raw optic organ, red and unblinking. Suspended above the ship's engines, it gazes down tunnels in spacetime, allowing FTL travel between star systems.\n\nDirect the core's attention to remote destinations via the Galactic Map.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur81",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Hyperdrive Range",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "600"
+      },
+      {
+        "Name": "Warp Cell Efficiency",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "200"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech234",
+    "Icon": "technology/234.png",
+    "Name": "Aeron Shield",
+    "Group": "Radiant Defensive Barrier",
+    "Description": "A defensive crimson cocoon, obfuscating the ship's physical form and providing protection from collision and laser fire.\n\nThe core self-heals over time, but may be quickly replenished with <CATALYST>catalytic elements<> or <SPECIAL>radiant shards<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 4
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Shield Strength",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "0.65"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech235",
+    "Icon": "technology/235.png",
+    "Name": "Sentinel Cannon",
+    "Group": "Sentinel Ship Gun",
+    "Description": "Sentinel-grade weapons system, engineered for the singular purpose of annihilating rogue ships in violation of system regulations.\n\nPress <IMG>SHIPFIRE<> to administer lethal force.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw31",
+        "Quantity": 90
+      },
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Fire Rate",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "11"
+      },
+      {
+        "Name": "Accuracy",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "Total Cannon Count",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "1"
+      },
+      {
+        "Name": "Heat Dispersion",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "12"
+      },
+      {
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "220"
+      },
+      {
+        "Name": "Range",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "1,500"
+      },
+      {
+        "Name": "Heat Recovery",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech236",
+    "Icon": "technology/236.png",
+    "Name": "Pilot Interface",
+    "Group": "Glass / Boundary Terminal",
+    "Description": "This device allows a pilot's brain to <SPECIAL>interface<> with the mind of the Sentinel Interceptor, granting the pilot access to ship control systems and external sensors.\n\nThe enmeshing of the pilot's mind with that of the vessel is necessary to prevent <FUEL>rejection<>/<SPECIAL>consumption<> of the pilot by the ship's vestigial cockpit.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 6
+      },
+      {
+        "Id": "other358",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Internal Life Support Enabled",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech237",
+    "Icon": "technology/235.png",
+    "Name": "Sentience Resistor",
+    "Group": "Incomplete Sentinel Salvage",
+    "Description": "This Multi-Tool is a piece of hybrid technology, a fusion of crude scrap and a deep, powerful energy - part salvage, part Sentinel, part something undefinable...\n\nThis process of recycled fusion was <TECHNOLOGY>incomplete<> when this tool was acquired. Use <IMG>REPAIR<> to continue repair operations and free this slot for general use.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech238",
+    "Icon": "technology/232.png",
+    "Name": "Discordant Prism",
+    "Group": "Incomplete Sentinel Salvage",
+    "Description": "This Multi-Tool is a piece of hybrid technology, a fusion of crude scrap and a deep, powerful energy - part salvage, part Sentinel, part something undefinable...\n\nThis process of recycled fusion was <TECHNOLOGY>incomplete<> when this tool was acquired. Use <IMG>REPAIR<> to continue repair operations and free this slot for general use.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech239",
+    "Icon": "technology/234.png",
+    "Name": "Corrupted Lens",
+    "Group": "Incomplete Sentinel Salvage",
+    "Description": "This Multi-Tool is a piece of hybrid technology, a fusion of crude scrap and a deep, powerful energy - part salvage, part Sentinel, part something undefinable...\n\nThis process of recycled fusion was <TECHNOLOGY>incomplete<> when this tool was acquired. Use <IMG>REPAIR<> to continue repair operations and free this slot for general use.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 35
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech240",
+    "Icon": "technology/231.png",
+    "Name": "Drained Power Core",
+    "Group": "Incomplete Sentinel Salvage",
+    "Description": "This Multi-Tool is a piece of hybrid technology, a fusion of crude scrap and a deep, powerful energy - part salvage, part Sentinel, part something undefinable...\n\nThis process of recycled fusion was <TECHNOLOGY>incomplete<> when this tool was acquired. Use <IMG>REPAIR<> to continue repair operations and free this slot for general use.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech241",
+    "Icon": "technology/241.png",
+    "Name": "Hijacked Laser",
+    "Group": "Repurposed High-Energy Beam",
+    "Description": "This Multi-Tool is made with material and methods known to no conventional manufacturer, its core a unfathomable array of impossible optics and glassy foam. Nonetheless, there is a layer of recogniseable technology. It shows signs of having been <STELLAR>tampered with<> by an unknown craftsman, who has repurposed its scanner array into a <TECHNOLOGY>high-powered mining laser<>.\n\nPowered by <FUEL>Carbon-based Elements<>. Fire the beam with <IMG>ATTACK<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Mining Speed",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "Heat Dispersion",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "8"
+      },
+      {
+        "Name": "Damage",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Overheat Downtime",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "0.6"
+      },
+      {
+        "Name": "Fuel Efficiency",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "120"
+      },
+      {
+        "Name": "Resources Mined",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "miningLaser",
+        "Value": "100"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]
