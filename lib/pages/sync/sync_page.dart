@@ -161,36 +161,36 @@ class _SyncWidget extends State<SyncPage> {
       //   GenericItemText('It is not possible to link with your NMS save'),
       // );
       // widgets.add(const EmptySpace1x());
-      widgets.add(Center(
-        child: AuthButton.google(
-          onPressed: () async {
-            try {
-              await getFirebase().signInwithGoogle();
-              setState(() {
-                rebuildCounter++;
-              });
-            } catch (exception) {
-              getLog().e('signInWithGoogle exception' + exception.toString());
-              getDialog().showSimpleDialog(
-                authCtx,
-                getTranslations().fromKey(LocaleKey.error),
-                Text(
-                  getTranslations()
-                      .fromKey(LocaleKey.unableToLogInToGoogleAccount),
-                ),
-                buttonBuilder: (BuildContext ctx) => [
-                  getDialog().simpleDialogCloseButton(
-                    ctx,
-                    onTap: () {
-                      // Old signIn
-                    },
-                  )
-                ],
-              );
-            }
-          },
-        ),
-      ));
+      // widgets.add(Center(
+      //   child: AuthButton.google(
+      //     onPressed: () async {
+      //       try {
+      //         await getFirebase().signInwithGoogle();
+      //         setState(() {
+      //           rebuildCounter++;
+      //         });
+      //       } catch (exception) {
+      //         getLog().e('signInWithGoogle exception' + exception.toString());
+      //         getDialog().showSimpleDialog(
+      //           authCtx,
+      //           getTranslations().fromKey(LocaleKey.error),
+      //           Text(
+      //             getTranslations()
+      //                 .fromKey(LocaleKey.unableToLogInToGoogleAccount),
+      //           ),
+      //           buttonBuilder: (BuildContext ctx) => [
+      //             getDialog().simpleDialogCloseButton(
+      //               ctx,
+      //               onTap: () {
+      //                 // Old signIn
+      //               },
+      //             )
+      //           ],
+      //         );
+      //       }
+      //     },
+      //   ),
+      // ));
     }
 
     widgets.add(const EmptySpace3x());

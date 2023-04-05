@@ -14,7 +14,7 @@ class WeekendMissionSeasonJsonRepository extends BaseJsonService
   @override
   Future<ResultWithValue<List<WeekendMission>>> getAll(
       BuildContext context) async {
-    String jsonFile = getTranslations().fromKey(_jsonLocale);
+    String jsonFile = getTranslations().fromKey(_jsonLocale) + '.json';
     try {
       List list = await getListfromJson(context, jsonFile);
       List<WeekendMission> weekendMission =

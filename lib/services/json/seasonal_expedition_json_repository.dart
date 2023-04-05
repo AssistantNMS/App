@@ -17,7 +17,8 @@ class SeasonalExpeditionJsonRepository extends BaseJsonService
         ? 'en/SeasonalExpeditionCustom.lang'
         : getTranslations().fromKey(LocaleKey.seasonalExpeditionJson);
     try {
-      List responseDetailsJson = await getListfromJson(context, jsonFile);
+      List responseDetailsJson =
+          await getListfromJson(context, jsonFile + '.json');
       List<SeasonalExpeditionSeason> seasonalExp = responseDetailsJson
           .map((m) => SeasonalExpeditionSeason.fromJson(m))
           .toList();

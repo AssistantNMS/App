@@ -8497,5 +8497,470 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech231",
+    "Icon": "technology/231.png",
+    "Name": "反重力のくぼみ",
+    "Group": "エーロン準軌道エンジン",
+    "Description": "重力場からそっと宇宙船を引き離し、星々に向かって持ち上げる。\n\nくぼみは<SPECIAL>パグニウム<>か<SPECIAL>ラディアントシャード<>を必要とするので、起動する前に十分に補充する必要がある。\n\n<IMG>THRUST<>を長押しで惑星を離陸する。\n<IMG>BOOST<>を長押しでフライト速度ブーストを起動する。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 170
+      },
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "発射コスト",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      },
+      {
+        "Name": "自動リチャージ",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech232",
+    "Icon": "technology/232.png",
+    "Name": "ルミナンスエンジン",
+    "Group": "再利用された亜光速ドライブ",
+    "Description": "宇宙船の電磁気放出を<FUEL>アトラス<>ウェーブと同調させて、基本的な推進力とパルスジャンプを利用可能にする。\n\n亜光速ドライブは<EXOTIC>三重水素<>か<SPECIAL>ラディアントシャード<>を必要とする。\n\n<IMG>PULSEJUMP<>を長押しでパルスジャンプを起動する。\n<IMG>BOOST<>を長押しでフライト速度ブーストを起動する。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur80",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 210
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "パルスドライブ燃料効率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "加速する",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "11,900"
+      },
+      {
+        "Name": "パルスドライブパワー",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "110"
+      },
+      {
+        "Name": "操縦性 (宇宙船)",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "50"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech233",
+    "Icon": "technology/233.png",
+    "Name": "クリムゾンコア",
+    "Group": "インターステラーアトラスの推進力",
+    "Description": "未加工の視覚器官。紅く、瞬きをしない。宇宙船のエンジンの上部に吊り下げられ、時空のトンネルを見下ろしている。星系間の超光速航行を可能にする。\n\nギャラクシーマップを開いて、コアの注意を遠くの目的地に向けよう。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur81",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "ハイパードライブ範囲",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "600"
+      },
+      {
+        "Name": "ワープセルの効率性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "200"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech234",
+    "Icon": "technology/234.png",
+    "Name": "エーロンシールド",
+    "Group": "ラディアント防衛バリア",
+    "Description": "防御的な紅い繭。宇宙船の物理的な形を曖昧にし、衝突やレーザーを防御する。\n\nコアは時間経過で自己修復するが、<CATALYST>触媒資源<>か<SPECIAL>ラディアントシャード<>で急速に修復することもできる。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 4
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "シールド強度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "0.65"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech235",
+    "Icon": "technology/235.png",
+    "Name": "センチネルキャノン",
+    "Group": "センチネルシップガン",
+    "Description": "センチネルグレードの武器システム。星系規制を違反するならず者の宇宙船を殲滅するという唯一の目的のために設計された。\n\n<IMG>SHIPFIRE<>を押して、殲滅力の高い武器を使用する。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw31",
+        "Quantity": 90
+      },
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "発射速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "11"
+      },
+      {
+        "Name": "精度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "総砲撃数",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "1"
+      },
+      {
+        "Name": "散熱",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "12"
+      },
+      {
+        "Name": "ダメージ",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "220"
+      },
+      {
+        "Name": "射程距離",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "1,500"
+      },
+      {
+        "Name": "熱回復",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech236",
+    "Icon": "technology/236.png",
+    "Name": "パイロットインターフェース",
+    "Group": "ガラス/境界ターミナル",
+    "Description": "このデバイスがあればパイロットの脳はセンチネル迎撃機の精神と<SPECIAL>結合する<>ことができ、パイロットは迎撃機の制御システムと外部センサーにアクセスできるようになる。\n\nパイロットの精神を迎撃機と結合することは、退化したコックピットによるパイロットの<FUEL>拒絶<>/<SPECIAL>消耗<>を防ぐために必要なことだ。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 6
+      },
+      {
+        "Id": "other358",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "内部生命維持システム有効",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech237",
+    "Icon": "technology/235.png",
+    "Name": "ショート回路",
+    "Group": "破損したマルチツールコンポーネント",
+    "Description": "マルチツールのサブシステムが<FUEL>致命的なダメージを受けました<>。\n\nダメージを修復するまでスロットは使用できません。<IMG>REPAIR<>で修理を開始してください。\n\n修理すれば通常どおり使用可能になります。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech238",
+    "Icon": "technology/232.png",
+    "Name": "吹き飛んだトランジスタ",
+    "Group": "破損したマルチツールコンポーネント",
+    "Description": "マルチツールのサブシステムが<FUEL>致命的なダメージを受けました<>。\n\nダメージを修復するまでスロットは使用できません。<IMG>REPAIR<>で修理を開始してください。\n\n修理すれば通常どおり使用可能になります。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech239",
+    "Icon": "technology/234.png",
+    "Name": "破損した回線",
+    "Group": "破損したマルチツールコンポーネント",
+    "Description": "マルチツールのサブシステムが<FUEL>致命的なダメージを受けました<>。\n\nダメージを修復するまでスロットは使用できません。<IMG>REPAIR<>で修理を開始してください。\n\n修理すれば通常どおり使用可能になります。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 35
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech240",
+    "Icon": "technology/231.png",
+    "Name": "錆びたパワーコア",
+    "Group": "破損したマルチツールコンポーネント",
+    "Description": "マルチツールのサブシステムが<FUEL>致命的なダメージを受けました<>。\n\nダメージを修復するまでスロットは使用できません。<IMG>REPAIR<>で修理を開始してください。\n\n修理すれば通常どおり使用可能になります。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech241",
+    "Icon": "technology/241.png",
+    "Name": "乗っ取られたレーザー",
+    "Group": "再利用された高出力ビーム",
+    "Description": "このマルチツールは従来の製造業者には知られていない素材と製造法で作られている。そのコアはあり得ない光学技術とガラス状の泡をした計り知れない配列でできている。それにもかかわらず、認識可能なテクノロジーの層も見受けられる。未知の職人がこのスキャナーの配列を<TECHNOLOGY>高出力のマインレーザー<>として利用するために<STELLAR>改造<>した形跡がある。\n\n<FUEL>炭素系資源<>を動力源とする。<IMG>ATTACK<>でビームを射出する。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "マインスピード",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "散熱",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "8"
+      },
+      {
+        "Name": "ダメージ",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "オーバーヒートダウンタイム",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "0.6"
+      },
+      {
+        "Name": "燃料効率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "120"
+      },
+      {
+        "Name": "採掘した資源",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "miningLaser",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
   }
 ]

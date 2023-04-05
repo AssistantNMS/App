@@ -8497,5 +8497,470 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech231",
+    "Icon": "technology/231.png",
+    "Name": "Poço antigravidade",
+    "Group": "Motor suborbital Aeron",
+    "Description": "Gentilmente separa a nave dos campos gravitacionais, elevando-a em direção às estrelas.\n \nO poço anseia por <SPECIAL>púgneo<> ou <SPECIAL>fragmentos radiantes<>, e deve ser suficientemente abastecido antes do lançamento.\n \nSegure <IMG>THRUST<> para decolar do planeta.\nSegure <IMG>BOOST<> para iniciar o aumento de velocidade em voo.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 170
+      },
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Custo de lançamento",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      },
+      {
+        "Name": "Recarga automática",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech232",
+    "Icon": "technology/232.png",
+    "Name": "Motor de luminosidade",
+    "Group": "Propulsor de subluz reutilizado",
+    "Description": "Alinha as emissões eletromagnéticas da nave com ondas <FUEL>A T L A S<>, fornecendo propulsão básica e capacidade de salto de pulso.\n \nO propulsor de subluz anseia por <EXOTIC>trítio<> ou <SPECIAL>fragmentos radiantes<>.\n\nSegure <IMG>PULSEJUMP<> para ativar o salto de pulso.\nSegure <IMG>BOOST<> para iniciar o aumento de velocidade em voo.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur80",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 210
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Eficiência do combustível do mecanismo de pulso",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "Incrementar",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "11,900"
+      },
+      {
+        "Name": "Energia do mecanismo de pulso",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "110"
+      },
+      {
+        "Name": "Mobilidade (Nave)",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "50"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech233",
+    "Icon": "technology/233.png",
+    "Name": "Núcleo vermelho",
+    "Group": "Propulsão Atlas interestelar",
+    "Description": "Um órgão óptico cru, vermelho e sem piscar. Suspenso acima dos motores da nave, ele observa túneis no espaço-tempo, permitindo viagens mais rápidas que a luz entre sistemas estelares.\n\nDirecione a atenção do núcleo para destinos remotos por meio do mapa galáctico.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur81",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Alcance do hiperpropulsor",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "600"
+      },
+      {
+        "Name": "Eficiência da célula de dobra",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "200"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech234",
+    "Icon": "technology/234.png",
+    "Name": "Escudo Aeron",
+    "Group": "Barreira defensiva radiante",
+    "Description": "Um casulo defensivo vermelho, ofuscando a forma física da nave e fornecendo proteção contra colisões e disparos de laser.\n\nO núcleo se autorregenera com o tempo, mas pode ser rapidamente reabastecido com <CATALYST>elementos catalíticos<> ou <SPECIAL>fragmentos radiantes<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 4
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Força do escudo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "0.65"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech235",
+    "Icon": "technology/235.png",
+    "Name": "Canhão sentinela",
+    "Group": "Arma da nave sentinela",
+    "Description": "Sistema de armas de nível sentinela, projetado com o único propósito de aniquilar naves rebeldes em violação dos regulamentos do sistema.\n\nPressione <IMG>SHIPFIRE<> para administrar força letal.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw31",
+        "Quantity": 90
+      },
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Taxa de disparos",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "11"
+      },
+      {
+        "Name": "Precisão",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "Contagem total do canhão",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "1"
+      },
+      {
+        "Name": "Dispersão de calor",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "12"
+      },
+      {
+        "Name": "Dano",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "220"
+      },
+      {
+        "Name": "Alcance",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "1,500"
+      },
+      {
+        "Name": "Recuperação de calor",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech236",
+    "Icon": "technology/236.png",
+    "Name": "Interface de piloto",
+    "Group": "Terminal de vidro / limítrofe",
+    "Description": "Este dispositivo permite que o cérebro do piloto <SPECIAL>faça interface<> com a mente do interceptador sentinela, concedendo ao piloto acesso aos sistemas de controle da nave e sensores externos.\n\nA integração da mente do piloto com a da nave é necessária para evitar <FUEL>rejeição<>/<SPECIAL>consumo<> do piloto pelo cockpit vestigial da nave.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 6
+      },
+      {
+        "Id": "other358",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Sistema de sobrevivência interno ativado",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech237",
+    "Icon": "technology/235.png",
+    "Name": "Curto-circuito",
+    "Group": "Componente da multiferramenta danificado",
+    "Description": "Subsistema da multiferramenta com <FUEL>dano crítico<>.\n\nO slot não poderá ser usado enquanto o dano não for reparado. Use <IMG>REPAIR<> para iniciar o conserto.\n\nEsse conserto vai liberar o slot para uso geral.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech238",
+    "Icon": "technology/232.png",
+    "Name": "Transistor explodido",
+    "Group": "Componente da multiferramenta danificado",
+    "Description": "Subsistema da multiferramenta com <FUEL>dano crítico<>.\n\nO slot não poderá ser usado enquanto o dano não for reparado. Use <IMG>REPAIR<> para iniciar o conserto.\n\nEsse conserto vai liberar o slot para uso geral.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech239",
+    "Icon": "technology/234.png",
+    "Name": "Fio danificado",
+    "Group": "Componente da multiferramenta danificado",
+    "Description": "Subsistema da multiferramenta com <FUEL>dano crítico<>.\n\nO slot não poderá ser usado enquanto o dano não for reparado. Use <IMG>REPAIR<> para iniciar o conserto.\n\nEsse conserto vai liberar o slot para uso geral.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 35
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech240",
+    "Icon": "technology/231.png",
+    "Name": "Núcleo de energia enferrujado",
+    "Group": "Componente da multiferramenta danificado",
+    "Description": "Subsistema da multiferramenta com <FUEL>dano crítico<>.\n\nO slot não poderá ser usado enquanto o dano não for reparado. Use <IMG>REPAIR<> para iniciar o conserto.\n\nEsse conserto vai liberar o slot para uso geral.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech241",
+    "Icon": "technology/241.png",
+    "Name": "Laser adulterado",
+    "Group": "Feixe de alta energia reutilizado",
+    "Description": "Esta multiferramenta é feita com materiais e métodos que nenhum fabricante convencional conhece, seu núcleo é um arranjo insondável de ótica impossível e espuma de vidro. No entanto, há uma camada de tecnologia reconhecível. Ela mostra sinais de ter sido <STELLAR>adulterada<> por um artesão desconhecido, que reaproveitou seu conjunto de scanners em um <TECHNOLOGY>laser minerador de alta potência<>.\n\nAlimentada por <FUEL>elementos baseados em carbono<>. Dispare o feixe com <IMG>ATTACK<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Veloc. de mineração",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "Dispersão de calor",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "8"
+      },
+      {
+        "Name": "Dano",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Intervalo de superaquecimento",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "0.6"
+      },
+      {
+        "Name": "Eficiência do combustível",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "120"
+      },
+      {
+        "Name": "Recursos extraídos",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "miningLaser",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
   }
 ]

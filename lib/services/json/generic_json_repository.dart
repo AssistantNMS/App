@@ -13,7 +13,7 @@ class GenericJsonRepository extends BaseJsonService
   @override
   Future<ResultWithValue<List<GenericPageItem>>> getAll(
       BuildContext context) async {
-    String detailJson = getTranslations().fromKey(detailsJsonLocale);
+    String detailJson = getTranslations().fromKey(detailsJsonLocale) + '.json';
     try {
       List responseDetailsJson = await getListfromJson(context, detailJson);
       List<GenericPageItem> detailedItems = responseDetailsJson //

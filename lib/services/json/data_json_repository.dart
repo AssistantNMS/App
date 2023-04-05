@@ -26,7 +26,8 @@ class DataJsonRepository extends BaseJsonService
     BuildContext context,
   ) async {
     try {
-      dynamic responseJson = await getJsonFromAssets(context, "data/social");
+      dynamic responseJson =
+          await getJsonFromAssets(context, "data/social.json");
       List list = json.decode(responseJson);
       List<SocialItem> socials =
           list.map((m) => SocialItem.fromJson(m)).toList();
@@ -44,7 +45,8 @@ class DataJsonRepository extends BaseJsonService
     BuildContext context,
   ) async {
     try {
-      dynamic responseJson = await getJsonFromAssets(context, "data/newItems");
+      dynamic responseJson =
+          await getJsonFromAssets(context, "data/newItems.json");
       List list = json.decode(responseJson);
       List<UpdateItemDetail> updateItems =
           list.map((m) => UpdateItemDetail.fromJson(m)).toList();
@@ -92,7 +94,7 @@ class DataJsonRepository extends BaseJsonService
   ) async {
     try {
       dynamic responseJson =
-          await getJsonFromAssets(context, "data/quicksilverStore");
+          await getJsonFromAssets(context, "data/quicksilverStore.json");
       List list = json.decode(responseJson);
       List<QuicksilverStore> quicksilverStoreItems =
           list.map((m) => QuicksilverStore.fromJson(m)).toList();
@@ -138,7 +140,7 @@ class DataJsonRepository extends BaseJsonService
   ) async {
     try {
       dynamic responseJson =
-          await getJsonFromAssets(context, "data/eggNeuralTraits");
+          await getJsonFromAssets(context, "data/eggNeuralTraits.json");
       List list = json.decode(responseJson);
       List<EggTrait> eggTraitItems = list //
           .map((e) => EggTrait.fromJson(e))
@@ -159,7 +161,7 @@ class DataJsonRepository extends BaseJsonService
   ) async {
     try {
       dynamic responseJson =
-          await getJsonFromAssets(context, "data/unusedMilestonePatches");
+          await getJsonFromAssets(context, "data/unusedMilestonePatches.json");
       List list = json.decode(responseJson);
       List<String> unusedItems = list.map((e) => e as String).toList();
       return ResultWithValue<List<String>>(true, unusedItems, '');
@@ -176,7 +178,7 @@ class DataJsonRepository extends BaseJsonService
   ) async {
     try {
       dynamic responseJson =
-          await getJsonFromAssets(context, "data/developerDetails");
+          await getJsonFromAssets(context, "data/developerDetails.json");
       List list = json.decode(responseJson);
       List<DevDetail> devItems = list //
           .map((e) => DevDetail.fromJson(e))
@@ -231,7 +233,7 @@ class DataJsonRepository extends BaseJsonService
     BuildContext context,
   ) async {
     try {
-      dynamic responseJson = await getJsonFromAssets(context, "data/meta");
+      dynamic responseJson = await getJsonFromAssets(context, "data/meta.json");
       GeneratedMeta meta = GeneratedMeta.fromRawJson(responseJson);
       return ResultWithValue<GeneratedMeta>(true, meta, '');
     } catch (exception) {
@@ -252,7 +254,7 @@ class DataJsonRepository extends BaseJsonService
   ) async {
     try {
       dynamic responseJson =
-          await getJsonFromAssets(context, "data/controllerLookup");
+          await getJsonFromAssets(context, "data/controllerLookup.json");
       ControlMappingList fullMapping =
           ControlMappingList.fromRawJson(responseJson);
       List<PlatformControlMapping> result =
@@ -275,7 +277,7 @@ class DataJsonRepository extends BaseJsonService
   ) async {
     try {
       dynamic responseJson =
-          await getJsonFromAssets(context, "data/alphabetTranslations");
+          await getJsonFromAssets(context, "data/alphabetTranslations.json");
       List list = json.decode(responseJson);
       List<AlphabetTranslation> trans = list //
           .map((e) => AlphabetTranslation.fromJson(e))
@@ -334,7 +336,7 @@ class DataJsonRepository extends BaseJsonService
   ) async {
     try {
       dynamic responseJson =
-          await getJsonFromAssets(context, "data/twitchDrops");
+          await getJsonFromAssets(context, "data/twitchDrops.json");
       List list = json.decode(responseJson);
       List<TwitchCampaignData> trans = list //
           .map((e) => TwitchCampaignData.fromJson(e))
@@ -396,7 +398,8 @@ class DataJsonRepository extends BaseJsonService
     BuildContext context,
   ) async {
     try {
-      dynamic responseJson = await getJsonFromAssets(context, "data/updates");
+      dynamic responseJson =
+          await getJsonFromAssets(context, "data/updates.json");
       List list = json.decode(responseJson);
       List<MajorUpdateItem> trans = list //
           .map((e) => MajorUpdateItem.fromJson(e))
@@ -496,7 +499,7 @@ class DataJsonRepository extends BaseJsonService
   ) async {
     try {
       dynamic responseJson =
-          await getJsonFromAssets(context, "data/starshipScrap");
+          await getJsonFromAssets(context, "data/starshipScrap.json");
       List list = json.decode(responseJson);
       List<StarshipScrap> trans = list //
           .map((e) => StarshipScrap.fromJson(e))

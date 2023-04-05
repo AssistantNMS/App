@@ -48,20 +48,17 @@
   },
   {
     "Id": "other3",
-    "Icon": "other/3.png",
-    "Name": "Ancient Key",
-    "Group": "Timeless Artifact",
-    "Description": "A key of some weight, this aged piece of wrought iron must belong in a nearby lock...",
+    "Icon": "building/272.png",
+    "Name": "Fato X.O.",
+    "Group": "",
+    "Description": "",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
-    "Additional": "",
     "MaxStackSize": 5.0,
-    "Colour": "4D2957",
+    "Colour": "262626",
     "CdnUrl": "https://cdn.nmsassistant.com/other/3.png",
     "Usages": [
-      "HasUsedToCraft",
-      "HasDevProperties",
-      "IsConsumable"
+      "HasDevProperties"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -73,24 +70,25 @@
   {
     "Id": "other4",
     "Icon": "other/4.png",
-    "Name": "Trident Key",
-    "Group": "Aquatic Relic",
-    "Description": "A strange forked key, glowing with an ultraviolet light.\n\nDespite its primitive appearance, Exosuit scanning systems reveal traces of nanite foam upon its teeth.",
-    "BaseValueUnits": 1000.0,
+    "Name": "Módulo de Torre",
+    "Group": "Módulo de construção",
+    "Description": "Um módulo alto e empilhável de torre, com lados rígidos reforçados e impermeabilização adicional para conter a exposição aos elementos.",
+    "BaseValueUnits": 2.0,
     "CurrencyType": "Credits",
-    "Additional": "",
-    "MaxStackSize": 5.0,
-    "Colour": "4D2957",
+    "Colour": "2C7C9F",
     "CdnUrl": "https://cdn.nmsassistant.com/other/4.png",
     "Usages": [
-      "HasUsedToCraft",
-      "HasDevProperties",
-      "IsConsumable"
+      "HasDevProperties"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 2,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
-    "RequiredItems": [],
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 40
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -5020,7 +5018,7 @@
     "Icon": "other/316.png",
     "Name": "O Filho do Sol",
     "Group": "Nave Exclusiva",
-    "Description": "Uma <STELLAR>Nave Espacial<> exclusiva. Esta nave de exploração está configurada com <TECHNOLOGY>Detetores de Economia<> e de <TECHNOLOGY>Conflito<> sondar dados de sistema de forma remota.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para <STELLAR>Trocar<> com a tua nave atual. Quando estiveres num planeta, podes chamar as naves no Menu Rápido (<IMG>QUICK_MENU<>).",
+    "Description": "Uma <STELLAR>Nave Espacial<> exclusiva. Esta nave de exploração está configurada com <TECHNOLOGY>Detetores de Economia<> e de <TECHNOLOGY>Conflito<> para sondar dados de sistema de forma remota.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para <STELLAR>Trocar<> com a tua nave atual. Quando estiveres num planeta, podes chamar as naves no Menu Rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -5042,7 +5040,7 @@
     "Icon": "other/317.png",
     "Name": "Habika BF3",
     "Group": "Nave Exclusiva",
-    "Description": "Uma <STELLAR>Nave espacial<> exclusiva. A Habiki BF3 é uma nave de transporte especialidade no lançamento de economia graças aos seus <TECHNOLOGY>Propulsores Eficientes<> e ao <TECHNOLOGY>Carregador Automático de Lançamento<>, minimizando o consumo de combustível no lançamento.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para <STELLAR>Trocar<> com a tua nave atual. Quando estiveres num planeta, podes chamar as naves no Menu Rápido (<IMG>QUICK_MENU<>).",
+    "Description": "Uma <STELLAR>Nave espacial<> exclusiva. A Habiki BF3 é uma nave de transporte especializada no lançamento de economia graças aos seus <TECHNOLOGY>Propulsores Eficientes<> e ao <TECHNOLOGY>Carregador Automático de Lançamento<>, minimizando o consumo de combustível no lançamento.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para <STELLAR>Trocar<> com a tua nave atual. Quando estiveres num planeta, podes chamar as naves no Menu Rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -5479,7 +5477,7 @@
   {
     "Id": "other337",
     "Icon": "other/337.png",
-    "Name": "Nave espacial exclusiva",
+    "Name": "A derrota de Ikawaji",
     "Group": "Nave Exclusiva",
     "Description": "Uma <STELLAR>Nave espacial<> exclusiva.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para <STELLAR>Trocar<> com a tua nave atual. Quando estiveres num planeta, podes chamar as naves no Menu Rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5501,7 +5499,7 @@
   {
     "Id": "other338",
     "Icon": "other/338.png",
-    "Name": "Nave espacial exclusiva",
+    "Name": "As Cinzas da Devastação",
     "Group": "Nave Exclusiva",
     "Description": "Uma <STELLAR>Nave espacial<> exclusiva.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para <STELLAR>Trocar<> com a tua nave atual. Quando estiveres num planeta, podes chamar as naves no Menu Rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5523,7 +5521,7 @@
   {
     "Id": "other339",
     "Icon": "other/339.png",
-    "Name": "Nave espacial exclusiva",
+    "Name": "A Derradeira Mão de Morozawa",
     "Group": "Nave Exclusiva",
     "Description": "Uma <STELLAR>Nave espacial<> exclusiva.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para <STELLAR>Trocar<> com a tua nave atual. Quando estiveres num planeta, podes chamar as naves no Menu Rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5545,7 +5543,7 @@
   {
     "Id": "other340",
     "Icon": "other/340.png",
-    "Name": "Nave espacial exclusiva",
+    "Name": "Aebashi TV2",
     "Group": "Nave Exclusiva",
     "Description": "Uma <STELLAR>Nave espacial<> exclusiva.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para <STELLAR>Trocar<> com a tua nave atual. Quando estiveres num planeta, podes chamar as naves no Menu Rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5567,7 +5565,7 @@
   {
     "Id": "other341",
     "Icon": "other/341.png",
-    "Name": "Nave espacial exclusiva",
+    "Name": "O Arrependimento Ilimitado de Tahama",
     "Group": "Nave Exclusiva",
     "Description": "Uma <STELLAR>Nave espacial<> exclusiva.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para <STELLAR>Trocar<> com a tua nave atual. Quando estiveres num planeta, podes chamar as naves no Menu Rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5589,9 +5587,9 @@
   {
     "Id": "other342",
     "Icon": "other/342.png",
-    "Name": "Ovo de Companheiro",
+    "Name": "Ovo de E. Pantheibea",
     "Group": "Ovo de Companheiro Exclusivo",
-    "Description": "Um ovo vivo e fértil, <TRADEABLE>pronto para chocar!<>",
+    "Description": "Um ovo vivo e fértil, <TRADEABLE>pronto para eclodir!<>\n\nDentro, a besta pesada bate com os seus membros cristalinos contra a casca do ovo.\n\nAs análises indicam que o ser no interior tem o potencial genético para uma predisposição <TRADEABLE>tranquila<>, muito carinhosa apesar da sua aparência terrível.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -5611,9 +5609,9 @@
   {
     "Id": "other343",
     "Icon": "other/343.png",
-    "Name": "Ovo de Companheiro",
+    "Name": "I. Ovo de Bearicatea",
     "Group": "Ovo de Companheiro Exclusivo",
-    "Description": "Um ovo vivo e fértil, <TRADEABLE>pronto para chocar!<>",
+    "Description": "Um ovo vivo e fértil, <TRADEABLE>pronto para eclodir!<>\n\nDentro, a criatura delicada agita as suas asas pousadas, ansiando pela liberdade.\n\nAs análises indicam que o ser no interior tem o potencial genético para ser um companheiro <TRADEABLE>devoto<> e feliz quando voa junto do seu mestre.",
     "BaseValueUnits": 3000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
@@ -5633,7 +5631,7 @@
   {
     "Id": "other344",
     "Icon": "other/344.png",
-    "Name": "Multiferramenta exclusiva",
+    "Name": "Condensador de luz feito à mão",
     "Group": "Dispositivo de sobrevivência multifunções exclusivo",
     "Description": "Uma <STELLAR>Multiferramenta<> exclusiva.\n\n<STELLAR>Leva<> esta Multiferramenta para adicioná-la à tua coleção, ou para <STELLAR>Trocar<> com a tua Multiferramenta atual. Alterna as Multiferramentas ativas na secção Ferramentas do Menu Rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5655,7 +5653,7 @@
   {
     "Id": "other345",
     "Icon": "other/345.png",
-    "Name": "Multiferramenta exclusiva",
+    "Name": "Touch of Silence 8-T",
     "Group": "Dispositivo de sobrevivência multifunções exclusivo",
     "Description": "Uma <STELLAR>Multiferramenta<> exclusiva.\n\n<STELLAR>Leva<> esta Multiferramenta para adicioná-la à tua coleção, ou para <STELLAR>Trocar<> com a tua Multiferramenta atual. Alterna as Multiferramentas ativas na secção Ferramentas do Menu Rápido (<IMG>QUICK_MENU<>).",
     "BaseValueUnits": 3000.0,
@@ -5791,12 +5789,11 @@
     "Group": "Gesto desbloqueável",
     "Description": "Um gesto exclusivo.\n\nPode ser selecionado no <VAL_ON>Menu Rápido<> para gerar um holograma portátil de uma adorável criatura em forma de bolha.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5813,12 +5810,11 @@
     "Group": "Gesto desbloqueável",
     "Description": "Um gesto exclusivo.\n\nPode ser selecionado no <VAL_ON>Menu Rápido<> para gerar um holograma portátil de uma elegante e poderosa fragata.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5835,12 +5831,11 @@
     "Group": "Gesto desbloqueável",
     "Description": "Um gesto exclusivo.\n\nPode ser selecionado no <VAL_ON>Menu Rápido<> para gerar um holograma portátil da clássica nave espacial de combate.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5857,12 +5852,11 @@
     "Group": "Gesto desbloqueável",
     "Description": "Um gesto exclusivo.\n\nPode ser selecionado no <VAL_ON>Menu Rápido<> para gerar um holograma portátil da pistola Multiferramenta.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5879,12 +5873,11 @@
     "Group": "Gesto desbloqueável",
     "Description": "Um gesto exclusivo.\n\nPode ser selecionado no <VAL_ON>Menu Rápido<> para gerar um holograma portátil do sistema solar em miniatura.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5906,6 +5899,94 @@
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other358",
+    "Icon": "other/358.png",
+    "Name": "Cérebro Harmónico",
+    "Group": "Senciente Aproveitado",
+    "Description": "A unidade central de processamento de uma nave intercetora Sentinela. O circuito parece estar estável e pulsa com um batimento cardíaco elétrico regular. Já não reage com raiva à minha presença.\n\nEstado: <TRADEABLE>DÓCIL<>\n\nInstala esta unidade numa nave Sentinela desativada para desbloquear o seu cockpit vestigial e permitir <STELLAR>pilotagem manual<>.",
+    "BaseValueUnits": 480016.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other359",
+    "Icon": "other/359.png",
+    "Name": "Turbojato Aeron",
+    "Group": "Melhoria visual do exofato",
+    "Description": "Um exclusivo <STELLAR>Modificador de Aparência do Exofato<>.\n\nUm dispositivo de voo de titânio, montado a partir de tecnologia roubada da horda das Sentinelas. Os seus motores são pré-refrigerados com um fluxo constante de pugneum e nitrogénio, garantindo um funcionamento silencioso, eficiente em termos de combustível e mortífero.\n\n<FUEL>Aviso<>: não abrir a câmara de contenção de pugneum sem equipamento de proteção.\n\nTransforma a aparência do teu Exofato num <TECHNOLOGY>Modificador de Aparência<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other360",
+    "Icon": "other/360.png",
+    "Name": "Capa Geométrica",
+    "Group": "Capa Desbloqueável",
+    "Description": "Um exclusivo <STELLAR>Modificador de Aparência do Exofato<>.\n\nUma vestimenta entrançada vintage de mistura de seda estelar, com um design geométrico clássico.\n\nTransforma a aparência do teu Exofato num <TECHNOLOGY>Modificador de Aparência<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other361",
+    "Icon": "other/361.png",
+    "Name": "Capuz de Reprodução",
+    "Group": "Capuz Desbloqueável",
+    "Description": "Este grandioso capuz é usado pelas classificações superiores de Gek em eventos e convenções, distinguindo o estimado Lorde Comerciante do modesto Mercenário.\n\nTransforma a aparência do teu Exofato com esta exclusiva <STELLAR>Alteração de Aparência<> com um <TECHNOLOGY>Modificador de Aparência<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

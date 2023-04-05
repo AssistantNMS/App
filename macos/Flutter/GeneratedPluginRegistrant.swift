@@ -20,7 +20,7 @@ import flutter_native_timezone
 import flutter_secure_storage_macos
 import macos_ui
 import package_info_plus
-import path_provider_macos
+import path_provider_foundation
 import platform_device_id
 import platform_device_id_macos
 import share_plus

@@ -49,20 +49,18 @@
   },
   {
     "Id": "other3",
-    "Icon": "other/3.png",
-    "Name": "Ancient Key",
-    "Group": "Timeless Artifact",
-    "Description": "A key of some weight, this aged piece of wrought iron must belong in a nearby lock...",
+    "Icon": "building/272.png",
+    "Name": "X.O. Suit",
+    "Group": "",
+    "Description": "",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
     "Additional": "",
     "MaxStackSize": 5.0,
-    "Colour": "4D2957",
+    "Colour": "262626",
     "CdnUrl": "https://cdn.nmsassistant.com/other/3.png",
     "Usages": [
-      "HasUsedToCraft",
-      "HasDevProperties",
-      "IsConsumable"
+      "HasDevProperties"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -74,24 +72,26 @@
   {
     "Id": "other4",
     "Icon": "other/4.png",
-    "Name": "Trident Key",
-    "Group": "Aquatic Relic",
-    "Description": "A strange forked key, glowing with an ultraviolet light.\n\nDespite its primitive appearance, Exosuit scanning systems reveal traces of nanite foam upon its teeth.",
-    "BaseValueUnits": 1000.0,
+    "Name": "Tower Module",
+    "Group": "Construction module",
+    "Description": "A tall, stackable tower module, with rigid, reinforced sides and additional weatherproofing to counter exposure to the elements.",
+    "BaseValueUnits": 2.0,
     "CurrencyType": "Credits",
     "Additional": "",
-    "MaxStackSize": 5.0,
-    "Colour": "4D2957",
+    "Colour": "2C7C9F",
     "CdnUrl": "https://cdn.nmsassistant.com/other/4.png",
     "Usages": [
-      "HasUsedToCraft",
-      "HasDevProperties",
-      "IsConsumable"
+      "HasDevProperties"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 2,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
-    "RequiredItems": [],
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 40
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   },
@@ -5815,12 +5815,11 @@
     "Group": "Unlockable Gesture",
     "Description": "An exclusive gesture.\n\nThis can be selected from the <VAL_ON>Quick Menu<> to generate a handheld hologram of an adorable miniature blob creature.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5837,12 +5836,11 @@
     "Group": "Unlockable Gesture",
     "Description": "An exclusive gesture.\n\nThis can be selected from the <VAL_ON>Quick Menu<> to generate a handheld hologram of a sleek and powerful frigate.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5859,12 +5857,11 @@
     "Group": "Unlockable Gesture",
     "Description": "An exclusive gesture.\n\nThis can be selected from the <VAL_ON>Quick Menu<> to generate a handheld hologram of a classic fighter starship.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5881,12 +5878,11 @@
     "Group": "Unlockable Gesture",
     "Description": "An exclusive gesture.\n\nThis can be selected from the <VAL_ON>Quick Menu<> to generate a handheld hologram of a Multi-Tool pistol.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5903,12 +5899,11 @@
     "Group": "Unlockable Gesture",
     "Description": "An exclusive gesture.\n\nThis can be selected from the <VAL_ON>Quick Menu<> to generate a handheld hologram of a miniature solar system.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Quicksilver",
+    "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
-      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5930,6 +5925,94 @@
     "Colour": "4D2957",
     "Usages": [
       "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other358",
+    "Icon": "other/358.png",
+    "Name": "Harmonic Brain",
+    "Group": "Harnessed Sentience",
+    "Description": "The central processing unit of a Sentinel interceptor ship. The circuitry appears stable, pulsing with a regular electrical heartbeat. It no longer reacts angrily to my presence.\n\nStatus: <TRADEABLE>DOCILE<>\n\nInstall this unit in a disabled Sentinel ship to unlock its vestigial cockpit and enable <STELLAR>manual piloting<>.",
+    "BaseValueUnits": 480016.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other359",
+    "Icon": "other/359.png",
+    "Name": "Aeron Turbojet",
+    "Group": "Exosuit Visual Enhancement",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nA titanium flightpack, assembled from technology stolen from the Sentinel horde. Its engines are precooled with a constant flow of pugneum and nitrogen, ensuring fuel-efficient and deadly silent operation.\n\n<FUEL>Warning<>: do not unseal pugneum containment chamber without protective gear.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other360",
+    "Icon": "other/360.png",
+    "Name": "Geometric Cape",
+    "Group": "Unlockable Cape",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nA vintage garment woven from a star silk blend, bearing a classic geometric design.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other361",
+    "Icon": "other/361.png",
+    "Name": "Spawning Cowl",
+    "Group": "Unlockable Hood",
+    "Description": "This grand hood is worn by the upper ranks of Gek at events and conventions, distinguishing the esteemed Trade Lord from the lowly Hireling.\n\nTransform the appearance of your Exosuit with this exclusive <STELLAR>Appearance Override<> at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,

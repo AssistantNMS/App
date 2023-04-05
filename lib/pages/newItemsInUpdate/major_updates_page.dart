@@ -1,15 +1,10 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/integration/dependency_injection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_redux/flutter_redux.dart';
 
-import '../../components/modalBottomSheet/patreon_modal_bottom_sheet.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/major_update_tile_presenter.dart';
-import '../../constants/patreon.dart';
 import '../../contracts/data/major_update_item.dart';
-import '../../contracts/redux/app_state.dart';
-import '../../redux/modules/setting/is_patreon_view_model.dart';
 import 'major_updates_speculation_page.dart';
 
 class MajorUpdatesPage extends StatelessWidget {
@@ -20,15 +15,9 @@ class MajorUpdatesPage extends StatelessWidget {
     return basicGenericPageScaffold(
       context,
       title: getTranslations().fromKey(LocaleKey.newItemsAdded),
-      body: StoreConnector<AppState, IsPatreonViewModel>(
-        converter: (store) => IsPatreonViewModel.fromStore(store),
-        builder: (_, viewModel) {
-          return FutureBuilder<ResultWithValue<List<MajorUpdateItem>>>(
-            future: getDataRepo().getMajorUpdates(context),
-            builder: (bodyCtx, asyncSnapshot) =>
-                getBodyFromFuture(bodyCtx, asyncSnapshot, viewModel),
-          );
-        },
+      body: FutureBuilder<ResultWithValue<List<MajorUpdateItem>>>(
+        future: getDataRepo().getMajorUpdates(context),
+        builder: getBodyFromFuture,
       ),
     );
   }
@@ -36,7 +25,6 @@ class MajorUpdatesPage extends StatelessWidget {
   Widget getBodyFromFuture(
     BuildContext bodyCtx,
     AsyncSnapshot<ResultWithValue<List<MajorUpdateItem>>> snapshot,
-    IsPatreonViewModel reduxViewModel,
   ) {
     List<Widget> listItems = List.empty(growable: true);
 
@@ -63,22 +51,11 @@ class MajorUpdatesPage extends StatelessWidget {
         updateType: UpdateType.minor,
         releaseDate: DateTime.now(),
       ),
-      isPatronLocked: isPatreonFeatureLocked(
-        PatreonEarlyAccessFeature.newMajorUpdatesPage,
-        reduxViewModel.isPatron,
+      onTap: () => getNavigation().navigateAwayFromHomeAsync(
+        bodyCtx,
+        navigateTo: (_) =>
+            MajorUpdatesSpeculationPage(items: snapshot.data!.value),
       ),
-      onTap: () {
-        handlePatreonBottomModalSheetWhenTapped(
-          bodyCtx,
-          reduxViewModel.isPatron,
-          unlockDate: PatreonEarlyAccessFeature.newMajorUpdatesPage,
-          onTap: (dialogCtx) => getNavigation().navigateAwayFromHomeAsync(
-            dialogCtx,
-            navigateTo: (_) =>
-                MajorUpdatesSpeculationPage(items: snapshot.data!.value),
-          ),
-        );
-      },
     ));
     for (MajorUpdateItem update in snapshot.data!.value) {
       listItems.add(majorUpdateTilePresenter(bodyCtx, update));

@@ -11,7 +11,8 @@ class RechargeJsonRepository extends BaseJsonService
   //
   Future<ResultWithValue<List<Recharge>>> getAllRechargeItems(context) async {
     try {
-      dynamic responseJson = await getJsonFromAssets(context, "data/Recharge");
+      dynamic responseJson =
+          await getJsonFromAssets(context, 'data/Recharge.json');
       List list = json.decode(responseJson);
       List<Recharge> rechargeItems =
           list.map((m) => Recharge.fromJson(m)).toList();

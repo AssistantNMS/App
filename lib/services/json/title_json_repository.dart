@@ -11,7 +11,7 @@ class TitleJsonRepository extends BaseJsonService
   Future<ResultWithValue<List<TitleData>>> getAll(context) async {
     try {
       String langJson = getTranslations().fromKey(LocaleKey.titlesJson);
-      List list = await getListfromJson(context, langJson);
+      List list = await getListfromJson(context, langJson + '.json');
       List<TitleData> titleItems =
           list.map((m) => TitleData.fromJson(m)).toList();
       return ResultWithValue<List<TitleData>>(true, titleItems, '');

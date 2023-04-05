@@ -13,7 +13,7 @@ class FactionJsonRepository extends BaseJsonService
     String jsonFileName = getTranslations().fromKey(LocaleKey.factionJson);
     try {
       dynamic responseDetailsJson =
-          await getJsonFromAssets(context, 'json/$jsonFileName');
+          await getJsonFromAssets(context, 'json/$jsonFileName.json');
 
       FactionData item = FactionData.fromRawJson(responseDetailsJson);
       return ResultWithValue<FactionData>(true, item, '');
@@ -63,7 +63,8 @@ class FactionJsonRepository extends BaseJsonService
   Future<ResultWithValue<List<GuildMission>>> getAllMissions(
     BuildContext context,
   ) async {
-    String jsonFileName = getTranslations().fromKey(LocaleKey.guildMissionJson);
+    String jsonFileName =
+        getTranslations().fromKey(LocaleKey.guildMissionJson) + '.json';
     try {
       List responseDetailsJson = await getListfromJson(context, jsonFileName);
       List<GuildMission> missions =

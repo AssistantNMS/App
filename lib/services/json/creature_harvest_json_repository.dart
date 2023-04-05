@@ -10,8 +10,8 @@ class CreatureHarvestJsonRepository extends BaseJsonService
   Future<ResultWithValue<List<CreatureHarvest>>> getCreatureHarvests(
       BuildContext context) async {
     try {
-      List responseJson = await getListfromJson(
-          context, getTranslations().fromKey(LocaleKey.creatureHarvestJson));
+      List responseJson = await getListfromJson(context,
+          getTranslations().fromKey(LocaleKey.creatureHarvestJson) + '.json');
       List<CreatureHarvest> dataItems =
           responseJson.map((m) => CreatureHarvest.fromJson(m)).toList();
       return ResultWithValue<List<CreatureHarvest>>(true, dataItems, '');

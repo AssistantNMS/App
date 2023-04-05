@@ -17,11 +17,10 @@ do
 	fi
 done
 
+printf '\n'
 
 if [[ $hasEmoji == 0 ]]; then
-	printf "\n\e[31;1m%s\e[0m\n" 'Commit message does not start with an emoji!'
-	printf "\e[31;1m%s\e[0m\n" 'If you are not sure which emoji would fit with your commit, take a look at https://gitmoji.dev.'
-	printf "\e[31;1m%s\e[0m\n\n" 'Both unicode emojis and Github emoji shotcodes are valid 🤘.'
+	printf 'Commit message does not start with an emoji! If you are not sure which emoji would fit with your commit, take a look at https://gitmoji.dev. Both unicode emojis and Github emoji shortcodes are valid 🤘. '
 	exit 1
 fi
 

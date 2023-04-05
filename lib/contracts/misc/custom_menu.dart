@@ -2,6 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
+import '../../constants/nms_external_urls.dart';
 import '../../constants/routes.dart';
 import '../../redux/modules/setting/drawer_settings_view_model.dart';
 
@@ -270,11 +271,35 @@ List<CustomMenu> getMenuOptionsSection3(
       title: LocaleKey.puzzles,
       navigateToNamed: Routes.alienPuzzlesMenuPage,
     ),
+    // CustomMenu(
+    //   icon: const ListTileImage(
+    //     partialPath: AppImage.kanaju,
+    //     size: imageSize,
+    //   ),
+    //   drawerIcon: const ListTileImage(partialPath: AppImage.kanaju),
+    //   title: LocaleKey.newItem,
+    //   navigateToNamed: Routes.missionGenerator,
+    //   onTap: (btnCtx) {
+    //     if (isDesktop) {
+    //       launchExternalURL(NmsExternalUrls.deepSpaceTravelNetMissionGen);
+    //       getNavigation().pop(btnCtx);
+    //       return;
+    //     }
+    //     getNavigation().navigateAsync(
+    //       btnCtx,
+    //       navigateToNamed: Routes.missionGenerator,
+    //     );
+    //   },
+    // ),
     CustomMenu(
       icon: localGetFromIcon(Icons.offline_bolt),
       drawerIcon: localGetDrawerFromIcon(Icons.offline_bolt),
       title: LocaleKey.solarPanelBatteryCalculator,
       navigateToNamed: Routes.solarPanelBatteryCalculator,
+      onLongPress: (navCtx) => getNavigation().navigateAsync(
+        navCtx,
+        navigateToNamed: Routes.missionGenerator,
+      ),
     ),
     CustomMenu(
       icon: const ListTileImage(

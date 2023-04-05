@@ -8497,5 +8497,470 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech231",
+    "Icon": "technology/231.png",
+    "Name": "Puits anti-gravité",
+    "Group": "Moteur suborbital d'Aeron",
+    "Description": "Détache délicatement le vaisseau de ses champs gravitationnels, lui permettant de s'élever vers les étoiles.\n \nLe puits a soif de <SPECIAL>pugnéum<> ou de <SPECIAL>fragments radieux<> et doit être suffisamment alimenté avant le décollage.\n \nMaintenez <IMG>THRUST<> pour décoller.\nMaintenez <IMG>BOOST<> pour activer le turbo.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 170
+      },
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Coût de lancement",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      },
+      {
+        "Name": "Recharge automatique",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech232",
+    "Icon": "technology/232.png",
+    "Name": "Moteur à luminance",
+    "Group": "Moteur à sous-lumière reconditionné",
+    "Description": "Aligne les émissions électromagnétiques du vaisseau avec les ondes d'<FUEL>A T L A S<> et octroie les capacités de base de propulsion et de saut assisté.\n \nLe moteur à sous-lumière a soif de <EXOTIC>tritium<> ou de <SPECIAL>fragments radieux<>.\n\nMaintenez <IMG>PULSEJUMP<> pour enclencher un saut assisté.\nMaintenez <IMG>BOOST<> pour activer le turbo.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur80",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 210
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Efficacité du propulseur à impulsions",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "Turbo",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "recovery",
+        "Value": "11,900"
+      },
+      {
+        "Name": "Puissance du propulseur à impulsions",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge2",
+        "Value": "110"
+      },
+      {
+        "Name": "Manœuvrabilité (Vaisseau)",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "target",
+        "Value": "50"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech233",
+    "Icon": "technology/233.png",
+    "Name": "Noyau pourpre",
+    "Group": "Propulsion d'Atlas interstellaire",
+    "Description": "Un organe optique brut, rouge et grand ouvert. Il est suspendu au-dessus des moteurs du vaisseau et observe les tunnels de l'espace-temps et permet de voyager en VSL entre les systèmes stellaires.\n\nDirigez l'attention du noyau vers des destinations lointaines dans la carte galactique.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur81",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Portée hyperpropulsion",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "600"
+      },
+      {
+        "Name": "Efficacité de la cellule de distorsion",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "200"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech234",
+    "Icon": "technology/234.png",
+    "Name": "Bouclier d'Aeron",
+    "Group": "Barrière défensive radieuse",
+    "Description": "Un cocon défensif pourpre qui brouille la forme physique du vaisseau et le protège des collisions et des tirs de laser.\n\nLe noyau se soigne tout seul mais peut être rapidement régénéré avec des <CATALYST>éléments catalyseurs<> ou des <SPECIAL>fragments radieux<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 4
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Solidité du bouclier",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "prot",
+        "Value": "0.65"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech235",
+    "Icon": "technology/235.png",
+    "Name": "Canon sentinelle",
+    "Group": "Canon de vaisseau sentinelle",
+    "Description": "Un système d'arme sentinelle conçu spécialement pour détruire les vaisseaux rebelles qui enfreignent le règlement du système.\n\nAppuyez sur <IMG>SHIPFIRE<> pour exercer une sanction mortelle.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw31",
+        "Quantity": 90
+      },
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Cadence de tir",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "11"
+      },
+      {
+        "Name": "Précision",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "Nombre total de canons ",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "ammo",
+        "Value": "1"
+      },
+      {
+        "Name": "Dispersion de chaleur",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "12"
+      },
+      {
+        "Name": "Dégâts",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "220"
+      },
+      {
+        "Name": "Portée",
+        "LocaleKeyTemplate": "meter",
+        "Image": "range",
+        "Value": "1,500"
+      },
+      {
+        "Name": "Refroidissement",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "time",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech236",
+    "Icon": "technology/236.png",
+    "Name": "Interface du pilote",
+    "Group": "Terminal de verre/limite",
+    "Description": "Cet appareil permet au cerveau du pilote de <SPECIAL>communiquer<> avec l'esprit d'un intercepteur sentinelle, lui donnant accès aux systèmes de commande et capteurs externes du vaisseau.\n\nLa connexion de l'esprit du pilote à celui du vaisseau est nécessaire afin d'éviter les <FUEL>rejets<> ou l'<SPECIAL>absorption<> du pilote par le cockpit vestigial.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 6
+      },
+      {
+        "Id": "other358",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Système de survie interne activé",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech237",
+    "Icon": "technology/235.png",
+    "Name": "Court-circuit",
+    "Group": "Composant pour multi-outil endommagé",
+    "Description": "Système multi-outil <FUEL>gravement endommagé<>.\n\nL'emplacement ne peut pas être utilisé tant que les dégâts ne sont pas réparés. Utilisez <IMG>REPAIR<> pour lancer le processus de réparation.\n\nLa réparation libérera un emplacement.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech238",
+    "Icon": "technology/232.png",
+    "Name": "Transistor grillé",
+    "Group": "Composant pour multi-outil endommagé",
+    "Description": "Système multi-outil <FUEL>gravement endommagé<>.\n\nL'emplacement ne peut pas être utilisé tant que les dégâts ne sont pas réparés. Utilisez <IMG>REPAIR<> pour lancer le processus de réparation.\n\nLa réparation libérera un emplacement.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech239",
+    "Icon": "technology/234.png",
+    "Name": "Câblage endommagé",
+    "Group": "Composant pour multi-outil endommagé",
+    "Description": "Système multi-outil <FUEL>gravement endommagé<>.\n\nL'emplacement ne peut pas être utilisé tant que les dégâts ne sont pas réparés. Utilisez <IMG>REPAIR<> pour lancer le processus de réparation.\n\nLa réparation libérera un emplacement.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 35
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech240",
+    "Icon": "technology/231.png",
+    "Name": "Noyau d'énergie rouillé",
+    "Group": "Composant pour multi-outil endommagé",
+    "Description": "Système multi-outil <FUEL>gravement endommagé<>.\n\nL'emplacement ne peut pas être utilisé tant que les dégâts ne sont pas réparés. Utilisez <IMG>REPAIR<> pour lancer le processus de réparation.\n\nLa réparation libérera un emplacement.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech241",
+    "Icon": "technology/241.png",
+    "Name": "Laser détourné",
+    "Group": "Rayon à haute énergie remanié",
+    "Description": "Ce multi-outil a été conçu avec des matériaux et des méthodes inconnues des fabricants conventionnels. En son centre se trouve une énigmatique panoplie de matière optique impossible et de mousse vitreuse. Il contient néanmoins une couche de technologie reconnaissable. Il semble avoir été <STELLAR>manipulé<> par un artisan inconnu qui a remanié son scanner pour en faire un <TECHNOLOGY>puissant laser d'extraction<>.\n\nAlimenté par des <FUEL>éléments à base de carbone<>. Tirez le rayon laser avec <IMG>ATTACK<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Vitesse d'extraction",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "Dispersion de chaleur",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "8"
+      },
+      {
+        "Name": "Dégâts",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Temps de refroidissement",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "0.6"
+      },
+      {
+        "Name": "Efficacité du carburant",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "120"
+      },
+      {
+        "Name": "Ressources extraites",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "miningLaser",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
   }
 ]
