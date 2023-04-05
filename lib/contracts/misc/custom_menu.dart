@@ -271,31 +271,35 @@ List<CustomMenu> getMenuOptionsSection3(
       title: LocaleKey.puzzles,
       navigateToNamed: Routes.alienPuzzlesMenuPage,
     ),
-    CustomMenu(
-      icon: const ListTileImage(
-        partialPath: AppImage.kanaju,
-        size: imageSize,
-      ),
-      drawerIcon: const ListTileImage(partialPath: AppImage.kanaju),
-      title: LocaleKey.newItem,
-      navigateToNamed: Routes.missionGenerator,
-      onTap: (btnCtx) {
-        if (isDesktop) {
-          launchExternalURL(NmsExternalUrls.deepSpaceTravelNetMissionGen);
-          getNavigation().pop(btnCtx);
-          return;
-        }
-        getNavigation().navigateAsync(
-          btnCtx,
-          navigateToNamed: Routes.missionGenerator,
-        );
-      },
-    ),
+    // CustomMenu(
+    //   icon: const ListTileImage(
+    //     partialPath: AppImage.kanaju,
+    //     size: imageSize,
+    //   ),
+    //   drawerIcon: const ListTileImage(partialPath: AppImage.kanaju),
+    //   title: LocaleKey.newItem,
+    //   navigateToNamed: Routes.missionGenerator,
+    //   onTap: (btnCtx) {
+    //     if (isDesktop) {
+    //       launchExternalURL(NmsExternalUrls.deepSpaceTravelNetMissionGen);
+    //       getNavigation().pop(btnCtx);
+    //       return;
+    //     }
+    //     getNavigation().navigateAsync(
+    //       btnCtx,
+    //       navigateToNamed: Routes.missionGenerator,
+    //     );
+    //   },
+    // ),
     CustomMenu(
       icon: localGetFromIcon(Icons.offline_bolt),
       drawerIcon: localGetDrawerFromIcon(Icons.offline_bolt),
       title: LocaleKey.solarPanelBatteryCalculator,
       navigateToNamed: Routes.solarPanelBatteryCalculator,
+      onLongPress: (navCtx) => getNavigation().navigateAsync(
+        navCtx,
+        navigateToNamed: Routes.missionGenerator,
+      ),
     ),
     CustomMenu(
       icon: const ListTileImage(
