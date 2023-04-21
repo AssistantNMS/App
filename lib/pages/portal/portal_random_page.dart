@@ -15,7 +15,7 @@ import '../../constants/routes.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../redux/modules/portal/portal_view_model.dart';
 
-const double horizontalPadding = 32;
+const double horizontalPadding = 16;
 
 class RandomPortalPage extends StatefulWidget {
   const RandomPortalPage({Key? key}) : super(key: key);
