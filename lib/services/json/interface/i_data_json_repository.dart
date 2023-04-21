@@ -2,6 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../../contracts/data/alphabet_translation.dart';
+import '../../../contracts/data/catalogue_order.dart';
 import '../../../contracts/data/egg_trait.dart';
 import '../../../contracts/data/generated_meta.dart';
 import '../../../contracts/data/major_update_item.dart';
@@ -180,6 +181,27 @@ class IDataJsonRepository {
   Future<ResultWithValue<List<StarshipScrap>>> getStarshipScrapDataForItem(
       BuildContext context, String itemId) async {
     return ResultWithValue<List<StarshipScrap>>(
+      false,
+      List.empty(),
+      '',
+    );
+  }
+
+  Future<ResultWithValue<List<CatalogueOrder>>> getCatalogueOrders(
+    BuildContext context,
+  ) async {
+    return ResultWithValue<List<CatalogueOrder>>(
+      false,
+      List.empty(),
+      '',
+    );
+  }
+
+  Future<ResultWithValue<List<String>>> getCatalogueOrder(
+    BuildContext context,
+    String itemId,
+  ) async {
+    return ResultWithValue<List<String>>(
       false,
       List.empty(),
       '',

@@ -3,6 +3,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import '../contracts/custom_menu_item.dart';
 import '../pages/catalogue/catalogue_item_page.dart';
+import '../pages/catalogue/cooking_page.dart';
 
 List<CustomMenuItem> getCatalogueItemData(context) {
   List<CustomMenuItem> menuItems = List.empty(growable: true);
@@ -65,10 +66,7 @@ List<CustomMenuItem> getCatalogueItemData(context) {
   menuItems.add(CustomMenuItem(
     image: const ListTileImage(partialPath: 'drawer/cooking.png'),
     title: LocaleKey.cooking,
-    navigateTo: (context) => const CatalogueItemPage(
-      LocaleKey.cooking,
-      [LocaleKey.cookingJson],
-    ),
+    navigateTo: (context) => CookingTrackingPage(),
   ));
   menuItems.add(CustomMenuItem(
     image: const ListTileImage(partialPath: 'drawer/upgradeModules.png'),

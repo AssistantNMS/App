@@ -2,7 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
-import '../../constants/nms_external_urls.dart';
 import '../../constants/routes.dart';
 import '../../redux/modules/setting/drawer_settings_view_model.dart';
 

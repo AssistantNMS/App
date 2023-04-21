@@ -72,10 +72,10 @@ class SeasonalExpeditionPhaseListPage extends StatelessWidget {
           'This data is incomplete and we are working on getting accurate information!';
 
       widgets.add(Container(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 4, left: 4, right: 4, bottom: 8),
+        child: const Padding(
+          padding: EdgeInsets.only(top: 4, left: 4, right: 4, bottom: 8),
           child: Column(
-            children: const [
+            children: [
               Icon(Icons.error, color: Colors.white),
               Text(mesg),
             ],
