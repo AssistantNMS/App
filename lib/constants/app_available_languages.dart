@@ -16,7 +16,7 @@ List<LocalizationMap> supportedLanguageMaps = [
     LocalizationMap(LocaleKey.spanish, 'es', 'es', percentageComplete: 100),
     LocalizationMap(LocaleKey.czech, 'cs', 'cz', percentageComplete: 93),
     LocalizationMap(LocaleKey.turkish, 'tr', 'tr', percentageComplete: 89),
-    LocalizationMap(LocaleKey.hungarian, 'hu', 'hu', percentageComplete: 98),
+    LocalizationMap(LocaleKey.hungarian, 'hu', 'hu', percentageComplete: 100),
     LocalizationMap(LocaleKey.simplifiedChinese, 'zh-hans', 'cn', percentageComplete: 99),
     LocalizationMap(LocaleKey.traditionalChinese, 'zh-hant', 'cn', percentageComplete: 48),
     LocalizationMap(LocaleKey.arabic, 'ar', 'ae', percentageComplete: 11),
