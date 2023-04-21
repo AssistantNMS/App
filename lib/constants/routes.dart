@@ -29,7 +29,6 @@ import '../pages/homepage/default_home_page.dart';
 import '../pages/inventory/inventory_list_page.dart';
 import '../pages/ios/apple_menu.dart';
 import '../pages/language.dart';
-import '../pages/misc/mission_generator.dart';
 import '../pages/misc/retired_drawer_menu_page.dart';
 import '../pages/newItemsInUpdate/major_updates_page.dart';
 import '../pages/newItemsInUpdate/new_items_page.dart';
@@ -194,7 +193,6 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.nomNomInventoryTutorial: (context) =>
         const NomNomInventorySyncTutorial(),
     Routes.randomPortal: (context) => const RandomPortalPage(),
-    Routes.missionGenerator: (context) => const MissionGeneratorPage(),
   });
   return routes;
 }

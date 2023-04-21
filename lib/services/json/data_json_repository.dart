@@ -4,6 +4,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import '../../contracts/data/alphabet_translation.dart';
+import '../../contracts/data/catalogue_order.dart';
 import '../../contracts/data/control_mapping_list.dart';
 import '../../contracts/data/generated_meta.dart';
 import '../../contracts/data/major_update_item.dart';
@@ -549,6 +550,69 @@ class DataJsonRepository extends BaseJsonService
       getLog().e(
           "DataJsonRepository getStarshipScrapDataForItem Exception: ${exception.toString()}");
       return ResultWithValue<List<StarshipScrap>>(
+        false,
+        List.empty(),
+        exception.toString(),
+      );
+    }
+  }
+
+  @override
+  Future<ResultWithValue<List<CatalogueOrder>>> getCatalogueOrders(
+    BuildContext context,
+  ) async {
+    try {
+      dynamic responseJson =
+          await getJsonFromAssets(context, "data/catalogue.json");
+      List list = json.decode(responseJson);
+      List<CatalogueOrder> trans = list //
+          .map((e) => CatalogueOrder.fromJson(e))
+          .toList();
+      return ResultWithValue<List<CatalogueOrder>>(true, trans, '');
+    } catch (exception) {
+      getLog().e(
+          "DataJsonRepository getCatalogueOrders Exception: ${exception.toString()}");
+      return ResultWithValue<List<CatalogueOrder>>(
+        false,
+        List.empty(),
+        exception.toString(),
+      );
+    }
+  }
+
+  @override
+  Future<ResultWithValue<List<String>>> getCatalogueOrder(
+    BuildContext context,
+    String itemId,
+  ) async {
+    ResultWithValue<List<CatalogueOrder>> allItemsResult =
+        await getCatalogueOrders(context);
+    if (allItemsResult.hasFailed) {
+      return ResultWithValue<List<String>>(
+        false,
+        List.empty(),
+        allItemsResult.errorMessage,
+      );
+    }
+
+    try {
+      List<CatalogueOrder> items = allItemsResult.value //
+          .where((dev) => dev.id == itemId)
+          .toList();
+
+      if (items.isEmpty) {
+        return ResultWithValue<List<String>>(
+          false,
+          List.empty(),
+          'No catalogue data found',
+        );
+      }
+
+      return ResultWithValue<List<String>>(true, items[0].appIds, '');
+    } catch (exception) {
+      getLog().e(
+          "DataJsonRepository getCatalogueOrder Exception: ${exception.toString()}");
+      return ResultWithValue<List<String>>(
         false,
         List.empty(),
         exception.toString(),

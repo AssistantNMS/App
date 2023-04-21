@@ -28,7 +28,7 @@ class AnalyticsEvent {
   static const String refinerRecipePage = 'Refiner_Recipe_Page_View';
   static const String languageHelpPage = 'Language_Help_Page_View';
   static const String cartPage = 'Cart_Page_View';
-  static const String cookingPage = 'Cooking_Page_View';
+  static const String cookingPage = 'Cooking_Tracking_Page_View';
   static const String nutrientProcessorRecipePage =
       'Nutrient_Processor_Recipe_Page_View';
   static const String exploitPage = 'Exploit_Page_View';
