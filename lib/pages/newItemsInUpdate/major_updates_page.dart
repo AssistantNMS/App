@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/major_update_tile_presenter.dart';
 import '../../contracts/data/major_update_item.dart';
+import '../../helpers/column_helper.dart';
 import 'major_updates_speculation_page.dart';
 
 class MajorUpdatesPage extends StatelessWidget {
@@ -61,12 +62,22 @@ class MajorUpdatesPage extends StatelessWidget {
       listItems.add(majorUpdateTilePresenter(bodyCtx, update));
     }
 
-    return listWithScrollbar(
-      shrinkWrap: true,
-      itemCount: listItems.length,
-      itemBuilder: (BuildContext context, int index) => listItems[index],
-      padding: const EdgeInsets.only(bottom: 64),
-      scrollController: ScrollController(),
+    return SearchableGrid<Widget>(
+      () => Future.value(ResultWithValue<List<Widget>>(true, listItems, '')),
+      gridItemDisplayer:
+          (BuildContext ctx, Widget widg, {void Function()? onTap}) => widg,
+      gridItemSearch: (Widget item, String searchText) => false,
+      gridViewColumnCalculator: getMajorUpdateColumnCount,
+      addFabPadding: true,
+      minListForSearch: 1000,
     );
+
+    // return listWithScrollbar(
+    //   shrinkWrap: true,
+    //   itemCount: listItems.length,
+    //   itemBuilder: (BuildContext context, int index) => listItems[index],
+    //   padding: const EdgeInsets.only(bottom: 64),
+    //   scrollController: ScrollController(),
+    // );
   }
 }

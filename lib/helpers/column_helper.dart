@@ -10,6 +10,16 @@ int getCommunityLinkColumnCount(Breakpoint breakpoint) {
   return 1;
 }
 
+int getMajorUpdateColumnCount(Breakpoint breakpoint) {
+  if (breakpoint.window == WindowSize.xsmall) return 1;
+  if (breakpoint.window == WindowSize.small) return 2;
+  if (breakpoint.window == WindowSize.medium) return 3;
+  if (breakpoint.window == WindowSize.large) return 4;
+  if (breakpoint.window == WindowSize.xlarge) return 5;
+
+  return 3;
+}
+
 int getCookingItemColumnCount(Breakpoint breakpoint) {
   if (breakpoint.window == WindowSize.xsmall) return 5;
   if (breakpoint.window == WindowSize.small) return 6;
