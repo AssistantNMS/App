@@ -59,7 +59,7 @@ Widget genericItemQuicksilver(
     genericItemIntCurrency(
       context,
       quicksilver,
-      '${getPath().imageAssetPathPrefix}/rawMaterials/57.png',
+      '${getPath().imageAssetPathPrefix}/quicksilver.png',
       colour: colour,
     );
 Widget genericItemSalvagedData(
