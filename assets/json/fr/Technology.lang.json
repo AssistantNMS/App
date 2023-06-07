@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "Moteur de forme d'onde",
     "Group": "Moteur de vaisseau hautement personnalisé",
-    "Description": "Une version retravaillée du <TECHNOLOGY>pulsoréacteur<> d'un vaisseau conventionnel. La forme d'onde a été poussée à sa limite, créant une expérience de pulsion à la fois <STELLAR>efficace<> et <STELLAR>hautement réactive<>.\n\nVeuillez noter que du <EXOTIC>tritium<> est nécessaire pour charger le pulsoréacteur. Le tritium se trouve en abondance dans les <COMMODITY>champs d'astéroïdes voisins<>. Scannez (<IMG>SCAN<>) les environs pour chercher des <TECHNOLOGY>astéroïdes riches en tritium<>.\n\nMaintenez <IMG>PULSEJUMP<> pour activer le saut assisté. Maintenez <IMG>BOOST<> enfoncé pour activer l'accélération en vol.",
+    "Description": "Une version retravaillée du <TECHNOLOGY>pulsoréacteur<> d'un vaisseau conventionnel. La forme d'onde a été poussée à sa limite, créant une expérience de pulsion à la fois <STELLAR>efficace<> et <STELLAR>hautement réactive<>.\n\nVeuillez noter que du <EXOTIC>tritium<> est nécessaire pour charger le pulsoréacteur. Le tritium se trouve en abondance dans les <COMMODITY>champs d'astéroïdes voisins<>. Scannez (<IMG>VEHICLESCAN<>) les environs pour chercher des <TECHNOLOGY>astéroïdes riches en tritium<>.\n\nMaintenez <IMG>PULSEJUMP<> pour activer le saut assisté. Maintenez <IMG>BOOST<> enfoncé pour activer l'accélération en vol.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -7656,7 +7656,7 @@
         "Name": "Dégâts",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "100"
+        "Value": "120"
       },
       {
         "Name": "Portée",
@@ -7674,7 +7674,7 @@
         "Name": "Précision",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "accuracy",
-        "Value": "4"
+        "Value": "2.5"
       },
       {
         "Name": "Sphères ioniques créées",
@@ -7744,7 +7744,13 @@
         "Name": "Vitesse des sphères ioniques",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
-        "Value": "40"
+        "Value": "50"
+      },
+      {
+        "Name": "Vitesse de charge",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8503,7 +8509,7 @@
     "Icon": "technology/231.png",
     "Name": "Puits anti-gravité",
     "Group": "Moteur suborbital d'Aeron",
-    "Description": "Détache délicatement le vaisseau de ses champs gravitationnels, lui permettant de s'élever vers les étoiles.\n \nLe puits a soif de <SPECIAL>pugnéum<> ou de <SPECIAL>fragments radieux<> et doit être suffisamment alimenté avant le décollage.\n \nMaintenez <IMG>THRUST<> pour décoller.\nMaintenez <IMG>BOOST<> pour activer le turbo.",
+    "Description": "Détache délicatement le vaisseau de ses champs gravitationnels, lui permettant de s'élever vers les étoiles.\n \nLe puits a soif de <SPECIAL>pugnéum<> ou d'<SPECIAL>éclats radiants<> et doit être suffisamment alimenté avant le décollage.\n \nMaintenez <IMG>THRUST<> pour décoller.\nMaintenez <IMG>BOOST<> pour activer le turbo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -8517,7 +8523,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur1",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8550,7 +8556,7 @@
     "Icon": "technology/232.png",
     "Name": "Moteur à luminance",
     "Group": "Moteur à sous-lumière reconditionné",
-    "Description": "Aligne les émissions électromagnétiques du vaisseau avec les ondes d'<FUEL>A T L A S<> et octroie les capacités de base de propulsion et de saut assisté.\n \nLe moteur à sous-lumière a soif de <EXOTIC>tritium<> ou de <SPECIAL>fragments radieux<>.\n\nMaintenez <IMG>PULSEJUMP<> pour enclencher un saut assisté.\nMaintenez <IMG>BOOST<> pour activer le turbo.",
+    "Description": "Aligne les émissions électromagnétiques du vaisseau avec les ondes d'<FUEL>A T L A S<> et octroie les capacités de base de propulsion et de saut assisté.\n \nLe moteur à sous-lumière a soif de <EXOTIC>tritium<> ou d'<SPECIAL>éclats radiants<>.\n\nMaintenez <IMG>PULSEJUMP<> pour enclencher un saut assisté.\nMaintenez <IMG>BOOST<> pour activer le turbo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -8623,7 +8629,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur81",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8651,8 +8657,8 @@
     "Id": "tech234",
     "Icon": "technology/234.png",
     "Name": "Bouclier d'Aeron",
-    "Group": "Barrière défensive radieuse",
-    "Description": "Un cocon défensif pourpre qui brouille la forme physique du vaisseau et le protège des collisions et des tirs de laser.\n\nLe noyau se soigne tout seul mais peut être rapidement régénéré avec des <CATALYST>éléments catalyseurs<> ou des <SPECIAL>fragments radieux<>.",
+    "Group": "Barrière défensive radiante",
+    "Description": "Un cocon défensif pourpre qui brouille la forme physique du vaisseau et le protège des collisions et des tirs de laser.\n\nLe noyau se soigne tout seul mais peut être rapidement régénéré avec des <CATALYST>éléments catalyseurs<> ou des <SPECIAL>éclats radiants<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -8799,9 +8805,9 @@
   {
     "Id": "tech237",
     "Icon": "technology/235.png",
-    "Name": "Court-circuit",
-    "Group": "Composant pour multi-outil endommagé",
-    "Description": "Système multi-outil <FUEL>gravement endommagé<>.\n\nL'emplacement ne peut pas être utilisé tant que les dégâts ne sont pas réparés. Utilisez <IMG>REPAIR<> pour lancer le processus de réparation.\n\nLa réparation libérera un emplacement.",
+    "Name": "Résistance de conscience",
+    "Group": "Récupération sentinelle incomplète",
+    "Description": "Ce multi-outil est une technologie hybride, la fusion d'un morceau de ferraille brut et d'une énergie profonde et puissante ; en partie pièce de récupération, en partie Sentinelle, en partie quelque chose d'indéfinissable...\n\nCe processus de recyclage-fusion était <TECHNOLOGY>incomplet<> lors de l'acquisition de cet outil. Utilisez <IMG>REPAIR<> pour continuer à le réparer et libérer cet emplacement pour une utilisation générale.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8824,9 +8830,9 @@
   {
     "Id": "tech238",
     "Icon": "technology/232.png",
-    "Name": "Transistor grillé",
-    "Group": "Composant pour multi-outil endommagé",
-    "Description": "Système multi-outil <FUEL>gravement endommagé<>.\n\nL'emplacement ne peut pas être utilisé tant que les dégâts ne sont pas réparés. Utilisez <IMG>REPAIR<> pour lancer le processus de réparation.\n\nLa réparation libérera un emplacement.",
+    "Name": "Prisme discordant",
+    "Group": "Récupération sentinelle incomplète",
+    "Description": "Ce multi-outil est une technologie hybride, la fusion d'un morceau de ferraille brut et d'une énergie profonde et puissante ; en partie pièce de récupération, en partie Sentinelle, en partie quelque chose d'indéfinissable...\n\nCe processus de recyclage-fusion était <TECHNOLOGY>incomplet<> lors de l'acquisition de cet outil. Utilisez <IMG>REPAIR<> pour continuer à le réparer et libérer cet emplacement pour une utilisation générale.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8849,9 +8855,9 @@
   {
     "Id": "tech239",
     "Icon": "technology/234.png",
-    "Name": "Câblage endommagé",
-    "Group": "Composant pour multi-outil endommagé",
-    "Description": "Système multi-outil <FUEL>gravement endommagé<>.\n\nL'emplacement ne peut pas être utilisé tant que les dégâts ne sont pas réparés. Utilisez <IMG>REPAIR<> pour lancer le processus de réparation.\n\nLa réparation libérera un emplacement.",
+    "Name": "Lentille corrompue",
+    "Group": "Récupération sentinelle incomplète",
+    "Description": "Ce multi-outil est une technologie hybride, la fusion d'un morceau de ferraille brut et d'une énergie profonde et puissante ; en partie pièce de récupération, en partie Sentinelle, en partie quelque chose d'indéfinissable...\n\nCe processus de recyclage-fusion était <TECHNOLOGY>incomplet<> lors de l'acquisition de cet outil. Utilisez <IMG>REPAIR<> pour continuer à le réparer et libérer cet emplacement pour une utilisation générale.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8878,9 +8884,9 @@
   {
     "Id": "tech240",
     "Icon": "technology/231.png",
-    "Name": "Noyau d'énergie rouillé",
-    "Group": "Composant pour multi-outil endommagé",
-    "Description": "Système multi-outil <FUEL>gravement endommagé<>.\n\nL'emplacement ne peut pas être utilisé tant que les dégâts ne sont pas réparés. Utilisez <IMG>REPAIR<> pour lancer le processus de réparation.\n\nLa réparation libérera un emplacement.",
+    "Name": "Noyau d'énergie purgé",
+    "Group": "Récupération sentinelle incomplète",
+    "Description": "Ce multi-outil est une technologie hybride, la fusion d'un morceau de ferraille brut et d'une énergie profonde et puissante ; en partie pièce de récupération, en partie Sentinelle, en partie quelque chose d'indéfinissable...\n\nCe processus de recyclage-fusion était <TECHNOLOGY>incomplet<> lors de l'acquisition de cet outil. Utilisez <IMG>REPAIR<> pour continuer à le réparer et libérer cet emplacement pour une utilisation générale.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8905,7 +8911,7 @@
     "Icon": "technology/241.png",
     "Name": "Laser détourné",
     "Group": "Rayon à haute énergie remanié",
-    "Description": "Ce multi-outil a été conçu avec des matériaux et des méthodes inconnues des fabricants conventionnels. En son centre se trouve une énigmatique panoplie de matière optique impossible et de mousse vitreuse. Il contient néanmoins une couche de technologie reconnaissable. Il semble avoir été <STELLAR>manipulé<> par un artisan inconnu qui a remanié son scanner pour en faire un <TECHNOLOGY>puissant laser d'extraction<>.\n\nAlimenté par des <FUEL>éléments à base de carbone<>. Tirez le rayon laser avec <IMG>ATTACK<>.",
+    "Description": "Ce multi-outil a été conçu avec des matériaux et des méthodes inconnues des fabricants conventionnels. En son centre se trouve une énigmatique panoplie de matière optique impossible et de mousse vitreuse. Il contient néanmoins une couche de technologie reconnaissable. Il semble avoir été <STELLAR>manipulé<> par un artisan inconnu qui a remanié son scanner pour en faire un <TECHNOLOGY>puissant laser d'extraction<>.\n\nAlimenté par des <FUEL>éléments à base de carbone<>. Tirez au rayon laser avec <IMG>ATTACK<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",

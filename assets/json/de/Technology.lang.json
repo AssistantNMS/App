@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "Wellenform-Antrieb",
     "Group": "Hochgradig angepasster Raumschiffsantrieb",
-    "Description": "Eine hochgradig abgestimmte Version des konventionellen Raumschiff-<TECHNOLOGY>Impulsantriebs<>. Die Wellenfrontnutzung wurde bis zum Äußersten ausgenutzt und so ein Pulserlebnis erschaffen, das sowohl <STELLAR>effizient<> als auch <STELLAR>äußerst reaktionsschnell<> ist.\n\nZum Laden des Impulsantriebs ist <EXOTIC>Tritium<> erforderlich. Tritium ist in großer Menge in <COMMODITY>planetennahen Asteroidenfeldern<> vorhanden. Scanne (<IMG>SCAN<>), um nach <TECHNOLOGY>tritiumreichen Asteroiden<> zu suchen.\n\nZum Aktivieren des Impulssprungs <IMG>PULSEJUMP<> gedrückt halten. Mit <IMG>BOOST<> den Geschwindigkeitsschub während des Flugs aktivieren.",
+    "Description": "Eine hochgradig abgestimmte Version des konventionellen Raumschiff-<TECHNOLOGY>Impulsantriebs<>. Die Wellenfrontnutzung wurde bis zum Äußersten ausgenutzt und so ein Pulserlebnis erschaffen, das sowohl <STELLAR>effizient<> als auch <STELLAR>äußerst reaktionsschnell<> ist.\n\nZum Laden des Impulsantriebs ist <EXOTIC>Tritium<> erforderlich. Tritium ist in großer Menge in <COMMODITY>planetennahen Asteroidenfeldern<> vorhanden. Scanne (<IMG>SHIPSCAN<>), um nach <TECHNOLOGY>tritiumreichen Asteroiden<> zu suchen.\n\nHalte zum Aktivieren des Impulssprungs <IMG>PULSEJUMP<> gedrückt. Aktiviere mit <IMG>BOOST<> den Geschwindigkeitsschub während des Flugs.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -7656,7 +7656,7 @@
         "Name": "Schaden",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "100"
+        "Value": "120"
       },
       {
         "Name": "Reichweite",
@@ -7674,7 +7674,7 @@
         "Name": "Präzision",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "accuracy",
-        "Value": "4"
+        "Value": "2.5"
       },
       {
         "Name": "Ionenkugeln erzeugt",
@@ -7744,7 +7744,13 @@
         "Name": "Ionenkugeltempo",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
-        "Value": "40"
+        "Value": "50"
+      },
+      {
+        "Name": "Aufladetempo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8517,7 +8523,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur1",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8623,7 +8629,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur81",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8799,9 +8805,9 @@
   {
     "Id": "tech237",
     "Icon": "technology/235.png",
-    "Name": "Kurzer Schaltkreis",
-    "Group": "Beschädigte Multiwerkzeug-Komponente",
-    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "Name": "Empfindungswiderstand",
+    "Group": "Unvollständige Wächter-Bergung",
+    "Description": "Dieses Multiwerkzeug ist ein Stück Hybridtechnologie, eine Verschmelzung aus grobem Schrott und einer tiefen, mächtigen Energie – teils Bergung, teils Wächter, teils etwas Undefinierbares ...\n\nDieser Prozess der recycelten Verschmelzung war <TECHNOLOGY>unvollständig<> als dieses Werkzeug erworben wurde. Benutze <IMG>REPAIR<>, um die Reparaturen fortzusetzen und diesen Platz für allgemeine Zwecke freizugeben.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8824,9 +8830,9 @@
   {
     "Id": "tech238",
     "Icon": "technology/232.png",
-    "Name": "Durchgebrannter Transistor",
-    "Group": "Beschädigte Multiwerkzeug-Komponente",
-    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "Name": "Disharmonisches Prisma",
+    "Group": "Unvollständige Wächter-Bergung",
+    "Description": "Dieses Multiwerkzeug ist ein Stück Hybridtechnologie, eine Verschmelzung aus grobem Schrott und einer tiefen, mächtigen Energie – teils Bergung, teils Wächter, teils etwas Undefinierbares ...\n\nDieser Prozess der recycelten Verschmelzung war <TECHNOLOGY>unvollständig<> als dieses Werkzeug erworben wurde. Benutze <IMG>REPAIR<>, um die Reparaturen fortzusetzen und diesen Platz für allgemeine Zwecke freizugeben.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8849,9 +8855,9 @@
   {
     "Id": "tech239",
     "Icon": "technology/234.png",
-    "Name": "Beschädigte Verkabelung",
-    "Group": "Beschädigte Multiwerkzeug-Komponente",
-    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "Name": "Verdorbene Linse",
+    "Group": "Unvollständige Wächter-Bergung",
+    "Description": "Dieses Multiwerkzeug ist ein Stück Hybridtechnologie, eine Verschmelzung aus grobem Schrott und einer tiefen, mächtigen Energie – teils Bergung, teils Wächter, teils etwas Undefinierbares ...\n\nDieser Prozess der recycelten Verschmelzung war <TECHNOLOGY>unvollständig<> als dieses Werkzeug erworben wurde. Benutze <IMG>REPAIR<>, um die Reparaturen fortzusetzen und diesen Platz für allgemeine Zwecke freizugeben.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8878,9 +8884,9 @@
   {
     "Id": "tech240",
     "Icon": "technology/231.png",
-    "Name": "Verrosteter Energiekern",
-    "Group": "Beschädigte Multiwerkzeug-Komponente",
-    "Description": "Multiwerkzeug-Teilsystem <FUEL>kritisch beschädigt<>.\n\nPlatz kann nicht benutzt werden, bis der Schaden repariert ist. Verwende <IMG>REPAIR<>, um den Reparaturprozess zu starten.\n\nDurch die Reparatur wird ein Platz für den allgemeinen Gebrauch frei.",
+    "Name": "Entleerter Energiekern",
+    "Group": "Unvollständige Wächter-Bergung",
+    "Description": "Dieses Multiwerkzeug ist ein Stück Hybridtechnologie, eine Verschmelzung aus grobem Schrott und einer tiefen, mächtigen Energie – teils Bergung, teils Wächter, teils etwas Undefinierbares ...\n\nDieser Prozess der recycelten Verschmelzung war <TECHNOLOGY>unvollständig<> als dieses Werkzeug erworben wurde. Benutze <IMG>REPAIR<>, um die Reparaturen fortzusetzen und diesen Platz für allgemeine Zwecke freizugeben.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",

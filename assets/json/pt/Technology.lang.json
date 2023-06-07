@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "Motor de Forma de Onda",
     "Group": "Motor Altamente Personalizado da Nave Espacial",
-    "Description": "Uma versão altamente ajustada do <TECHNOLOGY>Motor de Pulsação<> convencional da nave espacial. A ocupação da frente de onda foi levada ao limite, criando uma experiência de pulsação que é <STELLAR>eficiente<> e <STELLAR>altamente recetiva<>.\n\nO utilizador precisa de usar <EXOTIC>Trítio<> para carregar o propulsor. O trítio é abundante em <COMMODITY>campos de asteroides no espaço próximo aos planetas<>. Analisa (<IMG>SCAN<>) para procurar <TECHNOLOGY>asteroides ricos em trítio<>.\n\nMantém <IMG>PULSEJUMP<> premido para ativar o Salto Pulsante. Mantém <IMG>BOOST<> premido para iniciar o impulso de velocidade durante o voo.",
+    "Description": "Uma versão altamente ajustada do <TECHNOLOGY>Motor de Pulsação<> convencional da nave espacial. A ocupação da frente de onda foi levada ao limite, criando uma experiência de pulsação que é <STELLAR>eficiente<> e <STELLAR>altamente recetiva<>.\n\nO utilizador precisa de usar <EXOTIC>Trítio<> para carregar o propulsor. O trítio é abundante em <COMMODITY>campos de asteroides no espaço próximo aos planetas<>. Analisa (<IMG>SHIPSCAN<>) para procurar <TECHNOLOGY>asteroides ricos em trítio<>.\n\nMantém <IMG>PULSEJUMP<> premido para ativar o Salto Pulsante. Mantém <IMG>BOOST<> premido para iniciar o impulso de velocidade durante o voo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -7656,7 +7656,7 @@
         "Name": "Danos",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "100"
+        "Value": "120"
       },
       {
         "Name": "Alcance",
@@ -7674,7 +7674,7 @@
         "Name": "Precisão",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "accuracy",
-        "Value": "4"
+        "Value": "2.5"
       },
       {
         "Name": "Esferas de Iões Criadas",
@@ -7744,7 +7744,13 @@
         "Name": "Velocidade das Esferas de Iões",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
-        "Value": "40"
+        "Value": "50"
+      },
+      {
+        "Name": "Velocidade de Carga",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8517,7 +8523,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur1",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8609,7 +8615,7 @@
     "Icon": "technology/233.png",
     "Name": "Núcleo Carmesim",
     "Group": "Propulsão de Atlas Interestelar",
-    "Description": "Um órgão ótico em vivo, vermelho e sem piscar. Suspenso acima dos motores da nave, olha para os túneis no espaço-tempo, permitindo viagens FTL entre sistemas estelares.\n\nDireciona a atenção do núcleo para destinos remotos através do Mapa Galáctico.",
+    "Description": "Um órgão ótico cru, vermelho e sem piscar. Suspenso acima dos motores da nave, olha para os túneis no espaço-tempo, permitindo viagens FTL entre sistemas estelares.\n\nDireciona a atenção do núcleo para destinos remotos através do Mapa Galáctico.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -8623,7 +8629,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur81",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8799,9 +8805,9 @@
   {
     "Id": "tech237",
     "Icon": "technology/235.png",
-    "Name": "Curto-circuito",
-    "Group": "Componente multiferramenta danificado",
-    "Description": "Subsistema da Multiferramenta com <FUEL>danos críticos<>.\n\nO espaço não pode ser usado enquanto o dano não estiver reparado. Usa <IMG>REPAIR<> para iniciar o processo de reparação.\n\nA reparação irá vagar um espaço para uso geral.",
+    "Name": "Resistência Senciente",
+    "Group": "Recuperação de Sentinela Incompleta",
+    "Description": "Esta Multiferramenta é uma peça de tecnologia híbrida, uma fusão de sucata rudimentar e de uma energia profunda e poderosa, em parte recuperação, em parte Sentinela, em parte algo indefinível...\n\nEste processo de fusão reciclada estava <TECHNOLOGY>incompleto<> quando esta ferramenta foi adquirida. Usa <IMG>REPAIR<> para continuar as operações de reparo e liberta este espaço para uso geral.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8824,9 +8830,9 @@
   {
     "Id": "tech238",
     "Icon": "technology/232.png",
-    "Name": "Transístor explodido",
-    "Group": "Componente multiferramenta danificado",
-    "Description": "Subsistema da Multiferramenta com <FUEL>danos críticos<>.\n\nO espaço não pode ser usado enquanto o dano não estiver reparado. Usa <IMG>REPAIR<> para iniciar o processo de reparação.\n\nA reparação irá vagar um espaço para uso geral.",
+    "Name": "Prisma Dissonante",
+    "Group": "Recuperação de Sentinela Incompleta",
+    "Description": "Esta Multiferramenta é uma peça de tecnologia híbrida, uma fusão de sucata rudimentar e de uma energia profunda e poderosa, em parte recuperação, em parte Sentinela, em parte algo indefinível...\n\nEste processo de fusão reciclada estava <TECHNOLOGY>incompleto<> quando esta ferramenta foi adquirida. Usa <IMG>REPAIR<> para continuar as operações de reparo e liberta este espaço para uso geral.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8849,9 +8855,9 @@
   {
     "Id": "tech239",
     "Icon": "technology/234.png",
-    "Name": "Cabos danificados",
-    "Group": "Componente multiferramenta danificado",
-    "Description": "Subsistema da Multiferramenta com <FUEL>danos críticos<>.\n\nO espaço não pode ser usado enquanto o dano não estiver reparado. Usa <IMG>REPAIR<> para iniciar o processo de reparação.\n\nA reparação irá vagar um espaço para uso geral.",
+    "Name": "Lente Corrompida",
+    "Group": "Recuperação de Sentinela Incompleta",
+    "Description": "Esta Multiferramenta é uma peça de tecnologia híbrida, uma fusão de sucata rudimentar e de uma energia profunda e poderosa, em parte recuperação, em parte Sentinela, em parte algo indefinível...\n\nEste processo de fusão reciclada estava <TECHNOLOGY>incompleto<> quando esta ferramenta foi adquirida. Usa <IMG>REPAIR<> para continuar as operações de reparo e liberta este espaço para uso geral.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8878,9 +8884,9 @@
   {
     "Id": "tech240",
     "Icon": "technology/231.png",
-    "Name": "Núcleo de energia enferrujado",
-    "Group": "Componente multiferramenta danificado",
-    "Description": "Subsistema da Multiferramenta com <FUEL>danos críticos<>.\n\nO espaço não pode ser usado enquanto o dano não estiver reparado. Usa <IMG>REPAIR<> para iniciar o processo de reparação.\n\nA reparação irá vagar um espaço para uso geral.",
+    "Name": "Núcleo de Energia Esgotado",
+    "Group": "Recuperação de Sentinela Incompleta",
+    "Description": "Esta Multiferramenta é uma peça de tecnologia híbrida, uma fusão de sucata rudimentar e de uma energia profunda e poderosa, em parte recuperação, em parte Sentinela, em parte algo indefinível...\n\nEste processo de fusão reciclada estava <TECHNOLOGY>incompleto<> quando esta ferramenta foi adquirida. Usa <IMG>REPAIR<> para continuar as operações de reparo e liberta este espaço para uso geral.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",

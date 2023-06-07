@@ -6876,7 +6876,7 @@
     "Icon": "technology/90.png",
     "Name": "Sistema de lanzamiento avanzado",
     "Group": "Tren de aterrizaje personalizado",
-    "Description": "Un sistema de <TECHNOLOGY>control de lanzamiento<> hecho a medida para naves espaciales de alto rendimiento. Los giroscopios sensibles y los circuitos de control especializados trazan rutinas de despegue personalizadas para aumentar la <STELLAR>velocidad<> y la <STELLAR>eficiencia<> del despegue.\n\nSe necesita <TECHNOLOGY>combustible especializado derivado del dihidrógeno<> para recargar el propulsor. Los procedimientos de lanzamiento exigen un nivel mínimo de combustible antes de la activación.\n\nMantener <IMG>THRUST<> para despegar desde el planeta. Mantener <IMG>BOOST<> para iniciar la potenciación de velocidad en vuelo.",
+    "Description": "Un sistema de <TECHNOLOGY>control de lanzamiento<> hecho a medida para naves espaciales de alto rendimiento. Los giroscopios sensibles y los circuitos de control especializados trazan rutinas de despegue personalizadas para aumentar la <STELLAR>velocidad<> y la <STELLAR>eficiencia<> del despegue.Se necesita <TECHNOLOGY>combustible especializado derivado del dihidrógeno<> para recargar el propulsor. Los procedimientos de lanzamiento exigen un nivel mínimo de combustible antes de la activación.Mantener <IMG>THRUST<> para despegar desde el planeta. Mantener <IMG>BOOST<> para iniciar la potenciación de velocidad en vuelo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "Motor de onda",
     "Group": "Motor de nave altamente personalizado",
-    "Description": "Una versión altamente optimizada del <TECHNOLOGY>motor de pulso<> de las naves convencionales. La ocupación de onda se ha llevado al límite y crea una experiencia de pulso que es tan <STELLAR>eficiente<> como <STELLAR>receptiva<>.\n\nSe advierte al usuario de que se requiere <EXOTIC>tritio<> para cargar el motor. El tritio abunda en los <COMMODITY>campos de asteroides cercanos<>. Escanea (<IMG>SCAN<>) para buscar <TECHNOLOGY>asteroides ricos en tritio<>.\n\nMantén <IMG>PULSEJUMP<> para iniciar el salto de pulso. Mantén <IMG>BOOST<> para iniciar la potenciación de velocidad en vuelo.",
+    "Description": "Una versión altamente optimizada del <TECHNOLOGY>motor de pulso<> de las naves convencionales. La ocupación de onda se ha llevado al límite y crea una experiencia de pulso que es tan <STELLAR>eficiente<> como <STELLAR>receptiva<>.\n\nSe advierte al usuario de que se requiere <EXOTIC>tritio<> para cargar el motor. El tritio abunda en los <COMMODITY>campos de asteroides cercanos<>. Escanea (<IMG>SHIPSCAN<>) para buscar <TECHNOLOGY>asteroides ricos en tritio<>.\n\nMantén <IMG>PULSEJUMP<> para iniciar el salto de pulso. Mantén <IMG>BOOST<> para iniciar la potenciación de velocidad en vuelo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -7656,7 +7656,7 @@
         "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "100"
+        "Value": "120"
       },
       {
         "Name": "Rango",
@@ -7674,7 +7674,7 @@
         "Name": "Precisión",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "accuracy",
-        "Value": "4"
+        "Value": "2.5"
       },
       {
         "Name": "Esferas de iones creadas",
@@ -7744,7 +7744,13 @@
         "Name": "Velocidad de esfera de iones",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
-        "Value": "40"
+        "Value": "50"
+      },
+      {
+        "Name": "Velocidad de carga",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8517,7 +8523,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur1",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8623,7 +8629,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur81",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8799,9 +8805,9 @@
   {
     "Id": "tech237",
     "Icon": "technology/235.png",
-    "Name": "Cortocircuito",
-    "Group": "Componente de multiherramienta dañado",
-    "Description": "Subsistema de multiherramienta <FUEL>con daños graves<>.\n\nEl espacio no se puede usar hasta que se reparen los daños. Usa <IMG>REPAIR<> para comenzar el proceso de reparación.\n\nReparar liberará espacio para uso general.",
+    "Name": "Resistencia de consciencia",
+    "Group": "Recuperación de Centinela incompleta",
+    "Description": "Esta multiherramienta es una pieza de tecnología híbrida, una fusión de chatarra cruda y una energía poderosa y profunda: en parte recuperación, en parte Centinela, en parte algo indefinible...\n\nEste proceso de fusión reciclada estaba <TECHNOLOGY>incompleto<> cuando se adquirió esta herramienta. Usa <IMG>REPARAR<> para continuar con las operaciones de reparación y liberar este espacio para uso general.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8824,9 +8830,9 @@
   {
     "Id": "tech238",
     "Icon": "technology/232.png",
-    "Name": "Transistor estropeado",
-    "Group": "Componente de multiherramienta dañado",
-    "Description": "Subsistema de multiherramienta <FUEL>con daños graves<>.\n\nEl espacio no se puede usar hasta que se reparen los daños. Usa <IMG>REPAIR<> para comenzar el proceso de reparación.\n\nReparar liberará espacio para uso general.",
+    "Name": "Prisma discordante",
+    "Group": "Recuperación de Centinela incompleta",
+    "Description": "Esta multiherramienta es una pieza de tecnología híbrida, una fusión de chatarra cruda y una energía poderosa y profunda: en parte recuperación, en parte Centinela, en parte algo indefinible...\n\nEste proceso de fusión reciclada estaba <TECHNOLOGY>incompleto<> cuando se adquirió esta herramienta. Usa <IMG>REPARAR<> para continuar con las operaciones de reparación y liberar este espacio para uso general.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8849,9 +8855,9 @@
   {
     "Id": "tech239",
     "Icon": "technology/234.png",
-    "Name": "Cableado dañado",
-    "Group": "Componente de multiherramienta dañado",
-    "Description": "Subsistema de multiherramienta <FUEL>con daños graves<>.\n\nEl espacio no se puede usar hasta que se reparen los daños. Usa <IMG>REPAIR<> para comenzar el proceso de reparación.\n\nReparar liberará espacio para uso general.",
+    "Name": "Lente corrupta",
+    "Group": "Recuperación de Centinela incompleta",
+    "Description": "Esta multiherramienta es una pieza de tecnología híbrida, una fusión de chatarra cruda y una energía poderosa y profunda: en parte recuperación, en parte Centinela, en parte algo indefinible...\n\nEste proceso de fusión reciclada estaba <TECHNOLOGY>incompleto<> cuando se adquirió esta herramienta. Usa <IMG>REPARAR<> para continuar con las operaciones de reparación y liberar este espacio para uso general.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8878,9 +8884,9 @@
   {
     "Id": "tech240",
     "Icon": "technology/231.png",
-    "Name": "Núcleo de energía oxidado",
-    "Group": "Componente de multiherramienta dañado",
-    "Description": "Subsistema de multiherramienta <FUEL>con daños graves<>.\n\nEl espacio no se puede usar hasta que se reparen los daños. Usa <IMG>REPAIR<> para comenzar el proceso de reparación.\n\nReparar liberará espacio para uso general.",
+    "Name": "Núcleo de energía agotado",
+    "Group": "Recuperación de Centinela incompleta",
+    "Description": "Esta multiherramienta es una pieza de tecnología híbrida, una fusión de chatarra cruda y una energía poderosa y profunda: en parte recuperación, en parte Centinela, en parte algo indefinible...\n\nEste proceso de fusión reciclada estaba <TECHNOLOGY>incompleto<> cuando se adquirió esta herramienta. Usa <IMG>REPARAR<> para continuar con las operaciones de reparación y liberar este espacio para uso general.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
