@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "波形驱动器",
     "Group": "高度定制化的飞船驱动器",
-    "Description": "经过缜密调试过的传统飞船<TECHNOLOGY>脉冲驱动器<>。接近极限的波面频率将能够提供<STELLAR>高效<>而且<STELLAR>极度灵敏<>的脉冲动力。\n\n建议使用<EXOTIC>氚<>作为驱动器燃料。<COMMODITY>近太空小行星带<>中能够找到丰富的氚。扫描（<IMG>SCAN<>）以搜寻<TECHNOLOGY>富含氚的小行星<>。\n\n同时长按<IMG>PULSEJUMP<>将启动脉冲跃迁。在飞行时长按<IMG>BOOST<>激活加速。",
+    "Description": "经过缜密调试过的传统飞船<TECHNOLOGY>脉冲驱动器<>。接近极限的波面频率将能够提供<STELLAR>高效<>而且<STELLAR>极度灵敏<>的脉冲动力。\n\n建议使用<EXOTIC>氚<>作为驱动器燃料。<COMMODITY>近太空小行星带<>中能够找到丰富的氚。扫描（<IMG>SHIPSCAN<>）以搜寻<TECHNOLOGY>富含氚的小行星<>。\n\n长按<IMG>PULSEJUMP<>将启动脉冲跃迁。在飞行时长按<IMG>BOOST<>激活加速。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -7656,7 +7656,7 @@
         "Name": "伤害",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "100"
+        "Value": "120"
       },
       {
         "Name": "范围",
@@ -7674,7 +7674,7 @@
         "Name": "精度",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "accuracy",
-        "Value": "4"
+        "Value": "2.5"
       },
       {
         "Name": "创造离子球",
@@ -7744,7 +7744,13 @@
         "Name": "离子球速度",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
-        "Value": "40"
+        "Value": "50"
+      },
+      {
+        "Name": "充能速度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8517,7 +8523,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur1",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8623,7 +8629,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur81",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8799,9 +8805,9 @@
   {
     "Id": "tech237",
     "Icon": "technology/235.png",
-    "Name": "短路",
-    "Group": "受损的多用途工具部件",
-    "Description": "多用途工具子系统<FUEL>严重受损<>。\n\n栏位无法使用，直至损害得到修复。使用<IMG>REPAIR<>启动修复过程。\n\n修复将使栏位空出，以供一般用途使用。",
+    "Name": "智慧生命电阻器",
+    "Group": "残缺的护卫回收物",
+    "Description": "该多用途工具是一种混合技术，是粗糙废料与更深邃的强大能源之间的融合：一部分回收物，一部分护卫，还有一部分无法分辨的存在......\n\n但是获取该工具时，这种回收融合尚未<TECHNOLOGY>完成<>。使用<IMG>REPAIR<>继续修复流程并为其他功能腾出栏位。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8824,9 +8830,9 @@
   {
     "Id": "tech238",
     "Icon": "technology/232.png",
-    "Name": "爆炸的晶体管",
-    "Group": "受损的多用途工具部件",
-    "Description": "多用途工具子系统<FUEL>严重受损<>。\n\n栏位无法使用，直至损害得到修复。使用<IMG>REPAIR<>启动修复过程。\n\n修复将使栏位空出，以供一般用途使用。",
+    "Name": "不谐棱镜",
+    "Group": "残缺的护卫回收物",
+    "Description": "该多用途工具是一种混合技术，是粗糙废料与更深邃的强大能源之间的融合：一部分回收物，一部分护卫，还有一部分无法分辨的存在......\n\n但是获取该工具时，这种回收融合尚未<TECHNOLOGY>完成<>。使用<IMG>REPAIR<>继续修复流程并为其他功能腾出栏位。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8849,9 +8855,9 @@
   {
     "Id": "tech239",
     "Icon": "technology/234.png",
-    "Name": "受损的线路",
-    "Group": "受损的多用途工具部件",
-    "Description": "多用途工具子系统<FUEL>严重受损<>。\n\n栏位无法使用，直至损害得到修复。使用<IMG>REPAIR<>启动修复过程。\n\n修复将使栏位空出，以供一般用途使用。",
+    "Name": "腐化透镜",
+    "Group": "残缺的护卫回收物",
+    "Description": "该多用途工具是一种混合技术，是粗糙废料与更深邃的强大能源之间的融合：一部分回收物，一部分护卫，还有一部分无法分辨的存在......\n\n但是获取该工具时，这种回收融合尚未<TECHNOLOGY>完成<>。使用<IMG>REPAIR<>继续修复流程并为其他功能腾出栏位。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8878,9 +8884,9 @@
   {
     "Id": "tech240",
     "Icon": "technology/231.png",
-    "Name": "生锈的能量核心",
-    "Group": "受损的多用途工具部件",
-    "Description": "多用途工具子系统<FUEL>严重受损<>。\n\n栏位无法使用，直至损害得到修复。使用<IMG>REPAIR<>启动修复过程。\n\n修复将使栏位空出，以供一般用途使用。",
+    "Name": "干涸的能量核心",
+    "Group": "残缺的护卫回收物",
+    "Description": "该多用途工具是一种混合技术，是粗糙废料与更深邃的强大能源之间的融合：一部分回收物，一部分护卫，还有一部分无法分辨的存在......\n\n但是获取该工具时，这种回收融合尚未<TECHNOLOGY>完成<>。使用<IMG>REPAIR<>继续修复流程并为其他功能腾出栏位。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",

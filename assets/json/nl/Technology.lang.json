@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "Golfvormmotor",
     "Group": "Extra aangepaste ruimteschipmotor",
-    "Description": "Een opgevoerde versie van de conventionele <TECHNOLOGY>pulsmotor<> van het ruimteschip. De wavefront-bezetting is tot het uiterste afgesteld, waardoor de pulsmotor zowel <STELLAR>efficiënt<> als <STELLAR>zeer responsief<> functioneert.\n\nEr is <EXOTIC>tritium<> nodig om de motor op te laden. Tritium wordt veel aangetroffen in <COMMODITY>asteroïdenvelden in de buurt van planeten<> Scan (<IMG>SCAN<>) om te zoeken naar <TECHNOLOGY>tritiumrijke asteroïden<>.\n\nHou <IMG>PULSEJUMP<> ingedrukt om de pulssprong te activeren. Hou <IMG>BOOST<> ingedrukt voor een snelheidsboost tijdens de vlucht.",
+    "Description": "Een opgevoerde versie van de conventionele <TECHNOLOGY>pulsmotor<> van het ruimteschip. De wavefront-bezetting is tot het uiterste afgesteld, waardoor de pulsmotor zowel <STELLAR>efficiënt<> als <STELLAR>zeer responsief<> functioneert.\n\nEr is <EXOTIC>tritium<> nodig om de motor op te laden. Tritium wordt veel aangetroffen in <COMMODITY>asteroïdenvelden in de buurt van planeten<> Scan (<IMG>SHIPSCAN<>) om te zoeken naar <TECHNOLOGY>tritiumrijke asteroïden<>.\n\nHou <IMG>PULSEJUMP<> ingedrukt om de pulssprong te activeren. Hou <IMG>BOOST<> ingedrukt voor een snelheidsboost tijdens de vlucht.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -7656,7 +7656,7 @@
         "Name": "Schade",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "100"
+        "Value": "120"
       },
       {
         "Name": "Bereik",
@@ -7674,7 +7674,7 @@
         "Name": "Nauwkeurigheid",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "accuracy",
-        "Value": "4"
+        "Value": "2.5"
       },
       {
         "Name": "Gemaakte ionenbollen",
@@ -7744,7 +7744,13 @@
         "Name": "Snelheid ionenbol",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
-        "Value": "40"
+        "Value": "50"
+      },
+      {
+        "Name": "Oplaadsnelheid",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8517,7 +8523,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur1",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8623,7 +8629,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur81",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8761,7 +8767,7 @@
     "Icon": "technology/236.png",
     "Name": "Piloteninterface",
     "Group": "Glas-/grensterminal",
-    "Description": "Met dit apparaat apparaat kan het brein van een piloot <SPECIAL>communiceren<> met het brein van de Sentinel-interceptor, waardoor de piloot toegang krijgt tot het besturingssysteem en de externe sensoren van het schip.\n\nHet brein van de piloot moet verweven worden met het brein van het schip, omdat anders de kans bestaat dat de piloot wordt <FUEL>geweigerd<>/<SPECIAL>geconsumeerd<> door de rudimentaire cockpit van het schip.",
+    "Description": "Met dit apparaat kan het brein van een piloot <SPECIAL>communiceren<> met het brein van de Sentinel-interceptor, waardoor de piloot toegang krijgt tot het besturingssysteem en de externe sensoren van het schip.\n\nHet brein van de piloot moet verweven worden met het brein van het schip, omdat anders de kans bestaat dat de piloot wordt <FUEL>geweigerd<>/<SPECIAL>geconsumeerd<> door de rudimentaire cockpit van het schip.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -8799,9 +8805,9 @@
   {
     "Id": "tech237",
     "Icon": "technology/235.png",
-    "Name": "Kortsluiting",
-    "Group": "Beschadigd multitool-onderdeel",
-    "Description": "Subsysteem multitool <FUEL>heeft kritische schade opgelopen<>.\n\nVak kan niet worden gebruikt tot de schade is gerepareerd. Gebruik <IMG>REPAIR<> om te beginnen met repareren.\n\nReparatie maakt vak beschikbaar voor algemeen gebruik.",
+    "Name": "Bewustzijnsweerstand",
+    "Group": "Onvoltooide Sentinel-berging",
+    "Description": "Deze multitool is voorzien een hybride technologie, een samensmelting van ruw schroot en een diepe, krachtige energie. Het is deels berging, deels Sentinel en deels iets ondefinieerbaars...\n\nDit proces van gerecycleerde fusie was <TECHNOLOGY>nog niet klaar<> toen dit gereedschap werd verkregen. Gebruik <IMG>REPAIR<> om door te gaan met repareren en dit vak vrij te maken voor algemeen gebruik.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8824,9 +8830,9 @@
   {
     "Id": "tech238",
     "Icon": "technology/232.png",
-    "Name": "Opgeblazen transistor",
-    "Group": "Beschadigd multitool-onderdeel",
-    "Description": "Subsysteem multitool <FUEL>heeft kritische schade opgelopen<>.\n\nVak kan niet worden gebruikt tot de schade is gerepareerd. Gebruik <IMG>REPAIR<> om te beginnen met repareren.\n\nReparatie maakt vak beschikbaar voor algemeen gebruik.",
+    "Name": "Dissonant prisma",
+    "Group": "Onvoltooide Sentinel-berging",
+    "Description": "Deze multitool is voorzien een hybride technologie, een samensmelting van ruw schroot en een diepe, krachtige energie. Het is deels berging, deels Sentinel en deels iets ondefinieerbaars...\n\nDit proces van gerecycleerde fusie was <TECHNOLOGY>nog niet klaar<> toen dit gereedschap werd verkregen. Gebruik <IMG>REPAIR<> om door te gaan met repareren en dit vak vrij te maken voor algemeen gebruik.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8849,9 +8855,9 @@
   {
     "Id": "tech239",
     "Icon": "technology/234.png",
-    "Name": "Beschadigde bedrading",
-    "Group": "Beschadigd multitool-onderdeel",
-    "Description": "Subsysteem multitool <FUEL>heeft kritische schade opgelopen<>.\n\nVak kan niet worden gebruikt tot de schade is gerepareerd. Gebruik <IMG>REPAIR<> om te beginnen met repareren.\n\nReparatie maakt vak beschikbaar voor algemeen gebruik.",
+    "Name": "Beschadigde lens",
+    "Group": "Onvoltooide Sentinel-berging",
+    "Description": "Deze multitool is voorzien een hybride technologie, een samensmelting van ruw schroot en een diepe, krachtige energie. Het is deels berging, deels Sentinel en deels iets ondefinieerbaars...\n\nDit proces van gerecycleerde fusie was <TECHNOLOGY>nog niet klaar<> toen dit gereedschap werd verkregen. Gebruik <IMG>REPAIR<> om door te gaan met repareren en dit vak vrij te maken voor algemeen gebruik.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8878,9 +8884,9 @@
   {
     "Id": "tech240",
     "Icon": "technology/231.png",
-    "Name": "Verroeste energiekern",
-    "Group": "Beschadigd multitool-onderdeel",
-    "Description": "Subsysteem multitool <FUEL>heeft kritische schade opgelopen<>.\n\nVak kan niet worden gebruikt tot de schade is gerepareerd. Gebruik <IMG>REPAIR<> om te beginnen met repareren.\n\nReparatie maakt vak beschikbaar voor algemeen gebruik.",
+    "Name": "Lege energiekern",
+    "Group": "Onvoltooide Sentinel-berging",
+    "Description": "Deze multitool is voorzien een hybride technologie, een samensmelting van ruw schroot en een diepe, krachtige energie. Het is deels berging, deels Sentinel en deels iets ondefinieerbaars...\n\nDit proces van gerecycleerde fusie was <TECHNOLOGY>nog niet klaar<> toen dit gereedschap werd verkregen. Gebruik <IMG>REPAIR<> om door te gaan met repareren en dit vak vrij te maken voor algemeen gebruik.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",

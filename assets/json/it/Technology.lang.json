@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "Motore a onde",
     "Group": "Motore dell'astronave altamente personalizzato",
-    "Description": "Una versione migliorata del <TECHNOLOGY>motore a impulso<> delle astronavi tradizionali. La capacità del fronte d'onda è stata potenziata al massimo, creando una propulsione tanto <STELLAR>efficiente<> quanto <STELLAR>estremamente reattiva<>.\n\nPer ricaricare il motore è necessario del <EXOTIC>trizio<>, che abbonda nei <COMMODITY>campi di asteroidi vicino ai pianeti<>. Scansiona (<IMG>SCAN<>) per cercare <TECHNOLOGY>asteroidi ricchi di trizio<>.\n\nTieni premuto <IMG>PULSEJUMP<> per attivare il salto a impulso. Tieni premuto <IMG>BOOST<> per attivare il turbo durante il volo.",
+    "Description": "Una versione migliorata del <TECHNOLOGY>motore a impulso<> delle astronavi tradizionali. La capacità del fronte d'onda è stata potenziata al massimo, creando una propulsione <STELLAR>efficiente<> ed <STELLAR>estremamente reattiva<>.\n\nPer ricaricare il motore è necessario del <EXOTIC>trizio<>, che abbonda nei <COMMODITY>campi di asteroidi vicino ai pianeti<>. Scansiona (<IMG>SHIPSCAN<>) per cercare <TECHNOLOGY>asteroidi ricchi di trizio<>.\n\nTieni premuto <IMG>PULSEJUMP<> per attivare il salto a impulso. Tieni premuto <IMG>BOOST<> per attivare il turbo durante il volo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -7656,7 +7656,7 @@
         "Name": "Danni",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "100"
+        "Value": "120"
       },
       {
         "Name": "Gittata",
@@ -7674,7 +7674,7 @@
         "Name": "Precisione",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "accuracy",
-        "Value": "4"
+        "Value": "2.5"
       },
       {
         "Name": "Sfere ioniche create",
@@ -7744,7 +7744,13 @@
         "Name": "Velocità sfera ionica",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
-        "Value": "40"
+        "Value": "50"
+      },
+      {
+        "Name": "Velocità di carica",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8503,7 +8509,7 @@
     "Icon": "technology/231.png",
     "Name": "Pozzo antigravità",
     "Group": "Motore suborbitale Aeron",
-    "Description": "Sgancia dolcemente l'astronave dai campi gravitazionali, facendola librare tra le stelle.\n\nIl pozzo ha fame di <SPECIAL>panio<> o <SPECIAL>schegge radianti<> e dovrebbe essere alimentato a dovere prima del decollo.\n\nTieni premuto <IMG>THRUST<> per decollare dal pianeta. \nTieni premuto <IMG>BOOST<> per avviare il turbo in volo.",
+    "Description": "Sgancia dolcemente l'astronave dai campi gravitazionali, facendola librare tra le stelle.\n\nIl pozzo ha fame di <SPECIAL>pugneum<> o <SPECIAL>schegge radianti<> e dovrebbe essere alimentato a dovere prima del decollo.\n\nTieni premuto <IMG>THRUST<> per decollare dal pianeta. \nTieni premuto <IMG>BOOST<> per avviare il turbo in volo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -8517,7 +8523,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur1",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8623,7 +8629,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur81",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8799,9 +8805,9 @@
   {
     "Id": "tech237",
     "Icon": "technology/235.png",
-    "Name": "Cortocircuito",
-    "Group": "Componente multi-tool danneggiato",
-    "Description": "Sottosistema del multi-tool <FUEL>gravemente danneggiato<>.\n\nLo slot non può essere usato fino alla riparazione del danno. Usa <IMG>REPAIR<> per dare inizio alle riparazioni.\n\nLa riparazione libererà slot utilizzabili.",
+    "Name": "Resistore senziente",
+    "Group": "Recupero Sentinella incompleto",
+    "Description": "Questo multi-tool è un pezzo di tecnologia ibrida, una fusione di rottami grezzi e un'energia profonda e potente: in parte recupero, in parte Sentinella, in parte qualcosa di indefinibile...\n\nQuesto processo di fusione riciclata era <TECHNOLOGY>incompleto<> quando questo strumento è stato acquisito. Usa <IMG>REPAIR<> per continuare le operazioni di riparazione e liberare questo slot per uso generale.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8824,9 +8830,9 @@
   {
     "Id": "tech238",
     "Icon": "technology/232.png",
-    "Name": "Transistor bruciato",
-    "Group": "Componente multi-tool danneggiato",
-    "Description": "Sottosistema del multi-tool <FUEL>gravemente danneggiato<>.\n\nLo slot non può essere usato fino alla riparazione del danno. Usa <IMG>REPAIR<> per dare inizio alle riparazioni.\n\nLa riparazione libererà slot utilizzabili.",
+    "Name": "Prisma dissonante",
+    "Group": "Recupero Sentinella incompleto",
+    "Description": "Questo multi-tool è un pezzo di tecnologia ibrida, una fusione di rottami grezzi e un'energia profonda e potente: in parte recupero, in parte Sentinella, in parte qualcosa di indefinibile...\n\nQuesto processo di fusione riciclata era <TECHNOLOGY>incompleto<> quando questo strumento è stato acquisito. Usa <IMG>REPAIR<> per continuare le operazioni di riparazione e liberare questo slot per uso generale.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8849,9 +8855,9 @@
   {
     "Id": "tech239",
     "Icon": "technology/234.png",
-    "Name": "Cablaggio danneggiato",
-    "Group": "Componente multi-tool danneggiato",
-    "Description": "Sottosistema del multi-tool <FUEL>gravemente danneggiato<>.\n\nLo slot non può essere usato fino alla riparazione del danno. Usa <IMG>REPAIR<> per dare inizio alle riparazioni.\n\nLa riparazione libererà slot utilizzabili.",
+    "Name": "Lenti corrotte",
+    "Group": "Recupero Sentinella incompleto",
+    "Description": "Questo multi-tool è un pezzo di tecnologia ibrida, una fusione di rottami grezzi e un'energia profonda e potente: in parte recupero, in parte Sentinella, in parte qualcosa di indefinibile...\n\nQuesto processo di fusione riciclata era <TECHNOLOGY>incompleto<> quando questo strumento è stato acquisito. Usa <IMG>REPAIR<> per continuare le operazioni di riparazione e liberare questo slot per uso generale.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8878,9 +8884,9 @@
   {
     "Id": "tech240",
     "Icon": "technology/231.png",
-    "Name": "Nucleo energetico arrugginito",
-    "Group": "Componente multi-tool danneggiato",
-    "Description": "Sottosistema del multi-tool <FUEL>gravemente danneggiato<>.\n\nLo slot non può essere usato fino alla riparazione del danno. Usa <IMG>REPAIR<> per dare inizio alle riparazioni.\n\nLa riparazione libererà slot utilizzabili.",
+    "Name": "Nucleo energetico prosciugato",
+    "Group": "Recupero Sentinella incompleto",
+    "Description": "Questo multi-tool è un pezzo di tecnologia ibrida, una fusione di rottami grezzi e un'energia profonda e potente: in parte recupero, in parte Sentinella, in parte qualcosa di indefinibile...\n\nQuesto processo di fusione riciclata era <TECHNOLOGY>incompleto<> quando questo strumento è stato acquisito. Usa <IMG>REPAIR<> per continuare le operazioni di riparazione e liberare questo slot per uso generale.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",

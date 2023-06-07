@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "Motor de onda",
     "Group": "Motor de nave altamente modificado",
-    "Description": "Una versión altamente optimizada del <TECHNOLOGY>motor de pulso<> de las naves convencionales. La ocupación de onda se ha llevado al límite y crea una experiencia de pulso que es tan <STELLAR>eficiente<> como <STELLAR>receptiva<>.\n\nSe advierte al usuario de que se requiere <EXOTIC>tritio<> para cargar el motor. El tritio abunda en los <COMMODITY>campos de asteroides cercanos<>. Escanea (<IMG>SCAN<>) para buscar <TECHNOLOGY>asteroides ricos en tritio<>.\n\nMantén <IMG>PULSEJUMP<> para iniciar el salto de pulso. Mantén <IMG>BOOST<> para iniciar la potenciación de velocidad en vuelo.",
+    "Description": "Una versión altamente optimizada del <TECHNOLOGY>motor de pulso<> de las naves convencionales. La ocupación de onda se ha llevado al límite creando una experiencia de pulso <STELLAR>eficiente<> con <STELLAR>gran capacidad de respuesta<>.\n\nSe advierte al usuario de que se necesita <EXOTIC>tritio<> para cargar la unidad. Hay mucho tritio en los campos de <COMMODITY>asteroides cercanos al espacio<>. Escanea (<IMG>SHIPSCAN<>) para encontrar <TECHNOLOGY>asteroides ricos en tritios<>.\n\nMantén presionado <IMG>PULSEJUMP<> para activar el salto de pulso. Mantén presionado <IMG>BOOST<> para iniciar la potenciación de velocidad mientras vuelas.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -7656,7 +7656,7 @@
         "Name": "Daño",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "100"
+        "Value": "120"
       },
       {
         "Name": "Alcance",
@@ -7674,7 +7674,7 @@
         "Name": "Precisión",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "accuracy",
-        "Value": "4"
+        "Value": "2.5"
       },
       {
         "Name": "Esferas de iones creadas",
@@ -7744,7 +7744,13 @@
         "Name": "Velocidad de la esfera de iones",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
-        "Value": "40"
+        "Value": "50"
+      },
+      {
+        "Name": "Velocidad de carga",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8517,7 +8523,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur1",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8549,7 +8555,7 @@
     "Id": "tech232",
     "Icon": "technology/232.png",
     "Name": "Motor de luminancia",
-    "Group": "Propulsor de subluz reutilizado",
+    "Group": "Propulsor de Subluz Reutilizado",
     "Description": "Alinea las emisiones electromagnéticas de la nave con las ondas <FUEL>A T L A S<>, esto proporciona propulsión básica y capacidad de salto de pulso.\n \nLa unidad subluz ansía <EXOTIC>tritio<> o <SPECIAL>fragmentos radiantes<>.\n\nMantén presionado <IMG>PULSEJUMP<> para activar el salto de pulso.\nMantén presionado <IMG>BOOST<> para iniciar la potenciación de velocidad en el vuelo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -8607,9 +8613,9 @@
   {
     "Id": "tech233",
     "Icon": "technology/233.png",
-    "Name": "Núcleo carmesí",
+    "Name": "Núcleo Carmesí",
     "Group": "Propulsión interestelar Atlas",
-    "Description": "Un órgano óptico en bruto, rojo y sin parpadear. Suspendido sobre los motores de la nave, observa túneles en el espacio-tiempo lo que permite viajes superlumínicos entre sistemas estelares.\n\nDirige el núcleo hacia destinos remotos al usar el mapa galáctico.",
+    "Description": "Un órgano óptico en bruto, rojo y sin parpadear. Suspendido sobre los motores de la nave, observa túneles en el espacio-tiempo lo que permite viajes superlumínicos entre sistemas estelares.\n\nDirige el núcleo hacia destinos remotos al usar el Mapa Galáctico.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -8623,7 +8629,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur81",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8651,7 +8657,7 @@
     "Id": "tech234",
     "Icon": "technology/234.png",
     "Name": "Escudo Aeron",
-    "Group": "Barrera defensiva radiante",
+    "Group": "Barrera Defensiva Radiante",
     "Description": "Un capullo carmesí defensivo que oculta la forma física de la nave y la protege de colisiones y disparos láser.\n\nEl núcleo se repara automáticamente con el tiempo, pero puede reponerse rápidamente con <CATALYST>elementos catalíticos<> o <SPECIAL>fragmentos radiantes<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -8688,7 +8694,7 @@
     "Id": "tech235",
     "Icon": "technology/235.png",
     "Name": "Cañón Centinela",
-    "Group": "Cañón de nave Centinela",
+    "Group": "Cañón de Nave Centinela",
     "Description": "Sistema de armas de grado Centinela, diseñado con el único propósito de aniquilar a las naves rebeldes que violan las normas del sistema.\n\nPresiona <IMG>SHIPFIRE<> para usar la fuerza letal.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -8799,9 +8805,9 @@
   {
     "Id": "tech237",
     "Icon": "technology/235.png",
-    "Name": "Cortocircuito",
-    "Group": "Componente de multiherramienta dañado",
-    "Description": "Subsistema de multiherramienta <FUEL>con daños graves<>.\n\nEl espacio no se puede usar hasta que se reparen los daños. Usa <IMG>REPAIR<> para comenzar el proceso de reparación.\n\nReparar liberará espacio para uso general.",
+    "Name": "Resistencia de conciencia",
+    "Group": "Partes recuperadas Centinela incompletas",
+    "Description": "Esta multiherramienta es una pieza de tecnología híbrida, una fusión de chatarra primitiva y una energía profunda y poderosa, con partes recuperadas, partes de Centinela y partes de algo indescifrable...\n\nEste proceso de fusión reciclada estaba <TECHNOLOGY>incompleta<> cuando se adquirió esta herramienta. Usa <IMG>REPAIR<> para continuar con las operaciones de reparación y desocupa este espacio para uso general.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8824,9 +8830,9 @@
   {
     "Id": "tech238",
     "Icon": "technology/232.png",
-    "Name": "Transistor estropeado",
-    "Group": "Componente de multiherramienta dañado",
-    "Description": "Subsistema de multiherramienta <FUEL>con daños graves<>.\n\nEl espacio no se puede usar hasta que se reparen los daños. Usa <IMG>REPAIR<> para comenzar el proceso de reparación.\n\nReparar liberará espacio para uso general.",
+    "Name": "Prisma discordante",
+    "Group": "Partes recuperadas Centinela incompletas",
+    "Description": "Esta multiherramienta es una pieza de tecnología híbrida, una fusión de chatarra primitiva y una energía profunda y poderosa, con partes recuperadas, partes de Centinela y partes de algo indescifrable...\n\nEste proceso de fusión reciclada estaba <TECHNOLOGY>incompleta<> cuando se adquirió esta herramienta. Usa <IMG>REPAIR<> para continuar con las operaciones de reparación y desocupa este espacio para uso general.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8849,9 +8855,9 @@
   {
     "Id": "tech239",
     "Icon": "technology/234.png",
-    "Name": "Cableado dañado",
-    "Group": "Componente de multiherramienta dañado",
-    "Description": "Subsistema de multiherramienta <FUEL>con daños graves<>.\n\nEl espacio no se puede usar hasta que se reparen los daños. Usa <IMG>REPAIR<> para comenzar el proceso de reparación.\n\nReparar liberará espacio para uso general.",
+    "Name": " Lente corrupto",
+    "Group": "Partes recuperadas Centinela incompletas",
+    "Description": "Esta multiherramienta es una pieza de tecnología híbrida, una fusión de chatarra primitiva y una energía profunda y poderosa, con partes recuperadas, partes de Centinela y partes de algo indescifrable...\n\nEste proceso de fusión reciclada estaba <TECHNOLOGY>incompleta<> cuando se adquirió esta herramienta. Usa <IMG>REPAIR<> para continuar con las operaciones de reparación y desocupa este espacio para uso general.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8878,9 +8884,9 @@
   {
     "Id": "tech240",
     "Icon": "technology/231.png",
-    "Name": "Núcleo de energía oxidado",
-    "Group": "Componente de multiherramienta dañado",
-    "Description": "Subsistema de multiherramienta <FUEL>con daños graves<>.\n\nEl espacio no se puede usar hasta que se reparen los daños. Usa <IMG>REPAIR<> para comenzar el proceso de reparación.\n\nReparar liberará espacio para uso general.",
+    "Name": "Núcleo de energía drenado",
+    "Group": "Partes recuperadas Centinela incompletas",
+    "Description": "Esta multiherramienta es una pieza de tecnología híbrida, una fusión de chatarra primitiva y una energía profunda y poderosa, con partes recuperadas, partes de Centinela y partes de algo indescifrable...\n\nEste proceso de fusión reciclada estaba <TECHNOLOGY>incompleta<> cuando se adquirió esta herramienta. Usa <IMG>REPAIR<> para continuar con las operaciones de reparación y desocupa este espacio para uso general.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",

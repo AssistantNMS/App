@@ -5304,9 +5304,9 @@
   {
     "Id": "other328",
     "Icon": "other/328.png",
-    "Name": "Casque solaire",
-    "Group": "Casque à débloquer",
-    "Description": "Un <STELLAR>changement d'apparence de combinaison<> exclusif.\n\nRecouvert de voiles vespérales authentiques, ce casque d'aventurier crépite au gré des fréquences des vents solaires.\n\nTransformez l'apparence de votre combinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "Name": "Solar Helmet",
+    "Group": "Unlockable Helmet",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nAdorned with a mesh of genuine Vesper sail, this adventurer's helm crackles with the frequency of solar winds.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
@@ -5435,7 +5435,7 @@
   {
     "Id": "other334",
     "Icon": "other/52.png",
-    "Name": "Titre : 'Dignitaire d'Utopie'",
+    "Name": "Titre : « Dignitaire d'Utopie »",
     "Group": "Identification personnelle sur mesure",
     "Description": "Un <STELLAR>titre d'explorateur<> exclusif, commémorant l'accomplissement de l'expédition <STELLAR>Utopie<> et les contributions au projet d'habitation communautaire de la Fondation Utopie.\n\nAppliquez ce titre à votre bannière dans un <TECHNOLOGY>modificateur d'apparence<>.",
     "BaseValueUnits": 800.0,
@@ -5813,11 +5813,12 @@
     "Group": "Geste à débloquer",
     "Description": "Un geste exclusif.\n\nIl peut être sélectionné depuis le <VAL_ON>menu rapide<> pour générer un hologramme portable d'une adorable créature blob miniature.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5834,11 +5835,12 @@
     "Group": "Geste à débloquer",
     "Description": "Un geste exclusif.\n\nIl peut être sélectionné depuis le <VAL_ON>menu rapide<> pour générer un hologramme portable d'une frégate élégante et puissante.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5855,11 +5857,12 @@
     "Group": "Geste à débloquer",
     "Description": "Un geste exclusif.\n\nIl peut être sélectionné depuis le <VAL_ON>menu rapide<> pour générer un hologramme portable d'un vaisseau de combat classique.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5876,11 +5879,12 @@
     "Group": "Geste à débloquer",
     "Description": "Un geste exclusif.\n\nIl peut être sélectionné depuis le <VAL_ON>menu rapide<> pour générer un hologramme portable d'un pistolet multi-outil.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5897,11 +5901,12 @@
     "Group": "Geste à débloquer",
     "Description": "Un geste exclusif.\n\nIl peut être sélectionné depuis le <VAL_ON>menu rapide<> pour générer un hologramme portable d'un système solaire miniature.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -6007,6 +6012,719 @@
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
     "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other362",
+    "Icon": "other/362.png",
+    "Name": "Tête du Concept",
+    "Group": "Composant d'Autophage récupéré",
+    "Description": "La cage électronique et les capteurs de commande primaires d'un <TECHNOLOGY>automate primitif<>.\n\nLes plans de cette unité ont été extraits à partir d'un <STELLAR>autophage<> abandonné dans un campement de ferrailleurs.",
+    "BaseValueUnits": 9000.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other363",
+    "Icon": "other/363.png",
+    "Name": "Coquille du Concept",
+    "Group": "Composant d'Autophage récupéré",
+    "Description": "La carapace métallique principale d'un <TECHNOLOGY>automate primitif<>.\n\nLes plans de cette unité ont été extraits à partir d'un <STELLAR>autophage<> abandonné dans un campement de ferrailleurs.",
+    "BaseValueUnits": 17000.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 210
+      },
+      {
+        "Id": "prod23",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other364",
+    "Icon": "other/364.png",
+    "Name": "Membres du Concept",
+    "Group": "Composant d'Autophage récupéré",
+    "Description": "Un ensemble de tubes hydrauliques complexes et de surfaces préhensiles variées formant une paire de bras utilisables par un <TECHNOLOGY>automate primitif<>.\n\nLes plans de cette unité ont été extraits à partir d'un <STELLAR>autophage<> abandonné dans un campement de ferrailleurs.",
+    "BaseValueUnits": 4000.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod3",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other365",
+    "Icon": "other/365.png",
+    "Name": "Jambes du Concept",
+    "Group": "Composant d'Autophage récupéré",
+    "Description": "Une plateforme de déplacement bipède pour un <TECHNOLOGY>automate primitif<>.\n\nLes plans de cette unité ont été extraits à partir d'un <STELLAR>autophage<> abandonné dans un campement de ferrailleurs.",
+    "BaseValueUnits": 6000.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod57",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other366",
+    "Icon": "other/366.png",
+    "Name": "Réacteur de l'Atlantide",
+    "Group": "Composant d'Autophage récupéré",
+    "Description": "L'unité centrale du réacteur et la source primaire de combustible d'un <TECHNOLOGY>automate primitif<>.\n\nLes plans de cette unité ont été extraits à partir d'un <STELLAR>autophage<> abandonné dans un campement de ferrailleurs.",
+    "BaseValueUnits": 16000.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod2",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 75
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other367",
+    "Icon": "curiosities/13.png",
+    "Name": "Graine de rêves",
+    "Group": "Voix de l'Atlas muet",
+    "Description": "Une graine de création, une infime goutte de l'infinité de l'Atlas. Ce simple atome contient du bruit sans limites, chaque minuscule vibration les espoirs et les rêves de vies entières.\n\nUtilisez <VAL_ON><IMG>FE_ALT1<><> pour <SPECIAL>faire résonner<> la graine et convertir sa forme d'onde vers une plage audible.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Tenter une synchronisation harmonique"
+    ]
+  },
+  {
+    "Id": "other368",
+    "Icon": "curiosities/10.png",
+    "Name": "Graine de pouvoir",
+    "Group": "Voix de l'Atlas muet",
+    "Description": "Une graine de création, une infime goutte de l'infinité de l'Atlas. Une particule contenant une énergie indescriptible ; personne ne sait comment elle peut exister dans cette réalité.\n\nUtilisez <VAL_ON><IMG>FE_ALT1<><> pour <SPECIAL>faire résonner<> la graine et convertir sa forme d'onde vers une plage audible.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 100
+      },
+      {
+        "Id": "other367",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Tenter une synchronisation harmonique"
+    ]
+  },
+  {
+    "Id": "other369",
+    "Icon": "curiosities/9.png",
+    "Name": "Graine de volonté",
+    "Group": "Voix de l'Atlas muet",
+    "Description": "Une graine de création, une infime goutte de l'infinité de l'Atlas. Un éclair de lumière et de rage pures ; cette graine renferme le besoin irrépressible d'exister.\n\nUtilisez <VAL_ON><IMG>FE_ALT1<><> pour <SPECIAL>faire résonner<> la graine et convertir sa forme d'onde vers une plage audible.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw15",
+        "Quantity": 100
+      },
+      {
+        "Id": "other368",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Tenter une synchronisation harmonique"
+    ]
+  },
+  {
+    "Id": "other370",
+    "Icon": "curiosities/8.png",
+    "Name": "Graine de vie",
+    "Group": "Voix de l'Atlas muet",
+    "Description": "Une graine de création, une infime goutte de l'infinité de l'Atlas. Malgré sa taille minuscule, cette graine contient le potentiel d'un univers entier ; une étendue infinie et magnifique.\n\nUtilisez <VAL_ON><IMG>FE_ALT1<><> pour <SPECIAL>faire résonner<> la graine et convertir sa forme d'onde vers une plage audible.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 5
+      },
+      {
+        "Id": "other369",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Tenter une synchronisation harmonique"
+    ]
+  },
+  {
+    "Id": "other371",
+    "Icon": "curiosities/12.png",
+    "Name": "Graine d'espoir",
+    "Group": "Voix de l'Atlas muet",
+    "Description": "Une graine de création, une goutte d'infinité parfaite. Offert par l'Atlas, il s'agit d'un fragment minuscule de tous les rêves, de la volonté, du pouvoir et de la vie de l'univers ; un fragment des Voyageurs, un fragment de moi-même.\n\nUtilisez <VAL_ON><IMG>FE_ALT1<><> pour <SPECIAL>faire résonner<> la graine et convertir sa forme d'onde vers une plage audible.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 25
+      },
+      {
+        "Id": "other370",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Tenter une synchronisation harmonique"
+    ]
+  },
+  {
+    "Id": "other372",
+    "Icon": "other/372.png",
+    "Name": "Graine d'écho",
+    "Group": "Cage de conscience cristalline",
+    "Description": "La <TECHNOLOGY>graine<> est un écho de vie, les dernières réverbérations d'un être vivant.\n\nNada pense que planter cette graine au sein de son <STELLAR>primo-terminal<> peut permettre à sa simulation de développer sa propre convergence et d'apporter l'étincelle de la vie au <TECHNOLOGY>Concept<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other373",
+    "Icon": "other/373.png",
+    "Name": "Collectif d'échos",
+    "Group": "Boîtier de conscience",
+    "Description": "Un vortex mouvant d'<SPECIAL>atlantidéum<>, sensible à la volonté collective grandissante à l'intérieur du <STELLAR>primo-terminal<> de Nada. Seuil de conscience actuel : <STELLAR>100 %<>.\n\nLes grains oscillent selon une certaine logique, mais le message est inintelligible.",
+    "BaseValueUnits": 900.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other374",
+    "Icon": "other/328.png",
+    "Name": "Casque de bourlingueur",
+    "Group": "Casque à débloquer",
+    "Description": "Un <STELLAR>changement d'apparence de combinaison<> exclusif.\n\nMalgré son apparence aérodynamique et son look sophistiqué et solaire, il est déconseillé de se propulser uniquement à l'aide du casque. Pour plus de sécurité, assurez-vous que toutes les autres parties du corps subissent la même propulsion.\n\nTransformez l'apparence de votre combinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other375",
+    "Icon": "other/52.png",
+    "Name": "Titre : 'Le Concept'",
+    "Group": "Identification personnelle sur mesure",
+    "Description": "Un <STELLAR>titre d'explorateur<> exclusif, commémorant l'accomplissement de l'expédition du <STELLAR>Singularité<> et le forgeage du mystérieux Concept.\n\nAppliquez ce titre à votre bannière à un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other376",
+    "Icon": "other/376.png",
+    "Name": "Bannière Singularité",
+    "Group": "Identification personnelle sur mesure",
+    "Description": "Équipez cette <STELLAR>touche personnelle<> exclusive en commémoration de l'accomplissement de l'expédition <STELLAR>Singularité<> et du forgeage du mystérieux Concept.\n\nAppliquez cette bannière à votre profil dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other377",
+    "Icon": "other/377.png",
+    "Name": "Traînée discordante",
+    "Group": "Changement de l'échappement du jetpack",
+    "Description": "Un <STELLAR>changement d'apparence de combinaison<> exclusif.\n\nL'échappement du jetpack a été amélioré par un filtre en atlantidéum. Une fois activé, son effet discordant se répand sur le paysage en une traînée de réverbérations dissonantes qui se répercutent sur une fréquence incompréhensible.\n\nTransformez l'apparence de votre combinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other378",
+    "Icon": "other/378.png",
+    "Name": "Tête du Concept : Atlantide",
+    "Group": "Changement d'apparence personnalisée",
+    "Description": "Un <STELLAR>changement d'apparence de combinaison<> exclusif.\n\nLa cage électronique et les capteurs de commande primaires d'un <TECHNOLOGY>automate primitif<>. Les plans d'une unité de ce type ont été extraits à partir d'un <STELLAR>autophage<> abandonné dans un campement de ferrailleurs, avant d'être imprégné d'<SPECIAL>atlantidéum<>.\n\nTransformez l'apparence de votre combinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other379",
+    "Icon": "other/379.png",
+    "Name": "Tête du Concept : Pourpre",
+    "Group": "Changement d'apparence personnalisée",
+    "Description": "Un <STELLAR>changement d'apparence de combinaison<> exclusif.\n\nLa cage électronique et les capteurs de commande primaires d'un <TECHNOLOGY>automate primitif<>. Les plans d'une unité de ce type ont été extraits à partir d'un <STELLAR>autophage<> abandonné dans un campement de ferrailleurs, avant d'être imprégné d'une <FUEL>graine d'Atlas<>.\nTransformez l'apparence de votre combinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other380",
+    "Icon": "other/380.png",
+    "Name": "Mains du Concept",
+    "Group": "Gants à débloquer",
+    "Description": "Un <STELLAR>changement d'apparence de combinaison<> exclusif.\n\nUn ensemble de tubes hydrauliques complexes et de surfaces préhensiles variées formant une paire de bras utilisables par un <TECHNOLOGY>automate primitif<>. Les plans de cette unité ont été extraits à partir d'un <STELLAR>autophage<> abandonné dans un campement de ferrailleurs.\n\nTransformez l'apparence de votre combinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other381",
+    "Icon": "other/381.png",
+    "Name": "Poitrine du Concept",
+    "Group": "Personnalisation de torse à débloquer",
+    "Description": "Un <STELLAR>changement d'apparence de combinaison<> exclusif.\n\nLa carapace métallique principale d'un <TECHNOLOGY>automate primitif<>. Les plans d'une unité de ce type ont été extraits à partir d'un <STELLAR>autophage<> abandonné dans un campement de ferrailleurs.\n\nTransformez l'apparence de votre combinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 750.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other382",
+    "Icon": "other/382.png",
+    "Name": "Pieds du Concept",
+    "Group": "Bottes à débloquer",
+    "Description": "Un <STELLAR>changement d'apparence de combinaison<> exclusif.\n\nUne paire de pieds décharnés pour un <TECHNOLOGY>automate primitif<>. Les plans d'une unité de ce type ont été extraits à partir d'un <STELLAR>autophage<> abandonné dans un campement de ferrailleurs.\n\nTransformez l'apparence de votre combinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other383",
+    "Icon": "other/383.png",
+    "Name": "Jambes du Concept",
+    "Group": "Personnalisation de jambes à débloquer",
+    "Description": "Un <STELLAR>changement d'apparence de combinaison<> exclusif.\n\nUne plateforme de déplacement bipède pour un <TECHNOLOGY>automate primitif<>. Les plans d'une unité de ce type ont été extraits à partir d'un <STELLAR>autophage<> abandonné dans un campement de ferrailleurs.\n\nTransformez l'apparence de votre combinaison dans un <TECHNOLOGY>modificateur d'apparence<>.",
+    "BaseValueUnits": 750.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other384",
+    "Name": "",
+    "Group": "Changement de l'échappement du jetpack",
+    "Description": "",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other385",
+    "Name": "",
+    "Group": "Changement de l'échappement du jetpack",
+    "Description": "",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other386",
+    "Name": "",
+    "Group": "Changement de l'échappement du jetpack",
+    "Description": "",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other387",
+    "Name": "",
+    "Group": "Changement de l'échappement du jetpack",
+    "Description": "",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other388",
+    "Name": "",
+    "Group": "Changement de l'échappement du jetpack",
+    "Description": "",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other389",
+    "Name": "",
+    "Group": "Changement de l'échappement du jetpack",
+    "Description": "",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",

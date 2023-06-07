@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "波形引擎",
     "Group": "高度客製化太空船引擎",
-    "Description": "經高度調整的常規太空船<TECHNOLOGY>脈衝引擎<>。波陣面使用率已達到極限，可產生<STELLAR>高效率<>與<STELLAR>高響應<>的脈衝事件。\n\n提醒使用者，驅動器需使用<EXOTIC>氚<>充能。在<COMMODITY>近太空的小行星帶<>可以找到大量氚。掃描 (<IMG>SCAN<>) 即可找尋<TECHNOLOGY>富含氚的小行星<>。\n\n按住 <IMG>PULSEJUMP<> 發動脈衝跳躍。按住 <IMG>BOOST<> 啟動飛行加速功能。",
+    "Description": "經高度調整的常規太空船<TECHNOLOGY>脈衝引擎<>。波陣面使用率已達到極限，可產生<STELLAR>高效率<>與<STELLAR>高響應<>的脈衝事件。\n\n提醒使用者，驅動器需使用<EXOTIC>氚<>充能。<COMMODITY>近太空的小行星帶<>內有大量的氚。掃描 (<IMG>SHIPSCAN<>) 即可找尋<TECHNOLOGY>富含氚的小行星<>。\n\n按住 <IMG>PULSEJUMP<> 發動脈衝跳躍。按住 <IMG>BOOST<> 啟動飛行加速功能。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -7656,7 +7656,7 @@
         "Name": "傷害",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "100"
+        "Value": "120"
       },
       {
         "Name": "射程",
@@ -7674,7 +7674,7 @@
         "Name": "準確度",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "accuracy",
-        "Value": "4"
+        "Value": "2.5"
       },
       {
         "Name": "已創造離子球",
@@ -7744,7 +7744,13 @@
         "Name": "離子球速度",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
-        "Value": "40"
+        "Value": "50"
+      },
+      {
+        "Name": "充能速度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8517,7 +8523,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur1",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8623,7 +8629,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur81",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8799,9 +8805,9 @@
   {
     "Id": "tech237",
     "Icon": "technology/235.png",
-    "Name": "短迴路",
-    "Group": "受損工具組元件",
-    "Description": "工具組系統<FUEL>嚴重受損<>。\n\n損害修復前，欄位無法使用。使用 <IMG>REPAIR<> 開始進行修復。\n\n修復後欄位即可供一般使用。",
+    "Name": "智慧生物電阻器",
+    "Group": "不完整的巡警回收物",
+    "Description": "這個工具組是一種混合式科技的產物，結合了粗陋的廢料及深沉、強大的能量：一部分是回收物，一部分是巡警，一部分是某種無法辨識的東西......\n\n獲得此工具時，回收結合的過程<TECHNOLOGY>尚未執行完畢<>。使用 <IMG>REPAIR<> 繼續維修，清空此欄位供一般使用。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8824,9 +8830,9 @@
   {
     "Id": "tech238",
     "Icon": "technology/232.png",
-    "Name": "炸開的電晶體",
-    "Group": "受損工具組元件",
-    "Description": "工具組系統<FUEL>嚴重受損<>。\n\n損害修復前，欄位無法使用。使用 <IMG>REPAIR<> 開始進行修復。\n\n修復後欄位即可供一般使用。",
+    "Name": "不和諧稜鏡",
+    "Group": "不完整的巡警回收物",
+    "Description": "這個工具組是一種混合式科技的產物，結合了粗陋的廢料及深沉、強大的能量：一部分是回收物，一部分是巡警，一部分是某種無法辨識的東西......\n\n獲得此工具時，回收結合的過程<TECHNOLOGY>尚未執行完畢<>。使用 <IMG>REPAIR<> 繼續維修，清空此欄位供一般使用。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8849,9 +8855,9 @@
   {
     "Id": "tech239",
     "Icon": "technology/234.png",
-    "Name": "受損線路",
-    "Group": "受損工具組元件",
-    "Description": "工具組系統<FUEL>嚴重受損<>。\n\n損害修復前，欄位無法使用。使用 <IMG>REPAIR<> 開始進行修復。\n\n修復後欄位即可供一般使用。",
+    "Name": "受腐蝕的鏡片",
+    "Group": "不完整的巡警回收物",
+    "Description": "這個工具組是一種混合式科技的產物，結合了粗陋的廢料及深沉、強大的能量：一部分是回收物，一部分是巡警，一部分是某種無法辨識的東西......\n\n獲得此工具時，回收結合的過程<TECHNOLOGY>尚未執行完畢<>。使用 <IMG>REPAIR<> 繼續維修，清空此欄位供一般使用。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8878,9 +8884,9 @@
   {
     "Id": "tech240",
     "Icon": "technology/231.png",
-    "Name": "生鏽能量核心",
-    "Group": "受損工具組元件",
-    "Description": "工具組系統<FUEL>嚴重受損<>。\n\n損害修復前，欄位無法使用。使用 <IMG>REPAIR<> 開始進行修復。\n\n修復後欄位即可供一般使用。",
+    "Name": "被抽乾的能量核心",
+    "Group": "不完整的巡警回收物",
+    "Description": "這個工具組是一種混合式科技的產物，結合了粗陋的廢料及深沉、強大的能量：一部分是回收物，一部分是巡警，一部分是某種無法辨識的東西......\n\n獲得此工具時，回收結合的過程<TECHNOLOGY>尚未執行完畢<>。使用 <IMG>REPAIR<> 繼續維修，清空此欄位供一般使用。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",

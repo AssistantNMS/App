@@ -5304,9 +5304,9 @@
   {
     "Id": "other328",
     "Icon": "other/328.png",
-    "Name": "Solarhelm",
-    "Group": "Freischaltbarer Helm",
-    "Description": "Eine exklusive <STELLAR>Exo-Anzug-Aussehenüberschreibung<>.\n\nDieser Abenteurerhelm ist mit einem Netz aus echtem Vesper-Segel verziert und knistert in der Frequenz der Sonnenwinde.\n\nÄndere das Aussehen deines Exo-Anzugs an einem <TECHNOLOGY>Aussehenmodifikator<>.",
+    "Name": "Solar Helmet",
+    "Group": "Unlockable Helmet",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nAdorned with a mesh of genuine Vesper sail, this adventurer's helm crackles with the frequency of solar winds.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Nanites",
     "MaxStackSize": 5.0,
@@ -5813,11 +5813,12 @@
     "Group": "Freischaltbare Geste",
     "Description": "Eine exklusive Geste.\n\nSie kann im <VAL_ON>Schnellmenü<> ausgewählt werden, um ein Handheld-Hologramm einer niedlichen Mini-Kleckskreatur zu erzeugen.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5834,11 +5835,12 @@
     "Group": "Freischaltbare Geste",
     "Description": "Eine exklusive Geste.\n\nSie kann im <VAL_ON>Schnellmenü<> ausgewählt werden, um ein Handheld-Hologramm einer schnittigen und mächtigen Fregatte zu erzeugen.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5855,11 +5857,12 @@
     "Group": "Freischaltbare Geste",
     "Description": "Eine exklusive Geste.\n\nSie kann im <VAL_ON>Schnellmenü<> ausgewählt werden, um ein Handheld-Hologramm eines klassischen Raumjägers zu erzeugen.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5876,11 +5879,12 @@
     "Group": "Freischaltbare Geste",
     "Description": "Eine exklusive Geste.\n\nSie kann im <VAL_ON>Schnellmenü<> ausgewählt werden, um ein Handheld-Hologramm einer Multiwerkzeug-Pistole zu erzeugen.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -5897,11 +5901,12 @@
     "Group": "Freischaltbare Geste",
     "Description": "Eine exklusive Geste.\n\nSie kann im <VAL_ON>Schnellmenü<> ausgewählt werden, um ein Handheld-Hologramm eines Miniatur-Sonnensystems zu erzeugen.",
     "BaseValueUnits": 1500.0,
-    "CurrencyType": "Credits",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
     "Colour": "007951",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -6007,6 +6012,719 @@
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
     "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other362",
+    "Icon": "other/362.png",
+    "Name": "Konstrukt-Kopf",
+    "Group": "Autophagen-Komponente geborgen",
+    "Description": "Der Schaltkäfig und die primären Steuersensoren für einen <TECHNOLOGY>primitiven Automaten<>. \n\nDie Pläne für dieses Gerät stammen aus einem <STELLAR>Autophagen<>, der auf einem verlassenen Schrottplatz zurückgelassen wurde.",
+    "BaseValueUnits": 9000.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other363",
+    "Icon": "other/363.png",
+    "Name": "Konstrukt-Hülle",
+    "Group": "Autophagen-Komponente geborgen",
+    "Description": "Eine Hülle aus Metall für einen <TECHNOLOGY>primitiven Automaten<>.\n\nDie Pläne für dieses Gerät stammen aus einem <STELLAR>Autophagen<>, der auf einem verlassenen Schrottplatz zurückgelassen wurde.",
+    "BaseValueUnits": 17000.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 210
+      },
+      {
+        "Id": "prod23",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other364",
+    "Icon": "other/364.png",
+    "Name": "Konstrukt-Gliedmaßen",
+    "Group": "Autophagen-Komponente geborgen",
+    "Description": "Ein Satz komplexer hydraulischer Schläuche und verschiedener Greifflächen, die ein Paar brauchbarer Arme für einen <TECHNOLOGY>primitiven Automaten<> bilden.\n\nDie Pläne für diese Einheit wurden einem <STELLAR>Autophagen<> entnommen, der auf einem verlassenen Schrottplatz zurückgelassen wurde.",
+    "BaseValueUnits": 4000.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod3",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other365",
+    "Icon": "other/365.png",
+    "Name": "Konstrukt-Beine",
+    "Group": "Autophagen-Komponente geborgen",
+    "Description": "Eine zweibeinige Bewegungsplattform für einen <TECHNOLOGY>primitiven Automaten<>.\n\nDie Pläne für diese Einheit stammen aus einem <STELLAR>Autophagen<>, der auf einem verlassenen Schrottplatz zurückgelassen wurde.",
+    "BaseValueUnits": 6000.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod57",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other366",
+    "Icon": "other/366.png",
+    "Name": "Atlantid-Reaktor",
+    "Group": "Autophagen-Komponente geborgen",
+    "Description": "Die zentrale Reaktoreinheit und primäre Treibstoffquelle für einen <TECHNOLOGY>primitiven Automaten<>.\n\nDie Pläne für diese Einheit wurden einem <STELLAR>Autophagen<> entnommen, der auf einem verlassenen Schrottplatz zurückgelassen wurde.",
+    "BaseValueUnits": 16000.0,
+    "CurrencyType": "Credits",
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod2",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 75
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other367",
+    "Icon": "curiosities/13.png",
+    "Name": "Saat der Träume",
+    "Group": "Stimme des wortlosen Atlas",
+    "Description": "Ein Samen der Schöpfung, ein winziger Tropfen der Unendlichkeit des Atlas. Dieses bloße Atom enthält grenzenloses Rauschen, jede winzige Schwingung die Hoffnungen und Träume ganzer Leben.\n\nBenutze <VAL_ON><IMG>FE_ALT1<><>, um den Samen in <SPECIAL>Resonanz zu bringen<> und seine Wellenform in den hörbaren Bereich umzuwandeln.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Harmonische Synchronisation versuchen"
+    ]
+  },
+  {
+    "Id": "other368",
+    "Icon": "curiosities/10.png",
+    "Name": "Saat der Macht",
+    "Group": "Stimme des wortlosen Atlas",
+    "Description": "Ein Samen der Schöpfung, ein winziger Tropfen der Unendlichkeit des Atlas. Ein Partikel unbeschreiblicher Energie, von dem unklar ist, wie es in dieser Realität weiter existieren kann.\n\nBenutze <VAL_ON><IMG>FE_ALT1<><>, um den Samen <SPECIAL>in Resonanz zu bringen<> und seine Wellenform in den hörbaren Bereich umzuwandeln.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 100
+      },
+      {
+        "Id": "other367",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Harmonische Synchronisation versuchen"
+    ]
+  },
+  {
+    "Id": "other369",
+    "Icon": "curiosities/9.png",
+    "Name": "Saat des Willens",
+    "Group": "Stimme des wortlosen Atlas",
+    "Description": "Ein Samen der Schöpfung, ein winziger Tropfen der Unendlichkeit des Atlas. Ein Blitz aus reinem Licht und Wut: Dieser Samen enthält das ununterdrückbare Bedürfnis zu existieren.\n\nBenutze <VAL_ON><IMG>FE_ALT1<><>, um den Samen <SPECIAL>in Resonanz zu bringen<> und seine Wellenform in den hörbaren Bereich umzuwandeln.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw15",
+        "Quantity": 100
+      },
+      {
+        "Id": "other368",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Harmonische Synchronisation versuchen"
+    ]
+  },
+  {
+    "Id": "other370",
+    "Icon": "curiosities/8.png",
+    "Name": "Saat des Lebens",
+    "Group": "Stimme des wortlosen Atlas",
+    "Description": "Ein Samen der Schöpfung, ein winziger Tropfen der Unendlichkeit des Atlas. Obwohl er nur ein winziger Fleck ist, enthält er das Potenzial für ein ganzes Universum, eine grenzenlose, glorreiche Ausdehnung.\n\nBenutze <VAL_ON><IMG>FE_ALT1<><> um den Samen <SPECIAL>in Resonanz zu bringen<> und seine Wellenform in den hörbaren Bereich umzuwandeln.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasUsedToCraft",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 5
+      },
+      {
+        "Id": "other369",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Harmonische Synchronisation versuchen"
+    ]
+  },
+  {
+    "Id": "other371",
+    "Icon": "curiosities/12.png",
+    "Name": "Saat der Hoffnung",
+    "Group": "Stimme des wortlosen Atlas",
+    "Description": "Ein Samen der Schöpfung, ein perfekter Tropfen der Unendlichkeit. Ein Geschenk des Atlas, ein winziges Fragment aller Träume, des Willens, der Macht und des Lebens des Universums; ein Fragment der Reisenden; ein Fragment meiner selbst.\n\nBenutze <VAL_ON><IMG>FE_ALT1<><>, um <SPECIAL>den Samen in Resonanz zu bringen<> und seine Wellenform in den hörbaren Bereich umzuwandeln.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 25
+      },
+      {
+        "Id": "other370",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Harmonische Synchronisation versuchen"
+    ]
+  },
+  {
+    "Id": "other372",
+    "Icon": "other/372.png",
+    "Name": "Echosamen",
+    "Group": "Kristalliner Empfindungskäfig",
+    "Description": "Der <TECHNOLOGY>Samen<> ist ein Echo des Lebens, der letzte Nachhall eines Lebewesens.\n\nNada glaubt, dass das Einpflanzen dieses Samens in Nadas <STELLAR>Primus-Terminal<> der Simulation erlauben könnte, eine Konvergenz ihrer eigenen Art zu entwickeln und den Funken zu liefern, der das <TECHNOLOGY>Konstrukt<> zum Leben erweckt.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other373",
+    "Icon": "other/373.png",
+    "Name": "Echo-Kollektiv",
+    "Group": "Empfindungshülle",
+    "Description": "Ein sich verändernder Wirbel von <SPECIAL>Atlantideum<>, abgestimmt auf den stärker werdenden Willen des Kollektivs, der in Nadas <STELLAR>Primus-Terminal<> untergebracht ist. Aktuelle Empfindungsschwelle: <STELLAR>100 %<>.\n\nDie Körner schwingen in einem Muster, aber die Botschaft ist unverständlich.",
+    "BaseValueUnits": 900.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other374",
+    "Icon": "other/328.png",
+    "Name": "Helm des Wanderers",
+    "Group": "Freischaltbarer Helm",
+    "Description": "Eine exklusive <STELLAR>Exo-Anzug-Aussehenüberschreibung<>.\n\nTrotz seiner aerodynamischen Erscheinung und seines fortschrittlichen Solardesigns ist es nicht ratsam, sich ausschließlich auf den Helm-Antrieb zu verlassen. Für maximale Sicherheit solltest du sicherstellen, dass alle Körperteile gleichermaßen angetrieben werden.\n\nVerändere die Erscheinung deines Exo-Anzugs mit einem <TECHNOLOGY>Aussehenmodifikator<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other375",
+    "Icon": "other/52.png",
+    "Name": "Titel: „Das Konstrukt“",
+    "Group": "Individuelle persönliche Kennung",
+    "Description": "Ein exklusiver <STELLAR>Entdeckertitel<>, der an den Abschluss der Expedition <STELLAR>Singularität<> und das Schmieden des mysteriösen Konstrukts erinnern soll.\n\nFüge diesen Titel mit einem <TECHNOLOGY>Aussehenmodifikator<> zu deinem Banner hinzu.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other376",
+    "Icon": "other/376.png",
+    "Name": "Singularität-Banner",
+    "Group": "Individuelles persönliches Symbol",
+    "Description": "Rüste diesen exklusiven <STELLAR>persönlichen Flair<> aus, um an den Abschluss der Expedition <STELLAR>Singularität<> und das Schmieden des mysteriösen Konstrukts zu erinnern.\n\nFüge dieses Banner mit einem <TECHNOLOGY>Aussehenmodifikator<> zu deinem Profil hinzu.",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other377",
+    "Icon": "other/377.png",
+    "Name": "Disharmonische Spur",
+    "Group": "Jetpack-Auspuffüberschreibung",
+    "Description": "Eine exklusive <STELLAR>Exo-Anzug-Aussehenüberschreibung<>.\n\nDer Jetpack-Auspuff wurde mit einem Atlantideum-Filter aufgewertet. Wird er aktiviert, breitet sich sein disharmonischer Effekt über die Landschaft aus, eine Spur von dissonantem Nachhall, der auf einer unbestimmten Frequenz widerhallt.\n\nVerändere die Erscheinung deines Exo-Anzugs mit einem <TECHNOLOGY>Aussehenmodifikator<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other378",
+    "Icon": "other/378.png",
+    "Name": "Konstrukt-Kopf: Atlantid",
+    "Group": "„Angepasstes Aussehen“-Überschreibung",
+    "Description": "Eine exklusive <STELLAR>Exo-Anzug-Aussehenüberschreibung<>.\n\nDer Schaltkäfig und die primären Steuersensoren für einen <TECHNOLOGY>primitiven Automaten<>. Die Pläne für eine Einheit dieses Designs wurden aus einem <STELLAR>Autophagen<> entnommen, der in einem verlassenen Schrottplatzlager zurückgelassen wurde, bevor er mit <SPECIAL>Atlantideum<> erfüllt wurde.\n\nÄndere die Erscheinung deines Exo-Anzugs an einem <TECHNOLOGY>Aussehenmodifikator<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other379",
+    "Icon": "other/379.png",
+    "Name": "Konstrukt-Kopf: Karmesinrot",
+    "Group": "„Angepasstes Aussehen“-Überschreibung",
+    "Description": "Eine exklusive <STELLAR>Exo-Anzug-Aussehenüberschreibung<>.\n\nDer Schaltkäfig und die primären Steuersensoren für einen <TECHNOLOGY>primitiven Automaten<>. Die Pläne für eine Einheit dieses Designs wurden aus einem <STELLAR>Autophagen<> entnommen, der in einem verlassenen Schrottplatzlager zurückgelassen wurde, bevor er mit einem <FUEL>Atlas-Samen<> erfüllt wurde.\nÄndere die Erscheinung deines Exo-Anzugs an einem <TECHNOLOGY>Aussehenmodifikator<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other380",
+    "Icon": "other/380.png",
+    "Name": "Konstrukt-Hände",
+    "Group": "Freischaltbare Handschuhe",
+    "Description": "Eine exklusive <STELLAR>Exo-Anzug-Aussehenüberschreibung<>.\n\nEin Satz komplexer hydraulischer Schläuche und verschiedener Greifflächen, die ein Paar brauchbarer Arme für einen <TECHNOLOGY>primitiven Automaten<> bilden. Die Pläne für dieses Design wurden einem <STELLAR>Autophagen<> entnommen, der auf einem verlassenen Schrottplatz zurückgelassen wurde.\n\nVerändere die Erscheinung deines Exo-Anzugs mit einem <TECHNOLOGY>Aussehenmodifikator<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other381",
+    "Icon": "other/381.png",
+    "Name": "Konstrukt-Rumpf",
+    "Group": "Freischaltbare Torso-Anpassung",
+    "Description": "Eine exklusive <STELLAR>Exo-Anzug-Aussehenüberschreibung<>.\n\nDie metallische Haupthülle für einen <TECHNOLOGY>primitiven Automaten<>. Die Pläne für eine Einheit dieses Designs wurden einem <STELLAR>Autophagen<> entnommen, der in einem verlassenen Schrottplatzlager zurückgelassen wurde.\n\nÄndere die Erscheinung deines Exo-Anzugs an einem <TECHNOLOGY>Aussehenmodifikator<>.",
+    "BaseValueUnits": 750.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other382",
+    "Icon": "other/382.png",
+    "Name": "Konstrukt-Füße",
+    "Group": "Freischaltbare Stiefel",
+    "Description": "Eine exklusive <STELLAR>Exo-Anzug-Aussehenüberschreibung<>.\n\nEin Paar fleischlose Füße für einen <TECHNOLOGY>primitiven Automaten<>. Die Pläne für eine Einheit dieses Designs wurden einen <STELLAR>Autophagen<> entnommen, der in einem verlassenen Schrottplatzlager zurückgelassen wurde.\n\nÄndere die Erscheinung deines Exo-Anzugs an einem <TECHNOLOGY>Aussehenmodifikator<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other383",
+    "Icon": "other/383.png",
+    "Name": "Konstrukt-Beine",
+    "Group": "Freischaltbare Bein-Anpassung",
+    "Description": "Eine exklusive <STELLAR>Exo-Anzug-Aussehenüberschreibung<>.\n\nEine zweibeinige Bewegungsplattform für einen <TECHNOLOGY>primitiven Automaten<>. Die Pläne für eine Einheit dieses Designs wurden einem <STELLAR>Autophagen<> entnommen, der in einem verlassenen Schrottplatzlager zurückgelassen wurde.\n\nÄndere die Erscheinung deines Exo-Anzugs an einem <TECHNOLOGY>Aussehenmodifikator<>.",
+    "BaseValueUnits": 750.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other384",
+    "Name": "",
+    "Group": "Jetpack-Auspuffüberschreibung",
+    "Description": "",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other385",
+    "Name": "",
+    "Group": "Jetpack-Auspuffüberschreibung",
+    "Description": "",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other386",
+    "Name": "",
+    "Group": "Jetpack-Auspuffüberschreibung",
+    "Description": "",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other387",
+    "Name": "",
+    "Group": "Jetpack-Auspuffüberschreibung",
+    "Description": "",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other388",
+    "Name": "",
+    "Group": "Jetpack-Auspuffüberschreibung",
+    "Description": "",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other389",
+    "Name": "",
+    "Group": "Jetpack-Auspuffüberschreibung",
+    "Description": "",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",

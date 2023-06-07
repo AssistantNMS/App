@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "파형 엔진",
     "Group": "최고급 개조 함선 엔진",
-    "Description": "일반적인 함선에 사용할 수 있는 최고급 사양 <TECHNOLOGY>펄스 엔진<>입니다. 파면 사용량을 극한까지 끌어올려 <STELLAR>효율적<>이고 <STELLAR>반응성이 좋은<> 펄스 엔진 성능을 보입니다.\n\n충전 시에는 <EXOTIC>삼중 수소<>를 사용하기를 추천합니다. 삼중 수소는 <COMMODITY>가까운 우주의 소행성대<>에 풍족합니다. 스캔(<IMG>SCAN)<>으로 <TECHNOLOGY>삼중 수소가 풍부한 소행성<>을 탐색할 수 있습니다.\n\n<IMG>PULSEJUMP<>을 동시에 길게 눌러 펄스 점프를 개시합니다. <IMG>BOOST<>을 길게 눌러 비행 시 속도 부스트를 사용합니다.",
+    "Description": "일반적인 함선에 사용할 수 있는 최고급 사양 <TECHNOLOGY>펄스 엔진<>입니다. 파면 사용량을 극한까지 끌어올려 <STELLAR>효율적<>이고 <STELLAR>반응성이 좋은<> 펄스 엔진 성능을 보입니다.\n\n충전 시에는 <EXOTIC>삼중 수소<>를 사용하기를 추천합니다. 삼중 수소는 <COMMODITY>가까운 우주의 소행성대<>에 풍족합니다. 스캔(<IMG>SHIPSCAN)<>으로 <TECHNOLOGY>삼중 수소가 풍부한 소행성<>을 탐색할 수 있습니다.\n\n<IMG>PULSEJUMP<>를 동시에 길게 눌러 펄스 점프를 개시합니다. <IMG>BOOST<>를 길게 눌러 비행 시 속도 부스트를 사용합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -7656,7 +7656,7 @@
         "Name": "위력",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "damage",
-        "Value": "100"
+        "Value": "120"
       },
       {
         "Name": "사정거리",
@@ -7674,7 +7674,7 @@
         "Name": "정확도",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "accuracy",
-        "Value": "4"
+        "Value": "2.5"
       },
       {
         "Name": "이온 구체 생성됨",
@@ -7744,7 +7744,13 @@
         "Name": "이온 구체 속도",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "recovery",
-        "Value": "40"
+        "Value": "50"
+      },
+      {
+        "Name": "충전 속도",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "-10"
       }
     ],
     "ConsumableRewardTexts": []
@@ -8517,7 +8523,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur1",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8623,7 +8629,7 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur81",
+        "Id": "cur97",
         "Quantity": 1
       },
       {
@@ -8799,9 +8805,9 @@
   {
     "Id": "tech237",
     "Icon": "technology/235.png",
-    "Name": "짧은 회로",
-    "Group": "파손된 멀티툴 부품",
-    "Description": "멀티툴 서브시스템에 <FUEL>치명적인 손상<>이 발생했습니다.\n\n피해를 수리할 때까지 슬롯을 사용할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "Name": "지성체 레지스터",
+    "Group": "노획한 미완성 센티널",
+    "Description": "이 멀티툴은 조잡한 고철과 심오하고 강력한 에너지가 합쳐진 하이브리드 기술의 결과물입니다. 일부는 노획물, 일부는 센티널이며, 나머지는 정의할 수 없는 것들로 이루어져 있습니다...\n\n이러한 재활용 융합 프로세스는 이 도구를 획득한 시점에는 <TECHNOLOGY>미완성<>이었습니다. <IMG>REPAIR<>로 수리 작업을 계속하여 이 슬롯을 일반 용도로 사용 가능하게 만드십시오.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8824,9 +8830,9 @@
   {
     "Id": "tech238",
     "Icon": "technology/232.png",
-    "Name": "폭발한 트랜지스터",
-    "Group": "파손된 멀티툴 부품",
-    "Description": "멀티툴 서브시스템에 <FUEL>치명적인 손상<>이 발생했습니다.\n\n피해를 수리할 때까지 슬롯을 사용할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "Name": "부조화 프리즘",
+    "Group": "노획한 미완성 센티널",
+    "Description": "이 멀티툴은 조잡한 고철과 심오하고 강력한 에너지가 합쳐진 하이브리드 기술의 결과물입니다. 일부는 노획물, 일부는 센티널이며, 나머지는 정의할 수 없는 것들로 이루어져 있습니다...\n\n이러한 재활용 융합 프로세스는 이 도구를 획득한 시점에는 <TECHNOLOGY>미완성<>이었습니다. <IMG>REPAIR<>로 수리 작업을 계속하여 이 슬롯을 일반 용도로 사용 가능하게 만드십시오.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8849,9 +8855,9 @@
   {
     "Id": "tech239",
     "Icon": "technology/234.png",
-    "Name": "파손된 배선",
-    "Group": "파손된 멀티툴 부품",
-    "Description": "멀티툴 서브시스템에 <FUEL>치명적인 손상<>이 발생했습니다.\n\n피해를 수리할 때까지 슬롯을 사용할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "Name": "오염된 렌즈",
+    "Group": "노획한 미완성 센티널",
+    "Description": "이 멀티툴은 조잡한 고철과 심오하고 강력한 에너지가 합쳐진 하이브리드 기술의 결과물입니다. 일부는 노획물, 일부는 센티널이며, 나머지는 정의할 수 없는 것들로 이루어져 있습니다...\n\n이러한 재활용 융합 프로세스는 이 도구를 획득한 시점에는 <TECHNOLOGY>미완성<>이었습니다. <IMG>REPAIR<>로 수리 작업을 계속하여 이 슬롯을 일반 용도로 사용 가능하게 만드십시오.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
@@ -8878,9 +8884,9 @@
   {
     "Id": "tech240",
     "Icon": "technology/231.png",
-    "Name": "녹슨 동력 코어",
-    "Group": "파손된 멀티툴 부품",
-    "Description": "멀티툴 서브시스템에 <FUEL>치명적인 손상<>이 발생했습니다.\n\n피해를 수리할 때까지 슬롯을 사용할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "Name": "고갈된 동력 코어",
+    "Group": "노획한 미완성 센티널",
+    "Description": "이 멀티툴은 조잡한 고철과 심오하고 강력한 에너지가 합쳐진 하이브리드 기술의 결과물입니다. 일부는 노획물, 일부는 센티널이며, 나머지는 정의할 수 없는 것들로 이루어져 있습니다...\n\n이러한 재활용 융합 프로세스는 이 도구를 획득한 시점에는 <TECHNOLOGY>미완성<>이었습니다. <IMG>REPAIR<>로 수리 작업을 계속하여 이 슬롯을 일반 용도로 사용 가능하게 만드십시오.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "7B0000",
