@@ -405,6 +405,12 @@ Future<ResultWithValue<List<GenericPageItem>>> getAllFromLocaleKeys(
       }
       return 1;
     }
+    if (a.name.isNotEmpty && a.name[0] == '?') {
+      if (b.name.isNotEmpty && b.name[0] == '?') {
+        return b.name.compareTo(a.name);
+      }
+      return 1;
+    }
     return a.name.compareTo(b.name);
   });
 
