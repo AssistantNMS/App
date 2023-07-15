@@ -162,7 +162,10 @@ class GenericPage extends StatelessWidget {
     // ----------------------------- Crafted using -----------------------------
     Widget Function(BuildContext context, RequiredItem requiredItem,
             {void Function()? onTap}) requiredItemsFunction =
-        requiredItemBackgroundTilePresenter(vm.displayGenericItemColour);
+        requiredItemBackgroundTilePresenter(
+      vm.displayGenericItemColour,
+      itemDetails?.craftingOutputAmount ?? 0,
+    );
     widgets.addAll(getCraftedUsing(
       bodyCtx,
       vm.displayGenericItemColour,

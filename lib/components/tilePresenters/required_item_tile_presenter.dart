@@ -15,16 +15,18 @@ import 'generic_tile_presenter.dart';
 
 Widget Function(BuildContext context, RequiredItem requiredItem,
     {void Function()? onTap}) requiredItemBackgroundTilePresenter(
-  bool showBackgroundColours, {
+  bool showBackgroundColours,
+  int outputAmount, {
   void Function()? onEdit,
   void Function()? onDelete,
 }) =>
     (BuildContext context, RequiredItem requiredItem,
-            {void Function()? onTap}) =>
+            {int? quantity, void Function()? onTap}) =>
         requiredItemTilePresenter(
           context,
           requiredItem,
           showBackgroundColours: showBackgroundColours,
+          outputAmount: outputAmount,
           onEdit: onEdit,
           onDelete: onDelete,
           onTap: onTap,
@@ -33,6 +35,7 @@ Widget Function(BuildContext context, RequiredItem requiredItem,
 Widget requiredItemTilePresenter(
   BuildContext context,
   RequiredItem requiredItem, {
+  int? outputAmount,
   void Function()? onTap,
   void Function()? onEdit,
   void Function()? onDelete,
@@ -47,6 +50,7 @@ Widget requiredItemTilePresenter(
         context,
         requiredItem,
         showBackgroundColours,
+        outputAmount,
         onEdit,
         onDelete,
         data,
@@ -60,6 +64,7 @@ Widget requiredItemBody(
   BuildContext context,
   RequiredItem requiredItem,
   bool showBackgroundColours,
+  int? outputAmount,
   void Function()? onEdit,
   void Function()? onDelete,
   ResultWithValue<RequiredItemDetails> snapshot,
@@ -70,6 +75,12 @@ Widget requiredItemBody(
   String? tileDescrip;
   RequiredItemDetails details = snapshot.value;
 
+  Widget? trailingWidget = popupMenu(
+    context,
+    onEdit: onEdit,
+    onDelete: onDelete,
+  );
+
   if (requiredItem is ProcessorRequiredItem) {
     icon = (requiredItem.processor.id.contains('nut'))
         ? AppImage.nutrientProcessor
@@ -78,6 +89,10 @@ Widget requiredItemBody(
   } else {
     icon = details.icon;
     navigate = (context) => GenericPage(details.id);
+  }
+
+  if (trailingWidget == null && outputAmount != null && outputAmount > 1) {
+    trailingWidget = Text('x $outputAmount');
   }
 
   return genericListTile(
@@ -93,11 +108,7 @@ Widget requiredItemBody(
               context,
               navigateTo: navigate,
             ),
-    trailing: popupMenu(
-      context,
-      onEdit: onEdit,
-      onDelete: onDelete,
-    ),
+    trailing: trailingWidget,
   );
 }
 

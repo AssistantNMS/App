@@ -281,11 +281,10 @@ List<Widget> getCraftedUsing(
     GenericPageItem genericItem,
     List<RequiredItem> resArray,
     Widget Function(
-  BuildContext context,
-  RequiredItem requiredItem, {
-  void Function()? onTap,
-})
-        requiredItemsPresenter) {
+      BuildContext context,
+      RequiredItem requiredItem, {
+      void Function()? onTap,
+    }) requiredItemsPresenter) {
   List<Widget> craftedUsing = List.empty(growable: true);
   if (resArray.isNotEmpty) {
     craftedUsing.add(const EmptySpace3x());
@@ -330,11 +329,10 @@ List<Widget> getUsedToCreate(
     GenericPageItem genericItem,
     Future<List<GenericPageItem>> Function() usedToCreateArrayFuture,
     Widget Function(
-  BuildContext context,
-  RequiredItemDetails requiredItemDetails, {
-  void Function()? onTap,
-})
-        requiredItemDetailsPresenter) {
+      BuildContext context,
+      RequiredItemDetails requiredItemDetails, {
+      void Function()? onTap,
+    }) requiredItemDetailsPresenter) {
   List<Widget> usedToCreate = List.empty(growable: true);
 
   List<GenericPageItem> usedToCreateArray =
@@ -451,11 +449,10 @@ List<Widget> getRechargeWith(
     List<ChargeBy> rechargeItems,
     Future<List<ChargeBy>> Function() rechargeItemsFuture,
     Widget Function(
-  BuildContext context,
-  ChargeBy chargeByItem, {
-  void Function()? onTap,
-})
-        chargeByItemPresenter) {
+      BuildContext context,
+      ChargeBy chargeByItem, {
+      void Function()? onTap,
+    }) chargeByItemPresenter) {
   List<Widget> rechargeWidgets = List.empty(growable: true);
   if (rechargeItems.isNotEmpty) {
     rechargeWidgets.add(const EmptySpace3x());
@@ -485,11 +482,10 @@ List<Widget> getUsedToRecharge(
     List<Recharge> rechargeItems,
     Future<List<Recharge>> Function() rechargeItemsFuture,
     Widget Function(
-  BuildContext context,
-  Recharge rechargeItem, {
-  void Function()? onTap,
-})
-        usedToRechargeItemPresenter) {
+      BuildContext context,
+      Recharge rechargeItem, {
+      void Function()? onTap,
+    }) usedToRechargeItemPresenter) {
   List<Widget> rechargeWidgets = List.empty(growable: true);
   if (rechargeItems.isNotEmpty) {
     rechargeWidgets.add(const EmptySpace3x());
