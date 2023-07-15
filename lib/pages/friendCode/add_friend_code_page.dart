@@ -135,9 +135,15 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
     ));
 
     if (isSwitch) {
+      widgets.add(const EmptySpace3x());
       widgets.add(Padding(
         padding: textEditingPadding,
-        child: const Center(child: Text('Not available yet')),
+        child: const Center(
+          child: Text(
+            'Not available yet',
+            style: TextStyle(fontSize: 24),
+          ),
+        ),
       ));
     } else {
       widgets.add(Padding(
