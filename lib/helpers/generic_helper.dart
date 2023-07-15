@@ -206,7 +206,8 @@ Widget viewMoreButton(context, int numLeftOver, viewMoreOnPress) {
 Widget? getFloatingActionButtonFromSnapshot(
   BuildContext context,
   TextEditingController controller,
-  AsyncSnapshot<ResultWithValue<GenericPageItem>> snapshot, {
+  AsyncSnapshot<ResultWithValue<GenericPageItem>> snapshot,
+  bool canBeCooked, {
   void Function(GenericPageItem item, int quantity)? addToCart,
 }) {
   switch (snapshot.connectionState) {
@@ -236,6 +237,7 @@ Widget? getFloatingActionButtonFromSnapshot(
     context,
     controller,
     snapshot.data!.value,
+    canBeCooked,
     addToCart: addToCart,
   );
 }
@@ -243,7 +245,8 @@ Widget? getFloatingActionButtonFromSnapshot(
 Widget? getFloatingActionButton(
   BuildContext context,
   TextEditingController controller,
-  GenericPageItem genericItem, {
+  GenericPageItem genericItem,
+  bool canBeCooked, {
   void Function(GenericPageItem item, int quantity)? addToCart,
 }) {
   if (genericItem.description == null ||
@@ -256,7 +259,8 @@ Widget? getFloatingActionButton(
 
   List<SpeedDialChild> fabs = List.empty(growable: true);
   fabs.add(inventorySpeedDial(context, genericItem));
-  if (!genericItem.id.contains(IdPrefix.cooking) && addToCart != null) {
+  bool isCookingItem = genericItem.id.contains(IdPrefix.cooking);
+  if ((isCookingItem == false || canBeCooked == false) && addToCart != null) {
     fabs.add(cartFloatingActionButton(
       context,
       controller,

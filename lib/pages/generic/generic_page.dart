@@ -82,9 +82,11 @@ class GenericPage extends StatelessWidget {
     GenericPageViewModel viewModel,
     ResultWithValue<GenericPageItem> snapshot,
   ) {
+    GenericPageItem genericItem = snapshot.value;
+    bool canBeCooked = (genericItem.cooking ?? List.empty()).isNotEmpty;
     return genericPageScaffold<ResultWithValue<GenericPageItem>>(
       doneLoadingCtx,
-      snapshot.value.typeName,
+      genericItem.typeName,
       const AsyncSnapshot.nothing(), // unused
       body: (BuildContext scaffoldCtx, unused) {
         List<Widget> widgets = getBody(
@@ -109,7 +111,6 @@ class GenericPage extends StatelessWidget {
           ),
           text: getTranslations().fromKey(LocaleKey.share),
           onPressed: () {
-            GenericPageItem genericItem = snapshot.value;
             adaptiveBottomModalSheet(
               doneLoadingCtx,
               hasRoundedCorners: true,
@@ -124,7 +125,8 @@ class GenericPage extends StatelessWidget {
       floatingActionButton: getFloatingActionButton(
         doneLoadingCtx,
         controller,
-        snapshot.value,
+        genericItem,
+        canBeCooked,
         addToCart: viewModel.addToCart,
       ),
     );
