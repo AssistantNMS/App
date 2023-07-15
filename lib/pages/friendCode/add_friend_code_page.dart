@@ -17,6 +17,7 @@ const String pc = 'PC';
 const String ps4 = 'PS';
 const String xb1 = 'XB';
 const String nsw = 'SW';
+const String defaultFriendCodeMask = '@@@@-@@@@-@@@@@';
 
 class AddFriendCodePage extends StatefulWidget {
   const AddFriendCodePage({Key? key}) : super(key: key);
@@ -27,10 +28,13 @@ class AddFriendCodePage extends StatefulWidget {
 
 class _AddFriendCodeState extends State<AddFriendCodePage> {
   late AddFriendCodeViewModel friendCodeVm;
-  late TextEditingController _nameController;
-  late TextEditingController _emailController;
-  late TextEditingController _codeController;
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
   late Map<String, bool Function()> _validationMap;
+  TextEditingController _codeController = maskedTextController(
+    mask: defaultFriendCodeMask,
+    defaultText: '',
+  );
   bool _showValidation = false;
   bool _isLoading = false;
 
@@ -45,8 +49,6 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
   void initState() {
     super.initState();
     friendCodeVm = AddFriendCodeViewModel.initial()..languageCode = 'en';
-    _nameController = TextEditingController();
-    _emailController = TextEditingController();
     _validationMap = {
       'name': () => nameValidator(_nameController.text, minLength: 1),
       'email': () => emailValidator(_emailController.text),
@@ -60,17 +62,17 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
   }
 
   setCodeValidator(bool isSwitch) {
-    String friendCodeMask = '@@@@-@@@@-@@@@@';
+    String friendCodeMask = '';
     String text = _codeController.text;
-    // if (isSwitch) {
-    //   friendCodeMask = '@@-@@@@-@@@@-@@@@';
-    //   _validationMap['code'] = () => switchFriendCodeValidator(text);
-    // } else {
-    friendCodeMask = '@@@@-@@@@-@@@@@';
-    _validationMap['code'] = () => friendCodeValidator(text);
-    // }
+    if (isSwitch) {
+      friendCodeMask = '@@-@@@@-@@@@-@@@@';
+      _validationMap['code'] = () => switchFriendCodeValidator(text);
+    } else {
+      friendCodeMask = defaultFriendCodeMask;
+      _validationMap['code'] = () => friendCodeValidator(text);
+    }
 
-    if ((_codeController as dynamic).mask != friendCodeMask) {
+    if (((_codeController as dynamic)?.mask ?? '') != friendCodeMask) {
       getLog().i(friendCodeMask);
       _codeController = maskedTextController(
         mask: friendCodeMask,
@@ -78,7 +80,7 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
         afterChange: (String prev, String next) {
           _codeController.text = next.toUpperCase();
           _codeController.selection = TextSelection.collapsed(
-            offset: _codeController.text.length,
+            offset: prev.length,
           );
         },
       );
@@ -133,9 +135,15 @@ class _AddFriendCodeState extends State<AddFriendCodePage> {
     ));
 
     if (isSwitch) {
+      widgets.add(const EmptySpace3x());
       widgets.add(Padding(
         padding: textEditingPadding,
-        child: const Center(child: Text('Not available yet')),
+        child: const Center(
+          child: Text(
+            'Not available yet',
+            style: TextStyle(fontSize: 24),
+          ),
+        ),
       ));
     } else {
       widgets.add(Padding(

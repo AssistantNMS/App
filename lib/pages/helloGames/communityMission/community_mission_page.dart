@@ -119,7 +119,7 @@ class CommunityMissionPage extends StatelessWidget {
         percent: percentage.toDouble(),
         text: Text(
           '${percentage.toStringAsFixed(0)}%',
-          style: const TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.black, fontSize: 14),
         ),
       ),
     ));

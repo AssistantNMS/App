@@ -29,6 +29,7 @@ class GenericPageItem {
   double maxStackSize;
   double baseValueUnits;
   int blueprintCost;
+  int craftingOutputAmount;
   CurrencyType blueprintCostType;
   CurrencyType currencyType;
   BlueprintSource blueprintSource;
@@ -69,6 +70,7 @@ class GenericPageItem {
     required this.maxStackSize,
     required this.baseValueUnits,
     required this.blueprintCost,
+    required this.craftingOutputAmount,
     required this.blueprintCostType,
     required this.currencyType,
     required this.blueprintSource,
@@ -114,6 +116,7 @@ class GenericPageItem {
       blueprintSource:
           BlueprintSource.values[readIntSafe(json, 'BlueprintSource')],
       blueprintCost: readIntSafe(json, 'BlueprintCost'),
+      craftingOutputAmount: readIntSafe(json, 'CraftingOutputAmount'),
       blueprintCostType:
           currencyTypeValues.map[readStringSafe(json, 'BlueprintCostType')]!,
       requiredItems: readListSafe<RequiredItem>(
