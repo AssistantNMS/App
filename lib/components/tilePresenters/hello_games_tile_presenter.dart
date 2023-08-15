@@ -13,7 +13,12 @@ Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release,
       text: 'PC',
       backgroundColor: Colors.red[400]!,
     ));
+    platformChips.add(getBaseWidget().appChip(
+      text: 'Mac',
+      backgroundColor: Colors.red[400]!,
+    ));
   }
+  if (release.isMac) {}
   if (release.isPs4) {
     platformChips.add(getBaseWidget().appChip(
       text: 'PS4',
@@ -61,28 +66,31 @@ Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release,
 
   return GestureDetector(
     child: Card(
-      child: Column(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
-            child: Text(
-              release.name,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 20),
+      child: Padding(
+        padding: const EdgeInsets.only(top: 4, bottom: 8),
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
+              child: Text(
+                release.name,
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 20),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
-            child: Text(
-              release.description,
-              maxLines: NMSUIConstants.ReleaseNotesDescripNumLines,
-              overflow: TextOverflow.ellipsis,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 16),
+            Padding(
+              padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
+              child: Text(
+                release.description,
+                maxLines: NMSUIConstants.ReleaseNotesDescripNumLines,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 16),
+              ),
             ),
-          ),
-          Wrap(children: platformChips),
-        ],
+            Wrap(children: platformChips, spacing: 6),
+          ],
+        ),
       ),
       margin: const EdgeInsets.all(4),
     ),
@@ -98,37 +106,45 @@ Widget newsItemTilePresenter(BuildContext context, NewsItem newsItem,
         imagePath: '${getPath().imageAssetPathPrefix}/defaultNews.jpg'),
   );
   return GestureDetector(
-    child: Card(
-      child: Column(
-        children: <Widget>[
-          image,
-          Padding(
-            padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
-            child: Text(
-              newsItem.name,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 20),
+    child: Padding(
+      padding: const EdgeInsets.all(8),
+      child: Card(
+        semanticContainer: true,
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        child: Column(
+          children: <Widget>[
+            image,
+            Padding(
+              padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
+              child: Text(
+                newsItem.name,
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 20),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
-            child: Text(
-              newsItem.date,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 14),
+            Padding(
+              padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
+              child: Text(
+                newsItem.date,
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 14),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8),
-            child: Text(
-              newsItem.description,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 16),
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: Text(
+                newsItem.description,
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 16),
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        margin: const EdgeInsets.all(4),
       ),
-      margin: const EdgeInsets.all(4),
     ),
     onTap: () => launchExternalURL(newsItem.link),
   );
