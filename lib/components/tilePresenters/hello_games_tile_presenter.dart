@@ -65,34 +65,37 @@ Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release,
   */
 
   return GestureDetector(
-    child: Card(
-      child: Padding(
-        padding: const EdgeInsets.only(top: 4, bottom: 8),
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
-              child: Text(
-                release.name,
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 20),
+    child: Padding(
+      padding: const EdgeInsets.only(left: 8, right: 8, bottom: 4),
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 4, bottom: 8),
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
+                child: Text(
+                  release.name,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontSize: 20),
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
-              child: Text(
-                release.description,
-                maxLines: NMSUIConstants.ReleaseNotesDescripNumLines,
-                overflow: TextOverflow.ellipsis,
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 16),
+              Padding(
+                padding: const EdgeInsets.only(top: 4, right: 4, left: 4),
+                child: Text(
+                  release.description,
+                  maxLines: NMSUIConstants.ReleaseNotesDescripNumLines,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontSize: 16),
+                ),
               ),
-            ),
-            Wrap(children: platformChips, spacing: 6),
-          ],
+              Wrap(children: platformChips, spacing: 6),
+            ],
+          ),
         ),
+        margin: const EdgeInsets.all(4),
       ),
-      margin: const EdgeInsets.all(4),
     ),
     onTap: () => launchExternalURL(release.link),
   );
