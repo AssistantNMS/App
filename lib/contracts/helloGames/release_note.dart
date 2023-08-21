@@ -16,6 +16,7 @@ class ReleaseNote {
   bool isXb1;
   bool isXbsx;
   bool isNsw;
+  bool isMac;
 
   ReleaseNote({
     required this.name,
@@ -27,6 +28,7 @@ class ReleaseNote {
     required this.isXb1,
     required this.isXbsx,
     required this.isNsw,
+    required this.isMac,
   });
 
   factory ReleaseNote.fromRawJson(String str) =>
@@ -42,5 +44,6 @@ class ReleaseNote {
         isXb1: readBoolSafe(json, 'isXb1'),
         isXbsx: readBoolSafe(json, 'isXbsx'),
         isNsw: readBoolSafe(json, 'isNsw'),
+        isMac: readBoolSafe(json, 'isMac'),
       );
 }

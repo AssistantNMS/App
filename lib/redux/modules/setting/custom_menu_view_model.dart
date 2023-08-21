@@ -1,6 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:redux/redux.dart';
 
+import '../../../contracts/enum/homepage_type.dart';
 import '../../../contracts/redux/app_state.dart';
 import 'actions.dart';
 import 'drawer_settings_view_model.dart';
@@ -12,6 +13,7 @@ class CustomMenuSettingsViewModel {
   final bool dontShowSpoilerAlert;
   final bool showFestiveBackground;
   final int customColumnCount;
+  final HomepageType homepageType;
   final void Function(List<LocaleKey>) setCustomMenuOrder;
 
   CustomMenuSettingsViewModel({
@@ -20,6 +22,7 @@ class CustomMenuSettingsViewModel {
     required this.dontShowSpoilerAlert,
     required this.showFestiveBackground,
     required this.customColumnCount,
+    required this.homepageType,
     required this.setCustomMenuOrder,
   });
 
@@ -30,6 +33,7 @@ class CustomMenuSettingsViewModel {
         dontShowSpoilerAlert: getDontShowSpoilerAlert(store.state),
         showFestiveBackground: getShowFestiveBackground(store.state),
         customColumnCount: getCustomHomePageColumnCount(store.state),
+        homepageType: getHomepageType(store.state),
         setCustomMenuOrder: (List<LocaleKey> newOrder) => store.dispatch(
           SetCustomMenuOrder(newOrder),
         ),
@@ -38,5 +42,6 @@ class CustomMenuSettingsViewModel {
   DrawerSettingsViewModel toDrawerViewModel() => DrawerSettingsViewModel(
         isPatron: isPatron,
         dontShowSpoilerAlert: dontShowSpoilerAlert,
+        homepageType: homepageType,
       );
 }

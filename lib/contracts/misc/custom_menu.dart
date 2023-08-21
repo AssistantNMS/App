@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../constants/app_image.dart';
 import '../../constants/routes.dart';
 import '../../redux/modules/setting/drawer_settings_view_model.dart';
+import '../enum/homepage_type.dart';
 
 class CustomMenu {
   Widget icon;
@@ -99,7 +100,10 @@ List<CustomMenu> getMenuOptionsSection1(
 }
 
 List<CustomMenu> getMenuOptionsSection2(
-    BuildContext context, DrawerSettingsViewModel vm, Color drawerIconColour) {
+  BuildContext context,
+  DrawerSettingsViewModel vm,
+  Color drawerIconColour,
+) {
   //
   Widget localGetFromIcon(IconData icon) => CorrectlySizedImageFromIcon(
       icon: icon, colour: drawerIconColour, maxSize: imageSize);
@@ -121,7 +125,7 @@ List<CustomMenu> getMenuOptionsSection2(
       drawerIcon: const ListTileImage(partialPath: AppImage.catalogue),
       title: LocaleKey.catalogue,
       navigateToNamed: Routes.cataloguePage,
-      hideInDrawer: true,
+      hideInDrawer: vm.homepageType == HomepageType.catalogue,
     ),
     CustomMenu(
       icon: const ListTileImage(
@@ -131,7 +135,7 @@ List<CustomMenu> getMenuOptionsSection2(
       drawerIcon: const ListTileImage(partialPath: 'drawer/crafted.png'),
       title: LocaleKey.allItems,
       navigateToNamed: Routes.allItemsPage,
-      hideInDrawer: true,
+      hideInDrawer: vm.homepageType == HomepageType.allItemsList,
     ),
     CustomMenu(
       icon: localGetFromIcon(Icons.military_tech_rounded),
@@ -141,12 +145,6 @@ List<CustomMenu> getMenuOptionsSection2(
       title: LocaleKey.communitySpotlight,
       navigateToNamed: Routes.communitySpotlight,
     ),
-    CustomMenu(
-      icon: localGetFromIcon(Icons.radio),
-      drawerIcon: localGetDrawerFromIcon(Icons.radio),
-      title: LocaleKey.nmsfm,
-      navigateToNamed: Routes.nmsfmPage,
-    )
   ];
 }
 
@@ -245,6 +243,12 @@ List<CustomMenu> getMenuOptionsSection3(
       drawerIcon: localGetDrawerFromIcon(Icons.show_chart),
       title: LocaleKey.milestones,
       navigateToNamed: Routes.factionPage,
+    ),
+    CustomMenu(
+      icon: localGetFromIcon(Icons.radio),
+      drawerIcon: localGetDrawerFromIcon(Icons.radio),
+      title: LocaleKey.nmsfm,
+      navigateToNamed: Routes.nmsfmPage,
     ),
     CustomMenu(
       icon: const ListTileImage(partialPath: AppImage.timer, size: imageSize),
