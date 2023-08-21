@@ -84,9 +84,7 @@ void initDependencyInjection(EnvironmentSettings _env) {
   getIt.registerSingleton<ICreatureHarvestJsonRepository>(
       CreatureHarvestJsonRepository());
 
-  getIt.registerSingleton<IAudioPlayerService>(
-    isWindows ? WindowsAudioPlayerService() : AudioPlayerService(),
-  );
+  getIt.registerSingleton<IAudioPlayerService>(AudioPlayerService());
   getIt.registerSingleton<LocalNotificationService>(LocalNotificationService());
   getIt.registerSingleton<FirebaseService>(FirebaseService());
 
