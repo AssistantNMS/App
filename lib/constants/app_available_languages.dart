@@ -8,7 +8,7 @@ List<LocalizationMap> supportedLanguageMaps = [
     LocalizationMap(LocaleKey.french, 'fr', 'fr', percentageComplete: 99),
     LocalizationMap(LocaleKey.italian, 'it', 'it', percentageComplete: 99),
     LocalizationMap(LocaleKey.russian, 'ru', 'ru', percentageComplete: 99),
-    LocalizationMap(LocaleKey.polish, 'pl', 'pl', percentageComplete: 99),
+    LocalizationMap(LocaleKey.polish, 'pl', 'pl', percentageComplete: 100),
     LocalizationMap(LocaleKey.brazilianPortuguese, 'pt-br', 'br', percentageComplete: 99),
     LocalizationMap(LocaleKey.portuguese, 'pt', 'pt', percentageComplete: 24),
     LocalizationMap(LocaleKey.norwegian, 'no', 'no', percentageComplete: 79),

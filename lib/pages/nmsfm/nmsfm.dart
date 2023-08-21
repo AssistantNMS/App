@@ -1,12 +1,10 @@
 import 'dart:async';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/youtubers_tile_presenter.dart';
-import '../../constants/app_audio.dart';
 import '../../constants/app_duration.dart';
 import '../../constants/app_image.dart';
 import '../../constants/nms_ui_constants.dart';
@@ -25,27 +23,6 @@ class NMSFMPage extends StatefulWidget {
 }
 
 class _NMSFMPageWidget extends State<NMSFMPage> {
-  ConnectivityResult _connectivityStatus = ConnectivityResult.none;
-  late StreamSubscription<ConnectivityResult> _connectivitySubscription;
-
-  _isOnline() {
-    return _connectivityStatus != ConnectivityResult.none ||
-        isiOS; // Connectivity plugin subscription to connectivity does not work on ios 🙄
-  }
-
-  @override
-  initState() {
-    super.initState();
-
-    _connectivitySubscription = Connectivity()
-        .onConnectivityChanged
-        .listen((ConnectivityResult result) {
-      setState(() {
-        _connectivityStatus = result;
-      });
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return simpleGenericPageScaffold(
@@ -84,9 +61,7 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
       ),
     ));
 
-    bool isOnline = _isOnline();
-
-    if (isOnline && !isDesktop) {
+    if (!isDesktop) {
       widgets.add(const AudioStreamPresenter());
       widgets.add(Container(
         padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -105,31 +80,6 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
       externalLinkPresenter(context, 'Zeno Radio', 'https://zeno.fm/nms-fm/'),
     );
 
-    if (!isOnline) {
-      widgets.add(getBaseWidget().customDivider());
-      widgets.add(
-        const LocalAudioPresenter(
-          'Cactus Jelly Sunrise',
-          'Tron Lennon',
-          AppAudio.cactusJellySunrise,
-        ),
-      );
-      widgets.add(
-        const LocalAudioPresenter(
-          'Flux16',
-          'The ByteBeat Guy',
-          AppAudio.flux16,
-        ),
-      );
-      widgets.add(
-        const LocalAudioPresenter(
-          'Oranges',
-          'VeritasVelez',
-          AppAudio.oranges,
-        ),
-      );
-    }
-
     return listWithScrollbar(
       shrinkWrap: true,
       itemCount: widgets.length,
@@ -137,14 +87,6 @@ class _NMSFMPageWidget extends State<NMSFMPage> {
       padding: const EdgeInsets.only(bottom: 32),
       scrollController: ScrollController(),
     );
-  }
-
-  @override
-  void dispose() {
-    _connectivitySubscription.cancel();
-    // getAudioPlayer().stop();
-    // getAudioPlayer().dispose();
-    super.dispose();
   }
 }
 
