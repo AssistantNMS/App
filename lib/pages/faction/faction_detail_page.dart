@@ -9,6 +9,7 @@ import '../../contracts/faction/faction.dart';
 import '../../contracts/faction/stored_faction_mission.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../redux/modules/journeyMilestone/factions_view_model.dart';
+import '../generic/generic_page_descrip_highlight_text.dart';
 import 'guild_missions_page.dart';
 
 class FactionDetailPage extends StatelessWidget {
@@ -34,9 +35,12 @@ class FactionDetailPage extends StatelessWidget {
     ));
     widgets.add(Padding(
       padding: NMSUIConstants.buttonPadding,
-      child: GenericItemDescription(
-        factionDetail.description,
-        maxLines: 20,
+      child: Column(
+        children: genericPageDescripHighlightText(
+          storeContext,
+          factionDetail.description,
+          List.empty(),
+        ),
       ),
     ));
     widgets.add(getBaseWidget().customDivider());

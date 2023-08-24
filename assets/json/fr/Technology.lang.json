@@ -5092,7 +5092,7 @@
     "Id": "tech143",
     "Icon": "technology/143.png",
     "Name": "Raffinerie personnelle",
-    "Group": "Unité de raffinerie auto-portante",
+    "Group": "Raffineur avancé auto-portant",
     "Description": "Une extension compacte de l'exocombinaison, mettant à disposition une petite <TECHNOLOGY>raffinerie portative<>, accessible directement depuis l'interface utilisateur de l'exocombinaison.\n\nL'unité nécessite du <FUEL>carburant<> et est limitée à la raffinerie d'une substance à la fois.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -8972,7 +8972,7 @@
   {
     "Id": "tech242",
     "Icon": "technology/242.png",
-    "Name": "Localisateur d'échos",
+    "Name": "Amplificateur de résonances",
     "Group": "Dispositif de détection de graines d'écho",
     "Description": "Un accessoire pour le <TECHNOLOGY>scanner<> du multi-outil conçu par le spécialiste Polo pour la détection d'<SPECIAL>échos de conscience<> imprégnés d'atlantidéum.\n\nSur les planètes <SPECIAL>dissonantes<>, utilisez la visière d'analyse (<IMG>AIM<>) pour localiser des échos de conscience. En arrivant sur un site d'écho, utilisez <IMG>SCAN<> pour <SPECIAL>révéler complètement<> les anomalies à proximité.",
     "BaseValueUnits": 1.0,
@@ -9075,6 +9075,451 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech246",
+    "Icon": "technology/246.png",
+    "Name": "Raffinerie personnelle Mk 2",
+    "Group": "Raffineur avancé auto-portant",
+    "Description": "Une extension compacte de l'exocombinaison, mettant à disposition un <TECHNOLOGY>raffineur moyen<> avancé mais portatif, accessible directement depuis l'interface utilisateur de l'exocombinaison.\n\nL'unité nécessite du <FUEL>carburant<> et est capable de suivre des recettes plus complexes que l'unité de raffinerie personnelle standard.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 580,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw15",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech247",
+    "Icon": "technology/242.png",
+    "Name": "Harmonisateur de scan",
+    "Group": "Amélioration du multi-outil",
+    "Description": "Un accessoire pour le <TECHNOLOGY>scanner<> du multi-outil qui permet à l'appareil de détecter et <TECHNOLOGY>décoder<> le <TECHNOLOGY>signal de camouflage<> des unités autophages à proximité.\n\nUtilisez <IMG>SCAN<> pour activer le scanner. Lorsque la forme d'onde du détecteur passe au-dessus de la zone locale, il <STELLAR>révélera automatiquement<> toutes les <STELLAR>entités autophages à proximité<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw52",
+        "Quantity": 100
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Résonateur d'échos",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "Rayon de scan",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech248",
+    "Icon": "technology/248.png",
+    "Name": "Noyau polyphonique",
+    "Group": "Clé de résonance autophage",
+    "Description": "Un accessoire pour le <TECHNOLOGY>scanner<> du multi-outil qui permet à l'appareil de détecter et <TECHNOLOGY>décoder<> le <TECHNOLOGY>signal de camouflage<> des unités autophages à proximité.\n\nUtilisez <IMG>SCAN<> pour activer le scanner. Lorsque la forme d'onde du détecteur passe au-dessus de la zone locale, il <STELLAR>révélera automatiquement<> toutes les <STELLAR>entités autophages à proximité<>.\n\nDe plus, cet appareil peut être utilisé pour <SPECIAL>localiser des colonies autophages<>. Sélectionnez cet appareil et utilisez <VAL_ON>Localiser un campement autophage<> (<IMG>FE_SELECT<>)<> pour localiser un lieu d'intérêt planétaire pour l'Autophage.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 190
+      },
+      {
+        "Id": "prod58",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Résonateur d'échos",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "Rayon de scan",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech249",
+    "Icon": "technology/249.png",
+    "Name": "Lentille runique",
+    "Group": "Anomalie géométrique",
+    "Description": "Le cœur géométrique de cette arme ancienne est la <TECHNOLOGY>lentille runique<>. Sa géométrie inconcevable concentre non seulement la lumière dans un puissant <TECHNOLOGY>laser d'extraction<>, mais peut également distordre le champ électromagnétique local afin de rendre l'utilisateur <STELLAR>invisible<>.\n\nAlimenté par des <FUEL>éléments à base de carbone<>. Utilisez le rayon avec <IMG>ATTACK<>. Sélectionnez sa fonction de camouflage secondaire avec <IMG>CYCLEALTWEAPON<> et maintenez <IMG>ALTATTACK<> pour l'activer. ",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Vitesse d'extraction",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "Dispersion de chaleur",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "12"
+      },
+      {
+        "Name": "Dégâts",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Temps de refroidissement",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "0.6"
+      },
+      {
+        "Name": "Efficacité du carburant",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "120"
+      },
+      {
+        "Name": "Ressources extraites",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "miningLaser",
+        "Value": "10"
+      },
+      {
+        "Name": "Camouflage actif",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech250",
+    "Icon": "technology/106.png",
+    "Name": "Nœud phalangé",
+    "Group": "Composant d'Autophage endommagé",
+    "Description": "Cet Autophage est loin d'être en état de fonctionner, mais ses sous-composants témoignent d'une tentative de réparation précédente. Avec quelques ajustements supplémentaires, le travail pourrait être terminé...\n\nRéparez ce composant avec <IMG>REPAIR<>, ou utiliser <IMG>PIN<> pour localiser les matériaux nécessaires.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech251",
+    "Icon": "technology/88.png",
+    "Name": "Sceau de pression",
+    "Group": "Composant d'Autophage endommagé",
+    "Description": "Cet Autophage est loin d'être en état de fonctionner, mais ses sous-composants témoignent d'une tentative de réparation précédente. Avec quelques ajustements supplémentaires, le travail pourrait être terminé...\n\nRéparez ce composant avec <IMG>REPAIR<>, ou utiliser <IMG>PIN<> pour localiser les matériaux nécessaires.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech252",
+    "Icon": "technology/108.png",
+    "Name": "Charnière de couplement",
+    "Group": "Composant d'Autophage endommagé",
+    "Description": "Cet Autophage est loin d'être en état de fonctionner, mais ses sous-composants témoignent d'une tentative de réparation précédente. Avec quelques ajustements supplémentaires, le travail pourrait être terminé...\n\nRéparez ce composant avec <IMG>REPAIR<>, ou utiliser <IMG>PIN<> pour localiser les matériaux nécessaires.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech253",
+    "Icon": "technology/109.png",
+    "Name": "Tissage de câble",
+    "Group": "Composant d'Autophage endommagé",
+    "Description": "Cet Autophage est loin d'être en état de fonctionner, mais ses sous-composants témoignent d'une tentative de réparation précédente. Avec quelques ajustements supplémentaires, le travail pourrait être terminé...\n\nRéparez ce composant avec <IMG>REPAIR<>, ou utiliser <IMG>PIN<> pour localiser les matériaux nécessaires.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech254",
+    "Icon": "technology/110.png",
+    "Name": "Lien de bobine",
+    "Group": "Composant d'Autophage endommagé",
+    "Description": "Cet Autophage est loin d'être en état de fonctionner, mais ses sous-composants témoignent d'une tentative de réparation précédente. Avec quelques ajustements supplémentaires, le travail pourrait être terminé...\n\nRéparez ce composant avec <IMG>REPAIR<>, ou utiliser <IMG>PIN<> pour localiser les matériaux nécessaires.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw13",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech255",
+    "Icon": "technology/89.png",
+    "Name": "Relais d'étincelles",
+    "Group": "Composant d'Autophage endommagé",
+    "Description": "Cet Autophage est loin d'être en état de fonctionner, mais ses sous-composants témoignent d'une tentative de réparation précédente. Avec quelques ajustements supplémentaires, le travail pourrait être terminé...\n\nRéparez ce composant avec <IMG>REPAIR<>, ou utiliser <IMG>PIN<> pour localiser les matériaux nécessaires.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw12",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech256",
+    "Icon": "technology/84.png",
+    "Name": "Capteurs visuels",
+    "Group": "Composant d'Autophage endommagé",
+    "Description": "Cet Autophage est loin d'être en état de fonctionner, mais ses sous-composants témoignent d'une tentative de réparation précédente. Avec quelques ajustements supplémentaires, le travail pourrait être terminé...\n\nRéparez ce composant avec <IMG>REPAIR<>, ou utiliser <IMG>PIN<> pour localiser les matériaux nécessaires.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech257",
+    "Icon": "technology/112.png",
+    "Name": "Allumeur neuronal",
+    "Group": "Composant d'Autophage endommagé",
+    "Description": "Cet Autophage est loin d'être en état de fonctionner, mais ses sous-composants témoignent d'une tentative de réparation précédente. Avec quelques ajustements supplémentaires, le travail pourrait être terminé...\n\nRéparez ce composant avec <IMG>REPAIR<>, ou utiliser <IMG>PIN<> pour localiser les matériaux nécessaires.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod2",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech258",
+    "Icon": "technology/118.png",
+    "Name": "Engrenages temporels",
+    "Group": "Composant d'Autophage endommagé",
+    "Description": "Cet Autophage est loin d'être en état de fonctionner, mais ses sous-composants témoignent d'une tentative de réparation précédente. Avec quelques ajustements supplémentaires, le travail pourrait être terminé...\n\nRéparez ce composant avec <IMG>REPAIR<>, ou utiliser <IMG>PIN<> pour localiser les matériaux nécessaires.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod11",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech259",
+    "Icon": "technology/122.png",
+    "Name": "Cellules d'alimentation",
+    "Group": "Composant d'Autophage endommagé",
+    "Description": "Cet Autophage est loin d'être en état de fonctionner, mais ses sous-composants témoignent d'une tentative de réparation précédente. Avec quelques ajustements supplémentaires, le travail pourrait être terminé...\n\nRéparez ce composant avec <IMG>REPAIR<>, ou utiliser <IMG>PIN<> pour localiser les matériaux nécessaires.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 20
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   }

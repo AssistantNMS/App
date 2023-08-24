@@ -5092,7 +5092,7 @@
     "Id": "tech143",
     "Icon": "technology/143.png",
     "Name": "個人精製機",
-    "Group": "自行裝載精製機裝置",
+    "Group": "自裝式先進精製機",
     "Description": "強化套裝的小型額外套件，能安裝小型<TECHNOLOGY>可攜式精製機<>，可直接從使用者的強化套裝介面使用。\n\n該裝置需要<FUEL>燃料<>，一次僅限精製一種物質。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -8972,7 +8972,7 @@
   {
     "Id": "tech242",
     "Icon": "technology/242.png",
-    "Name": "回音定位器",
+    "Name": "共振增幅器",
     "Group": "回音種子偵測裝置",
     "Description": "工具組的附屬<TECHNOLOGY>掃描器<>，由專家波羅所設計，用於偵測注入亞特蘭提德鋼的<SPECIAL>智慧生物回音<>。\n\n身處<SPECIAL>不和諧<>世界時，使用分析護目鏡 (<IMG>AIM<>) 即可找到智慧生物回音。到達回音地點後，使用 <IMG>SCAN<> 即可<SPECIAL>完全揭示<>附近的異常。",
     "BaseValueUnits": 1.0,
@@ -9075,6 +9075,451 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech246",
+    "Icon": "technology/246.png",
+    "Name": "個人精製機 Mk 2",
+    "Group": "自裝式先進精製機",
+    "Description": "強化套裝的小型額外套件，能安裝先進的可攜式<TECHNOLOGY>中型精製機<>，可直接在使用者的強化套裝介面使用。\n\n該裝置需要<FUEL>燃料<>，能精製的物質比標準個人精製機更加複雜。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 580,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw15",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech247",
+    "Icon": "technology/242.png",
+    "Name": "掃描協和器",
+    "Group": "工具組升級",
+    "Description": "工具組<TECHNOLOGY>掃描器<>的配件，能讓裝置偵測並<TECHNOLOGY>破譯<>附近自噬單位的<TECHNOLOGY>隱形訊號<>。\n\n使用 <IMG>SCAN<> 啟動掃描器。偵測器波形經過當地區域時，會<STELLAR>自動顯示<><STELLAR>附近任何自噬存在體<>。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw52",
+        "Quantity": 100
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "回音共振器",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "掃描半徑",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech248",
+    "Icon": "technology/248.png",
+    "Name": "複音核心",
+    "Group": "自噬共鳴鑰匙",
+    "Description": "工具組<TECHNOLOGY>掃描器<>的配件，能讓裝置偵測並<TECHNOLOGY>破譯<>附近自噬單位的<TECHNOLOGY>隱形訊號<>。\n\n使用 <IMG>SCAN<> 啟動掃描器。偵測器波形經過當地區域時，會<STELLAR>自動顯示<><STELLAR>附近任何自噬存在體<>。\n\n此外，裝置還能用來<SPECIAL>找出自噬聚居地<>。選擇裝置並使用<VAL_ON>找出自噬營地<> (<IMG>FE_SELECT<>)<> 以找出自噬的重要星球地點。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 190
+      },
+      {
+        "Id": "prod58",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "回音共振器",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "掃描半徑",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech249",
+    "Icon": "technology/249.png",
+    "Name": "符文透鏡",
+    "Group": "幾何異常",
+    "Description": "這把古代武器的幾何核心是<TECHNOLOGY>符文透鏡<>。不可思義的幾何形狀不僅能將光線集中形成一道高功率<TECHNOLOGY>採礦雷射<>，也可以扭曲局部電磁場，從而讓使用者<STELLAR>隱形<>。\n\n需要<FUEL>碳基元素<>提供動能。按 <IMG>ATTACK<> 發射光束。按 <IMG>CYCLEALTWEAPON<> 選擇次要隱形功能並按住 <IMG>ALTATTACK<> 啟動。 ",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "採礦速度",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "熱能分散",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "12"
+      },
+      {
+        "Name": "傷害",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "過熱停機時間",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "0.6"
+      },
+      {
+        "Name": "燃料效率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "120"
+      },
+      {
+        "Name": "已開採的資源",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "miningLaser",
+        "Value": "10"
+      },
+      {
+        "Name": "啟動迷彩",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech250",
+    "Icon": "technology/106.png",
+    "Name": "指骨節點",
+    "Group": "受損的自噬元件",
+    "Description": "這個自噬遠未達到能正常運作的狀態，但其子元件顯示之前有嘗試修復過的跡象。再進行些許額外調整，應該能夠完成......\n\n按 <IMG>REPAIR<> 修復此元件，或按 <IMG>PIN<> 找出所需材料。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech251",
+    "Icon": "technology/88.png",
+    "Name": "壓力密封裝置",
+    "Group": "受損的自噬元件",
+    "Description": "這個自噬遠未達到能正常運作的狀態，但其子元件顯示之前有嘗試修復過的跡象。再進行些許額外調整，應該能夠完成......\n\n按 <IMG>REPAIR<> 修復此元件，或按 <IMG>PIN<> 找出所需材料。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech252",
+    "Icon": "technology/108.png",
+    "Name": "聯接鉸鏈",
+    "Group": "受損的自噬元件",
+    "Description": "這個自噬遠未達到能正常運作的狀態，但其子元件顯示之前有嘗試修復過的跡象。再進行些許額外調整，應該能夠完成......\n\n按 <IMG>REPAIR<> 修復此元件，或按 <IMG>PIN<> 找出所需材料。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech253",
+    "Icon": "technology/109.png",
+    "Name": "電纜編織",
+    "Group": "受損的自噬元件",
+    "Description": "這個自噬遠未達到能正常運作的狀態，但其子元件顯示之前有嘗試修復過的跡象。再進行些許額外調整，應該能夠完成......\n\n按 <IMG>REPAIR<> 修復此元件，或按 <IMG>PIN<> 找出所需材料。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech254",
+    "Icon": "technology/110.png",
+    "Name": "線圈連結",
+    "Group": "受損的自噬元件",
+    "Description": "這個自噬遠未達到能正常運作的狀態，但其子元件顯示之前有嘗試修復過的跡象。再進行些許額外調整，應該能夠完成......\n\n按 <IMG>REPAIR<> 修復此元件，或按 <IMG>PIN<> 找出所需材料。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw13",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech255",
+    "Icon": "technology/89.png",
+    "Name": "火花繼電器",
+    "Group": "受損的自噬元件",
+    "Description": "這個自噬遠未達到能正常運作的狀態，但其子元件顯示之前有嘗試修復過的跡象。再進行些許額外調整，應該能夠完成......\n\n按 <IMG>REPAIR<> 修復此元件，或按 <IMG>PIN<> 找出所需材料。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw12",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech256",
+    "Icon": "technology/84.png",
+    "Name": "視覺感應器",
+    "Group": "受損的自噬元件",
+    "Description": "這個自噬遠未達到能正常運作的狀態，但其子元件顯示之前有嘗試修復過的跡象。再進行些許額外調整，應該能夠完成......\n\n按 <IMG>REPAIR<> 修復此元件，或按 <IMG>PIN<> 找出所需材料。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech257",
+    "Icon": "technology/112.png",
+    "Name": "神經點火器",
+    "Group": "受損的自噬元件",
+    "Description": "這個自噬遠未達到能正常運作的狀態，但其子元件顯示之前有嘗試修復過的跡象。再進行些許額外調整，應該能夠完成......\n\n按 <IMG>REPAIR<> 修復此元件，或按 <IMG>PIN<> 找出所需材料。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod2",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech258",
+    "Icon": "technology/118.png",
+    "Name": "正時齒輪",
+    "Group": "受損的自噬元件",
+    "Description": "這個自噬遠未達到能正常運作的狀態，但其子元件顯示之前有嘗試修復過的跡象。再進行些許額外調整，應該能夠完成......\n\n按 <IMG>REPAIR<> 修復此元件，或按 <IMG>PIN<> 找出所需材料。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod11",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech259",
+    "Icon": "technology/122.png",
+    "Name": "動力電池",
+    "Group": "受損的自噬元件",
+    "Description": "這個自噬遠未達到能正常運作的狀態，但其子元件顯示之前有嘗試修復過的跡象。再進行些許額外調整，應該能夠完成......\n\n按 <IMG>REPAIR<> 修復此元件，或按 <IMG>PIN<> 找出所需材料。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 20
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
