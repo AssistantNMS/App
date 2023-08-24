@@ -1907,6 +1907,638 @@
       "Additional": [
         "ShowGuildMissions"
       ]
+    },
+    {
+      "Id": "unknown: Guild,Pirates",
+      "Icon": "faction/FACTIONS.PIRATE.ON.png",
+      "Name": "非合法な無法者",
+      "Description": "一部の恒星系において、現地の主要当局が、反乱を起こしたならず者部隊によって <VAL_ON>倒された<>。こうした無法者星系は貿易船を捕獲してもほとんど罰せられないため、異常なほど <FUEL>紛争<> レベルが高い。この状況は貿易を望む者にとってはリスクであるが、海賊行為を生業とする者にとっては相当な <STELLAR>チャンス<> である。\n\n儲かる海賊行為には、<SPECIAL>禁制品<>の密輸、<TECHNOLOGY>貨物船<>や<TECHNOLOGY>トレーダー<>の襲撃、あるいは反乱軍ステーションで<STELLAR>バウンティマスター<>のミッション遂行することなどが含まれる。",
+      "Missions": [
+        {
+          "Name": "評価",
+          "Icon": "faction/MEDAL.PIRATEFACTIONGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONNONE.png",
+              "Name": "裏切り者",
+              "RequiredProgress": -5
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONNONE.png",
+              "Name": "内なる敵",
+              "RequiredProgress": -2
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONNONE.png",
+              "Name": "不明",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONBRONZE.png",
+              "Name": "船底のネズミ",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONBRONZE.png",
+              "Name": "私掠船",
+              "RequiredProgress": 8
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONBRONZE.png",
+              "Name": "コルセア",
+              "RequiredProgress": 14
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONSILVER.png",
+              "Name": "野心家",
+              "RequiredProgress": 21
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONSILVER.png",
+              "Name": "災難",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONSILVER.png",
+              "Name": "レジェンド",
+              "RequiredProgress": 40
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONSILVER.png",
+              "Name": "ドレッド・パイレーツ",
+              "RequiredProgress": 60
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONGOLD.png",
+              "Name": "アドミラル・オブ・ザ・ブラック",
+              "RequiredProgress": 100
+            }
+          ]
+        },
+        {
+          "Name": "完了したミッション",
+          "Icon": "faction/MEDAL.MEDALGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.MEDALOFF.png",
+              "Name": "アウトサイダー",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "新参者",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "知り合い",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "経験者",
+              "RequiredProgress": 8
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "仲間",
+              "RequiredProgress": 12
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "熟練者",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "マスター",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "アドバイザー",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "ベテラン",
+              "RequiredProgress": 40
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "高貴",
+              "RequiredProgress": 50
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALGOLD.png",
+              "Name": "大使",
+              "RequiredProgress": 60
+            }
+          ]
+        },
+        {
+          "Name": "密輸業",
+          "Icon": "faction/MEDAL.SMUGGLEGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.SMUGGLENONE.png",
+              "Name": "行儀がいい",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "事務上の誤り",
+              "RequiredProgress": 10000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "逃亡中",
+              "RequiredProgress": 100000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "障害物",
+              "RequiredProgress": 200000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "密輸者",
+              "RequiredProgress": 500000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "密輸業者",
+              "RequiredProgress": 1000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLESILVER.png",
+              "Name": "法律違反者",
+              "RequiredProgress": 2000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLESILVER.png",
+              "Name": "エージェント",
+              "RequiredProgress": 5000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLESILVER.png",
+              "Name": "密輸の達人",
+              "RequiredProgress": 10000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLESILVER.png",
+              "Name": "アンタッチャブル",
+              "RequiredProgress": 20000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEGOLD.png",
+              "Name": "封鎖突破船",
+              "RequiredProgress": 50000000
+            }
+          ]
+        },
+        {
+          "Name": "バウンティ完了",
+          "Icon": "faction/MEDAL.BOUNTIESGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.BOUNTIESOFF.png",
+              "Name": "無害",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "ほとんど無害",
+              "RequiredProgress": 1
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "自警団員",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "賞金稼ぎ",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "元帥",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "バウンティマスター",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESSILVER.png",
+              "Name": "ブラッドハウンド",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESSILVER.png",
+              "Name": "執行者",
+              "RequiredProgress": 25
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESSILVER.png",
+              "Name": "報復",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESSILVER.png",
+              "Name": "射撃の名手",
+              "RequiredProgress": 35
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESGOLD.png",
+              "Name": "スターウルフ",
+              "RequiredProgress": 40
+            }
+          ]
+        },
+        {
+          "Name": "略奪されたトレーダー",
+          "Icon": "faction/MEDAL.SHIPKILLGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.SHIPKILLOFF.png",
+              "Name": "合法",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "日和見主義者",
+              "RequiredProgress": 1
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "厄介者",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "無法者",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "脅威",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "侵略者",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLSILVER.png",
+              "Name": "襲撃者",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLSILVER.png",
+              "Name": "星の海賊",
+              "RequiredProgress": 25
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLSILVER.png",
+              "Name": "最重要指名手配犯",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLSILVER.png",
+              "Name": "危険な翼",
+              "RequiredProgress": 35
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLGOLD.png",
+              "Name": "略奪王",
+              "RequiredProgress": 40
+            }
+          ]
+        }
+      ],
+      "Additional": [
+        "ShowGuildMissions"
+      ]
+    },
+    {
+      "Id": "unknown: Guild,Builders",
+      "Icon": "faction/FACTIONS.BUILDER.ON.png",
+      "Name": "オートファジー",
+      "Description": "オートファジーは、コンバージェンスの純粋さから追放された異端のコーバックスのロボット生命体だ。抹消によって追放された彼らは、不協和な世界の奥深くから噴出する<SPECIAL>アトランティディウム<>によって虚無から引き出された。\n\n再構築のプロセスではすべてのオートファジーが、自分たちの殻の構築に必要な素材を探し求めながら、緩慢で困難な儀式を行う。彼らの殻は、彼らの心のようなものであり、彼ら自身のものなので、彼らから再び奪われることはない。",
+      "Missions": [
+        {
+          "Name": "評価",
+          "Icon": "faction/MEDAL.BUILDERGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.BUILDERNONE.png",
+              "Name": "コンバージェンス - 廃棄物",
+              "RequiredProgress": -5
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERNONE.png",
+              "Name": "追放",
+              "RequiredProgress": -2
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERNONE.png",
+              "Name": "未登録",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERBRONZE.png",
+              "Name": "構築済み",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERBRONZE.png",
+              "Name": "返品済み",
+              "RequiredProgress": 8
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERBRONZE.png",
+              "Name": "再生済み",
+              "RequiredProgress": 14
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERSILVER.png",
+              "Name": "機械工",
+              "RequiredProgress": 21
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERSILVER.png",
+              "Name": "破壊者",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERSILVER.png",
+              "Name": "熟練工",
+              "RequiredProgress": 40
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERSILVER.png",
+              "Name": "虚無の目",
+              "RequiredProgress": 60
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERGOLD.png",
+              "Name": "ワイルドスパーク",
+              "RequiredProgress": 100
+            }
+          ]
+        },
+        {
+          "Name": "完了したミッション",
+          "Icon": "faction/MEDAL.MEDALGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.MEDALOFF.png",
+              "Name": "アウトサイダー",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "新参者",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "知り合い",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "経験者",
+              "RequiredProgress": 8
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "仲間",
+              "RequiredProgress": 12
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "熟練者",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "マスター",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "アドバイザー",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "ベテラン",
+              "RequiredProgress": 40
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "高貴",
+              "RequiredProgress": 50
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALGOLD.png",
+              "Name": "大使",
+              "RequiredProgress": 60
+            }
+          ]
+        },
+        {
+          "Name": "覚えた言葉",
+          "Icon": "faction/MEDAL.WORDSGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.WORDSOFF.png",
+              "Name": "ちんぷんかんぷん",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "初心者",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "学習者",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "言語習熟者",
+              "RequiredProgress": 50
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "言語に精通",
+              "RequiredProgress": 100
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "会話好き",
+              "RequiredProgress": 150
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSSILVER.png",
+              "Name": "堪能",
+              "RequiredProgress": 250
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSSILVER.png",
+              "Name": "通訳者",
+              "RequiredProgress": 350
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSSILVER.png",
+              "Name": "学者",
+              "RequiredProgress": 450
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSSILVER.png",
+              "Name": "言語学者",
+              "RequiredProgress": 550
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSGOLD.png",
+              "Name": "宇宙の翻訳者",
+              "RequiredProgress": 650
+            }
+          ]
+        },
+        {
+          "Name": "ラディアントシャード",
+          "Icon": "faction/MEDAL.CRYSTALGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.CRYSTALNONE.png",
+              "Name": "従順",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "不協和音の",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "結晶質",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "きらめく",
+              "RequiredProgress": 25
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "クリア",
+              "RequiredProgress": 50
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "再び調和して",
+              "RequiredProgress": 75
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALSILVER.png",
+              "Name": "メロディック",
+              "RequiredProgress": 100
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALSILVER.png",
+              "Name": "虚無の探求者",
+              "RequiredProgress": 125
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALSILVER.png",
+              "Name": "虚無を刈り取る者",
+              "RequiredProgress": 150
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALSILVER.png",
+              "Name": "ラディアント",
+              "RequiredProgress": 175
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALGOLD.png",
+              "Name": "アトランティディアン",
+              "RequiredProgress": 200
+            }
+          ]
+        },
+        {
+          "Name": "オートファジーの回収",
+          "Icon": "faction/MEDAL.REPAIRGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.REPAIRNONE.png",
+              "Name": "ヌル",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "破損した",
+              "RequiredProgress": 1
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "未削除",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "デフラグ済み",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "回収済み",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "再構成",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRSILVER.png",
+              "Name": "再利用された",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRSILVER.png",
+              "Name": "修理済み",
+              "RequiredProgress": 25
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRSILVER.png",
+              "Name": "最適化済み",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRSILVER.png",
+              "Name": "再構築済み",
+              "RequiredProgress": 35
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRGOLD.png",
+              "Name": "返品済み",
+              "RequiredProgress": 40
+            }
+          ]
+        }
+      ],
+      "Additional": [
+        "ShowGuildMissions"
+      ]
     }
   ]
 }

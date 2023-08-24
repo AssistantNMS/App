@@ -1907,6 +1907,638 @@
       "Additional": [
         "ShowGuildMissions"
       ]
+    },
+    {
+      "Id": "unknown: Guild,Pirates",
+      "Icon": "faction/FACTIONS.PIRATE.ON.png",
+      "Name": "亡命之徒",
+      "Description": "在一些星系中，占主导地位的地方当局已经被反叛的亡命之徒势力<VAL_ON>推翻<>。因为缺少对于劫掠贸易飞船行为的管制惩罚，此类亡命之徒恒星系中的<FUEL>纷争<>等级异乎寻常地高。对于正经商人来说，这些地方存在着不容小觑的危险，但反过来也将是意图参与海盗行为之人的<STELLAR>机遇<>之地。\n\n像是走私<SPECIAL>违禁品<>、劫掠<TECHNOLOGY>货船<>与<TECHNOLOGY>商人<>，或者是为叛乱空间站上的<STELLAR>赏金大师<>执行任务等等海盗行为都能够带来巨大的收益。",
+      "Missions": [
+        {
+          "Name": "声望",
+          "Icon": "faction/MEDAL.PIRATEFACTIONGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONNONE.png",
+              "Name": "叛徒",
+              "RequiredProgress": -5
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONNONE.png",
+              "Name": "变节者",
+              "RequiredProgress": -2
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONNONE.png",
+              "Name": "未知",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONBRONZE.png",
+              "Name": "舱鼠",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONBRONZE.png",
+              "Name": "私掠者",
+              "RequiredProgress": 8
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONBRONZE.png",
+              "Name": "海贼",
+              "RequiredProgress": 14
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONSILVER.png",
+              "Name": "太空响马",
+              "RequiredProgress": 21
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONSILVER.png",
+              "Name": "灾厄",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONSILVER.png",
+              "Name": "传奇",
+              "RequiredProgress": 40
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONSILVER.png",
+              "Name": "恐怖海盗",
+              "RequiredProgress": 60
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONGOLD.png",
+              "Name": "黑色上将",
+              "RequiredProgress": 100
+            }
+          ]
+        },
+        {
+          "Name": "已完成任务",
+          "Icon": "faction/MEDAL.MEDALGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.MEDALOFF.png",
+              "Name": "外来者",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "开始",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "已识别",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "熟手",
+              "RequiredProgress": 8
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "合作",
+              "RequiredProgress": 12
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "资深",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "精通",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "顾问",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "老手",
+              "RequiredProgress": 40
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "尊贵",
+              "RequiredProgress": 50
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALGOLD.png",
+              "Name": "大使",
+              "RequiredProgress": 60
+            }
+          ]
+        },
+        {
+          "Name": "走私偷运",
+          "Icon": "faction/MEDAL.SMUGGLEGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.SMUGGLENONE.png",
+              "Name": "正义之士",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "账面问题",
+              "RequiredProgress": 10000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "在逃犯",
+              "RequiredProgress": 100000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "销赃贩",
+              "RequiredProgress": 200000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "地下交易",
+              "RequiredProgress": 500000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "走私犯",
+              "RequiredProgress": 1000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLESILVER.png",
+              "Name": "违法分子",
+              "RequiredProgress": 2000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLESILVER.png",
+              "Name": "地下代理人",
+              "RequiredProgress": 5000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLESILVER.png",
+              "Name": "走私大师",
+              "RequiredProgress": 10000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLESILVER.png",
+              "Name": "神出鬼没",
+              "RequiredProgress": 20000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEGOLD.png",
+              "Name": "封锁突破者",
+              "RequiredProgress": 50000000
+            }
+          ]
+        },
+        {
+          "Name": "完成悬赏令",
+          "Icon": "faction/MEDAL.BOUNTIESGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.BOUNTIESOFF.png",
+              "Name": "人畜无害",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "基本无害",
+              "RequiredProgress": 1
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "义务警员",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "赏金猎人",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "治安官",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "赏金大师",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESSILVER.png",
+              "Name": "寻血猎犬",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESSILVER.png",
+              "Name": "打手",
+              "RequiredProgress": 25
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESSILVER.png",
+              "Name": "惩罚者",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESSILVER.png",
+              "Name": "死亡之眼",
+              "RequiredProgress": 35
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESGOLD.png",
+              "Name": "星狼",
+              "RequiredProgress": 40
+            }
+          ]
+        },
+        {
+          "Name": "打劫商人",
+          "Icon": "faction/MEDAL.SHIPKILLGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.SHIPKILLOFF.png",
+              "Name": "守法公民",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "投机分子",
+              "RequiredProgress": 1
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "麻烦精",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "亡命之徒",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "威胁",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "劫匪",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLSILVER.png",
+              "Name": "强盗",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLSILVER.png",
+              "Name": "太空海盗",
+              "RequiredProgress": 25
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLSILVER.png",
+              "Name": "全民公敌",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLSILVER.png",
+              "Name": "厄运之翼",
+              "RequiredProgress": 35
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLGOLD.png",
+              "Name": "盗匪之王",
+              "RequiredProgress": 40
+            }
+          ]
+        }
+      ],
+      "Additional": [
+        "ShowGuildMissions"
+      ]
+    },
+    {
+      "Id": "unknown: Guild,Builders",
+      "Icon": "faction/FACTIONS.BUILDER.ON.png",
+      "Name": "自噬体",
+      "Description": "自噬体是机械类生命体，它们曾经被纯净集会剔除的分支科尔瓦克斯人。虽然被删除放逐到了虚空，但是它们受到了从不谐世界深处迸发的<SPECIAL>亚特拉迪姆<>的吸引。\n\n重塑自身是每一名自噬体都需要经历的漫长而且艰辛的仪式，它们寻找着合适的部件来组装自己的躯壳。与自噬体的意识一样，这些躯壳也属于自噬体自身，没有人能够再次将之夺走。",
+      "Missions": [
+        {
+          "Name": "声望",
+          "Icon": "faction/MEDAL.BUILDERGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.BUILDERNONE.png",
+              "Name": "集会废柴",
+              "RequiredProgress": -5
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERNONE.png",
+              "Name": "放逐者",
+              "RequiredProgress": -2
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERNONE.png",
+              "Name": "未注册",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERBRONZE.png",
+              "Name": "预制品",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERBRONZE.png",
+              "Name": "回归者",
+              "RequiredProgress": 8
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERBRONZE.png",
+              "Name": "回收品",
+              "RequiredProgress": 14
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERSILVER.png",
+              "Name": "机械师",
+              "RequiredProgress": 21
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERSILVER.png",
+              "Name": "干扰者",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERSILVER.png",
+              "Name": "工匠",
+              "RequiredProgress": 40
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERSILVER.png",
+              "Name": "虚空之眼",
+              "RequiredProgress": 60
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERGOLD.png",
+              "Name": "狂野之光",
+              "RequiredProgress": 100
+            }
+          ]
+        },
+        {
+          "Name": "已完成任务",
+          "Icon": "faction/MEDAL.MEDALGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.MEDALOFF.png",
+              "Name": "外来者",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "开始",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "已识别",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "熟手",
+              "RequiredProgress": 8
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "合作",
+              "RequiredProgress": 12
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "资深",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "精通",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "顾问",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "老手",
+              "RequiredProgress": 40
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "尊贵",
+              "RequiredProgress": 50
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALGOLD.png",
+              "Name": "大使",
+              "RequiredProgress": 60
+            }
+          ]
+        },
+        {
+          "Name": "已学习词汇",
+          "Icon": "faction/MEDAL.WORDSGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.WORDSOFF.png",
+              "Name": "无法理解",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "初学者",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "学生",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "得到理解",
+              "RequiredProgress": 50
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "密友",
+              "RequiredProgress": 100
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "健谈者",
+              "RequiredProgress": 150
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSSILVER.png",
+              "Name": "流利",
+              "RequiredProgress": 250
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSSILVER.png",
+              "Name": "口译译员",
+              "RequiredProgress": 350
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSSILVER.png",
+              "Name": "学者",
+              "RequiredProgress": 450
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSSILVER.png",
+              "Name": "语言学家",
+              "RequiredProgress": 550
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSGOLD.png",
+              "Name": "宇宙翻译机",
+              "RequiredProgress": 650
+            }
+          ]
+        },
+        {
+          "Name": "光耀碎片",
+          "Icon": "faction/MEDAL.CRYSTALGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.CRYSTALNONE.png",
+              "Name": "遵从",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "不谐",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "结晶质",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "闪烁的",
+              "RequiredProgress": 25
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "明朗",
+              "RequiredProgress": 50
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "和谐恢复",
+              "RequiredProgress": 75
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALSILVER.png",
+              "Name": "美妙乐章",
+              "RequiredProgress": 100
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALSILVER.png",
+              "Name": "虚空探寻者",
+              "RequiredProgress": 125
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALSILVER.png",
+              "Name": "虚空收获者",
+              "RequiredProgress": 150
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALSILVER.png",
+              "Name": "闪光的",
+              "RequiredProgress": 175
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALGOLD.png",
+              "Name": "阿特兰蒂风",
+              "RequiredProgress": 200
+            }
+          ]
+        },
+        {
+          "Name": "自噬体回收物",
+          "Icon": "faction/MEDAL.REPAIRGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.REPAIRNONE.png",
+              "Name": "无名",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "支离破碎",
+              "RequiredProgress": 1
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "尚未删除",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "碎片整理",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "回收物",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "重新组装",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRSILVER.png",
+              "Name": "循环",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRSILVER.png",
+              "Name": "恢复",
+              "RequiredProgress": 25
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRSILVER.png",
+              "Name": "优化",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRSILVER.png",
+              "Name": "重建",
+              "RequiredProgress": 35
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRGOLD.png",
+              "Name": "完全回归",
+              "RequiredProgress": 40
+            }
+          ]
+        }
+      ],
+      "Additional": [
+        "ShowGuildMissions"
+      ]
     }
   ]
 }

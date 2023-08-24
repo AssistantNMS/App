@@ -1907,6 +1907,638 @@
       "Additional": [
         "ShowGuildMissions"
       ]
+    },
+    {
+      "Id": "unknown: Guild,Pirates",
+      "Icon": "faction/FACTIONS.PIRATE.ON.png",
+      "Name": "Proscritos",
+      "Description": "En algunos sistemas estelares, la autoridad local dominante ha sido <VAL_ON>derrocada<> por las fuerzas rebeldes proscritas. Estos sistemas proscritos son inusualmente <FUEL>conflictivos<> debido a la falta de represalias por atacar a naves comerciales. Esto presenta tanto un riesgo para los comerciantes como una <STELLAR>oportunidad<> sustancial para los que desean dedicarse a la piratería.\n\nLos actos de piratería lucrativos incluyen el <SPECIAL>contrabando<>, el saqueo de <TECHNOLOGY>cargueros<> y <TECHNOLOGY>comerciantes<> o llevar a cabo misiones para el <STELLAR>maestro de recompensas<> a bordo de la estación rebelde.",
+      "Missions": [
+        {
+          "Name": "Estatus",
+          "Icon": "faction/MEDAL.PIRATEFACTIONGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONNONE.png",
+              "Name": "Traidor",
+              "RequiredProgress": -5
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONNONE.png",
+              "Name": "Renegado",
+              "RequiredProgress": -2
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONNONE.png",
+              "Name": "Desconocido",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONBRONZE.png",
+              "Name": "Rata de sentina",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONBRONZE.png",
+              "Name": "Filibustero",
+              "RequiredProgress": 8
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONBRONZE.png",
+              "Name": "Corsario",
+              "RequiredProgress": 14
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONSILVER.png",
+              "Name": "Bucanero",
+              "RequiredProgress": 21
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONSILVER.png",
+              "Name": "Azote",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONSILVER.png",
+              "Name": "Leyenda",
+              "RequiredProgress": 40
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONSILVER.png",
+              "Name": "Pirata terrible",
+              "RequiredProgress": 60
+            },
+            {
+              "Icon": "faction/MEDAL.PIRATEFACTIONGOLD.png",
+              "Name": "Almirante de los oscuros",
+              "RequiredProgress": 100
+            }
+          ]
+        },
+        {
+          "Name": "Misiones completadas",
+          "Icon": "faction/MEDAL.MEDALGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.MEDALOFF.png",
+              "Name": "Forastero",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "Iniciado",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "Reconocido",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "Oficial",
+              "RequiredProgress": 8
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "Asociado",
+              "RequiredProgress": 12
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "Sénior",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "Maestro",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "Consejero",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "Veterano",
+              "RequiredProgress": 40
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "Eminente",
+              "RequiredProgress": 50
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALGOLD.png",
+              "Name": "Embajador",
+              "RequiredProgress": 60
+            }
+          ]
+        },
+        {
+          "Name": "La carrera del contrabandista",
+          "Icon": "faction/MEDAL.SMUGGLEGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.SMUGGLENONE.png",
+              "Name": "Tan bueno como el oro",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "Errores administrativos",
+              "RequiredProgress": 10000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "A la carrera",
+              "RequiredProgress": 100000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "Perista",
+              "RequiredProgress": 200000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "Traficante",
+              "RequiredProgress": 500000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEBRONZE.png",
+              "Name": "Contrabandista",
+              "RequiredProgress": 1000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLESILVER.png",
+              "Name": "Infractor",
+              "RequiredProgress": 2000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLESILVER.png",
+              "Name": "El agente",
+              "RequiredProgress": 5000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLESILVER.png",
+              "Name": "Maestro contrabandista",
+              "RequiredProgress": 10000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLESILVER.png",
+              "Name": "Inalcanzable",
+              "RequiredProgress": 20000000
+            },
+            {
+              "Icon": "faction/MEDAL.SMUGGLEGOLD.png",
+              "Name": "Sorteabloqueos",
+              "RequiredProgress": 50000000
+            }
+          ]
+        },
+        {
+          "Name": "Recompensas completadas",
+          "Icon": "faction/MEDAL.BOUNTIESGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.BOUNTIESOFF.png",
+              "Name": "Inofensivo",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "Principalmente inofensivo",
+              "RequiredProgress": 1
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "Vigilante",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "Cazarrecompensas",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "Mariscal",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESBRONZE.png",
+              "Name": "Maestro de recompensas",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESSILVER.png",
+              "Name": "Sabueso",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESSILVER.png",
+              "Name": "Sicario",
+              "RequiredProgress": 25
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESSILVER.png",
+              "Name": "Castigador",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESSILVER.png",
+              "Name": "Ojo mortal",
+              "RequiredProgress": 35
+            },
+            {
+              "Icon": "faction/MEDAL.BOUNTIESGOLD.png",
+              "Name": "Lobo estelar",
+              "RequiredProgress": 40
+            }
+          ]
+        },
+        {
+          "Name": "Comerciantes saqueados",
+          "Icon": "faction/MEDAL.SHIPKILLGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.SHIPKILLOFF.png",
+              "Name": "Legal",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "Oportunista",
+              "RequiredProgress": 1
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "Molestia",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "Proscrito",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "Amenaza",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLBRONZE.png",
+              "Name": "Saqueador",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLSILVER.png",
+              "Name": "Asaltante",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLSILVER.png",
+              "Name": "Pirata estelar",
+              "RequiredProgress": 25
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLSILVER.png",
+              "Name": "Más buscado",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLSILVER.png",
+              "Name": "Alas del peligro",
+              "RequiredProgress": 35
+            },
+            {
+              "Icon": "faction/MEDAL.SHIPKILLGOLD.png",
+              "Name": "Señor del pillaje",
+              "RequiredProgress": 40
+            }
+          ]
+        }
+      ],
+      "Additional": [
+        "ShowGuildMissions"
+      ]
+    },
+    {
+      "Id": "unknown: Guild,Builders",
+      "Icon": "faction/FACTIONS.BUILDER.ON.png",
+      "Name": "El autófago",
+      "Description": "Los autófagos son formas de vida robóticas, Korvax divergentes purgados de la pureza de la Convergencia. Desterrados al borrarse, han sido extraídos del vacío por el <SPECIAL>atlantideum<> que brota desde lo más profundo de los mundos disonantes.\n\nEl proceso de reconstrucción es un rito lento y arduo que llevan a cabo todos y cada uno de los autófagos, ya que buscan las piezas necesarias para ensamblar su propio caparazón que, al igual que su mente, es de su propiedad. No volverán a renunciar a ellos.",
+      "Missions": [
+        {
+          "Name": "Estatus",
+          "Icon": "faction/MEDAL.BUILDERGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.BUILDERNONE.png",
+              "Name": "Residuo de la Convergencia",
+              "RequiredProgress": -5
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERNONE.png",
+              "Name": "Desterrado",
+              "RequiredProgress": -2
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERNONE.png",
+              "Name": "Sin registrar",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERBRONZE.png",
+              "Name": "Preconstruido",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERBRONZE.png",
+              "Name": "Regresado",
+              "RequiredProgress": 8
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERBRONZE.png",
+              "Name": "Reclamado",
+              "RequiredProgress": 14
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERSILVER.png",
+              "Name": "Maquinista",
+              "RequiredProgress": 21
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERSILVER.png",
+              "Name": "Disruptor",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERSILVER.png",
+              "Name": "Artífice",
+              "RequiredProgress": 40
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERSILVER.png",
+              "Name": "Ojos del vacío",
+              "RequiredProgress": 60
+            },
+            {
+              "Icon": "faction/MEDAL.BUILDERGOLD.png",
+              "Name": "Chispa salvaje",
+              "RequiredProgress": 100
+            }
+          ]
+        },
+        {
+          "Name": "Misiones completadas",
+          "Icon": "faction/MEDAL.MEDALGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.MEDALOFF.png",
+              "Name": "Forastero",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "Iniciado",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "Reconocido",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "Oficial",
+              "RequiredProgress": 8
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "Asociado",
+              "RequiredProgress": 12
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALBRONZE.png",
+              "Name": "Sénior",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "Maestro",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "Consejero",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "Veterano",
+              "RequiredProgress": 40
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALSILVER.png",
+              "Name": "Eminente",
+              "RequiredProgress": 50
+            },
+            {
+              "Icon": "faction/MEDAL.MEDALGOLD.png",
+              "Name": "Embajador",
+              "RequiredProgress": 60
+            }
+          ]
+        },
+        {
+          "Name": "Palabras aprendidas",
+          "Icon": "faction/MEDAL.WORDSGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.WORDSOFF.png",
+              "Name": "Incomprensible",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "Principiante",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "Estudiante",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "Comprendido",
+              "RequiredProgress": 50
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "Familiar",
+              "RequiredProgress": 100
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSBRONZE.png",
+              "Name": "Conversador",
+              "RequiredProgress": 150
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSSILVER.png",
+              "Name": "Fluido",
+              "RequiredProgress": 250
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSSILVER.png",
+              "Name": "Intérprete",
+              "RequiredProgress": 350
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSSILVER.png",
+              "Name": "Erudito",
+              "RequiredProgress": 450
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSSILVER.png",
+              "Name": "Lingüista",
+              "RequiredProgress": 550
+            },
+            {
+              "Icon": "faction/MEDAL.WORDSGOLD.png",
+              "Name": "Traductor universal",
+              "RequiredProgress": 650
+            }
+          ]
+        },
+        {
+          "Name": "Esquirlas radiantes",
+          "Icon": "faction/MEDAL.CRYSTALGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.CRYSTALNONE.png",
+              "Name": "Cumplidor",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "Disonante",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "Cristalino",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "Centelleantes",
+              "RequiredProgress": 25
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "Brillante",
+              "RequiredProgress": 50
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALBRONZE.png",
+              "Name": "Rearmonizado",
+              "RequiredProgress": 75
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALSILVER.png",
+              "Name": "Melódico",
+              "RequiredProgress": 100
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALSILVER.png",
+              "Name": "Buscador del Vacío",
+              "RequiredProgress": 125
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALSILVER.png",
+              "Name": "Cosechador de vacío",
+              "RequiredProgress": 150
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALSILVER.png",
+              "Name": "Radiante",
+              "RequiredProgress": 175
+            },
+            {
+              "Icon": "faction/MEDAL.CRYSTALGOLD.png",
+              "Name": "Atlantid",
+              "RequiredProgress": 200
+            }
+          ]
+        },
+        {
+          "Name": "Recuperación de autófagos",
+          "Icon": "faction/MEDAL.REPAIRGOLD.png",
+          "Tiers": [
+            {
+              "Icon": "faction/MEDAL.REPAIRNONE.png",
+              "Name": "Nulo",
+              "RequiredProgress": 0
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "En fragmentación",
+              "RequiredProgress": 1
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "No eliminado",
+              "RequiredProgress": 3
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "Desfragmentado",
+              "RequiredProgress": 5
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "Recuperado",
+              "RequiredProgress": 10
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRBRONZE.png",
+              "Name": "Reunido",
+              "RequiredProgress": 15
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRSILVER.png",
+              "Name": "Reciclado",
+              "RequiredProgress": 20
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRSILVER.png",
+              "Name": "Recuperada",
+              "RequiredProgress": 25
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRSILVER.png",
+              "Name": "Optimizado",
+              "RequiredProgress": 30
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRSILVER.png",
+              "Name": "Reconstruido",
+              "RequiredProgress": 35
+            },
+            {
+              "Icon": "faction/MEDAL.REPAIRGOLD.png",
+              "Name": "Regresado",
+              "RequiredProgress": 40
+            }
+          ]
+        }
+      ],
+      "Additional": [
+        "ShowGuildMissions"
+      ]
     }
   ]
 }

@@ -5092,7 +5092,7 @@
     "Id": "tech143",
     "Icon": "technology/143.png",
     "Name": "パーソナル精製機",
-    "Group": "個人携帯型の精製機ユニット",
+    "Group": "マウント型高度精製機",
     "Description": "コンパクトな拡張ユニットでエクソスーツに小型の<TECHNOLOGY>携帯精製機<>を取り付け、エクソスーツのインターフェイスから直接使用できるようにする。\n\nユニットの稼働には<FUEL>燃料<>が必要で、一度に1種類の物質しか精製できない。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -8972,7 +8972,7 @@
   {
     "Id": "tech242",
     "Icon": "technology/242.png",
-    "Name": "エコー探査機",
+    "Name": "共鳴増幅器",
     "Group": "エコーシード探査装置",
     "Description": "マルチツールの<TECHNOLOGY>スキャナー<>用アタッチメント。専門家ポーロが設計し、アトランティディウムを融合した<SPECIAL>知覚体エコー<>を検出できる。\n\n<SPECIAL>不協和音の<>惑星上で、分析レンズ（<IMG>AIM<>）を使って知覚体エコーを探す。エコーの場所に到着したら、知覚のアノマリーを<IMG>SCAN<>で<SPECIAL>完全に見つける<>。",
     "BaseValueUnits": 1.0,
@@ -9075,6 +9075,451 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech246",
+    "Icon": "technology/246.png",
+    "Name": "パーソナル精製機MK2",
+    "Group": "マウント型高度精製機",
+    "Description": "エクソスーツのコンパクトな拡張機能で、高機能でありながら携帯可能な<TECHNOLOGY>中型精製機<>をインストールできる。使用者のエクソスーツインターフェースから直接利用できる。\n\nこの精製機は<FUEL>燃料<>を必要とし、標準的なパーソナル精製機よりも複雑なレシピを精製できる。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 580,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw15",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech247",
+    "Icon": "technology/242.png",
+    "Name": "スキャンハーモナイザー",
+    "Group": "マルチツールアップグレード",
+    "Description": "マルチツールの<TECHNOLOGY>スキャナー<>用のアタッチメント。スキャナーで近くのオートファジーユニットの<TECHNOLOGY>隠された信号<>を<TECHNOLOGY>解読<>できるようになる。\n\n<IMG>SCAN<>でスキャナーを有効にする。探知器の電波が周辺エリアを通過すると、<STELLAR>近くのオートファジー<>を<STELLAR>自動で露見させる<>。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw52",
+        "Quantity": 100
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "エコー共鳴装置",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "スキャン半径",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech248",
+    "Icon": "technology/248.png",
+    "Name": "ポリフォニックコア",
+    "Group": "オートファジーの共鳴鍵",
+    "Description": "マルチツールの<TECHNOLOGY>スキャナー<>用のアタッチメント。スキャナーで近くのオートファジーユニットの<TECHNOLOGY>隠された信号<>を<TECHNOLOGY>解読<>できるようになる。\n\n<IMG>SCAN<>でスキャナーを有効にする。探知器の電波が周辺エリアを通過すると、<STELLAR>近くのオートファジー<>を<STELLAR>自動で露見させる<>。\n\nさらに、このスキャナーで<SPECIAL>オートファジーの集落を発見<>することもできる。このスキャナーを選択し、<VAL_ON>オートファジーの集落を発見<>（<IMG>FE_SELECT<>）<>を使うと、オートファジーが関心のある惑星の場所を特定できる。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 190
+      },
+      {
+        "Id": "prod58",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "エコー共鳴装置",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "スキャン半径",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech249",
+    "Icon": "technology/249.png",
+    "Name": "ルーン文字のレンズ",
+    "Group": "幾何学的アノマリー",
+    "Description": "この古代兵器の幾何学的な心臓は<TECHNOLOGY>ルーン文字のレンズ<>だ。そのあり得ない幾何学模様は光を収束させて高出力の<TECHNOLOGY>マインレーザー<>に変換するだけでなく、局所的な電磁場を捻じ曲げて使用者を<STELLAR>見えなく<>することもできる。\n\n<FUEL>炭素系資源<>を燃料とする。<IMG>ATTACK<>でビームを射出する。<IMG>CYCLEALTWEAPON<>で隠れる機能を選択し、<IMG>ALTATTACK<>を長押しすると起動する。 ",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "マインスピード",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "散熱",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "12"
+      },
+      {
+        "Name": "ダメージ",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "オーバーヒートダウンタイム",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "0.6"
+      },
+      {
+        "Name": "燃料効率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "120"
+      },
+      {
+        "Name": "採掘した資源",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "miningLaser",
+        "Value": "10"
+      },
+      {
+        "Name": "アクティブカモフラージュ",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech250",
+    "Icon": "technology/106.png",
+    "Name": "指節ノード",
+    "Group": "破損したオートファジーの部品",
+    "Description": "このオートファジーは正常に機能しているとはいえないが、そのサブコンポーネントには以前に修理を試みた形跡が見られる。もう少し微調整を加えれば、修理は完了するかもしれない...\n\nこのコンポーネントを<IMG>REPAIR<>で修理するか、<IMG>PIN<>で必要な素材の場所を見つけよう。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech251",
+    "Icon": "technology/88.png",
+    "Name": "圧力シール",
+    "Group": "破損したオートファジーの部品",
+    "Description": "このオートファジーは正常に機能しているとはいえないが、そのサブコンポーネントには以前に修理を試みた形跡が見られる。もう少し微調整を加えれば、修理は完了するかもしれない...\n\nこのコンポーネントを<IMG>REPAIR<>で修理するか、<IMG>PIN<>で必要な素材の場所を見つけよう。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech252",
+    "Icon": "technology/108.png",
+    "Name": "連結ヒンジ",
+    "Group": "破損したオートファジーの部品",
+    "Description": "このオートファジーは正常に機能しているとはいえないが、そのサブコンポーネントには以前に修理を試みた形跡が見られる。もう少し微調整を加えれば、修理は完了するかもしれない...\n\nこのコンポーネントを<IMG>REPAIR<>で修理するか、<IMG>PIN<>で必要な素材の場所を見つけよう。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech253",
+    "Icon": "technology/109.png",
+    "Name": "編み込みケーブル",
+    "Group": "破損したオートファジーの部品",
+    "Description": "このオートファジーは正常に機能しているとはいえないが、そのサブコンポーネントには以前に修理を試みた形跡が見られる。もう少し微調整を加えれば、修理は完了するかもしれない...\n\nこのコンポーネントを<IMG>REPAIR<>で修理するか、<IMG>PIN<>で必要な素材の場所を見つけよう。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech254",
+    "Icon": "technology/110.png",
+    "Name": "コイルリンク",
+    "Group": "破損したオートファジーの部品",
+    "Description": "このオートファジーは正常に機能しているとはいえないが、そのサブコンポーネントには以前に修理を試みた形跡が見られる。もう少し微調整を加えれば、修理は完了するかもしれない...\n\nこのコンポーネントを<IMG>REPAIR<>で修理するか、<IMG>PIN<>で必要な素材の場所を見つけよう。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw13",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech255",
+    "Icon": "technology/89.png",
+    "Name": "点火リレー",
+    "Group": "破損したオートファジーの部品",
+    "Description": "このオートファジーは正常に機能しているとはいえないが、そのサブコンポーネントには以前に修理を試みた形跡が見られる。もう少し微調整を加えれば、修理は完了するかもしれない...\n\nこのコンポーネントを<IMG>REPAIR<>で修理するか、<IMG>PIN<>で必要な素材の場所を見つけよう。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw12",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech256",
+    "Icon": "technology/84.png",
+    "Name": "視覚センサー",
+    "Group": "破損したオートファジーの部品",
+    "Description": "このオートファジーは正常に機能しているとはいえないが、そのサブコンポーネントには以前に修理を試みた形跡が見られる。もう少し微調整を加えれば、修理は完了するかもしれない...\n\nこのコンポーネントを<IMG>REPAIR<>で修理するか、<IMG>PIN<>で必要な素材の場所を見つけよう。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech257",
+    "Icon": "technology/112.png",
+    "Name": "神経点火装置",
+    "Group": "破損したオートファジーの部品",
+    "Description": "このオートファジーは正常に機能しているとはいえないが、そのサブコンポーネントには以前に修理を試みた形跡が見られる。もう少し微調整を加えれば、修理は完了するかもしれない...\n\nこのコンポーネントを<IMG>REPAIR<>で修理するか、<IMG>PIN<>で必要な素材の場所を見つけよう。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod2",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech258",
+    "Icon": "technology/118.png",
+    "Name": "タイミングギア",
+    "Group": "破損したオートファジーの部品",
+    "Description": "このオートファジーは正常に機能しているとはいえないが、そのサブコンポーネントには以前に修理を試みた形跡が見られる。もう少し微調整を加えれば、修理は完了するかもしれない...\n\nこのコンポーネントを<IMG>REPAIR<>で修理するか、<IMG>PIN<>で必要な素材の場所を見つけよう。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod11",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech259",
+    "Icon": "technology/122.png",
+    "Name": "パワーセル",
+    "Group": "破損したオートファジーの部品",
+    "Description": "このオートファジーは正常に機能しているとはいえないが、そのサブコンポーネントには以前に修理を試みた形跡が見られる。もう少し微調整を加えれば、修理は完了するかもしれない...\n\nこのコンポーネントを<IMG>REPAIR<>で修理するか、<IMG>PIN<>で必要な素材の場所を見つけよう。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 20
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   }

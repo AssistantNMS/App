@@ -5092,7 +5092,7 @@
     "Id": "tech143",
     "Icon": "technology/143.png",
     "Name": "Osobisty rafinator",
-    "Group": "Przenośna jednostka rafinująca",
+    "Group": "Przenośny zaawansowany rafinator",
     "Description": "Przenośne rozszerzenie egzokombinezonu, instalujące niewielki <TECHNOLOGY>mobilny rafinator<>, dostępny bezpośrednio z interfejsu egzokombinezonu użytkownika.\n\nJednostka wymaga <FUEL>paliwa<> i może rafinować tylko jedną substancję jednocześnie.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -8972,7 +8972,7 @@
   {
     "Id": "tech242",
     "Icon": "technology/242.png",
-    "Name": "Echolokator",
+    "Name": "Wzmacniacz rezonansu",
     "Group": "Urządzenie do wykrywania ziaren echa",
     "Description": "Dodatek do <TECHNOLOGY>skanera<> multinarzędzia zaprojektowany przez specjalistę Polo w celu wykrycia <SPECIAL>ech świadomości<> nasyconych atlantideum.\n\nW światach <SPECIAL>pełnych dysonansu<> skorzystaj z wizjera analitycznego (<IMG>AIM<>), aby zlokalizować echa świadomości. Po przybyciu do lokalizacji echa użyj <IMG>SCAN<>, aby <SPECIAL>w pełni odkryć<> pobliskie anomalie.",
     "BaseValueUnits": 1.0,
@@ -9075,6 +9075,451 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech246",
+    "Icon": "technology/246.png",
+    "Name": "Osobisty rafinator typ 2",
+    "Group": "Przenośny zaawansowany rafinator",
+    "Description": "Przenośne rozszerzenie egzokombinezonu, instalujące zaawansowany, przenośny <TECHNOLOGY>średni rafinator<>, dostępny bezpośrednio z interfejsu egzokombinezonu użytkownika\n\nJednostka wymaga <FUEL>paliwa<> i może rafinować bardziej złożone formuły niż standardowy osobisty rafinator.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 580,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw15",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech247",
+    "Icon": "technology/242.png",
+    "Name": "Harmonizator skanera",
+    "Group": "Ulepszenie multinarzędzia",
+    "Description": "Dodatek do <TECHNOLOGY>skanera<> multinarzędzia, który pozwala urządzeniu wykryć i <TECHNOLOGY>odszyfrować<> <TECHNOLOGY>sygnał maskujący<> pobliskich Autofagów.\n\nAby aktywować skaner, użyj <IMG>SCAN<>. Gdy fala detektora przejdzie przez lokalny obszar, <STELLAR>ujawni automatycznie<> każdego <STELLAR>Autofaga znajdującego się w pobliżu<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw52",
+        "Quantity": 100
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Rezonator echa",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "Promień skanowania",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech248",
+    "Icon": "technology/248.png",
+    "Name": "Polifoniczny rdzeń",
+    "Group": "Klucz do rezonansu Autofagów",
+    "Description": "Dodatek do <TECHNOLOGY>skanera<> multinarzędzia, który pozwala urządzeniu wykryć i <TECHNOLOGY>odszyfrować<> <TECHNOLOGY>sygnał maskujący<> pobliskich Autofagów.\n\nAby aktywować skaner, użyj <IMG>SCAN<>. Gdy fala detektora przejdzie przez lokalny obszar, <STELLAR>ujawni automatycznie<> każdego <STELLAR>Autofaga znajdującego się w pobliżu<>.\n\nPonadto urządzenie może być stosowane do <SPECIAL>lokalizowania osad Autofagów<>. Wybierz to urządzenie i użyj <VAL_ON>Zlokalizuj obóz Autofagów<> (<IMG>FE_SELECT<>)<>, aby wskazać na planecie interesujące miejsce powiązane z Autofagami.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 190
+      },
+      {
+        "Id": "prod58",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Rezonator echa",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "Promień skanowania",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech249",
+    "Icon": "technology/249.png",
+    "Name": "Runiczna soczewka",
+    "Group": "Anomalia geometryczna",
+    "Description": "Geometrycznym sercem tej starożytnej broni jest <TECHNOLOGY>Soczewka Runiczna<>. Jej niemożliwa geometria nie tylko koncentruje światło w <TECHNOLOGY>laserze wydobywczym<> o dużej mocy, ale może również zagiąć lokalne pole elektromagnetyczne, aby uczynić użytkownika <STELLAR>niewidzialnym<>.\n\nUrządzenie jest zasilane <FUEL>pierwiastkami węglopochodnymi<>. Wystrzel wiązkę przy użyciu <IMG>ATTACK<>. Wybierz funkcję maskowania, używając <IMG>CYCLEALTWEAPON<> i przytrzymaj <IMG>ALTATTACK<>, by aktywować. ",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Szybkość wydobycia",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "Rozpraszanie ciepła",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "12"
+      },
+      {
+        "Name": "Obrażenia",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Przestój spowodowany przegrzaniem",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "0.6"
+      },
+      {
+        "Name": "Wydajność paliwa",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "120"
+      },
+      {
+        "Name": "Wydobyte zasoby",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "miningLaser",
+        "Value": "10"
+      },
+      {
+        "Name": "Aktywny kamuflaż",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech250",
+    "Icon": "technology/106.png",
+    "Name": "Węzeł paliczkowy",
+    "Group": "Uszkodzony komponent Autofaga",
+    "Description": "Ten autofag jest daleki od gotowości do pracy, ale jego podzespoły wykazują oznaki poprzedniej próby naprawy. Z kilkoma dodatkowymi poprawkami pewnie uda się dokończyć pracę...\n\nNapraw ten komponent, wykorzystując <IMG>REPAIR<> lub użyj<IMG>PIN<>, by zlokalizować potrzebne materiały.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech251",
+    "Icon": "technology/88.png",
+    "Name": "Uszczelka ciśnieniowa",
+    "Group": "Uszkodzony komponent Autofaga",
+    "Description": "Ten autofag jest daleki od gotowości do pracy, ale jego podzespoły wykazują oznaki poprzedniej próby naprawy. Z kilkoma dodatkowymi poprawkami pewnie uda się dokończyć pracę...\n\nNapraw ten komponent, wykorzystując <IMG>REPAIR<> lub użyj<IMG>PIN<>, by zlokalizować potrzebne materiały.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech252",
+    "Icon": "technology/108.png",
+    "Name": "Zawias sprzęgający",
+    "Group": "Uszkodzony komponent Autofaga",
+    "Description": "Ten autofag jest daleki od gotowości do pracy, ale jego podzespoły wykazują oznaki poprzedniej próby naprawy. Z kilkoma dodatkowymi poprawkami pewnie uda się dokończyć pracę...\n\nNapraw ten komponent, wykorzystując <IMG>REPAIR<> lub użyj<IMG>PIN<>, by zlokalizować potrzebne materiały.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech253",
+    "Icon": "technology/109.png",
+    "Name": "Splot kablowy",
+    "Group": "Uszkodzony komponent Autofaga",
+    "Description": "Ten autofag jest daleki od gotowości do pracy, ale jego podzespoły wykazują oznaki poprzedniej próby naprawy. Z kilkoma dodatkowymi poprawkami pewnie uda się dokończyć pracę...\n\nNapraw ten komponent, wykorzystując <IMG>REPAIR<> lub użyj<IMG>PIN<>, by zlokalizować potrzebne materiały.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech254",
+    "Icon": "technology/110.png",
+    "Name": "Łącznik cewki",
+    "Group": "Uszkodzony komponent Autofaga",
+    "Description": "Ten autofag jest daleki od gotowości do pracy, ale jego podzespoły wykazują oznaki poprzedniej próby naprawy. Z kilkoma dodatkowymi poprawkami pewnie uda się dokończyć pracę...\n\nNapraw ten komponent, wykorzystując <IMG>REPAIR<> lub użyj<IMG>PIN<>, by zlokalizować potrzebne materiały.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw13",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech255",
+    "Icon": "technology/89.png",
+    "Name": "Przekaźnik iskrowy",
+    "Group": "Uszkodzony komponent Autofaga",
+    "Description": "Ten autofag jest daleki od gotowości do pracy, ale jego podzespoły wykazują oznaki poprzedniej próby naprawy. Z kilkoma dodatkowymi poprawkami pewnie uda się dokończyć pracę...\n\nNapraw ten komponent, wykorzystując <IMG>REPAIR<> lub użyj<IMG>PIN<>, by zlokalizować potrzebne materiały.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw12",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech256",
+    "Icon": "technology/84.png",
+    "Name": "Czujniki wizualne",
+    "Group": "Uszkodzony komponent Autofaga",
+    "Description": "Ten autofag jest daleki od gotowości do pracy, ale jego podzespoły wykazują oznaki poprzedniej próby naprawy. Z kilkoma dodatkowymi poprawkami pewnie uda się dokończyć pracę...\n\nNapraw ten komponent, wykorzystując <IMG>REPAIR<> lub użyj<IMG>PIN<>, by zlokalizować potrzebne materiały.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech257",
+    "Icon": "technology/112.png",
+    "Name": "Neuronowy zapalnik",
+    "Group": "Uszkodzony komponent Autofaga",
+    "Description": "Ten autofag jest daleki od gotowości do pracy, ale jego podzespoły wykazują oznaki poprzedniej próby naprawy. Z kilkoma dodatkowymi poprawkami pewnie uda się dokończyć pracę...\n\nNapraw ten komponent, wykorzystując <IMG>REPAIR<> lub użyj<IMG>PIN<>, by zlokalizować potrzebne materiały.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod2",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech258",
+    "Icon": "technology/118.png",
+    "Name": "Zębatki czasowe",
+    "Group": "Uszkodzony komponent Autofaga",
+    "Description": "Ten autofag jest daleki od gotowości do pracy, ale jego podzespoły wykazują oznaki poprzedniej próby naprawy. Z kilkoma dodatkowymi poprawkami pewnie uda się dokończyć pracę...\n\nNapraw ten komponent, wykorzystując <IMG>REPAIR<> lub użyj<IMG>PIN<>, by zlokalizować potrzebne materiały.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod11",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech259",
+    "Icon": "technology/122.png",
+    "Name": "Ogniwa zasilające",
+    "Group": "Uszkodzony komponent Autofaga",
+    "Description": "Ten autofag jest daleki od gotowości do pracy, ale jego podzespoły wykazują oznaki poprzedniej próby naprawy. Z kilkoma dodatkowymi poprawkami pewnie uda się dokończyć pracę...\n\nNapraw ten komponent, wykorzystując <IMG>REPAIR<> lub użyj<IMG>PIN<>, by zlokalizować potrzebne materiały.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 20
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   }

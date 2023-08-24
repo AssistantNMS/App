@@ -5092,7 +5092,7 @@
     "Id": "tech143",
     "Icon": "technology/143.png",
     "Name": "개인용 정제기",
-    "Group": "신체 장착 정제기 유닛",
+    "Group": "신체 장착 첨단 정제기",
     "Description": "사용자의 엑소슈트 인터페이스에서 곧장 사용할 수 있는 작은 <TECHNOLOGY>휴대용 정제기<>를 설치해 주는 엑소슈트의 소형 확장물입니다.\n\n유닛에는 <FUEL>연료<>가 필요하며, 한 번에 하나의 물질만 정제할 수 있다는 제한이 존재합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -8972,7 +8972,7 @@
   {
     "Id": "tech242",
     "Icon": "technology/242.png",
-    "Name": "반향 위치 탐지기",
+    "Name": "공명 증폭기",
     "Group": "반향의 씨앗 탐지 장치",
     "Description": "멀티툴 <TECHNOLOGY>스캐너<>를 위한 부가 장치로, 전문가 폴로가 아틀란티디움이 주입된 <SPECIAL>지성체의 반향<>을 감지하기 위해 고안되었습니다.\n\n<SPECIAL>부조화된<>행성에서 분석 바이저(<IMG>AIM<>)를 사용하여 지성체의 반향을 찾으십시오. 반향의 위치에 도착하면 <IMG>SCAN<>으로 주변의 아노말리를 <SPECIAL>완전히 드러내십시오<>.",
     "BaseValueUnits": 1.0,
@@ -9075,6 +9075,451 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech246",
+    "Icon": "technology/246.png",
+    "Name": "개인용 정제기 Mk 2",
+    "Group": "신체 장착 첨단 정제기",
+    "Description": "사용자의 엑소슈트 인터페이스에서 곧장 사용할 수 있는 첨단 휴대용 <TECHNOLOGY>중형 정제기<>를 설치해 주는 엑소슈트의 소형 확장물입니다.\n\n유닛에는 <FUEL>연료<>가 필요하며, 표준 개인 정제기 유닛보다 더 복잡한 레시피를 정제할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 580,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw15",
+        "Quantity": 120
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech247",
+    "Icon": "technology/242.png",
+    "Name": "스캔 하모나이저",
+    "Group": "멀티툴 업그레이드",
+    "Description": "근처에 있는 자가포식 유닛의 <TECHNOLOGY>은신 신호<>를 멀티툴 <TECHNOLOGY>스캐너<>가 감지 및 <TECHNOLOGY>해독<>할 수 있도록 해주는 부착물입니다.\n\n<IMG>SCAN<>을 이용해 스캐너를 활성화하십시오. 감지기 파장이 해당 지역에 퍼져나가면 <STELLAR>근처에 있는 자가포식 엔티티<>를 <STELLAR>자동으로 드러냅니다<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw52",
+        "Quantity": 100
+      },
+      {
+        "Id": "cur101",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "반향 공명기",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "스캔 반경",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech248",
+    "Icon": "technology/248.png",
+    "Name": "다선율 코어",
+    "Group": "자가포식 공명 키",
+    "Description": "근처에 있는 자가포식 유닛의 <TECHNOLOGY>은신 신호<>를 멀티툴 <TECHNOLOGY>스캐너<>가 감지 및 <TECHNOLOGY>해독<>할 수 있도록 해주는 부착물입니다.\n\n<IMG>SCAN<>을 이용해 스캐너를 활성화하십시오. 감지기 파장이 해당 지역에 퍼져나가면 <STELLAR>근처에 있는 자가포식 엔티티<>를 <STELLAR>자동으로 드러냅니다<>.\n\n이 장치로 <SPECIAL>자가포식 거주지를 찾을<> 수도 있습니다. 이 장치를 선택하고 <VAL_ON>자가포식 캠프 찾기<>(<IMG>FE_SELECT<>)<>를 사용하면 행성 내 자가포식 관심 장소가 표시됩니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw72",
+        "Quantity": 190
+      },
+      {
+        "Id": "prod58",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "반향 공명기",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "accuracy",
+        "Value": "100"
+      },
+      {
+        "Name": "스캔 반경",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "range",
+        "Value": "10"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech249",
+    "Icon": "technology/249.png",
+    "Name": "룬 렌즈",
+    "Group": "기하학적 아노말리",
+    "Description": "이 고대 무기의 심장부에는 <TECHNOLOGY>룬 렌즈<>가 자리합니다. 빛을 고출력 <TECHNOLOGY>마이닝 레이저<>에 집중시킬 뿐 아니라 전자기장을 워프시켜 사용자를 <STELLAR>보이지 않게<> 만들어주니 기하학적으로 불가능한 구조가 아닐 수 없습니다.\n\n<FUEL>탄소 기반 원소<>로 구동합니다. <IMG>ATTACK<>으로 빔을 쏩니다. <IMG>CYCLEALTWEAPON<>으로 보조 은신 기능을 선택한 후 <IMG>ALTATTACK<>을 길게 누르면 활성화됩니다. ",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "채광 속도",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recharge",
+        "Value": "100"
+      },
+      {
+        "Name": "열 확산",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "12"
+      },
+      {
+        "Name": "위력",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "과열로 인한 작동 불가능 시간",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "time",
+        "Value": "0.6"
+      },
+      {
+        "Name": "연료 효율",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "120"
+      },
+      {
+        "Name": "채광한 자원",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "miningLaser",
+        "Value": "10"
+      },
+      {
+        "Name": "활성 위장",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech250",
+    "Icon": "technology/106.png",
+    "Name": "손가락 마디",
+    "Group": "손상된 자가포식 부품",
+    "Description": "이 자가포식체는 전혀 작동할 기미가 없지만 보조 부품을 보니 기존에 수리 시도가 있었습니다. 몇 가지를 추가로 조정하면 작업을 완료할 수 있을 것 같습니다...\n\n<IMG>REPAIR<>로 이 부품을 수리하거나 <IMG>PIN<>을 사용하여 필요한 재료를 찾아보십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech251",
+    "Icon": "technology/88.png",
+    "Name": "압력 봉인기",
+    "Group": "손상된 자가포식 부품",
+    "Description": "이 자가포식체는 전혀 작동할 기미가 없지만 보조 부품을 보니 기존에 수리 시도가 있었습니다. 몇 가지를 추가로 조정하면 작업을 완료할 수 있을 것 같습니다...\n\n<IMG>REPAIR<>로 이 부품을 수리하거나 <IMG>PIN<>을 사용하여 필요한 재료를 찾아보십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech252",
+    "Icon": "technology/108.png",
+    "Name": "커플링 힌지",
+    "Group": "손상된 자가포식 부품",
+    "Description": "이 자가포식체는 전혀 작동할 기미가 없지만 보조 부품을 보니 기존에 수리 시도가 있었습니다. 몇 가지를 추가로 조정하면 작업을 완료할 수 있을 것 같습니다...\n\n<IMG>REPAIR<>로 이 부품을 수리하거나 <IMG>PIN<>을 사용하여 필요한 재료를 찾아보십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech253",
+    "Icon": "technology/109.png",
+    "Name": "케이블 위브",
+    "Group": "손상된 자가포식 부품",
+    "Description": "이 자가포식체는 전혀 작동할 기미가 없지만 보조 부품을 보니 기존에 수리 시도가 있었습니다. 몇 가지를 추가로 조정하면 작업을 완료할 수 있을 것 같습니다...\n\n<IMG>REPAIR<>로 이 부품을 수리하거나 <IMG>PIN<>을 사용하여 필요한 재료를 찾아보십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech254",
+    "Icon": "technology/110.png",
+    "Name": "코일 링크",
+    "Group": "손상된 자가포식 부품",
+    "Description": "이 자가포식체는 전혀 작동할 기미가 없지만 보조 부품을 보니 기존에 수리 시도가 있었습니다. 몇 가지를 추가로 조정하면 작업을 완료할 수 있을 것 같습니다...\n\n<IMG>REPAIR<>로 이 부품을 수리하거나 <IMG>PIN<>을 사용하여 필요한 재료를 찾아보십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw13",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech255",
+    "Icon": "technology/89.png",
+    "Name": "스파크 릴레이",
+    "Group": "손상된 자가포식 부품",
+    "Description": "이 자가포식체는 전혀 작동할 기미가 없지만 보조 부품을 보니 기존에 수리 시도가 있었습니다. 몇 가지를 추가로 조정하면 작업을 완료할 수 있을 것 같습니다...\n\n<IMG>REPAIR<>로 이 부품을 수리하거나 <IMG>PIN<>을 사용하여 필요한 재료를 찾아보십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw12",
+        "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech256",
+    "Icon": "technology/84.png",
+    "Name": "비주얼 센서",
+    "Group": "손상된 자가포식 부품",
+    "Description": "이 자가포식체는 전혀 작동할 기미가 없지만 보조 부품을 보니 기존에 수리 시도가 있었습니다. 몇 가지를 추가로 조정하면 작업을 완료할 수 있을 것 같습니다...\n\n<IMG>REPAIR<>로 이 부품을 수리하거나 <IMG>PIN<>을 사용하여 필요한 재료를 찾아보십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech257",
+    "Icon": "technology/112.png",
+    "Name": "신경 점화기",
+    "Group": "손상된 자가포식 부품",
+    "Description": "이 자가포식체는 전혀 작동할 기미가 없지만 보조 부품을 보니 기존에 수리 시도가 있었습니다. 몇 가지를 추가로 조정하면 작업을 완료할 수 있을 것 같습니다...\n\n<IMG>REPAIR<>로 이 부품을 수리하거나 <IMG>PIN<>을 사용하여 필요한 재료를 찾아보십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod2",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech258",
+    "Icon": "technology/118.png",
+    "Name": "타이밍 기어",
+    "Group": "손상된 자가포식 부품",
+    "Description": "이 자가포식체는 전혀 작동할 기미가 없지만 보조 부품을 보니 기존에 수리 시도가 있었습니다. 몇 가지를 추가로 조정하면 작업을 완료할 수 있을 것 같습니다...\n\n<IMG>REPAIR<>로 이 부품을 수리하거나 <IMG>PIN<>을 사용하여 필요한 재료를 찾아보십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod11",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech259",
+    "Icon": "technology/122.png",
+    "Name": "파워셀",
+    "Group": "손상된 자가포식 부품",
+    "Description": "이 자가포식체는 전혀 작동할 기미가 없지만 보조 부품을 보니 기존에 수리 시도가 있었습니다. 몇 가지를 추가로 조정하면 작업을 완료할 수 있을 것 같습니다...\n\n<IMG>REPAIR<>로 이 부품을 수리하거나 <IMG>PIN<>을 사용하여 필요한 재료를 찾아보십시오.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 20
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
