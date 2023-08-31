@@ -20,12 +20,12 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf64}\AssistantNMS
 DisableProgramGroupPage=yes
-LicenseFile=C:\Development\Projects\AssistantNMS\assistantnms_app\installers\LICENCE.txt
+LicenseFile=..\LICENCE.md
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=C:\Development\Projects\AssistantNMS\assistantnms_app\installers
+OutputDir=.
 OutputBaseFilename=AssistantNMS_setup
-SetupIconFile=C:\Development\Projects\AssistantNMS\assistantnms_app\installers\favicon.ico
+SetupIconFile=favicon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -48,19 +48,19 @@ Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\bitsdojo_window_windows_plugin.lib"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\connectivity_plus_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\dynamic_color_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\flutter_secure_storage_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\assistantnms_app.exp"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\assistantnms_app.lib"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\platform_device_id_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\url_launcher_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\flutter_localization_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\share_plus_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Development\Projects\AssistantNMS\assistantnms_app\build\windows\runner\Release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\build\windows\runner\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\build\windows\runner\Release\bitsdojo_window_windows_plugin.lib"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\build\windows\runner\Release\connectivity_plus_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\build\windows\runner\Release\dynamic_color_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\build\windows\runner\Release\flutter_secure_storage_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\build\windows\runner\Release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\build\windows\runner\Release\assistantnms_app.exp"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\build\windows\runner\Release\assistantnms_app.lib"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\build\windows\runner\Release\platform_device_id_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\build\windows\runner\Release\url_launcher_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\build\windows\runner\Release\flutter_localization_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\build\windows\runner\Release\share_plus_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\build\windows\runner\Release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

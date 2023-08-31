@@ -1,0 +1,50 @@
+name: Flutter Deploy - Windows
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'build-windows'
+  cancel-in-progress: true
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - '2.*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: 'stable' # 'stable', 'beta', 'dev' or 'master'
+
+      - name: Write env file
+        env:
+          ENV_DART: ${{ secrets.ENV_DART }}
+        run: |
+          $Env:ENV_DART | Out-File ./lib/env.dart
+
+      - name: Build Windows release version
+        run: flutter build windows --release
+
+      - name: Building the installer
+        shell: cmd
+        run: |
+          "%programfiles(x86)%\Inno Setup 6\iscc.exe" "installers\assistantNMS.iss"
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: AssistantNMS_setup
+          path: 'installers/AssistantNMS_setup.exe'
