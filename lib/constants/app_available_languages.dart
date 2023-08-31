@@ -6,8 +6,8 @@ List<LocalizationMap> supportedLanguageMaps = [
     LocalizationMap(LocaleKey.dutch, 'nl', 'nl', percentageComplete: 68),
     LocalizationMap(LocaleKey.german, 'de', 'de', percentageComplete: 99),
     LocalizationMap(LocaleKey.french, 'fr', 'fr', percentageComplete: 100),
-    LocalizationMap(LocaleKey.italian, 'it', 'it', percentageComplete: 99),
-    LocalizationMap(LocaleKey.russian, 'ru', 'ru', percentageComplete: 99),
+    LocalizationMap(LocaleKey.italian, 'it', 'it', percentageComplete: 100),
+    LocalizationMap(LocaleKey.russian, 'ru', 'ru', percentageComplete: 100),
     LocalizationMap(LocaleKey.polish, 'pl', 'pl', percentageComplete: 100),
     LocalizationMap(LocaleKey.brazilianPortuguese, 'pt-br', 'br', percentageComplete: 99),
     LocalizationMap(LocaleKey.portuguese, 'pt', 'pt', percentageComplete: 37),
@@ -27,7 +27,7 @@ List<LocalizationMap> supportedLanguageMaps = [
     LocalizationMap(LocaleKey.malaysian, 'ms', 'my', percentageComplete: 87),
     LocalizationMap(LocaleKey.tagalog, 'tl', 'ph', percentageComplete: 0),
     LocalizationMap(LocaleKey.japanese, 'ja', 'jp', percentageComplete: 6),
-    LocalizationMap(LocaleKey.afrikaans, 'af', 'za', percentageComplete: 46),
+    LocalizationMap(LocaleKey.afrikaans, 'af', 'za', percentageComplete: 60),
 
 ];
 

@@ -201,7 +201,6 @@ class _TitlePageViewState extends State<TitlePageView>
                 viewModel.setHideCompleted(!viewModel.hideCompleted),
             text: getTranslations().fromKey(LocaleKey.showOwned),
           ),
-          goHomeAction(context),
         ],
       ),
       body: isLoading

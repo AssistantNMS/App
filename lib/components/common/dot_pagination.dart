@@ -26,11 +26,11 @@ Widget dotPagination(
         child: Center(
           child: DotsIndicator(
               dotsCount: numberOfDots,
-              position: currentPosition.toDouble(),
+              position: currentPosition,
               decorator: DotsDecorator(
                 activeColor: getTheme().getSecondaryColour(context),
               ),
-              onTap: (double dotIndex) {
+              onTap: (int dotIndex) {
                 if (onDotTap != null) {
                   onDotTap(dotIndex.toInt());
                 }

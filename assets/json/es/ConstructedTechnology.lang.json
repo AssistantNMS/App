@@ -281,7 +281,7 @@
   {
     "Id": "conTech10",
     "Icon": "constructedTechnology/10.png",
-    "Name": "Módulo de teletransporte entre bases",
+    "Name": "Módulo de teletransporte de base",
     "Group": "Dispositivo de transferencia de materia a larga distancia",
     "Description": "Un <TECHNOLOGY>dispositivo de teletransporte personal<>, que permite al usuario desplazarse con rapidez entre sus bases construidas, así como a cualquier terminal de estación espacial conectada a su red.\n\nSe insta al usuario a que verifique la integridad de su red antes de insertar cualquier materia de la que no pueda desprenderse.",
     "BaseValueUnits": 2.0,
@@ -3166,6 +3166,39 @@
     "RequiredItems": [
       {
         "Id": "raw2",
+        "Quantity": 25
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech114",
+    "Icon": "constructedTechnology/114.png",
+    "Name": "Proyector de maravillas",
+    "Group": "Holograma de pantalla de descubrimientos",
+    "Description": "Una <TECHNOLOGY>pantalla holográfica<> construible, diseñada para visualizar cualquier descubrimiento actualmente indicado en tus <STELLAR>registros personales<>.\n\nUsa el proyector para administrar estos registros directamente o verlos desde la sección <TRADEABLE>Maravillas<> del <VAL_ON>Catálogo<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 12,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod1",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw10",
         "Quantity": 25
       },
       {
