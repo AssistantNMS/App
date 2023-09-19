@@ -12,7 +12,7 @@
   [![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd] 
   ![Profile views](https://komarev.com/ghpvc/?username=AssistantNMS&color=green&style=for-the-badge)
 
-  [![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantNMS?color=%231d9bf0&style=for-the-badge)][assistantnmsTwitter]
+  [![Follow on Twitter](https://img.shields.io/badge/follow-%40AssistantNMS-1d9bf0?logo=twitter&style=for-the-badge)][assistantnmsTwitter]
   [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
 
   [![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](#)<br />
