@@ -27,6 +27,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v1
+        with:
+          channel: 'master' # or: 'beta', 'dev' or 'master'
 
       - name: Write env file
         env:

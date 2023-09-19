@@ -11,13 +11,14 @@
   ![gitmoji](https://github.com/AssistantNMS/.github/blob/main/badge/gitmoji.svg?raw=true)<br />
   [![Supported by the No Man's Sky Community Developers & Designers](https://raw.githubusercontent.com/NMSCD/About/master/badge/purple-ftb.svg)][nmscd] 
   ![Profile views](https://komarev.com/ghpvc/?username=AssistantNMS&color=green&style=for-the-badge)
-
-  [![Follow on Twitter](https://img.shields.io/badge/follow-%40AssistantNMS-1d9bf0?logo=twitter&style=for-the-badge)][assistantnmsTwitter]
-  [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
-
-  [![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](#)<br />
+  
+  [![Mastodon](https://img.shields.io/mastodon/follow/109315859662532146?color=%2300ff00&domain=https%3A%2F%2Fnomanssky.social&style=for-the-badge&logo=mastodon)][mastodon]
+  [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge&label=Chat%20on%20Discord&logo=discord)][discord]<br />
+  [![Follow on Twitter](https://img.shields.io/badge/follow-%40AssistantNMS-1d9bf0?logo=twitter&style=for-the-badge)][assistantnmsTwitter]<br />
+  
   [![Android review](https://api.assistantapps.com/badge/review/1/1.svg)][googlePlayStore]<br />
-  [![iOS review](https://api.assistantapps.com/badge/review/1/2.svg)][appleAppStore]
+  [![iOS review](https://api.assistantapps.com/badge/review/1/2.svg)][appleAppStore]<br />
+  [![Latest version](https://api.assistantapps.com/badge/version/589405b4-e40f-4cd9-b793-6bf37944ee09.svg?platforms=0&platforms=1)](*)
   
   <br /> 
 </div>
@@ -118,6 +119,7 @@ __The iOS build on [CodeMagic][codeMagic] generally reports that it has failed e
 [windowsStore]: https://apps.microsoft.com/store/detail/assistant-for-no-mans-sky/9NQLF7XD0LF3?ref=AssistantNMSGithub
 [discord]: https://assistantapps.com/discord?ref=AssistantNMSGithub
 [nmscd]: https://github.com/NMSCD?ref=AssistantNMSGithub
+[mastodon]: https://nomanssky.social/@assistantnms?ref=AssistantNMSGithub
 
 <!-- Other -->
 [mbincompiler]: https://github.com/monkeyman192/MBINCompiler
