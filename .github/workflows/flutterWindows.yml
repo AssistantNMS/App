@@ -13,8 +13,7 @@ concurrency:
 on:
   workflow_dispatch:
   push:
-    tags:
-      - '2.*'
+    branches: ['main']
 
 jobs:
   build:
