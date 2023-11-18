@@ -140,7 +140,9 @@ class _ViewInventoryListState extends State<AddInventorySlotPage> {
               Inventory? temp = await getNavigation().navigateAsync<Inventory>(
                 context,
                 navigateTo: (context) => AddEditInventoryPage(
-                  Inventory.initial(),
+                  Inventory.initial(
+                    getTranslations().fromKey(LocaleKey.name),
+                  ),
                   false,
                 ),
               );

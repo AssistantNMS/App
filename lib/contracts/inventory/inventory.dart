@@ -31,9 +31,9 @@ class Inventory {
     );
   }
 
-  factory Inventory.initial() => Inventory(
-        uuid: '',
-        name: '',
+  factory Inventory.initial(String name) => Inventory(
+        uuid: getNewGuid(),
+        name: name,
         icon: '',
         slots: [],
       );
