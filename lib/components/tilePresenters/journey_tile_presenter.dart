@@ -25,11 +25,17 @@ Widget journeyMilestoneTilePresenter(BuildContext context,
 
   int statIndex = storedMilestone?.journeyStatIndex ?? 0;
   JourneyMilestoneStat chosenStat = milestone.stats[statIndex];
+
+  String statValue = chosenStat.value.toString();
+  String min = getTranslations().fromKey(LocaleKey.minutes);
+  if (milestone.id == 'journey7') {
+    String statInMin = (chosenStat.value / 60).floor().toString();
+    statValue = min.replaceAll('{0}', statInMin);
+  }
   String heading =
       milestone.title.length > 1 ? milestone.title : milestone.message;
-  heading = heading.replaceAll('%STAT%', chosenStat.value.toString());
-  String subHeading =
-      milestone.message.replaceAll('%STAT%', chosenStat.value.toString());
+  heading = heading.replaceAll('%STAT%', statValue);
+  String subHeading = milestone.message.replaceAll('%STAT%', statValue);
 
   return ListTile(
     leading: Stack(
