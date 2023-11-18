@@ -27,9 +27,15 @@ class JourneyMilestoneBottomSheet extends StatelessWidget {
     for (int statIndex = 0; statIndex < milestone.stats.length; statIndex++) {
       JourneyMilestoneStat stat = milestone.stats[statIndex];
       String messageToDisplay = stat.value.toString();
+
+      String statValue = stat.value.toString();
+      String min = getTranslations().fromKey(LocaleKey.minutes);
+      if (milestone.id == 'journey7') {
+        String statInMin = (stat.value / 60).floor().toString();
+        statValue = min.replaceAll('{0}', statInMin);
+      }
       if ((milestone.message.length) > 1) {
-        messageToDisplay =
-            milestone.message.replaceAll('%STAT%', stat.value.toString());
+        messageToDisplay = milestone.message.replaceAll('%STAT%', statValue);
       }
 
       void Function() onTap;

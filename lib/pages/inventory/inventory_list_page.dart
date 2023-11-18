@@ -85,8 +85,11 @@ class _InventoryListState extends State<InventoryListPage> {
           onPressed: () async {
             Inventory? temp = await getNavigation().navigateAsync<Inventory>(
               context,
-              navigateTo: (context) =>
-                  AddEditInventoryPage(Inventory.initial(), false),
+              navigateTo: (context) => AddEditInventoryPage(
+                  Inventory.initial(
+                    getTranslations().fromKey(LocaleKey.name),
+                  ),
+                  false),
             );
             if (temp == null) return;
             viewModel.addInventory(temp);
