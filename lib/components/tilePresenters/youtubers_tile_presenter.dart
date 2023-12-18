@@ -106,18 +106,25 @@ Widget steamDatabaseTile(BuildContext context) =>
       onTap: () => launchExternalURL(NmsExternalUrls.steamDatabase),
     );
 
-Widget nmsHomeTile(BuildContext context) =>
-    genericListTileWithSubtitleAndImageCount(
-      context,
-      leadingImage: LocalImage(
-        imagePath:
-            '${getPath().imageAssetPathPrefix}/${AppImage.nmsWebsiteFavicon}',
-        padding: const EdgeInsets.all(4),
+Widget nmsHomeTile(BuildContext context) => Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 500),
+        child: Card(
+          margin: const EdgeInsets.all(12),
+          child: genericListTileWithSubtitleAndImageCount(
+            context,
+            leadingImage: LocalImage(
+              imagePath:
+                  '${getPath().imageAssetPathPrefix}/${AppImage.nmsWebsiteFavicon}',
+              padding: const EdgeInsets.all(4),
+            ),
+            title: 'No Man\'s Sky Official Website',
+            subtitle: const Text(NmsExternalUrls.noMansSkyWebsite),
+            trailing: const Icon(Icons.open_in_new),
+            onTap: () => launchExternalURL(NmsExternalUrls.noMansSkyWebsite),
+          ),
+        ),
       ),
-      title: 'No Man\'s Sky Official Website',
-      subtitle: const Text(NmsExternalUrls.noMansSkyWebsite),
-      trailing: const Icon(Icons.open_in_new),
-      onTap: () => launchExternalURL(NmsExternalUrls.noMansSkyWebsite),
     );
 
 Widget veritasVelezTile(BuildContext context, {String? subtitle}) =>
