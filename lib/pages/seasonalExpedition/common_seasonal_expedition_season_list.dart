@@ -5,6 +5,7 @@ import '../../components/tilePresenters/seasonal_expedition_tile_presenter.dart'
 import '../../constants/app_image.dart';
 import '../../contracts/generated/expedition_view_model.dart';
 import '../../contracts/seasonalExpedition/seasonal_expedition_season.dart';
+import '../../helpers/column_helper.dart';
 import '../../integration/dependency_injection.dart';
 import '../../redux/modules/setting/is_patreon_view_model.dart';
 import 'season_expedition_constants.dart';
@@ -56,7 +57,8 @@ Widget getExpeditionBodyFromFuture(
   AsyncSnapshot<ResultWithValue<CurrentAndPastExpeditions>> snapshot, {
   bool isCustom = false,
 }) {
-  List<Widget> listItems = List.empty(growable: true);
+  List<Widget Function(BuildContext)> listItems = List.empty(growable: true);
+  Widget? headingExpWidget;
 
   Widget? errorWidget = asyncSnapshotHandler(
     context,
@@ -74,11 +76,9 @@ Widget getExpeditionBodyFromFuture(
     ExpeditionViewModel? current = snapshot.data?.value.current;
     Widget innerChild = expeditionInProgressPresenter(context, current!);
 
-    listItems.add(
-      Padding(
-        padding: const EdgeInsets.only(top: 8, bottom: 12, left: 0),
-        child: innerChild,
-      ),
+    headingExpWidget = Padding(
+      padding: const EdgeInsets.only(top: 8, bottom: 12, left: 0),
+      child: innerChild,
     );
   }
 
@@ -94,8 +94,8 @@ Widget getExpeditionBodyFromFuture(
         .replaceAll('-redux', '');
     String suffix = jsonExp.isRedux ? ' (Redux)' : '';
     listItems.add(
-      expeditionSeasonTile(
-        context,
+      (liCtx) => expeditionSeasonTile(
+        liCtx,
         getBackgroundForExpedition(jsonExp.id),
         tileHeight,
         // getPatchForExpedition(jsonExp.id, jsonExp.icon),
@@ -117,8 +117,8 @@ Widget getExpeditionBodyFromFuture(
 
   if (isCustom == false) {
     listItems.add(
-      expeditionSeasonTile(
-        context,
+      (liCtx) => expeditionSeasonTile(
+        liCtx,
         AppImage.expeditionSeasonBackgroundBackup,
         smallTileHeight,
         AppImage.expeditionsUnusedPatches,
@@ -135,16 +135,51 @@ Widget getExpeditionBodyFromFuture(
   }
 
   listItems.add(
-    Padding(
-      child: Container(),
+    (_) => Padding(
       padding: const EdgeInsets.all(16),
+      child: Container(),
     ),
   );
 
-  return listWithScrollbar(
-    shrinkWrap: true,
-    itemCount: listItems.length,
-    itemBuilder: (BuildContext context, int index) => listItems[index],
-    scrollController: ScrollController(),
+  // return listWithScrollbar(
+  //   shrinkWrap: true,
+  //   itemCount: listItems.length,
+  //   itemBuilder: (BuildContext context, int index) => listItems[index],
+  //   scrollController: ScrollController(),
+  // );
+
+  List<Widget> children = List.empty(growable: true);
+  if (headingExpWidget != null) {
+    children.add(
+      Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 500),
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: headingExpWidget,
+          ),
+        ),
+      ),
+    );
+  }
+  children.add(
+    ListView(
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      children: [
+        gridWithScrollbar(
+          shrinkWrap: true,
+          itemCount: listItems.length,
+          itemBuilder: (BuildContext liCtx, int index) =>
+              listItems[index](liCtx),
+          gridViewColumnCalculator: getCommunityLinkColumnCount,
+          scrollController: ScrollController(),
+        ),
+      ],
+    ),
+  );
+
+  return ListView(
+    children: children,
   );
 }

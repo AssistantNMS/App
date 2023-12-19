@@ -5,6 +5,7 @@ import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/youtubers_tile_presenter.dart';
 import '../../constants/app_image.dart';
 import '../../contracts/redux/app_state.dart';
+import '../../helpers/column_helper.dart';
 import '../../redux/modules/setting/news_page_view_model.dart';
 
 import '../../components/tilePresenters/hello_games_tile_presenter.dart';
@@ -62,24 +63,27 @@ class NewsShellPage extends StatelessWidget {
   }
 
   Widget getBody(BuildContext context, NewsPageViewModel viewModel) {
+    Widget? initialColumnWidget;
     Widget columnWidget = Container();
 
     switch (viewModel.selectedNewsPage) {
       case 0:
-        columnWidget = SearchableList<NewsItem>(
+        initialColumnWidget = nmsHomeTile(context);
+        columnWidget = SearchableGrid<NewsItem>(
           () => getHelloGamesApiService().getNews(),
-          listItemDisplayer: newsItemTilePresenter,
-          listItemSearch: searchNews,
-          firstListItemWidget: nmsHomeTile(context),
+          gridItemDisplayer: newsItemTilePresenter,
+          gridItemSearch: searchNews,
+          gridViewColumnCalculator: getCommunityLinkColumnCount,
           addFabPadding: true,
         );
         break;
       case 1:
-        columnWidget = SearchableList<ReleaseNote>(
+        initialColumnWidget = nmsHomeTile(context);
+        columnWidget = SearchableGrid<ReleaseNote>(
           () => getHelloGamesApiService().getReleases(),
-          listItemDisplayer: releaseNoteTilePresenter,
-          listItemSearch: searchReleaseNotes,
-          firstListItemWidget: nmsHomeTile(context),
+          gridItemDisplayer: releaseNoteTilePresenter,
+          gridItemSearch: searchReleaseNotes,
+          gridViewColumnCalculator: getCommunityLinkColumnCount,
           minListForSearch: 10000,
           addFabPadding: true,
         );
@@ -88,13 +92,14 @@ class NewsShellPage extends StatelessWidget {
         columnWidget = const SteamBranchesPage();
         break;
       case 3:
-        columnWidget = SearchableList<SteamNewsItemViewModel>(
+        columnWidget = SearchableGrid<SteamNewsItemViewModel>(
           () => getAssistantAppsSteam().getSteamNews(AssistantAppType.nms),
-          listItemDisplayer:
+          gridItemDisplayer:
               (BuildContext localContext, SteamNewsItemViewModel newsItem,
                       {void Function()? onTap}) =>
                   steamNewsItemTilePresenter(localContext, newsItem, 0),
-          listItemSearch: (_, __) => true,
+          gridItemSearch: (_, __) => true,
+          gridViewColumnCalculator: getCommunityLinkColumnCount,
           addFabPadding: true,
         );
         break;
@@ -116,7 +121,10 @@ class NewsShellPage extends StatelessWidget {
             onSegmentChosen: viewModel.setSelectedNewsPage,
           ),
         ),
-        Expanded(child: columnWidget),
+        if (initialColumnWidget != null) initialColumnWidget,
+        Expanded(
+          child: columnWidget,
+        ),
       ],
     );
   }

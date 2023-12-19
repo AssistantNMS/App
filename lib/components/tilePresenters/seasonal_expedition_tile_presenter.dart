@@ -21,51 +21,60 @@ Widget seasonalExpeditionDetailTilePresenter(
   SeasonalExpeditionSeason season,
   bool useAltGlyphs,
 ) {
-  return Column(
-    children: [
-      seasonalExpeditionBase(
-        context,
-        150,
-        season.title,
-        season.icon,
-        bodyDisplayFunc: () => Padding(
-          padding: const EdgeInsets.only(right: 8),
-          child: Stack(
-            children: [
-              twoLinePortalGlyphList(
-                hexToIntArray(season.portalCode ?? ''),
-                useAltGlyphs: useAltGlyphs,
-              ),
-            ],
-          ),
-        ),
-        bodyFlex: 7,
-        imageFlex: 4,
-        onTap: () => getNavigation().navigateAsync(
-          context,
-          navigateTo: (context) => ImageViewerPage(
+  return LayoutBuilder(
+    builder: (layoutCtx, BoxConstraints constraints) {
+      int numPerLine = 6;
+      if (constraints.maxWidth > 1000) {
+        numPerLine = 12;
+      }
+      return Column(
+        children: [
+          seasonalExpeditionBase(
+            context,
+            150,
             season.title,
             season.icon,
-            analyticsKey: '',
+            bodyDisplayFunc: () => Padding(
+              padding: const EdgeInsets.only(right: 8),
+              child: Stack(
+                children: [
+                  portalGlyphList(
+                    hexToIntArray(season.portalCode ?? ''),
+                    numPerLine,
+                    useAltGlyphs: useAltGlyphs,
+                  ),
+                ],
+              ),
+            ),
+            bodyFlex: 7,
+            imageFlex: 4,
+            onTap: () => getNavigation().navigateAsync(
+              context,
+              navigateTo: (context) => ImageViewerPage(
+                season.title,
+                season.icon,
+                analyticsKey: '',
+              ),
+            ),
+            backgroundColour: getTheme().getScaffoldBackgroundColour(context),
           ),
-        ),
-        backgroundColour: getTheme().getScaffoldBackgroundColour(context),
-      ),
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(getTranslations().fromKey(LocaleKey.startDate) +
-                ': ' +
-                simpleDate(season.startDate)),
-            Text(getTranslations().fromKey(LocaleKey.endDate) +
-                ': ' +
-                simpleDate(season.endDate)),
-          ],
-        ),
-      ),
-    ],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(getTranslations().fromKey(LocaleKey.startDate) +
+                    ': ' +
+                    simpleDate(season.startDate)),
+                Text(getTranslations().fromKey(LocaleKey.endDate) +
+                    ': ' +
+                    simpleDate(season.endDate)),
+              ],
+            ),
+          ),
+        ],
+      );
+    },
   );
 }
 
@@ -242,7 +251,10 @@ Widget seasonalExpeditionBase(
       Expanded(
         flex: imageFlex,
         child: GestureDetector(
-          child: LocalImage(imagePath: imagePath),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(maxHeight: height),
+            child: LocalImage(imagePath: imagePath),
+          ),
           onTap: () => getNavigation().navigateAsync(
             context,
             navigateTo: (context) => ImageViewerPage(
@@ -283,7 +295,6 @@ Widget seasonalExpeditionBase(
     );
   }
   return Container(
-    height: height,
     padding: const EdgeInsets.all(0),
     color: backgroundColour,
     child: (useMaterial ?? false) ? Material(child: child) : child,
