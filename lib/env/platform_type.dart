@@ -1,0 +1,1 @@
+const isGithubWindowsInstaller = false;

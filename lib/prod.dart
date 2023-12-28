@@ -4,6 +4,7 @@ import 'app.dart';
 import 'env.dart';
 import 'assistant_apps_settings.dart';
 import 'env/environment_settings.dart';
+import 'env/platform_type.dart';
 
 Future main() async {
   EnvironmentSettings env = EnvironmentSettings(
@@ -11,6 +12,7 @@ Future main() async {
     remoteConfigsConfigId: '4fa400a4',
     donationsEnabled: false,
     isProduction: true,
+    isGithubRelease: isGithubWindowsInstaller,
 
     // AssistantApps
     assistantAppsApiUrl: assistantAppsApiUrl,

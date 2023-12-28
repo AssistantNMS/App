@@ -34,6 +34,9 @@ jobs:
         run: |
           $Env:ENV_DART | Out-File ./lib/env.dart
 
+      - name: Set platform override
+        run: dart scripts\platform_type_on.dart
+
       - name: Build Windows release version
         run: flutter build windows --release
 
