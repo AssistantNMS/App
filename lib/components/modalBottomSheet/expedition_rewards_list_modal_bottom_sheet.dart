@@ -12,7 +12,7 @@ import '../../helpers/items_helper.dart';
 import '../../redux/modules/expedition/expedition_view_model.dart';
 import '../tilePresenters/seasonal_expedition_reward_details_tile_presenter.dart';
 
-class ExpeditionRewardsListModalBottomSheet extends StatefulWidget {
+class ExpeditionRewardsListModalBottomSheet extends StatelessWidget {
   final String milestoneId;
   final List<SeasonalExpeditionReward> rewards;
   const ExpeditionRewardsListModalBottomSheet(this.milestoneId, this.rewards,
@@ -20,17 +20,8 @@ class ExpeditionRewardsListModalBottomSheet extends StatefulWidget {
       : super(key: key);
 
   @override
-  _ExpeditionRewardsListModalBottomSheetWidget createState() =>
-      _ExpeditionRewardsListModalBottomSheetWidget();
-}
-
-class _ExpeditionRewardsListModalBottomSheetWidget
-    extends State<ExpeditionRewardsListModalBottomSheet> {
-  @override
   Widget build(BuildContext context) {
-    getLog().i(widget.milestoneId);
-
-    List<RequiredItem> requiredItems = widget.rewards //
+    List<RequiredItem> requiredItems = rewards //
         .map((r) => RequiredItem(id: r.id, quantity: 1))
         .toList();
 
@@ -79,7 +70,7 @@ class _ExpeditionRewardsListModalBottomSheetWidget
     ResultWithValue<List<RequiredItemDetails>>? snapshot,
   ) {
     List<RequiredItemDetails>? rewardLookups = snapshot?.value;
-    List<Widget Function()> widgetFuncs = widget.rewards
+    List<Widget Function()> widgetFuncs = rewards
         .map((reward) => () => seasonalExpeditionRewardDetailTilePresenter(
               futureContext,
               reward,
@@ -87,21 +78,21 @@ class _ExpeditionRewardsListModalBottomSheetWidget
             ))
         .toList();
 
-    if (widget.milestoneId.isNotEmpty) {
+    if (milestoneId.isNotEmpty) {
       widgetFuncs.add(() => const EmptySpace1x());
       bool isClaimed = false;
-      if (viewModel.claimedRewards.any((cla) => cla == widget.milestoneId)) {
+      if (viewModel.claimedRewards.any((cla) => cla == milestoneId)) {
         isClaimed = true;
       }
 
       Widget button = NegativeButton(
         title: getTranslations().fromKey(LocaleKey.markAsNotClaimed),
-        onTap: () => viewModel.removeFromClaimedRewards(widget.milestoneId),
+        onTap: () => viewModel.removeFromClaimedRewards(milestoneId),
       );
       if (!isClaimed) {
         button = PositiveButton(
           title: getTranslations().fromKey(LocaleKey.markAsClaimed),
-          onTap: () => viewModel.addToClaimedRewards(widget.milestoneId),
+          onTap: () => viewModel.addToClaimedRewards(milestoneId),
         );
       }
 
