@@ -180,7 +180,7 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
       seasonalExpeditionMilestone.icon,
       topLeftBanner: seasonalExpeditionMilestone.type ==
               SeasonalExpeditionMilestoneType.Optional
-          ? 'Optional'
+          ? getTranslations().fromKey(LocaleKey.optional)
           : null,
       bodyFlex: 8,
       bodyDisplayFunc: () => Column(
@@ -288,7 +288,7 @@ Widget seasonalExpeditionBase(
   if (topLeftBanner != null) {
     child = ClipRect(
       child: Banner(
-        message: 'Optional', // TODO translate
+        message: topLeftBanner,
         location: BannerLocation.topEnd,
         child: innerChild,
       ),
