@@ -13,10 +13,11 @@ import '../services/base/analytics_service.dart';
 import '../services/base/audio_player_service.dart';
 import '../services/base/base_widget_service.dart';
 import '../services/base/dialog_service.dart';
-import '../services/base/firebase_service.dart';
 import '../services/base/interface/i_audio_player_service.dart';
+import '../services/base/interface/i_firebase_service.dart';
 import '../services/base/loading_widget_service.dart';
 import '../services/base/local_notification_service.dart';
+import '../services/base/mock_firebase_service.dart';
 import '../services/base/notification_service.dart';
 import '../services/base/path_service.dart';
 import '../services/base/theme_service.dart';
@@ -26,11 +27,6 @@ import '../services/json/creature_harvest_json_repository.dart';
 import '../services/json/data_json_repository.dart';
 import '../services/json/faction_json_repository.dart';
 import '../services/json/generic_json_repository.dart';
-import '../services/json/recharge_json_repository.dart';
-import '../services/json/refinery_json_repository.dart';
-import '../services/json/seasonal_expedition_json_repository.dart';
-import '../services/json/tech_tree_json_repository.dart';
-import '../services/json/title_json_repository.dart';
 import '../services/json/interface/i_alien_puzzle_json_repository.dart';
 import '../services/json/interface/i_alien_puzzle_rewards_json_repository.dart';
 import '../services/json/interface/i_creature_harvest_json_repository.dart';
@@ -42,6 +38,11 @@ import '../services/json/interface/i_refinery_repository.dart';
 import '../services/json/interface/i_seasonal_expedition_json_repository.dart';
 import '../services/json/interface/i_tech_tree_json_repository.dart';
 import '../services/json/interface/i_title_json_repository.dart';
+import '../services/json/recharge_json_repository.dart';
+import '../services/json/refinery_json_repository.dart';
+import '../services/json/seasonal_expedition_json_repository.dart';
+import '../services/json/tech_tree_json_repository.dart';
+import '../services/json/title_json_repository.dart';
 import 'app_api.dart';
 
 final getIt = GetIt.instance;
@@ -85,7 +86,7 @@ void initDependencyInjection(EnvironmentSettings _env) {
 
   getIt.registerSingleton<IAudioPlayerService>(AudioPlayerService());
   getIt.registerSingleton<LocalNotificationService>(LocalNotificationService());
-  getIt.registerSingleton<FirebaseService>(FirebaseService());
+  getIt.registerSingleton<IFirebaseService>(MockFirebaseService());
 
   getIt.registerSingleton<AppApi>(AppApi());
   getIt.registerSingleton<GuideApiService>(GuideApiService());
@@ -125,7 +126,7 @@ ICreatureHarvestJsonRepository getCreatureHarvestRepo() =>
 IAudioPlayerService getAudioPlayer() => getIt<IAudioPlayerService>();
 LocalNotificationService getLocalNotification() =>
     getIt<LocalNotificationService>();
-FirebaseService getFirebase() => getIt<FirebaseService>();
+IFirebaseService getFirebase() => getIt<IFirebaseService>();
 
 AppApi getApiRepo() => getIt<AppApi>();
 GuideApiService getGuideApiService() => getIt<GuideApiService>();

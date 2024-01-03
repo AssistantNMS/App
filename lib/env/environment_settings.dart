@@ -12,6 +12,7 @@ class EnvironmentSettings {
   bool isProduction;
   String currentWhatIsNewGuid;
   String patreonOAuthClientId;
+  bool isGithubRelease;
 
   EnvironmentSettings({
     required this.baseApi,
@@ -23,6 +24,7 @@ class EnvironmentSettings {
     required this.isProduction,
     required this.currentWhatIsNewGuid,
     required this.patreonOAuthClientId,
+    required this.isGithubRelease,
   });
 
   AssistantAppsEnvironmentSettings toAssistantApps() =>
@@ -32,6 +34,7 @@ class EnvironmentSettings {
         currentWhatIsNewGuid: currentWhatIsNewGuid,
         isProduction: isProduction,
         patreonOAuthClientId: patreonOAuthClientId,
+        isGithubRelease: isGithubRelease,
 
         // Required for Android (because of how I set it up) and Windows
         appVersionBuildNumberOverride: appsBuildNum,

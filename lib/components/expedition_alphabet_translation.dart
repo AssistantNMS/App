@@ -27,7 +27,7 @@ class _ExpeditionAlphabetTranslationWidget
       padding: const EdgeInsets.only(left: 4),
       child: GestureDetector(
         child: AvatarGlow(
-          endRadius: 30.0,
+          glowRadiusFactor: 0.2,
           child: getBaseWidget().appChip(
             key: Key(_reveal.toString()),
             text: widget.text,

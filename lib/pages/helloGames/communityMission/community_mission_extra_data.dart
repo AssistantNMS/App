@@ -83,8 +83,10 @@ class CommunityMissionExtraData extends StatelessWidget {
           child: genericListTileWithSubtitle(
             bodyContext,
             leadingImage: AppImage.communityMissionProgress,
-            name: 'Community Mission Progress Tracker', //TODO translate
-            subtitle: const Text('Data below supplied by the NMSCD'),
+            name: getTranslations().fromKey(
+              LocaleKey.communityMissionProgressTracker,
+            ),
+            subtitle: Text(getTranslations().fromKey(LocaleKey.dataFromNMSCD)),
             trailing: const Padding(
               padding: EdgeInsets.only(right: 8),
               child: Icon(Icons.open_in_new_rounded),

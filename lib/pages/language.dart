@@ -16,6 +16,7 @@ class Language extends StatelessWidget {
       context,
       title: getTranslations().fromKey(LocaleKey.language),
       body: LanguagePageContent(
+        numberOfLanguagesToShow: 20,
         additionalButtons: [
           PositiveButton(
             title: getTranslations().fromKey(LocaleKey.useTranslationTool),

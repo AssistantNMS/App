@@ -1,38 +1,45 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 
 import '../../integration/dependency_injection.dart';
 
 class NotificationService implements INotificationService {
+  bool setupComplete = false;
+
   NotificationService() {
     if (isWindows) return;
-    Firebase.initializeApp().then((_) {
-      FirebaseMessaging.instance
-          .requestPermission(sound: true, badge: true, alert: true);
-      FirebaseMessaging.instance.getToken().then((token) {
-        getLog().d("Firebase Token: $token");
-      });
-    });
+    getFirebase().initFirebaseApp().then(handleToken);
+  }
+
+  Future<void> handleToken(void _) async {
+    try {
+      await getFirebase().requestNotificationPermission();
+
+      String? token = await getFirebase().getToken();
+      getLog().d("Firebase Token: $token");
+      setupComplete = true;
+    } catch (ex) {
+      //
+    }
   }
 
   @override
   subscribeToTopics(context, String selectedLanguage) {
     bool isProduction = getEnv().isProduction;
+    if (setupComplete == false) return;
+
     for (String code in getLanguage().supportedLanguagesCodes()) {
       if (code == selectedLanguage) {
         getLog().i("Sub Topic: $selectedLanguage");
-        FirebaseMessaging.instance.subscribeToTopic(selectedLanguage);
+        getFirebase().subscribeToTopic(selectedLanguage);
         if (!isProduction) {
           getLog().i("Sub Topic: Alpha-$selectedLanguage");
-          FirebaseMessaging.instance
-              .subscribeToTopic("Alpha-$selectedLanguage");
+          getFirebase().subscribeToTopic("Alpha-$selectedLanguage");
         }
       } else {
-        FirebaseMessaging.instance.unsubscribeFromTopic(code);
+        getFirebase().unsubscribeFromTopic(code);
         if (!isProduction) {
           getLog().i("UnSub Topic: Alpha-$code");
-          FirebaseMessaging.instance.unsubscribeFromTopic("Alpha-$code");
+          getFirebase().unsubscribeFromTopic("Alpha-$code");
         }
       }
     }

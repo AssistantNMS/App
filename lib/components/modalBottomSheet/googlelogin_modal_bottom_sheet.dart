@@ -1,10 +1,10 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_duration.dart';
 import '../../constants/modal.dart';
 import '../../constants/storage_key.dart';
+import '../../contracts/auth/authed_user.dart';
 import '../../contracts/auth/google_login_model.dart';
 import '../../integration/dependency_injection.dart';
 import '../common/row_helper.dart';
@@ -37,7 +37,7 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
         );
       }
 
-      User? user = getFirebase().getCurrentUser();
+      AuthedUser? user = getFirebase().getCurrentUser();
       if (user == null) {
         throw Exception(
           'User is not logged in via Google: ' + authTokenResult.errorMessage,
@@ -46,7 +46,7 @@ class _GoogleLoginBottomSheetWidget extends State<GoogleLoginBottomSheet> {
 
       model.aaAccessToken = authTokenResult.value;
       model.username = user.displayName ?? '';
-      model.profileUrl = user.photoURL ?? '';
+      model.profileUrl = user.photoUrl ?? '';
       model.email = user.email ?? '';
       return ResultWithValue(true, model, '');
     } catch (exception) {

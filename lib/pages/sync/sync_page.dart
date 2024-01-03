@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -10,6 +9,7 @@ import '../../components/tilePresenters/setting_tile_presenter.dart';
 import '../../components/tilePresenters/youtubers_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../constants/google_drive.dart';
+import '../../contracts/auth/authed_user.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../contracts/redux/inventory_state.dart';
 import '../../contracts/redux/portal_state.dart';
@@ -43,7 +43,7 @@ class _SyncWidget extends State<SyncPage> {
 
   List<Widget> getGoogleDriveWidgets(BuildContext authCtx) {
     List<Widget> widgets = List.empty(growable: true);
-    User? user = getFirebase().getCurrentUser();
+    AuthedUser? user = getFirebase().getCurrentUser();
     if (user != null) {
       widgets.add(headingSettingTilePresenter(
         getTranslations().fromKey(LocaleKey.account),
@@ -54,7 +54,7 @@ class _SyncWidget extends State<SyncPage> {
             ListTile(
               leading: ClipOval(
                 child: ImageFromNetwork(
-                    imageUrl: user.photoURL!, height: 50, width: 50),
+                    imageUrl: user.photoUrl!, height: 50, width: 50),
               ),
               title: Text(
                 user.displayName!,

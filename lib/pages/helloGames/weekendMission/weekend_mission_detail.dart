@@ -250,12 +250,12 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
       offsetDx: 0.5,
       iconSize: 42,
       iconOnRightSwipe: Icons.chevron_left,
-      onRightSwipe: () => getMission(
+      onRightSwipe: (_) => getMission(
         context,
         pageItem.stage.level - 1,
       ),
       iconOnLeftSwipe: Icons.chevron_right,
-      onLeftSwipe: () => getMission(
+      onLeftSwipe: (_) => getMission(
         context,
         pageItem.stage.level + 1,
       ),

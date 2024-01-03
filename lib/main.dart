@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/env/platform_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
@@ -14,6 +15,7 @@ Future main() async {
     remoteConfigsConfigId: '9e83ecdf',
     donationsEnabled: true,
     isProduction: true,
+    isGithubRelease: isGithubWindowsInstaller,
 
     // AssistantApps
     assistantAppsApiUrl: assistantAppsApiUrl,
