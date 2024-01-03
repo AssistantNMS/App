@@ -12,6 +12,8 @@ class NmsExternalUrls {
       'https://apps.apple.com/us/app/id1480287625';
   static const String microsoftStoreListing =
       'https://apps.microsoft.com/store/detail/assistant-for-no-mans-sky/9NQLF7XD0LF3';
+  static const String githubReleasesListing =
+      'https://github.com/AssistantNMS/App/releases';
   static const String noMansSkyWebsite = 'https://nomanssky.com';
   static const String discord = 'https://assistantapps.com/discord';
   static const String twitter = 'https://twitter.com/AssistantNMS';
