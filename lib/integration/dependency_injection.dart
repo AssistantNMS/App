@@ -17,7 +17,7 @@ import '../services/base/interface/i_audio_player_service.dart';
 import '../services/base/interface/i_firebase_service.dart';
 import '../services/base/loading_widget_service.dart';
 import '../services/base/local_notification_service.dart';
-import '../services/base/mock_firebase_service.dart';
+import '../services/base/firebase_service.dart';
 import '../services/base/notification_service.dart';
 import '../services/base/path_service.dart';
 import '../services/base/theme_service.dart';
@@ -49,6 +49,7 @@ final getIt = GetIt.instance;
 
 void initDependencyInjection(EnvironmentSettings _env) {
   getIt.registerSingleton<EnvironmentSettings>(_env);
+  getIt.registerSingleton<IFirebaseService>(FirebaseService());
 
   // AssistantApps
   initAssistantAppsDependencyInjection(
@@ -86,7 +87,6 @@ void initDependencyInjection(EnvironmentSettings _env) {
 
   getIt.registerSingleton<IAudioPlayerService>(AudioPlayerService());
   getIt.registerSingleton<LocalNotificationService>(LocalNotificationService());
-  getIt.registerSingleton<IFirebaseService>(MockFirebaseService());
 
   getIt.registerSingleton<AppApi>(AppApi());
   getIt.registerSingleton<GuideApiService>(GuideApiService());
