@@ -49,7 +49,8 @@ final getIt = GetIt.instance;
 
 void initDependencyInjection(EnvironmentSettings _env) {
   getIt.registerSingleton<EnvironmentSettings>(_env);
-  getIt.registerSingleton<IFirebaseService>(FirebaseService());
+  getIt.registerSingleton<IFirebaseService>(
+      FirebaseService()); // Is used by analytics & notification services
 
   // AssistantApps
   initAssistantAppsDependencyInjection(
