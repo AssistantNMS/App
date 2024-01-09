@@ -51,6 +51,7 @@ void initDependencyInjection(EnvironmentSettings _env) {
   getIt.registerSingleton<EnvironmentSettings>(_env);
   getIt.registerSingleton<IFirebaseService>(MockFirebaseService());
 
+
   // AssistantApps
   initAssistantAppsDependencyInjection(
     _env.toAssistantApps(),
