@@ -10,11 +10,6 @@ class MockFirebaseService implements IFirebaseService {
   }
 
   @override
-  Future<void> initFirebaseAdMob() {
-    return Future.value();
-  }
-
-  @override
   void trackAnalyticEvent(String key) {}
 
   @override
@@ -35,11 +30,6 @@ class MockFirebaseService implements IFirebaseService {
   @override
   Future<void> unsubscribeFromTopic(String topic) {
     return Future.value();
-  }
-
-  @override
-  String adMobInterstitialDonationPageAdUnitId() {
-    return '';
   }
 
   @override
