@@ -351,10 +351,14 @@ Widget rewardFromSeasonalExpeditionTilePresenter(
   String seasId,
   bool isCustom,
 ) {
+  String correctedSeasId =
+      seasId.replaceAll('seas-0', 'seas-').replaceAll('Redux', '-redux');
+
   return FlatCard(
     shadowColor: Colors.transparent,
     child: CachedFutureBuilder(
-      future: getSeasonalExpeditionRepo().getById(context, seasId, isCustom),
+      future: getSeasonalExpeditionRepo()
+          .getById(context, correctedSeasId, isCustom),
       whileLoading: () => getLoading().smallLoadingTile(context),
       whenDoneLoading: (ResultWithValue<SeasonalExpeditionSeason> snapshot) {
         SeasonalExpeditionSeason item = snapshot.value;
@@ -368,7 +372,7 @@ Widget rewardFromSeasonalExpeditionTilePresenter(
           onTap: () async => await getNavigation().navigateAsync(
             context,
             navigateTo: (_) => SeasonalExpeditionPhaseListPage(
-              seasId,
+              correctedSeasId,
               isCustomExp: isCustom,
             ),
           ),

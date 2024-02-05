@@ -2,12 +2,12 @@ name: assistantnms_app
 description: Assistant for No Man's Sky
 homepage: https://nmsassistant.com
 # author: Kurt Lourens
-version: 2.21.0+328 # dart scripts\version_num_script.dart
-publish_to: 'none'
+version: 2.22.0+333 # dart scripts\version_num_script.dart
+publish_to: "none"
 
 environment:
-  sdk: '>=3.2.0 <4.0.0'
-  flutter: '>=1.17.0'
+  sdk: ">=3.2.0 <4.0.0"
+  flutter: ">=1.17.0"
 
 dependencies:
   flutter:
@@ -27,7 +27,6 @@ dependencies:
   firebase_auth: 4.15.3
   # firebase_auth_web: ^0.3.2+6
   google_sign_in: 6.2.1
-  google_mobile_ads: 3.1.0
 
   # UI
   adaptive_theme: 3.4.1
@@ -81,18 +80,18 @@ flutter_icons: ## dart run flutter_launcher_icons:main
   ios: true
   android: true
   remove_alpha_ios: true
-  image_path: 'assets/images/fullSizeIcon.png'
-  adaptive_icon_background: 'assets/images/fullSizeIconAdaptiveBg.png'
-  adaptive_icon_foreground: 'assets/images/fullSizeIconAdaptiveFg.png'
+  image_path: "assets/images/fullSizeIcon.png"
+  adaptive_icon_background: "assets/images/fullSizeIconAdaptiveBg.png"
+  adaptive_icon_foreground: "assets/images/fullSizeIconAdaptiveFg.png"
 
 # dart run msix:create
 msix_config: # https://pub.dev/documentation/msix/latest/
   display_name: Assistant for No Man's Sky
   publisher_display_name: AssistantApps
-  msix_version: 2.21.0.0
-  identity_name: notSureIfSecret
-  publisher: notSureIfSecret
-  logo_path: './assets/images/fullSizeIcon.png'
+  msix_version: 2.22.0.0
+  identity_name: 32412AssistantApps.AssistantforNoMansSky
+  publisher: CN=3CD7EDA8-DFB6-44F8-A6AC-DC70B9A5D88A
+  logo_path: "./assets/images/fullSizeIcon.png"
   languages: en
   capabilities: internetClient
   store: true

@@ -1,10 +1,5 @@
-import 'dart:async';
-
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/integration/dependency_injection.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../constants/analytics_event.dart';
@@ -17,105 +12,8 @@ class Donation extends StatefulWidget {
 }
 
 class _DonationWidget extends State<Donation> {
-  bool adIsLoading = true;
-  bool adHasFailedToLoad = false;
-  bool supportsNavtivePay = false;
-
-  final _interstitialAdId =
-      getFirebase().adMobInterstitialDonationPageAdUnitId();
-  InterstitialAd? _interstitialAd;
-  final int maxFailedLoadAttempts = 3;
-  int _numInterstitialLoadAttempts = 0;
-  StreamSubscription? _interstitialAdSubscription;
-
-  static const AdRequest request = AdRequest(
-    keywords: ['gaming', 'space'],
-    nonPersonalizedAds: true,
-  );
-
   _DonationWidget() {
     getAnalytics().trackEvent(AnalyticsEvent.donationPage);
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    _createInterstitialAd();
-    if (!kReleaseMode) {
-      adHasFailedToLoad = true;
-    }
-  }
-
-  void _createInterstitialAd() {
-    if (_interstitialAd != null) {
-      _interstitialAd!.dispose();
-    }
-    if (_interstitialAdSubscription != null) {
-      _interstitialAdSubscription!.cancel();
-    }
-
-    InterstitialAd.load(
-      adUnitId: _interstitialAdId,
-      request: request,
-      adLoadCallback: InterstitialAdLoadCallback(
-        onAdLoaded: (InterstitialAd ad) {
-          getLog().d('$ad loaded');
-          _interstitialAd = ad;
-          _numInterstitialLoadAttempts = 0;
-          _interstitialAd?.setImmersiveMode(true);
-        },
-        onAdFailedToLoad: (LoadAdError error) {
-          getLog().d('InterstitialAd failed to load: $error.');
-          _numInterstitialLoadAttempts += 1;
-          _interstitialAd = null;
-          if (_numInterstitialLoadAttempts < maxFailedLoadAttempts) {
-            _createInterstitialAd();
-          }
-        },
-      ),
-    );
-  }
-
-  void _showInterstitialAd() {
-    if (_interstitialAd == null) {
-      getLog().d('Warning: attempt to show interstitial before loaded.');
-      return;
-    }
-    _interstitialAd!.fullScreenContentCallback =
-        FullScreenContentCallback(onAdShowedFullScreenContent: (ad) {
-      getLog().d('onAdShowedFullScreenContent.');
-      setState(() {
-        adIsLoading = false;
-      });
-    }, onAdDismissedFullScreenContent: (ad) {
-      getLog().d('onAdDismissedFullScreenContent.');
-      ad.dispose();
-      getAnalytics().trackEvent(AnalyticsEvent.addMobDonationPageClose);
-      handleAdDismiss();
-    }, onAdFailedToShowFullScreenContent: (ad, error) {
-      getAnalytics().trackEvent(AnalyticsEvent.addMobDonationPageFailedToLoad);
-      getLog().d('onAdFailedToShowFullScreenContent: $error');
-      setState(() {
-        adHasFailedToLoad = true;
-      });
-      ad.dispose();
-      _createInterstitialAd();
-    }, onAdClicked: (ad) {
-      getLog().d('Ad clicked!');
-      getAnalytics().trackEvent(AnalyticsEvent.addMobDonationPageClick);
-    });
-    _interstitialAd!.show();
-    _interstitialAd = null;
-  }
-
-  void handleAdDismiss() {
-    setState(() {
-      adIsLoading = true;
-      if (_interstitialAd != null) {
-        _interstitialAd!.dispose();
-      }
-      _createInterstitialAd();
-    });
   }
 
   @override
@@ -136,83 +34,56 @@ class _DonationWidget extends State<Donation> {
 
     List<Widget> paymentOptions = List.empty(growable: true);
 
-    if (!isApple) {
-      paymentOptions.add(ListTile(
-        key: const Key('buyMeACoffee'),
-        leading: DonationImage.buyMeACoffee(),
-        title: Text(getTranslations().fromKey(LocaleKey.buyMeACoffee),
-            style: const TextStyle(fontSize: 20)),
-        onTap: () {
-          getAnalytics().trackEvent(AnalyticsEvent.externalLinkBuyMeACoffee);
-          launchExternalURL(ExternalUrls.buyMeACoffee);
-        },
-      ));
-      paymentOptions.add(ListTile(
-        key: const Key('patreon'),
-        leading: DonationImage.patreon(),
-        title: Text(getTranslations().fromKey(LocaleKey.patreon),
-            style: const TextStyle(fontSize: 20)),
-        onTap: () {
-          getAnalytics().trackEvent(AnalyticsEvent.externalLinkPatreon);
-          launchExternalURL(ExternalUrls.patreon);
-        },
-      ));
-      paymentOptions.add(ListTile(
-        key: const Key('payPal'),
-        leading: DonationImage.payPal(),
-        title: Text(getTranslations().fromKey(LocaleKey.paypal),
-            style: const TextStyle(fontSize: 20)),
-        onTap: () {
-          getAnalytics().trackEvent(AnalyticsEvent.externalLinkPayPal);
-          launchExternalURL(ExternalUrls.payPal);
-        },
-      ));
-      paymentOptions.add(ListTile(
-        key: const Key('kofi'),
-        leading: DonationImage.kofi(),
-        title: Text(getTranslations().fromKey(LocaleKey.kofi),
-            style: const TextStyle(fontSize: 20)),
-        onTap: () {
-          getAnalytics().trackEvent(AnalyticsEvent.externalLinkkofi);
-          launchExternalURL(ExternalUrls.kofi);
-        },
-      ));
-      paymentOptions.add(ListTile(
-        key: const Key('openCollective'),
-        leading: DonationImage.openCollective(),
-        title: Text(getTranslations().fromKey(LocaleKey.openCollective),
-            style: const TextStyle(fontSize: 20)),
-        onTap: () {
-          getAnalytics().trackEvent(AnalyticsEvent.externalLinkOpenCollective);
-          launchExternalURL(ExternalUrls.openCollective);
-        },
-      ));
-
-      if (!adHasFailedToLoad) {
-        if (adIsLoading) {
-          paymentOptions.add(getLoading().smallLoadingTile(context));
-        } else {
-          paymentOptions.add(ListTile(
-            key: const Key('advert'),
-            leading: const ListTileImage(partialPath: 'ad.png'),
-            title: const Text("Advertisement", style: TextStyle(fontSize: 20)),
-            onTap: () {
-              _showInterstitialAd();
-            },
-          ));
-        }
-      }
-    }
-
-    if (paymentOptions.isNotEmpty) {
-      items.addAll(paymentOptions);
-    } else {
-      items.add(ListTile(
-        key: Key(LocaleKey.noItems.toString()),
-        title: Text(getTranslations().fromKey(LocaleKey.noItems),
-            textAlign: TextAlign.center, style: const TextStyle(fontSize: 20)),
-      ));
-    }
+    paymentOptions.add(ListTile(
+      key: const Key('buyMeACoffee'),
+      leading: DonationImage.buyMeACoffee(),
+      title: Text(getTranslations().fromKey(LocaleKey.buyMeACoffee),
+          style: const TextStyle(fontSize: 20)),
+      onTap: () {
+        getAnalytics().trackEvent(AnalyticsEvent.externalLinkBuyMeACoffee);
+        launchExternalURL(ExternalUrls.buyMeACoffee);
+      },
+    ));
+    paymentOptions.add(ListTile(
+      key: const Key('patreon'),
+      leading: DonationImage.patreon(),
+      title: Text(getTranslations().fromKey(LocaleKey.patreon),
+          style: const TextStyle(fontSize: 20)),
+      onTap: () {
+        getAnalytics().trackEvent(AnalyticsEvent.externalLinkPatreon);
+        launchExternalURL(ExternalUrls.patreon);
+      },
+    ));
+    paymentOptions.add(ListTile(
+      key: const Key('payPal'),
+      leading: DonationImage.payPal(),
+      title: Text(getTranslations().fromKey(LocaleKey.paypal),
+          style: const TextStyle(fontSize: 20)),
+      onTap: () {
+        getAnalytics().trackEvent(AnalyticsEvent.externalLinkPayPal);
+        launchExternalURL(ExternalUrls.payPal);
+      },
+    ));
+    paymentOptions.add(ListTile(
+      key: const Key('kofi'),
+      leading: DonationImage.kofi(),
+      title: Text(getTranslations().fromKey(LocaleKey.kofi),
+          style: const TextStyle(fontSize: 20)),
+      onTap: () {
+        getAnalytics().trackEvent(AnalyticsEvent.externalLinkkofi);
+        launchExternalURL(ExternalUrls.kofi);
+      },
+    ));
+    paymentOptions.add(ListTile(
+      key: const Key('openCollective'),
+      leading: DonationImage.openCollective(),
+      title: Text(getTranslations().fromKey(LocaleKey.openCollective),
+          style: const TextStyle(fontSize: 20)),
+      onTap: () {
+        getAnalytics().trackEvent(AnalyticsEvent.externalLinkOpenCollective);
+        launchExternalURL(ExternalUrls.openCollective);
+      },
+    ));
 
     return simpleGenericPageScaffold(
       context,
@@ -225,16 +96,5 @@ class _DonationWidget extends State<Donation> {
         scrollController: ScrollController(),
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    if (_interstitialAdSubscription != null) {
-      _interstitialAdSubscription!.cancel();
-    }
-    if (_interstitialAd != null) {
-      _interstitialAd!.dispose();
-    }
-    super.dispose();
   }
 }
