@@ -30,10 +30,6 @@ class _AssistantNMSState extends State<AssistantNMS> {
     super.initState();
     initDependencyInjection(widget.env);
     initReduxState();
-
-    if (kReleaseMode) {
-      // initFirebaseAdMob();
-    }
   }
 
   Future<AppState> initReduxState() async {

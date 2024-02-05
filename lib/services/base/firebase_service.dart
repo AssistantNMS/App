@@ -4,10 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:flutter/foundation.dart' show kReleaseMode;
 
-import '../../constants/app_config.dart';
 import '../../contracts/auth/authed_user.dart';
 import 'interface/i_firebase_service.dart';
 
@@ -31,12 +28,6 @@ class FirebaseService implements IFirebaseService {
     _auth = FirebaseAuth.instance;
     _analytics = FirebaseAnalytics.instance;
     _googleSignIn = GoogleSignIn(scopes: scopes);
-  }
-
-  @override
-  initFirebaseAdMob() async {
-    if (isWindows) return;
-    MobileAds.instance.initialize();
   }
 
   @override
@@ -66,14 +57,6 @@ class FirebaseService implements IFirebaseService {
   @override
   Future<void> unsubscribeFromTopic(String topic) {
     return FirebaseMessaging.instance.unsubscribeFromTopic(topic);
-  }
-
-  @override
-  String adMobInterstitialDonationPageAdUnitId() {
-    if (!kReleaseMode) return 'ca-app-pub-3940256099942544/2247696110';
-    return isAndroid
-        ? AppConfig.adMobAndroidInterstitialDonationPageAdUnitId
-        : AppConfig.adMobiOSInterstitialDonationPageAdUnitId;
   }
 
   @override
