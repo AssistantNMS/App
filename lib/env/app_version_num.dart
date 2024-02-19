@@ -1,3 +1,3 @@
-const appsBuildNum = 333;
-const appsBuildName = '2.22.0';
-const appsCommit = '41bf45e41a3d794a18620b468b6955583c06b57b';
+const appsBuildNum = 334;
+const appsBuildName = '2.23.0';
+const appsCommit = '5ac48e9b0bf49ca15f22985c80a6828fedc2dcd0';

@@ -5648,7 +5648,7 @@
     "IsFactory": false,
     "Number": 17,
     "IncomingMessages": [
-      "Posterunek jest starożytny, nawet jak na geckie standardy. Jego wnętrze zostało specjalnie wykalibrowane, aby zachować znajdujące się tam dane. W jednym z dzienników natrafiam na wzmiankę o powstaniu tak zwanych Pierwszych Pomiotów Geków. Gatunek przeżywał kryzys płodności. Coś w wodzie zaczęło wpływać na jego płodność. Próbowano więc selektywnego rozmnażania, klonowania i innych technik. Kryzys naukowy stał się kryzysem moralnym. Wymazano przeszłość. Władzę przejęły samozwańcze 'Pierwsze Pomioty', obiecując świetność i mordując wszystkich oponentów. Bycie prawym to bycie silnym.",
+      "Posterunek jest starożytny, nawet jak na geckie standardy. Jego wnętrze zostało specjalnie wykalibrowane, aby zachować znajdujące się tam dane.\n\nW jednym z dzienników natrafiam na wzmiankę o powstaniu tak zwanych Pierwszych Pomiotów Geków. Gatunek przeżywał kryzys płodności. Coś w wodzie zaczęło wpływać na jego płodność. Próbowano więc selektywnego rozmnażania, klonowania i innych technik.\n\nKryzys naukowy stał się kryzysem moralnym. Wymazano przeszłość. Władzę przejęły samozwańcze „Pierwsze Pomioty”, obiecując świetność i mordując wszystkich oponentów. Bycie prawym to bycie silnym.",
       "ARCHIVE RETRIEVAL SERVICE ACTIVE... ACCESS?"
     ],
     "Options": [
@@ -6905,7 +6905,7 @@
     "Number": 35,
     "IncomingMessages": [
       "Fabryka produkuje narzędzia codziennego użytku dla Geków. Sztućce do posiłków, spreje zapobiegające wyschnięciu ich skóry na obcych planetach, butelki z feromonami i tak dalej.",
-      "SYSTEMS OPERATIONAL... SELECTED DESIRED PRODUCT...",
+      "SYSTEMS OPERATIONAL... SELECT DESIRED PRODUCT...",
       "Obiekt jest opuszczony, ale nie dostrzegam wyraźnego powodu, który miałby uruchomić alarm. Wszystko wydaje się być w porządku."
     ],
     "Options": [
@@ -9615,7 +9615,7 @@
       },
       {
         "Name": "Sprzedaj dane Gekom",
-        "Text": "Sprzedaję dane Gekom, którzy wynagradzają mnie za przekazanie opisów szkolenia odwiecznego wroga.",
+        "Text": "Sprzedaję dane Gekom, którzy wynagradzają mnie za przekazanie opisów szkolenia odwiecznego wroga. ",
         "RewardIds": [
           "MONEY"
         ]
@@ -15128,7 +15128,7 @@
     "Number": 0,
     "IncomingMessages": [
       "Jasność. Prawda. Rzeczywistość. Znowu.",
-      "Stoję przy interfejsie Atlasa. Stoję w kuźni światów. Tak mi się objawiał. Tak dzielił się naturą swego życia, działaniem swego umysłu.\n\nNie chciał modlitw. Nie chciał adoracji. Prosił mnie jedynie... chciał jedynie... danych wejściowych. Mam być tylko użytkownikiem.\n\nUwolnione, ziarna Atlasa lecą ku drzwiom. Próżnia ma zostać wypełniona. Nicość czeka na duszę. Jeśli to zrobię, narodzi się gwiazda. Jeśli to zrobię, zyskam władzę poza wszelkimi wyobrażeniami..."
+      "Stoję przy interfejsie Atlasa. Stoję w kuźni światów. Tak mi się objawiał. Tak dzielił się naturą swego życia, działaniem swego umysłu.\n\nNie chciał modlitw. Nie chciał adoracji. Prosił mnie jedynie... chciał jedynie... danych wejściowych. Mam być tylko użytkownikiem.\n\nCzuję, jak nasiona, ich ukryta wiedza, grawitują w kierunku rdzenia interfejsu. Nicość czeka na wypełnienie. Jeśli to zrobię, narodzi się gwiazda. Jeśli to zrobię, zyskam władzę poza wszelkimi wyobrażeniami..."
     ],
     "Options": [
       {
@@ -15138,7 +15138,29 @@
       },
       {
         "Name": "Odejdź i wróć do odkrywania galaktyki",
-        "Text": "Odchodzę. Atlas pozostaje cichy. Samotny. Opuszczony...\n\nObjawia mi się tkanina czasoprzestrzeni. Czarne dziury przelatują z układu do układu. Atlas krzyczy...",
+        "InteractionId": "?ALL_ATLASSTATION_11_DENY",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "AtlasStation",
+    "Id": "?ALL_ATLASSTATION_11_DENY",
+    "Race": "Atlas",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Ledwie ta herezja formuje się w moim umyśle, a już czuję reakcję, przypływ karmazynowego światła, które zaczyna wznosić się za moimi oczami.\nAtlas jest całym stworzeniem, całym celem w tym wszechświecie. Wzywa do postępu. Wzywa mnie. Kim jestem, by opierać się takiej potędze?"
+    ],
+    "Options": [
+      {
+        "Name": "Odmów Atlasowi",
+        "Text": "Zostawiam Atlasa, samotnego, opuszczonego.\nCzuję, jak zaczyna krzyczeć – to cichy wrzask, który odbija się echem w całej przestrzeni i czasie...",
+        "RewardIds": []
+      },
+      {
+        "Name": "Rozważ",
+        "InteractionId": "?ALL_ATLASSTATION_11",
         "RewardIds": []
       }
     ]
