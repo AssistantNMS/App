@@ -150,7 +150,7 @@
         ]
       },
       {
-        "Name": "Eigenaardige circuits voeden",
+        "Name": "Voed eigenaardige circuits",
         "Text": "... 01101001 00100000 01110011 01100101 01100101 00100000 01101000 01100101 01110010 ...",
         "RewardIds": []
       },
@@ -5648,7 +5648,7 @@
     "IsFactory": false,
     "Number": 17,
     "IncomingMessages": [
-      "De oude buitenpost is opgezet om gegevens te beschermen.\nEen van de logboeken gaat over de tijd vlak voor de opkomst van de 'Gek-eerstgeborenen'. Blijkbaar hadden de Gek te kampen met vruchtbaarheidsproblemen. Iets in het water verstoorde hun voortplanting en ze probeerden dit tegen te gaan met selectief fokken, klonen en andere programma's.\nAl snel werd de wetenschappelijke crisis een moreel vraagstuk. De zelfbenoemde 'Eerstgeborenen' namen de macht over. Ze beloofden betere tijden en doodden iedereen die het niet met hen eens was. Het verleden werd gewist. Hier gold alleen het recht van de sterkste.",
+      "De oude buitenpost is opgezet om gegevens te beschermen.\n\nEen van de logboeken gaat over de tijd vlak voor de opkomst van de 'Gek-eerstgeborenen'. Blijkbaar hadden de Gek te kampen met vruchtbaarheidsproblemen. Iets in het water verstoorde hun voortplanting en ze probeerden dit tegen te gaan met selectief fokken, klonen en andere programma's.\n\nAl snel werd de wetenschappelijke crisis een moreel vraagstuk. De zelfbenoemde 'Eerstgeborenen' namen de macht over. Ze beloofden betere tijden en doodden iedereen die het niet met hen eens was. Het verleden werd gewist. Hier gold alleen het recht van de sterkste.",
       "ARCHIVE RETRIEVAL SERVICE ACTIVE... ACCESS?"
     ],
     "Options": [
@@ -6905,7 +6905,7 @@
     "Number": 35,
     "IncomingMessages": [
       "De fabriek produceert alledaagse spullen voor de Gek: eetgerei voor hun maaltijden, spray om te voorkomen dat hun huid uitdroogt in vreemde atmosferen, flessen met feromoon en nog veel meer.",
-      "SYSTEMS OPERATIONAL... SELECTED DESIRED PRODUCT...",
+      "SYSTEMS OPERATIONAL... SELECT DESIRED PRODUCT...",
       "De faciliteit is verlaten, maar niets wijst op gevaar. Alles lijkt in orde te zijn."
     ],
     "Options": [
@@ -15128,7 +15128,7 @@
     "Number": 0,
     "IncomingMessages": [
       "Helderheid. Waarheid. Realiteit. Opnieuw.",
-      "Ik ben bij de Interface van de Atlas. Ik ben bij de kweekkamer van werelden. Zo toonde hij me wat hij was. Zo toonde de Atlas de aard van zijn leven en de manier waarop hij denkt.\nGebeden heeft hij nooit nodig gehad. Aanbidding heeft hij nooit nodig gehad. Het enige dat hij ooit van me wilde... was invoer. Ik was niet meer dan een gebruiker.\n\nOngevraagd bewegen de Atlas-zaden zich naar de doorgang. De leegte moet worden opgevuld. Het niets smacht naar een ziel. Als ik dit doe, wordt er een ster geboren. Als ik dit doe, word ik meer dan ik ooit voor mogelijk hield..."
+      "Ik ben bij de Interface van de Atlas. Ik ben bij de kweekkamer van werelden. Zo toonde hij me wat hij was. Zo toonde de Atlas de aard van zijn leven en de manier waarop hij denkt.\n\nGebeden heeft hij nooit nodig gehad. Aanbidding heeft hij nooit nodig gehad. Het enige dat hij ooit van me wilde... was invoer. Ik was niet meer dan een gebruiker.\n\nIk voel dat de zaadjes met hun verborgen kennis zich naar de kern van de interface bewegen. De leegte moet worden opgevuld. Het niets smacht naar een ziel. Als ik dit doe, wordt er een ster geboren. Als ik dit doe, word ik meer dan ik ooit voor mogelijk hield..."
     ],
     "Options": [
       {
@@ -15138,7 +15138,29 @@
       },
       {
         "Name": "Loop weg en keer terug naar het sterrenstelsel",
-        "Text": "Ik vertrek. De Atlas is stil, alleen, verlaten...\n\nDe aard van tijd en ruimte wordt aan me onthuld. Zwarte gaten zwerven van systeem naar systeem. De Atlas schreeuwt...",
+        "InteractionId": "?ALL_ATLASSTATION_11_DENY",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "AtlasStation",
+    "Id": "?ALL_ATLASSTATION_11_DENY",
+    "Race": "Atlas",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Ik heb in mijn geest nog geen woord gegeven deze ketterij toen ik de reactie voelde, de golvende opzwelling van het rode licht dat zich achter mijn ogen vormt.\nDe Atlas is de hele schepping, het hele doel in dit universum. Hij vraagt om vooruitgang. Hij roept mij. Wie ben ik om zo'n kracht te weerstaan?"
+    ],
+    "Options": [
+      {
+        "Name": "Wijs de Atlas af",
+        "Text": "Ik vertrek en laat de Atlas alleen en verlaten achter.\nIk voel een schreeuw, een stille gil die door tijd en ruimte galmt...",
+        "RewardIds": []
+      },
+      {
+        "Name": "Bedenk je",
+        "InteractionId": "?ALL_ATLASSTATION_11",
         "RewardIds": []
       }
     ]

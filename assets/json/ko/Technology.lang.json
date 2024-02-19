@@ -467,7 +467,7 @@
     "Icon": "technology/12.png",
     "Name": "통기막",
     "Group": "수중호흡 보조",
-    "Description": "사용자가 장시간 물 속에서 수영할 수 있습니다.\n\n사용자가 평범한 구조를 지닌 종일 경우, 입 또는 얼굴의 모공 위에 자리잡은 막접촉기를 통해 물에 녹아있는 가스를 흡수합니다.\n\n사용자의 엑소슈트 인벤토리에 설치되면 자동으로 작동합니다.",
+    "Description": "사용자가 장시간 물속에서 수영할 수 있습니다.\n\n사용자가 평범한 구조를 지닌 종일 경우, 입 또는 얼굴의 모공 위에 자리잡은 막접촉기를 통해 물에 녹아있는 가스를 흡수합니다.\n\n사용자의 엑소슈트 인벤토리에 설치되면 자동으로 작동합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -568,7 +568,7 @@
     "Id": "tech15",
     "Icon": "rawMaterials/4.png",
     "Name": "별의 씨앗",
-    "Group": "귀중한 조각",
+    "Group": "우주적 낙인",
     "Description": "작디 작은 불꽃이 기원을 알 수 없는 장막 안에 담겨있다.\n\n씨앗은 생명으로 빛나며, 탈출하여 그 가능성을 실현하고자 갈구한다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -1408,7 +1408,7 @@
     "Icon": "technology/37.png",
     "Name": "포톤 캐논",
     "Group": "함선 탄체 무기",
-    "Description": "파괴력이 강한 <TECHNOLOGY>함선 탄체 발사기<>로서 성간 거래자와 해적 둘 다 쓰기 좋은 무기 시스템입니다.\n\n<IMG>CYCLEWEAPON<>을 눌러 무기 모드를 변경합니다. <IMG>SHIPFIRE<>을 눌러 발사합니다.",
+    "Description": "파괴적인 <TECHNOLOGY>함선 탄체 발사기<>로, 성간 거래자와 해적 모두가 애용하는 무기 시스템입니다.\n\n<IMG>CYCLEWEAPON<>을 눌러 무기 모드를 변경합니다. <IMG>SHIPFIRE<>을 눌러 발사합니다.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -9520,6 +9520,240 @@
       {
         "Id": "raw2",
         "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech260",
+    "Icon": "technology/260.png",
+    "Name": "거부한 자의 표식",
+    "Group": "우주적 낙인",
+    "Description": "한 점에 불과한 아주 작은 우주진의 티끌이다. 자세히 살펴보니 모든 표면이 결정 조각과 왜곡된 진홍빛 기하학 문양으로 이루어져 있다.\n\n자유를 요구하는 그것은 억제된 에너지를 내뿜으며 명멸한다.\n\n우주에 있는 성계와 행성, 물체를 <TECHNOLOGY>발견해<> 표식을 <STELLAR>강화하십시오<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 16
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 16
+      },
+      {
+        "Id": "raw34",
+        "Quantity": 16
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech261",
+    "Icon": "technology/261.png",
+    "Name": "선체 파열",
+    "Group": "파손된 함선 부품",
+    "Description": "함선 서브시스템에 <FUEL>심각한 손상<>이 발생했습니다. 피해를 수리할 때까지 슬롯에 <STELLAR>화물<>이나 <TECHNOLOGY>기술<>을 적재할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n핵심 함선 기능은 영향을 받지 않습니다. 수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech262",
+    "Icon": "tradeItems/21.png",
+    "Name": "녹슨 회로",
+    "Group": "파손된 함선 부품",
+    "Description": "함선 서브시스템에 <FUEL>심각한 손상<>이 발생했습니다. 피해를 수리할 때까지 슬롯에 <STELLAR>화물<>이나 <TECHNOLOGY>기술<>을 적재할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n핵심 함선 기능은 영향을 받지 않습니다. 수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw19",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech263",
+    "Icon": "products/113.png",
+    "Name": "유압 계통 파손",
+    "Group": "파손된 함선 부품",
+    "Description": "함선 서브시스템에 <FUEL>심각한 손상<>이 발생했습니다. 피해를 수리할 때까지 슬롯에 <STELLAR>화물<>이나 <TECHNOLOGY>기술<>을 적재할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n핵심 함선 기능은 영향을 받지 않습니다. 수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 45
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech264",
+    "Icon": "other/366.png",
+    "Name": "탱크 부식",
+    "Group": "파손된 함선 부품",
+    "Description": "함선 서브시스템에 <FUEL>심각한 손상<>이 발생했습니다. 피해를 수리할 때까지 슬롯에 <STELLAR>화물<>이나 <TECHNOLOGY>기술<>을 적재할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n핵심 함선 기능은 영향을 받지 않습니다. 수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 35
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech265",
+    "Icon": "technology/88.png",
+    "Name": "모듈 오염",
+    "Group": "파손된 멀티툴 부품",
+    "Description": "멀티툴 서브시스템에 <FUEL>치명적인 손상<>이 발생했습니다.\n\n피해를 수리할 때까지 슬롯을 사용할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw32",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech266",
+    "Icon": "technology/89.png",
+    "Name": "미약한 피해",
+    "Group": "파손된 멀티툴 부품",
+    "Description": "멀티툴 서브시스템에 <FUEL>치명적인 손상<>이 발생했습니다.\n\n피해를 수리할 때까지 슬롯을 사용할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech267",
+    "Icon": "products/53.png",
+    "Name": "터미널 소실",
+    "Group": "파손된 멀티툴 부품",
+    "Description": "멀티툴 서브시스템에 <FUEL>치명적인 손상<>이 발생했습니다.\n\n피해를 수리할 때까지 슬롯을 사용할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw13",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech268",
+    "Icon": "tradeItems/25.png",
+    "Name": "레지스터 고장",
+    "Group": "파손된 멀티툴 부품",
+    "Description": "멀티툴 서브시스템에 <FUEL>치명적인 손상<>이 발생했습니다.\n\n피해를 수리할 때까지 슬롯을 사용할 수 없습니다. <IMG>REPAIR<>을 사용해서 수리를 진행하십시오.\n\n수리하면 슬롯을 일반 용도로 사용할 수 있습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 50
       }
     ],
     "StatBonuses": [],

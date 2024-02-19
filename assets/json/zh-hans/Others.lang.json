@@ -25,9 +25,9 @@
   {
     "Id": "other2",
     "Icon": "other/1.png",
-    "Name": "星图",
-    "Group": "制图资料",
-    "Description": "一张附近位置的地图，取自一座行星档案馆建筑的<STELLAR>本地信息库<>。\n\n标有一个<SPECIAL>远古废墟地点<>。挖掘此地点就有可能获得珍贵宝藏。\n\n选择地图并使用<VAL_ON>规划路线（<IMG>FE_ALT1<>）<>以在你的套装屏幕中标记该地点。",
+    "Name": "遗物藏宝图",
+    "Group": "挖掘点地图数据",
+    "Description": "一张附近行星的地图，现已标记一处<SPECIAL>远古废墟地点<>。在此地进行挖掘很有可能会得到宝藏。\n\n选择地图并使用<VAL_ON>规划路线（<IMG>FE_ALT1<>）<>以在你的套装屏幕中标记该地点。\n\n与空间站制图师交换<COMMODITY>导航数据<>以获取新的地图。",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -37,7 +37,7 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
@@ -3633,7 +3633,7 @@
     "Icon": "other/222.png",
     "Name": "通向自由的门票",
     "Group": "安全系统通行证",
-    "Description": "“光荣的幸存者！<STELLAR>应许之星<>将属于你！”\n\n一张<TECHNOLOGY>安全系统通行证<>，从“<STELLAR>自由之音<>”处获取。\n选择通行证并使用接受邀请（<IMG>FE_ALT1<>）以在导航系统中标记位置。",
+    "Description": "“光荣的幸存者！<STELLAR>应许之星<>将属于你！”\n\n一张<TECHNOLOGY>安全系统通行证<>上带着“<STELLAR>自由之音<>”的标志。\n选择通行证并使用接受邀请（<IMG>FE_ALT1<>）以在导航系统中标记位置。",
     "BaseValueUnits": 888.0,
     "CurrencyType": "Credits",
     "Colour": "4D2957",
@@ -5977,7 +5977,7 @@
     "Id": "other356",
     "Icon": "curiosities/46.png",
     "Name": "虚空蛋",
-    "Group": "生命奇物",
+    "Group": "珍奇生物",
     "Description": "一个异常的蛋。蛋壳坚硬粗糙，触摸时会颤搐。\n\n里面会传出微弱的轻叩声，不时听起来像在唱歌。",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
@@ -7728,6 +7728,597 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "8C4B9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other432",
+    "Icon": "curiosities/13.png",
+    "Name": "大海的回忆",
+    "Group": "阿特拉斯碎片",
+    "Description": "这份回忆是宇宙的一块碎片，是有可能的过去与潜在的未来构成的无尽宇宙中的一隅。\n\n飞向群星并使用<IMG>FE_ALT1<>唤醒这份回忆。",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw11",
+        "Quantity": 99
+      },
+      {
+        "Id": "raw16",
+        "Quantity": 33
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "为碎片带去生命"
+    ]
+  },
+  {
+    "Id": "other433",
+    "Icon": "curiosities/10.png",
+    "Name": "征服的回忆",
+    "Group": "阿特拉斯碎片",
+    "Description": "这份回忆是宇宙的一块碎片，是有可能的过去与潜在的未来构成的无尽宇宙中的一隅。\n\n飞向群星并使用<IMG>FE_ALT1<>唤醒这份回忆。",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw13",
+        "Quantity": 33
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 99
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "为碎片带去生命"
+    ]
+  },
+  {
+    "Id": "other434",
+    "Icon": "curiosities/9.png",
+    "Name": "骸骨的回忆",
+    "Group": "阿特拉斯碎片",
+    "Description": "这份回忆是宇宙的一块碎片，是有可能的过去与潜在的未来构成的无尽宇宙中的一隅。\n\n飞向群星并使用<IMG>FE_ALT1<>唤醒这份回忆。",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 33
+      },
+      {
+        "Id": "raw20",
+        "Quantity": 99
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "为碎片带去生命"
+    ]
+  },
+  {
+    "Id": "other435",
+    "Icon": "curiosities/8.png",
+    "Name": "虚空的回忆",
+    "Group": "阿特拉斯碎片",
+    "Description": "这份回忆是宇宙的一块碎片，是有可能的过去与潜在的未来构成的无尽宇宙中的一隅。\n\n飞向群星并使用<IMG>FE_ALT1<>唤醒这份回忆。",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 99
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 33
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "为碎片带去生命"
+    ]
+  },
+  {
+    "Id": "other436",
+    "Icon": "other/436.png",
+    "Name": "星之子突破者",
+    "Group": "专属飞船",
+    "Description": "一艘独一无二的专属<STELLAR>飞船<>，纪念你完成<STELLAR>欧米茄<>远征。\n\n这艘面面俱到的飞船配备有能够抵抗辐射的装甲板，并且能够借助符合空气动力学的工程设计在大气层内灵活飞行。\n\n<STELLAR>领取<>这艘飞船并将其添加至你的收藏，或者与你的当前飞船进行<STELLAR>交换<>。在行星上时，通过快捷菜单（<IMG>QUICK_MENU<>）召唤飞船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other437",
+    "Icon": "other/437.png",
+    "Name": "阿特拉斯头罩",
+    "Group": "可解锁头盔",
+    "Description": "专属<STELLAR>套装外观<>。\n\n戴上这顶头盔，你的头骨能够感觉到一种柔软却又无比清晰的心跳共鸣。<FUEL>阿、特、拉、斯<>。\n虽然无法解释，但那种脉搏让人无比平静。\n\n可以在<TECHNOLOGY>外观修改器<>使用以更改你的套装外观。",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other438",
+    "Icon": "other/438.png",
+    "Name": "阿特拉斯权杖",
+    "Group": "独特科尔瓦克斯科技？",
+    "Description": "一台专属<STELLAR>多用途工具<>。\n\n这柄献给阿特拉斯的独特仪式权杖是由一名科尔瓦克斯神父实体亲手打造而成。\n\n<STELLAR>收下<>这个多用途工具，将它加入你的收藏，或与你现在的多用途工具<STELLAR>交换<>。在快捷菜单（<IMG>QUICK_MENU<>）中的工具部分切换可用的多用途工具。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other439",
+    "Icon": "other/439.png",
+    "Name": "阿特拉斯飞行背包",
+    "Group": "套装视觉增强",
+    "Description": "专属<STELLAR>套装外观<>。\n\n使用从一处绯红核心附近采集到的星体合金铸造而成的轻便喷气背包。\n\n可以在<TECHNOLOGY>外观修改器<>使用以改变你的套装外观。",
+    "BaseValueUnits": 3500.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other440",
+    "Icon": "other/52.png",
+    "Name": "头衔：“星之子”",
+    "Group": "定制个人身份",
+    "Description": "专属<STELLAR>探险家头衔<>，纪念<STELLAR>欧米茄<>远征的完成，以及在阿特拉斯内部见证的记忆。\n\n请使用<TECHNOLOGY>外观修改器<>在你的旗帜上应用此头衔。",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other441",
+    "Icon": "other/441.png",
+    "Name": "欧米茄旗帜",
+    "Group": "定制个人身份",
+    "Description": "装备上这枚专属的<STELLAR>个人旗帜<>，纪念<STELLAR>欧米茄<>远征的完成，以及在阿特拉斯内部见证的记忆。\n\n在<TECHNOLOGY>外观修改器<>中将这面旗帜应用至你的个人档案。",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other442",
+    "Icon": "other/442.png",
+    "Name": "终极隼UD7",
+    "Group": "专属飞船",
+    "Description": "一艘专属<STELLAR>飞船<>，这艘战斗飞船预装有强大的<TECHNOLOGY>相位光束<>与升级过的<TECHNOLOGY>护盾<>。\n\n<STELLAR>收取<>这艘飞船，将它加入你的收藏，或与你现在的飞船<STELLAR>交换<>。在行星上时，使用快捷菜单（<IMG>QUICK_MENU<>）召唤飞船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other443",
+    "Icon": "other/443.png",
+    "Name": "虚空的纳贝托",
+    "Group": "专属飞船",
+    "Description": "一艘专属<STELLAR>飞船<>，这艘战斗飞船预装有<TECHNOLOGY>冲突扫描仪<>与强大的<TECHNOLOGY>红外切割机<>。\n\n<STELLAR>收取<>这艘飞船，将它加入你的收藏，或与你现在的飞船<STELLAR>交换<>。在行星上时，使用快捷菜单（<IMG>QUICK_MENU<>）召唤飞船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other444",
+    "Icon": "other/444.png",
+    "Name": "重力宿敌RE5",
+    "Group": "专属飞船",
+    "Description": "一艘专属<STELLAR>飞船<>，这艘多功能飞船预装有<TECHNOLOGY>一系列升级技术<>。\n\n<STELLAR>收取<>这艘飞船，将它加入你的收藏，或与你现在的飞船<STELLAR>交换<>。在行星上时，使用快捷菜单（<IMG>QUICK_MENU<>）召唤飞船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other445",
+    "Icon": "other/445.png",
+    "Name": "利耀JU4",
+    "Group": "专属飞船",
+    "Description": "一艘专属<STELLAR>飞船<>，这艘宽敞货船预装有<TECHNOLOGY>经济扫描仪<>与<TECHNOLOGY>货物扫描偏导器<>。\n\n<STELLAR>收取<>这艘飞船，将它加入你的收藏，或与你现在的飞船<STELLAR>交换<>。在行星上时，使用快捷菜单（<IMG>QUICK_MENU<>）召唤飞船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other446",
+    "Icon": "other/446.png",
+    "Name": "伊萨亚苏的太平鸟观测者",
+    "Group": "专属飞船",
+    "Description": "一艘专属<STELLAR>飞船<>，这艘深空探索飞船装备了强大的升级版<TECHNOLOGY>超光速推进器<>与<TECHNOLOGY>正电子冲击波<>。\n\n<STELLAR>收取<>这艘飞船，将它加入你的收藏，或与你现在的飞船<STELLAR>交换<>。在行星上时，使用快捷菜单（<IMG>QUICK_MENU<>）召唤飞船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other447",
+    "Icon": "other/447.png",
+    "Name": "I. 普罗托布尼亚蛋",
+    "Group": "专属同伴卵",
+    "Description": "一个有生命的、可生育的卵，<TRADEABLE>已经准备好孵化！<>\n\n里面的生物正用小小的手指刮挠着蛋壳。\n\n根据扫描结果显示，里面的生物拥有好斗的基因潜质，并且会<FUEL>凶猛<>保护自己的旅行者同伴。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other448",
+    "Icon": "other/448.png",
+    "Name": "F. 格拉斯帕乌姆蛋",
+    "Group": "专属同伴卵",
+    "Description": "一个有生命的、可生育的卵，<TRADEABLE>已经准备好孵化！<>\n\n虽然尚未孵化，但里面的生物已经在用獠牙推挤着蛋壳，看来是已经迫不及待想要看看外面的大千世界。\n\n根据扫描结果显示，里面的生物拥有<STELLAR>怪诞<>的基因潜质，因此很有可能会长成一名天性爱玩的同伴。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other449",
+    "Icon": "other/449.png",
+    "Name": "惯性聚焦器NL4-0/9",
+    "Group": "专属多功能生存装置",
+    "Description": "一台专属<STELLAR>多用途工具<>。这把手枪预装有极其强大的<TECHNOLOGY>标枪光束<>。\n\n<STELLAR>收下<>这个多用途工具，将它加入你的收藏，或与你现在的多用途工具<STELLAR>交换<>。在快捷菜单（<IMG>QUICK_MENU<>）中的工具部分切换可用的多用途工具。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other450",
+    "Icon": "other/450.png",
+    "Name": "冲出地平线Y-74B-O",
+    "Group": "专属多功能生存装置",
+    "Description": "一台专属<STELLAR>多用途工具<>。这把手枪预装有极其强大的<TECHNOLOGY>散射爆破器<>。\n\n<STELLAR>收下<>这个多用途工具，将它加入你的收藏，或与你现在的多用途工具<STELLAR>交换<>。在快捷菜单（<IMG>QUICK_MENU<>）中的工具部分切换可用的多用途工具。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other451",
+    "Icon": "other/451.png",
+    "Name": "洞悉之吻",
+    "Group": "专属多功能生存装置",
+    "Description": "一台专属<STELLAR>多用途工具<>。这把手枪预装有<TECHNOLOGY>一系列实用技术<>。\n\n<STELLAR>收下<>这个多用途工具，将它加入你的收藏，或与你现在的多用途工具<STELLAR>交换<>。在快捷菜单（<IMG>QUICK_MENU<>）中的工具部分切换可用的多用途工具。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other452",
+    "Icon": "other/452.png",
+    "Name": "泰坦烟花包",
+    "Group": "烟火技术组合包",
+    "Description": "一包包含三种烟花的奢华烟花包，灵感源自潜伏于宇宙各地的泰坦蠕虫。内含大量的<FUEL>镉<>、<COMMODITY>钠<>和<TRADEABLE>艾梅里尔<>。点燃就可以在天空中开启一场炫丽的光影表演。\n\n可以通过<VAL_ON>建造菜单<>（<IMG>BUILD_MENU<>）来放置发射筒。<FUEL>警告<>：不可瞄准活体生物。不建议在室内使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other453",
+    "Icon": "other/452.png",
+    "Name": "泰坦烟花包",
+    "Group": "烟火技术组合包",
+    "Description": "一包包含三种烟花的奢华烟花包，灵感源自潜伏于宇宙各地的泰坦蠕虫。内含大量的<FUEL>镉<>、<COMMODITY>钠<>和<TRADEABLE>艾梅里尔<>。点燃就可以在天空中开启一场炫丽的光影表演。\n\n可以通过<VAL_ON>建造菜单<>（<IMG>BUILD_MENU<>）来放置发射筒。<FUEL>警告<>：不可瞄准活体生物。不建议在室内使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other454",
+    "Icon": "other/452.png",
+    "Name": "泰坦烟花包",
+    "Group": "烟火技术组合包",
+    "Description": "一包包含三种烟花的奢华烟花包，灵感源自潜伏于宇宙各地的泰坦蠕虫。内含大量的<FUEL>镉<>、<COMMODITY>钠<>和<TRADEABLE>艾梅里尔<>。点燃就可以在天空中开启一场炫丽的光影表演。\n\n可以通过<VAL_ON>建造菜单<>（<IMG>BUILD_MENU<>）来放置发射筒。<FUEL>警告<>：不可瞄准活体生物。不建议在室内使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other455",
+    "Icon": "other/452.png",
+    "Name": "泰坦烟花包",
+    "Group": "烟火技术组合包",
+    "Description": "一包包含三种烟花的奢华烟花包，灵感源自潜伏于宇宙各地的泰坦蠕虫。内含大量的<FUEL>镉<>、<COMMODITY>钠<>和<TRADEABLE>艾梅里尔<>。点燃就可以在天空中开启一场炫丽的光影表演。\n\n可以通过<VAL_ON>建造菜单<>（<IMG>BUILD_MENU<>）来放置发射筒。<FUEL>警告<>：不可瞄准活体生物。不建议在室内使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other456",
+    "Icon": "other/452.png",
+    "Name": "泰坦烟花包",
+    "Group": "烟火技术组合包",
+    "Description": "一包包含三种烟花的奢华烟花包，灵感源自潜伏于宇宙各地的泰坦蠕虫。内含大量的<FUEL>镉<>、<COMMODITY>钠<>和<TRADEABLE>艾梅里尔<>。点燃就可以在天空中开启一场炫丽的光影表演。\n\n可以通过<VAL_ON>建造菜单<>（<IMG>BUILD_MENU<>）来放置发射筒。<FUEL>警告<>：不可瞄准活体生物。不建议在室内使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate"

@@ -6905,7 +6905,7 @@
     "Number": 35,
     "IncomingMessages": [
       "La fabbrica produce oggetti di uso quotidiano per i Gek. Utensili da cucina, spray per impedire che la loro pelle si secchi in atmosfere aliene, bottiglie di feromoni e così via.",
-      "SYSTEMS OPERATIONAL... SELECTED DESIRED PRODUCT...",
+      "SYSTEMS OPERATIONAL... SELECT DESIRED PRODUCT...",
       "La struttura è abbandonata e non sembra esserci una ragione ovvia per cui l'allarme debba suonare. Sembra tutto a posto."
     ],
     "Options": [
@@ -15128,7 +15128,7 @@
     "Number": 0,
     "IncomingMessages": [
       "Chiarezza. Verità. Realtà. Ancora una volta.",
-      "Sono di fronte all'interfaccia dell'Atlante. Sono alla forgia dei mondi. È così che mi ha mostrato cos'è. È così che l'Atlante ha condiviso la natura della sua vita, i meccanismi della sua mente.\n\nNon ha mai avuto bisogno delle mie preghiere. Non ha mai avuto bisogno di essere adorato. Tutto ciò che mi chiedeva, tutto ciò che ha mai desiderato... era solo un comando. Ero solamente un utente.\n\nSpontaneamente, i Semi dell'Atlante gravitano verso la soglia. Il vuoto dev'essere riempito. Il nulla desidera un'anima. Se lo faccio, nascerà una stella. Se lo faccio, diventerò qualcosa che non ho mai ritenuto possibile..."
+      "Sono di fronte all'interfaccia dell'Atlante. Sono alla forgia dei mondi. È così che mi ha mostrato cos'è. È così che l'Atlante ha condiviso la natura della sua vita, i meccanismi della sua mente.\n\nNon ha mai avuto bisogno delle mie preghiere. Non ha mai avuto bisogno di essere adorato. Tutto ciò che mi chiedeva, tutto ciò che ha mai desiderato... era solo un comando. Ero solamente un utente.\n\nSento che i semi, il loro sapere nascosto, gravitano verso il nucleo dell'interfaccia. Il vuoto dev'essere riempito. Il nulla desidera un'anima. Se lo faccio, nascerà una stella. Se lo faccio, diventerò qualcosa che non ho mai ritenuto possibile..."
     ],
     "Options": [
       {
@@ -15138,7 +15138,29 @@
       },
       {
         "Name": "Me ne vado e faccio ritorno alla galassia",
-        "Text": "Me ne vado. L'Atlante è silenzioso, solo, abbandonato...\n\nIl tessuto dello spaziotempo mi si rivela. I buchi neri sciamano di sistema in sistema. L'Atlante grida...",
+        "InteractionId": "?ALL_ATLASSTATION_11_DENY",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "AtlasStation",
+    "Id": "?ALL_ATLASSTATION_11_DENY",
+    "Race": "Atlas",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Ho appena iniziato a elaborare quest'eresia nella mia mente quando sento la risposta, l'ondata di luce scarlatta che inizia a ergersi dietro i miei occhi.\nL'Atlante è tutta la creazione, tutto lo scopo di questo universo. Richiede progressi. Richiede la mia presenza. Chi sono io per negare una tale forza?"
+    ],
+    "Options": [
+      {
+        "Name": "Rifiuto l'Atlante",
+        "Text": "Lascio, l'Atlante, solo, abbandonato.\nSento che inizia a urlare, un grido silenzioso che riecheggia in tutto lo spazio e il tempo...",
+        "RewardIds": []
+      },
+      {
+        "Name": "Ci ripenso",
+        "InteractionId": "?ALL_ATLASSTATION_11",
         "RewardIds": []
       }
     ]

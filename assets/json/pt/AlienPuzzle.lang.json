@@ -6905,7 +6905,7 @@
     "Number": 35,
     "IncomingMessages": [
       "A fábrica produz acessórios do dia-a-dia para os Gek. Utensílios para as refeições, sprays para evitar que a pele seque em atmosferas alienígenas, garrafas de feromonas e assim por diante.",
-      "SYSTEMS OPERATIONAL... SELECTED DESIRED PRODUCT...",
+      "SYSTEMS OPERATIONAL... SELECT DESIRED PRODUCT...",
       "A unidade está abandonada e não há motivos óbvios para que um alarme dispare. Parece estar tudo bem."
     ],
     "Options": [
@@ -6923,7 +6923,7 @@
       },
       {
         "Name": "Desligar produção",
-        "Text": "Desligo a produção, conseguindo ainda extrair alguns Aglomerados de Nanite.\n\nEnquanto vou, ouço-a, uma voz na escuridão. Investigo, mas não encontro nada...",
+        "Text": "Desligo a produção, conseguindo ainda extrair alguns Aglomerados de Nanite.\n\nAo ir embora, ouço-a, uma voz na escuridão. Investigo, mas não encontro nada...",
         "RewardIds": [
           "TECHFRAG_M"
         ]
@@ -15128,7 +15128,7 @@
     "Number": 0,
     "IncomingMessages": [
       "Claridade. Verdade. Realidade. Outra vez.",
-      "Encontro-me no interface do Atlas, na forja dos mundos. Foi assim que me mostrou o que era. Foi assim que o Atlas partilhou a natureza da sua vida, o mecanismo da sua mente.\nNunca exigiu preces. Nunca exigiu veneração. Tudo o que me pediu, tudo o que sempre quis... foi apenas uma contribuição. Eu era apenas um utilizador.\nAs Sementes do Atlas gravitam, espontaneamente, em direção à entrada. O vazio está destinado a ser preenchido. O Nada anseia uma alma. Se eu fizer isto irá nascer uma estrela. Se eu fizer isto, vou tornar-me em muito mais do que alguma vez pensei ser possível..."
+      "Encontro-me na interface do Atlas, na forja dos mundos. Foi assim que me mostrou o que era. Foi assim que o Atlas partilhou a natureza da sua vida, o mecanismo da sua mente.\n\nNunca exigiu preces. Nunca exigiu veneração. Tudo o que me pediu, tudo o que sempre quis... foi apenas uma contribuição. Eu era apenas um utilizador.\n\nSinto as sementes, o seu conhecimento oculto, a gravitarem em direção ao núcleo da interface. O vazio está destinado a ser preenchido. O Nada anseia por uma alma. Se eu fizer isto, irá nascer uma estrela. Se eu fizer isto, vou tornar-me em muito mais do que alguma vez pensei ser possível..."
     ],
     "Options": [
       {
@@ -15138,7 +15138,29 @@
       },
       {
         "Name": "Afastar-me e regressar à galáxia.",
-        "Text": "Saio, o Atlas fica silencioso, sozinho, abandonado...\n\nOs suportes do tecido do tempo e do espaço são-me revelados, os buracos negros vagueando através dos sistemas. O Atlas grita...",
+        "InteractionId": "?ALL_ATLASSTATION_11_DENY",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "AtlasStation",
+    "Id": "?ALL_ATLASSTATION_11_DENY",
+    "Race": "Atlas",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Mal comecei a formular esta heresia dentro da minha mente, sinto a resposta, a onda gigante de luz carmesim que começa a subir atrás dos meus olhos.\nO Atlas é toda a criação, todo o propósito neste universo. Apela ao progresso. Chama-me. Quem sou eu para negar tal força?"
+    ],
+    "Options": [
+      {
+        "Name": "Negar o Atlas",
+        "Text": "Saio, o Atlas sozinho, abandonado.\nSinto que começa a gritar, um grito silencioso que ecoa por todo o espaço e tempo...",
+        "RewardIds": []
+      },
+      {
+        "Name": "Reconsiderar",
+        "InteractionId": "?ALL_ATLASSTATION_11",
         "RewardIds": []
       }
     ]

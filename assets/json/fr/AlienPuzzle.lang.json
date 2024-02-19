@@ -5648,7 +5648,7 @@
     "IsFactory": false,
     "Number": 17,
     "IncomingMessages": [
-      "L'avant-poste est ancien, même selon les critères des Gek. Son environnement est spécialement conçu pour conserver les données.\n \nUn journal parle de la période précédant la montée au pouvoir des 'Premier-Nés Gek'. Les Gek semblent avoir connu une crise de fertilité. Quelque chose dans l'eau a commencé à affecter leur chiffre de reproduction, ce qui a mené à une tentative d'amélioration sélective, de programmes de clonage et bien d'autres choses.\n \nLa crise scientifique est devenue morale. Les 'Premier-Nés' autoproclamés ont pris le pouvoir, promettant de grandes choses et assassinant tous leurs opposants. Les souvenirs du passé étaient effacés. Être fort, c'était être juste.",
+      "L'avant-poste est ancien, même selon les critères des Gek. Son environnement est spécialement conçu pour conserver les données.\n\nUn journal parle de la période précédant la montée au pouvoir des 'Premier-Nés Gek'. Les Gek semblent avoir connu une crise de fertilité. Quelque chose dans l'eau a commencé à affecter leur chiffre de reproduction, ce qui a mené à une tentative d'amélioration sélective, de programmes de clonage et bien d'autres choses.\n\nLa crise scientifique est devenue morale. Les 'Premier-Nés' autoproclamés ont pris le pouvoir, promettant de grandes choses et assassinant tous leurs opposants. Les souvenirs du passé étaient effacés. Être fort, c'était être juste.",
       "ARCHIVE RETRIEVAL SERVICE ACTIVE... ACCESS?"
     ],
     "Options": [
@@ -6905,7 +6905,7 @@
     "Number": 35,
     "IncomingMessages": [
       "L'usine produit des objets courants pour les Geks. Des ustensiles de cuisine pour leurs repas, des sprays pour protéger leur peau contre la sécheresse dans les atmosphères inhospitalières, des flacons de phéromones, etc.",
-      "SYSTEMS OPERATIONAL... SELECTED DESIRED PRODUCT...",
+      "SYSTEMS OPERATIONAL... SELECT DESIRED PRODUCT...",
       "L'installation est abandonnée, mais rien n'explique l'alarme. Tout semble normal."
     ],
     "Options": [
@@ -15128,7 +15128,7 @@
     "Number": 0,
     "IncomingMessages": [
       "Clarté. Vérité. Réalité. À nouveau.",
-      "Je me trouve à l'interface de l'Atlas, à la forge des mondes. C'est comme ça qu'il m'a montré ce que c'était, c'est ainsi que l'Atlas a révélé la nature de sa vie, le fonctionnement de son esprit.\n\nIl n'a jamais eu besoin de prières ou d'adoration. Tout ce qu'il me demandait, tout ce qu'il a toujours voulu... c'était simplement des données. Je n'étais qu'un utilisateur.\n\nSoudain, les graines d'Atlas gravitent en direction de la porte. Le vide doit être rempli, le néant convoite une âme. Si je le fais, une étoile naîtra. Si je le fais, je deviendrai bien plus que je n'aurais jamais imaginé."
+      "Je me trouve à l'interface de l'Atlas, à la forge des mondes. C'est comme ça qu'il m'a montré ce que c'était, c'est ainsi que l'Atlas a révélé la nature de sa vie, le fonctionnement de son esprit.\n\nIl n'a jamais eu besoin de prières ou d'adoration. Tout ce qu'il me demandait, tout ce qu'il a toujours voulu... c'était simplement des données. Je n'étais qu'un utilisateur.\n\nJe sens les graines, leur savoir caché, qui gravitent vers le centre de l'interface. Le vide doit être rempli, le néant convoite une âme. Si je le fais, une étoile naîtra. Si je le fais, je deviendrai bien plus que je n'aurais jamais imaginé."
     ],
     "Options": [
       {
@@ -15138,7 +15138,29 @@
       },
       {
         "Name": "Partir et retourner dans la galaxie",
-        "Text": "Le tissu du temps et de l'espace m'est dévoilé, des trous noirs pullulant de système en système. L'Atlas crie...",
+        "InteractionId": "?ALL_ATLASSTATION_11_DENY",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "AtlasStation",
+    "Id": "?ALL_ATLASSTATION_11_DENY",
+    "Race": "Atlas",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "À peine ai-je commencé à formuler cette hérésie dans mon esprit que je ressens la réponse, la vague de lumière pourpre qui commence à affluer derrière mes yeux.\nL'Atlas représente toute la création, toute la raison d'être de cet univers. Il réclame le progrès. Il me réclame moi. Qui suis-je pour tourner le dos à une telle force ?"
+    ],
+    "Options": [
+      {
+        "Name": "Refuser d'écouter l'Atlas",
+        "Text": "Je laisse l'Atlas, seul, abandonné.\nJe sens qu'il commence à crier, un hurlement silencieux qui résonne dans tout l'espace et le temps...",
+        "RewardIds": []
+      },
+      {
+        "Name": "Changer d'avis",
+        "InteractionId": "?ALL_ATLASSTATION_11",
         "RewardIds": []
       }
     ]

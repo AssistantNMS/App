@@ -25,9 +25,9 @@
   {
     "Id": "other2",
     "Icon": "other/1.png",
-    "Name": "星系図",
-    "Group": "地図データ",
-    "Description": "惑星アーカイブの建物で<STELLAR>現地情報レポジトリ<>から入手した、近くにある地点の地図。\n\n<SPECIAL>古代の遺跡<>にブックマークをつけた。採掘することで貴重な物資が手に入る可能性がある。\n\nマップを開いて<VAL_ON>ルート設定（<IMG>FE_ALT1<>）<>をすることで該当地点をエクソスーツにハイライト表示させられる。",
+    "Name": "遺物図",
+    "Group": "採掘地点地図データ",
+    "Description": "近くの惑星の地図。<SPECIAL>古代の遺跡<>がマークされている。この場所を採掘することで貴重な物資が手に入る可能性がある。\n\n地図を選択して<VAL_ON>ルート設定（<IMG>FE_ALT1<>）<>を使うと、エクソスーツの画面にブックマークできる。\n\n新しい地図は、宇宙ステーションの地図製作者と<COMMODITY>ナビゲーションデータ<>を交換すると手に入る。",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -37,7 +37,7 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
@@ -3633,7 +3633,7 @@
     "Icon": "other/222.png",
     "Name": "自由への切符",
     "Group": "セキュアシステムパス",
-    "Description": "「栄光の生存者！<STELLAR>約束の星<> は君のものだ！」\n\n「<STELLAR>自由の声」<TECHNOLOGY><> から取得したセキュアシステムパス<>。\nパスを選択し、招待の承諾（<IMG>FE_ALT1<>） を使用すると、ナビゲーションシステムに位置を固定する。",
+    "Description": "「栄光の生存者！<STELLAR>約束の星<>は君のものだ！」\n\n「<STELLAR>自由の声<>」のマークがついた<TECHNOLOGY>セキュアシステムパス<>。\nパスを選択し、招待を承諾（<IMG>FE_ALT1<>）すると、位置をナビゲーションシステムにブックマークできる。",
     "BaseValueUnits": 888.0,
     "CurrencyType": "Credits",
     "Colour": "4D2957",
@@ -7728,6 +7728,597 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "8C4B9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other432",
+    "Icon": "curiosities/13.png",
+    "Name": "海の記憶",
+    "Group": "アトラスの欠片",
+    "Description": "この記憶は、宇宙の断片。起こり得た過去と起こり得る未来をすべて内包する、無限の銀河を紡ぐ1本の糸だ。\n\n星々のところまで到達し、<IMG>FE_ALT1<>でこの記憶を呼び覚まそう。",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw11",
+        "Quantity": 99
+      },
+      {
+        "Id": "raw16",
+        "Quantity": 33
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "欠片に生命を吹き込む"
+    ]
+  },
+  {
+    "Id": "other433",
+    "Icon": "curiosities/10.png",
+    "Name": "征服の記憶",
+    "Group": "アトラスの欠片",
+    "Description": "この記憶は、宇宙の断片。起こり得た過去と起こり得る未来をすべて内包する、無限の銀河を紡ぐ1本の糸だ。\n\n星々のところまで到達し、<IMG>FE_ALT1<>でこの記憶を呼び覚まそう。",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw13",
+        "Quantity": 33
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 99
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "欠片に生命を吹き込む"
+    ]
+  },
+  {
+    "Id": "other434",
+    "Icon": "curiosities/9.png",
+    "Name": "骨の記憶",
+    "Group": "アトラスの欠片",
+    "Description": "この記憶は、宇宙の断片。起こり得た過去と起こり得る未来をすべて内包する、無限の銀河を紡ぐ1本の糸だ。\n\n星々のところまで到達し、<IMG>FE_ALT1<>でこの記憶を呼び覚まそう。",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 33
+      },
+      {
+        "Id": "raw20",
+        "Quantity": 99
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "欠片に生命を吹き込む"
+    ]
+  },
+  {
+    "Id": "other435",
+    "Icon": "curiosities/8.png",
+    "Name": "虚無の記憶",
+    "Group": "アトラスの欠片",
+    "Description": "この記憶は、宇宙の断片。起こり得た過去と起こり得る未来をすべて内包する、無限の銀河を紡ぐ1本の糸だ。\n\n星々のところまで到達し、<IMG>FE_ALT1<>でこの記憶を呼び覚まそう。",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 99
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 33
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "欠片に生命を吹き込む"
+    ]
+  },
+  {
+    "Id": "other436",
+    "Icon": "other/436.png",
+    "Name": "スターボーンランナー",
+    "Group": "特製宇宙船",
+    "Description": "探検「<STELLAR>オメガ<>」の達成を記念した特別な<STELLAR>宇宙船<>。\n\nこの汎用性の高い宇宙船は、放射線に耐性のある装甲が張られ、大気圏での飛行中も機敏に動けるように空力特性を考慮して設計されている。\n\nこの宇宙船は<STELLAR>取得<>して手持ちに加えるか、現在の宇宙船と<STELLAR>交換<>できる。惑星上でクイックメニュー（<IMG>QUICK_MENU<>）から宇宙船を呼び出せる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other437",
+    "Icon": "other/437.png",
+    "Name": "アトラスヘッドシールド",
+    "Group": "アンロック可能なヘルメット",
+    "Description": "特製<STELLAR>エクソスーツ外見変更モジュール<>。\n\nこのヘルメットをかぶると、かすかだが揺るぎない鼓動が頭蓋骨に響いてくる。<FUEL>A T L A S<>。\nこの鼓動、不思議と心が落ち着く。\n\n<TECHNOLOGY>外見変更モジュール<>でエクソスーツのデザインを変更することができる。",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other438",
+    "Icon": "other/438.png",
+    "Name": "アトラスセプター",
+    "Group": "コーバックス独自のテクノロジー？",
+    "Description": "特別製の<STELLAR>マルチツール<>。\n\nコーバックスの祭司がアトラスに捧げる品として自らの手によって作り出した、風変わりな儀式用の杖。\n\nこのマルチツールは<STELLAR>取得<>して手持ちに加えるか、現在のマルチツールと<STELLAR>交換<>できる。クイックメニュー（<IMG>QUICK_MENU<>）の機能の項目から使用するマルチツールを切り替えられる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other439",
+    "Icon": "other/439.png",
+    "Name": "アトラスジェットパック",
+    "Group": "エクソスーツ外装カスタマイズ",
+    "Description": "特製<STELLAR>エクソスーツ外見変更モジュール<>。\n\n灼熱のクリムゾンコアを核にして、恒星合金で作られた軽量ジェットパック。\n\n<TECHNOLOGY>外見変更モジュール<>でエクソスーツのデザインを変更することができる。",
+    "BaseValueUnits": 3500.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other440",
+    "Icon": "other/52.png",
+    "Name": "称号：星に生まれし者",
+    "Group": "オーダーメイド個人識別",
+    "Description": "探検「<STELLAR>オメガ<>」の達成とアトラスの内側から集めた記憶を記念した、特別な<STELLAR>探検家の称号<>。\n\n<TECHNOLOGY>外見変更モジュール<>でバナーに適用できる。",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other441",
+    "Icon": "other/441.png",
+    "Name": "オメガバナー",
+    "Group": "オーダーメイド個人識別バナー（旗）",
+    "Description": "探検「<STELLAR>オメガ<>」と、アトラスの内側から集めた記憶を記念した特製<STELLAR>自己表現用アイテム<>。\n\n<TECHNOLOGY>外見変更モジュール<>で自分のプロフィールにこのバナーを採用できる。",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other442",
+    "Icon": "other/442.png",
+    "Name": "究極のファルコンUD7",
+    "Group": "特製宇宙船",
+    "Description": "特別製の<STELLAR>宇宙船<>。強力な<TECHNOLOGY>フェーズビーム<>とアップグレード版<TECHNOLOGY>シールド<>が標準装備されている。\n\nこの宇宙船は<STELLAR>取得<>して手持ちに加えるか、現在の宇宙船と<STELLAR>交換<>できる。惑星上ではクイックメニュー（<IMG>QUICK_MENU<>）から宇宙船を呼び出せる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other443",
+    "Icon": "other/443.png",
+    "Name": "虚無のナバエト",
+    "Group": "特製宇宙船",
+    "Description": "特別製の<STELLAR>宇宙船<>。<TECHNOLOGY>紛争状況スキャナー<>と強力な<TECHNOLOGY>インフラナイフ<>が標準装備されている。\n\nこの宇宙船は<STELLAR>取得<>して手持ちに加えるか、現在の宇宙船と<STELLAR>交換<>できる。惑星上ではクイックメニュー（<IMG>QUICK_MENU<>）から宇宙船を呼び出せる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other444",
+    "Icon": "other/444.png",
+    "Name": "グラビティネメシスRE5",
+    "Group": "特製宇宙船",
+    "Description": "特別製の<STELLAR>宇宙船<>。<TECHNOLOGY>さまざまなアップグレード版テクノロジー<>が標準装備された、汎用性の高いシャトル。\n\nこの宇宙船は<STELLAR>取得<>して手持ちに加えるか、現在の宇宙船と<STELLAR>交換<>できる。惑星上ではクイックメニュー（<IMG>QUICK_MENU<>）から宇宙船を呼び出せる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other445",
+    "Icon": "other/445.png",
+    "Name": "イーヨウJU4",
+    "Group": "特製宇宙船",
+    "Description": "特別製の<STELLAR>宇宙船<>。積載量の多い貨物船で、<TECHNOLOGY>経済状態スキャナー<>と<TECHNOLOGY>貨物スキャンディフレクター<>が標準装備されている。\n\nこの宇宙船は<STELLAR>取得<>して手持ちに加えるか、現在の宇宙船と<STELLAR>交換<>できる。惑星上ではクイックメニュー（<IMG>QUICK_MENU<>）から宇宙船を呼び出せる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other446",
+    "Icon": "other/446.png",
+    "Name": "イサヤスのハルシオン調査船",
+    "Group": "特製宇宙船",
+    "Description": "特別製の<STELLAR>宇宙船<>。遥か遠くの銀河を徘徊してきた探索船で、強力なアップグレード版<TECHNOLOGY>ハイパードライブ<>と<TECHNOLOGY>ポジトロン・イジェクター<>が標準装備されている。\n\nこの宇宙船は<STELLAR>取得<>して手持ちに加えるか、現在の宇宙船と<STELLAR>交換<>できる。惑星上ではクイックメニュー（<IMG>QUICK_MENU<>）から宇宙船を呼び出せる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other447",
+    "Icon": "other/447.png",
+    "Name": "I.プロトウブネアの卵",
+    "Group": "限定コンパニオンの卵",
+    "Description": "生きている受精卵で、<TRADEABLE>孵化の準備万端！<>\n\n中の生き物は、小さな両手のかぎ爪で内側から殻を引っかき、孵化したいという意思を示している。\n\nスキャンによれば、中の生物は遺伝上、コンパニオンのトラベラーを<FUEL>どう猛な<>ほどに守ろうとする攻撃的な性格である可能性がある。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other448",
+    "Icon": "other/448.png",
+    "Name": "F.グラスパレウムの卵",
+    "Group": "限定コンパニオンの卵",
+    "Description": "生きている受精卵で、<TRADEABLE>孵化の準備万端！<>\n\n殻の中では、生き物が小さなツノで殻をつつき、誕生して宇宙をその目で見る時を心待ちにしている様子だ。\n\nスキャンによれば、中の生き物は遺伝上<STELLAR>気まぐれ<>な性格を持つ可能性があり、遊び心たっぷりのコンパニオンになってくれそうだ。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other449",
+    "Icon": "other/449.png",
+    "Name": "イナーシャルフォーカサーNL4-0/9",
+    "Group": "特製多機能サバイバルデバイス",
+    "Description": "特別製の<STELLAR>マルチツール<>。このピストルには、強力な<TECHNOLOGY>ジャベリンビーム<>が標準装備されている。\n\nこのマルチツールは<STELLAR>取得<>して手持ちに加えるか、現在のマルチツールと<STELLAR>交換<>できる。クイックメニュー（<IMG>QUICK_MENU<>）の機能の項目から使用するマルチツールを切り替えられる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other450",
+    "Icon": "other/450.png",
+    "Name": "ディファイアンス・オブ・ザ・ホライズンY-74B-O",
+    "Group": "特製多機能サバイバルデバイス",
+    "Description": "特別製の<STELLAR>マルチツール<>。このピストルには、強力な<TECHNOLOGY>スキャターブラスター<>が標準装備されている。\n\nこのマルチツールは<STELLAR>取得<>して手持ちに加えるか、現在のマルチツールと<STELLAR>交換<>できる。クイックメニュー（<IMG>QUICK_MENU<>）の機能の項目から使用するマルチツールを切り替えられる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other451",
+    "Icon": "other/451.png",
+    "Name": "キス・オブ・クラリティ",
+    "Group": "特製多機能サバイバルデバイス",
+    "Description": "特別製の<STELLAR>マルチツール<>。このピストルには、<TECHNOLOGY>さまざまな便利テクノロジー<>が標準装備されている。\n\nこのマルチツールは<STELLAR>取得<>して手持ちに加えるか、現在のマルチツールと<STELLAR>交換<>できる。クイックメニュー（<IMG>QUICK_MENU<>）の機能の項目から使用するマルチツールを切り替えられる。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other452",
+    "Icon": "other/452.png",
+    "Name": "タイタン花火パック",
+    "Group": "パイロテクニクスマルチパック",
+    "Description": "宇宙を徘徊するタイタンサンドワームをイメージした、見事な演出の高級花火3点セット。<FUEL>カドミウム<>、<COMMODITY>ソジウム<>そして<TRADEABLE>エメリル<>を惜しげなく使っている。着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>（<IMG>BUILD_MENU<>）から打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて発砲しないこと。室内での使用は推奨しない。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other453",
+    "Icon": "other/452.png",
+    "Name": "タイタン花火パック",
+    "Group": "パイロテクニクスマルチパック",
+    "Description": "宇宙を徘徊するタイタンサンドワームをイメージした、見事な演出の高級花火3点セット。<FUEL>カドミウム<>、<COMMODITY>ソジウム<>そして<TRADEABLE>エメリル<>を惜しげなく使っている。着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>（<IMG>BUILD_MENU<>）から打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて発砲しないこと。室内での使用は推奨しない。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other454",
+    "Icon": "other/452.png",
+    "Name": "タイタン花火パック",
+    "Group": "パイロテクニクスマルチパック",
+    "Description": "宇宙を徘徊するタイタンサンドワームをイメージした、見事な演出の高級花火3点セット。<FUEL>カドミウム<>、<COMMODITY>ソジウム<>そして<TRADEABLE>エメリル<>を惜しげなく使っている。着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>（<IMG>BUILD_MENU<>）から打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて発砲しないこと。室内での使用は推奨しない。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other455",
+    "Icon": "other/452.png",
+    "Name": "タイタン花火パック",
+    "Group": "パイロテクニクスマルチパック",
+    "Description": "宇宙を徘徊するタイタンサンドワームをイメージした、見事な演出の高級花火3点セット。<FUEL>カドミウム<>、<COMMODITY>ソジウム<>そして<TRADEABLE>エメリル<>を惜しげなく使っている。着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>（<IMG>BUILD_MENU<>）から打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて発砲しないこと。室内での使用は推奨しない。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other456",
+    "Icon": "other/452.png",
+    "Name": "タイタン花火パック",
+    "Group": "パイロテクニクスマルチパック",
+    "Description": "宇宙を徘徊するタイタンサンドワームをイメージした、見事な演出の高級花火3点セット。<FUEL>カドミウム<>、<COMMODITY>ソジウム<>そして<TRADEABLE>エメリル<>を惜しげなく使っている。着火すると空に美しい煌めきを作り上げる。\n\n<VAL_ON>ビルドメニュー<>（<IMG>BUILD_MENU<>）から打ち上げチューブを設置できる。<FUEL>警告<>：生物に向けて発砲しないこと。室内での使用は推奨しない。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate"
