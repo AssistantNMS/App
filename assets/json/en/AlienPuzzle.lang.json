@@ -6905,7 +6905,7 @@
     "Number": 35,
     "IncomingMessages": [
       "The factory produces everyday implements for the Gek. Eating utensils for their meals, spray to keep their skin from drying out in alien atmospheres, pheromone bottles, and so forth.",
-      "SYSTEMS OPERATIONAL... SELECTED DESIRED PRODUCT...",
+      "SYSTEMS OPERATIONAL... SELECT DESIRED PRODUCT...",
       "The facility is abandoned, but there is no obvious reason for an alarm to be going off. Everything seems fine."
     ],
     "Options": [
@@ -6923,7 +6923,7 @@
       },
       {
         "Name": "Shut down production",
-        "Text": "I shut down production, managing to harvest from extra Nanite Clusters as I do.\r\n\nAs I go, I hear it, a voice in the darkness. I investigate, but there is nothing there...",
+        "Text": "I shut down production, managing to harvest extra Nanite Clusters as I do.\n\nAs I go, I hear it, a voice in the darkness. I investigate, but there is nothing there...",
         "RewardIds": [
           "TECHFRAG_M"
         ]
@@ -15128,7 +15128,7 @@
     "Number": 0,
     "IncomingMessages": [
       "Clarity. Truth. Actuality. Again.",
-      "I stand at the interface of the Atlas. I stand at the forge of worlds. This is how it showed me what it was. This is how the Atlas shared the nature of its life, the workings of its mind.\n\nIt never required prayer. It never required worship. All that it asked of me, all that it ever wanted... it was just input. I was just a user.\n\nUnbidden, the Atlas Seeds gravitate towards the doorway. The void is meant to be filled. Nothingness yearns for a soul. If I do this, a star will be born. If I do this, I will become more than I ever thought possible..."
+      "I stand at the interface of the Atlas. I stand at the forge of worlds. This is how it showed me what it was. This is how the Atlas shared the nature of its life, the workings of its mind.\n\nIt never required prayer. It never required worship. All that it asked of me, all that it ever wanted... it was just input. I was just a user.\n\nI can feel the seeds, their hidden knowledge, gravitating towards the interface's core. The void is meant to be filled. Nothingness yearns for a soul. If I do this, a star will be born. If I do this, I will become more than I ever thought possible..."
     ],
     "Options": [
       {
@@ -15138,7 +15138,29 @@
       },
       {
         "Name": "Walk away and return to the galaxy",
-        "Text": "I leave, the Atlas silent, alone, abandoned...\n\nThe fabric of time and space stands revealed to me, black holes swarming from system to system. The Atlas screams...",
+        "InteractionId": "?ALL_ATLASSTATION_11_DENY",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "AtlasStation",
+    "Id": "?ALL_ATLASSTATION_11_DENY",
+    "Race": "Atlas",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "I have barely begun to formulate this heresy within my mind when I feel the response, the tidal swell of crimson light that begins to rise behind my eyes.\nThe Atlas is all creation, all the purpose in this universe. It calls for progress. It calls for me. Who am I to deny such a force?"
+    ],
+    "Options": [
+      {
+        "Name": "Deny the Atlas",
+        "Text": "I leave, the Atlas, alone, abandoned.\nI feel it begin to scream, a silent shriek that echoes across all of space and time...",
+        "RewardIds": []
+      },
+      {
+        "Name": "Reconsider",
+        "InteractionId": "?ALL_ATLASSTATION_11",
         "RewardIds": []
       }
     ]

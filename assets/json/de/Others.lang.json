@@ -25,9 +25,9 @@
   {
     "Id": "other2",
     "Icon": "other/1.png",
-    "Name": "Planetenkarte",
-    "Group": "Kartografische Daten",
-    "Description": "Eine Karte eines nahen Ortes, gefunden im <STELLAR>lokalen Informationsspeicher<> eines planetaren Archivgebäudes.\n\nDer <SPECIAL>Standort einer alten Ruine<> wurde darauf markiert. Ausgrabungen an dieser Stelle können wertvolle Schätze zutage fördern.\n\nWähle die Karte aus und nutze <VAL_ON>„Route planen“ (<IMG>FE_ALT1<>)<>, um den Ort in der Anzeige deines Exo-Anzugs einzustellen.",
+    "Name": "Artefaktkarte",
+    "Group": "Kartografische Ausgrabungsstätte-Daten",
+    "Description": "Eine Karte von einem Planeten in der Nähe. Der Standort einer <SPECIAL>antiken Ruinenstätte<> wurde darauf markiert. Ausgrabungen an dieser Stelle können wertvolle Schätze zutage fördern.\n\nWähle die Karte aus und nutze <VAL_ON>„Route planen“ (<IMG>FE_ALT1<>)<>, um den Ort in der Anzeige deines Exo-Anzugs einzustellen.\n\nNeue Karten erhält man, indem man <COMMODITY>Navigationsdaten<> mit einem Raumstation-Kartografen austauscht.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -37,7 +37,7 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
@@ -3633,7 +3633,7 @@
     "Icon": "other/222.png",
     "Name": "Eintrittskarte in die Freiheit",
     "Group": "Sicherer Systempass",
-    "Description": "„Ruhmreicher Überlebender! Der <STELLAR>verheißene Stern<> soll dein sein!“\n\nEin <TECHNOLOGY>Sicherer Systempass<>, den du von der „<STELLAR>Stimme der Freiheit<>“ erhalten hast.\nWähle den Pass aus und verwende „Einladung annehmen“ (<IMG>FE_ALT1<>), um den Ort in deinen Navigationssystemen anzupinnen.",
+    "Description": "„Ruhmreicher Überlebender! Der <STELLAR>verheißene Stern<> soll dein sein!“\n\nEin <TECHNOLOGY>Sicherer Systempass<> mit dem Zeichen der „<STELLAR>Stimme der Freiheit<>“.\nWähle den Pass aus und verwende „Einladung annehmen“ (<IMG>FE_ALT1<>), um den Ort in deinen Navigationssystemen anzupinnen.",
     "BaseValueUnits": 888.0,
     "CurrencyType": "Credits",
     "Colour": "4D2957",
@@ -7728,6 +7728,597 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "8C4B9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other432",
+    "Icon": "curiosities/13.png",
+    "Name": "Erinnerung an den Ozean",
+    "Group": "Fragment des Atlas",
+    "Description": "Diese Erinnerung ist ein Fragment des Kosmos, ein Faden in einer endlosen Galaxie möglicher Vergangenheiten und möglicher Zukünfte.\n\nErreiche die Sterne und benutze <IMG>FE_ALT1<>, um diese Erinnerung zu erwecken.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw11",
+        "Quantity": 99
+      },
+      {
+        "Id": "raw16",
+        "Quantity": 33
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Dem Fragment Leben einhauchen"
+    ]
+  },
+  {
+    "Id": "other433",
+    "Icon": "curiosities/10.png",
+    "Name": "Erinnerung an die Eroberung",
+    "Group": "Fragment des Atlas",
+    "Description": "Diese Erinnerung ist ein Fragment des Kosmos, ein Faden in einer endlosen Galaxie möglicher Vergangenheiten und möglicher Zukünfte.\n\nErreiche die Sterne und benutze <IMG>FE_ALT1<>, um diese Erinnerung zu erwecken.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw13",
+        "Quantity": 33
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 99
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Dem Fragment Leben einhauchen"
+    ]
+  },
+  {
+    "Id": "other434",
+    "Icon": "curiosities/9.png",
+    "Name": "Erinnerung an Knochen",
+    "Group": "Fragment des Atlas",
+    "Description": "Diese Erinnerung ist ein Fragment des Kosmos, ein Faden in einer endlosen Galaxie möglicher Vergangenheiten und möglicher Zukünfte.\n\nErreiche die Sterne und benutze <IMG>FE_ALT1<>, um diese Erinnerung zu erwecken.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 33
+      },
+      {
+        "Id": "raw20",
+        "Quantity": 99
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Dem Fragment Leben einhauchen"
+    ]
+  },
+  {
+    "Id": "other435",
+    "Icon": "curiosities/8.png",
+    "Name": "Erinnerung an die Leere",
+    "Group": "Fragment des Atlas",
+    "Description": "Diese Erinnerung ist ein Fragment des Kosmos, ein Faden in einer endlosen Galaxie möglicher Vergangenheiten und möglicher Zukünfte.\n\nErreiche die Sterne und benutze <IMG>FE_ALT1<>, um diese Erinnerung zu erwecken.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 99
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 33
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Dem Fragment Leben einhauchen"
+    ]
+  },
+  {
+    "Id": "other436",
+    "Icon": "other/436.png",
+    "Name": "Der/die Sternengeborene Läufer*in",
+    "Group": "Exklusives Raumschiff",
+    "Description": "Ein einzigartiges und exklusives <STELLAR>Raumschiff<>, das an den Abschluss der <STELLAR>Omega<>-Expedition erinnert.\n\nDieses vielseitige Schiff ist mit einer strahlungsresistenten Panzerung versehen und mit einem aerodynamischen Profil für mehr Agilität in der Atmosphäre ausgestattet.\n\n<STELLAR>Hol dir<> dieses Schiff, um es deiner Sammlung hinzuzufügen, oder <STELLAR>tausche<> es gegen dein aktuelles Schiff aus. Während du dich auf einem Planeten befindest, kannst du Schiffe über das Schnellmenü (<IMG>QUICK_MENU<>) herbeirufen.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other437",
+    "Icon": "other/437.png",
+    "Name": "Atlas-Kopfschild",
+    "Group": "Freischaltbarer Helm",
+    "Description": "Eine exklusive <STELLAR>Exo-Anzug-Aussehenüberschreibung<>.\n\nEin sanfter, aber unveränderlicher Herzschlag hallt durch deinen Schädel, wenn du diesen Helm trägst. <FUEL>A T L A S<>.\nDer Herzschlag ist auf eine seltsame Weise beruhigend.\n\nÄndere die Erscheinung deines Exo-Anzugs an einem <TECHNOLOGY>Aussehenmodifikator<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other438",
+    "Icon": "other/438.png",
+    "Name": "Atlas-Zepter",
+    "Group": "Einzigartige Korvax-Technologie?",
+    "Description": "Ein exklusives <STELLAR>Multiwerkzeug<>.\n\nDieser ungewöhnliche Zeremonienstab wurde von einer Korvax-Priester-Entität als Tribut an den Atlas handgeschmiedet.\n\n<STELLAR>Nimm dir<> dieses Multiwerkzeug, um es zu deiner Sammlung hinzuzufügen oder gegen dein aktuelles Multiwerkzeug <STELLAR>einzutauschen<>. Wechsle über den Abschnitt „Hilfsmittel“ des Schnellmenüs (<IMG>QUICK_MENU<>) zwischen aktiven Multiwerkzeugen.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other439",
+    "Icon": "other/439.png",
+    "Name": "Atlas-Jetpack",
+    "Group": "Visuelle Exo-Anzug-Verbesserung",
+    "Description": "Eine exklusive <STELLAR>Exo-Anzug-Aussehenüberschreibung<>.\n\nEin leichtes Jetpack aus Sternlegierungen mit einem feurigen blutroten Kern.\n\nÄndere die Erscheinung deines Exo-Anzugs an einem <TECHNOLOGY>Aussehenmodifikator<>.",
+    "BaseValueUnits": 3500.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other440",
+    "Icon": "other/52.png",
+    "Name": "Title: „Der/die Sternengeborene“",
+    "Group": "Individuelle persönliche Kennung",
+    "Description": "Ein exklusiver <STELLAR>Entdeckertitel<>. Er erinnert an den Abschluss der Expedition <STELLAR>Omega<> und die im Atlas gesammelten Erinnerungen.\n\nFüge diesen Titel mit einem <TECHNOLOGY>Aussehenmodifikator<> deinem Banner hinzu.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other441",
+    "Icon": "other/441.png",
+    "Name": "Omega-Banner",
+    "Group": "Individuelles persönliches Symbol",
+    "Description": "Rüste diesen exklusiven <STELLAR>persönlichen Flair<> aus, um an den Abschluss der Expedition <STELLAR>Omega<> und die Erinnerungen, die du im Atlas gesammelt hast, zu erinnern.\n\nFüge dieses Banner mit einem <TECHNOLOGY>Aussehenmodifikator<> deinem Profil hinzu.",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other442",
+    "Icon": "other/442.png",
+    "Name": "Ultimativer Falke UD7",
+    "Group": "Exklusives Raumschiff",
+    "Description": "Ein exklusives <STELLAR>Raumschiff<>. Dieses Kampfschiff ist mit einem mächtigen <TECHNOLOGY>Phasenstrahler<> und verbessertem <TECHNOLOGY>Schild<> ausgestattet.\n\n<STELLAR>Hol dir<> dieses Schiff, um es deiner Sammlung hinzuzufügen oder gegen dein aktuelles Schiff <STELLAR>einzutauschen<>. Rufe Schiffe über das Schnellmenü (<IMG>QUICK_MENU<>) auf, während du dich auf einem Planeten befindest.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other443",
+    "Icon": "other/443.png",
+    "Name": "Nabaeto der Leere",
+    "Group": "Exklusives Raumschiff",
+    "Description": "Ein exklusives <STELLAR>Raumschiff<>. Dieses Kampfschiff ist mit einem <TECHNOLOGY>Konfliktscanner<> und starkem <TECHNOLOGY>Inframesser<> ausgestattet.\n\n<STELLAR>Hol dir<> dieses Schiff, um es deiner Sammlung hinzuzufügen oder gegen dein aktuelles Schiff <STELLAR>einzutauschen<>. Rufe Schiffe über das Schnellmenü (<IMG>QUICK_MENU<>) auf, während du dich auf einem Planeten befindest.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other444",
+    "Icon": "other/444.png",
+    "Name": "Nemesis der Schwerkraft RE5",
+    "Group": "Exklusives Raumschiff",
+    "Description": "Ein exklusives <STELLAR>Raumschiff<>. Dieses vielseitige Shuttle ist mit einer <TECHNOLOGY>Bandbreite von verbesserten Technologien<> ausgestattet.\n\n<STELLAR>Hol dir<> dieses Schiff, um es deiner Sammlung hinzuzufügen oder gegen dein aktuelles Schiff <STELLAR>einzutauschen<>. Rufe Schiffe über das Schnellmenü (<IMG>QUICK_MENU<>) auf, während du dich auf einem Planeten befindest.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other445",
+    "Icon": "other/445.png",
+    "Name": "Iiyaw JU4",
+    "Group": "Exklusives Raumschiff",
+    "Description": "Ein exklusives <STELLAR>Raumschiff<>.Dieser geräumige Transporter ist mit einem <TECHNOLOGY>Wirtschaftsscanner<> und <TECHNOLOGY>Frachtscan-Deflektor<> ausgestattet.\n\n<STELLAR>Hol dir<> dieses Schiff, um es deiner Sammlung hinzuzufügen oder gegen dein aktuelles Schiff <STELLAR>einzutauschen<>. Rufe Schiffe über das Schnellmenü (<IMG>QUICK_MENU<>) auf, während du dich auf einem Planeten befindest.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other446",
+    "Icon": "other/446.png",
+    "Name": "Friedlicher Erkunder von Iasayasu",
+    "Group": "Exklusives Raumschiff",
+    "Description": "Ein exklusives <STELLAR>Raumschiff<>. Dieser weitreichende Erkunder ist mit einem leistungsstarken verbesserten <TECHNOLOGY>Hyperantrieb<> und einem <TECHNOLOGY>Positronenwerfer<> ausgestattet.\n\n<STELLAR>Hol dir<> dieses Schiff, um es deiner Sammlung hinzuzufügen oder gegen dein aktuelles Schiff <STELLAR>einzutauschen<>. Rufe Schiffe über das Schnellmenü (<IMG>QUICK_MENU<>) auf, während du dich auf einem Planeten befindest.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other447",
+    "Icon": "other/447.png",
+    "Name": "I. Protoubnea-Ei",
+    "Group": "Exklusives Begleiter-Ei",
+    "Description": "Ein lebendiges, befruchtetes Ei, <TRADEABLE>bereit zum Schlüpfen!<>\n\nDie Kreatur im Inneren kratzt mit seinen winzigen Händen am Ei.\n\nScans zeigen, dass das Wesen darin das genetische Potenzial für eine aggressive und <FUEL>wilde<> Persönlichkeit hat und seinen Reisenden-Begleiter stets beschützen wird.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other448",
+    "Icon": "other/448.png",
+    "Name": "F. Graspaeeum-Ei",
+    "Group": "Exklusives Begleiter-Ei",
+    "Description": "Ein lebendiges, befruchtetes Ei, <TRADEABLE>bereit zum Schlüpfen!<>\n\nDas ungeborene Wesen stupst die Eierschale mit seinen Hauern an, voller Vorfreude darauf, ausgebrütet zu werden und das Universum zu sehen.\n\nScans zeigen, dass das Wesen darin das genetische Potenzial für eine <STELLAR>launische<> Persönlichkeit hat, die wahrscheinlich einen spielerischen Begleiter abgeben wird.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other449",
+    "Icon": "other/449.png",
+    "Name": "Inertialer Fokussierer NL4-0/9",
+    "Group": "Exklusives Multifunktions-Überlebensgerät",
+    "Description": "Ein exklusives <STELLAR>Multiwerkzeug<>. Diese Pistole ist mit einem starken <TECHNOLOGY>Speerstrahl<> ausgestattet.\n\n<STELLAR>Nimm dir<> dieses Multiwerkzeug, um es deiner Sammlung hinzuzufügen oder gegen dein aktuelles Multiwerkzeug <STELLAR>einzutauschen<>. Wechsle über den Abschnitt „Hilfsmittel“ des Schnellmenüs (<IMG>QUICK_MENU<>) zwischen aktiven Multiwerkzeugen.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other450",
+    "Icon": "other/450.png",
+    "Name": "Trotz des Horizonts Y-74B-O",
+    "Group": "Exklusives Multifunktions-Überlebensgerät",
+    "Description": "Ein exklusives <STELLAR>Multiwerkzeug<>. Diese Pistole ist mit einem starken <TECHNOLOGY>Streublaster<> ausgestattet.\n\n<STELLAR>Nimm dir<> dieses Multiwerkzeug, um es deiner Sammlung hinzuzufügen oder gegen dein aktuelles Multiwerkzeug <STELLAR>einzutauschen<>. Wechsle über den Abschnitt „Hilfsmittel“ des Schnellmenüs (<IMG>QUICK_MENU<>) zwischen aktiven Multiwerkzeugen.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other451",
+    "Icon": "other/451.png",
+    "Name": "Kuss der Klarheit",
+    "Group": "Exklusives Multifunktions-Überlebensgerät",
+    "Description": "Ein exklusives <STELLAR>Multiwerkzeug<>. Diese Pistole ist mit einer <TECHNOLOGY>Auswahl an Versorgungstechnologien<> ausgestattet.\n\n<STELLAR>Nimm dir<> dieses Multiwerkzeug, um es deiner Sammlung hinzuzufügen oder gegen dein aktuelles Multiwerkzeug <STELLAR>einzutauschen<>. Wechsle über den Abschnitt „Hilfsmittel“ des Schnellmenüs (<IMG>QUICK_MENU<>) zwischen aktiven Multiwerkzeugen.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other452",
+    "Icon": "other/452.png",
+    "Name": "Titanen-Feuerwerk-Paket",
+    "Group": "Pyrotechnik-Multipack",
+    "Description": "Ein Luxusfeuerwerk mit drei Sorten, inspiriert von den titanischen Sandwürmern, die das Universum durchstreifen. Enthält <FUEL>Cadmium<>, <COMMODITY>Natrium<> und <TRADEABLE>Emeril<>. Zünde es, um glanzvolle Bilder am Himmel zu erzeugen.\n\nDie Abschussröhre kann über das <VAL_ON>Baumenü<> (<IMG>BUILD_MENU<>) platziert werden. <FUEL>Warnung<>: Niemals damit auf lebende Kreaturen zielen. Nicht empfohlen für den Gebrauch in geschlossenen Räumen.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other453",
+    "Icon": "other/452.png",
+    "Name": "Titanen-Feuerwerk-Paket",
+    "Group": "Pyrotechnik-Multipack",
+    "Description": "Ein Luxusfeuerwerk mit drei Sorten, inspiriert von den titanischen Sandwürmern, die das Universum durchstreifen. Enthält <FUEL>Cadmium<>, <COMMODITY>Natrium<> und <TRADEABLE>Emeril<>. Zünde es, um glanzvolle Bilder am Himmel zu erzeugen.\n\nDie Abschussröhre kann über das <VAL_ON>Baumenü<> (<IMG>BUILD_MENU<>) platziert werden. <FUEL>Warnung<>: Niemals damit auf lebende Kreaturen zielen. Nicht empfohlen für den Gebrauch in geschlossenen Räumen.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other454",
+    "Icon": "other/452.png",
+    "Name": "Titanen-Feuerwerk-Paket",
+    "Group": "Pyrotechnik-Multipack",
+    "Description": "Ein Luxusfeuerwerk mit drei Sorten, inspiriert von den titanischen Sandwürmern, die das Universum durchstreifen. Enthält <FUEL>Cadmium<>, <COMMODITY>Natrium<> und <TRADEABLE>Emeril<>. Zünde es, um glanzvolle Bilder am Himmel zu erzeugen.\n\nDie Abschussröhre kann über das <VAL_ON>Baumenü<> (<IMG>BUILD_MENU<>) platziert werden. <FUEL>Warnung<>: Niemals damit auf lebende Kreaturen zielen. Nicht empfohlen für den Gebrauch in geschlossenen Räumen.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other455",
+    "Icon": "other/452.png",
+    "Name": "Titanen-Feuerwerk-Paket",
+    "Group": "Pyrotechnik-Multipack",
+    "Description": "Ein Luxusfeuerwerk mit drei Sorten, inspiriert von den titanischen Sandwürmern, die das Universum durchstreifen. Enthält <FUEL>Cadmium<>, <COMMODITY>Natrium<> und <TRADEABLE>Emeril<>. Zünde es, um glanzvolle Bilder am Himmel zu erzeugen.\n\nDie Abschussröhre kann über das <VAL_ON>Baumenü<> (<IMG>BUILD_MENU<>) platziert werden. <FUEL>Warnung<>: Niemals damit auf lebende Kreaturen zielen. Nicht empfohlen für den Gebrauch in geschlossenen Räumen.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other456",
+    "Icon": "other/452.png",
+    "Name": "Titanen-Feuerwerk-Paket",
+    "Group": "Pyrotechnik-Multipack",
+    "Description": "Ein Luxusfeuerwerk mit drei Sorten, inspiriert von den titanischen Sandwürmern, die das Universum durchstreifen. Enthält <FUEL>Cadmium<>, <COMMODITY>Natrium<> und <TRADEABLE>Emeril<>. Zünde es, um glanzvolle Bilder am Himmel zu erzeugen.\n\nDie Abschussröhre kann über das <VAL_ON>Baumenü<> (<IMG>BUILD_MENU<>) platziert werden. <FUEL>Warnung<>: Niemals damit auf lebende Kreaturen zielen. Nicht empfohlen für den Gebrauch in geschlossenen Räumen.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate"

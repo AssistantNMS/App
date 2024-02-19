@@ -25,9 +25,9 @@
   {
     "Id": "other2",
     "Icon": "other/1.png",
-    "Name": "Mappa planetaria",
-    "Group": "Dati cartografici",
-    "Description": "Una mappa di un pianeta vicino, recuperata dall'<STELLAR>archivio informazioni locali<> nell'edificio di un archivio planetario.\n\nVi è stata contrassegnata la posizione di <SPECIAL>antiche rovine<> che probabilmente contengono tesori preziosi.\n\nSeleziona la mappa e usa <VAL_ON>Traccia rotta (<IMG>FE_ALT1<>)<> per mettere in evidenza la posizione sul display dell'exotuta.",
+    "Name": "Mappa del manufatto",
+    "Group": "Dati cartografici del sito di scavo",
+    "Description": "Una mappa di un pianeta vicino. Vi è stata contrassegnata la <SPECIAL>posizione di antiche rovine<> che probabilmente contengono tesori preziosi.\n\nSeleziona la mappa e usa <VAL_ON>Traccia rotta (<IMG>FE_ALT1<>)<> per mettere in evidenza la posizione sul display dell'exotuta.\n\nPuoi ottenere nuove mappe scambiando <COMMODITY>dati di navigazione<> con i cartografi delle stazioni spaziali.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -37,7 +37,7 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
@@ -3633,7 +3633,7 @@
     "Icon": "other/222.png",
     "Name": "Biglietto per la libertà",
     "Group": "Pass sistema sicuro",
-    "Description": "'Grande superstite! La <STELLAR>stella promessa<> sarà tua!'\n\nUn <TECHNOLOGY>Pass sistema sicuro<> ottenuto dalla '<STELLAR>Voce della Libertà<>'.\nSeleziona il pass e usa Accetta invito (<IMG>FE_ALT1<>) per evidenziare la posizione nei tuoi sistemi di navigazione.",
+    "Description": "'Grande superstite! La <STELLAR>stella promessa<> sarà tua!'\n\nUn <TECHNOLOGY>Pass sistema sicuro<> che reca il marchio della '<STELLAR>Voce della Libertà<>'.\nSeleziona il pass e usa Accetta invito (<IMG>FE_ALT1<>) per evidenziare la posizione nei tuoi sistemi di navigazione.",
     "BaseValueUnits": 888.0,
     "CurrencyType": "Credits",
     "Colour": "4D2957",
@@ -7728,6 +7728,597 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "8C4B9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other432",
+    "Icon": "curiosities/13.png",
+    "Name": "Ricordo dell'oceano",
+    "Group": "Frammento dell'Atlante",
+    "Description": "Questo ricordo è un frammento del cosmo, un filamento in una galassia infinita di possibili passati e possibili futuri.\n\nRaggiungi le stelle e poi usa <IMG>FE_ALT1<> per risvegliare questo ricordo.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw11",
+        "Quantity": 99
+      },
+      {
+        "Id": "raw16",
+        "Quantity": 33
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Dai vita al frammento"
+    ]
+  },
+  {
+    "Id": "other433",
+    "Icon": "curiosities/10.png",
+    "Name": "Ricordo della conquista",
+    "Group": "Frammento dell'Atlante",
+    "Description": "Questo ricordo è un frammento del cosmo, un filamento in una galassia infinita di possibili passati e possibili futuri.\n\nRaggiungi le stelle e poi usa <IMG>FE_ALT1<> per risvegliare questo ricordo.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw13",
+        "Quantity": 33
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 99
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Dai vita al frammento"
+    ]
+  },
+  {
+    "Id": "other434",
+    "Icon": "curiosities/9.png",
+    "Name": "Ricordo delle ossa",
+    "Group": "Frammento dell'Atlante",
+    "Description": "Questo ricordo è un frammento del cosmo, un filamento in una galassia infinita di possibili passati e possibili futuri.\n\nRaggiungi le stelle e poi usa <IMG>FE_ALT1<> per risvegliare questo ricordo.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 33
+      },
+      {
+        "Id": "raw20",
+        "Quantity": 99
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Dai vita al frammento"
+    ]
+  },
+  {
+    "Id": "other435",
+    "Icon": "curiosities/8.png",
+    "Name": "Ricordo del vuoto",
+    "Group": "Frammento dell'Atlante",
+    "Description": "Questo ricordo è un frammento del cosmo, un filamento in una galassia infinita di possibili passati e possibili futuri.\n\nRaggiungi le stelle e poi usa <IMG>FE_ALT1<> per risvegliare questo ricordo.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 99
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 33
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Dai vita al frammento"
+    ]
+  },
+  {
+    "Id": "other436",
+    "Icon": "other/436.png",
+    "Name": "Corridore nato tra le stelle",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> unica ed esclusiva, per commemorare il completamento della spedizione <STELLAR>Omega<>.\n\nQuesta creazione versatile è placcata con un rivestimento resistente alle radiazioni e costruita con un profilo aerodinamico per una maggiore agilità durante il volo atmosferico.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other437",
+    "Icon": "other/437.png",
+    "Name": "Casco dell'Atlante",
+    "Group": "Casco sbloccabile",
+    "Description": "Un esclusivo <STELLAR>override aspetto dell'exotuta<>.\n\nQuando indossi questo elmetto, un leggero ma immutabile battito ti risuona nel cranio. <FUEL>A T L A N T E<>.\nIl battito è stranamente calmante.\n\nTrasforma l'aspetto dell'exotuta presso un <TECHNOLOGY>modificatore aspetto<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other438",
+    "Icon": "other/438.png",
+    "Name": "Scettro dell'Atlante",
+    "Group": "Tecnologia Korvax unica?",
+    "Description": "Un <STELLAR>multi-tool<> esclusivo.\n\nQuesto insolito bastone cerimoniale è stato forgiato a mano da un'entità sacerdotale Korvax in tributo all'Atlante.\n\n<STELLAR>Prendi<> questo multi-tool per aggiungerlo alla tua collezione o <STELLAR>scambialo<> con il tuo multi-tool attuale. Cambia il multi-tool attivo dalla sezione Strumenti del menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other439",
+    "Icon": "other/439.png",
+    "Name": "Zaino-razzo dell'Atlante",
+    "Group": "Miglioramento estetico exotuta",
+    "Description": "Un esclusivo <STELLAR>override aspetto dell'exotuta<>.\n\nUn jet pack leggerissimo, creato tramite la saldatura di leghe stellari attorno a un ardente nucleo cremisi.\n\nTrasforma l'aspetto dell'exotuta presso un <TECHNOLOGY>modificatore aspetto<>.",
+    "BaseValueUnits": 3500.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other440",
+    "Icon": "other/52.png",
+    "Name": "Titolo: 'Nato tra le stelle'",
+    "Group": "Identificazione personalizzata",
+    "Description": "Un <STELLAR>titolo da esploratore<> esclusivo, che commemora il completamento della spedizione <STELLAR>Omega<> e i ricordi svelati dall'Atlante.\n\nApplica questo titolo al tuo striscione presso un <TECHNOLOGY>modificatore aspetto<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other441",
+    "Icon": "other/441.png",
+    "Name": "Striscione Omega",
+    "Group": "Identificazione personalizzata",
+    "Description": "Equipaggia quest'esclusivo <STELLAR>tocco personale<> per commemorare la spedizione <STELLAR>Omega<> e i ricordi svelati dall'Atlante.\n\nApplica questo striscione al tuo profilo in un <TECHNOLOGY>modificatore aspetto<>.",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other442",
+    "Icon": "other/442.png",
+    "Name": "Falco supremo UD7",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva. Questo velivolo è dotato di un potente <TECHNOLOGY>raggio fasico<> e di una <TECHNOLOGY>schermatura<> potenziata.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other443",
+    "Icon": "other/443.png",
+    "Name": "Nabaeto del vuoto",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva. Questo velivolo è dotato di uno <TECHNOLOGY>scanner di conflitto<> e di una potente <TECHNOLOGY>infra-lama<>.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other444",
+    "Icon": "other/444.png",
+    "Name": "Nemesi della gravità RE5",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva. Questa navetta versatile è dotata di una <TECHNOLOGY>gamma di tecnologie potenziate<>.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other445",
+    "Icon": "other/445.png",
+    "Name": "Iiyaw JU4",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva. Questo velivolo spazioso è dotato di uno <TECHNOLOGY>scanner economico<> e di un <TECHNOLOGY>deflettore di scansione del carico<>.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other446",
+    "Icon": "other/446.png",
+    "Name": "Navigatore sereno di Iasayasu",
+    "Group": "Astronave esclusiva",
+    "Description": "Un'<STELLAR>astronave<> esclusiva. Questo velivolo per viaggi estesi è dotato di una potente <TECHNOLOGY>iperguida<> e di un <TECHNOLOGY>eiettore di positroni<>.\n\n<STELLAR>Rivendica<> quest'astronave per aggiungerla alla tua collezione o <STELLAR>scambiala<> con la tua astronave attuale. Quando sei su un pianeta, richiama le astronavi dal menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other447",
+    "Icon": "other/447.png",
+    "Name": "I. Uovo di Protoubnea",
+    "Group": "Uovo di compagno esclusivo",
+    "Description": "Un uovo fertilizzato, <TRADEABLE>pronto a schiudersi!<>\n\nLa creatura all'interno gratta il guscio dell'uovo con le sue piccole mani.\n\nLe scansioni indicano che l'essere al suo interno ha il potenziale genetico per sviluppare una personalità aggressiva, <FUEL>ferocemente<> protettivo nei confronti del suo compagno Viaggiatore.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other448",
+    "Icon": "other/448.png",
+    "Name": "Uovo di F. Graspaeeum",
+    "Group": "Uovo di compagno esclusivo",
+    "Description": "Un uovo fertilizzato, <TRADEABLE>pronto a schiudersi!<>\n\nLa creatura non ancora nata spinge contro il guscio dell'uovo con le zanne, impaziente di schiudersi e di vedere l'universo.\n\nLe scansioni indicano che l'essere al suo interno ha il potenziale genetico per sviluppare una personalità <STELLAR>stravagante<>, un possibile compagno giocoso.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other449",
+    "Icon": "other/449.png",
+    "Name": "Focalizzatore inerziale NL4-0/9",
+    "Group": "Dispositivo di sopravvivenza multifunzione esclusivo",
+    "Description": "Un <STELLAR>multi-tool<> esclusivo. Questa pistola è dotata di un potente <TECHNOLOGY>raggio Lancia<>.\n\n<STELLAR>Prendi<> questo multi-tool per aggiungerlo alla tua collezione o <STELLAR>scambialo<> con il tuo multi-tool attuale. Cambia il multi-tool attivo dalla sezione Strumenti del menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other450",
+    "Icon": "other/450.png",
+    "Name": "Ribellione dell'orizzonte Y-74B-O",
+    "Group": "Dispositivo di sopravvivenza multifunzione esclusivo",
+    "Description": "Un <STELLAR>multi-tool<> esclusivo. Questa pistola è dotata di una potente <TECHNOLOGY>arma a dispersione<>.\n\n<STELLAR>Prendi<> questo multi-tool per aggiungerlo alla tua collezione o <STELLAR>scambialo<> con il tuo multi-tool attuale. Cambia il multi-tool attivo dalla sezione Strumenti del menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other451",
+    "Icon": "other/451.png",
+    "Name": "Bacio della chiarezza",
+    "Group": "Dispositivo di sopravvivenza multifunzione esclusivo",
+    "Description": "Un <STELLAR>multi-tool<> esclusivo. Questa pistola è dotata di una <TECHNOLOGY>gamma di tecnologie utili<>.\n\n<STELLAR>Prendi<> questo multi-tool per aggiungerlo alla tua collezione o <STELLAR>scambialo<> con il tuo multi-tool attuale. Cambia il multi-tool attivo dalla sezione Strumenti del menu rapido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other452",
+    "Icon": "other/452.png",
+    "Name": "Pacchetto fuochi d'artificio titanici",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio di lusso, ispirato ai vermi della sabbia titanici che pullulano nell'universo. Ricco di <FUEL>cadmio<>, <COMMODITY>sodio<> ed <TRADEABLE>emeril<>. Accendilo per creare spettacoli luminosi nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Attenzione<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other453",
+    "Icon": "other/452.png",
+    "Name": "Pacchetto fuochi d'artificio titanici",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio di lusso, ispirato ai vermi della sabbia titanici che pullulano nell'universo. Ricco di <FUEL>cadmio<>, <COMMODITY>sodio<> ed <TRADEABLE>emeril<>. Accendilo per creare spettacoli luminosi nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Attenzione<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other454",
+    "Icon": "other/452.png",
+    "Name": "Pacchetto fuochi d'artificio titanici",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio di lusso, ispirato ai vermi della sabbia titanici che pullulano nell'universo. Ricco di <FUEL>cadmio<>, <COMMODITY>sodio<> ed <TRADEABLE>emeril<>. Accendilo per creare spettacoli luminosi nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Attenzione<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other455",
+    "Icon": "other/452.png",
+    "Name": "Pacchetto fuochi d'artificio titanici",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio di lusso, ispirato ai vermi della sabbia titanici che pullulano nell'universo. Ricco di <FUEL>cadmio<>, <COMMODITY>sodio<> ed <TRADEABLE>emeril<>. Accendilo per creare spettacoli luminosi nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Attenzione<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other456",
+    "Icon": "other/452.png",
+    "Name": "Pacchetto fuochi d'artificio titanici",
+    "Group": "Pacchetto pirotecnico multiplo",
+    "Description": "Un triplice pacchetto di fuochi d'artificio di lusso, ispirato ai vermi della sabbia titanici che pullulano nell'universo. Ricco di <FUEL>cadmio<>, <COMMODITY>sodio<> ed <TRADEABLE>emeril<>. Accendilo per creare spettacoli luminosi nel cielo.\n\nPosiziona il tubo di lancio dal <VAL_ON>menu di creazione<> (<IMG>BUILD_MENU<>). <FUEL>Attenzione<>: non mirare verso creature viventi. Sconsigliato l'uso negli interni.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate"

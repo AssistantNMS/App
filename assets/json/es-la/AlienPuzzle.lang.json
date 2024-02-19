@@ -6905,7 +6905,7 @@
     "Number": 35,
     "IncomingMessages": [
       "La fábrica produce herramientas de uso cotidiano para los Gek. Utensilios para las comidas, aerosoles para evitar que se reseque la piel en entornos alienígenas, botellas de feromonas y demás.",
-      "SYSTEMS OPERATIONAL... SELECTED DESIRED PRODUCT...",
+      "SYSTEMS OPERATIONAL... SELECT DESIRED PRODUCT...",
       "Las instalaciones están abandonadas, pero no hay un motivo obvio para que se dispare la alarma. Todo parece en orden."
     ],
     "Options": [
@@ -6923,7 +6923,7 @@
       },
       {
         "Name": "Detener la producción",
-        "Text": "Detengo la producción y trato de obtener algunos cúmulos de nanitos adicionales.\n\nAl marcharme escucho una voz en la oscuridad. Investigo, pero no encuentro nada...",
+        "Text": "Detengo la producción y trato de recolectar algunos cúmulos de nanitos adicionales.\n\nAl marcharme escucho una voz en la oscuridad. Investigo, pero no encuentro nada...",
         "RewardIds": [
           "TECHFRAG_M"
         ]
@@ -15128,7 +15128,7 @@
     "Number": 0,
     "IncomingMessages": [
       "Claridad. Verdad. Realidad. De nuevo.",
-      "Estoy de pie frente a la interfaz del Atlas, frente a la forja de los mundos. Así me mostró qué era. Así es como el Atlas compartió la naturaleza de su vida, el funcionamiento de su mente.\n\nNunca necesitó plegarias. Ni adoración. Todo lo que me pidió, todo lo que quería... eran datos. Yo solo era un usuario.\n\nEspontáneamente, las Semillas del Atlas gravitan hacia la entrada. Se debe llenar el vacío. La inexistencia busca desesperadamente un alma. Si hago eso, nacerá una estrella. Si lo hago, trascenderé más allá de lo que nunca imaginé."
+      "Estoy de pie frente a la interfaz del Atlas, frente a la forja de los mundos. Así me mostró qué era. Así es como el Atlas compartió la naturaleza de su vida, el funcionamiento de su mente.\n\nNunca necesitó plegarias ni adoración. Todo lo que me pidió, todo lo que quería... eran datos. Yo solo era un usuario.\n\nPuedo sentir las semillas, su conocimiento oculto, gravitando hacia el núcleo de la interfaz. Se debe llenar el vacío. La inexistencia busca desesperadamente un alma. Si hago eso, nacerá una estrella. Si lo hago, trascenderé más allá de lo que nunca imaginé."
     ],
     "Options": [
       {
@@ -15138,7 +15138,29 @@
       },
       {
         "Name": "Marcharme y regresar a la galaxia",
-        "Text": "Me marcho. El Atlas se queda en silencio, solo, abandonado.\n\nLa estructura del tiempo y del espacio se alza revelada ante mí. Se propagan agujeros negros de sistema a sistema. El Atlas grita.",
+        "InteractionId": "?ALL_ATLASSTATION_11_DENY",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "AtlasStation",
+    "Id": "?ALL_ATLASSTATION_11_DENY",
+    "Race": "Atlas",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Apenas empecé a formular esta herejía dentro de mi mente cuando siento la respuesta, la marejada de luz carmesí que empieza a surgir detrás de mis ojos.\nEl Atlas es toda la creación, todo el propósito de este universo. Invita al progreso. Me llama a mí. ¿Quién soy yo para negar tal fuerza?"
+    ],
+    "Options": [
+      {
+        "Name": "Negar el Atlas",
+        "Text": "Me voy, el Atlas se queda solo, abandonado.\nSiento que empieza a gritar, un grito silencioso que resuena en todo el espacio y el tiempo...",
+        "RewardIds": []
+      },
+      {
+        "Name": "Reconsiderar",
+        "InteractionId": "?ALL_ATLASSTATION_11",
         "RewardIds": []
       }
     ]

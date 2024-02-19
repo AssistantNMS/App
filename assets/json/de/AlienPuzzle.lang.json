@@ -5648,7 +5648,7 @@
     "IsFactory": false,
     "Number": 17,
     "IncomingMessages": [
-      "Der Außenposten ist selbst für Gek-Verhältnisse uralt.\nEin Protokoll berichtet von der Zeit kurz vor dem Aufstieg des sogenannten Gek-Erstgebrüteten. Die Gek erlebten eine Fruchtbarkeitskrise. Irgendetwas im Wasser beeinflusste ihre Laichzahlen. Sie versuchten dem Rückgang mit selektiver Zuchtwahl und Klonprogrammen entgegenzuwirken.\n \nDie Wissenschaftskrise wurde zu einer moralischen. Der selbsternannte Erstgebrütete übernahm die Macht, versprach Größe und ermordete alle, die sich ihm widersetzten. Die Geschichte wurde umgeschrieben. Den Starken gebührte das Recht.",
+      "Der Außenposten ist uralt, selbst für die Verhältnisse der Gek. Seine Umgebung ist speziell für die Datenerhaltung kalibriert.\n\nIn einem Logbuch wird von der Zeit kurz vor dem Auftauchen der „ersten Gek-Laich“ berichtet. Die Gek scheinen eine Fruchtbarkeitskrise erlebt zu haben. Irgendetwas im Wasser begann ihre Laichzahlen zu beeinträchtigen, was zu Experimenten mit der selektiven Zucht, Klonprogrammen und mehr führte.\n\nDiese wissenschaftliche Krise wurde zu einer moralischen. Die selbsternannten „Erstgebrüteten“ übernahmen die Macht, versprachen Großes und ermordeten alle, die sich ihnen widersetzten. Die Geschichte wurde umgeschrieben. Den Starken gebührte das Recht.",
       "ARCHIVE RETRIEVAL SERVICE ACTIVE... ACCESS?"
     ],
     "Options": [
@@ -6905,7 +6905,7 @@
     "Number": 35,
     "IncomingMessages": [
       "Die Fabrik produziert alltägliche Gebrauchsgegenstände für die Gek. Essbesteck für ihre Mahlzeiten, Spray, damit ihre Haut in fremden Atmosphären nicht austrocknet, Pheromonflaschen und so weiter.",
-      "SYSTEMS OPERATIONAL... SELECTED DESIRED PRODUCT...",
+      "SYSTEMS OPERATIONAL... SELECT DESIRED PRODUCT...",
       "Die Anlage ist verlassen, aber es gibt keinen offensichtlichen Grund für einen Alarm. Alles scheint in Ordnung zu sein."
     ],
     "Options": [
@@ -6923,7 +6923,7 @@
       },
       {
         "Name": "Produktion abschalten",
-        "Text": "Ich halte die Produktion an und kann im Zuge dessen zusätzliche Nanit-Haufen sammeln.\n\nAls ich gehe, höre ich sie, eine Stimme in der Dunkelheit. Ich sehe mich um, aber da ist nichts ...",
+        "Text": "Ich fahre die Produktion herunter und schaffe es dabei, zusätzliche Nanit-Haufen zu ernten.\n\nAls ich gehe, höre ich sie, eine Stimme in der Dunkelheit. Ich sehe mich um, aber da ist nichts ...",
         "RewardIds": [
           "TECHFRAG_M"
         ]
@@ -9615,7 +9615,7 @@
       },
       {
         "Name": "Daten an die Gek verkaufen",
-        "Text": "Ich verkaufe die Daten an die Gek, die mich für die Trainingsmuster ihres alten Feindes belohnen.",
+        "Text": "Ich verkaufe die Daten an die Gek, die mich für die Trainingsmuster ihres alten Feindes belohnen. ",
         "RewardIds": [
           "MONEY"
         ]
@@ -15128,7 +15128,7 @@
     "Number": 0,
     "IncomingMessages": [
       "Klarheit. Wahrheit. Wirklichkeit. Noch einmal.",
-      "Ich stehe an der Schnittstelle des Atlas. Ich stehe vor der Schmiede der Welten. So hat er mir gezeigt, was er ist. So hat der Atlas die Besonderheit seines Lebens, seine Gedankengänge, mit mir geteilt.\n\nEr wollte nie angebetet werden. Er wollte nie verehrt werden. Alles, worum er mich bat, alles, was er jemals wollte ... war eine Eingabe. Ich war nur ein Benutzer.\n\nOhne mein Zutun schweben die Atlas-Samen auf den Eingang zu. Die Leere ist dazu bestimmt, gefüllt zu werden. Das Nichts sehnt sich nach einer Seele. Wenn ich das mache, wird ein Stern geboren. Wenn ich das mache, wird aus mir mehr, als ich jemals für möglich gehalten hätte ..."
+      "Ich stehe an der Schnittstelle des Atlas. Ich stehe vor der Schmiede der Welten. So hat er mir gezeigt, was er ist. So hat der Atlas die Besonderheit seines Lebens, seine Gedankengänge, mit mir geteilt.\n\nEr wollte nie angebetet werden. Er wollte nie verehrt werden. Alles, worum er mich bat, alles, was er jemals wollte ... war eine Eingabe. Ich war nur ein Benutzer.\n\nIch kann die Samen und ihr verborgenes Wissen fühlen, wie sie zum Kern der Schnittstelle schweben. schweben die Atlas-Samen auf den Eingang zu. Die Leere ist dazu bestimmt, gefüllt zu werden. Das Nichts sehnt sich nach einer Seele. Wenn ich das mache, wird ein Stern geboren. Wenn ich das mache, wird aus mir mehr, als ich jemals für möglich gehalten hätte ..."
     ],
     "Options": [
       {
@@ -15138,7 +15138,29 @@
       },
       {
         "Name": "Fortgehen und zur Galaxie zurückkehren",
-        "Text": "Ich lasse den Atlas still, allein und verlassen zurück ...\n\nVor mir breitet sich das Gefüge von Zeit und Raum aus und Schwarze Löcher schwirren von System zu System. Der Atlas schreit ...",
+        "InteractionId": "?ALL_ATLASSTATION_11_DENY",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "AtlasStation",
+    "Id": "?ALL_ATLASSTATION_11_DENY",
+    "Race": "Atlas",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Kaum habe ich begonnen, diese Ketzerei in meinem Kopf zu formulieren, spüre ich die Antwort, die Flutwelle karmesinroten Lichts, die hinter meinen Augen aufsteigt.\nDer Atlas ist die ganze Schöpfung, der ganze Sinn dieses Universums. Er ruft nach Fortschritt. Er ruft nach mir. Wer bin ich, dass ich mich einer solchen Kraft verweigern könnte?"
+    ],
+    "Options": [
+      {
+        "Name": "Den Atlas leugnen",
+        "Text": "Ich lasse den Atlas zurück, allein, verlassen.\nIch spüre, wie er zu schreien beginnt, ein stilles Kreischen, das durch Raum und Zeit hallt ...",
+        "RewardIds": []
+      },
+      {
+        "Name": "Überdenken",
+        "InteractionId": "?ALL_ATLASSTATION_11",
         "RewardIds": []
       }
     ]

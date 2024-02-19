@@ -25,9 +25,9 @@
   {
     "Id": "other2",
     "Icon": "other/1.png",
-    "Name": "星系圖",
-    "Group": "地圖資料",
-    "Description": "鄰近地點的地圖，從星球資料庫建築的<STELLAR>當地資訊庫<>取得。\n\n已標記一處<SPECIAL>古老遺址地點<>。到現場挖掘可能找到珍貴的寶藏。\n\n選取地圖後，使用<VAL_ON>規劃路線功能 (<IMG>FE_ALT1<>) <>即可在你的強化套裝顯示器中釘選該地點。",
+    "Name": "器物圖",
+    "Group": "挖掘場地地圖資料",
+    "Description": "附近行星的地圖，已標記一處<SPECIAL>古老遺址地點<>。到現場挖掘就有機會找到珍貴的寶藏。\n\n選取地圖後，使用<VAL_ON>規劃路線功能 (<IMG>FE_ALT1<>)<> 即可在你的強化套裝顯示器中釘選該地點。\n\n與太空站地圖學家交換<COMMODITY>導航資料<>，即可獲得新星系圖。",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -37,7 +37,7 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
@@ -3633,7 +3633,7 @@
     "Icon": "other/222.png",
     "Name": "通往自由的門票",
     "Group": "安全星系通行證",
-    "Description": "「光榮的倖存者！<STELLAR>應許之星<>將屬於你們！」\n\n從 「<STELLAR>自由之聲」<>取得<TECHNOLOGY>安全星系通行證<>。\n選擇通行證並使用接受邀請 (<IMG>FE_ALT1<>)，在你的導航系統中釘選該地點。",
+    "Description": "「光榮的倖存者！<STELLAR>應許之星<>將屬於你們！」\n\n一個上面印有「<STELLAR>自由之聲<>」印記的<TECHNOLOGY>安全星系通行證<>。\n選擇通行證並使用接受邀請 (<IMG>FE_ALT1<>)，在你的導航系統中釘選該地點。",
     "BaseValueUnits": 888.0,
     "CurrencyType": "Credits",
     "Colour": "4D2957",
@@ -7728,6 +7728,597 @@
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "8C4B9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other432",
+    "Icon": "curiosities/13.png",
+    "Name": "大海記憶",
+    "Group": "寰宇碎片",
+    "Description": "這個記憶是宇宙的碎片，是無窮銀河中各種過去和未來可能性的一縷細絲。\n\n抵達群星深處，然後使用 <IMG>FE_ALT1<> 喚醒這個記憶。",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw11",
+        "Quantity": 99
+      },
+      {
+        "Id": "raw16",
+        "Quantity": 33
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "為碎片注入生命"
+    ]
+  },
+  {
+    "Id": "other433",
+    "Icon": "curiosities/10.png",
+    "Name": "征服記憶",
+    "Group": "寰宇碎片",
+    "Description": "這個記憶是宇宙的碎片，是無窮銀河中各種過去和未來可能性的一縷細絲。\n\n抵達群星深處，然後使用 <IMG>FE_ALT1<> 喚醒這個記憶。",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw13",
+        "Quantity": 33
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 99
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "為碎片注入生命"
+    ]
+  },
+  {
+    "Id": "other434",
+    "Icon": "curiosities/9.png",
+    "Name": "骨骸記憶",
+    "Group": "寰宇碎片",
+    "Description": "這個記憶是宇宙的碎片，是無窮銀河中各種過去和未來可能性的一縷細絲。\n\n抵達群星深處，然後使用 <IMG>FE_ALT1<> 喚醒這個記憶。",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 33
+      },
+      {
+        "Id": "raw20",
+        "Quantity": 99
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "為碎片注入生命"
+    ]
+  },
+  {
+    "Id": "other435",
+    "Icon": "curiosities/8.png",
+    "Name": "虛空記憶",
+    "Group": "寰宇碎片",
+    "Description": "這個記憶是宇宙的碎片，是無窮銀河中各種過去和未來可能性的一縷細絲。\n\n抵達群星深處，然後使用 <IMG>FE_ALT1<> 喚醒這個記憶。",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 99
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 33
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "為碎片注入生命"
+    ]
+  },
+  {
+    "Id": "other436",
+    "Icon": "other/436.png",
+    "Name": "星辰之子信使",
+    "Group": "特殊太空船",
+    "Description": "一艘獨一無二的<STELLAR>太空船<>，用以紀念 <STELLAR>Omega<> 探險的完成。\n\n這艘多用途太空船鍍有抗輻射裝甲，並採用空氣動力學外形設計，可在大氣層飛行時保持敏捷。\n\n<STELLAR>認領<>這艘船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other437",
+    "Icon": "other/437.png",
+    "Name": "寰宇頭盾",
+    "Group": "可解鎖的頭盔",
+    "Description": "獨特的<STELLAR>強化套裝外觀覆寫<>。\n\n戴上這頂頭盔時，一陣溫柔又規律的心跳聲在你的頭骨中迴盪。<FUEL>寰 宇<>。\n這股脈動充滿莫名的療癒之力。\n\n在<TECHNOLOGY>外觀改造器<>改變你的強化套裝外觀。",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other438",
+    "Icon": "other/438.png",
+    "Name": "寰宇權杖",
+    "Group": "特殊科瓦族科技？",
+    "Description": "一個獨特的<STELLAR>工具組<>。\n\n這款不尋常的儀式手杖，由科瓦族牧師存在體手工打造，用以敬奉寰宇。\n\n<STELLAR>取走<>這個工具組加入你的收藏，或是與目前工具組<STELLAR>交換<>。利用快捷選單 (<IMG>QUICK_MENU<>) 的機能頁面切換使用中的工具組。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other439",
+    "Icon": "other/439.png",
+    "Name": "寰宇飛行背包",
+    "Group": "強化套裝視覺增強",
+    "Description": "獨特的<STELLAR>強化套裝外觀覆寫<>。\n\n一款輕型噴射背包，由星體合金包覆烈火般的緋紅核心焊接而成。\n\n在<TECHNOLOGY>外觀改造器<>改變你的強化套裝外觀。",
+    "BaseValueUnits": 3500.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other440",
+    "Icon": "other/52.png",
+    "Name": "頭銜：星辰之子",
+    "Group": "量身訂製個人識別",
+    "Description": "獨特<STELLAR>探險家頭銜<>，紀念 <STELLAR>Omega<> 探險的完成，以及從寰宇內辛苦收集來的記憶。\n\n在<TECHNOLOGY>外觀改造器<>將此頭銜套用至旗幟上。",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other441",
+    "Icon": "other/441.png",
+    "Name": "Omega 旗幟",
+    "Group": "量身訂製個人識別",
+    "Description": "裝備這款獨特的<STELLAR>個人造型<>以紀念 <STELLAR>Omega<> 探險的完成，以及從寰宇內辛苦收集來的記憶。\n\n在<TECHNOLOGY>外觀改造器<>將此旗幟套用到你的檔案。",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other442",
+    "Icon": "other/442.png",
+    "Name": "終極獵鷹 UD7",
+    "Group": "特殊太空船",
+    "Description": "一艘特殊<STELLAR>太空船<>。這架戰鬥機預裝了強大的<TECHNOLOGY>相位光束<>和升級版<TECHNOLOGY>防護罩<>。\n\n<STELLAR>認領<>這艘船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other443",
+    "Icon": "other/443.png",
+    "Name": "虛空的納貝托",
+    "Group": "特殊太空船",
+    "Description": "一艘特殊<STELLAR>太空船<>。這架戰鬥機預裝了一部<TECHNOLOGY>衝突掃描器<>和強大的<TECHNOLOGY>紅外線刀<>。\n\n<STELLAR>認領<>這艘船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other444",
+    "Icon": "other/444.png",
+    "Name": "重力剋星 RE5",
+    "Group": "特殊太空船",
+    "Description": "一艘特殊<STELLAR>太空船<>。這艘多用途太空梭預裝了<TECHNOLOGY>各式升級科技<>。\n\n<STELLAR>認領<>這艘船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other445",
+    "Icon": "other/445.png",
+    "Name": "伊亞武 JU4",
+    "Group": "特殊太空船",
+    "Description": "一艘特殊<STELLAR>太空船<>。這艘大容量拖運船預裝了<TECHNOLOGY>經濟掃描器<>和<TECHNOLOGY>貨物掃描反射器<>。\n\n<STELLAR>認領<>這艘船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other446",
+    "Icon": "other/446.png",
+    "Name": "伊莎雅蘇的寧靜號調查船",
+    "Group": "特殊太空船",
+    "Description": "一艘特殊<STELLAR>太空船<>。\n這艘遠征型探索者預裝了強大的升級版<TECHNOLOGY>超空間驅動器<>和<TECHNOLOGY>正電子發射器<>。\n\n<STELLAR>認領<>這艘船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other447",
+    "Icon": "other/447.png",
+    "Name": "I. PROTOUBNEA 蛋",
+    "Group": "特殊同伴蛋",
+    "Description": "有生命、可孵化的蛋，<TRADEABLE>且即將孵化！<>\n\n這隻生物在裡面不斷用小爪子抓著蛋殼。\n\n掃描結果顯示，該生物可能擁有以下形容的大小及特徵：激烈性情，會<FUEL>凶猛地<>保護自己的旅行者同伴。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other448",
+    "Icon": "other/448.png",
+    "Name": "F. GRASPAEEUM 蛋",
+    "Group": "特殊同伴蛋",
+    "Description": "有生命、可孵化的蛋，<TRADEABLE>且即將孵化！<>\n\n這隻尚未出世的生物用尖牙輕推著蛋殼，似乎等不及破殼而出探索宇宙。\n\n掃描結果顯示，該生物可能擁有以下形容的大小及特徵：<STELLAR>異想天開<>的性情，可能會是個愛嬉鬧的同伴。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other449",
+    "Icon": "other/449.png",
+    "Name": "慣性聚焦器 NL4-0/9",
+    "Group": "特殊多功能求生裝置",
+    "Description": "一個特殊<STELLAR>工具組<>。這把手槍預裝了強大的<TECHNOLOGY>標槍光束<>。\n\n<STELLAR>取走<>這個工具組加入你的收藏，或是與目前工具組<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 的機能選項切換使用中的工具組。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other450",
+    "Icon": "other/450.png",
+    "Name": "地平線反抗者 Y-74B-O",
+    "Group": "特殊多功能求生裝置",
+    "Description": "一個特殊<STELLAR>工具組<>。這把手槍預裝了強大的<TECHNOLOGY>雙管霰彈槍<>。\n\n<STELLAR>取走<>這個工具組加入你的收藏，或是與目前工具組<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 的機能選項切換使用中的工具組。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other451",
+    "Icon": "other/451.png",
+    "Name": "澄徹之吻",
+    "Group": "特殊多功能求生裝置",
+    "Description": "一個特殊<STELLAR>工具組<>。這把手槍預裝了<TECHNOLOGY>各式實用科技<>。\n\n<STELLAR>取走<>這個工具組加入你的收藏，或是與目前工具組<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 的機能選項切換使用中的工具組。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other452",
+    "Icon": "other/452.png",
+    "Name": "泰坦煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種豪華煙火的組合包，靈感來自潛伏在宇宙各處的巨大沙蟲，富含<FUEL>鎘<>、<COMMODITY>鈉<>與<TRADEABLE>砪<>。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other453",
+    "Icon": "other/452.png",
+    "Name": "泰坦煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種豪華煙火的組合包，靈感來自潛伏在宇宙各處的巨大沙蟲，富含<FUEL>鎘<>、<COMMODITY>鈉<>與<TRADEABLE>砪<>。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other454",
+    "Icon": "other/452.png",
+    "Name": "泰坦煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種豪華煙火的組合包，靈感來自潛伏在宇宙各處的巨大沙蟲，富含<FUEL>鎘<>、<COMMODITY>鈉<>與<TRADEABLE>砪<>。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other455",
+    "Icon": "other/452.png",
+    "Name": "泰坦煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種豪華煙火的組合包，靈感來自潛伏在宇宙各處的巨大沙蟲，富含<FUEL>鎘<>、<COMMODITY>鈉<>與<TRADEABLE>砪<>。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other456",
+    "Icon": "other/452.png",
+    "Name": "泰坦煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種豪華煙火的組合包，靈感來自潛伏在宇宙各處的巨大沙蟲，富含<FUEL>鎘<>、<COMMODITY>鈉<>與<TRADEABLE>砪<>。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate"

@@ -568,7 +568,7 @@
     "Id": "tech15",
     "Icon": "rawMaterials/4.png",
     "Name": "星种",
-    "Group": "无价碎片",
+    "Group": "宇宙系带",
     "Description": "藏身于未知来源控制区域内的最小的火花。\n\n这颗种子会发芽，急切地逃离区域并展现其潜质。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
@@ -1408,7 +1408,7 @@
     "Icon": "technology/37.png",
     "Name": "光子大炮",
     "Group": "飞船射弹武器",
-    "Description": "一种毁灭性的<TECHNOLOGY>飞船射弹发射器<>，星际商人和海盗使用的武器系统。\n\n使用<IMG>CYCLEWEAPON<>变更武器模式。按下<IMG>SHIPFIRE<>发射。",
+    "Description": "一种毁灭性的<TECHNOLOGY>飞船射弹发射器，<>星际商人和海盗使用的武器系统。\n\n使用<IMG>CYCLEWEAPON<>变更武器模式。按下<IMG>SHIPFIRE<>发射。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -2167,7 +2167,7 @@
     "Icon": "technology/62.png",
     "Name": "分析面甲",
     "Group": "双筒望远镜标记装置",
-    "Description": "用于<TECHNOLOGY>探索<>和<TECHNOLOGY>调查<>的专业型装置。\n\n通过将详细的环境数据直接投射至使用者的视觉系统来增强标准<TECHNOLOGY>扫描仪<>的功能。可以识别<STELLAR>遥远的兴趣点<>。\n\n面甲可在研究<TRADEABLE>植物群系<>、<FUEL>动物群系<>和<TECHNOLOGY>矿物<>时生成<COMMODITY>有价值的数据<>。\n\n按住<IMG>AIM<>操作。按下<IMG>ZOOM<>缩放。",
+    "Description": "用于<TECHNOLOGY>探索<>和<TECHNOLOGY>调查<>的专业型装置。\n\n通过将详细的环境数据直接投射至使用者的视觉系统来增强标准<TECHNOLOGY>扫描仪<>的功能。可以识别<STELLAR>遥远的重要地点<>。\n\n面甲可在研究<TRADEABLE>植物群系<>、<FUEL>动物群系<>和<TECHNOLOGY>矿物<>时生成<COMMODITY>有价值的数据<>。\n\n按住<IMG>AIM<>操作。按下<IMG>ZOOM<>缩放。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -6393,7 +6393,7 @@
     "Icon": "technology/94.png",
     "Name": "弥诺陶洛斯雷达阵列",
     "Group": "弥诺陶洛斯扫描附件",
-    "Description": "一种高细节的雷达设备，可将弥诺陶洛斯上的扫描技术升级到分析面甲级别。\n\n按下 <IMG>SCAN<>以激活雷达扫描，显示无法通过多用途工具扫描器定位的<STELLAR>其他兴趣点<>。\n\n使用快捷菜单微调雷达搜寻<TECHNOLOGY>特定建筑<>。",
+    "Description": "一种高细节的雷达设备，可将弥诺陶洛斯上的扫描技术升级到分析面甲级别。\n\n按下 <IMG>SCAN<>以激活雷达扫描，显示无法通过多用途工具扫描器定位的<STELLAR>其他重要地点<>。\n\n使用快捷菜单微调雷达搜寻<TECHNOLOGY>特定建筑<>。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -9520,6 +9520,240 @@
       {
         "Id": "raw2",
         "Quantity": 20
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech260",
+    "Icon": "technology/260.png",
+    "Name": "反抗者的标记",
+    "Group": "宇宙系带",
+    "Description": "一簇微不足道的星尘颗粒。仔细查看时能够发现星尘表面遍布着晶体碎片与扭曲的绯红色几何图案。\n\n星尘中积累的能量因渴望被释放而悸动不停。\n\n通过<TECHNOLOGY>发现<>宇宙中的星系、行星以及各类对象来为标记<STELLAR>充能<>。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 16
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 16
+      },
+      {
+        "Id": "raw34",
+        "Quantity": 16
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech261",
+    "Icon": "technology/261.png",
+    "Name": "船体损坏",
+    "Group": "受损的飞船部件",
+    "Description": "飞船子系统<FUEL>严重受损<>。栏位无法用于<STELLAR>储存<>或<TECHNOLOGY>技术<>用途，直至损害得到修复。使用<IMG>REPAIR<>启动修复过程。\n\n飞船核心机能将不受影响。修复该损伤将使栏位空出，以供一般库存用途使用。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 80
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech262",
+    "Icon": "tradeItems/21.png",
+    "Name": "线圈生锈",
+    "Group": "受损的飞船部件",
+    "Description": "飞船子系统<FUEL>严重受损<>。栏位无法用于<STELLAR>储存<>或<TECHNOLOGY>技术<>用途，直至损害得到修复。使用<IMG>REPAIR<>启动修复过程。\n\n飞船核心机能将不受影响。修复该损伤将使栏位空出，以供一般库存用途使用。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw19",
+        "Quantity": 40
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech263",
+    "Icon": "products/113.png",
+    "Name": "液压装置受损",
+    "Group": "受损的飞船部件",
+    "Description": "飞船子系统<FUEL>严重受损<>。栏位无法用于<STELLAR>储存<>或<TECHNOLOGY>技术<>用途，直至损害得到修复。使用<IMG>REPAIR<>启动修复过程。\n\n飞船核心机能将不受影响。修复该损伤将使栏位空出，以供一般库存用途使用。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 45
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech264",
+    "Icon": "other/366.png",
+    "Name": "燃料箱腐蚀",
+    "Group": "受损的飞船部件",
+    "Description": "飞船子系统<FUEL>严重受损<>。栏位无法用于<STELLAR>储存<>或<TECHNOLOGY>技术<>用途，直至损害得到修复。使用<IMG>REPAIR<>启动修复过程。\n\n飞船核心机能将不受影响。修复该损伤将使栏位空出，以供一般库存用途使用。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 35
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech265",
+    "Icon": "technology/88.png",
+    "Name": "受损模块",
+    "Group": "受损的多用途工具部件",
+    "Description": "多用途工具子系统<FUEL>严重受损<>。\n\n栏位无法使用，直至损害得到修复。使用<IMG>REPAIR<>启动修复过程。\n\n修复将使栏位空出，以供一般用途使用。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw32",
+        "Quantity": 60
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech266",
+    "Icon": "technology/89.png",
+    "Name": "套管损坏",
+    "Group": "受损的多用途工具部件",
+    "Description": "多用途工具子系统<FUEL>严重受损<>。\n\n栏位无法使用，直至损害得到修复。使用<IMG>REPAIR<>启动修复过程。\n\n修复将使栏位空出，以供一般用途使用。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech267",
+    "Icon": "products/53.png",
+    "Name": "终端烧毁",
+    "Group": "受损的多用途工具部件",
+    "Description": "多用途工具子系统<FUEL>严重受损<>。\n\n栏位无法使用，直至损害得到修复。使用<IMG>REPAIR<>启动修复过程。\n\n修复将使栏位空出，以供一般用途使用。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw13",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech268",
+    "Icon": "tradeItems/25.png",
+    "Name": "电阻器故障",
+    "Group": "受损的多用途工具部件",
+    "Description": "多用途工具子系统<FUEL>严重受损<>。\n\n栏位无法使用，直至损害得到修复。使用<IMG>REPAIR<>启动修复过程。\n\n修复将使栏位空出，以供一般用途使用。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "7B0000",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 50
       }
     ],
     "StatBonuses": [],
