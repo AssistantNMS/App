@@ -25,9 +25,9 @@
   {
     "Id": "other2",
     "Icon": "other/1.png",
-    "Name": "Mapa Planetário",
-    "Group": "Dados Cartográficos",
-    "Description": "Um mapa de uma localização próxima, obtido de um <STELLAR>Repositório de informação local<> num edifício do Arquivo planetário.\n\nUma <SPECIAL>Ruína antiga<> foi marcada. É provável que escavar este local permita obter tesouros valiosos.\n\nSeleciona o mapa e usa <VAL_ON>Traçar Rota (<IMG>FE_ALT1<>)<> para fixar a localização no visor do Exofato.",
+    "Name": "Gráfico de Artefactos",
+    "Group": "Dados Cartográficos do Local de Escavação",
+    "Description": "Um mapa de um planeta próximo. Um <SPECIAL>local antigo em ruínas<> foi marcado. É provável que escavar este local permita obter tesouros valiosos.\n\nSeleciona o mapa e usa <VAL_ON>Traçar Rota (<IMG>FE_ALT1<>)<> para afixares a localização no visor do Exofato.\n\nÉ possível obter novos mapas ao trocar <COMMODITY>Dados de Navegação<> com um Cartógrafo da Estação Espacial.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -37,7 +37,7 @@
       "HasDevProperties",
       "IsConsumable"
     ],
-    "BlueprintCost": 1,
+    "BlueprintCost": 3,
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
@@ -3633,7 +3633,7 @@
     "Icon": "other/222.png",
     "Name": "Bilhete para a Liberdade",
     "Group": "Passe de Sistema Seguro",
-    "Description": "'Glorioso sobrevivente, a <STELLAR>estrela prometida<> será tua!'\n\nUm <TECHNOLOGY>Passe de Sistema Seguro<> adquirido da '<STELLAR>Voz da Liberdade'<>. \nSeleciona o passe e usa Aceitar convite (<IMG>FE_ALT1<>) para fixar a localização nos teus sistemas de navegação.",
+    "Description": "'Glorioso sobrevivente, a <STELLAR>estrela prometida<> será tua!'\n\nUm <TECHNOLOGY>Passe de Sistema Seguro<> com a marca da '<STELLAR>Voz da Liberdade'<>. \nSeleciona o passe e usa Aceitar convite (<IMG>FE_ALT1<>) para afixares a localização nos teus sistemas de navegação.",
     "BaseValueUnits": 888.0,
     "CurrencyType": "Credits",
     "Colour": "4D2957",
@@ -7731,6 +7731,612 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other432",
+    "Icon": "curiosities/13.png",
+    "Name": "Memória do Oceano",
+    "Group": "Fragmento de Atlas",
+    "Description": "Esta memória é um fragmento do cosmos, um filamento numa galáxia infinita de passados e futuros possíveis.\n\nAlcança as estrelas e, em seguida, usa <IMG>FE_ALT1<> para despertares esta memória.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw7",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw11",
+        "Quantity": 99
+      },
+      {
+        "Id": "raw16",
+        "Quantity": 33
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Dá vida ao fragmento"
+    ]
+  },
+  {
+    "Id": "other433",
+    "Icon": "curiosities/10.png",
+    "Name": "Memória da Conquista",
+    "Group": "Fragmento de Atlas",
+    "Description": "Esta memória é um fragmento do cosmos, um filamento numa galáxia infinita de passados e futuros possíveis.\n\nAlcança as estrelas e, em seguida, usa <IMG>FE_ALT1<> para despertares esta memória.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw10",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw13",
+        "Quantity": 33
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 99
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Dá vida ao fragmento"
+    ]
+  },
+  {
+    "Id": "other434",
+    "Icon": "curiosities/9.png",
+    "Name": "Memória dos Ossos",
+    "Group": "Fragmento de Atlas",
+    "Description": "Esta memória é um fragmento do cosmos, um filamento numa galáxia infinita de passados e futuros possíveis.\n\nAlcança as estrelas e, em seguida, usa <IMG>FE_ALT1<> para despertares esta memória.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw5",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw15",
+        "Quantity": 33
+      },
+      {
+        "Id": "raw20",
+        "Quantity": 99
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Dá vida ao fragmento"
+    ]
+  },
+  {
+    "Id": "other435",
+    "Icon": "curiosities/8.png",
+    "Name": "Memória do Vazio",
+    "Group": "Fragmento de Atlas",
+    "Description": "Esta memória é um fragmento do cosmos, um filamento numa galáxia infinita de passados e futuros possíveis.\n\nAlcança as estrelas e, em seguida, usa <IMG>FE_ALT1<> para despertares esta memória.",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 66
+      },
+      {
+        "Id": "raw31",
+        "Quantity": 99
+      },
+      {
+        "Id": "raw33",
+        "Quantity": 33
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Dá vida ao fragmento"
+    ]
+  },
+  {
+    "Id": "other436",
+    "Icon": "other/436.png",
+    "Name": "Corredor Nascido nas Estrelas",
+    "Group": "Nave Exclusiva",
+    "Description": "Uma <STELLAR>nave espacial<> exclusiva e comemorativa da conclusão da expedição <STELLAR>Ómega.<>\n\nEsta nave versátil conta com armadura resistente à radiação e foi construída com um perfil aerodinâmico para uma maior agilidade durante os voos atmosféricos.\n\n<STELLAR>Reivindica<> esta nave para a adicionares à tua coleção ou <STELLAR>Troca-a<> pela tua nave atual. Quando estiveres num planeta, podes chamar naves através do Menu Rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other437",
+    "Icon": "other/437.png",
+    "Name": "Capacete Protetor de Atlas",
+    "Group": "Capacete desbloqueável",
+    "Description": "Uma <STELLAR>Alteração da Aparência do Exofato<> exclusiva.\n\nUm ténue mas imutável batimento cardíaco ressoa na tua cabeça quando usas este capacete. <FUEL>A T L A S<>.\nO pulso é estranhamente reconfortante.\n\nTransforma a aparência do teu Exofato num <TECHNOLOGY>Modificador de Aparência<>.",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other438",
+    "Icon": "other/438.png",
+    "Name": "Cetro de Atlas",
+    "Group": "Tecnologia Korvax Exclusiva?",
+    "Description": "Uma <STELLAR>Multiferramenta<> exclusiva.\n\nEste bastão cerimonial incomum foi forjado à mão pela Entidade Sacerdotisa Korvax em tributo a Atlas.\n\n<STELLAR>Leva<> esta Multiferramenta para a adicionares à tua coleção ou para <STELLAR>Trocar<> pela tua Multiferramenta atual. Alterna entre as Multiferramentas ativas na secção Utilidades do Menu Rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other439",
+    "Icon": "other/439.png",
+    "Name": "Dispositivo de Voo de Atlas",
+    "Group": "Melhoria visual do exofato",
+    "Description": "Uma <STELLAR>Alteração da Aparência do Exofato<> exclusiva.\n\nUm jetpack leve, soldado com ligas estelares em volta de um núcleo carmesim incandescente.\n\nTransforma a aparência do teu Exofato num <TECHNOLOGY>Modificador de Aparência<>.",
+    "BaseValueUnits": 3500.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other440",
+    "Icon": "other/52.png",
+    "Name": "Título: 'Nascido nas Estrelas'",
+    "Group": "Identificação pessoal personalizada",
+    "Description": "Um <STELLAR>Título de Explorador<> exclusivo para comemorar a conclusão da expedição <STELLAR>Ómega<> e as memórias recolhidas do Atlas.\n\nAplica este título ao teu estandarte num <TECHNOLOGY>Modificador de Aparência<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other441",
+    "Icon": "other/441.png",
+    "Name": "Estandarte Ómega",
+    "Group": "Identificação pessoal personalizada",
+    "Description": "Equipa este exclusivo <STELLAR>Toque Pessoal<> para comemorares a conclusão da expedição <STELLAR>Ómega<> e as memórias recolhidas do Atlas.\n\nAplica este estandarte ao teu perfil num <TECHNOLOGY>Modificador de Aparência<>.",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason12Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other442",
+    "Icon": "other/442.png",
+    "Name": "Falcão Definitivo UD7",
+    "Group": "Nave Exclusiva",
+    "Description": "Uma <STELLAR>Nave<> exclusiva. Esta nave de combate dispõe de um potente <TECHNOLOGY>Laser Polifásico<> e <TECHNOLOGY>Escudos<> atualizados pré-instalados.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para a <STELLAR>Trocar<> pela tua nave atual. Quando estiveres num planeta, chama naves a partir do Menu Rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other443",
+    "Icon": "other/443.png",
+    "Name": "Nabaeto do Vazio",
+    "Group": "Nave Exclusiva",
+    "Description": "Uma <STELLAR>Nave<> exclusiva. Esta nave de combate dispõe de um <TECHNOLOGY>Detetor de Conflito<> e de uma potente <TECHNOLOGY>Infra-faca<> pré-instalados.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para a <STELLAR>Trocar<> pela tua nave atual. Quando estiveres num planeta, chama naves a partir do Menu Rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other444",
+    "Icon": "other/444.png",
+    "Name": "Gravidade Némesis RE5",
+    "Group": "Nave Exclusiva",
+    "Description": "Uma <STELLAR>Nave<> exclusiva. Este versátil vaivém dispõe de um <TECHNOLOGY>leque de tecnologias atualizadas<> pré-instaladas.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para a <STELLAR>Trocar<> pela tua nave atual. Quando estiveres num planeta, chama naves a partir do Menu Rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other445",
+    "Icon": "other/445.png",
+    "Name": "Iiyaw JU4",
+    "Group": "Nave Exclusiva",
+    "Description": "Uma <STELLAR>Nave<> exclusiva. Este espaçoso transportador dispõe de um <TECHNOLOGY>Detetor de Economia<> e um <TECHNOLOGY>Defletor de Análise de Carga<> pré-instalados.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para a <STELLAR>Trocar<> pela tua nave atual. Quando estiveres num planeta, chama naves a partir do Menu Rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other446",
+    "Icon": "other/446.png",
+    "Name": "Agrimensor Alcíone de Iasayasu",
+    "Group": "Nave Exclusiva",
+    "Description": "Uma <STELLAR>Nave<> exclusiva. Este Explorador de itinerância longínqua dispõe de uma potente <TECHNOLOGY>Hiperdrive<> atualizada e de um <TECHNOLOGY>Ejetor de Positrões<> pré-instalados.\n\n<STELLAR>Reivindica<> esta nave para adicioná-la à tua coleção, ou para a <STELLAR>Trocar<> pela tua nave atual. Quando estiveres num planeta, chama naves a partir do Menu Rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other447",
+    "Icon": "other/447.png",
+    "Name": "I. Ovo de Protoubnea",
+    "Group": "Ovo de Companheiro Exclusivo",
+    "Description": "Um ovo vivo e fértil, <TRADEABLE>pronto para eclodir!<>\n\nA criatura no seu interior arranha o ovo com minúsculas mãos.\n\nAs análises indicam que o ser dentro do ovo tem o potencial genético para uma natureza agressiva, <FUEL>ferozmente<> protetora do seu companheiro Viajante.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other448",
+    "Icon": "other/448.png",
+    "Name": "F. Ovo de Graspaeeum",
+    "Group": "Ovo de Companheiro Exclusivo",
+    "Description": "Um ovo vivo e fértil, <TRADEABLE>pronto para eclodir!<>\n\nA criatura ainda por nascer empurra a casca do ovo com as suas presas, entusiasmada pela proximidade da eclosão e por poder ver o universo.\n\nAs análises indicam que o ser dentro do ovo tem o potencial genético para uma natureza <STELLAR>extravagante<>, sendo provável que venha a ser um companheiro divertido.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other449",
+    "Icon": "other/449.png",
+    "Name": "Focador Inercial NL4-0/9",
+    "Group": "Dispositivo de sobrevivência multifunções exclusivo",
+    "Description": "Uma <STELLAR>Multiferramenta<> exclusiva. Esta pistola dispõe de um potente <TECHNOLOGY>Feixe de Arremesso<> pré-instalado.\n\n<STELLAR>Leva<> esta Multiferramenta para adicioná-la à tua coleção, ou para a <STELLAR>Trocar<> pela tua Multiferramenta atual. Alterna entre Multiferramentas ativas na secção Utilidades do Menu Rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other450",
+    "Icon": "other/450.png",
+    "Name": "Desafio do Horizonte Y-74B-O",
+    "Group": "Dispositivo de sobrevivência multifunções exclusivo",
+    "Description": "Uma <STELLAR>Multiferramenta<> exclusiva. Esta pistola dispõe de um potente <TECHNOLOGY>Detonador de Fragmentação<> pré-instalado.\n\n<STELLAR>Leva<> esta Multiferramenta para adicioná-la à tua coleção, ou para a <STELLAR>Trocar<> pela tua Multiferramenta atual. Alterna entre Multiferramentas ativas na secção Utilidades do Menu Rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other451",
+    "Icon": "other/451.png",
+    "Name": "Beijo da Clareza",
+    "Group": "Dispositivo de sobrevivência multifunções exclusivo",
+    "Description": "Uma <STELLAR>Multiferramenta<> exclusiva. Esta pistola dispõe de um <TECHNOLOGY>leque de tecnologias de utilidades<> pré-instaladas.\n\n<STELLAR>Leva<> esta Multiferramenta para adicioná-la à tua coleção, ou para a <STELLAR>Trocar<> pela tua Multiferramenta atual. Alterna entre Multiferramentas ativas na secção Utilidades do Menu Rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other452",
+    "Icon": "other/452.png",
+    "Name": "Pacote de Fogo de Artifício Titan",
+    "Group": "Multi-pacote de pirotecnia",
+    "Description": "Um conjunto de três variedades de fogos de artifício de luxo, inspirado pelos titânicos vermes da areia que percorrem o universo. Rico em <FUEL>cádmio<>, <COMMODITY>sódio<> e <TRADEABLE>emeril<>. Acende para criares brilhantes desenhos no céu.\n\nPosiciona o tubo de lançamento através do <VAL_ON>Menu de Construção<> (<IMG>BUILD_MENU<>). <FUEL>Aviso<>: não apontar a criaturas vivas. Não recomendado para utilização em espaços interiores.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other453",
+    "Icon": "other/452.png",
+    "Name": "Pacote de Fogo de Artifício Titan",
+    "Group": "Multi-pacote de pirotecnia",
+    "Description": "Um conjunto de três variedades de fogos de artifício de luxo, inspirado pelos titânicos vermes da areia que percorrem o universo. Rico em <FUEL>cádmio<>, <COMMODITY>sódio<> e <TRADEABLE>emeril<>. Acende para criares brilhantes desenhos no céu.\n\nPosiciona o tubo de lançamento através do <VAL_ON>Menu de Construção<> (<IMG>BUILD_MENU<>). <FUEL>Aviso<>: não apontar a criaturas vivas. Não recomendado para utilização em espaços interiores.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other454",
+    "Icon": "other/452.png",
+    "Name": "Pacote de Fogo de Artifício Titan",
+    "Group": "Multi-pacote de pirotecnia",
+    "Description": "Um conjunto de três variedades de fogos de artifício de luxo, inspirado pelos titânicos vermes da areia que percorrem o universo. Rico em <FUEL>cádmio<>, <COMMODITY>sódio<> e <TRADEABLE>emeril<>. Acende para criares brilhantes desenhos no céu.\n\nPosiciona o tubo de lançamento através do <VAL_ON>Menu de Construção<> (<IMG>BUILD_MENU<>). <FUEL>Aviso<>: não apontar a criaturas vivas. Não recomendado para utilização em espaços interiores.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other455",
+    "Icon": "other/452.png",
+    "Name": "Pacote de Fogo de Artifício Titan",
+    "Group": "Multi-pacote de pirotecnia",
+    "Description": "Um conjunto de três variedades de fogos de artifício de luxo, inspirado pelos titânicos vermes da areia que percorrem o universo. Rico em <FUEL>cádmio<>, <COMMODITY>sódio<> e <TRADEABLE>emeril<>. Acende para criares brilhantes desenhos no céu.\n\nPosiciona o tubo de lançamento através do <VAL_ON>Menu de Construção<> (<IMG>BUILD_MENU<>). <FUEL>Aviso<>: não apontar a criaturas vivas. Não recomendado para utilização em espaços interiores.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other456",
+    "Icon": "other/452.png",
+    "Name": "Pacote de Fogo de Artifício Titan",
+    "Group": "Multi-pacote de pirotecnia",
+    "Description": "Um conjunto de três variedades de fogos de artifício de luxo, inspirado pelos titânicos vermes da areia que percorrem o universo. Rico em <FUEL>cádmio<>, <COMMODITY>sódio<> e <TRADEABLE>emeril<>. Acende para criares brilhantes desenhos no céu.\n\nPosiciona o tubo de lançamento através do <VAL_ON>Menu de Construção<> (<IMG>BUILD_MENU<>). <FUEL>Aviso<>: não apontar a criaturas vivas. Não recomendado para utilização em espaços interiores.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign8Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

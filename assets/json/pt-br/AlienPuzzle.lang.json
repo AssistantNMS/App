@@ -5648,7 +5648,7 @@
     "IsFactory": false,
     "Number": 17,
     "IncomingMessages": [
-      "O posto avançado é antigo para os padrões Geks. O ambiente foi calibrado para a preservação de dados.\nUm log fala da época precendente à ascensão dos 'Primeiros Filhos Geks'. Parece que o povo Gek passou por uma crise de fertilidade. Algo na água começou a afetar sua capacidade de reprodução, o que resultou em tentativas de procriação seletiva, programas de clonagem e muito mais.\nA crise científica se tornou moral. Os autoproclamados 'Primeiros Filhos' assumiram o poder, prometendo grandeza e matando todos que se opunham a eles. As memórias do passado foram apagadas. Ser forte era ser justo.",
+      "O posto avançado é antigo, até mesmo para os padrões Geks. O ambiente foi calibrado para a preservação de dados.\n\nUm log fala da época anterior à ascensão dos 'Primeiros Filhos Geks'. Parece que o povo Gek passou por uma crise de fertilidade. Algo na água começou a afetar a capacidade de reprodução deles, o que resultou em tentativas de procriação seletiva, programas de clonagem e muito mais.\n\nA crise científica se tornou uma crise moral. Os autoproclamados 'Primeiros Filhos' assumiram o poder, prometendo grandeza e matando todos que se opunham a eles. As lembranças do passado foram apagadas. Ser forte era ser íntegro.",
       "ARCHIVE RETRIEVAL SERVICE ACTIVE... ACCESS?"
     ],
     "Options": [
@@ -6905,7 +6905,7 @@
     "Number": 35,
     "IncomingMessages": [
       "A fábrica produz apetrechos para o dia a dia dos Geks. Utensílios para as refeições, spray para evitar que a pele deles resseque em atmosferas alienígenas, frascos de feromônios etc.",
-      "SYSTEMS OPERATIONAL... SELECTED DESIRED PRODUCT...",
+      "SYSTEMS OPERATIONAL... SELECT DESIRED PRODUCT...",
       "A instalação está abandonada, mas não há uma razão óbvia para o alarme ter sido disparado. Parece que está tudo bem."
     ],
     "Options": [
@@ -9615,7 +9615,7 @@
       },
       {
         "Name": "Venda os dados para os Geks",
-        "Text": "Eu vendo os dados para os Geks, que me recompensam por lhes fornecer os padrões de treino de seu antigo inimigo.",
+        "Text": "Eu vendo os dados para os Geks, que me recompensam por lhes fornecer os padrões de treino do antigo inimigo deles. ",
         "RewardIds": [
           "MONEY"
         ]
@@ -10253,7 +10253,7 @@
     "IncomingMessages": [
       "O terminal revela que esta instalação produz as enzimas e os fluidos necessários para as tatuagens dos Vy'keens. Não está claro como os pigmentos são gerados. Não há registros de suprimentos de tinta ou fluidos recebidos. Vários alienígenas chegaram, mas não há evidências de sua presença nem de sua partida.",
       "Security scan initializing! Motion detection cameras operational! Security scan initializing!",
-      "Então, eu ouço. Por entre o zunido da fábrica, uma batida estranha nas paredes, sussurros de vozes desconhecidas... O terminal aguarda uma entrada."
+      "Então eu ouço. Por entre o zunido da fábrica, uma batida estranha nas paredes, sussurros de vozes desconhecidas... O terminal aguarda uma entrada."
     ],
     "Options": [
       {
@@ -10606,7 +10606,7 @@
     "IncomingMessages": [
       "O terminal revela que esta instalação produz as enzimas e os fluidos necessários para as tatuagens dos Vy'keens. Não está claro como os pigmentos são gerados. Não há registros de suprimentos de tinta ou fluidos recebidos. Vários alienígenas chegaram, mas não há evidências de sua presença nem de sua partida.",
       "Help... us. Harvested... get out...",
-      "Então, eu ouço. Por entre o zunido da fábrica, uma batida estranha nas paredes, sussurros de vozes desconhecidas... O terminal aguarda uma entrada."
+      "Então eu ouço. Por entre o zunido da fábrica, uma batida estranha nas paredes, sussurros de vozes desconhecidas... O terminal aguarda uma entrada."
     ],
     "Options": [
       {
@@ -15128,7 +15128,7 @@
     "Number": 0,
     "IncomingMessages": [
       "Clareza. Verdade. Realidade. De novo.",
-      "Estou na interface do Atlas. Estou na forja dos mundos. Foi assim que ele me mostrou o que era. Foi assim que o Atlas compartilhou a natureza de sua vida e como funciona sua mente.\n\nEle nunca exigiu oração. Ele nunca exigiu adoração. Tudo o que pediu de mim, tudo o que queria... era informação. Eu era só um usuário.\n\nEspontaneamente, as Sementes do Atlas gravitam em direção à porta. O vazio foi feito para ser preenchido. O nada deseja uma alma. Se eu fizer isso, uma estrela nascerá. Se eu fizer isso, me tornarei mais do que um dia pensei ser possível..."
+      "Estou na interface do Atlas. Estou na forja dos mundos. Foi assim que ele me mostrou o que era. Foi assim que o Atlas compartilhou a natureza de sua vida e como funciona sua mente.\n\nEle nunca exigiu oração. Ele nunca exigiu adoração. Tudo o que pediu de mim, tudo o que queria... era informação. Eu era só um usuário.\n\nPosso sentir as sementes, o conhecimento oculto delas, gravitando em direção ao núcleo da interface. O vazio foi feito para ser preenchido. O nada deseja uma alma. Se eu fizer isto, uma estrela vai nascer. Se eu fizer isto, vou me tornar mais do que um dia pensei ser possível..."
     ],
     "Options": [
       {
@@ -15138,7 +15138,29 @@
       },
       {
         "Name": "Afaste-se e retorne à galáxia",
-        "Text": "Vou embora. O Atlas está em silêncio, sozinho e abandonado...\n\nO tempo e o espaço se revelaram para mim, buracos negros surgem em todos os sistemas. O Atlas grita...",
+        "InteractionId": "?ALL_ATLASSTATION_11_DENY",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "AtlasStation",
+    "Id": "?ALL_ATLASSTATION_11_DENY",
+    "Race": "Atlas",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Mal comecei a formular essa heresia na minha mente quando senti a resposta. A onda de luz vermelha que começa a surgir atrás dos meus olhos.\nO Atlas é toda a criação, todo o propósito deste universo. Exige progresso. Ele chama por mim. Quem sou eu para negar tal força?"
+    ],
+    "Options": [
+      {
+        "Name": "Negue o Atlas",
+        "Text": "Deixo o Atlas sozinho, abandonado.\nEu sinto que ele começa a gritar; um grito silencioso que ecoa por todo o espaço e tempo...",
+        "RewardIds": []
+      },
+      {
+        "Name": "Reconsidere",
+        "InteractionId": "?ALL_ATLASSTATION_11",
         "RewardIds": []
       }
     ]
