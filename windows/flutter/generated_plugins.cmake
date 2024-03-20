@@ -4,14 +4,9 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   bitsdojo_window_windows
-  file_selector_windows
   firebase_auth
   firebase_core
   flutter_localization
-  flutter_secure_storage_windows
-  platform_device_id_windows
-  share_plus
-  url_launcher_windows
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST
