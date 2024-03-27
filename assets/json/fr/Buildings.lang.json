@@ -5625,8 +5625,7 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign1Reward",
-      "IsTwitchCampaign8Reward"
+      "IsTwitchCampaign1Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -22848,11 +22847,12 @@
     "Group": "Appareil de pyrotechnie consommable",
     "Description": "Ce feu d'artifice exotique, teinté de sels de <FUEL>cadmium<>, est inspiré de la forme ondulante du ver des sables titanesque. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis le <VAL_ON>menu de construction<> (<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur.",
     "BaseValueUnits": 60.0,
-    "CurrencyType": "None",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 20.0,
     "Colour": "262626",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -22869,11 +22869,12 @@
     "Group": "Appareil de pyrotechnie consommable",
     "Description": "Ce feu d'artifice exotique, teinté de sels de <COMMODITY>sodium<>, est inspiré de la forme ondulante du ver des sables titanesque.\n\nAllumez-les pour illuminer les cieux de figures scintillantes.Placez le tube de lancement depuis le <VAL_ON>menu de construction<> (<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur.",
     "BaseValueUnits": 60.0,
-    "CurrencyType": "None",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 20.0,
     "Colour": "262626",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -22890,11 +22891,12 @@
     "Group": "Appareil de pyrotechnie consommable",
     "Description": "Ce feu d'artifice exotique, teinté de sels d'<TRADEABLE>émeril<>, est inspiré de la forme ondulante du ver des sables titanesque.\n\nAllumez-les pour illuminer les cieux de figures scintillantes.Placez le tube de lancement depuis le <VAL_ON>menu de construction<> (<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur.",
     "BaseValueUnits": 60.0,
-    "CurrencyType": "None",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 20.0,
     "Colour": "262626",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -23057,6 +23059,803 @@
       {
         "Id": "raw9",
         "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1087",
+    "Icon": "building/1087.png",
+    "Name": "Archives sécurisées",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1088",
+    "Icon": "building/1088.png",
+    "Name": "Bouteille de carburant",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1089",
+    "Icon": "building/1089.png",
+    "Name": "Stockage orbital",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1090",
+    "Icon": "building/1090.png",
+    "Name": "Cadre de stockage",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1091",
+    "Icon": "building/1091.png",
+    "Name": "Affichage holographique gek",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1092",
+    "Icon": "building/1092.png",
+    "Name": "Affichage holographique korvax",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1093",
+    "Icon": "building/1093.png",
+    "Name": "Affichage holographique vy'keen",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1094",
+    "Icon": "building/1094.png",
+    "Name": "Affichage holographique mural A",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1095",
+    "Icon": "building/1095.png",
+    "Name": "Affichage holographique mural B",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1096",
+    "Icon": "building/1096.png",
+    "Name": "Petit affichage holographique A",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1097",
+    "Icon": "building/1097.png",
+    "Name": "Petit affichage holographique B",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1098",
+    "Icon": "building/1098.png",
+    "Name": "Petit affichage holographique C",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1099",
+    "Icon": "building/1099.png",
+    "Name": "Éclairage de cadre",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1100",
+    "Icon": "building/1100.png",
+    "Name": "Réseau d'éclairage",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1101",
+    "Icon": "building/1101.png",
+    "Name": "Lampe de socle",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1102",
+    "Icon": "building/1102.png",
+    "Name": "Lumière de pilier",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1103",
+    "Icon": "building/1103.png",
+    "Name": "Caisse biologique",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1104",
+    "Icon": "building/1104.png",
+    "Name": "Petite jardinière",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1105",
+    "Icon": "building/1105.png",
+    "Name": "Bloc serveur A",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1106",
+    "Icon": "building/1106.png",
+    "Name": "Bloc serveur B",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1107",
+    "Icon": "building/1107.png",
+    "Name": "Placard de données",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1108",
+    "Icon": "building/1108.png",
+    "Name": "Transformateur",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1109",
+    "Icon": "building/1109.png",
+    "Name": "Bras hydrauliques",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 10.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 10,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1110",
+    "Icon": "building/1110.png",
+    "Name": "Panneau debout",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1111",
+    "Icon": "building/1111.png",
+    "Name": "Panneau debout B",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1112",
+    "Icon": "building/1112.png",
+    "Name": "Table topographique",
+    "Group": "Décoration de station spatiale synthétique",
+    "Description": "Une <STELLAR>pièce décorative<> conçue pour être utilisée dans des bases habitables.\n\nCe composant a été fabriqué dans le style de l'une des nombreuses <TECHNOLOGY>stations spatiales<> de l'univers.",
+    "BaseValueUnits": 8.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 8,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1113",
+    "Icon": "building/1113.png",
+    "Name": "Feu d'artifice ruban violet",
+    "Group": "Appareil de pyrotechnie consommable",
+    "Description": "Ce feu d'artifice exotique, scintillant d'éléments en <SPECIAL>atlantidéum<> et en <VAL_ON>antimoine<>, explose en un amas de rubans qui se dispersent en décrivant des spirales. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis <VAL_ON>menu de construction<> (<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur.",
+    "BaseValueUnits": 60.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 20.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1114",
+    "Icon": "building/1114.png",
+    "Name": "Feu d'artifice ruban bleu",
+    "Group": "Appareil de pyrotechnie consommable",
+    "Description": "Ce feu d'artifice exotique, scintillant d'éléments en <TECHNOLOGY>indium<> et en <VAL_ON>antimoine<>, explose en un amas de rubans qui se dispersent en décrivant des spirales. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis <VAL_ON>menu de construction<> (<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur.",
+    "BaseValueUnits": 60.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 20.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1115",
+    "Icon": "building/1115.png",
+    "Name": "Feu d'artifice ruban bleu sarcelle",
+    "Group": "Appareil de pyrotechnie consommable",
+    "Description": "Ce feu d'artifice exotique, scintillant d'éléments en <TRADEABLE>zinc<> et en <VAL_ON>antimoine<>, explose en un amas de rubans qui se dispersent en décrivant des spirales. Allumez-les pour illuminer les cieux de figures scintillantes.\n\nPlacez le tube de lancement depuis <VAL_ON>menu de construction<> (<IMG>BUILD_MENU<>). <FUEL>Attention<> : ne pas viser les créatures vivantes. Non recommandé pour un usage en intérieur.",
+    "BaseValueUnits": 60.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 20.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1116",
+    "Icon": "building/1116.png",
+    "Name": "Affiche signal brouillé",
+    "Group": "Décoration",
+    "Description": "Une œuvre d'art mural exclusive, adhésive et infroissable.\nCette affiche représente des fragments de nombreux signaux de communication longue distance entre les factions dominantes de l'univers.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1117",
+    "Icon": "building/1117.png",
+    "Name": "Affiche pièces de vaisseau",
+    "Group": "Décoration",
+    "Description": "Une œuvre d'art mural exclusive, adhésive et infroissable.\nCette affiche a été offerte par l'honnête vaisseau CommerGek Bakkar. Venez faire un tour à la boutique de composants pour vaisseau dès aujourd'hui ! Les amis auront droit à des réductions !",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1118",
+    "Icon": "building/1118.png",
+    "Name": "Affiche vente de pâtisseries",
+    "Group": "Décoration",
+    "Description": "Une œuvre d'art mural exclusive, adhésive et infroissable.\nCette affiche fait la publicité d'un assortiment de pains et gâteaux, parmi lesquels un petit pain croustillant et une pile de gaufrettes hantées encore chaudes.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
       }
     ],
     "StatBonuses": [],
