@@ -5625,8 +5625,7 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign1Reward",
-      "IsTwitchCampaign8Reward"
+      "IsTwitchCampaign1Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -22475,7 +22474,7 @@
     "Icon": "building/1065.png",
     "Name": "Рисунок «Колеоптерология»",
     "Group": "Украшение",
-    "Description": "Эксклюзивный размещаемый рисунок, добавляющий шарма базе.\nНа нем изображен подпрыгивающий в воздух огромный жук.",
+    "Description": "Эксклюзивный размещаемый рисунок, добавляющий шарма базе.\nНа нем изображен огромный жук, подпрыгивающий в воздух.",
     "BaseValueUnits": 400.0,
     "CurrencyType": "Quicksilver",
     "MaxStackSize": 5.0,
@@ -22846,13 +22845,14 @@
     "Icon": "building/1078.png",
     "Name": "Фейерверк «Красный титан»",
     "Group": "Расходуемое пиротехническое устройство",
-    "Description": "Экзотический фейерверк, содержащий соли <FUEL>кадмия<>. Вдохновлен подвижными формами титанических песчаных червей. Зажгите его, чтобы озарить небо мерцающими огнями.\n\nРазместите пусковую трубку с помощью <VAL_ON>меню созидания<>\n(<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
+    "Description": "Экзотический фейерверк, содержащий соли <FUEL>кадмия<>. Вдохновлен подвижными формами титанических песчаных червей. Зажгите его, чтобы озарить небо мерцающими огнями.\n\nРазместите пусковую трубку с помощью <VAL_ON>меню созидания<>(<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
     "BaseValueUnits": 60.0,
-    "CurrencyType": "None",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 20.0,
     "Colour": "262626",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -22867,13 +22867,14 @@
     "Icon": "building/1079.png",
     "Name": "Фейерверк «Золотой титан»",
     "Group": "Расходуемое пиротехническое устройство",
-    "Description": "Экзотический фейерверк, содержащий соли <COMMODITY>натрия<>. Вдохновлен подвижными формами титанических песчаных червей. Зажгите его, чтобы озарить небо мерцающими огнями.\n\nРазместите пусковую трубку с помощью <VAL_ON>меню созидания<>\n(<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
+    "Description": "Экзотический фейерверк, содержащий соли <COMMODITY>натрия<>. Вдохновлен подвижными формами титанических песчаных червей. Зажгите его, чтобы озарить небо мерцающими огнями.\n\nРазместите пусковую трубку с помощью <VAL_ON>меню созидания<>(<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
     "BaseValueUnits": 60.0,
-    "CurrencyType": "None",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 20.0,
     "Colour": "262626",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -22888,13 +22889,14 @@
     "Icon": "building/1080.png",
     "Name": "Фейерверк «Зеленый титан»",
     "Group": "Расходуемое пиротехническое устройство",
-    "Description": "Экзотический фейерверк, содержащий соли <TRADEABLE>эмерила<>. Вдохновлен подвижными формами титанических песчаных червей. Зажгите его, чтобы озарить небо мерцающими огнями.\n\nРазместите пусковую трубку с помощью <VAL_ON>меню созидания<>\n(<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
+    "Description": "Экзотический фейерверк, содержащий соли <TRADEABLE>эмерила<>. Вдохновлен подвижными формами титанических песчаных червей. Зажгите его, чтобы озарить небо мерцающими огнями.\n\nРазместите пусковую трубку с помощью <VAL_ON>меню созидания<>(<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
     "BaseValueUnits": 60.0,
-    "CurrencyType": "None",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 20.0,
     "Colour": "262626",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -23057,6 +23059,803 @@
       {
         "Id": "raw9",
         "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1087",
+    "Icon": "building/1087.png",
+    "Name": "Защищенный архив",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1088",
+    "Icon": "building/1088.png",
+    "Name": "Бак с топливом",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1089",
+    "Icon": "building/1089.png",
+    "Name": "Орбитальное хранилище",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1090",
+    "Icon": "building/1090.png",
+    "Name": "Складская конструкция",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1091",
+    "Icon": "building/1091.png",
+    "Name": "Голостенд геков",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1092",
+    "Icon": "building/1092.png",
+    "Name": "Голостенд корваксов",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1093",
+    "Icon": "building/1093.png",
+    "Name": "Голостенд вай'кинов",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1094",
+    "Icon": "building/1094.png",
+    "Name": "Настенный голодисплей «A»",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1095",
+    "Icon": "building/1095.png",
+    "Name": "Настенный голодисплей «B»",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1096",
+    "Icon": "building/1096.png",
+    "Name": "Малый голостенд «A»",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1097",
+    "Icon": "building/1097.png",
+    "Name": "Малый голостенд «B»",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1098",
+    "Icon": "building/1098.png",
+    "Name": "Малый голостенд «C»",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1099",
+    "Icon": "building/1099.png",
+    "Name": "Каркасное освещение",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1100",
+    "Icon": "building/1100.png",
+    "Name": "Световой массив",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1101",
+    "Icon": "building/1101.png",
+    "Name": "Цокольная подсветка",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1102",
+    "Icon": "building/1102.png",
+    "Name": "Столбовое освещение",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1103",
+    "Icon": "building/1103.png",
+    "Name": "Биоящик",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1104",
+    "Icon": "building/1104.png",
+    "Name": "Малая кадка",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1105",
+    "Icon": "building/1105.png",
+    "Name": "Серверный шкаф «A»",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1106",
+    "Icon": "building/1106.png",
+    "Name": "Серверный шкаф «B»",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1107",
+    "Icon": "building/1107.png",
+    "Name": "Шкаф обработки данных",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1108",
+    "Icon": "building/1108.png",
+    "Name": "Электротрансформатор",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1109",
+    "Icon": "building/1109.png",
+    "Name": "Гидравлические манипуляторы",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 10.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 10,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1110",
+    "Icon": "building/1110.png",
+    "Name": "Стоячий знак",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1111",
+    "Icon": "building/1111.png",
+    "Name": "Стоячий знак «B»",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1112",
+    "Icon": "building/1112.png",
+    "Name": "Топографический стол",
+    "Group": "Декоративная имитация космической станции",
+    "Description": "<STELLAR>Декоративный элемент<> для использования на обитаемых базах.\n\nВыполнен в стиле одной из множества <TECHNOLOGY>космический станций<> во вселенной.",
+    "BaseValueUnits": 8.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 8,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1113",
+    "Icon": "building/1113.png",
+    "Name": "Фейерверк «Пурпурные ленты»",
+    "Group": "Расходуемое пиротехническое устройство",
+    "Description": "Экзотический фейерверк, в котором блестят частицы <SPECIAL>атлантидия<> и <VAL_ON>сурьмы<>, взрывается и разбрасывает кружащиеся ленты. Зажгите его, чтобы озарить небо мерцающими огнями.\n\nРазместите пусковую трубку с помощью <VAL_ON>меню созидания<> (<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
+    "BaseValueUnits": 60.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 20.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1114",
+    "Icon": "building/1114.png",
+    "Name": "Фейерверк «Синие ленты»",
+    "Group": "Расходуемое пиротехническое устройство",
+    "Description": "Экзотический фейерверк, в котором блестят частицы <TECHNOLOGY>индия<> и <VAL_ON>сурьмы<>, взрывается и разбрасывает кружащиеся ленты. Зажгите его, чтобы озарить небо мерцающими огнями.\n\nРазместите пусковую трубку с помощью <VAL_ON>меню созидания<> (<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
+    "BaseValueUnits": 60.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 20.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1115",
+    "Icon": "building/1115.png",
+    "Name": "Фейерверк «Бирюзовые ленты»",
+    "Group": "Расходуемое пиротехническое устройство",
+    "Description": "Экзотический фейерверк, в котором блестят частицы <TRADEABLE>цинка<> и <VAL_ON>сурьмы<>, взрывается и разбрасывает кружащиеся ленты. Зажгите его, чтобы озарить небо мерцающими огнями.\n\nРазместите пусковую трубку с помощью <VAL_ON>меню созидания<> (<IMG>BUILD_MENU<>). <FUEL>Внимание<>: не нацеливайте на живых существ. Не рекомендуется использовать в помещениях.",
+    "BaseValueUnits": 60.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 20.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1116",
+    "Icon": "building/1116.png",
+    "Name": "Плакат «Зашифрованный сигнал»",
+    "Group": "Украшение",
+    "Description": "Эксклюзивные самоклеящиеся несминаемые обои.\nНа этом плакате изображены фрагменты множества сигналов дальней связи между основными фракциями вселенной.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1117",
+    "Icon": "building/1117.png",
+    "Name": "Плакат «Детали корабля»",
+    "Group": "Украшение",
+    "Description": "Эксклюзивные самоклеящиеся несминаемые обои.\nЭтот плакат был подарен честным корабельным геком-торговцем Баккаром. Загляните в его магазин компонентов звездолетов прямо сегодня! Друзьям лучшие цены!",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1118",
+    "Icon": "building/1118.png",
+    "Name": "Плакат «Продажа выпечки»",
+    "Group": "Украшение",
+    "Description": "Эксклюзивные самоклеящиеся несминаемые обои.\nЭтот плакат рекламирует разнообразную выпечку, включая хлебный рулет с корочкой и призрачные вафли.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
       }
     ],
     "StatBonuses": [],

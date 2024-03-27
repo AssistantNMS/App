@@ -23,7 +23,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v1
         with:
           channel: 'stable' # 'stable', 'beta', 'dev' or 'master'
@@ -38,7 +38,7 @@ jobs:
         run: dart scripts\platform_type_on.dart
 
       - name: Build Windows release version
-        run: flutter build windows --release
+        run: flutter build windows -t lib/prod.dart --release
 
       - name: Building the installer
         shell: cmd

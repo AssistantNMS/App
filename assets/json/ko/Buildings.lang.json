@@ -5625,8 +5625,7 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign1Reward",
-      "IsTwitchCampaign8Reward"
+      "IsTwitchCampaign1Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -22848,11 +22847,12 @@
     "Group": "소모형 불꽃놀이 장치",
     "Description": "<FUEL>카드뮴<> 소금으로 색을 낸 이 이국적인 불꽃놀이는 꿈틀거리는 타이탄 샌드웜 모습에서 영감을 받았습니다. 점화시키면 하늘에 광채를 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관에 배치하십시오. <FUEL>경고<>: 살아있는 생물체를 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
     "BaseValueUnits": 60.0,
-    "CurrencyType": "None",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 20.0,
     "Colour": "262626",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -22869,11 +22869,12 @@
     "Group": "소모형 불꽃놀이 장치",
     "Description": "<COMMODITY>나트륨<> 소금으로 색을 낸 이 이국적인 불꽃놀이는 꿈틀거리는 타이탄 샌드웜 모습에서 영감을 받았습니다. 점화시키면 하늘에 광채를 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관에 배치하십시오. <FUEL>경고<>: 살아있는 생물체를 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
     "BaseValueUnits": 60.0,
-    "CurrencyType": "None",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 20.0,
     "Colour": "262626",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -22890,11 +22891,12 @@
     "Group": "소모형 불꽃놀이 장치",
     "Description": "<TRADEABLE>에메릴<> 소금으로 색을 낸 이 이국적인 불꽃놀이는 꿈틀거리는 타이탄 샌드웜 모습에서 영감을 받았습니다. 점화시키면 하늘에 광채를 수놓습니다.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관에 배치하십시오. <FUEL>경고<>: 살아있는 생물체를 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
     "BaseValueUnits": 60.0,
-    "CurrencyType": "None",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 20.0,
     "Colour": "262626",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -23057,6 +23059,803 @@
       {
         "Id": "raw9",
         "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1087",
+    "Icon": "building/1087.png",
+    "Name": "보안 기록 보관소",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1088",
+    "Icon": "building/1088.png",
+    "Name": "연료통",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1089",
+    "Icon": "building/1089.png",
+    "Name": "궤도 보관소",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1090",
+    "Icon": "building/1090.png",
+    "Name": "보관소 프레임",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1091",
+    "Icon": "building/1091.png",
+    "Name": "홀로그램 겍 디스플레이",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1092",
+    "Icon": "building/1092.png",
+    "Name": "홀로그램 코백스 디스플레이",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1093",
+    "Icon": "building/1093.png",
+    "Name": "홀로그램 바이-킨 디스플레이",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1094",
+    "Icon": "building/1094.png",
+    "Name": "홀로그램 벽면 디스플레이 A",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1095",
+    "Icon": "building/1095.png",
+    "Name": "홀로그램 벽면 디스플레이 B",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1096",
+    "Icon": "building/1096.png",
+    "Name": "소형 홀로그램 디스플레이 A",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1097",
+    "Icon": "building/1097.png",
+    "Name": "소형 홀로그램 디스플레이 B",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1098",
+    "Icon": "building/1098.png",
+    "Name": "소형 홀로그램 디스플레이 C",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1099",
+    "Icon": "building/1099.png",
+    "Name": "프레임 조명",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1100",
+    "Icon": "building/1100.png",
+    "Name": "조명 어레이",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1101",
+    "Icon": "building/1101.png",
+    "Name": "받침 조명",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1102",
+    "Icon": "building/1102.png",
+    "Name": "기둥 조명",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1103",
+    "Icon": "building/1103.png",
+    "Name": "바이오 상자",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1104",
+    "Icon": "building/1104.png",
+    "Name": "소형 화분",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1105",
+    "Icon": "building/1105.png",
+    "Name": "서버 블록 A",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1106",
+    "Icon": "building/1106.png",
+    "Name": "서버 블록 B",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1107",
+    "Icon": "building/1107.png",
+    "Name": "데이터 캐비닛",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1108",
+    "Icon": "building/1108.png",
+    "Name": "전력 변압기",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1109",
+    "Icon": "building/1109.png",
+    "Name": "유압식 팔",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 10.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 10,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1110",
+    "Icon": "building/1110.png",
+    "Name": "우호도 간판",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1111",
+    "Icon": "building/1111.png",
+    "Name": "우호도 간판 B",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1112",
+    "Icon": "building/1112.png",
+    "Name": "지형 테이블",
+    "Group": "합성 우주정거장 장식",
+    "Description": "거주 가능한 기지용으로 설계된 <STELLAR>장식 부품<>입니다.\n\n이 부품은 우주에 있는 여러 <TECHNOLOGY>우주정거장<> 중 하나의 스타일로 제작되었습니다.",
+    "BaseValueUnits": 8.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 8,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1113",
+    "Icon": "building/1113.png",
+    "Name": "보라색 리본 폭죽",
+    "Group": "소모형 불꽃놀이 장치",
+    "Description": "<SPECIAL>아틀란티디움<>과 <VAL_ON>안티몬<> 원소로 반짝거리는 이 이색적인 폭죽은 힘차게 나선형 리본 형태를 이루며 불꽃을 뿜어냅니다. 불을 붙여 하늘에 광채를 수놓으십시오.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "BaseValueUnits": 60.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 20.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1114",
+    "Icon": "building/1114.png",
+    "Name": "파란색 리본 폭죽",
+    "Group": "소모형 불꽃놀이 장치",
+    "Description": "<TECHNOLOGY>인듐<>과 <VAL_ON>안티몬<> 원소로 반짝거리는 이 이색적인 폭죽은 힘차게 나선형 리본 형태를 이루며 불꽃을 뿜어냅니다. 불을 붙여 하늘에 광채를 수놓으십시오.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "BaseValueUnits": 60.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 20.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1115",
+    "Icon": "building/1115.png",
+    "Name": "청록색 리본 폭죽",
+    "Group": "소모형 불꽃놀이 장치",
+    "Description": "<TRADEABLE>아연<>과 <VAL_ON>안티몬<> 원소로 반짝거리는 이 이색적인 폭죽은 힘차게 나선형 리본 형태를 이루며 불꽃을 뿜어냅니다. 불을 붙여 하늘에 광채를 수놓으십시오.\n\n<VAL_ON>건설 메뉴<>(<IMG>BUILD_MENU<>)를 통해 발사관을 배치하십시오. <FUEL>경고<>: 살아있는 생물체에게 겨냥하지 마십시오. 실내에서의 사용은 권장하지 않습니다.",
+    "BaseValueUnits": 60.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 20.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1116",
+    "Icon": "building/1116.png",
+    "Name": "변환된 신호 포스터",
+    "Group": "장식",
+    "Description": "자체 접착식, 구겨짐 방지 처리된 독점 벽면 예술입니다.\n우주의 우세한 세력 간에 보낸 수많은 장거리 통신 신호의 단편을 나타낸 포스터입니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1117",
+    "Icon": "building/1117.png",
+    "Name": "함선 부품 포스터",
+    "Group": "장식",
+    "Description": "자체 접착식, 구겨짐 방지 처리된 독점 벽면 예술입니다.\n정직한 함선 세일즈겍 바카르에서 기증한 포스터입니다. 지금 함선 부품 매장을 방문하십시오! 최고의 친구, 최고의 가격!",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1118",
+    "Icon": "building/1118.png",
+    "Name": "빵 판매 포스터",
+    "Group": "장식",
+    "Description": "자체 접착식 주름 방지 벽 예술 작품입니다.\n바삭한 롤빵과 갓 구운 귀신 들린 웨이퍼를 비롯한 다양한 제과제빵 상품을 광고하는 포스터입니다.",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
       }
     ],
     "StatBonuses": [],
