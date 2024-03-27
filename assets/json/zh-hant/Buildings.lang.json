@@ -5625,8 +5625,7 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsTwitchCampaign1Reward",
-      "IsTwitchCampaign8Reward"
+      "IsTwitchCampaign1Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -22848,11 +22847,12 @@
     "Group": "消耗型煙火表演裝置",
     "Description": "這套奇特的煙火帶有<FUEL>鎘<>鹽的色彩，\n靈感來自巨大沙蟲的蜿蜒身形。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。\n<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
     "BaseValueUnits": 60.0,
-    "CurrencyType": "None",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 20.0,
     "Colour": "262626",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -22869,11 +22869,12 @@
     "Group": "消耗型煙火表演裝置",
     "Description": "這套奇特的煙火帶有<COMMODITY>鈉<>鹽的色彩，\n靈感來自巨大沙蟲的蜿蜒身形。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。\n<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
     "BaseValueUnits": 60.0,
-    "CurrencyType": "None",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 20.0,
     "Colour": "262626",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -22890,11 +22891,12 @@
     "Group": "消耗型煙火表演裝置",
     "Description": "這套特異的煙火帶有<TRADEABLE>砪<>鹽的色彩，\n靈感來自巨大沙蟲的蜿蜒身形。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。\n<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
     "BaseValueUnits": 60.0,
-    "CurrencyType": "None",
+    "CurrencyType": "Quicksilver",
     "MaxStackSize": 20.0,
     "Colour": "262626",
     "Usages": [
       "HasDevProperties",
+      "IsQuicksilver",
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
@@ -23057,6 +23059,803 @@
       {
         "Id": "raw9",
         "Quantity": 10
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1087",
+    "Icon": "building/1087.png",
+    "Name": "保全資料庫",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1088",
+    "Icon": "building/1088.png",
+    "Name": "燃料罐",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1089",
+    "Icon": "building/1089.png",
+    "Name": "軌道倉儲",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1090",
+    "Icon": "building/1090.png",
+    "Name": "置物架",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1091",
+    "Icon": "building/1091.png",
+    "Name": "全像吉客族顯示器",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1092",
+    "Icon": "building/1092.png",
+    "Name": "全像科瓦族顯示器",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1093",
+    "Icon": "building/1093.png",
+    "Name": "全像維金族顯示器",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1094",
+    "Icon": "building/1094.png",
+    "Name": "全像壁掛顯示器 A",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1095",
+    "Icon": "building/1095.png",
+    "Name": "全像壁掛顯示器 B",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1096",
+    "Icon": "building/1096.png",
+    "Name": "小型全像顯示器 A",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1097",
+    "Icon": "building/1097.png",
+    "Name": "小型全像顯示器 B",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1098",
+    "Icon": "building/1098.png",
+    "Name": "小型全像顯示器 C",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 2.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1099",
+    "Icon": "building/1099.png",
+    "Name": "照明架",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1100",
+    "Icon": "building/1100.png",
+    "Name": "照明陣列",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1101",
+    "Icon": "building/1101.png",
+    "Name": "基座燈",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1102",
+    "Icon": "building/1102.png",
+    "Name": "立柱燈",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1103",
+    "Icon": "building/1103.png",
+    "Name": "生物箱",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1104",
+    "Icon": "building/1104.png",
+    "Name": "小型種植器",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1105",
+    "Icon": "building/1105.png",
+    "Name": "伺服器區塊 A",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1106",
+    "Icon": "building/1106.png",
+    "Name": "伺服器區塊 B",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1107",
+    "Icon": "building/1107.png",
+    "Name": "資料櫃",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1108",
+    "Icon": "building/1108.png",
+    "Name": "電力變壓器",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 5.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 5,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1109",
+    "Icon": "building/1109.png",
+    "Name": "液壓機械臂",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 10.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 10,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1110",
+    "Icon": "building/1110.png",
+    "Name": "立牌",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1111",
+    "Icon": "building/1111.png",
+    "Name": "立牌 B",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 3.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 3,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1112",
+    "Icon": "building/1112.png",
+    "Name": "地形圖桌",
+    "Group": "合成太空站裝飾",
+    "Description": "可用於居住基地的<STELLAR>裝飾零件<>。\n\n該元件是依照宇宙中眾多<TECHNOLOGY>太空站<>的風格製造而成。",
+    "BaseValueUnits": 8.0,
+    "CurrencyType": "None",
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 8,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw9",
+        "Quantity": 5
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1113",
+    "Icon": "building/1113.png",
+    "Name": "紫絲帶煙火",
+    "Group": "消耗型煙火表演裝置",
+    "Description": "這種充滿異國風情的煙火會綻放為成簇狂亂旋轉的絲帶，並帶有<SPECIAL>亞特蘭提德鋼<>與<VAL_ON>銻<>元素的光輝。點燃即可在天空中創造出絢爛效果。\n\n從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 60.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 20.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1114",
+    "Icon": "building/1114.png",
+    "Name": "藍絲帶煙火",
+    "Group": "消耗型煙火表演裝置",
+    "Description": "這種充滿異國風情的煙火會綻放為成簇狂亂旋轉的絲帶，並帶有<TECHNOLOGY>銦<>與<VAL_ON>銻<>元素的光輝。點燃即可在天空中創造出絢爛效果。\n\n從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 60.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 20.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1115",
+    "Icon": "building/1115.png",
+    "Name": "青絲帶煙火",
+    "Group": "消耗型煙火表演裝置",
+    "Description": "這種充滿異國風情的煙火會綻放為成簇狂亂旋轉的絲帶，並帶有<TRADEABLE>鋅<>與<VAL_ON>銻<>元素的光輝。點燃即可在天空中創造出絢爛效果。\n\n從<VAL_ON>建造選單<> (<IMG>BUILD_MENU<>) 放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 60.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 20.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1116",
+    "Icon": "building/1116.png",
+    "Name": "鎖碼訊號海報",
+    "Group": "裝飾",
+    "Description": "獨特的自黏防皺牆面藝術作品。\n這張海報呈現宇宙主要陣營間眾多長途通訊的訊號碎片。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1117",
+    "Icon": "building/1117.png",
+    "Name": "太空船零件海報",
+    "Group": "裝飾",
+    "Description": "獨特的自黏防皺牆面藝術作品。\n這張海報由榮譽號吉客族銷售員的巴卡爾捐贈。立即前往太空船元件商店！親友有優惠價！",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "build1118",
+    "Icon": "building/1118.png",
+    "Name": "糕點義賣海報",
+    "Group": "裝飾",
+    "Description": "獨特的自黏防皺牆面藝術作品。\n這張海報宣傳各式糕點，包括酥皮圓麵包，及成堆令人魂牽夢縈的新鮮威化餅。",
+    "BaseValueUnits": 400.0,
+    "CurrencyType": "Quicksilver",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsQuicksilver",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 25
       }
     ],
     "StatBonuses": [],

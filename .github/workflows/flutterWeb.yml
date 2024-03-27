@@ -10,10 +10,8 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 on:
+  workflow_dispatch:
   push:
     branches: ['main']
 
@@ -25,10 +23,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v1
         with:
-          channel: 'master' # or: 'beta', 'dev' or 'master'
+          channel: 'stable' # 'stable', 'beta', 'dev' or 'master'
 
       - name: Write env file
         env:
@@ -39,7 +37,7 @@ jobs:
       - name: Enable web
         run: flutter config --enable-web
 
-      - name: Build release version
+      - name: Build Web release version
         run: flutter build web -t lib/prod.dart --release
 
       - name: Upload artifact
