@@ -117,7 +117,8 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
         widgets.add(GenericItemDescription(
           getTranslations().fromKey(LocaleKey.nomNomCollaborationDesc),
         ));
-        widgets.add(const LocalImage(imagePath: AppImage.nomNomHeader));
+        // widgets.add(const LocalImage(imagePath: AppImage.nomNomHeader));
+        widgets.add(const EmptySpace2x());
         widgets.add(const EmptySpace2x());
         widgets.add(PositiveButton(
           title: getTranslations().fromKey(LocaleKey.instructions),
@@ -191,7 +192,7 @@ class _SyncWithNomNomBottomSheetState extends State<SyncWithNomNomBottomSheet> {
         return AnimatedSize(
           duration: AppDuration.modal,
           child: Container(
-            constraints: modalDefaultSize(context),
+            constraints: modalFullHeightSize(context),
             child: ListView.builder(
               padding: NMSUIConstants.buttonPadding,
               itemCount: widgets.length,
