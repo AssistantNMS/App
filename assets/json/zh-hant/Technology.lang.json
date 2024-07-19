@@ -3073,7 +3073,7 @@
     "Icon": "technology/81.png",
     "Name": "炮彈上油器",
     "Group": "雙管霰彈槍升級",
-    "Description": "先進的自潤滑元件，可減少<TECHNOLOGY>雙管霰彈槍<>的內部摩擦，顯著提升<STELLAR>裝彈時間<>。",
+    "Description": "先進的自潤式元件可減少<TECHNOLOGY>雙管霰彈槍<>內部的摩擦，有效縮短<STELLAR>裝填彈藥時間<>。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "波形引擎",
     "Group": "高度客製化太空船引擎",
-    "Description": "經高度調整的常規太空船<TECHNOLOGY>脈衝引擎<>。波陣面使用率已達到極限，可產生<STELLAR>高效率<>與<STELLAR>高響應<>的脈衝事件。\n\n提醒使用者，驅動器需使用<EXOTIC>氚<>充能。在<COMMODITY>近太空的小行星帶<>可以找到大量氚。掃描 (<IMG>SCAN<>) 即可找尋<TECHNOLOGY>富含氚的小行星<>。\n\n按住 <IMG>PULSEJUMP<> 發動脈衝跳躍。按住 <IMG>BOOST<> 啟動飛行加速功能。",
+    "Description": "經高度調整的常規太空船<TECHNOLOGY>脈衝引擎<>。波陣面使用率已達到極限，可產生<STELLAR>高效率<>與<STELLAR>高響應<>的脈衝事件。\n\n提醒使用者，驅動器需使用<EXOTIC>氚<>充能。<COMMODITY>近太空的小行星帶<>內有大量的氚。掃描 (<IMG>SHIPSCAN<>) 即可找尋<TECHNOLOGY>富含氚的小行星<>。\n\n按住 <IMG>PULSEJUMP<> 發動脈衝跳躍。按住 <IMG>BOOST<> 啟動飛行加速功能。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -9781,6 +9781,268 @@
       }
     ],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech270",
+    "Icon": "technology/270.png",
+    "Name": "水流噴射器",
+    "Group": "水上降落系統",
+    "Description": "太空船<TECHNOLOGY>降落系統<>的進階升級，有助太空船在水面降落和起飛。\n\n訂製的噴射器和重新導向排氣扇組合，讓太空船可以<STELLAR>懸浮<>在水面。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod1",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech271",
+    "Icon": "technology/271.png",
+    "Name": "鹽水甲殼",
+    "Group": "感知太空船節點",
+    "Description": "太空船外包覆的一層阻鹽薄膜，可大幅增加船身的自然浮力。\n\n甲殼有助太空船<TECHNOLOGY>漂浮<>，實現<STELLAR>水上降落<>。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur18",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur19",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech272",
+    "Icon": "technology/272.png",
+    "Name": "清算人左臂",
+    "Group": "彌諾陶洛斯四肢替換零件",
+    "Description": "清算人是一種尖端耐用戰鬥機體，為<TECHNOLOGY>彌諾陶洛斯<>重型混合強化艇的升級，專為在最嚴苛的環境中運作而設計。\n\n此肢體覆寫能夠充當<STELLAR>專用戰鬥系統<>。會部署高速的<TECHNOLOGY>暈眩射彈<>，是彌諾陶洛斯主砲的絕佳輔助武器，非常適合在迫近距離時，將敵對者凍結在原地。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "傷害",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "武器能量效率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "射速",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech273",
+    "Icon": "technology/273.png",
+    "Name": "清算人右臂",
+    "Group": "彌諾陶洛斯四肢替換零件",
+    "Description": "清算人是一種尖端耐用戰鬥機體，為<TECHNOLOGY>彌諾陶洛斯<>重型混合強化艇的升級，專為在最嚴苛的環境中運作而設計。\n\n此肢體覆寫能夠充當<STELLAR>專用戰鬥系統<>，在近距離發揮<TECHNOLOGY>火焰噴射器<>的極大破壞力。\n\n使用 <IMG>CYCLEWEAPON<> 切換可用的武器模式。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod19",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "傷害",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "武器能量效率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "射速",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "衝擊點火",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "衝擊火焰持續時間",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "衝擊火焰傷害",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech274",
+    "Icon": "technology/274.png",
+    "Name": "清算人雙腿",
+    "Group": "彌諾陶洛斯四肢替換零件",
+    "Description": "清算人是一種尖端耐用戰鬥機體，為<TECHNOLOGY>彌諾陶洛斯<>重型混合強化艇的升級，專為在最嚴苛的環境中運作而設計。\n\n安裝後會顯著提升彌諾陶洛斯的<TECHNOLOGY>引擎和機動性<>系統。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "燃料使用",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "-10"
+      },
+      {
+        "Name": "加速槽尺寸",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech275",
+    "Icon": "technology/275.png",
+    "Name": "清算人軀體",
+    "Group": "彌諾陶洛斯四肢替換零件",
+    "Description": "清算人是一種尖端耐用戰鬥機體，為<TECHNOLOGY>彌諾陶洛斯<>重型混合強化艇的升級，專為在最嚴苛的環境中運作而設計。\n\n可作為半自主的<TECHNOLOGY>人工駕駛員外掛程式<>使用。安裝後能讓彌諾陶洛斯<STELLAR>獨自穿越星球<>並進行<STELLAR>戰鬥<>或者<STELLAR>採礦<>活動，以支援其主要操作員。\n\n主要操作員進入駕駛艙後，人工駕駛員將會交付控制權。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur2",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "彌諾陶洛斯人工智慧駕駛員",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

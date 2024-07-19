@@ -114,9 +114,10 @@ class CommunityMissionExtraData extends StatelessWidget {
                 launchExternalURL(NmsExternalUrls.communityMissionProgress),
           ));
 
-          bool isCurrentlyComplete =
-              (status == CommunityMissionStatus.current && percentage > 99);
-          if (status == CommunityMissionStatus.past || isCurrentlyComplete) {
+          // bool isCurrentlyComplete =
+          //     (status == CommunityMissionStatus.current && percentage > 99);
+          // if (status == CommunityMissionStatus.past || isCurrentlyComplete) {
+          if (status == CommunityMissionStatus.past) {
             widgets.add(ListTile(
               title: Text(getTranslations().fromKey(LocaleKey.endDate)),
               subtitle: Text(_getDateTimeString(pageData.endDateRecorded)),

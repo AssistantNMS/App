@@ -3073,7 +3073,7 @@
     "Icon": "technology/81.png",
     "Name": "炸裂弾グリース",
     "Group": "スキャターブラスターアップグレード",
-    "Description": "高度な自己潤滑性コンポーネントが\n<TECHNOLOGY>スキャターブラスター<>内の摩擦を減少\nさせ、<STELLAR>リロード時間<>を大幅に改善する。",
+    "Description": "高度な自己潤滑性コンポーネントが<TECHNOLOGY>スキャターブラスター<>内の摩擦を減少させ、<STELLAR>リロード時間<>を大幅に改善する。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "波形エンジン",
     "Group": "高カスタム宇宙船エンジン",
-    "Description": "従来の宇宙船の<TECHNOLOGY>パルスドライブ<>を高度にチューニングしたもの。波面占有率を極限まで高め、<STELLAR>効率の良さ<>と<STELLAR>応答性の高さ<>を両立させたパルスを実現する\n\nパルスドライブのチャージには<EXOTIC>三重水素<>が必要。 三重水素は<COMMODITY>宇宙近くの小惑星<>で豊富に存在している。スキャン（<IMG>SCAN<>）で<TECHNOLOGY>三重水素が豊富な小惑星<>が探せる。\n\n<IMG>PULSEJUMP<>を長押しでパルスジャンプ。<IMG>BOOST<>を長押しするとフライト速度を加速できる。",
+    "Description": "従来の宇宙船の<TECHNOLOGY>パルスドライブ<>を高度にチューニングしたもの。波面占有率を極限まで高め、<STELLAR>効率の良さ<>と<STELLAR>応答性の高さ<>を両立させたパルスを実現する\n\nパルスドライブのチャージには<EXOTIC>三重水素<>が必要。 三重水素は<COMMODITY>宇宙近くの小惑星<>で豊富に存在している。スキャン（<IMG>SHIPSCAN<>）で<TECHNOLOGY>三重水素が豊富な小惑星<>が探せる。\n\n<IMG>PULSEJUMP<>を長押しでパルスジャンプ。<IMG>BOOST<>を長押しするとフライト速度を加速できる。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -9781,6 +9781,268 @@
       }
     ],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech270",
+    "Icon": "technology/270.png",
+    "Name": "アクアジェット",
+    "Group": "水上着陸システム",
+    "Description": "宇宙船の<TECHNOLOGY>着陸システム<>の高度なアップグレード。船が水面から離着陸できるようになる。\n\n特注のジェット機関と方向を変えた排気ファンを組み合わせることで、船は水面の直上で<STELLAR>ホバリング<>できる。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod1",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech271",
+    "Icon": "technology/271.png",
+    "Name": "塩の外殻",
+    "Group": "知性をもつ船のノード",
+    "Description": "塩分の多い膜が船を包み込み、船本来の浮力を劇的に高める。\n\n外殻によって船が<TECHNOLOGY>浮き<>、<STELLAR>水上着陸<>が可能になる。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur18",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur19",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech272",
+    "Icon": "technology/272.png",
+    "Name": "始末屋の左腕",
+    "Group": "ミノタウロスの四肢の代替品",
+    "Description": "<TECHNOLOGY>ミノタウロス<>・ヘビー・エクソクラフト・ハイブリッドのアップグレードである始末屋は、どんな過酷な環境でも動作するように設計された、最新の重装甲戦闘ユニットである。\n\nこのリムオーバーライドは<STELLAR>専用の戦闘システム<>としても機能する。<TECHNOLOGY>高速スタン飛翔体<>を展開するので、近距離まで進みながら敵を釘付けするのに最適。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "ダメージ",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "武器動力の効率性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "発射速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech273",
+    "Icon": "technology/273.png",
+    "Name": "始末屋の右腕",
+    "Group": "ミノタウロスの四肢の代替品",
+    "Description": "<TECHNOLOGY>ミノタウロス<>・ヘビー・エクソクラフト・ハイブリッドのアップグレードである始末屋は、どんな過酷な環境でも動作するように設計された、最新の重装甲戦闘ユニットである。\n\nこのリムオーバーライドは<STELLAR>専用の戦闘システム<>（近接距離で大ダメージを与える<TECHNOLOGY>火炎放射器<>）としても機能する。\n\n<IMG>CYCLEWEAPON<>を使用すると、使用可能な武器モードが切り替わる。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod19",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "ダメージ",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "武器動力の効率性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "発射速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "着弾後点火",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "着弾火災の持続時間",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "着弾火災のダメージ",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech274",
+    "Icon": "technology/274.png",
+    "Name": "始末屋の脚",
+    "Group": "ミノタウロスの四肢の代替品",
+    "Description": "<TECHNOLOGY>ミノタウロス<>・ヘビー・エクソクラフト・ハイブリッドのアップグレードである始末屋は、どんな過酷な環境でも動作するように設計された、最新の重装甲戦闘ユニットである。\n\nインストールすると、ミノタウロスの<TECHNOLOGY>エンジンと機動性<>システムが大幅に向上する。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "燃料消費",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "-10"
+      },
+      {
+        "Name": "ブーストタンクサイズ",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech275",
+    "Icon": "technology/275.png",
+    "Name": "始末屋の体",
+    "Group": "ミノタウロスの四肢の代替品",
+    "Description": "<TECHNOLOGY>ミノタウロス<>・ヘビー・エクソクラフト・ハイブリッドのアップグレードである始末屋は、どんな過酷な環境でも動作するように設計された、最新の重装甲戦闘ユニットである。\n\n半自律型<TECHNOLOGY>人工パイロットプラグイン<>として機能する。インストールすると、ミノタウロスは自分で<STELLAR>惑星を横断<>し、<STELLAR>戦闘<>または<STELLAR>採掘<>活動に従事してメインオペレーターを支援する。\n\nメインオペレーターがコクピットに入ると、AIパイロットが常にコントロールを譲る。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur2",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "ミノタウロスAIパイロット",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]
