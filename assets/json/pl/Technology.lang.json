@@ -9782,5 +9782,267 @@
     ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech270",
+    "Icon": "technology/270.png",
+    "Name": "Pędniki wodne",
+    "Group": "Wodny system lądowania",
+    "Description": "Zaawansowane ulepszenie <TECHNOLOGY>systemu lądowania<> statku, umożliwiające lądowanie i startowanie z powierzchni wodnych.\n\nZestaw specjalnych dysz i ustawianych wentylatorów wydechowych pozwala statkowi <STELLAR>unosić się<> tuż nad powierzchnią wody.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod1",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech271",
+    "Icon": "technology/271.png",
+    "Name": "Powłoka solna",
+    "Group": "Węzeł świadomego statku",
+    "Description": "Słona membrana otacza statek, znacznie zwiększając jego naturalną wyporność.\n\nPowłoka pozwoli statkowi <TECHNOLOGY>pływać<>, umożliwiając <STELLAR>lądowanie na wodzie<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur18",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur19",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech272",
+    "Icon": "technology/272.png",
+    "Name": "Lewe ramię Likwidatora",
+    "Group": "Zamienna kończyna Minotaura",
+    "Description": "Likwidator – ulepszenie ciężkiego hybrydowego egzopojazdu <TECHNOLOGY>Minotaur<> –  to najnowocześniejsza, wytrzymała jednostka bojowa, zaprojektowana do działania w najtrudniejszych warunkach.\n\nTo wymienne ramię działa jako oddzielny <STELLAR>wyspecjalizowany system bojowy<>. Wystrzeliwuje z dużą prędkością <TECHNOLOGY>pociski ogłuszające<>, idealne do utrzymywania wrogów w miejscu w trakcie zmniejszania dystansu.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Obrażenia",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Wydajność mocy uzbrojenia",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "Szybkostrzelność",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech273",
+    "Icon": "technology/273.png",
+    "Name": "Prawe ramię Likwidatora",
+    "Group": "Zamienna kończyna Minotaura",
+    "Description": "Likwidator – ulepszenie ciężkiego hybrydowego egzopojazdu <TECHNOLOGY>Minotaur<> –  to najnowocześniejsza, wytrzymała jednostka bojowa, zaprojektowana do działania w najtrudniejszych warunkach.\n\nTo wymienne ramię działa jako oddzielny <STELLAR>wyspecjalizowany system bojowy<> – <TECHNOLOGY>miotacz ognia<> zadający ogromne obrażenia z bliskiej odległości.\n\nUżyj <IMG>CYCLEWEAPON<>, by przełączać się między dostępnymi trybami broni.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod19",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Obrażenia",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "Wydajność mocy uzbrojenia",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "Szybkostrzelność",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "Podpalenie po uderzeniu",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "Czas trwania podpalenia",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "Obrażenia od podpalenia",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech274",
+    "Icon": "technology/274.png",
+    "Name": "Nogi Likwidatora",
+    "Group": "Zamienna kończyna Minotaura",
+    "Description": "Likwidator – ulepszenie ciężkiego hybrydowego egzopojazdu <TECHNOLOGY>Minotaur<> –  to najnowocześniejsza, wytrzymała jednostka bojowa, zaprojektowana do działania w najtrudniejszych warunkach.\n\nPo instalacji <TECHNOLOGY>silnik i mobilność<> Minotaura zostaną znacznie poprawione.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Zużycie paliwa",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "-10"
+      },
+      {
+        "Name": "Wielkość zbiornika dopalacza",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech275",
+    "Icon": "technology/275.png",
+    "Name": "Korpus Likwidatora",
+    "Group": "Zamienna kończyna Minotaura",
+    "Description": "Likwidator – ulepszenie ciężkiego hybrydowego egzopojazdu <TECHNOLOGY>Minotaur<> – to najnowocześniejsza, wytrzymała jednostka bojowa, zaprojektowana do działania w najtrudniejszych warunkach.\n\nFunkcjonuje jako półautonomiczna <TECHNOLOGY>wtyczka autopilota<>. Po instalacji Minotaur może <STELLAR>samodzielnie poruszać się po planetach<>, brać udział w <STELLAR>walce<> lub przeprowadzać <STELLAR>wydobycie<>, by wesprzeć swojego głównego operatora.\n\nPilot SI zawsze oddaje kontrolę nad pojazdem operatorowi, gdy ten wejdzie do kokpitu.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur2",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Pilot SI Minotaura",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
   }
 ]

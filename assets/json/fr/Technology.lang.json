@@ -9782,5 +9782,267 @@
     ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech270",
+    "Icon": "technology/270.png",
+    "Name": "Propulseurs aquatiques",
+    "Group": "Système d'amerrissage",
+    "Description": "Une amélioration avancée pour le <TECHNOLOGY>système d'atterrissage<> du vaisseau qui permet d'atterrir et de décoller sur des surfaces aquatiques.\n\nUne combinaison de propulseurs sur mesure et de ventilateurs d'échappement redirigés permet au vaisseau de <STELLAR>rester en vol stationnaire<> juste au-dessus de la surface de l'eau.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod1",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech271",
+    "Icon": "technology/271.png",
+    "Name": "Carapace saline",
+    "Group": "Nœud de vaisseau conscient",
+    "Description": "Une membrane salée enveloppe le vaisseau et augmente considérablement sa flottabilité naturelle.\n\nLa carapace permet au vaisseau de <TECHNOLOGY>flotter<>, ce qui rend possibles les <STELLAR>amerrissages<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur18",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur19",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech272",
+    "Icon": "technology/272.png",
+    "Name": "Bras gauche de Liquidateur",
+    "Group": "Membre de remplacement de Minotaure",
+    "Description": "Amélioration pour l'exonef lourd hybride du <TECHNOLOGY>Minotaure<>. Le Liquidateur est une unité de combat lourde à la pointe de la technologie, conçue pour intervenir dans les environnements les plus hostiles.\n\nCe membre piraté possède également son propre <STELLAR>système de combat dédié<>. Il déploie des <TECHNOLOGY>projectiles étourdissants<> à haute vitesse, parfaits pour immobiliser les ennemis le temps d'arriver au corps-à-corps.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Dégâts",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Puissance d'arme",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "Cadence de feu",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech273",
+    "Icon": "technology/273.png",
+    "Name": "Bras droit de Liquidateur",
+    "Group": "Membre de remplacement de Minotaure",
+    "Description": "Amélioration pour l'exonef lourd hybride du <TECHNOLOGY>Minotaure<>. Le Liquidateur est une unité de combat lourde à la pointe de la technologie, conçue pour intervenir dans les environnements les plus hostiles.\n\nCe membre piraté possède également son propre <STELLAR>système de combat dédié<> : un <TECHNOLOGY>lance-flamme<> qui inflige des dégâts considérables à courte portée.\n\nUtilisez <IMG>CYCLEWEAPON<> pour alterner entre les différents modes d'arme.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod19",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Dégâts",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "Puissance d'arme",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "Cadence de feu",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "Brûlure post-impact",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "Durée de la brûlure à l'impact",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "Dégâts de la brûlure à l'impact",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech274",
+    "Icon": "technology/274.png",
+    "Name": "Jambes de Liquidateur",
+    "Group": "Membre de remplacement de Minotaure",
+    "Description": "Amélioration pour l'exonef lourd hybride du <TECHNOLOGY>Minotaure<>. Le Liquidateur est une unité de combat lourde à la pointe de la technologie, conçue pour intervenir dans les environnements les plus hostiles.\n\nCette installation améliorera considérablement les systèmes de <TECHNOLOGY>moteur et de mobilité<> du Minotaure.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Utilisation du carburant",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "-10"
+      },
+      {
+        "Name": "Booster la taille du réservoir",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech275",
+    "Icon": "technology/275.png",
+    "Name": "Corps de Liquidateur",
+    "Group": "Membre de remplacement de Minotaure",
+    "Description": "Amélioration pour l'exonef lourd hybride du <TECHNOLOGY>Minotaure<>. Le Liquidateur est une unité de combat lourde à la pointe de la technologie, conçue pour intervenir dans les environnements les plus hostiles.\n\nFonctionne comme un <TECHNOLOGY>plug-in de pilote artificiel<> semi-autonome. Cette installation permet au Minotaure de <STELLAR>traverser des planètes de manière autonome<> ou d'aider son opérateur principal à <STELLAR>combattre<> ou à <STELLAR>extraire du minerai<>.\n\nLe pilote IA cède toujours le contrôle à l'opérateur principal lorsque ce dernier entre dans le cockpit.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur2",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Pilote IA du Minotaure",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
   }
 ]

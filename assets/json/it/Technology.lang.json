@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "Motore a onde",
     "Group": "Motore dell'astronave altamente personalizzato",
-    "Description": "Una versione migliorata del <TECHNOLOGY>motore a impulso<> delle astronavi tradizionali. La capacità del fronte d'onda è stata potenziata al massimo, creando una propulsione tanto <STELLAR>efficiente<> quanto <STELLAR>estremamente reattiva<>.\n\nPer ricaricare il motore è necessario del <EXOTIC>trizio<>, che abbonda nei <COMMODITY>campi di asteroidi vicino ai pianeti<>. Scansiona (<IMG>SCAN<>) per cercare <TECHNOLOGY>asteroidi ricchi di trizio<>.\n\nTieni premuto <IMG>PULSEJUMP<> per attivare il salto a impulso. Tieni premuto <IMG>BOOST<> per attivare il turbo durante il volo.",
+    "Description": "Una versione migliorata del <TECHNOLOGY>motore a impulso<> delle astronavi tradizionali. La capacità del fronte d'onda è stata potenziata al massimo, creando una propulsione <STELLAR>efficiente<> ed <STELLAR>estremamente reattiva<>.\n\nPer ricaricare il motore è necessario del <EXOTIC>trizio<>, che abbonda nei <COMMODITY>campi di asteroidi vicino ai pianeti<>. Scansiona (<IMG>SHIPSCAN<>) per cercare <TECHNOLOGY>asteroidi ricchi di trizio<>.\n\nTieni premuto <IMG>PULSEJUMP<> per attivare il salto a impulso. Tieni premuto <IMG>BOOST<> per attivare il turbo durante il volo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -9781,6 +9781,268 @@
       }
     ],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech270",
+    "Icon": "technology/270.png",
+    "Name": "Getti d'acqua",
+    "Group": "Sistema di atterraggio acquatico",
+    "Description": "Un potenziamento avanzato per il <TECHNOLOGY>sistema di atterraggio<> dell'astronave, che le permette di atterrare e decollare da superfici acquatiche.\n\nUna combinazione di suddetti getti e ventole di scarico reindirizzate consentono all'astronave di <STELLAR>fluttuare<> appena sopra la superficie dell'acqua.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod1",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech271",
+    "Icon": "technology/271.png",
+    "Name": "Carapace salino",
+    "Group": "Nodo della nave senziente",
+    "Description": "Una membrana salata avvolge l'astronave, aumentando notevolmente la sua naturale galleggiabilità.\n\nIl carapace consente alla nave di <TECHNOLOGY>galleggiare<>, rendendo possibili gli <STELLAR>atterraggi sull'acqua<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur18",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur19",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech272",
+    "Icon": "technology/272.png",
+    "Name": "Braccio sinistro dello Sterminatore",
+    "Group": "Arto Minotauro sostitutivo",
+    "Description": "Lo Sterminatore è un potenziamento dell'exoscafo pesante ibrido <TECHNOLOGY>Minotauro<>: si tratta di un'unità da combattimento pesante all'avanguardia progettata per funzionare anche negli ambienti più ostili.\n\nQuesto override per arto funziona anche come <STELLAR>sistema di combattimento dedicato<> singolo: spara <TECHNOLOGY>proiettili stordenti<> ad alta velocità, perfetti per tenere a bada gli ostili mentre ti avvicini.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Danni",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Efficienza energetica arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "Cadenza di fuoco",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech273",
+    "Icon": "technology/273.png",
+    "Name": "Braccio destro dello Sterminatore",
+    "Group": "Arto Minotauro sostitutivo",
+    "Description": "Lo Sterminatore è un potenziamento dell'exoscafo pesante ibrido <TECHNOLOGY>Minotauro<>: si tratta di un'unità da combattimento pesante all'avanguardia progettata per funzionare anche negli ambienti più ostili.\n\nQuesto override per arto funziona anche come <STELLAR>sistema di combattimento dedicato<> singolo con <TECHNOLOGY>lanciafiamme<> ed è in grado di infliggere danni estremi a breve distanza.\n\nUsa <IMG>CYCLEWEAPON<> per passare in rassegna le modalità d'arma disponibili.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod19",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Danni",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "Efficienza energetica arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "Cadenza di fuoco",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "Innesco post-impatto",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "Durata fuoco dell'impatto",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "Danni fuoco dell'impatto",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech274",
+    "Icon": "technology/274.png",
+    "Name": "Gambe dello Sterminatore",
+    "Group": "Arto Minotauro sostitutivo",
+    "Description": "Lo Sterminatore è un potenziamento dell'exoscafo pesante ibrido <TECHNOLOGY>Minotauro<>: si tratta di un'unità da combattimento pesante all'avanguardia progettata per funzionare anche negli ambienti più ostili.\n\nL'installazione migliorerà notevolmente <TECHNOLOGY>il motore e la mobilità<> del Minotauro.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Utilizzo carburante",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "-10"
+      },
+      {
+        "Name": "Dimensioni serbatoio turbo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech275",
+    "Icon": "technology/275.png",
+    "Name": "Corpo dello Sterminatore",
+    "Group": "Arto Minotauro sostitutivo",
+    "Description": "Lo Sterminatore è un potenziamento dell'exoscafo pesante ibrido <TECHNOLOGY>Minotauro<>: si tratta di un'unità da combattimento pesante all'avanguardia progettata per funzionare anche negli ambienti più ostili.\n\nLa sua funzione sarà quella di <TECHNOLOGY>plugin pilota artificiale<> semi-autonomo. L'installazione consente al Minotauro di <STELLAR>viaggiare da solo verso i pianeti<> e affrontare <STELLAR>combattimenti<> o attività di <STELLAR>estrazione<> per supportare il suo operatore primario.\n\nIl pilota IA cede sempre il controllo all'operatore primario all'entrata nell'abitacolo.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur2",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Pilota IA Minotauro",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

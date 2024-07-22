@@ -3073,7 +3073,7 @@
     "Icon": "technology/81.png",
     "Name": "炮弹上油器",
     "Group": "散射爆破器升级",
-    "Description": "先进的自润滑部件，可减少<TECHNOLOGY>散射爆破器<>的内部摩擦，显著提升<STELLAR>装弹时间<>。",
+    "Description": "先进的自润滑构件，可减少<TECHNOLOGY>散射爆破器<>的内部摩擦，显著提升<STELLAR>装弹时间<>。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "波形驱动器",
     "Group": "高度定制化的飞船驱动器",
-    "Description": "经过缜密调试过的传统飞船<TECHNOLOGY>脉冲驱动器<>。接近极限的波面频率将能够提供<STELLAR>高效<>而且<STELLAR>极度灵敏<>的脉冲动力。\n\n建议使用<EXOTIC>氚<>作为驱动器燃料。<COMMODITY>近太空小行星带<>中能够找到丰富的氚。扫描（<IMG>SCAN<>）以搜寻<TECHNOLOGY>富含氚的小行星<>。\n\n同时长按<IMG>PULSEJUMP<>将启动脉冲跃迁。在飞行时长按<IMG>BOOST<>激活加速。",
+    "Description": "经过缜密调试过的传统飞船<TECHNOLOGY>脉冲驱动器<>。接近极限的波面频率将能够提供<STELLAR>高效<>而且<STELLAR>极度灵敏<>的脉冲动力。\n\n建议使用<EXOTIC>氚<>作为驱动器燃料。<COMMODITY>近太空小行星带<>中能够找到丰富的氚。扫描（<IMG>SHIPSCAN<>）以搜寻<TECHNOLOGY>富含氚的小行星<>。\n\n长按<IMG>PULSEJUMP<>将启动脉冲跃迁。长按<IMG>BOOST<>在飞行中进行速度提升。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -9781,6 +9781,268 @@
       }
     ],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech270",
+    "Icon": "technology/270.png",
+    "Name": "水流喷射器",
+    "Group": "水上着陆系统",
+    "Description": "飞船<TECHNOLOGY>着陆系统<>的进阶升级，能够允许飞船直接在水体表面着陆或起飞。\n\n专门设计的喷射器与能够调整导向的喷气风扇使得飞船能够<STELLAR>悬浮<>在水体表面之上。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod1",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech271",
+    "Icon": "technology/271.png",
+    "Name": "盐水甲壳",
+    "Group": "有感知的容器节点",
+    "Description": "充满盐分的薄膜包裹着飞船，大幅提升飞船浮力。\n\n通过让飞船<TECHNOLOGY>飘浮<>在水体上，甲壳能够允许飞船进行<STELLAR>水上着陆<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur18",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur19",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech272",
+    "Icon": "technology/272.png",
+    "Name": "清算员左臂",
+    "Group": "弥诺陶洛斯肢体替换组件",
+    "Description": "作为<TECHNOLOGY>弥诺陶洛斯<>重型混合强化艇的升级版本，清算员是一种尖端的重装作战单元，并且被设计成能够在最险恶的环境中执行任务。\n\n这种肢体的超控系统也能够作为<STELLAR>专用战斗系统<>。它可以部署高速<TECHNOLOGY>眩晕弹<>，这种弹药能够限制敌对目标行动并允许机体迅速接近敌人。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "伤害",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "武器功率效率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "射速",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech273",
+    "Icon": "technology/273.png",
+    "Name": "清算员右臂",
+    "Group": "弥诺陶洛斯肢体替换组件",
+    "Description": "作为<TECHNOLOGY>弥诺陶洛斯<>重型混合强化艇的升级版本，清算员是一种尖端的重装作战单元，并且被设计成能够在最险恶的环境中执行任务。\n\n这种肢体的超控系统也能够作为<STELLAR>专用战斗系统<> - <TECHNOLOGY>火焰喷射器<>能够在近距离造成显著伤害。\n\n使用<IMG>CYCLEWEAPON<>切换可用的武器模式。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod19",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "伤害",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "武器功率效率",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "射速",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "冲击后燃烧",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "冲击火焰持续时间",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "冲击火焰伤害",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech274",
+    "Icon": "technology/274.png",
+    "Name": "清算员腿部",
+    "Group": "弥诺陶洛斯肢体替换组件",
+    "Description": "作为<TECHNOLOGY>弥诺陶洛斯<>重型混合强化艇的升级版本，清算员是一种尖端的重装作战单元，并且被设计成能够在最险恶的环境中执行任务。\n\n安装这种腿部组建能够显著改善弥诺陶洛斯的<TECHNOLOGY>驱动器以及机动<>系统。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "燃料使用",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "-10"
+      },
+      {
+        "Name": "推进器箱尺寸",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech275",
+    "Icon": "technology/275.png",
+    "Name": "清算员机体",
+    "Group": "弥诺陶洛斯肢体替换组件",
+    "Description": "作为<TECHNOLOGY>弥诺陶洛斯<>重型混合强化艇的升级版本，清算员是一种尖端的重装作战单元，并且被设计成能够在最险恶的环境中执行任务。\n\n能够作为半自主<TECHNOLOGY>智能导航插件<>使用。安装后，弥诺陶洛斯将能够<STELLAR>自主跨越行星<>，并在<STELLAR>交战<>或<STELLAR>采矿<>作业中辅助主要操作员。\n\n当主要操作员进入驾驶舱后，人工智能将移交设备控制权。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur2",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "弥诺陶洛斯人工智能驾驶员",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

@@ -3073,7 +3073,7 @@
     "Icon": "technology/81.png",
     "Name": "Lubrificante de projéteis",
     "Group": "Atualização do detonador dispersivo",
-    "Description": "Componentes autolubrificantes avançados diminuem o atrito dentro do <TECHNOLOGY>detonador dispersivo<>, melhorando significativamente os <STELLAR>tempos de recarga<>.",
+    "Description": "Componentes autolubrificantes avançados diminuem o atrito dentro do <TECHNOLOGY>detonador dispersivo<>, oferecendo melhorias significativas para os <STELLAR>tempos de recarregamento<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "Motor de forma de onda",
     "Group": "Motor de nave altamente personalizado",
-    "Description": "Uma versão altamente aprimorada do <TECHNOLOGY>mecanismo de pulso<> de uma nave convencional. A frente de onda foi configurada até o limite, criando uma experiência de pulso que é <STELLAR>eficiente<> e <STELLAR>altamente responsiva<>.\n\nInformamos que é necessário <EXOTIC>trítio<> para carregar o propulsor. O trítio é abundante em <COMMODITY>campos de asteroides no espaço próximo aos planetas<>. Verifique (<IMG>SCAN<>) para procurar <TECHNOLOGY>asteroides ricos em trítio<>.\n\nSegure <IMG>PULSEJUMP<> para preparar o salto de pulso. Segure <IMG>BOOST<> para aumentar a velocidade em voo.",
+    "Description": "Uma versão altamente aprimorada do <TECHNOLOGY>mecanismo de pulso<> de uma nave convencional. A frente de onda foi configurada até o limite, criando uma experiência de pulso que é <STELLAR>eficiente<> e <STELLAR>altamente responsiva<>.\n\nInformamos que é necessário <EXOTIC>trítio<> para carregar o propulsor. O trítio é abundante em <COMMODITY>campos de asteroides no espaço próximo aos planetas<>. Verifique (<IMG>SHIPSCAN<>) para procurar <TECHNOLOGY>asteroides ricos em trítio<>.\n\nSegure <IMG>PULSEJUMP<> para preparar o salto de pulso. Segure <IMG>BOOST<> para aumentar a velocidade em voo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -9781,6 +9781,268 @@
       }
     ],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech270",
+    "Icon": "technology/270.png",
+    "Name": "Aquajatos",
+    "Group": "Sistema de pouso aquático",
+    "Description": "Uma atualização avançada para o <TECHNOLOGY>sistema de pouso<> da nave, permitindo que ela pouse e decole de superfícies aquáticas.\n\nUma mistura de jatos personalizados e ventiladores de exaustão redirecionados permite que a nave <STELLAR>paire<> logo acima da superfície da água.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod1",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech271",
+    "Icon": "technology/271.png",
+    "Name": "Carapaça salina",
+    "Group": "Nodo de nave inteligente",
+    "Description": "Uma membrana salgada envolve a nave, aumentando drasticamente sua flutuabilidade natural.\n\nA carapaça permitirá que a nave <TECHNOLOGY>flutue<>, possibilitando o <STELLAR>pouso na água<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur18",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur19",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech272",
+    "Icon": "technology/272.png",
+    "Name": "Braço esquerdo de liquidador",
+    "Group": "Substituição de membro do Minotauro",
+    "Description": "Uma atualização do exoveículo pesado híbrido <TECHNOLOGY>Minotauro<>, o Liquidador é uma unidade de combate pesada de última geração, projetada para operar nos ambientes mais adversos.\n\nEssa substituição de membros também funciona como seu próprio <STELLAR>sistema de combate dedicado<>. Ele lança <TECHNOLOGY>projéteis de atordoamento<> de alta velocidade, perfeitos para manter os inimigos no lugar enquanto avançam a curta distância.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Dano",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Eficiência do poder de fogo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "Taxa de disparos",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech273",
+    "Icon": "technology/273.png",
+    "Name": "Braço direito de liquidador",
+    "Group": "Substituição de membro do Minotauro",
+    "Description": "Uma atualização do exoveículo pesado híbrido <TECHNOLOGY>Minotauro<>, o Liquidador é uma unidade de combate pesada de última geração, projetada para operar nos ambientes mais adversos.\n\nEssa substituição de membros também funciona como seu próprio <STELLAR>sistema de combate dedicado<>. Um <TECHNOLOGY>lança-chamas<> para causar dano extremo em curto alcance.\n\nUse <IMG>CYCLEWEAPON<> para alternar os modos de armas disponíveis.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod19",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Dano",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "Eficiência do poder de fogo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "Taxa de disparos",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "Ignição pós-impacto",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "Duração da combustão de impacto",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "Dano da combustão de impacto",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech274",
+    "Icon": "technology/274.png",
+    "Name": "Pernas de liquidador",
+    "Group": "Substituição de membro do Minotauro",
+    "Description": "Uma atualização do exoveículo pesado híbrido <TECHNOLOGY>Minotauro<>, o Liquidador é uma unidade de combate pesada de última geração, projetada para operar nos ambientes mais adversos.\n\nA instalação vai melhorar de forma significativa os sistemas de <TECHNOLOGY>motor e mobilidade<> do Minotauro.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Uso de combustível",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "-10"
+      },
+      {
+        "Name": "Tamanho do tanque do incremento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech275",
+    "Icon": "technology/275.png",
+    "Name": "Corpo de liquidador",
+    "Group": "Substituição de membro do Minotauro",
+    "Description": "Uma atualização para o exoveículo pesado híbrido <TECHNOLOGY>Minotauro<>, o Liquidador é uma unidade de combate de ponta para serviços pesados, projetada para operar nos ambientes mais adversos.\n\nFunciona como um <TECHNOLOGY>plug-in de piloto artificial<> semiautônomo. A instalação permite que o Minotauro <STELLAR>viaje por planetas por conta própria<> e se envolva em atividades de <STELLAR>combate<> ou <STELLAR>mineração<> para dar suporte a seu operador principal.\n\nO piloto de IA sempre cederá o controle ao operador principal quando este entrar no cockpit.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur2",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Piloto de IA do Minotauro",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

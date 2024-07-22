@@ -3073,7 +3073,7 @@
     "Icon": "technology/81.png",
     "Name": "Lubrificador de Escudo",
     "Group": "Atualização do Detonador de Fragmentação",
-    "Description": "Componentes avançados de lubrificação automática que reduzem a fricção no interior do <TECHNOLOGY>Detonador de Fragmentação<> para oferecer melhorias significativas aos <STELLAR>tempos de recarga<>.",
+    "Description": "Componentes avançados de lubrificação automática que reduzem a fricção no interior do <TECHNOLOGY>Detonador de Fragmentação<>, melhorando significativamente os <STELLAR>tempos de recarga<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "Motor de Forma de Onda",
     "Group": "Motor Altamente Personalizado da Nave Espacial",
-    "Description": "Uma versão altamente ajustada do <TECHNOLOGY>Motor de Pulsação<> convencional da nave espacial. A ocupação da frente de onda foi levada ao limite, criando uma experiência de pulsação que é <STELLAR>eficiente<> e <STELLAR>altamente recetiva<>.\n\nO utilizador precisa de usar <EXOTIC>Trítio<> para carregar o propulsor. O trítio é abundante em <COMMODITY>campos de asteroides no espaço próximo aos planetas<>. Analisa (<IMG>SCAN<>) para procurar <TECHNOLOGY>asteroides ricos em trítio<>.\n\nMantém <IMG>PULSEJUMP<> premido para ativar o Salto Pulsante. Mantém <IMG>BOOST<> premido para iniciar o impulso de velocidade durante o voo.",
+    "Description": "Uma versão altamente ajustada do <TECHNOLOGY>Motor de Pulsação<> convencional da nave espacial. A ocupação da frente de onda foi levada ao limite, criando uma experiência de pulsação que é <STELLAR>eficiente<> e <STELLAR>altamente recetiva<>.\n\nO utilizador precisa de usar <EXOTIC>Trítio<> para carregar o propulsor. O trítio é abundante em <COMMODITY>campos de asteroides no espaço próximo dos planetas<>. Analisa (<IMG>SHIPSCAN<>) para procurar <TECHNOLOGY>asteroides ricos em trítio<>.\n\nMantém <IMG>PULSEJUMP<> premido para ativar o Salto Pulsante. Mantém <IMG>BOOST<> premido para iniciar o impulso de velocidade durante o voo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -9781,6 +9781,268 @@
       }
     ],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech270",
+    "Icon": "technology/270.png",
+    "Name": "Jatos Aquáticos",
+    "Group": "Sistema de Aterragem Aquática",
+    "Description": "Uma atualização avançada para o <TECHNOLOGY>sistema de aterragem<> da nave espacial, permitindo que a nave aterre e descole de superfícies aquáticas.\n\nUma combinação de jatos personalizados e exaustores redirecionados permitem que o navio <STELLAR>paire<> mesmo acima da superfície aquática.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod1",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech271",
+    "Icon": "technology/271.png",
+    "Name": "Carapaça Salina",
+    "Group": "Nó de Nave Senciente",
+    "Description": "Uma membrana salgada envolve o navio, aumentando drasticamente a sua capacidade de flutuação natural.\n\nA carapaça permite que a nave <TECHNOLOGY>flutue<>, possibilitando <STELLAR>aterragens na água<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur18",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur19",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech272",
+    "Icon": "technology/272.png",
+    "Name": "Braço Esquerdo do Aniquilador",
+    "Group": "Substituição de Membro do Minotauro",
+    "Description": "Uma atualização da Exonave Pesada Híbrida do <TECHNOLOGY>Minotauro<>, o Aniquilador é uma unidade de combate pesada de ponta, concebida para utilização nos ambientes mais extremos.\n\nEsta substituição de membro também funciona como o seu próprio <STELLAR>sistema de combate dedicado<>. Lança <TECHNOLOGY>projéteis de atordoamento<> de alta velocidade, perfeitos para paralisar inimigos enquanto se avança para a curta distância.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Danos",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Eficiência de potência da arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "Cadência de fogo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech273",
+    "Icon": "technology/273.png",
+    "Name": "Braço Direito do Aniquilador",
+    "Group": "Substituição de Membro do Minotauro",
+    "Description": "Uma atualização da Exonave Pesada Híbrida do <TECHNOLOGY>Minotauro<>, o Aniquilador é uma unidade de combate pesada de ponta, concebida para utilização nos ambientes mais extremos.\n\nEsta substituição de membro também funciona como o seu próprio <STELLAR>sistema de combate dedicado:<> um <TECHNOLOGY>lança-chamas<> que provoca danos extremos a curta distância.\n\nUtiliza <IMG>CYCLEWEAPON<> para alternar modos de armas disponíveis.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod19",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Danos",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "Eficiência de potência da arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "Cadência de fogo",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "Ignição Pós-impacto",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "Duração do Fogo Pós-impacto",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "Dano do Fogo Pós-impacto",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech274",
+    "Icon": "technology/274.png",
+    "Name": "Pernas do Aniquilador",
+    "Group": "Substituição de Membro do Minotauro",
+    "Description": "Uma atualização da Exonave Pesada Híbrida do <TECHNOLOGY>Minotauro<>, o Aniquilador é uma unidade de combate pesada de ponta, concebida para utilização nos ambientes mais extremos.\n\nA instalação melhora significativamente o <TECHNOLOGY>motor e os sistemas de mobilidade<> do Minotauro.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Utilização do Combustível",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "-10"
+      },
+      {
+        "Name": "Tamanho tanque de propulsão",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech275",
+    "Icon": "technology/275.png",
+    "Name": "Corpo dos Aniquiladores",
+    "Group": "Substituição de Membro do Minotauro",
+    "Description": "Uma atualização da Exonave Pesada Híbrida do <TECHNOLOGY>Minotauro<>, o Aniquilador é uma unidade de combate pesada de ponta, concebida para utilização nos ambientes mais extremos.\n\nFuncionará como um <TECHNOLOGY>plug-in de piloto artificial<> semiautónomo. A instalação permite que o Minotauro <STELLAR>atravesse planetas sozinho<> e <STELLAR>combata<> ou participe em atividades de <STELLAR>mineração<> para apoiar o operador principal.\n\nO piloto de IA cederá sempre o controlo ao operador principal quando este entrar no cockpit.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur2",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Piloto de IA para Minotauro",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

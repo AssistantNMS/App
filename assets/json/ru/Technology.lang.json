@@ -3073,7 +3073,7 @@
     "Icon": "technology/81.png",
     "Name": "Система смазки снарядов",
     "Group": "Улучшение бластера-рассеивателя",
-    "Description": "Новейшие самосмазывающиеся детали снижают трение внутри <TECHNOLOGY>бластера-рассеивателя<>, в результате чего повышается <STELLAR>скорость перезарядки<>.",
+    "Description": "Новейшие самосмазывающиеся детали снижают трение внутри <TECHNOLOGY>бластера-рассеивателя<>, в результате чего значительно повышается <STELLAR>скорость перезарядки<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -9781,6 +9781,268 @@
       }
     ],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech270",
+    "Icon": "technology/270.png",
+    "Name": "Водные реактивные двигатели",
+    "Group": "Система посадки на воду",
+    "Description": "Продвинутое улучшение <TECHNOLOGY>посадочной системы<> звездолета, позволяющая ему садиться и взлетать с водных поверхностей.\n\nУникальные реактивные двигатели и перенаправленные вытяжные вентиляторы позволяют кораблю <STELLAR>парить<> над поверхностью воды.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 240,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "prod1",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod115",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech271",
+    "Icon": "technology/271.png",
+    "Name": "Соленый панцирь",
+    "Group": "Узел разумного корабля",
+    "Description": "Корабль покрыт соленой мембраной, которая значительно повышает его естественную плавучесть.\n\nПанцирь позволяет судну <TECHNOLOGY>парить<> и <STELLAR>садиться на воду<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur18",
+        "Quantity": 1
+      },
+      {
+        "Id": "cur19",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech272",
+    "Icon": "technology/272.png",
+    "Name": "Левая рука «Ликвидатор»",
+    "Group": "Замена конечностей «Минотавра»",
+    "Description": "Улучшение тяжелого гибридного экзокостюма <TECHNOLOGY>«Минотавр»<>. «Ликвидатор» — это новейшая тяжелая боевая единица, созданная для работы в сложнейших условиях.\n\nЭта замена для конечностей также является <STELLAR>отдельной боевой системой<>. Она стреляет высокоскоростными <TECHNOLOGY>оглушающими снарядами<> и прекрасно подходит, чтобы держать врагов на одном месте и вступать в ближний бой.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 5
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Урон",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "20"
+      },
+      {
+        "Name": "Энергомощность оружия",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      },
+      {
+        "Name": "Скорострельность",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech273",
+    "Icon": "technology/273.png",
+    "Name": "Правая рука «Ликвидатор»",
+    "Group": "Замена конечностей «Минотавра»",
+    "Description": "Улучшение тяжелого гибридного экзокостюма <TECHNOLOGY>«Минотавр»<>. «Ликвидатор» — это новейшая тяжелая боевая единица, созданная для работы в сложнейших условиях.\n\nЭта замена для конечностей также является <STELLAR>отдельной боевой системой<>, а именно <TECHNOLOGY>огнеметом<>, способным наносить огромный урон на малой дистанции.\n\nПереключайте доступные режимы оружия с помощью <IMG>CYCLEWEAPON<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod19",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Урон",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "Энергомощность оружия",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "Скорострельность",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "Возгорание после попадания",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "Длительность горения",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "Урон от горения",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech274",
+    "Icon": "technology/274.png",
+    "Name": "Ноги «Ликвидатор»",
+    "Group": "Замена конечностей «Минотавра»",
+    "Description": "Улучшение тяжелого гибридного экзокостюма <TECHNOLOGY>«Минотавр»<>. «Ликвидатор» — это новейшая тяжелая боевая единица, созданная для работы в сложнейших условиях.\n\nМодуль значительно улучшает <TECHNOLOGY>двигатель и мобильность<> «Минотавра».",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 500,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur1",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Расход топлива",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "-10"
+      },
+      {
+        "Name": "Размер резервуара ускорителя",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech275",
+    "Icon": "technology/275.png",
+    "Name": "Тело «Ликвидатор»",
+    "Group": "Замена конечностей «Минотавра»",
+    "Description": "Улучшение тяжелого гибридного экзокостюма <TECHNOLOGY>«Минотавр»<>. «Ликвидатор» — это новейшая тяжелая боевая единица, созданная для работы в сложнейших условиях.\n\nРаботает аналогично полуавтономному <TECHNOLOGY>модулю пилотирования с ИИ<>. После установки позволяет «Минотавру» <STELLAR>передвигаться по поверхности планет<> и участвовать в <STELLAR>бою<> или операциях <STELLAR>добычи<> для поддержки основного оператора.\n\nИИ-пилот всегда передает управление основному оператору, когда тот садится в кабину.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur2",
+        "Quantity": 1
+      },
+      {
+        "Id": "prod81",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "ИИ-пилот «Минотавра»",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]
