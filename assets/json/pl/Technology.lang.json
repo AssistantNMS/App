@@ -2538,7 +2538,7 @@
       "HasDevProperties"
     ],
     "BlueprintCost": 460,
-    "BlueprintCostType": "Nanites",
+    "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -6913,7 +6913,7 @@
     "Icon": "products/79.png",
     "Name": "Silnik falowy",
     "Group": "Wyjątkowo zmodyfikowany silnik statku",
-    "Description": "Wybitnie zmodyfikowana wersja konwencjonalnego <TECHNOLOGY>silnika pulsacyjnego<> statku. Wykorzystanie fali zostało zmaksymalizowane, tworząc <STELLAR>wydajny<> i <STELLAR>wyjątkowo responsywny<> impuls.\n\nUżytkownik powinien zwrócić uwagę, że do naładowania silnika pulsacyjnego wymagany jest <EXOTIC>tryt<>. Tryt występuje w obfitości na <COMMODITY>polach asteroid w pobliskiej przestrzeni kosmicznej<>. Użyj skanera (<IMG>SCAN<>), by znaleźć <TECHNOLOGY>asteroidy bogate w tryt<>.\n\nPrzytrzymaj <IMG>PULSEJUMP<>, aby włączyć skok impulsowy. Przytrzymaj <IMG>BOOST<>, aby włączyć dopalanie w trakcie lotu w kosmosie.",
+    "Description": "Wybitnie zmodyfikowana wersja konwencjonalnego <TECHNOLOGY>silnika pulsacyjnego<> statku. Wykorzystanie fali zostało zmaksymalizowane, tworząc <STELLAR>wydajny<> i <STELLAR>wyjątkowo responsywny<> impuls.\n\nUżytkownik powinien zwrócić uwagę, że do naładowania silnika pulsacyjnego wymagany jest <EXOTIC>tryt<>. Tryt występuje w obfitości na <COMMODITY>polach asteroid w pobliskiej przestrzeni kosmicznej<>. Użyj skanera (<IMG>SHIPSCAN<>), by znaleźć <TECHNOLOGY>asteroidy bogate w tryt<>.\n\nPrzytrzymaj <IMG>PULSEJUMP<>, aby włączyć skok impulsowy. Przytrzymaj <IMG>BOOST<>, aby włączyć dopalanie w trakcie lotu w kosmosie.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "1A2733",
@@ -10043,6 +10043,192 @@
         "Value": "1"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech276",
+    "Icon": "technology/276.png",
+    "Name": "Egzoskif",
+    "Group": "Rozkładana platforma wędkarska",
+    "Description": "Rozkładana nieruchoma platforma, pozwalająca użytkownikowi na wygodne badanie morza w każdych warunkach pogodowych. Oprócz stabilnego i łatwo dostępnego miejsca do wędkowania, egzoskiff posiada również pojemną <TECHNOLOGY>chłodnię<>, w której znajdzie się dodatkowe miejsce dla zdobyczy. \n\n<STELLAR>Przywołaj<> egzoskiffa na odpowiednim akwenie, używając szybkiego menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 2
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 120
+      },
+      {
+        "Id": "raw16",
+        "Quantity": 30
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech277",
+    "Icon": "technology/277.png",
+    "Name": "Figurka z mackami",
+    "Group": "Dekoracja wnętrza statku gwiezdnego",
+    "Description": "Syntetyczny towarzysz z polimeru, przedstawiający morskie stworzenie, do postawienia w kokpicie statku.\n\nZainstaluj w <TECHNOLOGY>polu ekwipunku<>, by ozdobić wnętrze swojego statku.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Dopalacz",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech278",
+    "Icon": "technology/278.png",
+    "Name": "Zestaw wędkarski",
+    "Group": "Rozkładany sprzęt wędkarski",
+    "Description": "Wielofunkcyjny <TECHNOLOGY>sprzęt wędkarski<>, umożliwiający użytkownikowi łowienie <STELLAR>ryb<> w różnorodnych warunkach.\n\nWybierz zestaw wędkarski, naciskając <IMG>CYCLEWEAPON<> i zarzuć żyłkę do wody, używając <IMG>ATTACK<>. Gdy ryba złapie haczyk, naciśnij i przytrzymaj <IMG>ATTACK<>, by ją wciągnąć.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod11",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Zestaw wędkarski",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech279",
+    "Icon": "technology/279.png",
+    "Name": "Sprzęt zaginionego wędkarza",
+    "Group": "Unikatowe urządzenie wędkarskie",
+    "Description": "Wielofunkcyjny <TECHNOLOGY>zestaw wędkarski<>, umożliwiający użytkownikowi łowienie <STELLAR>ryb<> w różnorodnych warunkach. Zestaw ten należał kiedyś do legendarnego <STELLAR>zaginionego wędkarza<>.\n\nWybierz zestaw wędkarski, naciskając <IMG>CYCLEWEAPON<> i zarzuć żyłkę do wody, używając <IMG>ATTACK<>. Gdy ryba złapie haczyk, naciśnij i przytrzymaj <IMG>ATTACK<>, by ją wciągnąć.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason15Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw16",
+        "Quantity": 60
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 90
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Zestaw wędkarski",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech280",
+    "Icon": "technology/280.png",
+    "Name": "Skrzynka na przynęty",
+    "Group": "Automatyczny dozownik przynęt",
+    "Description": "Włoż <STELLAR>przynęty lub wabiki<>, by przyciągnąć <TECHNOLOGY>konkretne ryby<> lub by zwiększyć <TECHNOLOGY>szansę na połów<>. Uwaga: każdy produkt spożywczy może służyć za przynętę.\n\nObecna przynęta: <%NAMETAG%>%BAIT%<>\nZwiększenie rzadkości zdobyczy: <%RARETAG%>%RARE_BOOST%%<>\nZwiększenie rozmiarów zdobyczy <%SIZETAG%>%SIZE_BOOST%%<>\nInne uwagi: <%TAG%>%NOTES%<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech281",
+    "Icon": "technology/281.png",
+    "Name": "Auto-pułapka",
+    "Group": "Samowystarczalny automatyczny podajnik",
+    "Description": "Autonomiczne urządzenie wędkarskie, zaprojektowane do długotrwałego stosowania w większości warunków panujących w wodzie. Wróć później, by zabrać schwytane ryby.\n\nCykl pułapki: <TRADEABLE>W TOKU<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]

@@ -3212,9 +3212,9 @@
   {
     "Id": "conTech115",
     "Icon": "constructedTechnology/115.png",
-    "Name": "Moduł miotacza ognia minotaura",
+    "Name": "Moduł miotacza ognia Minotaura",
     "Group": "Znaczące ulepszenie uzbrojenia Minotaura",
-    "Description": "<TECHNOLOGY>Znaczące<> ulepszenie <TECHNOLOGY>miotacza ognia minotaura<>. Użyj <VAL_ON><IMG>FE_ALT1<><>, by rozpocząć <VAL_ON>proces instalacji<> ulepszenia.\n\nModuł jest elastyczny, a dokładne statystyki ulepszenia są <SPECIAL>nieznane<> do chwili zakończenia instalacji.\n\nPotencjalne usprawnienia obejmują: <STELLAR>zadawane obrażenia<>, <STELLAR>czas podpalenia<> i <STELLAR>zużycie paliwa<>.",
+    "Description": "<TECHNOLOGY>Znaczące<> ulepszenie <TECHNOLOGY>miotacza ognia Minotaura<>. Użyj <VAL_ON><IMG>FE_ALT1<><>, by rozpocząć <VAL_ON>proces instalacji<> ulepszenia.\n\nModuł jest elastyczny, a dokładne statystyki ulepszenia są <SPECIAL>nieznane<> do chwili zakończenia instalacji.\n\nPotencjalne usprawnienia obejmują: <STELLAR>zadawane obrażenia<>, <STELLAR>czas podpalenia<> i <STELLAR>zużycie paliwa<>.",
     "BaseValueUnits": 140.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -3234,9 +3234,9 @@
   {
     "Id": "conTech116",
     "Icon": "constructedTechnology/116.png",
-    "Name": "Moduł miotacza ognia minotaura",
+    "Name": "Moduł miotacza ognia Minotaura",
     "Group": "Potężne ulepszenie uzbrojenia Minotaura",
-    "Description": "<SPECIAL>Bardzo potężne<> ulepszenie <TECHNOLOGY>miotacza ognia minotaura<>. Użyj <VAL_ON><IMG>FE_ALT1<><>, by rozpocząć <VAL_ON>proces instalacji<> ulepszenia.\n\nModuł jest elastyczny, a dokładne statystyki ulepszenia są <SPECIAL>nieznane<> do chwili zakończenia instalacji.\n\nPotencjalne usprawnienia obejmują: <STELLAR>zadawane obrażenia<>, <STELLAR>czas podpalenia<> i <STELLAR>zużycie paliwa<>.",
+    "Description": "<SPECIAL>Bardzo potężne<> ulepszenie <TECHNOLOGY>miotacza ognia Minotaura<>. Użyj <VAL_ON><IMG>FE_ALT1<><>, by rozpocząć <VAL_ON>proces instalacji<> ulepszenia.\n\nModuł jest elastyczny, a dokładne statystyki ulepszenia są <SPECIAL>nieznane<> do chwili zakończenia instalacji.\n\nPotencjalne usprawnienia obejmują: <STELLAR>zadawane obrażenia<>, <STELLAR>czas podpalenia<> i <STELLAR>zużycie paliwa<>.",
     "BaseValueUnits": 300.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -3256,9 +3256,9 @@
   {
     "Id": "conTech117",
     "Icon": "constructedTechnology/117.png",
-    "Name": "Moduł miotacza ognia minotaura",
+    "Name": "Moduł miotacza ognia Minotaura",
     "Group": "Najmocniejsze ulepszenie uzbrojenia Minotaura",
-    "Description": "<COMMODITY>Najpotężniejsze<> ulepszenie <TECHNOLOGY>miotacza ognia minotaura<>. Użyj <VAL_ON><IMG>FE_ALT1<><>, by rozpocząć <VAL_ON>proces instalacji<> ulepszenia.\n\nModuł jest elastyczny, a dokładne statystyki ulepszenia są <SPECIAL>nieznane<> do chwili zakończenia instalacji.\n\nPotencjalne usprawnienia obejmują: <STELLAR>zadawane obrażenia<>, <STELLAR>czas podpalenia<> i <STELLAR>zużycie paliwa<>.",
+    "Description": "<COMMODITY>Najpotężniejsze<> ulepszenie <TECHNOLOGY>miotacza ognia Minotaura<>. Użyj <VAL_ON><IMG>FE_ALT1<><>, by rozpocząć <VAL_ON>proces instalacji<> ulepszenia.\n\nModuł jest elastyczny, a dokładne statystyki ulepszenia są <SPECIAL>nieznane<> do chwili zakończenia instalacji.\n\nPotencjalne usprawnienia obejmują: <STELLAR>zadawane obrażenia<>, <STELLAR>czas podpalenia<> i <STELLAR>zużycie paliwa<>.",
     "BaseValueUnits": 480.0,
     "CurrencyType": "None",
     "MaxStackSize": 5.0,
@@ -3272,6 +3272,40 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "conTech118",
+    "Icon": "constructedTechnology/118.png",
+    "Name": "Automatyczna pułapka",
+    "Group": "Samowystarczalny automatyczny podajnik",
+    "Description": "Autonomiczne urządzenie wędkarskie, zaprojektowane do długotrwałego stosowania w większości warunków panujących w wodzie.\n\nPo aktywacji system zwabi i uwięzi wszelkie pobliskie stworzenia wodne i przechowa je do późniejszego odzyskania.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "SalvagedData",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod6",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw16",
+        "Quantity": 50
+      },
+      {
+        "Id": "prod20",
+        "Quantity": 1
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   }

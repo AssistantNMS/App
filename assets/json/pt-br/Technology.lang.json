@@ -2538,7 +2538,7 @@
       "HasDevProperties"
     ],
     "BlueprintCost": 460,
-    "BlueprintCostType": "Nanites",
+    "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -9850,7 +9850,7 @@
     "Icon": "technology/272.png",
     "Name": "Braço esquerdo de liquidador",
     "Group": "Substituição de membro do Minotauro",
-    "Description": "Uma atualização do exoveículo pesado híbrido <TECHNOLOGY>Minotauro<>, o Liquidador é uma unidade de combate pesada de última geração, projetada para operar nos ambientes mais adversos.\n\nEssa substituição de membros também funciona como seu próprio <STELLAR>sistema de combate dedicado<>. Ele lança <TECHNOLOGY>projéteis de atordoamento<> de alta velocidade, perfeitos para manter os inimigos no lugar enquanto avançam a curta distância.",
+    "Description": "Uma atualização do exoveículo pesado híbrido <TECHNOLOGY>Minotauro<>, o Liquidador é uma unidade de combate pesada de última geração, projetada para operar nos ambientes mais adversos.\n\nEssa substituição de membros também funciona como seu próprio <STELLAR>sistema de combate dedicado<>. Ele lança <TECHNOLOGY>projéteis de atordoamento<> de alta velocidade, perfeitos para manter os inimigos no lugar enquanto avança a curta distância.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -10043,6 +10043,192 @@
         "Value": "1"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech276",
+    "Icon": "technology/276.png",
+    "Name": "Exoesquife",
+    "Group": "Plataforma de pesca implantável",
+    "Description": "Uma plataforma estática implantável que permite que o usuário analise os mares com conforto em qualquer clima. Além de oferecer um local de pesca estável e de fácil acesso, o exoesquife também contém <TECHNOLOGY>armazenamento frio<> abundante, concedendo espaço adicional para armazenar os espécimes que você pescar. \n\n<STELLAR>Chame<> o exoesquife até qualquer corpo de água adequado pelo menu rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 2
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 120
+      },
+      {
+        "Id": "raw16",
+        "Quantity": 30
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech277",
+    "Icon": "technology/277.png",
+    "Name": "Estatueta com tentáculos",
+    "Group": "Ornamento de Nave",
+    "Description": "Um companheiro de polímero sintético para o cockpit da sua nave, elaborado à semelhança de uma criatura marinha.\n\nInstale em um <TECHNOLOGY>slot de inventário<> para decorar o interior da sua nave.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Incrementar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech278",
+    "Icon": "technology/278.png",
+    "Name": "Equipamento de pesca",
+    "Group": "Dispositivo de pesca implantável",
+    "Description": "Um <TECHNOLOGY>equipamento<> versátil que permite que o usuário <STELLAR>pesque peixes<> em águas de vários tipos.\n\nAcesse o equipamento de pesca pressionando <IMG>CYCLEWEAPON<> e lance a linha em um corpo de água com <IMG>ATTACK<>. Com o peixe fisgado, pressione e segure <IMG>ATTACK<> para puxá-lo.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod11",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Equipamento de pesca",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech279",
+    "Icon": "technology/279.png",
+    "Name": "Equipamento do Pescador Perdido",
+    "Group": "Dispositivo de pesca exclusivo",
+    "Description": "Um <TECHNOLOGY>equipamento<> versátil que permite que o usuário <STELLAR>pesque peixes<> em águas de vários tipos. Ele já pertenceu ao lendário <STELLAR>Pescador Perdido<>.\n\nAcesse o equipamento de pesca pressionando <IMG>CYCLEWEAPON<> e lance a linha em um corpo de água com <IMG>ATTACK<>. Com o peixe fisgado, pressione e segure <IMG>ATTACK<> para puxá-lo.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason15Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw16",
+        "Quantity": 60
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 90
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Equipamento de pesca",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech280",
+    "Icon": "technology/280.png",
+    "Name": "Caixa de isca",
+    "Group": "Ejetor automático de iscas",
+    "Description": "Insira <STELLAR>iscas ou engodos<> para atrair <TECHNOLOGY>peixes específicos<> ou para aumentar as <TECHNOLOGY>chances de pescar algo<>. Observação: qualquer alimento pode ser usado como isca.\n\nIsca atual: <%NAMETAG%>%BAIT%<>\nAumento da raridade do espécime pescado: <%RARETAG%>%RARE_BOOST%%<>\nAumento do tamanho do espécime pescado: <%SIZETAG%>%SIZE_BOOST%%<>\nOutras observações: <%TAG%>%NOTES%<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech281",
+    "Icon": "technology/281.png",
+    "Name": "Armadilha automática",
+    "Group": "Cesto autônomo",
+    "Description": "Um dispositivo de pesca autônomo feito para uso em longo prazo em águas de vários tipos. Volte mais tarde para coletar os peixes na armadilha.\n\nCiclo da armadilha: <TRADEABLE>EM PROGRESSO<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]

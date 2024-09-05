@@ -74,6 +74,8 @@ RichText textWithHighlightTags(
   RegExp tagStartRegex = RegExp(r'(.*)<(\w+)>(.*)');
   RegExp tagEndRegex = RegExp(r'(.*)<>(.*)');
 
+  text = text.replaceAll('<VAL_ON>"', '<VAL_ON> "');
+
   String currentColourValue = '';
   List<InlineSpan> nodes = List.empty(growable: true);
   if (text.contains('<>')) {
@@ -138,6 +140,12 @@ RichText textWithHighlightTags(
 
           if (lookupResult != null && lookupResult.icon.isNotEmpty) {
             imagePath = '${AppImage.controls}${lookupResult.icon}';
+          }
+
+          if (imagePath == AppImage.controlUnknown) {
+            if (lookupKey.contains('UNITS')) {
+              imagePath = AppImage.credits;
+            }
           }
           nodes.add(WidgetSpan(
               child: LocalImage(

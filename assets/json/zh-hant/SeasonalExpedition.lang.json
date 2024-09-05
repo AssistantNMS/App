@@ -41951,7 +41951,7 @@
             "MissionId": "JETPACKER",
             "Id": "seas-14-expedPhase-2-milestone-6",
             "Title": "近距離空中支援",
-            "Description": "用噴射背包旅行：0u/1000u",
+            "Description": "用噴射背包前進：0u/1000u",
             "DescriptionDone": "噴射背包 1000u",
             "Icon": "milestonePatches/PATCH.AIRBORNE1.png",
             "Type": "Normal",
@@ -42552,7 +42552,7 @@
           {
             "MissionId": "FISH_SWARM",
             "Id": "seas-14-expedPhase-4-milestone-4",
-            "Title": "水中血",
+            "Title": "水中之血",
             "Description": "勇猛的 3 頭深淵懼獸",
             "DescriptionDone": "敗北的 3 頭深淵懼獸",
             "Icon": "milestonePatches/PATCH.BIGFISH.png",
@@ -42997,10 +42997,1437 @@
             "AmountMax": 0,
             "Currency": 0,
             "ProcTechQuality": 0
+          }
+        ]
+      }
+    ],
+    "Rewards": [
+      {
+        "Id": "other758",
+        "Type": 3,
+        "AmountMin": 0,
+        "AmountMax": 0,
+        "Currency": 0,
+        "ProcTechQuality": 0
+      }
+    ]
+  },
+  {
+    "Id": "seas-15",
+    "Icon": "milestonePatches/PATCH.EXPEDITION.15.png",
+    "StartDate": "2024-09-04T00:00:00",
+    "EndDate": "2024-10-21T00:00:00",
+    "Title": "第十五次探險：水瓶座",
+    "IsRedux": false,
+    "PortalCode": "60CDFA5B4C22",
+    "GameMode": "正常",
+    "GameModeType": "Normal",
+    "Phases": [
+      {
+        "Id": "seas-15-expedPhase-1",
+        "Icon": "milestonePatches/PATCH.FISHEXPEDITION.S1.png",
+        "Title": "第 1 階段",
+        "Description": "目前進度：0/7",
+        "DescriptionDone": "第 1 階段完成",
+        "Milestones": [
+          {
+            "MissionId": "FIND_SHIP",
+            "Id": "seas-15-expedPhase-1-milestone-1",
+            "Title": "解纜啟航",
+            "Description": "找到你的太空船",
+            "DescriptionDone": "已抵達你的太空船",
+            "Icon": "milestonePatches/PATCH.FINDSHIP.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "tech143",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "prod28",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 3,
+                "AmountMax": 3,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              }
+            ]
           },
           {
-            "Id": "",
-            "Type": 11,
+            "MissionId": "LEAVE_PLANET",
+            "Id": "seas-15-expedPhase-1-milestone-2",
+            "Title": "藍海彼方",
+            "Description": "離開星球",
+            "DescriptionDone": "已離開星球",
+            "Icon": "milestonePatches/PATCH.LEAVE.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "conTech1",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "tMod79",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              }
+            ]
+          },
+          {
+            "MissionId": "S15_PLANET1",
+            "Id": "seas-15-expedPhase-1-milestone-3",
+            "Title": "釣魚去：1",
+            "Description": "到達第一個垂釣目的地",
+            "DescriptionDone": "找到垂釣者的第一個垂釣點",
+            "Icon": "milestonePatches/PATCH.FISHEXPEDITIONPARTY.1.png",
+            "Type": "Rendezvous",
+            "Rewards": [
+              {
+                "Id": "tech278",
+                "Type": 0,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "raw53",
+                "Type": 0,
+                "MultiItemRewardType": "Substance",
+                "AmountMin": 46,
+                "AmountMax": 46,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "raw16",
+                "Type": 0,
+                "MultiItemRewardType": "Substance",
+                "AmountMin": 73,
+                "AmountMax": 73,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              }
+            ]
+          },
+          {
+            "MissionId": "GET_FISHLASER",
+            "Id": "seas-15-expedPhase-1-milestone-4",
+            "Title": "試試水溫",
+            "Description": "獲得釣具",
+            "DescriptionDone": "獲得了釣具",
+            "Icon": "milestonePatches/PATCH.FISHLASER.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "tMod58",
+                "Type": 8,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "tech18",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "tech17",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "CATCH_ANY_FISH",
+            "Id": "seas-15-expedPhase-1-milestone-5",
+            "Title": "開始捕魚",
+            "Description": "捕捉最初的 5 條魚",
+            "DescriptionDone": "已捕捉 5 條魚",
+            "Icon": "milestonePatches/PATCH.CATCHFISH.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "prod169",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 3,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "conTech17",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "CATCH_JUNK",
+            "Id": "seas-15-expedPhase-1-milestone-6",
+            "Title": "就差一點...",
+            "Description": "沒抓到魚",
+            "DescriptionDone": "得到了一個好故事",
+            "Icon": "milestonePatches/PATCH.FISHLOST.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "cur14",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 6,
+                "AmountMax": 6,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "tMod46",
+                "Type": 8,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "other141",
+                "Type": 6,
+                "AmountMin": 5,
+                "AmountMax": 5,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "COOK_FISH",
+            "Id": "seas-15-expedPhase-1-milestone-7",
+            "Title": "當日漁獲",
+            "Description": "烹煮一道魚類料理",
+            "DescriptionDone": "準備了一道魚類料理",
+            "Icon": "milestonePatches/PATCH.FISHGRILL.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "tMod41",
+                "Type": 8,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "tMod45",
+                "Type": 8,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          }
+        ],
+        "Rewards": [
+          {
+            "Id": "build1140",
+            "Type": 3,
+            "AmountMin": 0,
+            "AmountMax": 0,
+            "Currency": 0,
+            "ProcTechQuality": 0
+          },
+          {
+            "Id": "build1141",
+            "Type": 3,
+            "AmountMin": 0,
+            "AmountMax": 0,
+            "Currency": 0,
+            "ProcTechQuality": 0
+          },
+          {
+            "Id": "build1142",
+            "Type": 3,
+            "AmountMin": 0,
+            "AmountMax": 0,
+            "Currency": 0,
+            "ProcTechQuality": 0
+          }
+        ]
+      },
+      {
+        "Id": "seas-15-expedPhase-2",
+        "Icon": "milestonePatches/PATCH.FISHEXPEDITION.S2.png",
+        "Title": "第 2 階段",
+        "Description": "目前進度：0/8",
+        "DescriptionDone": "第 2 階段完成",
+        "Milestones": [
+          {
+            "MissionId": "PARTY_PLANET2",
+            "Id": "seas-15-expedPhase-2-milestone-1",
+            "Title": "釣魚去：2",
+            "Description": "到達第二個垂釣目的地",
+            "DescriptionDone": "找到了垂釣者的第二個垂釣點",
+            "Icon": "milestonePatches/PATCH.FISHEXPEDITIONPARTY.2.png",
+            "Type": "Rendezvous",
+            "Rewards": [
+              {
+                "Id": "other141",
+                "Type": 6,
+                "AmountMin": 5,
+                "AmountMax": 5,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "raw56",
+                "Type": 2,
+                "AmountMin": 900,
+                "AmountMax": 900,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "S15_BOTTLEMSG",
+            "Id": "seas-15-expedPhase-2-milestone-2",
+            "Title": "瓶中信",
+            "Description": "收到來自垂釣者的訊息",
+            "DescriptionDone": "發現來自垂釣者的訊息",
+            "Icon": "milestonePatches/PATCH.FISHSTORY.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "cur112",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "cur111",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "cur110",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "cur109",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "cur108",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "cur107",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "FISH_BAIT",
+            "Id": "seas-15-expedPhase-2-milestone-3",
+            "Title": "咬餌上鉤",
+            "Description": "在釣魚時使用誘餌",
+            "DescriptionDone": "使用誘餌加強垂釣效果",
+            "Icon": "milestonePatches/PATCH.FISHBAIT.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "tech27",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "tMod168",
+                "Type": 8,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "CATCH_RARE_FISH",
+            "Id": "seas-15-expedPhase-2-milestone-4",
+            "Title": "魚鉤、魚線和鉛墜",
+            "Description": "釣到一條少見的魚類",
+            "DescriptionDone": "釣到了一條少見的魚類",
+            "Icon": "milestonePatches/PATCH.RAREFISH.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "tech70",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "cur110",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 5,
+                "AmountMax": 5,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              }
+            ]
+          },
+          {
+            "MissionId": "RELEASE_FISH",
+            "Id": "seas-15-expedPhase-2-milestone-5",
+            "Title": "回歸海洋",
+            "Description": "將 3 條魚放回水裡",
+            "DescriptionDone": "已將 3 條魚放回水裡",
+            "Icon": "milestonePatches/PATCH.RELEASEFISH.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "tech276",
+                "Type": 0,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "cur32",
+                "Type": 0,
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "CATCH_DAY_FISH",
+            "Id": "seas-15-expedPhase-2-milestone-6",
+            "Title": "日光粼粼",
+            "Description": "捕捉 3 條晝行性的魚類",
+            "DescriptionDone": "捕捉了 3 條只在白天活動的魚類",
+            "Icon": "milestonePatches/PATCH.DAYFISH.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "prod3",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "prod113",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "prod114",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "prod115",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "prod116",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "prod117",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "tMod61",
+                "Type": 8,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "GET_SKIFF",
+            "Id": "seas-15-expedPhase-2-milestone-7",
+            "Title": "船長",
+            "Description": "部署一艘強化艇",
+            "DescriptionDone": "部署了一艘強化艇",
+            "Icon": "milestonePatches/PATCH.BUILDSKIFF.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "cur107",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 5,
+                "AmountMax": 5,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "cur108",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 5,
+                "AmountMax": 5,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "cur109",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 5,
+                "AmountMax": 5,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              }
+            ]
+          },
+          {
+            "MissionId": "CATCH_RAD_FISH",
+            "Id": "seas-15-expedPhase-2-milestone-8",
+            "Title": "核能廢水",
+            "Description": "捕捉 4 條少見的輻射魚類",
+            "DescriptionDone": "捕捉了 4 條輻射魚類",
+            "Icon": "milestonePatches/PATCH.RADIATIONFISH.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "tMod45",
+                "Type": 8,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "cur18",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 3,
+                "AmountMax": 3,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              }
+            ]
+          }
+        ],
+        "Rewards": [
+          {
+            "Id": "other797",
+            "Type": 3,
+            "AmountMin": 0,
+            "AmountMax": 0,
+            "Currency": 0,
+            "ProcTechQuality": 0
+          },
+          {
+            "Id": "other796",
+            "Type": 3,
+            "AmountMin": 0,
+            "AmountMax": 0,
+            "Currency": 0,
+            "ProcTechQuality": 0
+          }
+        ]
+      },
+      {
+        "Id": "seas-15-expedPhase-3",
+        "Icon": "milestonePatches/PATCH.FISHEXPEDITION.S3.png",
+        "Title": "第 3 階段",
+        "Description": "目前進度：0/7",
+        "DescriptionDone": "第 3 階段完成",
+        "Milestones": [
+          {
+            "MissionId": "PARTY_PLANET3",
+            "Id": "seas-15-expedPhase-3-milestone-1",
+            "Title": "釣魚去：3",
+            "Description": "到達第三個垂釣目的地",
+            "DescriptionDone": "找到垂釣者的第三個垂釣點",
+            "Icon": "milestonePatches/PATCH.FISHEXPEDITIONPARTY.3.png",
+            "Type": "Rendezvous",
+            "Rewards": [
+              {
+                "Id": "other141",
+                "Type": 6,
+                "AmountMin": 5,
+                "AmountMax": 5,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "raw56",
+                "Type": 2,
+                "AmountMin": 900,
+                "AmountMax": 900,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "S15_BOTTLEMSG",
+            "Id": "seas-15-expedPhase-3-milestone-2",
+            "Title": "浪濤傳說",
+            "Description": "收到來自垂釣者的訊息",
+            "DescriptionDone": "閱讀另一則來自垂釣者的訊息",
+            "Icon": "milestonePatches/PATCH.FISHSTORY1.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "conTech118",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "raw3",
+                "Type": 0,
+                "AmountMin": 750,
+                "AmountMax": 750,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "DIVE_DEEP",
+            "Id": "seas-15-expedPhase-3-milestone-3",
+            "Title": "自由潛水",
+            "Description": "到達海洋深度：0/50u",
+            "DescriptionDone": "探索低於海平面 %AMOUNT%u 的位置",
+            "Icon": "milestonePatches/PATCH.SWIMDEEP.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "cur32",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 10,
+                "AmountMax": 10,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "prod54",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 15,
+                "AmountMax": 15,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "raw9",
+                "Type": 0,
+                "MultiItemRewardType": "Substance",
+                "AmountMin": 1000,
+                "AmountMax": 1000,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "build174",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "build175",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "build179",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "build180",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "build177",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "build176",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "build172",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "DEEP_BASE",
+            "Id": "seas-15-expedPhase-3-milestone-4",
+            "Title": "海洋之子",
+            "Description": "設立一個水底基地",
+            "DescriptionDone": "建立一個水底基地",
+            "Icon": "milestonePatches/PATCH.WATERBASE.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "tMod51",
+                "Type": 8,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "tMod58",
+                "Type": 8,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "S15_FISHPOT",
+            "Id": "seas-15-expedPhase-3-milestone-5",
+            "Title": "懶惰漁夫",
+            "Description": "用自動陷阱抓住 13 條魚",
+            "DescriptionDone": "已用自動陷阱抓住 13 條魚",
+            "Icon": "milestonePatches/PATCH.FISHPOT.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "tech7",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "tMod46",
+                "Type": 8,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "CATCH_DEEP_FISH",
+            "Id": "seas-15-expedPhase-3-milestone-6",
+            "Title": "漆黑深淵",
+            "Description": "在深水區拋出魚線",
+            "DescriptionDone": "探索了深淵",
+            "Icon": "milestonePatches/PATCH.DEEPFISH.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "tMod67",
+                "Type": 8,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "tMod45",
+                "Type": 8,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "CATCH_COLD_FISH",
+            "Id": "seas-15-expedPhase-3-milestone-7",
+            "Title": "寒冷刺骨",
+            "Description": "在冰寒世界捕捉 5 條少見的魚類",
+            "DescriptionDone": "在冰寒世界捕捉了 5 條少見的魚類",
+            "Icon": "milestonePatches/PATCH.COLDFISH.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "tMod70",
+                "Type": 8,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          }
+        ],
+        "Rewards": [
+          {
+            "Id": "other795",
+            "Type": 3,
+            "AmountMin": 0,
+            "AmountMax": 0,
+            "Currency": 0,
+            "ProcTechQuality": 0
+          },
+          {
+            "Id": "other794",
+            "Type": 3,
+            "AmountMin": 0,
+            "AmountMax": 0,
+            "Currency": 0,
+            "ProcTechQuality": 0
+          }
+        ]
+      },
+      {
+        "Id": "seas-15-expedPhase-4",
+        "Icon": "milestonePatches/PATCH.FISHEXPEDITION.S4.png",
+        "Title": "第 4 階段",
+        "Description": "目前進度：0/7",
+        "DescriptionDone": "第 4 階段完成",
+        "Milestones": [
+          {
+            "MissionId": "PARTY_PLANET4",
+            "Id": "seas-15-expedPhase-4-milestone-1",
+            "Title": "釣魚去：4",
+            "Description": "到達第四個垂釣目的地",
+            "DescriptionDone": "找到了垂釣者的第四個垂釣點",
+            "Icon": "milestonePatches/PATCH.FISHEXPEDITIONPARTY.4.png",
+            "Type": "Rendezvous",
+            "Rewards": [
+              {
+                "Id": "raw56",
+                "Type": 2,
+                "AmountMin": 900,
+                "AmountMax": 900,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "other141",
+                "Type": 6,
+                "AmountMin": 7,
+                "AmountMax": 7,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "S15_BOTTLEMSG",
+            "Id": "seas-15-expedPhase-4-milestone-2",
+            "Title": "水的呼喚",
+            "Description": "收到來自垂釣者的訊息",
+            "DescriptionDone": "閱讀另一則來自垂釣者的訊息",
+            "Icon": "milestonePatches/PATCH.FISHSTORY2.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "procProd21",
+                "Type": 8,
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "cur111",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 5,
+                "AmountMax": 5,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "SeaHorror",
+                "ProcProdRarity": "Rare"
+              }
+            ]
+          },
+          {
+            "MissionId": "CATCH_HOT_FISH",
+            "Id": "seas-15-expedPhase-4-milestone-3",
+            "Title": "水深火熱",
+            "Description": "捕捉 7 條高溫地區的少見魚類",
+            "DescriptionDone": "捕捉了 7 條高溫地區的少見魚類",
+            "Icon": "milestonePatches/PATCH.HOTFISH.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "raw57",
+                "Type": 2,
+                "AmountMin": 400,
+                "AmountMax": 400,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "cook152",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              }
+            ]
+          },
+          {
+            "MissionId": "CATCH_NGHT_FISH",
+            "Id": "seas-15-expedPhase-4-milestone-4",
+            "Title": "夜間釣魚",
+            "Description": "捕捉 3 條夜行性魚類",
+            "DescriptionDone": "捕捉 3 條夜行性魚類",
+            "Icon": "milestonePatches/PATCH.NIGHTFISH.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "build314",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "raw49",
+                "Type": 0,
+                "AmountMin": 20,
+                "AmountMax": 20,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "GOT_PEARLS",
+            "Id": "seas-15-expedPhase-4-milestone-5",
+            "Title": "智慧珍珠",
+            "Description": "採集 15 顆活珍珠",
+            "DescriptionDone": "採集 %AMOUNT% 顆活珍珠",
+            "Icon": "milestonePatches/PATCH.GETPEARLS.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "procProd24",
+                "Type": 8,
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "cook366",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 5,
+                "AmountMax": 5,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              }
+            ]
+          },
+          {
+            "MissionId": "CATCH_BIG_FISH",
+            "Id": "seas-15-expedPhase-4-milestone-6",
+            "Title": "魚中之王",
+            "Description": "捕捉 3 條巨大魚類",
+            "DescriptionDone": "捕捉了 3 條巨大魚類",
+            "Icon": "milestonePatches/PATCH.XLFISH.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "build310",
+                "Type": 1,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "procProd24",
+                "Type": 8,
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "CATCH_ANY_FISH",
+            "Id": "seas-15-expedPhase-4-milestone-7",
+            "Title": "再試身手",
+            "Description": "捕捉 100 條魚",
+            "DescriptionDone": "已捕捉 %AMOUNT% 條魚",
+            "Icon": "milestonePatches/PATCH.FISHLOST.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "conTech90",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 30,
+                "AmountMax": 30,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "cur86",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              }
+            ]
+          }
+        ],
+        "Rewards": [
+          {
+            "Id": "tech279",
+            "Type": 0,
+            "AmountMin": 0,
+            "AmountMax": 0,
+            "Currency": 0,
+            "ProcTechQuality": 0
+          }
+        ]
+      },
+      {
+        "Id": "seas-15-expedPhase-5",
+        "Icon": "milestonePatches/PATCH.FISHEXPEDITION.S5.png",
+        "Title": "第 5 階段",
+        "Description": "目前進度：0/7",
+        "DescriptionDone": "第 5 階段完成",
+        "Milestones": [
+          {
+            "MissionId": "PARTY_PLANET5",
+            "Id": "seas-15-expedPhase-5-milestone-1",
+            "Title": "釣魚去：5",
+            "Description": "到達最終垂釣目的地",
+            "DescriptionDone": "找到垂釣者的最後一個垂釣點",
+            "Icon": "milestonePatches/PATCH.FISHEXPEDITIONPARTY.5.png",
+            "Type": "Rendezvous",
+            "Rewards": [
+              {
+                "Id": "raw16",
+                "Type": 0,
+                "MultiItemRewardType": "Substance",
+                "AmountMin": 1500,
+                "AmountMax": 1500,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "other141",
+                "Type": 6,
+                "AmountMin": 7,
+                "AmountMax": 7,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "S15_BOTTLEMSG",
+            "Id": "seas-15-expedPhase-5-milestone-2",
+            "Title": "釣者憩息",
+            "Description": "收到來自垂釣者的訊息",
+            "DescriptionDone": "閱讀垂釣者最後一則訊息",
+            "Icon": "milestonePatches/PATCH.FISHSTORY3.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "raw33",
+                "Type": 0,
+                "MultiItemRewardType": "Substance",
+                "AmountMin": 400,
+                "AmountMax": 400,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "raw23",
+                "Type": 0,
+                "MultiItemRewardType": "Substance",
+                "AmountMin": 200,
+                "AmountMax": 200,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              }
+            ]
+          },
+          {
+            "MissionId": "S15_CATCHANGLER",
+            "Id": "seas-15-expedPhase-5-milestone-3",
+            "Title": "火鱗",
+            "Description": "尋找垂釣者的遺物",
+            "DescriptionDone": "找到垂釣者",
+            "Icon": "milestonePatches/PATCH.OCTOFISH.png",
+            "Type": "Normal",
+            "Encryption": {
+              "Title": "T'2/E G7455!",
+              "Description": "<IMG>SLASH<> <SPECIAL>里程碑已加密<> <IMG>SLASH<>\n<IMG>SLASH<> <SPECIAL>無法破譯任務內容<> <IMG>SLASH<>\n\n%DESC%\n\n里程碑<STELLAR>已加密<>。完成<EXPED>%MILESTONE%<>以繼續。",
+              "Icon": "milestonePatches/ENCRYPTED.PATCH.3.png"
+            },
+            "Rewards": [
+              {
+                "Id": "tech277",
+                "Type": 0,
+                "AmountMin": 0,
+                "AmountMax": 0,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              }
+            ]
+          },
+          {
+            "MissionId": "CATCH_STRM_FISH",
+            "Id": "seas-15-expedPhase-5-milestone-4",
+            "Title": "雷霆之鰭",
+            "Description": "捕捉 3 條只在風暴期間活動的魚類",
+            "DescriptionDone": "在風暴期間捕捉了 3 條魚",
+            "Icon": "milestonePatches/PATCH.STORMFISH.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "raw57",
+                "Type": 2,
+                "AmountMin": 400,
+                "AmountMax": 400,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "cur21",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 3,
+                "AmountMax": 3,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              }
+            ]
+          },
+          {
+            "MissionId": "W_CRE_WATER",
+            "Id": "seas-15-expedPhase-5-milestone-5",
+            "Title": "深淵奇遇",
+            "Description": "記錄體重超過 100 公斤的水中生物",
+            "DescriptionDone": "已發現體重超過 %AMOUNT% 公斤的水中生物",
+            "Icon": "milestonePatches/PATCH.WONDERFISH.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "cur19",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 5,
+                "AmountMax": 5,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "cook196",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              }
+            ]
+          },
+          {
+            "MissionId": "CATCH_LEG_FISH",
+            "Id": "seas-15-expedPhase-5-milestone-6",
+            "Title": "深海神話",
+            "Description": "捕捉 1 條傳奇魚類",
+            "DescriptionDone": "捕捉了 1 條傳奇魚類",
+            "Icon": "milestonePatches/PATCH.LEGENDFISH.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "procProd24",
+                "Type": 8,
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechQuality": 0
+              },
+              {
+                "Id": "cur287",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 2,
+                "AmountMax": 2,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "SeaLoot",
+                "ProcProdRarity": "Rare"
+              }
+            ]
+          },
+          {
+            "MissionId": "S15_SELLFISH",
+            "Id": "seas-15-expedPhase-5-milestone-7",
+            "Title": "鮮魚販售",
+            "Description": "賣出 500000<IMG>UNITS<> 價值的魚",
+            "DescriptionDone": "已賣出 500000<IMG>UNITS<> 的魚",
+            "Icon": "milestonePatches/PATCH.FISHMARKET.png",
+            "Type": "Normal",
+            "Rewards": [
+              {
+                "Id": "cur32",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 20,
+                "AmountMax": 20,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "cur19",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 20,
+                "AmountMax": 20,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              },
+              {
+                "Id": "cook370",
+                "Type": 0,
+                "MultiItemRewardType": "Product",
+                "AmountMin": 1,
+                "AmountMax": 1,
+                "Currency": 0,
+                "ProcTechGroup": "",
+                "ProcTechQuality": 0,
+                "ProcProdType": "Loot",
+                "ProcProdRarity": "Common"
+              }
+            ]
+          }
+        ],
+        "Rewards": [
+          {
+            "Id": "other798",
+            "Type": 3,
+            "AmountMin": 0,
+            "AmountMax": 0,
+            "Currency": 0,
+            "ProcTechQuality": 0
+          },
+          {
+            "Id": "build1143",
+            "Type": 3,
+            "AmountMin": 0,
+            "AmountMax": 0,
+            "Currency": 0,
+            "ProcTechQuality": 0
+          },
+          {
+            "Id": "other799",
+            "Type": 3,
             "AmountMin": 0,
             "AmountMax": 0,
             "Currency": 0,
@@ -43011,7 +44438,7 @@
     ],
     "Rewards": [
       {
-        "Id": "other758",
+        "Id": "other793",
         "Type": 3,
         "AmountMin": 0,
         "AmountMax": 0,
