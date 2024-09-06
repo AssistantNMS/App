@@ -31,8 +31,7 @@ class WindowsAudioPlayerService extends IAudioPlayerService {
     required Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
-    )
-        builder,
+    ) builder,
   }) {
     return Container();
   }
@@ -44,8 +43,7 @@ class WindowsAudioPlayerService extends IAudioPlayerService {
     required Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
-    )
-        builder,
+    ) builder,
   }) {
     return Container();
   }

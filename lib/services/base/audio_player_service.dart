@@ -79,8 +79,7 @@ class AudioPlayerService extends IAudioPlayerService {
     required Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
-    )
-        builder,
+    ) builder,
   }) {
     return StreamBuilder(
       stream: getPlayer().isPlaying,
@@ -106,8 +105,7 @@ class AudioPlayerService extends IAudioPlayerService {
     required Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
-    )
-        builder,
+    ) builder,
   }) {
     return StreamBuilder(
       stream: getPlayer().isPlaying,
