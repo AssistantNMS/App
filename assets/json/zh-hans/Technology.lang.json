@@ -2538,7 +2538,7 @@
       "HasDevProperties"
     ],
     "BlueprintCost": 460,
-    "BlueprintCostType": "Nanites",
+    "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -10043,6 +10043,192 @@
         "Value": "1"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech276",
+    "Icon": "technology/276.png",
+    "Name": "强化快艇",
+    "Group": "可部署垂钓平台",
+    "Description": "可部署的静态平台，允许使用者在所有气候条件下惬意观赏海洋风光。除此以外还能够提供稳定而且方便的钓鱼点，强化快艇内置有容量充足的<TECHNOLOGY>冷藏箱<>，能够为你提供存放渔获的额外空间。\n\n使用快捷菜单（<IMG>QUICK_MENU<>）在符合条件的水体上<STELLAR>召唤<>强化快艇。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 2
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 120
+      },
+      {
+        "Id": "raw16",
+        "Quantity": 30
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech277",
+    "Icon": "technology/277.png",
+    "Name": "触手手办",
+    "Group": "飞船内饰",
+    "Description": "飞船驾驶舱的合成高分子玩具摆件，原型是某个不可思议的海洋生物。\n\n安装到<TECHNOLOGY>库存栏位<>中来装饰你的飞船内部。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "推进器",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech278",
+    "Icon": "technology/278.png",
+    "Name": "渔具",
+    "Group": "可部署垂钓装置",
+    "Description": "多功能<TECHNOLOGY>垂钓装备<>，允许使用者在各类水体环境中进行<STELLAR>垂钓<>。\n\n按<IMG>CYCLEWEAPON<>启用渔具并使用<IMG>ATTACK<>抛竿。鱼上钩时长按<IMG>ATTACK<>收线并收取你的渔获。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod11",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "渔具",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech279",
+    "Icon": "technology/279.png",
+    "Name": "迷途垂钓者的渔具",
+    "Group": "独特垂钓装置",
+    "Description": "多功能<TECHNOLOGY>垂钓装备<>，允许使用者在各类水体环境中进行<STELLAR>垂钓<>。曾经属于传说中的<STELLAR>迷途垂钓者<>的渔具。\n\n按<IMG>CYCLEWEAPON<>启用渔具并使用<IMG>ATTACK<>抛竿。鱼上钩时长按<IMG>ATTACK<>收线并收取你的渔获。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason15Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw16",
+        "Quantity": 60
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 90
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "渔具",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech280",
+    "Icon": "technology/280.png",
+    "Name": "诱饵盒子",
+    "Group": "自动诱饵投放器",
+    "Description": "嵌入<STELLAR>诱饵与鱼饵<>以吸引<TECHNOLOGY>特定种类的鱼<>或者提升<TECHNOLOGY>捕获几率<>。注意：所有食物都能被用作诱饵。\n\n当前诱饵：<%NAMETAG%>%BAIT%<>\n稀有鱼类捕获几率提升：<%RARETAG%>%RARE_BOOST%%<>\n捕获尺寸提升<%SIZETAG%>%SIZE_BOOST%%<>\n其他注意事项：<%TAG%>%NOTES%<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech281",
+    "Icon": "technology/281.png",
+    "Name": "自动陷阱",
+    "Group": "全自动鱼篓",
+    "Description": "一种自动化的捕鱼装置，被设计成能够在一系列水体环境中进行远程部署。等待一段时间后返回并收集捕获的鱼类。\n\n陷阱周期：<TRADEABLE>进行中<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]

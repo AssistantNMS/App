@@ -106,11 +106,11 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
   }
 
   List<Widget> getAdditionalWidgetsFromVM(
-      BuildContext context, WeekendMissionViewModel viewmodel) {
-    // var isConfirmedByCaptSteve = viewmodel.isConfirmedByCaptSteve ?? false;
+      BuildContext context, WeekendMissionViewModel viewModel) {
+    // var isConfirmedByCaptSteve = viewModel.isConfirmedByCaptSteve ?? false;
     // var isConfirmedByAssistantNms =
-    //     viewmodel.isConfirmedByAssistantNms ?? false;
-    var captainSteveVideoUrl = viewmodel.captainSteveVideoUrl ?? '';
+    //     viewModel.isConfirmedByAssistantNms ?? false;
+    var captainSteveVideoUrl = viewModel.captainSteveVideoUrl ?? '';
     return getAdditionalWidgets(
       context,
       captainSteveVideoUrl,
@@ -266,7 +266,7 @@ class _WeekendMissionDetailWidget extends State<WeekendMissionDetail>
     return Center(
       child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(
+          backgroundColor: WidgetStateProperty.all<Color>(
             getTheme().getSecondaryColour(context),
           ),
         ),

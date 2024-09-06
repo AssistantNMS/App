@@ -2538,7 +2538,7 @@
       "HasDevProperties"
     ],
     "BlueprintCost": 460,
-    "BlueprintCostType": "Nanites",
+    "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -10043,6 +10043,192 @@
         "Value": "1"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech276",
+    "Icon": "technology/276.png",
+    "Name": "強化艇",
+    "Group": "可部署釣魚平台",
+    "Description": "可部署的固定平台，方便使用者無懼天候舒適地探勘海洋。強化艇不僅提供穩定、方便的釣魚地點，更備有容量龐大的<TECHNOLOGY>冷藏庫<>，利用額外的空間儲藏漁獲。\n\n使用快捷選單 (<IMG>QUICK_MENU<>) 在任何適合的水域中<STELLAR>召喚<>強化艇。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 2
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 120
+      },
+      {
+        "Id": "raw16",
+        "Quantity": 30
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech277",
+    "Icon": "technology/277.png",
+    "Name": "觸手雕像",
+    "Group": "太空船室內裝飾品",
+    "Description": "海洋生物造型的太空船駕駛艙小擺飾，材質為合成聚合物。\n\n置於<TECHNOLOGY>道具欄欄位<>，即可裝飾太空船內部。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "強化",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech278",
+    "Icon": "technology/278.png",
+    "Name": "釣具",
+    "Group": "可部署垂釣裝置",
+    "Description": "一套萬用的<TECHNOLOGY>垂釣裝備<>，能協助使用者在各種水域條件下<STELLAR>釣魚<>。\n\n若要使用釣具，請按下 <IMG>CYCLEWEAPON<>，然後使用 <IMG>ATTACK<> 將魚線拋入水中。待魚上鉤後，按住 <IMG>ATTACK<> 即可將魚釣上來。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod11",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "釣具",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech279",
+    "Icon": "technology/279.png",
+    "Name": "失落垂釣者的裝備",
+    "Group": "獨特的垂釣裝置",
+    "Description": "一套萬用的<TECHNOLOGY>垂釣裝備<>，能協助使用者在各種水域條件下<STELLAR>釣魚<>。這套釣具曾經是傳奇人物<STELLAR>失落垂釣者<>的所有物。\n\n若要使用這套釣具，請按下 <IMG>CYCLEWEAPON<>，然後使用 <IMG>ATTACK<> 將魚線拋入水中。待魚上鉤後，按住 <IMG>ATTACK<> 即可將魚釣上來。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason15Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw16",
+        "Quantity": 60
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 90
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "釣具",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech280",
+    "Icon": "technology/280.png",
+    "Name": "誘餌盒",
+    "Group": "自動投餌機",
+    "Description": "放入<STELLAR>誘餌或假餌<>可以吸引<TECHNOLOGY>特定魚類<>或增加<TECHNOLOGY>捕獲機會<>。注意：任何食物都可以當作誘餌使用。\n\n目前誘餌：<%NAMETAG%>%BAIT%<>\n漁獲稀有度提升度：<%RARETAG%>%RARE_BOOST%%<>\n漁獲大小提升度：<%SIZETAG%>%SIZE_BOOST%%<>\n其他說明：<%TAG%>%NOTES%<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech281",
+    "Icon": "technology/281.png",
+    "Name": "自動陷阱",
+    "Group": "生態自動魚簍",
+    "Description": "自動捕魚裝置，可長期部署於各種水域條件當中，過一會兒再返回拿取捕獲的魚。\n\n陷阱週期：<TRADEABLE>正在進行中<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]

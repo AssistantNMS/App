@@ -18,6 +18,7 @@ class AppImage {
   static const String twitchAlt = base + 'special/twitchAlt.png';
   static const String quicksilver = base + 'special/quicksilver.png';
   static const String quicksilverAlt = base + 'special/quicksilverAlt.png';
+  static const String credits = base + 'credits.png';
   static const String starshipScrap = base + 'special/starshipScrap.png';
   static const String creatureHarvest = base + 'special/creatureHarvest.png';
   static const String creatureKill = base + 'special/creatureKill.png';

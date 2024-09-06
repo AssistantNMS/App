@@ -2538,7 +2538,7 @@
       "HasDevProperties"
     ],
     "BlueprintCost": 460,
-    "BlueprintCostType": "Nanites",
+    "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -10043,6 +10043,192 @@
         "Value": "1"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech276",
+    "Icon": "technology/276.png",
+    "Name": "Exoesquife",
+    "Group": "Plataforma de Pesca Ativável",
+    "Description": "Uma plataforma estática ativável, que permite ao utilizador analisar confortavelmente o mar independentemente do tempo. Para além de proporcionar um local de pesca seguro e facilmente acessível, o Exoesquife também inclui uma abundante <TECHNOLOGY>Câmara de Refrigeração<>, garantindo espaço adicional para guardar peixe. \n\n<STELLAR>Convoca<> o Exoesquife em qualquer superfície de água adequada usando o Menu Rápido (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 90,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 2
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 120
+      },
+      {
+        "Id": "raw16",
+        "Quantity": 30
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech277",
+    "Icon": "technology/277.png",
+    "Name": "Estatueta com Tentáculos",
+    "Group": "Adorno interior da nave",
+    "Description": "Um companheiro em polímero sintético para o cockpit da tua nave, moldado à semelhança de uma criatura marinha.\n\nColoca-o num <TECHNOLOGY>Espaço de inventário<> para decorar o interior da tua nave.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw1",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Impulso",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "5"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech278",
+    "Icon": "technology/278.png",
+    "Name": "Equipamento de Pesca",
+    "Group": "Dispositivo de Pesca Ativável",
+    "Description": "Uma peça versátil do <TECHNOLOGY>equipamento de pesca<>, que permite ao utilizador <STELLAR>pescar<> numa grande variedade de condições aquáticas.\n\nAcede ao equipamento de pesca premindo <IMG>CYCLEWEAPON<> e lança o isco para a água com <IMG>ATTACK<>. Quando um peixe morder o isco, mantém premido <IMG>ATTACK<> para o apanhares.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod3",
+        "Quantity": 3
+      },
+      {
+        "Id": "raw23",
+        "Quantity": 60
+      },
+      {
+        "Id": "prod11",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Equipamento de Pesca",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech279",
+    "Icon": "technology/279.png",
+    "Name": "Equipamento do Pescador Perdido",
+    "Group": "Dispositivo de Pesca Único",
+    "Description": "Uma peça versátil do <TECHNOLOGY>equipamento de pesca<>, que permite ao utilizador <STELLAR>pescar<> numa grande variedade de condições aquáticas. Este equipamento pertenceu ao lendário <STELLAR>Pescador Perdido<>.\n\nAcede ao equipamento de pesca premindo <IMG>CYCLEWEAPON<> e lança o isco para a água com <IMG>ATTACK<>. Quando um peixe morder o isco, mantém premido <IMG>ATTACK<> para o apanhares.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason15Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw16",
+        "Quantity": 60
+      },
+      {
+        "Id": "raw32",
+        "Quantity": 90
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Equipamento de Pesca",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech280",
+    "Icon": "technology/280.png",
+    "Name": "Caixa de Iscos",
+    "Group": "Distribuidor Automático de Iscos",
+    "Description": "Introduz <STELLAR>iscos<> para atrair <TECHNOLOGY>peixes específicos<> ou para melhorar as <TECHNOLOGY>hipóteses de captura<>. Nota: qualquer tipo de alimento pode ser usado como isco.\n\nIsco atual: <%NAMETAG%>%BAIT%<>\nMelhoria da Raridade da Captura: <%RARETAG%>%RARE_BOOST%%<>\nMelhoria do Tamanho da Captura <%SIZETAG%>%SIZE_BOOST%%<>\nOutras notas: <%TAG%>%NOTES%<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech281",
+    "Icon": "technology/281.png",
+    "Name": "Armadilha Automática",
+    "Group": "Nassa Automática Autossustentável",
+    "Description": "Um dispositivo de pesca autónomo, concebido para ser utilizado a longo prazo numa vasta gama de condições aquáticas. Regressa mais tarde para recolheres os peixes que apanhaste.\n\nCiclo da armadilha: <TRADEABLE>EM CURSO<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]
