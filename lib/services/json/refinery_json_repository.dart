@@ -16,7 +16,7 @@ class RefineryJsonRepository extends BaseJsonService
 
     String detailJson = getTranslations().fromKey(detailsJsonLocale) + '.json';
     try {
-      List responseDetailsJson = await getListfromJson(context, detailJson);
+      List responseDetailsJson = await getListFromJson(context, detailJson);
       List<Processor> refinerDetails = responseDetailsJson
           .map((m) => Processor.fromJson(m, isRefiner))
           .toList();

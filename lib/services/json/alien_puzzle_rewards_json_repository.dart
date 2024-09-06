@@ -10,7 +10,7 @@ class AlienPuzzleRewardsJsonRepository extends BaseJsonService
   @override
   Future<ResultWithValue<List<AlienPuzzleReward>>> getAll(context) async {
     try {
-      List responseDetailsJson = await getListfromJson(
+      List responseDetailsJson = await getListFromJson(
           context,
           getTranslations().fromKey(LocaleKey.alienPuzzleRewardsJson) +
               '.json');

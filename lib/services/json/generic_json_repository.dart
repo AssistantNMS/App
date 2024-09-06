@@ -15,7 +15,7 @@ class GenericJsonRepository extends BaseJsonService
       BuildContext context) async {
     String detailJson = getTranslations().fromKey(detailsJsonLocale) + '.json';
     try {
-      List responseDetailsJson = await getListfromJson(context, detailJson);
+      List responseDetailsJson = await getListFromJson(context, detailJson);
       List<GenericPageItem> detailedItems = responseDetailsJson //
           .map((m) => GenericPageItem.fromJson(m))
           .toList();

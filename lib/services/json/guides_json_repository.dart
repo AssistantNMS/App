@@ -12,7 +12,7 @@ class GuidesJsonRepository extends BaseJsonService
   @override
   Future<ResultWithValue<List<NmsGuide>>> getAll(context) async {
     try {
-      List availableGuidesJson = await getListfromJson(
+      List availableGuidesJson = await getListFromJson(
           context, getTranslations().fromKey(LocaleKey.guidesJson) + '.json');
 
       List<NmsGuide> guides = List.empty(growable: true);

@@ -16,7 +16,7 @@ class WeekendMissionSeasonJsonRepository extends BaseJsonService
       BuildContext context) async {
     String jsonFile = getTranslations().fromKey(_jsonLocale) + '.json';
     try {
-      List list = await getListfromJson(context, jsonFile);
+      List list = await getListFromJson(context, jsonFile);
       List<WeekendMission> weekendMission =
           list.map((m) => WeekendMission.fromJson(m)).toList();
       return ResultWithValue<List<WeekendMission>>(true, weekendMission, '');
