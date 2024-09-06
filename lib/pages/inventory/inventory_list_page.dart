@@ -125,26 +125,30 @@ class _InventoryListState extends State<InventoryListPage> {
       );
       widgets.add(const EmptySpace3x());
     } else {
-      widgets.add(Padding(
-        child: Card(
-          child: InkWell(
-            child: Padding(
-              child: Center(
-                child: Icon(
-                  Icons.search,
-                  color: getTheme().getSecondaryColour(context),
+      if (viewModel.containers.length > 2) {
+        widgets.add(Padding(
+          child: Card(
+            child: InkWell(
+              child: Padding(
+                child: Center(
+                  child: Icon(
+                    Icons.search,
+                    color: getTheme().getSecondaryColour(context),
+                  ),
                 ),
+                padding: const EdgeInsets.all(12),
               ),
-              padding: const EdgeInsets.all(12),
-            ),
-            onTap: () async => await getNavigation().navigateAsync<Inventory>(
-              context,
-              navigateTo: (context) => SearchAllInventoriesPage(),
+              onTap: () async => await getNavigation().navigateAsync<Inventory>(
+                context,
+                navigateTo: (context) => SearchAllInventoriesPage(),
+              ),
             ),
           ),
-        ),
-        padding: const EdgeInsets.only(top: 4, bottom: 0),
-      ));
+          padding: const EdgeInsets.only(top: 4, bottom: 0),
+        ));
+      } else {
+        widgets.add(const EmptySpace1x());
+      }
       widgets.addAll(getContainers(viewModel));
     }
 

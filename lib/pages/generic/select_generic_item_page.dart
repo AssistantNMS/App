@@ -34,6 +34,7 @@ class SelectGenericItemPage extends StatelessWidget {
             var presenter = getListItemDisplayer(
               viewModel.genericTileIsCompact,
               viewModel.displayGenericItemColour,
+              removeContentPadding: true,
             );
             return SearchableList<GenericPageItem>(
               () => getAllFromLocaleKeys(context, getAllItemsLocaleKeys),

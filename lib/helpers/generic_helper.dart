@@ -331,7 +331,7 @@ List<Widget> getConsumableRewards(
 Widget Function(BuildContext, GenericPageItem, {void Function()? onTap})
     getListItemDisplayer(
         bool genericTileIsCompact, bool displayGenericItemColour,
-        {bool isHero = false}) {
+        {bool isHero = false, bool? removeContentPadding}) {
   var presenterWithIsHero = displayGenericItemColour
       ? genericHomeTileWithRequiredItemsAndBackgroundColourPresenter
       : genericHomeTileWithRequiredItemsPresenter;
@@ -342,7 +342,8 @@ Widget Function(BuildContext, GenericPageItem, {void Function()? onTap})
         : genericTilePresenter;
   }
   return (BuildContext ctx, GenericPageItem item, {void Function()? onTap}) =>
-      presenterWithIsHero(ctx, item, isHero, onTap: onTap);
+      presenterWithIsHero(ctx, item, isHero,
+          removeContentPadding: removeContentPadding, onTap: onTap);
 }
 
 Widget getFavouriteStar(

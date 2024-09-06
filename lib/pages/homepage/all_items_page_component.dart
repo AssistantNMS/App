@@ -50,6 +50,7 @@ class AllItemsPageComponent extends StatelessWidget {
         viewModel.genericTileIsCompact,
         viewModel.displayGenericItemColour,
         isHero: true,
+        removeContentPadding: true,
       ),
       listItemSearch: search,
       key: Key(renderKey),

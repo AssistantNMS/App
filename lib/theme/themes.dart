@@ -17,6 +17,7 @@ ThemeData darkThemeM3(String fontFamily) {
   return base.copyWith(
     brightness: Brightness.dark,
     primaryColor: darkColorScheme.primary,
+    scaffoldBackgroundColor: const Color.fromARGB(255, 20, 20, 20),
     textTheme: base.textTheme.apply(fontFamily: fontFamily),
     primaryTextTheme: base.primaryTextTheme.apply(fontFamily: fontFamily),
     pageTransitionsTheme: const PageTransitionsTheme(builders: {

@@ -85,6 +85,7 @@ class _AddEditInventoryState extends State<AddEditInventoryPage> {
           selectedImageIndex = selectedIndex;
         });
       }),
+      numberOfColumns: 6,
     ));
 
     return listWithScrollbar(
