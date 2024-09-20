@@ -73,22 +73,22 @@ class CommunityApiService extends BaseApiService {
     }
   }
 
-  Future<ResultWithValue<List<CommuntySpotlightViewModel>>>
+  Future<ResultWithValue<List<CommunitySpotlightViewModel>>>
       getAllCommunitySpotlights() async {
     try {
       final response = await apiGet(ApiUrls.communitySpotlight);
       if (response.hasFailed) {
-        return ResultWithValue<List<CommuntySpotlightViewModel>>(
+        return ResultWithValue<List<CommunitySpotlightViewModel>>(
             false, List.empty(growable: true), response.errorMessage);
       }
       final List newsList = json.decode(response.value);
-      List<CommuntySpotlightViewModel> links =
-          newsList.map((r) => CommuntySpotlightViewModel.fromJson(r)).toList();
+      List<CommunitySpotlightViewModel> links =
+          newsList.map((r) => CommunitySpotlightViewModel.fromJson(r)).toList();
       return ResultWithValue(true, links, '');
     } catch (exception) {
       getLog().e(
           "getAllCommunitySpotlights Api Exception: ${exception.toString()}");
-      return ResultWithValue<List<CommuntySpotlightViewModel>>(
+      return ResultWithValue<List<CommunitySpotlightViewModel>>(
           false, List.empty(growable: true), exception.toString());
     }
   }

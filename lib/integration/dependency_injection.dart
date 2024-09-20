@@ -13,11 +13,11 @@ import '../services/base/analytics_service.dart';
 import '../services/base/audio_player_service.dart';
 import '../services/base/base_widget_service.dart';
 import '../services/base/dialog_service.dart';
+import '../services/base/firebase_service.dart';
 import '../services/base/interface/i_audio_player_service.dart';
 import '../services/base/interface/i_firebase_service.dart';
 import '../services/base/loading_widget_service.dart';
 import '../services/base/local_notification_service.dart';
-import '../services/base/firebase_service.dart';
 import '../services/base/notification_service.dart';
 import '../services/base/path_service.dart';
 import '../services/base/theme_service.dart';
@@ -26,12 +26,14 @@ import '../services/json/alien_puzzle_rewards_json_repository.dart';
 import '../services/json/creature_harvest_json_repository.dart';
 import '../services/json/data_json_repository.dart';
 import '../services/json/faction_json_repository.dart';
+import '../services/json/fishing_json_repository.dart';
 import '../services/json/generic_json_repository.dart';
 import '../services/json/interface/i_alien_puzzle_json_repository.dart';
 import '../services/json/interface/i_alien_puzzle_rewards_json_repository.dart';
 import '../services/json/interface/i_creature_harvest_json_repository.dart';
 import '../services/json/interface/i_data_json_repository.dart';
 import '../services/json/interface/i_faction_json_repository.dart';
+import '../services/json/interface/i_fishing_json_repository.dart';
 import '../services/json/interface/i_generic_repository.dart';
 import '../services/json/interface/i_recharge_json_repository.dart';
 import '../services/json/interface/i_refinery_repository.dart';
@@ -85,6 +87,7 @@ void initDependencyInjection(EnvironmentSettings _env) {
   getIt.registerSingleton<IFactionJsonRepository>(FactionJsonRepository());
   getIt.registerSingleton<ICreatureHarvestJsonRepository>(
       CreatureHarvestJsonRepository());
+  getIt.registerSingleton<IFishingJsonRepository>(FishingJsonRepository());
 
   getIt.registerSingleton<IAudioPlayerService>(AudioPlayerService());
   getIt.registerSingleton<LocalNotificationService>(LocalNotificationService());
@@ -123,6 +126,7 @@ ISeasonalExpeditionJsonRepository getSeasonalExpeditionRepo() =>
 IFactionJsonRepository getFactionRepo() => getIt<IFactionJsonRepository>();
 ICreatureHarvestJsonRepository getCreatureHarvestRepo() =>
     getIt<ICreatureHarvestJsonRepository>();
+IFishingJsonRepository getFishingRepo() => getIt<IFishingJsonRepository>();
 
 IAudioPlayerService getAudioPlayer() => getIt<IAudioPlayerService>();
 LocalNotificationService getLocalNotification() =>

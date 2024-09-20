@@ -58,7 +58,7 @@ class _FriendCodeListWidget extends State<FriendCodeListPage> {
       context,
       title: getTranslations().fromKey(LocaleKey.friendCodes),
       body: animateWidgetIn(
-        key: const Key('firendCodesSearch'),
+        key: const Key('friendCodesSearch'),
         child: SearchableList<FriendCodeViewModel>(
           () => getApiRepo().getFriendCodes(showPC, showPS4, showXb1, showNsw),
           listItemDisplayer: (
@@ -73,7 +73,7 @@ class _FriendCodeListWidget extends State<FriendCodeListPage> {
           addFabPadding: true,
           keepFirstListItemWidgetVisible: true,
           firstListItemWidget: topSectionWidget,
-          key: Key('firendCodes-${currentSelection.length}'),
+          key: Key('friendCodes-${currentSelection.length}'),
         ),
       ),
       fab: FloatingActionButton(

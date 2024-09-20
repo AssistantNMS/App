@@ -1,13 +1,9 @@
-// To parse this JSON data, do
-//
-//     final communtySpotlight = communtySpotlightFromJson(jsonString);
-
 import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
-class CommuntySpotlightViewModel {
-  CommuntySpotlightViewModel({
+class CommunitySpotlightViewModel {
+  CommunitySpotlightViewModel({
     required this.userName,
     required this.userImage,
     required this.title,
@@ -23,11 +19,11 @@ class CommuntySpotlightViewModel {
   String externalUrl;
   String previewImageUrl;
 
-  factory CommuntySpotlightViewModel.fromRawJson(String str) =>
-      CommuntySpotlightViewModel.fromJson(json.decode(str));
+  factory CommunitySpotlightViewModel.fromRawJson(String str) =>
+      CommunitySpotlightViewModel.fromJson(json.decode(str));
 
-  factory CommuntySpotlightViewModel.fromJson(Map<String, dynamic>? json) =>
-      CommuntySpotlightViewModel(
+  factory CommunitySpotlightViewModel.fromJson(Map<String, dynamic>? json) =>
+      CommunitySpotlightViewModel(
         userName: readStringSafe(json, 'userName'),
         userImage: readStringSafe(json, 'userImage'),
         title: readStringSafe(json, 'title'),

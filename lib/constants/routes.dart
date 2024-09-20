@@ -13,6 +13,10 @@ import '../pages/donation.dart';
 import '../pages/faction/faction_list_page.dart';
 import '../pages/faction/journey_milestone.dart';
 import '../pages/favourite/favourites_page.dart';
+import '../pages/fishing/bait_stat_page.dart';
+import '../pages/fishing/fishing_location_page.dart';
+import '../pages/fishing/fishing_page.dart';
+import '../pages/fishing/good_guys_free_bait_stat_page.dart';
 import '../pages/friendCode/friend_code_list_page.dart';
 import '../pages/guide/assistant_apps_guides_page.dart';
 import '../pages/guide/guides_page.dart';
@@ -110,6 +114,10 @@ class Routes {
   static const String nomNomInventoryTutorial = '/nomNomInventoryTutorial';
   static const String randomPortal = '/randomPortal';
   static const String missionGenerator = '/missionGenerator';
+  static const String fishing = '/fishing';
+  static const String fishingBait = '/fishingBait';
+  static const String fishingGgfBait = '/fishingGgfBait';
+  static const String fishingLocations = '/fishingLocations';
 }
 
 Map<String, Widget Function(BuildContext)> initNamedRoutes(
@@ -193,6 +201,10 @@ Map<String, Widget Function(BuildContext)> initNamedRoutes(
     Routes.nomNomInventoryTutorial: (context) =>
         const NomNomInventorySyncTutorial(),
     Routes.randomPortal: (context) => const RandomPortalPage(),
+    Routes.fishing: (context) => const FishingPage(),
+    Routes.fishingBait: (context) => const BaitStatPage(),
+    Routes.fishingGgfBait: (context) => GoodGuysFreeBaitStatPage(),
+    Routes.fishingLocations: (context) => FishingLocationPage(),
   });
   return routes;
 }

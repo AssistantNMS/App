@@ -7,7 +7,7 @@ import '../../contracts/generated/community_spotlight_view_model.dart';
 
 Widget communitySpotlightTilePresenter(
   BuildContext context,
-  CommuntySpotlightViewModel communitySpotlight, {
+  CommunitySpotlightViewModel communitySpotlight, {
   void Function()? onTap,
 }) {
   Function() localOnTap =

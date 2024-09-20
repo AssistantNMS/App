@@ -22,6 +22,10 @@ class AppImage {
   static const String starshipScrap = base + 'special/starshipScrap.png';
   static const String creatureHarvest = base + 'special/creatureHarvest.png';
   static const String creatureKill = base + 'special/creatureKill.png';
+  static const String storm = base + 'special/storm.png';
+  static const String fishingDay = base + 'special/fishing-day.png';
+  static const String fishingNight = base + 'special/fishing-night.png';
+  static const String fishingBoth = base + 'special/fishing-both.png';
 
   static const String drawer = 'drawer/';
   static const String about = drawer + 'about.png';
@@ -112,6 +116,9 @@ class AppImage {
 
   static const String statImages = base + 'stats';
 
+  static const String fishingBait = 'technology/280.png';
+  static const String fishingLocation = 'curiosities/173.png';
+
   static const String update = 'update/';
   static const String updateCompanions = update + 'companions.png';
   static const String updateExpeditions = update + 'expeditions.png';
@@ -136,6 +143,7 @@ class AppImage {
   static const String veritasVelez = 'contributors/veritasVelez.jpg';
   static const String nomNom = 'contributors/nomnomSimple.png';
   static const String kanaju = 'contributors/kanaju.png';
+  static const String goodGuysFree = 'contributors/goodGuysFree.png';
   static const String assistantNMSIcon = 'icon.png';
   static const String assistantNMSWindowIcon = 'window_icon.png';
   static const String kurtlIcon = 'KurtLourens.png';

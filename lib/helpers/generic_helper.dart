@@ -399,11 +399,11 @@ Widget getHdImage(
   );
 }
 
-Widget gridIconTilePresenter(BuildContext innerContext, String imageprefix,
+Widget gridIconTilePresenter(BuildContext innerContext, String imagePrefix,
         String imageAddress, Function(String icon) onTap) =>
     genericItemImage(
       innerContext,
-      '$imageprefix$imageAddress',
+      '$imagePrefix$imageAddress',
       disableZoom: true,
       onTap: () => onTap(imageAddress),
     );

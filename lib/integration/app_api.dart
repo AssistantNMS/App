@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/contracts/fishing/good_guy_free_bait_view_model.dart';
 
 import '../constants/api_urls.dart';
 import '../constants/app_config.dart';
@@ -107,6 +108,26 @@ class AppApi extends BaseApiService {
       getLog()
           .e("getInventoryFromNomNom Api Exception: ${exception.toString()}");
       return ResultWithValue<List<NomNomInventoryViewModel>>(
+          false, List.empty(), exception.toString());
+    }
+  }
+
+  Future<ResultWithValue<List<GoodGuyFreeBaitViewModel>>> getGoodGuyFreeBait(
+      String lang) async {
+    try {
+      final response =
+          await apiGet(ApiUrls.goodGuyFreeBait.replaceAll('{lang}', lang));
+      if (response.hasFailed) {
+        return ResultWithValue<List<GoodGuyFreeBaitViewModel>>(
+            false, List.empty(), response.errorMessage);
+      }
+      final List newsList = json.decode(response.value);
+      List<GoodGuyFreeBaitViewModel> news =
+          newsList.map((r) => GoodGuyFreeBaitViewModel.fromJson(r)).toList();
+      return ResultWithValue(true, news, '');
+    } catch (exception) {
+      getLog().e("getGoodGuyFreeBait Api Exception: ${exception.toString()}");
+      return ResultWithValue<List<GoodGuyFreeBaitViewModel>>(
           false, List.empty(), exception.toString());
     }
   }

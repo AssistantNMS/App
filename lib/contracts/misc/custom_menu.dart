@@ -322,6 +322,12 @@ List<CustomMenu> getMenuOptionsSection3(
       title: LocaleKey.techTree,
       navigateToNamed: Routes.techTree,
     ),
+    CustomMenu(
+      icon: localGetFromIcon(Icons.phishing),
+      drawerIcon: localGetDrawerFromIcon(Icons.phishing),
+      title: LocaleKey.fishing,
+      navigateToNamed: Routes.fishing,
+    ),
     // CustomMenu(
     //   icon: const ListTileImage(partialPath:AppImage.techTree, size: imageSize),
     //   drawerIcon: const ListTileImage(partialPath:AppImage.techTree),
