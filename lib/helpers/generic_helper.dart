@@ -416,6 +416,28 @@ String removeAllNameVariables(String input) {
       .replaceAll('%NAME%', '');
 }
 
+Widget displayFishValue(double stat) {
+  var textStyle = const TextStyle(fontSize: 16);
+  String displayValue = stat.toString();
+  if (stat < 1.0) {
+    textStyle = textStyle.copyWith(color: Colors.red);
+    String calculatedStat = ((1 - stat) * 100).toStringAsFixed(0);
+    displayValue = '- $calculatedStat %';
+  } else if (stat > 1.0) {
+    textStyle = textStyle.copyWith(color: Colors.green);
+    String calculatedStat = ((stat - 1) * 100).toStringAsFixed(0);
+    displayValue = '+ $calculatedStat %';
+  } else {
+    displayValue = ' ‒‒';
+  }
+  return Text(
+    displayValue,
+    textAlign: TextAlign.center,
+    overflow: TextOverflow.ellipsis,
+    style: textStyle,
+  );
+}
+
 Widget getDevSheet(
     BuildContext context, String itemId, Color iconColour, bool hdAvailable) {
   Widget iconBtn = animateWidgetIn(

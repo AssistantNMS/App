@@ -2,16 +2,18 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/contracts/creature/creature_harvest.dart';
 import 'package:assistantnms_app/contracts/data/starship_scrap.dart';
 
+import '../components/tilePresenters/bait_tile_presenter.dart';
+import 'data/egg_trait.dart';
 import 'data/major_update_item.dart';
 import 'data/platform_control_mapping.dart';
-import 'stat_bonus.dart';
-import 'procedural_stat_bonus.dart';
 import 'enum/blueprint_source.dart';
 import 'enum/currency_type.dart';
-import 'data/egg_trait.dart';
+import 'fishing/fishing_data.dart';
+import 'procedural_stat_bonus.dart';
 import 'processor.dart';
 import 'recharge.dart';
 import 'required_item.dart';
+import 'stat_bonus.dart';
 
 class GenericPageItem {
   String typeName;
@@ -51,6 +53,9 @@ class GenericPageItem {
   List<EggTrait>? eggTraits;
   List<PlatformControlMapping>? controlMappings;
   List<CreatureHarvest>? creatureHarvests;
+  FishingData? fishingData;
+  BaitDataWithItemDetails? fishingBait;
+  bool? hasGoodGuyFreeBait;
   String? translation;
   List<String>? usage;
 

@@ -72,7 +72,13 @@ Widget fishingDataTilePresenter(
     context,
     leadingImage: data.icon,
     name: data.name,
-    subtitle: Opacity(opacity: 0.75, child: Text(data.biomes.join(', '))),
+    subtitle: Opacity(
+        opacity: 0.75,
+        child: Text(
+          getTranslations().fromKey(LocaleKey.biome) +
+              ': ' +
+              data.biomes.join(', '),
+        )),
     trailing: Wrap(
       spacing: 8,
       children: [

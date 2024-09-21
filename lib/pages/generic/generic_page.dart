@@ -5,6 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/modalBottomSheet/share_modal_bottom_sheet.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
+import '../../components/tilePresenters/bait_tile_presenter.dart';
 import '../../components/tilePresenters/nutrient_processor_recipe_tile_presenter.dart';
 import '../../components/tilePresenters/recharge_tile_presenter.dart';
 import '../../components/tilePresenters/refiner_recipe_tile_presenter.dart';
@@ -290,6 +291,29 @@ class GenericPage extends StatelessWidget {
       () => nutrientProcessorRecipesByInputFuture(bodyCtx, itemId),
       nutrientProcessorRecipeWithInputsTilePresentor,
     ));
+
+    // ---------------------------- Fishing Data -----------------------------
+
+    if (genericItem.fishingData != null) {
+      widgets.addAll(getFishingLocation(
+        bodyCtx,
+        genericItem.fishingData!,
+      ));
+    }
+
+    if (genericItem.fishingBait != null) {
+      widgets.addAll(getFishingBait(
+        bodyCtx,
+        genericItem.fishingBait!,
+      ));
+    }
+
+    if (genericItem.hasGoodGuyFreeBait == true) {
+      widgets.addAll(ggfBaitOnCatalogueTilePresenter(
+        bodyCtx,
+        genericItem.id,
+      ));
+    }
 
     // ----------------------------- Stat bonuses ------------------------------
     List<StatBonus> statBonuses = genericItem.statBonuses ?? List.empty();

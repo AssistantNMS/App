@@ -131,4 +131,20 @@ class AppApi extends BaseApiService {
           false, List.empty(), exception.toString());
     }
   }
+
+  Future<ResultWithValue<GoodGuyFreeBaitViewModel>> getGoodGuyFreeBaitForItem(
+      String lang, String itemId) async {
+    var baitResult = await getGoodGuyFreeBait(lang);
+    GoodGuyFreeBaitViewModel? ggfItem = baitResult.value //
+        .where((dev) => dev.appId == itemId)
+        .firstOrNull;
+    if (ggfItem == null) {
+      return ResultWithValue(
+        false,
+        GoodGuyFreeBaitViewModel.fromRawJson('{}'),
+        'Unable to find item with appId "$itemId"',
+      );
+    }
+    return ResultWithValue(true, ggfItem, '');
+  }
 }
