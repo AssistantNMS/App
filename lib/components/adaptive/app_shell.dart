@@ -1,6 +1,5 @@
-import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
-import 'package:assistantnms_app/constants/app_image.dart';
+import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -117,20 +116,20 @@ class AppShell extends StatelessWidget {
       ),
     );
 
-    if (isDesktop) {
-      return MaterialApp(
-        theme: theme,
-        darkTheme: darkTheme,
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          appBar: WindowTitleBar(
-            title: 'Assistant for No Man\'s Sky',
-            iconPath: AppImage.assistantNMSWindowIcon,
-          ),
-          body: matApp,
-        ),
-      );
-    }
+    // if (isDesktop) {
+    //   return MaterialApp(
+    //     theme: theme,
+    //     darkTheme: darkTheme,
+    //     debugShowCheckedModeBanner: false,
+    //     home: Scaffold(
+    //       appBar: WindowTitleBar(
+    //         title: 'Assistant for No Man\'s Sky',
+    //         iconPath: AppImage.assistantNMSWindowIcon,
+    //       ),
+    //       body: matApp,
+    //     ),
+    //   );
+    // }
 
     return MaterialApp(
       theme: theme,

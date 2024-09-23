@@ -1,12 +1,10 @@
-import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/env/platform_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:bitsdojo_window/bitsdojo_window.dart';
 
 import 'app.dart';
-import 'env.dart';
 import 'assistant_apps_settings.dart';
+import 'env.dart';
 import 'env/environment_settings.dart';
 
 Future main() async {
@@ -31,12 +29,12 @@ Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(AssistantNMS(env));
 
-  if (isDesktop) {
-    doWhenWindowReady(() {
-      const initialSize = Size(400, 600);
-      appWindow.minSize = initialSize;
-      appWindow.alignment = Alignment.center;
-      appWindow.show();
-    });
-  }
+  // if (isDesktop) {
+  //   doWhenWindowReady(() {
+  //     const initialSize = Size(400, 600);
+  //     appWindow.minSize = initialSize;
+  //     appWindow.alignment = Alignment.center;
+  //     appWindow.show();
+  //   });
+  // }
 }
