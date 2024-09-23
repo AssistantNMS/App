@@ -26,4 +26,5 @@ class ApiUrls {
   static const String communitySearchChips = "CommunityLink/NMSCD-Chips";
   static const String communityMissionProgressByMission =
       "CommunityMissionProgress/progressByMission/";
+  static const String goodGuyFreeBait = "GoodGuysFree/{lang}/bait";
 }

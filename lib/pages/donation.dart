@@ -70,7 +70,7 @@ class _DonationWidget extends State<Donation> {
       title: Text(getTranslations().fromKey(LocaleKey.kofi),
           style: const TextStyle(fontSize: 20)),
       onTap: () {
-        getAnalytics().trackEvent(AnalyticsEvent.externalLinkkofi);
+        getAnalytics().trackEvent(AnalyticsEvent.externalLinkKofi);
         launchExternalURL(ExternalUrls.kofi);
       },
     ));

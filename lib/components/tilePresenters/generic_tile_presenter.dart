@@ -10,6 +10,7 @@ Widget genericTileWithBackgroundColourPresenter(
   BuildContext context,
   GenericPageItem genericItem,
   bool isHero, {
+  bool? removeContentPadding,
   void Function()? onTap,
 }) {
   String itemIcon = (genericItem.icon.isEmpty)
@@ -19,6 +20,7 @@ Widget genericTileWithBackgroundColourPresenter(
     context,
     leadingImage: itemIcon,
     leadingImageHero: isHero ? gameItemIconHero(genericItem) : null,
+    removeContentPadding: removeContentPadding,
     imageBackgroundColour: genericItem.colour,
     name: genericItem.name,
     onTap: onTap ??
@@ -38,6 +40,7 @@ Widget genericTilePresenter(
   BuildContext context,
   GenericPageItem genericItem,
   bool isHero, {
+  bool? removeContentPadding,
   void Function()? onTap,
 }) {
   String itemIcon = (genericItem.icon.isEmpty)
@@ -48,6 +51,7 @@ Widget genericTilePresenter(
     context,
     leadingImage: itemIcon,
     leadingImageHero: isHero ? gameItemIconHero(genericItem) : null,
+    removeContentPadding: removeContentPadding,
     name: genericItem.name,
     onTap: onTap ??
         () {

@@ -173,10 +173,10 @@ class _TitlePageViewState extends State<TitlePageView>
   Widget build(BuildContext context) {
     String title = getTranslations().fromKey(LocaleKey.titles);
     int ownedItems = viewModel.owned.length;
-    String owned = ownedItems > 0 ? ownedItems.toString() : '...';
+    String owned = ownedItems > 0 ? ownedItems.toString() : '0';
     String numTiles = titleDataWithOwned.isNotEmpty
         ? titleDataWithOwned.length.toString()
-        : '...';
+        : '.';
     List<TitleDataWithOwned> filtered = titleDataWithOwned
         .where(
           (item) => (viewModel.hideCompleted == false || item.isOwned == false),

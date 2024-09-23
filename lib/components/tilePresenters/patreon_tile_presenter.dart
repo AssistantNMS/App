@@ -1,9 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/app_image.dart';
-import '../../constants/nms_ui_constants.dart';
-import '../dialogs/pretty_dialog.dart';
+import '../modalBottomSheet/patreon_modal_bottom_sheet.dart';
 
 Widget patronTilePresenter(BuildContext context, PatreonViewModel patron) {
   if (patron.url == ExternalUrls.patreon) {
@@ -27,9 +25,12 @@ Widget patronTilePresenter(BuildContext context, PatreonViewModel patron) {
   );
 }
 
-Widget patronFeatureTilePresenter(BuildContext context, String featureName,
-    String navigateToNamed, DateTime unlockDate) {
-  var isFeatureAvailable = DateTime.now().isAfter(unlockDate);
+Widget patronFeatureTilePresenter(
+  BuildContext context,
+  String featureName,
+  String navigateToNamed,
+  DateTime unlockDate,
+) {
   var timeDiff =
       unlockDate.millisecondsSinceEpoch - DateTime.now().millisecondsSinceEpoch;
   var descripText =
@@ -38,28 +39,19 @@ Widget patronFeatureTilePresenter(BuildContext context, String featureName,
     '{0}',
     getFriendlyTimeLeft(context, timeDiff),
   );
-  void Function() onTap;
-  onTap = () {
-    Future Function() navigateAway;
-    navigateAway = () => getNavigation().navigateAwayFromHomeAsync(
-          context,
-          navigateToNamed: navigateToNamed,
-        );
-    if (isFeatureAvailable) {
-      navigateAway();
-      return;
-    }
-
-    prettyDialog(
-      context,
-      AppImage.patreonFeature,
-      getTranslations().fromKey(LocaleKey.featureNotAvailable),
-      descrip,
-      okButtonText: getTranslations().fromKey(LocaleKey.patreon),
-      buttonOkColor: HexColor(NMSUIConstants.PatreonHex),
-      onSuccess: (_) => launchExternalURL(ExternalUrls.patreon),
+  void Function(BuildContext) onTap;
+  onTap = (navCtx) {
+    handlePatreonBottomModalSheetWhenTapped(
+      navCtx,
+      false,
+      unlockDate: unlockDate,
+      onTap: (innerNavCtx) => getNavigation().navigateAwayFromHomeAsync(
+        innerNavCtx,
+        navigateToNamed: navigateToNamed,
+      ),
     );
   };
+
   return FlatCard(
     child: ListTile(
       leading: DonationImage.patreon(),
@@ -76,9 +68,9 @@ Widget patronFeatureTilePresenter(BuildContext context, String featureName,
       trailing: IconButton(
         icon: const Icon(Icons.help),
         iconSize: 32.0,
-        onPressed: onTap,
+        onPressed: () => onTap(context),
       ),
-      onTap: onTap,
+      onTap: () => onTap(context),
     ),
   );
 }

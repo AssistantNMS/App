@@ -1,7 +1,7 @@
-import 'package:assistantnms_app/contracts/creature/creature_harvest.dart';
-import 'package:flutter/material.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:flutter/material.dart';
 
+import '../../contracts/creature/creature_harvest.dart';
 import 'interface/i_creature_harvest_json_repository.dart';
 
 class CreatureHarvestJsonRepository extends BaseJsonService
@@ -10,7 +10,7 @@ class CreatureHarvestJsonRepository extends BaseJsonService
   Future<ResultWithValue<List<CreatureHarvest>>> getCreatureHarvests(
       BuildContext context) async {
     try {
-      List responseJson = await getListfromJson(context,
+      List responseJson = await getListFromJson(context,
           getTranslations().fromKey(LocaleKey.creatureHarvestJson) + '.json');
       List<CreatureHarvest> dataItems =
           responseJson.map((m) => CreatureHarvest.fromJson(m)).toList();

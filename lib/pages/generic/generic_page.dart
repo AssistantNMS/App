@@ -5,6 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../components/modalBottomSheet/share_modal_bottom_sheet.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
+import '../../components/tilePresenters/bait_tile_presenter.dart';
 import '../../components/tilePresenters/nutrient_processor_recipe_tile_presenter.dart';
 import '../../components/tilePresenters/recharge_tile_presenter.dart';
 import '../../components/tilePresenters/refiner_recipe_tile_presenter.dart';
@@ -12,6 +13,7 @@ import '../../components/tilePresenters/required_item_details_tile_presenter.dar
 import '../../components/tilePresenters/required_item_tile_presenter.dart';
 import '../../constants/analytics_event.dart';
 import '../../constants/nms_ui_constants.dart';
+import '../../constants/patreon.dart';
 import '../../constants/usage_key.dart';
 import '../../contracts/cart/cart_item.dart';
 import '../../contracts/charge_by.dart';
@@ -61,6 +63,7 @@ class GenericPage extends StatelessWidget {
             storeCtx,
             itemId,
             viewModel.platformIndex,
+            viewModel.isPatron,
           ),
           whileLoading: () => (itemTopContent != null) //
               ? itemTopContent
@@ -290,6 +293,37 @@ class GenericPage extends StatelessWidget {
       () => nutrientProcessorRecipesByInputFuture(bodyCtx, itemId),
       nutrientProcessorRecipeWithInputsTilePresentor,
     ));
+
+    // ---------------------------- Fishing Data -----------------------------
+
+    var isFishingLocked = isPatreonFeatureLocked(
+      PatreonEarlyAccessFeature.fishingDataPage,
+      vm.isPatron,
+    );
+
+    if (genericItem.fishingData != null) {
+      widgets.addAll(getFishingLocation(
+        bodyCtx,
+        genericItem.fishingData!,
+        isFishingLocked,
+      ));
+    }
+
+    if (genericItem.fishingBait != null) {
+      widgets.addAll(getFishingBait(
+        bodyCtx,
+        genericItem.fishingBait!,
+        isFishingLocked,
+      ));
+    }
+
+    if (genericItem.hasGoodGuyFreeBait == true) {
+      widgets.addAll(ggfBaitOnCatalogueTilePresenter(
+        bodyCtx,
+        genericItem.id,
+        isFishingLocked,
+      ));
+    }
 
     // ----------------------------- Stat bonuses ------------------------------
     List<StatBonus> statBonuses = genericItem.statBonuses ?? List.empty();

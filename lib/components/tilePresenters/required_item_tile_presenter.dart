@@ -116,6 +116,7 @@ Widget genericHomeTileWithRequiredItemsPresenter(
   BuildContext context,
   GenericPageItem genericItem,
   bool isHero, {
+  bool? removeContentPadding,
   void Function()? onTap,
 }) {
   return CachedFutureBuilder<List<RequiredItemDetails>>(
@@ -127,6 +128,7 @@ Widget genericHomeTileWithRequiredItemsPresenter(
         genericItem,
         isHero,
         data,
+        removeContentPadding: removeContentPadding,
       );
     },
   );
@@ -136,6 +138,7 @@ Widget genericHomeTileWithRequiredItemsAndBackgroundColourPresenter(
   BuildContext context,
   GenericPageItem genericItem,
   bool isHero, {
+  bool? removeContentPadding,
   void Function()? onTap,
 }) {
   return CachedFutureBuilder<List<RequiredItemDetails>>(
@@ -159,6 +162,7 @@ Widget genericHomeTileWithRequiredItemsBody(
   bool isHero,
   List<RequiredItemDetails> snapshot, {
   bool displayBackgroundColour = false,
+  bool? removeContentPadding,
   void Function()? onTap,
 }) {
   if (snapshot.isEmpty) {
@@ -168,12 +172,14 @@ Widget genericHomeTileWithRequiredItemsBody(
         genericItem,
         isHero,
         onTap: onTap,
+        removeContentPadding: removeContentPadding,
       );
     } else {
       genericTilePresenter(
         context,
         genericItem,
         isHero,
+        removeContentPadding: removeContentPadding,
         onTap: onTap,
       );
     }

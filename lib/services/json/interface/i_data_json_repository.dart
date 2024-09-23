@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantnms_app/contracts/data/bait_data.dart';
 import 'package:flutter/material.dart';
 
 import '../../../contracts/data/alphabet_translation.dart';
@@ -18,20 +19,12 @@ class IDataJsonRepository {
   //
   Future<ResultWithValue<List<SocialItem>>> getSocial(
       BuildContext context) async {
-    return ResultWithValue<List<SocialItem>>(
-      false,
-      List.empty(growable: true),
-      '',
-    );
+    return ResultWithValue<List<SocialItem>>(false, List.empty(), '');
   }
 
   Future<ResultWithValue<List<UpdateItemDetail>>> getUpdateItems(
       BuildContext context) async {
-    return ResultWithValue<List<UpdateItemDetail>>(
-      false,
-      List.empty(growable: true),
-      '',
-    );
+    return ResultWithValue<List<UpdateItemDetail>>(false, List.empty(), '');
   }
 
   Future<ResultWithValue<UpdateItemDetail>> getUpdateItem(
@@ -45,11 +38,7 @@ class IDataJsonRepository {
 
   Future<ResultWithValue<List<QuicksilverStore>>> getQuickSilverItems(
       BuildContext context) async {
-    return ResultWithValue<List<QuicksilverStore>>(
-      false,
-      List.empty(growable: true),
-      '',
-    );
+    return ResultWithValue<List<QuicksilverStore>>(false, List.empty(), '');
   }
 
   Future<ResultWithValue<QuicksilverStore>> getQuickSilverItem(
@@ -63,20 +52,12 @@ class IDataJsonRepository {
 
   Future<ResultWithValue<List<EggTrait>>> getEggTraits(
       BuildContext context, String itemId) async {
-    return ResultWithValue<List<EggTrait>>(
-      false,
-      List.empty(),
-      '',
-    );
+    return ResultWithValue<List<EggTrait>>(false, List.empty(), '');
   }
 
   Future<ResultWithValue<List<String>>> getUnusedMileStonePatchImages(
       BuildContext context) async {
-    return ResultWithValue<List<String>>(
-      false,
-      List.empty(),
-      '',
-    );
+    return ResultWithValue<List<String>>(false, List.empty(), '');
   }
 
   Future<ResultWithValue<DevDetail>> getDevDetails(
@@ -100,19 +81,12 @@ class IDataJsonRepository {
   Future<ResultWithValue<List<PlatformControlMapping>>> getControlMapping(
       BuildContext context, int platformIndex) async {
     return ResultWithValue<List<PlatformControlMapping>>(
-      false,
-      List.empty(),
-      '',
-    );
+        false, List.empty(), '');
   }
 
   Future<ResultWithValue<List<AlphabetTranslation>>> getTranslations(
       BuildContext context) async {
-    return ResultWithValue<List<AlphabetTranslation>>(
-      false,
-      List.empty(),
-      '',
-    );
+    return ResultWithValue<List<AlphabetTranslation>>(false, List.empty(), '');
   }
 
   Future<ResultWithValue<AlphabetTranslation>> getTranslation(
@@ -126,11 +100,7 @@ class IDataJsonRepository {
 
   Future<ResultWithValue<List<TwitchCampaignData>>> getTwitchDrops(
       BuildContext context) async {
-    return ResultWithValue<List<TwitchCampaignData>>(
-      false,
-      List.empty(),
-      '',
-    );
+    return ResultWithValue<List<TwitchCampaignData>>(false, List.empty(), '');
   }
 
   Future<ResultWithValue<TwitchCampaignData>> getTwitchDropById(
@@ -144,11 +114,7 @@ class IDataJsonRepository {
 
   Future<ResultWithValue<List<MajorUpdateItem>>> getMajorUpdates(
       BuildContext context) async {
-    return ResultWithValue<List<MajorUpdateItem>>(
-      false,
-      List.empty(),
-      '',
-    );
+    return ResultWithValue<List<MajorUpdateItem>>(false, List.empty(), '');
   }
 
   Future<ResultWithValue<MajorUpdateItem>> getLatestMajorUpdate(
@@ -171,40 +137,37 @@ class IDataJsonRepository {
 
   Future<ResultWithValue<List<StarshipScrap>>> getStarshipScrapData(
       BuildContext context) async {
-    return ResultWithValue<List<StarshipScrap>>(
-      false,
-      List.empty(),
-      '',
-    );
+    return ResultWithValue<List<StarshipScrap>>(false, List.empty(), '');
   }
 
   Future<ResultWithValue<List<StarshipScrap>>> getStarshipScrapDataForItem(
       BuildContext context, String itemId) async {
-    return ResultWithValue<List<StarshipScrap>>(
-      false,
-      List.empty(),
-      '',
-    );
+    return ResultWithValue<List<StarshipScrap>>(false, List.empty(), '');
   }
 
   Future<ResultWithValue<List<CatalogueOrder>>> getCatalogueOrders(
     BuildContext context,
   ) async {
-    return ResultWithValue<List<CatalogueOrder>>(
-      false,
-      List.empty(),
-      '',
-    );
+    return ResultWithValue<List<CatalogueOrder>>(false, List.empty(), '');
   }
 
   Future<ResultWithValue<List<String>>> getCatalogueOrder(
     BuildContext context,
     String itemId,
   ) async {
-    return ResultWithValue<List<String>>(
-      false,
-      List.empty(),
-      '',
-    );
+    return ResultWithValue<List<String>>(false, List.empty(), '');
+  }
+
+  Future<ResultWithValue<List<BaitData>>> getBaitData(
+    BuildContext context,
+  ) async {
+    return ResultWithValue<List<BaitData>>(false, List.empty(), '');
+  }
+
+  Future<ResultWithValue<BaitData>> getBaitDataForItem(
+    BuildContext context,
+    String itemId,
+  ) async {
+    return ResultWithValue<BaitData>(false, BaitData.fromRawJson('{}'), '');
   }
 }

@@ -9,6 +9,7 @@ class PatreonEarlyAccessFeature {
   static DateTime newMilestonesPage = DateTime(2022, 4, 1);
   static DateTime newMajorUpdatesPage = DateTime(2022, 6, 18);
   static DateTime syncInventoryPage = DateTime(2022, 12, 24);
+  static DateTime fishingDataPage = DateTime(2024, 10, 1);
 }
 
 bool isPatreonFeatureLocked(DateTime unlockDate, bool isPatron) {

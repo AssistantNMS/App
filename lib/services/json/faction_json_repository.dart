@@ -66,7 +66,7 @@ class FactionJsonRepository extends BaseJsonService
     String jsonFileName =
         getTranslations().fromKey(LocaleKey.guildMissionJson) + '.json';
     try {
-      List responseDetailsJson = await getListfromJson(context, jsonFileName);
+      List responseDetailsJson = await getListFromJson(context, jsonFileName);
       List<GuildMission> missions =
           responseDetailsJson.map((m) => GuildMission.fromJson(m)).toList();
 

@@ -248,8 +248,8 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                       const SizedBox(width: 10),
                       ElevatedButton(
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(
-                              Colors.red[400]!),
+                          backgroundColor:
+                              WidgetStateProperty.all<Color>(Colors.red[400]!),
                         ),
                         onPressed: disableEditBtns
                             ? null
@@ -265,8 +265,8 @@ class _PortalConverterPageState extends State<PortalConverterPage> {
                       const SizedBox(width: 5),
                       ElevatedButton(
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(
-                              Colors.red[800]!),
+                          backgroundColor:
+                              WidgetStateProperty.all<Color>(Colors.red[800]!),
                         ),
                         onPressed: disableEditBtns
                             ? null

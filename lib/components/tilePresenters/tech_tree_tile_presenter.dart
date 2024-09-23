@@ -21,23 +21,14 @@ Widget techTreeNodeTilePresenter(
 }
 
 Widget techTreeTilePresenter(BuildContext context, String name) {
-  return Row(
-    children: [
-      const SizedBox(
-        child: null,
-        height: 50,
-        width: 50,
-      ),
-      Padding(
-        padding: const EdgeInsets.only(left: 8),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(name, maxLines: 2),
-            Container(height: 4),
-          ],
-        ),
-      ),
-    ],
+  return Padding(
+    padding: const EdgeInsets.only(left: 8),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(name, maxLines: 2),
+        Container(height: 4),
+      ],
+    ),
   );
 }

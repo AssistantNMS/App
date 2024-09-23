@@ -10,7 +10,7 @@ class JourneyJsonRepository extends BaseJsonService
   Future<ResultWithValue<List<JourneyMilestone>>> getAllMilestones(
       BuildContext context) async {
     try {
-      List responseJson = await getListfromJson(context,
+      List responseJson = await getListFromJson(context,
           getTranslations().fromKey(LocaleKey.journeyMilestoneJson) + '.json');
       List<JourneyMilestone> dataItems =
           responseJson.map((m) => JourneyMilestone.fromJson(m)).toList();

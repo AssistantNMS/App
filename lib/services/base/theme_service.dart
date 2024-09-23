@@ -28,7 +28,7 @@ class ThemeService implements IThemeService {
 
   @override
   Color getBackgroundColour(BuildContext context) =>
-      getTheme(context).colorScheme.background;
+      getTheme(context).colorScheme.surface;
 
   @override
   Color getScaffoldBackgroundColour(BuildContext context) =>
@@ -75,9 +75,7 @@ class ThemeService implements IThemeService {
 
   @override
   Color getCardBackgroundColour(BuildContext context) => lighten(
-        getDynamicTheme(Brightness.dark, defaultFontFamily)
-            .colorScheme
-            .background,
+        getDynamicTheme(Brightness.dark, defaultFontFamily).colorScheme.surface,
         0.25,
       );
 

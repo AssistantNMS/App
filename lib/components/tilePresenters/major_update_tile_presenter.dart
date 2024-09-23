@@ -32,7 +32,7 @@ Widget majorUpdateTilePresenter(
       children: [
         backgroundImgSource,
         Container(
-          color: const Color.fromRGBO(0, 0, 0, 0.45),
+          color: const Color.fromRGBO(0, 0, 0, 1),
           child: Column(children: [
             GenericItemName(updateNewItems.title),
           ]),

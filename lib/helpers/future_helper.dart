@@ -5,13 +5,16 @@ import 'package:assistantnms_app/contracts/data/major_update_item.dart';
 import 'package:assistantnms_app/contracts/data/starship_scrap.dart';
 import 'package:flutter/material.dart';
 
+import '../components/tilePresenters/bait_tile_presenter.dart';
 import '../constants/id_prefix.dart';
 import '../contracts/creature/creature_harvest.dart';
+import '../contracts/data/bait_data.dart';
 import '../contracts/data/egg_trait.dart';
 import '../contracts/data/platform_control_mapping.dart';
 import '../contracts/data/quicksilver_store.dart';
 import '../contracts/data/update_item_detail.dart';
 import '../contracts/enum/currency_type.dart';
+import '../contracts/fishing/fishing_data.dart';
 import '../contracts/generic_page_item.dart';
 import '../contracts/helloGames/quick_silver_store_details.dart';
 import '../contracts/processor.dart';
@@ -23,14 +26,15 @@ import '../contracts/weekend_mission.dart';
 import '../contracts/weekend_stage_page_item.dart';
 import '../integration/dependency_injection.dart';
 import '../mapper/generic_item_mapper.dart';
-import '../services/json/weekend_mission_season_json_repository.dart';
 import '../services/json/interface/i_generic_repository.dart';
+import '../services/json/weekend_mission_season_json_repository.dart';
 import 'items_helper.dart';
 
 Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   context,
   String itemId,
   int platformIndex,
+  bool isPatron,
 ) async {
   ResultWithValue<IGenericRepository?> genRepo = getRepoFromId(context, itemId);
   if (genRepo.hasFailed) {
@@ -93,6 +97,9 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   if (usage.contains(UsageKey.isRewardFromShipScrap)) {
     item.starshipScrapItems = await rewardStarshipScrapFuture(context, itemId);
   }
+  if (usage.contains(UsageKey.isEggIngredient)) {
+    item.eggTraits = await eggTraitsFuture(context, itemId);
+  }
   if (usage.contains(UsageKey.isAddedInTrackedUpdate)) {
     item.addedInUpdate = await fromTrackedUpdateFuture(context, itemId);
   }
@@ -100,7 +107,15 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
     item.creatureHarvests = await creatureHarvestsFuture(context, itemId);
   }
 
-  itemResult.value.eggTraits = await eggTraitsFuture(context, itemId);
+  if (usage.contains(UsageKey.hasFishingLocation)) {
+    item.fishingData = await fishingLocationFuture(context, itemId);
+  }
+  if (usage.contains(UsageKey.hasFishingBait)) {
+    item.fishingBait = await fishingBaitFuture(context, itemId);
+  } else {
+    item.hasGoodGuyFreeBait = usage.contains(UsageKey.hasGoodGuysFreeBait);
+  }
+
   itemResult.value.controlMappings =
       await controlMappingsFuture(context, platformIndex);
   itemResult.value.translation = await translationFuture(context, itemId);
@@ -303,6 +318,33 @@ Future<List<CreatureHarvest>> creatureHarvestsFuture(
       .getCreatureHarvestsForItem(context, itemId);
   if (items.hasFailed) {
     return List.empty();
+  }
+  return items.value;
+}
+
+Future<BaitDataWithItemDetails?> fishingBaitFuture(
+    context, String itemId) async {
+  ResultWithValue<BaitData> item =
+      await getDataRepo().getBaitDataForItem(context, itemId);
+  if (item.hasFailed) {
+    return null;
+  }
+
+  var details = await requiredItemDetails(context, RequiredItem(id: itemId));
+  if (details.hasFailed) {
+    return null;
+  }
+  return BaitDataWithItemDetails(
+    bait: item.value,
+    itemDetails: details.value,
+  );
+}
+
+Future<FishingData?> fishingLocationFuture(context, String itemId) async {
+  ResultWithValue<FishingData> items =
+      await getFishingRepo().getById(context, itemId);
+  if (items.hasFailed) {
+    return null;
   }
   return items.value;
 }

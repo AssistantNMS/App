@@ -17,7 +17,7 @@ class CommunitySpotlightPage extends StatelessWidget {
     return simpleGenericPageScaffold(
       context,
       title: getTranslations().fromKey(LocaleKey.communitySpotlight),
-      body: SearchableList<CommuntySpotlightViewModel>(
+      body: SearchableList<CommunitySpotlightViewModel>(
         () => getCommunityApiService().getAllCommunitySpotlights(),
         listItemDisplayer: communitySpotlightTilePresenter,
         listItemSearch: (_, __) => false,

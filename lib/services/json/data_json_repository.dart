@@ -4,6 +4,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import '../../contracts/data/alphabet_translation.dart';
+import '../../contracts/data/bait_data.dart';
 import '../../contracts/data/catalogue_order.dart';
 import '../../contracts/data/control_mapping_list.dart';
 import '../../contracts/data/generated_meta.dart';
@@ -615,6 +616,68 @@ class DataJsonRepository extends BaseJsonService
       return ResultWithValue<List<String>>(
         false,
         List.empty(),
+        exception.toString(),
+      );
+    }
+  }
+
+  @override
+  Future<ResultWithValue<List<BaitData>>> getBaitData(
+    BuildContext context,
+  ) async {
+    try {
+      dynamic responseJson = await getJsonFromAssets(context, "data/bait.json");
+      List list = json.decode(responseJson);
+      List<BaitData> trans = list //
+          .map((e) => BaitData.fromJson(e))
+          .toList();
+      return ResultWithValue<List<BaitData>>(true, trans, '');
+    } catch (exception) {
+      getLog().e(
+          "DataJsonRepository getBaitData Exception: ${exception.toString()}");
+      return ResultWithValue<List<BaitData>>(
+        false,
+        List.empty(),
+        exception.toString(),
+      );
+    }
+  }
+
+  @override
+  Future<ResultWithValue<BaitData>> getBaitDataForItem(
+    BuildContext context,
+    String itemId,
+  ) async {
+    var defaultValue = BaitData.fromRawJson('{}');
+    ResultWithValue<List<BaitData>> allItemsResult = await getBaitData(context);
+    if (allItemsResult.hasFailed) {
+      return ResultWithValue<BaitData>(
+        false,
+        defaultValue,
+        allItemsResult.errorMessage,
+      );
+    }
+
+    try {
+      BaitData? items = allItemsResult.value //
+          .where((dev) => dev.appId == itemId)
+          .firstOrNull;
+
+      if (items == null) {
+        return ResultWithValue<BaitData>(
+          false,
+          defaultValue,
+          'No Bait data data found',
+        );
+      }
+
+      return ResultWithValue<BaitData>(true, items, '');
+    } catch (exception) {
+      getLog().e(
+          "DataJsonRepository getBaitDataForItem Exception: ${exception.toString()}");
+      return ResultWithValue<BaitData>(
+        false,
+        defaultValue,
         exception.toString(),
       );
     }

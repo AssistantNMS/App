@@ -331,7 +331,7 @@ List<Widget> getConsumableRewards(
 Widget Function(BuildContext, GenericPageItem, {void Function()? onTap})
     getListItemDisplayer(
         bool genericTileIsCompact, bool displayGenericItemColour,
-        {bool isHero = false}) {
+        {bool isHero = false, bool? removeContentPadding}) {
   var presenterWithIsHero = displayGenericItemColour
       ? genericHomeTileWithRequiredItemsAndBackgroundColourPresenter
       : genericHomeTileWithRequiredItemsPresenter;
@@ -342,7 +342,8 @@ Widget Function(BuildContext, GenericPageItem, {void Function()? onTap})
         : genericTilePresenter;
   }
   return (BuildContext ctx, GenericPageItem item, {void Function()? onTap}) =>
-      presenterWithIsHero(ctx, item, isHero, onTap: onTap);
+      presenterWithIsHero(ctx, item, isHero,
+          removeContentPadding: removeContentPadding, onTap: onTap);
 }
 
 Widget getFavouriteStar(
@@ -398,11 +399,11 @@ Widget getHdImage(
   );
 }
 
-Widget gridIconTilePresenter(BuildContext innerContext, String imageprefix,
+Widget gridIconTilePresenter(BuildContext innerContext, String imagePrefix,
         String imageAddress, Function(String icon) onTap) =>
     genericItemImage(
       innerContext,
-      '$imageprefix$imageAddress',
+      '$imagePrefix$imageAddress',
       disableZoom: true,
       onTap: () => onTap(imageAddress),
     );
@@ -413,6 +414,28 @@ String removeAllNameVariables(String input) {
       .replaceAll('„%NAME%“', '') //
       .replaceAll('%NAME%-', '') //
       .replaceAll('%NAME%', '');
+}
+
+Widget displayFishValue(double stat) {
+  var textStyle = const TextStyle(fontSize: 16);
+  String displayValue = stat.toString();
+  if (stat < 1.0) {
+    textStyle = textStyle.copyWith(color: Colors.red);
+    String calculatedStat = ((1 - stat) * 100).toStringAsFixed(0);
+    displayValue = '- $calculatedStat %';
+  } else if (stat > 1.0) {
+    textStyle = textStyle.copyWith(color: Colors.green);
+    String calculatedStat = ((stat - 1) * 100).toStringAsFixed(0);
+    displayValue = '+ $calculatedStat %';
+  } else {
+    displayValue = ' ‒‒';
+  }
+  return Text(
+    displayValue,
+    textAlign: TextAlign.center,
+    overflow: TextOverflow.ellipsis,
+    style: textStyle,
+  );
 }
 
 Widget getDevSheet(

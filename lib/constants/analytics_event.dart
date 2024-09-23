@@ -92,6 +92,10 @@ class AnalyticsEvent {
   static const String twitchCampaignPage = "Twitch_Campaigns_Page_View";
   static const String starshipScrapPagePage = "Starship_Scrap_Page_View";
   static const String randomPortalPage = 'Random_Portal_Page_View';
+  static const String fishingPage = 'Fishing_Page_View';
+  static const String fishingBaitPage = 'Fishing_Bait_Page_View';
+  static const String fishingGgfBaitPage = 'Fishing_Ggf_Bait_Page_View';
+  static const String fishingLocationPage = 'Fishing_Location_Page_View';
   //user_events
   static const String addToCartFromHome = 'Added_item_to_cart_from_Home_Page';
   static const String exploitItemClick = 'Exploit_item_Click';
@@ -110,7 +114,7 @@ class AnalyticsEvent {
   static const String externalLinkBuyMeACoffee = 'BuyMeACoffee';
   static const String externalLinkPayPal = 'PayPal';
   static const String externalLinkPatreon = 'Patreon';
-  static const String externalLinkkofi = 'Ko-fi';
+  static const String externalLinkKofi = 'Ko-fi';
   static const String externalLinkKurtLourensEmail = 'Email_hi@kurtlourens.com';
   static const String externalLinkGitHubGeneral = 'Go_to_General_Repository';
   static const String externalLinkGitHubLanguage = 'Go_to_Language_Repository';

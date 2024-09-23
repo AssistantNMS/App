@@ -19,8 +19,7 @@ abstract class IAudioPlayerService {
     required Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
-    )
-        builder,
+    ) builder,
   });
 
   Widget audioLocalBuilder({
@@ -29,7 +28,6 @@ abstract class IAudioPlayerService {
     required Widget Function(
       BuildContext audioContext,
       AudioStreamBuilderEvent audioStream,
-    )
-        builder,
+    ) builder,
   });
 }

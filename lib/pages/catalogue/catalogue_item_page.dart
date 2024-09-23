@@ -1,5 +1,3 @@
-// ignore_for_file: unnecessary_this
-
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
@@ -28,7 +26,7 @@ class CatalogueItemPage extends StatelessWidget {
       body: StoreConnector<AppState, GenericPageViewModel>(
         converter: (store) => GenericPageViewModel.fromStore(store),
         builder: (_, viewModel) => SearchableList<GenericPageItem>(
-          () => getAllFromLocaleKeys(context, this.repoJsonLocaleKeys),
+          () => getAllFromLocaleKeys(context, repoJsonLocaleKeys),
           listItemDisplayer: getListItemDisplayer(
             viewModel.genericTileIsCompact,
             viewModel.displayGenericItemColour,

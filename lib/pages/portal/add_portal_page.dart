@@ -215,7 +215,7 @@ class _PortalPageState extends State<AddPortalPage> {
                     ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.red[400]!),
+                            WidgetStateProperty.all<Color>(Colors.red[400]!),
                       ),
                       onPressed: disableEditBtns
                           ? null
@@ -230,7 +230,7 @@ class _PortalPageState extends State<AddPortalPage> {
                     ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.red[800]!),
+                            WidgetStateProperty.all<Color>(Colors.red[800]!),
                       ),
                       onPressed: disableEditBtns
                           ? null

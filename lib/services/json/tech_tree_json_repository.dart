@@ -16,7 +16,7 @@ class TechTreeJsonRepository extends BaseJsonService
   Future<ResultWithValue<List<UnlockableTechTree>>> getAll(context) async {
     String jsonFile = getTranslations().fromKey(jsonLocale) + '.json';
     try {
-      List list = await getListfromJson(context, jsonFile);
+      List list = await getListFromJson(context, jsonFile);
       List<UnlockableTechTree> unlockableTechTree =
           list.map((m) => UnlockableTechTree.fromJson(m)).toList();
       return ResultWithValue<List<UnlockableTechTree>>(
