@@ -7,13 +7,13 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: 'build-windows'
+  group: "build-windows"
   cancel-in-progress: true
 
 on:
   workflow_dispatch:
   push:
-    branches: ['main']
+    branches: ["main"]
 
 jobs:
   build:
@@ -24,9 +24,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v2
         with:
-          channel: 'stable' # 'stable', 'beta', 'dev' or 'master'
+          channel: "stable" # 'stable', 'beta', 'dev' or 'master'
+          flutter-version-file: pubspec.yaml
 
       - name: Write env file
         env:
@@ -46,7 +47,7 @@ jobs:
           "%programfiles(x86)%\Inno Setup 6\iscc.exe" "installers\assistantNMS.iss"
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: AssistantNMS_setup
-          path: 'installers/AssistantNMS_setup.exe'
+          path: "installers/AssistantNMS_setup.exe"
