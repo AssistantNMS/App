@@ -2,6 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
+import '../../constants/patreon.dart';
 import '../../constants/routes.dart';
 import '../../contracts/data/bait_data.dart';
 import '../../contracts/fishing/good_guy_free_bait_view_model.dart';
@@ -10,6 +11,7 @@ import '../../helpers/generic_helper.dart';
 import '../../integration/dependency_injection.dart';
 import '../../pages/generic/generic_page.dart';
 import '../modalBottomSheet/good_guys_free_modal_bottom_sheet.dart';
+import 'patreon_tile_presenter.dart';
 
 class BaitDataWithItemDetails {
   BaitData bait;
@@ -331,11 +333,25 @@ Widget ggfBaitTilePresenter(
 List<Widget> ggfBaitOnCatalogueTilePresenter(
   BuildContext context,
   String itemId,
+  bool isPatronLocked,
 ) {
-  return [
+  var title = getTranslations().fromKey(LocaleKey.fishingBait);
+  List<Widget> updateWidgets = [
     const EmptySpace3x(),
-    GenericItemText(getTranslations().fromKey(LocaleKey.fishingBait)),
-    CachedFutureBuilder(
+    GenericItemText(title),
+  ];
+
+  if (isPatronLocked) {
+    updateWidgets.add(FlatCard(
+      child: patronFeatureTilePresenter(
+        context,
+        title,
+        Routes.fishingLocations,
+        PatreonEarlyAccessFeature.fishingDataPage,
+      ),
+    ));
+  } else {
+    updateWidgets.add(CachedFutureBuilder(
       future: getApiRepo().getGoodGuyFreeBaitForItem(
         getTranslations().currentLanguage,
         itemId,
@@ -366,6 +382,8 @@ List<Widget> ggfBaitOnCatalogueTilePresenter(
           },
         );
       },
-    ),
-  ];
+    ));
+  }
+
+  return updateWidgets;
 }

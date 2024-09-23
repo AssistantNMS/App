@@ -131,7 +131,6 @@ void handlePatreonBottomModalSheetWhenTapped(
   bool isPatron, {
   required DateTime unlockDate,
   required void Function(BuildContext dialogCtx) onTap,
-  Future<void> Function(BuildContext dialogCtx)? onSettingsTap,
 }) {
   bool isLocked = isPatreonFeatureLocked(unlockDate, isPatron);
   if (isLocked == false) {
@@ -143,8 +142,11 @@ void handlePatreonBottomModalSheetWhenTapped(
     navContext,
     hasRoundedCorners: true,
     builder: (BuildContext innerContext) => PatreonModalBottomSheet(
-      onSettingsTap: onSettingsTap,
       unlockDate: unlockDate,
+      onSettingsTap: (navCtx) => getNavigation().navigateAwayFromHomeAsync(
+        navCtx,
+        navigateToNamed: Routes.settings,
+      ),
       onTap: onTap,
     ),
   );

@@ -34,6 +34,7 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   context,
   String itemId,
   int platformIndex,
+  bool isPatron,
 ) async {
   ResultWithValue<IGenericRepository?> genRepo = getRepoFromId(context, itemId);
   if (genRepo.hasFailed) {
@@ -105,6 +106,7 @@ Future<ResultWithValue<GenericPageItem>> genericItemFuture(
   if (usage.contains(UsageKey.hasCreatureHarvest)) {
     item.creatureHarvests = await creatureHarvestsFuture(context, itemId);
   }
+
   if (usage.contains(UsageKey.hasFishingLocation)) {
     item.fishingData = await fishingLocationFuture(context, itemId);
   }

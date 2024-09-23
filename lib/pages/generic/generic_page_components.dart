@@ -1,5 +1,6 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:assistantnms_app/components/tilePresenters/fishing_page_tile_presenter.dart';
+import 'package:assistantnms_app/constants/patreon.dart';
 import 'package:assistantnms_app/contracts/fishing/fishing_data.dart';
 import 'package:ff_stars/ff_stars.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ import '../../components/tilePresenters/creature_harvest_tile_presenter.dart';
 import '../../components/tilePresenters/egg_trait_tile_presenter.dart';
 import '../../components/tilePresenters/inventory_tile_presenter.dart';
 import '../../components/tilePresenters/major_update_tile_presenter.dart';
+import '../../components/tilePresenters/patreon_tile_presenter.dart';
 import '../../components/tilePresenters/required_item_tile_presenter.dart';
 import '../../components/tilePresenters/reward_from_tile_presenter.dart';
 import '../../components/tilePresenters/seasonal_expedition_tile_presenter.dart';
@@ -690,15 +692,40 @@ List<Widget> getFromUpdate(
   return updateWidgets;
 }
 
-List<Widget> getFishingLocation(BuildContext context, FishingData fishingData) {
+List<Widget> getFishingLocation(
+  BuildContext context,
+  FishingData fishingData,
+  bool isPatronLocked,
+) {
   List<Widget> updateWidgets = List.empty(growable: true);
   updateWidgets.add(const EmptySpace3x());
   String title = getTranslations().fromKey(LocaleKey.fishingLocation);
   updateWidgets.add(GenericItemText(title));
-  fishingData.icon = AppImage.fishingLocation;
-  updateWidgets.add(FlatCard(
-    child: fishingDataTilePresenter(context, fishingData),
-  ));
+
+  if (isPatronLocked) {
+    updateWidgets.add(FlatCard(
+      child: patronFeatureTilePresenter(
+        context,
+        title,
+        Routes.fishingLocations,
+        PatreonEarlyAccessFeature.fishingDataPage,
+      ),
+    ));
+  } else {
+    fishingData.icon = AppImage.fishingBait;
+    updateWidgets.add(FlatCard(
+      child: fishingDataTilePresenter(
+        context,
+        fishingData,
+        onTap: () {
+          getNavigation().navigateAwayFromHomeAsync(
+            context,
+            navigateToNamed: Routes.fishingLocations,
+          );
+        },
+      ),
+    ));
+  }
 
   return updateWidgets;
 }
@@ -706,25 +733,37 @@ List<Widget> getFishingLocation(BuildContext context, FishingData fishingData) {
 List<Widget> getFishingBait(
   BuildContext context,
   BaitDataWithItemDetails fishingBait,
+  bool isPatronLocked,
 ) {
   List<Widget> updateWidgets = List.empty(growable: true);
   updateWidgets.add(const EmptySpace3x());
   String title = getTranslations().fromKey(LocaleKey.fishingBait);
   updateWidgets.add(GenericItemText(title));
-  fishingBait.itemDetails.icon = AppImage.fishingBait;
-  updateWidgets.add(FlatCard(
-    child: baitTilePresenter(
-      context,
-      fishingBait,
-      wrapInCard: false,
-      onTap: () {
-        getNavigation().navigateAwayFromHomeAsync(
-          context,
-          navigateToNamed: Routes.fishingBait,
-        );
-      },
-    ),
-  ));
+  if (isPatronLocked) {
+    updateWidgets.add(FlatCard(
+      child: patronFeatureTilePresenter(
+        context,
+        title,
+        Routes.fishingLocations,
+        PatreonEarlyAccessFeature.fishingDataPage,
+      ),
+    ));
+  } else {
+    fishingBait.itemDetails.icon = AppImage.fishingBait;
+    updateWidgets.add(FlatCard(
+      child: baitTilePresenter(
+        context,
+        fishingBait,
+        wrapInCard: false,
+        onTap: () {
+          getNavigation().navigateAwayFromHomeAsync(
+            context,
+            navigateToNamed: Routes.fishingBait,
+          );
+        },
+      ),
+    ));
+  }
 
   return updateWidgets;
 }
