@@ -27,7 +27,7 @@ List<LocalizationMap> supportedLanguageMaps = [
     LocalizationMap(LocaleKey.malaysian, 'ms', 'my', percentageComplete: 84),
     LocalizationMap(LocaleKey.tagalog, 'tl', 'ph', percentageComplete: 0),
     LocalizationMap(LocaleKey.japanese, 'ja', 'jp', percentageComplete: 10),
-    LocalizationMap(LocaleKey.ukrainian, 'uk', 'ua', percentageComplete: 47),
+    LocalizationMap(LocaleKey.ukrainian, 'uk', 'ua', percentageComplete: 92),
     LocalizationMap(LocaleKey.korean, 'kr', 'kr', percentageComplete: 95),
     LocalizationMap(LocaleKey.afrikaans, 'af', 'za', percentageComplete: 58),
 
