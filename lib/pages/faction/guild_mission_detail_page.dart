@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/components/common/row_helper.dart';
 import 'package:flutter/material.dart';
 
+import '../../components/common/row_helper.dart';
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../constants/app_image.dart';
 import '../../contracts/faction/guild_mission.dart';

@@ -17,7 +17,7 @@ class AnalyticsService implements IAnalyticsService {
         getFirebase().trackAnalyticEvent(key);
         getLog().i("$analyticsKey $key");
       } catch (ex) {
-        getLog().e("$analyticsKey $key");
+        getLog().e("$analyticsKey $key - $ex");
       }
     } else {
       getLog().i("$analyticsKey $key");

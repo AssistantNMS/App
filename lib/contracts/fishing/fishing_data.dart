@@ -12,6 +12,7 @@ class FishingData {
     required this.appId,
     required this.name,
     required this.icon,
+    required this.colour,
     required this.quality,
     required this.size,
     required this.time,
@@ -27,6 +28,7 @@ class FishingData {
   String appId;
   String name;
   String icon;
+  String colour;
   String quality;
   String size;
   String time;
@@ -45,6 +47,7 @@ class FishingData {
         appId: readStringSafe(json, 'AppId'),
         name: readStringSafe(json, 'Name'),
         icon: readStringSafe(json, 'Icon'),
+        colour: readStringSafe(json, 'Colour'),
         quality: readStringSafe(json, 'Quality'),
         size: readStringSafe(json, 'Size'),
         time: readStringSafe(json, 'Time'),

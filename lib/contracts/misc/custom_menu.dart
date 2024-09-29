@@ -1,9 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/modalBottomSheet/patreon_modal_bottom_sheet.dart';
 import '../../constants/app_image.dart';
-import '../../constants/patreon.dart';
 import '../../constants/routes.dart';
 import '../../redux/modules/setting/drawer_settings_view_model.dart';
 import '../enum/homepage_type.dart';
@@ -329,24 +327,24 @@ List<CustomMenu> getMenuOptionsSection3(
       drawerIcon: localGetDrawerFromIcon(Icons.phishing),
       title: LocaleKey.fishing,
       navigateToNamed: Routes.fishing,
-      isNew: DateTime.now().isBefore(PatreonEarlyAccessFeature.fishingDataPage),
-      isLocked: isPatreonFeatureLocked(
-        PatreonEarlyAccessFeature.fishingDataPage,
-        vm.isPatron,
-      ),
-      onTap: (tapCtx) {
-        handlePatreonBottomModalSheetWhenTapped(
-          tapCtx,
-          vm.isPatron,
-          unlockDate: PatreonEarlyAccessFeature.fishingDataPage,
-          onTap: (navCtx) {
-            getNavigation().navigateAwayFromHomeAsync(
-              navCtx,
-              navigateToNamed: Routes.fishing,
-            );
-          },
-        );
-      },
+      isNew: DateTime.now().isBefore(DateTime(2024, 10, 7)),
+      // isLocked: isPatreonFeatureLocked(
+      //   PatreonEarlyAccessFeature.fishingDataPage,
+      //   vm.isPatron,
+      // ),
+      // onTap: (tapCtx) {
+      //   handlePatreonBottomModalSheetWhenTapped(
+      //     tapCtx,
+      //     vm.isPatron,
+      //     unlockDate: PatreonEarlyAccessFeature.fishingDataPage,
+      //     onTap: (navCtx) {
+      //       getNavigation().navigateAwayFromHomeAsync(
+      //         navCtx,
+      //         navigateToNamed: Routes.fishing,
+      //       );
+      //     },
+      //   );
+      // },
     ),
     // CustomMenu(
     //   icon: const ListTileImage(partialPath:AppImage.techTree, size: imageSize),

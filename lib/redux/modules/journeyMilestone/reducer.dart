@@ -1,18 +1,17 @@
-import 'package:assistantnms_app/contracts/faction/stored_faction_mission.dart';
-
-import '../../../contracts/journey/stored_journey_milestone.dart';
 import 'package:redux/redux.dart';
 
+import '../../../contracts/journey/stored_journey_milestone.dart';
+import '../../../contracts/faction/stored_faction_mission.dart';
 import '../../../contracts/redux/journey_milestone_state.dart';
 import 'actions.dart';
 
 final journeyMilestoneReducer = combineReducers<JourneyMilestoneState>([
-  TypedReducer<JourneyMilestoneState, SetMilestonAction>(_setMilestonAction),
+  TypedReducer<JourneyMilestoneState, SetMilestoneAction>(_setMilestoneAction),
   TypedReducer<JourneyMilestoneState, SetFaction>(_setFactionAction),
 ]);
 
-JourneyMilestoneState _setMilestonAction(
-    JourneyMilestoneState state, SetMilestonAction action) {
+JourneyMilestoneState _setMilestoneAction(
+    JourneyMilestoneState state, SetMilestoneAction action) {
   bool itemExists = false;
   StoredJourneyMilestone itemToAdd = StoredJourneyMilestone(
     journeyId: action.journeyId,

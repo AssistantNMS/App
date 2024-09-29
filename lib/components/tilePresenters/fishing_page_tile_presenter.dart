@@ -1,7 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/app_image.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/app_image.dart';
+import '../../constants/nms_ui_constants.dart';
 import '../../contracts/fishing/fishing_data.dart';
 import '../../pages/fishing/fishing_page.dart';
 import '../../pages/generic/generic_page.dart';
@@ -72,6 +73,8 @@ Widget fishingDataTilePresenter(
     context,
     leadingImage: data.icon,
     name: data.name,
+    imageBackgroundColour: data.colour,
+    borderRadius: NMSUIConstants.gameItemBorderRadius,
     subtitle: Opacity(
         opacity: 0.75,
         child: Text(
