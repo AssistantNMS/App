@@ -19,7 +19,7 @@ class JourneyMilestoneViewModel {
     return JourneyMilestoneViewModel(
       storedMilestones: getJourneyMilestones(store.state),
       setMilestone: (String journeyId, int journeyStatIndex) =>
-          store.dispatch(SetMilestonAction(journeyId, journeyStatIndex)),
+          store.dispatch(SetMilestoneAction(journeyId, journeyStatIndex)),
     );
   }
 }

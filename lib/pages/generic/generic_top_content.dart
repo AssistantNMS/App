@@ -82,7 +82,7 @@ class GenericTopContent extends StatelessWidget {
 
         if ((genericItem.usage ?? []).contains(UsageKey.hasDevProperties)) {
           Widget devSheet = KeyedSubtree(
-            key: Key('${genericItem.id}-hd-devsheet'),
+            key: Key('${genericItem.id}-hd-dev-sheet'),
             child: getDevSheet(
               context,
               genericItem.id,

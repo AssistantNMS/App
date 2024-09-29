@@ -2,7 +2,6 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_image.dart';
-import '../../constants/patreon.dart';
 import '../../constants/routes.dart';
 import '../../contracts/data/bait_data.dart';
 import '../../contracts/fishing/good_guy_free_bait_view_model.dart';
@@ -11,7 +10,6 @@ import '../../helpers/generic_helper.dart';
 import '../../integration/dependency_injection.dart';
 import '../../pages/generic/generic_page.dart';
 import '../modalBottomSheet/good_guys_free_modal_bottom_sheet.dart';
-import 'patreon_tile_presenter.dart';
 
 class BaitDataWithItemDetails {
   BaitData bait;
@@ -333,7 +331,6 @@ Widget ggfBaitTilePresenter(
 List<Widget> ggfBaitOnCatalogueTilePresenter(
   BuildContext context,
   String itemId,
-  bool isPatronLocked,
 ) {
   var title = getTranslations().fromKey(LocaleKey.fishingBait);
   List<Widget> updateWidgets = [
@@ -341,49 +338,38 @@ List<Widget> ggfBaitOnCatalogueTilePresenter(
     GenericItemText(title),
   ];
 
-  if (isPatronLocked) {
-    updateWidgets.add(FlatCard(
-      child: patronFeatureTilePresenter(
+  updateWidgets.add(CachedFutureBuilder(
+    future: getApiRepo().getGoodGuyFreeBaitForItem(
+      getTranslations().currentLanguage,
+      itemId,
+    ),
+    whileLoading: () => getLoading().smallLoadingTile(context),
+    whenDoneLoading: (ResultWithValue<GoodGuyFreeBaitViewModel> baitResult) {
+      var errorTile = ListTile(
+        leading: const LocalImage(imagePath: AppImage.error),
+        title: Text(
+          getTranslations().fromKey(LocaleKey.somethingWentWrong),
+        ),
+      );
+
+      if (baitResult.hasFailed) return errorTile;
+
+      GoodGuyFreeBaitViewModel? ggfItem = baitResult.value;
+
+      ggfItem.icon = AppImage.fishingBait;
+      return ggfBaitTilePresenter(
         context,
-        title,
-        Routes.fishingLocations,
-        PatreonEarlyAccessFeature.fishingDataPage,
-      ),
-    ));
-  } else {
-    updateWidgets.add(CachedFutureBuilder(
-      future: getApiRepo().getGoodGuyFreeBaitForItem(
-        getTranslations().currentLanguage,
-        itemId,
-      ),
-      whileLoading: () => getLoading().smallLoadingTile(context),
-      whenDoneLoading: (ResultWithValue<GoodGuyFreeBaitViewModel> baitResult) {
-        var errorTile = ListTile(
-          leading: const LocalImage(imagePath: AppImage.error),
-          title: Text(
-            getTranslations().fromKey(LocaleKey.somethingWentWrong),
-          ),
-        );
-
-        if (baitResult.hasFailed) return errorTile;
-
-        GoodGuyFreeBaitViewModel? ggfItem = baitResult.value;
-
-        ggfItem.icon = AppImage.fishingBait;
-        return ggfBaitTilePresenter(
-          context,
-          ggfItem,
-          showInfoAction: true,
-          onTap: () {
-            getNavigation().navigateAwayFromHomeAsync(
-              context,
-              navigateToNamed: Routes.fishingGgfBait,
-            );
-          },
-        );
-      },
-    ));
-  }
+        ggfItem,
+        showInfoAction: true,
+        onTap: () {
+          getNavigation().navigateAwayFromHomeAsync(
+            context,
+            navigateToNamed: Routes.fishingGgfBait,
+          );
+        },
+      );
+    },
+  ));
 
   return updateWidgets;
 }

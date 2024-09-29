@@ -1,9 +1,9 @@
 import '../base/persist_to_storage.dart';
 
-class SetMilestonAction extends PersistToStorage {
+class SetMilestoneAction extends PersistToStorage {
   final String journeyId;
   final int journeyStatIndex;
-  SetMilestonAction(this.journeyId, this.journeyStatIndex);
+  SetMilestoneAction(this.journeyId, this.journeyStatIndex);
 }
 
 class SetFaction extends PersistToStorage {
