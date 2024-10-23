@@ -9,6 +9,7 @@ import '../../contracts/required_item_details.dart';
 import '../../contracts/seasonalExpedition/expedition_reward_type.dart';
 import '../../contracts/seasonalExpedition/seasonal_expedition_reward.dart';
 import '../../pages/generic/generic_page.dart';
+import '../../pages/generic/generic_page_descrip_highlight_text.dart';
 
 const double itemPadding = 16.0;
 
@@ -67,6 +68,8 @@ Widget seasonalExpeditionRewardDetailTilePresenter(
   if (expReward.type == ExpeditionRewardType.JetpackBoost) {
     subtitleText = 'BOOST';
   }
+
+  rewardName = removeTags(rewardName);
 
   bool addPadding = subtitleText == null;
   ListTile tile = genericListTileWithSubtitle(

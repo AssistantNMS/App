@@ -10230,5 +10230,68 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech282",
+    "Icon": "technology/282.png",
+    "Name": "アノマリーサプレッサー",
+    "Group": "境界エラー完全性の自動検知装置",
+    "Description": "現実の境界が脆弱化し始めると、<SPECIAL>壊滅的な侵害異常<>が発生するリスクが高まる。\n\nこの装置はローカルエリア内の<TECHNOLOGY>境界強度<>をモニタリングし、現実の継続性エラーを防いでくれる。機能性を維持するため、この装置には<SPECIAL>ガラス<>を投入する必要がある。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "危険防御バッテリー",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "100"
+      },
+      {
+        "Name": "放射線によるダメージ防御",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "rad",
+        "Value": "100"
+      },
+      {
+        "Name": "有毒物質によるダメージ防御",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "toxic",
+        "Value": "100"
+      },
+      {
+        "Name": "低温によるダメージ防御",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "cold",
+        "Value": "100"
+      },
+      {
+        "Name": "高温によるダメージ防御",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "heat",
+        "Value": "100"
+      },
+      {
+        "Name": "ダッシュ回復時間",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
   }
 ]

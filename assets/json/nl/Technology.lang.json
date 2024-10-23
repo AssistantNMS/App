@@ -10230,5 +10230,68 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech282",
+    "Icon": "technology/282.png",
+    "Name": "Anomalie-onderdrukker",
+    "Group": "Geautomatiseerd breukintegriteitsapparaat",
+    "Description": "Naarmate de grenzen van de realiteit zwakker worden, neemt het risico op <SPECIAL>catastrofale anomalieën<> die de realiteit doorbreken toe.\n\nDit apparaat bewaakt en behoudt de lokale <TECHNOLOGY>grenssterkte<> en beschermt tegen fouten in de continuïteit van de realiteit. Voorzie het apparaat met <SPECIAL>glas<> om de functionaliteit te behouden.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Accu beschermingsunit",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "100"
+      },
+      {
+        "Name": "Bescherming tegen stralingschade",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "rad",
+        "Value": "100"
+      },
+      {
+        "Name": "Bescherming tegen gifschade",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "toxic",
+        "Value": "100"
+      },
+      {
+        "Name": "Bescherming tegen koudeschade",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "cold",
+        "Value": "100"
+      },
+      {
+        "Name": "Bescherming tegen hitteschade",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "heat",
+        "Value": "100"
+      },
+      {
+        "Name": "Hersteltijd na sprinten",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
   }
 ]

@@ -10230,5 +10230,68 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech282",
+    "Icon": "technology/282.png",
+    "Name": "Supresor de anomalías",
+    "Group": "Dispositivo automático de integridad de brechas",
+    "Description": "A medida que las fronteras de la realidad empiezan a debilitarse, aumenta el riesgo de <SPECIAL>anomalías catastróficas de la frontera<>.\n\nEste dispositivo lleva un seguimiento de la <TECHNOLOGY>fortaleza de las fronteras<> locales y la mantiene estable para protegerla de los errores de continuidad de la realidad. Suministra al dispositivo <SPECIAL>vidrio<> para que pueda seguir funcionando.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Batería de protección frente a peligros",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "100"
+      },
+      {
+        "Name": "Escudo de daño por radiación",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "rad",
+        "Value": "100"
+      },
+      {
+        "Name": "Escudo de daño tóxico",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "toxic",
+        "Value": "100"
+      },
+      {
+        "Name": "Escudo de daño por frío",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "cold",
+        "Value": "100"
+      },
+      {
+        "Name": "Escudo de daño por calor",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "heat",
+        "Value": "100"
+      },
+      {
+        "Name": "Tiempo de recuperación de esprint",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
   }
 ]

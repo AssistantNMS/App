@@ -57,6 +57,7 @@ List<Widget> getBodyItemDetailsContent(BuildContext bodyDetailsCtx,
   if (itemName.isEmpty) {
     itemName = getTranslations().fromKey(LocaleKey.unknown);
   }
+  itemName = removeTags(itemName);
   String? heroTagString = gameItemNameHero(genericItem);
   widgets.add(
     heroTagString == null

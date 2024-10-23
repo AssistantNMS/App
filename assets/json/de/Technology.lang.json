@@ -10230,5 +10230,68 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech282",
+    "Icon": "technology/282.png",
+    "Name": "Anomaliedämpfer",
+    "Group": "Automatisiertes Gerät zur Aufrechterhaltung der Grenzintegrität",
+    "Description": "Wenn die Grenzen der Realität schwächer werden, steigt das Risiko von <SPECIAL>katastrophalen Bruchanomalien<>.\n\nDieses Gerät überwacht und erhält die lokale <TECHNOLOGY>Grenzfestigkeit<>, wodurch es gleichzeitig vor Realitätskontinuitätsfehlern schützt. Versorge das Gerät mit <SPECIAL>Glas<>, damit es funktionstüchtig bleibt.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Gefahrenschutzbatterie",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "100"
+      },
+      {
+        "Name": "Strahlungsschild",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "rad",
+        "Value": "100"
+      },
+      {
+        "Name": "Giftschild",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "toxic",
+        "Value": "100"
+      },
+      {
+        "Name": "Kälteschild",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "cold",
+        "Value": "100"
+      },
+      {
+        "Name": "Hitzeschild",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "heat",
+        "Value": "100"
+      },
+      {
+        "Name": "Sprint-Erholungszeit",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
   }
 ]

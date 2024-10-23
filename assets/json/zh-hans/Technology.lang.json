@@ -10230,5 +10230,68 @@
     "RequiredItems": [],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech282",
+    "Icon": "technology/282.png",
+    "Name": "异象抑制器",
+    "Group": "自动化裂隙完整性装置",
+    "Description": "随着现实的边界不断崩塌，发生<SPECIAL>灾难性裂隙异象<>的威胁正在不断扩大。\n\n这种设备能够监控并维护本地的<TECHNOLOGY>边界强度<>，同时抵御现实连续体的崩坏。为装置提供<SPECIAL>玻璃<>以确保其能够持续运作。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasChargedBy",
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 100
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "危险防护电池",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "prot",
+        "Value": "100"
+      },
+      {
+        "Name": "辐射伤害防护",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "rad",
+        "Value": "100"
+      },
+      {
+        "Name": "毒性伤害防护",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "toxic",
+        "Value": "100"
+      },
+      {
+        "Name": "寒冷伤害防护",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "cold",
+        "Value": "100"
+      },
+      {
+        "Name": "热量伤害防护",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "heat",
+        "Value": "100"
+      },
+      {
+        "Name": "冲刺恢复时间",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "100"
+      }
+    ],
+    "ConsumableRewardTexts": []
   }
 ]

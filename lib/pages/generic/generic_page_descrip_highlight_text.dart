@@ -214,3 +214,10 @@ List<Widget> genericPageDescripHighlightText(
           ))
       .toList();
 }
+
+String removeTags(String name) {
+  RegExp tagRegex = RegExp(r'<(\w+)>(.*)<>');
+  return name.replaceAllMapped(tagRegex, (match) {
+    return "";
+  });
+}
