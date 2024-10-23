@@ -141,7 +141,7 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
 
   textWrapper(String text, {double? fontSize}) => Container(
         child: Text(
-          text,
+          removeTags(text),
           textAlign: TextAlign.start,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
