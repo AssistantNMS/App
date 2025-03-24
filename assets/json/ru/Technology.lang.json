@@ -57,6 +57,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "100"
+      },
+      {
+        "Name": "Стабилизация давления",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -2347,7 +2353,7 @@
       "HasDevProperties"
     ],
     "BlueprintCost": 50,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -3879,6 +3885,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
+      },
+      {
+        "Name": "Размер резервуара ускорителя",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "400"
       }
     ],
     "ConsumableRewardTexts": []
@@ -10292,6 +10304,361 @@
         "Value": "100"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech283",
+    "Icon": "technology/283.png",
+    "Name": "Мембрана давления",
+    "Group": "Укрепленный барометрический стабилизатор",
+    "Description": "Нахождение в средах с экстремально высоким давлением, например, на большой глубине, увеличивает нагрузку на системы <TECHNOLOGY>циркуляции кислорода<> и общую систему жизнеобеспечения экзокостюма.\n\nУстановите этот укрепленный герметичный панцирь, чтобы повысить <STELLAR>эффективность<> и <STELLAR>защиту<> при нахождении в средах с высоким давлением.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 320,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 150
+      },
+      {
+        "Id": "prod5",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod29",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Стабилизация давления",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1.8"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech284",
+    "Icon": "technology/284.png",
+    "Name": "Станция вызова вездехода",
+    "Group": "Устройство перемещения техники",
+    "Description": "Постройка позволяет вызывать любой имеющийся вездеход из <STELLAR>любой точки<> системы.\n\nДля облегчения использования подключается к <STELLAR>быстрому меню экзокостюма<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 640,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw78",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw80",
+        "Quantity": 140
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech285",
+    "Icon": "technology/285.png",
+    "Name": "Поглотитель нутриентов",
+    "Group": "Автоматический модуль питания",
+    "Description": "Поглотитель нутриентов улучшает <TECHNOLOGY>работу экзокостюма<>, автоматически обрабатывая <STELLAR>приготовленные блюда<> и разделяя их на порции.\n\nВыберите пункт «<COMMODITY>Начать поглощение<>», чтобы начать автоматическое потребление имеющихся ингредиентов.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 350,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 30
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod57",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech286",
+    "Icon": "technology/286.png",
+    "Name": "Атлантидиевый привод",
+    "Group": "Улучшение гипердвигателя: пурпурные системы",
+    "Description": "Подгружает <SPECIAL>пакет резонансного воспоминания<> в ваш варп-компьютер, позволяя кораблю проходить через лишенное гармонии пространство вокруг <SPECIAL>пурпурных небесных тел<>.\n\nРекомендуется задействовать системы гипердвигателя через <VAL_ON>галактическую карту<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 200,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw22",
+        "Quantity": 250
+      },
+      {
+        "Id": "raw72",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod58",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech287",
+    "Icon": "technology/287.png",
+    "Name": "Матрица резонанса",
+    "Group": "Улучшение гипердвигателя: пурпурные системы",
+    "Description": "Подгружает <SPECIAL>пакет резонансного воспоминания<> в ваш варп-компьютер, позволяя кораблю проходить через лишенное гармонии пространство вокруг <SPECIAL>пурпурных небесных тел<>.\n\nРекомендуется задействовать системы гипердвигателя через <VAL_ON>галактическую карту<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 12,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw72",
+        "Quantity": 160
+      },
+      {
+        "Id": "raw75",
+        "Quantity": 250
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Дальность",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech288",
+    "Icon": "technology/288.png",
+    "Name": "Агрегат переработки минералов",
+    "Group": "Бортовой очиститель",
+    "Description": "Большой и энергоемкий <TECHNOLOGY>модуль очистителя<>, предназначенный для установки в трюме <STELLAR>вездехода «Колосс»<>.\n\nМодуль способен работать с самыми <TECHNOLOGY>сложными схемами<>, но требует собственного отдельного источника <FUEL>топлива<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech289",
+    "Icon": "technology/289.png",
+    "Name": "Поворотный огнемет",
+    "Group": "Зажигательное оружие вездехода",
+    "Description": "<STELLAR>Огнемет<>, разработанный для <TECHNOLOGY>вездехода<>. Наносит огромный урон на ближней дистанции.\n\nПереключайте режимы оружия с помощью <IMG>CYCLEWEAPON<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw29",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw61",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw79",
+        "Quantity": 90
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Урон",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "Энергомощность оружия",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "Скорострельность",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "Возгорание после попадания",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "Длительность горения",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "Урон от горения",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech290",
+    "Icon": "technology/290.png",
+    "Name": "Дноуглубительный лазер",
+    "Group": "Ландшафтный манипулятор «Наутилона»",
+    "Description": "Позволяет лазерным системам <STELLAR>подводной лодки «Наутилон»<> <STELLAR>изменять ландшафт<>.\n\nЭтот лазер охлаждается окружающей водой и особым образом откалиброван, чтобы разрезать составную почву морского дна.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 390,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 80
+      },
+      {
+        "Id": "raw77",
+        "Quantity": 90
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech291",
+    "Icon": "technology/291.png",
+    "Name": "Поглотитель пуст",
+    "Group": "Автоматический модуль питания",
+    "Description": "Поглотитель нутриентов улучшает <TECHNOLOGY>работу экзокостюма<>, автоматически обрабатывая различные <STELLAR>приготовленные блюда<> и разделяя их на порции.\n\nТекущий источник нутриентов: <%NAMETAG%>%NAME%<>\nДлительность: <%TIMETAG%>%TIME%<>\nЭффект: <%EFFECTTAG%>%EFFECT%<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech292",
+    "Icon": "technology/292.png",
+    "Name": "Готовое блюдо",
+    "Group": "Накопительная воронка",
+    "Description": "Емкость для хранения материалов, полученных из очистителя",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]

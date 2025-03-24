@@ -57,6 +57,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "100"
+      },
+      {
+        "Name": "Stabilizzazione pressione",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -2347,7 +2353,7 @@
       "HasDevProperties"
     ],
     "BlueprintCost": 50,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -3879,6 +3885,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
+      },
+      {
+        "Name": "Dimensioni serbatoio turbo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "400"
       }
     ],
     "ConsumableRewardTexts": []
@@ -10113,9 +10125,9 @@
   {
     "Id": "tech278",
     "Icon": "technology/278.png",
-    "Name": "Attrezzatura da pesca",
+    "Name": "Canna da pesca",
     "Group": "Dispositivo di pesca posizionabile",
-    "Description": "Dell'<TECHNOLOGY>equipaggiamento da pesca<> versatile che consente all'utente di <STELLAR>pescare<> in diverse condizioni d'acqua.\n\nAccedi all'attrezzatura da pesca premendo <IMG>CYCLEWEAPON<> e lancia la tua lenza in uno specchio d'acqua con <IMG>ATTACK<>. Quando il pesce ha abboccato, tieni premuto <IMG>ATTACK<> per recuperarlo.",
+    "Description": "Dell'<TECHNOLOGY>equipaggiamento da pesca<> versatile che consente all'utente di <STELLAR>pescare<> in diverse condizioni d'acqua.\n\nAccedi alla canna da pesca premendo <IMG>CYCLEWEAPON<> e lancia la tua lenza in uno specchio d'acqua con <IMG>ATTACK<>. Quando il pesce ha abboccato, tieni premuto <IMG>ATTACK<> per recuperarlo.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -10142,7 +10154,7 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Attrezzatura da pesca",
+        "Name": "Canna da pesca",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "enabled",
         "Value": "1"
@@ -10183,7 +10195,7 @@
     ],
     "StatBonuses": [
       {
-        "Name": "Attrezzatura da pesca",
+        "Name": "Canna da pesca",
         "LocaleKeyTemplate": "defaultTemplate",
         "Image": "enabled",
         "Value": "1"
@@ -10292,6 +10304,361 @@
         "Value": "100"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech283",
+    "Icon": "technology/283.png",
+    "Name": "Membrana a pressione",
+    "Group": "Stabilizzatore barometrico rinforzato",
+    "Description": "Gli ambienti sottoposti a pressione estrema, come gli abissi, possono mettere sotto grave sforzo la <TECHNOLOGY>circolazione dell'ossigeno<> dell'exotuta e i sistemi di supporto vitale generali.\n\nL'installazione di questo guscio di pressurizzazione rinforzato aumenta l'<STELLAR>efficienza<> e la <STELLAR>protezione<> quando ci si trova in ambienti ad alta pressione.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 320,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 150
+      },
+      {
+        "Id": "prod5",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod29",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Stabilizzazione pressione",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1.8"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech284",
+    "Icon": "technology/284.png",
+    "Name": "Postazione di richiamo exoscafo",
+    "Group": "Dispositivo di trasferimento veicolo",
+    "Description": "La costruzione permette di richiamare qualsiasi exoscafo da <STELLAR>un altro punto<> in quel sistema.\n\nSi interfaccia con il <STELLAR>menu rapido dell'exotuta<> per un utilizzo più semplice.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 640,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw78",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw80",
+        "Quantity": 140
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech285",
+    "Icon": "technology/285.png",
+    "Name": "Ingeritore di sostanze nutritive",
+    "Group": "Unità di alimentazione automatica",
+    "Description": "L'ingeritore di sostanze nutritive migliora le <TECHNOLOGY>prestazioni dell'exotuta<> tramite il porzionamento automatico e la lavorazione di vari <STELLAR>oggetti cucinati<>.\n\nSeleziona <COMMODITY>Inizia ingestione<> per avviare il consumo automatico degli ingredienti forniti.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 350,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 30
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod57",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech286",
+    "Icon": "technology/286.png",
+    "Name": "Motore Atlantide",
+    "Group": "Potenziamento iperguida: sistemi viola",
+    "Description": "Carica un <SPECIAL>pacchetto di memoria risonante<> nel tuo computer di curvatura, permettendo così all'astronave di passare attraverso lo spazio dissonante che circonda <SPECIAL>corpi celesti viola<>.\n\nÈ possibile accedere ai sistemi di iperguida dalla <VAL_ON>mappa galattica<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 200,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw22",
+        "Quantity": 250
+      },
+      {
+        "Id": "raw72",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod58",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech287",
+    "Icon": "technology/287.png",
+    "Name": "Matrice di risonanza",
+    "Group": "Potenziamento iperguida: sistemi viola",
+    "Description": "Carica un <SPECIAL>pacchetto di memoria risonante<> nel tuo computer di curvatura, permettendo così all'astronave di passare attraverso lo spazio dissonante che circonda <SPECIAL>corpi celesti viola<>.\n\nÈ possibile accedere ai sistemi di iperguida dalla <VAL_ON>mappa galattica<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 12,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw72",
+        "Quantity": 160
+      },
+      {
+        "Id": "raw75",
+        "Quantity": 250
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Portata iperguida",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech288",
+    "Icon": "technology/288.png",
+    "Name": "Attrezzatura per la lavorazione di minerali",
+    "Group": "Raffinatore mobile",
+    "Description": "Una grande e potente <TECHNOLOGY>unità di raffinazione<>, progettata per essere ospitata all'interno di un <STELLAR>exoscafo Colosso<>.\n\nQuesta unità è in grado di processare le <TECHNOLOGY>formule più complesse<>, ma necessita della sua personale fonte di <FUEL>carburante<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech289",
+    "Icon": "technology/289.png",
+    "Name": "Lanciafiamme integrato",
+    "Group": "Arma a ignizione dell'exoscafo",
+    "Description": "Un <STELLAR>lanciafiamme<> integrato progettato specificatamente per l'<TECHNOLOGY>exoscafo<>. Provoca danni estremi a corto raggio.\n\nUsa <IMG>CYCLEWEAPON<> per passare da una modalità d'arma disponibile a un'altra.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw29",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw61",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw79",
+        "Quantity": 90
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Danni",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "Efficienza energetica arma",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "Cadenza di fuoco",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "Innesco post-impatto",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "Durata fuoco dell'impatto",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "Danni fuoco dell'impatto",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech290",
+    "Icon": "technology/290.png",
+    "Name": "Laser di dragaggio",
+    "Group": "Manipolatore di terreno Nautilon",
+    "Description": "Aggiunge la capacità <STELLAR>manipolazione del terreno<> ai sistemi laser del <STELLAR>sottomarino Nautilon<>.\n\nRaffreddato da quantità di acqua specificamente studiate, è calibrato per scavare nei complessi terreni del fondale marino.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 390,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 80
+      },
+      {
+        "Id": "raw77",
+        "Quantity": 90
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech291",
+    "Icon": "technology/291.png",
+    "Name": "Ingeritore vuoto",
+    "Group": "Unità di alimentazione automatica",
+    "Description": "L'ingeritore di sostanze nutritive migliora le <TECHNOLOGY>prestazioni dell'exotuta<> tramite il porzionamento automatico e la lavorazione di vari <STELLAR>oggetti cucinati<>.\n\nFonte di sostanze nutritive attuale: <%NAMETAG%>%NAME%<>\nDurata: <%TIMETAG%>%TIME%<>\nEffetto: <%EFFECTTAG%>%EFFECT%<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech292",
+    "Icon": "technology/292.png",
+    "Name": "Piatto terminato",
+    "Group": "Serbatoio di stoccaggio",
+    "Description": "Un serbatoio per immagazzinare i materiali generati dal raffinatore.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]

@@ -57,6 +57,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "100"
+      },
+      {
+        "Name": "Estabilização de pressão",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -2347,7 +2353,7 @@
       "HasDevProperties"
     ],
     "BlueprintCost": 50,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -3879,6 +3885,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
+      },
+      {
+        "Name": "Tamanho do tanque do incremento",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "400"
       }
     ],
     "ConsumableRewardTexts": []
@@ -10292,6 +10304,361 @@
         "Value": "100"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech283",
+    "Icon": "technology/283.png",
+    "Name": "Membrana de pressão",
+    "Group": "Estabilizador barométrico reforçado",
+    "Description": "Ambientes de pressão extrema, como águas profundas, causam tensão elevada nos sistemas de <TECHNOLOGY>circulação de oxigênio<> e sistemas de sobrevivência do exotraje.\n\nA instalação desta carapaça de pressurização reforçada aumenta a <STELLAR>eficiência<> e a <STELLAR>proteção<> durante operações em ambientes de alta pressão.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 320,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 150
+      },
+      {
+        "Id": "prod5",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod29",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Estabilização de pressão",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1.8"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech284",
+    "Icon": "technology/284.png",
+    "Name": "Estação para chamada de exoveículo",
+    "Group": "Dispositivo para deslocamento de veículo",
+    "Description": "Construção que permite ao usuário chamar qualquer exoveículo obtido de <STELLAR>qualquer lugar<> do sistema.\n\nInterage com o <STELLAR>menu de comandos rápidos do exotraje<> para facilitar o uso.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 640,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw78",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw80",
+        "Quantity": 140
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech285",
+    "Icon": "technology/285.png",
+    "Name": "Ingestor de nutrientes",
+    "Group": "Unidade de alimentação automática",
+    "Description": "O ingestor de nutrientes melhora o <TECHNOLOGY>desempenho do exotraje<> através da partilha e do processamento automático de vários <STELLAR>itens cozidos<>.\n\nSelecione <COMMODITY>começar ingestão<> para iniciar o consumo automático dos ingredientes fornecidos.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 350,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 30
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod57",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech286",
+    "Icon": "technology/286.png",
+    "Name": "Propulsor de Atlante",
+    "Group": "Atualização do hiperpropulsor: sistemas roxos",
+    "Description": "Carrega um <SPECIAL>pacote de memória ressonante<> no seu computador de dobra, permitindo que a nave atravesse o espaço dissonante ao redor de <SPECIAL>corpos estelares roxos<>.\n\nRecomenda-se ao usuário acessar os sistemas de hiperpropulsão através do <VAL_ON>mapa galáctico<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 200,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw22",
+        "Quantity": 250
+      },
+      {
+        "Id": "raw72",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod58",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech287",
+    "Icon": "technology/287.png",
+    "Name": "Matriz de ressonância",
+    "Group": "Atualização do hiperpropulsor: sistemas roxos",
+    "Description": "Carrega um <SPECIAL>pacote de memória ressonante<> no seu computador de dobra, permitindo que a nave atravesse o espaço dissonante ao redor de <SPECIAL>corpos estelares roxos<>.\n\nRecomenda-se ao usuário acessar os sistemas de hiperpropulsão através do <VAL_ON>mapa galáctico<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 12,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw72",
+        "Quantity": 160
+      },
+      {
+        "Id": "raw75",
+        "Quantity": 250
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Alcance do hiperpropulsor",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech288",
+    "Icon": "technology/288.png",
+    "Name": "Equipamento de processamento de mineral",
+    "Group": "Refinador veicular",
+    "Description": "Uma <TECHNOLOGY>unidade refinadora<> grande e poderosa, projetada para ser abrigada no interior do núcleo de um <STELLAR>exoveículo Colosso<>.\n\nA unidade é capaz de processar as <TECHNOLOGY>receitas mais complexas<>, mas requer sua própria fonte de <FUEL>combustível<> independente.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech289",
+    "Icon": "technology/289.png",
+    "Name": "Lança-chamas montado",
+    "Group": "Arma de ignição do exoveículo",
+    "Description": "Um <STELLAR>lança-chamas<> instalado e projetado especificamente para o <TECHNOLOGY>exoveículo<>. Causa danos extremos a curta distância.\n\nUse <IMG>CYCLEWEAPON<> para alternar os modos de armas disponíveis.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw29",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw61",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw79",
+        "Quantity": 90
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Dano",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "Eficiência do poder de fogo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "Taxa de disparos",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "Ignição pós-impacto",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "Duração da combustão de impacto",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "Dano da combustão de impacto",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech290",
+    "Icon": "technology/290.png",
+    "Name": "Laser de dragagem",
+    "Group": "Manipulador de terreno do Nautilon",
+    "Description": "Adiciona a capacidade de <STELLAR>manipulação de terreno<> ao sistema de laser do <STELLAR>submarino Nautilon<>.\n\nResfriado por entradas de água especialmente projetadas, é especificamente calibrado para cortar a complexa geologia do solo marítimo.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 390,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 80
+      },
+      {
+        "Id": "raw77",
+        "Quantity": 90
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech291",
+    "Icon": "technology/291.png",
+    "Name": "Ingestor vazio",
+    "Group": "Unidade de alimentação automática",
+    "Description": "O ingestor de nutrientes melhora o <TECHNOLOGY>desempenho do exotraje<> através da partilha e do processamento automáticos de vários <STELLAR>itens cozidos<>.\n\nFonte de nutrição atual: <%NAMETAG%>%NAME%<>\nDuração: <%TIMETAG%>%TIME%<>\nEfeito: <%EFFECTTAG%>%EFFECT%<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech292",
+    "Icon": "technology/292.png",
+    "Name": "Prato finalizado",
+    "Group": "Funil de armazenamento",
+    "Description": "Um funil de enchimento para armazenar os materiais gerados pela refinaria",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]

@@ -57,6 +57,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "100"
+      },
+      {
+        "Name": "圧力安定化",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -2347,7 +2353,7 @@
       "HasDevProperties"
     ],
     "BlueprintCost": 50,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -3879,6 +3885,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
+      },
+      {
+        "Name": "ブーストタンクサイズ",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "400"
       }
     ],
     "ConsumableRewardTexts": []
@@ -10292,6 +10304,361 @@
         "Value": "100"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech283",
+    "Icon": "technology/283.png",
+    "Name": "圧膜",
+    "Group": "強化気圧スタビライザー",
+    "Description": "深海などの極端な圧力環境では、エクソスーツの<TECHNOLOGY>酸素循環<>と一般的な生命維持システムに高い負荷がかかる。\n\nこの強化加圧シェルを取り付けると、高圧環境での操作時の<STELLAR>効率性<>と<STELLAR>保護<>が向上する。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 320,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 150
+      },
+      {
+        "Id": "prod5",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod29",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "圧力安定化",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1.8"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech284",
+    "Icon": "technology/284.png",
+    "Name": "エクソクラフト召喚ステーション",
+    "Group": "車両転送装置",
+    "Description": "建設すると、所有するエクソクラフトを<STELLAR>惑星のどこからでも<>召喚可能になる。\n\n<STELLAR>エクソスーツのクイックコマンドメニュー<>で簡単に使用できる。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 640,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw78",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw80",
+        "Quantity": 140
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech285",
+    "Icon": "technology/285.png",
+    "Name": "栄養摂取装置",
+    "Group": "自動栄養摂取装置",
+    "Description": "栄養摂取装置は、さまざまな<STELLAR>調理済み食品<>を自動的に小分けして処理することで、<TECHNOLOGY>エクソスーツのパフォーマンス<>を向上させます。\n\n<COMMODITY>摂取を開始する<>を選択すると、補給栄養素の自動消化を開始します。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 350,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 30
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod57",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech286",
+    "Icon": "technology/286.png",
+    "Name": "アトランティドドライブ",
+    "Group": "ハイパードライブアップグレード：紫色星系",
+    "Description": "<SPECIAL>共鳴メモリーパケット<>をワープコンピューターにサイドロードして、宇宙船が<SPECIAL>紫色の恒星体<>の周りの不協和音空間を通過できるようにする。\n\n<VAL_ON>ギャラクシーマップ<>からハイパードライブシステムにアクセスすることをお勧めする。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 200,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw22",
+        "Quantity": 250
+      },
+      {
+        "Id": "raw72",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod58",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech287",
+    "Icon": "technology/287.png",
+    "Name": "共鳴マトリックス",
+    "Group": "ハイパードライブアップグレード：紫色星系",
+    "Description": "<SPECIAL>共鳴メモリーパケット<>をワープコンピューターにサイドロードして、宇宙船が<SPECIAL>紫色の恒星体<>の周りの不協和音空間を通過できるようにする。\n\n<VAL_ON>ギャラクシーマップ<>からハイパードライブシステムにアクセスすることをお勧めする。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 12,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw72",
+        "Quantity": 160
+      },
+      {
+        "Id": "raw75",
+        "Quantity": 250
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "ハイパードライブ範囲",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech288",
+    "Icon": "technology/288.png",
+    "Name": "鉱物加工リグ",
+    "Group": "車載精製機",
+    "Description": "<STELLAR>コロッサスエクソクラフト<>の下部貨物室の中に収まるように設計された、大きくてパワフルな<TECHNOLOGY>精製機<>。\n\nこのユニットは最も<TECHNOLOGY>複雑なレシピ<>も処理できるが、専用の<FUEL>燃料<>源が必要。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech289",
+    "Icon": "technology/289.png",
+    "Name": "マウント型火炎放射器",
+    "Group": "エクソクラフト火炎放射ウェポン",
+    "Description": "<TECHNOLOGY>エクソクラフト<>専用に設計されたマウント型<STELLAR>火炎放射器<>。近距離で極度のダメージを与える。\n\n<IMG>CYCLEWEAPON<>を使うと、使用可能な武器モードが切り替わる。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw29",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw61",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw79",
+        "Quantity": 90
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "ダメージ",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "武器動力の効率性",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "発射速度",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "着弾後点火",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "着弾火災の持続時間",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "着弾火災のダメージ",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech290",
+    "Icon": "technology/290.png",
+    "Name": "浚渫レーザー",
+    "Group": "ノーティロン地形操作機",
+    "Description": "<STELLAR>ノーティロン潜水艦<>のレーザーシステムに<STELLAR>地形操作機能<>を追加します。\n\n特別に設計された取水口によって冷却され、海底の複雑な地質を切り抜けるよう特別に調整されています。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 390,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 80
+      },
+      {
+        "Id": "raw77",
+        "Quantity": 90
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech291",
+    "Icon": "technology/291.png",
+    "Name": "摂取装置が空です",
+    "Group": "自動栄養摂取装置",
+    "Description": "栄養摂取装置は、さまざまな調理済み食品を自動的に小分けして処理することで、<TECHNOLOGY>エクソスーツのパフォーマンス<>を向上させる。<STELLAR><>\n\n現在の栄養源：<%NAMETAG%>%NAME%<>\n持続時間：<%TIMETAG%>%TIME%<>\n効果：<%EFFECTTAG%>%EFFECT%<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech292",
+    "Icon": "technology/292.png",
+    "Name": "完成した料理",
+    "Group": "ストレージホッパー",
+    "Description": "精製機で作った材料を保管するホッパー",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]
