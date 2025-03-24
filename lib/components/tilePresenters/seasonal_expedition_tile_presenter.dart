@@ -201,22 +201,22 @@ Widget seasonalExpeditionPhaseMilestoneTilePresenter(
           const EmptySpace1x(),
         ],
       ),
-      trailingFlex: hasRewards ? 4 : 2,
+      trailingFlex: 4,
       trailingDisplayFunc: () => Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Row(
             children: [
-              if (hasRewards) ...[
-                const Padding(
-                  padding: EdgeInsets.only(right: 4),
-                  child: Icon(
-                    Icons.info_sharp,
-                    size: 30,
-                  ),
-                ),
-              ],
+              Padding(
+                padding: const EdgeInsets.only(right: 4),
+                child: hasRewards
+                    ? const Icon(
+                        Icons.info_sharp,
+                        size: 30,
+                      )
+                    : const SizedBox(width: 30),
+              ),
               getBaseWidget().adaptiveCheckbox(
                 value: isClaimed,
                 onChanged: checkBoxOnTap,

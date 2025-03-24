@@ -27,7 +27,7 @@
     "Icon": "other/1.png",
     "Name": "Artifact Chart",
     "Group": "Dig Site Cartographic Data",
-    "Description": "A map of a nearby planet. An <SPECIAL>ancient ruined site<> has been marked. Excavating this site is likely to yield valuable treasures.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
+    "Description": "A map of a nearby planet. An ancient ruined site has been marked. Excavating this site is likely to yield <SPECIAL>valuable treasures<>.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "Additional": "",
@@ -2227,8 +2227,8 @@
     "Usages": [
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
-      "IsTwitchCampaign1Reward",
-      "IsTwitchCampaign2Reward"
+      "IsTwitchCampaign2Reward",
+      "IsTwitchCampaign1Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -3397,7 +3397,7 @@
     "Icon": "other/208.png",
     "Name": "Planetary Chart",
     "Group": "Alien Cartographic Data",
-    "Description": "A map of a nearby planet. An <SPECIAL>ancient artifact site<> has been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
+    "Description": "A map of a nearby planet. A <SPECIAL>a relic of an ancient civilisation<> has been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -3420,7 +3420,7 @@
     "Icon": "other/1.png",
     "Name": "Planetary Chart",
     "Group": "Cartographic Data",
-    "Description": "A map of a nearby planet. An <SPECIAL>ancient artifact site<> has been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
+    "Description": "A map of a nearby planet. A <SPECIAL>a relic of an ancient civilisation<> has been marked.\n\nSelect the map and use <VAL_ON>Plot Route (<IMG>FE_ALT1<>)<> to pin the location in your Exosuit display.\n\nNew maps can be gained by exchanging <COMMODITY>Navigation Data<> with a Space Station Cartographer.",
     "BaseValueUnits": 3200.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 20.0,
@@ -5906,7 +5906,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5928,7 +5929,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -5950,7 +5952,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6080,7 +6083,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -6442,12 +6446,13 @@
     "Icon": "other/372.png",
     "Name": "Echo Seed",
     "Group": "Crystalline Sentience Cage",
-    "Description": "The <TECHNOLOGY>Seed<> is an echo of life, the last reverberations of a living being.\n\nThe seed was revealed in a vision granted by Nada's ritual, at a <TECHNOLOGY>Monolith<> infused with <SPECIAL>Atlantideum<>.",
+    "Description": "The <TECHNOLOGY>Seed<> is an echo of life, the last reverberations of a living being.\n\nThis sentience was fused with a lattice of <SPECIAL>Atlantideum<>, as though it had germinated together with the crystal.",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Credits",
     "MaxStackSize": 5.0,
     "Colour": "1A2733",
     "Usages": [
+      "HasUsedToCraft",
       "HasDevProperties",
       "IsConsumable",
       "IsAddedInTrackedUpdate"
@@ -6742,7 +6747,8 @@
     "Usages": [
       "HasDevProperties",
       "IsQuicksilver",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -15425,7 +15431,7 @@
     "Id": "other794",
     "Icon": "other/794.png",
     "Name": "Deep-Sea Armour",
-    "Group": "Unlockable Jetpack",
+    "Group": "Unlockable Armour",
     "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nHardened against the extreme conditions found beneath the waves, this diving suit component is the perfect choice for both deep-water exploration and an afternoon's fishing.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Nanites",
@@ -15447,7 +15453,7 @@
     "Id": "other795",
     "Icon": "other/795.png",
     "Name": "Deep-Sea Helmet",
-    "Group": "Unlockable Jetpack",
+    "Group": "Unlockable Helmet",
     "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nHardened against the extreme conditions found beneath the waves, this diving suit component is the perfect choice for both deep-water exploration and an afternoon's fishing.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Nanites",
@@ -15469,7 +15475,7 @@
     "Id": "other796",
     "Icon": "other/796.png",
     "Name": "Deep-Sea Leggings",
-    "Group": "Unlockable Jetpack",
+    "Group": "Unlockable Leg Customisation",
     "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nHardened against the extreme conditions found beneath the waves, this diving suit component is the perfect choice for both deep-water exploration and an afternoon's fishing.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Nanites",
@@ -15491,7 +15497,7 @@
     "Id": "other797",
     "Icon": "other/797.png",
     "Name": "Deep-Sea Flippers",
-    "Group": "Unlockable Jetpack",
+    "Group": "Unlockable Boots",
     "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nHardened against the extreme conditions found beneath the waves, this diving suit component is the perfect choice for both deep-water exploration and an afternoon's fishing.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Nanites",
@@ -15886,7 +15892,7 @@
     "Id": "other812",
     "Icon": "other/812.png",
     "Name": "Boundary Horror Mandibles",
-    "Group": "Unlockable Jetpack",
+    "Group": "Unlockable Helmet",
     "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nTransform your appearance into that of a <SPECIAL>Boundary Horror<>, a fragment of what dwells beyond the tunnels of the portal network...\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
     "BaseValueUnits": 1000.0,
     "CurrencyType": "Nanites",
@@ -16138,6 +16144,896 @@
       "HasDevProperties",
       "IsQuicksilver",
       "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other824",
+    "Icon": "other/824.png",
+    "Name": "Memories of Atlantid",
+    "Group": "Forgotten Void Data",
+    "Description": "The howling of an advanced intelligence banished to oblivion, a reverberation in sentience and crystal. \n\nEach memory in this <TECHNOLOGY>data packet<> is an entire reality in itself, bearing the fingerprint of countless lives. The <FUEL>Atlas<> will recognise this seed.",
+    "BaseValueUnits": 1919.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod114",
+        "Quantity": 1
+      },
+      {
+        "Id": "other372",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other825",
+    "Icon": "other/825.png",
+    "Name": "Reality Anchor",
+    "Group": "Spacetime Tether",
+    "Description": "A ancient newborn star exists only at the strange intersection points of time and space, where the dissonance is strongest.\n\nTo bind such a place to the rest of reality, a proper <SPECIAL>anchor<> is required...",
+    "BaseValueUnits": 1919.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw75",
+        "Quantity": 160
+      },
+      {
+        "Id": "raw78",
+        "Quantity": 380
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other826",
+    "Icon": "other/825.png",
+    "Name": "Reality Anchor",
+    "Group": "Spacetime Tether",
+    "Description": "A ancient newborn star exists only at the strange intersection points of time and space, where the dissonance is strongest.\n\nTo bind such a place to the rest of reality, a proper <SPECIAL>anchor<> is required...",
+    "BaseValueUnits": 1919.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw75",
+        "Quantity": 160
+      },
+      {
+        "Id": "raw77",
+        "Quantity": 200
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other827",
+    "Icon": "other/825.png",
+    "Name": "Reality Anchor",
+    "Group": "Spacetime Tether",
+    "Description": "A ancient newborn star exists only at the strange intersection points of time and space, where the dissonance is strongest.\n\nTo bind such a place to the rest of reality, a proper <SPECIAL>anchor<> is required...",
+    "BaseValueUnits": 1919.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw24",
+        "Quantity": 240
+      },
+      {
+        "Id": "raw75",
+        "Quantity": 160
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other828",
+    "Icon": "other/828.png",
+    "Name": "Anomalous Scaffold",
+    "Group": "Crystalline Breach",
+    "Description": "To bridge between realities requires a scaffold and a seed.\n\nThis crystalline propagation matrix will allow the breach to become the bridge, the seed by which a new reality can bloom.",
+    "BaseValueUnits": 1919.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw33",
+        "Quantity": 250
+      },
+      {
+        "Id": "cur100",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other829",
+    "Icon": "other/829.png",
+    "Name": "Sailfin Tank",
+    "Group": "Unlockable Helmet",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nTransport evidence of your fishing achievements around in your own personalised <STELLAR>cranium/aquarium interchange<>.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other830",
+    "Icon": "other/830.png",
+    "Name": "Deepwater Hunter Tank",
+    "Group": "Unlockable Helmet",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nTransport evidence of your fishing achievements around in your own personalised <STELLAR>cranium/aquarium interchange<>.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other831",
+    "Icon": "other/831.png",
+    "Name": "Shrimp Tank",
+    "Group": "Unlockable Helmet",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nTransport evidence of your fishing achievements around in your own personalised <STELLAR>cranium/aquarium interchange<>.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other832",
+    "Icon": "other/832.png",
+    "Name": "Jellyfish Tank",
+    "Group": "Unlockable Helmet",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nTransport evidence of your fishing achievements around in your own personalised <STELLAR>cranium/aquarium interchange<>.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other833",
+    "Icon": "other/833.png",
+    "Name": "Squid Tank",
+    "Group": "Unlockable Helmet",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nTransport evidence of your fishing achievements around in your own personalised <STELLAR>cranium/aquarium interchange<>.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other834",
+    "Icon": "other/834.png",
+    "Name": "Floating Boot Helmet",
+    "Group": "Unlockable Helmet",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nTransport evidence of your fishing achievements around in your own personalised <STELLAR>cranium/aquarium interchange<>.\n\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other835",
+    "Icon": "other/835.png",
+    "Name": "Grub Float",
+    "Group": "Customised Fishing Equipment",
+    "Description": "An exclusive <STELLAR>Fishing Rig Customisation<>, altering the appearance of the <TECHNOLOGY>float<>.\n\nTransform the appearance of your fishing equipment from the fishing rig's <TECHNOLOGY>bait management<> page.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other836",
+    "Icon": "other/836.png",
+    "Name": "Exotic Plumage Float",
+    "Group": "Customised Fishing Equipment",
+    "Description": "An exclusive <STELLAR>Fishing Rig Customisation<>, altering the appearance of the <TECHNOLOGY>float<>.\n\nTransform the appearance of your fishing equipment from the fishing rig's <TECHNOLOGY>bait management<> page.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other837",
+    "Icon": "other/837.png",
+    "Name": "Bobber-Gek",
+    "Group": "Customised Fishing Equipment",
+    "Description": "An exclusive <STELLAR>Fishing Rig Customisation<>, altering the appearance of the <TECHNOLOGY>float<>.\n\nTransform the appearance of your fishing equipment from the fishing rig's <TECHNOLOGY>bait management<> page.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other838",
+    "Icon": "other/838.png",
+    "Name": "Vile Egg Float",
+    "Group": "Customised Fishing Equipment",
+    "Description": "An exclusive <STELLAR>Fishing Rig Customisation<>, altering the appearance of the <TECHNOLOGY>float<>.\n\nTransform the appearance of your fishing equipment from the fishing rig's <TECHNOLOGY>bait management<> page.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other839",
+    "Icon": "other/839.png",
+    "Name": "Octopus Float",
+    "Group": "Customised Fishing Equipment",
+    "Description": "An exclusive <STELLAR>Fishing Rig Customisation<>, altering the appearance of the <TECHNOLOGY>float<>.\n\nTransform the appearance of your fishing equipment from the fishing rig's <TECHNOLOGY>bait management<> page.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other840",
+    "Icon": "other/840.png",
+    "Name": "Salvaged Hand Float",
+    "Group": "Customised Fishing Equipment",
+    "Description": "An exclusive <STELLAR>Fishing Rig Customisation<>, altering the appearance of the <TECHNOLOGY>float<>.\n\nTransform the appearance of your fishing equipment from the fishing rig's <TECHNOLOGY>bait management<> page.",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other841",
+    "Icon": "other/841.png",
+    "Name": "Starborn Phoenix",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>reforged starship<>, commemorating a time when Travellers old and new joined together to voyage across the stars.\n\nThis unusual ship is optimised for effortless gliding during flight, while a localised vector field allows the craft to hover above solid planes.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other842",
+    "Icon": "other/842.png",
+    "Name": "The Wraith",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>starship<>, earned for surveying a host of new worlds during the <STELLAR>Titan Expedition<>.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason17Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other843",
+    "Icon": "other/843.png",
+    "Name": "Title: 'Surveyor of Worlds'",
+    "Group": "Bespoke Personal Identification",
+    "Description": "An exclusive <STELLAR>Explorer Title<>, marking the <STELLAR>Titan<> expedition's voyage through new stars and new worlds.\n\nApply this title to your banner at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason17Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other844",
+    "Icon": "other/844.png",
+    "Name": "Titan Banner",
+    "Group": "Bespoke Personal Identification",
+    "Description": "Titan Banner",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason17Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other845",
+    "Icon": "other/845.png",
+    "Name": "Titan Stripes",
+    "Group": "Starship Customisation Option",
+    "Description": "An exclusive starship customisation option, creating a vibrant and eye-catching appearance for <STELLAR>Fighter<> and <STELLAR>Hauler<> class starships.\n\nAcquire starship components by breaking down existing ships at the <TECHNOLOGY>Starship Outfitting<> unit aboard any space station. Visit the <TECHNOLOGY>Starship Fabricator<> to design and assemble a new vessel.",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason17Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other846",
+    "Icon": "other/846.png",
+    "Name": "Surveyor's Cape",
+    "Group": "Unlockable Cape",
+    "Description": "An exclusive <STELLAR>Exosuit Appearance Override<>.\n\nA robust and well-made covering: waterproof, windproof and designed to keep the wearer protected against anything they may encounter while exploring unmapped worlds.\nTransform the appearance of your Exosuit at an <TECHNOLOGY>Appearance Modifier<>.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason17Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other847",
+    "Icon": "other/847.png",
+    "Name": "Pillar of Titan",
+    "Group": "Unique Korvax Technology?",
+    "Description": "An exclusive <STELLAR>Multi-Tool<>.\n\nThis sturdy staff is hewn from polished stone, and yet floats in the hand as if it were no weight at all. It is a perfect companion to those who seek to make long trips across the wilderness.\n\n<STELLAR>Take<> this Multi-Tool to add it to your collection, or <STELLAR>Exchange<> it with your current Multi-Tool. Swap between active Multi-Tools from the Utilities section of the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsExpeditionSeason17Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other848",
+    "Icon": "other/848.png",
+    "Name": "Otenba's Airborne Gambit",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>. This  A-class hauler benefits from shield and inventory capacity bonuses, and is pre-installed with a selection of technologies and upgrades.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other849",
+    "Icon": "other/849.png",
+    "Name": "Buyamak Liberator XIII",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>. This A-class shuttle is a pragmatic, balanced ship, pre-installed with a broad range of technologies and upgrades.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other850",
+    "Icon": "other/850.png",
+    "Name": "Taganon of Gravity",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>. This A-class explorer benefits from hyperdrive and launcher bonuses, and is pre-installed with a selection of technologies and upgrades.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other851",
+    "Icon": "other/851.png",
+    "Name": "Toontu SJ3",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>. This A-class explorer benefits from hyperdrive and launcher bonuses, and is pre-installed with a selection of technologies and upgrades.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other852",
+    "Icon": "other/852.png",
+    "Name": "The Forge of the Gek",
+    "Group": "Exclusive Spacecraft",
+    "Description": "An exclusive <STELLAR>Starship<>. This  A-class fighter benefits from damage and manoeuvrability bonuses, and is pre-installed with a selection of technologies and upgrades.\n\n<STELLAR>Claim<> this ship to add it to your collection, or <STELLAR>Exchange<> it with your current ship. While on a planet, summon ships from the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other853",
+    "Icon": "other/853.png",
+    "Name": "E. Leoloxostii Egg",
+    "Group": "Exclusive Companion Egg",
+    "Description": "A living, fertile egg, <TRADEABLE>ready to hatch!<>\n\nThe creature inside snuffles at the inside of its egg, curious about the world beyond.\n\nScans indicate the being within has the genetic potential for a <FUEL>ferocious<> personality.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other854",
+    "Icon": "other/854.png",
+    "Name": "R. Somnadadum Egg",
+    "Group": "Exclusive Companion Egg",
+    "Description": "A living, fertile egg, <TRADEABLE>ready to hatch!<>\n\nThe creature inside wriggles its chubby limbs, patiently waiting to be hatched.\n\nScans indicate the being within has the genetic potential for a <TRADEABLE>loyal<> personality.",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other855",
+    "Icon": "other/855.png",
+    "Name": "Legacy of Thought",
+    "Group": "Exclusive Multifunction Survival Device",
+    "Description": "An exclusive <STELLAR>Multi-Tool<>. This A-class weapon comes equipped with a range of pre-installed technologies and upgrades.\n\n<STELLAR>Take<> this Multi-Tool to add it to your collection, or <STELLAR>Exchange<> it with your current Multi-Tool. Swap between active Multi-Tools from the Utilities section of the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other856",
+    "Icon": "other/856.png",
+    "Name": "Art of Storms",
+    "Group": "Exclusive Multifunction Survival Device",
+    "Description": "An exclusive <STELLAR>Multi-Tool<>. This A-class weapon comes equipped with a range of pre-installed technologies and upgrades.\n\n<STELLAR>Take<> this Multi-Tool to add it to your collection, or <STELLAR>Exchange<> it with your current Multi-Tool. Swap between active Multi-Tools from the Utilities section of the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other857",
+    "Icon": "other/857.png",
+    "Name": "Improvised Volodov Clarifier",
+    "Group": "Exclusive Multifunction Survival Device",
+    "Description": "An exclusive <STELLAR>Multi-Tool<>. This A-class weapon comes equipped with a range of pre-installed technologies and upgrades.\n\n<STELLAR>Take<> this Multi-Tool to add it to your collection, or <STELLAR>Exchange<> it with your current Multi-Tool. Swap between active Multi-Tools from the Utilities section of the Quick Menu (<IMG>QUICK_MENU<>).",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other858",
+    "Icon": "other/858.png",
+    "Name": "Ribbon Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of luxury fireworks, bursting into clusters of wildly spiralling ribbons. Rich in <TRADEABLE>zinc<>, <SPECIAL>Atlantideum<>, and <TECHNOLOGY>indium<>. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other859",
+    "Icon": "other/858.png",
+    "Name": "Ribbon Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of luxury fireworks, bursting into clusters of wildly spiralling ribbons. Rich in <TRADEABLE>zinc<>, <SPECIAL>Atlantideum<>, and <TECHNOLOGY>indium<>. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other860",
+    "Icon": "other/858.png",
+    "Name": "Ribbon Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of luxury fireworks, bursting into clusters of wildly spiralling ribbons. Rich in <TRADEABLE>zinc<>, <SPECIAL>Atlantideum<>, and <TECHNOLOGY>indium<>. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other861",
+    "Icon": "other/858.png",
+    "Name": "Ribbon Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of luxury fireworks, bursting into clusters of wildly spiralling ribbons. Rich in <TRADEABLE>zinc<>, <SPECIAL>Atlantideum<>, and <TECHNOLOGY>indium<>. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other862",
+    "Icon": "other/858.png",
+    "Name": "Ribbon Firework Pack",
+    "Group": "Pyrotechnics Multi-Pack",
+    "Description": "A three-variety pack of luxury fireworks, bursting into clusters of wildly spiralling ribbons. Rich in <TRADEABLE>zinc<>, <SPECIAL>Atlantideum<>, and <TECHNOLOGY>indium<>. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the <VAL_ON>Build Menu<> (<IMG>BUILD_MENU<>). <FUEL>Warning<>: Aim away from living creatures. Not recommended for indoor use.",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate",
+      "IsTwitchCampaign10Reward"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
