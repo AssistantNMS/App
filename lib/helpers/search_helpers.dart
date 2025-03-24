@@ -82,19 +82,25 @@ bool searchFavourite(RequiredItemDetails req, String searchText) =>
 
 bool searchTitle(TitleDataWithOwned titleData, String search) {
   if (titleData.title.toLowerCase().contains(search) ||
-      titleData.description.toLowerCase().contains(search)) return true;
+      titleData.description.toLowerCase().contains(search)) {
+    return true;
+  }
   return false;
 }
 
 bool searchNmsfm(NmsfmTrackData track, String search) {
   if ((track.title ?? '').toLowerCase().contains(search) ||
-      (track.artist ?? '').toLowerCase().contains(search)) return true;
+      (track.artist ?? '').toLowerCase().contains(search)) {
+    return true;
+  }
   return false;
 }
 
 bool searchAlienPuzzleIncomingMessages(AlienPuzzle alienPuzzle, String search) {
   if (alienPuzzle.incomingMessages
-      .any((msg) => msg.toLowerCase().contains(search))) return true;
+      .any((msg) => msg.toLowerCase().contains(search))) {
+    return true;
+  }
   List<String> optionTexts = List.empty(growable: true);
   for (Option option in alienPuzzle.options) {
     optionTexts.add(option.name);
