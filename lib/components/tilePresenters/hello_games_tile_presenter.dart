@@ -108,9 +108,11 @@ Widget releaseNoteTilePresenter(BuildContext context, ReleaseNote release,
 Widget newsItemTilePresenter(BuildContext context, NewsItem newsItem,
     {void Function()? onTap}) {
   Widget image = ImageFromNetwork(
-    imageUrl: newsItem.image,
-    loading: LocalImage(
-        imagePath: '${getPath().imageAssetPathPrefix}/defaultNews.jpg'),
+    imageUrl: newsItem.image.startsWith('https://')
+        ? newsItem.image
+        : 'https://www.nomanssky.com${newsItem.image}',
+    boxfit: BoxFit.fitWidth,
+    loading: getPath().steamNewsDefaultImage,
   );
   return GestureDetector(
     child: Padding(
