@@ -57,6 +57,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "100"
+      },
+      {
+        "Name": "StabilizStabilizacja ciśnieniaacja ciśnieniowa",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -2347,7 +2353,7 @@
       "HasDevProperties"
     ],
     "BlueprintCost": 50,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -3879,6 +3885,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
+      },
+      {
+        "Name": "Wielkość zbiornika dopalacza",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "400"
       }
     ],
     "ConsumableRewardTexts": []
@@ -10292,6 +10304,361 @@
         "Value": "100"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech283",
+    "Icon": "technology/283.png",
+    "Name": "Membrana ciśnieniowa",
+    "Group": "Wzmocniony stabilizator barometryczny",
+    "Description": "Środowiska o ekstremalnym ciśnieniu – takie jak podwodne głębiny – powodują zwiększone obciążenie <TECHNOLOGY>obiegu tlenu<> i ogólnych systemów podtrzymywania życia w egzokombinezonie.\n\nInstalacja tej wzmocnionej powłoki ciśnieniowej zwiększa <STELLAR>wydajność<> i <STELLAR>ochronę<> podczas pracy w środowiskach o wysokim ciśnieniu.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 320,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 150
+      },
+      {
+        "Id": "prod5",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod29",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "StabilizStabilizacja ciśnieniaacja ciśnieniowa",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1.8"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech284",
+    "Icon": "technology/284.png",
+    "Name": "Stacja wzywania egzopojazdów",
+    "Group": "Urządzenie translokacji pojazdów",
+    "Description": "Budowla pozwala użytkownikowi wezwać dowolny posiadany egzopojazd z <STELLAR>każdego<> miejsca w tym systemie.\n\nDla wygody użytkowania opcja jest dodawana do <STELLAR>menu szybkich komend egzokombinezonu<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 640,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw78",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw80",
+        "Quantity": 140
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech285",
+    "Icon": "technology/285.png",
+    "Name": "Pochłaniacz składników odżywczych",
+    "Group": "Zautomatyzowana jednostka karmiąca",
+    "Description": "Pochłaniacz składników odżywczych poprawia <TECHNOLOGY>wydajność egzokombinezonu<> dzięki automatycznemu porcjowaniu i przetwarzaniu różnych <STELLAR>gotowanych produktów<>.\n\nWybierz <COMMODITY>Rozpocznij pochłanianie<>, aby zacząć automatyczne spożywać dostarczone składniki.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 350,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 30
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod57",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech286",
+    "Icon": "technology/286.png",
+    "Name": "Napęd Atlantydy",
+    "Group": "Ulepszenie hipernapędu: Fioletowe układy",
+    "Description": "Wprowadza <SPECIAL>rezonansowy pakiet pamięci<> do komputera warpowego, umożliwiając statkowi przejście przez przestrzeń pełną dysonansu, otaczającą <SPECIAL>fioletowe gwiazdy<>.\n\nZalecane wykorzystanie systemów hipernapędu za pośrednictwem <VAL_ON>mapy galaktyki<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 200,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw22",
+        "Quantity": 250
+      },
+      {
+        "Id": "raw72",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod58",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech287",
+    "Icon": "technology/287.png",
+    "Name": "Matryca rezonansu",
+    "Group": "Ulepszenie hipernapędu: Fioletowe układy",
+    "Description": "Wprowadza <SPECIAL>rezonansowy pakiet pamięci<> do komputera warpowego, umożliwiając statkowi przejście przez przestrzeń pełną dysonansu, otaczającą <SPECIAL>fioletowe gwiazdy<>.\n\nZalecane wykorzystanie systemów hipernapędu za pośrednictwem <VAL_ON>mapy galaktyki<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 12,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw72",
+        "Quantity": 160
+      },
+      {
+        "Id": "raw75",
+        "Quantity": 250
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Zasięg hipernapędu",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech288",
+    "Icon": "technology/288.png",
+    "Name": "Urządzenie do przetwarzania minerałów",
+    "Group": "Rafinator pokładowy",
+    "Description": "Duża i potężna <TECHNOLOGY>jednostka rafinująca<>, zaprojektowana do umieszczenia we wnętrzu <STELLAR>egzopojazdu Kolos<>.\n\nJednostka jest w stanie przetwarzać najbardziej <TECHNOLOGY>skomplikowane przepisy<>, ale wymaga własnego niezależnego źródła <FUEL>paliwa<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech289",
+    "Icon": "technology/289.png",
+    "Name": "Montowany miotacz ognia",
+    "Group": "Broń zapalająca egzopojazdu",
+    "Description": "Montowany <STELLAR>miotacz ognia<>, zaprojektowany specjalnie dla <TECHNOLOGY>egzopojazdu<>. Zadaje ekstremalne obrażenia na bliskim dystansie.\n\nUżyj <IMG>CYCLEWEAPON<>, by przełączać się między dostępnymi trybami broni.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw29",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw61",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw79",
+        "Quantity": 90
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Obrażenia",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "Wydajność mocy uzbrojenia",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "Szybkostrzelność",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "Podpalenie po uderzeniu",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "Czas trwania podpalenia",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "Obrażenia od podpalenia",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech290",
+    "Icon": "technology/290.png",
+    "Name": "Laser bagrujący",
+    "Group": "Manipulator terenu Nautilona",
+    "Description": "Dodaje możliwość <STELLAR>manipulacji terenu<> do systemów laserowych <STELLAR>łodzi podwodnej Nautilon<>.\n\nChłodzony przez specjalnie zaprojektowane ujęcia wody, został skalibrowany do przecinania złożonej geologii dna morskiego.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 390,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 80
+      },
+      {
+        "Id": "raw77",
+        "Quantity": 90
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech291",
+    "Icon": "technology/291.png",
+    "Name": "Pochłaniacz Pusty",
+    "Group": "Zautomatyzowana jednostka karmiąca",
+    "Description": "Pochłaniacz składników odżywczych poprawia <TECHNOLOGY>wydajność egzokombinezonu<> dzięki automatycznemu porcjowaniu i przetwarzaniu różnych <STELLAR>gotowanych produktów<>.\n\nAktualne źródło pożywienia: <%NAMETAG%>%NAME%<>\nCzas trwania: <%TIMETAG%>%TIME%<>\nEfekt: <%EFFECTTAG%>%EFFECT%<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech292",
+    "Icon": "technology/292.png",
+    "Name": "Ukończone danie",
+    "Group": "Pojemnik magazynowy",
+    "Description": "Pojemnik przechowujący materiały, wytworzone przez rafinator",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]

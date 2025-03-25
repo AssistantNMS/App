@@ -29,7 +29,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
   ) {
     List<Widget> listItems = List.empty(growable: true);
 
-    int lastestUpdateInDaysSinceEpoch = items
+    int latestUpdateInDaysSinceEpoch = items
         .map((item) =>
             item.releaseDate.millisecondsSinceEpoch ~/
             millisecondsToDaysConversion)
@@ -37,7 +37,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
     int nowInDaysSinceEpoch =
         DateTime.now().millisecondsSinceEpoch ~/ millisecondsToDaysConversion;
     int daysSinceLastUpdate =
-        nowInDaysSinceEpoch - lastestUpdateInDaysSinceEpoch;
+        nowInDaysSinceEpoch - latestUpdateInDaysSinceEpoch;
     listItems.add(
       GenericItemDescription(
         getTranslations().fromKey(LocaleKey.daysSinceLastUpdate).replaceAll(
@@ -101,7 +101,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
       ),
     );
     int nextUpdateBasedOnAvgDaysSinceEpoch =
-        (lastestUpdateInDaysSinceEpoch + avgDaysPerUpdate.round()) *
+        (latestUpdateInDaysSinceEpoch + avgDaysPerUpdate.round()) *
             millisecondsToDaysConversion;
     listItems.add(
       GenericItemDescription(
@@ -128,7 +128,7 @@ class MajorUpdatesSpeculationPage extends StatelessWidget {
           daysSinceLastUpdateList.take(lastXUpdate).toList();
       String dayString = simpleDate(
         DateTime.fromMillisecondsSinceEpoch(
-          (lastestUpdateInDaysSinceEpoch +
+          (latestUpdateInDaysSinceEpoch +
                   (localDaysSinceLastUpdateList.reduce((a, b) => a + b) /
                           localDaysSinceLastUpdateList.length)
                       .round()) *

@@ -2,7 +2,7 @@ name: assistantnms_app
 description: Assistant for No Man's Sky
 homepage: https://nmsassistant.com
 # author: Kurt Lourens
-version: 2.29.0+345 # dart scripts\version_num_script.dart
+version: 2.30.0+346 # dart scripts\version_num_script.dart
 publish_to: "none"
 
 environment:
@@ -32,7 +32,6 @@ dependencies:
   adaptive_theme: 3.6.0
   after_layout: 1.2.0
   avatar_glow: 3.0.1
-  assets_audio_player: 3.1.1
   bubble: 1.2.1
   collection: 1.19.0
   dots_indicator: 3.0.0
@@ -42,13 +41,12 @@ dependencies:
   ff_stars: 3.0.0
   # file_picker: 6.1.1
   flutter_image_slideshow: 0.1.6
-  flutter_local_notifications: 17.2.2
+  flutter_local_notifications: ^19.0.0
   flutter_localization: 0.2.2
-  flutter_native_timezone: 2.0.0
   flutter_redux: 0.10.0
   flutter_simple_treeview: 3.0.2
   flutter_speed_dial: 7.0.0
-  flutter_sticky_header: 0.6.5
+  flutter_sticky_header: 0.7.0
   get_it: 7.7.0
   intro_slider: 4.2.1
   marquee_vertical: 1.0.0
@@ -58,12 +56,15 @@ dependencies:
   reorderables: 0.6.0
   shared_preferences: 2.3.2
   swipe_to: 1.0.6
-  timezone: 0.9.4
+  timezone: 0.10.0
 
   roll_slot_machine:
     git:
       url: https://github.com/AssistantApps/roll_slot_machine.git
       ref: master
+  assets_audio_player:
+    git:
+      url: https://github.com/florent37/Flutter-AssetsAudioPlayer
 
 dev_dependencies:
   flutter_launcher_icons: 0.13.1
@@ -90,7 +91,7 @@ flutter_icons: ## dart run flutter_launcher_icons:main
 msix_config: # https://pub.dev/documentation/msix/latest/
   display_name: Assistant for No Man's Sky
   publisher_display_name: AssistantApps
-  msix_version: 2.28.1.0
+  msix_version: 2.30.0.0
   identity_name: 32412AssistantApps.AssistantforNoMansSky
   publisher: CN=3CD7EDA8-DFB6-44F8-A6AC-DC70B9A5D88A
   logo_path: "./assets/images/fullSizeIcon.png"

@@ -57,6 +57,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "recovery",
         "Value": "100"
+      },
+      {
+        "Name": "Druckstabilisierung",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1"
       }
     ],
     "ConsumableRewardTexts": []
@@ -2347,7 +2353,7 @@
       "HasDevProperties"
     ],
     "BlueprintCost": 50,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -3879,6 +3885,12 @@
         "LocaleKeyTemplate": "percentage",
         "Image": "recharge",
         "Value": "100"
+      },
+      {
+        "Name": "Tankgröße erhöhen",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "ammo",
+        "Value": "400"
       }
     ],
     "ConsumableRewardTexts": []
@@ -10292,6 +10304,361 @@
         "Value": "100"
       }
     ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech283",
+    "Icon": "technology/283.png",
+    "Name": "Druckmembran",
+    "Group": "Verstärkter barometrischer Stabilisator",
+    "Description": "Extreme Druckumgebungen, wie z. B. die Tiefsee, führen zu einer erhöhten Belastung des <TECHNOLOGY>Sauerstoffkreislaufs<> und der allgemeinen Lebenserhaltungssysteme des Exo-Anzugs.\n\nDer Einbau dieser verstärkten Druckhülle erhöht die <STELLAR>Effizienz<> und den <STELLAR>Schutz<> beim Einsatz in Hochdruckumgebungen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 320,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw3",
+        "Quantity": 150
+      },
+      {
+        "Id": "prod5",
+        "Quantity": 3
+      },
+      {
+        "Id": "prod29",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Druckstabilisierung",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "enabled",
+        "Value": "1.8"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech284",
+    "Icon": "technology/284.png",
+    "Name": "Exo-Fahrzeug-Rufstation",
+    "Group": "Fahrzeug-Versetzungsgerät",
+    "Description": "Nach Konstruktion kann der Nutzer jedes Exo-Fahrzeug in seinem Besitz von <STELLAR>überallher<> im System rufen.\n\nVerbindet sich mit dem <STELLAR>Exo-Anzug-Schnellbefehlsmenü<> für eine einfachere Bedienung.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 640,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw78",
+        "Quantity": 90
+      },
+      {
+        "Id": "raw80",
+        "Quantity": 140
+      },
+      {
+        "Id": "prod114",
+        "Quantity": 3
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech285",
+    "Icon": "technology/285.png",
+    "Name": "Nährstoffprozessor",
+    "Group": "Automatische Fütterungseinheit",
+    "Description": "Der Nährstoffprozessor verbessert die Leistung des <TECHNOLOGY>Exo-Anzugs<> durch die automatische Portionierung und Verarbeitung verschiedener <STELLAR>gekochter Lebensmittel<>.\n\nWähle <COMMODITY>Einnahme beginnen<>, um den automatischen Verzehr der zugeführten Zutaten zu starten.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 350,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw2",
+        "Quantity": 30
+      },
+      {
+        "Id": "prod7",
+        "Quantity": 2
+      },
+      {
+        "Id": "prod57",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech286",
+    "Icon": "technology/286.png",
+    "Name": "Atlantid-Antrieb",
+    "Group": "Hyperantrieb-Upgrade: Lila Systeme",
+    "Description": "Lädt ein <SPECIAL>resonantes Speicherpaket<> in den Warp-Computer, das es dem Schiff ermöglicht, den dissonanten Raum um <SPECIAL>lila Sternenkörper<> zu durchqueren.\n\nDem Benutzer wird empfohlen, über die <VAL_ON>Galaktische Karte<> auf Hyperantriebssysteme zuzugreifen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 200,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw22",
+        "Quantity": 250
+      },
+      {
+        "Id": "raw72",
+        "Quantity": 200
+      },
+      {
+        "Id": "prod58",
+        "Quantity": 1
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech287",
+    "Icon": "technology/287.png",
+    "Name": "Resonanzmatrix",
+    "Group": "Hyperantrieb-Upgrade: Lila Systeme",
+    "Description": "Lädt ein <SPECIAL>resonantes Speicherpaket<> in den Warp-Computer, das es dem Schiff ermöglicht, den dissonanten Raum um <SPECIAL>lila Sternenkörper<> zu durchqueren.\n\nDem Benutzer wird empfohlen, über die <VAL_ON>Galaktische Karte<> auf Hyperantriebssysteme zuzugreifen.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 12,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur97",
+        "Quantity": 1
+      },
+      {
+        "Id": "raw72",
+        "Quantity": 160
+      },
+      {
+        "Id": "raw75",
+        "Quantity": 250
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Hyperantrieb-Reichweite",
+        "LocaleKeyTemplate": "lightYear",
+        "Image": "hyperDrive",
+        "Value": "50"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech288",
+    "Icon": "technology/288.png",
+    "Name": "Mineralienaufbereitungsanlage",
+    "Group": "Fahrzeuggetragene Raffinerie",
+    "Description": "Eine große und leistungsstarke <TECHNOLOGY>Raffinerieeinheit<>, die im Innenraum eines <STELLAR>Koloss-Exo-Fahrzeuges<> untergebracht werden kann.\n\nDie Einheit kann die <TECHNOLOGY>komplexesten Rezepte<> verarbeiten, benötigt aber eine eigene <FUEL>unabhängige Treibstoffquelle<>.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "prod7",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 100
+      },
+      {
+        "Id": "prod113",
+        "Quantity": 2
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech289",
+    "Icon": "technology/289.png",
+    "Name": "Montierter Flammenwerfer",
+    "Group": "Exo-Fahrzeug-Zündwaffe",
+    "Description": "Ein montierter <STELLAR>Flammenwerfer<>, speziell für das <TECHNOLOGY>Exo-Fahrzeug<> entwickelt. Verursacht extremen Schaden auf kurze Distanz.\n\nBenutze <IMG>CYCLEWEAPON<>, um zwischen den verfügbaren Waffenmodi zu wechseln.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 480,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw29",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw61",
+        "Quantity": 50
+      },
+      {
+        "Id": "raw79",
+        "Quantity": 90
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Schaden",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "3"
+      },
+      {
+        "Name": "Waffen-Energieeffizienz",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "75"
+      },
+      {
+        "Name": "Feuerrate",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "damage",
+        "Value": "0.08"
+      },
+      {
+        "Name": "Nach-Aufprall-Zündung",
+        "LocaleKeyTemplate": "enabled",
+        "Image": "damage",
+        "Value": "1"
+      },
+      {
+        "Name": "Aufprallfeuerdauer",
+        "LocaleKeyTemplate": "seconds",
+        "Image": "recharge",
+        "Value": "3"
+      },
+      {
+        "Name": "Aufprallfeuerschaden",
+        "LocaleKeyTemplate": "defaultTemplate",
+        "Image": "recharge2",
+        "Value": "25"
+      }
+    ],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech290",
+    "Icon": "technology/290.png",
+    "Name": "Baggerlaser",
+    "Group": "Nautilon-Terrainmanipulator",
+    "Description": "Erweitert die Lasersysteme des <STELLAR>Nautilon-U-Boots<> um <STELLAR>Terrainmanipulations<>-Kapazitäten.\n\nGekühlt durch eigens dafür entwickelte Wassereinlässe, ist er speziell kalibriert, um sich durch die komplexe Beschaffenheit des Meeresbodens zu graben.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 390,
+    "BlueprintCostType": "Nanites",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "cur32",
+        "Quantity": 4
+      },
+      {
+        "Id": "raw10",
+        "Quantity": 80
+      },
+      {
+        "Id": "raw77",
+        "Quantity": 90
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech291",
+    "Icon": "technology/291.png",
+    "Name": "Prozessor leer",
+    "Group": "Automatische Fütterungseinheit",
+    "Description": "Der Nährstoffprozessor verbessert die <TECHNOLOGY>Leistung des Exo-Anzugs<> durch die automatische Portionierung und Verarbeitung von verschiedenen <STELLAR>gekochten Lebensmitteln<>.\n\nAktuelle Nährstoffquelle: <%NAMETAG%>%NAME%<>\nDauer: <%TIMETAG%>%TIME%<>\nWirkung: <%EFFECTTAG%>%EFFECT%<>",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "2177C8",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech292",
+    "Icon": "technology/292.png",
+    "Name": "Fertiges Gericht",
+    "Group": "Lagerbehälter",
+    "Description": "Ein Behälter für die Lagerung der in der Raffinerie erzeugten Materialien.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "095C77",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 2,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
     "ConsumableRewardTexts": []
   }
 ]
