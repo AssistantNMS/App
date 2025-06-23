@@ -4002,7 +4002,7 @@
     "Icon": "technology/104.png",
     "Name": "Supersonar",
     "Group": "Analyseapparaat onderzeeër",
-    "Description": "Een sonarapparaat dat gedetailleerde opnamen maakt en de scannertechnologie aan boord van een Nautilon-onderzeeër kan verbeteren naar het niveau van een analysevizier.\nDruk op <IMG>SCAN<> om de supersonar te activeren.",
+    "Description": "Een sonarapparaat dat gedetailleerde opnamen maakt en de scannertechnologie aan boord van een Nautilon-onderzeeër kan verbeteren naar het niveau van een <TECHNOLOGY>analysevizier<>, waarbij alle gebruikelijke informatie van het analysevizier in het HUD wordt vastgemaakt.\n\nDruk op <IMG>SCAN<> om de supersonar te activeren.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -8365,8 +8365,8 @@
         "Quantity": 40
       },
       {
-        "Id": "cook40",
-        "Quantity": 15
+        "Id": "prod11",
+        "Quantity": 3
       }
     ],
     "StatBonuses": [],
@@ -8390,12 +8390,12 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw52",
-        "Quantity": 40
+        "Id": "cur17",
+        "Quantity": 2
       },
       {
-        "Id": "cook40",
-        "Quantity": 15
+        "Id": "raw18",
+        "Quantity": 25
       }
     ],
     "StatBonuses": [
@@ -8426,12 +8426,12 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw52",
-        "Quantity": 40
+        "Id": "cur18",
+        "Quantity": 2
       },
       {
-        "Id": "cook40",
-        "Quantity": 15
+        "Id": "cook311",
+        "Quantity": 3
       }
     ],
     "StatBonuses": [],
@@ -9130,7 +9130,7 @@
     "Icon": "technology/242.png",
     "Name": "Scanharmonisator",
     "Group": "Multitool-upgrade",
-    "Description": "Een uitbreiding voor de <TECHNOLOGY>scanner<> van de multitool, waarmee je het <TECHNOLOGY>verhulde signaal<> van Autofaag-eenheden in de buurt kunt detecteren en <TECHNOLOGY>decoderen<>.\n\nActiveer de scanner met <IMG>SCAN<>. Terwijl de golfvorm van de detector over het lokale gebied gaat, worden alle <STELLAR>Autofaag in de buurt<> <STELLAR>automatisch onthuld<>.",
+    "Description": "Een uitbreiding voor de <TECHNOLOGY>scanner<> van de multitool, waarmee je het verhulde signaal van Autofaag-eenheden in de buurt kunt detecteren en decoderen.\n\nActiveer de scanner met <IMG>SCAN<>. Terwijl de golfvorm van de detector over het lokale gebied gaat, worden alle <STELLAR>Autofaag in de buurt<> <STELLAR>automatisch onthuld<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -9176,7 +9176,7 @@
     "Icon": "technology/248.png",
     "Name": "Polyfone kern",
     "Group": "Autofaag-resonantiesleutel",
-    "Description": "Een uitbreiding voor de <TECHNOLOGY>scanner<> van de multitool, waarmee je het <TECHNOLOGY>verhulde signaal<> van Autofaag-eenheden in de buurt kunt detecteren en <TECHNOLOGY>decoderen<>.\n\nActiveer de scanner met <IMG>SCAN<>. Terwijl de golfvorm van de detector over het lokale gebied gaat, worden alle <STELLAR>Autofaag in de buurt<> <STELLAR>automatisch onthuld<>.\n\nMet dit apparaat kun je ook <SPECIAL>Autofaag-nederzettingen<> vinden. Selecteer dit apparaat en gebruik <VAL_ON>Autofaag-kamp vinden<> (<IMG>FE_SELECT<>)<> om een planetaire locatie die van belang is voor de Autofaag te vinden.",
+    "Description": "Een uitbreiding voor de <TECHNOLOGY>scanner<> van de multitool, waarmee je het verhulde signaal van Autofaag-eenheden in de buurt kunt detecteren en decoderen.\n\nActiveer de scanner met <IMG>SCAN<>. Terwijl de golfvorm van de detector over het lokale gebied gaat, worden alle <STELLAR>Autofaag in de buurt<> <STELLAR>automatisch onthuld<>.\n\nMet dit apparaat kun je ook <SPECIAL>Autofaag-gemeenschappen<> vinden. Gebruik <VAL_ON>Autofaag-kamp vinden<> (<IMG>FE_SELECT<>)<> om een planetaire verzameling Autofaag te vinden.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -9846,12 +9846,12 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur18",
+        "Id": "cur19",
         "Quantity": 1
       },
       {
-        "Id": "cur19",
-        "Quantity": 1
+        "Id": "raw16",
+        "Quantity": 25
       }
     ],
     "StatBonuses": [],
@@ -10349,9 +10349,9 @@
   {
     "Id": "tech284",
     "Icon": "technology/284.png",
-    "Name": "Exocraftoproepstation",
+    "Name": "Exocraft-oproepeenheid",
     "Group": "Voertuigverplaatser",
-    "Description": "Bouw een oproepstation om <STELLAR>waar dan ook<> in dat stelsel je exocraft te kunnen oproepen.\n\nToegankelijk via het <STELLAR>snelmenu van het exopak<>.",
+    "Description": "Deze persoonlijke translocator is een krachtig apparaat voor materieteleportatie en zorgt ervoor dat elke aangesloten exocraft direct naar jouw locatie kan worden getransporteerd, van <STELLAR>overal<> in het sterrenstelsel.\n\nToegankelijk via het <TECHNOLOGY>snelmenu van het exopak<>.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -10658,6 +10658,35 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech293",
+    "Icon": "technology/293.png",
+    "Name": "Reikende ranken",
+    "Group": "Knooppunt intelligent schip",
+    "Description": "Strengen van spierweefsel en zenuwcellen vervormen en verstrengelen zich over het schip, waarbij hun ingewikkelde structuur zich heen en weer tussen de zichtbare wereld en een ondoorgrondelijke dimensie daarbuiten beweegt.\n\nDeze ranken strekken zich uit over tijd en ruimte, op zoek naar een <TECHNOLOGY>langeafstandsverbinding<> tussen het schip en de exopakinventaris van hun doelwit.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw30",
+        "Quantity": 30
+      },
+      {
+        "Id": "cur291",
+        "Quantity": 1
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   }

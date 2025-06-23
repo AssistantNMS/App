@@ -4195,7 +4195,7 @@
   {
     "Id": "cook151",
     "Icon": "cooking/29.png",
-    "Name": "Haricots marins",
+    "Name": "Morceaux salés",
     "Group": "Ingrédient cru",
     "Description": "Un morceau de viande nutritif, récupéré sur le cadavre de la créature qui le possédait.\n\nTraitez-le dans un <TECHNOLOGY>processeur de nutriments<> pour générer des produits comestibles.",
     "BaseValueUnits": 1400.0,
@@ -8572,6 +8572,7 @@
     "Colour": "6AD01E",
     "CookingValue": 0.1,
     "Usages": [
+      "HasUsedToCraft",
       "HasCookToCreate",
       "HasDevProperties",
       "IsConsumable",
@@ -10563,6 +10564,62 @@
     "StatBonuses": [],
     "ConsumableRewardTexts": [
       "Le système de nutriments de l’exocombinaison va activer<TECHNOLOGY>%NUM% secondes de surcharge du jetpack<>"
+    ]
+  },
+  {
+    "Id": "cook384",
+    "Icon": "cooking/384.png",
+    "Name": "Moelle ramollie",
+    "Group": "Produit comestible",
+    "Description": "Une denrée alimentaire hautement raffinée créée à partir du <TECHNOLOGY>processeur de nutriments<>. Elle a à la fois les formes et les arômes caractéristiques d'un produit alimentaire réel, ce qui contraste fortement avec les pâtes ou les granulés nutritionnels classiques.\n\nCe genre de nourriture peut être <STELLAR>très précieuse<>.",
+    "BaseValueUnits": 79000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.3,
+    "Usages": [
+      "HasCookUsing",
+      "HasCookToCreate",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate",
+      "HasCreatureHarvest"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Le système de nutriments de l’exocombinaison va restaurer <STELLAR>%NUM% % de la santé<>"
+    ]
+  },
+  {
+    "Id": "cook385",
+    "Icon": "cooking/385.png",
+    "Name": "Bouillon d'os",
+    "Group": "Produit comestible",
+    "Description": "Une denrée alimentaire hautement raffinée créée à partir du <TECHNOLOGY>processeur de nutriments<>. Elle a à la fois les formes et les arômes caractéristiques d'un produit alimentaire réel, ce qui contraste fortement avec les pâtes ou les granulés nutritionnels classiques.\n\nCe genre de nourriture peut être <STELLAR>très précieuse<>.",
+    "BaseValueUnits": 172000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.66,
+    "Usages": [
+      "HasCookUsing",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Le système de nutriments de l’exocombinaison va restaurer <COMMODITY>%NUM% % de la protection environnementale<>"
     ]
   }
 ]

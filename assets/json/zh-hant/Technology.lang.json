@@ -4002,7 +4002,7 @@
     "Icon": "technology/104.png",
     "Name": "高功率聲納",
     "Group": "潛艇分析裝置",
-    "Description": "可呈現高度細節的聲納裝置，可以將巡洋龍等級潛艇上的掃描器技術升級為分析護目鏡等級。\n按 <IMG>SCAN<> 啟用高功率聲納。",
+    "Description": "可呈現高度細節的聲納裝置，可以將巡洋龍級別潛艇上的掃描器科技升級為<TECHNOLOGY>分析護目鏡<>等級，將其釘選至抬頭顯示器即可查看所有分析護目鏡所示資訊。\n\n使用 <IMG>SCAN<> 啟用高功率聲納。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -8365,8 +8365,8 @@
         "Quantity": 40
       },
       {
-        "Id": "cook40",
-        "Quantity": 15
+        "Id": "prod11",
+        "Quantity": 3
       }
     ],
     "StatBonuses": [],
@@ -8390,12 +8390,12 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw52",
-        "Quantity": 40
+        "Id": "cur17",
+        "Quantity": 2
       },
       {
-        "Id": "cook40",
-        "Quantity": 15
+        "Id": "raw18",
+        "Quantity": 25
       }
     ],
     "StatBonuses": [
@@ -8426,12 +8426,12 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "raw52",
-        "Quantity": 40
+        "Id": "cur18",
+        "Quantity": 2
       },
       {
-        "Id": "cook40",
-        "Quantity": 15
+        "Id": "cook311",
+        "Quantity": 3
       }
     ],
     "StatBonuses": [],
@@ -9130,7 +9130,7 @@
     "Icon": "technology/242.png",
     "Name": "掃描協和器",
     "Group": "工具組升級",
-    "Description": "工具組<TECHNOLOGY>掃描器<>的配件，能讓裝置偵測並<TECHNOLOGY>破譯<>附近自噬單體的<TECHNOLOGY>隱形訊號<>。\n\n使用 <IMG>SCAN<> 啟動掃描器。偵測器波形經過當地區域時，會<STELLAR>自動顯示<><STELLAR>附近任何自噬存在體<>。",
+    "Description": "工具組<TECHNOLOGY>掃描器<>的配件，能讓裝置偵測並破譯附近自噬單位的隱形訊號。\n\n使用 <IMG>SCAN<> 啟動掃描器。偵測器波形經過當地區域時，會<STELLAR>自動顯示<><STELLAR>附近任何自噬存在體<>。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -9176,7 +9176,7 @@
     "Icon": "technology/248.png",
     "Name": "複音核心",
     "Group": "自噬共鳴鑰匙",
-    "Description": "工具組<TECHNOLOGY>掃描器<>的配件，能讓裝置偵測並<TECHNOLOGY>破譯<>附近自噬單體的<TECHNOLOGY>隱形訊號<>。\n\n使用 <IMG>SCAN<> 啟動掃描器。偵測器波形經過當地區域時，會<STELLAR>自動揭示<><STELLAR>附近任何自噬存在體<>。\n\n此外，裝置還能用來<SPECIAL>找出自噬聚居地<>。選擇裝置並使用<VAL_ON>找出自噬營地<> (<IMG>FE_SELECT<>)<> 以找出自噬感興趣的星球地點。",
+    "Description": "工具組<TECHNOLOGY>掃描器<>的配件，能讓裝置偵測並破譯附近自噬單體的隱形訊號。\n\n使用 <IMG>SCAN<> 啟動掃描器。偵測器波形在經過當地區域時，會<STELLAR>自動顯示<>任何<STELLAR>附近的自噬存在體<>。\n\n此外，此裝置還能用來<SPECIAL>尋找自噬體聚居地<>。使用<VAL_ON>找出自噬營地<> (<IMG>FE_SELECT<>)<> 即可定位自噬體聚居的星球。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -9490,7 +9490,7 @@
   {
     "Id": "tech258",
     "Icon": "technology/118.png",
-    "Name": "定時齒輪",
+    "Name": "正時齒輪",
     "Group": "受損的自噬元件",
     "Description": "這個自噬遠未達到能正常運作的狀態，但其子元件顯示之前有嘗試修復過的跡象。再進行些許額外調整，應該能夠完成......\n\n按 <IMG>REPAIR<> 修復此元件，或按 <IMG>PIN<> 找出所需材料。",
     "BaseValueUnits": 1.0,
@@ -9846,12 +9846,12 @@
     "BlueprintSource": 0,
     "RequiredItems": [
       {
-        "Id": "cur18",
+        "Id": "cur19",
         "Quantity": 1
       },
       {
-        "Id": "cur19",
-        "Quantity": 1
+        "Id": "raw16",
+        "Quantity": 25
       }
     ],
     "StatBonuses": [],
@@ -10349,9 +10349,9 @@
   {
     "Id": "tech284",
     "Icon": "technology/284.png",
-    "Name": "強化艇召喚站",
+    "Name": "強化艇召喚單位",
     "Group": "載具移位裝置",
-    "Description": "此建設能讓使用者在星系中<STELLAR>隨處<>召喚自己擁有的強化艇。\n\n與<STELLAR>強化套裝快速指令選單<>連結後，更方便使用。",
+    "Description": "這是一種高功率物質傳送裝置，可以呼叫銀河系<STELLAR>任何地方<>的連結強化艇，立即傳送到你的位置。\n\n與<TECHNOLOGY>強化套裝快捷選單<>連結能更方便使用。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "2177C8",
@@ -10658,6 +10658,35 @@
     "BlueprintCostType": "None",
     "BlueprintSource": 0,
     "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech293",
+    "Icon": "technology/293.png",
+    "Name": "抓握觸手",
+    "Group": "感知太空船節點",
+    "Description": "肌腱和神經元的細絲在飛船上扭曲交織，其複雜的幾何形狀在可見世界和某個深不可測的維度之間穿梭。\n\n這些觸手跨越時間和空間，尋找船艦與目標的強化套裝道具欄之間的<TECHNOLOGY>長距離連結<>。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 150,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw30",
+        "Quantity": 30
+      },
+      {
+        "Id": "cur291",
+        "Quantity": 1
+      }
+    ],
     "StatBonuses": [],
     "ConsumableRewardTexts": []
   }

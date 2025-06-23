@@ -4195,7 +4195,7 @@
   {
     "Id": "cook151",
     "Icon": "cooking/29.png",
-    "Name": "Zoute vingers",
+    "Name": "Ziltige stukken",
     "Group": "Rauw ingrediënt",
     "Description": "Een voedzaam vleesproduct, afkomstig uit het lijk van een wezen.\n\nVerwerk in een <TECHNOLOGY>bouwstoffenverwerker<> om eetbare producten aan te maken.",
     "BaseValueUnits": 1400.0,
@@ -8572,6 +8572,7 @@
     "Colour": "6AD01E",
     "CookingValue": 0.1,
     "Usages": [
+      "HasUsedToCraft",
       "HasCookToCreate",
       "HasDevProperties",
       "IsConsumable",
@@ -10563,6 +10564,62 @@
     "StatBonuses": [],
     "ConsumableRewardTexts": [
       "Het voedingssysteem van het exopak activeert <TECHNOLOGY>%NUM% seconden de jetpackboost<>"
+    ]
+  },
+  {
+    "Id": "cook384",
+    "Icon": "cooking/384.png",
+    "Name": "Zacht beenmerg",
+    "Group": "Eetbaar product",
+    "Description": "Een zeer verfijnd voedselproduct, gemaakt met de <TECHNOLOGY>bouwstoffenverwerker<>. Het heeft zowel de karakteristieke vorm als de aroma's van echt voedsel, in tegenstelling tot conventionele proteïnepasta of -capsules.\n\nDit soort voedsel kan <STELLAR>zeer waardevol<> zijn.",
+    "BaseValueUnits": 79000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.3,
+    "Usages": [
+      "HasCookUsing",
+      "HasCookToCreate",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate",
+      "HasCreatureHarvest"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Het voedingssysteem van het exopak herstelt <STELLAR>%NUM%% van de gezondheid<>"
+    ]
+  },
+  {
+    "Id": "cook385",
+    "Icon": "cooking/385.png",
+    "Name": "Bottenbouillon",
+    "Group": "Eetbaar product",
+    "Description": "Een zeer verfijnd voedselproduct, gemaakt met de <TECHNOLOGY>bouwstoffenverwerker<>. Het heeft zowel de karakteristieke vorm als de aroma's van echt voedsel, in tegenstelling tot conventionele proteïnepasta of -capsules.\n\nDit soort voedsel kan <STELLAR>zeer waardevol<> zijn.",
+    "BaseValueUnits": 172000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.66,
+    "Usages": [
+      "HasCookUsing",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Het voedingssysteem van het exopak herstelt <COMMODITY>%NUM%% van de omgevingsbescherming<>"
     ]
   }
 ]

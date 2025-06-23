@@ -4195,7 +4195,7 @@
   {
     "Id": "cook151",
     "Icon": "cooking/29.png",
-    "Name": "Słone palce",
+    "Name": "Słone kawałki",
     "Group": "Surowy składnik",
     "Description": "Odżywczy produkt mięsny pozyskiwany z truchła stworzenia, które niegdyś go zawierało.\n\nPrzetwórz w <TECHNOLOGY>przetwarzaczu składników odżywczych<>, by pozyskać jadalne produkty.",
     "BaseValueUnits": 1400.0,
@@ -8572,6 +8572,7 @@
     "Colour": "6AD01E",
     "CookingValue": 0.1,
     "Usages": [
+      "HasUsedToCraft",
       "HasCookToCreate",
       "HasDevProperties",
       "IsConsumable",
@@ -10563,6 +10564,62 @@
     "StatBonuses": [],
     "ConsumableRewardTexts": [
       "System odżywczy egzokombinezonu aktywuje <TECHNOLOGY>%NUM% sek. przeładowania plecaka odrzutowego<>"
+    ]
+  },
+  {
+    "Id": "cook384",
+    "Icon": "cooking/384.png",
+    "Name": "Zmiękczony szpik",
+    "Group": "Produkt jadalny",
+    "Description": "Silnie wzbogacony produkt żywnościowy wytworzony w <TECHNOLOGY>przetwarzaczu składników odżywczych<>. Posiada wygląd i aromat prawdziwego pożywienia, w przeciwieństwie do pasty czy pastylek odżywczych.\n\nTego typu żywność może być <STELLAR>niezwykle cenna<>.",
+    "BaseValueUnits": 79000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.3,
+    "Usages": [
+      "HasCookUsing",
+      "HasCookToCreate",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate",
+      "HasCreatureHarvest"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "System odżywczy egzokombinezonu przywróci <STELLAR>%NUM%% zdrowia<>"
+    ]
+  },
+  {
+    "Id": "cook385",
+    "Icon": "cooking/385.png",
+    "Name": "Wywar z kości",
+    "Group": "Produkt jadalny",
+    "Description": "Silnie wzbogacony produkt żywnościowy wytworzony w <TECHNOLOGY>przetwarzaczu składników odżywczych<>. Posiada wygląd i aromat prawdziwego pożywienia, w przeciwieństwie do pasty czy pastylek odżywczych.\n\nTego typu żywność może być <STELLAR>niezwykle cenna<>.",
+    "BaseValueUnits": 172000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.66,
+    "Usages": [
+      "HasCookUsing",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "System odżywczy egzokombinezonu przywróci <COMMODITY>%NUM%% ochrony przed zagrożeniami<>"
     ]
   }
 ]

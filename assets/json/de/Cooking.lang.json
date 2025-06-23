@@ -4195,7 +4195,7 @@
   {
     "Id": "cook151",
     "Icon": "cooking/29.png",
-    "Name": "Salzige Fischfilets",
+    "Name": "Salzige Brocken",
     "Group": "Rohe Zutaten",
     "Description": "Ein nahrhaftes Fleischprodukt, das der Leiche der Kreatur entnommen wurde, die es einst enthielt.\n\nVerarbeite etwas in einem <TECHNOLOGY>Nährstoffprozessor<>, um essbare Produkte zu erzeugen.",
     "BaseValueUnits": 1400.0,
@@ -8572,6 +8572,7 @@
     "Colour": "6AD01E",
     "CookingValue": 0.1,
     "Usages": [
+      "HasUsedToCraft",
       "HasCookToCreate",
       "HasDevProperties",
       "IsConsumable",
@@ -10563,6 +10564,62 @@
     "StatBonuses": [],
     "ConsumableRewardTexts": [
       "Exo-Anzug-Nährstoffsystem aktiviert Jetpack-Überladung für <TECHNOLOGY>%NUM% Sekunden<>."
+    ]
+  },
+  {
+    "Id": "cook384",
+    "Icon": "cooking/384.png",
+    "Name": "Aufgeweichtes Mark",
+    "Group": "Essbares Produkt",
+    "Description": "Ein stark veredeltes Nahrungsmittelprodukt, das in einem <TECHNOLOGY>Nährstoffprozessor<> erzeugt wurde. Sie verfügt sowohl über die erkennbaren Formen als auch die Aromen eines tatsächlichen Nahrungsmittels – in krassem Gegensatz zu konventioneller Nahrungspaste oder -kugeln.\n\nNahrung wie diese kann <STELLAR>äußerst wertvoll<> sein.",
+    "BaseValueUnits": 79000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.3,
+    "Usages": [
+      "HasCookUsing",
+      "HasCookToCreate",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate",
+      "HasCreatureHarvest"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Exo-Anzug-Nährstoffsystem stellt <STELLAR>%NUM% % Gesundheit<> wieder her."
+    ]
+  },
+  {
+    "Id": "cook385",
+    "Icon": "cooking/385.png",
+    "Name": "Knochenbrühe",
+    "Group": "Essbares Produkt",
+    "Description": "Ein stark veredeltes Nahrungsmittelprodukt, das in einem <TECHNOLOGY>Nährstoffprozessor<> erzeugt wurde. Sie verfügt sowohl über die erkennbaren Formen als auch die Aromen eines tatsächlichen Nahrungsmittels – in krassem Gegensatz zu konventioneller Nahrungspaste oder -kugeln.\n\nNahrung wie diese kann <STELLAR>äußerst wertvoll<> sein.",
+    "BaseValueUnits": 172000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.66,
+    "Usages": [
+      "HasCookUsing",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Exo-Anzug-Nährstoffsystem stellt <COMMODITY>%NUM% % Gefahrenschutz<> wieder her."
     ]
   }
 ]

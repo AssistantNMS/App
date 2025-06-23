@@ -5,6 +5,8 @@
 list(APPEND FLUTTER_PLUGIN_LIST
   bitsdojo_window_windows
   file_selector_windows
+  firebase_auth
+  firebase_core
   flutter_localization
   flutter_secure_storage_windows
   flutter_udid

@@ -4195,7 +4195,7 @@
   {
     "Id": "cook151",
     "Icon": "cooking/29.png",
-    "Name": "鹹手指",
+    "Name": "鹹肉塊",
     "Group": "原料",
     "Description": "營養豐富的肉製品，從擁有它的動物的屍體上收取。\n\n用<TECHNOLOGY>營養處理器<>加工即可生成可食用產品。",
     "BaseValueUnits": 1400.0,
@@ -8572,6 +8572,7 @@
     "Colour": "6AD01E",
     "CookingValue": 0.1,
     "Usages": [
+      "HasUsedToCraft",
       "HasCookToCreate",
       "HasDevProperties",
       "IsConsumable",
@@ -10563,6 +10564,62 @@
     "StatBonuses": [],
     "ConsumableRewardTexts": [
       "強化套裝營養系統將啟用 <TECHNOLOGY>%NUM% 秒噴射背包過載<>"
+    ]
+  },
+  {
+    "Id": "cook384",
+    "Icon": "cooking/384.png",
+    "Name": "軟化骨髓",
+    "Group": "食用產品",
+    "Description": "使用<TECHNOLOGY>營養處理器<>生成的精製食品，具有真正食物的外形和味道，和一般的營養糊或營養丸截然不同。\n\n這種食物可能<STELLAR>極為有價值<>。",
+    "BaseValueUnits": 79000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.3,
+    "Usages": [
+      "HasCookUsing",
+      "HasCookToCreate",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate",
+      "HasCreatureHarvest"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "強化套裝營養系統將恢復 <STELLAR>%NUM%% 生命值<>"
+    ]
+  },
+  {
+    "Id": "cook385",
+    "Icon": "cooking/385.png",
+    "Name": "大骨湯",
+    "Group": "食用產品",
+    "Description": "使用<TECHNOLOGY>營養處理器<>生成的精製食品，具有真正食物的外形和味道，和一般的營養糊或營養丸截然不同。\n\n這種食物可能<STELLAR>極為有價值<>。",
+    "BaseValueUnits": 172000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.66,
+    "Usages": [
+      "HasCookUsing",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "強化套裝營養系統將恢復 <COMMODITY>%NUM%% 風險防護<>"
     ]
   }
 ]
