@@ -1,8 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/services/json/interface/i_generic_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
+import '../services/json/interface/i_generic_repository.dart';
 import '../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../components/tilePresenters/required_item_details_tile_presenter.dart';
 import '../constants/analytics_event.dart';

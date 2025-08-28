@@ -1,8 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/contracts/data/bait_data.dart';
 import 'package:flutter/material.dart';
 
 import '../../../contracts/data/alphabet_translation.dart';
+import '../../../contracts/data/bait_data.dart';
 import '../../../contracts/data/catalogue_order.dart';
 import '../../../contracts/data/egg_trait.dart';
 import '../../../contracts/data/generated_meta.dart';

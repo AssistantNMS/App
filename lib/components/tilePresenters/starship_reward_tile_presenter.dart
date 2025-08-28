@@ -1,7 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/app_image.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/app_image.dart';
 import '../../constants/nms_ui_constants.dart';
 import '../../contracts/data/starship_scrap.dart';
 import '../../contracts/helloGames/starship_scrap_detailed.dart';

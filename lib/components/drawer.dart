@@ -1,10 +1,10 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/app_image.dart';
-import 'package:assistantnms_app/constants/nms_external_urls.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../constants/app_colour.dart';
+import '../constants/app_image.dart';
+import '../constants/nms_external_urls.dart';
 import '../contracts/redux/app_state.dart';
 import '../helpers/drawer_helper.dart';
 import '../redux/modules/setting/drawer_settings_view_model.dart';

@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/contracts/fishing/good_guy_free_bait_view_model.dart';
 
 import '../constants/api_urls.dart';
 import '../constants/app_config.dart';
+import '../contracts/fishing/good_guy_free_bait_view_model.dart';
 import '../contracts/generated/add_friend_code_view_model.dart';
 import '../contracts/generated/friend_code_view_model.dart';
 import '../contracts/generated/nom_nom_inventory_view_model.dart';

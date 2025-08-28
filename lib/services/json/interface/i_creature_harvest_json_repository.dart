@@ -1,6 +1,7 @@
-import 'package:assistantnms_app/contracts/creature/creature_harvest.dart';
-import 'package:flutter/material.dart';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:flutter/material.dart';
+
+import '../../../contracts/creature/creature_harvest.dart';
 
 class ICreatureHarvestJsonRepository {
   Future<ResultWithValue<List<CreatureHarvest>>> getCreatureHarvests(

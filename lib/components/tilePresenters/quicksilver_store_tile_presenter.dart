@@ -1,8 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/app_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/common/image.dart';
+import '../../constants/app_image.dart';
 import '../../contracts/data/quicksilver_store_item.dart';
 import '../../contracts/required_item_details.dart';
 import '../../pages/generic/generic_page.dart';
