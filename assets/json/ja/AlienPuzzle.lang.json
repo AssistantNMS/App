@@ -203,6 +203,91 @@
     ]
   },
   {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>アトラス/アーロン監視アップリンク：<SPECIAL>gLass<>... <NEWLINE>アノマリーの定義：<FUEL>データ損失<><NEWLINE>指令：<FUEL>アノマリーの抑制...<>指令：<FUEL>アノマリーの一掃<><NEWLINE>... 指令：<FUEL>ターゲットアノマリー<>..."
+    ],
+    "Options": [
+      {
+        "Name": "何もしない",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE_PARTY",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>アトラス/アーロン監視アップリンク：<SPECIAL>gLass<>... <NEWLINE>アノマリーの定義：<FUEL>データ損失<><NEWLINE>指令：<FUEL>アノマリーの抑制...<>指令：<FUEL>アノマリーの一掃<><NEWLINE>... 指令：<FUEL>ターゲットアノマリー<>..."
+    ],
+    "Options": [
+      {
+        "Name": "<SPECIAL>イテレーション署名<>をインプリント",
+        "Text": "インプリント中... トラベラー<SPECIAL>%USER%<>... <NEWLINE>アノマリーの定義：<STELLAR>%CMTOTALPERCENT%回復<>",
+        "InteractionId": "?S19_STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "何もしない",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>アトラス/アーロン監視アップリンク：<SPECIAL>gLass<>... <NEWLINE>アノマリーの定義：<FUEL>データ損失<><NEWLINE>指令：<FUEL>アノマリーの抑制...<>指令：<FUEL>アノマリーの一掃<><NEWLINE>... 指令：<FUEL>ターゲットアノマリー<>..."
+    ],
+    "Options": [
+      {
+        "Name": "<SPECIAL>アノマリーの定義<>をアップロード",
+        "InteractionId": "?S19_COMMUNITY_CORE2",
+        "RewardIds": []
+      },
+      {
+        "Name": "何もしない",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE2",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<SPECIAL>イテレーション署名<>をコンパイル中... リンク中... 展開中...\n...\n展開：<TRADEABLE>完了<>。アノマリーの定義：<TRADEABLE>修復<>。",
+      "ステーションコアは、通常のルーティーンに戻ります。以前からの敵対的なメッセージの痕跡は残っていません。",
+      "<STELLAR>注<>：データフラグメントが検出されました。<SPECIAL>定義<>と一致するイテレーションはまだ分離されています。アップロードの支援をしますか？"
+    ],
+    "Options": [
+      {
+        "Name": "<TECHNOLOGY>オービタルアップリンク<>ブループリントを送信",
+        "Text": "設計図：隔離された断片に<TRADEABLE>ブロードキャスト<>する。\nアトラス/アーロン監視アップリンク：<SPECIAL>機能的<>... すべてのシステム：<TRADEABLE>安定<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "メモを消す",
+        "Text": "アトラス/アーロン監視アップリンク：<SPECIAL>機能的<>... すべてのシステム：<TRADEABLE>安定<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
     "Type": "Factory",
     "Id": "?ALL_FACT_REWARD",
     "Race": "None",

@@ -7442,7 +7442,7 @@
     "Icon": "technology/204.png",
     "Name": "Dispositivo de camuflaje",
     "Group": "Unidad de camuflaje activo",
-    "Description": "Al activarse, este módulo obtiene energía del sistema de <VAL_ON>soporte vital del exotraje<> para manipular el campo gravitacional alrededor del usuario, refractando la luz y creando un <STELLAR>efecto de camuflaje activo<>.\n\nEste efecto <STELLAR>temporal<> se puede utilizar para escapar de la atención enemiga no deseada. ADVERTENCIA: el camuflaje activo se desactivará durante maniobras dramáticas del exotraje, como la activación del jetpack o al activar los sistemas de armas de la multiherramienta.",
+    "Description": "Al activarse, este módulo obtiene energía del sistema de <VAL_ON>soporte vital del exotraje<> para manipular el campo gravitacional alrededor del usuario, refractando la luz y creando un <STELLAR>efecto de camuflaje activo<>.\n\nEste efecto <STELLAR>temporal<> se puede utilizar para escapar de la atención enemiga no deseada. ADVERTENCIA: El camuflaje activo se desactivará durante maniobras dramáticas del exotraje, como la activación del jetpack o de los sistemas de armas de la multiherramienta.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -7861,7 +7861,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -7925,7 +7925,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -7977,7 +7977,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -8019,7 +8019,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 480,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -10688,6 +10688,38 @@
       }
     ],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech294",
+    "Icon": "technology/294.png",
+    "Name": "Estela de plasma de nave",
+    "Group": "Anulación de escape de nave",
+    "Description": "Un exclusivo <STELLAR>modificador de escape de nave<>.\n\nUna mejora visual para la nave espacial, que sustituye los tubos de escape tradicionales por un propulsor de plasma, lo que genera un nube espectacular de materia ionizada.\n\nInstala esta <TECHNOLOGY>tecnología<> en el inventario de tu nave para cambiar la apariencia de las estelas del escape del motor.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Potenciar",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

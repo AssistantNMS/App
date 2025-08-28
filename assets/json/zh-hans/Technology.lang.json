@@ -952,7 +952,7 @@
         "Value": "15"
       },
       {
-        "Name": "操控性 (飞船)",
+        "Name": "机动性 (飞船)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -6967,7 +6967,7 @@
         "Value": "100"
       },
       {
-        "Name": "操控性 (飞船)",
+        "Name": "机动性 (飞船)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "25"
@@ -7861,7 +7861,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -7925,7 +7925,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -7977,7 +7977,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -8019,7 +8019,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 480,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -8157,7 +8157,7 @@
         "Value": "15"
       },
       {
-        "Name": "操控性 (飞船)",
+        "Name": "机动性 (飞船)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8236,7 +8236,7 @@
         "Value": "0.6"
       },
       {
-        "Name": "操控性 (飞船)",
+        "Name": "机动性 (飞船)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8616,7 +8616,7 @@
         "Value": "110"
       },
       {
-        "Name": "操控性 (飞船)",
+        "Name": "机动性 (飞船)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "50"
@@ -10688,6 +10688,38 @@
       }
     ],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech294",
+    "Icon": "technology/294.png",
+    "Name": "等离子飞船尾迹",
+    "Group": "飞船排气管覆盖品",
+    "Description": "专属的<STELLAR>飞船排气管修改器<>。\n\n一种飞船的视觉增强装置，用等离子推进器取代传统的排气喷射器，会产生壮丽的离子化物质尾迹。\n\n在你的飞船库存中安装这个<TECHNOLOGY>技术<>以改变推进器排气管尾迹的外观。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "推进器",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

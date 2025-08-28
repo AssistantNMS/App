@@ -203,6 +203,91 @@
     ]
   },
   {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Канал связи с системой наблюдения Атласа/Эрона: <SPECIAL>gLass<>...<NEWLINE>Определение аномалии: <FUEL>ДАННЫЕ УТЕРЯНЫ<><NEWLINE>Приказ: <FUEL>подавить аномалии<>... Приказ: <FUEL>удалить аномалии<>...<NEWLINE>Приказ: <FUEL>атаковать аномалии<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Уйти",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE_PARTY",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Канал связи с системой наблюдения Атласа/Эрона: <SPECIAL>gLass<>...<NEWLINE>Определение аномалии: <FUEL>ДАННЫЕ УТЕРЯНЫ<><NEWLINE>Приказ: <FUEL>подавить аномалии<>... Приказ: <FUEL>удалить аномалии<>...<NEWLINE>Приказ: <FUEL>атаковать аномалии<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Записать <SPECIAL>сигнатуру итерации<>",
+        "Text": "Выполняется запись... Странник <SPECIAL>%USER%<>...<NEWLINE>Определение аномалий: <STELLAR>%CMTOTALPERCENT% восстановлено<>",
+        "InteractionId": "?S19_STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Уйти",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Канал связи с системой наблюдения Атласа/Эрона: <SPECIAL>gLass<>...<NEWLINE>Определение аномалии: <FUEL>ДАННЫЕ УТЕРЯНЫ<><NEWLINE>Приказ: <FUEL>подавить аномалии<>... Приказ: <FUEL>удалить аномалии<>...<NEWLINE>Приказ: <FUEL>атаковать аномалии<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Загрузить <SPECIAL>определение аномалии<>",
+        "InteractionId": "?S19_COMMUNITY_CORE2",
+        "RewardIds": []
+      },
+      {
+        "Name": "Уйти",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE2",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Компиляция <SPECIAL>сигнатур итерации<>... связывание... развертывание...\n...\nРазвертывание: <TRADEABLE>завершено<>. Определение аномалии: <TRADEABLE>восстановлено<>.",
+      "Ядро станции возвращается к обычной работе. От прежних враждебных сообщений не осталось и следа.",
+      "<STELLAR>Примечание<>: обнаружены фрагменты данных. Итерации, совпадающие с <SPECIAL>определением<>, все еще изолированы. Загрузить помощь?"
+    ],
+    "Options": [
+      {
+        "Name": "Передать чертеж <TECHNOLOGY>канала орбитальной связи<>",
+        "Text": "Чертеж: <TRADEABLE>передать<> изолированным фрагментам.\nКанал связи с системой наблюдения Атласа/Эрона: <SPECIAL>работает<>... Все системы: <TRADEABLE>стабильны<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Отклонить примечание",
+        "Text": "Канал связи с системой наблюдения Атласа/Эрона: <SPECIAL>работает<>... Все системы: <TRADEABLE>стабильны<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
     "Type": "Factory",
     "Id": "?ALL_FACT_REWARD",
     "Race": "None",

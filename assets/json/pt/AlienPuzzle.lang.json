@@ -203,6 +203,91 @@
     ]
   },
   {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Transmissão Satélite de Vigilância de Atlas/Aeron: <SPECIAL>gLass<>...<NEWLINE>Definição da anomalia: <FUEL>DADOS PERDIDOS<><NEWLINE>Diretiva: <FUEL>Suprimir Anomalias<>... Diretiva: <FUEL>Limpar Anomalias<>... <NEWLINE>Diretiva: <FUEL>Apontar Anomalias<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Sair",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE_PARTY",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Transmissão Satélite de Vigilância de Atlas/Aeron: <SPECIAL>gLass<>...<NEWLINE>Definição da anomalia: <FUEL>DADOS PERDIDOS<><NEWLINE>Diretiva: <FUEL>Suprimir Anomalias<>... Diretiva: <FUEL>Limpar Anomalias<>... <NEWLINE>Diretiva: <FUEL>Apontar Anomalias<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Carimbar <SPECIAL>assinatura de iteração<>",
+        "Text": "A carimbar... Viajante <SPECIAL>%USER%<>...<NEWLINE>Definição da anomalia: <STELLAR>%CMTOTALPERCENT% restaurado<>",
+        "InteractionId": "?S19_STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Sair",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Transmissão Satélite de Vigilância de Atlas/Aeron: <SPECIAL>gLass<>...<NEWLINE>Definição da anomalia: <FUEL>DADOS PERDIDOS<><NEWLINE>Diretiva: <FUEL>Suprimir Anomalias<>... Diretiva: <FUEL>Limpar Anomalias<>... <NEWLINE>Diretiva: <FUEL>Apontar Anomalias<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Carregar <SPECIAL>definição da anomalia<>",
+        "InteractionId": "?S19_COMMUNITY_CORE2",
+        "RewardIds": []
+      },
+      {
+        "Name": "Sair",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE2",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "A compilar <SPECIAL>assinaturas de iteração<>... a associar... a ativar...\n...\nAtivação: <TRADEABLE>Concluída<>. Definição de anomalia: <TRADEABLE>Restaurada<>.",
+      "O núcleo da estação retoma a sua rotina normal. Não existem vestígios das mensagens hostis anteriores.",
+      "<STELLAR>Nota<>: fragmentos de dados detetados. Iterações correspondentes à <SPECIAL>definição<> ainda isoladas. Carregar assistência?"
+    ],
+    "Options": [
+      {
+        "Name": "Submete o Diagrama de <TECHNOLOGY>Transmissão Orbital<>",
+        "Text": "Diagrama: <TRADEABLE>Efetua a transmissão<> para fragmentos isolados.\nTransmissão Satélite de Vigilância de Atlas/Aeron: <SPECIAL>Funcional<>... Todos os sistemas: <TRADEABLE>Estáveis<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Ignorar nota",
+        "Text": "Transmissão Satélite de Vigilância de Atlas/Aeron: <SPECIAL>Funcional<>... Todos os sistemas: <TRADEABLE>Estáveis<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
     "Type": "Factory",
     "Id": "?ALL_FACT_REWARD",
     "Race": "None",

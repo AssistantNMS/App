@@ -952,7 +952,7 @@
         "Value": "15"
       },
       {
-        "Name": "操控性 (太空船)",
+        "Name": "機動力 (太空船)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -6967,7 +6967,7 @@
         "Value": "100"
       },
       {
-        "Name": "操控性 (太空船)",
+        "Name": "機動力 (太空船)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "25"
@@ -7442,7 +7442,7 @@
     "Icon": "technology/204.png",
     "Name": "隱形裝置",
     "Group": "主動偽裝單位",
-    "Description": "啟動後，此模組會從<VAL_ON>強化套裝維生<>系統中抽取能量，控制使用者周遭的重力力場、折射光線，並創造一個<STELLAR>主動迷彩效果<>。\n\n這個<STELLAR>暫時的<>效果可用於逃離非必要的敵對注意。警告：主動迷彩會因激烈的強化套裝動作而中止，像是啟動噴射背包或是啟動工具組武器系統。",
+    "Description": "啟動後，此模組會從<VAL_ON>強化套裝維生<>系統中抽取能量，控制使用者周遭的重力場、折射光線，並創造一個<STELLAR>主動迷彩效果<>。\n\n這個<STELLAR>暫時的<>效果可用於逃離非必要的敵對注意範圍。警告：主動迷彩會因激烈的強化套裝動作而中止，像是操控噴射背包或是啟動工具組武器系統。",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -7861,7 +7861,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -7925,7 +7925,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -7977,7 +7977,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -8019,7 +8019,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 480,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -8157,7 +8157,7 @@
         "Value": "15"
       },
       {
-        "Name": "操控性 (太空船)",
+        "Name": "機動力 (太空船)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8236,7 +8236,7 @@
         "Value": "0.6"
       },
       {
-        "Name": "操控性 (太空船)",
+        "Name": "機動力 (太空船)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8616,7 +8616,7 @@
         "Value": "110"
       },
       {
-        "Name": "操控性 (太空船)",
+        "Name": "機動力 (太空船)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "50"
@@ -10688,6 +10688,38 @@
       }
     ],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech294",
+    "Icon": "technology/294.png",
+    "Name": "電漿太空船尾跡",
+    "Group": "太空船排氣管覆寫",
+    "Description": "獨特的<STELLAR>太空船排氣管改造器<>。\n\n強化太空船的視覺效果，用電漿推進器取代傳統的噴射口，產生大量的離子物質氣流。\n\n安裝此<TECHNOLOGY>科技<>到你的太空船道具欄，改變引擎廢氣尾跡的外觀。",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "強化",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

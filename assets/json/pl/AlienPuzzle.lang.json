@@ -203,6 +203,91 @@
     ]
   },
   {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Terminal obserwacyjny Atlas/Aeron: <SPECIAL>szKło<>...<NEWLINE>Definicja anomalii: <FUEL>UTRATA DANYCH<><NEWLINE>Dyrektywa:<FUEL> Tłumić anomalie<>... Dyrektywa: <FUEL>Oczyścić anomalie<>... <NEWLINE>Dyrektywa: <FUEL>Namierzyć anomalie<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Odejdź",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE_PARTY",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Terminal obserwacyjny Atlas/Aeron: <SPECIAL>szKło<>...<NEWLINE>Definicja anomalii: <FUEL>UTRATA DANYCH<><NEWLINE>Dyrektywa:<FUEL> Tłumić anomalie<>... Dyrektywa: <FUEL>Oczyścić anomalie<>... <NEWLINE>Dyrektywa: <FUEL>Namierzyć anomalie<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Odciśnij <SPECIAL>podpis iteracji<>",
+        "Text": "Odciskanie... Podróżnik <SPECIAL>%USER%<>...<NEWLINE>Definicja anomalii: <STELLAR>%CMTOTALPERCENT% odzyskane<>",
+        "InteractionId": "?S19_STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Odejdź",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Terminal obserwacyjny Atlas/Aeron: <SPECIAL>szKło<>...<NEWLINE>Definicja anomalii: <FUEL>UTRATA DANYCH<><NEWLINE>Dyrektywa:<FUEL> Tłumić anomalie<>... Dyrektywa: <FUEL>Oczyścić anomalie<>... <NEWLINE>Dyrektywa: <FUEL>Namierzyć anomalie<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Prześlij <SPECIAL>definicję anomalii<>",
+        "InteractionId": "?S19_COMMUNITY_CORE2",
+        "RewardIds": []
+      },
+      {
+        "Name": "Odejdź",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE2",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Kompilowanie <SPECIAL>podpisów iteracji<>... łączenie... rozmieszczanie...\n...\nRozmieszczanie: <TRADEABLE>zakończone<>. Definicja anomalii <TRADEABLE>przywrócona<>.",
+      "Rdzeń stacji wraca do normalnej pracy. Nie ma już śladu po wcześniejszych wrogich komunikatach.",
+      "<STELLAR>Uwaga<>: wykryto fragmenty danych. Iteracje pasujące do <SPECIAL>definicji<> wciąż są wyizolowane. Przesłać pomoc?"
+    ],
+    "Options": [
+      {
+        "Name": "Prześlij schemat <TECHNOLOGY>terminalu orbitalnego<>",
+        "Text": "Schemat: <TRADEABLE>Nadawaj<> do odizolowanych fragmentów.\nTerminal obserwacyjny Atlas/Aeron: <SPECIAL>Funkcjonalny<>... Wszystkie systemy: <TRADEABLE>Stabilne<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Odrzuć uwagę",
+        "Text": "Terminal obserwacyjny Atlas/Aeron: <SPECIAL>Funkcjonalny<>... Wszystkie systemy: <TRADEABLE>Stabilne<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
     "Type": "Factory",
     "Id": "?ALL_FACT_REWARD",
     "Race": "None",

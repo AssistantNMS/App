@@ -1120,7 +1120,7 @@
     ],
     "StatBonuses": [
       {
-        "Name": "操控性 (太空船)",
+        "Name": "機動力 (太空船)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "5"
@@ -17251,6 +17251,475 @@
       "HasDevProperties",
       "IsAddedInTrackedUpdate",
       "IsExpeditionSeason18Reward"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other874",
+    "Icon": "other/874.png",
+    "Name": "警惕尾跡",
+    "Group": "噴射背包排氣管覆寫",
+    "Description": "獨特的<STELLAR>強化套裝外觀覆寫<>。\n\n從沉睡的守護者身上摘下活石頭，經過一系列鏡頭聚焦和加固，噴射背包的尾跡才能散發如此光芒。\n\n在<TECHNOLOGY>外觀改造器<>改變你的強化套裝外觀。",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other875",
+    "Icon": "other/875.png",
+    "Name": "電漿太空船尾跡",
+    "Group": "太空船排氣管覆寫",
+    "Description": "獨特的<STELLAR>太空船排氣管改造器<>。\n\n強化太空船的視覺效果，用電漿推進器取代傳統的噴射口，產生大量的離子物質氣流。\n\n安裝此<TECHNOLOGY>科技<>到你的太空船道具欄，改變引擎廢氣尾跡的外觀。",
+    "BaseValueUnits": 2100.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other876",
+    "Icon": "other/876.png",
+    "Name": "機械鼠蛋",
+    "Group": "機器孵化膠囊",
+    "Description": "一個金屬「蛋」膠囊，<TRADEABLE>即將孵化！<>\n\n膠囊深處傳來合成生物發出的低沉吱吱聲。\n\n掃描結果顯示，該生物經程序設計，特徵為聰明、有愛心，但喜歡啃電子產品。",
+    "BaseValueUnits": 3200.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2987",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other877",
+    "Icon": "other/52.png",
+    "Name": "頭銜：船匠",
+    "Group": "量身訂製個人識別",
+    "Description": "獨特<STELLAR>探險家頭銜<>，紀念<STELLAR>輕型巡防艦<>探險的完成，以及你親自設計、組裝了可供居住的專屬太空船。\n\n在<TECHNOLOGY>外觀改造器<>將此頭銜套用至旗幟上。",
+    "BaseValueUnits": 800.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other878",
+    "Icon": "other/878.png",
+    "Name": "輕型巡防艦旗幟",
+    "Group": "量身訂製個人識別",
+    "Description": "裝備這款獨特的<STELLAR>個人造型<>以紀念<STELLAR>輕型巡防艦<>探險的完成，以及你親自設計、組裝了可供居住的專屬太空船。\n\n在<TECHNOLOGY>外觀改造器<>將此旗幟套用到你的檔案。",
+    "BaseValueUnits": 220.0,
+    "CurrencyType": "Nanites",
+    "MaxStackSize": 5.0,
+    "Colour": "007951",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other880",
+    "Icon": "other/880.png",
+    "Name": "軌道通信鏈路",
+    "Group": "瞬間傳送網路隧道",
+    "Description": "該裝置可繞過主流瞬間傳送網路，<SPECIAL>直接連結<>到當地太空站。\n\n選擇裝置並<VAL_ON>啟動瞬間傳送<> (<IMG> FE_ALT1<>)，立即轉移到最近的太空站。",
+    "BaseValueUnits": 1000.0,
+    "CurrencyType": "Credits",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw23",
+        "Quantity": 30
+      }
+    ],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "通往附近太空站的隧道"
+    ]
+  },
+  {
+    "Id": "other881",
+    "Icon": "cooking/45.png",
+    "Name": "牛奶",
+    "Group": "原料",
+    "Description": "動物的副產品，這種營養豐富的食物可以輕易收取且不會傷害生產它的動物。\n\n用<TECHNOLOGY>營養處理器<>加工即可生成可食用產品。",
+    "BaseValueUnits": 1600.0,
+    "CurrencyType": "Credits",
+    "Colour": "CCCCCC",
+    "CookingValue": 0.0,
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other882",
+    "Icon": "other/882.png",
+    "Name": "里貝蘇之刃",
+    "Group": "特殊太空船",
+    "Description": "獨特的<STELLAR>太空船<>。這艘 A 級戰鬥機配備精選科技與升級設備，有傷害和機動力加成。\n\n<STELLAR>領取<>太空船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other883",
+    "Icon": "other/883.png",
+    "Name": "布凱多探礦者 XII",
+    "Group": "特殊太空船",
+    "Description": "獨特的<STELLAR>太空船<>。這艘 A 級太空梭重視實用和平衡，並配備各種科技和升級設備。\n\n<STELLAR>領取<>太空船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other884",
+    "Icon": "other/884.png",
+    "Name": "宏偉預兆 T09",
+    "Group": "特殊太空船",
+    "Description": "獨特的<STELLAR>太空船<>。這艘 A 級探險家配備精選科技和升級設備，有超空間驅動器和發射器加成。\n\n<STELLAR>領取<>太空船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other885",
+    "Icon": "other/885.png",
+    "Name": "大森部翠鳥戰矛",
+    "Group": "特殊太空船",
+    "Description": "獨特的<STELLAR>太空船<>。這艘 A 級太陽動能船配備精選科技和升級設備，有傷害和防護罩加成，以及美觀的高科技夜行帆。\n\n<STELLAR>領取<>太空船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other886",
+    "Icon": "other/886.png",
+    "Name": "神速諾奇爾 V",
+    "Group": "特殊太空船",
+    "Description": "獨特的<STELLAR>太空船<>。這艘 A 級戰鬥機配備精選科技與升級設備，有傷害和機動力加成。\n\n<STELLAR>領取<>太空船加入你的收藏，或是與目前太空船<STELLAR>交換<>。在星球上時，利用快捷選單 (<IMG>QUICK_MENU<>) 召喚太空船。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other887",
+    "Icon": "other/887.png",
+    "Name": "G. 萊科納特卵",
+    "Group": "特殊同伴蛋",
+    "Description": "有生命、可孵化的蛋，<TRADEABLE>即將孵化！<>\n\n蛋內的重量不停變動，就像裡面的生物正在激烈地跳動一般。\n\n掃描結果顯示，該生物可能擁有以下特徵：<TRADEABLE>愛冒險<>的同伴，樂於探索冰寒家園以外的星球。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other888",
+    "Icon": "other/888.png",
+    "Name": "A. 奇林約薩卵",
+    "Group": "特殊同伴蛋",
+    "Description": "有生命、可孵化的蛋，<TRADEABLE>即將孵化！<>\n\n裡面的昆蟲尚未看到其他存在體，就緊緊咬住大顎，顯得十分兇猛。\n\n掃描結果顯示，該生物可能擁有以下特徵：<FUEL>強悍<>的獵手，對獵物和敵方生物有強烈的攻擊性。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other889",
+    "Icon": "other/889.png",
+    "Name": "卡利姆斯基夫探測射線分析儀",
+    "Group": "特殊多功能求生裝置",
+    "Description": "獨特的<STELLAR>工具組<>。這把 A 級武器配備大量科技和升級設備。\n\n<STELLAR>取走<>這個工具組加入你的收藏，或是與目前工具組<STELLAR>交換<>。利用快捷選單 (<IMG>QUICK_MENU<>) 的機能選項，切換使用中的工具組。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other890",
+    "Icon": "other/890.png",
+    "Name": "負離子重擊機",
+    "Group": "特殊多功能求生裝置",
+    "Description": "獨特的<STELLAR>工具組<>。這把 A 級武器配備大量科技和升級設備。\n\n<STELLAR>取走<>這個工具組加入你的收藏，或是與目前工具組<STELLAR>交換<>。利用快捷選單 (<IMG>QUICK_MENU<>) 的機能選項，切換使用中的工具組。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other891",
+    "Icon": "other/891.png",
+    "Name": "閃光注射器",
+    "Group": "特殊多功能求生裝置",
+    "Description": "獨特的<STELLAR>工具組<>。這把 A 級武器配備大量科技和升級設備。\n\n<STELLAR>取走<>這個工具組加入你的收藏，或是與目前工具組<STELLAR>交換<>。利用快捷選單 (<IMG>QUICK_MENU<>) 的機能選項，切換使用中的工具組。",
+    "BaseValueUnits": 3000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "2C7C9F",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other892",
+    "Icon": "other/892.png",
+    "Name": "寰宇煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種豪華煙火的組合包，令人驚奇的火焰技術，施放時爆發出多道<TECHNOLOGY>銦<>、<COMMODITY>金<>與<FUEL>鎘<>的光芒。在天空中描繪出寰宇介面的畫像。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<>（<IMG>BUILD_MENU<>）放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other893",
+    "Icon": "other/892.png",
+    "Name": "寰宇煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種豪華煙火的組合包，令人驚奇的火焰技術，施放時爆發出多道<TECHNOLOGY>銦<>、<COMMODITY>金<>與<FUEL>鎘<>的光芒。在天空中描繪出寰宇介面的畫像。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<>（<IMG>BUILD_MENU<>）放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other894",
+    "Icon": "other/892.png",
+    "Name": "寰宇煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種豪華煙火的組合包，令人驚奇的火焰技術，施放時爆發出多道<TECHNOLOGY>銦<>、<COMMODITY>金<>與<FUEL>鎘<>的光芒。在天空中描繪出寰宇介面的畫像。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<>（<IMG>BUILD_MENU<>）放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other895",
+    "Icon": "other/892.png",
+    "Name": "寰宇煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種豪華煙火的組合包，令人驚奇的火焰技術，施放時爆發出多道<TECHNOLOGY>銦<>、<COMMODITY>金<>與<FUEL>鎘<>的光芒。在天空中描繪出寰宇介面的畫像。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<>（<IMG>BUILD_MENU<>）放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "other896",
+    "Icon": "other/892.png",
+    "Name": "寰宇煙火包",
+    "Group": "煙火表演組合包",
+    "Description": "三種豪華煙火的組合包，令人驚奇的火焰技術，施放時爆發出多道<TECHNOLOGY>銦<>、<COMMODITY>金<>與<FUEL>鎘<>的光芒。在天空中描繪出寰宇介面的畫像。點燃即可在天空中創造出絢爛效果。\n\n可從<VAL_ON>建造選單<>（<IMG>BUILD_MENU<>）放置發射管。<FUEL>警告<>：請勿對著生物發射，不建議於室內使用。",
+    "BaseValueUnits": 250.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "262626",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",

@@ -952,7 +952,7 @@
         "Value": "15"
       },
       {
-        "Name": "Manewrowość (Statek gwiezdny)",
+        "Name": "Zwrotność (Statek gwiezdny)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -6967,7 +6967,7 @@
         "Value": "100"
       },
       {
-        "Name": "Manewrowość (Statek gwiezdny)",
+        "Name": "Zwrotność (Statek gwiezdny)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "25"
@@ -7861,7 +7861,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -7925,7 +7925,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -7977,7 +7977,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -8019,7 +8019,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 480,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -8157,7 +8157,7 @@
         "Value": "15"
       },
       {
-        "Name": "Manewrowość (Statek gwiezdny)",
+        "Name": "Zwrotność (Statek gwiezdny)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8236,7 +8236,7 @@
         "Value": "0.6"
       },
       {
-        "Name": "Manewrowość (Statek gwiezdny)",
+        "Name": "Zwrotność (Statek gwiezdny)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "10"
@@ -8616,7 +8616,7 @@
         "Value": "110"
       },
       {
-        "Name": "Manewrowość (Statek gwiezdny)",
+        "Name": "Zwrotność (Statek gwiezdny)",
         "LocaleKeyTemplate": "percentage",
         "Image": "target",
         "Value": "50"
@@ -10688,6 +10688,38 @@
       }
     ],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech294",
+    "Icon": "technology/294.png",
+    "Name": "Plazmowa smuga statku gwiezdnego",
+    "Group": "Personalizacja wydechu statku gwiezdnego",
+    "Description": "Wyjątkowy <STELLAR>modyfikator wydechu statku gwiezdnego<>.\n\nWizualne rozszerzenie statku gwiezdnego, zastępujące tradycyjne silniki modelami plazmowymi wytwarzającymi majestatyczne słupy zjonizowanej materii.\n\nZamontuj tę <TECHNOLOGY>technologię<> w ekwipunku swojego statku, by zmienić wygląd smugi z wydechu silnika.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Dopalacz",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

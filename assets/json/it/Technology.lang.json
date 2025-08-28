@@ -7442,7 +7442,7 @@
     "Icon": "technology/204.png",
     "Name": "Dispositivo di occultamento",
     "Group": "Unità di camuffamento attivo",
-    "Description": "All'attivazione, questo modulo preleva energia dai sistemi di <VAL_ON>supporto vitale dell'exotuta<> per manipolare il campo gravitazionale attorno all'utente, rifrangendo la luce e creando un <STELLAR>effetto di camuffamento attivo<>.\n\nQuesto effetto <STELLAR>temporaneo<> può essere utilizzato per sfuggire a un'attenzione ostile indesiderata. ATTENZIONE: il camuffamento attivo potrebbe interrompersi a seguito di manovre impegnative dell'exotuta come l'attivazione del jet pack o l'attivazione dei sistemi d'arma multi-tool.",
+    "Description": "All'attivazione, questo modulo preleva energia dai sistemi di <VAL_ON>supporto vitale dell'exotuta<> per manipolare il campo gravitazionale attorno all'utente, rifrangendo la luce e creando un <STELLAR>effetto di camuffamento attivo<>.\n\nQuesto effetto <STELLAR>temporaneo<> può essere usato per sfuggire a un'attenzione ostile indesiderata. ATTENZIONE: il camuffamento attivo potrebbe interrompersi a seguito di manovre impegnative dell'exotuta come l'attivazione del jet pack o l'attivazione dei sistemi d'arma multi-tool.",
     "BaseValueUnits": 1.0,
     "CurrencyType": "None",
     "Colour": "095C77",
@@ -7861,7 +7861,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -7925,7 +7925,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -7977,7 +7977,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 500,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -8019,7 +8019,7 @@
       "IsAddedInTrackedUpdate"
     ],
     "BlueprintCost": 480,
-    "BlueprintCostType": "None",
+    "BlueprintCostType": "Nanites",
     "BlueprintSource": 0,
     "RequiredItems": [
       {
@@ -10688,6 +10688,38 @@
       }
     ],
     "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "tech294",
+    "Icon": "technology/294.png",
+    "Name": "Scia plasmatica astronave",
+    "Group": "Override scarico astronave",
+    "Description": "Un esclusivo <STELLAR>modificatore di scarico dell'astronave<>.\n\nUn miglioramento estetico per l'astronave, sostituisce i soliti getti di scarico con un propulsore al plasma, che genera una scia di scarico impressionante di materia ionizzata.\n\nInstalla questa <TECHNOLOGY>tecnologia<> nell'inventario della tua astronave per modificare l'aspetto delle scie di scarico del motore.",
+    "BaseValueUnits": 1.0,
+    "CurrencyType": "None",
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [
+      {
+        "Id": "raw8",
+        "Quantity": 10
+      }
+    ],
+    "StatBonuses": [
+      {
+        "Name": "Turbo",
+        "LocaleKeyTemplate": "percentage",
+        "Image": "recovery",
+        "Value": "1"
+      }
+    ],
     "ConsumableRewardTexts": []
   }
 ]

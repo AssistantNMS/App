@@ -203,6 +203,91 @@
     ]
   },
   {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>寰宇/太空監視通信鏈路：<SPECIAL>玻璃<>......<NEWLINE>異常定義：<FUEL>資料遺失<><NEWLINE>指令：<FUEL>鎮壓異常<>......指令：<FUEL>清除異常<>......<NEWLINE>指令：<FUEL>瞄準異常<>......"
+    ],
+    "Options": [
+      {
+        "Name": "離開",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE_PARTY",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>寰宇/太空監視通信鏈路：<SPECIAL>玻璃<>......<NEWLINE>異常定義：<FUEL>資料遺失<><NEWLINE>指令：<FUEL>鎮壓異常<>......指令：<FUEL>清除異常<>......<NEWLINE>指令：<FUEL>瞄準異常<>......"
+    ],
+    "Options": [
+      {
+        "Name": "印上<SPECIAL>迭代簽名<>",
+        "Text": "印記......旅行者 <SPECIAL>%USER%<>......<NEWLINE>異常定義：<STELLAR>%CMTOTALPERCENT% 已恢復<>",
+        "InteractionId": "?S19_STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "離開",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>寰宇/太空監視通信鏈路：<SPECIAL>玻璃<>......<NEWLINE>異常定義：<FUEL>資料遺失<><NEWLINE>指令：<FUEL>鎮壓異常<>......指令：<FUEL>清除異常<>......<NEWLINE>指令：<FUEL>瞄準異常<>......"
+    ],
+    "Options": [
+      {
+        "Name": "上傳<SPECIAL>異常定義<>",
+        "InteractionId": "?S19_COMMUNITY_CORE2",
+        "RewardIds": []
+      },
+      {
+        "Name": "離開",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE2",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "編譯<SPECIAL>迭代簽名<>......連結......部署......\n......\n部署：<TRADEABLE>已完成<>。異常定義：<TRADEABLE>已恢復<>。",
+      "太空站台核心恢復正常了，之前傳出的敵對訊息已不復存在。",
+      "<STELLAR>注意<>：偵測到資料碎片。符合<SPECIAL>定義<>的迭代依舊處於隔離狀態。是否要上傳協助？"
+    ],
+    "Options": [
+      {
+        "Name": "提交<TECHNOLOGY>軌道通信鏈路<>設計圖",
+        "Text": "設計圖：朝隔離碎片傳送<TRADEABLE>廣播<>訊號。\n寰宇/太空監視通信鏈路：<SPECIAL>正常<>......所有系統：<TRADEABLE>穩定<>......",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "不理會筆記",
+        "Text": "寰宇/太空監視通信鏈路：<SPECIAL>正常<>......所有系統：<TRADEABLE>穩定<>......",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
     "Type": "Factory",
     "Id": "?ALL_FACT_REWARD",
     "Race": "None",

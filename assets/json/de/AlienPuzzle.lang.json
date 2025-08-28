@@ -203,6 +203,91 @@
     ]
   },
   {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Atlas/Aeron-Überwachungsuplink: <SPECIAL>gLass<> ...<NEWLINE>Anomaliedefinition: <FUEL>DATEN VERLOREN<><NEWLINE>Richtlinie: <FUEL>Anomalien unterdrücken<> ... Anweisung: <FUEL>Anomalien bereinigen<> ... <NEWLINE>Anweisung: <FUEL>Anomalien anvisieren<> ..."
+    ],
+    "Options": [
+      {
+        "Name": "Weggehen",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE_PARTY",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Atlas/Aeron-Überwachungsuplink: <SPECIAL>gLass<> ...<NEWLINE>Anomaliedefinition: <FUEL>DATEN VERLOREN<><NEWLINE>Richtlinie: <FUEL>Anomalien unterdrücken<> ... Anweisung: <FUEL>Anomalien bereinigen<> ... <NEWLINE>Anweisung: <FUEL>Anomalien anvisieren<> ..."
+    ],
+    "Options": [
+      {
+        "Name": "Einprägen der <SPECIAL>Iterationssignatur<>",
+        "Text": "Einprägen ... Reisender <SPECIAL>%USER%<>...<NEWLINE>Anomaliedefinition: <STELLAR>%CMTOTALPERCENT%wiederhergestellt<>",
+        "InteractionId": "?S19_STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Weggehen",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Atlas/Aeron-Überwachungsuplink: <SPECIAL>gLass<> ...<NEWLINE>Anomaliedefinition: <FUEL>DATEN VERLOREN<><NEWLINE>Richtlinie: <FUEL>Anomalien unterdrücken<> ... Anweisung: <FUEL>Anomalien bereinigen<> ... <NEWLINE>Anweisung: <FUEL>Anomalien anvisieren<> ..."
+    ],
+    "Options": [
+      {
+        "Name": "<SPECIAL>Anomaliedefinition<> hochladen",
+        "InteractionId": "?S19_COMMUNITY_CORE2",
+        "RewardIds": []
+      },
+      {
+        "Name": "Weggehen",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE2",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Kompilieren von <SPECIAL>Iterationssignaturen<> ... Verknüpfen ... Bereitstellen ...\n...\nBereitstellung: <TRADEABLE>Vollständig<>. Anomaliedefinition: <TRADEABLE>Wiederhergestellt<>.",
+      "Der Stationskern nimmt seine normale Routine wieder auf. Von der feindlichen Botschaft von vorhin ist keine Spur mehr zu sehen.",
+      "<STELLAR>Hinweis<>: Datenfragmente entdeckt. Iterationen, die mit der <SPECIAL>Definition<> übereinstimmen, sind immer noch isoliert. Hilfe beim Hochladen?"
+    ],
+    "Options": [
+      {
+        "Name": "Bauplan für <TECHNOLOGY>Orbitalen Uplink<> einreichen",
+        "Text": "Bauplan: <TRADEABLE>Übertragung<> an isolierte Fragmente.\nAtlas/Aeron-Überwachungsuplink: <SPECIAL>Funktionsfähig<> ... Alle Systeme: <TRADEABLE>Stabil<> ...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Hinweis schließen",
+        "Text": "Atlas/Aeron-Überwachungsuplink: <SPECIAL>Funktionsfähig<> ... Alle Systeme: <TRADEABLE>Stabil<> ...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
     "Type": "Factory",
     "Id": "?ALL_FACT_REWARD",
     "Race": "None",

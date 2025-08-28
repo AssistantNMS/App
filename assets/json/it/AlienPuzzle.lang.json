@@ -203,6 +203,91 @@
     ]
   },
   {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Collegamento di sorveglianza Atlante/Aeron: <SPECIAL>vetro<>...<NEWLINE>Definizione anomalia: <FUEL>DATI PERSI<><NEWLINE>Direttiva: <FUEL>sopprimere le anomalie<>... Direttiva: <FUEL>purificare le anomalie<>...<NEWLINE>Direttiva: <FUEL>prendere di mira le anomalie<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Me ne vado",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE_PARTY",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Collegamento di sorveglianza Atlante/Aeron: <SPECIAL>vetro<>...<NEWLINE>Definizione anomalia: <FUEL>DATI PERSI<><NEWLINE>Direttiva: <FUEL>sopprimere le anomalie<>... Direttiva: <FUEL>purificare le anomalie<>...<NEWLINE>Direttiva: <FUEL>prendere di mira le anomalie<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Lascia <SPECIAL>firma dell'iterazione<>",
+        "Text": "Firma... Viaggiatore <SPECIAL>%USER%<>...<NEWLINE>Definizione anomalia: <STELLAR>%CMTOTALPERCENT% ripristinato<>",
+        "InteractionId": "?S19_STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Me ne vado",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Collegamento di sorveglianza Atlante/Aeron: <SPECIAL>vetro<>...<NEWLINE>Definizione anomalia: <FUEL>DATI PERSI<><NEWLINE>Direttiva: <FUEL>sopprimere le anomalie<>... Direttiva: <FUEL>purificare le anomalie<>...<NEWLINE>Direttiva: <FUEL>prendere di mira le anomalie<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Carica <SPECIAL>definizione anomalia<>",
+        "InteractionId": "?S19_COMMUNITY_CORE2",
+        "RewardIds": []
+      },
+      {
+        "Name": "Me ne vado",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE2",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Raccolta di <SPECIAL>firme dell'iterazione<>... collegamento... schieramento...\n...\nSchieramento: <TRADEABLE>completo<> Definizione anomalia: <TRADEABLE>ripristinata<>.",
+      "Il nucleo della stazione riprende la sua normale routine. Non rimane alcuna traccia dei messaggi ostili precedenti.",
+      "<STELLAR>Nota<>: frammenti di dati rilevati. Iterazioni corrispondenti alla <SPECIAL>definizione<> ancora isolate. Hai bisogno di aiuto con il caricamento?"
+    ],
+    "Options": [
+      {
+        "Name": "Invia progetto <TECHNOLOGY>collegamento orbitale<>",
+        "Text": "Progetto: <TRADEABLE>trasmissione<> a frammenti isolati.\n Collegamento di sorveglianza Atlante/Aeron: <SPECIAL>funzionale<>... Tutti i sistemi: <TRADEABLE>stabili<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Ignora nota",
+        "Text": "Collegamento di sorveglianza Atlante/Aeron: <SPECIAL>funzionale<>... Tutti i sistemi: <TRADEABLE>stabili<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
     "Type": "Factory",
     "Id": "?ALL_FACT_REWARD",
     "Race": "None",

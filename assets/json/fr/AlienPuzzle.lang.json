@@ -203,6 +203,91 @@
     ]
   },
   {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Liaison de surveillance Atlas/Aeron : <SPECIAL>vErre<>...<NEWLINE>Définition d'Anomalie : <FUEL>DONNÉES PERDUES<><NEWLINE>Directive : <FUEL>supprimer les anomalies<>... Directive : <FUEL>purger les anomalies<>...<NEWLINE>Directive : <FUEL>cibler les anomalies<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Partir",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE_PARTY",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Liaison de surveillance Atlas/Aeron : <SPECIAL>vErre<>...<NEWLINE>Définition d'Anomalie : <FUEL>DONNÉES PERDUES<><NEWLINE>Directive : <FUEL>supprimer les anomalies<>... Directive : <FUEL>purger les anomalies<>...<NEWLINE>Directive : <FUEL>cibler les anomalies<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Marquer votre <SPECIAL>signature d'itération<>",
+        "Text": "Marquage... Voyageur <SPECIAL>%USER%<>...<NEWLINE>Définition d'Anomalie : <STELLAR>restaurée à %CMTOTALPERCENT% %<>",
+        "InteractionId": "?S19_STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Partir",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Liaison de surveillance Atlas/Aeron : <SPECIAL>vErre<>...<NEWLINE>Définition d'Anomalie : <FUEL>DONNÉES PERDUES<><NEWLINE>Directive : <FUEL>supprimer les anomalies<>... Directive : <FUEL>purger les anomalies<>...<NEWLINE>Directive : <FUEL>cibler les anomalies<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Mettre en ligne la <SPECIAL>définition d'Anomalie<>",
+        "InteractionId": "?S19_COMMUNITY_CORE2",
+        "RewardIds": []
+      },
+      {
+        "Name": "Partir",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE2",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Compilation des <SPECIAL>signatures d'itération<>... liaison... déploiement...\n...\nDéploiement : <TRADEABLE>terminé<>. Définition d'Anomalie : <TRADEABLE>restaurée<>.",
+      "Le noyau de la station retrouve son état normal. Il ne reste aucune trace des messages hostiles.",
+      "<STELLAR>Remarque<> : fragments de données détectés. Les itérations correspondant à la <SPECIAL>définition<> sont toujours isolées. Mettre en ligne l'assistance ?"
+    ],
+    "Options": [
+      {
+        "Name": "Soumettre un plan de <TECHNOLOGY>liaison orbitale<>",
+        "Text": "Plan : <TRADEABLE>diffusez<> à des fragments isolés.\nLiaison de surveillance Atlas/Aeron : <SPECIAL>fonctionnelle<>... Systèmes : <TRADEABLE>tous stables<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Ignorer la remarque",
+        "Text": "Liaison de surveillance Atlas/Aeron : <SPECIAL>fonctionnelle<>... Systèmes : <TRADEABLE>tous stables<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
     "Type": "Factory",
     "Id": "?ALL_FACT_REWARD",
     "Race": "None",
