@@ -4195,7 +4195,7 @@
   {
     "Id": "cook151",
     "Icon": "cooking/29.png",
-    "Name": "솔티 핑거즈",
+    "Name": "짭짤한 덩어리",
     "Group": "원재료",
     "Description": "한 때는 신체의 일부였던 생물체의 시체에서 채취한 영양가 높은 고기입니다.\n\n<TECHNOLOGY>영양소 가공기<>로 가공해 섭취 가능한 제품을 만드십시오.",
     "BaseValueUnits": 1400.0,
@@ -8572,6 +8572,7 @@
     "Colour": "6AD01E",
     "CookingValue": 0.1,
     "Usages": [
+      "HasUsedToCraft",
       "HasCookToCreate",
       "HasDevProperties",
       "IsConsumable",
@@ -10563,6 +10564,62 @@
     "StatBonuses": [],
     "ConsumableRewardTexts": [
       "엑소슈트 영양분 시스템이 2차 제트팩 과부하를 <TECHNOLOGY>%NUM% 작동시킵니다<>"
+    ]
+  },
+  {
+    "Id": "cook384",
+    "Icon": "cooking/384.png",
+    "Name": "연화된 골수",
+    "Group": "섭취 가능한 제품",
+    "Description": "<TECHNOLOGY>영양소 가공기<>에서 만들어진 고도로 정제된 음식입니다. 기존의 영양 페이스트나 알약과는 다르게 실제 음식물의 형태와 향 모두를 지니고 있습니다.\n\n이러한 음식은 <STELLAR>굉장히 소중한<> 가치를 지닙니다.",
+    "BaseValueUnits": 79000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.3,
+    "Usages": [
+      "HasCookUsing",
+      "HasCookToCreate",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate",
+      "HasCreatureHarvest"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "엑소슈트 영양분 시스템이 체력을 <STELLAR>%NUM%% 회복합니다<>"
+    ]
+  },
+  {
+    "Id": "cook385",
+    "Icon": "cooking/385.png",
+    "Name": "뼈 국물",
+    "Group": "섭취 가능한 제품",
+    "Description": "<TECHNOLOGY>영양소 가공기<>에서 만들어진 고도로 정제된 음식입니다. 기존의 영양 페이스트나 알약과는 다르게 실제 음식물의 형태와 향 모두를 지니고 있습니다.\n\n이러한 음식은 <STELLAR>굉장히 소중한<> 가치를 지닙니다.",
+    "BaseValueUnits": 172000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.66,
+    "Usages": [
+      "HasCookUsing",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "엑소슈트 영양분 시스템이 유해 요소 방호를 <COMMODITY>%NUM%% 회복합니다<>"
     ]
   }
 ]

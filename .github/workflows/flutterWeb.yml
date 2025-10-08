@@ -7,13 +7,13 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 on:
   workflow_dispatch:
   push:
-    branches: ['main']
+    branches: ["main"]
 
 jobs:
   build:
@@ -24,9 +24,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v2
         with:
-          channel: 'stable' # 'stable', 'beta', 'dev' or 'master'
+          channel: "stable" # 'stable', 'beta', 'dev' or 'master'
 
       - name: Write env file
         env:
@@ -41,9 +41,9 @@ jobs:
         run: flutter build web -t lib/prod.dart --release
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build/web'
+          path: "build/web"
 
       - name: Deploy GitHub Pages site
-        uses: actions/deploy-pages@v1.2.2
+        uses: actions/deploy-pages@v4

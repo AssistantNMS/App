@@ -1,8 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/contracts/creature/creature_harvest.dart';
-import 'package:assistantnms_app/contracts/data/starship_scrap.dart';
 
 import '../components/tilePresenters/bait_tile_presenter.dart';
+import '../contracts/creature/creature_harvest.dart';
+import '../contracts/data/starship_scrap.dart';
 import 'data/egg_trait.dart';
 import 'data/major_update_item.dart';
 import 'data/platform_control_mapping.dart';

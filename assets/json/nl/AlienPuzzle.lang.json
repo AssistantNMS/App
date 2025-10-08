@@ -203,6 +203,91 @@
     ]
   },
   {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Atlas/Aeron-surveillance-uplink: <SPECIAL>gLas<>...<NEWLINE>Definitie van anomalie: <FUEL>GEGEVENS VERLOREN<><NEWLINE>Opdracht: <FUEL>Anomalieën onderdrukken<>... Opdracht: <FUEL>Anomalieën zuiveren<>...<NEWLINE>Opdracht: <FUEL>Anomalieën vernietigen<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Vertrek",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE_PARTY",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Atlas/Aeron-surveillance-uplink: <SPECIAL>gLas<>...<NEWLINE>Definitie van anomalie: <FUEL>GEGEVENS VERLOREN<><NEWLINE>Opdracht: <FUEL>Anomalieën onderdrukken<>... Opdracht: <FUEL>Anomalieën zuiveren<>...<NEWLINE>Opdracht: <FUEL>Anomalieën vernietigen<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Zet je <SPECIAL>iteratiehandtekening<>",
+        "Text": "Handtekening zetten... Reiziger <SPECIAL>%USER%<>...<NEWLINE>Definitie van anomalie: <STELLAR>%CMTOTALPERCENT% hersteld<>",
+        "InteractionId": "?S19_STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Vertrek",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Atlas/Aeron-surveillance-uplink: <SPECIAL>gLas<>...<NEWLINE>Definitie van anomalie: <FUEL>GEGEVENS VERLOREN<><NEWLINE>Opdracht: <FUEL>Anomalieën onderdrukken<>... Opdracht: <FUEL>Anomalieën zuiveren<>...<NEWLINE>Opdracht: <FUEL>Anomalieën vernietigen<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Upload <SPECIAL>definitie van anomalie<>",
+        "InteractionId": "?S19_COMMUNITY_CORE2",
+        "RewardIds": []
+      },
+      {
+        "Name": "Vertrek",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE2",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<SPECIAL>Iteratiehandtekeningen<> compileren... koppelen... implementeren...\n...\nImplementatie: <TRADEABLE>voltooid<>Definitie van anomalie: <TRADEABLE>hersteld<>.",
+      "De kern van het station hervat zijn normale routine. Er is geen spoor meer te bekennen van de vijandige berichten van voorheen.",
+      "<STELLAR>Opmerking<>: Datafragmenten gedetecteerd. Iteraties die overeenkomen met <SPECIAL>definitie<> zijn nog steeds geïsoleerd. Hulp bij uploaden?"
+    ],
+    "Options": [
+      {
+        "Name": "Verzend blauwdruk voor <TECHNOLOGY>orbitale uplink<>",
+        "Text": "Blauwdruk: <TRADEABLE>zenden<> naar geïsoleerde fragmenten.\nAtlas/Aeron-surveillance-uplink: <SPECIAL>functioneel<>... Alle systemen: <TRADEABLE>stabiel<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Sluit notitie ",
+        "Text": "Atlas/Aeron-surveillance-uplink: <SPECIAL>Functioneel<>... Alle systemen: <TRADEABLE>Stabiel<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
     "Type": "Factory",
     "Id": "?ALL_FACT_REWARD",
     "Race": "None",

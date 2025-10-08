@@ -4195,7 +4195,7 @@
   {
     "Id": "cook151",
     "Icon": "cooking/29.png",
-    "Name": "咸手指",
+    "Name": "盐块",
     "Group": "原料",
     "Description": "营养丰富的肉制品，从拥有它的动物尸体上收取。\n\n使用<TECHNOLOGY>营养处理器<>生成可食用产品。",
     "BaseValueUnits": 1400.0,
@@ -8572,6 +8572,7 @@
     "Colour": "6AD01E",
     "CookingValue": 0.1,
     "Usages": [
+      "HasUsedToCraft",
       "HasCookToCreate",
       "HasDevProperties",
       "IsConsumable",
@@ -10563,6 +10564,62 @@
     "StatBonuses": [],
     "ConsumableRewardTexts": [
       "套装营养系统将激活<TECHNOLOGY>%NUM%秒喷气背包过载<>"
+    ]
+  },
+  {
+    "Id": "cook384",
+    "Icon": "cooking/384.png",
+    "Name": "软化脊髓",
+    "Group": "食用产品",
+    "Description": "通过<TECHNOLOGY>营养处理器<>制作的精制食品。这些食物在形状和气味上与真实的食品极为相似，和传统的营养剂或胶囊截然不同。\n\n这种食物可能拥有<STELLAR>极高的价值<>。",
+    "BaseValueUnits": 79000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.3,
+    "Usages": [
+      "HasCookUsing",
+      "HasCookToCreate",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate",
+      "HasCreatureHarvest"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "套装营养系统将恢复<STELLAR>%NUM%%生命值<>"
+    ]
+  },
+  {
+    "Id": "cook385",
+    "Icon": "cooking/385.png",
+    "Name": "骨汤",
+    "Group": "食用产品",
+    "Description": "通过<TECHNOLOGY>营养处理器<>制作的精制食品。这些食物在形状和气味上与真实的食品极为相似，和传统的营养剂或胶囊截然不同。\n\n这种食物可能拥有<STELLAR>极高的价值<>。",
+    "BaseValueUnits": 172000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.66,
+    "Usages": [
+      "HasCookUsing",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "套装营养系统将恢复<COMMODITY>%NUM%%危险防护<>"
     ]
   }
 ]

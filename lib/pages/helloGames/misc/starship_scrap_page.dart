@@ -1,7 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/contracts/required_item.dart';
-import 'package:assistantnms_app/integration/dependency_injection.dart';
-import 'package:assistantnms_app/pages/helloGames/misc/starship_scrap_display.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
@@ -11,8 +8,11 @@ import '../../../constants/analytics_event.dart';
 import '../../../contracts/data/starship_scrap.dart';
 import '../../../contracts/helloGames/starship_scrap_detailed.dart';
 import '../../../contracts/redux/app_state.dart';
+import '../../../contracts/required_item.dart';
 import '../../../contracts/required_item_details.dart';
 import '../../../helpers/items_helper.dart';
+import '../../../integration/dependency_injection.dart';
+import '../../../pages/helloGames/misc/starship_scrap_display.dart';
 import '../../../redux/modules/generic/generic_item_view_model.dart';
 
 class StarshipScrapPage extends StatelessWidget {

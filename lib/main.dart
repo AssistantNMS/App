@@ -1,4 +1,3 @@
-import 'package:assistantnms_app/env/platform_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +5,7 @@ import 'app.dart';
 import 'assistant_apps_settings.dart';
 import 'env.dart';
 import 'env/environment_settings.dart';
+import 'env/platform_type.dart';
 
 Future main() async {
   EnvironmentSettings env = EnvironmentSettings(

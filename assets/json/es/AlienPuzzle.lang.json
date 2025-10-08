@@ -203,6 +203,91 @@
     ]
   },
   {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Enlace ascendente de vigilancia Atlas/Aeron: <SPECIAL>gLass<>...<NEWLINE>Definición de la anomalía: <FUEL>DATOS PERDIDOS<><NEWLINE>Directriz: <FUEL>Suprimir anomalías<>... Directriz: <FUEL>Limpiar anomalías<>...<NEWLINE>Directriz: <FUEL>Identificar anomalías<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Salir",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE_PARTY",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Enlace ascendente de vigilancia Atlas/Aeron: <SPECIAL>gLass<>...<NEWLINE>Definición de la anomalía: <FUEL>DATOS PERDIDOS<><NEWLINE>Directriz: <FUEL>Suprimir anomalías<>... Directriz: <FUEL>Limpiar anomalías<>...<NEWLINE>Directriz: <FUEL>Identificar anomalías<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Registrar <SPECIAL>huella de iteración<>",
+        "Text": "Registrando... Viajero <SPECIAL>%USER%<>...<NEWLINE>Definición de la anomalía: <STELLAR>%CMTOTALPERCENT% restaurada<>",
+        "InteractionId": "?S19_STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Salir",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Enlace ascendente de vigilancia Atlas/Aeron: <SPECIAL>gLass<>...<NEWLINE>Definición de la anomalía: <FUEL>DATOS PERDIDOS<><NEWLINE>Directriz: <FUEL>Suprimir anomalías<>... Directriz: <FUEL>Limpiar anomalías<>...<NEWLINE>Directriz: <FUEL>Identificar anomalías<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Cargar <SPECIAL>definición de anomalía<>",
+        "InteractionId": "?S19_COMMUNITY_CORE2",
+        "RewardIds": []
+      },
+      {
+        "Name": "Salir",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE2",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Recopilando <SPECIAL>huellas de iteración<>... enlazando... desplegando...\n...\nDespliegue: <TRADEABLE>completado<>. Definición de la anomalía: <TRADEABLE>restaurada<>.",
+      "El núcleo de la estación reanuda la rutina habitual. No queda rastro de los mensajes hostiles anteriores.",
+      "<STELLAR>Nota<>: Fragmentos de datos detectados. Las iteraciones que coinciden con la definición <SPECIAL><> siguen aisladas. ¿Quieres cargar ayuda?"
+    ],
+    "Options": [
+      {
+        "Name": "Enviar plano de <TECHNOLOGY>enlace ascendente orbital<>",
+        "Text": "Plano: <TRADEABLE>Emitir<> a los fragmentos aislados.\nEnlace ascendente de vigilancia Atlas/Aeron: <SPECIAL>Funcional<>... Todos los sistemas: <TRADEABLE>Estables<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Descartar nota",
+        "Text": "Enlace ascendente de vigilancia Atlas/Aeron: <SPECIAL>Funcional<>... Todos los sistemas: <TRADEABLE>Estables<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
     "Type": "Factory",
     "Id": "?ALL_FACT_REWARD",
     "Race": "None",

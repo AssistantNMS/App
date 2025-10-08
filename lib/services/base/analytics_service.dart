@@ -1,6 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/integration/dependency_injection.dart';
 import 'package:flutter/foundation.dart';
+
+import '../../integration/dependency_injection.dart';
 
 class AnalyticsService implements IAnalyticsService {
   final analyticsKey = '[Analytics]:';

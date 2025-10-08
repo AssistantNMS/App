@@ -203,6 +203,91 @@
     ]
   },
   {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>阿特拉斯/艾伦监视装置：<SPECIAL>玻璃<>......<NEWLINE>异常定义：<FUEL>数据丢失<><NEWLINE>指令：<FUEL>压制异常<>......指令：<FUEL>净化异常<>......<NEWLINE>指令：<FUEL>定位异常<>......"
+    ],
+    "Options": [
+      {
+        "Name": "离开",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE_PARTY",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>阿特拉斯/艾伦监视装置：<SPECIAL>玻璃<>......<NEWLINE>异常定义：<FUEL>数据丢失<><NEWLINE>指令：<FUEL>压制异常<>......指令：<FUEL>净化异常<>......<NEWLINE>指令：<FUEL>定位异常<>......"
+    ],
+    "Options": [
+      {
+        "Name": "刻印<SPECIAL>迭代签名<>",
+        "Text": "刻印中......旅行者<SPECIAL>%USER%<>......<NEWLINE>异常定义：<STELLAR>%CMTOTALPERCENT%已恢复<>",
+        "InteractionId": "?S19_STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "离开",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>阿特拉斯/艾伦监视装置：<SPECIAL>玻璃<>......<NEWLINE>异常定义：<FUEL>数据丢失<><NEWLINE>指令：<FUEL>压制异常<>......指令：<FUEL>净化异常<>......<NEWLINE>指令：<FUEL>定位异常<>......"
+    ],
+    "Options": [
+      {
+        "Name": "上传<SPECIAL>异常定义<>",
+        "InteractionId": "?S19_COMMUNITY_CORE2",
+        "RewardIds": []
+      },
+      {
+        "Name": "离开",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE2",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "正在编译<SPECIAL>迭代签名<>......链接中......部署中......\n......\n部署状态：<TRADEABLE>完成<>。异常定义：<TRADEABLE>已恢复<>。",
+      "空间站核心恢复正常运作。先前所有的敌意讯息痕迹均已消失。",
+      "<STELLAR>注意<>：检测到数据碎片。符合<SPECIAL>定义<>的迭代仍处于孤立状态。需要上传协助吗？"
+    ],
+    "Options": [
+      {
+        "Name": "提交<TECHNOLOGY>轨道上行链路<>设计图",
+        "Text": "设计图：<TRADEABLE>广播<>至孤立碎片。\n阿特拉斯/艾伦监视装置：<SPECIAL>功能正常<>......所有系统：<TRADEABLE>稳定<>......",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "关闭提示",
+        "Text": "阿特拉斯/艾伦监视装置：<SPECIAL>功能正常<>......所有系统：<TRADEABLE>稳定<>......",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
     "Type": "Factory",
     "Id": "?ALL_FACT_REWARD",
     "Race": "None",

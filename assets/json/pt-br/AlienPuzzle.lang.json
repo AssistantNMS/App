@@ -203,6 +203,91 @@
     ]
   },
   {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Atlas/Uplink de vigilância de Aeron: <SPECIAL>vidro<>...<NEWLINE>Definição de anomalia: <FUEL>DADOS PERDIDOS<><NEWLINE>Diretiva: <FUEL>suprimir anomalias<>... Diretiva: <FUEL>expurgar anomalias<>...<NEWLINE>Diretiva: <FUEL>alvejar anomalias<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Parta",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE_PARTY",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Atlas/Uplink de vigilância de Aeron: <SPECIAL>vidro<>...<NEWLINE>Definição de anomalia: <FUEL>DADOS PERDIDOS<><NEWLINE>Diretiva: <FUEL>suprimir anomalias<>... Diretiva: <FUEL>expurgar anomalias<>...<NEWLINE>Diretiva: <FUEL>alvejar anomalias<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Imprimir <SPECIAL>assinatura de iteração<>",
+        "Text": "Registrando impressão... Viajante <SPECIAL>%USER%<>...<NEWLINE>Definição de anomalia: <STELLAR>%CMTOTALPERCENT% restaurada<>",
+        "InteractionId": "?S19_STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Parta",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>Atlas/Uplink de vigilância de Aeron: <SPECIAL>vidro<>...<NEWLINE>Definição de anomalia: <FUEL>DADOS PERDIDOS<><NEWLINE>Diretiva: <FUEL>suprimir anomalias<>... Diretiva: <FUEL>expurgar anomalias<>...<NEWLINE>Diretiva: <FUEL>alvejar anomalias<>..."
+    ],
+    "Options": [
+      {
+        "Name": "Carregar <SPECIAL>definição de anomalia<>",
+        "InteractionId": "?S19_COMMUNITY_CORE2",
+        "RewardIds": []
+      },
+      {
+        "Name": "Parta",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE2",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "Compilando <SPECIAL>assinaturas de iteração<>... Vinculando... Implantando...\n...\nImplantação: <TRADEABLE>concluída<>. Definição de anomalia: <TRADEABLE>restaurada<>.",
+      "O núcleo da estação retomou a sua rotina normal. Não há vestígios das mensagens hostis anteriores.",
+      "<STELLAR>Observação<>: fragmentos de dados detectados. Iterações de <SPECIAL>definições<> correspondentes ainda isoladas. Ajudar a carregar?"
+    ],
+    "Options": [
+      {
+        "Name": "Enviar planta de <TECHNOLOGY>uplink orbital<>",
+        "Text": "Planta: <TRADEABLE>Transmissão<> para fragmentos isolados.\nUplink de vigilância Atlas/Aeron: <SPECIAL>Funcional<>... Todos os sistemas: <TRADEABLE>Estáveis<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "Dispensar observação",
+        "Text": "Atlas/Uplink de vigilância de Aeron: <SPECIAL>Funcional<>... Todos os sistemas: <TRADEABLE>Estáveis<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
     "Type": "Factory",
     "Id": "?ALL_FACT_REWARD",
     "Race": "None",

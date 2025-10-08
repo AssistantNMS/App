@@ -203,6 +203,91 @@
     ]
   },
   {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>아틀라스/에어론 감시 업링크: <SPECIAL>gLass<>...<NEWLINE>아노말리 정의: <FUEL>데이터 손실됨<><NEWLINE>지시사항: <FUEL>아노말리 억제<>... 지시사항: <FUEL>아노말리 정화<>... <NEWLINE>지시사항: <FUEL>아노말리 표적 지정<>..."
+    ],
+    "Options": [
+      {
+        "Name": "떠난다",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_STATION_CORE_PARTY",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>아틀라스/에어론 감시 업링크: <SPECIAL>gLass<>...<NEWLINE>아노말리 정의: <FUEL>데이터 손실됨<><NEWLINE>지시사항: <FUEL>아노말리 억제<>... 지시사항: <FUEL>아노말리 정화<>... <NEWLINE>지시사항: <FUEL>아노말리 표적 지정<>..."
+    ],
+    "Options": [
+      {
+        "Name": "<SPECIAL>반복 서명<> 각인",
+        "Text": "각인 중... 여행자 <SPECIAL>%USER%<>...<NEWLINE>아노말리 정의: <STELLAR>%CMTOTALPERCENT% 복원됨<>",
+        "InteractionId": "?S19_STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "떠난다",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<NEWLINE>아틀라스/에어론 감시 업링크: <SPECIAL>gLass<>...<NEWLINE>아노말리 정의: <FUEL>데이터 손실됨<><NEWLINE>지시사항: <FUEL>아노말리 억제<>... 지시사항: <FUEL>아노말리 정화<>... <NEWLINE>지시사항: <FUEL>아노말리 표적 지정<>..."
+    ],
+    "Options": [
+      {
+        "Name": "<SPECIAL>아노말리 정의<> 업로드",
+        "InteractionId": "?S19_COMMUNITY_CORE2",
+        "RewardIds": []
+      },
+      {
+        "Name": "떠난다",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
+    "Type": "StationCore",
+    "Id": "?S19_COMMUNITY_CORE2",
+    "Race": "None",
+    "IsFactory": false,
+    "Number": 0,
+    "IncomingMessages": [
+      "<SPECIAL>반복 서명<> 컴파일 중... 연결 중... 배포 중...\n...\n배포: <TRADEABLE>완료<>. 아노말리 정의: <TRADEABLE>복원됨<>.",
+      "정거장 코어가 정상적인 작동을 재개합니다. 이전에 적대적인 메시지를 전달했던 흔적은 남아 있지 않습니다.",
+      "<STELLAR>메모<>: 데이터 조각이 감지됨. <SPECIAL>정의<>와 일치하는 반복은 아직 고립됨. 업로드를 지원하시겠습니까?"
+    ],
+    "Options": [
+      {
+        "Name": "<TECHNOLOGY>궤도 업링크<> 설계도 제출",
+        "Text": "설계도: 고립된 조각으로 <TRADEABLE>방송<>.\n아틀라스/에어론 감시 업링크: <SPECIAL>작동 중<>... 모든 시스템: <TRADEABLE>안정적<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      },
+      {
+        "Name": "메모 제거",
+        "Text": "아틀라스/에어론 감시 업링크: <SPECIAL>작동 중<>... 모든 시스템: <TRADEABLE>안정적<>...",
+        "InteractionId": "STATION_CORE",
+        "RewardIds": []
+      }
+    ]
+  },
+  {
     "Type": "Factory",
     "Id": "?ALL_FACT_REWARD",
     "Race": "None",

@@ -1,6 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/contracts/fishing/fishing_data.dart';
 import 'package:flutter/material.dart';
+
+import '../../../contracts/fishing/fishing_data.dart';
 
 class IFishingJsonRepository {
   Future<ResultWithValue<List<FishingData>>> getAll(

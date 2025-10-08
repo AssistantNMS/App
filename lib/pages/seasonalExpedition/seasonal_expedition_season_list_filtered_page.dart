@@ -1,10 +1,10 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/components/tilePresenters/setting_tile_presenter.dart';
-import 'package:assistantnms_app/contracts/seasonalExpedition/seasonal_expedition_title.dart';
 import 'package:flutter/material.dart';
 
+import '../../components/tilePresenters/setting_tile_presenter.dart';
 import '../../constants/app_image.dart';
 import '../../contracts/seasonalExpedition/seasonal_expedition_season.dart';
+import '../../contracts/seasonalExpedition/seasonal_expedition_title.dart';
 import '../../helpers/column_helper.dart';
 import 'common_seasonal_expedition_season_list.dart';
 import 'season_expedition_constants.dart';

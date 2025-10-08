@@ -4195,7 +4195,7 @@
   {
     "Id": "cook151",
     "Icon": "cooking/29.png",
-    "Name": "Dedos Salgados",
+    "Name": "Pedaços Salgados",
     "Group": "Ingrediente cru",
     "Description": "Um produto de carne nutritiva, recolhida de um cadáver de uma criatura.\n\nProcessado num <TECHNOLOGY>Processador de Nutrientes<> para gerar produtos comestíveis.",
     "BaseValueUnits": 1400.0,
@@ -8572,6 +8572,7 @@
     "Colour": "6AD01E",
     "CookingValue": 0.1,
     "Usages": [
+      "HasUsedToCraft",
       "HasCookToCreate",
       "HasDevProperties",
       "IsConsumable",
@@ -10563,6 +10564,62 @@
     "StatBonuses": [],
     "ConsumableRewardTexts": [
       "O sistema de nutrição do exofato irá ativar a sobrecarga do jetpack <TECHNOLOGY>%NUM% segundos<>"
+    ]
+  },
+  {
+    "Id": "cook384",
+    "Icon": "cooking/384.png",
+    "Name": "Medula Amolecida",
+    "Group": "Produto comestível",
+    "Description": "Um produto alimentar altamente refinado, criado com o <TECHNOLOGY>Processador de Nutrientes<>. Tem as formas e aromas identificadores de um alimento real, em forte contraste com a pasta nutricional convencional ou pellets.\n\nAlimentos confecionados como este podem ser <STELLAR>altamente valiosos<>.",
+    "BaseValueUnits": 79000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.3,
+    "Usages": [
+      "HasCookUsing",
+      "HasCookToCreate",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate",
+      "HasCreatureHarvest"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "O sistema de nutrição do exofato irá repor <STELLAR>%NUM%% da vida<>"
+    ]
+  },
+  {
+    "Id": "cook385",
+    "Icon": "cooking/385.png",
+    "Name": "Caldo de Ossos",
+    "Group": "Produto comestível",
+    "Description": "Um produto alimentar altamente refinado, criado com o <TECHNOLOGY>Processador de Nutrientes<>. Tem as formas e aromas identificadores de um alimento real, em forte contraste com a pasta nutricional convencional ou pellets.\n\nAlimentos confecionados como este podem ser <STELLAR>altamente valiosos<>.",
+    "BaseValueUnits": 172000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.66,
+    "Usages": [
+      "HasCookUsing",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "O sistema de nutrição do exofato irá repor <COMMODITY>%NUM%% da proteção contra perigos<>"
     ]
   }
 ]

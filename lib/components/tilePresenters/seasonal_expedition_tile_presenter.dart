@@ -119,7 +119,7 @@ Widget seasonalExpeditionPhaseTilePresenter(
               SeasonalExpeditionDetailPage(seasonalExpedition),
         );
       },
-      useMaterial: true,
+      useMaterial: false,
       backgroundColour: getTheme().getScaffoldBackgroundColour(context),
     ),
   );

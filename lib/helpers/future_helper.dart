@@ -1,17 +1,17 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/usage_key.dart';
-import 'package:assistantnms_app/contracts/data/alphabet_translation.dart';
-import 'package:assistantnms_app/contracts/data/major_update_item.dart';
-import 'package:assistantnms_app/contracts/data/starship_scrap.dart';
 import 'package:flutter/material.dart';
 
 import '../components/tilePresenters/bait_tile_presenter.dart';
 import '../constants/id_prefix.dart';
+import '../constants/usage_key.dart';
 import '../contracts/creature/creature_harvest.dart';
+import '../contracts/data/alphabet_translation.dart';
 import '../contracts/data/bait_data.dart';
 import '../contracts/data/egg_trait.dart';
+import '../contracts/data/major_update_item.dart';
 import '../contracts/data/platform_control_mapping.dart';
 import '../contracts/data/quicksilver_store.dart';
+import '../contracts/data/starship_scrap.dart';
 import '../contracts/data/update_item_detail.dart';
 import '../contracts/enum/currency_type.dart';
 import '../contracts/fishing/fishing_data.dart';

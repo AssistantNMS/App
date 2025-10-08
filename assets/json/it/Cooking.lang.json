@@ -4195,7 +4195,7 @@
   {
     "Id": "cook151",
     "Icon": "cooking/29.png",
-    "Name": "Bastoncini salati",
+    "Name": "Bocconi salati",
     "Group": "Ingrediente crudo",
     "Description": "Carne nutriente raccolta dalla carcassa di una creatura.\n\nInseriscila in un <TECHNOLOGY>trasformatore di sostanze nutritive<> per generare prodotti commestibili.",
     "BaseValueUnits": 1400.0,
@@ -8572,6 +8572,7 @@
     "Colour": "6AD01E",
     "CookingValue": 0.1,
     "Usages": [
+      "HasUsedToCraft",
       "HasCookToCreate",
       "HasDevProperties",
       "IsConsumable",
@@ -10563,6 +10564,62 @@
     "StatBonuses": [],
     "ConsumableRewardTexts": [
       "Il sistema nutritivo dell'exotuta attiverà <TECHNOLOGY>%NUM% secondi di sovraccarico del jet pack<>"
+    ]
+  },
+  {
+    "Id": "cook384",
+    "Icon": "cooking/384.png",
+    "Name": "Midollo ammorbidito",
+    "Group": "Prodotto edibile",
+    "Description": "Cibo altamente raffinato creato nel <TECHNOLOGY>trasformatore di sostanze nutritive<>. Possiede la forma e gli aromi di un vero cibo, in netto contrasto con la pasta e i mangimi nutritivi.\n\nIl cibo di questo tipo può essere <STELLAR>molto prezioso<>.",
+    "BaseValueUnits": 79000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.3,
+    "Usages": [
+      "HasCookUsing",
+      "HasCookToCreate",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate",
+      "HasCreatureHarvest"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Il sistema nutritivo dell'exotuta ripristinerà <STELLAR>%NUM%% della salute<>"
+    ]
+  },
+  {
+    "Id": "cook385",
+    "Icon": "cooking/385.png",
+    "Name": "Brodo di ossa",
+    "Group": "Prodotto edibile",
+    "Description": "Cibo altamente raffinato creato nel <TECHNOLOGY>trasformatore di sostanze nutritive<>. Possiede la forma e gli aromi di un vero cibo, in netto contrasto con la pasta e i mangimi nutritivi.\n\nIl cibo di questo tipo può essere <STELLAR>molto prezioso<>.",
+    "BaseValueUnits": 172000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.66,
+    "Usages": [
+      "HasCookUsing",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Il sistema nutritivo dell'exotuta ripristinerà <COMMODITY>%NUM%% della protezione rischi<>"
     ]
   }
 ]

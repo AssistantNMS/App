@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/app_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -7,6 +6,7 @@ import '../../components/modalBottomSheet/expedition_rewards_list_modal_bottom_s
 import '../../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../../components/tilePresenters/seasonal_expedition_tile_presenter.dart';
 import '../../components/tilePresenters/youtubers_tile_presenter.dart';
+import '../../constants/app_image.dart';
 import '../../contracts/redux/app_state.dart';
 import '../../contracts/seasonalExpedition/seasonal_expedition_phase.dart';
 import '../../contracts/seasonalExpedition/seasonal_expedition_season.dart';

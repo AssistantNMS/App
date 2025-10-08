@@ -4195,7 +4195,7 @@
   {
     "Id": "cook151",
     "Icon": "cooking/29.png",
-    "Name": "Соленые пальчики",
+    "Name": "Соленые кусочки",
     "Group": "Сырой ингредиент",
     "Description": "Питательный мясной продукт, полученный из тела умершего животного.\n\nЧтобы произвести что-то съедобное, загрузите его как сырье в <TECHNOLOGY>переработчик нутриентов<>.",
     "BaseValueUnits": 1400.0,
@@ -8572,6 +8572,7 @@
     "Colour": "6AD01E",
     "CookingValue": 0.1,
     "Usages": [
+      "HasUsedToCraft",
       "HasCookToCreate",
       "HasDevProperties",
       "IsConsumable",
@@ -10563,6 +10564,62 @@
     "StatBonuses": [],
     "ConsumableRewardTexts": [
       "Система питания экзокостюма активирует перегрузку реактивного ранца на <TECHNOLOGY>%NUM% сек.<>"
+    ]
+  },
+  {
+    "Id": "cook384",
+    "Icon": "cooking/384.png",
+    "Name": "Размягченный костный мозг",
+    "Group": "Съедобный продукт",
+    "Description": "Пищевой продукт высокой степени очистки, созданный <TECHNOLOGY>переработчиком нутриентов<>. Обладает примечательной формой и ароматом настоящей еды, чем отличается от обычной питательной пасты или пилюль.\n\nПодобная пища может быть <STELLAR>очень ценной<>.",
+    "BaseValueUnits": 79000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.3,
+    "Usages": [
+      "HasCookUsing",
+      "HasCookToCreate",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate",
+      "HasCreatureHarvest"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Система питания экзокостюма восстановит <STELLAR>%NUM%% здоровья<>"
+    ]
+  },
+  {
+    "Id": "cook385",
+    "Icon": "cooking/385.png",
+    "Name": "Костный бульон",
+    "Group": "Съедобный продукт",
+    "Description": "Пищевой продукт высокой степени очистки, созданный <TECHNOLOGY>переработчиком нутриентов<>. Обладает примечательной формой и ароматом настоящей еды, чем отличается от обычной питательной пасты или пилюль.\n\nПодобная пища может быть <STELLAR>очень ценной<>.",
+    "BaseValueUnits": 172000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 50.0,
+    "Colour": "BB3830",
+    "CookingValue": 0.66,
+    "Usages": [
+      "HasCookUsing",
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": [
+      "Система питания экзокостюма восстановит <COMMODITY>%NUM%% энергии защиты от вредных факторов<>"
     ]
   }
 ]

@@ -1,8 +1,8 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantnms_app/constants/app_image.dart';
 import 'package:flutter/material.dart';
 import 'package:marquee_vertical/marquee_vertical.dart';
 
+import '../../constants/app_image.dart';
 import '../../constants/routes.dart';
 import '../../contracts/faction/faction.dart';
 import '../../contracts/faction/guild_mission.dart';
